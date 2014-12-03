@@ -10,14 +10,23 @@
 -- 100%TP    200%TP    300%TP	
 -- 1.00      2.00      3.00	
 -----------------------------------	
-	
+package.loaded["scripts/globals/abyssea"] = nil;	
 require("scripts/globals/status");	
 require("scripts/globals/settings");	
-require("scripts/globals/weaponskills");	
+require("scripts/globals/abyssea");
+require("scripts/globals/weaponskills");		
 -----------------------------------	
 	
 function OnUseWeaponSkill(player, target, wsID)	
-	
+
+	local RedTrigger = player:getVar("RedTrigger");
+	if (RedTrigger == 161) then
+		WeaknessTriggerRed(player, target, wsID);
+	else
+		if (math.random(4) == 1) then
+			TriggerHintRED(player, target, wsID);
+		end
+	end
 	local params = {};
 	params.numHits = 1;
 	params.ftp100 = 1; params.ftp200 = 2; params.ftp300 = 3;
@@ -29,5 +38,4 @@ function OnUseWeaponSkill(player, target, wsID)
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
 	
 	return tpHits, extraHits, criticalHit, damage;
-	
 end	

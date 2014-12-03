@@ -1,0 +1,16 @@
+﻿'DSGame-server_64.exe' (Win32): Loaded 'C:\FFXI Server\Valor\DSGame-server_64.exe'. Symbols loaded.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\ntdll.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\kernel32.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\KernelBase.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\FFXI Server\Valor\libmariadb64.dll'. Module was built without symbols.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\advapi32.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\msvcrt.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\sechost.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\rpcrt4.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\ws2_32.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\Windows\System32\nsi.dll'. Cannot find or open the PDB file.
+'DSGame-server_64.exe' (Win32): Loaded 'C:\FFXI Server\Valor\lua51.dll'. Module was built without symbols.
+'DSGame-server_64.exe' (Win32): Unloaded 'C:\FFXI Server\Valor\lua51.dll'
+'DSGame-server_64.exe' (Win32): Loaded 'C:\FFXI Server\Valor\lua51.dll'. Module was built without symbols.
+'DSGame-server_64.exe' (Win32): Unloaded 'C:\FFXI Server\Valor\lua51.dll'
+The program '[5088] DSGame-server_64.exe' has exited with code -1073741701 (0xc000007b).

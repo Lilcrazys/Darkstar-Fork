@@ -2,11 +2,11 @@
 -- Spell: Bio II
 -- Deals dark damage that weakens an enemy's attacks and gruadually reduces its HP.
 -----------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/globals/magic");
-
+require("scripts/globals/status");
+require("scripts/globals/settings");
+require("scripts/globals/abyssea");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -16,6 +16,16 @@ function OnMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+	if caster:isPC() then
+		local YellowTrigger = caster:getVar("YellowTrigger");
+		if (YellowTrigger == 231) then
+			WeaknessTriggerYellow(caster,target,spell);
+		else
+			if (math.random(4) == 1) then
+				TriggerHintYELLOW(caster);
+			end
+		end
+	end
 
 	--calculate raw damage
 	local basedmg = caster:getSkillLevel(DARK_MAGIC_SKILL) / 4;

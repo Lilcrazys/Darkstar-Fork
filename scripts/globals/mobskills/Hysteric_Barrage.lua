@@ -12,7 +12,12 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function OnMobSkillCheck(target,mob,skill)
-	return 0;
+	local ID = mob:getID();
+    if (ID == 16998862) then
+	    return 1;
+	else
+	    return 0;
+	end	
 end;
 
 function OnMobWeaponSkill(target, mob, skill)

@@ -32,7 +32,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_FOOD,0,0,14400,5610);
+	target:addStatusEffect(EFFECT_FOOD,0,0,3600,5163);
 end;
 
 -----------------------------------
@@ -40,11 +40,14 @@ end;
 -----------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_HP, 20);
-	target:addMod(MOD_STR, 6);
-	target:addMod(MOD_INT, -2);
+	target:addMod(MOD_HPP, 30);
+	target:addMod(MOD_STR, 30);
+	target:addMod(MOD_DEX, 30);
+	target:addMod(MOD_AGI, -20);
+	target:addMod(MOD_INT, -20);
 	target:addMod(MOD_HPHEAL, 2);
 	target:addMod(MOD_ATTP, 19);
+	target:addMod(MOD_ACCP, 19);
 	target:addMod(MOD_RATTP, 19);
 	target:addMod(MOD_DRAGON_KILLER, 5);
 	target:addMod(MOD_DEMON_KILLER, 5);
@@ -55,11 +58,14 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_HP, 20);
-	target:delMod(MOD_STR, 6);
-	target:delMod(MOD_INT, -2);
+	target:delMod(MOD_HP, 30);
+	target:delMod(MOD_STR, 30);
+	target:delMod(MOD_DEX, 30);
+	target:delMod(MOD_AGI -20;
+	target:delMod(MOD_INT, -20);
 	target:delMod(MOD_HPHEAL, 2);
 	target:delMod(MOD_ATTP, 19);
+	target:delMod(MOD_ACCP, 19);
 	target:delMod(MOD_RATTP, 19);
 	target:delMod(MOD_DRAGON_KILLER, 5);
 	target:delMod(MOD_DEMON_KILLER, 5);

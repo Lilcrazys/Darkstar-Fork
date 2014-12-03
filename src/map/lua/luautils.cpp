@@ -61,6 +61,7 @@
 #include "../packets/char_update.h"
 #include "../packets/entity_update.h"
 #include "../packets/char.h"
+#include "../packets/chat_message.h"
 #include "../packets/menu_raisetractor.h"
 #include "../packets/message_basic.h"
 #include "../packets/entity_visual.h"
@@ -126,6 +127,12 @@ int32 init()
 
 	lua_register(LuaHandle,"getCorsairRollEffect",luautils::getCorsairRollEffect);
     lua_register(LuaHandle,"getSpell",luautils::getSpell);
+
+	lua_register(LuaHandle, "SpoofSay", luautils::SpoofSay);
+	lua_register(LuaHandle, "SpoofTell", luautils::SpoofTell);
+	lua_register(LuaHandle, "SpoofEmote", luautils::SpoofEmote);
+	lua_register(LuaHandle, "SpoofLink", luautils::SpoofLink);
+	lua_register(LuaHandle, "SpoofParty", luautils::SpoofParty);
 
     Lunar<CLuaAbility>::Register(LuaHandle);
 	Lunar<CLuaBaseEntity>::Register(LuaHandle);
@@ -938,6 +945,160 @@ int32 GetMobAction(lua_State* L)
     lua_pushnil(L);
     return 1;
 }
+/************************************************************************
+*                                                      *
+*   Send a fake "say" message from an NPC or MOB.                  *
+*                                                      *
+************************************************************************/
+
+int32 SpoofSay(lua_State* L)
+{
+	uint32 mobid = (uint32)lua_tointeger(L, 1);
+	uint32 CharID = (uint32)lua_tointeger(L, 2);
+	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
+	if (PNPC != NULL)
+	{
+		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
+		int32 ret = Sql_Query(SqlHandle, Query, CharID);
+		if (ret != SQL_ERROR &&
+			Sql_NumRows(SqlHandle) != 0 &&
+			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+		{
+			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
+			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
+			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
+			int8* data = (int8*)lua_tolstring(L, 3, NULL);
+			int8* name = (int8*)PNPC->GetObjectName();
+			uint8 size = (uint8)PNPC->name.size();
+			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_SAY, ZoneID, data, size));
+		}
+	}
+	return 1;
+}
+
+/************************************************************************
+*                                                      *
+*   Send a fake "tell" message from an NPC or MOB.                  *
+*                                                      *
+************************************************************************/
+
+int32 SpoofTell(lua_State* L)
+{
+	uint32 mobid = (uint32)lua_tointeger(L, 1);
+	uint32 CharID = (uint32)lua_tointeger(L, 2);
+	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
+	if (PNPC != NULL)
+	{
+		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
+		int32 ret = Sql_Query(SqlHandle, Query, CharID);
+		if (ret != SQL_ERROR &&
+			Sql_NumRows(SqlHandle) != 0 &&
+			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+		{
+			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
+			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
+			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
+			int8* data = (int8*)lua_tolstring(L, 3, NULL);
+			int8* name = (int8*)PNPC->GetObjectName();
+			uint8 size = (uint8)PNPC->name.size();
+			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_TELL, ZoneID, data, size));
+		}
+	}
+	return 1;
+}
+
+/************************************************************************
+*                                                      *
+*   Send a fake "emote" message from an NPC or MOB.                  *
+*                                                      *
+************************************************************************/
+
+int32 SpoofEmote(lua_State* L)
+{
+	uint32 mobid = (uint32)lua_tointeger(L, 1);
+	uint32 CharID = (uint32)lua_tointeger(L, 2);
+	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
+	if (PNPC != NULL)
+	{
+		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
+		int32 ret = Sql_Query(SqlHandle, Query, CharID);
+		if (ret != SQL_ERROR &&
+			Sql_NumRows(SqlHandle) != 0 &&
+			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+		{
+			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
+			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
+			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
+			int8* data = (int8*)lua_tolstring(L, 3, NULL);
+			int8* name = (int8*)PNPC->GetObjectName();
+			uint8 size = (uint8)PNPC->name.size();
+			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_EMOTION, ZoneID, data, size));
+		}
+	}
+	return 1;
+}
+
+/************************************************************************
+*                                                      *
+*   Send a fake "linkshell" message from an NPC or MOB.                  *
+*                                                      *
+************************************************************************/
+
+int32 SpoofLink(lua_State* L)
+{
+	uint32 mobid = (uint32)lua_tointeger(L, 1);
+	uint32 CharID = (uint32)lua_tointeger(L, 2);
+	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
+	if (PNPC != NULL)
+	{
+		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
+		int32 ret = Sql_Query(SqlHandle, Query, CharID);
+		if (ret != SQL_ERROR &&
+			Sql_NumRows(SqlHandle) != 0 &&
+			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+		{
+			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
+			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
+			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
+			int8* data = (int8*)lua_tolstring(L, 3, NULL);
+			int8* name = (int8*)PNPC->GetObjectName();
+			uint8 size = (uint8)PNPC->name.size();
+			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_LINKSHELL, ZoneID, data, size));
+		}
+	}
+	return 1;
+}
+
+/************************************************************************
+*                                                      *
+*   Send a fake "party" message from an NPC or MOB.                  *
+*                                                      *
+************************************************************************/
+
+int32 SpoofParty(lua_State* L)
+{
+	uint32 mobid = (uint32)lua_tointeger(L, 1);
+	uint32 CharID = (uint32)lua_tointeger(L, 2);
+	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
+	if (PNPC != NULL)
+	{
+		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
+		int32 ret = Sql_Query(SqlHandle, Query, CharID);
+		if (ret != SQL_ERROR &&
+			Sql_NumRows(SqlHandle) != 0 &&
+			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+		{
+			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
+			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
+			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
+			int8* data = (int8*)lua_tolstring(L, 3, NULL);
+			int8* name = (int8*)PNPC->GetObjectName();
+			uint8 size = (uint8)PNPC->name.size();
+			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_PARTY, ZoneID, data, size));
+		}
+	}
+	return 1;
+}
 
 /************************************************************************
 *                                                                       *
@@ -947,12 +1108,12 @@ int32 GetMobAction(lua_State* L)
 
 int32 GetTextIDVariable(uint16 ZoneID, const char* variable)
 {
-    lua_pushnil(LuaHandle);
-    lua_setglobal(LuaHandle, variable);
+	lua_pushnil(LuaHandle);
+	lua_setglobal(LuaHandle, variable);
 
-    int8 File[255];
+	int8 File[255];
 	memset(File,0,sizeof(File));
-    snprintf(File, sizeof(File), "scripts/zones/%s/TextIDs.lua", zoneutils::GetZone(ZoneID)->GetName());
+	snprintf(File, sizeof(File), "scripts/zones/%s/TextIDs.lua", zoneutils::GetZone(ZoneID)->GetName());
 
 	if( luaL_loadfile(LuaHandle,File) || lua_pcall(LuaHandle,0,0,0) )
 	{
@@ -960,17 +1121,17 @@ int32 GetTextIDVariable(uint16 ZoneID, const char* variable)
 		return 0;
 	}
 
-    lua_getglobal(LuaHandle,variable);
+	lua_getglobal(LuaHandle,variable);
 
 	if( lua_isnil(LuaHandle,-1) || !lua_isnumber(LuaHandle,-1) )
 	{
-        lua_pop(LuaHandle, 1);
+		lua_pop(LuaHandle, 1);
 		return 0;
 	}
 
-    int32 value = lua_tonumber(LuaHandle, -1);
-    lua_pop(LuaHandle, -1);
-    return value;
+	int32 value = lua_tonumber(LuaHandle, -1);
+	lua_pop(LuaHandle, -1);
+	return value;
 }
 
 /************************************************************************

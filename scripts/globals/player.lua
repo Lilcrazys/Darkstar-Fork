@@ -288,6 +288,19 @@ function CharCreate(player)
          player:addNationTeleport(2,10485760);
       end
    end
+
+    if (ALL_CONFLUX) then
+      player:setVar("ConfluxMask[Konschtat]",255);
+      player:setVar("ConfluxMask[Tahrongi]",255);
+      player:setVar("ConfluxMask[LaTheine]",255);
+      player:setVar("ConfluxMask[Attohwa]",511);
+      player:setVar("ConfluxMask[Misareaux]",511);
+      player:setVar("ConfluxMask[Vunkerl]",511);
+      player:setVar("ConfluxMask[Altepa]",255);
+      player:setVar("ConfluxMask[Uleguerand]",255);
+      player:setVar("ConfluxMask[Grauberg]",255);
+    end
+
    ----- End settings.lua Perks -----
 
 	-- SET START GIL

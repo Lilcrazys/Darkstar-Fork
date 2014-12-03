@@ -1,10 +1,11 @@
 -----------------------------------------
 -- Spell: Kurayami:Ni
 -----------------------------------------
-
-require("scripts/globals/status");
+package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/globals/magic");
-
+require("scripts/globals/status");
+require("scripts/globals/settings");
+require("scripts/globals/abyssea");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -14,6 +15,16 @@ function OnMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+	if caster:isPC() then
+		local YellowTrigger = caster:getVar("YellowTrigger");
+		if (YellowTrigger == 348) then
+			WeaknessTriggerYellow(caster,target,spell);
+		else
+			if (math.random(4) == 1) then
+				TriggerHintYELLOW(caster);
+			end
+		end
+	end
 
 	-- Base Stats
 	local dINT = (caster:getStat(MOD_INT) - target:getStat(MOD_INT));

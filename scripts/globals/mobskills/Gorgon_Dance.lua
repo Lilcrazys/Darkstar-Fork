@@ -14,13 +14,17 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function OnMobSkillCheck(target,mob,skill)
-	return 0;
+	local ID = mob:getID();
+    if (ID == 16998862) then
+	    return 0;
+	end
+	    return 1;
 end;
 
 function OnMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_PETRIFICATION;
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60));
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 15));
 
 	return typeEffect;
 end;

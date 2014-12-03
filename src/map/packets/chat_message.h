@@ -57,4 +57,9 @@ public:
 	CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE MessageType, int8* buff);
 };
 
+class CNPCMessagePacket : public CBasicPacket
+{
+public:
+	CNPCMessagePacket(int8* name, CHAT_MESSAGE_TYPE MessageType, uint8 zone, int8* dat, uint8 size);
+};
 #endif

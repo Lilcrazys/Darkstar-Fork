@@ -672,7 +672,7 @@ enum EFFECT
 	EFFECT_DYNAMIS					= 800
 };
 
-#define MAX_EFFECTID    801  // 768 real + 32 custom
+#define MAX_EFFECTID    901  // 768 real + 132 custom
 
 /************************************************************************
 *																		*

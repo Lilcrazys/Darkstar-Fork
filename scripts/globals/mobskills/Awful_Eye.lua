@@ -14,7 +14,7 @@ function OnMobSkillCheck(target,mob,skill)
 end;
 
 function OnMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_STR_DOWN;
+    local typeEffect = EFFECT_PETRIFICATION;
 
     skill:setMsg(MobGazeMove(mob, target, typeEffect, 33, 3, 120));
     return typeEffect;

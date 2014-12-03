@@ -43,3 +43,16 @@ CChatMessagePacket::CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE Mes
      memcpy(data + (0x08) - 4, PChar->GetName(), PChar->name.size());
      memcpy(data + (0x18) - 4, buff, buffSize);
 }
+
+CNPCMessagePacket::CNPCMessagePacket(int8* name, CHAT_MESSAGE_TYPE MessageType, uint8 zone, int8* dat, uint8 size)
+{
+		this->type = 0x17;
+		this->size = 32 + strlen(dat) + strlen(dat) % 2;
+
+		WBUFB(data, (0x04) - 4) = MessageType;
+		WBUFB(data, (0x06) - 4) = zone;
+
+		memcpy(data + (0x08) - 4, name, size);
+		memcpy(data + (0x18) - 4, dat, strlen(dat));
+
+}

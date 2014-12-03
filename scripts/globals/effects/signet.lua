@@ -20,6 +20,7 @@ require("scripts/globals/status");
 function onEffectGain(target,effect)
 	target:addMod(MOD_DEF,15);
 	target:addMod(MOD_EVA,15);
+	target:addStatusEffect(EFFECT_RERAISE,1,0,3600);
 end;
 
 -----------------------------------
@@ -36,4 +37,5 @@ end;
 function onEffectLose(target,effect)
 	target:delMod(MOD_DEF,15);
 	target:delMod(MOD_EVA,15);
+	target:delStatusEffect(EFFECT_RERAISE,1,0,3600);
 end;
