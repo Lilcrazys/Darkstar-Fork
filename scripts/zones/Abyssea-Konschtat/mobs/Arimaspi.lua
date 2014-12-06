@@ -46,8 +46,8 @@ function onMobDeath(mob,killer)
 end;
 
 function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	DoExp(mob,killer);
-	DoCruor(mob,killer);
-    DoLights(killer,mob,action)
+	-- DoExp(mob,killer);
+	-- DoCruor(mob,killer);
+    -- DoLights(killer,mob,action)
 	-- PyxisSpawn(mob,killer,npc);
 end;

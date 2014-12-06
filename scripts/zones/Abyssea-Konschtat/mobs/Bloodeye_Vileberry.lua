@@ -72,9 +72,9 @@ function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
 		-- SetDropRate(dropID,itemID,newrate);
 		-- SetDropRate(dropID,itemID,newrate);
 	end
-	DoExp(mob,killer);
-	DoCruor(mob,killer);
-    DoLights(killer,mob,action)
+	-- DoExp(mob,killer);
+	-- DoCruor(mob,killer);
+    -- DoLights(killer,mob,action)
 	-- PyxisSpawn(mob,killer,npc);
 
 end;

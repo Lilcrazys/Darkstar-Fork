@@ -10,23 +10,15 @@ cmdprops =
     parameters = ""
 };
 
+-- Don't use a var here, it doesn't get cleared when the effects get removed by causes other than GM command...
 function onTrigger(player)
-	if (player:getVar("Regen") == 0) then
-   		  -- Toggle Regen on..
-        player:setVar("Regen", 1);
-
-        -- Add bonus effects to the player..
-		player:addStatusEffect(EFFECT_REGAIN,5,1,0);
-        player:addStatusEffect(EFFECT_REFRESH,50,0,0);
-        player:addStatusEffect(EFFECT_REGEN,50,0,0);
-    else
-            -- Toggle Regen off..
-        player:setVar("Regen", 0);
-
-        -- Remove bonus effects..
-		player:delStatusEffect(EFFECT_REGAIN);
-        player:delStatusEffect(EFFECT_REFRESH);
-        player:delStatusEffect(EFFECT_REGEN);
-    end
+	-- Clear any existing...
+	player:delStatusEffect(EFFECT_REGEN);
+	player:delStatusEffect(EFFECT_REFRESH);
+	player:delStatusEffect(EFFECT_REGAIN);
+	-- And replace with fresh status...
+	player:addStatusEffect(EFFECT_REGEN,10,0,0);
+	player:addStatusEffect(EFFECT_REFRESH,6,0,0);
+	player:addStatusEffect(EFFECT_REGAIN,5,1,0);
 end
 
