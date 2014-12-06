@@ -28,21 +28,21 @@ ENABLE_ABYSEA = 1;
 ENABLE_SOA    = 1;
 
 -- CHARACTER CONFIG
-INITIAL_LEVEL_CAP = 50; --The initial level cap for new players.  There seems to be a hardcap of 255.
+INITIAL_LEVEL_CAP = 70; --The initial level cap for new players.  There seems to be a hardcap of 255.
 MAX_LEVEL = 99; -- Level max of the server, works by disabling Maat quests.
 NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 0; -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
 NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 0; -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
-START_GIL = 20000; --Amount of gil given to newly created characters.
+START_GIL = 200000; --Amount of gil given to newly created characters.
 START_INVENTORY = 80; --Starting inventory and satchel size.  Ignores values < 30.  Do not set above 80!
 OPENING_CUTSCENE_ENABLE = 0; --Set to 1 to enable opening cutscenes, 0 to disable.
 SUBJOB_QUEST_LEVEL = 18; --Minimum level to accept either subjob quest.  Set to 0 to start the game with subjobs unlocked.
 ADVANCED_JOB_LEVEL = 30; --Minimum level to accept advanced job quests.  Set to 0 to start the game with advanced jobs.
 ALL_MAPS = 1; -- Set to 1 to give starting characters all the maps.
-UNLOCK_OUTPOST_WARPS = 2; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
+UNLOCK_OUTPOST_WARPS = 1; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE = 1.000; --Multiplies prices in NPC shops.
 GIL_RATE   = 2.000; --Multiplies gil earned from quests.  Won't always display in game.
-EXP_RATE   = 2.000; --Multiplies exp earned from fov.
+EXP_RATE   = 3.000; --Multiplies exp earned from fov.
 TABS_RATE  = 2.000; --Multiplies tabs earned from fov.
 SAN_FAME   = 2.000; --Multiplies fame earned from San d'Oria quests.
 BAS_FAME   = 2.000; --Multiplies fame earned from Bastok quests.
