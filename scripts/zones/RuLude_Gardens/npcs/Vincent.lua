@@ -30,19 +30,18 @@ function onTrigger(player,npc)
 	256 = Grauberg			
 	total = 511
 ]]--
-	-- local AbysseaStatus = 1; -- player:getVar("AbysseaStatus");
-	-- local MawUnlock = 0;
-	--local cruor = player:getCruor();
-	-- if (MAW_UNLOCK == true) then
-		-- MawUnlock = 511;
-	-- else 
-		-- MawUnlock = player:getVar("MawUnlock[BIT]");
-	-- end
+	local AbysseaStatus = 1; -- player:getVar("AbysseaStatus");
+	local MawUnlock = 0;
+	local cruor = player:getCruor();
+	if (MAW_UNLOCK == true) then
+		MawUnlock = 511;
+	else 
+		MawUnlock = player:getVar("MawUnlock[BIT]");
+	end
 	-- print("onEventSelection")
     -- print("onEventSelection - CSID:",csid);
     -- print("onEventSelection - option ===",option);
-	SpoofSay(npc:getID(),player:getID(),"On completion of your trial please ensure you have at least 1 space free in your inventory.");
-	--player:startEvent(10185,1,cruor,511);
+	player:startEvent(10185,1,cruor,511);
 	
 end;
 
