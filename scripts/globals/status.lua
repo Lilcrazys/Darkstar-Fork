@@ -1135,6 +1135,11 @@ MOD_QUAD_ATTACK				  =0x1AE -- Quadruple attack chance.
 MOD_ADDITIONAL_EFFECT         =0x1AF -- All additional effects
 MOD_ENSPELL_DMG_BONUS         =0x1B0
 
+// Auto-Reraise
+MOD_RERAISE_I                 = 0x1C8, -- Auto-Reraise. (modId = 456)
+MOD_RERAISE_II                = 0x1C9, -- Auto-Reraise II. (modId = 457)
+MOD_RERAISE_III               = 0x1CA, -- Auto-Reraise III. (modId = 458)
+
 MOD_FIRE_ABSORB               =0x1CB -- (modId = 459)
 MOD_EARTH_ABSORB              =0x1CC -- (modId = 460)
 MOD_WATER_ABSORB              =0x1CD -- (modId = 461)

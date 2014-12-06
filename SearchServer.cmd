@@ -5,5 +5,4 @@ DSSearch-server.exe
 echo Server was stopped or crashed!
 echo %date% %time%> .\log\Last_AH_Stop.log
 @echo ...
-PAUSE
 GOTO onCrash

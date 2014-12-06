@@ -11,6 +11,11 @@ cmdprops =
 };
 
 function onTrigger(player)
+--[[
+
+Can't do mods outside of effects in this manner 
+(foods are their own effects so they get away with it by magic)
+
 	if (player:getVar("FastCast") == 0) then
         -- Toggle  on..
         player:setVar("FastCast", 1);
@@ -27,4 +32,5 @@ function onTrigger(player)
 		player:delStatusEffect(EFFECT_REGEN);
 		--player:delMod(MOD_GRIMOIRE_SPELLCASTING,700);
 	end
+]]--
 end
