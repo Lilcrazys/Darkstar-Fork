@@ -113,29 +113,17 @@ end;
 function onTrigger(player,npc)
 	-- lets see if this works!
 	-- If it does we can replace these entries and add up to 8 more
-    stock = {
-		--5718,  10000,   -- Cream Puff +17 int
-		--4363,   6000,   -- faerie apple
-		--5163,  7500,   -- Sole Sushi + 1 2000hp+
-	    4238,	1000,	-- fire
-	    4239,	1000,	-- ice
-	    4240,	1000,	-- wind
-	    4241,	1000,	-- earth
-	    4242,	1000,	-- lightning
-	    4243,	1000,	-- water
-	    4244,	1000,	-- light
-	    4245,	1000,	-- dark
-	   --15763,   10000,   -- Emperor Band
-	    --4151,   1000,    --Echo drops
-		--4150,   1000,    -- EyeDrops
-	   15533, 50000,    -- Choco Whistle
-	   14808, 150000000,  --Novio Earring
-	--	4776, 12638259,		--Scroll of Thunder V
-	--	4827, 12345549,		--Scroll of Comet
-	--	4891, 125967173, 	-- Scroll of Blizzaja
-	--  4894, 134739250,	--Scroll of Thundaja
-	--	4154, 1000,         --Holy Water
-    }
+    stock =
+	{
+		0x1034,316,		--Antidote
+		0x1037,800,		--Echo Drops
+		0x1020,4832,	--Ether
+		0x1036,2595,	--Eye Drops
+		0x1010,910,		--Potion
+	    4151,1000,    --Echo drops
+		4150,1000,    -- EyeDrops
+		10463,20000000
+    };
 
 	Shop(player, STATIC, stock);
 

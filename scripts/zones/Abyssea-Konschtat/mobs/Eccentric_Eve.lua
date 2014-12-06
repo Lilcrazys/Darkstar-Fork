@@ -21,6 +21,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+	mob:addMod(MOD_REGAIN,30);
 end;
 
 -----------------------------------

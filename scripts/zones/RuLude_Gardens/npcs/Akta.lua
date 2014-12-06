@@ -1093,7 +1093,7 @@ function onTrigger(player,npc)
 		GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	else
-		player:startEvent(0x2750);
+		SpoofSay(npc:getID(),player:getID(),"What you looking at?, Try brining me something of interest.");
 	end
 end;
 
