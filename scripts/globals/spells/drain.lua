@@ -58,10 +58,10 @@ function onSpellCast(caster,target,spell)
 
 	dmg = (dmg * DRAIN_POWER);
 	
-	local AtmaBonus = 25
-	if caster:hasStatusEffect(EFFECT_ATMA_OF_DUNES) then
-		dmg = dmg+AtmaBonus;
-	end
+	-- local AtmaBonus = 25
+	-- if caster:hasStatusEffect(EFFECT_ATMA_OF_DUNES) then
+	--	dmg = dmg+AtmaBonus;
+	-- end
 	
 	caster:addHP(dmg);
 	return dmg;
