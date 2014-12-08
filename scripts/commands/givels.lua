@@ -7,7 +7,7 @@
 cmdprops =
 {
 	permission = 0,
-	parameters = "s"
+	parameters = "ss"
 };
 
 function onTrigger(player,ls,target)
