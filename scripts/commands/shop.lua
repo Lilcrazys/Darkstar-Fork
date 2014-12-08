@@ -31,26 +31,18 @@ function onTrigger(player,page)
             4242,   5000,       -- HQ Lightning Crystal
             4243,   5000,       -- HQ Water Crystal
             4244,   5000,       -- HQ Light Crystal
-            4245,   5000        -- HQ Dark Crystal
+            4245,   5000,       -- HQ Dark Crystal
         };
         showShop(player, STATIC, stock_1);
 
     elseif (page == 2) then -- Would you like fries with that?
         local stock_2 =
         {
-            4271,   2499,       -- Rice Dumpling
-            4381,   2100,       -- Meat Mithkabob
-            4398,   2100,       -- Fish Mithkabob
-            4457,   2100,       -- Eel Kabob
-            5166,   2100,       -- Coeurl Sub Sandwich
-            4355,   1450,       -- Salmon Sub Sandwich
-            5686,   799,        -- Cheese Sandwich
-            5561,   799,        -- Moogle Pie
-            4270,   999,        -- Sweet Rice Cake
-            5944,   2000,       -- Frontier Soda
-            5932,   1600,       -- Kitron Juice
-            4424,   1100,       -- Melon Juice
-            4422,   499         -- Orange Juice
+            5610,   60000,      -- Hellsteak +1
+            5163,   60000,      -- Plate of Sole Sushi +1
+            5765,   60000,      -- Red Curry Bun +1
+            5764,   60000,      -- Black Curry Bun +1
+            5718,   20000,      -- Cream Puff
         };
         showShop(player, STATIC, stock_2);
 
