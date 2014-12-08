@@ -18,6 +18,8 @@ function onTrigger(player,tele,target)
     package.loaded["scripts/globals/teleports"] = nil;
     require("scripts/globals/teleports");
 
+    local gmlvl = player:getGMLevel();
+	
     -- Check that a location was given...
     if (tele == nil) then
         player:PrintToPlayer("You must enter a valid Teleport location.");
@@ -26,13 +28,12 @@ function onTrigger(player,tele,target)
     end
 
     -- Check if the target was specified and default to self if not...
-    if (target == nil) then
+    if (target == nil or gmlvl == 0) then
         target = player:getName();
     end
 
     -- And now we check that the target exists and do the teleport if it does.
     local targ = GetPlayerByName( target );
-    local gmlvl = player:getGMLevel();
     if (targ ~= nil) then
     -- Parse the Teleports
         if (tele == "dem" or tele == "Dem") then
