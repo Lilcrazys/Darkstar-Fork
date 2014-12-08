@@ -36,7 +36,7 @@ function onTrigger(player,ls,target)
 			local targ = GetPlayerByName(target);
 			if (targ ~= nil) then
 				-- Load needed text ids for players current zone..
-				local TextIDs = "scripts/zones/" .. target:getZoneName() .. "/TextIDs";
+				local TextIDs = "scripts/zones/" .. targ:getZoneName() .. "/TextIDs";
 				package.loaded[TextIDs] = nil;
 				require(TextIDs);
 
