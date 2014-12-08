@@ -28,7 +28,7 @@ ENABLE_ABYSEA = 1;
 ENABLE_SOA    = 1;
 
 -- CHARACTER CONFIG
-INITIAL_LEVEL_CAP = 70; --The initial level cap for new players.  There seems to be a hardcap of 255.
+INITIAL_LEVEL_CAP = 50; --The initial level cap for new players.  There seems to be a hardcap of 255.
 MAX_LEVEL = 99; -- Level max of the server, works by disabling Maat quests.
 NORMAL_MOB_MAX_LEVEL_RANGE_MIN = 0; -- Lower Bound of Max Level Range for Normal Mobs (0 = Uncapped)
 NORMAL_MOB_MAX_LEVEL_RANGE_MAX = 0; -- Upper Bound of Max Level Range for Normal Mobs (0 = Uncapped)
@@ -96,8 +96,8 @@ LandKingSystem_HQ = 2;
              DYNA_LEVEL_MIN = 65;       -- level min for entering in Dynamis
     TIMELESS_HOURGLASS_COST = 500000;   -- cost of the timeless hourglass for Dynamis.
      CURRENCY_EXCHANGE_RATE = 100;      -- X Tier 1 ancient currency -> 1 Tier 2, and so on.  Certain values may conflict with shop items.  Not designed to exceed 198.
-RELIC_2ND_UPGRADE_WAIT_TIME = 604800;      -- wait time for 2nd relic upgrade (stage 2 -> stage 3) in seconds. 604800s = 1 RL week.
-RELIC_3RD_UPGRADE_WAIT_TIME = 295200;      -- wait time for 3rd relic upgrade (stage 3 -> stage 4) in seconds. 295200s = 82 hours.
+RELIC_2ND_UPGRADE_WAIT_TIME = 86400;      -- wait time for 2nd relic upgrade (stage 2 -> stage 3) in seconds. 604800s = 1 RL week.
+RELIC_3RD_UPGRADE_WAIT_TIME = 86400;      -- wait time for 3rd relic upgrade (stage 3 -> stage 4) in seconds. 295200s = 82 hours.
 FREE_COP_DYNAMIS = 0 ; -- Authorize player to entering inside COP Dynamis without completing COP mission ( 1 = enable 0= disable)
 -- QUEST/MISSION SPECIFIC SETTINGS
 WSNM_LEVEL = 70; -- Min Level to get WSNM Quests
