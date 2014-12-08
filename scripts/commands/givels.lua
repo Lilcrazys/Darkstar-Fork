@@ -24,8 +24,8 @@ function onTrigger(player,ls,target)
 		return
 	end
 
-	local local assistant = false;
-	if (player:getVar("AssistantGM") == 1 and player:checkNameFlags(0x02002000)) then
+	local assistant = false;
+	if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
 		assistant = true;
 	end
 
@@ -57,7 +57,7 @@ function onTrigger(player,ls,target)
 			player:PrintToPlayer( "@givels <linkshell name> <player>" );
 		end
 	else
-		Player:PrintToPlayer("You are not authorized to use this command.")
+		player:PrintToPlayer("You are not authorized to use this command.")
 	end
 
 end;

@@ -133,6 +133,7 @@ int32 init()
 	lua_register(LuaHandle, "SpoofEmote", luautils::SpoofEmote);
 	lua_register(LuaHandle, "SpoofLink", luautils::SpoofLink);
 	lua_register(LuaHandle, "SpoofParty", luautils::SpoofParty);
+	lua_register(LuaHandle,"isValidLS",luautils::isValidLS);
 
     Lunar<CLuaAbility>::Register(LuaHandle);
 	Lunar<CLuaBaseEntity>::Register(LuaHandle);
@@ -946,9 +947,9 @@ int32 GetMobAction(lua_State* L)
     return 1;
 }
 /************************************************************************
-*                                                      *
-*   Send a fake "say" message from an NPC or MOB.                  *
-*                                                      *
+*                                                                       *
+*   Send a fake "say" message from an NPC or MOB.                       *
+*                                                                       *
 ************************************************************************/
 
 int32 SpoofSay(lua_State* L)
@@ -977,9 +978,9 @@ int32 SpoofSay(lua_State* L)
 }
 
 /************************************************************************
-*                                                      *
-*   Send a fake "tell" message from an NPC or MOB.                  *
-*                                                      *
+*                                                                       *
+*   Send a fake "tell" message from an NPC or MOB.                      *
+*                                                                       *
 ************************************************************************/
 
 int32 SpoofTell(lua_State* L)
@@ -1008,9 +1009,9 @@ int32 SpoofTell(lua_State* L)
 }
 
 /************************************************************************
-*                                                      *
-*   Send a fake "emote" message from an NPC or MOB.                  *
-*                                                      *
+*                                                                       *
+*   Send a fake "emote" message from an NPC or MOB.                     *
+*                                                                       *
 ************************************************************************/
 
 int32 SpoofEmote(lua_State* L)
@@ -1039,9 +1040,9 @@ int32 SpoofEmote(lua_State* L)
 }
 
 /************************************************************************
-*                                                      *
-*   Send a fake "linkshell" message from an NPC or MOB.                  *
-*                                                      *
+*                                                                       *
+*   Send a fake "linkshell" message from an NPC or MOB.                 *
+*                                                                       *
 ************************************************************************/
 
 int32 SpoofLink(lua_State* L)
@@ -1070,9 +1071,9 @@ int32 SpoofLink(lua_State* L)
 }
 
 /************************************************************************
-*                                                      *
-*   Send a fake "party" message from an NPC or MOB.                  *
-*                                                      *
+*                                                                       *
+*   Send a fake "party" message from an NPC or MOB.                     *
+*                                                                       *
 ************************************************************************/
 
 int32 SpoofParty(lua_State* L)
@@ -1099,6 +1100,29 @@ int32 SpoofParty(lua_State* L)
 	}
 	return 1;
 }
+
+/************************************************************************
+*                                                                       *
+* Check if a given linkshell exists by checking the name in database    *
+*                                                                       *
+************************************************************************/
+
+	int32 isValidLS(lua_State* L)
+	{
+	const int8* linkshellName = lua_tostring(L, 1);
+	const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
+	int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
+
+	if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+	{
+		lua_pushboolean(L, true);
+	}
+		else
+	{
+		lua_pushboolean(L, false);
+	}
+		return 1;
+	}
 
 /************************************************************************
 *                                                                       *

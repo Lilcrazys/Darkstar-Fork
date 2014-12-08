@@ -184,6 +184,7 @@ namespace luautils
 	int32 SpoofEmote(lua_State* L);												// Send faked Emote messages from NPCs or MOBs.
 	int32 SpoofLink(lua_State* L);												// Send faked Linkshell messages from NPCs or MOBs.
 	int32 SpoofParty(lua_State* L);												// Send faked Party messages from NPCs or MOBs.
+	int32 isValidLS(lua_State*);                                                // Checks is LS exists
 	int32 SetDropRate(lua_State*);												// Set drop rate of a mob setDropRate(dropid,itemid,newrate)
 	int32 UpdateTreasureSpawnPoint(lua_State* L);                               // Update the spawn point of an Treasure
 	int32 UpdateServerMessage(lua_State*);										// update server message, first modify in conf and update
