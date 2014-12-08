@@ -51,17 +51,17 @@ function onSpellCast(caster,target,spell)
 	if(target:getMP() > dmg) then
 		caster:addMP(dmg);
 		target:delMP(dmg);
-	elseif caster:hasStatusEffect(EFFECT_ATMA_OF_DUNES) then
-		local AtmaBonus = 25
-		if(target:getMP() > dmg) then
-			caster:addMP(dmg+AtmaBonus);
-			target:delMP(dmg+AtmaBonus);
-		else
-			dmg = target:getMP();
-			caster:addMP(dmg+AtmaBonus);
-			target:delMP(dmg+AtmaBonus);
-		end
-	else
+	--elseif caster:hasStatusEffect(EFFECT_ATMA_OF_DUNES) then
+	--	local AtmaBonus = 25
+	--	if(target:getMP() > dmg) then
+	--		caster:addMP(dmg+AtmaBonus);
+	--		target:delMP(dmg+AtmaBonus);
+	--	else
+	--		dmg = target:getMP();
+	--		caster:addMP(dmg+AtmaBonus);
+	--		target:delMP(dmg+AtmaBonus);
+	--	end
+	-- else
 		dmg = target:getMP();
 		caster:addMP(dmg);
 		target:delMP(dmg);
