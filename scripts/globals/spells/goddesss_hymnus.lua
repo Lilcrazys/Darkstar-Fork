@@ -16,6 +16,9 @@ function OnMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+
+	-- This file needs to be re-synchronized with darkstar! Someone live edited the server and screwed up 
+
 	local duration = 120;
  	duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
  	duration = duration + (duration * ((caster:getMod(MOD_ALL_SONGS) * 10)/100));
