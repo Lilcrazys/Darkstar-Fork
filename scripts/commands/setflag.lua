@@ -1,27 +1,19 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @setflag <flags> <target>
--- auth: TeoTwawki
+-- auth: TeoTwawki (aka Forgottenandlost)
 -- desc: set arbitrary flags for testing
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1,
     parameters = "ss"
 };
-
-    -- GM flags as stated in @togglegm (not retail!)
-    -- FLAG_GM          = 0x04000000;
-    -- FLAG_GM_SENIOR   = 0x05000000;
-    -- FLAG_GM_LEAD     = 0x06000000;
-    -- FLAG_GM_PRODUCER = 0x07000000;
-    -- FLAG_SENIOR      = 0x01000000; -- Do NOT set these flags. These are here to
-    -- FLAG_LEAD        = 0x02000000; -- ensure all GM status is removed.
 
 function onTrigger(player, flags, target)
 
     if (flags == nil) then
-        player:PrintToPlayer("You must enter a number for the flags!");
+        player:PrintToPlayer("You must enter a number for the flags (hex values work)");
         player:PrintToPlayer( "@setflag <flags> <target>" );
         return;
     end
@@ -39,6 +31,7 @@ function onTrigger(player, flags, target)
     end
 
 end;
+
 
 --  FLAG_AUTOGROUP      = 0x00000000,
 --  FLAG_NEWPLAYER      = 0x00000000,
