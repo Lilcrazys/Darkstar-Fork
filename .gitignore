@@ -117,3 +117,4 @@ UpgradeLog*.XML
 *.out
 *.app
 /log/Errors lost.txt
+/log/Old

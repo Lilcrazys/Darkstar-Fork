@@ -40,10 +40,11 @@ function onTrigger(player,ls,target)
 				package.loaded[TextIDs] = nil;
 				require(TextIDs);
 
-				if (player:getFreeSlotsCount() >= 1) then
+				if (targ:getFreeSlotsCount() >= 1) then
 					targ:addLSpearl(ls);
 					targ:messageSpecial( ITEM_OBTAINED, 515 );
 					targ:PrintToPlayer( "Welcome to our community! Don't forget to equip your LinkPearl :) " );
+					player:PrintToPlayer( string.format( "Player '%s' should now have a pearl in inventory. Remember to welcome them in LS.", target ) );
 				else
 					targ:messageSpecial( ITEM_CANNOT_BE_OBTAINED, 515 );
 					player:PrintToPlayer( string.format( "Player '%s' doesn't have a free slot for the item.", target ) );
