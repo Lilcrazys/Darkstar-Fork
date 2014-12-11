@@ -4254,3 +4254,58 @@ INSERT INTO `mob_skill` VALUES (94,623,94,'Mandible_Bite', 0, 7.0, 2000, 1500, 4
 INSERT INTO `mob_skill` VALUES (97,623,97,'Death_Scissors', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
 INSERT INTO `mob_skill` VALUES (98,623,98,'Wild_Rage', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
 INSERT INTO `mob_skill` VALUES (99,623,99,'Earth_Pounder', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
+
+-- Lofty_Ferromantoise (904)
+INSERT INTO `mob_skill` VALUES(548,904,476,'Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(549,904,477,'Head_Butt_Turtle',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(550,904,478,'Tortoise_Stomp',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(551,904,479,'Harden_Shell',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES(552,904,480,'Earth_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2329,904,478,'Tetsudo_Tremor',0,7.0,2000,1500,4,0,0,0);
+
+-- Lofty_Elasmoth 903
+INSERT INTO `mob_skill` VALUES(2135,903,373,'Amnesic_Blast',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(372,903,372,'Wild_Horn',4,10.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(373,903,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(376,903,376,'Flame_Armor',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES(2330,903,378,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
+
+-- Lofty_Zilant 900
+INSERT INTO `mob_skill` VALUES (2264,900,1757,'Sinister_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2265,900,1758,'Chaos_blast',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2267,900,1760,'Dancing_tail',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2269,900,1762,'Chilling_roar',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2271,900,1764,'Soul_douse',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2273,900,1766,'Dark_star',1,18.0,2000,1000,4,0,0,0);
+
+-- Lofty_Harpeia 901
+INSERT INTO `mob_skill` VALUES (2469,901,1912,'Rending_talons',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2470,901,1913,'Shrieking_gale',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2471,901,1914,'Wings_of_woe',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2472,901,1915,'Wings_of_agony',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2474,901,1917,'Ravenous_wail',1,15.0,2000,1000,4,0,0,0);
+
+
+-- Lofty_Wyrm (905)
+INSERT INTO `mob_skill` VALUES(1033,905,653,'Gregale_Wing',1,30.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(1034,905,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(1035,905,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(1036,905,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(1037,905,964,'Sleet_Blast',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(1039,905,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES(439,905,432,'Blood_Weapon',0,18.0,2000,0,1,0,30,0);
+
+-- Lofty_Behemoth 902
+INSERT INTO `mob_skill` VALUES (373,902,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (374,902,374,'Kick_Out',4,10.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (375,902,375,'Shock_Wave',4,7.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (376,902,376,'Flame_Armor',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (378,902,378,'Meteor',2,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2135,902,373,'Amnesic_Blast',0,10.0,2000,1500,4,0,0,0);
+
+-- Lofty_Adamantoise 906
+INSERT INTO `mob_skill` VALUES (548,906,476,'Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (549,906,477,'Head_Butt_Turtle',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (550,906,478,'Tortoise_Stomp',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (552,906,480,'Earth_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (553,906,481,'Aqua_Breath',4,15.0,2000,1500,4,0,0,0);

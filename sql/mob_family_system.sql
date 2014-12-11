@@ -605,7 +605,21 @@ INSERT INTO `mob_family_system` VALUES (602,'Za_Dha_Adamantking',7,'Beastmen',1,
 INSERT INTO `mob_family_system` VALUES (621,'Alkyoneus',7,'Beastmen',2,40,125,100,1,2,1,1,5,4,1,3,3,3,3,1,1,1,1,1,0.875,1,1.125,0.5,1,1,1,2);
 INSERT INTO `mob_family_system` VALUES (622,'Stroper_Chyme',1,'Amorph',1,40,100,120,1,3,3,4,3,6,1,3,3,3,3,0.5,0.5,0.25,0.25,1.5,1.125,1.125,1.125,1.125,0.625,1.125,1.125,6);
 INSERT INTO `mob_family_system` VALUES (623,'Aqrabuamelu',20,'Vermin',3,40,90,120,3,3,4,3,3,6,5,3,3,3,3,1,1,1,1,1,1.25,1,1,1,0.875,1.25,0.875,4);
-
+INSERT INTO `mob_family_system` VALUES (900,'Lofty_Zilant',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,1,1.125,1,1,1,1,1,3);
+INSERT INTO `mob_family_system` VALUES (901,'Lofty_Harpeia',8,'Bird',3,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
+INSERT INTO `mob_family_system` VALUES (902,'Lofty_Behemoth',6,'Beast',4,40,110,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,6);
+INSERT INTO `mob_family_system` VALUES (903,'Lofty_Elasmoth',6,'Beast',4,40,110,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,6);
+INSERT INTO `mob_family_system` VALUES (904,'Lofty_Ferromantoise',14,'Lizard',3,30,120,90,2,5,1,6,8,4,3,3,3,3,4,1,1,1,1,1,1.25,1,0.875,1.125,0.875,1,1,4);
+INSERT INTO `mob_family_system` VALUES (905,'Lofty_Wyrm',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0,8);
+INSERT INTO `mob_family_system` VALUES (906,'Lofty_Adamantoise',14,'Lizard',3,30,120,90,2,5,1,6,6,4,3,3,3,3,4,1,1,1,1,1,1.25,1,0.875,1.125,0.875,1,1,4);
+INSERT INTO `mob_family_system` VALUES (907,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1.25,0.75,0.75,1,1,1,1,3);
+INSERT INTO `mob_family_system` VALUES (908,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1,1,1,1,1,1.25,0.75,8);
+INSERT INTO `mob_family_system` VALUES (909,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1,1.25,0.75,0.75,1,1,1,4);
+INSERT INTO `mob_family_system` VALUES (910,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,0.75,0.75,1,1,1,1.25,1,1,1);
+INSERT INTO `mob_family_system` VALUES (911,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1.25,0.75,0.75,1,1,1,1,1,2);
+INSERT INTO `mob_family_system` VALUES (912,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1,1,1,1,1,0.75,1.25,7);
+INSERT INTO `mob_family_system` VALUES (913,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1,1,1.25,0.75,0.75,1,1,5);
+INSERT INTO `mob_family_system` VALUES (914,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,0.75,1,1,1,1.25,0.75,1,1,6);
 /*!40000 ALTER TABLE `mob_family_system` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
