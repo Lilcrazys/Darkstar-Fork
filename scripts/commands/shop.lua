@@ -50,18 +50,31 @@ function onTrigger(player,page)
     elseif (page == 3) then -- Medicine chest.
         local stock_3 =
         {
-            4148,   316,	-- Antidote
-            4150,   2595,	-- Eye Drops
-            4151,   800,	-- Echo drops
-            4112,   910,	-- Potion
-            4128,   4832,	-- Ether
+            4148,   316,    -- Antidote
+            4150,   2595,   -- Eye Drops
+            4151,   800,    -- Echo drops
+            4112,   910,    -- Potion
+            4128,   4832,   -- Ether
         };
         showShop(player, STATIC, stock_3);
 
     elseif (page == 4) then -- Tools and gears.
         local stock_4 =
         {
-            10463,   20000000 -- Mustella Harness
+            10463, 20000000, -- Mustella Harness
+            16368,    80000, -- Herder's Subligar
+            18762,    80000, -- Custodes
+            18503,    80000, -- Mammut
+            19222,    80000, -- Wurger
+            15880,    80000, -- Key Ring Belt
+            19223,    60000, -- Attar of Roses
+            16007,    60000, -- Protect Earing
+            15835,    50000, -- Desperado Ring
+            19157,    50000, -- Surviver
+            15926,    50000, -- Bronze Bandolier
+            19221,    50000, -- Firefly
+            15834,    50000, -- Bind Ring
+            16279,    40000, -- Pile Chain
         };
         showShop(player, STATIC, stock_4);
 
