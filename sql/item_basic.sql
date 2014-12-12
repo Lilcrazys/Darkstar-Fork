@@ -12302,7 +12302,9 @@ INSERT INTO `item_basic` VALUES ('17436', '0', 'platinum_rod_+1', 'platinum_rod_
 INSERT INTO `item_basic` VALUES ('17437', '0', 'curse_wand', 'curse_wand', '1', '63568', '0', '1', '0');
 INSERT INTO `item_basic` VALUES ('17438', '0', 'titans_cudgel', 'titans_cudgel', '1', '63552', '0', '1', '0');
 INSERT INTO `item_basic` VALUES ('17439', '0', 'leviathans_rod', 'leviathans_rod', '1', '63552', '0', '1', '0');
-INSERT INTO `item_basic` VALUES ('17440', '0', 'kraken_club', 'kraken_club', '1', '34816', '11', '0', '12850');
+-- K.club intentionally removed from AH listing.
+INSERT INTO `item_basic` VALUES ('17440', '0', 'kraken_club', 'kraken_club', '1', '34816', '0', '0', '12850');
+-- Be careful during resolving any future edit conflicts here.
 INSERT INTO `item_basic` VALUES ('17441', '0', 'eremites_wand', 'eremites_wand', '1', '2080', '11', '0', '564');
 INSERT INTO `item_basic` VALUES ('17442', '0', 'eremites_wand_+1', 'eremites_wand_+1', '1', '2080', '11', '0', '705');
 INSERT INTO `item_basic` VALUES ('17443', '0', 'thoths_wand', 'thoths_wand', '1', '34816', '11', '0', '2487');
