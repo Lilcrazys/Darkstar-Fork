@@ -620,6 +620,30 @@ INSERT INTO `mob_family_system` VALUES (911,'Auspicious_Entity',11,'Elemental',0
 INSERT INTO `mob_family_system` VALUES (912,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1,1,1,1,1,0.75,1.25,7);
 INSERT INTO `mob_family_system` VALUES (913,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,1,1,1,1.25,0.75,0.75,1,1,5);
 INSERT INTO `mob_family_system` VALUES (914,'Auspicious_Entity',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,0.25,0.25,0.25,0.25,0.75,1,1,1,1.25,0.75,1,1,6);
+INSERT INTO `mob_family_system` VALUES (920,'Mired_Cerberus',6,'Beast',3,40,100,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,1);
+INSERT INTO `mob_family_system` VALUES (921,'Mired_Khimaira',3,'Arcana',3,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1.125,1,1.125,1,1,1,1,5);
+INSERT INTO `mob_family_system` VALUES (922,'Mired_Hydra',10,'Dragon',4,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,0.875,1,1,1,1.125,1.125,1,1,0.875,6);
+INSERT INTO `mob_family_system` VALUES (923,'Mired_Orthrus',6,'Beast',3,40,100,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,1);
+INSERT INTO `mob_family_system` VALUES (924,'Mired_Khrysokhimaira',3,'Arcana',3,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1.125,1,1.125,1,1,1,1,5);
+INSERT INTO `mob_family_system` VALUES (925,'Mired_Alfard',10,'Dragon',5,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,0.875,1,1,1,1,1,1,1,1,6);
+INSERT INTO `mob_family_system` VALUES (926,'Mired_Mantis',20,'Vermin',1,40,105,120,3,3,4,3,3,6,5,3,5,3,3,1,1,1,1,1,1.25,1,1,1.25,1,1.125,1.25,4);
+INSERT INTO `mob_family_system` VALUES (930,'Soaring_Corse',19,'Undead',1,40,111,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,0.75,0.75,0.75,0.75,1.25,0.5,8);
+INSERT INTO `mob_family_system` VALUES (931,'Soaring_Dvergr',9,'Demon',1,40,90,140,6,3,3,3,1,5,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0.875,0);
+INSERT INTO `mob_family_system` VALUES (932,'Soaring_Vampyr',19,'Undead',2,40,100,120,1,3,3,4,3,6,6,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
+INSERT INTO `mob_family_system` VALUES (933,'Soaring_Kumakatok',19,'Undead',1,40,111,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,0.75,0.75,0.75,0.75,1.25,0.5,8);
+INSERT INTO `mob_family_system` VALUES (934,'Soaring_Dweorg',9,'Demon',1,40,90,140,6,3,3,3,1,5,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0.875,0);
+INSERT INTO `mob_family_system` VALUES (935,'Soaring_Strigoi',19,'Undead',2,40,100,120,1,3,3,4,3,6,6,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
+INSERT INTO `mob_family_system` VALUES (936,'Soaring_Naraka',19,'Undead',2,40,70,140,6,3,6,3,1,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
+
+
+
+
+
+
+
+
+
+
 /*!40000 ALTER TABLE `mob_family_system` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
