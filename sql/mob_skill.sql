@@ -4309,3 +4309,113 @@ INSERT INTO `mob_skill` VALUES (549,906,477,'Head_Butt_Turtle',0,7.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (550,906,478,'Tortoise_Stomp',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (552,906,480,'Earth_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (553,906,481,'Aqua_Breath',4,15.0,2000,1500,4,0,0,0);
+
+-- Mired Cerberus
+INSERT INTO `mob_skill` VALUES (1529,920,1223,'Lava_Spit', 1, 10.0, 2000, 1500, 4, 0, 0, 0); 
+INSERT INTO `mob_skill` VALUES (1530,920,1224,'Sulfurous_Breath', 0, 7.0, 2000, 1500, 4, 0, 0, 0); 
+INSERT INTO `mob_skill` VALUES (1531,920,1225,'Scorching_Lash', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
+INSERT INTO `mob_skill` VALUES (1532,920,1226,'Ululation', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
+INSERT INTO `mob_skill` VALUES (1533,920,1227,'Magma_Hoplon', 0, 7.0, 2000, 1500, 1, 0, 0, 0); 
+INSERT INTO `mob_skill` VALUES (1534,920,1228,'Gates_of_Hades', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
+
+-- Mired Khimaira
+INSERT INTO `mob_skill` VALUES (1769,921,1369,'Dreadstorm', 1, 13.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (1770,921,1381,'Fossilizing_Breath', 4, 12.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (1772,921,1386,'Fulmination', 1, 40.0, 2000, 1500, 4, 0, 0, 0); 
+INSERT INTO `mob_skill` VALUES (1771,921,1382,'Plague_Swipe', 4, 12.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (1766,921,1367,'Tenebrous_Mist', 1, 13.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (1767,921,1368,'Thunderstrike', 1, 13.0, 2000, 1500, 4, 0, 0, 0);
+
+-- Mired Hydra
+INSERT INTO `mob_skill` VALUES (1572,922,1308,'Pyric_Blast',4,15.0,2000,1500,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1573,922,1319,'Polar_Bulwark',0,7.0,2000,1500,1,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1574,922,1309,'Polar_Blast',4,15.0,2000,1500,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1575,922,1318,'Pyric_Bulwark',0,7.0,2000,1500,1,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1576,922,1313,'Barofield',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1578,922,1310,'Trembling',1,5.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1579,922,1311,'Serpentine_Tail',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1580,922,1312,'Nerve_Gas',1,10.0,2000,1500,4,0,0,0);
+
+-- Mired Orthrus 
+INSERT INTO `mob_skill` VALUES(1529,923,1223,'Lava_Spit',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1530,923,1224,'Sulfurous_Breath',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1531,923,1225,'Scorching_Lash',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1532,923,1226,'Ululation',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1533,923,1227,'Magma_Hoplon',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES(1534,923,1228,'Acheron_Flame',1,20.0,2000,1500,4,0,0,0);
+
+-- Mired Khrysokhimaira
+INSERT INTO `mob_skill` VALUES(1769,924,1369,'Dreadstorm',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1770,924,1381,'Fossilizing_Breath',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1772,924,1386,'Fulmination',1,40.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1771,924,1382,'Plague_Swipe',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1766,924,1367,'Tenebrous_Mist',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1767,924,1368,'Thunderstrike',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1768,924,1371,'Tourbillion',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2442,924,1381,'Lithic_Breath',1,13.0,2000,1500,4,0,0,0);
+
+-- Mired Alfard 
+INSERT INTO `mob_skill` VALUES (1572,925,1308,'Pyric_Blast',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1573,925,1319,'Polar_Bulwark',0,7.0,2000,1500,1,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1574,925,1309,'Polar_Blast',4,15.0,2000,1500,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1575,925,1318,'Pyric_Bulwark',0,7.0,2000,1500,1,0,0,0); 
+INSERT INTO `mob_skill` VALUES (1576,925,1313,'Barofield',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1578,925,1310,'Trembling',1,5.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1579,925,1311,'Serpentine_Tail',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1580,925,1312,'Nerve_Gas',1,10.0,2000,1500,4,0,0,0);
+
+-- Mired Mantis
+INSERT INTO `mob_skill` VALUES (2595,926,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2596,926,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2597,926,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2598,926,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2600,926,1924,'Dead_Prophet ',4,10.0,2000,1000,4,0,0,0);
+
+-- Soaring Corse
+INSERT INTO `mob_skill` VALUES (274,930,900,'Memento_Mori', 0, 7.0, 2000, 1500, 1, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (275,930,901,'Silence_Seal', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (276,930,902,'Envoutement', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (277,930,903,'Danse_Macabre', 0, 10.0, 2000, 2000, 4, 0, 0, 0);
+
+-- Soaring Dvergar 
+INSERT INTO `mob_skill` VALUES (1857,931,1456,'Hellsnap',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1859,931,1457,'Cackle',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1861,931,1461,'Necropurge',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1863,931,1459,'Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
+
+-- Soaring Vampyr
+INSERT INTO `mob_skill` VALUES (1850,932,1449,'Bloodrake',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1852,932,1451,'Nosferatus_kiss',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1854,932,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1856,932,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
+
+
+-- Soaring Kumakatok
+INSERT INTO `mob_skill` VALUES (274,933,900,'Memento_Mori', 0, 7.0, 2000, 1500, 1, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (275,933,901,'Silence_Seal', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (276,933,902,'Envoutement', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (277,933,903,'Danse_Macabre', 0, 10.0, 2000, 2000, 4, 0, 0, 0);
+
+-- Soaring Dweorg 
+INSERT INTO `mob_skill` VALUES (1857,934,1456,'Hellsnap',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1858,934,1460,'Hellclap',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1859,934,1457,'Cackle',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1860,934,1462,'Necrobane',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1861,934,1461,'Necropurge',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1862,934,1458,'Bilgestorm',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1863,934,1459,'Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
+
+-- Soaring Strigoi
+INSERT INTO `mob_skill` VALUES (1852,935,1451,'Nosferatus_kiss',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1854,935,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2132,935,1451,'Dirty_Breath',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2278,935,1450,'Minax_Glare',4,15.0,2000,1000,4,0,0,0);
+
+-- Soaring Naraka
+INSERT INTO `mob_skill` VALUES (2465,936,1907,'Raksha_Vengeance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2464,936,1906,'Raksha_Illusion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2463,936,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2461,936,1902,'Yaksha_Bliss',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2460,936,1903,'Yaksha_Oblivion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2459,936,1901,'Yaksha_Damnation',1,18.0,2000,1000,4,0,0,0);
+
