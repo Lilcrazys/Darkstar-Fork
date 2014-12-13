@@ -61,7 +61,6 @@ function onTrigger(player,page)
     elseif (page == 4) then -- Tools and gears.
         local stock_4 =
         {
-            10463, 20000000, -- Mustella Harness
             16368,    80000, -- Herder's Subligar
             18762,    80000, -- Custodes
             18503,    80000, -- Mammut
