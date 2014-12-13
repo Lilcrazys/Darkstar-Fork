@@ -605,6 +605,14 @@ INSERT INTO `mob_family_system` VALUES (602,'Za_Dha_Adamantking',7,'Beastmen',1,
 INSERT INTO `mob_family_system` VALUES (621,'Alkyoneus',7,'Beastmen',2,40,125,100,1,2,1,1,5,4,1,3,3,3,3,1,1,1,1,1,0.875,1,1.125,0.5,1,1,1,2);
 INSERT INTO `mob_family_system` VALUES (622,'Stroper_Chyme',1,'Amorph',1,40,100,120,1,3,3,4,3,6,1,3,3,3,3,0.5,0.5,0.25,0.25,1.5,1.125,1.125,1.125,1.125,0.625,1.125,1.125,6);
 INSERT INTO `mob_family_system` VALUES (623,'Aqrabuamelu',20,'Vermin',3,40,90,120,3,3,4,3,3,6,5,3,3,3,3,1,1,1,1,1,1.25,1,1,1,0.875,1.25,0.875,4);
+
+
+
+INSERT INTO `mob_family_system` VALUES (701,'Rabbit',6,'Beast',0,40,96,120,3,1,4,2,4,4,6,3,3,3,3,1,1,1,1,1,1,1,1,1.25,1.25,1,1.25,4); -- Actual IDs used in Darkstars mob skill table,
+INSERT INTO `mob_family_system` VALUES (702,'Rabbit',6,'Beast',0,40,96,120,3,1,4,2,4,4,6,3,3,3,3,1,1,1,1,1,1,1,1,1.25,1.25,1,1.25,4); -- even though they never used the family IDs here. No idea why.
+
+
+
 INSERT INTO `mob_family_system` VALUES (900,'Lofty_Zilant',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,1,1.125,1,1,1,1,1,3);
 INSERT INTO `mob_family_system` VALUES (901,'Lofty_Harpeia',8,'Bird',3,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (902,'Lofty_Behemoth',6,'Beast',4,40,110,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,6);
