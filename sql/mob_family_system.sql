@@ -613,7 +613,7 @@ INSERT INTO `mob_family_system` VALUES (702,'Rabbit',6,'Beast',0,40,96,120,3,1,4
 
 
 
-INSERT INTO `mob_family_system` VALUES (900,'Lofty_Zilant',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,1,1.125,1,1,1,1,1,3);
+INSERT INTO `mob_family_system` VALUES (900,'Lofty_Zilant',10,'Dragon',6,40,120,90,1,3,4,3,6,3,1,3,6,3,3,1,1,1,1,1,1,1.125,1,1,1,1,1,3);
 INSERT INTO `mob_family_system` VALUES (901,'Lofty_Harpeia',8,'Bird',3,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (902,'Lofty_Behemoth',6,'Beast',4,40,110,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,6);
 INSERT INTO `mob_family_system` VALUES (903,'Lofty_Elasmoth',6,'Beast',4,40,110,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,6);
@@ -634,14 +634,14 @@ INSERT INTO `mob_family_system` VALUES (922,'Mired_Hydra',10,'Dragon',4,40,90,90
 INSERT INTO `mob_family_system` VALUES (923,'Mired_Orthrus',6,'Beast',3,40,100,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,1);
 INSERT INTO `mob_family_system` VALUES (924,'Mired_Khrysokhimaira',3,'Arcana',3,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1.125,1,1.125,1,1,1,1,5);
 INSERT INTO `mob_family_system` VALUES (925,'Mired_Alfard',10,'Dragon',5,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,0.875,1,1,1,1,1,1,1,1,6);
-INSERT INTO `mob_family_system` VALUES (926,'Mired_Mantis',20,'Vermin',1,40,105,120,3,3,4,3,3,6,5,3,5,3,3,1,1,1,1,1,1.25,1,1,1.25,1,1.125,1.25,4);
+INSERT INTO `mob_family_system` VALUES (926,'Mired_Mantis',20,'Vermin',1,40,105,120,3,8,4,3,3,6,5,3,5,8,3,1,1,1,1,1,1.25,1,1,1.25,1,1.125,1.25,4);
 INSERT INTO `mob_family_system` VALUES (930,'Soaring_Corse',19,'Undead',1,40,111,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,0.75,0.75,0.75,0.75,1.25,0.5,8);
 INSERT INTO `mob_family_system` VALUES (931,'Soaring_Dvergr',9,'Demon',1,40,90,140,6,3,3,3,1,5,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0.875,0);
 INSERT INTO `mob_family_system` VALUES (932,'Soaring_Vampyr',19,'Undead',2,40,100,120,1,3,3,4,3,6,6,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
 INSERT INTO `mob_family_system` VALUES (933,'Soaring_Kumakatok',19,'Undead',1,40,111,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,0.75,0.75,0.75,0.75,1.25,0.5,8);
 INSERT INTO `mob_family_system` VALUES (934,'Soaring_Dweorg',9,'Demon',1,40,90,140,6,3,3,3,1,5,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0.875,0);
 INSERT INTO `mob_family_system` VALUES (935,'Soaring_Strigoi',19,'Undead',2,40,100,120,1,3,3,4,3,6,6,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
-INSERT INTO `mob_family_system` VALUES (936,'Soaring_Naraka',19,'Undead',2,40,70,140,6,3,6,3,1,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
+INSERT INTO `mob_family_system` VALUES (936,'Soaring_Naraka',19,'Undead',2,40,70,140,6,3,6,3,8,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
 
 
 

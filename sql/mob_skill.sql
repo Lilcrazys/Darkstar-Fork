@@ -4365,8 +4365,8 @@ INSERT INTO `mob_skill` VALUES (1579,925,1311,'Serpentine_Tail',0,7.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (1580,925,1312,'Nerve_Gas',1,10.0,2000,1500,4,0,0,0);
 
 -- Mired Mantis
-INSERT INTO `mob_skill` VALUES (2595,926,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2596,926,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2595,926,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2596,926,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (2597,926,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2598,926,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2600,926,1924,'Dead_Prophet ',4,10.0,2000,1000,4,0,0,0);
