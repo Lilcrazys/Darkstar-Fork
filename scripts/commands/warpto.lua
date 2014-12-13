@@ -6,21 +6,21 @@
 
 cmdprops =
 {
-    permission = 0,
-    parameters = "s"
+	permission = 1,
+	parameters = "s"
 };
 
 function onTrigger(player, target)
-    if (target == nil) then
+	if (target == nil) then
 		player:PrintToPlayer("You must enter a valid player name.");
-        return;
-    end
+		return;
+	end
 
-    local targ = GetPlayerByName( target );
-    if (targ ~= nil) then
-		player:setVar("WarpTo", 1);
-        player:setPos( targ:getXPos(), targ:getYPos(), targ:getZPos(), 0, targ:getZone() );
-    else
-        player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
-    end
-end;
+	local targ = GetPlayerByName( target );
+	if (targ ~= nil) then
+		-- player:setVar("WarpTo", 1); <-Whats this for?
+		player:setPos( targ:getXPos(), targ:getYPos(), targ:getZPos(), 0, targ:getZone():getID() );
+	else
+		player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
+	end
+end

@@ -29,6 +29,8 @@ function onTrigger(player, victim)
         local targ = GetPlayerByName(victim);
         if (targ ~= nil) then
             -- Begin Wrath of the Gods Animation
+            targ:injectActionPacket( 5, 271 );
+            targ:injectActionPacket( 5, 202 );
             targ:injectActionPacket( 5, 207 );
             targ:injectActionPacket( 5, 216 );
             targ:injectActionPacket( 5, 270 );

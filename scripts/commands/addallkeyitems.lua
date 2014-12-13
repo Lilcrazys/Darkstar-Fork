@@ -1,15 +1,19 @@
+---------------------------------------------------------------------------------------------------
+-- func: @addallkeyitems
+-- auth: <Unknown>
+-- desc: BVravely tries to give every existing KI..which may break missions and quests
+---------------------------------------------------------------------------------------------------
 
-require("scripts/globals/keyitems");
 cmdprops=
 {
-    permission = 1,
-    parameters=""
+	permission = 1,
+	parameters = ""
 }
 function onTrigger(player)
-z=1;
-while z <= 2544 do
-   player:addKeyItem(z);
-   z = z + 1;
+	require("scripts/globals/keyitems");
+	z=1;
+	while z <= 2544 do
+		player:addKeyItem(z);
+		z = z + 1;
+	end
 end
-end
-

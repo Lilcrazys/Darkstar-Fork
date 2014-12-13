@@ -6,13 +6,13 @@
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1,
     parameters = "i"
 };
 
 function onTrigger(player, id)
     id = math.random(0,84);
-	           
+
 	if (id == 0) then
     	id = 30;
     elseif (id == 1) then
@@ -182,7 +182,7 @@ function onTrigger(player, id)
 	elseif (id == 83) then
          	id = 2372;
 	elseif (id == 84) then
-         	id = 1812;		
-	end         
+         	id = 1812;
+	end
     player:costume2(id);
 end

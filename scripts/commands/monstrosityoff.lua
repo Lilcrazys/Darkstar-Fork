@@ -6,12 +6,10 @@
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1,
     parameters = "i"
 };
 
 function onTrigger(player, id)
-  
     player:costume2(0);
 end
-			 

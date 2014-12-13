@@ -19,7 +19,7 @@ function onTrigger(player,tele,target)
     require("scripts/globals/teleports");
 
     local gmlvl = player:getGMLevel();
-	
+
     -- Check that a location was given...
     if (tele == nil) then
         player:PrintToPlayer("You must enter a valid Teleport location.");

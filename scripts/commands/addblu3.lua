@@ -1,4 +1,3 @@
- 
 ---------------------------------------------------------------------------------------------------
 -- func: addblu3
 -- auth: Omni
@@ -11,7 +10,7 @@ cmdprops =
     parameters = "i"
 };
 
-function onTrigger(player, spellId)  
+function onTrigger(player, spellId)
 
     player:addSpell(656);
     player:addSpell(657);

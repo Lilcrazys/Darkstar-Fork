@@ -10,9 +10,8 @@ cmdprops =
     parameters = "i"
 };
 
-function onTrigger(player, spellId)  
-	
-	
+function onTrigger(player, spellId)
+
 	player:addSpell(606);
     player:addSpell(608);
     player:addSpell(610);
