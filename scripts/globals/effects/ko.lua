@@ -9,6 +9,8 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
+	-- Entirely possible this isn't needed and is already handled in core.
+	-- target:setHP(0);
 end;
 
 -----------------------------------

@@ -15,9 +15,9 @@ end;
 
 function OnMobWeaponSkill(target, mob, skill)
 
-	local typeEffect = EFFECT_DEATH;
+	local typeEffect = EFFECT_KO;
 	local power = 30;
-	local duration = 30;
+	local duration = 3;
 	skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, power, 0, duration));
 	return typeEffect;
 
