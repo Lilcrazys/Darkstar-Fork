@@ -249,6 +249,14 @@ function CharCreate(player)
 		default = function (x) end,
 	}
 
+	----- Start of custom and workaround stuffs -----
+
+	if (player:hasKeyItem(PORTAL_CHARM) == false) then
+		player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
+	end
+
+	----- End of custom and workaround stuffs -----
+
    ----- settings.lua Perks -----
    if (ADVANCED_JOB_LEVEL == 0) then
       for i = 6,22 do
