@@ -9711,7 +9711,55 @@ inline int32 CLuaBaseEntity::getBehaviour(lua_State* L)
 
 inline int32 CLuaBaseEntity::reloadParty(lua_State* L)
 {
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
     ((CCharEntity*)m_PBaseEntity)->ReloadPartyInc();
+
+    return 0;
+}
+
+inline int32 CLuaBaseEntity::setModelId(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_MOB);
+    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
+
+    uint16 look = lua_tointeger(L, -1);
+    WBUFW(&m_PBaseEntity->look, 2) = look;
+
+    m_PBaseEntity->loc.zone->PushPacket(m_PBaseEntity, CHAR_INRANGE, new CEntityUpdatePacket(m_PBaseEntity, ENTITY_UPDATE, UPDATE_COMBAT));
+
+    return 0;
+}
+
+inline int32 CLuaBaseEntity::getModelId(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_MOB);
+    
+    lua_pushinteger(L, RBUFW(&m_PBaseEntity->look, 16));
+
+    return 1;
+}
+
+inline int32 CLuaBaseEntity::setAggroFlag(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_MOB);
+    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
+
+    ((CMobEntity*)m_PBaseEntity)->m_Aggro |= lua_tointeger(L, -1);
+
+    return 0;
+}
+
+inline int32 CLuaBaseEntity::unsetAggroFlag(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_MOB);
+    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
+
+    ((CMobEntity*)m_PBaseEntity)->m_Aggro &= ~lua_tointeger(L, -1);
 
     return 0;
 }
@@ -10161,5 +10209,9 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getBehaviour),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setBehaviour),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,reloadParty),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,getModelId),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,setModelId),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,setAggroFlag),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,unsetAggroFlag),
     {NULL,NULL}
 };

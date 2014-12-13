@@ -606,6 +606,10 @@ public:
     int32 setBehaviour(lua_State* L);
     int32 getBehaviour(lua_State* L);
     int32 reloadParty(lua_State* L);
+    int32 getModelId(lua_State* L);
+    int32 setModelId(lua_State* L);
+    int32 setAggroFlag(lua_State* L);
+    int32 unsetAggroFlag(lua_State* L);
 };
 
 #endif
