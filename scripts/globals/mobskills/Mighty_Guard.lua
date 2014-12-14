@@ -37,5 +37,5 @@ local typeEffect = EFFECT_HUNDRED_FISTS;
 
     skill:setMsg(MSG_SELF_HEAL);
 
-    return MobHealMove(mob, mob:getMaxHP() * potency / 100);
+    return MobHealMove(mob, mob:getMaxHP() * potency / 20);
 end;
