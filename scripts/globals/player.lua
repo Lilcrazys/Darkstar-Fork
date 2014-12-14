@@ -18,10 +18,18 @@ require("scripts/globals/gear_sets");
 -----------------------------------
 
 function onGameIn(player, firstlogin)
+	----- Start of custom and workaround stuffs -----
+
+	if (player:hasKeyItem(PORTAL_CHARM) == false) then
+		player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
+	end
+
+	----- End of custom and workaround stuffs -----
+
     if (firstlogin) then
         CharCreate(player);
     end;
-	
+
 	checkForGearSet(player);
 
     if (player:getVar("GodMode") == 1) then
@@ -32,13 +40,13 @@ function onGameIn(player, firstlogin)
         player:addStatusEffect(EFFECT_MIGHTY_STRIKES,1,0,0);
         player:addStatusEffect(EFFECT_HUNDRED_FISTS,1,0,0);
         player:addStatusEffect(EFFECT_CHAINSPELL,1,0,0);
-        player:addStatusEffect(EFFECT_PERFECT_DODGE,1,0,0);		
-        player:addStatusEffect(EFFECT_INVINCIBLE,1,0,0);				
+        player:addStatusEffect(EFFECT_PERFECT_DODGE,1,0,0);
+        player:addStatusEffect(EFFECT_INVINCIBLE,1,0,0);
         player:addStatusEffect(EFFECT_MANAFONT,1,0,0);
         player:addStatusEffect(EFFECT_REGAIN,100,1,0);
         player:addStatusEffect(EFFECT_REFRESH,99,0,0);
         player:addStatusEffect(EFFECT_REGEN,99,0,0);
-        
+
         -- Add bonus mods to the player..
         player:addMod(MOD_RACC,5000);
         player:addMod(MOD_RATT,5000);
@@ -49,7 +57,7 @@ function onGameIn(player, firstlogin)
         player:addMod(MOD_RDEF,5000);
         player:addMod(MOD_DEF,5000);
         player:addMod(MOD_MDEF,5000);
-        
+
         -- Heal the player from the new buffs..
         player:addHP( 50000 );
         player:setMP( 50000 );
@@ -248,14 +256,6 @@ function CharCreate(player)
 
 		default = function (x) end,
 	}
-
-	----- Start of custom and workaround stuffs -----
-
-	if (player:hasKeyItem(PORTAL_CHARM) == false) then
-		player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
-	end
-
-	----- End of custom and workaround stuffs -----
 
    ----- settings.lua Perks -----
    if (ADVANCED_JOB_LEVEL == 0) then
