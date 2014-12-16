@@ -2901,7 +2901,7 @@ INSERT INTO `mob_skill` VALUES (1766,315,1367,'Tenebrous_Mist',1,18.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (1767,315,1368,'Thunderstrike',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1768,315,1371,'Tourbillion',1,18.0,2000,1500,4,0,0,0);
 
---Shinryu (475)
+-- Shinryu (475)
 INSERT INTO `mob_skill` VALUES (2408,475,1868,'Cosmic_Breath',4,15.0,4000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2409,475,1869,'Cataclysmic_Vortex',1,15.0,4000,5000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2411,475,1870,'Mighty_Guard',0,7.0,3000,2000,1,0,0,0);
