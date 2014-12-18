@@ -4402,3 +4402,13 @@ INSERT INTO `mob_skill` VALUES (2461,936,1902,'Yaksha_Bliss',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2460,936,1903,'Yaksha_Oblivion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2459,936,1901,'Yaksha_Damnation',1,18.0,2000,1000,4,0,0,0);
 
+-- 937 through 953 coming next week added gallu for testing
+
+-- Paramount Gallu
+INSERT INTO `mob_skill` VALUES (2528,954,1956,'Diluvial_wakes',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2529,954,1957,'Kurugi_collapse',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2530,954,1958,'Searing_halitus',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2531,954,1959,'Divesting_gale',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2532,954,1960,'Bolt_of_perdition',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2534,954,1962,'Oblivions_mantle',1,15.0,2000,1000,4,0,0,0);
