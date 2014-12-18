@@ -14772,6 +14772,7 @@ INSERT INTO `item_mods` VALUES ('18848', '10', '5');
 INSERT INTO `item_mods` VALUES ('18849', '2', '31');
 INSERT INTO `item_mods` VALUES ('18849', '5', '-31');
 INSERT INTO `item_mods` VALUES ('18849', '10', '6');
+INSERT INTO `item_mods` VALUES ('18852', '289', '50');
 INSERT INTO `item_mods` VALUES ('18853', '13', '2');
 INSERT INTO `item_mods` VALUES ('18853', '61', '3');
 INSERT INTO `item_mods` VALUES ('18854', '2', '30');
