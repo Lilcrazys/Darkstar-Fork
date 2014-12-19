@@ -58,7 +58,7 @@ end;
 function onEffectLose(target,effect)
 	target:delMod(MOD_HP, 30);
 	target:delMod(MOD_STR, 30);
-	target:delMod(MOD_DEX, 30);
+	target:delMod(MOD_VIT, 30);
 	target:delMod(MOD_HPHEAL, 15);
 	target:delMod(MOD_ATTP, 19);
 	target:delMod(MOD_ACCP, 5);
