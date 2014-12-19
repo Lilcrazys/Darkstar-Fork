@@ -13,7 +13,7 @@ cmdprops =
 
 function onTrigger(player, target)
 	local ZoneID = 0
-	if (target == nil) then
+	if (target == nil or player:getGMLevel() == 0) then
 		target = player:getName();
 	end
 
@@ -28,4 +28,4 @@ function onTrigger(player, target)
 	else
 		player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
 	end
-end
+end;
