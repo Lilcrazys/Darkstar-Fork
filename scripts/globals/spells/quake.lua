@@ -2,29 +2,19 @@
 -- Spell: Quake
 -- Deals earth damage to an enemy.
 -----------------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
-require("scripts/globals/abyssea");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	if caster:isPC() then
-		local YellowTrigger = caster:getVar("YellowTrigger");
-		if (YellowTrigger == 210) then
-			WeaknessTriggerYellow(caster,target,spell);
-		else
-			if (math.random(4) == 1) then
-				TriggerHintYELLOW(caster);
-			end
-		end
-	end
 	--calculate raw damage
 	local dmg = calculateMagicDamage(577,2,caster,spell,target,ELEMENTAL_MAGIC_SKILL,MOD_INT,false);
 	--get resist multiplier (1x if no resist)

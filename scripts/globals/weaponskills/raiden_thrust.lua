@@ -1,23 +1,23 @@
------------------------------------	
--- Raiden Thrust	
--- Polearm weapon skill	
--- Skill Level: 70	
--- Deals lightning elemental damage to enemy. Damage varies with TP.	
--- Aligned with the Light Gorget & Thunder Gorget.	
--- Aligned with the Light Belt & Thunder Belt.	
--- Element: Lightning	
--- Modifiers: STR:30% ; INT:30%	
--- 100%TP    200%TP    300%TP	
--- 1.00      2.00      3.00	
--package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
+-----------------------------------
+-- Raiden Thrust
+-- Polearm weapon skill
+-- Skill Level: 70
+-- Deals lightning elemental damage to enemy. Damage varies with TP.
+-- Aligned with the Light Gorget & Thunder Gorget.
+-- Aligned with the Light Belt & Thunder Belt.
+-- Element: Lightning
+-- Modifiers: STR:30% ; INT:30%
+-- 100%TP    200%TP    300%TP
+-- 1.00      2.00      3.00
+-----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");		
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
-	
+require("scripts/globals/weaponskills");
+-----------------------------------
+
+function onUseWeaponSkill(player, target, wsID)
+
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 144) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -35,7 +35,7 @@ function OnUseWeaponSkill(player, target, wsID)
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-	
+
 	return tpHits, extraHits, criticalHit, damage;
-	
-end	
+
+end

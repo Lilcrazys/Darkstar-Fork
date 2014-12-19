@@ -2,7 +2,6 @@
 -- Spell: Aspir
 -- Drain functions only on skill level!!
 -----------------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/settings");
@@ -11,7 +10,7 @@ require("scripts/globals/abyssea");
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
 

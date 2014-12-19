@@ -1,25 +1,24 @@
------------------------------------	
--- Tachi Jinpu	
--- Great Katana weapon skill	
--- Skill level: 150	
--- Two-hit attack. Deals Physical and wind elemental damage to enemy. Additonal Effect Damage varies with TP.	
--- Will stack with Sneak Attack and Souleater.	
--- Aligned with the Breeze Gorget & Shadow Gorget.	
--- Aligned with the Breeze Belt & Shadow Belt.	
--- Element: Wind	
--- Modifiers: STR:40%	
--- 100%TP    200%TP    300%TP	
--- 1.00      1.00      1.00	
------------------------------------	
-package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
+-----------------------------------
+-- Tachi Jinpu
+-- Great Katana weapon skill
+-- Skill level: 150
+-- Two-hit attack. Deals Physical and wind elemental damage to enemy. Additonal Effect Damage varies with TP.
+-- Will stack with Sneak Attack and Souleater.
+-- Aligned with the Breeze Gorget & Shadow Gorget.
+-- Aligned with the Breeze Belt & Shadow Belt.
+-- Element: Wind
+-- Modifiers: STR:40%
+-- 100%TP    200%TP    300%TP
+-- 1.00      1.00      1.00
+-----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");		
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
-	
+require("scripts/globals/weaponskills");
+-----------------------------------
+
+function onUseWeaponSkill(player, target, wsID)
+
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 148) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -37,7 +36,7 @@ function OnUseWeaponSkill(player, target, wsID)
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-	
+
 	return tpHits, extraHits, criticalHit, damage;
-	
-end	
+
+end

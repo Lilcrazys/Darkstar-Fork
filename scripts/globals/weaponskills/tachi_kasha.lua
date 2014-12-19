@@ -14,23 +14,14 @@
 -- 100%TP    200%TP    300%TP	
 -- 1.56      1.88      2.50	
 -----------------------------------	
-package.loaded["scripts/globals/abyssea"] = nil;	
+	
 require("scripts/globals/status");	
 require("scripts/globals/settings");	
-require("scripts/globals/abyssea");
 require("scripts/globals/weaponskills");	
 -----------------------------------	
 	
-function OnUseWeaponSkill(player, target, wsID)	
-
-	local BlueTrigger = player:getVar("BlueTrigger");
-	if (BlueTrigger == 152) then
-		WeaknessTriggerBlue(player, target, wsID);
-	else
-		if (math.random(4) == 1) then
-			TriggerHintBLUE(player, target, wsID);
-		end
-	end
+function onUseWeaponSkill(player, target, wsID)	
+	
 	local params = {};
 	params.numHits = 1;
 	params.ftp100 = 1.56; params.ftp200 = 1.88; params.ftp300 = 2.5;

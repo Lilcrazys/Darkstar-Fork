@@ -1,24 +1,23 @@
------------------------------------	
--- Earth Crusher	
--- Staff weapon skill	
--- Skill Level: 70	
--- Delivers an area of effect earth elemental attack. Damage varies with TP.	
--- Aligned with the Breeze Gorget & Thunder Gorget.	
--- Aligned with the Breeze Belt & Thunder Belt.	
--- Element: Earth	
--- Modifiers: STR:30% ; INT:30%	
--- 100%TP    200%TP    300%TP	
--- 1.00      2.31      3.63	
------------------------------------	
-package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
+-----------------------------------
+-- Earth Crusher
+-- Staff weapon skill
+-- Skill Level: 70
+-- Delivers an area of effect earth elemental attack. Damage varies with TP.
+-- Aligned with the Breeze Gorget & Thunder Gorget.
+-- Aligned with the Breeze Belt & Thunder Belt.
+-- Element: Earth
+-- Modifiers: STR:30% ; INT:30%
+-- 100%TP    200%TP    300%TP
+-- 1.00      2.31      3.63
+-----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");		
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
-	
+require("scripts/globals/weaponskills");
+-----------------------------------
+
+function onUseWeaponSkill(player, target, wsID)
+
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 178) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -36,7 +35,7 @@ function OnUseWeaponSkill(player, target, wsID)
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-	
+
 	return tpHits, extraHits, criticalHit, damage;
-	
-end	
+
+end

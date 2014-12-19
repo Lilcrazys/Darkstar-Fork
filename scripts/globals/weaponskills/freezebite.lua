@@ -1,24 +1,23 @@
------------------------------------	
--- Freezebite	
--- Great Sword weapon skill	
--- Skill Level: 100	
--- Delivers an ice elemental attack. Damage varies with TP.	
--- Aligned with the Snow Gorget & Breeze Gorget.	
--- Aligned with the Snow Belt & Breeze Belt.	
--- Element: Ice	
--- Modifiers: STR:30% ; INT:20%	
--- 100%TP    200%TP    300%TP	
--- 1.00      1.50      3.00	
------------------------------------	
-package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
+-----------------------------------
+-- Freezebite
+-- Great Sword weapon skill
+-- Skill Level: 100
+-- Delivers an ice elemental attack. Damage varies with TP.
+-- Aligned with the Snow Gorget & Breeze Gorget.
+-- Aligned with the Snow Belt & Breeze Belt.
+-- Element: Ice
+-- Modifiers: STR:30% ; INT:20%
+-- 100%TP    200%TP    300%TP
+-- 1.00      1.50      3.00
+-----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");		
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
-	
+require("scripts/globals/weaponskills");
+-----------------------------------
+
+function onUseWeaponSkill(player, target, wsID)
+
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 51) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -36,7 +35,7 @@ function OnUseWeaponSkill(player, target, wsID)
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-	
+
 	return tpHits, extraHits, criticalHit, damage;
-	
-end	
+
+end

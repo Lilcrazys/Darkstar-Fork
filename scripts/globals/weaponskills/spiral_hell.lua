@@ -7,23 +7,10 @@
 -- 100%TP 	200%TP 	300%TP
 -- 1.375	1.875	3.625
 -----------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
-require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");	
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
+require("/scripts/globals/settings");
+require("/scripts/globals/weaponskills");
+function onUseWeaponSkill(player, target, wsID)
 
-	local BlueTrigger = player:getVar("BlueTrigger");
-	if (BlueTrigger == 104) then
-		WeaknessTriggerBlue(player, target, wsID);
-	else
-		if (math.random(4) == 1) then
-			TriggerHintBLUE(player, target, wsID);
-		end
-	end
 	local params = {};
 	params.numHits = 1;
 	--ftp damage mods (for Damage Varies with TP; lines are calculated in the function

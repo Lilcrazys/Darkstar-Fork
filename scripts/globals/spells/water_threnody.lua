@@ -1,9 +1,8 @@
 -----------------------------------------
 -- Spell: Threnody - MOD_WATERRES
 -----------------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
-require("scripts/globals/magic");
 require("scripts/globals/status");
+require("scripts/globals/magic");
 require("scripts/globals/abyssea");
 -----------------------------------------
 -- OnSpellCast

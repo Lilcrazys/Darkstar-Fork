@@ -2,30 +2,20 @@
 -- Spell: Drain
 -- Drain functions only on skill level!!
 -----------------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/settings");
-require("scripts/globals/abyssea");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	if caster:isPC() then
-		local YellowTrigger = caster:getVar("YellowTrigger");
-		if (YellowTrigger == 245) then
-			WeaknessTriggerYellow(caster,target,spell);
-		else
-			if (math.random(4) == 1) then
-				TriggerHintYELLOW(caster);
-			end
-		end
-	end
 
 	--calculate raw damage (unknown function  -> only dark skill though) - using http://www.bluegartr.com/threads/44518-Drain-Calculations
 	-- also have small constant to account for 0 dark skill
@@ -57,12 +47,7 @@ function onSpellCast(caster,target,spell)
 	dmg = finalMagicAdjustments(caster,target,spell,dmg);
 
 	dmg = (dmg * DRAIN_POWER);
-	
-	-- local AtmaBonus = 25
-	-- if caster:hasStatusEffect(EFFECT_ATMA_OF_DUNES) then
-	--	dmg = dmg+AtmaBonus;
-	-- end
-	
+
 	caster:addHP(dmg);
 	return dmg;
 

@@ -1,26 +1,25 @@
------------------------------------	
--- Cyclone	
--- Dagger weapon skill	
--- Skill level: 125	
--- Delivers an area attack that deals wind elemental damage. Damage varies with TP.	
--- This weapon skill is ranged and can be used from a distance (Up to 15').	
--- Directly affected by Magic Attack Bonus.	
--- Aligned with the Breeze Gorget & Thunder Gorget.	
--- Aligned with the Breeze Belt & Thunder Belt.	
--- Element: Wind	
--- Modifiers: DEX:30% ; INT:25%	
--- 100%TP    200%TP    300%TP	
--- 1.00      2.38      2.88	
------------------------------------	
-package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
+-----------------------------------
+-- Cyclone
+-- Dagger weapon skill
+-- Skill level: 125
+-- Delivers an area attack that deals wind elemental damage. Damage varies with TP.
+-- This weapon skill is ranged and can be used from a distance (Up to 15').
+-- Directly affected by Magic Attack Bonus.
+-- Aligned with the Breeze Gorget & Thunder Gorget.
+-- Aligned with the Breeze Belt & Thunder Belt.
+-- Element: Wind
+-- Modifiers: DEX:30% ; INT:25%
+-- 100%TP    200%TP    300%TP
+-- 1.00      2.38      2.88
+-----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");		
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
-	
+require("scripts/globals/weaponskills");
+-----------------------------------
+
+function onUseWeaponSkill(player, target, wsID)
+
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 20) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -38,7 +37,7 @@ function OnUseWeaponSkill(player, target, wsID)
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-	
+
 	return tpHits, extraHits, criticalHit, damage;
-	
-end	
+
+end

@@ -1,25 +1,24 @@
------------------------------------	
--- Tachi Koki	
--- Great Katana weapon skill	
--- Skill level: 175	
--- Deals light elemental damage to enemy. Damage varies with TP.	
--- Will stack with Sneak Attack.	
--- Aligned with the Aqua Gorget & Thunder Gorget.	
--- Aligned with the Aqua Belt & Thunder Belt.	
--- Element: Light	
--- Modifiers: STR:50% ; MND:30%	
--- 100%TP    200%TP    300%TP	
--- 1.00      1.00      1.00	
------------------------------------	
-package.loaded["scripts/globals/abyssea"] = nil;	
-require("scripts/globals/status");	
-require("scripts/globals/settings");	
+-----------------------------------
+-- Tachi Koki
+-- Great Katana weapon skill
+-- Skill level: 175
+-- Deals light elemental damage to enemy. Damage varies with TP.
+-- Will stack with Sneak Attack.
+-- Aligned with the Aqua Gorget & Thunder Gorget.
+-- Aligned with the Aqua Belt & Thunder Belt.
+-- Element: Light
+-- Modifiers: STR:50% ; MND:30%
+-- 100%TP    200%TP    300%TP
+-- 1.00      1.00      1.00
+-----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/globals/weaponskills");		
------------------------------------	
-	
-function OnUseWeaponSkill(player, target, wsID)	
-	
+require("scripts/globals/weaponskills");
+-----------------------------------
+
+function onUseWeaponSkill(player, target, wsID)
+
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 149) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -37,7 +36,7 @@ function OnUseWeaponSkill(player, target, wsID)
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-	
+
 	return tpHits, extraHits, criticalHit, damage;
-	
-end	
+
+end
