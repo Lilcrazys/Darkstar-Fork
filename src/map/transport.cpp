@@ -125,15 +125,6 @@ void CTransportHandler::InitializeTransport()
             }
             PTransport->PTransportNPC->name.resize(8);
             TransportList.push_back(PTransport);
-
-            TransportZone_t TransportZone;
-
-            TransportZone.zone = (uint8)Sql_GetIntData(SqlHandle, 8);
-            TransportZone.TimeOffset = (uint16)Sql_GetIntData(SqlHandle, 11);
-            TransportZone.TimeInterval = (uint16)Sql_GetIntData(SqlHandle, 12);
-            TransportZone.TimeAnimationArrive = (uint16)Sql_GetIntData(SqlHandle, 14);
-
-            TransportZoneList.push_back(TransportZone);
         }
     }
 

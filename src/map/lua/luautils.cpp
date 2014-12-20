@@ -1132,12 +1132,12 @@ int32 SpoofParty(lua_State* L)
 
 int32 GetTextIDVariable(uint16 ZoneID, const char* variable)
 {
-	lua_pushnil(LuaHandle);
-	lua_setglobal(LuaHandle, variable);
+    lua_pushnil(LuaHandle);
+    lua_setglobal(LuaHandle, variable);
 
-	int8 File[255];
+    int8 File[255];
 	memset(File,0,sizeof(File));
-	snprintf(File, sizeof(File), "scripts/zones/%s/TextIDs.lua", zoneutils::GetZone(ZoneID)->GetName());
+    snprintf(File, sizeof(File), "scripts/zones/%s/TextIDs.lua", zoneutils::GetZone(ZoneID)->GetName());
 
 	if( luaL_loadfile(LuaHandle,File) || lua_pcall(LuaHandle,0,0,0) )
 	{
@@ -1145,17 +1145,17 @@ int32 GetTextIDVariable(uint16 ZoneID, const char* variable)
 		return 0;
 	}
 
-	lua_getglobal(LuaHandle,variable);
+    lua_getglobal(LuaHandle,variable);
 
 	if( lua_isnil(LuaHandle,-1) || !lua_isnumber(LuaHandle,-1) )
 	{
-		lua_pop(LuaHandle, 1);
+        lua_pop(LuaHandle, 1);
 		return 0;
 	}
 
-	int32 value = lua_tonumber(LuaHandle, -1);
-	lua_pop(LuaHandle, -1);
-	return value;
+    int32 value = lua_tonumber(LuaHandle, -1);
+    lua_pop(LuaHandle, -1);
+    return value;
 }
 
 /************************************************************************

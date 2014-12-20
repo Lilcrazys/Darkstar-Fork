@@ -142,7 +142,6 @@ inline int32 CLuaBaseEntity::leavegame(lua_State *L)
 
 //==========================================================//
 
-
 inline int32 CLuaBaseEntity::ChangeMusic(lua_State *L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
