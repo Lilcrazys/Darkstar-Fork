@@ -1,7 +1,7 @@
 -----------------------------------------
 -- ID: 5765
 -- Item: red_curry_bun_+1
--- Food Effect: 30 Min, All Races
+-- Food Effect: 60 Min, All Races
 -----------------------------------------
 -- Health 35
 -- Strength 7
@@ -20,11 +20,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-local result = 0;
+	local result = 0;
 	if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
 		result = 246;
 	end
-return result;
+	return result;
 end;
 
 -----------------------------------------
@@ -32,7 +32,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_FOOD,0,0,1800,5765);
+	target:addStatusEffect(EFFECT_FOOD,0,0,3600,5765);
 end;
 
 -----------------------------------------
@@ -41,10 +41,13 @@ end;
 
 function onEffectGain(target,effect)
 	target:addMod(MOD_HPP, 25);
-	target:addMod(MOD_DEX, 30);
-	target:addMod(MOD_AGI, 30);
-	target:addMod(MOD_FOOD_RACCP, 20);
-	target:addMod(MOD_FOOD_RATTP, 20);
+	target:addMod(MOD_STR, 27);
+	target:addMod(MOD_AGI, 23);
+	target:addMod(MOD_DEX, 23);
+	target:addMod(MOD_FOOD_ATTP, 44);
+	target:addMod(MOD_FOOD_ATT_CAP, 200);
+	target:addMod(MOD_FOOD_RATTP, 44);
+	target:addMod(MOD_FOOD_RATT_CAP, 200);
 end;
 
 -----------------------------------------
@@ -53,8 +56,11 @@ end;
 
 function onEffectLose(target,effect)
 	target:delMod(MOD_HPP, 25);
-	target:delMod(MOD_DEX, 30);
-	target:delMod(MOD_AGI, 30);
-	target:delMod(MOD_FOOD_RACCP, 20);
-	target:delMod(MOD_FOOD_RATTP, 20);
+	target:delMod(MOD_STR, 27);
+	target:delMod(MOD_AGI, 23);
+	target:delMod(MOD_DEX, 23);
+	target:delMod(MOD_FOOD_ATTP, 44);
+	target:delMod(MOD_FOOD_ATT_CAP, 200);
+	target:delMod(MOD_FOOD_RATTP, 44);
+	target:delMod(MOD_FOOD_RATT_CAP, 200);
 end;
