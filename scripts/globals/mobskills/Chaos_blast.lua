@@ -12,7 +12,7 @@ require("/scripts/globals/status");
 require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
-function OnMobSkillCheck(target,mob,skill)
+function onMobSkillCheck(target,mob,skill)
   --  if (mob:AnimationSub() == 1) then
      --   return 1;
 	--if(target:isBehind(mob, 48) == true) then
@@ -21,7 +21,7 @@ function OnMobSkillCheck(target,mob,skill)
 	return 0;
 end;
 
-function OnMobWeaponSkill(target, mob, skill)
+function onMobWeaponSkill(target, mob, skill)
 	local currentHP = target:getHP();
 	-- remove all by 1%
 	local damage = 0;

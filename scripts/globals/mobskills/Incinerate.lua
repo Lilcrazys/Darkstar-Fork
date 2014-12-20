@@ -12,12 +12,12 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
-function OnMobSkillCheck(target,mob,skill)
+function onMobSkillCheck(target,mob,skill)
 	return 0;
 end;
 
 
-function OnMobWeaponSkill(target, mob, skill)
+function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_BURN;
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 5, 3, 30);
     local dmgmod = 2;

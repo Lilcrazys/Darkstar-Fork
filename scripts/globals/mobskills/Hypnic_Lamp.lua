@@ -8,7 +8,7 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
-function OnMobSkillCheck(target,mob,skill)
+function onMobSkillCheck(target,mob,skill)
 	local chance = math.random(10);
 	if (chance == 1) then
 		return 0;
@@ -17,7 +17,7 @@ function OnMobSkillCheck(target,mob,skill)
 	end
 end;
 
-function OnMobWeaponSkill(target, mob, skill)
+function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_CHARM_I;
     skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60));
 

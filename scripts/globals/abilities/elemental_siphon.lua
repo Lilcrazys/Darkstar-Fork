@@ -13,7 +13,7 @@ require("scripts/globals/weather");
 -- OnUseAbility
 -----------------------------------
 
-function OnAbilityCheck(player,target,ability)
+function onAbilityCheck(player,target,ability)
 	if (player:getPet() == nil) then
 		return MSGBASIC_REQUIRES_A_PET,0;
 	else

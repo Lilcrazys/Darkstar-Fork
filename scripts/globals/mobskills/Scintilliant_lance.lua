@@ -6,7 +6,7 @@ require("/scripts/globals/status");
 require("/scripts/globals/monstertpmoves");
 require("/scripts/zones/Empyreal_Paradox/TextIDs");
 ---------------------------------------------
-function OnMobSkillCheck(target,mob,skill)
+function onMobSkillCheck(target,mob,skill)
     local lanceTime, lanceOut, rejuv = mob:getExtraVar(3);
     if (not (target:hasStatusEffect(EFFECT_PHYSICAL_SHIELD) and target:hasStatusEffect(EFFECT_MAGIC_SHIELD)))
         and (lanceTime + 60 < mob:getBattleTime()) and target:getCurrentAction() ~= ACTION_MOBABILITY_USING
@@ -17,7 +17,7 @@ function OnMobSkillCheck(target,mob,skill)
     return 1;
 end;
 
-function OnMobWeaponSkill(target, mob, skill)
+function onMobWeaponSkill(target, mob, skill)
 
     mob:showText(mob, SELHTEUS_TEXT + 1);
 

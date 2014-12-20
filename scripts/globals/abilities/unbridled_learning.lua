@@ -9,7 +9,7 @@ require("scripts/globals/status");
 -- OnUseAbility
 -----------------------------------
 
-function OnAbilityCheck(player,target,ability)  
+function onAbilityCheck(player,target,ability)  
     if player:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) then
 		return MSGBASIC_EFFECT_ALREADY_ACTIVE, 0;
 	end

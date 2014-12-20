@@ -94,7 +94,7 @@ INSERT INTO `zone_settings` VALUES (45,2,'107.134.149.145',54230,'Abyssea-Tahron
 INSERT INTO `zone_settings` VALUES (46,2,'107.134.149.145',54230,'Open_sea_route_to_Al_Zahbi',147,101,138,0,0.00,152,0);
 INSERT INTO `zone_settings` VALUES (47,2,'107.134.149.145',54230,'Open_sea_route_to_Mhaura',147,101,138,0,0.00,152,0);
 INSERT INTO `zone_settings` VALUES (48,1,'107.134.149.145',54230,'Al_Zahbi',178,178,178,0,0.00,24,0);
-INSERT INTO `zone_settings` VALUES (49,0,'107.134.149.145',54230,'noname',0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (49,0,'107.134.149.145',54230,'49',0,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (50,1,'107.134.149.145',54230,'Aht_Urhgan_Whitegate',178,178,178,0,0.00,1032,0);
 INSERT INTO `zone_settings` VALUES (51,2,'107.134.149.145',54230,'Wajaom_Woodlands',149,101,138,0,0.00,156,0);
 INSERT INTO `zone_settings` VALUES (52,2,'107.134.149.145',54230,'Bhaflau_Thickets',149,101,138,0,0.00,156,0);

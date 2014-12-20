@@ -14,11 +14,11 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
-function OnMobSkillCheck(target,mob,skill)
+function onMobSkillCheck(target,mob,skill)
 	return 0;
 end;
 
-function OnMobWeaponSkill(target, mob, skill)
+function onMobWeaponSkill(target, mob, skill)
 	local power = 100;
 	local duration = 180;
 	local typeEffect = MOD_ABSORB_DMG_CHANCE;

@@ -10,7 +10,7 @@ require("scripts/globals/status");
 -- OnUseAbility
 -----------------------------------
 
-function OnAbilityCheck(player,target,ability)
+function onAbilityCheck(player,target,ability)
 	local pet = target:getPet();
 	-- The avatar or elemental must be present in order to use Mana Cede
 	if (pet == nil) then
