@@ -25,7 +25,7 @@ function onTrigger(player,npc)
 	-- player:startEvent(0x038e);
 	local month = tonumber(os.date("%m"));
 	local day = tonumber(os.date("%d"));
-	if ((month == 12 and day >= 10 and day <= 27) ) then -- Xmass gear: Dec 10 ~ Dec 27
+	if ((month == 12 and day >= 10 and day <= 27) ) then -- Xmas gear: Dec 10 ~ Dec 27
 		local stock_1 =
 		{
 			15179,   7500,    -- Dream Hat +1
@@ -47,7 +47,12 @@ function onTrigger(player,npc)
 	elseif ((month == 12 and day >= 28) or (month == 1 and day <= 10)) then -- New Years: Dec 28 ~ Jan 10
 		local stock_2 =
 		{
-			18846,   5000,    -- Battledore
+			18846,   7500,    -- Battledore
+			10875,   7500,    -- Snowman Cap
+			176,     6000,    -- Snowman Knight
+			177,     6000,    -- Snowman Miner
+			178,     6000,    -- Snowman Mage
+			192,     6000,    -- Hoary Spire
 		};
 		showShop(player, STATIC, stock_2);
 	end
