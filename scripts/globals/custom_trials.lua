@@ -39,7 +39,7 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	end
 
 	-- There was no need to check every value between 17 and 32 individually with "or" here.
-	-- Not did each item need parentheses. But, the entire content between if and then, DID.
+	-- Each item did not need parentheses. But, the entire content between if and then, DID.
 	-- Additional parentheses are only needed to group or separate multiple objects.
 	if ((trial >= 17 and trial <= 32) and (MAIN == 18646 or MAIN == 16196
 		or MAIN == 18649 or MAIN == 18644 or MAIN == 18642 or MAIN == 18648
