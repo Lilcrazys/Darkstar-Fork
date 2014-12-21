@@ -1,8 +1,9 @@
 -----------------------------------------
---	ID: 15753
---	Item: Dream Boots +1
---	Enchantment: Sneak
---	Durration: 3 Mins 20 Secs
+-- ID: 15753
+-- Item: Dream Boots +1
+-- Enchantment: Sneak
+-- Duration: 3 Mins 20 Secs
+-- TODO: Enhances duration of Sneak Effect
 -----------------------------------------
 
 require("scripts/globals/settings");

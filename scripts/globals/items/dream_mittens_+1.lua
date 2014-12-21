@@ -1,8 +1,9 @@
 -----------------------------------------
---	ID: 10383
---	Item: Dream Mittens +1
---	Enchantment: Invisible
---	Durration: 3 Mins 20 Secs
+-- ID: 10383
+-- Item: Dream Mittens +1
+-- Enchantment: Invisible
+-- Duration: 3 Mins 20 Secs
+-- TODO: Enhances duration of Invisible Effect
 -----------------------------------------
 
 require("scripts/globals/settings");

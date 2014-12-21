@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 15179
---	Dream Hat +1
---	When used, you will obtain one Ginger Cookie
+-- ID: 15179
+-- Dream Hat +1
+-- Dispenses Ginger Cookies
 -----------------------------------------
 
 -----------------------------------------
@@ -21,5 +21,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addItem(4394,1);
+	target:addItem(4394,math.random(1,10));
 end;
