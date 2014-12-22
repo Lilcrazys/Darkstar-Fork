@@ -24,9 +24,29 @@ function onTrigger(player, target)
 		if (targ:getVar("AssistantGM") == 1) then
 			targ:setVar("AssistantGM",0);
 			player:PrintToPlayer( string.format( " '%s' has been stripped of Community Assistant status", target ) );
-			player:PrintToPlayer("You may need to use @setflag 0x02002000 <target> if the icon was active");
+			-- Attempt to strip related nameflags...
+			if (player:checkNameFlags(0x02000000)) then
+				player:setFlag(0x02000000);
+			end
+			if (player:checkNameFlags(0x00002000)) then
+				player:setFlag(0x00002000);
+			end
 		else
 			targ:setVar("AssistantGM",1);
+			-- Check for and set normal GM flags to off, just in case.
+			-- This is copypasta from @togglegm so I certainly hope it works this way.
+			if (player:checkNameFlags(0x04000000)) then
+				if (player:checkNameFlags(0x04000000)) then
+					player:setFlag(0x04000000);
+				end
+				if (player:checkNameFlags(0x05000000)) then
+					player:setFlag(0x05000000);
+				end
+				if (player:checkNameFlags(0x02000000)) then
+					player:setFlag(0x02000000);
+				end
+			end
+			-- And now setting our intended icon and name color.
 			targ:setFlag( 0x02002000 );
 			player:PrintToPlayer( string.format( " '%s' is now a Community Assistant", target ) );
 			targ:PrintToPlayer("You have been granted Community Assistant status.");
