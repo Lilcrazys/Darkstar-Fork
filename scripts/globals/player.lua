@@ -334,6 +334,11 @@ function CharCreate(player)
 	-- Needs Moghouse Intro
 	player:setVar("MoghouseExplication",1);
 
+	----- Start of custom stuffs for new players -----
+
+	player:addLSpearl("LegionFFXI"); -- Give an LS pearl to all new players
+
+	----- End of custom stuffs for new players -----
 end;
 
 function onPlayerLevelUp(player)
