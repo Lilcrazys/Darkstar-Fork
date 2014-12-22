@@ -34,12 +34,12 @@ function onItemUse(target)
 		duration2 = duration2 * 1.5;
 	end
 	if (not target:hasStatusEffect(EFFECT_INVISIBLE)) then
-		target:addStatusEffect(EFFECT_INVISIBLE,0,10,duration);
+		target:addStatusEffect(EFFECT_INVISIBLE,0,10,duration * SNEAK_INVIS_DURATION_MULTIPLIER);
 	end
 	if (not target:hasStatusEffect(EFFECT_SNEAK)) then
-		target:addStatusEffect(EFFECT_SNEAK,1,10,duration2);
+		target:addStatusEffect(EFFECT_SNEAK,1,10,duration2 * SNEAK_INVIS_DURATION_MULTIPLIER);
 	end
 	if (not target:hasStatusEffect(EFFECT_DEODORIZE)) then
-		target:addStatusEffect(EFFECT_DEODORIZE,1,10,180);
+		target:addStatusEffect(EFFECT_DEODORIZE,1,10,180 * SNEAK_INVIS_DURATION_MULTIPLIER);
 	end
 end;

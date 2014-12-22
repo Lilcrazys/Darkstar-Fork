@@ -249,9 +249,9 @@ function finishGov(player,csid,option,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,msg_offset)
         if (tabs >= 5) then
             player:delValorPoint(5);
             player:delStatusEffect(EFFECT_SNEAK);
-            player:addStatusEffect(EFFECT_SNEAK,0,10,900);
+            player:addStatusEffect(EFFECT_SNEAK,0,10,900 * SNEAK_INVIS_DURATION_MULTIPLIER);
             player:delStatusEffect(EFFECT_INVISIBLE);
-            player:addStatusEffect(EFFECT_INVISIBLE,0,10,900);
+            player:addStatusEffect(EFFECT_INVISIBLE,0,10,900 * SNEAK_INVIS_DURATION_MULTIPLIER);
         end
     elseif (option == GOV_MENU_HOMING_INSTINCT) then -- Send to Homepoint
         if (tabs >= 50) then

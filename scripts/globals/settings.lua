@@ -146,7 +146,7 @@ KLIMAFORM_MACC = 50;  -- magic accuracy added by Klimaform. 30 is just a guess.
 AQUAVEIL_INTERR_RATE = 25;  -- percent spell interruption rate reduction from Aquaveil (see http://www.bluegartrls.com/forum/82143-spell-interruption-down-cap-aquaveil-tests.html)
 ABSORB_SPELL_AMOUNT = 8; -- how much of a stat gets absorbed by DRK absorb spells - expected to be a multiple of 8.
 ABSORB_SPELL_TICK = 9; -- duration of 1 absorb spell tick
-SNEAK_INVIS_DURATION_MULTIPLIER = 1; -- multiplies duration of sneak,invis,deodorize to reduce player torture. 1 = retail behavior. MUST BE INTEGER.
+SNEAK_INVIS_DURATION_MULTIPLIER = 1.5; -- multiplies duration of sneak,invis,deodorize to reduce player torture. 1 = retail behavior. MUST BE INTEGER.
 USE_OLD_CURE_FORMULA = false; -- true/false. if true, uses older cure formula (3*MND + VIT + 3*(healing skill/5)) // cure 6 will use the newer formula
 
 -- CELEBRATIONS

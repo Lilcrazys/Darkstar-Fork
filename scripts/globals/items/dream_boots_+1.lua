@@ -25,6 +25,6 @@ function onItemUse(target)
 	-- duration = duration + (duration * target:getMod(MOD_SNEAK_DUR));
 	-- MOD_SNEAK_DUR needed to be created in modifier.h AND in status.lua or you crash the server!
 	if (not target:hasStatusEffect(EFFECT_SNEAK)) then
-		target:addStatusEffect(EFFECT_SNEAK,1,10,duration);
+		target:addStatusEffect(EFFECT_SNEAK,1,10,duration * SNEAK_INVIS_DURATION_MULTIPLIER);
 	end
 end;
