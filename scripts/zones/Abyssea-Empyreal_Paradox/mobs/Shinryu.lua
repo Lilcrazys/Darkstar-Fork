@@ -20,14 +20,14 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
 
-function onMobSpawn(mob)	
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
@@ -53,10 +53,10 @@ end;
 function onMobDeath(mob,killer)
 
 	killer:getBCNMloot();
-	
-	--[[  -- local keyId = KEYITEM_ID_HERE;
+	--[[
+	-- local keyId = KEYITEM_ID_HERE;
 	if (killer:getVar("RED_PROC") == 1) then
-		-- if (killer:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
+		-- if (killer:hasKeyItem(keyId) == false) then -- Uncomment to use
 			-- killer:addKeyItem(keyId);
 			-- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
 		-- end
@@ -65,7 +65,7 @@ function onMobDeath(mob,killer)
 	if (killer:getVar("BLUE_PROC") == 1) then
 		-- SetDropRate(dropID,itemID,newrate);
 		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);	--[[ Uncomment to use]]--
+		-- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
 		-- SetDropRate(dropID,itemID,newrate);
 		-- SetDropRate(dropID,itemID,newrate);
 	end
@@ -73,9 +73,10 @@ function onMobDeath(mob,killer)
 	if (killer:getVar("YELLOW_PROC") == 1) then
 		-- SetDropRate(dropID,itemID,newrate);
 		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);	--[[ Uncomment to use]]--
+		-- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
 		-- SetDropRate(dropID,itemID,newrate);
 		-- SetDropRate(dropID,itemID,newrate);
-	end]]
+	end
+	]]
 end;
 
