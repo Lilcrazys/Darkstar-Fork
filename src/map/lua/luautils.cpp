@@ -1453,8 +1453,29 @@ int32 OnTrigger(CCharEntity* PChar, CBaseEntity* PNpc)
     PChar->m_event.Script.insert(0, File);
     PChar->StatusEffectContainer->DelStatusEffect(EFFECT_BOOST);
 
-    if (prepFile(File, "onTrigger"))
+    lua_pushnil(LuaHandle);
+    lua_setglobal(LuaHandle, "onTrigger");
+
+    auto ret = luaL_loadfile(LuaHandle, File);
+    if (ret)
     {
+        ShowError("luautils::%s: %s\n", "onTrigger", lua_tostring(LuaHandle, -1));
+        lua_pop(LuaHandle, 1);
+        return -1;
+    }
+
+    ret = lua_pcall(LuaHandle, 0, 0, 0);
+    if (ret)
+    {
+        ShowError("luautils::%s: %s\n", "onTrigger", lua_tostring(LuaHandle, -1));
+        lua_pop(LuaHandle, 1);
+        return -1;
+    }
+
+    lua_getglobal(LuaHandle, "onTrigger");
+    if (lua_isnil(LuaHandle, -1))
+    {
+        lua_pop(LuaHandle, 1);
         return -1;
     }
 
@@ -1613,7 +1634,7 @@ int32 OnEventFinish(CCharEntity* PChar, uint16 eventID, uint32 result)
 		PChar->animation = ANIMATION_DEATH;
 		PChar->pushPacket(new CCharUpdatePacket(PChar));
 		PChar->pushPacket(new CRaiseTractorMenuPacket(PChar,TYPE_HOMEPOINT));
-		PChar->loc.zone->PushPacket(PChar, CHAR_INRANGE, new CCharPacket(PChar,ENTITY_UPDATE));
+        PChar->updatemask |= UPDATE_HP;
 	}
     if (returns > 0)
     {
