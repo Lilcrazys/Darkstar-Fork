@@ -18,6 +18,7 @@ function onTrade(player,npc,trade)
 	local day = tonumber(os.date("%d"));
 	if (month == 5 and day >= 12 and day <= 25) then -- Adventurer Appreciation Campaign (and Mog Bonanza) ~ May 12 - May 25
 		local stock_Statues =
+		{
 			265,     5000,    -- Adamantoise Statue
 			266,     5000,    -- Behemoth Statue
 			267,     5000,    -- Fafnir Statue
