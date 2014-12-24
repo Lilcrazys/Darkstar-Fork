@@ -60,7 +60,7 @@ function onSpellCast(caster,target,spell)
 	--		caster:addMP(dmg+AtmaBonus);
 	--		target:delMP(dmg+AtmaBonus);
 	--	end
-	-- else
+	else
 		dmg = target:getMP();
 		caster:addMP(dmg);
 		target:delMP(dmg);
