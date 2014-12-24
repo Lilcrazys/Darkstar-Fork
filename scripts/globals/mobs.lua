@@ -22,7 +22,7 @@ function onMobDeathEx(mob, killer, isWeaponSkillKill)
 	local BladeofDarkness = killer:getQuestStatus(BASTOK, BLADE_OF_DARKNESS);
 	local BladeofDeath = killer:getQuestStatus(BASTOK, BLADE_OF_DEATH);
 	local ChaosbringerKills = killer:getVar("ChaosbringerKills");
-	if (killer:getVar("ChaosbringerKills")) then ChaosbringerKills = 0; end
+	if (killer:getVar("ChaosbringerKills") == nil) then ChaosbringerKills = 0; end
 	
 	if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
 
