@@ -22,7 +22,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 	-- KNOCKBACK
 
-	local typeEffect = EFFECT_CURSE;
+	local typeEffect = EFFECT_CURSE_I;
 
 	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 4);
 
