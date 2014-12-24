@@ -359,6 +359,8 @@ public:
     int32 hasPartyJob(lua_State*);
     int32 fold(lua_State*);
     int32 hasCorsairEffect(lua_State*);
+    int32 getActiveManeuvers(lua_State*);
+    int32 removeOldestManeuver(lua_State*);
 
     int32 addMod(lua_State*);                // Adds Modifier Value
     int32 getMod(lua_State*);                // Retrieves Modifier Value
@@ -592,6 +594,7 @@ public:
     int32 setModelId(lua_State* L);
     int32 setAggroFlag(lua_State* L);
     int32 unsetAggroFlag(lua_State* L);
+    int32 instantiateMob(lua_State* L);
 };
 
 #endif
