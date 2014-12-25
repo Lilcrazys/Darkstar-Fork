@@ -11974,6 +11974,10 @@ INSERT INTO `mob_groups` VALUES (90019,9019,49,1800,0,9019,60000,10000,110,115,0
 INSERT INTO `mob_groups` VALUES (90015,3604,49,1800,0,9015,120000,120000,130,135,0); -- Shinryu TEST
 
 
+-- Super experimental z49 mobs, will not spawn without script or GM command.
+INSERT INTO `mob_groups` VALUES (96666,9666,49,0,128,9666,180000,6666,106,106,0); -- SlenderMan
+INSERT INTO `mob_groups` VALUES (97777,9777,49,0,128,9777,444000,7777,140,140,0); -- Minerva
+
 
 /*!40000 ALTER TABLE `mob_groups` ENABLE KEYS */;
 UNLOCK TABLES;
