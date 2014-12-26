@@ -1396,7 +1396,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 247, 1, 255); -- Aspir
 
 INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 242, 1, 255); -- Absorb-ACC
-INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 242, 1, 255); -- Absorb-ACC
 INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 266, 1, 255); -- Absorb-STR
 INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 267, 1, 255); -- Absorb-DEX
 INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 268, 1, 255); -- Absorb-VIT
