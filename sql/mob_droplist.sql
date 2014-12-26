@@ -32508,6 +32508,8 @@ INSERT INTO `mob_droplist` VALUES (203,0,12102,340);
 INSERT INTO `mob_droplist` VALUES (1786,0,12093,340);
 INSERT INTO `mob_droplist` VALUES (1966,0,12088,340);
 INSERT INTO `mob_droplist` VALUES (962,0,12090,340);
+
+
 INSERT INTO `mob_droplist` VALUES (9000,0,3925,1000);
 INSERT INTO `mob_droplist` VALUES (9000,0,3925,1000);
 INSERT INTO `mob_droplist` VALUES (9000,0,3925,600);
@@ -32549,7 +32551,11 @@ INSERT INTO `mob_droplist` VALUES (9006,0,3925,200);
 
 
 
+-- SlenderMan
+-- INSERT INTO `mob_droplist` VALUES (9666,0,0,0); -- No drops yet
 
+-- Minerva
+-- INSERT INTO `mob_droplist` VALUES (9777,0,0,0); -- No drops yet
 
 /*!40000 ALTER TABLE `mob_droplist` ENABLE KEYS */;
 UNLOCK TABLES;

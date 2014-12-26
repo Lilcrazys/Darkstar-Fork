@@ -4414,7 +4414,6 @@ INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',4,10.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2534,954,1962,'Oblivions_mantle',1,15.0,2000,1000,4,0,0,0);
 
 -- Hades V1
-
 INSERT INTO `mob_skill` VALUES (3133,980,2399,'Fulminous_Smash',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (3134,980,2400,'Flaming_Kick',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (3135,980,2401,'Icy_Grasp',1,18.0,2000,1000,4,0,0,0);
@@ -4423,7 +4422,6 @@ INSERT INTO `mob_skill` VALUES (3137,980,2403,'Eroding_Flesh',1,18.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (3138,980,2404,'Vivisection',1,18.0,2000,1000,4,0,0,0);
 
 -- Hades V2
-
 INSERT INTO `mob_skill` VALUES (3143,981,2409,'Impudence',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (3144,981,2410,'Incessant_Void',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (3145,981,2411,'Tenbrous_Grip',1,18.0,2000,1000,4,0,0,0);
@@ -4438,3 +4436,47 @@ INSERT INTO `mob_skill` VALUES (3153,981,2419,'Crippling_Agony',1,18.0,2000,1000
 INSERT INTO `mob_skill` VALUES (3154,981,2420,'Bane_Of_Tartarus',1,18.0,2000,1000,4,0,0,0);
 
 
+
+
+-- SlenderMan
+INSERT INTO `mob_skill` VALUES (200,6666,200,'SlenderMan_Tentacle', 0, 7.0, 1200, 600, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (190,6666,190,'SlenderMan_Dimensional_Death', 0, 7.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (246,6666,246,'SlenderMan_Shackled_Fists', 0, 7.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (332,6666,107,'SlenderMan_Death_Trap', 1, 30.0, 2000, 2000, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (249,6666,239,'SlenderMan_Netherspikes', 4, 10.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (250,6666,241,'SlenderMan_Carnal_Nightmare', 1, 10.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (251,6666,243,'SlenderMan_Dancing_Chains', 1, 10.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (252,6666,242,'SlenderMan_Aegis_Schism', 0, 7.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (253,6666,244,'SlenderMan_Barbed_Crescent', 0, 7.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (1424,6666,28,'SlenderMan_Predatory_Glare', 4, 16.0, 2000, 1500, 4, 0, 0, 0); -- NM/Dyna/einherjar
+INSERT INTO `mob_skill` VALUES (35,6666,17,'SlenderMan_Claw_Storm', 0, 7.0, 2000, 1500, 4, 0, 0, 0); -- 7hp/tick
+INSERT INTO `mob_skill` VALUES (17,6666,15,'SlenderMan_Claw_Cyclone', 4, 10.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (14,6666,14,'SlenderMan_Roar', 1, 10.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (2131,6666,14,'SlenderMan_Fatal_Scream', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (209,6666,209,'SlenderMan_Howling', 1, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (222,6666,222,'SlenderMan_Hell_Slash', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (223,6666,223,'SlenderMan_Horror_Cloud', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (871,6666,316,'SlenderMan_Dynamic_Implosion', 1, 18.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (413,6666,413,'SlenderMan_Implosion', 1, 60, 2000, 0, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (417,6666,417,'SlenderMan_Dark_Nova', 1, 12.0, 3000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (943,6666,801,'SlenderMan_Gate_of_Tartarus', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+
+-- Minerva
+INSERT INTO `mob_skill` VALUES (574,7777,244,'Minerva_Light_Blade', 0, 30.0, 1200, 600, 4, 0, 0, 0); -- Restores EnLight
+INSERT INTO `mob_skill` VALUES (654,7777,378,'Minerva_meteorite',0,10.0,500,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (656,7777,1468,'Minerva_searing_light',1,10.0,502,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (729,7777,686,'Minerva_Stellar_burst',2,7.0,5000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1130,7777,1021,'Minerva_Medusa_Javelin',0,6.0,2000,1500,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (1123,7777,1011,'Minerva_Auroral_Wind',1,10.0,2000,1500,12,0, 0, 0); -- Restores Light spikes
+INSERT INTO `mob_skill` VALUES (1252,7777,1099,'Minerva_Luminous_Lance',0,20.0,2000,0,4,0,0,0); -- Restores EnLight
+INSERT INTO `mob_skill` VALUES (2434,7777,1856,'Minerva_Dark_Moon',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2435,7777,1857,'Minerva_Dark_Sun',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1885,7777,1465,'Minerva_Radiant_sacrament',1,18.0,2000,1000,4,0,0,0); -- Restores Light spikes
+INSERT INTO `mob_skill` VALUES (1886,7777,1471,'Minerva_Mega_holy',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1888,7777,1470,'Minerva_Divine_spear',1,18.0,2000,1000,4,0,0,0); -- Restores EnLight
+INSERT INTO `mob_skill` VALUES (2078,7777,1854,'Minerva_Wrath_of_zeus',4,10.0,2000,1000,4,0,0,0); -- Shock spikes, enthunder
+INSERT INTO `mob_skill` VALUES (2079,7777,1470,'Minerva_Lightning_spear',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2113,7777,1470,'Minerva_Scintillant_lance',4,10.0,2000,1000,4,0,0,0); -- Restores EnLight
+INSERT INTO `mob_skill` VALUES (2114,7777,1465,'Minerva_Grace_of_Hera',0,7.0,2000,1000,1,0,0,0); -- Restores Light spikes
+INSERT INTO `mob_skill` VALUES (2586,7777,2059,'Minerva_Phason_Beam',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2198,7777,1692,'Minerva_Level-3-Holy',1,18.0,1200,600,4,0,0,0);

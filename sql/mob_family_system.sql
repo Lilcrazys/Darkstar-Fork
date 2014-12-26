@@ -661,6 +661,10 @@ INSERT INTO `mob_family_system` VALUES (981,'Hades_V2',9,'Demon',1,40,90,140,6,3
 
 
 
+INSERT INTO `mob_family_system` VALUES (6666,'SlenderMan',13,'Humanoid',0,48,110,80,3,3,2,3,2,2,3,3,3,3,3,1,1,0.9,0.85,0.64,1.4,1.2,1.4,1.25,1.3,0.1,1.85,8);
+INSERT INTO `mob_family_system` VALUES (7777,'Minerva',18,'Unclassified',3,36,140,140,1,1,1,1,1,1,1,3,1,3,1,1,0.9,0.95,0.9,1.4,1.1,1.2,0.75,1.4,1.2,1.5,1.1,0);
+
+
 /*!40000 ALTER TABLE `mob_family_system` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
