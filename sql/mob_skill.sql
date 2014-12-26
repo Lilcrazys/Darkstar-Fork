@@ -4412,3 +4412,29 @@ INSERT INTO `mob_skill` VALUES (2531,954,1959,'Divesting_gale',1,18.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2532,954,1960,'Bolt_of_perdition',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2534,954,1962,'Oblivions_mantle',1,15.0,2000,1000,4,0,0,0);
+
+-- Hades V1
+
+INSERT INTO `mob_skill` VALUES (3133,980,2399,'Fulminous_Smash',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3134,980,2400,'Flaming_Kick',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3135,980,2401,'Icy_Grasp',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3136,980,2402,'Flash_Flood',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3137,980,2403,'Eroding_Flesh',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3138,980,2404,'Vivisection',1,18.0,2000,1000,4,0,0,0);
+
+-- Hades V2
+
+INSERT INTO `mob_skill` VALUES (3143,981,2409,'Impudence',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3144,981,2410,'Incessant_Void',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3145,981,2411,'Tenbrous_Grip',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3146,981,2412,'Demon_Fire',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3147,981,2413,'Frozen_Blood',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3148,981,2414,'Blast_Of_Reticence',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3149,981,2415,'Ensepulcher',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3150,981,2416,'Ceaseless_Surge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3151,981,2417,'Torrential_Pain',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3152,981,2418,'Eternal_Misery',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3153,981,2419,'Crippling_Agony',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3154,981,2420,'Bane_Of_Tartarus',1,18.0,2000,1000,4,0,0,0);
+
+
