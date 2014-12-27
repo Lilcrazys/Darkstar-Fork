@@ -4402,6 +4402,65 @@ INSERT INTO `mob_skill` VALUES (2461,936,1902,'Yaksha_Bliss',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2460,936,1903,'Yaksha_Oblivion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2459,936,1901,'Yaksha_Damnation',1,18.0,2000,1000,4,0,0,0);
 
+-- Veiled_Amphiptere (940)
+INSERT INTO `mob_skill` VALUES (2171,940,1705,'Tail_lash',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2172,940,1706,'Bloody_beak',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2173,940,1707,'Feral_peck',0,9.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2175,940,1709,'Reaving_wind',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2176,940,1710,'Storm_wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2177,940,1711,'Calamitous_wind',1,15.0,2000,1000,4,0,0,0);
+
+-- Veiled_Ixion (941)
+INSERT INTO `mob_skill` VALUES (2079,941,1639,'Lightning_spear',4,10.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2080,941,1642,'Acheron_kick',4,10.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2082,941,1641,'Rampant_stance',1,15.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2113,941,1652,'Scintillant_lance',4,10.0,2000,1000,4,0,0,0);
+
+-- Veiled_Sandworm (942)
+INSERT INTO `mob_skill` VALUES (1931,942,1537,'Dustvoid',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1932,942,1538,'Slaverous_gale',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1933,942,1539,'Aeolian_Void',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1934,942,1540,'Extreme_Purgation',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2348,942,1538,'Gorge',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2349,942,1542,'Disgorge',4,15.0,2000,1000,4,0,0,0);
+
+-- Veiled_Sanguiptere (943)
+INSERT INTO `mob_skill` VALUES(2171,943,1705,'Tail_Lash',0,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2172,943,1706,'Bloody_Beak',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2173,943,1707,'Feral_Peck',0,9.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2175,943,1709,'Reaving_Wind',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2176,943,1710,'Storm_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2177,943,1711,'Calamitous_Wind',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2174,943,1708,'Warped_Wail',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2386,943,1711,'Vermillion_Wind',1,15.0,2000,1000,4,0,0,0);
+
+-- Veiled_Alicorn (944)
+INSERT INTO `mob_skill` VALUES (2078,944,1640,'Wrath_of_zeus',4,10.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2079,944,1639,'Lightning_spear',4,10.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2080,944,1642,'Acheron_kick',4,10.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2081,944,1653,'Damsel_memento',0,7.0,2000,1000,1,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2082,944,1641,'Rampant_stance',1,15.0,2000,1000,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2113,944,1652,'Scintillant_lance',4,10.0,2000,1000,4,0,0,0); 
+
+-- Veiled_Gigaworm (945)
+INSERT INTO `mob_skill` VALUES (1931,945,1537,'Dustvoid',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1932,945,1538,'Slaverous_gale',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1933,945,1539,'Aeolian_Void',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1934,945,1540,'Extreme_Purgation',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1935,945,1541,'Desiccation',0,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1936,945,1542,'Doomvoid',1,30.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2348,945,1538,'Gorge',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2349,945,1542,'Disgorge',4,15.0,2000,1000,4,0,0,0);
+
+-- Veiled_Ironclad (946)
+INSERT INTO `mob_skill` VALUES (2363,946,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2364,946,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2365,946,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2366,946,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2367,946,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2368,946,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2370,946,1824,'Auger_Smash',4,9.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2371,946,1825,'Area_Bombardment',1,12.0,2000,1000,4,0,0,0);
 -- 937 through 953 coming next week added gallu for testing
 
 -- Paramount Gallu
