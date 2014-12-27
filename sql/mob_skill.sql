@@ -4461,7 +4461,7 @@ INSERT INTO `mob_skill` VALUES (2367,946,1821,'Ballistic_kick',4,12.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2368,946,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2370,946,1824,'Auger_Smash',4,9.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2371,946,1825,'Area_Bombardment',1,12.0,2000,1000,4,0,0,0);
--- 937 through 953 coming next week added gallu for testing
+
 
 -- Paramount Gallu
 INSERT INTO `mob_skill` VALUES (2528,954,1956,'Diluvial_wakes',4,10.0,2000,1000,4,0,0,0);
