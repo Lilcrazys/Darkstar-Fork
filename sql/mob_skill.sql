@@ -3581,7 +3581,7 @@ INSERT INTO `mob_skill` VALUES(372,526,372,'Wild_Horn',4,10.0,2000,1500,4,8,0,0)
 INSERT INTO `mob_skill` VALUES(373,526,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES(376,526,376,'Flame_Armor',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES(377,526,377,'Howl',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES(2330,526,378,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2330,526,2077,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
 
 -- Carabosse 527
 INSERT INTO `mob_skill` VALUES (1937,527,1581,'Zephyr_Arrow',0,15.0,2000,1500,4,0,0,3);
@@ -4251,7 +4251,7 @@ INSERT INTO `mob_skill` VALUES(2135,903,373,'Amnesic_Blast',0,10.0,2000,1500,4,0
 INSERT INTO `mob_skill` VALUES(372,903,372,'Wild_Horn',4,10.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES(373,903,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES(376,903,376,'Flame_Armor',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES(2330,903,378,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2330,903,2077,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
 
 -- Lofty_Zilant 900
 INSERT INTO `mob_skill` VALUES (2264,900,1757,'Sinister_Wing',1,18.0,2000,1000,4,0,0,0);
@@ -4471,6 +4471,15 @@ INSERT INTO `mob_skill` VALUES (2531,954,1959,'Divesting_gale',1,18.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2532,954,1960,'Bolt_of_perdition',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2534,954,1962,'Oblivions_mantle',1,15.0,2000,1000,4,0,0,0);
+
+-- Paramount Botulus (955) 
+INSERT INTO `mob_skill` VALUES (2542,955,1283,'Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2543,955,1284,'Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2544,955,1286,'Chymous_Reek',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2545,955,1288,'Rancid_Reflux',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2546,955,1289,'Crowning_Flatus',1,20.0,2000,1500,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2547,955,1285,'Slimy_Proposal',1,20.0,2000,1500,1,0,0,0); 
+INSERT INTO `mob_skill` VALUES (2548,955,1287,'Just_Desserts',1,20.0,2000,1500,4,0,0,0); 
 
 -- Hades V1
 INSERT INTO `mob_skill` VALUES (3133,980,2399,'Fulminous_Smash',1,18.0,2000,1000,4,0,0,0);

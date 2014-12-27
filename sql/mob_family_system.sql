@@ -661,6 +661,7 @@ INSERT INTO `mob_family_system` VALUES (944,'Veiled_Alicorn',5,'Avatar',2,40,100
 INSERT INTO `mob_family_system` VALUES (945,'Veiled_Gigaworm',1,'Amorph',5,40,155,180,2,3,4,3,8,8,5,3,3,3,3,1,1,1,1,0.5,0.5,1.125,0.25,0.25,0.5,1,0.5,4);
 INSERT INTO `mob_family_system` VALUES (946,'Veiled_Ironclad',3,'Arcana',1,40,130,130,2,3,3,3,3,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1.125,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (954,'Paramount_Gallu',9,'Demon',2,70,110,140,1,2,4,4,1,2,4,3,3,3,3,1,1,1,1,0.75,0.75,0.75,0.75,0.75,0.75,1.25,0.75,8);
+INSERT INTO `mob_family_system` VALUES (955,'Paramount_Botulus',1,'Amorph',4,40,70,140,6,3,6,3,1,5,4,3,3,3,3,0.875,1,0.75,0.75,1.25,1.25,1.25,1.125,1.125,1.125,1.125,1.125,6);
 
 INSERT INTO `mob_family_system` VALUES (980,'Hades_V1',13,'Humanoid',0,40,100,90,2,5,3,6,6,2,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0);
 INSERT INTO `mob_family_system` VALUES (981,'Hades_V2',9,'Demon',1,40,90,140,6,3,3,3,1,5,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0.875,0);
