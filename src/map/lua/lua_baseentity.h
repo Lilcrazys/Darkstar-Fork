@@ -215,6 +215,7 @@ public:
     int32 levelCap(lua_State*);             // genkai
     int32 levelRestriction(lua_State*);     // Establish/return current level restriction
     int32 sjRestriction(lua_State*);        // Establish/return subjob restriction
+    int32 sjBoost(lua_State*);              // Enhances a player's max subjob level temporarily
 
     int32 showText(lua_State*);             // Displays Dialog for npc
     int32 messageSpecial(lua_State*);       // Sends Special Message

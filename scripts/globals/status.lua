@@ -74,6 +74,8 @@ STATUS_SHUTDOWN			= 20;
     SUBEFFECT_REPRISAL          = 6;    -- 01-0110      26
 	SUBEFFECT_WIND_SPIKES       = 7;
 	SUBEFFECT_STONE_SPIKES      = 8;
+	SUBEFFECT_DELUGE_SPIKES     = 9;
+	SUBEFFECT_DARK_SPIKES       = 10;
 	SUBEFFECT_COUNTER           = 63;
 
 -- SKILLCHAINS
@@ -715,7 +717,15 @@ EFFECT_DYNAMIS                  = 800
 
 ------------------------------------------------
 -- Start of LegionXI custom section
--- EFFECT_SJCAP_BOOST                     = 900
+EFFECT_WIND_SPIKES                     = 890
+EFFECT_STONE_SPIKES                    = 891
+EFFECT_DARK_SPIKES                     = 892
+-- 893/894/895 reserved.
+EFFECT_MINERVA_ENTHUNDER               = 896
+EFFECT_MINERVA_ENLIGHT                 = 897
+EFFECT_MINERVA_SHOCK_SPIKES            = 898
+EFFECT_MINERVA_LIGHT_SPIKES            = 899
+EFFECT_SJCAP_BOOST                     = 900
 -- Note: ATMA must be applied using addStatusEffectEx()
 -- with the "EFFECT_ATMA" ID of 287 OR YOU WILL CRASH!
 -- EFFECT_ATMA_OF_THE_LION                = 901

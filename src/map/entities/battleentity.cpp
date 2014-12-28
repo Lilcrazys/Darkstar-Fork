@@ -650,7 +650,14 @@ void CBattleEntity::SetMLevel(uint8 mlvl)
 
 void CBattleEntity::SetSLevel(uint8 slvl)
 {
-	m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
+	if (StatusEffectContainer->HasStatusEffect(EFFECT_SJCAP_BOOST))
+	{
+		m_slvl = (slvl > ((m_mlvl * 2) / 3) ? (m_mlvl == 1 ? 1 : ((m_mlvl * 2) / 3)) : slvl);
+	}
+	else
+	{
+		m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
+	}
 }
 
 /************************************************************************

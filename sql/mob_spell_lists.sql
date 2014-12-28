@@ -1366,7 +1366,85 @@ INSERT INTO `mob_spell_lists` VALUES ('Tyrant', 131, 112, 1, 255);
 -- place new stuff right at this line
 
 -- INSERT INTO `mob_spell_lists` VALUES ('spell_list_name', spell_list_id, spell_id, min_level, max_level);
+
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 152, 1, 255); -- Blizzard 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 153, 1, 255); -- Blizzard 5
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 162, 1, 255); -- Stone 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 172, 1, 255); -- Water 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 177, 1, 255); -- Firaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 182, 1, 255); -- Blizzaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 204, 1, 255); -- Flare
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 206, 1, 255); -- Freeze
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 207, 1, 255); -- Freeze 2
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 208, 1, 255); -- Tornado
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 210, 1, 255); -- Quake
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 211, 1, 255); -- Quake 2
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 212, 1, 255); -- Burst
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 214, 1, 255); -- Flood
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 215, 1, 255); -- Flood 2
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 219, 1, 255); -- Comet
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 245, 1, 255); -- Drain
+INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 247, 1, 255); -- Aspir
+
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 242, 1, 255); -- Absorb-ACC
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 266, 1, 255); -- Absorb-STR
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 267, 1, 255); -- Absorb-DEX
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 268, 1, 255); -- Absorb-VIT
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 269, 1, 255); -- Absorb-AGI
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 270, 1, 255); -- Absorb-INT
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 271, 1, 255); -- Absorb-MND
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 272, 1, 255); -- Absorb-CHR
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 275, 1, 255); -- Absorb-TP
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 153, 1, 255); -- Blizzard 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 177, 1, 255); -- Firaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 182, 1, 255); -- Blizzaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 183, 1, 255); -- Blizzaga 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 193, 1, 255); -- Stonega 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 203, 1, 255); -- Waterga 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 204, 1, 255); -- Flare
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 206, 1, 255); -- Freeze
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 207, 1, 255); -- Freeze 2
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 208, 1, 255); -- Tornado
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 210, 1, 255); -- Quake
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 211, 1, 255); -- Quake 2
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 212, 1, 255); -- Burst
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 214, 1, 255); -- Flood
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 215, 1, 255); -- Flood 2
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 228, 1, 255); -- Poisonga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 233, 1, 255); -- Bio 4
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 234, 1, 255); -- Bio 5
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 245, 1, 255); -- Drain
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 246, 1, 255); -- Drain 2
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 247, 1, 255); -- Aspir
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 248, 1, 255); -- Aspir 2
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 255, 1, 255); -- Break
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 256, 1, 255); -- Virus
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 257, 1, 255); -- Curse
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 277, 1, 255); -- Dread Spikes
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 311, 1, 255); -- Endark
+INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 360, 1, 255); -- Dispelga
+
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 242, 1, 255); -- Absorb-ACC
+INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 257, 1, 255); -- Curse
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 266, 1, 255); -- Absorb-STR
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 267, 1, 255); -- Absorb-DEX
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 268, 1, 255); -- Absorb-VIT
@@ -1389,6 +1467,7 @@ INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 356, 1, 255); -- Paraly
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 365, 1, 255); -- Breakga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 366, 1, 255); -- Graviga
+
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 5, 1, 255); -- Cure 5
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 14, 1, 255); -- Poisona
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 15, 1, 255); -- Paralyna
@@ -1430,22 +1509,24 @@ INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 212, 1, 255); -- Burst
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 213, 1, 255); -- Burst 2
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 214, 1, 255); -- Flood
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 222, 1, 255); -- Poison
+INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 222, 1, 255); -- Poison 3
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 235, 1, 255); -- Burn
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 237, 1, 255); -- Choke
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 239, 1, 255); -- Shock
+INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 257, 1, 255); -- Curse
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 361, 1, 255); -- Blindga
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 366, 1, 255); -- Graviga
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 477, 1, 255); -- Regen 4
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 486, 1, 255); -- Gain-STR
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 487, 1, 255); -- Gain-DEX
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 488, 1, 255); -- Gain-VIT
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 489, 1, 255); -- Gain-AGI
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 483, 1, 255); -- Boost-INT
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 484, 1, 255); -- Boost-MND
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 486, 1, 255); -- Gain-STR
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 487, 1, 255); -- Gain-DEX
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 488, 1, 255); -- Gain-VIT
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 489, 1, 255); -- Gain-AGI
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 490, 1, 255); -- Gain-INT
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 491, 1, 255); -- Gain-MND
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 492, 1, 255); -- Gain-CHR
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 492, 1, 255); -- Gain-CHR
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 493, 1, 255); -- Temper
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 496, 1, 255); -- Firaja
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 498, 1, 255); -- Aeroja
