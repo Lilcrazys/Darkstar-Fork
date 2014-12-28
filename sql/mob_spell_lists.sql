@@ -1359,6 +1359,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Bedrock_Barry', 130, 238, 1, 255);
 INSERT INTO `mob_spell_lists` VALUES ('Tyrant', 131, 112, 1, 255);
 
 
+
 -- ---------------------------------------------------------------------------
 -- Custom Section
 -- ---------------------------------------------------------------------------
@@ -1443,6 +1444,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 311, 1, 255); -- Endark
 INSERT INTO `mob_spell_lists` VALUES ('Hades', 600, 360, 1, 255); -- Dispelga
 
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 242, 1, 255); -- Absorb-ACC
+INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 257, 1, 255); -- Curse
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 266, 1, 255); -- Absorb-STR
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 267, 1, 255); -- Absorb-DEX
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 268, 1, 255); -- Absorb-VIT
@@ -1465,6 +1467,7 @@ INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 356, 1, 255); -- Paraly
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 365, 1, 255); -- Breakga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 366, 1, 255); -- Graviga
+
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 5, 1, 255); -- Cure 5
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 14, 1, 255); -- Poisona
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 15, 1, 255); -- Paralyna
@@ -1506,24 +1509,24 @@ INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 212, 1, 255); -- Burst
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 213, 1, 255); -- Burst 2
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 214, 1, 255); -- Flood
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 222, 1, 255); -- Poison
+INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 222, 1, 255); -- Poison 3
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 235, 1, 255); -- Burn
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 237, 1, 255); -- Choke
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 239, 1, 255); -- Shock
+INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 257, 1, 255); -- Curse
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 361, 1, 255); -- Blindga
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 366, 1, 255); -- Graviga
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 477, 1, 255); -- Regen 4
 -- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 483, 1, 255); -- Boost-INT
 -- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 484, 1, 255); -- Boost-MND
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 486, 1, 255); -- Gain-STR
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 487, 1, 255); -- Gain-DEX
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 488, 1, 255); -- Gain-VIT
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 489, 1, 255); -- Gain-AGI
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 486, 1, 255); -- Gain-STR
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 487, 1, 255); -- Gain-DEX
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 488, 1, 255); -- Gain-VIT
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 489, 1, 255); -- Gain-AGI
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 490, 1, 255); -- Gain-INT
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 491, 1, 255); -- Gain-MND
-INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 492, 1, 255); -- Gain-CHR
+-- INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 492, 1, 255); -- Gain-CHR
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 493, 1, 255); -- Temper
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 496, 1, 255); -- Firaja
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 498, 1, 255); -- Aeroja

@@ -2475,6 +2475,46 @@ inline int32 CLuaBaseEntity::sjRestriction(lua_State* L)
     return 0;
 }
 
+/************************************************************************
+*                                                                       *
+*  Enhances a player's max subjob level temporarily                     *
+*                                                                       *
+************************************************************************/
+
+inline int32 CLuaBaseEntity::sjBoost(lua_State *L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
+
+    PChar->SetSLevel(PChar->jobs.job[PChar->GetSJob()]);
+
+    blueutils::ValidateBlueSpells(PChar);
+
+    charutils::CalculateStats(PChar);
+    charutils::CheckValidEquipment(PChar);
+    charutils::BuildingCharSkillsTable(PChar);
+    charutils::BuildingCharAbilityTable(PChar);
+    charutils::BuildingCharTraitsTable(PChar);
+    charutils::BuildingCharWeaponSkills(PChar);
+
+    PChar->UpdateHealth();
+    PChar->health.hp = PChar->GetMaxHP();
+    PChar->health.mp = PChar->GetMaxMP();
+
+    charutils::SaveCharStats(PChar);
+
+    PChar->pushPacket(new CCharJobsPacket(PChar));
+    PChar->pushPacket(new CCharStatsPacket(PChar));
+    PChar->pushPacket(new CCharSkillsPacket(PChar));
+    PChar->pushPacket(new CCharAbilitiesPacket(PChar));
+    PChar->pushPacket(new CCharUpdatePacket(PChar));
+    PChar->pushPacket(new CMenuMeritPacket(PChar));
+    PChar->pushPacket(new CCharSyncPacket(PChar));
+    return 0;
+}
+
 //==========================================================//
 
 inline int32 CLuaBaseEntity::release(lua_State *L)
@@ -9713,6 +9753,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,levelCap),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,levelRestriction),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjRestriction),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getVar),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setVar),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,addVar),

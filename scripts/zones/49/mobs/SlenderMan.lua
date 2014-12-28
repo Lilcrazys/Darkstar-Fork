@@ -1,21 +1,24 @@
 -----------------------------------
 -- Area: Multiple - randomly chooses zone to pop at.
--- Al Zahbi (Besieged - Undead Swarm), 
--- Jugner Forest, Jugner Forest [S],
--- Wajaom Woodlands, Bhaflau Thickets
 --  NM:  SlenderMan
 -- Randomly camps players who see/hear him.
+-- May appear in:
+-- Al Zahbi (Besieged - Undead Swarm),
+-- Jugner Forest, Jugner Forest [S],
+-- Wajaom Woodlands, Bhaflau Thickets
 -----------------------------------
 
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/utils");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:addMod(MOD_REGAIN, 25);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,1);
+    mob:setMobMod(MOBMOD_AUTO_SPIKES,1);
 end
 
 -----------------------------------
@@ -23,7 +26,14 @@ end
 -----------------------------------
 
 function onMobSpawn(mob)
-
+    mob:setMod(MOD_REGEN, 40);
+    mob:setMod(MOD_REFRESH, 3);
+    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_FASTCAST, 80);
+    mob:addMod(MOD_HUMANOID_KILLER, 15);
+    mob:addMod(MOD_MATT, 20);
+    mob:addMod(MOD_MACC, 100);
+    mob:addMod(MOD_INT, 20);
 end;
 
 -----------------------------------
@@ -31,7 +41,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-
+    SpoofSay( mob, target, "I'll swallow your soul!")
 end;
 
 -----------------------------------
@@ -39,23 +49,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-
     --[[
-    if (target:getTarget():getID() ~= mob:getID()) then
-        local targetPos = target:getPos();
-        local radians = (256 - targetPos.rot) * (math.pi / 128);
-        mob:pathTo(targetPos.x + math.cos(radians) * 16, targetPos.y, targetPos.z + math.sin(radians) * 16);
-    end
-    local lanceTime = mob:getLocalVar("lanceTime");
-    local lanceOut = mob:getLocalVar("lanceOut");
-    local rejuv = mob:getLocalVar("rejuv");
-    if (mob:getHPP() < 30 and rejuv == 0 and target:getFamily() == 478) then
-        -- SpoofSay(  message here)
-        mob:useMobAbility(1253);
-        mob:setLocalVar("rejuv", 1);
-    elseif lanceTime + 50 < mob:getBattleTime() and lanceOut == 0 then
-        mob:entityAnimationPacket("sp00");
-        mob:setLocalVar("lanceOut", 1);
+    if (mob:getHPP() <= 3) then
+        mob:useMobAbility(475); -- Do Mijin Gakure!
     end
     ]]--
 end;
@@ -65,6 +61,38 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    -- SpoofSay( victory message here)
-    -- mob:getBattlefield():win();
+    -- SpoofSay( mob, killer, "victory message here" )
+end;
+
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob,target,damage)
+    if (math.random(0,99) >= 33) then
+        return 0,0,0;
+    else
+        local dmg = damage * 0.34;
+        local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+        if (INT_diff > 20) then
+            INT_diff = 20 + (INT_diff - 20) / 2;
+        end
+        dmg = INT_diff+LV_diff+damage/2;
+        dmg = utils.clamp(dmg, 5, 66);
+        return SUBEFFECT_FIRE_DAMAGE,163,dmg;
+    end
+end;
+
+-----------------------------------
+-- onSpikesDamage
+-----------------------------------
+
+function onSpikesDamage(mob,target,damage)
+    if (math.random(0,99) >= 33) then
+        return 0,0,0;
+    else
+        local duration = 5;
+        target:addStatusEffect(EFFECT_TERROR,1,0,duration);
+        return SUBEFFECT_CURSE_SPIKES,0,EFFECT_TERROR;
+    end
 end;
