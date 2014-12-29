@@ -5,8 +5,8 @@
 -----------------------------------
 
 function doCustomTrial(mob, killer)
-	print("mob:checkBaseExp()",mob:checkBaseExp());
-	killer:PrintToPlayer("TEST!");
+	-- print("mob:checkBaseExp()",mob:checkBaseExp());
+	-- killer:PrintToPlayer("TEST!");
 	---------------------------------------------------
 	-- Custom Trials
 	---------------------------------------------------
@@ -24,7 +24,7 @@ function doCustomTrial(mob, killer)
 	local MischievousCount = 0;
 	local IntuloKillCount = 0;
 	local KeeperKillCount = 0;
-	
+
 	if (killer:getVar("Seww_the_Squidlimbed_KILLS") ~= nil) then
 		SewwtheSquidlimbedKillCount = killer:getVar("Seww_the_Squidlimbed_KILLS")
 	end
@@ -55,7 +55,7 @@ function doCustomTrial(mob, killer)
 		MAIN == 18270 or MAIN == 18324 or MAIN == 18282 or MAIN == 18264 or
 		RANGED == 18348 or RANGED == 18336 ) ) then
 
-		
+
 		if (SewwtheSquidlimbedKillCount < 4 and mob:getID() == 17498301) then
 			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwtheSquidlimbedKillCount + 1);
 		end
@@ -104,10 +104,10 @@ function doCustomTrial(mob, killer)
 		FafnirKillCount = killer:getVar("Fafnir_KILLS")
 	end
 
-	if ((trial >= 17 and trial <= 32) and (MAIN == 18646 or SUB == 16196 or 
-		MAIN == 18644 or MAIN == 18642 or MAIN == 18648 or MAIN == 18639 or 
-		RANGED == 18578 or MAIN == 18643 or MAIN == 18641 or MAIN == 18645 or 
-		MAIN == 18638 or MAIN == 18647 or MAIN == 18640 or MAIN == 18637 or 
+	if ((trial >= 17 and trial <= 32) and (MAIN == 18646 or SUB == 16196 or
+		MAIN == 18644 or MAIN == 18642 or MAIN == 18648 or MAIN == 18639 or
+		RANGED == 18578 or MAIN == 18643 or MAIN == 18641 or MAIN == 18645 or
+		MAIN == 18638 or MAIN == 18647 or MAIN == 18640 or MAIN == 18637 or
 		RANGED == 18650 or RANGED == 18649) ) then
 
 		if (AdamantoiseKillCount < 7 and mob:getID() == 17301537) then
@@ -136,7 +136,7 @@ function doCustomTrial(mob, killer)
 	local AshDragonKillCount = 0;
 	local JugglerKillCount = 0;
 	local NidhoggKillCount = 0;
-	
+
 	if (killer:getVar("Aspidochelone_KILLS") ~= nil) then
 		AspidocheloneKillCount = killer:getVar("Aspidochelone_KILLS")
 	end
@@ -153,10 +153,10 @@ function doCustomTrial(mob, killer)
 		NidhoggKillCount = killer:getVar("Nidhogg_KILLS")
 	end
 
-	if ((trial >= 33 and trial <= 48) and (MAIN == 18674 or 
-		SUB == 16198 or RANGED == 18677 or MAIN == 18672 or MAIN == 18670 or 
-		MAIN == 18676 or MAIN == 18667 or RANGED == 18580 or MAIN == 18671 or 
-		MAIN == 18669 or MAIN == 18673 or MAIN == 18666 or MAIN == 18675 or 
+	if ((trial >= 33 and trial <= 48) and (MAIN == 18674 or
+		SUB == 16198 or RANGED == 18677 or MAIN == 18672 or MAIN == 18670 or
+		MAIN == 18676 or MAIN == 18667 or RANGED == 18580 or MAIN == 18671 or
+		MAIN == 18669 or MAIN == 18673 or MAIN == 18666 or MAIN == 18675 or
 		MAIN == 18668 or MAIN == 18665 or RANGED == 18678) ) then
 
 		if (JugglerKillCount < 4 and mob:getID() == 17580248) then
@@ -183,7 +183,7 @@ function doCustomTrial(mob, killer)
 			killer:PrintToPlayer("Your trial is complete!.");
 		end
 	end
-	
+
 -- The below needs cleanup badly.
 --[[
 
@@ -275,7 +275,7 @@ function doCustomTrial(mob, killer)
 	end
 
 
-	
+
 
 		---------------------
 	-- Mythic 2 95-99
