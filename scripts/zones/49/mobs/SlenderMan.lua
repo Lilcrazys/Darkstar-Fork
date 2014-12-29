@@ -17,8 +17,10 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,1);
-    mob:setMobMod(MOBMOD_AUTO_SPIKES,1);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
+    mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0);
+    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32);
 end
 
 -----------------------------------

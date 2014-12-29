@@ -13,8 +13,8 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,1);
-    mob:setMobMod(MOBMOD_AUTO_SPIKES,1);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
 end
 
 -----------------------------------
@@ -45,7 +45,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
--- Possibly broken, mobMod method only allow 2 jobs 2hrs, 
+-- Possibly broken, mobMod method only allow 2 jobs 2hrs,
 -- skill method requires it be an actual skill...
 -- ...Can 2hr get selected as random TP move? That would suck.
     --[[
@@ -150,7 +150,7 @@ function onAdditionalEffect(mob,target,damage)
         if (MND_diff > 20) then
             MND_diff = 20 + (MND_diff - 20);
             MND_diff = MND_diff * 0.34;
-        end	
+        end
         IntMndBonus = INT_diff + MND_diff;
         IntMndBonus = IntMndBonus * 0.20;
         -- target:PrintToPlayer( string.format( "Enspell int+mnd bonus: '%u' ", IntMndBonus) );
@@ -233,7 +233,7 @@ function onSpikesDamage(mob,target,damage)
         if (MND_diff > 20) then
             MND_diff = 20 + (MND_diff - 20);
             MND_diff = MND_diff * 0.34;
-        end		IntMndBonus = INT_diff + MND_diff;
+        end     IntMndBonus = INT_diff + MND_diff;
         IntMndBonus = IntMndBonus * 0.2;
         -- target:PrintToPlayer( string.format( "Spikes int+mnd bonus: '%u' ", IntMndBonus) );
         dmg = dmg + IntMndBonus;
