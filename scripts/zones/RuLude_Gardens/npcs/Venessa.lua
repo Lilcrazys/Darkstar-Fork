@@ -55,8 +55,22 @@ function onTrade(player,npc,trade)
 		SpoofSay(npc:getID(),player:getID(),"If you wish to cancel the current trial, please trade me a small fee of,");
 		SpoofEmote(npc:getID(),player:getID(),": 1x imperial bronze piece.");
 	end
-	if (trade:hasItemQty(2184,1)) and (trade:getItemCount() == 1) and (player:getVar("customtrial") >= 1) then
+	if (trade:hasItemQty(2184,1) and trade:getItemCount() == 1 and player:getVar("customtrial") > 0) then
 		player:setVar("customtrial",0);
+		player:setVar("Seww_the_Squidlimbed_KILLS",0);
+		player:setVar("Mischievous_Micholas_KILLS",0);
+		player:setVar("Keeper_of_Halidom_KILLS",0);
+		player:setVar("Megalobugard_KILLS",0);
+		player:setVar("Dune_Widow_KILLS",0);
+		player:setVar("Intulo_KILLS",0);
+		player:setVar("Adamantoise_KILLS",0);
+		player:setVar("Behemoth_KILLS",0);
+		player:setVar("Fafnir_KILLS",0);
+		player:setVar("Juggler_Hecatomb_KILLS",0);
+		player:setVar("Nidhogg_KILLS",0);
+		player:setVar("King_Behemoth_KILLS",0);
+		player:setVar("Aspidochelone_KILLS",0);
+		player:setVar("Ash_Dragon_KILLS",0);
 		SpoofSay(npc:getID(),player:getID(),"Ok your trial has been reset and your are now able to undertake a new trial.");
 		player:tradeComplete();
 	elseif (trade:hasItemQty(2184,1)) and (player:getVar("customtrial") == 0) then
@@ -64,7 +78,7 @@ function onTrade(player,npc,trade)
 	end
 
 	--------------------------------------------
-	-- Relic Trials
+	-- 				Relic Trials
 	--------------------------------------------
 
 	-----------------------
