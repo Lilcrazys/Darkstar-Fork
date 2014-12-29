@@ -369,6 +369,7 @@ void SmallPacket0x00D(map_session_data_t* session, CCharEntity* PChar, int8* dat
     if (PChar->animation == ANIMATION_ATTACK)
     {
         PChar->animation = ANIMATION_NONE;
+        PChar->updatemask |= UPDATE_HP;
     }
 
     PChar->PRecastContainer->Del(RECAST_MAGIC);
@@ -721,6 +722,7 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, int8* dat
 
         PChar->status = STATUS_DISAPPEAR;
         PChar->animation = ANIMATION_NONE;
+        PChar->updatemask |= UPDATE_HP;
 
         PChar->clearPacketList();
         PChar->pushPacket(new CServerIPPacket(PChar, 2));
@@ -778,6 +780,7 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, int8* dat
     {
         PChar->status = STATUS_UPDATE;
         PChar->animation = ANIMATION_NONE;
+        PChar->updatemask |= UPDATE_HP;
         PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_CHOCOBO);
         PChar->pushPacket(new CCharUpdatePacket(PChar));
         PChar->pushPacket(new CChangeMusicPacket(0, PChar->loc.zone->GetBackgroundMusic()));
@@ -3798,6 +3801,7 @@ void SmallPacket0x0C4(map_session_data_t* session, CCharEntity* PChar, int8* dat
                 PChar->equip[SLOT_LINK] = 0;
                 PChar->equipLoc[SLOT_LINK] = 0;
                 PChar->nameflags.flags &= ~FLAG_LINKSHELL;
+                PChar->updatemask |= UPDATE_HP;
 
                 PChar->pushPacket(new CInventoryAssignPacket(PItemLinkshell, INV_NORMAL));
             }
@@ -3828,6 +3832,7 @@ void SmallPacket0x0C4(map_session_data_t* session, CCharEntity* PChar, int8* dat
                 PChar->equip[SLOT_LINK] = SlotID;
                 PChar->equipLoc[SLOT_LINK] = LOC_INVENTORY;
                 PChar->nameflags.flags |= FLAG_LINKSHELL;
+                PChar->updatemask |= UPDATE_HP;
 
                 PChar->pushPacket(new CInventoryAssignPacket(PItemLinkshell, INV_LINKSHELL));
             }
@@ -3939,6 +3944,7 @@ void SmallPacket0x0DC(map_session_data_t* session, CCharEntity* PChar, int8* dat
     }
     charutils::SaveCharStats(PChar);
 
+    PChar->updatemask |= UPDATE_HP;
     PChar->status = STATUS_UPDATE;
     PChar->pushPacket(new CMenuConfigPacket(PChar));
     PChar->pushPacket(new CCharUpdatePacket(PChar));
@@ -4305,6 +4311,7 @@ void SmallPacket0x0EA(map_session_data_t* session, CCharEntity* PChar, int8* dat
 
     PChar->status = STATUS_UPDATE;
     PChar->animation = (PChar->animation == ANIMATION_SIT ? ANIMATION_NONE : ANIMATION_SIT);
+    PChar->updatemask |= UPDATE_HP;
     PChar->pushPacket(new CCharUpdatePacket(PChar));
     return;
 }
@@ -5056,6 +5063,7 @@ void SmallPacket0x106(map_session_data_t* session, CCharEntity* PChar, int8* dat
         if (BazaarIsEmpty)
         {
             PTarget->status = STATUS_UPDATE;
+            PTarget->updatemask |= UPDATE_HP;
             PTarget->nameflags.flags &= ~FLAG_BAZAAR;
             PTarget->pushPacket(new CCharUpdatePacket(PTarget));
         }
@@ -5083,6 +5091,7 @@ void SmallPacket0x109(map_session_data_t* session, CCharEntity* PChar, int8* dat
         {
             PChar->status = STATUS_UPDATE;
             PChar->nameflags.flags |= FLAG_BAZAAR;
+            PChar->updatemask |= UPDATE_HP;
             PChar->pushPacket(new CCharUpdatePacket(PChar));
             return;
         }
@@ -5137,6 +5146,7 @@ void SmallPacket0x10B(map_session_data_t* session, CCharEntity* PChar, int8* dat
 
     PChar->status = STATUS_UPDATE;
     PChar->nameflags.flags &= ~FLAG_BAZAAR;
+    PChar->updatemask |= UPDATE_HP;
     PChar->pushPacket(new CCharUpdatePacket(PChar));
     return;
 }
