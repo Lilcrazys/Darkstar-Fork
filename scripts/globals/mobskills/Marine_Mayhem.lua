@@ -16,10 +16,10 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	MobStatusEffectMove(mob, target, EFFECT_KO, 128, 0, 60);
+	MobStatusEffectMove(mob, target, EFFECT_KO, 1, 0, 1);
 
 
-	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_EARTH, 50);
+	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_EARTH, 0);
 
 	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
 	target:delHP(dmg);

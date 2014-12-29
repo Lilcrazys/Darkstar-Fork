@@ -1,11 +1,11 @@
 -----------------------------------
 --
 -- Functions for LegionXI custom trials content
---
+-- Author: Teo & Omni LegionFFXI
 -----------------------------------
 
-function doCustomTrial(mob, killer, isWeaponSkillKill)
-	-- print("mob:checkBaseExp()",mob:checkBaseExp());
+function doCustomTrial(mob, killer)
+	print("mob:checkBaseExp()",mob:checkBaseExp());
 	killer:PrintToPlayer("TEST!");
 	---------------------------------------------------
 	-- Custom Trials
@@ -15,17 +15,83 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	local MAIN = killer:getEquipID(SLOT_MAIN);
 	local SUB = killer:getEquipID(SLOT_SUB);
 	local RANGED = killer:getEquipID(SLOT_RANGED);
-	-- You can NOT declare 3 vars with the same name "Weapon"!!!
-	-- for single hand weapons you will need to check both MAIN and SUB - separately.
-	-- Or inform people they have to mainhand their trial weapon.
+	---------------------
+	-- Relic 1 75-85
+	---------------------
+	local SewwtheSquidlimbedKillCount = 0;
+	local MegalobugardKillCount = 0;
+	local DuneWidowKillCount = 0;
+	local MischievousCount = 0;
+	local IntuloKillCount = 0;
+	local KeeperKillCount = 0;
+	
+	if (killer:getVar("Seww_the_Squidlimbed_KILLS") ~= nil) then
+		SewwtheSquidlimbedKillCount = killer:getVar("Seww_the_Squidlimbed_KILLS")
+	end
+	if (killer:getVar("Mischievous_Micholas_KILLS") ~= nil) then
+		MischievousCount = killer:getVar("Mischievous_Micholas_KILLS")
+	end
+	if (killer:getVar("Megalobugard_KILLS") ~= nil) then
+		MegalobugardKillCount = killer:getVar("Megalobugard_KILLS")
+	end
+	if (killer:getVar("Keeper_of_Halidom_KILLS") ~= nil) then
+		KeeperKillCount = killer:getVar("Keeper_of_Halidom_KILLS")
+	end
+	if (killer:getVar("Dune_Widow_KILLS") ~= nil) then
+		DuneWidowKillCount = killer:getVar("Dune_Widow_KILLS")
+	end
+	if (killer:getVar("Intulo_KILLS") ~= nil) then
+		IntuloKillCount = killer:getVar("Intulo_KILLS")
+	end
+
+	---------------------
+	-- Trial start count
+	---------------------
+
+
+	if ( (trial >= 1 and trial <= 16) and (MAIN == 18318 or SUB == 15070 or
+		MAIN == 18306 or MAIN == 18294 or MAIN == 18330 or MAIN == 18276 or
+		RANGED == 18342 or MAIN == 18300 or MAIN == 18288 or MAIN == 18312 or
+		MAIN == 18270 or MAIN == 18324 or MAIN == 18282 or MAIN == 18264 or
+		RANGED == 18348 or RANGED == 18336 ) ) then
+
+		
+		if (SewwtheSquidlimbedKillCount < 4 and mob:getID() == 17498301) then
+			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwtheSquidlimbedKillCount + 1);
+		end
+		if (MischievousCount < 4 and mob:getID() == 17281149) then
+			killer:setVar("Mischievous_Micholas_KILLS", MischievousCount + 1);
+		end
+		if (KeeperKillCount < 4 and mob:getID() == 17272978) then
+			killer:setVar("Keeper_of_Halidom_KILLS", KeeperKillCount + 1);
+		end
+		if (MegalobugardKillCount < 4 and mob:getID() == 16875741) then
+			killer:setVar("Megalobugard_KILLS", MegalobugardKillCount + 1);
+		end
+		if (DuneWidowKillCount < 3 and mob:getID() == 17244396) then
+			killer:setVar("Dune_Widow_KILLS", DuneWidowKillCount + 1);
+		end
+		if (IntuloKillCount < 4 and mob:getID() == 16793742) then
+			killer:setVar("Intulo_KILLS", IntuloKillCount + 1);
+		end
+
+		------------------
+		-- trial complete
+		------------------
+		if (MegalobugardKillCount == 4 and Seww_the_SquidlimbedKillCount == 4 and MischievousCount == 4 and
+			Dune_WidowKillCount == 3 and Keeper_of_HalidomKillCount == 4 and  IntuloKillCount == 4) then
+			killer:setVar("TRIAL_COMPLETE",1);
+			killer:PrintToPlayer("Your trial is complete!.");
+		end
+	end
+
 	---------------------
 	-- Relic 2 85-95
 	---------------------
 	local AdamantoiseKillCount = 0;
 	local BehemothKillCount = 0;
 	local FafnirKillCount = 0;
-	-- Your vars were returning nil here because they didn't exist yet.
-	-- Normally the getVar() returns zero if they don't exist but these weren't...Odd...
+
 	if (killer:getVar("Adamantoise_KILLS") ~= nil) then
 		AdamantoiseKillCount = killer:getVar("Adamantoise_KILLS")
 	end
@@ -38,19 +104,14 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		FafnirKillCount = killer:getVar("Fafnir_KILLS")
 	end
 
-	-- There was no need to check every value between 17 and 32 individually with "or" here.
-	-- Each item did not need parentheses. But, the entire content between if and then, DID.
-	-- Additional parentheses are only needed to group or separate multiple objects.
-	if ((trial >= 17 and trial <= 32) and (MAIN == 18646 or MAIN == 16196
-		or MAIN == 18649 or MAIN == 18644 or MAIN == 18642 or MAIN == 18648
-		or MAIN == 18639 or MAIN == 18578 or MAIN == 18643 or MAIN == 18641
-		or MAIN == 18645 or MAIN == 18638 or MAIN == 18647 or MAIN == 18640
-		or MAIN == 18637 or MAIN == 18650) ) then
-		-- isWeaponSkillKill == false
-		-- Unless specifically not allowing ws kills, no need to check if its false.
-		-- If ws kill is REQUIRED however, DO check if its true.
+	if ((trial >= 17 and trial <= 32) and (MAIN == 18646 or SUB == 16196 or 
+		MAIN == 18644 or MAIN == 18642 or MAIN == 18648 or MAIN == 18639 or 
+		RANGED == 18578 or MAIN == 18643 or MAIN == 18641 or MAIN == 18645 or 
+		MAIN == 18638 or MAIN == 18647 or MAIN == 18640 or MAIN == 18637 or 
+		RANGED == 18650 or RANGED == 18649) ) then
+
 		if (AdamantoiseKillCount < 7 and mob:getID() == 17301537) then
-			killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
+			 killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
 		end
 		if (BehemothKillCount < 7 and mob:getID() == 17297440) then
 			killer:setVar("Behemoth_KILLS", BehemothKillCount + 1);
@@ -63,64 +124,69 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		------------------
 		if (AdamantoiseKillCount == 7 and BehemothKillCount == 7 and FafnirKillCount == 7) then
 			killer:setVar("TRIAL_COMPLETE",1);
+			killer:PrintToPlayer("Your trial is complete!.");
 		end
 	end
 
--- The below needs cleanup badly.
---[[
 	---------------------
-	-- Relic 1 75-85
+	-- Relic 3 95-99
 	---------------------
+	local AspidocheloneKillCount = 0;
+	local KingBehemothKillCount = 0;
+	local AshDragonKillCount = 0;
+	local JugglerKillCount = 0;
+	local NidhoggKillCount = 0;
+	
+	if (killer:getVar("Aspidochelone_KILLS") ~= nil) then
+		AspidocheloneKillCount = killer:getVar("Aspidochelone_KILLS")
+	end
+	if (killer:getVar("King_Behemoth_KILLS") ~= nil) then
+		KingBehemothKillCount = killer:getVar("King_Behemoth_KILLS")
+	end
+	if (killer:getVar("Juggler_Hecatomb_KILLS") ~= nil) then
+		JugglerKillCount = killer:getVar("Juggler_Hecatomb_KILLS")
+	end
+	if (killer:getVar("Ash_Dragon_KILLS") ~= nil) then
+		AshDragonKillCount = killer:getVar("Ash_Dragon_KILLS")
+	end
+	if (killer:getVar("Nidhogg_KILLS") ~= nil) then
+		NidhoggKillCount = killer:getVar("Nidhogg_KILLS")
+	end
 
-	local kill1 = killer:getVar("Megalobugard_KILLS");
-	local kill2 = killer:getVar("Intulo_KILLS");
-	local kill3 = killer:getVar("Keeper_of_Halidom_KILLS");
-	local kill4 = killer:getVar("Dune_Widow_KILLS");
-	local kill5 = killer:getVar("Seww_the_Squidlimbed_KILLS");
-	local kill6 = killer:getVar("Mischievous_Micholas_KILLS");
+	if ((trial >= 33 and trial <= 48) and (MAIN == 18674 or 
+		SUB == 16198 or RANGED == 18677 or MAIN == 18672 or MAIN == 18670 or 
+		MAIN == 18676 or MAIN == 18667 or RANGED == 18580 or MAIN == 18671 or 
+		MAIN == 18669 or MAIN == 18673 or MAIN == 18666 or MAIN == 18675 or 
+		MAIN == 18668 or MAIN == 18665 or RANGED == 18678) ) then
 
-	if (killer == nil or killer:getHP() == 0) then
-        return;
-    end
-
-	---------------------
-	-- Trial start count
-	---------------------
-	if (trial == 1)  or (trial == 2)  or (trial == 3)  or (trial == 4)  or (trial == 5)  or
-	   (trial == 6)  or (trial == 7)  or (trial == 8)  or (trial == 9)  or (trial == 10) or
-	   (trial == 11) or (trial == 12) or (trial == 13) or (trial == 14) or (trial == 15) or
-	   (trial == 16) and
-	   (Weapon == 18318) or (Weapon == 15070) or (Weapon == 18336) or (Weapon == 18306) or
-	   (Weapon == 18294) or (Weapon == 18330) or (Weapon == 18276) or (Weapon == 18342) or
-	   (Weapon == 18300) or (Weapon == 18288) or (Weapon == 18312) or (Weapon == 18270) or
-	   (Weapon == 18324) or (Weapon == 18282) or (Weapon == 18264) or (Weapon == 18348) and
-	   (isWeaponSkillKill == false) then
-
-		if (kill1 < 4) and (mob:getID() == 16875741) then
-			killer:setVar("Megalobugard_KILLS", kill1 + 1);
+		if (JugglerKillCount < 4 and mob:getID() == 17580248) then
+			killer:setVar("Juggler_Hecatomb_KILLS", JugglerKillCount + 1);
 		end
-		if (kill2 < 4) and (mob:getID() == 16793742) then
-			killer:setVar("Intulo_KILLS", kill2 + 1);
+		if (NidhoggKillCount < 4 and mob:getID() == 17408019) then
+			killer:setVar("Nidhogg_KILLS", NidhoggKillCount + 1);
 		end
-		if (kill3 < 4) and (mob:getID() == 17272978) then
-			killer:setVar("Keeper_of_Halidom_KILLS", kill3 + 1);
+		if (KingBehemothKillCount < 4 and mob:getID() == 17297441) then
+			killer:setVar("King_Behemoth_KILLS", KingBehemothKillCount + 1);
 		end
-		if (kill4 < 3) and (mob:getID() == 17244396) then
-			killer:setVar("Dune_Widow_KILLS", kill4 + 1);
+		if (AspidocheloneKillCount < 3 and mob:getID() == 17301538) then
+			killer:setVar("Aspidochelone_KILLS", AspidocheloneKillCount + 1);
 		end
-		if (kill5 < 4) and (mob:getID() == 17498301) then
-			killer:setVar("Seww_the_Squidlimbed_KILLS", kill5 + 1);
-		end
-		if (kill6 < 4) and (mob:getID() == 17281149) then
-			killer:setVar("Mischievous_Micholas_KILLS", kill6 + 1);
+		if (AshDragonKillCount < 4 and mob:getID() == 17617147) then
+			killer:setVar("Ash_Dragon_KILLS", AshDragonKillCount + 1);
 		end
 		------------------
 		-- trial complete
 		------------------
-		if (kill1 == 4) and (kill2 == 4) and (kill3 == 4) and (kill4 == 3) and (kill5 == 4) and (kill6 == 4) then
+		if (JugglerKillCount == 4 and NidhoggKillCount == 4 and KingBehemothKillCount == 4 and
+			AspidocheloneKillCount == 3 and AshDragonKillCount == 4) then
 			killer:setVar("TRIAL_COMPLETE",1);
+			killer:PrintToPlayer("Your trial is complete!.");
 		end
 	end
+	
+-- The below needs cleanup badly.
+--[[
+
 
 	---------------------
 	-- Mythic 1 75-85
@@ -137,8 +203,8 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	---------------------
 	-- Mythic Trial start count
 	---------------------
-	if (trial == 100)  or (trial == 101)  or (trial == 102)  or (trial == 103)  or (trial == 104)  or
-	   (trial == 105)  or (trial == 106)  or (trial == 107)  or (trial == 108)  or (trial == 109) or
+	if (trial == 100)  or (trial == 101)  or (trial == 102)	 or (trial == 103)	or (trial == 104)  or
+	   (trial == 105)  or (trial == 106)  or (trial == 107)	 or (trial == 108)	or (trial == 109) or
 	   (trial == 110) or (trial == 111) or (trial == 112) or (trial == 113) or (trial == 114) or
 	   (trial == 115) or (trial == 116) and
 	   (Weapon == 18999) or (Weapon == 18997) or (Weapon == 19000) or (Weapon == 18991) or
@@ -208,78 +274,8 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		end
 	end
 
-		---------------------
-	-- Relic 2 85-95
-	---------------------
-	local Fafnir = killer:getVar("Fafnir_KILLS");
-	local Adamantoise = killer:getVar("Adamantoise_KILLS");
-	local Behemoth = killer:getVar("Behemoth_KILLS");
 
-	if ( (trial >= 17 and trial <= 32) and
-	   (Weapon == 18646) or (Weapon == 16196) or (Weapon == 18649) or (Weapon == 18644) or
-	   (Weapon == 18642) or (Weapon == 18648) or (Weapon == 18639) or (Weapon == 18578) or
-	   (Weapon == 18643) or (Weapon == 18641) or (Weapon == 18645) or (Weapon == 18638) or
-	   (Weapon == 18647) or (Weapon == 18640) or (Weapon == 18637) or (Weapon == 18650) and
-	   (isWeaponSkillKill == false) ) then
-
-		if (Fafnir < 7 and mob:getID() == 17408018) then
-			killer:setVar("Fafnir_KILLS", Fafnir + 1);
-		end
-		if (Adamantose < 7 and mob:getID() == 17301537) then
-			killer:setVar("Adamantoise_KILLS", Adamantoise + 1);
-		end
-		if (Behemoth < 7 and mob:getID() == 17297440) then
-			killer:setVar("Behemoth_KILLS", Behemoth + 1);
-		end
-		------------------
-		-- trial complete
-		------------------
-		if (Fafnir == 7 and Adamantose == 7 and Behemoth == 7) then
-			killer:setVar("TRIAL_COMPLETE",1);
-		end
-	end
-
-	---------------------
-	-- Relic 2 95-99
-	---------------------
-	local kill10 = killer:getVar("Juggler_Hecatomb_KILLS");
-	local kill11 = killer:getVar("Nidhogg_KILLS");
-	local kill12 = killer:getVar("King_Behemoth_KILLS");
-	local kill13 = killer:getVar("Aspidochelone_KILLS");
-	local kill14 = killer:getVar("Ash_Dragon_KILLS");
-
-	if (trial == 33)  or (trial == 34)  or (trial == 35)  or (trial == 36)  or (trial == 37)  or
-	   (trial == 38)  or (trial == 39)  or (trial == 40)  or (trial == 41)  or (trial == 42) or
-	   (trial == 43) or (trial == 44) or (trial == 45) or (trial == 46) or (trial == 47) or
-	   (trial == 48) and
-	   (Weapon == 18674) or (Weapon == 16198) or (Weapon == 18677) or (Weapon == 18672) or
-	   (Weapon == 18670) or (Weapon == 18676) or (Weapon == 18667) or (Weapon == 18580) or
-	   (Weapon == 18671) or (Weapon == 18669) or (Weapon == 18673) or (Weapon == 18666) or
-	   (Weapon == 18675) or (Weapon == 18668) or (Weapon == 18665) or (Weapon == 18678) and
-	   (isWeaponSkillKill == false) then
-
-		if (kill10 < 4) and (mob:getID() == 17580248) then
-			killer:setVar("Juggler_Hecatomb_KILLS", kill10 + 1);
-		end
-		if (kill11 < 4) and (mob:getID() == 17408019) then
-			killer:setVar("Nidhogg_KILLS", kill11 + 1);
-		end
-		if (kill12 < 4) and (mob:getID() == 17297441) then
-			killer:setVar("King_Behemoth_KILLS", kill12 + 1);
-		end
-		if (kill13 < 3) and (mob:getID() == 17301538) then
-			killer:setVar("Aspidochelone_KILLS", kill13 + 1);
-		end
-		if (kill14 < 4) and (mob:getID() == 17617147) then
-			killer:setVar("Ash_Dragon_KILLS", kill14 + 1);
-		end
-		------------------
-		-- trial complete
-		------------------
-		if (kill10 == 4) and (kill11 == 4) and (kill12 == 4) and (kill13 == 3) and (kill14 == 4) then
-			killer:setVar("TRIAL_COMPLETE",1);
-		end
-	end
+	
 
 		---------------------
 	-- Mythic 2 95-99
@@ -291,8 +287,8 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	local kill29 = killer:getVar("Gurfurlur_the_Menacing_KILLS");
 	local kill30 = killer:getVar("Hydra_KILLS");
 
-	if (trial == 134) or (trial == 135)  or (trial == 136)  or (trial == 137)  or (trial == 138) or
-	   (trial == 139) or (trial == 140)  or (trial == 141)  or (trial == 142)  or (trial == 143) or
+	if (trial == 134) or (trial == 135)	 or (trial == 136)	or (trial == 137)  or (trial == 138) or
+	   (trial == 139) or (trial == 140)	 or (trial == 141)	or (trial == 142)  or (trial == 143) or
 	   (trial == 144) or (trial == 145) or (trial == 146) or (trial == 147) or (trial == 148) or
 	   (trial == 149) or (trial == 150) and
 	   (Weapon == 19718) or (Weapon == 19716) or (Weapon == 19719) or (Weapon == 19710) or

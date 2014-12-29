@@ -4631,24 +4631,24 @@ INSERT INTO `mob_skill` VALUES (2760,984,2201,'Marine_Mayhem',0,18.0,2000,1000,4
 
 
 -- Bismark
-INSERT INTO `mob_skill` VALUES (2620,986,2012,'Thar_She_Blows',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2619,986,2010,'Waterspout',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2618,986,2011,'Angry_Seas',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2617,986,2009,'Blowhole_Blast',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2616,986,2008,'Depht_Charge',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2615,986,2007,'Baleen_Gurge',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2614,986,2006,'Caudal_Capacitor',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2613,986,2005,'Deep_Sea_Dirge',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2612,986,2004,'Echolocation',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2620,987,2012,'Thar_She_Blows',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2619,987,2010,'Waterspout',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2618,987,2011,'Angry_Seas',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2617,987,2009,'Blowhole_Blast',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2616,987,2008,'Depht_Charge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2615,987,2007,'Baleen_Gurge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2614,987,2006,'Caudal_Capacitor',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2613,987,2005,'Deep_Sea_Dirge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2612,987,2004,'Echolocation',1,18.0,2000,1000,4,0,0,0);
 
 -- Smierc
-INSERT INTO `mob_skill` VALUES (222,987,222,'Hell_Slash', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
-INSERT INTO `mob_skill` VALUES (223,987,223,'Horror_Cloud', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
-INSERT INTO `mob_skill` VALUES (228,987,228,'Black_Cloud', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
-INSERT INTO `mob_skill` VALUES (229,987,229,'Blood_Saber', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
-INSERT INTO `mob_skill` VALUES (900,987,229,'Marrow Drain', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
-INSERT INTO `mob_skill` VALUES (1539,987,229,'Malediction', 1, 15.0, 2000, 1500, 4, 0, 0, 0); 
-INSERT INTO `mob_skill` VALUES (2568,987,223,'Cloudscourge', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
+-- INSERT INTO `mob_skill` VALUES (222,986,222,'Hell_Slash', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+-- INSERT INTO `mob_skill` VALUES (223,986,223,'Horror_Cloud', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+-- INSERT INTO `mob_skill` VALUES (228,986,228,'Black_Cloud', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
+-- INSERT INTO `mob_skill` VALUES (229,986,229,'Blood_Saber', 1, 15.0, 2000, 1500, 4, 0, 0, 0);
+-- INSERT INTO `mob_skill` VALUES (900,986,229,'Marrow Drain', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+-- INSERT INTO `mob_skill` VALUES (1539,986,229,'Malediction', 1, 15.0, 2000, 1500, 4, 0, 0, 0); 
+-- INSERT INTO `mob_skill` VALUES (2568,986,223,'Cloudscourge', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
  
 
 
