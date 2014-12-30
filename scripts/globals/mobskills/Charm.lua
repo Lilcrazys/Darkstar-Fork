@@ -24,10 +24,4 @@ function onMobWeaponSkill(target, mob, skill)
 
     return typeEffect;
 end;
-
-function onEffectLose(target,effect)
-	target:costume(0)
-	target:setTP(0)
-	target:uncharm()
-end;
 	
