@@ -17,7 +17,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if(target:addStatusEffect(EFFECT_ENCHANTMENT) == false) then
+	if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
 		target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,180,14679);
 	end
 end;
@@ -27,7 +27,7 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-	if(target:hasStatusEffect(EFFECT_REGAIN) == false) then
+	if (target:hasStatusEffect(EFFECT_REGAIN) == false) then
 		target:addStatusEffect(EFFECT_REGAIN,3,1,180);
 	end
 end;

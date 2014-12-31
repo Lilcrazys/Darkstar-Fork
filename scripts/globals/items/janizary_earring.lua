@@ -22,9 +22,9 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if(target:addStatusEffect(EFFECT_ENCHANTMENT) == false) then
+	if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
 		target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,60,14785);
-	end;	
+	end;
 end;
 
 -----------------------------------------
