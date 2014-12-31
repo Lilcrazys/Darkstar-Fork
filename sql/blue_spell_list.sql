@@ -69,7 +69,7 @@ INSERT INTO `blue_spell_list` VALUES ('569','139','4','9','1','8','0');      -- 
 INSERT INTO `blue_spell_list` VALUES ('570','138','2','0','1','0','0');      -- Blood Drain
 INSERT INTO `blue_spell_list` VALUES ('572','154','1','6','1','0','0');      -- Sound Blast
 INSERT INTO `blue_spell_list` VALUES ('573','1445','3','4','1','0','0');     -- Feather Tickle
-INSERT INTO `blue_spell_list` VALUES ('574','146','2','19','1','0','0');     -- Feather Barrier
+INSERT INTO `blue_spell_list` VALUES ('574','669','2','19','1','0','0');     -- Feather Barrier
 INSERT INTO `blue_spell_list` VALUES ('575','2572','4','0','1','0','0');     -- Jettatura
 INSERT INTO `blue_spell_list` VALUES ('576','1457','3','5','1','0','0');     -- Yawn
 INSERT INTO `blue_spell_list` VALUES ('577','1','2','3','1','6','0');        -- Foot Kick
