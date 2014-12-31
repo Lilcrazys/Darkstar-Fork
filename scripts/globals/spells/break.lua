@@ -22,13 +22,21 @@ function onSpellCast(caster,target,spell)
     -- Duration, including resistance.  Unconfirmed.
     local duration = 30 * resist;
 
-    if(resist > 0.5) then
-	
-	    if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
-        duration = duration * 2;
+    -- Begin nerfing of Break on NMs
+    if(target:isMob() == true) then
+        if (target:isNM() == true) then
+            spell:setMsg(75);
+            return EFFECT_PETRIFICATION;
+        end
     end
-    caster:delStatusEffect(EFFECT_SABOTEUR);
-	
+    -- End nerfing of Break on NMs
+
+    if(resist > 0.5) then
+        if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
+            duration = duration * 2;
+            caster:delStatusEffect(EFFECT_SABOTEUR);
+        end
+
         if(target:addStatusEffect(EFFECT_PETRIFICATION,1,0,duration)) then
             spell:setMsg(236);
         else
