@@ -40,9 +40,9 @@ end;
 -----------------------------------
 function onTrade(player,npc,trade)
 	-----------------------
-	--Custom Trial Start
+	-- Custom Trial Start
 	-----------------------
-	if (trade:hasItemQty(3925,50)) and (trade:getItemCount() == 50) then
+	if (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
 		SpoofSay(npc:getID(),player:getID(),"Well done, I see you have brought me the items I requested, Trade them along with the trial item to my friend here for your reward.");
 		SpoofEmote(npc:getID(),player:getID(),": Calls Forth the Magian Moogle.");
 		GetNPCByID(17772760):setPos(5,0,-86,166);
@@ -50,12 +50,12 @@ function onTrade(player,npc,trade)
 		GetNPCByID(17772760):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	end
-	if (player:getVar("customtrial") >= 1) and (trade:hasItemQty(3925,50) == false) and (trade:hasItemQty(2184,1) == false) then
+	if (player:getVar("customtrial") >= 1 and trade:hasItemQty(3925,50) == false and trade:hasItemQty(2184,1) == false) then
 		SpoofSay(npc:getID(),player:getID(),"Sorry you already have a trial active");
 		SpoofSay(npc:getID(),player:getID(),"If you wish to cancel the current trial, please trade me a small fee of,");
 		SpoofEmote(npc:getID(),player:getID(),": 1x imperial bronze piece.");
 	end
-	if (trade:hasItemQty(2184,1) and trade:getItemCount() == 1 and player:getVar("customtrial") > 0) then
+	if (trade:hasItemQty(2184,1) and trade:getItemCount() == 1 and player:getVar("customtrial") >= 1) then
 		player:setVar("customtrial",0);
 		player:setVar("Seww_the_Squidlimbed_KILLS",0);
 		player:setVar("Mischievous_Micholas_KILLS",0);
@@ -73,21 +73,21 @@ function onTrade(player,npc,trade)
 		player:setVar("Ash_Dragon_KILLS",0);
 		SpoofSay(npc:getID(),player:getID(),"Ok your trial has been reset and your are now able to undertake a new trial.");
 		player:tradeComplete();
-	elseif (trade:hasItemQty(2184,1)) and (player:getVar("customtrial") == 0) then
+	elseif (trade:hasItemQty(2184,1) and player:getVar("customtrial") == 0) then
 		SpoofSay(npc:getID(),player:getID(),"I cannot accept that right now, you have already erased your trial.");
 	end
 
 	--------------------------------------------
-	-- 				Relic Trials
+	-- Relic Trials Start.
 	--------------------------------------------
 
 	-----------------------
 	-- Amanomurakumo
 	-----------------------
-	if (trade:hasItemQty(18318,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18318,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18318;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Amanomurakumo [75-85]'");
@@ -98,10 +98,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18646,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18646,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18646;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Amanomurakumo [85-95]'");
@@ -112,10 +112,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18674,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18674,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18674;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Amanomurakumo [95-99]'");
@@ -126,10 +126,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19755,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19755,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19755;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Amanomurakumo [(99-1)-(99-4)]'");
@@ -143,10 +143,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Aegis
 	-----------------------
-	if (trade:hasItemQty(15070,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(15070,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 15070;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Aegis [75-85]'");
@@ -157,10 +157,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(16196,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(16196,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 16196;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Aegis [85-95]'");
@@ -171,10 +171,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(16198,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(16198,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 16198;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Aegis [95-99]'");
@@ -185,10 +185,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(11927,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(11927,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 11927;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Aegis [(99-1)-(99-4)]'");
@@ -202,10 +202,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Annihilator
 	-----------------------
-	if (trade:hasItemQty(18336,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18336,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18336;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Annihilator [75-85]'");
@@ -216,10 +216,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18649,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18649,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18649;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Annihilator [85-95]'");
@@ -230,10 +230,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18677,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18677,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18677;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Annihilator [95-99]'");
@@ -244,10 +244,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19758,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19758,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19758;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Annihilator [(99-1)-(99-4)]'");
@@ -261,10 +261,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Apocalypse
 	-----------------------
-	if (trade:hasItemQty(18306,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18306,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18306;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Apocalypse [75-85]'");
@@ -275,10 +275,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18644,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18644,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18644;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Apocalypse [85-95]'");
@@ -289,10 +289,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18672,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18672,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18672;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Apocalypse [95-99]'");
@@ -303,10 +303,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19753,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19753,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19753;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Apocalypse [(99-1)-(99-4)]'");
@@ -320,10 +320,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Bravura
 	-----------------------
-	if (trade:hasItemQty(18294,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18294,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18294;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Bravura [75-85]'");
@@ -334,10 +334,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18642,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18642,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18642;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Bravura [85-95]'");
@@ -348,10 +348,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18670,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18670,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18670;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Bravura [95-99]'");
@@ -362,10 +362,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19751,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19751,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19751;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Bravura [(99-1)-(99-4)]'");
@@ -379,10 +379,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Claustrum
 	-----------------------
-	if (trade:hasItemQty(18330,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18330,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18330;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Claustrum [75-85]'");
@@ -393,10 +393,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18648,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18648,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18648;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Claustrum [85-95]'");
@@ -407,10 +407,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18676,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18676,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18676;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Claustrum [95-99]'");
@@ -421,10 +421,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19757,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19757,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19757;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Claustrum [(99-1)-(99-4)]'");
@@ -438,10 +438,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Excalibur
 	-----------------------
-	if (trade:hasItemQty(18276,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18276,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18276;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Excalibur [75-85]'");
@@ -452,10 +452,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18639,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18639,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18639;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Excalibur [85-95]'");
@@ -466,10 +466,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18667,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18667,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18667;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Excalibur [95-99]'");
@@ -480,10 +480,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19748,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19748,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19748;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Excalibur [(99-1)-(99-4)]'");
@@ -497,10 +497,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Gjallarhorn
 	-----------------------
-	if (trade:hasItemQty(18342,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18342,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18342;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gjallarhorn [75-85]'");
@@ -511,10 +511,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18578,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18578,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18578;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gjallarhorn [85-95]'");
@@ -525,10 +525,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18580,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18580,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18580;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gjallarhorn [95-99]'");
@@ -539,10 +539,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18572,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18572,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18572;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gjallarhorn [(99-1)-(99-4)]'");
@@ -556,10 +556,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Gungnir
 	-----------------------
-	if (trade:hasItemQty(18300,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18300,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18300;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gungnir [75-85]'");
@@ -570,10 +570,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18643,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18643,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18643;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gungnir [85-95]'");
@@ -584,10 +584,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18671,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18671,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18671;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gungnir [95-99]'");
@@ -598,10 +598,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19752,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19752,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19752;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Gungnir [(99-1)-(99-4)]'");
@@ -615,10 +615,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Guttler
 	-----------------------
-	if (trade:hasItemQty(18288,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18288,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18288;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Guttler [75-85]'");
@@ -629,10 +629,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18641,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18641,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18641;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Guttler [85-95]'");
@@ -643,10 +643,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18669,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18669,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18669;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Guttler [95-99]'");
@@ -657,10 +657,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19750,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19750,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19750;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Guttler [(99-1)-(99-4)]'");
@@ -674,10 +674,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Kikoku
 	-----------------------
-	if (trade:hasItemQty(18312,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18312,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18312;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Kikoku [75-85]'");
@@ -688,10 +688,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18645,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18645,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18645;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Kikoku [85-95]'");
@@ -702,10 +702,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18673,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18673,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18673;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Kikoku [95-99]'");
@@ -716,10 +716,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19754,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19754,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19754;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Kikoku [(99-1)-(99-4)]'");
@@ -733,10 +733,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Mandau
 	-----------------------
-	if (trade:hasItemQty(18270,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18270,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18270;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mandau [75-85]'");
@@ -747,10 +747,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18638,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18638,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18638;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mandau [85-95]'");
@@ -761,10 +761,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18666,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18666,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18666;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mandau [95-99]'");
@@ -775,10 +775,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19747,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19747,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19747;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mandau [(99-1)-(99-4)]'");
@@ -792,10 +792,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Mjollnir
 	-----------------------
-	if (trade:hasItemQty(18324,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18324,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18324;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mjollnir [75-85]'");
@@ -806,10 +806,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18647,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18647,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18647;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mjollnir [85-95]'");
@@ -820,10 +820,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18675,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18675,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18675;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mjollnir [95-99]'");
@@ -834,10 +834,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19756,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19756,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19756;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Mjollnir [(99-1)-(99-4)]'");
@@ -851,10 +851,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Ragnarok
 	-----------------------
-	if (trade:hasItemQty(18282,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18282,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18282;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Ragnarok [75-85]'");
@@ -865,10 +865,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18640,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18640,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18640;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Ragnarok [85-95]'");
@@ -879,10 +879,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18668,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18668,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18668;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Ragnarok [95-99]'");
@@ -893,10 +893,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19749,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19749,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19749;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Ragnarok [(99-1)-(99-4)]'");
@@ -910,10 +910,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Spharai
 	-----------------------
-	if (trade:hasItemQty(18264,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18264,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18264;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Spharai [75-85]'");
@@ -924,10 +924,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18637,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18637,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18637;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Spharai [85-95]'");
@@ -938,10 +938,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18665,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18665,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18665;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Spharai [95-99]'");
@@ -952,10 +952,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19746,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19746,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19746;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Spharai [(99-1)-(99-4)]'");
@@ -969,10 +969,10 @@ function onTrade(player,npc,trade)
 	-----------------------
 	-- Yoichinoyumi
 	-----------------------
-	if (trade:hasItemQty(18348,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18348,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18348;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Yoichinoyumi [75-85]'");
@@ -983,10 +983,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18650,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18650,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18650;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Yoichinoyumi [85-95]'");
@@ -997,10 +997,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(18678,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(18678,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 18678;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Yoichinoyumi [95-99]'");
@@ -1011,10 +1011,10 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
 		end
 	end
-	if (trade:hasItemQty(19759,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
+	if (trade:hasItemQty(19759,1) and trade:getItemCount() == 1 and player:getVar("customtrial") == 0) then
 		local ITEM = 19759;
 		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
 			SpoofEmote(npc:getID(),player:getID(),": 'Yoichinoyumi [(99-1)-(99-4)]'");
@@ -1051,8 +1051,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+	-- printf("CSID: %u",csid);
+	-- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -1060,12 +1060,9 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
+	-- printf("CSID: %u",csid);
+	-- printf("RESULT: %u",option);
 	-- if(csid == 0x2750) then
 		-- npc:setAnimation(0);
 	-- end
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
 end;
-
-
-

@@ -4,7 +4,7 @@
 -- Author: Teo & Omni LegionFFXI
 -----------------------------------
 
-function doCustomTrial(mob, killer)
+function doCustomTrial(mob, killer, isWeaponSkillKill)
 	-- print("mob:checkBaseExp()",mob:checkBaseExp());
 	-- killer:PrintToPlayer("TEST!");
 	---------------------------------------------------
@@ -48,13 +48,11 @@ function doCustomTrial(mob, killer)
 	-- Trial start count
 	---------------------
 
-
 	if ( (trial >= 1 and trial <= 16) and (MAIN == 18318 or SUB == 15070 or
 		MAIN == 18306 or MAIN == 18294 or MAIN == 18330 or MAIN == 18276 or
 		RANGED == 18342 or MAIN == 18300 or MAIN == 18288 or MAIN == 18312 or
 		MAIN == 18270 or MAIN == 18324 or MAIN == 18282 or MAIN == 18264 or
 		RANGED == 18348 or RANGED == 18336 ) ) then
-
 
 		if (SewwtheSquidlimbedKillCount < 4 and mob:getID() == 17498301) then
 			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwtheSquidlimbedKillCount + 1);
@@ -111,7 +109,7 @@ function doCustomTrial(mob, killer)
 		RANGED == 18650 or RANGED == 18649) ) then
 
 		if (AdamantoiseKillCount < 7 and mob:getID() == 17301537) then
-			 killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
+			killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
 		end
 		if (BehemothKillCount < 7 and mob:getID() == 17297440) then
 			killer:setVar("Behemoth_KILLS", BehemothKillCount + 1);
@@ -273,9 +271,6 @@ function doCustomTrial(mob, killer)
 			killer:setVar("TRIAL_COMPLETE",1);
 		end
 	end
-
-
-
 
 		---------------------
 	-- Mythic 2 95-99

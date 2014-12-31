@@ -46,6 +46,6 @@ function onMobDeathEx(mob, killer, isWeaponSkillKill)
 	-- Legion XI custom section
 	-----------------------------------
 	if (killer:getVar("customtrial") ~= nil) then
-		doCustomTrial(mob, killer)
+		doCustomTrial(mob, killer, isWeaponSkillKill)
 	end
 end;
