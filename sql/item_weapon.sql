@@ -2142,7 +2142,7 @@ INSERT INTO `item_weapon` VALUES (18520,'laceratrice',6,0,2,1,504,128,0);
 INSERT INTO `item_weapon` VALUES (18521,'Dies_Irae',6,0,0,1,489,137,0);
 INSERT INTO `item_weapon` VALUES (18522,'firnaxe',6,0,2,1,504,118,0);
 INSERT INTO `item_weapon` VALUES (18523,'firnaxe_+1',6,0,2,1,489,119,0);
-INSERT INTO `item_weapon` VALUES (18524,'huskarl_axe',0,0,0,1,0,0,0);
+INSERT INTO `item_weapon` VALUES (18524,'huskarl_axe',6,0,2,1,504,132,0);
 INSERT INTO `item_weapon` VALUES (18525,'himthige',6,0,2,1,489,140,0);
 INSERT INTO `item_weapon` VALUES (18531,'veldt_axe_+1',5,0,2,1,268,28,0);
 INSERT INTO `item_weapon` VALUES (18532,'cleofun_axe',5,0,0,1,280,63,0);

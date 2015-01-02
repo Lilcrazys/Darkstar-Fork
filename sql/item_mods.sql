@@ -18537,6 +18537,7 @@ INSERT INTO `item_mods` VALUES(18517, 25, 4); --
 INSERT INTO `item_mods` VALUES(18518, 10, 5); --
 INSERT INTO `item_mods` VALUES(18518, 25, 5); --
 INSERT INTO `item_mods` VALUES(18520, 165, 4); --
+INSERT INTO `item_mods` VALUES(18524, 8, 10); --
 INSERT INTO `item_mods` VALUES(18525, 8, 15); --
 -- INSERT INTO `item_mods` VALUES(18525, ???, ?); -- Occasionally prevents "weakened" status Additional effect: Regen unknown
 
