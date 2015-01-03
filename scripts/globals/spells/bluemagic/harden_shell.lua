@@ -1,17 +1,14 @@
 -----------------------------------
 -- Spell: Harden Shell
 -----------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-require("/scripts/globals/monstertpmoves");
------------------------------------
--- onSpellcast
------------------------------------
+-----------------------------------------
+-- OnSpellCast
+-----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
     if caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) then
        return 0;
     else

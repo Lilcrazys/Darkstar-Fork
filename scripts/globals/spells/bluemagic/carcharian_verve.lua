@@ -10,7 +10,7 @@ require("scripts/globals/bluemagic");
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	 if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
       return 0;
    else

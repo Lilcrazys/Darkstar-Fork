@@ -5,11 +5,11 @@
 -- VIT+3  CHR-2
 -- Lvl.: 88 MP Cost: 138 Blue Points: 3
 -----------------------------------------
-
+require("scripts/globals/magic");
 require("scripts/globals/status");
-
+require("scripts/globals/bluemagic");
 -----------------------------------------
--- onMagicCastingCheck
+-- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)

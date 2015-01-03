@@ -4,16 +4,14 @@
 --	Note: this does nothing but drain at he moment
 --	as it has not been implimented yet
 --------------------------------------
- 
-require("scripts/globals/settings");
+ require("scripts/globals/magic");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-
+require("scripts/globals/bluemagic");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
 

@@ -1,15 +1,16 @@
 -----------------------------------------
 -- Spell: Absolute Terror
 -----------------------------------------
-require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
-    return 0;
+function onMagicCastingCheck(caster,target,spell)
+	return 0;
 end;
 
 function onSpellCast(caster,target,spell)

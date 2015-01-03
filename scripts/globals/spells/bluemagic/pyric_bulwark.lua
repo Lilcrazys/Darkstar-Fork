@@ -1,16 +1,14 @@
 -----------------------------------
 -- Spell: Pyric Bulwark
 -----------------------------------
-
-require("scripts/globals/settings");
+require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+-----------------------------------------
+-- OnSpellCast
+-----------------------------------------
 
------------------------------------
--- onSpellcast
------------------------------------
-
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
       return 0;
    else

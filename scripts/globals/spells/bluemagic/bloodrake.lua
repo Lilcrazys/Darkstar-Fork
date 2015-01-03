@@ -10,13 +10,14 @@ require("scripts/globals/bluemagic");
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	 if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
       return 0;
    else
       return MSGBASIC_STATUS_PREVENTS;
    end
 end;
+
 function onSpellCast(caster, target, spell)
     local params = {};
     params.tpmod = TPMOD_ATTACK; params.dmgtype = DMGTYPE_SLASH; params.scattr = SC_SCISSION;

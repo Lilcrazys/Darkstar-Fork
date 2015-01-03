@@ -7,17 +7,14 @@
 --  Range:
 --  Notes:
 -----------------------------------------
-
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-require("/scripts/globals/settings");
-require("/scripts/globals/monstertpmoves");
-
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
-function OnMagicCastingCheck(caster,target,spell)
+
+function onMagicCastingCheck(caster,target,spell)
 	if caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) then
         return 0;
     else

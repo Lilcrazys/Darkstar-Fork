@@ -2,16 +2,14 @@
 -- Spell: Plenilune Embrace
 -- Restores target party member's HP and enhances attack and magic attack..
 -----------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/magic");
-
+require("scripts/globals/status");
+require("scripts/globals/bluemagic");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
 

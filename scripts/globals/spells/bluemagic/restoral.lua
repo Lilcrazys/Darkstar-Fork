@@ -2,21 +2,19 @@
 -- Spell: Restoral
 -- Restores target party member's HP and enhances attack and magic attack..
 -----------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/magic");
-
+require("scripts/globals/status");
+require("scripts/globals/bluemagic");
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function OnMagicCastingCheck(caster,target,spell)
+function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	local minCure = 725;
+	local minCure = 640;
 	local divisor = 0.6666;
 	local constant = 500;
 	local power = getCurePowerOld(caster);
