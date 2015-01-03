@@ -1301,18 +1301,236 @@ INSERT INTO `item_mods` VALUES(11032, 29, 2);
 INSERT INTO `item_mods` VALUES(11032, 289, 4);
 INSERT INTO `item_mods` VALUES(11036, 14, 4); --
 INSERT INTO `item_mods` VALUES(11036, 30, 2); --
+
+INSERT INTO `item_mods` VALUES(11067, 1, 29); --
+INSERT INTO `item_mods` VALUES(11067, 12, 8); --
+INSERT INTO `item_mods` VALUES(11067, 115, 15); --
+INSERT INTO `item_mods` VALUES(11067, 170, 12); -- elemental casting time unknown gave reg fastcast
+INSERT INTO `item_mods` VALUES(11067, 27, -6); --
+
+INSERT INTO `item_mods` VALUES(11072, 1, 37); --
+INSERT INTO `item_mods` VALUES(11072, 9, 8); --
+INSERT INTO `item_mods` VALUES(11072, 14, 8); --
+INSERT INTO `item_mods` VALUES(11072, 25, 8); --
+INSERT INTO `item_mods` VALUES(11072, 384, 60); --
+INSERT INTO `item_mods` VALUES(11073, 1, 33); --
+INSERT INTO `item_mods` VALUES(11073, 14, 8); --
+INSERT INTO `item_mods` VALUES(11073, 455, 12); --
+INSERT INTO `item_mods` VALUES(11073, 27, -7); --
+
+INSERT INTO `item_mods` VALUES(11079, 1, 34); --
+INSERT INTO `item_mods` VALUES(11079, 25, 12); --
+INSERT INTO `item_mods` VALUES(11079, 82, 7); --
+INSERT INTO `item_mods` VALUES(11079, 384, 60); --
+
+INSERT INTO `item_mods` VALUES(11087, 1, 50); --
+INSERT INTO `item_mods` VALUES(11087, 5, 45); --
+INSERT INTO `item_mods` VALUES(11087, 30, 11); --
+INSERT INTO `item_mods` VALUES(11087, 28, 11); --
+
+INSERT INTO `item_mods` VALUES(11092, 1, 67); --
+INSERT INTO `item_mods` VALUES(11092, 25, 18); --
+INSERT INTO `item_mods` VALUES(11092, 23, 18); --
+INSERT INTO `item_mods` VALUES(11092, 68, 18); --
+INSERT INTO `item_mods` VALUES(11092, 84, 7); --
+INSERT INTO `item_mods` VALUES(11092, 384, 20); --
+INSERT INTO `item_mods` VALUES(11093, 1, 51); --
+INSERT INTO `item_mods` VALUES(11093, 14, 10); --
+INSERT INTO `item_mods` VALUES(11093, 119, 10); --
+INSERT INTO `item_mods` VALUES(11093, 121, 10); --
+INSERT INTO `item_mods` VALUES(11093, 454, 10); -- unsure how amount works
+INSERT INTO `item_mods` VALUES(11093, 434, 1); --
+
+INSERT INTO `item_mods` VALUES(11099, 1, 60); --
+INSERT INTO `item_mods` VALUES(11099, 25, 12); --
+INSERT INTO `item_mods` VALUES(11099, 30, 12); --
+INSERT INTO `item_mods` VALUES(11099, 384, 30); --
+INSERT INTO `item_mods` VALUES(11099, 170, 12); -- blue magic casting time % unknown gave reg fastcast
+
+INSERT INTO `item_mods` VALUES(11107, 1, 23); --
+INSERT INTO `item_mods` VALUES(11107, 12, 7); --
+INSERT INTO `item_mods` VALUES(11107, 28, 8); --
+
+INSERT INTO `item_mods` VALUES(11112, 1, 29); --
+INSERT INTO `item_mods` VALUES(11112, 8, 11); --
+INSERT INTO `item_mods` VALUES(11112, 23, 15); --
+INSERT INTO `item_mods` VALUES(11112, 165, 3); --
+INSERT INTO `item_mods` VALUES(11113, 1, 24); --
+INSERT INTO `item_mods` VALUES(11113, 14, 12); --
+INSERT INTO `item_mods` VALUES(11113, 30, 8); --
+INSERT INTO `item_mods` VALUES(11113, 119, 8); --
+INSERT INTO `item_mods` VALUES(11113, 120, 8); --
+INSERT INTO `item_mods` VALUES(11113, 121, 8); --
+
+INSERT INTO `item_mods` VALUES(11119, 1, 26); --
+INSERT INTO `item_mods` VALUES(11119, 13, 10); --
+INSERT INTO `item_mods` VALUES(11119, 28, 10); --
+INSERT INTO `item_mods` VALUES(11119, 27, -4); --
+
+INSERT INTO `item_mods` VALUES(11127, 1, 41); --
+INSERT INTO `item_mods` VALUES(11127, 5, 55); --
+INSERT INTO `item_mods` VALUES(11127, 30, 7); --
+INSERT INTO `item_mods` VALUES(11127, 28, 7); --
+
+INSERT INTO `item_mods` VALUES(11132, 1, 51); --
+INSERT INTO `item_mods` VALUES(11132, 14, 10); --
+INSERT INTO `item_mods` VALUES(11132, 25, 7); --
+INSERT INTO `item_mods` VALUES(11132, 23, 7); --
+INSERT INTO `item_mods` VALUES(11132, 384, 70); --
+INSERT INTO `item_mods` VALUES(11133, 1, 42); --
+INSERT INTO `item_mods` VALUES(11133, 30, 7); --
+INSERT INTO `item_mods` VALUES(11133, 119, 10); --
+-- INSERT INTO `item_mods` VALUES(11133, ???, -6); -- song recast delay unknown
+
+INSERT INTO `item_mods` VALUES(11139, 1, 47); --
+INSERT INTO `item_mods` VALUES(11139, 8, 8); --
+INSERT INTO `item_mods` VALUES(11139, 9, 8); --
+INSERT INTO `item_mods` VALUES(11139, 122, 15); --
+INSERT INTO `item_mods` VALUES(11139, 384, 40); --
+
 INSERT INTO `item_mods` VALUES(11146, 1, 18);
 INSERT INTO `item_mods` VALUES(11146, 2, 30);
 INSERT INTO `item_mods` VALUES(11146, 5, 30);
 INSERT INTO `item_mods` VALUES(11146, 13, 8);
 INSERT INTO `item_mods` VALUES(11146, 113, 20);
 INSERT INTO `item_mods` VALUES(11146, 484, 10);
+INSERT INTO `item_mods` VALUES(11147, 1, 17); --
+INSERT INTO `item_mods` VALUES(11147, 12, 10); --
+INSERT INTO `item_mods` VALUES(11147, 116, 15); --
+INSERT INTO `item_mods` VALUES(11147, 27, -10); --
+
+
+INSERT INTO `item_mods` VALUES(11152, 1, 25); --
+INSERT INTO `item_mods` VALUES(11152, 8, 7); --
+INSERT INTO `item_mods` VALUES(11152, 9. 7); --
+INSERT INTO `item_mods` VALUES(11152, 25, 8); --
+INSERT INTO `item_mods` VALUES(11152, 288, 3); --
+INSERT INTO `item_mods` VALUES(11153, 1, 18); --
+INSERT INTO `item_mods` VALUES(11153, 14, 11); --
+INSERT INTO `item_mods` VALUES(11153, 169, 12); --
+
+INSERT INTO `item_mods` VALUES(11159, 1, 23); --
+INSERT INTO `item_mods` VALUES(11159, 12, 10); --
+INSERT INTO `item_mods` VALUES(11159, 30, 8); --
+INSERT INTO `item_mods` VALUES(11159, 28, 8); --
+INSERT INTO `item_mods` VALUES(11159, 27, -6); --
+
+INSERT INTO `item_mods` VALUES(11167, 1, 27); --
+INSERT INTO `item_mods` VALUES(11167, 12, 6); --
+INSERT INTO `item_mods` VALUES(11167, 115, 10); --
+INSERT INTO `item_mods` VALUES(11167, 27, -4); --
+INSERT INTO `item_mods` VALUES(11167, 170, 6); -- elemental magic casting time minus % unknown gave reg fastcast
+
+INSERT INTO `item_mods` VALUES(11172, 1, 35); --
+INSERT INTO `item_mods` VALUES(11172, 25, 6); --
+INSERT INTO `item_mods` VALUES(11172, 9, 6); --
+INSERT INTO `item_mods` VALUES(11172, 14, 6); --
+INSERT INTO `item_mods` VALUES(11172, 384, 50); --
+-- INSERT INTO `item_mods` VALUES(11172, ???, ??); -- enhances monster correlation effects 
+INSERT INTO `item_mods` VALUES(11173, 1, 31); --
+INSERT INTO `item_mods` VALUES(11173, 14, 6); --
+INSERT INTO `item_mods` VALUES(11173, 455, 8); --
+INSERT INTO `item_mods` VALUES(11173, 27, -5); --
+
+INSERT INTO `item_mods` VALUES(11179, 1, 32); --
+INSERT INTO `item_mods` VALUES(11179, 25, 8); --
+INSERT INTO `item_mods` VALUES(11179, 82, 5); --
+INSERT INTO `item_mods` VALUES(11179, 384, 50); --
+
+INSERT INTO `item_mods` VALUES(11187, 1, 47); --
+INSERT INTO `item_mods` VALUES(11187, 5, 35); --
+INSERT INTO `item_mods` VALUES(11187, 30, 8); --
+INSERT INTO `item_mods` VALUES(11187, 28, 8); --
+-- INSERT INTO `item_mods` VALUES(11187, ???, 6); -- elemental recast delay unknown
+
+INSERT INTO `item_mods` VALUES(11192, 1, 64); --
+INSERT INTO `item_mods` VALUES(11192, 25, 15); --
+INSERT INTO `item_mods` VALUES(11192, 23, 15); --
+INSERT INTO `item_mods` VALUES(11192, 68, 15); --
+INSERT INTO `item_mods` VALUES(11192, 84, 5); --
+-- INSERT INTO `item_mods` VALUES(11192, ???, ?); -- augments killer effects
+INSERT INTO `item_mods` VALUES(11193, 1, 48); --
+INSERT INTO `item_mods` VALUES(11193, 14, 8); --
+INSERT INTO `item_mods` VALUES(11193, 119, 8); --
+INSERT INTO `item_mods` VALUES(11193, 121, 8); --
+INSERT INTO `item_mods` VALUES(11193, 454, 5); -- unsure how amount works
+
+INSERT INTO `item_mods` VALUES(11199, 1, 57); --
+INSERT INTO `item_mods` VALUES(11199, 25, 9); --
+INSERT INTO `item_mods` VALUES(11199, 30, 9); --
+INSERT INTO `item_mods` VALUES(11199, 384, 20); --
+INSERT INTO `item_mods` VALUES(11199, 170, 6); -- blue magic casting time minus % unknown gave reg fastcast
+
+INSERT INTO `item_mods` VALUES(11207, 1, 21); --
+INSERT INTO `item_mods` VALUES(11207, 12, 5); --
+INSERT INTO `item_mods` VALUES(11207, 28, 6); --
+-- INSERT INTO `item_mods` VALUES(11207, ???, 3); -- magic crit  unknown
+-- INSERT INTO `item_mods` VALUES(11207, ???, ?); -- inc magic crit dmg unknown
+
+INSERT INTO `item_mods` VALUES(11212, 1, 27); --
+INSERT INTO `item_mods` VALUES(11212, 8, 8); --
+INSERT INTO `item_mods` VALUES(11212, 23, 10); --
+INSERT INTO `item_mods` VALUES(11212, 165, 2); --
+INSERT INTO `item_mods` VALUES(11213, 1, 22); --
+INSERT INTO `item_mods` VALUES(11213, 14, 10); --
+INSERT INTO `item_mods` VALUES(11213, 30, 6); --
+INSERT INTO `item_mods` VALUES(11213, 119, 6); --
+INSERT INTO `item_mods` VALUES(11213, 120, 6); --
+INSERT INTO `item_mods` VALUES(11213, 121, 6); --
+
+INSERT INTO `item_mods` VALUES(11219, 1, 24); --
+INSERT INTO `item_mods` VALUES(11219, 13, 7); --
+INSERT INTO `item_mods` VALUES(11219, 28, 7); --
+INSERT INTO `item_mods` VALUES(11219, 27, -3); --
+
+INSERT INTO `item_mods` VALUES(11227, 1, 39); --
+INSERT INTO `item_mods` VALUES(11227, 5, 40); --
+INSERT INTO `item_mods` VALUES(11227, 30, 5); --
+INSERT INTO `item_mods` VALUES(11227, 28, 5); --
+
+INSERT INTO `item_mods` VALUES(11232, 1, 49); --
+INSERT INTO `item_mods` VALUES(11232, 14, 7); --
+INSERT INTO `item_mods` VALUES(11232, 25, 5); --
+INSERT INTO `item_mods` VALUES(11232, 23, 5); --
+INSERT INTO `item_mods` VALUES(11232, 384, 60); --
+INSERT INTO `item_mods` VALUES(11233, 1, 40); --
+INSERT INTO `item_mods` VALUES(11233, 30, 5); --
+INSERT INTO `item_mods` VALUES(11233, 119, 8); --
+-- INSERT INTO `item_mods` VALUES(11233, ???, -4); -- song recast delay unknown
+
+INSERT INTO `item_mods` VALUES(11239, 1, 45); --
+INSERT INTO `item_mods` VALUES(11239, 8, 5); --
+INSERT INTO `item_mods` VALUES(11239, 9, 5); --
+INSERT INTO `item_mods` VALUES(11239, 122, 10); --
+INSERT INTO `item_mods` VALUES(11239, 384, 30); --
+
+
 INSERT INTO `item_mods` VALUES(11246, 1, 16);
 INSERT INTO `item_mods` VALUES(11246, 2, 20);
 INSERT INTO `item_mods` VALUES(11246, 5, 20);
 INSERT INTO `item_mods` VALUES(11246, 13, 6);
 INSERT INTO `item_mods` VALUES(11246, 113, 15);
 INSERT INTO `item_mods` VALUES(11246, 484, 5);
+INSERT INTO `item_mods` VALUES(11247, 1, 15); --
+INSERT INTO `item_mods` VALUES(11247, 12, 8); --
+INSERT INTO `item_mods` VALUES(11247, 116, 10); --
+INSERT INTO `item_mods` VALUES(11247, 27, -6); --
+
+INSERT INTO `item_mods` VALUES(11252, 1, 23); --
+INSERT INTO `item_mods` VALUES(11252, 8, 5); --
+INSERT INTO `item_mods` VALUES(11252, 9, 5); --
+INSERT INTO `item_mods` VALUES(11252, 25, 5); --
+INSERT INTO `item_mods` VALUES(11252, 288, 2); --
+INSERT INTO `item_mods` VALUES(11253, 1, 16); --
+INSERT INTO `item_mods` VALUES(11253, 14, 9); --
+INSERT INTO `item_mods` VALUES(11253, 169, 12); --
+
+INSERT INTO `item_mods` VALUES(11259, 1, 21); --
+INSERT INTO `item_mods` VALUES(11259, 12, 7); --
+INSERT INTO `item_mods` VALUES(11259, 30, 5); --
+INSERT INTO `item_mods` VALUES(11259, 28, 5); --
+INSERT INTO `item_mods` VALUES(11259, 27, -4); --
+
 INSERT INTO `item_mods` VALUES(11265, 1, 1);
 INSERT INTO `item_mods` VALUES(11266, 1, 1);
 INSERT INTO `item_mods` VALUES(11267, 1, 1);
@@ -3350,6 +3568,81 @@ INSERT INTO `item_mods` VALUES(11982, 13, 8); --
 INSERT INTO `item_mods` VALUES(11982, 117, 6); --
 INSERT INTO `item_mods` VALUES(11982, 357, -2); --
 INSERT INTO `item_mods` VALUES(11982, 30, 1); -- Macc  added to compensate for set bonus
+
+INSERT INTO `item_mods` VALUES(12011, 1, 24); --
+INSERT INTO `item_mods` VALUES(12011, 12, 3); --
+INSERT INTO `item_mods` VALUES(12011, 27, -3); --
+
+INSERT INTO `item_mods` VALUES(12016, 1, 32); --
+INSERT INTO `item_mods` VALUES(12016, 9, 3); --
+INSERT INTO `item_mods` VALUES(12016, 14, 3); --
+INSERT INTO `item_mods` VALUES(12016, 25, 3); --
+INSERT INTO `item_mods` VALUES(12017, 1, 28); --
+INSERT INTO `item_mods` VALUES(12017, 14, 3); --
+INSERT INTO `item_mods` VALUES(12017, 27, -2); --
+
+INSERT INTO `item_mods` VALUES(12023, 1, 29); --
+INSERT INTO `item_mods` VALUES(12023, 25, 4); --
+
+INSERT INTO `item_mods` VALUES(12031, 1, 44); --
+INSERT INTO `item_mods` VALUES(12031, 5, 15); --
+INSERT INTO `item_mods` VALUES(12031, 28, 2); --
+
+INSERT INTO `item_mods` VALUES(12036, 1, 61); --
+INSERT INTO `item_mods` VALUES(12036, 25, 5); --
+INSERT INTO `item_mods` VALUES(12036, 23, 5); --
+INSERT INTO `item_mods` VALUES(12036, 68, 5); --
+INSERT INTO `item_mods` VALUES(12037, 1, 45); --
+INSERT INTO `item_mods` VALUES(12037, 14, 3); --
+
+INSERT INTO `item_mods` VALUES(12043, 1, 54); --
+INSERT INTO `item_mods` VALUES(12043, 25, 3); --
+INSERT INTO `item_mods` VALUES(12043, 30, 3); --
+
+INSERT INTO `item_mods` VALUES(12051, 1, 18); --
+INSERT INTO `item_mods` VALUES(12051, 12, 2); --
+INSERT INTO `item_mods` VALUES(12051, 28, 2); --
+
+INSERT INTO `item_mods` VALUES(12056, 1, 24); --
+INSERT INTO `item_mods` VALUES(12056, 8, 3); --
+INSERT INTO `item_mods` VALUES(12056, 23, 5); --
+INSERT INTO `item_mods` VALUES(12057, 1, 19); --
+INSERT INTO `item_mods` VALUES(12057, 14, 2); --
+INSERT INTO `item_mods` VALUES(12057, 30, 2); --
+
+INSERT INTO `item_mods` VALUES(12063, 1, 21); --
+INSERT INTO `item_mods` VALUES(12063, 13, 3); --
+INSERT INTO `item_mods` VALUES(12063, 28, 2); --
+
+INSERT INTO `item_mods` VALUES(12071, 1, 36); --
+INSERT INTO `item_mods` VALUES(12071, 5, 20); --
+INSERT INTO `item_mods` VALUES(12071, 28, 1); --
+
+INSERT INTO `item_mods` VALUES(12076, 1, 46); --
+INSERT INTO `item_mods` VALUES(12076, 14, 3); --
+INSERT INTO `item_mods` VALUES(12076, 25, 2); --
+INSERT INTO `item_mods` VALUES(12076, 23, 2); --
+INSERT INTO `item_mods` VALUES(12077, 1, 37); --
+-- INSERT INTO `item_mods` VALUES(12077, ???, -2); -- song recat delay unknown
+
+INSERT INTO `item_mods` VALUES(12083, 1, 42); --
+INSERT INTO `item_mods` VALUES(12083, 8, 2); --
+INSERT INTO `item_mods` VALUES(12083, 9, 2); --
+
+INSERT INTO `item_mods` VALUES(12091, 1, 12); --
+INSERT INTO `item_mods` VALUES(12091, 12, 4); --
+INSERT INTO `item_mods` VALUES(12091, 27, -2); --
+
+INSERT INTO `item_mods` VALUES(12096, 1, 20); --
+INSERT INTO `item_mods` VALUES(12096, 8, 2); --
+INSERT INTO `item_mods` VALUES(12096, 9, 2); --
+INSERT INTO `item_mods` VALUES(12096, 25, 2); --
+INSERT INTO `item_mods` VALUES(12097, 1, 13); --
+INSERT INTO `item_mods` VALUES(12097, 14, 3); --
+
+INSERT INTO `item_mods` VALUES(12103, 1, 18); --
+INSERT INTO `item_mods` VALUES(12103, 13, 3); --
+INSERT INTO `item_mods` VALUES(12103, 30, 1); --
 
 INSERT INTO `item_mods` VALUES(12108, 1, 30);
 INSERT INTO `item_mods` VALUES(12108, 8, 2);
