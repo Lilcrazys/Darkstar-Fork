@@ -30,7 +30,7 @@ end;
 
 function onMobDeath(mob, killer)
     -- Set PH back to normal, then set to respawn spawn
-    PH = GetServerVariable("[PH]Blubbery_Bulge");
+    local PH = GetServerVariable("[PH]Blubbery_Bulge");
     SetServerVariable("[PH]Blubbery_Bulge", 0);
     DeterMob(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
