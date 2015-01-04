@@ -41,12 +41,13 @@ end;
 
 function onEffectGain(target,effect)
 	target:addMod(MOD_HPP, 30);
-	target:addMod(MOD_STR, 19);
-	target:addMod(MOD_DEX, 19);
-	target:addMod(MOD_HPHEAL, 2);
+	target:addMod(MOD_STR, 20);
+	target:addMod(MOD_DEX, 20);
 	target:addMod(MOD_ATTP, 20);
+	target:addMod(MOD_FOOD_ATT_CAP, 250);
 	target:addMod(MOD_ACCP, 20);
-	target:addMod(MOD_RATTP, 19);
+	target:addMod(MOD_RATTP, 15);
+	target:addMod(MOD_FOOD_RATT_CAP, 175);
 	target:addMod(MOD_DRAGON_KILLER, 5);
 	target:addMod(MOD_DEMON_KILLER, 5);
 end;
@@ -57,12 +58,13 @@ end;
 
 function onEffectLose(target,effect)
 	target:delMod(MOD_HPP, 30);
-	target:delMod(MOD_STR, 19);
-	target:delMod(MOD_DEX, 19);
-	target:delMod(MOD_HPHEAL, 2);
+	target:delMod(MOD_STR, 20);
+	target:delMod(MOD_DEX, 20);
 	target:delMod(MOD_ATTP, 20);
+	target:delMod(MOD_FOOD_ATT_CAP, 250); 
 	target:delMod(MOD_ACCP, 20);
-	target:delMod(MOD_RATTP, 19);
+	target:delMod(MOD_RATTP, 15);
+	target:delMod(MOD_FOOD_RATT_CAP, 175);
 	target:delMod(MOD_DRAGON_KILLER, 5);
 	target:delMod(MOD_DEMON_KILLER, 5);
 end;

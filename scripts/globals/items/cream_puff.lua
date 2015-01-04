@@ -27,7 +27,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_FOOD,0,0,1800,5718);
+	target:addStatusEffect(EFFECT_FOOD,0,0,3600,5718);
 end;
 
 -----------------------------------------
@@ -36,13 +36,14 @@ end;
 
 function onEffectGain(target,effect)
 	target:addMod(MOD_FASTCAST, 15);
-	target:addMod(MOD_INT, 19);
-	target:addMod(MOD_MND, 19);
-	target:addMod(MOD_HPP, 15);
+	target:addMod(MOD_INT, 20);
+	target:addMod(MOD_MND, 20);
+	target:addMod(MOD_HPP, 10);
 	target:addMod(MOD_MPP, 25);
 	target:addMod(MOD_MATT, 15);
 	target:addMod(MOD_MACC, 15);
-	target:addMod(MOD_ENMITY, -10);
+	target:addMod(MOD_MPHEAL, 15);
+	target:addMod(MOD_ENMITY, -20);
 	target:addMod(MOD_SLOWRES, 5);
 end;
 
@@ -52,12 +53,13 @@ end;
 
 function onEffectLose(target,effect)
 	target:delMod(MOD_FASTCAST, 15);
-	target:delMod(MOD_INT, 19);
-	target:delMod(MOD_MND, 19);
-	target:delMod(MOD_HPP, 15);
+	target:delMod(MOD_INT, 20);
+	target:delMod(MOD_MND, 20);
+	target:delMod(MOD_HPP, 10);
 	target:delMod(MOD_MPP, 25);
 	target:delMod(MOD_MATT, 15);
 	target:delMod(MOD_MACC, 15);
-	target:delMod(MOD_ENMITY, -10);
+	target:delMod(MOD_MPHEAL, 15);
+	target:delMod(MOD_ENMITY, -20);
 	target:delMod(MOD_SLOWRES, 5);
 end;
