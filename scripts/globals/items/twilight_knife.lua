@@ -11,25 +11,34 @@ require("scripts/globals/magic");
 -- OnItemCheck
 -----------------------------------------
 
+
 function onAdditionalEffect(player,target,damage)
-    local draintype = math.random(1,2)
-	local power = math.random(10,15);
-	if(draintype == 1) then
-        target:addMod(MOD_ENSPELL_DMG,0);	    
-	    return SUBEFFECT_HP_DRAIN, 161, player:addHP(power);
-	elseif(draintype == 2) then   
-	    target:addMod(MOD_ENSPELL_DMG,0);   
-	    return SUBEFFECT_TP_DRAIN, 162, player:addMP(power);
-    end	   
+	local dmg = math.random(5,25);
+	local TYPE = math.random(1,3);
+    local params = {};
+    params.bonusmab = 0;
+    params.includemab = false;
+    dmg = addBonusesAbility(player, ELE_DARK, target, dmg, params);
+    dmg = dmg * applyResistanceAddEffect(player,target,ELE_DARK,0);
+    dmg = adjustForTarget(target,dmg,ELE_DARK);
+    dmg = finalMagicNonSpellAdjustments(player,target,ELE_DARK,dmg);
+
+    local message = 0;
+	if (TYPE == 1) then
+		message = 161;
+		subeffect = SUBEFFECT_HP_DRAIN;
+	elseif (TYPE == 2) then
+		message = 162;
+		subeffect = SUBEFFECT_MP_DRAIN;
+	elseif (TYPE == 3) then
+		message = 165;
+		subeffect = SUBEFFECT_TP_DRAIN;
+    elseif (dmg < 0) then
+        message = 167;
+    end
+
+    return subeffect,message,dmg;
 end;
-
------------------------------------------
--- onEffectGain Action
------------------------------------------
-
-function onEffectGain(player,target,effect)
-end;
-
 
 
 
