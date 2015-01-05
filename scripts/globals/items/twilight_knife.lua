@@ -13,6 +13,7 @@ require("scripts/globals/magic");
 
 
 function onAdditionalEffect(player,target,damage)
+	local subeffect = 0;
 	local dmg = math.random(5,25);
 	local TYPE = math.random(1,3);
     local params = {};
