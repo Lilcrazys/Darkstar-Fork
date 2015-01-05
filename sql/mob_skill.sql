@@ -1692,11 +1692,11 @@ INSERT INTO `mob_skill` VALUES (1944,195,1588,'Cyclonic_Torrent',1,15.0,2000,150
 
 -- Gnole
 INSERT INTO `mob_skill` VALUES (1914,132,1589,'Fevered_Pitch',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1915,132,1590,'Call_of_the_Moon',1,25.0,2000,1500,4,0,0,0); -- standing up
-INSERT INTO `mob_skill` VALUES (1916,132,1591,'Call_of_the_Moon',1,25.0,2000,1500,4,0,0,0); -- on 4 legs
-INSERT INTO `mob_skill` VALUES (1917,132,1592,'Plenilune_embrace',1,15.0,2000,1500,2,0,0,0); -- standing up
-INSERT INTO `mob_skill` VALUES (1918,132,1593,'Plenilune_embrace',1,15.0,2000,1500,2,0,0,0); -- 4 legs
-INSERT INTO `mob_skill` VALUES (1919,132,1594,'Nox_blast',0,7.0,2000,1000,4,0,0,0); -- standing only
+INSERT INTO `mob_skill` VALUES (1915,132,1590,'Call_of_the_Moon_up',1,25.0,2000,1500,4,0,0,0); -- standing up
+INSERT INTO `mob_skill` VALUES (1916,132,1591,'Call_of_the_Moon_down',1,25.0,2000,1500,4,0,0,0); -- on 4 legs
+INSERT INTO `mob_skill` VALUES (1917,132,1592,'Plenilune_Embrace_up',0,15.0,2000,1500,1,0,0,0); -- standing up
+INSERT INTO `mob_skill` VALUES (1918,132,1593,'Plenilune_Embrace_down',0,15.0,2000,1500,1,0,0,0); -- 4 legs
+INSERT INTO `mob_skill` VALUES (1919,132,1594,'Nox_blast',0,7.0,2000,1000,4,0,0,3); -- standing only
 INSERT INTO `mob_skill` VALUES (1920,132,1595,'Asuran_claws',0,7.0,2000,1000,4,0,0,0); -- standing only
 
 -- INSERT INTO `mob_skill` VALUES (1921,0,1596,'Cacophony',0,7.0,2000,1000,1,0,0,0); -- standing up - NMs only
@@ -3154,21 +3154,21 @@ INSERT INTO `mob_skill` VALUES (2113,39,1652,'Scintillant_lance',4,10.0,2000,100
 -- INSERT INTO `mob_skill` VALUES (2114,?,1650,'Grace_of_Hera',0,7.0,2000,1000,1,0,0,0); -- Alicorn Subspecies only
 
 -- Slugs
-INSERT INTO `mob_skill` VALUES (1927,357,1572,'Fuscous_ooze',4,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1928,357,1573,'Purulent_ooze',4,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1930,357,1575,'Corrosive_ooze',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1927,231,1572,'Fuscous_ooze',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1928,231,1573,'Purulent_ooze',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1929,231,1575,'Corrosive_ooze',1,15.0,2000,1000,4,0,0,0);
 
--- INSERT INTO `mob_skill` VALUES (1929,?,1574,'Mucilaginous_ooze',1,15.0,2000,1000,4,0,0,0); -- Certain NM only
+-- INSERT INTO `mob_skill` VALUES (1930,?,1574,'Mucilaginous_ooze',1,15.0,2000,1000,4,0,0,0); -- Certain NM only
 
 -- Sandworms
 INSERT INTO `mob_skill` VALUES (1931,215,1537,'Dustvoid',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1932,215,1538,'Slaverous_gale',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1933,215,1539,'Aeolian_Void',4,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1934,357,1540,'Extreme_Purgation',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1935,357,1541,'Desiccation',0,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1936,357,1542,'Doomvoid',1,30.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2348,357,1538,'Gorge',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2349,357,1540,'Disgorge',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1934,215,1540,'Extreme_Purgation',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1935,215,1541,'Desiccation',0,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1936,215,1542,'Doomvoid',1,30.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2348,215,1538,'Gorge',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2349,215,1540,'Disgorge',4,15.0,2000,1000,4,0,0,0);
 
 -- Glaviod
 INSERT INTO `mob_skill` VALUES (1931,504,1537,'Dustvoid',1,18.0,2000,1000,4,0,0,0);

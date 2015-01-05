@@ -1,11 +1,12 @@
 ---------------------------------------------
---  Calcifying Deluge
+--  Grim Glower
 --
---  Description: Delivers a threefold ranged attack to targets in an area of effect. Additional effect: Petrification
+--  Description: Stares with glowing eyes that petrifies any target that makes eye contact.
 --  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown
---  Notes: Used only by Medusa.
+--  Utsusemi/Blink absorb: Ignores shadows
+--  Range: Line of sight
+--  Notes: The peiste eyes will be brightly glowing while this is in effect.
+--  Anyone facing it will be petrified until it ends or it turns away.
 ---------------------------------------------
 
 require("/scripts/globals/settings");
@@ -20,16 +21,10 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	local numhits = 1;
-	local accmod = 1;
-	local dmgmod = 2;
-
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_3_SHADOW);
-	target:delHP(dmg);
-
 	local typeEffect = EFFECT_PETRIFICATION;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 120);
+	local duration = 45;
 
-	return dmg;
+	skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, duration));
+
+	return typeEffect
 end;
