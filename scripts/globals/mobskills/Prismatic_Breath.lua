@@ -22,7 +22,7 @@ function onMobWeaponSkill(target, mob, skill)
 	MobStatusEffectMove(mob, target, EFFECT_SILENCE, 1, 0, 60);
 	MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 15, 0, 60);
 	MobStatusEffectMove(mob, target, EFFECT_BIND, 1, 0, 30);
-	MobStatusEffectMove(mob, target, EFFECT_PLAUGE, 15, 0, 60);
+	MobStatusEffectMove(mob, target, EFFECT_PLAGUE, 15, 0, 60);
 	MobStatusEffectMove(mob, target, EFFECT_WEIGHT, 50, 0, 60);
 
 	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_EARTH, 1100);
