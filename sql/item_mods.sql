@@ -1402,7 +1402,7 @@ INSERT INTO `item_mods` VALUES(11147, 27, -10); --
 
 INSERT INTO `item_mods` VALUES(11152, 1, 25); --
 INSERT INTO `item_mods` VALUES(11152, 8, 7); --
-INSERT INTO `item_mods` VALUES(11152, 9. 7); --
+INSERT INTO `item_mods` VALUES(11152, 9, 7); --
 INSERT INTO `item_mods` VALUES(11152, 25, 8); --
 INSERT INTO `item_mods` VALUES(11152, 288, 3); --
 INSERT INTO `item_mods` VALUES(11153, 1, 18); --
@@ -21203,7 +21203,6 @@ INSERT INTO `item_mods` VALUES(10671, 370, 2);
 INSERT INTO `item_mods` VALUES(11798, 370, 2);
 INSERT INTO `item_mods` VALUES(10753, 370, 2);
 INSERT INTO `item_mods` VALUES(10936, 370, 2);
-INSERT INTO `item_mods` VALUES(10864, 370, 1);
 INSERT INTO `item_mods` VALUES(10867, 370, 1);
 INSERT INTO `item_mods` VALUES(10764, 370, 1);
 INSERT INTO `item_mods` VALUES(10468, 370, 3);
