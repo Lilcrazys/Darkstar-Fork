@@ -3774,7 +3774,7 @@ INSERT INTO `item_mods` VALUES(12011, 1, 24); --
 INSERT INTO `item_mods` VALUES(12011, 12, 3); --
 INSERT INTO `item_mods` VALUES(12011, 27, -3); --
 
-INSERT INTO `item_mods` VALUES(12015, 1, 37) --
+INSERT INTO `item_mods` VALUES(12015, 1, 37); --
 INSERT INTO `item_mods` VALUES(12015, 8, 2); --
 INSERT INTO `item_mods` VALUES(12015, 9, 2); --
 INSERT INTO `item_mods` VALUES(12016, 1, 32); --
