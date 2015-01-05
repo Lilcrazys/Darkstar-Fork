@@ -23,6 +23,5 @@ function onTrigger(player)
 		player:addStatusEffect(EFFECT_REGAIN,5,1,0);
 	else
 		player:PrintToPlayer("Sorry your level is too high for this command right now!, only level 75 and lower are permitted.");
-		player:messageBasic(144);
 	end
 end
