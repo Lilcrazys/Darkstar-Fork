@@ -21,8 +21,8 @@ function onMobWeaponSkill(target, mob, skill)
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_NONE,MOBPARAM_3_SHADOW);
     MobStatusEffectMove(mob, target, EFFECT_SILENCE, 1, 0, 30);
 	MobStatusEffectMove(mob, target, EFFECT_PLAGUE, 1, 0, 30);
-	MobStatusEffectMove(mob, target, EFFECT_PARALYZE, 1, 0, 30);
-	MobStatusEffectMove(mob, target, EFFECT_CHARM, 1, 0, 30);	
+	MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 1, 0, 30);
+	MobStatusEffectMove(mob, target, EFFECT_CHARM_I, 1, 0, 30);	
 	target:delHP(dmg);
     mob:resetEnmity(target);
 	return dmg;
