@@ -25,13 +25,12 @@ function onMobDeathEx(mob, killer, isWeaponSkillKill)
 	if (killer:getVar("ChaosbringerKills") == nil) then ChaosbringerKills = 0; end
 	
 	if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
-
 		if(killer:getEquipID(SLOT_MAIN) == 16607 and isWeaponSkillKill == false) then
 			if(ChaosbringerKills < 200) then
 				killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);	
+				killer:EchoToPlayer( string.format( "You have killed %u foes using the Chaosbringer...", ChaosbringerKills + 1) );
 			end
 		end
-		
 	end
 	
 	if(killer:getCurrentMission(WINDURST) == A_TESTING_TIME) then
