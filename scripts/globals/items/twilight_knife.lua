@@ -28,12 +28,15 @@ function onAdditionalEffect(player,target,damage)
 	if (TYPE == 1) then
 		message = 161;
 		subeffect = SUBEFFECT_HP_DRAIN;
+		player:addHP(dmg);
 	elseif (TYPE == 2) then
 		message = 162;
 		subeffect = SUBEFFECT_MP_DRAIN;
+		player:addMP(dmg);
 	elseif (TYPE == 3) then
 		message = 165;
 		subeffect = SUBEFFECT_TP_DRAIN;
+		player:addTP(dmg);
     elseif (dmg < 0) then
         message = 167;
     end
