@@ -548,155 +548,130 @@ function onTrade(player,npc,trade)
         player:addItem(27648);
         player:messageSpecial(ITEM_OBTAINED,27648);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(14546,1) and (trade:hasItemQty(27798,1) and trade:getItemCount() == 2) then 					--body
 		player:addItem(27788, 1);
 		player:messageSpecial(ITEM_OBTAINED,27788);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(14961,1) and (trade:hasItemQty(27938,1) and trade:getItemCount() == 2) then 					--hands
 		player:addItem(27928, 1);
 		player:messageSpecial(ITEM_OBTAINED,27928);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15625,1) and (trade:hasItemQty(28081,1) and trade:getItemCount() == 2) then 					--legs
 		player:addItem(28071, 1);
 		player:messageSpecial(ITEM_OBTAINED,28071);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15711,1) and (trade:hasItemQty(28218,1) and trade:getItemCount() == 2) then 					--feet
 		player:addItem(28208, 1);
 		player:messageSpecial(ITEM_OBTAINED,28208);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ----------------------------Usukane-------------------------------------
     if (trade:hasItemQty(16092,1) and (trade:hasItemQty(27660,1) and trade:getItemCount() == 2) then 					--head
 		player:addItem(27650, 1);
 		player:messageSpecial(ITEM_OBTAINED,27650);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14554,1) and (trade:hasItemQty(27800,1) and trade:getItemCount() == 2) then 					--body
 		player:addItem(27790, 1);
 		player:messageSpecial(ITEM_OBTAINED,27790);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14969,1) and (trade:hasItemQty(27940,1) and trade:getItemCount() == 2) then 					--hands
 		player:addItem(27930, 1);
 		player:messageSpecial(ITEM_OBTAINED,27930);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15633,1) and (trade:hasItemQty(28083,1) and trade:getItemCount() == 2) then 					--legs
 		player:addItem(28073, 1);
 		player:messageSpecial(ITEM_OBTAINED,28073);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15719,1) and (trade:hasItemQty(28220,1) and trade:getItemCount() == 2) then 					--feet
 		player:addItem(28210, 1);
 		player:messageSpecial(ITEM_OBTAINED,28210);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ----------------------------Skadi-------------------------------------
     if (trade:hasItemQty(16088,1) and (trade:hasItemQty(27659,1) and trade:getItemCount() == 2) then 					--head
 		player:addItem(27649, 1);
 		player:messageSpecial(ITEM_OBTAINED,27649);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14550,1) and (trade:hasItemQty(27799,1) and trade:getItemCount() == 2) then 					--body
 		player:addItem(27789, 1);
 		player:messageSpecial(ITEM_OBTAINED,27789);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14965,1) and (trade:hasItemQty(27939,1) and trade:getItemCount() == 2) then 					--hands
 		player:addItem(27929, 1);
 		player:messageSpecial(ITEM_OBTAINED,27929);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15629,1) and (trade:hasItemQty(28082,1) and trade:getItemCount() == 2) then 					--legs
 		player:addItem(28072, 1);
 		player:messageSpecial(ITEM_OBTAINED,28072);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15715,1) and (trade:hasItemQty(28219,1) and trade:getItemCount() == 2) then 					--feet
 		player:addItem(28209, 1);
 		player:messageSpecial(ITEM_OBTAINED,28209);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ----------------------------Morrigans-------------------------------------
     if (trade:hasItemQty(16100,1) and (trade:hasItemQty(27662,1) and trade:getItemCount() == 2) then 					--head
 		player:addItem(27652, 1);
 		player:messageSpecial(ITEM_OBTAINED,27652);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14562,1) and (trade:hasItemQty(27802,1) and trade:getItemCount() == 2) then 					--body
 		player:addItem(27792, 1);
 		player:messageSpecial(ITEM_OBTAINED,27792);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14977,1) and (trade:hasItemQty(27942,1) and trade:getItemCount() == 2) then 					--hands
 		player:addItem(27932, 1);
 		player:messageSpecial(ITEM_OBTAINED,27932);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15641,1) and (trade:hasItemQty(28085,1) and trade:getItemCount() == 2) then 					--legs
 		player:addItem(28075, 1);
 		player:messageSpecial(ITEM_OBTAINED,28075);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15727,1) and (trade:hasItemQty(28222,1) and trade:getItemCount() == 2) then 					--feet
 		player:addItem(28212, 1);
 		player:messageSpecial(ITEM_OBTAINED,28212);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ----------------------------Mardukes-------------------------------------
     if (trade:hasItemQty(160962,1) and (trade:hasItemQty(27661,1) and trade:getItemCount() == 2) then 					--head
 		player:addItem(27651, 1);
 		player:messageSpecial(ITEM_OBTAINED,27651);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14558,1) and (trade:hasItemQty(27801,1) and trade:getItemCount() == 2) then 					--body
 		player:addItem(27791, 1);
 		player:messageSpecial(ITEM_OBTAINED,27791);
 	    player:tradeComplete();
-		player:startEvent(10125);
 	end
 	if (trade:hasItemQty(14973,1) and (trade:hasItemQty(27941,1) and trade:getItemCount() == 2) then 					--hands
 		player:addItem(27931, 1);
 		player:messageSpecial(ITEM_OBTAINED,27931);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15637,1) and (trade:hasItemQty(28084,1) and trade:getItemCount() == 2) then 					--legs
 		player:addItem(28074, 1);
 		player:messageSpecial(ITEM_OBTAINED,28074);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(15723,1) and (trade:hasItemQty(28221,1) and trade:getItemCount() == 2) then 					--feet
 		player:addItem(28211, 1)
 		player:messageSpecial(ITEM_OBTAINED,28211);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ---------------------------------------------------EmpyWeapons----------------------------
 
@@ -705,400 +680,336 @@ function onTrade(player,npc,trade)
         player:addItem(19458);
         player:messageSpecial(ITEM_OBTAINED,19458);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19458,1) and (trade:hasItemQty(2964,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19634, 1);
 		player:messageSpecial(ITEM_OBTAINED,19634);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19634,1) and (trade:hasItemQty(3289,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19807, 1);
 		player:messageSpecial(ITEM_OBTAINED,19807);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19807,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20654, 1);
 		player:messageSpecial(ITEM_OBTAINED,20654);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Armageddon-------------------------------------
 	if (trade:hasItemQty(19399,1) and trade:hasItemQty(2930,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19469);
         player:messageSpecial(ITEM_OBTAINED,19469);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19469,1) and (trade:hasItemQty(2965,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19645, 1);
 		player:messageSpecial(ITEM_OBTAINED,19645);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19645,1) and (trade:hasItemQty(3290,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19818, 1);
 		player:messageSpecial(ITEM_OBTAINED,19818);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19818,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(21265, 1);
 		player:messageSpecial(ITEM_OBTAINED,21265);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Caladbolg-------------------------------------
 	if (trade:hasItemQty(19400,1) and trade:hasItemQty(2930,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19459);
         player:messageSpecial(ITEM_OBTAINED,19459);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19459,1) and (trade:hasItemQty(2965,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19635, 1);
 		player:messageSpecial(ITEM_OBTAINED,19635);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19635,1) and (trade:hasItemQty(3290,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19808, 1);
 		player:messageSpecial(ITEM_OBTAINED,19808);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19808,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20748, 1);
 		player:messageSpecial(ITEM_OBTAINED,20748);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Daurdabla-------------------------------------
 	if (trade:hasItemQty(18574,1) and trade:hasItemQty(2929,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(18575);
         player:messageSpecial(ITEM_OBTAINED,18575);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(18575,1) and (trade:hasItemQty(2964,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(18576, 1);
 		player:messageSpecial(ITEM_OBTAINED,18576);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(18576,1) and (trade:hasItemQty(3289,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(18571, 1);
 		player:messageSpecial(ITEM_OBTAINED,18571);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(18571,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(18839, 1);
 		player:messageSpecial(ITEM_OBTAINED,18839);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Farsha-------------------------------------
 	if (trade:hasItemQty(19401,1) and trade:hasItemQty(2931,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19460);
         player:messageSpecial(ITEM_OBTAINED,19460);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19460,1) and (trade:hasItemQty(2966,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19636, 1);
 		player:messageSpecial(ITEM_OBTAINED,19636);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19636,1) and (trade:hasItemQty(3291,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19809, 1);
 		player:messageSpecial(ITEM_OBTAINED,19809);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19809,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20795, 1);
 		player:messageSpecial(ITEM_OBTAINED,20795);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Gambanteinn-------------------------------------
 	if (trade:hasItemQty(19407,1) and trade:hasItemQty(2931,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19466);
         player:messageSpecial(ITEM_OBTAINED,19466);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19466,1) and (trade:hasItemQty(2966,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19642, 1);
 		player:messageSpecial(ITEM_OBTAINED,19642);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19642,1) and (trade:hasItemQty(3291,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19815, 1);
 		player:messageSpecial(ITEM_OBTAINED,19815);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19815,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(21065, 1);
 		player:messageSpecial(ITEM_OBTAINED,21065);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Gandiva-------------------------------------
 	if (trade:hasItemQty(19409,1) and trade:hasItemQty(2931,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19468);
         player:messageSpecial(ITEM_OBTAINED,19468);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19468,1) and (trade:hasItemQty(2966,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19644, 1);
 		player:messageSpecial(ITEM_OBTAINED,19644);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19644,1) and (trade:hasItemQty(3291,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19817, 1);
 		player:messageSpecial(ITEM_OBTAINED,19817);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19817,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(21213, 1);
 		player:messageSpecial(ITEM_OBTAINED,21213);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Hvergelmir-------------------------------------
 	if (trade:hasItemQty(19408,1) and trade:hasItemQty(2932,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19467);
         player:messageSpecial(ITEM_OBTAINED,19467);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19467,1) and (trade:hasItemQty(2967,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19643, 1);
 		player:messageSpecial(ITEM_OBTAINED,19643);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19643,1) and (trade:hasItemQty(3292,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19816, 1);
 		player:messageSpecial(ITEM_OBTAINED,19816);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19816,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(21144, 1);
 		player:messageSpecial(ITEM_OBTAINED,21144);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ----------------------------------Kannagi-----------------------------------
 	if (trade:hasItemQty(19405,1) and trade:hasItemQty(2929,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19464);
         player:messageSpecial(ITEM_OBTAINED,19464);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19464,1) and (trade:hasItemQty(2964,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19640, 1);
 		player:messageSpecial(ITEM_OBTAINED,19640);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19640,1) and (trade:hasItemQty(3289,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19813, 1);
 		player:messageSpecial(ITEM_OBTAINED,19813);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19813,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20975, 1);
 		player:messageSpecial(ITEM_OBTAINED,20975);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 -----------------------------Masamune----------------------------------------
 	if (trade:hasItemQty(19406,1) and trade:hasItemQty(2930,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19465);
         player:messageSpecial(ITEM_OBTAINED,19465);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19465,1) and (trade:hasItemQty(2965,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(16641, 1);
 		player:messageSpecial(ITEM_OBTAINED,16641);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(16641,1) and (trade:hasItemQty(3290,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19814, 1);
 		player:messageSpecial(ITEM_OBTAINED,19814);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19814,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(21020, 1);
 		player:messageSpecial(ITEM_OBTAINED,21020);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Ochain-------------------------------------
 	if (trade:hasItemQty(16192,1) and trade:hasItemQty(2932,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(16193);
         player:messageSpecial(ITEM_OBTAINED,16193);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(16193,1) and (trade:hasItemQty(2967,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(16194, 1);
 		player:messageSpecial(ITEM_OBTAINED,16194);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(16194,1) and (trade:hasItemQty(3292,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(11926, 1);
 		player:messageSpecial(ITEM_OBTAINED,11926);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(11926,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(16199, 1);
 		player:messageSpecial(ITEM_OBTAINED,16199);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 --------------------------------Redemption-------------------------------------
 	if (trade:hasItemQty(19403,1) and trade:hasItemQty(2928,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19462);
         player:messageSpecial(ITEM_OBTAINED,19462);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19462,1) and (trade:hasItemQty(2963,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19638, 1);
 		player:messageSpecial(ITEM_OBTAINED,19638);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19638,1) and (trade:hasItemQty(3288,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19811, 1);
 		player:messageSpecial(ITEM_OBTAINED,19811);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19811,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20885, 1);
 		player:messageSpecial(ITEM_OBTAINED,20885);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 ----------------------------Rhongomiant-----------------------------------------
 	if (trade:hasItemQty(19404,1) and trade:hasItemQty(2928,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19463);
         player:messageSpecial(ITEM_OBTAINED,19463);
-		player:tradeComplete();
-		player:startEvent(10125);		
+		player:tradeComplete();		
     end
 	if (trade:hasItemQty(19463,1) and (trade:hasItemQty(2963,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19639, 1);
 		player:messageSpecial(ITEM_OBTAINED,19639);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19639,1) and (trade:hasItemQty(3288,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19812, 1);
 		player:messageSpecial(ITEM_OBTAINED,19812);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19812,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20930, 1);
 		player:messageSpecial(ITEM_OBTAINED,20930);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 -------------------------Twashtar--------------------------------------------
 	if (trade:hasItemQty(19398,1) and trade:hasItemQty(2927,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19457);
         player:messageSpecial(ITEM_OBTAINED,19457);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19457,1) and (trade:hasItemQty(2962,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19633, 1);
 		player:messageSpecial(ITEM_OBTAINED,19633);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19633,1) and (trade:hasItemQty(3287,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19806, 1);
 		player:messageSpecial(ITEM_OBTAINED,19806);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19806,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20564, 1);
 		player:messageSpecial(ITEM_OBTAINED,20564);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 -------------------------Ukonvasara--------------------------------------------
 	if (trade:hasItemQty(19402,1) and trade:hasItemQty(2927,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19461);
         player:messageSpecial(ITEM_OBTAINED,19461);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19461,1) and (trade:hasItemQty(2962,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19637, 1);
 		player:messageSpecial(ITEM_OBTAINED,19637);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19637,1) and (trade:hasItemQty(3287,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19810, 1);
 		player:messageSpecial(ITEM_OBTAINED,19810);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19810,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20840, 1);
 		player:messageSpecial(ITEM_OBTAINED,20840);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 -------------------------Verethranga--------------------------------------------
 	if (trade:hasItemQty(19397,1) and trade:hasItemQty(2927,50) and trade:getItemCount() == 51) then 	--80-85	    		
         player:addItem(19456);
         player:messageSpecial(ITEM_OBTAINED,19456);
 		player:tradeComplete();
-		player:startEvent(10125);		
     end
 	if (trade:hasItemQty(19456,1) and (trade:hasItemQty(2962,50) and trade:getItemCount() == 51) then 	--85-95
 		player:addItem(19632, 1);
 		player:messageSpecial(ITEM_OBTAINED,19632);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19632,1) and (trade:hasItemQty(3287,50) and trade:getItemCount() == 51) then  --95-99/1
 		player:addItem(19805, 1);
 		player:messageSpecial(ITEM_OBTAINED,19805);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 	if (trade:hasItemQty(19805,1) and (trade:hasItemQty(3925,50) and trade:getItemCount() == 51) then --99/1-99/4
 		player:addItem(20487, 1);
 		player:messageSpecial(ITEM_OBTAINED,20487);
 	    player:tradeComplete();
-		player:startEvent(10125);
     end
 -----------------------------------
 -- onTrigger Action
