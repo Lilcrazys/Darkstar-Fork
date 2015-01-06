@@ -1011,6 +1011,9 @@ function onTrade(player,npc,trade)
 		player:messageSpecial(ITEM_OBTAINED,20487);
 		player:tradeComplete();
 	end
+
+end;
+
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
