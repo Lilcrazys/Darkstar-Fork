@@ -59,17 +59,9 @@ function onTrade(player,npc,trade)
 	end
 	if (player:getVar("customtrial") >= 1) and (trade:hasItemQty(3925,50) == false) and (trade:hasItemQty(2184,1) == false) then
 		SpoofSay(npc:getID(),player:getID(),"Sorry you already have a trial active");
-		SpoofSay(npc:getID(),player:getID(),"If you wish to cancel the current trial, please trade me a small fee of,");
-		SpoofEmote(npc:getID(),player:getID(),": 1x imperial bronze piece.");
+		SpoofSay(npc:getID(),player:getID(),"If you wish to cancel the current trial, please trade a small fee of 1x imperial bronze piece to Venessa.");
 	end
-	if (trade:hasItemQty(2184,1)) and (trade:getItemCount() == 1) and (player:getVar("customtrial") >= 1) then
-		player:setVar("customtrial",0);
-		SpoofSay(npc:getID(),player:getID(),"Ok your trial has been reset and your are now able to undertake a new trial.");
-		player:tradeComplete();
-	elseif (trade:hasItemQty(2184,1)) and (player:getVar("customtrial") == 0) then
-		SpoofSay(npc:getID(),player:getID(),"I cannot accept that right now, you have already erased your trial.");
-	end
-
+	
 	--------------------------------------------
 	-- 				Mythic Trials
 	--------------------------------------------

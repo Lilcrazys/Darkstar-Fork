@@ -5,19 +5,20 @@
 -----------------------------------
 
 function doCustomTrial(mob, killer, isWeaponSkillKill)
-	-- print("mob:checkBaseExp()",mob:checkBaseExp());
-	-- killer:PrintToPlayer("TEST!");
+	
 	---------------------------------------------------
 	-- Custom Trials
 	---------------------------------------------------
 	local trial = killer:getVar("customtrial");
 	local partyType = killer:checkSoloPartyAlliance();
+	local RANGED = killer:getEquipID(SLOT_RANGED);
 	local MAIN = killer:getEquipID(SLOT_MAIN);
 	local SUB = killer:getEquipID(SLOT_SUB);
-	local RANGED = killer:getEquipID(SLOT_RANGED);
+
 	---------------------
 	-- Relic 1 75-85
 	---------------------
+
 	local SewwtheSquidlimbedKillCount = 0;
 	local MegalobugardKillCount = 0;
 	local DuneWidowKillCount = 0;
@@ -76,10 +77,10 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		------------------
 		-- trial complete
 		------------------
+
 		if (MegalobugardKillCount == 4 and Seww_the_SquidlimbedKillCount == 4 and MischievousCount == 4 and
 			Dune_WidowKillCount == 3 and Keeper_of_HalidomKillCount == 4 and  IntuloKillCount == 4) then
 			killer:setVar("TRIAL_COMPLETE",1);
-			killer:PrintToPlayer("Your trial is complete!.");
 		end
 	end
 
@@ -102,7 +103,11 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		FafnirKillCount = killer:getVar("Fafnir_KILLS")
 	end
 
-	if ((trial >= 17 and trial <= 32) and (MAIN == 18646 or SUB == 16196 or
+	---------------------
+	-- Trial start count
+	---------------------
+
+	if ( (trial >= 17 and trial <= 32) and (MAIN == 18646 or SUB == 16196 or
 		MAIN == 18644 or MAIN == 18642 or MAIN == 18648 or MAIN == 18639 or
 		RANGED == 18578 or MAIN == 18643 or MAIN == 18641 or MAIN == 18645 or
 		MAIN == 18638 or MAIN == 18647 or MAIN == 18640 or MAIN == 18637 or
@@ -117,18 +122,20 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		if (FafnirKillCount < 7 and mob:getID() == 17408018) then
 			killer:setVar("Fafnir_KILLS", FafnirKillCount + 1);
 		end
+
 		------------------
 		-- trial complete
 		------------------
+
 		if (AdamantoiseKillCount == 7 and BehemothKillCount == 7 and FafnirKillCount == 7) then
 			killer:setVar("TRIAL_COMPLETE",1);
-			killer:PrintToPlayer("Your trial is complete!.");
 		end
 	end
 
 	---------------------
 	-- Relic 3 95-99
 	---------------------
+
 	local AspidocheloneKillCount = 0;
 	local KingBehemothKillCount = 0;
 	local AshDragonKillCount = 0;
@@ -151,7 +158,7 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		NidhoggKillCount = killer:getVar("Nidhogg_KILLS")
 	end
 
-	if ((trial >= 33 and trial <= 48) and (MAIN == 18674 or
+	if ( (trial >= 33 and trial <= 48) and (MAIN == 18674 or
 		SUB == 16198 or RANGED == 18677 or MAIN == 18672 or MAIN == 18670 or
 		MAIN == 18676 or MAIN == 18667 or RANGED == 18580 or MAIN == 18671 or
 		MAIN == 18669 or MAIN == 18673 or MAIN == 18666 or MAIN == 18675 or
@@ -178,61 +185,74 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 		if (JugglerKillCount == 4 and NidhoggKillCount == 4 and KingBehemothKillCount == 4 and
 			AspidocheloneKillCount == 3 and AshDragonKillCount == 4) then
 			killer:setVar("TRIAL_COMPLETE",1);
-			killer:PrintToPlayer("Your trial is complete!.");
 		end
 	end
-
--- The below needs cleanup badly.
---[[
-
 
 	---------------------
 	-- Mythic 1 75-85
 	---------------------
+	local BrassBorerKillCount = 0;
+	local ZareehklKillCount = 0;
+	local VelionisKillCount = 0;
+	local DextroseKillCount = 0;
+	local IririKillCount = 0;
+	local IrizKillCount = 0;
 
-	local kill15 = killer:getVar("Zareehkl_the_Jubilant_KILLS");
-	local kill16 = killer:getVar("Iriz_Irma_KILLS");
-	local kill17 = killer:getVar("Velionis_KILLS");
-	local kill18 = killer:getVar("Brass_Borer_KILLS");
-	local kill19 = killer:getVar("Dextrose_KILLS");
-	local kill20 = killer:getVar("Iriri_Samariri_KILLS");
-
+	if (killer:getVar("Zareehkl_the_Jubilant_KILLS") ~= nil) then
+		ZareehklKillCount = killer:getVar("Zareehkl_the_Jubilant_KILLS")
+	end
+	if (killer:getVar("Brass_Borer_KILLS") ~= nil) then
+		BrassBorerKillCount = killer:getVar("Brass_Borer_KILLS")
+	end
+	if (killer:getVar("Iriri_Samariri_KILLS") ~= nil) then
+		IririKillCount = killer:getVar("Iriri_Samariri_KILLS")
+	end
+	if (killer:getVar("Dextrose_KILLS") ~= nil) then
+		DextroseKillCount = killer:getVar("Dextrose_KILLS")
+	end
+	if (killer:getVar("Velionis_KILLS") ~= nil) then
+		VelionisKillCount = killer:getVar("Velionis_KILLS")
+	end
+	if (killer:getVar("Iriz_Irma_KILLS") ~= nil) then
+		IrizKillCount = killer:getVar("Iriz_Irma_KILLS")
+	end
 
 	---------------------
-	-- Mythic Trial start count
+	-- Trial start count
 	---------------------
-	if (trial == 100)  or (trial == 101)  or (trial == 102)	 or (trial == 103)	or (trial == 104)  or
-	   (trial == 105)  or (trial == 106)  or (trial == 107)	 or (trial == 108)	or (trial == 109) or
-	   (trial == 110) or (trial == 111) or (trial == 112) or (trial == 113) or (trial == 114) or
-	   (trial == 115) or (trial == 116) and
-	   (Weapon == 18999) or (Weapon == 18997) or (Weapon == 19000) or (Weapon == 18991) or
-	   (Weapon == 19007) or (Weapon == 19001) or (Weapon == 18992) or (Weapon == 19002) or
-	   (Weapon == 18994) or (Weapon == 18998) or (Weapon == 18995) or (Weapon == 19003) or
-	   (Weapon == 19005) or (Weapon == 19004) or (Weapon == 18989) or (Weapon == 19006) or (Weapon == 18990) and
-	   (isWeaponSkillKill == false) then
 
-		if (kill15 < 5) and (mob:getID() == 16998873) then
-			killer:setVar("Zareehkl_the_Jubilant_KILLS", kill7 + 1);
+	if ( (trial >= 100	or trial =< 116) and
+	   (MAIN == 18999 or MAIN == 18997 or MAIN == 19000 or MAIN == 18991 or
+		MAIN == 18992 or MAIN == 19002 or MAIN == 18994 or MAIN == 18998 or
+		MAIN == 18995 or MAIN == 19003 or MAIN == 19005 or MAIN == 19004 or
+		MAIN == 18989 or MAIN == 19006 or MAIN == 18990 or
+		RANGED == 19007 or RANGED == 19001) ) then
+
+		if (ZareehklKillCount < 5 and mob:getID() == 16998873) then
+			killer:setVar("Zareehkl_the_Jubilant_KILLS", ZareehklKillCount + 1);
 		end
-		if (kill16 < 5) and (mob:getID() == 16986429) then
-			killer:setVar("Iriz_Irma_KILLS", kill8 + 1);
+		if (BrassBorerKillCount < 5 and mob:getID() == 17027471) then
+			killer:setVar("Brass_Borer_KILLS", BrassBorerKillCount + 1);
 		end
-		if (kill17 < 5) and (mob:getID() == 16998872) then
-			killer:setVar("Velionis_KILLS", kill9 + 1);
+		if (IririKillCount < 5 and mob:getID() == 17043888) then
+			killer:setVar("Iriri_Samariri_KILLS", IririKillCount + 1);
 		end
-		if (kill18 < 5) and (mob:getID() == 17027471) then
-			killer:setVar("Brass_Borer_KILLS", kill10 + 1);
+		if (VelionisKillCount < 5 and mob:getID() == 16998872) then
+			killer:setVar("Velionis_KILLS", VelionisKillCount + 1);
 		end
-		if (kill19 < 5) and (mob:getID() == 17031598) then
-			killer:setVar("Dextrose_KILLS", kill11 + 1);
+		if (DextroseKillCount < 5 and mob:getID() == 17031598) then
+			killer:setVar("Dextrose_KILLS", DextroseKillCount + 1);
 		end
-		if (kill20 < 5) and (mob:getID() == 17043888) then
-			killer:setVar("Iriri_Samariri_KILLS", kill12 + 1);
+		if (IrizKillCount < 5 and mob:getID() == 16986429) then
+			killer:setVar("Iriz_Irma_KILLS", IrizKillCount + 1);
 		end
+
 		------------------
 		-- trial complete
 		------------------
-		if (kill15 == 5) and (kill16 == 5) and (kill17 == 5) and (kill18 == 5) and (kill19 == 5) and (kill20 == 5) then
+
+		if (ZareehklKillCount == 5 and BrassBorerKillCount == 5 and IririKillCount == 5 and
+			VelionisKillCount == 5 and DextroseKillCount == 5 and IrizKillCount == 5) then
 			killer:setVar("TRIAL_COMPLETE",1);
 		end
 	end
@@ -240,82 +260,126 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	---------------------
 	-- Mythic 2 85-95
 	---------------------
-	local kill21 = killer:getVar("Armed_Gears_KILLS");
-	local kill22 = killer:getVar("Nosferatu_KILLS");
-	local kill23 = killer:getVar("Achamoth_KILLS");
-	local kill24 = killer:getVar("Experimental_Lamia_KILLS");
 
-	if ( (trial >= 117 and trial <= 133) and
-	   (Weapon == 19088) or (Weapon == 19086) or (Weapon == 19089) or (Weapon == 19080) or
-	   (Weapon == 19096) or (Weapon == 19090) or (Weapon == 19081) or (Weapon == 19091) or
-	   (Weapon == 19083) or (Weapon == 19087) or (Weapon == 19084) or (Weapon == 19092) or
-	   (Weapon == 19094) or (Weapon == 19093) or (Weapon == 19098) or (Weapon == 19095) or (Weapon == 19099) and
-	   (isWeaponSkillKill == false) ) then
+	local ExperimentalLamiaKillCount = 0;
+	local NosferatuKillCount = 0;
+	local AchamothKillCount = 0;
+	local GearsKillCount = 0;
 
-		if (kill21 < 4 and mob:getID() == 17072178) then
-			killer:setVar("Armed_Gears_KILLS", kill21 + 1);
+	if (killer:getVar("Experimental_Lamia_KILLS") ~= nil) then
+		ExperimentalLamiaKillCount = killer:getVar("Experimental_Lamia_KILLS")
+	end
+	if (killer:getVar("Nosferatu_KILLS") ~= nil) then
+		NosferatuKillCount = killer:getVar("Nosferatu_KILLS")
+	end
+	if (killer:getVar("Armed_Gears_KILLS") ~= nil) then
+		GearsKillCount = killer:getVar("Armed_Gears_KILLS")
+	end
+	if (killer:getVar("Achamoth_KILLS") ~= nil) then
+		AchamothKillCount = killer:getVar("Achamoth_KILLS")
+	end
+
+	---------------------
+	-- Trial start count
+	---------------------
+
+	if ((trial >= 117 and trial <= 133) and
+	   (MAIN == 19088 or MAIN == 19086 or MAIN == 19089 or MAIN == 19080 or
+		MAIN == 19081 or MAIN == 19091 or MAIN == 19083 or MAIN == 19087 or
+		MAIN == 19084 or MAIN == 19092 or MAIN == 19094 or MAIN == 19093 or
+		MAIN == 19098 or MAIN == 19095 or MAIN == 19099 or
+		RANGED == 19096 or RANGED == 19090) ) then
+
+		if (ExperimentalLamiaKillCount < 4 and mob:getID() == 17101205) then
+			killer:setVar("Expermimental_Lamia_KILLS", ExperimentalLamiaKillCount + 1);
 		end
-		if (kill22 < 4 and mob:getID() == 17056158) then
-			killer:setVar("Nosferatu_KILLS", kill22 + 1);
+		if (NosferatuKillCount < 4 and mob:getID() == 17056158) then
+			killer:setVar("Nosferatu_KILLS", NosferatuKillCount + 1);
 		end
-		if (kill23 < 4 and mob:getID() == 17031600) then
-			killer:setVar("Achamoth_KILLS", kill23 + 1);
+		if (GearsKillCount < 4 and mob:getID() == 17072178) then
+			killer:setVar("Armed_Gears_KILLS", GearsKillCount + 1);
 		end
-		if (kill24 < 4 and mob:getID() == 17101205) then
-			killer:setVar("Expermimental_Lamia_KILLS", kill24 + 1);
+		if (AchamothKillCount < 4 and mob:getID() == 17031600) then
+			killer:setVar("Achamoth_KILLS", AchamothKillCount + 1);
 		end
+
 		------------------
 		-- trial complete
 		------------------
-		if (kill21 == 4 and kill22 == 4 and kill23 == 4 and kill24 == 4) then
+
+		if (ExperimentalLamiaKillCount == 4 and NosferatuKillCount == 4 and
+			GearsKillCount == 4 and AchamothKillCount == 4) then
 			killer:setVar("TRIAL_COMPLETE",1);
 		end
 	end
 
-		---------------------
+	---------------------
 	-- Mythic 2 95-99
 	---------------------
-	local kill25 = killer:getVar("Cerberus_KILLS");
-	local kill26 = killer:getVar("Khimara_KILLS");
-	local kill27 = killer:getVar("Medusa_KILLS");
-	local kill28 = killer:getVar("Gulool_Ja_Ja_KILLS");
-	local kill29 = killer:getVar("Gurfurlur_the_Menacing_KILLS");
-	local kill30 = killer:getVar("Hydra_KILLS");
+	local CerberusKillCount = 0;
+	local KhimaraKillCount = 0;
+	local MedusaKillCount = 0;
+	local GuloolKillCount = 0;
+	local GurfurlurKillCount = 0;
+	local HydraKillCount = 0;
 
-	if (trial == 134) or (trial == 135)	 or (trial == 136)	or (trial == 137)  or (trial == 138) or
-	   (trial == 139) or (trial == 140)	 or (trial == 141)	or (trial == 142)  or (trial == 143) or
-	   (trial == 144) or (trial == 145) or (trial == 146) or (trial == 147) or (trial == 148) or
-	   (trial == 149) or (trial == 150) and
-	   (Weapon == 19718) or (Weapon == 19716) or (Weapon == 19719) or (Weapon == 19710) or
-	   (Weapon == 19726) or (Weapon == 19720) or (Weapon == 19711) or (Weapon == 19721) or
-	   (Weapon == 19713) or (Weapon == 19717) or (Weapon == 19714) or (Weapon == 19722) or
-	   (Weapon == 19724) or (Weapon == 19723) or (Weapon == 19728) or (Weapon == 19725) or (Weapon == 19729) and
-	   (isWeaponSkillKill == false) then
+	if (killer:getVar("Gurfurlur_the_Menacing_KILLS") ~= nil) then
+		GurfurlurKillCount = killer:getVar("Gurfurlur_the_Menacing_KILLS")
+	end
+	if (killer:getVar("Gulool_Ja_Ja_KILLS") ~= nil) then
+		GuloolKillCount = killer:getVar("Gulool_Ja_Ja_KILLS")
+	end
+	if (killer:getVar("Cerberus_KILLS") ~= nil) then
+		CerberusKillCount = killer:getVar("Cerberus_KILLS")
+	end
+	if (killer:getVar("Khimara_KILLS") ~= nil) then
+		KhimaraKillCount = killer:getVar("Khimara_KILLS")
+	end
+	if (killer:getVar("Medusa_KILLS") ~= nil) then
+		MedusaKillCount = killer:getVar("Medusa_KILLS")
+	end
+	if (killer:getVar("Hydra_KILLS") ~= nil) then
+		HydraKillCount = killer:getVar("Hydra_KILLS")
+	end
 
-		if (kill25 < 3) and (mob:getID() == 17027458) then
-			killer:setVar("Cerberus_KILLS", kill25 + 1);
+	---------------------
+	-- Trial start count
+	---------------------
+
+	if ( (trial >= 134) or (trial =< 150) and
+	   (MAIN == 19718 or MAIN == 19716 or MAIN == 19719 or MAIN == 19710 or
+		MAIN == 19711 or MAIN == 19721 or MAIN == 19713 or MAIN == 19717 or
+		MAIN == 19714 or MAIN == 19722 or MAIN == 19724 or MAIN == 19723 or
+		MAIN == 19728 or MAIN == 19725 or MAIN == 19729 or
+		RANGED == 19726 or RANGED == 19720) ) then
+
+		if (GurfurlurKillCount < 3 and mob:getID() == 17031592) then
+			killer:setVar("Gurfurlur_the_Menacing_KILLS", GurfurlurKillCount + 1);
 		end
-		if (kill26 < 3) and (mob:getID() == 17101201) then
-			killer:setVar("Khimara_KILLS", kill26 + 1);
+		if (GuloolKillCount < 3 and mob:getID() == 16973900) then
+			killer:setVar("Gulool_Ja_Ja_KILLS", GuloolKillCount + 1);
 		end
-		if (kill27 < 3) and (mob:getID() == 16998862) then
-			killer:setVar("Medusa_KILLS", kill27 + 1);
+		if (CerberusKillCount < 3 and mob:getID() == 17027458) then
+			killer:setVar("Cerberus_KILLS", CerberusKillCount + 1);
 		end
-		if (kill28 < 3) and (mob:getID() == 16973900) then
-			killer:setVar("Gulool_Ja_Ja_KILLS", kill28 + 1);
+		if (KhimaraKillCount < 3 and mob:getID() == 17101201) then
+			killer:setVar("Khimara_KILLS", KhimaraKillCount + 1);
 		end
-		if (kill29 < 3) and (mob:getID() == 17031592) then
-			killer:setVar("Gurfurlur_the_Menacing_KILLS", kill29 + 1);
+		if (MedusaKillCount < 3 and mob:getID() == 16998862) then
+			killer:setVar("Medusa_KILLS", MedusaKillCount + 1);
 		end
-		if (kill30 < 3) and (mob:getID() == 16986355) then
-			killer:setVar("Hydra_KILLS", kill30 + 1);
+		if (HydraKillCount < 3 and mob:getID() == 16986355) then
+			killer:setVar("Hydra_KILLS", HydraKillCount + 1);
 		end
+
 		------------------
 		-- trial complete
 		------------------
-		if (kill25 == 3) and (kill26 == 3) and (kill27 == 3) and (kill28 == 3) and (kill29 == 3) and (kill30 == 3) then
+
+		if (GurfurlurKillCount == 3 and GuloolKillCount == 3 and CerberusKillCount == 3 and
+			KhimaraKillCount == 3 and MedusaKillCount == 3 and HydraKillCount == 3) then
 			killer:setVar("TRIAL_COMPLETE",1);
 		end
 	end
-]]--
+
 end;
