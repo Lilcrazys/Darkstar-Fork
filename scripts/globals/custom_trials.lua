@@ -346,7 +346,7 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 134) or (trial =< 150) and
+	if ( (trial >= 134 or trial =< 150) and
 	   (MAIN == 19718 or MAIN == 19716 or MAIN == 19719 or MAIN == 19710 or
 		MAIN == 19711 or MAIN == 19721 or MAIN == 19713 or MAIN == 19717 or
 		MAIN == 19714 or MAIN == 19722 or MAIN == 19724 or MAIN == 19723 or
