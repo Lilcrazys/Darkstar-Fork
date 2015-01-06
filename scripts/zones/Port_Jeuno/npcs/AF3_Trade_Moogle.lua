@@ -22,7 +22,7 @@ function onTrade(player,npc,trade)
 		player:messageSpecial(ITEM_OBTAINED,11169);
 		player:tradeComplete();
 	end
-	if (trade:hasItemQty(3135,10) and trade:hasItemQty(12033,1) and trade:getItemCount() == 11) then -- body
+	if (trade:hasItemQty(3135,10) and trade:hasItemQty(12033,1) and trade:getItemCount() == 11) then    -- body
 		player:addItem(11189);
 		player:messageSpecial(ITEM_OBTAINED,11189);
 		player:tradeComplete();
