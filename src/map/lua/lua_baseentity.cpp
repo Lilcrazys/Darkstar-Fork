@@ -9040,6 +9040,11 @@ inline int32 CLuaBaseEntity::disableLevelSync(lua_State* L)
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
     if (PChar->PParty && PChar->PParty->GetSyncTarget() == PChar)
         PChar->PParty->DisableSync();
+        // Disabling @regen level sync exploit. This is temp till I come up with a better way.
+        PBattle->StatusEffectContainer->DelStatusEffect(EFFECT_REGEN);
+        PBattle->StatusEffectContainer->DelStatusEffect(EFFECT_REFRESH);
+        PBattle->StatusEffectContainer->DelStatusEffect(EFFECT_REGAIN);
+
     PChar->loc.zone->PushPacket(PChar, CHAR_INRANGE, new CCharSyncPacket(PChar));
     return 0;
 }
