@@ -8,6 +8,10 @@
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
 
+-- North Gustaberg (Zone 106)
+REPLACE INTO `npc_list` VALUES (17212100,'Cavernous_Maw','Cavernous Maw',0,462.628,0.029,479.280,32769,40,40,0,0,96,0,3,0x0000140900000000000000000000000000000000,2); -- WotG Maw
+REPLACE INTO `npc_list` VALUES (17212105,'CavernousMaw','Cavernous Maw',250,-78.000,-0.500,600.000,32769,40,40,0,0,96,0,3,0x0000150900000000000000000000000000000000,2); -- Abyssea Maw
+
 -- Windurst Walls
 REPLACE INTO `npc_list` VALUES (17756379,'Babban_Ny_Mheillea','Babban Ny Mheillea',64,14,-4.525,-50,0,50,50,0,0,0,0,27,0x0000C70800000000000000000000000000000000,32);
 
