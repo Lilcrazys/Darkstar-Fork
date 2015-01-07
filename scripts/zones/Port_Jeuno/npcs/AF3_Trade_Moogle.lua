@@ -539,7 +539,528 @@ function onTrade(player,npc,trade)
 ----------------
 -- AF3+1 - SALVAGE +1 - AF3+2
 ----------------
-
+-----------------------------------------------AF3+2---------------------------------------------------
+----------------------------THF-------------------------------------
+	if (trade:hasItemQty(3210,6) and trade:hasItemQty(11169,1) and trade:getItemCount() == 7) then 		--head
+		player:addItem(11069);
+		player:messageSpecial(ITEM_OBTAINED,11069);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3215,9) and trade:hasItemQty(11189,1) and trade:getItemCount() == 10) then -- body
+		player:addItem(11089);
+		player:messageSpecial(ITEM_OBTAINED,11089);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3218,6) and trade:hasItemQty(11209,1) and trade:getItemCount() == 7) then 		--hands
+		player:addItem(11109);
+		player:messageSpecial(ITEM_OBTAINED,11109);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3223,6) and trade:hasItemQty(11229,1) and trade:getItemCount() == 7) then 		--legs
+		player:addItem(11129);
+		player:messageSpecial(ITEM_OBTAINED,11129);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3228,6) and trade:hasItemQty(11249,1) and trade:getItemCount() == 7) then 		--feet
+		player:addItem(11149);
+		player:messageSpecial(ITEM_OBTAINED,11149);
+		player:tradeComplete();
+	end
+----------------------------WAR-------------------------------------
+	if (trade:hasItemQty(3110,6) and trade:hasItemQty(11164,1) and trade:getItemCount() == 7) then		--head
+		player:addItem(11064);
+		player:messageSpecial(ITEM_OBTAINED,11064);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3130,9) and trade:hasItemQty(11184,1) and trade:getItemCount() == 10) then	     --body
+		player:addItem(11084);
+		player:messageSpecial(ITEM_OBTAINED,11084);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3150,6) and trade:hasItemQty(11204,1) and trade:getItemCount() == 7) then		--hands
+		player:addItem(11104);
+		player:messageSpecial(ITEM_OBTAINED,11104);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3170,6) and trade:hasItemQty(11224,1) and trade:getItemCount() == 7) then 		--legs
+		player:addItem(11124);
+		player:messageSpecial(ITEM_OBTAINED,11124);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3190,6) and trade:hasItemQty(11244,1) and trade:getItemCount() == 7) then		--feet
+		player:addItem(11144);
+		player:messageSpecial(ITEM_OBTAINED,11144);
+		player:tradeComplete();
+	end
+----------------------------MNK-------------------------------------
+	if (trade:hasItemQty(3212,6) and trade:hasItemQty(11165,1) and trade:getItemCount() == 7) then		--head
+		player:addItem(11065);
+		player:messageSpecial(ITEM_OBTAINED,11065);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3217,9) and trade:hasItemQty(11185,1) and trade:getItemCount() == 9) then	--body
+		player:addItem(11085);
+		player:messageSpecial(ITEM_OBTAINED,11085);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11205,1) and trade:getItemCount() == 7) then 					--hands
+		player:addItem(11105);
+		player:messageSpecial(ITEM_OBTAINED,11105);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3224,6) and trade:hasItemQty(11225,1) and trade:getItemCount() == 7) then 					--legs
+		player:addItem(11125);
+		player:messageSpecial(ITEM_OBTAINED,11125);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3227,6) and trade:hasItemQty(11245,1) and trade:getItemCount() == 7) then 					--feet
+		player:addItem(11145);
+		player:messageSpecial(ITEM_OBTAINED,11145);
+		player:tradeComplete();
+	end
+----------------------------WHM-------------------------------------
+	if (trade:hasItemQty(3210,6) and trade:hasItemQty(11166,1) and trade:getItemCount() == 7) then					--head
+		player:addItem(11066);
+		player:messageSpecial(ITEM_OBTAINED,11066);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3217,9) and trade:hasItemQty(11186,1) and trade:getItemCount() == 10) then					--body
+		player:addItem(11086);
+		player:messageSpecial(ITEM_OBTAINED,11086);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3219,6) and trade:hasItemQty(11206,1) and trade:getItemCount() == 7) then					--hands
+		player:addItem(11106);
+		player:messageSpecial(ITEM_OBTAINED,11106);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3225,6) and trade:hasItemQty(11226,1) and trade:getItemCount() == 7) then					--legs
+		player:addItem(11126);
+		player:messageSpecial(ITEM_OBTAINED,11126);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3228,6) and trade:hasItemQty(11246,1) and trade:getItemCount() == 7) then					--feet
+		player:addItem(11146);
+		player:messageSpecial(ITEM_OBTAINED,11146);
+		player:tradeComplete();
+	end
+----------------------------RDM-------------------------------------
+	if (trade:hasItemQty(3212,6) and trade:hasItemQty(11168,1) and trade:getItemCount() == 7) then					--head
+		player:addItem(11068);
+		player:messageSpecial(ITEM_OBTAINED,11068);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3216,9) and trade:hasItemQty(11188,1) and trade:getItemCount() == 9) then					--body
+		player:addItem(11088);
+		player:messageSpecial(ITEM_OBTAINED,11088);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3218,6) and trade:hasItemQty(11208,1) and trade:getItemCount() == 7) then					--hands
+		player:addItem(11108);
+		player:messageSpecial(ITEM_OBTAINED,11108);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3223,6) and trade:hasItemQty(11228,1) and trade:getItemCount() == 7) then					--legs
+		player:addItem(11128);
+		player:messageSpecial(ITEM_OBTAINED,11128);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3226,6) and trade:hasItemQty(11248,1) and trade:getItemCount() == 7) then					--feet
+		player:addItem(11148);
+		player:messageSpecial(ITEM_OBTAINED,11148);
+		player:tradeComplete();
+	end
+----------------------------BLM-------------------------------------
+	if (trade:hasItemQty(3211,6) and trade:hasItemQty(11167,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11067);
+		player:messageSpecial(ITEM_OBTAINED,11067);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3216,9) and trade:hasItemQty(11187,1) and trade:getItemCount() == 10) then				--body
+		player:addItem(11087);
+		player:messageSpecial(ITEM_OBTAINED,11087);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11207,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11107);
+		player:messageSpecial(ITEM_OBTAINED,11107);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3222,6) and trade:hasItemQty(11227,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11127);
+		player:messageSpecial(ITEM_OBTAINED,11127);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3229,6) and trade:hasItemQty(11247,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11147);
+		player:messageSpecial(ITEM_OBTAINED,11147);
+		player:tradeComplete();
+	end
+----------------------------PLD-------------------------------------
+	if (trade:hasItemQty(3213,6) and trade:hasItemQty(11170,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11070);
+		player:messageSpecial(ITEM_OBTAINED,11070);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3214,9) and trade:hasItemQty(11190,1) and trade:getItemCount() == 10) then				--body
+		player:addItem(11090);
+		player:messageSpecial(ITEM_OBTAINED,11090);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3221,6) and trade:hasItemQty(11210,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11110);
+		player:messageSpecial(ITEM_OBTAINED,11110);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3223,6) and trade:hasItemQty(11230,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11130);
+		player:messageSpecial(ITEM_OBTAINED,11130);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3226,6) and trade:hasItemQty(11250,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11150);
+		player:messageSpecial(ITEM_OBTAINED,11150);
+		player:tradeComplete();
+	end
+----------------------------DRK-------------------------------------
+	if (trade:hasItemQty(3212,6) and trade:hasItemQty(11171,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11071);
+		player:messageSpecial(ITEM_OBTAINED,11071);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3215,9) and trade:hasItemQty(11191,1) and trade:getItemCount() == 10) then				--body
+		player:addItem(11091);
+		player:messageSpecial(ITEM_OBTAINED,11091);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3219,6) and trade:hasItemQty(11211,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11111);
+		player:messageSpecial(ITEM_OBTAINED,11111);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3223,6) and trade:hasItemQty(11231,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11131);
+		player:messageSpecial(ITEM_OBTAINED,11131);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3227,6) and trade:hasItemQty(11251,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11151);
+		player:messageSpecial(ITEM_OBTAINED,11151);
+		player:tradeComplete();
+	end
+----------------------------BST-------------------------------------
+	if (trade:hasItemQty(3211,6) and trade:hasItemQty(11172,1) and trade:getItemCount() == 7) then					--head
+		player:addItem(11072);
+		player:messageSpecial(ITEM_OBTAINED,11072);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3217,9) and trade:hasItemQty(11192,1) and trade:getItemCount() == 10) then					--body
+		player:addItem(11092);
+		player:messageSpecial(ITEM_OBTAINED,11092);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3218,6) and trade:hasItemQty(11212,1) and trade:getItemCount() == 7) then					--hands
+		player:addItem(11112);
+		player:messageSpecial(ITEM_OBTAINED,11112);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3224,6) and trade:hasItemQty(11232,1) and trade:getItemCount() == 7) then					--legs
+		player:addItem(11132);
+		player:messageSpecial(ITEM_OBTAINED,11132);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3229,6) and trade:hasItemQty(11252,1) and trade:getItemCount() == 7) then					--feet
+		player:addItem(11152);
+		player:messageSpecial(ITEM_OBTAINED,11152);
+		player:tradeComplete();
+	end
+----------------------------BRD-------------------------------------
+	if (trade:hasItemQty(3210,6) and trade:hasItemQty(11173,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11073);
+		player:messageSpecial(ITEM_OBTAINED,11073);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3214,9) and trade:hasItemQty(11193,1) and trade:getItemCount() == 10) then					--body
+		player:addItem(11093);
+		player:messageSpecial(ITEM_OBTAINED,11093);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11213,1) and trade:getItemCount() == 7) then					--hands
+		player:addItem(11113);
+		player:messageSpecial(ITEM_OBTAINED,11113);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3223,6) and trade:hasItemQty(11233,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11133);
+		player:messageSpecial(ITEM_OBTAINED,11133);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3228,6) and trade:hasItemQty(11253,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11153);
+		player:messageSpecial(ITEM_OBTAINED,11153);
+		player:tradeComplete();
+	end
+----------------------------RNG-------------------------------------
+	if (trade:hasItemQty(3210,6) and trade:hasItemQty(11174,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11074);
+		player:messageSpecial(ITEM_OBTAINED,11074);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3215,9) and trade:hasItemQty(11194,1) and trade:getItemCount() == 10) then	    		--body
+		player:addItem(11094);
+		player:messageSpecial(ITEM_OBTAINED,11094);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3219,6) and trade:hasItemQty(11214,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11114);
+		player:messageSpecial(ITEM_OBTAINED,11114);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3224,6) and trade:hasItemQty(11234,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11134);
+		player:messageSpecial(ITEM_OBTAINED,11134);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3229,6) and trade:hasItemQty(11254,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11154);
+		player:messageSpecial(ITEM_OBTAINED,11154);
+		player:tradeComplete();
+	end
+----------------------------SAM-------------------------------------
+	if (trade:hasItemQty(3212,6) and trade:hasItemQty(11175,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11075);
+		player:messageSpecial(ITEM_OBTAINED,11075);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3216,9) and trade:hasItemQty(11195,1) and trade:getItemCount() == 10) then				--body
+		player:addItem(11095);
+		player:messageSpecial(ITEM_OBTAINED,11095);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3161,6) and trade:hasItemQty(11215,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11115);
+		player:messageSpecial(ITEM_OBTAINED,11115);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11235,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11135);
+		player:messageSpecial(ITEM_OBTAINED,11135);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3228,6) and trade:hasItemQty(11255,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11155);
+		player:messageSpecial(ITEM_OBTAINED,11155);
+		player:tradeComplete();
+	end
+----------------------------NIN-------------------------------------
+	if (trade:hasItemQty(3211,6) and trade:hasItemQty(11176,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11076);
+		player:messageSpecial(ITEM_OBTAINED,11076);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3214,9) and trade:hasItemQty(11196,1) and trade:getItemCount() == 10) then				--body
+		player:addItem(11096);
+		player:messageSpecial(ITEM_OBTAINED,11096);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3221,6) and trade:hasItemQty(11216,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11116);
+		player:messageSpecial(ITEM_OBTAINED,11116);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3222,6) and trade:hasItemQty(11236,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11136);
+		player:messageSpecial(ITEM_OBTAINED,11136);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3229,6) and trade:hasItemQty(11256,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11156);
+		player:messageSpecial(ITEM_OBTAINED,11156);
+		player:tradeComplete();
+	end
+----------------------------DRG-------------------------------------
+	if (trade:hasItemQty(3213,6) and trade:hasItemQty(11177,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11077);
+		player:messageSpecial(ITEM_OBTAINED,11077);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3217,9) and trade:hasItemQty(11197,1) and trade:getItemCount() == 10) then				--body
+		player:addItem(11097);
+		player:messageSpecial(ITEM_OBTAINED,11097);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3221,6) and trade:hasItemQty(11217,1) and trade:getItemCount() == 7) then					--hands
+		player:addItem(11117);
+		player:messageSpecial(ITEM_OBTAINED,11117);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3225,6) and trade:hasItemQty(11237,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11137);
+		player:messageSpecial(ITEM_OBTAINED,11137);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3229,6) and trade:hasItemQty(11257,1) and trade:getItemCount() == 7) then			--feet
+		player:addItem(11157);
+		player:messageSpecial(ITEM_OBTAINED,11157);
+		player:tradeComplete();
+	end
+----------------------------SMN-------------------------------------
+	if (trade:hasItemQty(3211,6) and trade:hasItemQty(11178,1) and trade:getItemCount() == 7) then			--head
+		player:addItem(11078);
+		player:messageSpecial(ITEM_OBTAINED,11078);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3215,9) and trade:hasItemQty(11198,1) and trade:getItemCount() == 10) then			--body
+		player:addItem(11098);
+		player:messageSpecial(ITEM_OBTAINED,11098);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11218,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11118);
+		player:messageSpecial(ITEM_OBTAINED,11118);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3225,6) and trade:hasItemQty(11238,1) and trade:getItemCount() == 7) then 					--legs
+		player:addItem(11138);
+		player:messageSpecial(ITEM_OBTAINED,11138);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3226,6) and trade:hasItemQty(11258,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11158);
+		player:messageSpecial(ITEM_OBTAINED,11158);
+		player:tradeComplete();
+	end
+----------------------------BLU-------------------------------------
+	if (trade:hasItemQty(3213,6) and trade:hasItemQty(11179,1) and trade:getItemCount() == 7) then			--head
+		player:addItem(11079);
+		player:messageSpecial(ITEM_OBTAINED,11079);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3214,9) and trade:hasItemQty(11199,1) and trade:getItemCount() == 10) then			--body
+		player:addItem(11099);
+		player:messageSpecial(ITEM_OBTAINED,11099);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3219,6) and trade:hasItemQty(11219,1) and trade:getItemCount() == 7) then			--hands
+		player:addItem(11119);
+		player:messageSpecial(ITEM_OBTAINED,11119);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3222,6) and trade:hasItemQty(11239,1) and trade:getItemCount() == 7) then				--legs
+		player:addItem(11139);
+		player:messageSpecial(ITEM_OBTAINED,11139);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3227,6) and trade:hasItemQty(11259,1) and trade:getItemCount() == 7) then			--feet
+		player:addItem(11159);
+		player:messageSpecial(ITEM_OBTAINED,11159);
+		player:tradeComplete();
+	end
+----------------------------COR-------------------------------------
+	if (trade:hasItemQty(3212,6) and trade:hasItemQty(11180,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11080);
+		player:messageSpecial(ITEM_OBTAINED,11080);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3215,9) and trade:hasItemQty(11200,1) and trade:getItemCount() == 10) then			--body
+		player:addItem(11100);
+		player:messageSpecial(ITEM_OBTAINED,11100);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3221,6) and trade:hasItemQty(11220,1) and trade:getItemCount() == 7) then				--hands
+		player:addItem(11120);
+		player:messageSpecial(ITEM_OBTAINED,11120);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3225,6) and trade:hasItemQty(11240,1) and trade:getItemCount() == 7) then			--legs
+		player:addItem(11140);
+		player:messageSpecial(ITEM_OBTAINED,11140);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3227,6) and trade:hasItemQty(11260,1) and trade:getItemCount() == 7) then			--feet
+		player:addItem(11160);
+		player:messageSpecial(ITEM_OBTAINED,11160);
+		player:tradeComplete();
+	end
+----------------------------PUP-------------------------------------
+	if (trade:hasItemQty(3212,6) and trade:hasItemQty(11181,1) and trade:getItemCount() == 7) then			--head
+		player:addItem(11081);
+		player:messageSpecial(ITEM_OBTAINED,11081);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3216,9) and trade:hasItemQty(11201,1) and trade:getItemCount() == 10) then			--body
+		player:addItem(11101);
+		player:messageSpecial(ITEM_OBTAINED,11101);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3221,6) and trade:hasItemQty(11221,1) and trade:getItemCount() == 7) then			--hands
+		player:addItem(11121);
+		player:messageSpecial(ITEM_OBTAINED,11121);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3222,6) and trade:hasItemQty(11241,1) and trade:getItemCount() == 7) then			--legs
+		player:addItem(11141);
+		player:messageSpecial(ITEM_OBTAINED,11141);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3228,6) and trade:hasItemQty(11261,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11161);
+		player:messageSpecial(ITEM_OBTAINED,11161);
+		player:tradeComplete();
+	end
+----------------------------DNC-------------------------------------
+	if (trade:hasItemQty(3213,6) and trade:hasItemQty(11182,1) and trade:getItemCount() == 7) then			--head
+		player:addItem(11082);
+		player:messageSpecial(ITEM_OBTAINED,11082);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3216,9) and trade:hasItemQty(11202,1) and trade:getItemCount() == 10) then			--body
+		player:addItem(11102);
+		player:messageSpecial(ITEM_OBTAINED,11102);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3219,6) and trade:hasItemQty(11222,1) and trade:getItemCount() == 7) then			--hands
+		player:addItem(11122);
+		player:messageSpecial(ITEM_OBTAINED,11122);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3225,6) and trade:hasItemQty(11242,1) and trade:getItemCount() == 7) then			--legs
+		player:addItem(11142);
+		player:messageSpecial(ITEM_OBTAINED,11142);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3226,6) and trade:hasItemQty(11262,1) and trade:getItemCount() == 7) then			--feet
+		player:addItem(11162);
+		player:messageSpecial(ITEM_OBTAINED,11162);
+		player:tradeComplete();
+	end
+----------------------------SCH-------------------------------------
+	if (trade:hasItemQty(3213,6) and trade:hasItemQty(11183,1) and trade:getItemCount() == 7) then				--head
+		player:addItem(11083);
+		player:messageSpecial(ITEM_OBTAINED,11083);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3217,9) and trade:hasItemQty(11203,1) and trade:getItemCount() == 10) then			--body
+		player:addItem(11103);
+		player:messageSpecial(ITEM_OBTAINED,11103);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3218,6) and trade:hasItemQty(11223,1) and trade:getItemCount() == 7) then			--hands
+		player:addItem(11123);
+		player:messageSpecial(ITEM_OBTAINED,11123);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3224,6) and trade:hasItemQty(11243,1) and trade:getItemCount() == 7) then			--legs
+		player:addItem(11143);
+		player:messageSpecial(ITEM_OBTAINED,11143);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(3227,6) and trade:hasItemQty(11263,1) and trade:getItemCount() == 7) then				--feet
+		player:addItem(11163);
+		player:messageSpecial(ITEM_OBTAINED,11163);
+		player:tradeComplete();
+	end
+	
 -------------------------------------------------------SALVAGE +1-----------------------------------------------------------
 
 	----------------------------Ares-------------------------------------
