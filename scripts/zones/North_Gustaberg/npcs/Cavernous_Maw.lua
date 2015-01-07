@@ -1,37 +1,35 @@
 -----------------------------------
--- Area: North Gustaberg
--- NPC:  Cavernous Maw
--- Teleports Players to North Gustaberg [S]
--- @pos 466 0 479 106
+-- NPC: Cavernous Maw
 -----------------------------------
 package.loaded["scripts/zones/North_Gustaberg/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
-require("scripts/globals/teleports");
-require("scripts/globals/campaign");
+require("scripts/globals/quests");
 require("scripts/zones/North_Gustaberg/TextIDs");
+
+-----------------------------------
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	
-	if(ENABLE_WOTG == 1 and player:hasKeyItem(PURE_WHITE_FEATHER) and hasMawActivated(player,7)) then
-		player:startEvent(0x0387);
+	local npcid = npc:getID();
+    if (ENABLE_ABYSEA == 1 and player:getMainLvl() >= 30) then
+        -- local HasStone = getTravStonesTotal(player);
+        player:startEvent(0x038c,0,1);
 	else
-		player:messageSpecial(NOTHING_HAPPENS);
-	end
-	
+        player:messageSpecial(NOTHING_HAPPENS);
+    end
+	print("npcid",npcid);
 end;
 
 -----------------------------------
@@ -39,19 +37,23 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+	--printf("CSID: %u",csid);
+	--printf("RESULT: %u",option);
 end;
-   
+
 -----------------------------------
--- onEventFinish Action
+-- onEventFinish
 -----------------------------------
+
 function onEventFinish(player,csid,option)
---print("CSID:",csid);
---print("RESULT:",option);
-	
-	if(csid == 0x0387 and option == 1) then
-		toMaw(player,11);
+	--printf("CSID: %u",csid);
+	--printf("RESULT: %u",option);
+	-- if (csid == 0x0000) then
+        -- player:addQuest(ABYSSEA, MEGADRILE_MENACE);
+	-- elseif (csid ==1) then
+        -- -- Killed Boss	
+	if(csid == 0x038c and option == 1) then
+		player:setPos(-554, 31, -760, 0, 254);
 	end
 	
 end;
