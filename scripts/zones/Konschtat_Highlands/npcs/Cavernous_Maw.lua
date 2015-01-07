@@ -10,6 +10,7 @@ package.loaded["scripts/zones/Konschtat_Highlands/TextIDs"] = nil;
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
 require("scripts/globals/quests");
+require("scripts/globals/abyssea");
 require("scripts/zones/Konschtat_Highlands/TextIDs");
 
 -----------------------------------
@@ -24,11 +25,11 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    if (ENABLE_ABYSEA == 1 and player:getMainLvl() >= 30) then
+    if (ENABLE_ABYSSEA == 1 and player:getMainLvl() >= 30) then
         local HasStone = getTravStonesTotal(player);
         if (HasStone >= 1 and player:getQuestStatus(ABYSSEA, DAWN_OF_DEATH) == QUEST_ACCEPTED
         and player:getQuestStatus(ABYSSEA, TO_PASTE_A_PEISTE) == QUEST_AVAILABLE) then
-			player:startEvent(0x0000);
+            player:startEvent(0);
         else
             player:startEvent(0x006B,0,1); -- No param = no entry.
         end

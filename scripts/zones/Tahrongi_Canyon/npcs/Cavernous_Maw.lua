@@ -1,16 +1,17 @@
 -----------------------------------
 -- Area: Tahrongi Canyon
--- NPC: Cavernous Maw
--- Teleports Players to Abyssea - Tahrongi
--- @pos -28 45 -684 117
+--  NPC: Cavernous Maw
+-- Teleports Players to Abyssea Tahrongi
+-- @pos -28.597, 46.056, -685.754 117
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Tahrongi/TextIDs"] = nil;
+package.loaded["scripts/zones/Tahrongi_Canyon/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
 require("scripts/globals/quests");
-require("scripts/zones/Abyssea-Tahrongi/TextIDs");
+require("scripts/globals/abyssea");
+require("scripts/zones/Tahrongi_Canyon/TextIDs");
 
 -----------------------------------
 -- onTrade Action
@@ -24,7 +25,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    if (ENABLE_ABYSEA == 1 and player:getMainLvl() >= 30) then
+    if (ENABLE_ABYSSEA == 1 and player:getMainLvl() >= 30) then
         local HasStone = getTravStonesTotal(player);
         if (HasStone >= 1 and player:getQuestStatus(ABYSSEA, DAWN_OF_DEATH) == QUEST_ACCEPTED
         and player:getQuestStatus(ABYSSEA, MEGADRILE_MENACE) == QUEST_AVAILABLE) then
@@ -56,7 +57,7 @@ function onEventFinish(player,csid,option)
     if (csid == 0) then
         player:addQuest(ABYSSEA, MEGADRILE_MENACE);
     elseif (csid ==1) then
-        -- Killed Kukulkan
+        -- Killed Glavoid
     elseif(csid == 0x0064 and option == 1) then
         player:setPos(-24,44,-678,240,45);
     end

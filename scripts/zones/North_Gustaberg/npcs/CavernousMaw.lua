@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: North Gustaberg
--- NPC:  Cavernous Maw
--- Teleports Players to North Gustaberg [S]
--- @pos 466 0 479 106
+--  NPC: Cavernous Maw
+-- Teleports Players to Abyssea-Grauberg
+-- @pos -78 -0.5 600 106
 -----------------------------------
 package.loaded["scripts/zones/North_Gustaberg/TextIDs"] = nil;
 -----------------------------------
@@ -10,7 +10,7 @@ package.loaded["scripts/zones/North_Gustaberg/TextIDs"] = nil;
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
 require("scripts/globals/teleports");
-require("scripts/globals/campaign");
+require("scripts/globals/abyssea");
 require("scripts/zones/North_Gustaberg/TextIDs");
 
 -----------------------------------
@@ -25,13 +25,11 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	local npcid = npc:getID();
-	if(ENABLE_WOTG == 1 and player:hasKeyItem(PURE_WHITE_FEATHER) and hasMawActivated(player,7)) then
-		player:startEvent(0x0387);
-	else
-		player:messageSpecial(NOTHING_HAPPENS);
-	end
-	print("npcid",npcid);
+    if (ENABLE_ABYSSEA == 1 and player:getMainLvl() >= 30) then
+        player:startEvent(0x038C,1,1,1,1,1,1,1);
+    else
+        player:messageSpecial(NOTHING_HAPPENS);
+    end
 end;
 
 -----------------------------------
@@ -39,19 +37,17 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
    
 -----------------------------------
 -- onEventFinish Action
 -----------------------------------
 function onEventFinish(player,csid,option)
---print("CSID:",csid);
---print("RESULT:",option);
-	
-	if(csid == 0x0387 and option == 1) then
-		toMaw(player,11);
-	end
-	
+    -- print("CSID:",csid);
+    -- print("RESULT:",option);
+    if(csid == 0x038C and option == 1) then
+        player:setPos(-555,31,-760,0,254); 
+    end
 end;
