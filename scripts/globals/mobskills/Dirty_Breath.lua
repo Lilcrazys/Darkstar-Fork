@@ -20,7 +20,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_PLAUGE;
+	local typeEffect = EFFECT_PLAGUE;
 
 	MobStatusEffectMove(mob, target, typeEffect, 300, 0, 120);
 
