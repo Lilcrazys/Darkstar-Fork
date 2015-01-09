@@ -8,7 +8,7 @@ require("scripts/globals/status");
 -----------------------------------------------
 cmdprops =
 {
-    permission = 1,
+    permission = 0,
     parameters = "i"
 };
 function RelicTrial1(player,npc)

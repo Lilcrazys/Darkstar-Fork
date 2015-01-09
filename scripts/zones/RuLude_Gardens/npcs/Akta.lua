@@ -20,13 +20,11 @@ end;
 	Hello World
 	or just create a new Spoof Line.
 	-------------------------------------------------------------------------------------------------------------------------------]]--
--- New text bellow for mythic needs changing if wrong.
 	function textRelic2(player,npc,trade)
-	SpoofSay(npc:getID(),player:getID(),"Objective:... \nCollect 50 Glaviod Shells");
-	SpoofSay(npc:getID(),player:getID(),"On completion of your trial please ensure you have at least 1 space free in your inventory and trade the items requested.");
+	SpoofSay(npc:getID(),player:getID(),"Objective:... \nZareehkl the Jubilant x 5\nIriz Ima x5\nVelionis x5\nBrass Borer x5\nDextrose x5\nIriri Samariri x5");
+	SpoofSay(npc:getID(),player:getID(),"On completion of your trial please ensure you have at least 1 space free in your inventory.");
 	player:injectActionPacket(4, 918);
 end;
-------------------------------------------------------------------------
 function textRelic3(player,npc,trade)
 	SpoofSay(npc:getID(),player:getID(),"Objective Kills:... \nArmed Gears x4\nNosferatu x4\nAchamoth x4\nExperimental Lamia x4");
 	SpoofSay(npc:getID(),player:getID(),"On completion of your trial please ensure you have at least 1 space free in your inventory.");
