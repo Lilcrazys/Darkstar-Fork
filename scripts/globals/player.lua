@@ -17,7 +17,8 @@ require("scripts/globals/gear_sets");
 -- onGameIn
 -----------------------------------
 
-function onGameIn(player, firstlogin)
+function onGameIn(player, firstlogin, zoning)
+    if (not zoning) then
 	----- Start of custom and workaround stuffs -----
 
 	if (player:hasKeyItem(PORTAL_CHARM) == false) then
@@ -28,8 +29,8 @@ function onGameIn(player, firstlogin)
 
     if (firstlogin) then
         CharCreate(player);
-    end;
-
+        end
+    else
 	checkForGearSet(player);
 
     if (player:getVar("GodMode") == 1) then
@@ -66,6 +67,7 @@ function onGameIn(player, firstlogin)
     
     if (player:getVar("GMHidden") == 1) then
         player:setGMHidden(true);
+    end
     end
 end;
 
@@ -277,7 +279,7 @@ function CharCreate(player)
       for i=385,447 do
          player:addKeyItem(i);
       end
-      for i=1856,1903 do
+      for i=1856,1915 do
          player:addKeyItem(i);
       end
    end
