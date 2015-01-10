@@ -28,9 +28,9 @@ function onMobDeathEx(mob, killer, isWeaponSkillKill)
 			if(ChaosbringerKills < 200) then
 				killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);	
 				if(ChaosbringerKills == 1) then
-					killer:EchoToPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1) );;
+					killer:EchoToPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1) );
 				else
-					killer:EchoToPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1) )
+					killer:EchoToPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1) );
 				end
 			end
 		end
