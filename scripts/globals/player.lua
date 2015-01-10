@@ -32,7 +32,6 @@ function onGameIn(player, firstlogin, zoning)
     checkForGearSet(player);
 
     if (player:getVar("GodMode") == 1) then
-        player:addStatusEffectEx(EFFECT_GODMODE,EFFECT_TRANSCENDENCY,0,0,0)
         -- Add bonus effects to the player..
         player:addStatusEffect(EFFECT_MAX_HP_BOOST,1000,0,0);
         player:addStatusEffect(EFFECT_MAX_MP_BOOST,1000,0,0);
