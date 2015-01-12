@@ -3711,7 +3711,7 @@ INSERT INTO `item_basic` VALUES (4019,0,'piece_of_guatambu_lumber','gua_lumber',
 INSERT INTO `item_basic` VALUES (4020,0,'chunk_of_titanium_ore','titanium_ore',1,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4021,0,'titanium_ingot','titanium_ingot',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4022,0,'titanium_sheet','titanium_sheet',12,0,38,0,79);
-INSERT INTO `item_basic` VALUES (4023,0,'chunk_of_snowsteel_ore','snowsteel_ore',99,0,38,0,79);
+INSERT INTO `item_basic` VALUES (4023,0,'chunk_of_snowsteel_ore','snowsteel_ore',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4024,0,'chunk_of_snowsteel','snowsteel',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4025,0,'snowsteel_sheet','snowsteel_sheet',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4026,0,'clump_of_akaso','akaso',12,0,40,0,79);
