@@ -180,11 +180,6 @@ namespace luautils
     int32 GetMobRespawnTime(lua_State* L);                                      // get the respawn time of a mob
 	int32 DeterMob(lua_State* L);                                               // Allow or prevent a mob from spawning
 	int32 UpdateNMSpawnPoint(lua_State* L);                                     // Update the spawn point of an NM
-	int32 SpoofSay(lua_State* L);												// Send faked say messages from NPCs or MOBs.
-	int32 SpoofTell(lua_State* L);												// Send faked tell messages from NPCs or MOBs.
-	int32 SpoofEmote(lua_State* L);												// Send faked Emote messages from NPCs or MOBs.
-	int32 SpoofLink(lua_State* L);												// Send faked Linkshell messages from NPCs or MOBs.
-	int32 SpoofParty(lua_State* L);												// Send faked Party messages from NPCs or MOBs.
 	int32 isValidLS(lua_State*);                                                // Checks is LS exists
 	int32 SetDropRate(lua_State*);												// Set drop rate of a mob setDropRate(dropid,itemid,newrate)
 	int32 UpdateTreasureSpawnPoint(lua_State* L);                               // Update the spawn point of an Treasure

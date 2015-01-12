@@ -21,6 +21,7 @@
 ===========================================================================
 */
 
+#include"../message.h"
 #include "../../common/showmsg.h"
 #include "../../common/timer.h"
 #include "../../common/utils.h"
@@ -8882,16 +8883,40 @@ inline int32 CLuaBaseEntity::PrintToPlayer(lua_State* L)
     return 0;
 }
 
-inline int32 CLuaBaseEntity::EchoToPlayer(lua_State* L)
+inline int32 CLuaBaseEntity::SpoofChatPlayer(lua_State* L)
 {
-	DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
-	DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
 
-	DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
+    uint32 ObjectID = (uint32)lua_tointeger(L, 3);
+    CBaseEntity* Object = (CBaseEntity*)zoneutils::GetEntity(ObjectID, TYPE_MOB | TYPE_NPC);
 
-	((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket((CCharEntity*)m_PBaseEntity, MESSAGE_EMOTION, (char*)lua_tostring(L, 1)));
+    if (Object != NULL)
+    {
+        int8* ObjectName = (int8*)Object->GetObjectName();
+        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_EMOTION);
+        ((CCharEntity*)m_PBaseEntity)->pushPacket(new CSpoofMessagePacket((CCharEntity*)m_PBaseEntity, ObjectName, messageType, (char*)lua_tostring(L, 1)));
+    }
+    else
+    {
+        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_EMOTION);
+        ((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
+    }
 
-	return 0;
+    return 0;
+}
+
+inline int32 CLuaBaseEntity::SpoofChatServer(lua_State* L)
+{
+   DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+   DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+   DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
+
+   CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_SYSTEM_1);
+   message::send(MSG_CHAT_SERVMES, 0, 0, new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
+
+   return 0;
 }
 
 /*
@@ -10222,7 +10247,8 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getGMHidden),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setGMHidden),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,PrintToPlayer),
-	LUNAR_DECLARE_METHOD(CLuaBaseEntity,EchoToPlayer),
+	LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatPlayer),
+	LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatServer),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getBaseMP),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,pathThrough),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,atPoint),
