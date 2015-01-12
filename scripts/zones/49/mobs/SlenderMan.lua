@@ -11,6 +11,7 @@
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -43,7 +44,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    SpoofSay( mob, target, "I'll swallow your soul!")
+    target:SpoofChatPlayer("I'll swallow your soul!", MESSAGE_SAY, mob:getID() )
 end;
 
 -----------------------------------
@@ -63,7 +64,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    -- SpoofSay( mob, killer, "victory message here" )
+    -- killer:SpoofChatPlayer( "victory message here", MESSAGE_SAY, mob:getID() )
 end;
 
 -----------------------------------

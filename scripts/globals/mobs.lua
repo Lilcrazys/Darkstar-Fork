@@ -10,6 +10,7 @@ require("scripts/globals/quests");
 require("scripts/globals/missions");
 require("scripts/globals/conquest");
 require("scripts/globals/status");
+require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
@@ -28,9 +29,9 @@ function onMobDeathEx(mob, killer, isWeaponSkillKill)
 			if(ChaosbringerKills < 200) then
 				killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);	
 				if(ChaosbringerKills == 1) then
-					killer:EchoToPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1) );
+					killer:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
 				else
-					killer:EchoToPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1) );
+					killer:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
 				end
 			end
 		end
