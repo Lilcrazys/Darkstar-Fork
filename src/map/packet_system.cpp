@@ -238,8 +238,7 @@ void SmallPacket0x00A(map_session_data_t* session, CCharEntity* PChar, int8* dat
             PChar->loc.destination = destination = ZONE_RESIDENTIAL_AREA;
         }
 
-        if (destination == ZONE_RESIDENTIAL_AREA ||
-            destination == ZONE_214 && PChar->m_moghouseID == 0)
+        if (destination == ZONE_RESIDENTIAL_AREA && PChar->m_moghouseID == 0)
         {
             PChar->m_moghouseID = PChar->id;
             destination = PChar->loc.prevzone;
