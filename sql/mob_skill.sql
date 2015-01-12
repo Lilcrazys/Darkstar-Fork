@@ -3635,11 +3635,11 @@ INSERT INTO `mob_skill` VALUES (3112,493,2378,'Undulating_Shockwave',1,18.0,2000
 
 -- Xol
 -- Dhokmak melee 2379 2380 2381
-INSERT INTO `mob_skill` VALUES (3116,490,2382,'Cesspool',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3117,490,2383,'Fetid_Eddies',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3118,490,2384,'Nullifying_rain',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3119,490,2385,'Noyade',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3120,490,2386,'Clobering_wave',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3116,492,2382,'Cesspool',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3117,492,2383,'Fetid_Eddies',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3118,492,2384,'Nullifying_rain',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3119,492,2385,'Noyade',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3120,492,2386,'Clobering_wave',1,18.0,2000,1000,4,0,0,0);
 
 -- Theodor
 -- Melee 2387 2388 2389
