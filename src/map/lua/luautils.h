@@ -109,7 +109,7 @@ namespace luautils
 	int32 OnZoneWeatherChange(uint16 ZoneID, uint8 weather);
 	int32 OnTOTDChange(uint16 ZoneID, uint8 TOTD);
 
-    int32 OnGameIn(CCharEntity* PChar);											//
+    int32 OnGameIn(CCharEntity* PChar, bool zoning);							//
 	int32 OnZoneIn(CCharEntity* PChar);											// triggers when a player zones into a zone
 	int32 AfterZoneIn(uint32 tick, CTaskMgr::CTask *PTask);						// triggers after a player has finished zoning in
 	int32 OnZoneInitialise(uint16 ZoneID);										// triggers when zone is loaded
@@ -133,9 +133,11 @@ namespace luautils
 	int32 OnItemCheck(CBaseEntity* PTarget, CItem* PItem, uint32 param = 0);	// check to see if item can be used
 	int32 CheckForGearSet(CBaseEntity* PTarget);								// check for gear sets
 
-	int32 OnSpellCast(CBattleEntity* PCaster, CBattleEntity* PTarget, CSpell* PSpell);			// triggered when casting a spell
-	int32 OnSpellPrecast(CBattleEntity* PCaster, CSpell* PSpell);				// triggered just before casting a spell
-	int32 OnMonsterMagicPrepare(CBattleEntity* PCaster, CBattleEntity* PTarget);// triggered when monster wants to use a spell on target
+    int32 OnMagicCastingCheck(CBaseEntity* PChar, CBaseEntity* PTarget, CSpell* PSpell);	// triggers when a player attempts to cast a spell
+	int32 OnSpellCast(CBattleEntity* PCaster, CBattleEntity* PTarget, CSpell* PSpell);		// triggered when casting a spell
+	int32 OnSpellPrecast(CBattleEntity* PCaster, CSpell* PSpell);				            // triggered just before casting a spell
+	int32 OnMonsterMagicPrepare(CBattleEntity* PCaster, CBattleEntity* PTarget);            // triggered when monster wants to use a spell on target
+    int32 OnMagicHit(CBattleEntity* PCaster, CBattleEntity* PTarget, CSpell* PSpell);       //triggered when spell cast on monster
 
     int32 OnMobInitialize(CBaseEntity* PMob);									// Used for passive trait
 	int32 OnMobSpawn(CBaseEntity* PMob);										// triggers on mob spawn
@@ -159,11 +161,10 @@ namespace luautils
 
 	int32 OnMobWeaponSkill(CBaseEntity* PChar, CBaseEntity* PMob, CMobSkill* PMobSkill);							// triggers when mob weapon skill is used
 	int32 OnMobSkillCheck(CBaseEntity* PChar, CBaseEntity* PMob, CMobSkill* PMobSkill);								// triggers before mob weapon skill is used, returns 0 if the move is valid
-	int32 OnMagicCastingCheck(CBaseEntity* PChar, CBaseEntity* PTarget, CSpell* PSpell);							// triggers when a player attempts to cast a spell
 	int32 OnAbilityCheck(CBaseEntity* PChar, CBaseEntity* PTarget, CAbility* PAbility, CBaseEntity** PMsgTarget);	// triggers when a player attempts to use a job ability or roll
 	int32 OnPetAbility(CBaseEntity* PPet, CBaseEntity* PMob, CMobSkill* PMobSkill, CBaseEntity* PPetMaster);		// triggers when pet uses an ability
 	int32 OnUseWeaponSkill(CCharEntity* PChar, CBaseEntity* PMob, uint16* tpHitsLanded, uint16* extraHitsLanded);	// triggers when weapon skill is used
-	int32 OnUseAbility(CCharEntity* PChar, CBattleEntity* PTarget, CAbility* PAbility, apAction_t* action);		// triggers when job ability is used
+	int32 OnUseAbility(CCharEntity* PChar, CBattleEntity* PTarget, CAbility* PAbility, apAction_t* action);		    // triggers when job ability is used
 	int32 OnUseAbilityRoll(CCharEntity* PChar, CBattleEntity* PTarget, CAbility* PAbility, uint8 total);			// triggers on corsair roll
 
 	int32 AfterInstanceRegister(uint32 tick, CTaskMgr::CTask *PTask);			// triggers after a character is registered and zoned into an instance (the first time)
@@ -179,11 +180,6 @@ namespace luautils
     int32 GetMobRespawnTime(lua_State* L);                                      // get the respawn time of a mob
 	int32 DeterMob(lua_State* L);                                               // Allow or prevent a mob from spawning
 	int32 UpdateNMSpawnPoint(lua_State* L);                                     // Update the spawn point of an NM
-	int32 SpoofSay(lua_State* L);												// Send faked say messages from NPCs or MOBs.
-	int32 SpoofTell(lua_State* L);												// Send faked tell messages from NPCs or MOBs.
-	int32 SpoofEmote(lua_State* L);												// Send faked Emote messages from NPCs or MOBs.
-	int32 SpoofLink(lua_State* L);												// Send faked Linkshell messages from NPCs or MOBs.
-	int32 SpoofParty(lua_State* L);												// Send faked Party messages from NPCs or MOBs.
 	int32 isValidLS(lua_State*);                                                // Checks is LS exists
 	int32 SetDropRate(lua_State*);												// Set drop rate of a mob setDropRate(dropid,itemid,newrate)
 	int32 UpdateTreasureSpawnPoint(lua_State* L);                               // Update the spawn point of an Treasure

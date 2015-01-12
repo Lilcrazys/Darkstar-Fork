@@ -3,9 +3,11 @@
 -- NPC: Haubijoux
 -- Standard Info NPC
 -----------------------------------
-
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
+-----------------------------------
+
 require("scripts/zones/Port_Jeuno/TextIDs");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
@@ -2115,9 +2117,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	local name = player:getName();
-
-	SpoofSay(npc:getID(),player:getID(),( string.format("Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", name ) ));
+	player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", player:getName() )), MESSAGE_SAY, npc:getID() );
 end;
 
 -----------------------------------

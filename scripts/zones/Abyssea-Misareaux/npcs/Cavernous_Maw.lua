@@ -1,19 +1,13 @@
 -----------------------------------
--- Area: Abyssea Valkrum
--- Name: Cavernous Maw
--- Teleports Players to Valkrum
--- Dunes
--- @zone 216
--- @pos 676.070, -16.063, 318.999
+-- Area: Abyssea - Misareaux
+--  NPC: Cavernous Maw
+-- @pos 676.070, -16.063, 318.999 216
+-- Teleports Players to Valkrum Dunes
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
-require("scripts/globals/keyitems");
-require("scripts/globals/teleports");
-require("scripts/globals/missions");
-require("scripts/globals/campaign");
 require("scripts/zones/Abyssea-Misareaux/TextIDs");
 
 -----------------------------------
@@ -21,14 +15,14 @@ require("scripts/zones/Abyssea-Misareaux/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	player:startEvent(0x00C8);	
+    player:startEvent(0x00C8);
 end;
 
 -----------------------------------
@@ -36,8 +30,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -45,9 +39,9 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
-	if(csid == 0x00C8 and option ==1) then
-		player:setPos(362,0.001,-119,4,103); 
-	end
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    if(csid == 0x00C8 and option ==1) then
+        player:setPos(362,0.001,-119,4,103);
+    end
 end;

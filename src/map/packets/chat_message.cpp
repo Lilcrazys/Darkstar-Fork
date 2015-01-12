@@ -44,15 +44,13 @@ CChatMessagePacket::CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE Mes
      memcpy(data + (0x18) - 4, buff, buffSize);
 }
 
-CNPCMessagePacket::CNPCMessagePacket(int8* name, CHAT_MESSAGE_TYPE MessageType, uint8 zone, int8* dat, uint8 size)
+CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_MESSAGE_TYPE MessageType, int8* buff)
 {
-		this->type = 0x17;
-		this->size = 32 + strlen(dat) + strlen(dat) % 2;
-
-		WBUFB(data, (0x04) - 4) = MessageType;
-		WBUFB(data, (0x06) - 4) = zone;
-
-		memcpy(data + (0x08) - 4, name, size);
-		memcpy(data + (0x18) - 4, dat, strlen(dat));
-
+    int32 buffSize = (strlen(buff) > 108) ? 108 : strlen(buff);
+    this->type = 0x17;
+    this->size = dsp_min((32 + (buffSize + 1) + ((4 - ((buffSize + 1) % 4)) % 4)) / 2, 128);
+    WBUFB(data, (0x04) - 4) = MessageType;
+    WBUFW(data, (0x06) - 4) = PChar->getZone();
+    memcpy(data + (0x08) - 4, name, size);
+    memcpy(data + (0x18) - 4, buff, buffSize);
 }

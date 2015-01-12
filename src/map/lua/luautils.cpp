@@ -28,6 +28,7 @@
 #include "../../common/malloc.h"
 
 #include <string.h>
+#include <unordered_map>
 
 #include "luautils.h"
 #include "lua_ability.h"
@@ -69,6 +70,9 @@
 namespace luautils
 {
 lua_State*  LuaHandle = NULL;
+
+bool expansionRestrictionEnabled;
+std::unordered_map<std::string, bool> expansionEnabledMap;
 
 /************************************************************************
 *																		*
@@ -128,11 +132,6 @@ int32 init()
 	lua_register(LuaHandle,"getCorsairRollEffect",luautils::getCorsairRollEffect);
     lua_register(LuaHandle,"getSpell",luautils::getSpell);
 
-	lua_register(LuaHandle, "SpoofSay", luautils::SpoofSay);
-	lua_register(LuaHandle, "SpoofTell", luautils::SpoofTell);
-	lua_register(LuaHandle, "SpoofEmote", luautils::SpoofEmote);
-	lua_register(LuaHandle, "SpoofLink", luautils::SpoofLink);
-	lua_register(LuaHandle, "SpoofParty", luautils::SpoofParty);
 	lua_register(LuaHandle,"isValidLS",luautils::isValidLS);
 
     Lunar<CLuaAbility>::Register(LuaHandle);
@@ -148,6 +147,8 @@ int32 init()
     Lunar<CLuaItem>::Register(LuaHandle);
 
     luaL_dostring(LuaHandle, "require('bit')");
+
+	expansionRestrictionEnabled = (GetSettingsVariable("RESTRICT_BY_EXPANSION") != 0);
 
 	ShowMessage("\t\t - " CL_GREEN"[OK]" CL_RESET"\n");
 	return 0;
@@ -285,7 +286,6 @@ int32 GetNPCByID(lua_State* L)
         }
 
 		if(PNpc == NULL){
-			ShowWarning("luautils::GetNPCByID NPC doesn't exist (%d)\n", npcid);
 			lua_pushnil(L);
 		} else {
 			lua_getglobal(L,CLuaBaseEntity::className);
@@ -946,160 +946,6 @@ int32 GetMobAction(lua_State* L)
     lua_pushnil(L);
     return 1;
 }
-/************************************************************************
-*                                                                       *
-*   Send a fake "say" message from an NPC or MOB.                       *
-*                                                                       *
-************************************************************************/
-
-int32 SpoofSay(lua_State* L)
-{
-	uint32 mobid = (uint32)lua_tointeger(L, 1);
-	uint32 CharID = (uint32)lua_tointeger(L, 2);
-	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
-	if (PNPC != NULL)
-	{
-		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
-		int32 ret = Sql_Query(SqlHandle, Query, CharID);
-		if (ret != SQL_ERROR &&
-			Sql_NumRows(SqlHandle) != 0 &&
-			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-		{
-			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
-			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
-			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
-			int8* data = (int8*)lua_tolstring(L, 3, NULL);
-			int8* name = (int8*)PNPC->GetObjectName();
-			uint8 size = (uint8)PNPC->name.size();
-			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_SAY, ZoneID, data, size));
-		}
-	}
-	return 1;
-}
-
-/************************************************************************
-*                                                                       *
-*   Send a fake "tell" message from an NPC or MOB.                      *
-*                                                                       *
-************************************************************************/
-
-int32 SpoofTell(lua_State* L)
-{
-	uint32 mobid = (uint32)lua_tointeger(L, 1);
-	uint32 CharID = (uint32)lua_tointeger(L, 2);
-	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
-	if (PNPC != NULL)
-	{
-		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
-		int32 ret = Sql_Query(SqlHandle, Query, CharID);
-		if (ret != SQL_ERROR &&
-			Sql_NumRows(SqlHandle) != 0 &&
-			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-		{
-			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
-			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
-			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
-			int8* data = (int8*)lua_tolstring(L, 3, NULL);
-			int8* name = (int8*)PNPC->GetObjectName();
-			uint8 size = (uint8)PNPC->name.size();
-			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_TELL, ZoneID, data, size));
-		}
-	}
-	return 1;
-}
-
-/************************************************************************
-*                                                                       *
-*   Send a fake "emote" message from an NPC or MOB.                     *
-*                                                                       *
-************************************************************************/
-
-int32 SpoofEmote(lua_State* L)
-{
-	uint32 mobid = (uint32)lua_tointeger(L, 1);
-	uint32 CharID = (uint32)lua_tointeger(L, 2);
-	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
-	if (PNPC != NULL)
-	{
-		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
-		int32 ret = Sql_Query(SqlHandle, Query, CharID);
-		if (ret != SQL_ERROR &&
-			Sql_NumRows(SqlHandle) != 0 &&
-			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-		{
-			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
-			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
-			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
-			int8* data = (int8*)lua_tolstring(L, 3, NULL);
-			int8* name = (int8*)PNPC->GetObjectName();
-			uint8 size = (uint8)PNPC->name.size();
-			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_EMOTION, ZoneID, data, size));
-		}
-	}
-	return 1;
-}
-
-/************************************************************************
-*                                                                       *
-*   Send a fake "linkshell" message from an NPC or MOB.                 *
-*                                                                       *
-************************************************************************/
-
-int32 SpoofLink(lua_State* L)
-{
-	uint32 mobid = (uint32)lua_tointeger(L, 1);
-	uint32 CharID = (uint32)lua_tointeger(L, 2);
-	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
-	if (PNPC != NULL)
-	{
-		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
-		int32 ret = Sql_Query(SqlHandle, Query, CharID);
-		if (ret != SQL_ERROR &&
-			Sql_NumRows(SqlHandle) != 0 &&
-			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-		{
-			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
-			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
-			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
-			int8* data = (int8*)lua_tolstring(L, 3, NULL);
-			int8* name = (int8*)PNPC->GetObjectName();
-			uint8 size = (uint8)PNPC->name.size();
-			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_LINKSHELL, ZoneID, data, size));
-		}
-	}
-	return 1;
-}
-
-/************************************************************************
-*                                                                       *
-*   Send a fake "party" message from an NPC or MOB.                     *
-*                                                                       *
-************************************************************************/
-
-int32 SpoofParty(lua_State* L)
-{
-	uint32 mobid = (uint32)lua_tointeger(L, 1);
-	uint32 CharID = (uint32)lua_tointeger(L, 2);
-	CBaseEntity* PNPC = (CBaseEntity*)zoneutils::GetEntity(mobid, TYPE_MOB | TYPE_NPC);
-	if (PNPC != NULL)
-	{
-		const int8* Query = "SELECT targid, pos_zone FROM chars INNER JOIN accounts_sessions USING(charid) WHERE charid = %u LIMIT 1";
-		int32 ret = Sql_Query(SqlHandle, Query, CharID);
-		if (ret != SQL_ERROR &&
-			Sql_NumRows(SqlHandle) != 0 &&
-			Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-		{
-			uint16 TargID = (uint16)Sql_GetUIntData(SqlHandle, 0);
-			uint8  ZoneID = (uint8)Sql_GetUIntData(SqlHandle, 1);
-			CCharEntity* PTellRecipient = (CCharEntity*)zoneutils::GetZone(ZoneID)->GetEntity(TargID, TYPE_PC);
-			int8* data = (int8*)lua_tolstring(L, 3, NULL);
-			int8* name = (int8*)PNPC->GetObjectName();
-			uint8 size = (uint8)PNPC->name.size();
-			PTellRecipient->pushPacket(new CNPCMessagePacket(name, MESSAGE_PARTY, ZoneID, data, size));
-		}
-	}
-	return 1;
-}
 
 /************************************************************************
 *                                                                       *
@@ -1201,12 +1047,23 @@ uint8 GetSettingsVariable(const char* variable)
 bool IsExpansionEnabled(const char* expansionCode)
 {
 	if (expansionCode != NULL){
-		char* expansionVariable = new char[14];
-		sprintf(expansionVariable, "ENABLE_%s", expansionCode);
+		std::string expansionVariable("ENABLE_");
+		expansionVariable.append(expansionCode);
+		
+        bool expansionEnabled;
 
-		uint8 expansionEnabled = GetSettingsVariable(expansionVariable);
+        try
+        {
+            expansionEnabled = expansionEnabledMap.at(expansionVariable);
+        }
+        catch (std::out_of_range)
+        {
+            // Cache Expansion Lookups in a Map so that we don't re-hit the Lua file every time
+            expansionEnabled = (GetSettingsVariable(expansionVariable.c_str()) != 0);
+            expansionEnabledMap[expansionVariable] = expansionEnabled;
+        }
 
-		if (expansionEnabled == 0){
+		if (expansionEnabled == false && expansionRestrictionEnabled == true){
 			return false;
 		}
 	}
@@ -1257,7 +1114,7 @@ int32 OnZoneInitialise(uint16 ZoneID)
 *																		*
 ************************************************************************/
 
-int32 OnGameIn(CCharEntity* PChar)
+int32 OnGameIn(CCharEntity* PChar, bool zoning)
 {
     lua_prepscript("scripts/globals/player.lua");
 
@@ -1270,8 +1127,9 @@ int32 OnGameIn(CCharEntity* PChar)
 	Lunar<CLuaBaseEntity>::push(LuaHandle,&LuaBaseEntity);
 
 	lua_pushboolean(LuaHandle, PChar->GetPlayTime(false) == 0); // first login
+    lua_pushboolean(LuaHandle, zoning);
 
-	if( lua_pcall(LuaHandle,2,LUA_MULTRET,0) )
+	if( lua_pcall(LuaHandle,3,LUA_MULTRET,0) )
 	{
 		ShowError("luautils::onGameIn: %s\n",lua_tostring(LuaHandle,-1));
         lua_pop(LuaHandle, 1);
@@ -1295,7 +1153,7 @@ int32 OnGameIn(CCharEntity* PChar)
 
 int32 OnZoneIn(CCharEntity* PChar)
 {
-    lua_prepscript("scripts/zones/%s/Zone.lua", PChar->loc.zone->GetName());
+    lua_prepscript("scripts/zones/%s/Zone.lua", PChar->m_moghouseID ? "Residential_Area" : zoneutils::GetZone(PChar->loc.destination)->GetName());
 
     if (prepFile(File, "onZoneIn"))
     {
@@ -2173,6 +2031,55 @@ int32 OnMonsterMagicPrepare(CBattleEntity* PCaster, CBattleEntity* PTarget)
     {
         ShowError("luautils::onMonsterMagicPrepare (%s): 1 return expected, got %d\n", File, returns);
         lua_pop(LuaHandle, returns-1);
+    }
+    return retVal;
+}
+
+/************************************************************************
+*																		*
+*  Called when mob is targeted by a spell.                              *
+*  Note: does not differentiate between offensive and defensive spells  *
+*																		*
+************************************************************************/
+
+int32 OnMagicHit(CBattleEntity* PCaster, CBattleEntity* PTarget, CSpell* PSpell)
+{
+    DSP_DEBUG_BREAK_IF(PSpell == NULL);
+
+    lua_prepscript("scripts/zones/%s/mobs/%s.lua", PCaster->loc.zone->GetName(), PCaster->GetName());
+
+    if (prepFile(File, "onMagicHit"))
+    {
+        return 0;
+    }
+
+    CLuaBaseEntity LuaCasterEntity(PCaster);
+    Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaCasterEntity);
+
+    CLuaBaseEntity LuaTargetEntity(PTarget);
+    Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaTargetEntity);
+
+    CLuaSpell LuaSpell(PSpell);
+    Lunar<CLuaSpell>::push(LuaHandle, &LuaSpell);
+
+    if (lua_pcall(LuaHandle, 3, LUA_MULTRET, 0))
+    {
+        ShowError("luautils::onMagicHit: %s\n", lua_tostring(LuaHandle, -1));
+        lua_pop(LuaHandle, 1);
+        return 0;
+    }
+    int32 returns = lua_gettop(LuaHandle) - oldtop;
+    if (returns < 1)
+    {
+        ShowError("luautils::onMagicHit (%s): 1 return expected, got %d\n", File, returns);
+        return 0;
+    }
+    uint32 retVal = (!lua_isnil(LuaHandle, -1) && lua_isnumber(LuaHandle, -1) ? (int32)lua_tonumber(LuaHandle, -1) : 0);
+    lua_pop(LuaHandle, 1);
+    if (returns > 1)
+    {
+        ShowError("luautils::onMagicHit (%s): 1 return expected, got %d\n", File, returns);
+        lua_pop(LuaHandle, returns - 1);
     }
     return retVal;
 }
@@ -3726,7 +3633,9 @@ int32 OnConquestUpdate(CZone* PZone, ConquestUpdate type)
 *********************************************************************/
 int32 OnBcnmEnter(CCharEntity* PChar, CBattlefield* PBattlefield){
 
-    lua_prepscript("scripts/zones/%s/bcnms/%s.lua", PChar->loc.zone->GetName(), PBattlefield->getBcnmName());
+    CZone* PZone = PChar->loc.zone == NULL ? zoneutils::GetZone(PChar->loc.destination) : PChar->loc.zone;
+    
+    lua_prepscript("scripts/zones/%s/bcnms/%s.lua", PZone->GetName(), PBattlefield->getBcnmName());
 
     if (prepFile(File, "onBcnmEnter"))
     {
@@ -3766,7 +3675,9 @@ int32 OnBcnmEnter(CCharEntity* PChar, CBattlefield* PBattlefield){
 *********************************************************************/
 int32 OnBcnmLeave(CCharEntity* PChar, CBattlefield* PBattlefield, uint8 LeaveCode){
 
-    lua_prepscript("scripts/zones/%s/bcnms/%s.lua", PChar->loc.zone->GetName(), PBattlefield->getBcnmName());
+    CZone* PZone = PChar->loc.zone == NULL ? zoneutils::GetZone(PChar->loc.destination) : PChar->loc.zone;
+    
+    lua_prepscript("scripts/zones/%s/bcnms/%s.lua", PZone->GetName(), PBattlefield->getBcnmName());
 
     if (prepFile(File, "onBcnmLeave"))
     {
@@ -3808,8 +3719,10 @@ int32 OnBcnmLeave(CCharEntity* PChar, CBattlefield* PBattlefield, uint8 LeaveCod
 	registration, and after CBattlefield:init() procedure.
 *********************************************************************/
 int32 OnBcnmRegister(CCharEntity* PChar, CBattlefield* PBattlefield){
+    
+    CZone* PZone = PChar->loc.zone == NULL ? zoneutils::GetZone(PChar->loc.destination) : PChar->loc.zone;
 
-    lua_prepscript("scripts/zones/%s/bcnms/%s.lua", PChar->loc.zone->GetName(), PBattlefield->getBcnmName());
+    lua_prepscript("scripts/zones/%s/bcnms/%s.lua", PZone->GetName(), PBattlefield->getBcnmName());
 
     if (prepFile(File, "onBcnmRegister"))
     {

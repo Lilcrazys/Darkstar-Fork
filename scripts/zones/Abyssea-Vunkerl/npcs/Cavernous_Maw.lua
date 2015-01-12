@@ -1,18 +1,13 @@
 -----------------------------------
--- Area: Abyssea Vunkerl
--- Name: Cavernous Maw
--- Teleports Players to Jugner
--- Forest
--- @zone 217
--- @pos -360.000, -46.750, 700.000
+-- Area: Abyssea - Vunkerl
+--  NPC: Cavernous Maw
+-- @pos -360.000 -46.750 700.000 217
+-- Notes: Teleports Players to Jugner Forest
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Vunkerl/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
-require("scripts/globals/keyitems");
-require("scripts/globals/teleports");
-require("scripts/globals/missions");
 require("scripts/zones/Abyssea-Vunkerl/TextIDs");
 
 -----------------------------------
@@ -20,14 +15,14 @@ require("scripts/zones/Abyssea-Vunkerl/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	player:startEvent(0x00c8);	
+    player:startEvent(0x00c8);
 end;
 
 -----------------------------------
@@ -35,8 +30,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -44,9 +39,9 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
-	if(csid == 0x00c8 and option == 1) then
-		player:setPos(241,0.001,11,42,104); 
-	end
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    if(csid == 0x00c8 and option == 1) then
+        player:setPos(241,0.001,11,42,104);
+    end
 end;

@@ -129,6 +129,7 @@ public:
     int32 getSpawnPos(lua_State*);          // Get Mob spawn position (x,y,z)
     int32 getZone(lua_State*);              // Get Entity zone
     int32 getZoneName(lua_State*);          // Get Entity zone name
+    int32 isInMogHouse(lua_State*);         // Check if entity inside a mog house
     int32 getCurrentRegion(lua_State*);     // Get Entity conquest region
     int32 getPreviousZone(lua_State*);      // Get Entity previous zone
     int32 getContinentID(lua_State*);       // узнаем континент, на котором находится сущность
@@ -372,6 +373,7 @@ public:
     int32 hasTrait(lua_State*);
 
     int32 addExp(lua_State*);                // Add to Character Experience
+    int32 delExp(lua_State*);                // Subtracts from Character Experience
 
     int32 getPetElement(lua_State*);
     int32 getPetName(lua_State*);
@@ -433,8 +435,12 @@ public:
     int32 resetRecasts(lua_State*);         // Reset recasts for the caller
     int32 resetRecast(lua_State*);          // Reset one recast ID
 
-    int32 addCP(lua_State*);                // Add CP
+    int32 getCurrency(lua_State*);          // Get Currency
+    int32 addCurrency(lua_State*);          // Add Currency
+    int32 delCurrency(lua_State*);          // Delete Currency
+
     int32 getCP(lua_State*);                // Get CP
+    int32 addCP(lua_State*);                // Add CP
     int32 delCP(lua_State*);                // Delete CP
 
     int32 getSeals(lua_State*);             // Get Seals (beastman seals, etc)
@@ -533,7 +539,8 @@ public:
     int32 getGMHidden(lua_State* L);
     int32 setGMHidden(lua_State* L);
     int32 PrintToPlayer(lua_State* L);    // for sending debugging messages/command confirmations to the player's client
-    int32 EchoToPlayer(lua_State* L);
+    int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
+    int32 SpoofChatServer(lua_State* L);  // Sends a faked chat packet to the entire server.
 
     // == Pathfind Methods ==
     int32 pathThrough(lua_State* L);      // walk at normal speed through the given points
@@ -599,6 +606,8 @@ public:
     int32 removeOldestManeuver(lua_State*);
     int32 removeAllManeuvers(lua_State*);
     int32 addBurden(lua_State* L);
+
+    int32 setElevator(lua_State* L);
 };
 
 #endif

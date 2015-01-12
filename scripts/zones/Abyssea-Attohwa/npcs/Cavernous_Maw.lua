@@ -1,17 +1,13 @@
 -----------------------------------
--- Area: Abyssea Attohwa
--- Name: Cavernous Maw
--- Teleports Players to Xarcabard
--- @zone 215
--- @pos -133.197, 20.242, -181.658
+-- Area: Abyssea - Attohwa
+--  NPC: Cavernous Maw
+-- @pos -133.197 20.242 -181.658 215
+-- Notes: Teleports Players to Buburimu Peninsula
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
-require("scripts/globals/keyitems");
-require("scripts/globals/teleports");
-require("scripts/globals/missions");
 require("scripts/zones/Abyssea-Attohwa/TextIDs");
 
 -----------------------------------
@@ -19,14 +15,14 @@ require("scripts/zones/Abyssea-Attohwa/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	player:startEvent(0x00c8);	
+    player:startEvent(0x00c8);
 end;
 
 -----------------------------------
@@ -34,8 +30,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -43,9 +39,9 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
-	if(csid == 0x00c8 and option == 1) then
-		player:setPos(-338,-23,47,167,118); 
-	end
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    if(csid == 0x00c8 and option == 1) then
+        player:setPos(-338,-23,47,167,118);
+    end
 end;

@@ -406,7 +406,6 @@ INSERT INTO `traits` VALUES ('114','tranquil heart','3','21','1','0','0','ABYSSE
 INSERT INTO `traits` VALUES ('114','tranquil heart','5','26','1','0','0','ABYSSEA');
 INSERT INTO `traits` VALUES ('114','tranquil heart','20','30','1','0','0','ABYSSEA');
 
-
 -- --- RUNE FENCER --- -- (Tenacity needs verifying)
 -- Tenacity Tier I
 INSERT INTO `traits` VALUES ('117','tenacity','22','5','1','240','5','SOA');
