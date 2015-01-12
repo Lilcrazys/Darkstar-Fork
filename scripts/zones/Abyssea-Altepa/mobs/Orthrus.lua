@@ -1,15 +1,15 @@
 -----------------------------------
 --  Area: Abyssea - Altepa (218)
---   Mob: Orthrus
+--   NM:  Orthrus
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Altepa/MobIDs");
 require("scripts/globals/status");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -28,20 +28,19 @@ end;
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
-
