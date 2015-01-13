@@ -4,8 +4,9 @@
 -- Author: Teo & Omni LegionFFXI
 -----------------------------------
 
-function doCustomTrial(mob, killer, isWeaponSkillKill)
-	
+-- function doCustomTrial(mob, killer, isKillShot, killType)
+function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
+
 	---------------------------------------------------
 	-- Custom Trials
 	---------------------------------------------------
