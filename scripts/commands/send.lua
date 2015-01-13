@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @send <player to be sent> <player to arrive at>
--- auth: TeoTwawki
+-- auth: TeoTwawki (at Nasomi's request).
 -- desc: Sends first player specified to a second player's position
 ---------------------------------------------------------------------------------------------------
 
@@ -11,7 +11,6 @@ cmdprops =
 };
 
 function onTrigger(player, p1, p2)
-
     if (p1 == nil or p2 == nil) then
         player:PrintToPlayer("Must specify 2 players: @send <player to be sent> <player to arrive at>");
         return;
@@ -31,7 +30,7 @@ function onTrigger(player, p1, p2)
         if (targ1 == nil or targ2 == nil) then
             player:PrintToPlayer( "@send <player to be sent> <player to arrive at>" );
         else
-            targ1:setPos( targ2:getXPos(), targ2:getYPos(), targ2:getZPos(), 0, targ2:getZone() );    
+            targ1:setPos( targ2:getXPos(), targ2:getYPos(), targ2:getZPos(), 0, targ2:getZone() );
         end
     end
 end;

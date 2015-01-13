@@ -3711,7 +3711,7 @@ INSERT INTO `item_basic` VALUES (4019,0,'piece_of_guatambu_lumber','gua_lumber',
 INSERT INTO `item_basic` VALUES (4020,0,'chunk_of_titanium_ore','titanium_ore',1,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4021,0,'titanium_ingot','titanium_ingot',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4022,0,'titanium_sheet','titanium_sheet',12,0,38,0,79);
-INSERT INTO `item_basic` VALUES (4023,0,'chunk_of_snowsteel_ore','snowsteel_ore',1,0,38,0,79);
+INSERT INTO `item_basic` VALUES (4023,0,'chunk_of_snowsteel_ore','snowsteel_ore',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4024,0,'chunk_of_snowsteel','snowsteel',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4025,0,'snowsteel_sheet','snowsteel_sheet',12,0,38,0,79);
 INSERT INTO `item_basic` VALUES (4026,0,'clump_of_akaso','akaso',12,0,40,0,79);
@@ -12750,7 +12750,7 @@ INSERT INTO `item_basic` VALUES (17300,0,'platinum_bullet','platinum_bullet',99,
 INSERT INTO `item_basic` VALUES (17301,0,'shuriken','shuriken',99,2048,15,0,10);
 INSERT INTO `item_basic` VALUES (17302,0,'juji_shuriken','juji_shuriken',99,2048,15,0,85);
 INSERT INTO `item_basic` VALUES (17303,0,'manji_shuriken','manji_shuriken',99,2048,15,0,184);
-INSERT INTO `item_basic` VALUES (17304,0,'fuma_shuriken','fuma_shuriken',12,2048,15,0,3285);
+INSERT INTO `item_basic` VALUES (17304,0,'fuma_shuriken','fuma_shuriken',99,2048,15,0,3285);
 INSERT INTO `item_basic` VALUES (17305,0,'cluster_arm','cluster_arm',12,2048,15,0,459);
 INSERT INTO `item_basic` VALUES (17306,0,'snoll_arm','snoll_arm',12,2048,15,0,300);
 INSERT INTO `item_basic` VALUES (17307,0,'dart','dart',99,2048,15,0,2);

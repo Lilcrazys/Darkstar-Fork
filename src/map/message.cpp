@@ -45,9 +45,9 @@ namespace message
 
     void send_queue()
     {
-        std::lock_guard<std::mutex> lk(send_mutex);
         while (!message_queue.empty())
         {
+            std::lock_guard<std::mutex> lk(send_mutex);
             chat_message_t msg = message_queue.front();
             message_queue.pop();
             try
@@ -81,6 +81,7 @@ namespace message
                     PChar->status = STATUS_SHUTDOWN;
                     PChar->pushPacket(new CServerIPPacket(PChar, 1));
                 }
+                break;
             }
 			case MSG_CHAT_TELL:
 			{
@@ -265,6 +266,7 @@ namespace message
 						}
 					}
 				}
+                break;
 			}
             case MSG_PT_RELOAD:
 			{
@@ -301,11 +303,12 @@ namespace message
             case MSG_PT_DISBAND:
             {
                 CCharEntity* PChar = zoneutils::GetChar(RBUFL(extra->data(), 0));
+                uint32 id = RBUFL(extra->data(), 4);
                 if (PChar)
                 {
                     if (PChar->PParty)
                     {
-                        if (PChar->PParty->m_PAlliance)
+                        if (PChar->PParty->m_PAlliance && PChar->PParty->m_PAlliance->m_AllianceID == id)
                         {
                             PChar->PParty->m_PAlliance->dissolveAlliance(false, ChatSqlHandle);
                         }
@@ -315,6 +318,7 @@ namespace message
                         }
                     }
                 }
+                break;
             }
 			case MSG_DIRECT:
 			{
@@ -335,6 +339,7 @@ namespace message
                 {
                     PLinkshell->ChangeMemberRank((int8*)extra->data() + 4, RBUFB(extra->data(), 28));
                 }
+                break;
             }
             case MSG_LINKSHELL_REMOVE:
             {
@@ -349,6 +354,7 @@ namespace message
                         PChar->PLinkshell->RemoveMemberByName((int8*)extra->data() + 4);
                     }
                 }
+                break;
             }
             default:
             {
@@ -367,6 +373,10 @@ namespace message
 
             try
             {
+                if (!zSocket)
+                {
+                    return;
+                }
                 if (!zSocket->recv(&type))
                 {
                     if (!message_queue.empty())
@@ -450,6 +460,13 @@ namespace message
 
 		listen();
 	}
+
+    void close()
+    {
+        zSocket->close();
+        zSocket = NULL;
+        zContext.close();
+    }
 
 	void send(MSGSERVTYPE type, void* data, size_t datalen, CBasicPacket* packet)
 	{

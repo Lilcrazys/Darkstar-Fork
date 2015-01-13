@@ -973,8 +973,11 @@ MOD_KATANA			= 0x58
 MOD_GKATANA			= 0x59
 MOD_CLUB			= 0x5A
 MOD_STAFF			= 0x5B
+MOD_AUTO_MELEE_SKILL  = 0x65
+MOD_AUTO_RANGED_SKILL = 0x66
+MOD_AUTO_MAGIC_SKILL  = 0x67
 MOD_ARCHERY			= 0x68
-MOD_MARKSMAN			= 0x69
+MOD_MARKSMAN	    = 0x69
 MOD_THROW			= 0x6A
 MOD_GUARD			= 0x6B
 MOD_EVASION			= 0x6C
@@ -983,11 +986,11 @@ MOD_PARRY			= 0x6E
 MOD_DIVINE			= 0x6F
 MOD_HEALING			= 0x70
 MOD_ENHANCE			= 0x71
-MOD_ENFEEBLE			= 0x72
+MOD_ENFEEBLE		= 0x72
 MOD_ELEM			= 0x73
 MOD_DARK			= 0x74
-MOD_SUMMONING			= 0x75
-MOD_NINJUTSU			= 0x76
+MOD_SUMMONING		= 0x75
+MOD_NINJUTSU		= 0x76
 MOD_SINGING			= 0x77
 MOD_STRING			= 0x78
 MOD_WIND			= 0x79
@@ -1204,9 +1207,6 @@ MOD_REGAIN_DOWN			 = 0x196			-- plague, reduce tp
 MOD_DA_DOUBLE_DAMAGE		  =0x198 -- Double attack's double damage chance %.
 MOD_TA_TRIPLE_DAMAGE		  =0x199 -- Triple attack's triple damage chance %.
 MOD_ZANSHIN_DOUBLE_DAMAGE	  =0x19A -- Zanshin's double damage chance %.
-MOD_AUTO_MELEE_SKILL          =0x19C
-MOD_AUTO_RANGED_SKILL         =0x19D
-MOD_AUTO_MAGIC_SKILL          =0x19E
 MOD_RAPID_SHOT_DOUBLE_DAMAGE  =0x1DF -- Rapid shot's double damage chance %.
 MOD_ABSORB_DMG_CHANCE		  =0x1E0 -- Chance to absorb damage %
 MOD_EXTRA_DUAL_WIELD_ATTACK   =0x1E1 -- Chance to land an extra attack when dual wielding
@@ -2082,3 +2082,13 @@ BEHAVIOUR_STANDBACK			= 0x002; -- mob will standback forever
 BEHAVIOUR_RAISABLE			= 0x004; -- mob can be raised via Raise spells
 BEHAVIOUR_AGGRO_AMBUSH		= 0x200; -- mob aggroes by ambush
 BEHAVIOUR_NO_TURN           = 0x400; -- mob does not turn to face target
+
+------------------------------------
+--
+-- Elevator IDs
+--
+------------------------------------
+ELEVATOR_KUFTAL_TUNNEL_DSPPRNG_RCK		= 1;
+ELEVATOR_PORT_BASTOK_DRWBRDG			= 2;
+ELEVATOR_DAVOI_LIFT                     = 3;
+ELEVATOR_PALBOROUGH_MINES_LIFT          = 4;

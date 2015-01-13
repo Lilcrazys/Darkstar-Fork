@@ -1,11 +1,9 @@
 -----------------------------------------
 -- Spell: Goddess's Hymnus
--- Grants Reraise to Party Members 
--- within target AoE
+-- Grants Reraise.
 -----------------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
 
 -----------------------------------------
 -- OnSpellCast
@@ -17,7 +15,16 @@ end;
 
 function onSpellCast(caster,target,spell)
 
-	-- This file needs to be re-synchronized with darkstar! Someone live edited the server and screwed up 
+		local duration = 120;
+
+		duration = duration * (caster:getMod(MOD_SONG_DURATION_BONUS)/100)
+
+		target:addBardSong(caster,EFFECT_HYMNUS,1,0,duration,caster:getID(), 0, 1);
+
+    return EFFECT_HYMNUS;
+
+--[[ 
+	-- I dunno wtf was being attempted here.
 
 	local duration = 120;
  	duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
@@ -29,5 +36,5 @@ function onSpellCast(caster,target,spell)
     target:delStatusEffect(EFFECT_HYMNUS);
     target:addStatusEffect(EFFECT_HYMNUS,3,0,duration);
     spell:setMsg(230);
-    return EFFECT_HYMNUS;
+	]]--
 end;

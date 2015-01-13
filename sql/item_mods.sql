@@ -11936,37 +11936,37 @@ INSERT INTO `item_mods` VALUES(14630, 8, 5);
 INSERT INTO `item_mods` VALUES(14630, 12, 2);
 INSERT INTO `item_mods` VALUES(14630, 13, -2);
 INSERT INTO `item_mods` VALUES(14631, 8, 6);
-INSERT INTO `item_mods` VALUES(14631, 20, -30);
+INSERT INTO `item_mods` VALUES(14631, 59, -30);
 INSERT INTO `item_mods` VALUES(14632, 1, 3);
 INSERT INTO `item_mods` VALUES(14632, 8, 2);
 INSERT INTO `item_mods` VALUES(14632, 9, -2);
 INSERT INTO `item_mods` VALUES(14632, 13, 5);
 INSERT INTO `item_mods` VALUES(14633, 13, 6);
-INSERT INTO `item_mods` VALUES(14633, 19, -30);
+INSERT INTO `item_mods` VALUES(14633, 58, -30);
 INSERT INTO `item_mods` VALUES(14634, 1, 3);
 INSERT INTO `item_mods` VALUES(14634, 9, 2);
 INSERT INTO `item_mods` VALUES(14634, 10, 5);
 INSERT INTO `item_mods` VALUES(14634, 11, -2);
 INSERT INTO `item_mods` VALUES(14635, 10, 6);
-INSERT INTO `item_mods` VALUES(14635, 17, -30);
+INSERT INTO `item_mods` VALUES(14635, 56, -30);
 INSERT INTO `item_mods` VALUES(14636, 1, 3);
 INSERT INTO `item_mods` VALUES(14636, 10, 2);
 INSERT INTO `item_mods` VALUES(14636, 11, 5);
 INSERT INTO `item_mods` VALUES(14636, 12, -2);
 INSERT INTO `item_mods` VALUES(14637, 11, 6);
-INSERT INTO `item_mods` VALUES(14637, 16, -30);
+INSERT INTO `item_mods` VALUES(14637, 55, -30);
 INSERT INTO `item_mods` VALUES(14638, 1, 3);
 INSERT INTO `item_mods` VALUES(14638, 9, 5);
 INSERT INTO `item_mods` VALUES(14638, 10, -2);
 INSERT INTO `item_mods` VALUES(14638, 13, 2);
 INSERT INTO `item_mods` VALUES(14639, 9, 6);
-INSERT INTO `item_mods` VALUES(14639, 18, -30);
+INSERT INTO `item_mods` VALUES(14639, 57, -30);
 INSERT INTO `item_mods` VALUES(14640, 1, 3);
 INSERT INTO `item_mods` VALUES(14640, 8, -2);
 INSERT INTO `item_mods` VALUES(14640, 11, 2);
 INSERT INTO `item_mods` VALUES(14640, 12, 5);
 INSERT INTO `item_mods` VALUES(14641, 12, 6);
-INSERT INTO `item_mods` VALUES(14641, 15, -30);
+INSERT INTO `item_mods` VALUES(14641, 54, -30);
 INSERT INTO `item_mods` VALUES(14642, 1, 3);
 INSERT INTO `item_mods` VALUES(14642, 2, 20);
 INSERT INTO `item_mods` VALUES(14642, 5, -20);
@@ -11978,7 +11978,7 @@ INSERT INTO `item_mods` VALUES(14642, 12, -1);
 INSERT INTO `item_mods` VALUES(14642, 13, -1);
 INSERT INTO `item_mods` VALUES(14642, 14, 5);
 INSERT INTO `item_mods` VALUES(14643, 14, 6);
-INSERT INTO `item_mods` VALUES(14643, 22, -30);
+INSERT INTO `item_mods` VALUES(14643, 61, -30);
 INSERT INTO `item_mods` VALUES(14644, 1, 3);
 INSERT INTO `item_mods` VALUES(14644, 2, -20);
 INSERT INTO `item_mods` VALUES(14644, 5, 20);
@@ -11990,7 +11990,7 @@ INSERT INTO `item_mods` VALUES(14644, 12, 1);
 INSERT INTO `item_mods` VALUES(14644, 13, 1);
 INSERT INTO `item_mods` VALUES(14644, 14, 1);
 INSERT INTO `item_mods` VALUES(14645, 5, 30);
-INSERT INTO `item_mods` VALUES(14645, 21, -30);
+INSERT INTO `item_mods` VALUES(14645, 60, -30);
 INSERT INTO `item_mods` VALUES(14650, 1, 2);
 INSERT INTO `item_mods` VALUES(14650, 26, 6);
 INSERT INTO `item_mods` VALUES(14651, 5, 15);
@@ -16596,7 +16596,7 @@ INSERT INTO `item_mods` VALUES(16199, 416, 25); -- Custom
 -- ------------------------------------------
 INSERT INTO `item_mods` VALUES (16201, 1, 21);
 INSERT INTO `item_mods` VALUES (16201, 302, 1);
-INSERT INTO `item_mods` VALUES (16201, 21, 30);
+INSERT INTO `item_mods` VALUES (16201, 60, 30);
 INSERT INTO `item_mods` VALUES (16201, 499, 4); -- Curse Spikes
 INSERT INTO `item_mods` VALUES (16201, 500, 0); -- Spikes DMG
 INSERT INTO `item_mods` VALUES (16201, 501, 20); -- Spikes Proc Rate
@@ -21050,19 +21050,19 @@ INSERT INTO `item_mods` VALUES(21132, 30, 42); --
 
 INSERT INTO `item_mods` VALUES(21138, 25, 30); --
 INSERT INTO `item_mods` VALUES(21138, 30, 285); --
-INSERT INTO `item_mods` VALUES(21138, 28, 288); -- modded  magic dmg+ unknown
+INSERT INTO `item_mods` VALUES(21138, 28, 165); -- modded  magic dmg+ unknown
 INSERT INTO `item_mods` VALUES(21138, 91, 242); --
 INSERT INTO `item_mods` VALUES(21128, 110, 242); --
 INSERT INTO `item_mods` VALUES(21128, 302, 15); --
 INSERT INTO `item_mods` VALUES(21139, 25, 30); --
 INSERT INTO `item_mods` VALUES(21139, 30, 265); --
-INSERT INTO `item_mods` VALUES(21139, 28, 308); -- Should be 60   magic dmg +  unknown
+INSERT INTO `item_mods` VALUES(21139, 28, 165); -- Should be 60   magic dmg +  unknown
 INSERT INTO `item_mods` VALUES(21139, 91, 242); --
 INSERT INTO `item_mods` VALUES(21139, 110, 242); --
 INSERT INTO `item_mods` VALUES(21139, 302, 15); --
 INSERT INTO `item_mods` VALUES(21140, 25, 30); --
 INSERT INTO `item_mods` VALUES(21140, 30, 265); --
-INSERT INTO `item_mods` VALUES(21140, 28, 308); -- Should be 60   magic dmg +  unknown
+INSERT INTO `item_mods` VALUES(21140, 28, 185); -- Should be 60   magic dmg +  unknown
 INSERT INTO `item_mods` VALUES(21140, 91, 24); --
 INSERT INTO `item_mods` VALUES(21140, 110, 242); --
 INSERT INTO `item_mods` VALUES(21140, 302, 15); --
@@ -21090,7 +21090,7 @@ INSERT INTO `item_mods` VALUES(21144, 30, 255); --
 
 INSERT INTO `item_mods` VALUES(21176, 12, 12); --
 INSERT INTO `item_mods` VALUES(21176, 13, 12); --
-INSERT INTO `item_mods` VALUES(21176, 28, 243); -- Should be 18 see below
+INSERT INTO `item_mods` VALUES(21176, 28, 120); -- Should be 18 see below
 -- INSERT INTO `item_mods` VALUES(21176, ???, 207); -- Magic Damage unknown
 -- INSERT INTO `item_mods` VALUES(21176, ???, 15); --  Ice Elemental "Magic Atk. Bonus"+15  unknown
 INSERT INTO `item_mods` VALUES(21176, 91, 242); --
@@ -21099,7 +21099,7 @@ INSERT INTO `item_mods` VALUES(21176, 30, 228); --
 -- INSERT INTO `item_mods` VALUES(21176, ???, -3); -- Elemental magic recast delay -3%  unknown
 INSERT INTO `item_mods` VALUES(21194, 12, 10); --
 INSERT INTO `item_mods` VALUES(21194, 13, 10); --
-INSERT INTO `item_mods` VALUES(21194, 28, 170); -- Should be 19 see below
+INSERT INTO `item_mods` VALUES(21194, 28, 95); -- Should be 19 see below
 -- INSERT INTO `item_mods` VALUES(21194, ???, 151); -- Magic Damage +
 INSERT INTO `item_mods` VALUES(21194, 91, 162); --
 INSERT INTO `item_mods` VALUES(21194, 110, 162); --
@@ -21111,7 +21111,7 @@ INSERT INTO `item_mods` VALUES(21195, 30, 126); --
 -- INSERT INTO `item_mods` VALUES(21195, ???, 60); -- Avatar: "Magic Atk. Bonus"+60
 INSERT INTO `item_mods` VALUES(21208, 12, 6); --
 INSERT INTO `item_mods` VALUES(21208, 13, 6); --
-INSERT INTO `item_mods` VALUES(21208, 28, 105); -- Should be 40   see below
+INSERT INTO `item_mods` VALUES(21208, 28, 73); -- Should be 40   see below
 -- INSERT INTO `item_mods` VALUES(21208, ???, 65); -- Magic Damage + 65  unknown
 INSERT INTO `item_mods` VALUES(21208, 91, 54); --
 INSERT INTO `item_mods` VALUES(21208, 110, 54); --
@@ -21167,11 +21167,11 @@ INSERT INTO `item_mods` VALUES(21364, 5, 35); --
 INSERT INTO `item_mods` VALUES(21364, 30, 4); --
 INSERT INTO `item_mods` VALUES(21364, 28, 4); --
 INSERT INTO `item_mods` VALUES(21364, 27, -2); --
-INSERT INTO `item_mods` VALUES(21382, 28, 13); -- Should be Magic Damage +13  added MAB
+INSERT INTO `item_mods` VALUES(21382, 28, 6); -- Should be Magic Damage +13  added MAB
 INSERT INTO `item_mods` VALUES(21385, 2, 20); --
 INSERT INTO `item_mods` VALUES(21385, 8, 5); --
 INSERT INTO `item_mods` VALUES(21385, 27, 2); --
-INSERT INTO `item_mods` VALUES(21424, 28, 10); -- Should be Magic Damage +10  added MAB
+INSERT INTO `item_mods` VALUES(21424, 28, 5); -- Should be Magic Damage +10  added MAB
 INSERT INTO `item_mods` VALUES(21428, 2, 50); --
 INSERT INTO `item_mods` VALUES(21428, 25, 10); --
 INSERT INTO `item_mods` VALUES(21428, 23, 10); --
@@ -22362,8 +22362,8 @@ INSERT INTO `item_mods` VALUES(11234, 73, 6); -- Store tp
 -- TODO true shot. Increases damage from ideal ranged attack distance ("sweet spot") by 3-7%. Trait also applies to Weapon Skills.
 
 -- Feet (Sylvan Bottillons +1)
-INSERT INTO `item_mods` VALUES(11254, 20, 17); -- def
-INSERT INTO `item_mods` VALUES(11254, 12, 4); -- agi
+INSERT INTO `item_mods` VALUES(11254, 1, 17); -- def
+INSERT INTO `item_mods` VALUES(11254, 11, 4); -- agi
 INSERT INTO `item_mods` VALUES(11254, 105, 5); -- marksmanship skill
 INSERT INTO `item_mods` VALUES(11254, 27, -5); -- enmity
 -- TODO Unlimited shot. Allows the next ranged attack to receive the bonuses of the "sweet spot" distance at any distance (will receive the pummeling message at any distance).
@@ -22403,8 +22403,8 @@ INSERT INTO `item_mods` VALUES(11134, 73, 9); -- Store tp
 -- TODO true shot. Increases damage from ideal ranged attack distance ("sweet spot") by 3-7%. Trait also applies to Weapon Skills.
 
 -- Feet (Sylvan Bottillons +2)
-INSERT INTO `item_mods` VALUES(11154, 20, 22); -- def
-INSERT INTO `item_mods` VALUES(11154, 12, 15); -- agi
+INSERT INTO `item_mods` VALUES(11154, 1, 22); -- def
+INSERT INTO `item_mods` VALUES(11154, 11, 15); -- agi
 INSERT INTO `item_mods` VALUES(11154, 105, 7); -- marksmanship skill
 INSERT INTO `item_mods` VALUES(11154, 27, -8); -- enmity
 -- TODO Unlimited shot. Allows the next ranged attack to receive the bonuses of the "sweet spot" distance at any distance (will receive the pummeling message at any distance).
@@ -23913,7 +23913,7 @@ INSERT INTO `item_mods` VALUES(11042, 11, -1); -- AGI-1
 -- -------------------------------------------------------
 -- Telluric Ring
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES(14649, 19, 20); -- [Element: Thunder]+20
+INSERT INTO `item_mods` VALUES(14649, 58, 20); -- [Element: Thunder]+20
 
 -- -------------------------------------------------------
 -- Stolid Breastplate
@@ -24275,14 +24275,14 @@ INSERT INTO `item_mods` VALUES(10328, 359, 5); -- Increases "Rapid Shot" activat
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES(10329, 1, 40); -- DEF:40
 INSERT INTO `item_mods` VALUES(10329, 113, 15); -- Enhancing magic skill +15
-INSERT INTO `item_mods` VALUES(10329, 15, 15); -- Elemental Fire resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 16, 15); -- Elemental Ice resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 17, 15); -- Elemental Wind resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 18, 15); -- Elemental Earth resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 19, 15); -- Elemental Thunder resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 20, 15); -- Elemental Water resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 21, 15); -- Elemental Light resistance spells +15
-INSERT INTO `item_mods` VALUES(10329, 22, 15); -- Elemental Dark resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 54, 15); -- Elemental Fire resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 55, 15); -- Elemental Ice resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 56, 15); -- Elemental Wind resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 57, 15); -- Elemental Earth resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 58, 15); -- Elemental Thunder resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 59, 15); -- Elemental Water resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 60, 15); -- Elemental Light resistance spells +15
+INSERT INTO `item_mods` VALUES(10329, 61, 15); -- Elemental Dark resistance spells +15
 
 -- -------------------------------------------------------
 -- Dux Cuisses
@@ -25100,3 +25100,48 @@ INSERT INTO `item_mods` VALUES(11433, 499, 5); -- shock spikes
 INSERT INTO `item_mods` VALUES(11433, 500, 20); -- spikes dmg
 INSERT INTO `item_mods` VALUES(11433, 501, 25); -- spikes proc rate
 
+-- Trials Weapons
+INSERT INTO `item_mods` VALUES(18144, 2, 20);
+INSERT INTO `item_mods` VALUES(18144, 56, 10);
+INSERT INTO `item_mods` VALUES(18144, 58, 10);
+INSERT INTO `item_mods` VALUES(17933, 2, 20);
+INSERT INTO `item_mods` VALUES(17933, 56, 10);
+INSERT INTO `item_mods` VALUES(17933, 58, 10);
+INSERT INTO `item_mods` VALUES(17456, 2, 10);
+INSERT INTO `item_mods` VALUES(17456, 5, 10);
+INSERT INTO `item_mods` VALUES(17456, 57, 10);
+INSERT INTO `item_mods` VALUES(17456, 59, 10);
+INSERT INTO `item_mods` VALUES(17616, 2, 20);
+INSERT INTO `item_mods` VALUES(17616, 55, 10);
+INSERT INTO `item_mods` VALUES(17616, 57, 10);
+INSERT INTO `item_mods` VALUES(16735, 2, 20);
+INSERT INTO `item_mods` VALUES(16735, 57, 10);
+INSERT INTO `item_mods` VALUES(16735, 59, 10);
+INSERT INTO `item_mods` VALUES(17815, 2, 20);
+INSERT INTO `item_mods` VALUES(17815, 55, 10);
+INSERT INTO `item_mods` VALUES(17815, 61, 10);
+INSERT INTO `item_mods` VALUES(16952, 2, 20);
+INSERT INTO `item_mods` VALUES(16952, 55, 10);
+INSERT INTO `item_mods` VALUES(16952, 57, 10);
+INSERT INTO `item_mods` VALUES(17507, 2, 20);
+INSERT INTO `item_mods` VALUES(17507, 57, 10);
+INSERT INTO `item_mods` VALUES(17507, 59, 10);
+INSERT INTO `item_mods` VALUES(17773, 2, 20);
+INSERT INTO `item_mods` VALUES(17773, 54, 10);
+INSERT INTO `item_mods` VALUES(17773, 60, 10);
+INSERT INTO `item_mods` VALUES(18146, 2, 20);
+INSERT INTO `item_mods` VALUES(18146, 57, 10);
+INSERT INTO `item_mods` VALUES(18146, 59, 10);
+INSERT INTO `item_mods` VALUES(16892, 2, 20);
+INSERT INTO `item_mods` VALUES(16892, 59, 10);
+INSERT INTO `item_mods` VALUES(16892, 61, 10);
+INSERT INTO `item_mods` VALUES(16793, 2, 20);
+INSERT INTO `item_mods` VALUES(16793, 58, 10);
+INSERT INTO `item_mods` VALUES(16793, 60, 10);
+INSERT INTO `item_mods` VALUES(17527, 2, 10);
+INSERT INTO `item_mods` VALUES(17527, 5, 10);
+INSERT INTO `item_mods` VALUES(17527, 54, 10);
+INSERT INTO `item_mods` VALUES(17527, 60, 10);
+INSERT INTO `item_mods` VALUES(17654, 2, 20);
+INSERT INTO `item_mods` VALUES(17654, 54, 10);
+INSERT INTO `item_mods` VALUES(17654, 56, 10);

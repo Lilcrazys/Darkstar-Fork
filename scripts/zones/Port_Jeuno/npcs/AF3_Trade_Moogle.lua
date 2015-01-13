@@ -3,9 +3,11 @@
 -- NPC: Haubijoux
 -- Standard Info NPC
 -----------------------------------
-
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
+-----------------------------------
+
 require("scripts/zones/Port_Jeuno/TextIDs");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
@@ -2030,6 +2032,84 @@ function onTrade(player,npc,trade)
 		player:messageSpecial(ITEM_OBTAINED,10749);
 		player:tradeComplete();
 	end
+----------------------------Askar-Phorcys-----------------------------------
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(16106,1) and trade:getItemCount() == 9) then 					--head
+		player:addItem(10901);
+		player:messageSpecial(ITEM_OBTAINED,10901);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,12) and trade:hasItemQty(14568,1) and trade:getItemCount() == 13) then   			   -- body
+		player:addItem(10474);
+		player:messageSpecial(ITEM_OBTAINED,10474);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(14983,1) and trade:getItemCount() == 9) then 					--hands
+		player:addItem(10523);
+		player:messageSpecial(ITEM_OBTAINED,10523);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(15647,1) and trade:getItemCount() == 9) then 					--legs
+		player:addItem(10554);
+		player:messageSpecial(ITEM_OBTAINED,10554);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(15733,1) and trade:getItemCount() == 9) then 					--feet
+		player:addItem(10620);
+		player:messageSpecial(ITEM_OBTAINED,10620);
+		player:tradeComplete();
+	end
+----------------------------Denali-Thaumas------------------------------------
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(16107,1) and trade:getItemCount() == 9) then					--head
+		player:addItem(10906);
+		player:messageSpecial(ITEM_OBTAINED,10906);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,12) and trade:hasItemQty(14569,1) and trade:getItemCount() == 13) then				--body
+		player:addItem(10479);
+		player:messageSpecial(ITEM_OBTAINED,10479);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(14984,1) and trade:getItemCount() == 9) then					--hands
+		player:addItem(10528);
+		player:messageSpecial(ITEM_OBTAINED,10528);
+		player:tradeComplete();
+	end	
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(15648,1) and trade:getItemCount() == 9) then 					--legs
+		player:addItem(10559);
+		player:messageSpecial(ITEM_OBTAINED,10559);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(15734,1) and trade:getItemCount() == 9) then					--feet
+		player:addItem(10625);
+		player:messageSpecial(ITEM_OBTAINED,10625);
+		player:tradeComplete();
+	end
+----------------------------Goliard-Nares------------------------------------	
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(16108,1) and trade:getItemCount() == 9) then					--head
+		player:addItem(10911);
+		player:messageSpecial(ITEM_OBTAINED,10911);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,12) and trade:hasItemQty(14570,1) and trade:getItemCount() == 13) then				--body
+		player:addItem(10484);
+		player:messageSpecial(ITEM_OBTAINED,10484);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(14985,1) and trade:getItemCount() == 9) then 					--hands
+		player:addItem(10533);
+		player:messageSpecial(ITEM_OBTAINED,10533);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(15649,1) and trade:getItemCount() == 9) then 					--legs
+		player:addItem(10564);
+		player:messageSpecial(ITEM_OBTAINED,10564);
+		player:tradeComplete();
+	end
+	if (trade:hasItemQty(4024,8) and trade:hasItemQty(15735,1) and trade:getItemCount() == 9) then 					--feet
+		player:addItem(10630);
+		player:messageSpecial(ITEM_OBTAINED,10630);
+		player:tradeComplete();
+	end	
 end;
 
 -----------------------------------
@@ -2037,9 +2117,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	local name = player:getName();
-
-	SpoofSay(npc:getID(),player:getID(),( string.format("Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", name ) ));
+	player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", player:getName() )), MESSAGE_SAY, npc:getID() );
 end;
 
 -----------------------------------

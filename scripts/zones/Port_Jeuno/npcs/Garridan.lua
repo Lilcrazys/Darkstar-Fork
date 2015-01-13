@@ -4,9 +4,11 @@
 -- @zone 246
 -- @pos
 -----------------------------------
-
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
+-----------------------------------
+
 require("scripts/zones/Port_Jeuno/TextIDs");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
@@ -83,7 +85,7 @@ function onTrade(player,npc,trade)
 		};
 		showShop(player, STATIC, stock_Swimsuits);
 	else
-		SpoofSay(npc:getID(),player:getID(),"I don't have special deals to show you right now.");
+		player:SpoofChatPlayer( "I don't have special deals to show you right now.", MESSAGE_SAY, npc:getID() );
 	end
 end;
 
@@ -216,7 +218,7 @@ function onTrigger(player,npc)
 			-- 28563,  25000,    -- Vocation Ring
 		};
 		showShop(player, STATIC, stock_7);
-		SpoofSay(npc:getID(),player:getID(),"For a small deposit of a 1 gil trade, I can show you our fine selection of hand crafted statues.");
+		player:SpoofChatPlayer( "For a small deposit of a 1 gil trade, I can show you our fine selection of hand crafted statues.", MESSAGE_SAY, npc:getID() );
 	elseif ((month == 6 and day >= 29) or (month == 7 and day <= 13)) then -- Celestial Nights ~ Jun 29 - Jul 13
 		local stock_8 =
 		{
@@ -252,7 +254,7 @@ function onTrigger(player,npc)
 			3676,    9999,    -- Celestial Globe
 		};
 		showShop(player, STATIC, stock_9);
-		SpoofSay(npc:getID(),player:getID(),"For a small deposit of a 1 gil trade, I can show you our fine selection of summer swim-wear.");
+		player:SpoofChatPlayer( "For a small deposit of a 1 gil trade, I can show you our fine selection of summer swim-wear.", MESSAGE_SAY, npc:getID() );
 	elseif ((month == 9 and day >= 28) or (month == 10 and day <= 12)) then -- Blazing Buffaloes ~ Sep 28 - Oct 12
 		local stock_10 =
 		{
@@ -294,7 +296,7 @@ function onTrigger(player,npc)
 		};
 		showShop(player, STATIC, stock_11);
 	else
-		SpoofSay(npc:getID(),player:getID(),"Sorry, I have no wares at this time. We are currently preparing new stock for the next holiday's festivities.");
+		player:SpoofChatPlayer( "Sorry, I have no wares at this time. We are currently preparing new stock for the next holiday's festivities.", MESSAGE_SAY, npc:getID() );
 	end
 end;
 

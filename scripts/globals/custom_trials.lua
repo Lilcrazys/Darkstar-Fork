@@ -4,8 +4,9 @@
 -- Author: Teo & Omni LegionFFXI
 -----------------------------------
 
-function doCustomTrial(mob, killer, isWeaponSkillKill)
-	
+-- function doCustomTrial(mob, killer, isKillShot, killType)
+function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
+
 	---------------------------------------------------
 	-- Custom Trials
 	---------------------------------------------------
@@ -221,7 +222,7 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 100	or trial =< 116) and
+	if ( (trial >= 100 or trial <= 116) and
 	   (MAIN == 18999 or MAIN == 18997 or MAIN == 19000 or MAIN == 18991 or
 		MAIN == 18992 or MAIN == 19002 or MAIN == 18994 or MAIN == 18998 or
 		MAIN == 18995 or MAIN == 19003 or MAIN == 19005 or MAIN == 19004 or
@@ -346,7 +347,7 @@ function doCustomTrial(mob, killer, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 134 or trial =< 150) and
+	if ( (trial >= 134 or trial <= 150) and
 	   (MAIN == 19718 or MAIN == 19716 or MAIN == 19719 or MAIN == 19710 or
 		MAIN == 19711 or MAIN == 19721 or MAIN == 19713 or MAIN == 19717 or
 		MAIN == 19714 or MAIN == 19722 or MAIN == 19724 or MAIN == 19723 or

@@ -149,13 +149,7 @@ namespace charutils
 
 	uint16	AvatarPerpetuationReduction(CCharEntity* PChar);
 
-	void	SaveCharUnlockedWeapons(CCharEntity* PChar);
-	void	LoadCharUnlockedWeapons(CCharEntity* PChar);
-	void	loadCharWsPoints(CCharEntity* PChar);
-	void	saveCharWsPoints(CCharEntity* PChar, uint16 indexid, int32 points);
-
     void    OpenSendBox(CCharEntity* PChar);
-    void    RecoverFailedSendBox(CCharEntity* PChar);
 
     bool    CheckAbilityAddtype(CCharEntity* PChar, CAbility* PAbility);
 

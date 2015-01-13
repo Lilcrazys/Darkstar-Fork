@@ -759,10 +759,7 @@ INSERT INTO `item_usable` VALUES (4859,'scroll_of_shock_spikes',1,1,12,5,0,0,0,0
 INSERT INTO `item_usable` VALUES (4860,'scroll_of_stun',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4861,'scroll_of_sleep',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4862,'scroll_of_blind',1,1,12,5,0,0,0,0);
-
--- Break and Breakga deliberately rendered unusable
--- INSERT INTO `item_usable` VALUES (4863,'scroll_of_break',1,1,12,5,0,0,0,0);
-
+INSERT INTO `item_usable` VALUES (4863,'scroll_of_break',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4866,'scroll_of_bind',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4867,'scroll_of_sleep_ii',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4868,'scroll_of_dispel',1,1,12,5,0,0,0,0);
@@ -783,10 +780,7 @@ INSERT INTO `item_usable` VALUES (4882,'scroll_of_sleepga_ii',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4883,'scroll_of_absorb-tp',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4885,'scroll_of_dread_spikes',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4886,'scroll_of_absorb-acc',1,1,12,5,0,0,0,0);
-
--- Break and Breakga deliberately rendered unusable
--- INSERT INTO `item_usable` VALUES (4889,'scroll_of_breakga',1,1,12,5,0,0,0,0);
-
+INSERT INTO `item_usable` VALUES (4889,'scroll_of_breakga',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4890,'scroll_of_firaja',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4891,'scroll_of_blizzaja',1,1,12,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (4892,'scroll_of_aeroja',1,1,12,5,0,0,0,0);

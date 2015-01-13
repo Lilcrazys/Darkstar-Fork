@@ -1790,7 +1790,7 @@ INSERT INTO `mob_skill` VALUES (1123,440,1011,'Auroral_Wind',4,10.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (1124,440,1012,'Impact_Stream',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1125,440,1013,'Depuration',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1126,440,1014,'Crystaline_Cocoon',0,7.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1130,440,1021,'Medusa_Javelin',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1130,440,1021,'Medusa_Javelin',0,7.0,2000,1000,4,0,0,0);
 
 
 -- Aern staff type smn whm
@@ -1804,19 +1804,19 @@ INSERT INTO `mob_skill` VALUES (1126,439,1014,'Crystaline_Cocoon',0,7.0,2000,100
 
 
 -- Phuabo
-INSERT INTO `mob_skill` VALUES (1097,194,1004,'Aerial_collision',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1097,194,1004,'Aerial_Collision',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1101,194,1008,'Tidal_Dive',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1098,194,1005,'Vapor_Spray',4,12.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1099,194,1006,'Spine_lash',4,12.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1100,194,1007,'Voiceless_storm',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1102,194,1009,'Plasma_charge',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1099,194,1006,'Spine_Lash',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1100,194,1007,'Voiceless_Storm',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1102,194,1009,'Plasma_Charge',0,7.0,2000,1000,1,0,0,0);
 
 -- Xzomit
-INSERT INTO `mob_skill` VALUES (1091,269,998,'Dual_strike',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1091,269,998,'Dual_Strike',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1092,269,999,'Syphon_Discharge',1,15.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (1093,269,1000,'Mantle_Pierce',0,7.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (1094,269,1001,'Ink_Cloud',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1095,269,1002,'Molluscous_mutation',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1095,269,1002,'Molluscous_Mutation',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1096,269,1003,'Saline_Coat',4,10.0,2000,1000,4,0,0,0);
 
 -- Hpemde
@@ -3635,11 +3635,11 @@ INSERT INTO `mob_skill` VALUES (3112,493,2378,'Undulating_Shockwave',1,18.0,2000
 
 -- Xol
 -- Dhokmak melee 2379 2380 2381
-INSERT INTO `mob_skill` VALUES (3116,490,2382,'Cesspool',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3117,490,2383,'Fetid_Eddies',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3118,490,2384,'Nullifying_rain',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3119,490,2385,'Noyade',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (3120,490,2386,'Clobering_wave',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3116,492,2382,'Cesspool',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3117,492,2383,'Fetid_Eddies',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3118,492,2384,'Nullifying_rain',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3119,492,2385,'Noyade',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (3120,492,2386,'Clobering_wave',1,18.0,2000,1000,4,0,0,0);
 
 -- Theodor
 -- Melee 2387 2388 2389

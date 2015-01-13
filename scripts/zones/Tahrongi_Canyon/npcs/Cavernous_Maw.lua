@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Tahrongi Canyon
 --  NPC: Cavernous Maw
--- Teleports Players to Abyssea Tahrongi
 -- @pos -28.597, 46.056, -685.754 117
+-- Teleports Players to Abyssea - Tahrongi
 -----------------------------------
 package.loaded["scripts/zones/Tahrongi_Canyon/TextIDs"] = nil;
 -----------------------------------
@@ -29,9 +29,9 @@ function onTrigger(player,npc)
         local HasStone = getTravStonesTotal(player);
         if (HasStone >= 1 and player:getQuestStatus(ABYSSEA, DAWN_OF_DEATH) == QUEST_ACCEPTED
         and player:getQuestStatus(ABYSSEA, MEGADRILE_MENACE) == QUEST_AVAILABLE) then
-            player:startEvent(0x0000);
+            player:startEvent(38);
         else
-            player:startEvent(0x0064,0,1); -- No param = no entry.
+            player:startEvent(100,0,1); -- No param = no entry.
         end
     else
         player:messageSpecial(NOTHING_HAPPENS);
@@ -54,11 +54,11 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    if (csid == 0) then
+    if (csid == 38) then
         player:addQuest(ABYSSEA, MEGADRILE_MENACE);
-    elseif (csid ==1) then
+    elseif (csid == 39) then
         -- Killed Glavoid
-    elseif(csid == 0x0064 and option == 1) then
+    elseif (csid == 100 and option == 1) then
         player:setPos(-24,44,-678,240,45);
     end
 end;
