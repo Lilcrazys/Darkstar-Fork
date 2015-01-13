@@ -10,6 +10,7 @@ require("scripts/globals/settings");
 require("scripts/globals/zone");
 require("scripts/globals/quests");
 require("scripts/zones/Castle_Oztroja/TextIDs");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onInitialize
@@ -61,7 +62,7 @@ function onRegionEnter(player,region)
 		[1] = function (x)  -- PLD AF2 "A boy's dream".
 		if(player:getQuestStatus(SANDORIA, A_BOY_S_DREAM) == QUEST_ACCEPTED) then
 			if (player:hasItem(17001) == true and player:hasItem(4562) == false) then
-				player:EchoToPlayer("The Giant Shell Bug you posses brings a fiend out of the water!.");
+				player:SpoofChatPlayer("The Giant Shell Bug you posses brings a fiend out of the water!.", MESSAGE_EMOTION, nil);
 				SpawnMob(17396141):updateEnmity(player);
 			end
 		end
