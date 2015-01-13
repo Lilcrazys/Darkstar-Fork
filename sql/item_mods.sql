@@ -21050,19 +21050,19 @@ INSERT INTO `item_mods` VALUES(21132, 30, 42); --
 
 INSERT INTO `item_mods` VALUES(21138, 25, 30); --
 INSERT INTO `item_mods` VALUES(21138, 30, 285); --
-INSERT INTO `item_mods` VALUES(21138, 28, 288); -- modded  magic dmg+ unknown
+INSERT INTO `item_mods` VALUES(21138, 28, 165); -- modded  magic dmg+ unknown
 INSERT INTO `item_mods` VALUES(21138, 91, 242); --
 INSERT INTO `item_mods` VALUES(21128, 110, 242); --
 INSERT INTO `item_mods` VALUES(21128, 302, 15); --
 INSERT INTO `item_mods` VALUES(21139, 25, 30); --
 INSERT INTO `item_mods` VALUES(21139, 30, 265); --
-INSERT INTO `item_mods` VALUES(21139, 28, 308); -- Should be 60   magic dmg +  unknown
+INSERT INTO `item_mods` VALUES(21139, 28, 165); -- Should be 60   magic dmg +  unknown
 INSERT INTO `item_mods` VALUES(21139, 91, 242); --
 INSERT INTO `item_mods` VALUES(21139, 110, 242); --
 INSERT INTO `item_mods` VALUES(21139, 302, 15); --
 INSERT INTO `item_mods` VALUES(21140, 25, 30); --
 INSERT INTO `item_mods` VALUES(21140, 30, 265); --
-INSERT INTO `item_mods` VALUES(21140, 28, 308); -- Should be 60   magic dmg +  unknown
+INSERT INTO `item_mods` VALUES(21140, 28, 185); -- Should be 60   magic dmg +  unknown
 INSERT INTO `item_mods` VALUES(21140, 91, 24); --
 INSERT INTO `item_mods` VALUES(21140, 110, 242); --
 INSERT INTO `item_mods` VALUES(21140, 302, 15); --
@@ -21090,7 +21090,7 @@ INSERT INTO `item_mods` VALUES(21144, 30, 255); --
 
 INSERT INTO `item_mods` VALUES(21176, 12, 12); --
 INSERT INTO `item_mods` VALUES(21176, 13, 12); --
-INSERT INTO `item_mods` VALUES(21176, 28, 243); -- Should be 18 see below
+INSERT INTO `item_mods` VALUES(21176, 28, 120); -- Should be 18 see below
 -- INSERT INTO `item_mods` VALUES(21176, ???, 207); -- Magic Damage unknown
 -- INSERT INTO `item_mods` VALUES(21176, ???, 15); --  Ice Elemental "Magic Atk. Bonus"+15  unknown
 INSERT INTO `item_mods` VALUES(21176, 91, 242); --
@@ -21099,7 +21099,7 @@ INSERT INTO `item_mods` VALUES(21176, 30, 228); --
 -- INSERT INTO `item_mods` VALUES(21176, ???, -3); -- Elemental magic recast delay -3%  unknown
 INSERT INTO `item_mods` VALUES(21194, 12, 10); --
 INSERT INTO `item_mods` VALUES(21194, 13, 10); --
-INSERT INTO `item_mods` VALUES(21194, 28, 170); -- Should be 19 see below
+INSERT INTO `item_mods` VALUES(21194, 28, 95); -- Should be 19 see below
 -- INSERT INTO `item_mods` VALUES(21194, ???, 151); -- Magic Damage +
 INSERT INTO `item_mods` VALUES(21194, 91, 162); --
 INSERT INTO `item_mods` VALUES(21194, 110, 162); --
@@ -21111,7 +21111,7 @@ INSERT INTO `item_mods` VALUES(21195, 30, 126); --
 -- INSERT INTO `item_mods` VALUES(21195, ???, 60); -- Avatar: "Magic Atk. Bonus"+60
 INSERT INTO `item_mods` VALUES(21208, 12, 6); --
 INSERT INTO `item_mods` VALUES(21208, 13, 6); --
-INSERT INTO `item_mods` VALUES(21208, 28, 105); -- Should be 40   see below
+INSERT INTO `item_mods` VALUES(21208, 28, 73); -- Should be 40   see below
 -- INSERT INTO `item_mods` VALUES(21208, ???, 65); -- Magic Damage + 65  unknown
 INSERT INTO `item_mods` VALUES(21208, 91, 54); --
 INSERT INTO `item_mods` VALUES(21208, 110, 54); --
@@ -21167,11 +21167,11 @@ INSERT INTO `item_mods` VALUES(21364, 5, 35); --
 INSERT INTO `item_mods` VALUES(21364, 30, 4); --
 INSERT INTO `item_mods` VALUES(21364, 28, 4); --
 INSERT INTO `item_mods` VALUES(21364, 27, -2); --
-INSERT INTO `item_mods` VALUES(21382, 28, 13); -- Should be Magic Damage +13  added MAB
+INSERT INTO `item_mods` VALUES(21382, 28, 6); -- Should be Magic Damage +13  added MAB
 INSERT INTO `item_mods` VALUES(21385, 2, 20); --
 INSERT INTO `item_mods` VALUES(21385, 8, 5); --
 INSERT INTO `item_mods` VALUES(21385, 27, 2); --
-INSERT INTO `item_mods` VALUES(21424, 28, 10); -- Should be Magic Damage +10  added MAB
+INSERT INTO `item_mods` VALUES(21424, 28, 5); -- Should be Magic Damage +10  added MAB
 INSERT INTO `item_mods` VALUES(21428, 2, 50); --
 INSERT INTO `item_mods` VALUES(21428, 25, 10); --
 INSERT INTO `item_mods` VALUES(21428, 23, 10); --
