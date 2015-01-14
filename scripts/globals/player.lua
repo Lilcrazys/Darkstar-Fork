@@ -345,7 +345,9 @@ function CharCreate(player)
 
 	----- Start of custom stuffs for new players -----
 
-	player:addLSpearl("LegionFFXI"); -- Give an LS pearl to all new players
+	if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
+		player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
+	end
 
 	----- End of custom stuffs for new players -----
 end;
