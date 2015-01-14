@@ -2,7 +2,6 @@
 -- func: @message2server <MSG_TEXT> <optional MSG_TYPE>
 -- auth: TeoTwawki
 -- desc: Spoofs a chat message to the entire server. Max 20 words.
---       Will default to a normal system message if no MSG_TYPE is specified.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
@@ -12,25 +11,25 @@ cmdprops =
 };
 
 function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t)
-	if (MSG_TYPE == nil) then
-		player:PrintToPlayer("Gotta use a message type value before the text!");
-		player:SpoofChatPlayer("SAY = 0", 0, nil );
-		player:SpoofChatPlayer("SHOUT = 1", 1, nil );
-		player:SpoofChatPlayer("TELL = 2", 2, nil );
-		player:SpoofChatPlayer("PARTY = 4", 4, nil );
+	if (MSG_TYPE == nil or tonumber(MSG_TYPE) == nil) then
+		player:PrintToPlayer("Didn't see a valid MSG_TYP, so printing available types at you!");
+		player:SpoofChatPlayer("Say = 0", 0, nil );
+		player:SpoofChatPlayer("Shout = 1", 1, nil );
+		player:SpoofChatPlayer("Tell = 2", 2, nil );
+		player:SpoofChatPlayer("Party = 4", 4, nil );
 		player:SpoofChatPlayer("1st LS = 5", 5, nil );
-		player:SpoofChatPlayer("SYSTEM message = 6 or 7", 6, nil );
+		player:SpoofChatPlayer("System message = 6 or 7", 6, nil );
 		player:SpoofChatPlayer("Emote = 8", 8, nil );
-		player:SpoofChatPlayer("SAY with no name = 13", 13, nil );
-		player:SpoofChatPlayer("SHOUT with no name = 14", 14, nil );
-		player:SpoofChatPlayer("PARTY with no name = 15", 15, nil );
+		player:SpoofChatPlayer("Say with no name = 13", 13, nil );
+		player:SpoofChatPlayer("Shout with no name = 14", 14, nil );
+		player:SpoofChatPlayer("Party with no name = 15", 15, nil );
 		player:SpoofChatPlayer("1st LS with no name = 16", 16, nil );
 		player:SpoofChatPlayer("Echo = 17", 17, nil );
 		player:SpoofChatPlayer("Echo = 20", 20, nil );
-		player:SpoofChatPlayer("YELL = 26", 26, nil );
+		player:SpoofChatPlayer("Yell = 26", 26, nil );
 		player:SpoofChatPlayer("2nd LS = 27", 27, nil );
 		player:SpoofChatPlayer("2nd LS with no name = 28", 28, nil );
-		player:SpoofChatPlayer("UNITY = 33", 33, nil );
+		player:SpoofChatPlayer("Unity = 33", 33, nil );
 	else
 		if (t == nil) then t = ""; end		if (s == nil) then s = ""; end
 		if (r == nil) then r = ""; end		if (q == nil) then q = ""; end

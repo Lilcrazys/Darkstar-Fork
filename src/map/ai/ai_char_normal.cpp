@@ -2954,7 +2954,7 @@ void CAICharNormal::ActionRaiseMenuSelection()
     //add weakness effect (75% reduction in HP/MP)
     if (!m_PChar->getMijinGakure())
     {
-	    CStatusEffect* PWeaknessEffect = new CStatusEffect(EFFECT_WEAKNESS,EFFECT_WEAKNESS,weaknessLvl,0,300);
+	    CStatusEffect* PWeaknessEffect = new CStatusEffect(EFFECT_WEAKNESS,EFFECT_WEAKNESS,weaknessLvl,0,150);
 		m_PChar->StatusEffectContainer->AddStatusEffect(PWeaknessEffect);
     }
 
