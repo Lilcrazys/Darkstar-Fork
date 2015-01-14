@@ -174,39 +174,35 @@ inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
     if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
     {
         CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
-        uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, 515, 1);
-        CItem* PItem = PChar->getStorage(LOC_INVENTORY)->GetItem(invSlotID);
 
-        if (PItem != NULL)
+        std::string qStr = ("UPDATE char_inventory SET signature='");
+        qStr += linkshellName;
+        qStr += "' WHERE charid = " + std::to_string(PChar->id);
+        qStr += " AND itemId = 515 AND signature = ''";
+        Sql_Query(SqlHandle, qStr.c_str());
+
+        Query = "SELECT linkshellid,color FROM linkshells WHERE name='%s'";
+        ret = Sql_Query(SqlHandle, Query, linkshellName);
+        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
         {
-            std::string qStr = ("UPDATE char_inventory SET signature='");
-            qStr += linkshellName;
-            qStr += "' WHERE charid = " + std::to_string(PChar->id);
-            qStr += " AND itemId = 515 AND signature = ''";
-            Sql_Query(SqlHandle, qStr.c_str());
+            CItem* PItem = itemutils::GetItem(515);
 
-            Query = "SELECT linkshellid,color FROM linkshells WHERE name='%s'";
-            ret = Sql_Query(SqlHandle, Query, linkshellName);
-            if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+            // Update item with name & color //
+            int8 EncodedString[16];
+            EncodeStringLinkshell((int8*)linkshellName, EncodedString);
+            PItem->setSignature(EncodedString);
+            ((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
+            ((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
+            uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem);
+
+            // auto-equip it //
+            /* if (invSlotID != ERROR_SLOTID)
             {
-                CItemLinkshell* PLinkshell = NULL;
-
-                // Update item with name & color //
-                int8 EncodedString[16];
-                EncodeStringLinkshell((int8*)linkshellName, EncodedString);
-                PItem->setSignature(EncodedString);
-                ((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
-                ((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
-            /*
-                // auto-equip it //
                 PItem->setSubType(ITEM_LOCKED);
                 PChar->equip[SLOT_LINK] = invSlotID;
                 PChar->equipLoc[SLOT_LINK] = LOC_INVENTORY;
-                PLinkshell = (CItemLinkshell*)PItem;
-                if (PLinkshell)
-                    linkshell::AddOnlineMember(PChar, PLinkshell);
-            */
-            }
+                linkshell::AddOnlineMember(PChar, (CItemLinkshell*)PItem);
+            } */
         }
     }
 
