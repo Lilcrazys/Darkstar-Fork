@@ -29,7 +29,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     local targetcurrentHP = target:getHP();
     local targetmaxHP = target:getMaxHP(); 
-    local hpset=targetmaxHP*0.05;
+    local hpset=targetmaxHP*0.50;
    	local typeEffect = EFFECT_BIND;
    	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
 	
