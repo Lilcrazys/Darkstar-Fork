@@ -8,6 +8,11 @@
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
 
+INSERT INTO `item_mods` VALUES(10409, 1, 30);
+INSERT INTO `item_mods` VALUES(10409, 13, 10);
+INSERT INTO `item_mods` VALUES(10409, 112, 10);
+INSERT INTO `item_mods` VALUES(10409, 27, -5);
+
 INSERT INTO `item_mods` VALUES(10523, 1, 31);
 INSERT INTO `item_mods` VALUES(10523, 8, 9);
 INSERT INTO `item_mods` VALUES(10523, 10, 9);
