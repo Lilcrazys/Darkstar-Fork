@@ -21308,7 +21308,7 @@ INSERT INTO `item_mods` VALUES(27788, 3, 5); --
 INSERT INTO `item_mods` VALUES(27788, 6, 5); --
 INSERT INTO `item_mods` VALUES(27788, 8, 16); --
 INSERT INTO `item_mods` VALUES(27788, 10, 16); --
-INSERT INTO `item_mods` VALUES(27788, 62, 60); --
+INSERT INTO `item_mods` VALUES(27788, 62, 6); --
 INSERT INTO `item_mods` VALUES(27788, 370, 2); --
 INSERT INTO `item_mods` VALUES(27788, 369, 2); --
 INSERT INTO `item_mods` VALUES(27788, 288, 1); --
