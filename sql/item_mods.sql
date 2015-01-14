@@ -20177,7 +20177,7 @@ INSERT INTO `item_mods` VALUES(19160, 431, 1); -- Additional Effect: TP Drain
 -- -------------------------------------------------------
 -- Nightfall
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES(19163, 368, 10); -- Regain
+INSERT INTO `item_mods` VALUES(19163, 368, 100); -- Regain
 
 
 INSERT INTO `item_mods` VALUES(19169, 2, 20); --
