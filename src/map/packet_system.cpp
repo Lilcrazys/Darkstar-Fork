@@ -238,7 +238,8 @@ void SmallPacket0x00A(map_session_data_t* session, CCharEntity* PChar, int8* dat
             PChar->loc.destination = destination = ZONE_RESIDENTIAL_AREA;
         }
 
-        if (destination == ZONE_RESIDENTIAL_AREA && PChar->m_moghouseID == 0)
+        if (destination == ZONE_DEMONSTRATION_AREA ||
+            destination == ZONE_RESIDENTIAL_AREA && PChar->m_moghouseID == 0)
         {
             PChar->m_moghouseID = PChar->id;
             destination = PChar->loc.prevzone;
@@ -291,7 +292,7 @@ void SmallPacket0x00A(map_session_data_t* session, CCharEntity* PChar, int8* dat
             ShowWarning(CL_YELLOW"Client cannot receive packet or key is invalid: %s\n" CL_RESET, PChar->GetName());
         }
     }
-    if (PChar->loc.prevzone == 0 && PChar->GetPlayTime(false) > 0)
+    if ((PChar->loc.prevzone == 214 || PChar->loc.prevzone == 0) && PChar->GetPlayTime(false) > 0)
     {
         PChar->loc.prevzone = PChar->getZone();
     }
@@ -2551,7 +2552,7 @@ void SmallPacket0x05E(map_session_data_t* session, CCharEntity* PChar, int8* dat
             uint16 prevzone = PChar->loc.prevzone;
 
             // If zero, return to previous zone.. otherwise, determine the zone..
-            if (zone != 0)
+            if (zone != 214 || zone != 0)
             {
                 switch (town)
                 {
