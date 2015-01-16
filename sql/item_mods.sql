@@ -16589,7 +16589,7 @@ INSERT INTO `item_mods` VALUES(11926, 416, 25); -- Custom
 INSERT INTO `item_mods` VALUES(16199, 1, 40); --
 INSERT INTO `item_mods` VALUES(16199, 10, 25); -- 
 INSERT INTO `item_mods` VALUES(16199, 416, 25); -- Custom
-
+INSERT INTO `item_mods` VALUES(16199, 109, 106); 
 
 -- ------------------------------------------
 -- Genesis Shield
@@ -21971,6 +21971,7 @@ INSERT INTO `item_mods` VALUES(16196, 385, 220);
 INSERT INTO `item_mods` VALUES(16197, 385, 230);
 INSERT INTO `item_mods` VALUES(16198, 385, 240);
 INSERT INTO `item_mods` VALUES(16200, 385, 250);
+INSERT INTO `item_mods` VALUES(16200, 109, 106); 
 INSERT INTO `item_mods` VALUES(11927, 385, 250);
 INSERT INTO `item_mods` VALUES(10663, 1, 33);
 INSERT INTO `item_mods` VALUES(10663, 2, 22);
