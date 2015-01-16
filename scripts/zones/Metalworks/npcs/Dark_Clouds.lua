@@ -30,7 +30,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	-- player:SpoofChatPlayer( "Grumbles to himself.", MESSAGE_EMOTION, npc:getID() );
+	-- player:SpoofChatPlayer( "Grumbles to himself.", MESSAGE_ECHO, npc:getID() );
 	-- player:SpoofChatPlayer( "Oh Hey there, so the boss told me to help you guy's out.", MESSAGE_SAY, npc:getID() );
 	-- player:SpoofChatPlayer( "He told me that I have to make our adventures happy, pshhh.", MESSAGE_SAY, npc:getID() );
 	-- player:SpoofChatPlayer( "Anyway trade me an item of armour or a weapon and I'll see if I can improve it for you.", MESSAGE_SAY, npc:getID() );

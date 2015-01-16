@@ -55,9 +55,10 @@ end;
 -- TARGETABLE       = 0x00080000
 -- ??               = 0x00100000
 -- ??               = 0x00200000    Self visible only - Trial Account
--- ??               = 0x00400000    Self visible only - Causes POL_ICON With tinted name when combined with another TEMP
+-- ??               = 0x00400000    Self visible only - Causes POL_ICON With tinted name when combined with 0x00200000 / 0x01000000 / 0x02000000
+--                    0x00500000
 -- GM               = 0x00800000    Self visible only - Mutually exclusive with 0x04000000
--- FLAG_RSTRICTED   = 0x01000000    Trial Account
+-- FLAG_RESTRICTED  = 0x01000000    Trial Account
 -- ??               = 0x02000000    Causes POL_ICON With tinted name when combined with 0x00200000 / 0x00400000 / 0x01000000
 -- GM               = 0x04000000    Mutually exclusive with 0x00800000
 -- FLAG_GM_SENIOR   = 0x05000000

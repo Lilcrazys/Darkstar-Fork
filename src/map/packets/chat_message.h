@@ -50,7 +50,7 @@ enum CHAT_MESSAGE_TYPE
     // MESSAGE_UNKNOWN     = 0x11, // Echo
     // MESSAGE_UNKNOWN     = 0x12, // Echo
     // MESSAGE_UNKNOWN     = 0x13, // Echo
-    // MESSAGE_UNKNOWN     = 0x14, // Echo
+    MESSAGE_ECHO        = 0x14, // Echo
     // MESSAGE_UNKNOWN     = 0x15, // Echo
     // MESSAGE_UNKNOWN     = 0x16, // Echo
     // MESSAGE_UNKNOWN     = 0x17, // Echo

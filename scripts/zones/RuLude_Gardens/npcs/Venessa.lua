@@ -15,7 +15,7 @@ require("scripts/globals/spoofchat");
 -- onTrade Text
 -----------------------------------
 function textRelic1(player,npc,trade)
-	player:SpoofChatPlayer( ": ........FFXILegion Custom Trials!........", MESSAGE_EMOTION, npc:getID() );
+	player:SpoofChatPlayer( ": ........FFXILegion Custom Trials!........", MESSAGE_ECHO, npc:getID() );
 end;
 
 function textRelic2(player,npc,trade)
@@ -47,7 +47,7 @@ function onTrade(player,npc,trade)
 	-----------------------
 	if (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
 		player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested, Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
-		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
+		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_ECHO, npc:getID() );
 		GetNPCByID(17772760):setPos(5,0,-86,166);
 		GetNPCByID(17772760):showNPC(100);
 		GetNPCByID(17772760):setStatus(STATUS_NORMAL);
@@ -56,7 +56,7 @@ function onTrade(player,npc,trade)
 	if (player:getVar("customtrial") >= 1 and trade:hasItemQty(3925,50) == false and trade:hasItemQty(2184,1) == false) then
 		player:SpoofChatPlayer( "Sorry you already have a trial active", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( "If you wish to cancel the current trial, please trade me a small fee of,", MESSAGE_SAY, npc:getID() );
-		player:SpoofChatPlayer( ": 1x imperial bronze piece.", MESSAGE_EMOTION, npc:getID() );
+		player:SpoofChatPlayer( ": 1x imperial bronze piece.", MESSAGE_ECHO, npc:getID() );
 	end
 	if (trade:hasItemQty(2184,1) and trade:getItemCount() == 1 and player:getVar("customtrial") >= 1) then
 		player:setVar("customtrial",0);
@@ -93,7 +93,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Amanomurakumo [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Amanomurakumo [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",1);
 			player:tradeComplete();
@@ -107,7 +107,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Amanomurakumo [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Amanomurakumo [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",17);
 			player:tradeComplete();
@@ -121,7 +121,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Amanomurakumo [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Amanomurakumo [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",33);
 			player:tradeComplete();
@@ -135,7 +135,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Amanomurakumo [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Amanomurakumo [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",49);
 			player:tradeComplete();
@@ -152,7 +152,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aegis [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Aegis [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",2);
 			player:tradeComplete();
@@ -166,7 +166,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aegis [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Aegis [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",18);
 			player:tradeComplete();
@@ -180,7 +180,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aegis [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Aegis [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",34);
 			player:tradeComplete();
@@ -194,7 +194,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aegis [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Aegis [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",50);
 			player:tradeComplete();
@@ -211,7 +211,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Annihilator [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Annihilator [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",3);
 			player:tradeComplete();
@@ -225,7 +225,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Annihilator [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Annihilator [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",19);
 			player:tradeComplete();
@@ -239,7 +239,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Annihilator [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Annihilator [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",35);
 			player:tradeComplete();
@@ -253,7 +253,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Annihilator [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Annihilator [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",51);
 			player:tradeComplete();
@@ -270,7 +270,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Apocalypse [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Apocalypse [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",4);
 			player:tradeComplete();
@@ -284,7 +284,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Apocalypse [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Apocalypse [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",20);
 			player:tradeComplete();
@@ -298,7 +298,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Apocalypse [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Apocalypse [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",36);
 			player:tradeComplete();
@@ -312,7 +312,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Apocalypse [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Apocalypse [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",52);
 			player:tradeComplete();
@@ -329,7 +329,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Bravura [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Bravura [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",5);
 			player:tradeComplete();
@@ -343,7 +343,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Bravura [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Bravura [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",21);
 			player:tradeComplete();
@@ -357,7 +357,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Bravura [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Bravura [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",37);
 			player:tradeComplete();
@@ -371,7 +371,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Bravura [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Bravura [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",53);
 			player:tradeComplete();
@@ -388,7 +388,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Claustrum [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Claustrum [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",6);
 			player:tradeComplete();
@@ -402,7 +402,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Claustrum [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Claustrum [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",22);
 			player:tradeComplete();
@@ -416,7 +416,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Claustrum [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Claustrum [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",38);
 			player:tradeComplete();
@@ -430,7 +430,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Claustrum [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Claustrum [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",54);
 			player:tradeComplete();
@@ -447,7 +447,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Excalibur [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Excalibur [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",7);
 			player:tradeComplete();
@@ -461,7 +461,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Excalibur [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Excalibur [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",23);
 			player:tradeComplete();
@@ -475,7 +475,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Excalibur [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Excalibur [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",39);
 			player:tradeComplete();
@@ -489,7 +489,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Excalibur [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Excalibur [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",55);
 			player:tradeComplete();
@@ -506,7 +506,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gjallarhorn [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gjallarhorn [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",8);
 			player:tradeComplete();
@@ -520,7 +520,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gjallarhorn [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gjallarhorn [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",24);
 			player:tradeComplete();
@@ -534,7 +534,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gjallarhorn [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gjallarhorn [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",40);
 			player:tradeComplete();
@@ -548,7 +548,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gjallarhorn [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gjallarhorn [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",57);
 			player:tradeComplete();
@@ -565,7 +565,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gungnir [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gungnir [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",9);
 			player:tradeComplete();
@@ -579,7 +579,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gungnir [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gungnir [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",25);
 			player:tradeComplete();
@@ -593,7 +593,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gungnir [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gungnir [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",41);
 			player:tradeComplete();
@@ -607,7 +607,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gungnir [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Gungnir [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",58);
 			player:tradeComplete();
@@ -624,7 +624,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Guttler [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Guttler [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",10);
 			player:tradeComplete();
@@ -638,7 +638,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Guttler [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Guttler [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",25);
 			player:tradeComplete();
@@ -652,7 +652,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Guttler [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Guttler [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",42);
 			player:tradeComplete();
@@ -666,7 +666,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Guttler [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Guttler [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",59);
 			player:tradeComplete();
@@ -683,7 +683,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kikoku [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Kikoku [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",11);
 			player:tradeComplete();
@@ -697,7 +697,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kikoku [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Kikoku [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",26);
 			player:tradeComplete();
@@ -711,7 +711,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kikoku [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Kikoku [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",43);
 			player:tradeComplete();
@@ -725,7 +725,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kikoku [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Kikoku [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",60);
 			player:tradeComplete();
@@ -742,7 +742,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mandau [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mandau [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",12);
 			player:tradeComplete();
@@ -756,7 +756,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mandau [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mandau [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",27);
 			player:tradeComplete();
@@ -770,7 +770,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mandau [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mandau [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",44);
 			player:tradeComplete();
@@ -784,7 +784,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mandau [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mandau [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",61);
 			player:tradeComplete();
@@ -801,7 +801,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mjollnir [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mjollnir [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",13);
 			player:tradeComplete();
@@ -815,7 +815,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mjollnir [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mjollnir [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",28);
 			player:tradeComplete();
@@ -829,7 +829,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mjollnir [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mjollnir [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",45);
 			player:tradeComplete();
@@ -843,7 +843,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Mjollnir [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Mjollnir [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",62);
 			player:tradeComplete();
@@ -860,7 +860,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ragnarok [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Ragnarok [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",14);
 			player:tradeComplete();
@@ -874,7 +874,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ragnarok [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Ragnarok [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",29);
 			player:tradeComplete();
@@ -888,7 +888,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ragnarok [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Ragnarok [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",46);
 			player:tradeComplete();
@@ -902,7 +902,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ragnarok [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Ragnarok [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",63);
 			player:tradeComplete();
@@ -919,7 +919,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Spharai [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Spharai [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",15);
 			player:tradeComplete();
@@ -933,7 +933,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Spharai [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Spharai [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",30);
 			player:tradeComplete();
@@ -947,7 +947,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Spharai [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Spharai [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",47);
 			player:tradeComplete();
@@ -961,7 +961,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Spharai [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Spharai [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",64);
 			player:tradeComplete();
@@ -978,7 +978,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Yoichinoyumi [75-85]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Yoichinoyumi [75-85]'", MESSAGE_ECHO, npc:getID() );
 			textRelic2(player,npc,trade);
 			player:setVar("customtrial",16);
 			player:tradeComplete();
@@ -992,7 +992,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Yoichinoyumi [85-95]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Yoichinoyumi [85-95]'", MESSAGE_ECHO, npc:getID() );
 			textRelic3(player,npc,trade);
 			player:setVar("customtrial",31);
 			player:tradeComplete();
@@ -1006,7 +1006,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Yoichinoyumi [95-99]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Yoichinoyumi [95-99]'", MESSAGE_ECHO, npc:getID() );
 			textRelic4(player,npc,trade);
 			player:setVar("customtrial",48);
 			player:tradeComplete();
@@ -1020,7 +1020,7 @@ function onTrade(player,npc,trade)
 			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
 		else
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Yoichinoyumi [(99-1)-(99-4)]'", MESSAGE_EMOTION, npc:getID() );
+			player:SpoofChatPlayer( ": 'Yoichinoyumi [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("customtrial",65);
 			player:tradeComplete();

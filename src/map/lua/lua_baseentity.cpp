@@ -8891,12 +8891,12 @@ inline int32 CLuaBaseEntity::SpoofChatPlayer(lua_State* L)
     if (Object != NULL)
     {
         int8* ObjectName = (int8*)Object->GetObjectName();
-        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_EMOTION);
+        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
         ((CCharEntity*)m_PBaseEntity)->pushPacket(new CSpoofMessagePacket((CCharEntity*)m_PBaseEntity, ObjectName, messageType, (char*)lua_tostring(L, 1)));
     }
     else
     {
-        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_EMOTION);
+        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
         ((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
     }
 

@@ -1468,6 +1468,20 @@ INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 365, 1, 255); -- Breakga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 366, 1, 255); -- Graviga
 
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 106, 1, 255); -- Phalanx
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 112, 1, 255); -- Flash
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 177, 1, 255); -- Firaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 182, 1, 255); -- Blizzaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 275, 1, 255); -- Absorb-TP
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 245, 1, 255); -- Drain
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 247, 1, 255); -- Aspir
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 311, 1, 255); -- Endark
+INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 502, 1, 255); -- Kaustra
+
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 5, 1, 255); -- Cure 5
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 14, 1, 255); -- Poisona
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 15, 1, 255); -- Paralyna
