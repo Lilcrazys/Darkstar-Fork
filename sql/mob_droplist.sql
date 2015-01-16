@@ -32593,7 +32593,7 @@ INSERT INTO `mob_droplist` VALUES (9006,0,3925,200);
 
 -- INSERT INTO `mob_droplist` VALUES (9089,0,27779,67);
 -- INSERT INTO `mob_droplist` VALUES (9089,0,28062,66);
--- INSERT INTO `mob_droplist` VALUES (9089,0,28679,69);
+-- INSERT INTO `mob_droplist` VALUES (9089,0,28579,69);
 
 -- INSERT INTO `mob_droplist` VALUES (9091,0,27780,67);
 -- INSERT INTO `mob_droplist` VALUES (9091,0,28343,65);
