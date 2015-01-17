@@ -32586,7 +32586,18 @@ INSERT INTO `mob_droplist` VALUES (9006,0,3925,600);
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,400);
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,200);
 
+-- INSERT INTO `mob_droplist` VALUES (9085,0,27781,66);
+-- INSERT INTO `mob_droplist` VALUES (9085,0,28201,63);
+-- INSERT INTO `mob_droplist` VALUES (9085,0,10597,72):
+-- INSERT INTO `mob_droplist` VALUES (9085,0,28463,70);
 
+-- INSERT INTO `mob_droplist` VALUES (9089,0,27779,67);
+-- INSERT INTO `mob_droplist` VALUES (9089,0,28062,66);
+-- INSERT INTO `mob_droplist` VALUES (9089,0,28579,69);
+
+-- INSERT INTO `mob_droplist` VALUES (9091,0,27780,67);
+-- INSERT INTO `mob_droplist` VALUES (9091,0,28343,65);
+-- INSERT INTO `mob_droplist` VALUES (9091,0,28401,69);
 
 
 

@@ -24,6 +24,9 @@ end;
 
 function onMobSpawn(mob)
 	mob:addMod(MOD_REGAIN,33);
+	mob:addMod(MOD_ACC,100);	
+	mob:addMod(MOD_ATT,150);		
+	mob:addMod(MOD_EVA,-150);	
 	mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;	
 	
@@ -40,7 +43,7 @@ end;
 function onMobFight(mob,target)
     local MobHP = mob:getHPP();
 	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
+		mob:addStatusEffect(EFFECT_HASTE,1,0,60);
 	end
 end
 

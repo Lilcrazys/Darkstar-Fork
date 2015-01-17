@@ -16,7 +16,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_PARALYSIS;
+    local typeEffect = EFFECT_WEAKNESS;
     MobStatusEffectMove(mob, target, typeEffect, 30, 0, 90);
 
     local dmgmod = MobBreathMove(mob, target, 0.2, 1.875, ELE_ICE, 800);
