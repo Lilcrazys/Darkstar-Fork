@@ -4674,6 +4674,19 @@ INSERT INTO `mob_skill` VALUES (475,6666,18,'Slendy_Mijin_Gakure', 1, 20.0, 2000
 -- 239??
 -- 249 thrown thingy
 
+-- Mars
+INSERT INTO `mob_skill` VALUES (253,7600,252,'Aegis_Schism', 0, 7.0, 2000, 0, 4, 1, 0, 0);
+INSERT INTO `mob_skill` VALUES (567,7600,495,'Fire_Blade',0,7,2000,0,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (568,7600,496,'Frost_Blade',0,7,2000,0,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (569,7600,497,'Wind_Blade2',0,7,2000,0,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (570,7600,498,'Earth_Blade',0,7,2000,0,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (571,7600,499,'Lightning_Blade',0,7,2000,0,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (572,7600,500,'Water_Blade',0,7,2000,0,1,0, 0, 0);
+INSERT INTO `mob_skill` VALUES (573,7600,501,'Great_Wheel', 1,7.0, 1200, 900, 4, 0, 0, 0);
+-- INSERT INTO `mob_skill` VALUES (700,7600,432,'Mars_Buff', 0, 18.0, 2000, 0, 1, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (432,7600,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (439,7600,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+
 -- Minerva
 -- 1849 Fight anim / 1861 alt
 INSERT INTO `mob_skill` VALUES (574,7777,244,'Minerva_Light_Blade', 0, 30.0, 2000, 1500, 4, 0, 0, 0); -- Restores EnLight
@@ -4691,6 +4704,7 @@ INSERT INTO `mob_skill` VALUES (2114,7777,1465,'Minerva_Grace_of_Hera',0,7.0,200
 INSERT INTO `mob_skill` VALUES (2434,7777,1856,'Dark_Moon',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2435,7777,1857,'Dark_Sun',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2586,7777,1015,'Minerva_Phason_Beam',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (700,7777,432,'Minerva_Buff', 0, 18.0, 2000, 0, 1, 0, 0, 0);
 INSERT INTO `mob_skill` VALUES (435,7777,432,'Manafont', 0, 7.0, 2000, 0, 1, 2, 0, 0); -- sub Minerva_Grace_of_Hera when not at correct hp%
 INSERT INTO `mob_skill` VALUES (436,7777,1091,'Chainspell', 0, 7.0, 2000, 0, 1, 2, 0, 0); -- sub Minerva_Medusa_Javelin when not at correct hp%
 INSERT INTO `mob_skill` VALUES (438,7777,432,'Invincible', 0, 7.0, 2000, 0, 1, 2, 0, 0); -- sub Minerva_Wrath_of_zeus when not at correct hp%

@@ -673,6 +673,7 @@ INSERT INTO `mob_family_system` VALUES (987,'Bismark',2,'Aquan',4,40,120,140,6,5
 
 
 INSERT INTO `mob_family_system` VALUES (6666,'SlenderMan',13,'Humanoid',1,48,110,80,3,2,3,1,1,4,5,4,4,2,2,0.9,0.8,0.66,0.66,1,0.75,0.75,0.5,0.75,1,1.85,0.1,8);
+INSERT INTO `mob_family_system` VALUES (7600,'Mars',18,'Unclassified',0,50,125,111,1,2,2,2,3,3,3,1,2,1,2,1,1,1,1,1,1,1,1,1,1,0.5,0.5,0);
 INSERT INTO `mob_family_system` VALUES (7777,'Minerva',18,'Unclassified',2,36,140,140,4,2,3,2,1,2,2,5,2,2,2,1,1.15,0.9,0.9,0.75,1,0.85,1.25,1,0.66,0.5,1.25,0);
 
 

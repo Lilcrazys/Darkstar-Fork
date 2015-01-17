@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Provenance
 --  HNM: Minerva
--- Provenance Boss
+-- Provenance Secret Bonus Boss
 -----------------------------------
 
 require("scripts/globals/status");
@@ -25,7 +25,7 @@ end
 function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 20);
     mob:setMod(MOD_REFRESH, 20);
-    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_FASTCAST, 80);
     mob:addMod(MOD_MATT, 33);
     mob:addMod(MOD_MACC, 100);
@@ -52,7 +52,7 @@ function onMobFight(mob, target)
     --[[
     if (mob:getHPP() < 11) then
         local TABULA_RASA = 0;
-        if (mob:fetLocalVar("Minerva_Used_Tabula_Rasa") ~= nil) then
+        if (mob:setLocalVar("Minerva_Used_Tabula_Rasa") ~= nil) then
             TABULA_RASA = mob:getLocalVar("Minerva_Used_Tabula_Rasa");
         end
         if (TABULA_RASA == 0) then
@@ -204,7 +204,7 @@ function onSpikesDamage(mob,target,damage)
         IntMndBonus = IntMndBonus * 0.2;
         -- target:PrintToPlayer( string.format( "Spikes int+mnd bonus: '%u' ", IntMndBonus) );
         dmg = dmg + IntMndBonus;
-        dmg = dmg -10; -- Minerva's Light Spieks don't hit as hard as her Shock Spikes
+        dmg = dmg -10; -- Minerva's Light Spikes don't hit as hard as her Shock Spikes
         -- target:PrintToPlayer( string.format( "Spikes Dmg before clamp: '%u' ", dmg ) );
         dmg = utils.clamp(dmg, 20, 40);
         if (math.random(0,99) >= 66) then

@@ -32,15 +32,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REFRESH, 3);
     mob:setMod(MOD_REGAIN, 20);
-    mob:setMod(MOD_FASTCAST, 80);
-    mob:addMod(MOD_HUMANOID_KILLER, 15);
+    mob:setMod(MOD_UFASTCAST, 80);
+    mob:addMod(MOD_HUMANOID_KILLER, 11);
     mob:addMod(MOD_MATT, 20);
     mob:addMod(MOD_MACC, 100);
     mob:addMod(MOD_INT, 20);
 end;
 
 -----------------------------------
--- onMobSpawn Action
+-- onMobEngaged Action
 -----------------------------------
 
 function onMobEngaged(mob, target)
@@ -48,7 +48,7 @@ function onMobEngaged(mob, target)
 end;
 
 -----------------------------------
--- onMobSpawn Action
+-- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
@@ -72,7 +72,9 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if (math.random(0,99) >= 33) then
+    local RAND = math.random(0,99);
+    target:PrintToPlayer(string.format(" 'u' ", RAND));
+    if (RAND >= 33) then
         return 0,0,0;
     else
         local dmg = damage * 0.34;
@@ -91,7 +93,9 @@ end;
 -----------------------------------
 
 function onSpikesDamage(mob,target,damage)
-    if (math.random(0,99) >= 33) then
+    local RAND = math.random(0,99);
+    target:PrintToPlayer(string.format(" 'u' ", RAND));
+    if (RAND >= 33) then
         return 0,0,0;
     else
         local duration = 5;
