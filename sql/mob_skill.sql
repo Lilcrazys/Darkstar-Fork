@@ -4682,7 +4682,7 @@ INSERT INTO `mob_skill` VALUES (569,7600,497,'Wind_Blade2',0,7,2000,0,1,0, 0, 0)
 INSERT INTO `mob_skill` VALUES (570,7600,498,'Earth_Blade',0,7,2000,0,1,0, 0, 0);
 INSERT INTO `mob_skill` VALUES (571,7600,499,'Lightning_Blade',0,7,2000,0,1,0, 0, 0);
 INSERT INTO `mob_skill` VALUES (572,7600,500,'Water_Blade',0,7,2000,0,1,0, 0, 0);
-INSERT INTO `mob_skill` VALUES (573,7600,501,'Great_Wheel', 1,7.0, 1200, 900, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (573,7600,501,'Mars_Great_Wheel', 1,7.0, 1200, 900, 4, 0, 0, 0);
 -- INSERT INTO `mob_skill` VALUES (700,7600,432,'Mars_Buff', 0, 18.0, 2000, 0, 1, 0, 0, 0);
 INSERT INTO `mob_skill` VALUES (432,7600,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 INSERT INTO `mob_skill` VALUES (439,7600,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);

@@ -1479,7 +1479,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 202, 1, 255); -- Waterga 4
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 275, 1, 255); -- Absorb-TP
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 247, 1, 255); -- Aspir
-INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 311, 1, 255); -- Endark
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 502, 1, 255); -- Kaustra
 
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 5, 1, 255); -- Cure 5
