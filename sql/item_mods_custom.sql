@@ -106,6 +106,8 @@ INSERT INTO `item_mods` VALUES(10911, 12, 12);
 INSERT INTO `item_mods` VALUES(10911, 28, 5);
 INSERT INTO `item_mods` VALUES(10911, 170, 10);
 
+INSERT INTO `item_mods` VALUES(11037, 57, 10);
+
 INSERT INTO `item_mods` VALUES(11580, 2, 12);
 INSERT INTO `item_mods` VALUES(11580, 27, -2);
 
