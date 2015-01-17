@@ -40,7 +40,7 @@ end;
 function onMobFight(mob,target)
     local MobHP = mob:getHPP();
 	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
+		mob:addStatusEffect(EFFECT_HASTE,1,0,60);
 	end
 end
 
