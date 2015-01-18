@@ -39,8 +39,8 @@ function onMobWeaponSkill(target, mob, skill)
    	local typeEffect = EFFECT_BIND;
    	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
 	
-      if(targetcurrentHP > hpset)then     
-        dmg= targetcurrentHP - hpset;
+      if(HP > 1)then     
+        dmg= hpset;
       else
         dmg=0;
 	  end
