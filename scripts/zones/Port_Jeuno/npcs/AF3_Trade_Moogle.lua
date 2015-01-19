@@ -1171,7 +1171,7 @@ function onTrade(player,npc,trade)
 		player:tradeComplete();
 	end
 ----------------------------Mardukes-------------------------------------
-	if (trade:hasItemQty(160962,1) and trade:hasItemQty(27661,1) and trade:getItemCount() == 2) then 					--head
+	if (trade:hasItemQty(160962,1) and trade:hasItemQty(27651,1) and trade:getItemCount() == 2) then 					--head
 		player:addItem(27651, 1);
 		player:messageSpecial(ITEM_OBTAINED,27651);
 		player:tradeComplete();
