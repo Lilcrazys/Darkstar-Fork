@@ -3539,6 +3539,7 @@ INSERT INTO `mob_skill` VALUES (2883,457,2263,'Biting_Abrogation',1,18.0,2000,10
 INSERT INTO `mob_skill` VALUES (2884,457,2264,'Permafrost_Requiem',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2885,457,2265,'Glacial_Tomb',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2886,457,2266,'Glassy_Nova',1,26.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (438,457,432,'Invincible', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Colkhab
 -- melee special 2133 / 2134 / 2135(aoe melee attack)
@@ -3558,6 +3559,7 @@ INSERT INTO `mob_skill` VALUES (2767,461,2148,'Tyrannical_Blow',1,18.0,2000,1000
 INSERT INTO `mob_skill` VALUES (2768,461,2149,'Batholithic_Shell',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2769,461,2150,'Pyroclastic_Surge',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2770,461,2151,'Incinerating_Lahar',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,461,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Hurkan
 -- special melee 2214 2215 2216
@@ -3622,6 +3624,7 @@ INSERT INTO `mob_skill` VALUES (2913,489,2324,'Howling_Gust',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2914,489,2325,'Righteous_Rasp',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2915,489,2326,'Starward_Yowl',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2916,489,2327,'Stalking_Prey',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (437,489,432,'Perfect_Dodge', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Ashrakk
 -- melee 2369 2370 2371 2372
