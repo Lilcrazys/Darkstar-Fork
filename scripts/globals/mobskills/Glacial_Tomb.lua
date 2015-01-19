@@ -24,11 +24,11 @@ function onMobWeaponSkill(target, mob, skill)
     skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 30));
 
 
-	local numhits = 3;
+	local numhits = 2;
 	local accmod = 1;
 	local dmgmod = 1.2;
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_WIPE_SHADOWS,info.hitslanded);
 	target:delHP(dmg);
 
 	return dmg;

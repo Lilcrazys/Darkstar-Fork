@@ -3538,7 +3538,7 @@ INSERT INTO `mob_skill` VALUES (2882,457,2262,'Brain_Freeze',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2883,457,2263,'Biting_Abrogation',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2884,457,2264,'Permafrost_Requiem',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2885,457,2265,'Glacial_Tomb',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2886,457,2266,'Glassy_Nova',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2886,457,2266,'Glassy_Nova',1,26.0,2000,1000,4,0,0,0);
 
 -- Colkhab
 -- melee special 2133 / 2134 / 2135(aoe melee attack)
