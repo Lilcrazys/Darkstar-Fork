@@ -13,9 +13,9 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMod(MOD_REGEN, 30);
-	mob:addMod(MOD_MDEF,30);
-	mob:addMod(MOD_ACC,150);
-	mob:addMod(MOD_DOUBLE_ATTACK,10)	
+    mob:addMod(MOD_MDEF,30);
+    mob:addMod(MOD_ACC,150);
+    mob:addMod(MOD_DOUBLE_ATTACK,10)
 end;
 
 -----------------------------------
@@ -23,15 +23,23 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_REGAIN,15);
 end;
------------------------------------
 
+-----------------------------------
 -- onMobEngaged Action
 -----------------------------------
 
 function onMobEngaged(mob, target)
-	mob:setLocalVar("BattleStart", os.time())
+    mob:setLocalVar("BattleStart", os.time())
+end;
+
+-----------------------------------
+-- onMobDisEngage Action
+-----------------------------------
+
+function onMobDisEngage(mob, target)
+    mob:delStatusEffect(EFFECT_RAGE);
 end;
 
 -----------------------------------
@@ -61,13 +69,13 @@ function onMobFight(mob, target)
             mob:setLocalVar("Kamhau_2hr", 1);
         end
     elseif (Kamhau_2hr_Used == 3) then
-            mob:addStatusEffect(EFFECT_HASTE,200,0,200);	
-		end	
-	elseif (os.time() -BattleStart > 3600) then
-            mob:addStatusEffect(EFFECT_RAGE,1,0,300);
-		end
-	end
-end;	
+        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+    elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
+        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        mob:setLocalVar("RAGED", 1);
+    end
+end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

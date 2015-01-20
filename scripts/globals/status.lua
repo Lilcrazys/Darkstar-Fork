@@ -726,6 +726,7 @@ EFFECT_MINERVA_ENLIGHT                 = 897
 EFFECT_MINERVA_SHOCK_SPIKES            = 898
 EFFECT_MINERVA_LIGHT_SPIKES            = 899
 EFFECT_SJCAP_BOOST                     = 900
+EFFECT_RAGE                            = 901 -- NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
 -- Note: ATMA must be applied using addStatusEffectEx()
 -- with the "EFFECT_ATMA" ID of 287 OR YOU WILL CRASH!
 -- EFFECT_ATMA_OF_THE_LION                = 901

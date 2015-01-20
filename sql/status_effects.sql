@@ -651,6 +651,7 @@ INSERT INTO `status_effects` VALUES (897,'minerva_enlight',33,94,51,0,0,0,6);
 INSERT INTO `status_effects` VALUES (898,'minerva_shock_spikes',33,34,0,0,0,0,6);
 INSERT INTO `status_effects` VALUES (899,'minerva_light_spikes',33,34,0,0,0,0,6);
 INSERT INTO `status_effects` VALUES (900,'sjcap_boost',768,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (900,'rage',32,0,0,0,0,0,0);
 -- Note: ATMA must be applied using addStatusEffectEx()
 -- with the "EFFECT_ATMA" ID of 287 OR YOU WILL CRASH!
 -- INSERT INTO `status_effects` VALUES (901,'atma_of_the_lion',256,0,0,0,0,0,0);
