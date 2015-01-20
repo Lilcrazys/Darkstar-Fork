@@ -59,8 +59,8 @@ enum CHAT_MESSAGE_TYPE
     MESSAGE_YELL        = 0x1A,
     MESSAGE_LINKSHELL_2 = 0x1B, // Second LS color...Default is Green
     MESSAGE_SYS_LS_2    = 0x1C, // Same as MESSAGE_LINKSHELL_2 but has but has no speaker object displayed
-    // MESSAGE_LINKSHELL_3 = 0x1E, // 3rd LS?
-    // MESSAGE_SYS_LS_3    = 0x1F, // Echo? / Same as MESSAGE_LINKSHELL_3 but has but has no speaker object displayed?
+    // MESSAGE_LINKSHELL_3 = 0x1E, // Third LS color...Default is same shade of yellow as the echo text default.
+    // MESSAGE_SYS_LS_3    = 0x1F, // Same as MESSAGE_LINKSHELL_3 but has but has no speaker object displayed?
     // MESSAGE_UNKNOWN     = 0x20, // Echo
     MESSAGE_UNITY       = 0x21,
 };
