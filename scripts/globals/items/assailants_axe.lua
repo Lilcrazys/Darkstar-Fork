@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 18488
---	Item: Assailant's Axe
---	Enchantment: Accuracy +3
---      Durration: 30 Mins
+-- ID: 18488
+-- Item: Assailant's Axe
+-- Enchantment: Accuracy +3
+-- Duration: 30 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

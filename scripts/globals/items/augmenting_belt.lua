@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 15889
---	Item: Augmenting Belt
---	Enchantment: HP while healing +2
---	Durration: 30 Mins
+-- ID: 15889
+-- Item: Augmenting Belt
+-- Enchantment: HP while healing +2
+-- Duration: 30 Mins
 -----------------------------------------
 
 -----------------------------------------

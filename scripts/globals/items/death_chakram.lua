@@ -2,7 +2,7 @@
 -- ID: 18231
 -- Item: Death Chakram
 -- Enchantment: MP +5%
--- Durration: 30 Mins
+-- Duration: 30 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

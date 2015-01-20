@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 17032
---	Gobbie Gavel
---	Enchantment: 60Min, Costume - Random Goblin
+-- ID: 17032
+-- Item: Gobbie Gavel
+-- Enchantment: 60Min, Costume - Random Goblin
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -20,5 +20,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_COSTUME,(math.random(484,511)),0,3600);	
+	target:addStatusEffect(EFFECT_COSTUME,(math.random(484,511)),0,3600);
 end;

@@ -2,7 +2,7 @@
 -- ID: 16077
 -- Item: Megrim Crown
 -- Enchantment: ??? Random 
--- Durration: 15 Mins
+-- Duration: 15 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -21,10 +21,10 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	var = math.random(1,8);
-	DEFmod = math.random(5,15)
-	ATKmod = math.random(5,15)
-	ACCmod = math.random(5,15)
+	local var = math.random(1,8);
+	local DEFmod = math.random(5,15)
+	local ATKmod = math.random(5,15)
+	local ACCmod = math.random(5,15)
 	if (var == 1) then
 		if (target:hasStatusEffect(EFFECT_DEFENSE_BOOST) == false) then
 			target:addStatusEffect(EFFECT_DEFEFENSE_BOOST,DEFmod,0,900);

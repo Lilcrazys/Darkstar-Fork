@@ -1,8 +1,8 @@
 -----------------------------------------
 -- ID: 10777
 -- Item: Caloussu Ring
--- Item Effect: Enchantment: DEF +30
--- Durration : 5 Mins
+-- Enchantment: DEF +30
+-- Duration: 5 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

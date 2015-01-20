@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 16273
---	Pullus Torque
---	Enchantment: 60Min, Costume - chicobo
+-- ID: 16273
+-- Item: Pullus Torque
+-- Enchantment: 60Min, Costume - chicobo
 -----------------------------------------
 
 require("scripts/globals/status");

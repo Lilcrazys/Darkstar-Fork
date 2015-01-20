@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 14957
---	Item: Aiming Gloves
---	Enchantment: Ranged Accuracy +3
+-- ID: 14957
+-- Item: Aiming Gloves
+-- Enchantment: Ranged Accuracy +3
 -----------------------------------------
 
 require("scripts/globals/status");

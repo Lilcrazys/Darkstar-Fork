@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 18867
---	Item: Daedalus Hammer
---	Enchantment: Adds Refresh
---	Duration: 60 Secs
+-- ID: 18867
+-- Item: Daedalus Hammer
+-- Enchantment: Adds Refresh
+-- local duration: 60 Secs
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -21,7 +21,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	duration = 60;
-		target:delStatusEffect(EFFECT_REFRESH);
-		target:addStatusEffect(EFFECT_REFRESH,1,1,duration);
+	local duration = 60;
+	target:delStatusEffect(EFFECT_REFRESH);
+	target:addStatusEffect(EFFECT_REFRESH,1,1,duration);
 end;

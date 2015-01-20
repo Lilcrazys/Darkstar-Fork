@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 18881
---	Melomane Mallet
---	Enchantment: Costume - Lycopodium
---	Durration: 60 Mins
+-- ID: 18881
+-- Item: Melomane Mallet
+-- Enchantment: Costume - Lycopodium
+-- Duration: 60 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

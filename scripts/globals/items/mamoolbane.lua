@@ -13,8 +13,8 @@ require("scripts/globals/settings");
 -----------------------------------------
 
 function onItemCheck(target)
-	target:getZone();
-	result = 0;
+	local target:getZone();
+	local result = 0;
 	if (zone ~= 54 or zone ~= 62 or zone ~= 65) then
 		result = 111;
 	end

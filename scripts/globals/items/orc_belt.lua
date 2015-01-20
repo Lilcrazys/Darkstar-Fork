@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 10847
---	Orc Belt
---	Enchantment: 60Min, Costume - Orc
+-- ID: 10847
+-- Item: Orc Belt
+-- Enchantment: 60Min, Costume - Orc
 -----------------------------------------
 
 require("scripts/globals/status");

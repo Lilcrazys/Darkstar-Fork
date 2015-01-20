@@ -2,7 +2,7 @@
 -- ID: 14788
 -- Item: Gamushara Earring
 -- Enchantment: Attack +22
--- Durration: 3 Mins
+-- Duration: 3 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -13,7 +13,7 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	result = 0;
+	local result = 0;
 end;
 
 -----------------------------------------

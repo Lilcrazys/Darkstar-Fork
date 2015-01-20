@@ -2,7 +2,7 @@
 -- ID: 18586
 -- Item: Flexible Pole
 -- Enchantment: Attack +3
--- Durration: 30 Mins
+-- Duration: 30 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -13,7 +13,7 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	result = 0;
+	local result = 0;
 end;
 
 -----------------------------------------

@@ -2,7 +2,7 @@
 -- ID: 15861
 -- Item: Deductive Brocade Obi
 -- Enchantment: MND +10
--- Durration: 60 Secs
+-- Duration: 60 Secs
 -----------------------------------------
 
 require("scripts/globals/settings");

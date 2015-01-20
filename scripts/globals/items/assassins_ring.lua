@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 14678
---	Item: Assassin's Ring
---	Enchantment: Ranged Accuracy +20
---	Durration: 3 Mins
+-- ID: 14678
+-- Item: Assassin's Ring
+-- Enchantment: Ranged Accuracy +20
+-- Duration: 3 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

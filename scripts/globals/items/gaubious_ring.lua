@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 10776
---	Item: Gaubious Ring
---	Enchantment: Accuracy +10
---	Durration: 5 Mins
+-- ID: 10776
+-- Item: Gaubious Ring
+-- Enchantment: Accuracy +10
+-- Duration: 5 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

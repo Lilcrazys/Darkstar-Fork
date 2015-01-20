@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 11500
---	Chocobo Beret
---	Enchantment: 60Min, Costume - Blue adolescent chocobo (INCOMPLETE)
+-- ID: 11500
+-- Item: Chocobo Beret
+-- Enchantment: 60Min, Costume - Blue adolescent chocobo (INCOMPLETE)
 -----------------------------------------
 
 require("scripts/globals/status");

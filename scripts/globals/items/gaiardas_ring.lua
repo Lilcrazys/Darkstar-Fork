@@ -2,7 +2,7 @@
 -- ID: 10775
 -- Item: Gaiardas Ring
 -- Enchantment: Attack +10
--- Durration: 5 Mins
+-- Duration: 5 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -13,7 +13,7 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	result = 0;
+	local result = 0;
 end;
 
 -----------------------------------------

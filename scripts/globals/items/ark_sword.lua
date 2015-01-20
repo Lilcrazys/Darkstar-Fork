@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18913
---	Ark Sword
---	Enchantment: 60Min, Costume - Ark Angel EV
+-- ID: 18913
+-- Item: Ark Sword
+-- Enchantment: 60Min, Costume - Ark Angel EV
 -----------------------------------------
 
 require("scripts/globals/status");

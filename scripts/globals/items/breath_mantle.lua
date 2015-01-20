@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 15486
---	Item: Breath Mantle
---	Enchantment: HP +18 Eminity +3
---	Durration: 30 Mins
+-- ID: 15486
+-- Item: Breath Mantle
+-- Enchantment: HP +18 Eminity +3
+-- Duration: 30 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

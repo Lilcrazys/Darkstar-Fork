@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 15326
---	Item: Gargoyle Boots
---	Enchantment: Wyvern Stoneskin
---	Durration: 1 Min
+-- ID: 15326
+-- Item: Gargoyle Boots
+-- Enchantment: Wyvern Stoneskin
+-- Duration: 1 Min
 -----------------------------------------
 
 require("scripts/globals/settings");

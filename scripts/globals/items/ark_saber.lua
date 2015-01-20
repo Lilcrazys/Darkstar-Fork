@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18912
---	Ark Saber
---	Enchantment: 60Min, Costume - Ark Angel HM
+-- ID: 18912
+-- Item: Ark Saber
+-- Enchantment: 60Min, Costume - Ark Angel HM
 -----------------------------------------
 
 require("scripts/globals/status");

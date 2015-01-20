@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18563
---	Ark Scythe
---	Enchantment: 60Min, Costume - Ark Angel TT
+-- ID: 18563
+-- Item: Ark Scythe
+-- Enchantment: 60Min, Costume - Ark Angel TT
 -----------------------------------------
 
 require("scripts/globals/status");

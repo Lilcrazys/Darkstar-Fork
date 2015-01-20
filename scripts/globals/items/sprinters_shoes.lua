@@ -31,7 +31,7 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_MOVE, 20);
+	target:addMod(MOD_MOVE, 15);
 end;
 
 -----------------------------------------
@@ -39,5 +39,5 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_MOVE, 20);
+	target:delMod(MOD_MOVE, 15);
 end;

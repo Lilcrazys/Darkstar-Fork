@@ -13,7 +13,8 @@ require("scripts/globals/settings");
 -----------------------------------------
 
 function onItemCheck(target)
-	return 0;
+	-- return 0;
+	return 56;
 end;
 
 -----------------------------------------
@@ -21,9 +22,9 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
-		target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,1800,14864);
-	end;
+	-- if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
+		-- target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,1800,14864);
+	-- end;
 end;
 
 -----------------------------------------
@@ -31,7 +32,8 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_GILFINDER, 1);
+	-- MOD_GILFINDER DOES NOT EXIST YET SO WHY IS THIS HERE, WAITING TO CRASH THE SERVER?
+	-- target:addMod(MOD_GILFINDER, 1);
 end;
 
 -----------------------------------------
@@ -39,5 +41,5 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_GILFINDER, 1);
+	-- target:delMod(MOD_GILFINDER, 1);
 end;

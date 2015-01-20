@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 10778
---	Item: Nanger Ring
---	Enchantment: Evasion +10
+-- ID: 10778
+-- Item: Nanger Ring
+-- Enchantment: Evasion +10
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -12,7 +12,7 @@ require("scripts/globals/settings");
 -----------------------------------------
 
 function onItemCheck(target)
-	return 0;
+    return 0;
 end;
 
 -----------------------------------------
@@ -20,9 +20,9 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
-		target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,300,10778);
-	end;
+    if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
+        target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,300,10778);
+    end;
 end;
 
 -----------------------------------------
@@ -30,7 +30,7 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_EVA, 10);
+    target:addMod(MOD_EVA, 10);
 end;
 
 -----------------------------------------
@@ -38,5 +38,5 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_EVA, 10);
+    target:delMod(MOD_EVA, 10);
 end;

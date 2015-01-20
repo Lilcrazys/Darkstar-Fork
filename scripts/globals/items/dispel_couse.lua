@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18095
---	Item: Dispel Couse
---	Enchantment: Sames as Dispel
+-- ID: 18095
+-- Item: Dispel Couse
+-- Enchantment: Sames as Dispel
 -----------------------------------------
 
 require("scripts/globals/settings");

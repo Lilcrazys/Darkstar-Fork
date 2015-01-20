@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18880
---	Maestro's Baton
---	Enchantment: 60Min, Costume - Hecteyes
+-- ID: 18880
+-- Item: Maestro's Baton
+-- Enchantment: 60Min, Costume - Hecteyes
 -----------------------------------------
 
 require("scripts/globals/settings");

@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 14681
---	Getsul Ring
---  	Enchantment: Max HP +20%
---	Uses: 20   Duration: 3 Mins
+-- ID: 14681
+-- Item: Getsul Ring
+-- Enchantment: Max HP +20%
+-- Uses: 20   Duration: 3 Mins
 -----------------------------------------
 
 -----------------------------------------

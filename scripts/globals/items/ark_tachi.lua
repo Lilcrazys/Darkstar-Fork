@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18464
---	Ark Tachi
---	Enchantment: 60Min, Costume - Ark Angel GK
+-- ID: 18464
+-- Item: Ark Tachi
+-- Enchantment: 60Min, Costume - Ark Angel GK
 -----------------------------------------
 
 require("scripts/globals/status");

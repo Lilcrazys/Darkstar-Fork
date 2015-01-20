@@ -1,6 +1,6 @@
 -----------------------------------
 -- Abyssea functions, vars, tables
--- DO NOT mess with the order 
+-- DO NOT mess with the order
 -- or change things to "elseif"!
 -----------------------------------
 require("scripts/globals/common");
@@ -10,7 +10,7 @@ require("scripts/globals/status");
 require("scripts/globals/weaponskills");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
------------------------------------  
+-----------------------------------
 
 -----------------------------------
 -- getMaxTravStones
@@ -266,9 +266,9 @@ end;
 -----------------------------------
 -- Calculating lights
 -----------------------------------
-			
+
 function DoLights(mob,killer)
-	
+
 	----------------------
 	-- Lights
 	----------------------
@@ -284,19 +284,19 @@ function DoLights(mob,killer)
 	local rubylight = ruby+ran2+bonus;
 	local amberlight = amber+ran2+bonus;
 	local azurelight = azure+ran2+bonus;
-	
+
 	--------------------------------------------
 	-- 		Add lights on mob death
 	--------------------------------------------
 	local lightchance = 1; --math.random(0,3);
 	--local action = killer:getVar("Action");
-	
+
 	if mob:isNM() then
 		bonus = NMbonus;
 	else
 		bonus = bonus;
 	end
-		
+
 	-- if (action == 0) and (lightchance == 1) then
 		-- if (pearl > 230) then
 			-- killer:setVar("LightPearl",230);
@@ -330,7 +330,7 @@ end;
 function checklights(target, effect)
 	local TextIDs = "scripts/zones/" .. target:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
-	require(TextIDs); 
+	require(TextIDs);
 
     local param0 = target:getVar("LightPearl");
 	local param1 = target:getVar("LightEbon");
@@ -358,17 +358,17 @@ end;
 function DoCruor(mob,killer)
 	local TextIDs = "scripts/zones/" .. killer:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
-	require(TextIDs); 
+	require(TextIDs);
 
 	local zone = killer:getZone();
     local silver = killer:getVar("LightSilver");
 	local mycruor = killer:getCruor();
-	if (zone == 132 or zone == 15 or zone == 45 or 
-		zone == 215 or zone == 216 or zone == 217 or 
+	if (zone == 132 or zone == 15 or zone == 45 or
+		zone == 215 or zone == 216 or zone == 217 or
 		zone == 218 or zone == 253 or zone == 254) then
 		cruor = (10+silver*2);
 		killer:addCruor(cruor);
-		killer:messageSpecial(CRUOR_OBTAINED,cruor,mycruor,0,0,zone); 
+		killer:messageSpecial(CRUOR_OBTAINED,cruor,mycruor,0,0,zone);
 	end
 end;
 
@@ -377,18 +377,18 @@ end;
 -----------------------------------
 
 function DoExp(mob,killer)
- 
+
 	local bonus = killer:getVar("LightEbon");
 	local caprate = 100;
 	if (mob:checkBaseExp() == true) then
-		if (zone == 132 or zone == 15 or zone == 45 or 
-			zone == 215 or zone == 216 or zone == 217 or 
+		if (zone == 132 or zone == 15 or zone == 45 or
+			zone == 215 or zone == 216 or zone == 217 or
 			zone == 218 or zone == 253 or zone == 254) then
 			if (bonus >= 100) then
 				bonus = caprate;
 			end
 		end
-		killer:addExp(bonus * 2);	
+		killer:addExp(bonus * 2);
 	end
 end;
 
@@ -405,7 +405,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 	-- Weakness Red - triggered by using a specific elemental Weapon Skill on the NM.
 	---------------------------------------------------------------------------------
 	Red Weakness 	Triggers By Weapon
-		
+
 	Weapon Type 	Weapon Skills		ID
 	---------------------------------------
 	Club			Seraph Strike		161
@@ -416,7 +416,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 	Great Katana	Tachi: Jinpu		148
 					Tachi: Koki			149
 	---------------------------------------
-	Great Sword		Freezebite			51	
+	Great Sword		Freezebite			51
 	---------------------------------------
 	Katana			Blade: Ei			133
 	---------------------------------------
@@ -431,9 +431,9 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 					Seraph Blade		37
 	------------------------------------]]--
 	-- trigger [0 = Yellow] [1 = blue] [2 = Red] [3 = White]
-	-- Trigger can be[ day before <- current day -> day after 
-	
-	local DayElement = VanadielDayElement();	
+	-- Trigger can be[ day before <- current day -> day after
+
+	local DayElement = VanadielDayElement();
 
 	if (DayElement == 0) then
 		local Wskill = math.random(1,5);
@@ -444,10 +444,10 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (Wskill == 5) then WSRED = 133;
 		end
 		target:setVar("RedTrigger", WSRED);
-		
+
 	elseif (DayElement == 1) then
 		local Wskill = math.random(1,2);
-		if (Wskill == 1) then WSRED = 178;	
+		if (Wskill == 1) then WSRED = 178;
 		elseif (Wskill == 2) then WSRED = 34;
 		end
 		target:setVar("RedTrigger", WSRED);
@@ -456,7 +456,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		local Wskill = math.random(1,2);
 		if (Wskill == 1) then WSRED = 178;
 		elseif (Wskill == 2) then WSRED = 20;
-		end	
+		end
 		target:setVar("RedTrigger", WSRED);
 
 	elseif (DayElement == 3) then
@@ -464,15 +464,15 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		if (Wskill == 1) then WSRED = 148;
 		elseif (Wskill == 2) then WSRED = 20;
 		elseif (Wskill == 3) then WSRED = 51;
-		end	
+		end
 		target:setVar("RedTrigger", WSRED);
 
 	elseif (DayElement == 4) then
 		local Wskill = math.random(1,3);
 		if (Wskill == 1) then WSRED = 51;
 		elseif (Wskill == 2) then WSRED = 114;
-		elseif (Wskill == 3) then WSRED = 148;	
-		end	
+		elseif (Wskill == 3) then WSRED = 148;
+		end
 		target:setVar("RedTrigger", WSRED);
 
 	elseif (DayElement == 5) then
@@ -483,7 +483,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (Wskill == 4) then WSRED = 161;
 		elseif (Wskill == 5) then WSRED = 180;
 		elseif (Wskill == 6) then WSRED = 37;
-		end	
+		end
 		target:setVar("RedTrigger", WSRED);
 
 	elseif (DayElement == 6) then
@@ -492,11 +492,11 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (Wskill == 2) then WSRED = 161;
 		elseif (Wskill == 3) then WSRED = 180;
 		elseif (Wskill == 4) then WSRED = 37;
-		elseif (Wskill == 5) then WSRED = 22;	
+		elseif (Wskill == 5) then WSRED = 22;
 		elseif (Wskill == 6) then WSRED = 133;
 		elseif (Wskill == 7) then WSRED = 98;
 		elseif (Wskill == 8) then WSRED = 114;
-		end	
+		end
 		target:setVar("RedTrigger", WSRED);
 
 	elseif (DayElement == 7) then
@@ -505,41 +505,41 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (Wskill == 2) then WSRED = 133;
 		elseif (Wskill == 3) then WSRED = 98;
 		elseif (Wskill == 4) then WSRED = 149;
-		elseif (Wskill == 5) then WSRED = 161;	
+		elseif (Wskill == 5) then WSRED = 161;
 		elseif (Wskill == 6) then WSRED = 180;
 		elseif (Wskill == 7) then WSRED = 37;
 		elseif (Wskill == 8) then WSRED = 34;
-		end	
-		target:setVar("RedTrigger", WSRED);	
-	end	
+		end
+		target:setVar("RedTrigger", WSRED);
+	end
 	--[[-----------------------------------------------------------------------------
 	-- Weakness Blue - triggered by using a specific physical Weapon Skill on the NM.
 	---------------------------------------------------------------------------------
 			[6:00-14:00 - Piercing]
-	--------------------------------------------		
+	--------------------------------------------
 	Weapon Type 		Weapon Skills		ID
 	--------------------------------------------
 	Archery				Sidewinder			196
 						Blast Arrow			197
 						Arching Arrow 		198
 						Empyreal Arrow		199
-	-------------------------------------------					
+	-------------------------------------------
 	Marksmanship		Slug Shot 			212
 						Blast Shot 			213
 						Heavy Shot 			214
 						Detonator			215
-	-------------------------------------------					
+	-------------------------------------------
 	Dagger 				Shadowstitch 		18
 						Dancing Edge 		23
 						Shark Bite 			24
 						Evisceration		25
-	-------------------------------------------					
+	-------------------------------------------
 	Polearm				Skewer 				118
 						Wheeling Thrust 	119
 						Impulse Drive		120
-	-------------------------------------------					
+	-------------------------------------------
 			[14:00-22:00 - Slashing]
-	-------------------------------------------		
+	-------------------------------------------
 	Weapon Type 		Weapon Skills		ID
 	-------------------------------------------
 	Sword				Vorpal Blade 		40
@@ -551,7 +551,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 	-------------------------------------------
 	Axe					Mistral Axe 		71
 						Decimation			72
-	-------------------------------------------					
+	-------------------------------------------
 	Scythes				Cross Reaper 		103
 						Spiral Hell			104
 	-------------------------------------------
@@ -560,35 +560,35 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 	-------------------------------------------
 	Great Katana		Tachi: Gekko 		151
 						Tachi: Kasha		152
-	-------------------------------------------				
+	-------------------------------------------
 	Great Sword			Spinning Slash 		55
 						Ground Strike		56
-	-------------------------------------------					
+	-------------------------------------------
 			[22:00-6:00 - Blunt]
-	-------------------------------------------		
+	-------------------------------------------
 	Weapon Type 		Weapon Skills		ID
 	-------------------------------------------
-	Club				Skullbreaker 		165	
+	Club				Skullbreaker 		165
 						True Strike 		166
 						Judgment 			167
 						Hexa Strike 		168
 						Black Halo			169
-	-------------------------------------------					
+	-------------------------------------------
 	Hand-to-Hand		Raging Fists 		5
 						Spinning Attack 	6
 						Howling Fist 		7
 						Dragon Kick 		8
 						Asuran Fists		9
-	-------------------------------------------					
+	-------------------------------------------
 	Staff				Heavy Swing 		176
 						Shell Crusher 		181
 						Full Swing 			182
 						Spirit Taker 		183
 						Retribution			184
 	---------------------------------------]]--
-	
+
 	local TimeBlue = VanadielHour();
-	
+
 	if (TimeBlue >= 6) and (TimeBlue <= 13) then
 		local WSTYPE = math.random(0,14);
 		if (WSTYPE == 0) then WSBLUE = 196;
@@ -608,7 +608,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (WSTYPE == 14) then WSBLUE = 120;
 		end
 		target:setVar("BlueTrigger",WSBLUE);
-	
+
 	elseif (TimeBlue >= 14) and (TimeBlue <= 21) then
 		local WSTYPE = math.random(0,15);
 		if (WSTYPE == 0) then WSBLUE = 40;
@@ -629,7 +629,7 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (WSTYPE == 15) then WSBLUE = 56;
 		end
 		target:setVar("BlueTrigger",WSBLUE);
-	
+
 	elseif (TimeBlue >= 22) and (TimeBlue <= 5) then
 		local WSTYPE = math.random(0,14);
 		if (WSTYPE == 0) then WSBLUE = 165;
@@ -729,14 +729,14 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 					Light Threnody			460
 	---------------------------------------]]--
 	local DayElement = VanadielDayElement();
-	
+
 	if (DayElement == 0) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 146;
 		elseif (SPELL == 2) then YELLOW = 147;
 		elseif (SPELL == 3) then YELLOW = 176;
-		elseif (SPELL == 4) then YELLOW = 204;	
-		elseif (SPELL == 5) then YELLOW = 591;	
+		elseif (SPELL == 4) then YELLOW = 204;
+		elseif (SPELL == 5) then YELLOW = 591;
 		elseif (SPELL == 6) then YELLOW = 321;
 		elseif (SPELL == 7) then YELLOW = 455;
 		elseif (SPELL == 8) then YELLOW = 161;
@@ -755,16 +755,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 460;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-	
+
 	elseif (DayElement == 1) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 330;
 		elseif (SPELL == 2) then YELLOW = 161;
 		elseif (SPELL == 3) then YELLOW = 162;
-		elseif (SPELL == 4) then YELLOW = 191;	
-		elseif (SPELL == 5) then YELLOW = 210;	
+		elseif (SPELL == 4) then YELLOW = 191;
+		elseif (SPELL == 5) then YELLOW = 210;
 		elseif (SPELL == 6) then YELLOW = 555;
-		elseif (SPELL == 7) then YELLOW = 458;	
+		elseif (SPELL == 7) then YELLOW = 458;
 		elseif (SPELL == 8) then YELLOW = 171;
 		elseif (SPELL == 9) then YELLOW = 172;
 		elseif (SPELL == 10) then YELLOW = 201;
@@ -781,16 +781,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 455;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-	
+
 	elseif (DayElement == 2) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 458;
 		elseif (SPELL == 2) then YELLOW = 171;
 		elseif (SPELL == 3) then YELLOW = 172;
-		elseif (SPELL == 4) then YELLOW = 201;	
-		elseif (SPELL == 5) then YELLOW = 214;	
+		elseif (SPELL == 4) then YELLOW = 201;
+		elseif (SPELL == 5) then YELLOW = 214;
 		elseif (SPELL == 6) then YELLOW = 515;
-		elseif (SPELL == 7) then YELLOW = 336;	
+		elseif (SPELL == 7) then YELLOW = 336;
 		elseif (SPELL == 8) then YELLOW = 454;
 		elseif (SPELL == 9) then YELLOW = 156;
 		elseif (SPELL == 10) then YELLOW = 157;
@@ -807,16 +807,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 330;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-	
+
 	elseif (DayElement == 3) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 156;
 		elseif (SPELL == 2) then YELLOW = 157;
 		elseif (SPELL == 3) then YELLOW = 186;
-		elseif (SPELL == 4) then YELLOW = 208;	
-		elseif (SPELL == 5) then YELLOW = 534;	
+		elseif (SPELL == 4) then YELLOW = 208;
+		elseif (SPELL == 5) then YELLOW = 534;
 		elseif (SPELL == 6) then YELLOW = 327;
-		elseif (SPELL == 7) then YELLOW = 457;	
+		elseif (SPELL == 7) then YELLOW = 457;
 		elseif (SPELL == 8) then YELLOW = 151;
 		elseif (SPELL == 9) then YELLOW = 152;
 		elseif (SPELL == 10) then YELLOW = 181;
@@ -833,16 +833,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 454;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-	
+
 	elseif (DayElement == 4) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 151;
 		elseif (SPELL == 2) then YELLOW = 152;
 		elseif (SPELL == 3) then YELLOW = 181;
-		elseif (SPELL == 4) then YELLOW = 206;	
-		elseif (SPELL == 5) then YELLOW = 531;	
+		elseif (SPELL == 4) then YELLOW = 206;
+		elseif (SPELL == 5) then YELLOW = 531;
 		elseif (SPELL == 6) then YELLOW = 324;
-		elseif (SPELL == 7) then YELLOW = 456;	
+		elseif (SPELL == 7) then YELLOW = 456;
 		elseif (SPELL == 8) then YELLOW = 166;
 		elseif (SPELL == 9) then YELLOW = 167;
 		elseif (SPELL == 10) then YELLOW = 196;
@@ -859,16 +859,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 457;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-		
+
 	elseif (DayElement == 5) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 166;
 		elseif (SPELL == 2) then YELLOW = 167;
 		elseif (SPELL == 3) then YELLOW = 196;
-		elseif (SPELL == 4) then YELLOW = 212;	
-		elseif (SPELL == 5) then YELLOW = 644;	
+		elseif (SPELL == 4) then YELLOW = 212;
+		elseif (SPELL == 5) then YELLOW = 644;
 		elseif (SPELL == 6) then YELLOW = 333;
-		elseif (SPELL == 7) then YELLOW = 459;	
+		elseif (SPELL == 7) then YELLOW = 459;
 		elseif (SPELL == 8) then YELLOW = 29;
 		elseif (SPELL == 9) then YELLOW = 30;
 		elseif (SPELL == 10) then YELLOW = 39;
@@ -885,16 +885,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 456;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-	
+
 	elseif (DayElement == 6) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 29;
 		elseif (SPELL == 2) then YELLOW = 30;
 		elseif (SPELL == 3) then YELLOW = 39;
-		elseif (SPELL == 4) then YELLOW = 21;	
-		elseif (SPELL == 5) then YELLOW = 112;	
+		elseif (SPELL == 4) then YELLOW = 21;
+		elseif (SPELL == 5) then YELLOW = 112;
 		elseif (SPELL == 6) then YELLOW = 565;
-		elseif (SPELL == 7) then YELLOW = 461;	
+		elseif (SPELL == 7) then YELLOW = 461;
 		elseif (SPELL == 8) then YELLOW = 247;
 		elseif (SPELL == 9) then YELLOW = 245;
 		elseif (SPELL == 10) then YELLOW = 231;
@@ -911,16 +911,16 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 21) then YELLOW = 459;
 		end
 		target:setVar("YellowTrigger",YELLOW);
-		
+
 	elseif (DayElement == 7) then
 		local SPELL = math.random(1,21);
 		if (SPELL == 1) then YELLOW = 247;
 		elseif (SPELL == 2) then YELLOW = 245;
 		elseif (SPELL == 3) then YELLOW = 231;
-		elseif (SPELL == 4) then YELLOW = 260;	
-		elseif (SPELL == 5) then YELLOW = 557;	
+		elseif (SPELL == 4) then YELLOW = 260;
+		elseif (SPELL == 5) then YELLOW = 557;
 		elseif (SPELL == 6) then YELLOW = 348;
-		elseif (SPELL == 7) then YELLOW = 460;	
+		elseif (SPELL == 7) then YELLOW = 460;
 		elseif (SPELL == 8) then YELLOW = 146;
 		elseif (SPELL == 9) then YELLOW = 147;
 		elseif (SPELL == 10) then YELLOW = 176;
@@ -936,23 +936,23 @@ function WeaknessTriggerSet(mob,target,ws,spell)
 		elseif (SPELL == 20) then YELLOW = 565;
 		elseif (SPELL == 21) then YELLOW = 461;
 		end
-		target:setVar("YellowTrigger",YELLOW);		
+		target:setVar("YellowTrigger",YELLOW);
 	end
 end;
 -------------------------------------------------
 -- Trigger Hints
--------------------------------------------------	
+-------------------------------------------------
 function TriggerHintRED(player, target, wsID)
 	local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
-	require(TextIDs); 
-	
+	require(TextIDs);
+
 	local Zone = player:getZone();
 	local RedTrigger = player:getVar("RedTrigger");
-	
+
 	if player:hasKeyItem(1442) and (Zone == 132 or Zone == 15 or Zone == 45 or Zone == 215 or Zone == 216 or Zone == 217 or Zone == 218 or Zone == 253 or Zone == 254 or Zone == 255) then
 		if (RedTrigger == 34) then
-			RedClue = 1;	
+			RedClue = 1;
 		elseif (RedTrigger == 51) then
 			RedClue = 2;
 		elseif (RedTrigger == 20) or (RedTrigger == 148) then
@@ -974,10 +974,10 @@ function TriggerHintBLUE(player, target, wsID)
 	local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
 	require(TextIDs);
-	
+
 	local Zone = player:getZone();
 	local BlueTrigger = player:getVar("BlueTrigger");
-	
+
 	if player:hasKeyItem(1442) and (Zone == 132 or Zone == 15 or Zone == 45 or Zone == 215 or Zone == 216 or Zone == 217 or Zone == 218 or Zone == 253 or Zone == 254 or Zone == 255) then
 		if (BlueTrigger == 5) or (BlueTrigger == 6) or (BlueTrigger == 7) or (BlueTrigger == 8) or (BlueTrigger == 9) then
 			BlueClue = 1;
@@ -986,17 +986,17 @@ function TriggerHintBLUE(player, target, wsID)
 		elseif (BlueTrigger == 40) or (BlueTrigger == 41) or (BlueTrigger == 42) then
 			BlueClue = 3;
 		elseif (BlueTrigger == 55) or (BlueTrigger == 56) then
-			BlueClue = 4;	
+			BlueClue = 4;
 		elseif (BlueTrigger == 71) or (BlueTrigger == 72) then
-			BlueClue = 5;	
+			BlueClue = 5;
 		elseif (BlueTrigger == 87) or (BlueTrigger == 88) then
-			BlueClue = 6;	
+			BlueClue = 6;
 		elseif (BlueTrigger == 103) or (BlueTrigger == 104) then
-			BlueClue = 7;	
+			BlueClue = 7;
 		elseif (BlueTrigger == 118) or (BlueTrigger == 119) or (BlueTrigger == 120) then
-			BlueClue = 8;		
+			BlueClue = 8;
 		elseif (BlueTrigger == 135) or (BlueTrigger == 136) then
-			BlueClue = 9;	
+			BlueClue = 9;
 		elseif (BlueTrigger == 151) or (BlueTrigger == 152) then
 			BlueClue = 10;
 		elseif (BlueTrigger == 165) or (BlueTrigger == 166) or (BlueTrigger == 167) or (BlueTrigger == 168) or (BlueTrigger == 169) then
@@ -1006,7 +1006,7 @@ function TriggerHintBLUE(player, target, wsID)
 		elseif (BlueTrigger == 196) or (BlueTrigger == 197) or (BlueTrigger == 198) or (BlueTrigger == 199) then
 			BlueClue = 13;
 		elseif (BlueTrigger == 212) or (BlueTrigger == 213) or (BlueTrigger == 214) or (BlueTrigger == 215) then
-			BlueClue = 14;	
+			BlueClue = 14;
 		end
 		player:messageSpecial(BLUE_WEAKNESS,BlueClue);
 	end
@@ -1016,7 +1016,7 @@ function TriggerHintYELLOW(caster)
 	local TextIDs = "scripts/zones/" .. caster:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
 	require(TextIDs);
-	
+
 	local Zone = caster:getZone();
 	local YellowTrigger = caster:getVar("YellowTrigger");
 	------------------------------------------------------------------------------------
@@ -1030,28 +1030,28 @@ function TriggerHintYELLOW(caster)
 		elseif (YellowTrigger == 171) or (YellowTrigger == 172) or (YellowTrigger == 201) or (YellowTrigger == 214) or (YellowTrigger == 515)  or (YellowTrigger == 336) or (YellowTrigger == 454) then
 			YellowClue = 6;
 		elseif (YellowTrigger == 156) or (YellowTrigger == 157) or (YellowTrigger == 186) or (YellowTrigger == 208) or (YellowTrigger == 534)  or (YellowTrigger == 327) or (YellowTrigger == 457) then
-			YellowClue = 3;	
+			YellowClue = 3;
 		elseif (YellowTrigger == 151) or (YellowTrigger == 152) or (YellowTrigger == 181) or (YellowTrigger == 206) or (YellowTrigger == 531)  or (YellowTrigger == 324) or (YellowTrigger == 456) then
-			YellowClue = 2;	
+			YellowClue = 2;
 		elseif (YellowTrigger == 166) or (YellowTrigger == 167) or (YellowTrigger == 196) or (YellowTrigger == 212) or (YellowTrigger == 644)  or (YellowTrigger == 333) or (YellowTrigger == 459) then
-			YellowClue = 5;	
+			YellowClue = 5;
 		elseif (YellowTrigger == 29) or (YellowTrigger == 30) or (YellowTrigger == 39) or (YellowTrigger == 21) or (YellowTrigger == 112)  or (YellowTrigger == 565) or (YellowTrigger == 461) then
-			YellowClue = 7;	
+			YellowClue = 7;
 		elseif (YellowTrigger == 247) or (YellowTrigger == 245) or (YellowTrigger == 231) or (YellowTrigger == 260) or (YellowTrigger == 557)  or (YellowTrigger == 348) or (YellowTrigger == 460) then
-			YellowClue = 8;		
+			YellowClue = 8;
 		end
 		caster:messageSpecial(YELLOW_WEAKNESS,YellowClue);
 	end
 end;
 -------------------------------------------------
--- Trigger Execute 
+-- Trigger Execute
 -- [0 = Yellow] [1 = blue] [2 = Red] [3 = White]
 -------------------------------------------------
 
 function WeaknessTriggerRed(player, target, wsID)
 	local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
-	require(TextIDs); 
+	require(TextIDs);
 	local redproc = player:getVar("RED_PROC");
 	local Zone = player:getZone();
 	if (redproc == 0) and (Zone == 132 or Zone == 15 or Zone == 45 or Zone == 215 or Zone == 216 or Zone == 217 or Zone == 218 or Zone == 253 or Zone == 254 or Zone == 255) then
@@ -1066,7 +1066,7 @@ end;
 function WeaknessTriggerBlue(player,target,wsID)
 	local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
-	require(TextIDs); 
+	require(TextIDs);
 	local Blueproc = player:getVar("BLUE_PROC");
 	local Zone = player:getZone();
 	if (Blueproc == 0) and (Zone == 132 or Zone == 15 or Zone == 45 or Zone == 215 or Zone == 216 or Zone == 217 or Zone == 218 or Zone == 253 or Zone == 254 or Zone == 255) then
@@ -1081,7 +1081,7 @@ end;
 function WeaknessTriggerYellow(caster,target,spell)
 	local TextIDs = "scripts/zones/" .. caster:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
-	require(TextIDs); 
+	require(TextIDs);
 	local Yellowproc = caster:getVar("YELLOW_PROC");
 	local Zone = caster:getZone();
 	if (Yellowproc == 0) and (Zone == 132 or Zone == 15 or Zone == 45 or Zone == 215 or Zone == 216 or Zone == 217 or Zone == 218 or Zone == 253 or Zone == 254 or Zone == 255) then
@@ -1090,5 +1090,5 @@ function WeaknessTriggerYellow(caster,target,spell)
 		caster:messageSpecial(STAGGERED,0,0,0,0,true);
 		caster:messageSpecial(YELLOW_STAGGER,0,0,0,0,true);
 		caster:setVar("YELLOW_PROC",1);
-	end	
+	end
 end;

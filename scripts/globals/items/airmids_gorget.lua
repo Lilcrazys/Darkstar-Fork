@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 10963
---	Item: Arimid's Gorget
---	Enchantment: Reraise III
+-- ID: 10963
+-- Item: Arimid's Gorget
+-- Enchantment: Reraise III
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -20,7 +20,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	duration = 3600;
-		target:delStatusEffect(EFFECT_RERAISE);
-		target:addStatusEffect(EFFECT_RERAISE,3,0,duration);
+	local duration = 3600;
+	target:delStatusEffect(EFFECT_RERAISE);
+	target:addStatusEffect(EFFECT_RERAISE,3,0,duration);
 end;

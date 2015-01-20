@@ -2,7 +2,7 @@
 -- ID: 15460
 -- Item: Deductive Gold Obi
 -- Enchantment: MND +3
--- Durration: 60 Secs
+-- Duration: 60 Secs
 -----------------------------------------
 
 require("scripts/globals/settings");

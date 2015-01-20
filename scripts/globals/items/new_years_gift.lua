@@ -2,7 +2,7 @@
 -- ID: 4176
 -- Item: New Years Gift
 -- Enchantment: ??? Random 
--- Durration: 10 Mins - 2 Hrs
+-- Duration: 10 Mins - 2 Hrs
 -----------------------------------------
 
 require("scripts/globals/settings");

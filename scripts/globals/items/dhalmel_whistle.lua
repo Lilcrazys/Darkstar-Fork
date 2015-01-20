@@ -2,7 +2,7 @@
 -- ID: 15505
 -- Item: Dhalmel Whistle
 -- Enchantment: AGI +6
--- Durration: 3 Mins
+-- Duration: 3 Mins
 -----------------------------------------
 
 require("scripts/globals/settings");

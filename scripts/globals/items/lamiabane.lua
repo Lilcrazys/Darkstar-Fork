@@ -1,10 +1,10 @@
 -----------------------------------------
---	ID: 18693
---	Equip: Lamiabane
---  	Latent effect: Enhances Magic Atk Bonus +2
---	Enchantment: Adds "Refresh"
---	Durration: 60 Mins
---	Active while in Mamook, Arrapago Reef, or Halvung
+-- ID: 18693
+-- Item: Lamiabane
+-- Latent effect: Enhances Magic Atk Bonus +2
+-- Enchantment: Adds "Refresh"
+-- Duration: 60 Mins
+-- Active while in Mamook, Arrapago Reef, or Halvung
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -15,11 +15,8 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-
-zone = target:getZone();
-
-ranged = target:getEquipID(SLOT_RANGED);
-
+	local zone = target:getZone();
+	local ranged = target:getEquipID(SLOT_RANGED);
 	if (ranged == 18693) then
 		if (zone == 65 or zone == 54 or zone == 62) then
 			target:addMod(MOD_MATT, 2);
@@ -36,7 +33,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	duration = 3600;
-		target:delStatusEffect(EFFECT_REFRESH);
-		target:addStatusEffect(EFFECT_REFRESH,3,1,duration);
+	local duration = 3600;
+	target:delStatusEffect(EFFECT_REFRESH);
+	target:addStatusEffect(EFFECT_REFRESH,3,1,duration);
 end;

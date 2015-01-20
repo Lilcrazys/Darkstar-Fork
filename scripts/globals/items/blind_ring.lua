@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 15834
---	Item: Blind Ring
---	Enchantment: Blind
---	Durration: 1 Min
+-- ID: 15834
+-- Item: Blind Ring
+-- Enchantment: Blind
+-- Duration: 1 Min
 -----------------------------------------
 
 require("scripts/globals/settings");

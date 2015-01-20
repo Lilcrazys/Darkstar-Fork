@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 15866
---	Item: Acrobat's Belt
---	Enchantment: AGI +3
---	Durration: 10 Mins
+-- ID: 15866
+-- Item: Acrobat's Belt
+-- Enchantment: AGI +3
+-- Duration: 10 Mins
 -----------------------------------------
 
 require("scripts/globals/status");

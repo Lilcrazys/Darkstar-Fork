@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 14680
---	Pacifist Ring
---  	Enchantment: Enmity -12
---	Uses: 20   Duration: 3 Mins
+-- ID: 14680
+-- Item: Pacifist Ring
+-- Enchantment: Enmity -12
+-- Uses: 20   Duration: 3 Mins
 -----------------------------------------
 
 -----------------------------------------

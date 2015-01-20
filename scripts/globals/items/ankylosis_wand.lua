@@ -1,9 +1,9 @@
 -----------------------------------------
---	ID: 18888
---	Item: Ankylosis Wand
---	Enchantment: Bind
---	Latent Effect: Magic Accuracy +20 Magic Atk Bonus +20
---	Latent activated when bound.
+-- ID: 18888
+-- Item: Ankylosis Wand
+-- Enchantment: Bind
+-- Latent Effect: Magic Accuracy +20 Magic Atk Bonus +20
+-- Latent activated when bound.
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -28,7 +28,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	duration = 60;
-		target:delStatusEffect(EFFECT_BIND);
-		target:addStatusEffect(EFFECT_BIND,1,0,duration);
+	local duration = 60;
+	target:delStatusEffect(EFFECT_BIND);
+	target:addStatusEffect(EFFECT_BIND,1,0,duration);
 end;

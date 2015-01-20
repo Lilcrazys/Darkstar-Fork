@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 11811
---	Destrier Beret
---	EEnchantment: 60Min, Costume - Chocobo Egg (INCOMPLETE)
+-- ID: 11811
+-- Destrier Beret
+-- Enchantment: 60Min, Costume - Chocobo Egg (INCOMPLETE)
 -----------------------------------------
 
 require("scripts/globals/status");

@@ -21,7 +21,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	duration = 60;
-		target:delStatusEffect(EFFECT_REFRESH);
-		target:addStatusEffect(EFFECT_REFRESH,3,1,duration);
+	local duration = 60;
+	target:delStatusEffect(EFFECT_REFRESH);
+	target:addStatusEffect(EFFECT_REFRESH,3,1,duration);
 end;

@@ -1,8 +1,8 @@
 -----------------------------------------
---	ID: 15783
---	Item: Armored Ring
---	Enchantment: DEF +8
---	Durration: 30 Mins
+-- ID: 15783
+-- Item: Armored Ring
+-- Enchantment: DEF +8
+-- Duration: 30 Mins
 -----------------------------------------
 
 -----------------------------------------

@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 18545
---	Ark Tabar
---	Enchantment: 60Min, Costume - Ark Angel MR
+-- ID: 18545
+-- Item: Ark Tabar
+-- Enchantment: 60Min, Costume - Ark Angel MR
 -----------------------------------------
 
 require("scripts/globals/status");
