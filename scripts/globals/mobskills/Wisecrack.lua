@@ -13,10 +13,15 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_CHARM_I;
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60));
-
-    mob:resetEnmity(target);
-
-	return typeEffect;
+	if (target:isPC()) then
+        local typeEffect = EFFECT_CHARM_I;
+        skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60));
+ 
+        mob:resetEnmity(target);
+ 
+		return typeEffect;
+    else
+        mob:resetEnmity(target);
+		return 0;
+    end
 end
