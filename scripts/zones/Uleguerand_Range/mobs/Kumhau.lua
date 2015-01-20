@@ -64,15 +64,7 @@ function onMobFight(mob, target)
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);	
 		end	
 	elseif (os.time() -BattleStart > 3600) then
-			mob:setMod(MOD_MDEF,3000);
-			mob:setMod(MOD_DEF,3000);	
-			mob:setMod(MOD_MATT,3000);
-			mob:setMod(MOD_ATT,3000);
-			mob:setMod(MOD_STR,3000);
-			mob:setMod(MOD_VIT,3000);
-			mob:setMod(MOD_INT,3000);
-			mob:setMod(MOD_AGI,3000);
-			mob:setMod(MOD_TRIPLE_ATTACK,3000);	
+            mob:addStatusEffect(EFFECT_RAGE,1,0,300);
 		end
 	end
 end;	
