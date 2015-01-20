@@ -18,7 +18,7 @@ end;
 
 function onSpellCast(caster,target,spell)
 
-	if caster:isPC() then
+	if (caster:isPC()) then
 		local YellowTrigger = caster:getVar("YellowTrigger");
 		if (YellowTrigger == 644) then
 			WeaknessTriggerYellow(caster,target,spell);

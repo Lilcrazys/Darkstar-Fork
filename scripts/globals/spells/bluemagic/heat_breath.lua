@@ -11,7 +11,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-	if caster:isPC() then
+	if (caster:isPC()) then
 		local YellowTrigger = caster:getVar("YellowTrigger");
 		if (YellowTrigger == 591) then
 			WeaknessTriggerYellow(caster,target,spell);
@@ -21,6 +21,7 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
     local params = {};
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
 	local multi = 6.38;

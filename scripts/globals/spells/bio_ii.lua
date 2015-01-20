@@ -1,6 +1,6 @@
 -----------------------------------------
 -- Spell: Bio II
--- Deals dark damage that weakens an enemy's attacks and gruadually reduces its HP.
+-- Deals dark damage that weakens an enemy's attacks and gradually reduces its HP.
 -----------------------------------------
 require("scripts/globals/magic");
 require("scripts/globals/status");
@@ -15,7 +15,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-	if caster:isPC() then
+	if (caster:isPC()) then
 		local YellowTrigger = caster:getVar("YellowTrigger");
 		if (YellowTrigger == 231) then
 			WeaknessTriggerYellow(caster,target,spell);

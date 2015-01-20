@@ -17,8 +17,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-
-	if caster:isPC() then
+	if (caster:isPC()) then
 		local YellowTrigger = caster:getVar("YellowTrigger");
 		if (YellowTrigger == 515) then
 			WeaknessTriggerYellow(caster,target,spell);
@@ -35,7 +34,7 @@ function onSpellCast(caster,target,spell)
 	params.str_wsc = 0.0; params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.3; params.mnd_wsc = 0.1; params.chr_wsc = 0.0;
     damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-	
+
 	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
 
 	if(damage > 0 and resist > 0.0625) then
@@ -43,6 +42,6 @@ function onSpellCast(caster,target,spell)
 			target:addStatusEffect(EFFECT_STR_DOWN,20,3,60);
 		end
 	end
-	
+
     return damage;
 end;
