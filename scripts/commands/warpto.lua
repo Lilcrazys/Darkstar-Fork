@@ -19,7 +19,7 @@ function onTrigger(player, target)
 	local targ = GetPlayerByName( target );
 	if (targ ~= nil) then
 		-- player:setVar("WarpTo", 1); <-Whats this for?
-		player:setPos( targ:getXPos(), targ:getYPos(), targ:getZPos(), 0, targ:getZone():getID() );
+		player:setPos( targ:getXPos(), targ:getYPos(), targ:getZPos(), 0, targ:getZoneID() );
 	else
 		player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
 	end
