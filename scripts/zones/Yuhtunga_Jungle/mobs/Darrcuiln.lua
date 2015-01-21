@@ -26,7 +26,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    mob:setLocalVar("BattleStart", os.time())
+    mob:setLocalVar("BattleStart", os.time());
 end;
 
 -----------------------------------
@@ -43,6 +43,7 @@ end;
 
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
     local Darrcuiln_2hr_Used = 0;
     if (mob:getLocalVar("Darrcuiln_2hr") ~= nil) then
         Darrcuiln_2hr_Used = mob:getLocalVar("Darrcuiln_2hr");

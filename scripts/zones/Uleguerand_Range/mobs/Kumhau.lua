@@ -31,7 +31,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    mob:setLocalVar("BattleStart", os.time())
+    mob:setLocalVar("BattleStart", os.time());
 end;
 
 -----------------------------------
@@ -48,6 +48,7 @@ end;
 
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
     local Kumhau_2hr_Used = 0;
     if (mob:getLocalVar("Kumhau_2hr") ~= nil) then
         Kumhau_2hr_Used = mob:getLocalVar("Kumhau_2hr");
