@@ -41,7 +41,8 @@
 
 enum ZONEID : uint16
 {
-	ZONE_DEMONSTRATION_AREA           = 0, // Old tech demo area from pre-release
+	// ZONE_DEMONSTRATION_AREA           = 0, // Old tech demo area from pre-release
+	ZONE_RESIDENTIAL_AREA             = 0,
 	ZONE_PHANAUET_CHANNEL             = 1,
 	ZONE_CARPENTERS_LANDING           = 2,
 	ZONE_MANACLIPPER                  = 3,
@@ -255,7 +256,8 @@ enum ZONEID : uint16
 	ZONE_CLOISTER_OF_TIDES            = 211,
 	ZONE_GUSTAV_TUNNEL                = 212,
 	ZONE_LABYRINTH_OF_ONZOZO          = 213,
-	ZONE_RESIDENTIAL_AREA             = 214, // Alt. ID of Residential Zone?
+	// ZONE_RESIDENTIAL_AREA             = 214, // Alt. ID of Residential Zone?
+	ZONE_214                          = 214, // Alt. ID of Residential Zone?
 	ZONE_ABYSSEA_ATTOHWA              = 215,
 	ZONE_ABYSSEA_MISAREAUX            = 216,
 	ZONE_ABYSSEA_VUNKERL              = 217,

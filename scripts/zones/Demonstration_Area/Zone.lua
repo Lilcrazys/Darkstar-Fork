@@ -29,6 +29,7 @@ end;
 -----------------------------------
 -- afterZoneIn
 -----------------------------------
+
 function afterZoneIn(player)
     if (player:getGMLevel() == 0) then
         player:PrintToPlayer("Dear player, the LegionDS devs would very much like to know HOW you landed here.");
