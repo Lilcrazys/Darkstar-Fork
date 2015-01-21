@@ -13,9 +13,10 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMod(MOD_REGEN, 30);
-    mob:addMod(MOD_MDEF,30);
+    mob:addMod(MOD_MDEF,80);
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,10)
+    mob:addMod(MOD_DEF,-80);	
 end;
 
 -----------------------------------

@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_ATT_DOWN;
 	local typeEffect = EFFECT_TERROR;	
 	local typeEffect = EFFECT_BURN;	
-	MobStatusEffectMove(mob, target, typeEffect, 10, 3, 120);
+	MobStatusEffectMove(mob, target, typeEffect, 10, 3, 60);
 
 	local dmgmod = 3;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_FIRE,dmgmod,TP_NO_EFFECT);
