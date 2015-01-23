@@ -23,9 +23,15 @@ function onInitialize(zone)
 	zone:registerRegion(5, -302.493,42,-179.995, -297.386,48,-176.078); -- Uncapped area 2 (G-9 Tower)
 	zone:registerRegion(6, 299.847,42, 257.716, 303.824,48,262.391); -- Uncapped area 3 (I-7 Tower)
 
-	-- Workarounds for easily broken elevators
+	-- Begin workarounds for easily broken elevators
 	zone:registerRegion(7, -20, 9, 20, 0, 0, 0); -- Elevator to/from Diablos
-	-- End workarounds
+	zone:registerRegion(8, -340, 10, 340, 0, 0, 0); -- Elevator to/from Promy 
+	zone:registerRegion(9, -300, 10, 340, 0, 0, 0); -- Elevator to/from ?
+	zone:registerRegion(10, 300, 10, -60, 0, 0, 0); -- Elevator to/from Tenzen's Path Avatar Gate (A)
+	zone:registerRegion(11, -340, 10, -220, 0, 0, 0); -- Elevator to/from Avatar Gate (B)
+	zone:registerRegion(12, 260, 10, 300, 0, 0, 0); -- Elevator to/from Avatar Gate (C)
+	zone:registerRegion(13, 140, 10, 340, 0, 0, 0); -- Elevator to/from Avatar Gate (D)
+	-- End workarounds for easily broken elevators
 
     UpdateTreasureSpawnPoint(16814557);
 end;
@@ -84,15 +90,75 @@ function onRegionEnter(player,region)
 		player:startEvent(0x0018);
 	elseif(region:GetRegionID() == 6) then
 		player:startEvent(0x0019);
-	elseif(region:GetRegionID() == 7) then -- Diablos Elevator, jump from top to bottom.
-		 if (player:getYPos() < 5) then
+	elseif(region:GetRegionID() == 7) then -- Diablos Elevator
+		if (player:getYPos() < 1) then
 			-- player:PrintToPlayer("Going down!");
-			player:setPos(-20, 31, 33, 190);
-		elseif(player:getYPos() >5) then
+			player:setPos(-20, 31, 33, 192);
+		elseif (player:getYPos() > 33 and player:getYPos() < 29) then
 			-- player:PrintToPlayer("Going up!");
 			player:setPos(-28, -1, 20, 128);
 		else
 			player:PrintToPlayer("ERROR! Report Diablos elevator bug please!");
+		end
+	elseif(region:GetRegionID() == 8) then -- Promy Vahzl Elevator
+		if (player:getYPos() < 2) then
+			-- player:PrintToPlayer("Going down!");
+			player:setPos(-348, 48, 340, 128);
+		elseif (player:getYPos() > 46 and player:getYPos() < 50) then
+			-- player:PrintToPlayer("Going up!");
+			player:setPos(-340, -0.5, 332, 64);
+		else
+			player:PrintToPlayer("ERROR! Report Promy-Vahzl elevator bug please!");
+		end
+	elseif (region:GetRegionID() == 9) then -- ? Elevator
+		if (player:getYPos() < 2) then
+			-- player:PrintToPlayer("Going down!");
+			player:setPos(-290, 48, 340, 128);
+		elseif (player:getYPos() > 46 and player:getYPos() < 50) then
+			-- player:PrintToPlayer("Going up!");
+			player:setPos(-300, -0.5, 332, 64);
+		else
+			player:PrintToPlayer("ERROR! Report Pso'Xja elevator bug please!");
+		end
+	elseif( region:on:GetRegionID() == 10) then -- Tenzen's Path Avatar Gate (A) Elevator
+		if (player:getYPos() < 2) then
+			-- player:PrintToPlayer("Going down!");
+			player:setPos(292, 32, -60, 128);
+		elseif (player:getYPos() > 30 and player:getYPos() < 34) then
+			-- player:PrintToPlayer("Going up!");
+			player:setPos(300, -0.5, -50, 192);
+		else
+			player:PrintToPlayer("ERROR! Report Tenzen's Path Avatar Gate (A) elevator bug please!");
+		end
+	elseif( region:on:GetRegionID() == 11) then -- Avatar Gate (B) Elevator
+		if (player:getYPos() < 2) then
+			-- player:PrintToPlayer("Going down!");
+			player:setPos(-348, 48, -220, 128);
+		elseif (player:getYPos() > 46 and player:getYPos() < 50) then
+			-- player:PrintToPlayer("Going up!");
+			player:setPos(-340, -0.5, -210, 192);
+		else
+			player:PrintToPlayer("ERROR! Report Avatar Gate (B) elevator bug please!");
+		end
+	elseif( region:on:GetRegionID() == 12) then -- Avatar Gate (C) Elevator
+		if (player:getYPos() > 17 and player:getYPos() < 13) then
+			-- player:PrintToPlayer("Going down!");
+			player:setPos(260, 48, 308, 192);
+		elseif (player:getYPos() > 40) then
+			-- player:PrintToPlayer("Going up!");
+			player:setPos(250, 15.5, 300, 128);
+		else
+			player:PrintToPlayer("ERROR! Report Avatar Gate (C) elevator bug please!");
+		end
+	elseif( region:on:GetRegionID() == 13) then -- Avatar Gate (D) Elevator
+		if (player:getYPos() > 17 and player:getYPos() < 13) then
+			-- player:PrintToPlayer("Going down!");
+			player:setPos(140, 48, -348, 64);
+		elseif (player:getYPos() > 46 and player:getYPos() < 50) then
+			-- player:PrintToPlayer("Going up!");
+			player:setPos(250, 15.5, -348, 64);
+		else
+			player:PrintToPlayer("ERROR! Report Avatar Gate (D) elevator bug please!");
 		end
 	end
 end;
