@@ -780,7 +780,7 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- Tahrongi Canyon (Zone 117)
 -- 17257471
 -- ------------------------------------------------------------
-
+INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,118,222);
 
 -- ------------------------------------------------------------
 -- Buburimu Peninsula (Zone 118)

@@ -1551,6 +1551,21 @@ INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 229, 1, 255);
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 246, 1, 255); 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 501, 1, 255); 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 503, 1, 255); 
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 316, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 286, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 277, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 229, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 197, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 198, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 168, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 356, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 357, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 359, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 360, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 503, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 504, 1, 255);
+
+
 /*!40000 ALTER TABLE `mob_spell_lists` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -3573,6 +3573,8 @@ INSERT INTO `mob_skill` VALUES (2819,460,2219,'Brownout',1,18.0,2000,1000,4,0,0,
 INSERT INTO `mob_skill` VALUES (2820,460,2220,'Reverse_Current',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2821,460,2221,'Sparkstorm',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2822,460,2222,'Static_Prison',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (436,460,432,'Chainspell', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (439,460,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Yumcax
 -- special melee anims 2202 2203 2204
