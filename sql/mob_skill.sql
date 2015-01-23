@@ -3529,7 +3529,9 @@ INSERT INTO `mob_skill` VALUES (2756,452,2197,'Aquatic_lance',1,18.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2757,452,2198,'Pelagic_cleaver',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2758,452,2199,'Carcharian_verve',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2759,452,2200,'Tidal_Guillotine',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2760,452,2201,'Marine_Mayhem',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2760,452,2201,'Marine_Mayhem',1,28.0,2000,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,452,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (434,452,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Kumhau
 -- melee special 2258 2259 2260
@@ -4654,7 +4656,14 @@ INSERT INTO `mob_skill` VALUES (2612,987,2004,'Echolocation',1,18.0,2000,1000,4,
 -- INSERT INTO `mob_skill` VALUES (2568,986,223,'Cloudscourge', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
  
 
-
+-- Ravenous Craklaw (990)
+INSERT INTO `mob_skill` VALUES (2701,990,2180,'Ravenous_Cracklaw_Impenetrable_carapace',1,18.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2702,990,2181,'Ravenous_Cracklaw_Rending_Deluge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2703,990,2182,'Ravenous_Cracklaw_Sundering_Snip',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2704,990,2183,'Ravenous_Cracklaw_Viscid_Spindrift',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2705,990,2184,'Ravenous_Cracklaw_Riptide_Eupnea',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,990,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (439,990,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 
 

@@ -39,6 +39,7 @@
 -- Bibiki Bay (Zone 4)
 -- 16794623
 -- ------------------------------------------------------------
+INSERT INTO `mob_spawn_points` VALUES (16794622,'Ravenous_Cracklaw','Ravenous_Cracklaw',90105,-115,0,-575,100);
 
 
 -- ------------------------------------------------------------
@@ -695,7 +696,7 @@ INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance
 -- Valkurm Dunes (Zone 103)
 -- 17200127
 -- ------------------------------------------------------------
-
+INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-3,155,252);
 
 -- ------------------------------------------------------------
 -- Jugner Forest (Zone 104)

@@ -1545,7 +1545,12 @@ INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 496, 1, 255); -- Firaja
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 498, 1, 255); -- Aeroja
 INSERT INTO `mob_spell_lists` VALUES ('Minerva', 777, 500, 1, 255); -- Thundaja
 -- Yeah, Minerva has a long list of spells she can use...
-
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 277, 1, 255); 
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 252, 1, 255); 
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 229, 1, 255); 
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 246, 1, 255); 
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 501, 1, 255); 
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 503, 1, 255); 
 /*!40000 ALTER TABLE `mob_spell_lists` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
