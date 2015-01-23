@@ -1039,7 +1039,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17396141,'Odontotyrannus','Odontotyrannu
 -- Temple of Uggalepih (Zone 159)
 -- 17429503
 -- ------------------------------------------------------------
-
+INSERT INTO `mob_spawn_points` VALUES (17429502,'Colkhab','Colkhab',90095,53,1,-62,0);
 
 -- ------------------------------------------------------------
 -- Den of Rancor (Zone 160)
