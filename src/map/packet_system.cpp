@@ -377,6 +377,7 @@ void SmallPacket0x00D(map_session_data_t* session, CCharEntity* PChar, int8* dat
     }
 
     PChar->PRecastContainer->Del(RECAST_MAGIC);
+    charutils::SaveRecasts(PChar);
 
     if (PChar->status == STATUS_SHUTDOWN)
     {
@@ -2614,7 +2615,10 @@ void SmallPacket0x05E(map_session_data_t* session, CCharEntity* PChar, int8* dat
         ShowInfo(CL_WHITE"Zoning from zone %u to zone %u: %s\n" CL_RESET, PChar->getZone(), PChar->loc.destination, PChar->GetName());
     }
     PChar->clearPacketList();
-    PChar->pushPacket(new CServerIPPacket(PChar, 2, zoneutils::GetZoneIPP(PChar->loc.destination)));
+
+    uint64 ipp = zoneutils::GetZoneIPP(PChar->loc.destination == 0 ? PChar->loc.prevzone : PChar->loc.destination);
+
+    PChar->pushPacket(new CServerIPPacket(PChar, 2, ipp));
     return;
 }
 
@@ -3922,40 +3926,14 @@ void SmallPacket0x0CB(map_session_data_t* session, CCharEntity* PChar, int8* dat
 
 void SmallPacket0x0D2(map_session_data_t* session, CCharEntity* PChar, int8* data)
 {
-    //alliance
-    if (PChar->PParty != NULL)
+    PChar->ForAlliance([PChar](CBattleEntity* PPartyMember)
     {
-        if (PChar->PParty->m_PAlliance != NULL)
+        if (PPartyMember->getZone() == PChar->getZone() && ((CCharEntity*)PPartyMember)->m_moghouseID == PChar->m_moghouseID)
         {
-            for (uint8 a = 0; a < PChar->PParty->m_PAlliance->partyList.size(); ++a)
-            {
-                for (uint8 i = 0; i < PChar->PParty->m_PAlliance->partyList.at(a)->members.size(); ++i)
-                {
-                    CCharEntity* PPartyMember = (CCharEntity*)PChar->PParty->m_PAlliance->partyList.at(a)->members.at(i);
-
-                    if (PPartyMember->getZone() == PChar->getZone() && PPartyMember->m_moghouseID == PChar->m_moghouseID)
-                    {
-                        PChar->pushPacket(new CPartyMapPacket(PPartyMember));
-                    }
-                }
-            }
-            return;
-
+            PChar->pushPacket(new CPartyMapPacket((CCharEntity*)PPartyMember));
         }
-        else{  //normal party - no alliance
-            for (int32 i = 0; i < PChar->PParty->members.size(); ++i)
-            {
-                CCharEntity* PPartyMember = (CCharEntity*)PChar->PParty->members.at(i);
+    });
 
-                if (PPartyMember->getZone() == PChar->getZone() && PPartyMember->m_moghouseID == PChar->m_moghouseID)
-                {
-                    PChar->pushPacket(new CPartyMapPacket(PPartyMember));
-                }
-            }
-            return;
-        }
-    }
-    PChar->pushPacket(new CPartyMapPacket(PChar));
     return;
 }
 
@@ -4806,14 +4784,10 @@ void SmallPacket0x100(map_session_data_t* session, CCharEntity* PChar, int8* dat
 
         PChar->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_DISPELABLE);
 
-        if (PChar->PParty != NULL) // check latents affected by party jobs
+        PChar->ForParty([](CBattleEntity* PMember)
         {
-            for (uint8 i = 0; i < PChar->PParty->members.size(); ++i)
-            {
-                CCharEntity* PMember = (CCharEntity*)PChar->PParty->members.at(i);
-                PMember->PLatentEffectContainer->CheckLatentsPartyJobs();
-            }
-        }
+            ((CCharEntity*)PMember)->PLatentEffectContainer->CheckLatentsPartyJobs();
+        });
 
 
         PChar->UpdateHealth();
@@ -4822,6 +4796,7 @@ void SmallPacket0x100(map_session_data_t* session, CCharEntity* PChar, int8* dat
         PChar->health.mp = PChar->GetMaxMP();
 
         charutils::SaveCharStats(PChar);
+        charutils::SaveRecasts(PChar);
 
         PChar->pushPacket(new CCharJobsPacket(PChar));
         PChar->pushPacket(new CCharUpdatePacket(PChar));
