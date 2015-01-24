@@ -3843,7 +3843,7 @@ INSERT INTO `mob_skill` VALUES(2133,538,851,'Lethal_Triclip',1,15.0,2000,1500,4,
 -- Sippoy (539)
 INSERT INTO `mob_skill` VALUES (2311,539,1787,'Stygian_cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2313,539,1789,'Hellish_crescendo',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2315,539,1791,'Stygian_sphere',0,9.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2315,539,1791,'Stygian_sphere',0,9.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2316,539,1792,'Malign_invocation',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2378,539,1810,'Interference',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2379,539,1811,'Dark_arrivisme',1,18.0,2000,1000,4,0,0,0);
