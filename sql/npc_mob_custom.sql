@@ -331,25 +331,15 @@ INSERT INTO `mob_spawn_points` VALUES (16977927,'Hades_V2','Hades',90081,90,0,1,
 INSERT INTO `mob_spawn_points` VALUES (16977928,'Paramount_Botulus','Paramount Botulus',90055,95,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,31,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,35,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977931,'Tchakka','Tchakka',90084,40,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977932,'Kumhau','Kumhau',90085,45,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977934,'Achuka','Achuka',90089,55,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977935,'Hurkan','Hurkan',90090,60,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977936,'Darrcuiln','Darrcuiln',90091,65,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977937,'Ashrakk','Ashrakk',90092,70,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977938,'Balamor','Balamor',90093,75,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977939,'Provenance_Watcher','Provenance_Watcher',90094,80,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977940,'Colkhab','Colkhab',90095,85,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977941,'Sharptusk_razz','Sharptusk_razz',90096,90,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977942,'Dhokmak','Dhokmak',90097,95,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977943,'Matamata','Matamata',90098,100,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977944,'Crackclaw','Crackclaw',90099,105,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977945,'Trembling_Tilfaire','Achuka',90100,110,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977946,'Velkk_vaticinator','Velkk_vaticinator',90101,115,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977947,'Velkk_punisher','Velkk_punisher',90102,120,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977948,'Velkk_ravager','Velkk_ravager',90103,125,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977949,'Velkk_manipulator','Velkk_manipulator',90104,130,0,1,0);
+
 
 -- Super experimental, will not spawn without script or GM command.
 INSERT INTO `mob_spawn_points` VALUES (16978940,'SlenderMan','SlenderMan',96666,-24,0,0,0);
@@ -536,12 +526,7 @@ REPLACE INTO `npc_list` VALUES (16982160,'2','Salvage Gear',127,137.800,1.185,-4
 INSERT INTO `mob_spawn_points` VALUES (17097270,'Odin','Odin',2766,379,-215,66,62);
 
 INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426,-215,20,104);
-INSERT INTO `mob_spawn_points` VALUES (17097718,'Tchakka','Tchakka',2768,417,-215,47,100);
-INSERT INTO `mob_spawn_points` VALUES (17097719,'Kumhau','Kumhau',2769,390,-215,33,27);
 INSERT INTO `mob_spawn_points` VALUES (17097720,'Bismark','Bismark',2770,366,-215,47,95);
-INSERT INTO `mob_spawn_points` VALUES (17097721,'Achuka','Achuka',2771,373,-214,4,248);
-INSERT INTO `mob_spawn_points` VALUES (17097722,'Hurkan','Hurkan',2772,398,-216,-1,108);
-INSERT INTO `mob_spawn_points` VALUES (17097723,'Darrcuiln','Darrcuiln',2773,418,-215,-8,193);
 INSERT INTO `mob_spawn_points` VALUES (17097724,'Ashrakk','Ashrakk',2774,446,-216,-8,153);
 -- INSERT INTO `mob_spawn_points` VALUES (17097725,'Balamor','Balamor',2775,406,-215,85,88);
 INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance_Watcher',2776,426,-215,85,88);
