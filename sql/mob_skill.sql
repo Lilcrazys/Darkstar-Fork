@@ -3529,7 +3529,9 @@ INSERT INTO `mob_skill` VALUES (2756,452,2197,'Aquatic_lance',1,18.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2757,452,2198,'Pelagic_cleaver',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2758,452,2199,'Carcharian_verve',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2759,452,2200,'Tidal_Guillotine',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2760,452,2201,'Marine_Mayhem',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2760,452,2201,'Marine_Mayhem',1,28.0,2000,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,452,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (434,452,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Kumhau
 -- melee special 2258 2259 2260
@@ -3541,14 +3543,16 @@ INSERT INTO `mob_skill` VALUES (2885,457,2265,'Glacial_Tomb',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2886,457,2266,'Glassy_Nova',1,26.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (438,457,432,'Invincible', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
--- Colkhab
+-- Colkhab 
 -- melee special 2133 / 2134 / 2135(aoe melee attack)
-INSERT INTO `mob_skill` VALUES (2746,456,2136,'Mandibular_Lashing',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2747,456,2137,'Vespine_Hurricane',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2748,456,2138,'Stinger_volley',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2749,456,2139,'Droning_Whirlwind',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2750,456,2140,'Incisive_Denouement',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2751,456,2141,'Incisive_Apotheosis',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2746,456,2136,'Colkhab_Mandibular_Lashing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2747,456,2137,'Colkhab_Vespine_Hurricane',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2748,456,2138,'Colkhab_Stinger_volley',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2749,456,2139,'Colkhab_Droning_Whirlwind',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2750,456,2140,'Colkhab_Incisive_Denouement',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2751,456,2141,'Colkhab_Incisive_Apotheosis',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,456,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (474,456,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Achuka
 -- special melee 2142 2143 2144
@@ -3569,6 +3573,8 @@ INSERT INTO `mob_skill` VALUES (2819,460,2219,'Brownout',1,18.0,2000,1000,4,0,0,
 INSERT INTO `mob_skill` VALUES (2820,460,2220,'Reverse_Current',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2821,460,2221,'Sparkstorm',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2822,460,2222,'Static_Prison',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (436,460,432,'Chainspell', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (439,460,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Yumcax
 -- special melee anims 2202 2203 2204
@@ -4654,7 +4660,14 @@ INSERT INTO `mob_skill` VALUES (2612,987,2004,'Echolocation',1,18.0,2000,1000,4,
 -- INSERT INTO `mob_skill` VALUES (2568,986,223,'Cloudscourge', 1, 20.0, 2000, 1500, 4, 0, 0, 0); 
  
 
-
+-- Ravenous Craklaw (990)
+INSERT INTO `mob_skill` VALUES (2701,990,2180,'Ravenous_Cracklaw_Impenetrable_carapace',1,18.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2702,990,2181,'Ravenous_Cracklaw_Rending_Deluge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2703,990,2182,'Ravenous_Cracklaw_Sundering_Snip',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2704,990,2183,'Ravenous_Cracklaw_Viscid_Spindrift',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2705,990,2184,'Ravenous_Cracklaw_Riptide_Eupnea',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,990,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (439,990,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 
 
