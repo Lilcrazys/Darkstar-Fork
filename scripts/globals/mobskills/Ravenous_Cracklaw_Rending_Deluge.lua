@@ -18,6 +18,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dis1 = target:dispelStatusEffect();
     local dis2 = target:dispelStatusEffect();
 	local typeEffect = EFFECT_WEAKNESS;
+	
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 90);
 	
     if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
@@ -32,10 +33,11 @@ function onMobWeaponSkill(target, mob, skill)
     end
 
 
-	dmgmod = 1;
+	local dmgmod = 1;
 	
-	info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 6,ELE_WATER,dmgmod,TP_NO_EFFECT,1);
-	dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 6,ELE_WATER,dmgmod,TP_NO_EFFECT,1);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
+	
 	target:delHP(dmg);
 	
 	return dmg;
