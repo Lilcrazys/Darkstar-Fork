@@ -53,16 +53,14 @@ function onTrade(player,npc,trade)
 	if (trade:hasItemQty(3925,50)) and (trade:getItemCount() == 50) then
 		player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested, Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_ECHO, npc:getID() );
-		GetNPCByID(17772589):setPos(5,0,-86,166);
-		GetNPCByID(17772589):showNPC(100);
-		GetNPCByID(17772589):setStatus(STATUS_NORMAL);
+		GetNPCByID(npc:getID+134):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	end
 	if (player:getVar("customtrial") >= 1) and (trade:hasItemQty(3925,50) == false) and (trade:hasItemQty(2184,1) == false) then
 		player:SpoofChatPlayer( "Sorry you already have a trial active", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( "If you wish to cancel the current trial, please trade a small fee of 1x imperial bronze piece to Venessa.", MESSAGE_SAY, npc:getID() );
 	end
-	
+
 	--------------------------------------------
 	-- 				Mythic Trials
 	--------------------------------------------
@@ -1076,14 +1074,10 @@ end;
 -- onTrigger Action
 -----------------------------------
 function onTrigger(player,npc)
-	local NPC = 17772760;
-
 	if (player:getVar("TRIAL_COMPLETE") == 1) then
 		player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_ECHO, npc:getID() );
-		GetNPCByID(NPC):setPos(5,0,-86,166);
-		GetNPCByID(NPC):showNPC(100);
-		GetNPCByID(NPC):setStatus(STATUS_NORMAL);
+		GetNPCByID(npc:getID+134):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	else
 		player:SpoofChatPlayer( "What you looking at?, Try brining me something of interest.", MESSAGE_SAY, npc:getID() );

@@ -1660,6 +1660,8 @@ REPLACE INTO `npc_list` VALUES (17756379,'Babban_Ny_Mheillea','Babban Ny Mheille
 -- 17773567
 -- ------------------------------------------------------------
 
+REPLACE INTO `npc_list` VALUES (17772723,'Custom_Magian_Moogle','Custom_Magian_Moogle',128,6.000,0.000,-76.000,32769,40,40,0,0,0,2,3,0x0000730900000000000000000000000000000000,0,null);
+
 REPLACE INTO `npc_list` VALUES (17772772,'Assai_Nybaem','Assai Nybaem',223,-34,0.001,-77,29,40,40,0,0,0,0,27,0x01000501fc100221c930b9408950006000700000,32,null);
 
 REPLACE INTO `npc_list` VALUES (17772784,'Fabien','Fabien',191,2.282,0.001,-65.316,29,40,40,0,0,0,0,3,0x0100070100100421c930b9400251006000700000,0,null);

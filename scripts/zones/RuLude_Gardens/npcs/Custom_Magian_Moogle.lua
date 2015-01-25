@@ -118,7 +118,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(15070,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -130,7 +130,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18336,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -142,7 +142,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18306,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -154,7 +154,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18294,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -166,7 +166,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18330,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -178,7 +178,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18276,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -190,7 +190,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18342,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -202,7 +202,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18300,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -214,7 +214,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18288,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -226,7 +226,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18312,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -238,7 +238,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18270,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -250,7 +250,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18324,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -262,7 +262,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18282,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -274,7 +274,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18264,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -286,7 +286,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18348,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -298,7 +298,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 		-------------------
@@ -313,7 +313,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(16196,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -325,7 +325,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18649,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -337,7 +337,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18644,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -349,7 +349,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18642,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -361,7 +361,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18648,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -373,7 +373,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18639,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -385,7 +385,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18578,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -397,7 +397,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18643,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -409,7 +409,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18641,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -421,7 +421,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18645,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -433,7 +433,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18638,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -445,7 +445,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18647,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -457,7 +457,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18640,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -469,7 +469,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18637,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -481,7 +481,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18650,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -493,7 +493,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 		-------------------
@@ -508,7 +508,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(16198,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -520,7 +520,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18677,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -532,7 +532,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18672,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -544,7 +544,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18670,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -556,7 +556,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18676,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -568,7 +568,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18667,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -580,7 +580,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18580,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -592,7 +592,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18671,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -604,7 +604,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18669,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -616,7 +616,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18673,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -628,7 +628,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18666,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -640,7 +640,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18675,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -652,7 +652,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18668,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -664,7 +664,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18665,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -676,7 +676,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18678,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -688,7 +688,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	-----------------
@@ -703,7 +703,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(11927,1) and trade:getItemCount() == 51) then
@@ -715,7 +715,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19758,1) and trade:getItemCount() == 51) then
@@ -727,7 +727,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19753,1) and trade:getItemCount() == 51) then
@@ -739,7 +739,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19751,1) and trade:getItemCount() == 51) then
@@ -751,7 +751,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19757,1) and trade:getItemCount() == 51) then
@@ -763,7 +763,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19748,1) and trade:getItemCount() == 51) then
@@ -775,7 +775,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(18572,1) and trade:getItemCount() == 51) then
@@ -787,7 +787,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19752,1) and trade:getItemCount() == 51) then
@@ -799,7 +799,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19750,1) and trade:getItemCount() == 51) then
@@ -811,7 +811,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19754,1) and trade:getItemCount() == 51) then
@@ -823,7 +823,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19747,1) and trade:getItemCount() == 51) then
@@ -835,7 +835,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19756,1) and trade:getItemCount() == 51) then
@@ -847,7 +847,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19749,1) and trade:getItemCount() == 51) then
@@ -859,7 +859,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19746,1) and trade:getItemCount() == 51) then
@@ -871,7 +871,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19759,1) and trade:getItemCount() == 51) then
@@ -883,7 +883,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 
@@ -899,7 +899,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18997,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -911,7 +911,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19000,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -923,7 +923,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18991,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -935,7 +935,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19007,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -947,7 +947,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19001,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -959,7 +959,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18992,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -971,7 +971,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19002,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -983,7 +983,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18994,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -995,7 +995,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18998,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1007,7 +1007,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18995,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1019,7 +1019,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19003,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1031,7 +1031,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19005,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1043,7 +1043,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19004,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1055,7 +1055,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 		if (trade:hasItemQty(18989,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1067,7 +1067,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19006,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1079,7 +1079,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(18990,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1091,7 +1091,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 
@@ -1107,7 +1107,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19086,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1119,7 +1119,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19089,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1131,7 +1131,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19080,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1143,7 +1143,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19096,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1155,7 +1155,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19090,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1167,7 +1167,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19081,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1179,7 +1179,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19091,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1191,7 +1191,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19083,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1203,7 +1203,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19087,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1215,7 +1215,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19084,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1227,7 +1227,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19092,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1239,7 +1239,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19094,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1251,7 +1251,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19093,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1263,7 +1263,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 		if (trade:hasItemQty(19098,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1275,7 +1275,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19095,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1287,7 +1287,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19099,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1299,7 +1299,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 
@@ -1315,7 +1315,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19716,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1327,7 +1327,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19719,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1339,7 +1339,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19710,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1351,7 +1351,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19726,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1363,7 +1363,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19720,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1375,7 +1375,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19711,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1387,7 +1387,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19721,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1399,7 +1399,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19713,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1411,7 +1411,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19717,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1423,7 +1423,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19714,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1435,7 +1435,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19722,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1447,7 +1447,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19724,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1459,7 +1459,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19723,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1471,7 +1471,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 		if (trade:hasItemQty(19728,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1483,7 +1483,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19725,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1495,7 +1495,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(19729,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
@@ -1507,7 +1507,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 
@@ -1523,7 +1523,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19825,1) and trade:getItemCount() == 51) then
@@ -1535,7 +1535,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19828,1) and trade:getItemCount() == 51) then
@@ -1547,7 +1547,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19819,1) and trade:getItemCount() == 51) then
@@ -1559,7 +1559,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19835,1) and trade:getItemCount() == 51) then
@@ -1571,7 +1571,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19829,1) and trade:getItemCount() == 51) then
@@ -1583,7 +1583,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19820,1) and trade:getItemCount() == 51) then
@@ -1595,7 +1595,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19830,1) and trade:getItemCount() == 51) then
@@ -1607,7 +1607,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19822,1) and trade:getItemCount() == 51) then
@@ -1619,7 +1619,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19826,1) and trade:getItemCount() == 51) then
@@ -1631,7 +1631,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19823,1) and trade:getItemCount() == 51) then
@@ -1643,7 +1643,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19831,1) and trade:getItemCount() == 51) then
@@ -1655,7 +1655,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19962,1) and trade:getItemCount() == 51) then
@@ -1667,7 +1667,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19832,1) and trade:getItemCount() == 51) then
@@ -1679,7 +1679,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19837,1) and trade:getItemCount() == 51) then
@@ -1691,7 +1691,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19834,1) and trade:getItemCount() == 51) then
@@ -1703,7 +1703,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 		if (trade:hasItemQty(3925,50) and trade:hasItemQty(19838,1) and trade:getItemCount() == 51) then
@@ -1715,7 +1715,7 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 			player:addItem(ITEM);
 			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			GetNPCByID(17772760):showNPC(5);
+			npc:setStatus(STATUS_DISAPPEAR);
 		end
 	end
 
