@@ -4621,7 +4621,8 @@ INSERT INTO `mob_skill` VALUES (2531,954,1959,'Divesting_gale',1,18.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2532,954,1960,'Bolt_of_perdition',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2534,954,1962,'Oblivions_mantle',1,15.0,2000,1000,4,0,0,0);
-
+INSERT INTO `mob_skill` VALUES (439,954,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (435,954,432,'Manafont', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 -- Paramount Botulus (955) 
 INSERT INTO `mob_skill` VALUES (2542,955,1283,'Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2543,955,1284,'Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
@@ -4630,6 +4631,45 @@ INSERT INTO `mob_skill` VALUES (2545,955,1288,'Rancid_Reflux',1,20.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (2546,955,1289,'Crowning_Flatus',1,20.0,2000,1500,4,0,0,0); 
 INSERT INTO `mob_skill` VALUES (2547,955,1285,'Slimy_Proposal',1,20.0,2000,1500,1,0,0,0); 
 INSERT INTO `mob_skill` VALUES (2548,955,1287,'Just_Desserts',1,20.0,2000,1500,4,0,0,0); 
+INSERT INTO `mob_skill` VALUES (436,955,432,'Chainspell', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (435,955,432,'Manafont', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+-- Paramount_Harpeia (956)
+INSERT INTO `mob_skill` VALUES (2469,956,1912,'Rending_talons',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2470,956,1913,'Shrieking_gale',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2471,956,1914,'Wings_of_woe',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2472,956,1915,'Wings_of_agony',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2474,956,1917,'Ravenous_wail',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (436,956,432,'Chainspell', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (433,956,432,'Benediction', 1, 20.0, 2000, 0, 1, 2, 0, 0);
+-- Paramount Mantis (957)
+INSERT INTO `mob_skill` VALUES (2595,957,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2596,957,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2597,957,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2598,957,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2600,957,1924,'Dead_Prophet ',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (434,957,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (475,957,18,'Mijin_Gakure', 1, 20.0, 2000, 0, 4, 2, 0, 0);
+-- Paramount Naraka (958)
+INSERT INTO `mob_skill` VALUES (2465,958,1907,'Raksha_Vengeance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2464,958,1906,'Raksha_Illusion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2463,958,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2461,958,1902,'Yaksha_Bliss',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2460,958,1903,'Yaksha_Oblivion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2459,958,1901,'Yaksha_Damnation',1,18.0,2000,1000,4,0,0,0
+INSERT INTO `mob_skill` VALUES (474,958,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (435,958,432,'Manafont', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+
+-- Paramount_Ironclad (959)
+INSERT INTO `mob_skill` VALUES (2363,959,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2364,959,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2365,959,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2366,959,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2367,959,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2368,959,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2370,959,1824,'Auger_Smash',4,9.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2371,959,1825,'Area_Bombardment',1,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,959,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (434,959,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Tchakka
 INSERT INTO `mob_skill` VALUES (2755,984,2196,'Protolithic_Puncture',1,18.0,2000,1000,4,0,0,0);
