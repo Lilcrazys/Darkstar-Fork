@@ -86,6 +86,10 @@ INSERT INTO `item_mods` VALUES(10750, 11, -4);
 INSERT INTO `item_mods` VALUES(10750, 23, 8);
 INSERT INTO `item_mods` VALUES(10750, 73, 4);
 
+INSERT INTO `item_mods` VALUES(10819, 1, 12); -- def +12
+INSERT INTO `item_mods` VALUES(10819, 161, -4); -- phy dmg taken -4%
+INSERT INTO `item_mods` VALUES(10819, 426, 2); -- convert dmg > MP 2%
+
 INSERT INTO `item_mods` VALUES(10901, 1, 36);
 INSERT INTO `item_mods` VALUES(10901, 25, 10);
 INSERT INTO `item_mods` VALUES(10901, 23, 10);

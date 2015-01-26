@@ -16579,17 +16579,21 @@ INSERT INTO `item_mods` VALUES(16192, 1, 20); --
 INSERT INTO `item_mods` VALUES(16192, 10, 10); --
 INSERT INTO `item_mods` VALUES(16193, 1, 40); --
 INSERT INTO `item_mods` VALUES(16193, 10, 20); --
-INSERT INTO `item_mods` VALUES(16193, 416, 20); -- Custom
+INSERT INTO `item_mods` VALUES(16193, 426, 25);
+INSERT INTO `item_mods` VALUES(16193, 416, 10); -- Custom
 INSERT INTO `item_mods` VALUES(16194, 1, 40); --
 INSERT INTO `item_mods` VALUES(16194, 10, 22); --
-INSERT INTO `item_mods` VALUES(16194, 416, 22); -- Custom
+INSERT INTO `item_mods` VALUES(16194, 426, 30); --
+INSERT INTO `item_mods` VALUES(16194, 416, 12); -- Custom
 INSERT INTO `item_mods` VALUES(11926, 1, 40); --
 INSERT INTO `item_mods` VALUES(11926, 10, 25); --
-INSERT INTO `item_mods` VALUES(11926, 416, 25); -- Custom
+INSERT INTO `item_mods` VALUES(11926, 426, 35);
+INSERT INTO `item_mods` VALUES(11926, 416, 15); -- Custom
 INSERT INTO `item_mods` VALUES(16199, 1, 40); --
-INSERT INTO `item_mods` VALUES(16199, 10, 25); -- 
+INSERT INTO `item_mods` VALUES(16199, 10, 25); --
+INSERT INTO `item_mods` VALUES(16199, 426, 35); 
 INSERT INTO `item_mods` VALUES(16199, 416, 25); -- Custom
-INSERT INTO `item_mods` VALUES(16199, 109, 106); 
+INSERT INTO `item_mods` VALUES(16199, 109, 106); -- Shield skill   Custom 
 
 -- ------------------------------------------
 -- Genesis Shield
@@ -19967,6 +19971,7 @@ INSERT INTO `item_mods` VALUES(18999, 288, 15); --
 INSERT INTO `item_mods` VALUES(18998, 30, 20);
 INSERT INTO `item_mods` VALUES(18998, 288, 15); --
 INSERT INTO `item_mods` VALUES(19000, 30, 10);
+INSERT INTO `item_mods` VALUES(19000, 454, 20); --
 INSERT INTO `item_mods` VALUES(19002, 288, 15); --
 INSERT INTO `item_mods` VALUES(19003, 27, 10);
 INSERT INTO `item_mods` VALUES(19003, 30, 10);
@@ -20067,7 +20072,7 @@ INSERT INTO `item_mods` VALUES(19087, 30, 25); --
 INSERT INTO `item_mods` VALUES(19087, 288, 20); --
 INSERT INTO `item_mods` VALUES(19088, 288, 20); --
 INSERT INTO `item_mods` VALUES(19089, 30, 15); --
-INSERT INTO `item_mods` VALUES(19089, 454, 25); -- 
+INSERT INTO `item_mods` VALUES(19089, 454, 22); -- 
 
 INSERT INTO `item_mods` VALUES(19091, 288, 20); --
 INSERT INTO `item_mods` VALUES(19092, 30, 20); --
@@ -20451,7 +20456,7 @@ INSERT INTO `item_mods` VALUES(19717, 302, 5); --
 INSERT INTO `item_mods` VALUES(19718, 288, 25); --
 INSERT INTO `item_mods` VALUES(19718, 302, 5); --
 INSERT INTO `item_mods` VALUES(19719, 30, 20); --
-INSERT INTO `item_mods` VALUES(19719, 454, 30); --
+INSERT INTO `item_mods` VALUES(19719, 454, 25); --
 
 INSERT INTO `item_mods` VALUES(19721, 288, 25); --
 INSERT INTO `item_mods` VALUES(19721, 302, 5); --
@@ -20586,7 +20591,7 @@ INSERT INTO `item_mods` VALUES(19826, 302, 10); --
 INSERT INTO `item_mods` VALUES(19827, 288, 30); --
 INSERT INTO `item_mods` VALUES(19827, 302, 10); --
 INSERT INTO `item_mods` VALUES(19828, 30, 25); --
-INSERT INTO `item_mods` VALUES(19828, 454, 35); --
+INSERT INTO `item_mods` VALUES(19828, 454, 25); --
 INSERT INTO `item_mods` VALUES(19830, 288, 30); --
 INSERT INTO `item_mods` VALUES(19830, 302, 10); --
 INSERT INTO `item_mods` VALUES(19831, 30, 30); --
@@ -20684,7 +20689,7 @@ INSERT INTO `item_mods` VALUES(20561, 454, 40); --
 INSERT INTO `item_mods` VALUES(20562, 30, 250); --
 INSERT INTO `item_mods` VALUES(20562, 81, 242); --
 INSERT INTO `item_mods` VALUES(20562, 110, 242); --
-INSERT INTO `item_mods` VALUES(20562, 454, 40); --
+INSERT INTO `item_mods` VALUES(20562, 454, 30); --
 INSERT INTO `item_mods` VALUES(20563, 9, 20); --
 INSERT INTO `item_mods` VALUES(20563, 81, 242); --
 INSERT INTO `item_mods` VALUES(20563, 110, 242); --
