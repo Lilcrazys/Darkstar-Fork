@@ -1,5 +1,5 @@
 -----------------------------------------
--- Spell: Bio III
+-- Spell: Bio IV
 -- Deals dark damage that weakens an enemy's attacks and gruadually reduces its HP.
 -----------------------------------------
 

@@ -1,7 +1,6 @@
 -----------------------------------------
 -- Spell: Diaga V
--- Lowers an enemy's defense and gradually
--- deals light elemental damage.
+-- Lowers an enemy's defense and gradually deals light elemental damage.
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -31,31 +30,30 @@ function onSpellCast(caster,target,spell)
 	--add on bonuses (staff/day/weather/jas/mab/etc all go in this function)
 	dmg = addBonuses(caster,spell,target,dmg);
 	--add in target adjustment
-	dmg = adjustForTarget(target,dmg);
+	dmg = adjustForTarget(target,dmg,spell:getElement());
 	--add in final adjustments including the actual damage dealt
 	local final = finalMagicAdjustments(caster,target,spell,dmg);
 
-	-- Calculate duration.
+	-- Calculate duration and bonus
 	local duration = 180;
+	local bonus = 0;
 
-	local diaPowerMod = 0;
-		
 	if(caster:getEquipID(SLOT_MAIN) == 17466 or caster:getEquipID(SLOT_SUB) == 17466) then -- Dia Wand
-		diaPowerMod = 1;
+		bonus = bonus+1;
 	end
-	
-	if (caster:hasStatusEffect(EFFECT_SABOTEUR) == true) then
-		duration = duration + (duration * (1 + (caster:getMod(MOD_SABOTEUR)/100)));
-		diaPowerMod = diaPowerMod + 5;
+
+	if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
+		duration = duration * 2;
+		bonus = bonus+5;
 		caster:delStatusEffect(EFFECT_SABOTEUR);
-    	end
-	
+	end
+
 	-- Check for Bio.
 	bio = target:getStatusEffect(EFFECT_BIO);
 
 	-- Do it!
 	if(bio == nil or (DIA_OVERWRITE == 0 and bio:getPower() <= 5) or (DIA_OVERWRITE == 1 and bio:getPower() < 5)) then
-		target:addStatusEffect(EFFECT_DIA,5,3,duration, 0, 25, diaPowerMod);
+		target:addStatusEffect(EFFECT_DIA,5,3,duration,FLAG_ERASABLE,25+bonus);
 		spell:setMsg(2);
 	else
 		spell:setMsg(75);

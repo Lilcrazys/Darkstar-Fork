@@ -1,8 +1,6 @@
 -----------------------------------------
 -- Spell: Bio V
--- Deals dark damage that weakens an
--- enemy's attacks and gruadually reduces
--- its HP.
+-- Deals dark damage that weakens an enemy's attacks and gruadually reduces its HP.
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -38,9 +36,9 @@ function onSpellCast(caster,target,spell)
 	--add on bonuses (staff/day/weather/jas/mab/etc all go in this function)
 	dmg = addBonuses(caster,spell,target,dmg);
 	--add in target adjustment
-	dmg = adjustForTarget(target,dmg);
+	dmg = adjustForTarget(target,dmg,spell:getElement());
 	--add in final adjustments including the actual damage dealt
-	final = finalMagicAdjustments(caster,target,spell,dmg);
+	local final = finalMagicAdjustments(caster,target,spell,dmg);
 
 	-- Calculate duration.
 	local duration = 150;
@@ -54,7 +52,7 @@ function onSpellCast(caster,target,spell)
 	-- Do it!
 	if(dia == nil or (BIO_OVERWRITE == 0 and dia:getPower() <= 5) or (BIO_OVERWRITE == 1 and dia:getPower() < 5)) then
 		target:delStatusEffect(EFFECT_BIO); -- delete old bio
-		target:addStatusEffect(EFFECT_BIO,dotdmg,3,duration,FLAG_ERASABLE);
+		target:addStatusEffect(EFFECT_BIO,dotdmg,3,duration,FLAG_ERASABLE,20);
 	end
 
 	--Try to kill same tier Dia (default behavior)

@@ -37,26 +37,26 @@ function onSpellCast(caster,target,spell)
 	--add in final adjustments including the actual damage dealt
 	local final = finalMagicAdjustments(caster,target,spell,dmg);
 
-	-- Calculate duration.
+	-- Calculate duration and bonus
 	local duration = 120;
-	local diaPowerMod = 0;
-		
+	local bonus = 0;
+
 	if(caster:getEquipID(SLOT_MAIN) == 17466 or caster:getEquipID(SLOT_SUB) == 17466) then -- Dia Wand
-		diaPowerMod = 1;
+		bonus = bonus+1;
 	end
-	
-	if (caster:hasStatusEffect(EFFECT_SABOTEUR) == true) then
-		duration = duration + (duration * (1 + (caster:getMod(MOD_SABOTEUR)/100)));
-		diaPowerMod = diaPowerMod + 5;
+
+	if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
+		duration = duration * 2;
+		bonus = bonus+5;
 		caster:delStatusEffect(EFFECT_SABOTEUR);
-    	end
+	end
 
 	-- Check for Bio.
-	bio = target:getStatusEffect(EFFECT_BIO);
+	local bio = target:getStatusEffect(EFFECT_BIO);
 
 	-- Do it!
 	if(bio == nil or (DIA_OVERWRITE == 0 and bio:getPower() <= 5) or (DIA_OVERWRITE == 1 and bio:getPower() < 5)) then
-		target:addStatusEffect(EFFECT_DIA,5,3,duration, 0, 25, diaPowerMod);
+		target:addStatusEffect(EFFECT_DIA,5,3,duration,FLAG_ERASABLE,25+bonus);
 		spell:setMsg(2);
 	else
 		spell:setMsg(75);

@@ -1,11 +1,13 @@
 -----------------------------------------
 -- Spell: Bio II
--- Deals dark damage that weakens an enemy's attacks and gradually reduces its HP.
+-- Deals dark damage that weakens an enemy's attacks and gruadually reduces its HP.
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/settings");
+
 require("scripts/globals/abyssea");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
