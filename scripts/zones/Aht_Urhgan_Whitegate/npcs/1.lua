@@ -18,7 +18,6 @@ function onTrade(player,npc,trade)
 		player:addItem(10901);
 		player:messageSpecial(ITEM_OBTAINED,10901);
 		player:tradeComplete();
-        npc:hideNPC(1);
 	end
 	if (trade:hasItemQty(4024,12) and trade:hasItemQty(14568,1) and trade:getItemCount() == 13) then   			   -- body
 		npc:AnimationSub(5);
