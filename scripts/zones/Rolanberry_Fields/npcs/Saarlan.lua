@@ -1,15 +1,15 @@
 -----------------------------------
 -- Area: Rolanberry Fields
 --  NPC: Saarlan
--- Legion starter NPC
+-- Legion NPC
 -- @pos 242 24.395 468
 -----------------------------------
 package.loaded["scripts/zones/Rolanberry_Fields/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
-require("scripts/globals/quests");
 require("scripts/globals/keyitems");
+require("scripts/globals/titles");
 require("scripts/zones/Rolanberry_Fields/TextIDs");
 
 -----------------------------------
@@ -17,28 +17,6 @@ require("scripts/zones/Rolanberry_Fields/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-	--[[
-	if (trade:getGil() == 360000 and trade:getItemCount() == 1) then
-		if (player:hasKeyItem(LEGION_TOME_PAGE_MAXIMUS)) then
-		player:showText(npc,LEGION_ALREADY_HAVE_KEYITEM,LEGION_TOME_PAGE_MAXIMUS);
-	else
-		player:tradeComplete();
-		player:showText(npc,LEGION_KEYITEM_GET);
-		player:addKeyItem(LEGION_TOME_PAGE_MAXIMUS);
-		player:messageSpecial(KEYITEM_OBTAINED,LEGION_TOME_PAGE_MAXIMUS);
-		end
-	end
-	if (trade:getGil() == 180000 and trade:getItemCount() == 1) then
-		if (player:hasKeyItem(LEGION_TOME_PAGE_MINIMUS)) then
-			player:showText(npc,LEGION_ALREADY_HAVE_KEYITEM,LEGION_TOME_PAGE_MINIMUS);
-		else
-			player:tradeComplete();
-			player:showText(npc,LEGION_KEYITEM_GET);
-			player:addKeyItem(LEGION_TOME_PAGE_MINIMUS);
-			player:messageSpecial(KEYITEM_OBTAINED,LEGION_TOME_PAGE_MINIMUS);
-		end
-	end
-	]]
 end;
 
 -----------------------------------
@@ -46,19 +24,41 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	--[[ YOU CANNOT CALL QUESTS THAT DO NOT EXIST IN THE GLOBAL YET.
-	That's a crash. So was requiring everything except the correct global, if it had actually been in there.
-	And quest ID's are not arbitrary so can't simply add oneto fix this - has to match client's expected ID. Get POLutils.
-	local legion = player:getQuestStatus(JEUNO,LEGION);
-	--local points = player:getVar(legion_point);
-	if((legion == QUEST_AVAILABLE)) then
-		player:startEvent(0x1F44,0,LEGION);
-	elseif((legion == QUEST_ACCEPTED)) then
-		gil = player:getGil();
-		player:PrintToPlayer("********************Saarlan will trade you the Keyitem of Choice when you trade the correct amount of Gil required for your choice.********************");
-		player:startEvent(0x1F45,gil);
-	end
-	]]
+    local TITLE = 0;
+    local MAXIMUS = 0;
+    local LP = player:getCurrency("legion_point");
+    local MINIMUS = 0;
+
+    if (player:hasKeyItem(LEGION_TOME_PAGE_MAXIMUS)) then
+        MAXIMUS = 1;
+    end
+    if (player:hasKeyItem(LEGION_TOME_PAGE_MINIMUS)) then
+        MINIMUS = 1;
+    end
+
+    if (player:hasTitle(SUBJUGATOR_OF_THE_LOFTY)) then
+        TITLE = TITLE+1;
+    end
+    if (player:hasTitle(SUBJUGATOR_OF_THE_MIRED)) then
+        TITLE = TITLE+2;
+    end
+    if (player:hasTitle(SUBJUGATOR_OF_THE_SOARING)) then
+        TITLE = TITLE+4;
+    end
+    if (player:hasTitle(SUBJUGATOR_OF_THE_VEILED)) then
+        TITLE = TITLE+8;
+    end
+    if (player:hasTitle(LEGENDARY_LEGIONNAIRE)) then
+        TITLE = TITLE+16;
+    end
+
+    if (player:getVar("LegionStatus") == 0) then
+        player:startEvent(8004);
+    elseif (player:getMainLvl() < 75) then
+        player:showText(npc, AWAIT_YOUR_CHALLENGE); -- Likely incorrect message.
+    elseif (player:getVar("LegionStatus") == 1) then
+        player:startEvent(8005, 0, TITLE, MAXIMUS, LP, MINIMUS);
+    end
 end;
 
 -----------------------------------
@@ -66,8 +66,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-	-- printf("CSID: %u",csid);
-	-- printf("RESULT: %u",option);
+    -- printf("CSID: %u", csid);
+    -- printf("RESULT: %u", option);
 end;
 
 -----------------------------------
@@ -75,13 +75,147 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-	-- print("CSID:",csid);
-	-- print("RESULT:",option);
-	--[[
-	if(csid == 0x1F44) then
-		if(player:getQuestStatus(JEUNO,LEGION) == QUEST_AVAILABLE) then
-			player:addQuest(JEUNO,LEGION);
-		end
-	end
-	]]
+    -- printf("CSID: %u", csid);
+    -- printf("RESULT: %u", option);
+    local GIL = player:getGil();
+    local LP = player:getCurrency("legion_point");
+    local LP_COST = 0;
+    local ITEM = 0;
+
+    if (csid == 8004) then
+        player:setVar("LegionStatus",1)
+    elseif (csid == 8005) then
+        if (option == 0x0001000A) then
+            if (GIL >= 360000) then
+                player:addKeyItem(LEGION_TOME_PAGE_MAXIMUS);
+                player:delGil(360000);
+                player:messageSpecial(KEYITEM_OBTAINED, LEGION_TOME_PAGE_MAXIMUS)
+            else
+                player:messageSpecial(NOT_ENOUGH_GIL);
+            end
+        elseif(option == 0x0001000B) then
+            if (GIL >= 180000) then
+                player:addKeyItem(LEGION_TOME_PAGE_MINIMUS);
+                player:delGil(180000);
+                player:messageSpecial(KEYITEM_OBTAINED, LEGION_TOME_PAGE_MINIMUS)
+            else
+                player:messageSpecial(NOT_ENOUGH_GIL);
+            end
+        elseif(option == 0x00000002) then -- Gaiardas Ring
+            LP_COST = 1000;
+            ITEM = 10775
+        elseif(option == 0x00010002) then -- Gaubious Ring
+            LP_COST = 1000;
+            ITEM = 10776;
+        elseif(option == 0x00020002) then -- Caloussu Ring
+            LP_COST = 1000;
+            ITEM = 10777;
+        elseif(option == 0x00030002) then -- Nanger Ring
+            LP_COST = 1000;
+            ITEM = 10778;
+        elseif(option == 0x00040002) then -- Sophia Ring
+            LP_COST = 1000;
+            ITEM = 10779;
+        elseif(option == 0x00050002) then -- Quies Ring
+            LP_COST = 1000;
+            ITEM = 10780;
+        elseif(option == 0x00060002) then -- Cynosure Ring
+            LP_COST = 1000;
+            ITEM = 10781;
+        elseif(option == 0x00070002) then -- Ambuscade Ring
+            LP_COST = 1000;
+            ITEM = 10782;
+        elseif(option == 0x00080002) then -- Veneficium Ring
+            LP_COST = 1000;
+            ITEM = 10783;
+        elseif(option == 0x00090002) then -- Calma Gauntlets  ...Requires title: "Subjugator of the Mired"
+            LP_COST = 3000;
+            ITEM = 10512;
+        elseif(option == 0x000A0002) then -- Magavan Mitts  ...Requires title: "Subjugator of the Mired"
+            LP_COST = 3000;
+            ITEM = 10514;
+        elseif(option == 0x000B0002) then -- Mustela Gloves  ...Requires title: "Subjugator of the Mired"
+            LP_COST = 3000;
+            ITEM = 10513;
+        elseif(option == 0x000C0002) then -- Saviesa Pearl  ...Requires title: "Subjugator of the Mired"
+            LP_COST = 3000;
+            ITEM = 11045;
+        elseif(option == 0x000D0002) then -- Calma Leggings  ...Requires title: "Subjugator of the Veiled"
+            LP_COST = 3000;
+            ITEM = 10610;
+        elseif(option == 0x000E0002) then -- Mustela Boots  ...Requires title: "Subjugator of the Veiled"
+            LP_COST = 3000;
+            ITEM = 10611;
+        elseif(option == 0x000F0002) then -- Magavan Clogs  ...Requires title: "Subjugator of the Veiled"
+            LP_COST = 3000;
+            ITEM = 10612;
+        elseif(option == 0x00100002) then -- Cytherea Pearl  ...Requires title: "Subjugator of the Veiled"
+            LP_COST = 3000;
+            ITEM = 11048;
+        elseif(option == 0x00110002) then -- Myrddin Pearl  ...Requires title: "Subjugator of the Veiled"
+            LP_COST = 3000;
+            ITEM = 11049;
+        elseif(option == 0x00120002) then -- Puissant Pearl  ...Requires title: "Subjugator of the Veiled"
+            LP_COST = 3000;
+            ITEM = 11050;
+        elseif(option == 0x00130002) then -- Calma Hose  ...Requires title: "Subjugator of the Soaring"
+            LP_COST = 4500;
+            ITEM = 11980;
+        elseif(option == 0x00140002) then -- Mustela Brais  ...Requires title: "Subjugator of the Soaring"
+            LP_COST = 4500;
+            ITEM = 11981;
+        elseif(option == 0x00150002) then -- Magavan Slops  ...Requires title: "Subjugator of the Soaring"
+            LP_COST = 4500;
+            ITEM = 11982;
+        elseif(option == 0x00160002) then -- Ouesk Pearl  ...Requires title: "Subjugator of the Soaring"
+            LP_COST = 3000;
+            ITEM = 11046;
+        elseif(option == 0x00170002) then -- Belatz Pearl  ...Requires title: "Subjugator of the Soaring"
+            LP_COST = 3000;
+            ITEM = 11047;
+        elseif(option == 0x00180002) then -- Calma Armet  ...Requires title: "Subjugator of the Lofty"
+            LP_COST = 4500;
+            ITEM = 10890;
+        elseif(option == 0x00190002) then -- Mustela Mask  ...Requires title: "Subjugator of the Lofty"
+            LP_COST = 4500;
+            ITEM = 10891;
+        elseif(option == 0x001A0002) then -- Magavan Beret  ...Requires title: "Subjugator of the Lofty"
+            LP_COST = 4500;
+            ITEM = 10892;
+        elseif(option == 0x001B0002) then -- Corybant Pearl  ...Requires title: "Subjugator of the Lofty"
+            LP_COST = 3000;
+            ITEM = 11044;
+        elseif(option == 0x001C0002) then -- Calma Breastplate  ...Requires title: "Legendary Legionnaire"
+            LP_COST = 10000;
+            ITEM = 10462;
+        elseif(option == 0x001D0002) then -- Mustela Harness  ...Requires title: "Legendary Legionnaire"
+            LP_COST = 10000;
+            ITEM = 10463;
+        elseif(option == 0x001E0002) then -- Magavan Frock  ...Requires title: "Legendary Legionnaire"
+            LP_COST = 10000;
+            ITEM = 10464;
+        elseif(option == 0x001F0002) then -- Dhanurveda Ring  ...Requires title: "Legendary Legionnaire"
+            LP_COST = 6000;
+            ITEM = 10784;
+        elseif(option == 0000200002) then -- Provocare Ring  ......Requires title: "Legendary Legionnaire"
+            LP_COST = 6000;
+            ITEM = 10785;
+        elseif(option == 0000210002) then -- Mediator's Ring  ...Requires title: "Legendary Legionnaire"
+            LP_COST = 6000;
+            ITEM = 10786;
+        end
+    end
+
+    if (LP < LP_COST) then
+        player:messageSpecial(LACK_LEGION_POINTS);
+    elseif (ITEM > 0) then
+        if (player:getFreeSlotsCount() >=1) then
+            player:delCurrency("legion_point", LP_COST);
+            player:addItem(ITEM, 1);
+            player:messageSpecial(ITEM_OBTAINED, ITEM);
+        else
+            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, ITEM);
+        end
+    end
+
 end;

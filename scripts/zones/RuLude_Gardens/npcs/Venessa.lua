@@ -48,9 +48,7 @@ function onTrade(player,npc,trade)
 	if (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
 		player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested, Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_ECHO, npc:getID() );
-		GetNPCByID(17772760):setPos(5,0,-86,166);
-		GetNPCByID(17772760):showNPC(100);
-		GetNPCByID(17772760):setStatus(STATUS_NORMAL);
+		GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	end
 	if (player:getVar("customtrial") >= 1 and trade:hasItemQty(3925,50) == false and trade:hasItemQty(2184,1) == false) then

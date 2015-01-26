@@ -16,7 +16,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-	-- Mostly Guestimate ??
+--[[ no, wrong, crashing server! Try again! DO NOT PUSH TO LIVE BRANCH!
 	local duration = 120;
 	local power = 20;
  	duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
@@ -30,4 +30,5 @@ function onSpellCast(caster,target,spell)
     target:addStatusEffect(EFFECT_CAPRICCIO,power,0,duration);
     spell:setMsg(230);
     return EFFECT_CAPRICCIO;
+]]
 end;
