@@ -31,7 +31,7 @@ function onMobWeaponSkill(target, mob, skill)
 		mob:delStatusEffectSilent(EFFECT_ENSTONE);
 	elseif (mob:hasStatusEffect(EFFECT_ENAERO)) then
 		mob:delStatusEffectSilent(EFFECT_ENAERO);
-	elseif (mob:hasStatusEffect(EFFECT_ENBLIZZARD) then
+	elseif (mob:hasStatusEffect(EFFECT_ENBLIZZARD)) then
 		mob:delStatusEffectSilent(EFFECT_ENBLIZZARD);
 	elseif (mob:hasStatusEffect(EFFECT_ENFIRE)) then
 		mob:delStatusEffectSilent(EFFECT_ENFIRE);
