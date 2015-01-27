@@ -1209,16 +1209,16 @@ INSERT INTO `mob_spawn_points` VALUES (17526837,'Veiled_Alicorn','Veiled Alicorn
 INSERT INTO `mob_spawn_points` VALUES (17526838,'Veiled_Gigaworm','Veiled Gigaworm',90045,0,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (17526839,'Veiled_Ironclad','Veiled Ironclad',90046,0,0,0,0);
 
-INSERT INTO `mob_spawn_points` VALUES (17526840,'Lofty_Harpeia','Lofty_Harpeia',90050,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526841,'Mired_Mantis','Mired_Mantis',90051,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526842,'Soaring_Naraka','Soaring_Naraka',90052,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526843,'Veiled_Ironclad','Veiled_Ironclad',90053,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526844,'Paramount_Gallu','Paramount_Gallu',90054,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526845,'Paramount_Botulus','Paramount_Botulus',90055,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526846,'Paramount_Harpeia','Paramount_Harpeia',90056,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526847,'Paramount_Mantis','Paramount_Mantis',90057,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526848,'Paramount_Naraka','Paramount_Naraka',90058,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526849,'Paramount_Ironclad','Paramount_Ironclad',90059,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526847,'Lofty_Harpeia','Lofty_Harpeia',90050,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526848,'Mired_Mantis','Mired_Mantis',90051,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526849,'Soaring_Naraka','Soaring_Naraka',90052,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526850,'Veiled_Ironclad','Veiled_Ironclad',90053,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526855,'Paramount_Gallu','Paramount_Gallu',90054,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526856,'Paramount_Botulus','Paramount_Botulus',90055,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526852,'Paramount_Harpeia','Paramount_Harpeia',90056,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526853,'Paramount_Mantis','Paramount_Mantis',90057,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526851,'Paramount_Naraka','Paramount_Naraka',90058,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526854,'Paramount_Ironclad','Paramount_Ironclad',90059,0,0,0,0);
 
 
 
