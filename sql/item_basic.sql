@@ -16036,6 +16036,7 @@ INSERT INTO `item_basic` VALUES (28344,0,'thurandaut_boots','thurandaut_boots',1
 INSERT INTO `item_basic` VALUES (28345,0,'karieyh_sollerets','karieyh_sollerets',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28346,0,'geomancy_sandals','geomancy_sandals',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28347,0,'runeist_bottes','runeist_bottes',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28381,0,'imbodla_necklace','imbodla_necklace',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28383,0,'pentalagus_charm','pentalagus_charm',1,34816,22,0,100);
 INSERT INTO `item_basic` VALUES (28384,0,'huani_collar','huani_collar',1,34816,22,0,100);
 INSERT INTO `item_basic` VALUES (28385,0,'atzintli_necklace','atzintli_necklace',1,34816,22,0,100);

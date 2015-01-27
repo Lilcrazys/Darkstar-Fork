@@ -125,6 +125,30 @@ INSERT INTO `item_mods` VALUES(20742, 82, 54); -- Iztaasu
 INSERT INTO `item_mods` VALUES(20742, 110, 54);
 INSERT INTO `item_mods` VALUES(20742, 30, 42);
 
+-- Honed Tathlum
+INSERT INTO `item_mods` VALUES(21389, 25, 15); -- acc
+
+-- Mephitis Grip
+INSERT INTO `item_mods` VALUES(21429, 30, 5); -- Macc
+INSERT INTO `item_mods` VALUES(21429, 114, 5); -- Enfeebling skill
+
+-- Uk'uxkaj Cap
+INSERT INTO `item_mods` VALUES(27766, 1, 95); -- def
+INSERT INTO `item_mods` VALUES(27766, 2, 28); -- hp
+INSERT INTO `item_mods` VALUES(27766, 5, 22); -- mp
+INSERT INTO `item_mods` VALUES(27766, 8, 22); -- str
+INSERT INTO `item_mods` VALUES(27766, 9, 25); -- dex
+INSERT INTO `item_mods` VALUES(27766, 10, 22); -- vit
+INSERT INTO `item_mods` VALUES(27766, 11, 25); -- agl
+INSERT INTO `item_mods` VALUES(27766, 12, 22); -- int
+INSERT INTO `item_mods` VALUES(27766, 13, 22); -- mnd
+INSERT INTO `item_mods` VALUES(27766, 14, 23); -- chr
+INSERT INTO `item_mods` VALUES(27766, 68, 34); -- eva
+INSERT INTO `item_mods` VALUES(27766, 31, 46); -- Meva
+INSERT INTO `item_mods` VALUES(27766, 29, 2); -- MDB
+INSERT INTO `item_mods` VALUES(27766, 165, 3); -- crit %
+INSERT INTO `item_mods` VALUES(27766, 384, 70); -- haste gear 
+
 INSERT INTO `item_mods` VALUES(27779, 1, 72);
 INSERT INTO `item_mods` VALUES(27779, 2, 12);
 INSERT INTO `item_mods` VALUES(27779, 5, 18);
@@ -188,3 +212,9 @@ INSERT INTO `item_mods` VALUES(28201, 68, 11);
 INSERT INTO `item_mods` VALUES(28201, 29, 1);
 INSERT INTO `item_mods` VALUES(28201, 31, 40);
 INSERT INTO `item_mods` VALUES(28201, 384, 70);
+
+-- Imbodla Necklace
+INSERT INTO `item_mods` VALUES(28381, 12, 7); -- int
+INSERT INTO `item_mods` VALUES(28381, 13, 7); -- mnd
+INSERT INTO `item_mods` VALUES(28381, 114, 5); -- enfeebling skill
+INSERT INTO `item_mods` VALUES(28381, 115, 5); -- elemental skill
