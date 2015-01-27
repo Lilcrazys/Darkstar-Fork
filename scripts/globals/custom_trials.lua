@@ -20,7 +20,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Relic 1 75-85
 	---------------------
 
-	local SewwtheSquidlimbedKillCount = 0;
+	local SewwTheSquidLimbedKillCount = 0;
 	local MegalobugardKillCount = 0;
 	local DuneWidowKillCount = 0;
 	local MischievousCount = 0;
@@ -28,7 +28,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	local KeeperKillCount = 0;
 
 	if (killer:getVar("Seww_the_Squidlimbed_KILLS") ~= nil) then
-		SewwtheSquidlimbedKillCount = killer:getVar("Seww_the_Squidlimbed_KILLS")
+		SewwTheSquidLimbedKillCount = killer:getVar("Seww_the_Squidlimbed_KILLS")
 	end
 	if (killer:getVar("Mischievous_Micholas_KILLS") ~= nil) then
 		MischievousCount = killer:getVar("Mischievous_Micholas_KILLS")
@@ -56,8 +56,8 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		MAIN == 18270 or MAIN == 18324 or MAIN == 18282 or MAIN == 18264 or
 		RANGED == 18348 or RANGED == 18336 ) ) then
 
-		if (SewwtheSquidlimbedKillCount < 4 and mob:getID() == 17498301) then
-			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwtheSquidlimbedKillCount + 1);
+		if (SewwTheSquidLimbedKillCount < 4 and mob:getID() == 17498301) then
+			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwTheSquidLimbedKillCount + 1);
 		end
 		if (MischievousCount < 4 and mob:getID() == 17281149) then
 			killer:setVar("Mischievous_Micholas_KILLS", MischievousCount + 1);
@@ -79,7 +79,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		-- Trial complete
 		------------------
 
-		if (MegalobugardKillCount == 4 and Seww_the_SquidlimbedKillCount == 4 and MischievousCount == 4 and
+		if (MegalobugardKillCount == 4 and SewwTheSquidLimbedKillCount == 4 and MischievousCount == 4 and
 			Dune_WidowKillCount == 3 and Keeper_of_HalidomKillCount == 4 and  IntuloKillCount == 4) then
 			killer:setVar("TRIAL_COMPLETE", 1);
 		end

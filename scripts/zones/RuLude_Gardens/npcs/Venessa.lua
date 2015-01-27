@@ -423,10 +423,9 @@ function onTrade(player,npc,trade)
 			player:tradeComplete();
 		else -- Trading anything other than expected during an active trial triggers this.
 			-- player:PrintToPlayer("Testing else");
-			player:SpoofChatPlayer( "Sorry but you already have a trial active.", MESSAGE_SAY, npc:getID() );
-			player:SpoofChatPlayer( "If you wish to cancel the current trial...", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "If you wish to cancel your current trial...", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "The fee for wasting my time is:", MESSAGE_SAY, npc:getID() );
-			player:SpoofChatPlayer( "1x Imp. Bronze Piece. ", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "1 Imperial Bronze Piece. ", MESSAGE_ECHO, npc:getID() );
 		end
 	end
 end;
