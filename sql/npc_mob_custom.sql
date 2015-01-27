@@ -47,7 +47,7 @@
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (16798718,'Kumhau','Kumhau',90085,-22,-175,50,118);
--- INSERT INTO `npc_list` VALUES (16798719,'Loot_Box','Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+-- INSERT INTO `npc_list` VALUES (16798719,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -62,7 +62,7 @@ INSERT INTO `mob_spawn_points` VALUES (16798718,'Kumhau','Kumhau',90085,-22,-175
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (16806910,'Achuka','Achuka',90089,324,-25,-52,187);
--- INSERT INTO `npc_list` VALUES (16806911,'Loot_Box','Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+-- INSERT INTO `npc_list` VALUES (16806911,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -354,7 +354,7 @@ INSERT INTO `mob_spawn_points` VALUES (16977949,'Velkk_manipulator','Velkk_manip
 INSERT INTO `mob_spawn_points` VALUES (16978940,'SlenderMan','SlenderMan',96666,-24,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978941,'Mars','Mars',97600,-5,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,0,0);
--- INSERT INTO `npc_list` VALUES (16978943,'Test_Box','Test Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+-- INSERT INTO `npc_list` VALUES (16978943,'Test_Box','Test Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -544,7 +544,7 @@ INSERT INTO `mob_spawn_points` VALUES (17097723,'Darrcuiln','Darrcuiln',2773,418
 INSERT INTO `mob_spawn_points` VALUES (17097724,'Ashrakk','Ashrakk',2774,446,-216,-8,153);
 -- INSERT INTO `mob_spawn_points` VALUES (17097725,'Balamor','Balamor',2775,406,-215,85,88);
 INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance_Watcher',2776,426,-215,85,88);
--- INSERT INTO `npc_list` VALUES (17097727,'Loot_Box','Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+-- INSERT INTO `npc_list` VALUES (17097727,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -817,7 +817,7 @@ INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (17282046,'Darrcuiln','Darrcuiln',90091,446,21,140,151);
--- INSERT INTO `npc_list` VALUES (17282047,'Loot_Box','Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+-- INSERT INTO `npc_list` VALUES (17282047,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1223,8 +1223,24 @@ INSERT INTO `mob_spawn_points` VALUES (17526837,'Veiled_Alicorn','Veiled Alicorn
 INSERT INTO `mob_spawn_points` VALUES (17526838,'Veiled_Gigaworm','Veiled Gigaworm',90045,0,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (17526839,'Veiled_Ironclad','Veiled Ironclad',90046,0,0,0,0);
 
+INSERT INTO `npc_list` VALUES (17526884,'Achieve_Master','Achieve Master',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526885,'EXIT_AN','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526886,'EXIT_KI','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526887,'EXIT_IM','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null); -- used in csid 10000
+INSERT INTO `npc_list` VALUES (17526888,'EXIT_MURU','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526889,'Blank','Blank',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526890,'Legion_Portal_1','Legion Portal',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526891,'Legion_Portal_2','Legion Portal',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526892,'Legion_Tome','Legion Tome',64,180.000,12.000,-251.000,1,40,40,0,16,32,0,3,0x0000F20800000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526893,'Legion_Libretto','Legion Libretto',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526894,'EXIT_MUL','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526895,'Moogle1','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526896,'Moogle2','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526897,'Moogle3','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526898,'Moogle4','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+
 -- INSERT INTO `mob_spawn_points` VALUES (17527806,'Mars','Mars',0,0,0,0,0);
--- INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 
 
 
@@ -1530,7 +1546,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17686540,'CrystalFetter','Crystal Fetter
 -- INSERT INTO `mob_spawn_points` VALUES (17687548,'Minerva','Minerva',97777,0,0,0,0);
 -- INSERT INTO `mob_spawn_points` VALUES (17687549,'Steller_Elemental','Baelfyr',97778,0,0,0,0);
 -- INSERT INTO `mob_spawn_points` VALUES (17687550,'Olympian_Elemental','Ungeweder',97779,0,0,0,0);
--- INSERT INTO `npc_list` VALUES (17687551,'Minerva_Loot_Box','Minerva Loot Box',192,0.000,0.0,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,'null');
+-- INSERT INTO `npc_list` VALUES (17687551,'Minerva_Loot_Box','Minerva Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------

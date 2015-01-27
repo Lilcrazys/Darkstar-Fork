@@ -19,8 +19,8 @@ function onSpellCast(caster,target,spell)
    	local power = 1;
 	local duration = 180;
 
-	-- Estoqueurs Bonus
-	duration = duration + (duration * caster:getMod(MOD_ENHANCING_DUR));
+	-- Estoqueurs Bonus THIS MOD DOES NOT EXIST. STOP PASTING CODE FROM NON DARKSTAR SOURCES.
+	-- duration = duration + (duration * caster:getMod(MOD_ENHANCING_DUR));
 	
 	target:delStatusEffect(EFFECT_KLIMAFORM);
 	target:addStatusEffect(EFFECT_KLIMAFORM,power,0,duration);

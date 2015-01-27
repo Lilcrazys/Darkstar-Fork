@@ -10,7 +10,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------------------------------------
 	-- Custom Trials
 	---------------------------------------------------
-	local trial = killer:getVar("customtrial");
+	local TRIAL = killer:getVar("CustomTrial");
 	local partyType = killer:checkSoloPartyAlliance();
 	local RANGED = killer:getEquipID(SLOT_RANGED);
 	local MAIN = killer:getEquipID(SLOT_MAIN);
@@ -50,7 +50,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 1 and trial <= 16) and (MAIN == 18318 or SUB == 15070 or
+	if ( (TRIAL >= 1 and TRIAL <= 16) and (MAIN == 18318 or SUB == 15070 or
 		MAIN == 18306 or MAIN == 18294 or MAIN == 18330 or MAIN == 18276 or
 		RANGED == 18342 or MAIN == 18300 or MAIN == 18288 or MAIN == 18312 or
 		MAIN == 18270 or MAIN == 18324 or MAIN == 18282 or MAIN == 18264 or
@@ -76,12 +76,12 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		end
 
 		------------------
-		-- trial complete
+		-- Trial complete
 		------------------
 
 		if (MegalobugardKillCount == 4 and Seww_the_SquidlimbedKillCount == 4 and MischievousCount == 4 and
 			Dune_WidowKillCount == 3 and Keeper_of_HalidomKillCount == 4 and  IntuloKillCount == 4) then
-			killer:setVar("TRIAL_COMPLETE",1);
+			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
 
@@ -108,7 +108,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 17 and trial <= 32) and (MAIN == 18646 or SUB == 16196 or
+	if ( (TRIAL >= 17 and TRIAL <= 32) and (MAIN == 18646 or SUB == 16196 or
 		MAIN == 18644 or MAIN == 18642 or MAIN == 18648 or MAIN == 18639 or
 		RANGED == 18578 or MAIN == 18643 or MAIN == 18641 or MAIN == 18645 or
 		MAIN == 18638 or MAIN == 18647 or MAIN == 18640 or MAIN == 18637 or
@@ -125,11 +125,11 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		end
 
 		------------------
-		-- trial complete
+		-- Trial complete
 		------------------
 
 		if (AdamantoiseKillCount == 7 and BehemothKillCount == 7 and FafnirKillCount == 7) then
-			killer:setVar("TRIAL_COMPLETE",1);
+			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
 
@@ -159,7 +159,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		NidhoggKillCount = killer:getVar("Nidhogg_KILLS")
 	end
 
-	if ( (trial >= 33 and trial <= 48) and (MAIN == 18674 or
+	if ( (TRIAL >= 33 and TRIAL <= 48) and (MAIN == 18674 or
 		SUB == 16198 or RANGED == 18677 or MAIN == 18672 or MAIN == 18670 or
 		MAIN == 18676 or MAIN == 18667 or RANGED == 18580 or MAIN == 18671 or
 		MAIN == 18669 or MAIN == 18673 or MAIN == 18666 or MAIN == 18675 or
@@ -181,11 +181,11 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 			killer:setVar("Ash_Dragon_KILLS", AshDragonKillCount + 1);
 		end
 		------------------
-		-- trial complete
+		-- Trial complete
 		------------------
 		if (JugglerKillCount == 4 and NidhoggKillCount == 4 and KingBehemothKillCount == 4 and
 			AspidocheloneKillCount == 3 and AshDragonKillCount == 4) then
-			killer:setVar("TRIAL_COMPLETE",1);
+			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
 
@@ -222,7 +222,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 100 or trial <= 116) and
+	if ( (TRIAL >= 100 or TRIAL <= 116) and
 	   (MAIN == 18999 or MAIN == 18997 or MAIN == 19000 or MAIN == 18991 or
 		MAIN == 18992 or MAIN == 19002 or MAIN == 18994 or MAIN == 18998 or
 		MAIN == 18995 or MAIN == 19003 or MAIN == 19005 or MAIN == 19004 or
@@ -249,12 +249,12 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		end
 
 		------------------
-		-- trial complete
+		-- Trial complete
 		------------------
 
 		if (ZareehklKillCount == 5 and BrassBorerKillCount == 5 and IririKillCount == 5 and
 			VelionisKillCount == 5 and DextroseKillCount == 5 and IrizKillCount == 5) then
-			killer:setVar("TRIAL_COMPLETE",1);
+			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
 
@@ -284,7 +284,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ((trial >= 117 and trial <= 133) and
+	if ((TRIAL >= 117 and TRIAL <= 133) and
 	   (MAIN == 19088 or MAIN == 19086 or MAIN == 19089 or MAIN == 19080 or
 		MAIN == 19081 or MAIN == 19091 or MAIN == 19083 or MAIN == 19087 or
 		MAIN == 19084 or MAIN == 19092 or MAIN == 19094 or MAIN == 19093 or
@@ -305,12 +305,12 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		end
 
 		------------------
-		-- trial complete
+		-- Trial complete
 		------------------
 
 		if (ExperimentalLamiaKillCount == 4 and NosferatuKillCount == 4 and
 			GearsKillCount == 4 and AchamothKillCount == 4) then
-			killer:setVar("TRIAL_COMPLETE",1);
+			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
 
@@ -347,7 +347,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (trial >= 134 or trial <= 150) and
+	if ( (TRIAL >= 134 or TRIAL <= 150) and
 	   (MAIN == 19718 or MAIN == 19716 or MAIN == 19719 or MAIN == 19710 or
 		MAIN == 19711 or MAIN == 19721 or MAIN == 19713 or MAIN == 19717 or
 		MAIN == 19714 or MAIN == 19722 or MAIN == 19724 or MAIN == 19723 or
@@ -374,12 +374,12 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		end
 
 		------------------
-		-- trial complete
+		-- Trial complete
 		------------------
 
 		if (GurfurlurKillCount == 3 and GuloolKillCount == 3 and CerberusKillCount == 3 and
 			KhimaraKillCount == 3 and MedusaKillCount == 3 and HydraKillCount == 3) then
-			killer:setVar("TRIAL_COMPLETE",1);
+			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
 

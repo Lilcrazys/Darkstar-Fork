@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Rulude Gardens
--- NPC:  MagianMoogle
+--  NPC: Custom Magian Moogle
 -----------------------------------
 package.loaded["scripts/zones/Rulude_Gardens/TextIDs"] = nil;
 -----------------------------------
@@ -11,13 +11,469 @@ require("scripts/zones/RuLude_Gardens/TextIDs");
 require("scripts/globals/spoofchat");
 
 -----------------------------------
--- onTrade Text
+-- onTrade Action
+-----------------------------------
+
+function onTrade(player,npc,trade)
+	local CUSTOM_TRIAL_ID = player:getVar("CustomTrial");
+	local REWARD = 0;
+
+	if (player:getVar("TRIAL_COMPLETE") == 1) then
+		------------------------
+		-- Custom trial complete
+		------------------------
+		if (player:getFreeSlotsCount() >= 1) then
+			if (trade:getItemCount() == 1) then -- NM kill related trials.
+				-- Relic 1
+				if (CUSTOM_TRIAL_ID == 18318 and trade:hasItemQty(18318,1)) then
+					REWARD = 18646;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 15070 and trade:hasItemQty(15070,1)) then
+					REWARD = 16196;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18336 and trade:hasItemQty(18336,1)) then
+					REWARD = 18649;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18306 and trade:hasItemQty(18306,1)) then
+					REWARD = 18644;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18294 and trade:hasItemQty(18294,1)) then
+					REWARD = 18642;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18330 and trade:hasItemQty(18330,1)) then
+					REWARD = 18648;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18276 and trade:hasItemQty(18276,1)) then
+					REWARD = 18639;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18342 and trade:hasItemQty(18342,1)) then
+					REWARD = 18578;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18300 and trade:hasItemQty(18300,1)) then
+					REWARD = 18643;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18288 and trade:hasItemQty(18288,1)) then
+					REWARD = 18641;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18312 and trade:hasItemQty(18312,1)) then
+					REWARD = 18645;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18270 and trade:hasItemQty(18270,1)) then
+					REWARD = 18638;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18324 and trade:hasItemQty(18324,1)) then
+					REWARD = 18647;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18282 and trade:hasItemQty(18282,1)) then
+					REWARD = 18640;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18264 and trade:hasItemQty(18264,1)) then
+					REWARD = 18637;
+					RelicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18348 and trade:hasItemQty(18348,1)) then
+					REWARD = 18650;
+					RelicComplete1(player,npc,trade);
+
+				-- Relic 2
+				elseif (CUSTOM_TRIAL_ID == 18646 and trade:hasItemQty(18646,1)) then
+					REWARD = 18674;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 16196 and trade:hasItemQty(16196,1)) then
+					REWARD = 16198;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18649 and trade:hasItemQty(18649,1)) then
+					REWARD = 18677;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18644 and trade:hasItemQty(18644,1)) then
+					REWARD = 18672;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18642 and trade:hasItemQty(18642,1)) then
+					REWARD = 18670;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18648 and trade:hasItemQty(18648,1)) then
+					REWARD = 18676;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18639 and trade:hasItemQty(18639,1)) then
+					REWARD = 18667;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18578 and trade:hasItemQty(18578,1)) then
+					REWARD = 18580;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18643 and trade:hasItemQty(18643,1)) then
+					REWARD = 18671;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18641 and trade:hasItemQty(18641,1)) then
+					REWARD = 18669;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18645 and trade:hasItemQty(18645,1)) then
+					REWARD = 18673;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18638 and trade:hasItemQty(18638,1)) then
+					REWARD = 18666;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18647 and trade:hasItemQty(18647,1)) then
+					REWARD = 18675;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18640 and trade:hasItemQty(18640,1)) then
+					REWARD = 18668;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18637 and trade:hasItemQty(18637,1)) then
+					REWARD = 18665;
+					RelicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18650 and trade:hasItemQty(18650,1)) then
+					REWARD = 18678;
+					RelicComplete2(player,npc,trade);
+
+				-- Relic 3
+				elseif (CUSTOM_TRIAL_ID == 18674 and trade:hasItemQty(18674,1)) then
+					REWARD = 19755;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 16198 and trade:hasItemQty(16198,1)) then
+					REWARD = 11927;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18677 and trade:hasItemQty(18677,1)) then
+					REWARD = 19758;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18672 and trade:hasItemQty(18672,1)) then
+					REWARD = 19753;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18670 and trade:hasItemQty(18670,1)) then
+					REWARD = 19751;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18676 and trade:hasItemQty(18676,1)) then
+					REWARD = 19757;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18667 and trade:hasItemQty(18667,1)) then
+					REWARD = 19748;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18580 and trade:hasItemQty(18580,1)) then
+					REWARD = 18572;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18671 and trade:hasItemQty(18671,1)) then
+					REWARD = 19752;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18669 and trade:hasItemQty(18669,1)) then
+					REWARD = 19750;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18673 and trade:hasItemQty(18673,1)) then
+					REWARD = 19754;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18666 and trade:hasItemQty(18666,1)) then
+					REWARD = 19747;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18675 and trade:hasItemQty(18675,1)) then
+					REWARD = 19756;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18668 and trade:hasItemQty(18668,1)) then
+					REWARD = 19749;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18665 and trade:hasItemQty(18665,1)) then
+					REWARD = 19746;
+					RelicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18678 and trade:hasItemQty(18678,1)) then
+					REWARD = 19759;
+					RelicComplete3(player,npc,trade);
+				-- End NM kill trials
+				end
+
+			-- Relic Final: 50 Tanzenite jewel
+			elseif (trade:getItemCount() == 51 and trade:hasItemQty(3925,50)) then
+				if (CUSTOM_TRIAL_ID == 19755 and trade:hasItemQty(19755,1)) then
+					REWARD = 21016;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 11927 and trade:hasItemQty(11927,1)) then
+					REWARD = 16200;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19758 and trade:hasItemQty(19758,1)) then
+					REWARD = 21261;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19753 and trade:hasItemQty(19753,1)) then
+					REWARD = 20881;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19751 and trade:hasItemQty(19751,1)) then
+					REWARD = 20836;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19757 and trade:hasItemQty(19757,1)) then
+					REWARD = 21136;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19748 and trade:hasItemQty(19748,1)) then
+					REWARD = 20646;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18572 and trade:hasItemQty(18572,1)) then
+					REWARD = 18840;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19752 and trade:hasItemQty(19752,1)) then
+					REWARD = 20926;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19750 and trade:hasItemQty(19750,1)) then
+					REWARD = 20791;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19754 and trade:hasItemQty(19754,1)) then
+					REWARD = 20971;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19747 and trade:hasItemQty(19747,1)) then
+					REWARD = 20556;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19756 and trade:hasItemQty(19756,1)) then
+					REWARD = 21061;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19749 and trade:hasItemQty(19749,1)) then
+					REWARD = 20746;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19746 and trade:hasItemQty(19746,1)) then
+					REWARD = 20481;
+					RelicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19759 and trade:hasItemQty(19759,1)) then
+					REWARD = 21211;
+					RelicComplete4(player,npc,trade);
+				end
+
+			-- Mythic 1
+			elseif (trade:getItemCount() == 1) then
+				if (CUSTOM_TRIAL_ID == 18999 and trade:hasItemQty(18999,1)) then
+					REWARD = 19088;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18997 and trade:hasItemQty(18997,1)) then
+					REWARD = 19086;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19000 and trade:hasItemQty(19000,1)) then
+					REWARD = 19089;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18991 and trade:hasItemQty(18991,1)) then
+					REWARD = 19080;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19007 and trade:hasItemQty(19007,1)) then
+					REWARD = 19096;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19001 and trade:hasItemQty(19001,1)) then
+					REWARD = 19090;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18992 and trade:hasItemQty(18992,1)) then
+					REWARD = 19081;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19002 and trade:hasItemQty(19002,1)) then
+					REWARD = 19091;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18994 and trade:hasItemQty(18994,1)) then
+					REWARD = 19083;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18998 and trade:hasItemQty(18998,1)) then
+					REWARD = 19087;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18995 and trade:hasItemQty(18995,1)) then
+					REWARD = 19084;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19003 and trade:hasItemQty(19003,1)) then
+					REWARD = 19092;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19005 and trade:hasItemQty(19005,1)) then
+					REWARD = 19094;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19004 and trade:hasItemQty(19004,1)) then
+					REWARD = 19093;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18989 and trade:hasItemQty(18989,1)) then
+					REWARD = 19098;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19006 and trade:hasItemQty(19006,1)) then
+					REWARD = 19095;
+					MythicComplete1(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 18990 and trade:hasItemQty(18990,1)) then
+					REWARD = 19099;
+					MythicComplete1(player,npc,trade);
+
+				-- Mythic 2 85-95
+				elseif (CUSTOM_TRIAL_ID == 19088 and trade:hasItemQty(19088,1)) then
+					REWARD = 19718;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19086 and trade:hasItemQty(19086,1)) then
+					REWARD = 19716;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19089 and trade:hasItemQty(19089,1)) then
+					REWARD = 19719;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19080 and trade:hasItemQty(19080,1)) then
+					REWARD = 19710;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19096 and trade:hasItemQty(19096,1)) then
+					REWARD = 19726;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19090 and trade:hasItemQty(19090,1)) then
+					REWARD = 19720;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19081 and trade:hasItemQty(19081,1)) then
+					REWARD = 19711;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19091 and trade:hasItemQty(19091,1)) then
+					REWARD = 19721;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19083 and trade:hasItemQty(19083,1)) then
+					REWARD = 19713;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19087 and trade:hasItemQty(19087,1)) then
+					REWARD = 19717;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19084 and trade:hasItemQty(19084,1)) then
+					REWARD = 19714;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19092 and trade:hasItemQty(19092,1)) then
+					REWARD = 19722;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19094 and trade:hasItemQty(19094,1)) then
+					REWARD = 19724;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19093 and trade:hasItemQty(19093,1)) then
+					REWARD = 19723;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19098 and trade:hasItemQty(19098,1)) then
+					REWARD = 19728;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19095 and trade:hasItemQty(19095,1)) then
+					REWARD = 19725;
+					MythicComplete2(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19099 and trade:hasItemQty(19099,1)) then
+					REWARD = 19729;
+					MythicComplete2(player,npc,trade);
+
+				-- Mythic 3 95-99
+				elseif (CUSTOM_TRIAL_ID == 19718 and trade:hasItemQty(19718,1)) then
+					REWARD = 19827;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19716 and trade:hasItemQty(19716,1)) then
+					REWARD = 19825;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19719 and trade:hasItemQty(19719,1)) then
+					REWARD = 19828;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19710 and trade:hasItemQty(19710,1)) then
+					REWARD = 19819;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19726 and trade:hasItemQty(19726,1)) then
+					REWARD = 19835;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19720 and trade:hasItemQty(19720,1)) then
+					REWARD = 19829;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19711 and trade:hasItemQty(19711,1)) then
+					REWARD = 19820;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19721 and trade:hasItemQty(19721,1)) then
+					REWARD = 19830;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19713 and trade:hasItemQty(19713,1)) then
+					REWARD = 19822;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19717 and trade:hasItemQty(19717,1)) then
+					REWARD = 19826;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19714 and trade:hasItemQty(19714,1)) then
+					REWARD = 19823;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19722 and trade:hasItemQty(19722,1)) then
+					REWARD = 19831;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19724 and trade:hasItemQty(19724,1)) then
+					REWARD = 19962;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19723 and trade:hasItemQty(19723,1)) then
+					REWARD = 19832;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19728 and trade:hasItemQty(19728,1)) then
+					REWARD = 19837;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19725 and trade:hasItemQty(19725,1)) then
+					REWARD = 19834;
+					MythicComplete3(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19729 and trade:hasItemQty(19729,1)) then
+					REWARD = 19838;
+					MythicComplete3(player,npc,trade);
+				-- End NM kill trials
+				end
+
+			-- Mythic Final: 50 Tanzenite jewel
+			elseif (trade:getItemCount() == 51 and trade:hasItemQty(3925,50)) then
+				if (CUSTOM_TRIAL_ID == 19827 and trade:hasItemQty(19827,1)) then
+					REWARD = 20793;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19825 and trade:hasItemQty(19825,1)) then
+					REWARD = 20650;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19828 and trade:hasItemQty(19828,1)) then
+					REWARD = 20562;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19819 and trade:hasItemQty(19819,1)) then
+					REWARD = 20838;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19835 and trade:hasItemQty(19835,1)) then
+					REWARD = 21263;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19829 and trade:hasItemQty(19829,1)) then
+					REWARD = 21247;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19820 and trade:hasItemQty(19820,1)) then
+					REWARD = 20483;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19830 and trade:hasItemQty(19830,1)) then
+					REWARD = 21018;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19822 and trade:hasItemQty(19822,1)) then
+					REWARD = 21140;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19826 and trade:hasItemQty(19826,1)) then
+					REWARD = 20883;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19823 and trade:hasItemQty(19823,1)) then
+					REWARD = 20648;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19831 and trade:hasItemQty(19831,1)) then
+					REWARD = 20973;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19962 and trade:hasItemQty(19962,1)) then
+					REWARD = 21142;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19832 and trade:hasItemQty(19832,1)) then
+					REWARD = 20928;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19837 and trade:hasItemQty(19837,1)) then
+					REWARD = 20558;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19834 and trade:hasItemQty(19834,1)) then
+					REWARD = 20652;
+					MythicComplete4(player,npc,trade);
+				elseif (CUSTOM_TRIAL_ID == 19838 and trade:hasItemQty(19838,1)) then
+					REWARD = 21138;
+					MythicComplete4(player,npc,trade);
+				end
+			end
+
+			if (REWARD > 0) then
+				player:tradeComplete();
+				player:addItem(REWARD);
+				player:messageSpecial(ITEM_OBTAINED,REWARD);
+				npc:setStatus(STATUS_DISAPPEAR);
+			end
+		else
+			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,REWARD);
+		end
+	end
+end;
+
+-----------------------------------
+-- onTrigger Action
+-----------------------------------
+
+function onTrigger(player,npc)
+	player:SpoofChatPlayer( "Mog: Ok trade me your item please ..Kupo!", MESSAGE_SYS_SAY, npc:getID() );
+end;
+
+-----------------------------------
+-- onTrade Texts
 -----------------------------------
 
 function RelicComplete1(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:setVar("customtrial",0);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Megalobugard_KILLS",0);
 	player:setVar("Intulo_KILLS",0);
@@ -29,8 +485,8 @@ end;
 
 function RelicComplete2(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:setVar("customtrial",0);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Fafnir_KILLS",0);
 	player:setVar("Adamantoise_KILLS",0);
@@ -39,8 +495,8 @@ end;
 
 function RelicComplete3(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:setVar("customtrial",0);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Juggler_Hecatomb_KILLS",0);
 	player:setVar("Nidhogg_KILLS",0);
@@ -51,14 +507,14 @@ end;
 
 function RelicComplete4(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "All trials complete for this Item!.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Mog: All trials complete for this Item!", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function MythicComplete1(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:setVar("customtrial",0);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Zareehkl_the_Jubilant_KILLS",0);
 	player:setVar("Iriz_Irma_KILLS",0);
@@ -70,8 +526,8 @@ end;
 
 function MythicComplete2(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:setVar("customtrial",0);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Armed_Gears_KILLS",0);
 	player:setVar("Nosferatu_KILLS",0);
@@ -81,8 +537,8 @@ end;
 
 function MythicComplete3(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:setVar("customtrial",0);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Cerberus_KILLS",0);
 	player:setVar("Khimara_KILLS",0);
@@ -94,1639 +550,8 @@ end;
 
 function MythicComplete4(player,npc,trade)
 	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Congratulations you have completed your trial, here is your prize.", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "All trials complete for this Item!.", MESSAGE_SAY, npc:getID() );
-end;
-
------------------------------------
--- onTrade Action
------------------------------------
-
-function onTrade(player,npc,trade)
-	------------------------
-	-- Custom trial complete
-	------------------------
-		-------------------
-		-- Relic 1
-		-------------------
-	if (trade:hasItemQty(18318,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18646;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(15070,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 16196;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18336,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18649;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18306,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18644;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18294,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18642;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18330,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18648;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18276,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18639;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18342,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18578;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18300,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18643;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18288,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18641;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18312,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18645;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18270,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18638;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18324,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18647;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18282,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18640;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18264,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18637;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18348,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18650;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-		-------------------
-		-- Relic 2
-		-------------------
-	if (trade:hasItemQty(18646,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19755;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(16196,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 16198;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18649,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18677;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18644,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18672;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18642,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18670;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18648,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18676;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18639,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18667;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18578,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18580;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18643,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18671;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18641,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18669;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18645,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18673;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18638,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18666;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18647,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18675;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18640,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18668;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18637,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18665;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18650,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18678;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-		-------------------
-		-- Relic 3
-		-------------------
-	if (trade:hasItemQty(19755,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19755;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(16198,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 11927;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18677,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19758;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18672,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19753;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18670,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19751;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18676,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19757;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18667,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19748;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18580,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 18572;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18671,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19752;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18669,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19750;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18673,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19754;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18666,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19747;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18675,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19756;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18668,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19749;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18665,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19746;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18678,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19759;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	-----------------
-	-- Relic Final
-	-----------------
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19755,1) and trade:getItemCount() == 51) then
-		local ITEM = 21016;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(11927,1) and trade:getItemCount() == 51) then
-		local ITEM = 16200;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19758,1) and trade:getItemCount() == 51) then
-		local ITEM = 21261;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19753,1) and trade:getItemCount() == 51) then
-		local ITEM = 20881;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19751,1) and trade:getItemCount() == 51) then
-		local ITEM = 20836;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19757,1) and trade:getItemCount() == 51) then
-		local ITEM = 21136;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19748,1) and trade:getItemCount() == 51) then
-		local ITEM = 20646;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(18572,1) and trade:getItemCount() == 51) then
-		local ITEM = 18840;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19752,1) and trade:getItemCount() == 51) then
-		local ITEM = 20926;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19750,1) and trade:getItemCount() == 51) then
-		local ITEM = 20791;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19754,1) and trade:getItemCount() == 51) then
-		local ITEM = 20971;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19747,1) and trade:getItemCount() == 51) then
-		local ITEM = 20556;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19756,1) and trade:getItemCount() == 51) then
-		local ITEM = 21061;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19749,1) and trade:getItemCount() == 51) then
-		local ITEM = 20746;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19746,1) and trade:getItemCount() == 51) then
-		local ITEM = 20481;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19759,1) and trade:getItemCount() == 51) then
-		local ITEM = 21211;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			RelicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-
-		-------------------
-		-- Mythic 1
-		-------------------
-	if (trade:hasItemQty(18999,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19088;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18997,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19086;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19000,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19089;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18991,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19080;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19007,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19096;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19001,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19090;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18992,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19081;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19002,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19091;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18994,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19083;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18998,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19087;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18995,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19084;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19003,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19092;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19005,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19094;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19004,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19093;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-		if (trade:hasItemQty(18989,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19098;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19006,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19095;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(18990,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19099;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete1(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-
-		-------------------
-		-- Mythic 2 85-95
-		-------------------
-	if (trade:hasItemQty(19088,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19718;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19086,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19716;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19089,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19719;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19080,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19710;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19096,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19726;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19090,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19720;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19081,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19711;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19091,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19721;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19083,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19713;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19087,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19717;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19084,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19714;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19092,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19722;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19094,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19724;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19093,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19723;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-		if (trade:hasItemQty(19098,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19728;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19095,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19725;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19099,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19729;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete2(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-
-		-------------------
-		-- Mythic 3 95-99
-		-------------------
-	if (trade:hasItemQty(19718,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19827;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19716,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19825;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19719,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19828;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19710,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19819;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19726,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19835;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19720,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19829;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19711,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19820;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19721,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19830;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19713,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19822;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19717,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19826;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19714,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19823;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19722,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19831;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19724,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19962;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19723,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19832;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-		if (trade:hasItemQty(19728,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19837;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19725,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19834;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(19729,1) and trade:getItemCount() == 1 and player:getVar("TRIAL_COMPLETE") == 1) then
-		local ITEM = 19838;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete3(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-
-	-----------------
-	-- Mythic Final
-	-----------------
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19827,1) and trade:getItemCount() == 51) then
-		local ITEM = 20793;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19825,1) and trade:getItemCount() == 51) then
-		local ITEM = 20650;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19828,1) and trade:getItemCount() == 51) then
-		local ITEM = 20562;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19819,1) and trade:getItemCount() == 51) then
-		local ITEM = 20838;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19835,1) and trade:getItemCount() == 51) then
-		local ITEM = 21263;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19829,1) and trade:getItemCount() == 51) then
-		local ITEM = 21247;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19820,1) and trade:getItemCount() == 51) then
-		local ITEM = 20483;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19830,1) and trade:getItemCount() == 51) then
-		local ITEM = 21018;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19822,1) and trade:getItemCount() == 51) then
-		local ITEM = 21140;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19826,1) and trade:getItemCount() == 51) then
-		local ITEM = 20883;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19823,1) and trade:getItemCount() == 51) then
-		local ITEM = 20648;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19831,1) and trade:getItemCount() == 51) then
-		local ITEM = 20973;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19962,1) and trade:getItemCount() == 51) then
-		local ITEM = 21142;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19832,1) and trade:getItemCount() == 51) then
-		local ITEM = 20928;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19837,1) and trade:getItemCount() == 51) then
-		local ITEM = 20558;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-	if (trade:hasItemQty(3925,50) and trade:hasItemQty(19834,1) and trade:getItemCount() == 51) then
-		local ITEM = 20652;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-		if (trade:hasItemQty(3925,50) and trade:hasItemQty(19838,1) and trade:getItemCount() == 51) then
-		local ITEM = 21138;
-		if (player:getFreeSlotsCount() == 0) then
-			player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			MythicComplete4(player,npc,trade);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-			npc:setStatus(STATUS_DISAPPEAR);
-		end
-	end
-
-end;
-
------------------------------------
--- onTrigger Action
------------------------------------
-
-function onTrigger(player,npc)
-	player:SpoofChatPlayer( "Ok trade me your item please ..Kupo!.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Mog: All trials complete for this Item!", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 -----------------------------------
