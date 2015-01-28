@@ -640,6 +640,11 @@ INSERT INTO `status_effects` VALUES (797,'teleport',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (798,'chainbound',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (799,'skillchain',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (800,'dynamis',0,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (801,'effect_atma_dummy_1',768,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (802,'effect_atma_dummy_2',768,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (803,'effect_atma_dummy_3',768,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (804,'effect_atmacite_dummy_1',768,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (805,'effect_atmacite_dummy_2',768,0,0,0,0,0,0);
 
 -- LegionXI custom effects
 INSERT INTO `status_effects` VALUES (890,'wind_spikes',33,34,0,0,0,0,6);
@@ -651,7 +656,11 @@ INSERT INTO `status_effects` VALUES (897,'minerva_enlight',33,94,51,0,0,0,6);
 INSERT INTO `status_effects` VALUES (898,'minerva_shock_spikes',33,34,0,0,0,0,6);
 INSERT INTO `status_effects` VALUES (899,'minerva_light_spikes',33,34,0,0,0,0,6);
 INSERT INTO `status_effects` VALUES (900,'sjcap_boost',768,0,0,0,0,0,0);
-INSERT INTO `status_effects` VALUES (901,'rage',32,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (901,'rage',544,0,0,0,0,0,0);
+-- INSERT INTO `status_effects` VALUES (902,'placeholder',0,0,0,0,0,0,0);
+
+INSERT INTO `status_effects` VALUES (999,'legion',768,0,0,0,0,0,0);
+
 /*!40000 ALTER TABLE `status_effects` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -12,1060 +12,423 @@ require("scripts/zones/RuLude_Gardens/TextIDs");
 require("scripts/globals/spoofchat");
 
 -----------------------------------
--- onTrade Text
------------------------------------
-function textRelic1(player,npc,trade)
-	player:SpoofChatPlayer( ": ........FFXILegion Custom Trials!........", MESSAGE_ECHO, npc:getID() );
-end;
-	--[[-------------------------------------------------------------------------------------------------------------------------------
-	\n indicates a new line in the string, use it like this: "Hi \nHello World", this will look like this in the game,
-	Akta: Hi
-	Hello World
-	or just create a new Spoof Line.
-	-------------------------------------------------------------------------------------------------------------------------------]]--
-	function textRelic2(player,npc,trade)
-	player:SpoofChatPlayer( "Objective:... \nZareehkl the Jubilant x 5\nIriz Ima x5\nVelionis x5\nBrass Borer x5\nDextrose x5\nIriri Samariri x5", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
-end;
-function textRelic3(player,npc,trade)
-	player:SpoofChatPlayer( "Objective Kills:... \nArmed Gears x4\nNosferatu x4\nAchamoth x4\nExperimental Lamia x4", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
-end;
-function textRelic4(player,npc,trade)
-	player:SpoofChatPlayer( "Objective Kills:... \nCerberus x3\nKhimara x3\nMedusa x3\nGulool Ja Ja x3\nGurfurlur the Menacing x3\nHydra x3", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
-end;
-function textRelic5(player,npc,trade)
-	player:SpoofChatPlayer( "Objective:... \nCollect 50 Tanzanite Jewels and return them to me.", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
-end;
------------------------------------
 -- onTrade Action
 -----------------------------------
+
 function onTrade(player,npc,trade)
+	local CUSTOM_TRIAL_ID = player:getVar("CustomTrial");
+	-- player:PrintToPlayer(string.format("Custom Trial ID: %u ", CUSTOM_TRIAL_ID));
+	-- player:PrintToPlayer(string.format("Trial Status: %u ", player:getVar("TRIAL_COMPLETE")));
 	-----------------------
-	--Custom Trial Start
+	-- Custom Trial Start
 	-----------------------
-	if (trade:hasItemQty(3925,50)) and (trade:getItemCount() == 50) then
-		player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested, Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
-		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_ECHO, npc:getID() );
-		GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
-		player:injectActionPacket(6, 617);
-	end
-	if (player:getVar("customtrial") >= 1) and (trade:hasItemQty(3925,50) == false) and (trade:hasItemQty(2184,1) == false) then
-		player:SpoofChatPlayer( "Sorry you already have a trial active", MESSAGE_SAY, npc:getID() );
-		player:SpoofChatPlayer( "If you wish to cancel the current trial, please trade a small fee of 1x imperial bronze piece to Venessa.", MESSAGE_SAY, npc:getID() );
-	end
+	if (CUSTOM_TRIAL_ID == 0) then
+		-- Imperial Bronze Piece
+		if (trade:hasItemQty(2184,1) and trade:getItemCount() == 1) then
+			player:SpoofChatPlayer( "Eh, whats this? I think you have me confused with Venessa.", MESSAGE_SAY, npc:getID() );
+		--------------------------------------------
+		-- Mythic Trials Start
+		--------------------------------------------
+		-- Aymur
+		elseif (trade:hasItemQty(18999,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade); -- Generic Legion trial text (see top of page).
+			player:SpoofChatPlayer( "Aymur [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18999);
+		elseif (trade:hasItemQty(19088,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Aymur [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19088);
+		elseif (trade:hasItemQty(19718,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Aymur [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19718);
+		elseif (trade:hasItemQty(19827,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Aymur [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19827);
 
-	--------------------------------------------
-	-- 				Mythic Trials
-	--------------------------------------------
+		-- Burtgang
+		elseif (trade:hasItemQty(18997,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Burtgang [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18997);
+		elseif (trade:hasItemQty(19086,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Burtgang [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19086);
+		elseif (trade:hasItemQty(19716,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Burtgang [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19716);
+		elseif (trade:hasItemQty(19825,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Burtgang [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19825);
 
-	-----------------------
-	-- Aymur
-	-----------------------
-	if (trade:hasItemQty(18999,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18999;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade); -- Generic Legion trial text (see top of page).
-			player:SpoofChatPlayer( ": 'Aymur [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade); -- Text asking to collect Glaviod shells (see top of page).
-			player:setVar("customtrial",100);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19088,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19088;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aymur [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",117);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19718,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19718;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aymur [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",134);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19827,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19827;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Aymur [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",49);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Burtgang
-	-----------------------
-	if (trade:hasItemQty(18997,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18997;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Burtgang [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",101);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19086,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19086;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Burtgang [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",118);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19716,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19716;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Burtgang [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",135);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19825,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19825;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Burtgang [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",50);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Carnwenhan
-	-----------------------
-	if (trade:hasItemQty(19000,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19000;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Carnwenhan [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",102);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19089,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19089;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Carnwenhan [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",119);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19719,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19719;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Carnwenhan [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",136);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19828,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19828;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Carnwenhan [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",51);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Conqueror
-	-----------------------
-	if (trade:hasItemQty(18991,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18991;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Conqueror [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",103);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19080,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19080;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Conqueror [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",120);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19710,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19710;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Conqueror [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",137);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19819,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19819;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Conqueror [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",52);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Death Penalty
-	-----------------------
-	if (trade:hasItemQty(19007,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19007;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Death Penalty [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",104);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19096,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19096;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Death Penalty [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",121);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19726,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19726;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Death Penalty [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",138);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19835,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19835;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Death Penalty [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",53);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Gastraphetes
-	-----------------------
-	if (trade:hasItemQty(19001,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19001;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gastraphetes [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",105);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19090,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19090;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gastraphetes [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",122);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19720,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19720;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gastraphetes [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",139);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19829,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19829;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Gastraphetes [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",54);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Glanzfaust
-	-----------------------
-	if (trade:hasItemQty(18992,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18992;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Glanzfaust [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",106);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19081,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19081;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Glanzfaust [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",123);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19711,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19711;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Glanzfaust [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",140);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19820,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19820;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Glanzfaust [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",55);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Kogarasumaru
-	-----------------------
-	if (trade:hasItemQty(19002,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19002;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kogarasumaru [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",107);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19091,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19091;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kogarasumaru [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",124);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19721,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19721;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kogarasumaru [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",141);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19830,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19830;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Kogarasumaru [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",57);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Laevateinn
-	-----------------------
-	if (trade:hasItemQty(18994,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18994;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Laevateinn [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",108);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19803,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19803;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Laevateinn [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",125);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19713,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19713;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Laevateinn [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",142);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19822,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19822;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Laevateinn [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",58);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Liberator
-	-----------------------
-	if (trade:hasItemQty(18998,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18998;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Liberator [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",109);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19087,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19087;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Liberator [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",126);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19717,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19717;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Liberator [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",143);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19826,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19826;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Liberator [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",59);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Murgleis
-	-----------------------
-	if (trade:hasItemQty(18995,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18995;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Murgleis [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",110);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19084,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19084;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Murgleis [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",127);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19714,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19714;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Murgleis [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",144);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19823,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19823;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Murgleis [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",60);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Nagi
-	-----------------------
-	if (trade:hasItemQty(19003,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19003;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nagi [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",111);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19092,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19092;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nagi [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",128);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19722,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19722;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nagi [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",145);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19831,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19831;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nagi [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",61);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Nirvana
-	-----------------------
-	if (trade:hasItemQty(19005,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19005;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nirvana [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",112);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19094,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19094;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nirvana [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",129);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19724,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19724;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nirvana [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",146);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19962,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19962;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Nirvana [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",62);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Ryunohige
-	-----------------------
-	if (trade:hasItemQty(19004,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19004;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ryunohige [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",113);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19093,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19093;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ryunohige [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",130);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19723,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19723;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ryunohige [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",147);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19832,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19832;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Ryunohige [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",63);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Terpsichore
-	-----------------------
-	if (trade:hasItemQty(18989,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18989;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Terpsichore [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",114);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19098,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19098;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Terpsichore [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",131);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19728,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19728;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Terpsichore [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",148);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19837,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19837;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Terpsichore [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",64);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	-----------------------
-	-- Tizona
-	-----------------------
-	if (trade:hasItemQty(19006,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19006;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tizona [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",115);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19095,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19095;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tizona [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",132);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19725,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19725;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tizona [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",149);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19834,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19834;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tizona [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",65);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
------------------------
-	-- Tupsimati
-	-----------------------
-	if (trade:hasItemQty(18990,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 18990;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tupsimati [75-85]'", MESSAGE_ECHO, npc:getID() );
-			textRelic2(player,npc,trade);
-			player:setVar("customtrial",116);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19099,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19099;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tupsimati [85-95]'", MESSAGE_ECHO, npc:getID() );
-			textRelic3(player,npc,trade);
-			player:setVar("customtrial",133);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19729,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19729;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tupsimati [95-99]'", MESSAGE_ECHO, npc:getID() );
-			textRelic4(player,npc,trade);
-			player:setVar("customtrial",150);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
-		end
-	end
-	if (trade:hasItemQty(19838,1) and trade:getItemCount() == 1) and (player:getVar("customtrial") == 0) then
-		local ITEM = 19838;
-		if (player:getFreeSlotsCount() == 0) then
-				player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,ITEM);
-		else
-			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( ": 'Tupsimati [(99-1)-(99-4)]'", MESSAGE_ECHO, npc:getID() );
-			textRelic5(player,npc,trade);
-			player:setVar("customtrial",65);
-			player:tradeComplete();
-			player:addItem(ITEM);
-			player:messageSpecial(ITEM_OBTAINED,ITEM);
+		-- Carnwenhan
+		elseif (trade:hasItemQty(19000,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Carnwenhan [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19000);
+		elseif (trade:hasItemQty(19089,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Carnwenhan [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19089);
+		elseif (trade:hasItemQty(19719,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Carnwenhan [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19719);
+		elseif (trade:hasItemQty(19828,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Carnwenhan [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19828);
+
+		-- Conqueror
+		elseif (trade:hasItemQty(18991,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Conqueror [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18991);
+		elseif (trade:hasItemQty(19080,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Conqueror [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19080);
+		elseif (trade:hasItemQty(19710,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Conqueror [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19710);
+		elseif (trade:hasItemQty(19819,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Conqueror [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19819);
+		-- Death Penalty
+		elseif (trade:hasItemQty(19007,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Death Penalty [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19007);
+		elseif (trade:hasItemQty(19096,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Death Penalty [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19096);
+		elseif (trade:hasItemQty(19726,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Death Penalty [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19726);
+		elseif (trade:hasItemQty(19835,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Death Penalty [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19835);
+
+		-- Gastraphetes
+		elseif (trade:hasItemQty(19001,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Gastraphetes [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19001);
+		elseif (trade:hasItemQty(19090,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Gastraphetes [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19090);
+		elseif (trade:hasItemQty(19720,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Gastraphetes [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19720);
+		elseif (trade:hasItemQty(19829,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Gastraphetes [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19829);
+
+		-- Glanzfaust
+		elseif (trade:hasItemQty(18992,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Glanzfaust [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18992);
+		elseif (trade:hasItemQty(19081,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Glanzfaust [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19081);
+		elseif (trade:hasItemQty(19711,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Glanzfaust [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19711);
+		elseif (trade:hasItemQty(19820,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Glanzfaust [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19820);
+
+		-- Kogarasumaru
+		elseif (trade:hasItemQty(19002,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Kogarasumaru [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19002);
+		elseif (trade:hasItemQty(19091,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Kogarasumaru [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19091);
+		elseif (trade:hasItemQty(19721,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Kogarasumaru [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19721);
+		elseif (trade:hasItemQty(19830,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Kogarasumaru [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19830);
+
+		-- Laevateinn
+		elseif (trade:hasItemQty(18994,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Laevateinn [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18994);
+		elseif (trade:hasItemQty(19803,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Laevateinn [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19803);
+		elseif (trade:hasItemQty(19713,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Laevateinn [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19713);
+		elseif (trade:hasItemQty(19822,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Laevateinn [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19822);
+
+		-- Liberator
+		elseif (trade:hasItemQty(18998,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Liberator [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18998);
+		elseif (trade:hasItemQty(19087,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Liberator [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19087);
+		elseif (trade:hasItemQty(19717,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Liberator [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19717);
+		elseif (trade:hasItemQty(19826,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Liberator [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19826);
+
+		-- Murgleis
+		elseif (trade:hasItemQty(18995,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Murgleis [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18995);
+		elseif (trade:hasItemQty(19084,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Murgleis [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19084);
+		elseif (trade:hasItemQty(19714,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Murgleis [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19714);
+		elseif (trade:hasItemQty(19823,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Murgleis [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19823);
+
+		-- Nagi
+		elseif (trade:hasItemQty(19003,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nagi [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19003);
+		elseif (trade:hasItemQty(19092,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nagi [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19092);
+		elseif (trade:hasItemQty(19722,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nagi [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19722);
+		elseif (trade:hasItemQty(19831,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nagi [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19831);
+
+		-- Nirvana
+		elseif (trade:hasItemQty(19005,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nirvana [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19005);
+		elseif (trade:hasItemQty(19094,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nirvana [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19094);
+		elseif (trade:hasItemQty(19724,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nirvana [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19724);
+		elseif (trade:hasItemQty(19962,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Nirvana [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19962);
+
+		-- Ryunohige
+		elseif (trade:hasItemQty(19004,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Ryunohige [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19004);
+		elseif (trade:hasItemQty(19093,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Ryunohige [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19093);
+		elseif (trade:hasItemQty(19723,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Ryunohige [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19723);
+		elseif (trade:hasItemQty(19832,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Ryunohige [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19832);
+
+		-- Terpsichore
+		elseif (trade:hasItemQty(18989,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Terpsichore [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18989);
+		elseif (trade:hasItemQty(19098,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Terpsichore [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19098);
+		elseif (trade:hasItemQty(19728,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Terpsichore [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19728);
+		elseif (trade:hasItemQty(19837,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Terpsichore [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19837);
+
+		-- Tizona
+		elseif (trade:hasItemQty(19006,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tizona [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 19006);
+		elseif (trade:hasItemQty(19095,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tizona [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19095);
+		elseif (trade:hasItemQty(19725,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tizona [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19725);
+		elseif (trade:hasItemQty(19834,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tizona [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19834);
+
+		-- Tupsimati
+		elseif (trade:hasItemQty(18990,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tupsimati [75-85]", MESSAGE_ECHO, npc:getID() );
+			textMythic2(player,npc,trade);
+			player:setVar("CustomTrial", 18990);
+		elseif (trade:hasItemQty(19099,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tupsimati [85-95]", MESSAGE_ECHO, npc:getID() );
+			textMythic3(player,npc,trade);
+			player:setVar("CustomTrial", 19099);
+		elseif (trade:hasItemQty(19729,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tupsimati [95-99]", MESSAGE_ECHO, npc:getID() );
+			textMythic4(player,npc,trade);
+			player:setVar("CustomTrial", 19729);
+		elseif (trade:hasItemQty(19838,1) and trade:getItemCount() == 1) then
+			textMythic1(player,npc,trade);
+			player:SpoofChatPlayer( "Tupsimati [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			textMythic5(player,npc,trade);
+			player:setVar("CustomTrial", 19838);
+		---------------------
+		-- End of Mythic Trials
+		---------------------
+		end
+	else
+		-- Completed trial via kill counts.
+		if (player:getVar("TRIAL_COMPLETE") == 1) then -- Only triggers if trial active AND done.
+			player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
+			GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
+			player:injectActionPacket(6, 617);
+
+		-- Complete trial via trade
+		elseif (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
+			player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested.", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
+			GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
+			player:injectActionPacket(6, 617);
+
+		-- Trial cancellation...
+		elseif (trade:hasItemQty(2184,1) and trade:getItemCount() == 1) then
+			player:SpoofChatPlayer( "Eh, whats this? I think you have me confused with Venessa.", MESSAGE_SAY, npc:getID() );
+		else -- Trading anything other than expected during an active trial triggers this.
+			-- player:PrintToPlayer("Testing else");
+			player:SpoofChatPlayer( "Sorry but you already have a trial active.", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "If you wish to cancel the current trial...", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "You'll need to pay Venessa's fee.", MESSAGE_SAY, npc:getID() );
 		end
 	end
 end;
@@ -1073,15 +436,76 @@ end;
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
+
 function onTrigger(player,npc)
 	if (player:getVar("TRIAL_COMPLETE") == 1) then
 		player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
-		player:SpoofChatPlayer( ": Calls Forth the Magian Moogle.", MESSAGE_ECHO, npc:getID() );
-		GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
+		player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
+		GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	else
-		player:SpoofChatPlayer( "What you looking at?, Try brining me something of interest.", MESSAGE_SAY, npc:getID() );
+		player:SpoofChatPlayer( "What you looking at? Try bringing me something of interest.", MESSAGE_SAY, npc:getID() );
 	end
+end;
+
+-----------------------------------
+-- onTrade Texts
+-----------------------------------
+
+function textMythic1(player,npc,trade)
+	player:SpoofChatPlayer( " ........ FFXILegion Custom Trials ........ ", MESSAGE_ECHO, npc:getID() );
+end;
+
+	--[[
+	\n indicates a new line in the string, use it like this: "Hi \nHello World", this will look like this in the game,
+	Akta: Hi
+	Hello World
+	or just create a new Spoof Line.
+
+	Note from Teo:
+	You can cause a lot of crashes using \n by exceeding message max length or by tripping the message format bug.
+	Usually safer to use multiple spoofs instead.
+	]]
+
+function textMythic2(player,npc,trade)
+	player:injectActionPacket(4, 918);
+	player:SpoofChatPlayer( "Objective: Monster slaying.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Iriz Ima x5", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Velionis x5", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Brass Borer x5", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Zareehkl the Jubilant x5", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Dextrose x5", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Iriri Samariri x5", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 free inventory space.", MESSAGE_ECHO, npc:getID() );
+end;
+
+function textMythic3(player,npc,trade)
+	player:injectActionPacket(4, 918);
+	player:SpoofChatPlayer( "Objective: Monster slaying.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Achamoth x4", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Armed Gears x4", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Nosferatu x4", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Experimental Lamia x4", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 free inventory space.", MESSAGE_ECHO, npc:getID() );
+end;
+
+function textMythic4(player,npc,trade)
+	player:injectActionPacket(4, 918);
+	player:SpoofChatPlayer( "Objective: Monster slaying.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Hydra x3", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Cerberus x3", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Khimara x3", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Gulool Ja Ja x3", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Gurfurlur the Menacing x3", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Medusa x3", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 free inventory space.", MESSAGE_ECHO, npc:getID() );
+end;
+
+function textMythic5(player,npc,trade)
+	player:injectActionPacket(4, 918);
+	player:SpoofChatPlayer( "Objective: Item gathering.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Collect 50 Tanzanite Jewels and bring them to me.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 free inventory space.", MESSAGE_ECHO, npc:getID() );
 end;
 
 -----------------------------------
@@ -1089,8 +513,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+	-- printf("CSID: %u",csid);
+	-- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -1098,12 +522,9 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
+	-- printf("CSID: %u",csid);
+	-- printf("RESULT: %u",option);
 	-- if(csid == 0x2750) then
 		-- npc:setAnimation(0);
 	-- end
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
 end;
-
-
-

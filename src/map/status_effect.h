@@ -643,6 +643,16 @@ enum EFFECT
 
     // EFFECT_PLACEHOLDER              = 640, // Polutils list ends at 639 so 640+ shouldn't collide with anything
 
+    EFFECT_ABYSSEA_STR              = 768, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_DEX              = 769, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_VIT              = 770, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_AGI              = 771, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_INT              = 772, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_MND              = 773, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_CHR              = 774, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_HP               = 775, // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_MP               = 776, // Purchased from Cruor Prospector
+
     // *Prowess increases not currently retail accurate.
     // GoV Prowess bonus effects, real effect at ID 474
     EFFECT_PROWESS_CASKET_RATE      = 777, // (Unimplemented)
@@ -670,6 +680,11 @@ enum EFFECT
     EFFECT_CHAINBOUND               = 798,
     EFFECT_SKILLCHAIN               = 799,
 	EFFECT_DYNAMIS					= 800,
+	EFFECT_ATMA_DUMMY_1             = 801,
+	EFFECT_ATMA_DUMMY_2             = 802,
+	EFFECT_ATMA_DUMMY_3             = 803,
+	EFFECT_ATMACITE_DUMMY_1         = 804,
+	EFFECT_ATMACITE_DUMMY_2         = 805,
 
 //==========================================================//
 	// Start of LegionXI custom section
@@ -683,6 +698,9 @@ enum EFFECT
 	EFFECT_MINERVA_LIGHT_SPIKES            = 899,
 	EFFECT_SJCAP_BOOST                     = 900,
 	EFFECT_RAGE                            = 901, // NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
+	// EFFECT_PLACEHOLDER                     = 902, // Next custom effect goes right here.
+
+	EFFECT_LEGION                          = 999,
 	// End of LegionXI Custom Section
 //==========================================================//
 

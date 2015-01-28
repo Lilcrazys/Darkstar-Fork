@@ -322,7 +322,7 @@ INSERT INTO `zone_settings` VALUES (273,3,'127.0.0.1',54230,'Woh_Gates',0,57,57,
 INSERT INTO `zone_settings` VALUES (274,3,'127.0.0.1',54230,'Outer_RaKaznar',73,57,57,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (275,0,'127.0.0.1',54230,'Outer_RaKaznar_U',0,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (276,0,'127.0.0.1',54230,'RaKaznar_Inner_Court',0,0,0,0,0.00,0,0);
-INSERT INTO `zone_settings` VALUES (277,0,'127.0.0.1',54230,'RaKaznar_Turris',0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (277,0,'127.0.0.1',54230,'RaKaznar_Turris',0,0,0,0,0.00,145,0);
 INSERT INTO `zone_settings` VALUES (278,0,'127.0.0.1',54230,'noname',0,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (279,0,'127.0.0.1',54230,'noname',0,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (280,1,'127.0.0.1',54230,'Mog_Garden',67,67,67,0,0.00,32,0);
@@ -331,6 +331,9 @@ INSERT INTO `zone_settings` VALUES (282,0,'127.0.0.1',54230,'Mount_Kamihr',0,0,0
 INSERT INTO `zone_settings` VALUES (283,0,'127.0.0.1',54230,'Silver_Knife',0,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (284,1,'127.0.0.1',54230,'Celennia_Memorial_Library',63,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (285,1,'127.0.0.1',54230,'Feretory',0,0,0,0,0.00,32,0);
+
+-- Temp workaround for Legion battles because instancing there isn't ready, so its BCNM for now
+REPLACE INTO `zone_settings` VALUES (183,4,'127.0.0.1',54230,'Maquette_Abdhaljs-Legion',0,143,143,0,0.00,145,0);
 
 -- -------------------------------------------------------
 -- This Sets zone IP on all of the above without causing
