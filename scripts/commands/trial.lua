@@ -82,67 +82,67 @@ function onTrigger(player,npc)
 		player:SpoofChatPlayer("You are not currently undertaking any trials.", MESSAGE_ECHO, nil );
 	end
 
-	if (player:getVar("CustomTrial") == 1) then
+	if (player:getVar("CustomTrial") == 18318) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Amanomurakumo [75-85]   ~~~~~"," Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 2) then
+	if (player:getVar("CustomTrial") == 15070) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Aegis [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 3) then
+	if (player:getVar("CustomTrial") == 18336) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Annihilator [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 4) then
+	if (player:getVar("CustomTrial") == 18306) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Apocalypse [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 5) then
+	if (player:getVar("CustomTrial") == 18294) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Bravura [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 6) then
+	if (player:getVar("CustomTrial") == 18330) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Claustrum [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 7) then
+	if (player:getVar("CustomTrial") == 18276) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Excalibur [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 8) then
+	if (player:getVar("CustomTrial") == 18342) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Gjallarhorn [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 9) then
+	if (player:getVar("CustomTrial") == 18300) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Gungnir [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 10) then
+	if (player:getVar("CustomTrial") == 18288) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Guttler [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 11) then
+	if (player:getVar("CustomTrial") == 18312) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Kikoku [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 12) then
+	if (player:getVar("CustomTrial") == 18270) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Mandau [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 13) then
+	if (player:getVar("CustomTrial") == 18324) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Mjollnir [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 14) then
+	if (player:getVar("CustomTrial") == 18282) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Ragnarok [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 15) then
+	if (player:getVar("CustomTrial") == 18264) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Spharai [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 16) then
+	if (player:getVar("CustomTrial") == 18348) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Yoichinoyumi [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		RelicTrial1(player,npc);
 	end
@@ -150,213 +150,213 @@ function onTrigger(player,npc)
 	---------------------
 	-- Mythic Trials 75-85
 	---------------------
-	if (player:getVar("CustomTrial") == 100) then
+	if (player:getVar("CustomTrial") == 18999) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Aymur [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 101) then
+	if (player:getVar("CustomTrial") == 18997) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Burtgang [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 102) then
+	if (player:getVar("CustomTrial") == 19000) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Carnwenhan [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 103) then
+		if (player:getVar("CustomTrial") == 18991) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Conqueror [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 104) then
+		if (player:getVar("CustomTrial") == 19007) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Death Penalty [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 105) then
+		if (player:getVar("CustomTrial") == 19001) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Gastraphetes [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 106) then
+		if (player:getVar("CustomTrial") == 18992) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Glanzfaust [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 107) then
+		if (player:getVar("CustomTrial") == 19002) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Kogarasumaru [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 108) then
+		if (player:getVar("CustomTrial") == 18994) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Laevateinn [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 109) then
+		if (player:getVar("CustomTrial") == 18998) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Liberator [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 110) then
+		if (player:getVar("CustomTrial") == 18995) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Murgleis [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 111) then
+		if (player:getVar("CustomTrial") == 19003) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Nagi [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 112) then
+		if (player:getVar("CustomTrial") == 19005) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Nirvana [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 113) then
+		if (player:getVar("CustomTrial") == 19004) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Ryunohige [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 114) then
+		if (player:getVar("CustomTrial") == 18989) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Terpsichore [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 115) then
+		if (player:getVar("CustomTrial") == 19006) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Tizona [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 116) then
+		if (player:getVar("CustomTrial") == 18990) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Tupsimati [75-85]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial1(player,npc);
 	end
 	---------------------
 	-- Mythic Trials 85-95
 	---------------------
-	if (player:getVar("CustomTrial") == 117) then
+	if (player:getVar("CustomTrial") == 19088) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Aymur [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 118) then
+	if (player:getVar("CustomTrial") == 19086) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Burtgang [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 119) then
+	if (player:getVar("CustomTrial") == 19089) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Carnwenhan [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 120) then
+		if (player:getVar("CustomTrial") == 19080) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Conqueror [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 121) then
+		if (player:getVar("CustomTrial") == 19096) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Death Penalty [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 122) then
+		if (player:getVar("CustomTrial") == 19090) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Gastraphetes [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 123) then
+		if (player:getVar("CustomTrial") == 19081) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Glanzfaust [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 124) then
+		if (player:getVar("CustomTrial") == 19091) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Kogarasumaru [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 125) then
+		if (player:getVar("CustomTrial") == 19083) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Laevateinn [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 126) then
+		if (player:getVar("CustomTrial") == 19087) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Liberator [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 127) then
+		if (player:getVar("CustomTrial") == 19084) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Murgleis [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 128) then
+		if (player:getVar("CustomTrial") == 19092) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Nagi [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 129) then
+		if (player:getVar("CustomTrial") == 19094) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Nirvana [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 130) then
+		if (player:getVar("CustomTrial") == 19093) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Ryunohige [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 131) then
+		if (player:getVar("CustomTrial") == 19098) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Terpsichore [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 132) then
+		if (player:getVar("CustomTrial") == 19095) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Tizona [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 133) then
+		if (player:getVar("CustomTrial") == 19099) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Tupsimati [85-95]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial2(player,npc);
 	end
 	---------------------
 	-- Mythic Trials 95-99
 	---------------------
-	if (player:getVar("CustomTrial") == 134) then
+	if (player:getVar("CustomTrial") == 19718) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Aymur [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 135) then
+	if (player:getVar("CustomTrial") == 19716) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Burtgang [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-	if (player:getVar("CustomTrial") == 136) then
+	if (player:getVar("CustomTrial") == 19719) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Carnwenhan [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 137) then
+		if (player:getVar("CustomTrial") == 19710) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Conqueror [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 138) then
+		if (player:getVar("CustomTrial") == 19726) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Death Penalty [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 139) then
+		if (player:getVar("CustomTrial") == 19720) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Gastraphetes [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 140) then
+		if (player:getVar("CustomTrial") == 19711) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Glanzfaust [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 141) then
+		if (player:getVar("CustomTrial") == 19721) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Kogarasumaru [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 142) then
+		if (player:getVar("CustomTrial") == 19713) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Laevateinn [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 143) then
+		if (player:getVar("CustomTrial") == 19717) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Liberator [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 144) then
+		if (player:getVar("CustomTrial") == 19714) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Murgleis [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 145) then
+		if (player:getVar("CustomTrial") == 19722) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Nagi [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 146) then
+		if (player:getVar("CustomTrial") == 19724) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Nirvana [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 147) then
+		if (player:getVar("CustomTrial") == 19723) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Ryunohige [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 148) then
+		if (player:getVar("CustomTrial") == 19728) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Terpsichore [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 149) then
+		if (player:getVar("CustomTrial") == 19725) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Tizona [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
-		if (player:getVar("CustomTrial") == 150) then
+		if (player:getVar("CustomTrial") == 19729) then
 		player:SpoofChatPlayer( string.format( "%s%s","~~~~~  Currently undertaking Custom Trial Tupsimati [95-99]   ~~~~~","Objectives Defeated:"), MESSAGE_ECHO, nil );
 		MythicTrial3(player,npc);
 	end
