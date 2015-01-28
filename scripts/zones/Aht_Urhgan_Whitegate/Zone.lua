@@ -20,7 +20,6 @@ function onInitialize(zone)
 	zone:registerRegion(1,57,-1,-70,62,1,-65); -- Sets Mark for "Got It All" Quest cutscene.
 	zone:registerRegion(2,-96,-7,121,-64,-5,137); -- Sets Mark for "Vanishing Act" Quest cutscene.
 	zone:registerRegion(3,14,-7,-65,37,-2,-41); -- TOAU Mission 1 CS area
-    zone:registerRegion(4,138,8,-37,0,0,0); -- Close Box
 end;
 
 -----------------------------------		
@@ -77,9 +76,6 @@ function onRegionEnter(player,region)
 		player:startEvent(0x0BB8,0,0,0,0,0,0,0,0,0);
 	end
 	end,
-    [4] = function (x) 
-	player:SpoofChatPlayer("             Left gold chest: (Nyzul exchange box)  <=>  Right gold chest: (Salvage +1 exchange box)",18);
-	end,
 	}
 end;	
 
@@ -89,13 +85,6 @@ end;
 
 function onRegionLeave(player,region)
 
-	switch (region:GetRegionID()): caseof
-	{
-	[4] = function (x)  
-        GetNPCByID(16982022):AnimationSub(12);
-        GetNPCByID(16982160):AnimationSub(12);
-	end,
-	}
 end;	
 
 -----------------------------------
