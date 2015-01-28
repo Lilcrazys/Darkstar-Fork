@@ -6,6 +6,15 @@
 
 -- function doCustomTrial(mob, killer, isKillShot, killType)
 function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
+	-- ID Tables
+	local Relic1 = {18318, 15070, 18336, 18306, 18294, 18330, 18276, 18342, 18300, 18288, 18312, 18270, 18324, 18282, 18264, 18348}
+	local Relic2 = {18646, 16196, 18649, 18644, 18642, 18648, 18639, 18578, 18643, 18641, 18645, 18638, 18647, 18640, 18637, 18650}
+	local Relic3 = {18674, 16198, 18677, 18672, 18670, 18676, 18667, 18580, 18671, 18669, 18673, 18666, 18675, 18668, 18665, 18678}
+	-- local Relic4 = {19755, 11927, 19758, 19753, 19751, 19757, 19748, 18572, 19752, 19750, 19754, 19747, 19756, 19749, 19746, 19759}
+	local Mythic1 = {18999, 18997, 19000, 18991, 19007, 19001, 18992, 19002, 18994, 18998, 18995, 19003, 19005, 19004, 18989, 19006, 18990}
+	local Mythic2 = {19088, 19086, 19089, 19080, 19096, 19090, 19081, 19091, 19803, 19087, 19084, 19092, 19094, 19093, 19098, 19095, 19099}
+	local Mythic3 = {19718, 19716, 19719, 19710, 19726, 19720, 19711, 19721, 19713, 19717, 19714, 19722, 19724, 19723, 19728, 19725, 19729}
+	-- local Mythic4 = {19827, 19825, 19828, 19819, 19835, 19829, 19820, 19830, 19822, 19826, 19823, 19831, 19962, 19832, 19837, 19834, 19838}
 
 	---------------------------------------------------
 	-- Custom Trials
@@ -50,12 +59,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (TRIAL >= 1 and TRIAL <= 16) and (MAIN == 18318 or SUB == 15070 or
-		MAIN == 18306 or MAIN == 18294 or MAIN == 18330 or MAIN == 18276 or
-		RANGED == 18342 or MAIN == 18300 or MAIN == 18288 or MAIN == 18312 or
-		MAIN == 18270 or MAIN == 18324 or MAIN == 18282 or MAIN == 18264 or
-		RANGED == 18348 or RANGED == 18336 ) ) then
-
+	if (TRIAL == Relic1 and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (SewwTheSquidLimbedKillCount < 4 and mob:getID() == 17498301) then
 			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwTheSquidLimbedKillCount + 1);
 		end
@@ -108,12 +112,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (TRIAL >= 17 and TRIAL <= 32) and (MAIN == 18646 or SUB == 16196 or
-		MAIN == 18644 or MAIN == 18642 or MAIN == 18648 or MAIN == 18639 or
-		RANGED == 18578 or MAIN == 18643 or MAIN == 18641 or MAIN == 18645 or
-		MAIN == 18638 or MAIN == 18647 or MAIN == 18640 or MAIN == 18637 or
-		RANGED == 18650 or RANGED == 18649) ) then
-
+	if (TRIAL == Relic2 and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (AdamantoiseKillCount < 7 and mob:getID() == 17301537) then
 			killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
 		end
@@ -159,12 +158,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		NidhoggKillCount = killer:getVar("Nidhogg_KILLS")
 	end
 
-	if ( (TRIAL >= 33 and TRIAL <= 48) and (MAIN == 18674 or
-		SUB == 16198 or RANGED == 18677 or MAIN == 18672 or MAIN == 18670 or
-		MAIN == 18676 or MAIN == 18667 or RANGED == 18580 or MAIN == 18671 or
-		MAIN == 18669 or MAIN == 18673 or MAIN == 18666 or MAIN == 18675 or
-		MAIN == 18668 or MAIN == 18665 or RANGED == 18678) ) then
-
+	if (TRIAL == Relic3 and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (JugglerKillCount < 4 and mob:getID() == 17580248) then
 			killer:setVar("Juggler_Hecatomb_KILLS", JugglerKillCount + 1);
 		end
@@ -222,13 +216,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (TRIAL >= 100 or TRIAL <= 116) and
-	   (MAIN == 18999 or MAIN == 18997 or MAIN == 19000 or MAIN == 18991 or
-		MAIN == 18992 or MAIN == 19002 or MAIN == 18994 or MAIN == 18998 or
-		MAIN == 18995 or MAIN == 19003 or MAIN == 19005 or MAIN == 19004 or
-		MAIN == 18989 or MAIN == 19006 or MAIN == 18990 or
-		RANGED == 19007 or RANGED == 19001) ) then
-
+	if (TRIAL == Mythic1 and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (ZareehklKillCount < 5 and mob:getID() == 16998873) then
 			killer:setVar("Zareehkl_the_Jubilant_KILLS", ZareehklKillCount + 1);
 		end
@@ -284,13 +272,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ((TRIAL >= 117 and TRIAL <= 133) and
-	   (MAIN == 19088 or MAIN == 19086 or MAIN == 19089 or MAIN == 19080 or
-		MAIN == 19081 or MAIN == 19091 or MAIN == 19083 or MAIN == 19087 or
-		MAIN == 19084 or MAIN == 19092 or MAIN == 19094 or MAIN == 19093 or
-		MAIN == 19098 or MAIN == 19095 or MAIN == 19099 or
-		RANGED == 19096 or RANGED == 19090) ) then
-
+	if (TRIAL == Mythic2 and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (ExperimentalLamiaKillCount < 4 and mob:getID() == 17101205) then
 			killer:setVar("Expermimental_Lamia_KILLS", ExperimentalLamiaKillCount + 1);
 		end
@@ -347,13 +329,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if ( (TRIAL >= 134 or TRIAL <= 150) and
-	   (MAIN == 19718 or MAIN == 19716 or MAIN == 19719 or MAIN == 19710 or
-		MAIN == 19711 or MAIN == 19721 or MAIN == 19713 or MAIN == 19717 or
-		MAIN == 19714 or MAIN == 19722 or MAIN == 19724 or MAIN == 19723 or
-		MAIN == 19728 or MAIN == 19725 or MAIN == 19729 or
-		RANGED == 19726 or RANGED == 19720) ) then
-
+	if (TRIAL == Mythic3 and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (GurfurlurKillCount < 3 and mob:getID() == 17031592) then
 			killer:setVar("Gurfurlur_the_Menacing_KILLS", GurfurlurKillCount + 1);
 		end
