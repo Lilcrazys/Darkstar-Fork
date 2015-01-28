@@ -181,6 +181,24 @@ INSERT INTO `item_mods` VALUES(27781, 29, 1);
 INSERT INTO `item_mods` VALUES(27781, 31, 43);
 INSERT INTO `item_mods` VALUES(27781, 384, 50);
 
+-- Buremte Gloves
+INSERT INTO `item_mods` VALUES(28050, 1, 74); -- def
+INSERT INTO `item_mods` VALUES(28050, 2, 19); -- hp
+INSERT INTO `item_mods` VALUES(28050, 8, 9); -- str
+INSERT INTO `item_mods` VALUES(28050, 9, 31); -- dex
+INSERT INTO `item_mods` VALUES(28050, 10, 27); -- vit
+INSERT INTO `item_mods` VALUES(28050, 11, 4); -- agi
+INSERT INTO `item_mods` VALUES(28050, 12, 11); -- int
+INSERT INTO `item_mods` VALUES(28050, 13, 26); -- mnd
+INSERT INTO `item_mods` VALUES(28050, 14, 15); -- chr
+INSERT INTO `item_mods` VALUES(28050, 25, 20); -- acc
+INSERT INTO `item_mods` VALUES(28050, 26, 20); -- Racc
+INSERT INTO `item_mods` VALUES(28050, 68, 19); -- eva
+INSERT INTO `item_mods` VALUES(28050, 31, 32); -- Meva
+INSERT INTO `item_mods` VALUES(28050, 29, 1); -- MDB
+INSERT INTO `item_mods` VALUES(28050, 384, 30); -- haste gear
+INSERT INTO `item_mods` VALUES(28050, 375, 13); -- cure received %
+
 INSERT INTO `item_mods` VALUES(28061, 1, 53);
 INSERT INTO `item_mods` VALUES(28061, 2, 7); 
 INSERT INTO `item_mods` VALUES(28061, 5, 70); 
@@ -213,8 +231,37 @@ INSERT INTO `item_mods` VALUES(28201, 29, 1);
 INSERT INTO `item_mods` VALUES(28201, 31, 40);
 INSERT INTO `item_mods` VALUES(28201, 384, 70);
 
+-- Uk'uxkaj Boots
+INSERT INTO `item_mods` VALUES(28331, 1, 58); -- def
+INSERT INTO `item_mods` VALUES(28331, 2, 10); -- hp
+INSERT INTO `item_mods` VALUES(28331, 5, 13); -- mp
+INSERT INTO `item_mods` VALUES(28331, 8, 8); -- str
+INSERT INTO `item_mods` VALUES(28331, 9, 9); -- dex
+INSERT INTO `item_mods` VALUES(28331, 10, 8); -- vit
+INSERT INTO `item_mods` VALUES(28331, 11, 8); -- agi
+INSERT INTO `item_mods` VALUES(28331, 12, 15); -- int
+INSERT INTO `item_mods` VALUES(28331, 13, 16); -- mnd
+INSERT INTO `item_mods` VALUES(28331, 14, 29); -- chr
+INSERT INTO `item_mods` VALUES(28331, 68, 43); -- eva
+INSERT INTO `item_mods` VALUES(28331, 31, 93); -- Meva
+INSERT INTO `item_mods` VALUES(28331, 29, 4); -- MDB
+-- INSERT INTO `item_mods` VALUES(28331, ???, ?); -- enhances enfeebling magic effect
+
+
 -- Imbodla Necklace
 INSERT INTO `item_mods` VALUES(28381, 12, 7); -- int
 INSERT INTO `item_mods` VALUES(28381, 13, 7); -- mnd
 INSERT INTO `item_mods` VALUES(28381, 114, 5); -- enfeebling skill
 INSERT INTO `item_mods` VALUES(28381, 115, 5); -- elemental skill
+
+-- Agitator's Collar
+INSERT INTO `item_mods` VALUES(28389, 25, 8); -- acc
+INSERT INTO `item_mods` VALUES(28389, 23, 5); -- atk
+INSERT INTO `item_mods` VALUES(28389, 161, -4); -- phy dmg taken -%
+
+-- Metalsinger Belt
+INSERT INTO `item_mods` VALUES(28449, 1, 15); -- def
+INSERT INTO `item_mods` VALUES(28449, 8, 13); -- str
+INSERT INTO `item_mods` VALUES(28449, 25, 5); -- acc
+INSERT INTO `item_mods` VALUES(28449, 288, 1); -- double atk
+
