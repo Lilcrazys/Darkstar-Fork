@@ -16043,6 +16043,7 @@ INSERT INTO `item_basic` VALUES (28385,0,'atzintli_necklace','atzintli_necklace'
 INSERT INTO `item_basic` VALUES (28386,0,'cuamiz_collar','cuamiz_collar',1,34816,22,0,100);
 INSERT INTO `item_basic` VALUES (28387,0,'quanpur_necklace','quanpur_necklace',1,34816,22,0,100);
 INSERT INTO `item_basic` VALUES (28388,0,'tlamiztli_collar','tlamiztli_collar',1,34816,22,0,100);
+INSERT INTO `item_basic` VALUES (28389,0,'agitators_collar','agitators_collar',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28390,0,'fiend_torque','fiend_torque',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28391,0,'animosity_torque','animosity_torque',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28392,0,'laceration_torque','laceration_torque',1,63568,0,1,0);
@@ -16063,6 +16064,7 @@ INSERT INTO `item_basic` VALUES (28406,0,'nuna_gorget','nuna_gorget',1,2080,0,1,
 INSERT INTO `item_basic` VALUES (28407,0,'nuna_gorget_+1','nuna_gorget_+1',1,2080,0,1,0);
 INSERT INTO `item_basic` VALUES (28440,0,'windbuffet_belt_+1','windbuffet_belt_+1',1,34816,99,0,0);
 INSERT INTO `item_basic` VALUES (28443,0,'yamabuki-no-obi','yamabuki-no-obi',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28449,0,'metalsinger_belt','metalsinger_belt',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28450,0,'chaac_belt','chaac_belt',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28455,0,'ovate_rope','ovate_rope',1,34816,23,0,100);
 INSERT INTO `item_basic` VALUES (28456,0,'kasiri_belt','kasiri_belt',1,34816,23,0,100);

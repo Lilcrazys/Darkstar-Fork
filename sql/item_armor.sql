@@ -9932,6 +9932,7 @@ INSERT INTO `item_armor` VALUES ('28020', 'iuitl_wristbands_+1', '99', '361760',
 INSERT INTO `item_armor` VALUES ('28021', 'gendewitha_gages_+1', '99', '524820', '265', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28022', 'hagondes_cuffs_+1', '99', '1605656', '262', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28027', 'boor_bracelets', '99', '2472947', '0', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28050', 'buremte_gloves', '99', '2473969', '250', '0', '0', '64', '0'); -- mID is wrong but meh
 INSERT INTO `item_armor` VALUES ('28056', 'yaoyotl_gloves', '99', '1589788', '264', '0', '0', '64', '0'); -- mID was 348 but looked like leather gloves
 INSERT INTO `item_armor` VALUES ('28057', 'mikinaak_gauntlets', '99', '21378', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28058', 'manibozho_gloves', '99', '5187652', '0', '0', '0', '64', '0');
@@ -10005,6 +10006,7 @@ INSERT INTO `item_armor` VALUES ('28343', 'chocaliztli_boots', '99', '10689', '1
 INSERT INTO `item_armor` VALUES ('28344', 'thurandaut_boots', '99', '2593826', '343', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28345', 'karieyh_sollerets', '99', '10689', '342', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28381', 'imbodla_necklace', '99', '1589788', '0', '0', '0', '512', '0');
+INSERT INTO `item_armor` VALUES ('28389', 'agitators_collar', '99', '6593', '0', '0', '0', '512', '0');
 INSERT INTO `item_armor` VALUES ('28401', 'eddy_necklace', '99', '7438776', '0', '0', '0', '512', '0');
 INSERT INTO `item_armor` VALUES ('28402', 'asperity_necklace', '99', '4194303', '0', '0', '0', '512', '0');
 INSERT INTO `item_armor` VALUES ('28403', 'inquisitor_bead_necklace', '99', '5139044', '0', '0', '0', '512', '0');
@@ -10014,6 +10016,7 @@ INSERT INTO `item_armor` VALUES ('28406', 'nuna_gorget', '99', '1758748', '0', '
 INSERT INTO `item_armor` VALUES ('28407', 'nuna_gorget_+1', '99', '1758748', '0', '0', '0', '512', '0');
 INSERT INTO `item_armor` VALUES ('28440', 'windbuffet_belt_+1', '99', '4194303', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28443', 'yamabuki-no-obi', '99', '3851870', '0', '0', '0', '1024', '0');
+INSERT INTO `item_armor` VALUES ('28449', 'metalsinger_belt', '99', '2473969', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28450', 'chaac_belt', '99', '4194303', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28462', 'hurchlan_sash', '99', '5188164', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28463', 'zorans_belt', '99', '17282', '0', '0', '0', '1024', '0');

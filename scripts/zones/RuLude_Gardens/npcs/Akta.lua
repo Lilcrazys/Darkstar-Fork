@@ -116,6 +116,7 @@ function onTrade(player,npc,trade)
 			player:SpoofChatPlayer( "Conqueror [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19819);
+
 		-- Death Penalty
 		elseif (trade:hasItemQty(19007,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
