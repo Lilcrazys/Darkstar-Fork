@@ -117,7 +117,7 @@ function onTrigger(player,job)
 	player:SpoofChatPlayer("--------------------------", 20);
     player:SpoofChatPlayer( string.format( "MND: %s         CHR: %s", player:getStat(MOD_MND), player:getStat(MOD_CHR)), 20);
 	player:SpoofChatPlayer("--------------------------", 20);
-    player:SpoofChatPlayer( string.format( "Haste: %s%%", player:getMod(MOD_DOUBLE_ATTACK)), 20);
+    player:SpoofChatPlayer( string.format( "Haste: %s%%", player:getMod(MOD_HASTE_GEAR)/10), 20);
 	player:SpoofChatPlayer( string.format( "Treasure Hunter level: %s%%", player:getMod(MOD_TREASURE_HUNTER)), 20);
 	player:SpoofChatPlayer( string.format( "Attack: %s", player:getStat(MOD_ATT)), 20);
 	player:SpoofChatPlayer( string.format( "Accuracy: %s%%", player:getMod(MOD_ACC)), 20);
