@@ -26,45 +26,45 @@ function onTrade(player,npc,trade)
     if (trade:hasItemQty(16106,1) and trade:getItemCount() == 1) then
         upgradeitem = 16106; -- Head
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(16106,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(16106,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10901;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(14568,1) and trade:getItemCount() == 1) then
         upgradeitem = 14568; -- Body
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(14568,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(14568,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10474;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(14983,1) and trade:getItemCount() == 1) then
         upgradeitem = 14983; -- Hands
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(14983,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(14983,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10523;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(15647,1) and trade:getItemCount() == 1) then
         upgradeitem = 15647; -- Legs
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(15647,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(15647,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10554;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(15733,1) and trade:getItemCount() == 1) then
         upgradeitem = 15733; -- Feet
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(15733,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(15733,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10620;
         player:setVar("NyzulTradeItem",reward);
@@ -74,45 +74,45 @@ function onTrade(player,npc,trade)
     elseif (trade:hasItemQty(16107,1) and trade:getItemCount() == 1) then
         upgradeitem = 16107; -- Head
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(16107,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(16107,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10906;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(14569,1) and trade:getItemCount() == 1) then
         upgradeitem = 14569; -- Body
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(14569,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(14569,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10479;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(14984,1) and trade:getItemCount() == 1) then
         upgradeitem = 14984; -- Hands
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(14984,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(14984,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10528;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(15648,1) and trade:getItemCount() == 1) then
         upgradeitem = 15648; -- Legs
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(15648,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(15648,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10559;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(15734,1) and trade:getItemCount() == 1) then
         upgradeitem = 15734; -- Feet
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(15734,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(15734,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10625;
         player:setVar("NyzulTradeItem",reward);
@@ -122,45 +122,45 @@ function onTrade(player,npc,trade)
     elseif (trade:hasItemQty(16108,1) and trade:getItemCount() == 1) then
         upgradeitem = 16108; -- Head
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(16108,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(16108,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10911;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(14570,1) and trade:getItemCount() == 1) then
         upgradeitem = 14570; -- Body
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(14570,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(14570,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10484;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(14985,1) and trade:getItemCount() == 1) then
         upgradeitem = 14985; -- Hands
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(14985,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(14985,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10533;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(15649,1) and trade:getItemCount() == 1) then
         upgradeitem = 15649; -- Legs
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(15649,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(15649,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10564;
         player:setVar("NyzulTradeItem",reward);
     elseif (trade:hasItemQty(15735,1) and trade:getItemCount() == 1) then
         upgradeitem = 15735; -- Feet
         csid = 970;
-        mats = 4024;
+        mats = 4023;
         matsquanity = 8;
-    elseif (trade:hasItemQty(4024,8) and trade:hasItemQty(15735,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
+    elseif (trade:hasItemQty(4023,8) and trade:hasItemQty(15735,1) and trade:hasItemQty(compensation,compansationamount) and trade:getItemCount() == 14) then
         csid = 971;
         reward = 10630;
         player:setVar("NyzulTradeItem",reward);
