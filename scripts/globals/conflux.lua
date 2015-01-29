@@ -149,7 +149,7 @@ function finishConflux(player,csid,option)
     local npcid = 0
     local zoneid = player:getZone();
     local discount = getCruorDiscount(player);
-    local cruor = player:getCurrency("cruor",);
+    local cruor = player:getCurrency("cruor");
     local bit = 0;
     local c01 = 0;
     local c02 = 0;
