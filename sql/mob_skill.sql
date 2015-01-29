@@ -4705,7 +4705,7 @@ INSERT INTO `mob_skill` VALUES (2464,958,1906,'Raksha_Illusion',1,18.0,2000,1000
 INSERT INTO `mob_skill` VALUES (2463,958,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2461,958,1902,'Yaksha_Bliss',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2460,958,1903,'Yaksha_Oblivion',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2459,958,1901,'Yaksha_Damnation',1,18.0,2000,1000,4,0,0,0
+INSERT INTO `mob_skill` VALUES (2459,958,1901,'Yaksha_Damnation',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (474,958,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 INSERT INTO `mob_skill` VALUES (435,958,432,'Manafont', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
