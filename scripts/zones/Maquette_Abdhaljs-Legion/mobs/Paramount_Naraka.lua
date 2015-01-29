@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Paramount_Naraka 
 
 -----------------------------------
 
@@ -25,6 +25,12 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REFRESH, 30);
+    mob:setMod(MOD_REGAIN, 30);
+    mob:setMod(MOD_HASTE_ABILITY, 15);
+    mob:setMod(MOD_UFASTCAST, 25);
+    mob:setMod(MOD_COUNTER, 15);	
 end;
 
 -----------------------------------
@@ -41,7 +47,28 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Paramount_Naraka_2hr_Used = 0;
+    if (mob:getLocalVar("Paramount_Naraka_2hr_Used") ~= nil) then
+        Paramount_Naraka_2hr_Used = mob:getLocalVar("Paramount_Naraka_2hr_Used");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Paramount_Naraka_2hr_Used == 2) then
+            mob:useMobAbility(474); -- MK
+            mob:setLocalVar("Paramount_Naraka_2hr_Used", 3);
+        end
+    elseif (mob:getHPP() <= 30) then 
+        if (Paramount_Naraka_2hr_Used == 1) then
+            mob:useMobAbility(474); -- MK
+            mob:setLocalVar("Paramount_Naraka_2hr_Used", 2);
+        end
+    elseif (mob:getHPP() <= 70) then 
+        if (Paramount_Naraka_2hr_Used == 0) then
+            mob:useMobAbility(474); -- MK
+            mob:setLocalVar("Paramount_Naraka_2hr_Used", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +99,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 100);
 end;

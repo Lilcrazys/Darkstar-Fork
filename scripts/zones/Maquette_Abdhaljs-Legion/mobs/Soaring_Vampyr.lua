@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Soaring_Vampyr 
 
 -----------------------------------
 
@@ -16,7 +16,6 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     -- MobMods
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
 end
 
 -----------------------------------
@@ -25,6 +24,9 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_REGEN,35);	
+    mob:setMod(MOD_HASTE_ABILITY, 10);	
 end;
 
 -----------------------------------
@@ -41,7 +43,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Soaring_Vampyr_2hr = 0;
+    if (mob:getLocalVar("Soaring_Vampyr_2hr") ~= nil) then
+        Soaring_Vampyr_2hr = mob:getLocalVar("Soaring_Vampyr_2hr");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Soaring_Vampyr_2hr == 0) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("Soaring_Vampyr_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +85,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 10);
+    mob:spawnMob(mob:getID()+3) -- Spawns Soaring_Strigoi
 end;

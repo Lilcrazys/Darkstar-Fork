@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Mired_Cerberus 
 
 -----------------------------------
 
@@ -25,6 +25,8 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_REGEN,25);		
 end;
 
 -----------------------------------
@@ -41,7 +43,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Mired_Cerberus_2hr = 0;
+    if (mob:getLocalVar("Mired_Cerberus_2hr") ~= nil) then
+        Mired_Cerberus_2hr = mob:getLocalVar("Mired_Cerberus_2hr");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Mired_Cerberus_2hr == 0) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("Mired_Cerberus_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +85,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 10);
+    mob:spawnMob(mob:getID()+3) -- Spawns Mired_Orthrus
 end;

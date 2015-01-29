@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Veiled_Ixion 
 
 -----------------------------------
 
@@ -17,6 +17,9 @@ function onMobInitialize(mob)
     -- MobMods
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
+	
+    mob:addMod(MOD_DOUBLE_ATTACK, 10);
+    mob:addMod(MOD_TRIPLE_ATTACK, 15);	
 end
 
 -----------------------------------
@@ -25,6 +28,8 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGAIN,25);
+    mob:setMod(MOD_REGEN,35);	
 end;
 
 -----------------------------------
@@ -41,7 +46,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Veiled_Ixion_2hr = 0;
+    if (mob:getLocalVar("Veiled_Ixion_2hr") ~= nil) then
+        Veiled_Ixion_2hr = mob:getLocalVar("Veiled_Ixion_2hr");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Veiled_Ixion_2hr == 0) then
+            mob:useMobAbility(437); -- PD
+            mob:setLocalVar("Veiled_Ixion_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +88,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 15);
+    mob:spawnMob(mob:getID()+3) -- Spawns Veiled_Alicorn
 end;

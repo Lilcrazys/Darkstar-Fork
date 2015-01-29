@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Mired_Khrysokhimaira 
 
 -----------------------------------
 
@@ -25,6 +25,9 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_REGEN,35);	
+    mob:setMod(MOD_HASTE_ABILITY, 10);	
 end;
 
 -----------------------------------
@@ -41,7 +44,23 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Mired_Khrysokhimaira_2hr = 0;
+    if (mob:getLocalVar("Mired_Khrysokhimaira_2hr") ~= nil) then
+        Mired_Khrysokhimaira_2hr = mob:getLocalVar("Mired_Khrysokhimaira_2hr");
+    end
 
+    if (mob:getHPP() <= 15) then 
+        if (Mired_Khrysokhimaira_2hr == 1) then
+            mob:useMobAbility(438); -- Invinc
+            mob:setLocalVar("Mired_Khrysokhimaira_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 60) then 
+        if (Mired_Khrysokhimaira_2hr == 0) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("Mired_Khrysokhimaira_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +91,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 25);
+    mob:spawnMob(mob:getID()+2) -- Spawns Mired_Mantis
 end;

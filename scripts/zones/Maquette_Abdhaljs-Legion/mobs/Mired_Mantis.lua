@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Mired_Mantis 
 
 -----------------------------------
 
@@ -25,6 +25,10 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGEN, 20);
+    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 10);
+    mob:setMod(MOD_COUNTER, 20);	
 end;
 
 -----------------------------------
@@ -41,7 +45,28 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Mired_Mantis_2hr_Used = 0;
+    if (mob:getLocalVar("Mired_Mantis_2hr_Used") ~= nil) then
+        Mired_Mantis_2hr_Used = mob:getLocalVar("Mired_Mantis_2hr_Used");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Mired_Mantis_2hr_Used == 2) then
+            mob:useMobAbility(434); -- HF
+            mob:setLocalVar("Mired_Mantis_2hr_Used", 3);
+        end
+    elseif (mob:getHPP() <= 30) then 
+        if (Mired_Mantis_2hr_Used == 1) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Mired_Mantis_2hr_Used", 2);
+        end
+    elseif (mob:getHPP() <= 70) then 
+        if (Mired_Mantis_2hr_Used == 0) then
+            mob:useMobAbility(434); -- HF
+            mob:setLocalVar("Mired_Mantis_2hr_Used", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +97,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 100);
 end;

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Veiled_Amphiptere 
 
 -----------------------------------
 
@@ -25,6 +25,12 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REFRESH, 20);
+    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 10);
+    mob:setMod(MOD_UFASTCAST, 15);
+    mob:setMod(MOD_COUNTER, 15);	
 end;
 
 -----------------------------------
@@ -41,7 +47,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Veiled_Amphiptere_2hr = 0;
+    if (mob:getLocalVar("Veiled_Amphiptere_2hr") ~= nil) then
+        Veiled_Amphiptere_2hr = mob:getLocalVar("Veiled_Amphiptere_2hr");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Veiled_Amphiptere_2hr == 0) then
+            mob:useMobAbility(434); -- HF
+            mob:setLocalVar("Veiled_Amphiptere_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +89,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 15);
+    mob:spawnMob(mob:getID()+3) -- Spawns Veiled_Sanguiptere
 end;

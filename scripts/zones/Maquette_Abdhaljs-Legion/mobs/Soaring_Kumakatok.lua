@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Soaring_Kumakatok 
 
 -----------------------------------
 
@@ -25,6 +25,11 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGEN, 25);
+    mob:setMod(MOD_REFRESH, 25);
+    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 10);
+    mob:setMod(MOD_UFASTCAST, 25);	
 end;
 
 -----------------------------------
@@ -41,7 +46,23 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Soaring_Kumakatok_2hr = 0;
+    if (mob:getLocalVar("Soaring_Kumakatok") ~= nil) then
+        Soaring_Kumakatok = mob:getLocalVar("Soaring_Kumakatok");
+    end
 
+    if (mob:getHPP() <= 15) then 
+        if (Soaring_Kumakatok == 1) then
+            mob:useMobAbility(436); -- CS
+            mob:setLocalVar("Soaring_Kumakatok", 2);
+        end
+    elseif (mob:getHPP() <= 60) then 
+        if (Soaring_Kumakatok == 0) then
+            mob:useMobAbility(435); -- MF
+            mob:setLocalVar("Soaring_Kumakatok", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +93,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 25);
 end;

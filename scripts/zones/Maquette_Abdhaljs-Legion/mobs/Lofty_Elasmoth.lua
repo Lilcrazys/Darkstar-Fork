@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Lofty_Elasmoth 
 
 -----------------------------------
 
@@ -25,6 +25,8 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGAIN,25);
+    mob:setMod(MOD_REGEN,35);	
 end;
 
 -----------------------------------
@@ -41,7 +43,23 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Lofty_Elasmoth_2hr = 0;
+    if (mob:getLocalVar("Lofty_Elasmoth_2hr") ~= nil) then
+        Lofty_Elasmoth_2hr = mob:getLocalVar("Lofty_Elasmoth_2hr");
+    end
 
+    if (mob:getHPP() <= 15) then 
+        if (Lofty_Elasmoth_2hr == 1) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("Lofty_Elasmoth_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 60) then 
+        if (Lofty_Elasmoth_2hr == 0) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Lofty_Elasmoth_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +90,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 25);
 end;

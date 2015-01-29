@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Paramount_Botulus 
 
 -----------------------------------
 
@@ -25,6 +25,11 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGEN, 40);
+    mob:setMod(MOD_REFRESH, 30);
+    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 10);
+    mob:setMod(MOD_UFASTCAST, 25);	
 end;
 
 -----------------------------------
@@ -41,7 +46,36 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Paramount_Botulus_2hr_Used = 0;
+    if (mob:getLocalVar("Paramount_Botulus_2hr_Used") ~= nil) then
+        Paramount_Botulus_2hr_Used = mob:getLocalVar("Paramount_Botulus_2hr_Used");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Paramount_Botulus_2hr_Used == 3) then
+            mob:useMobAbility(435); 
+            mob:setLocalVar("Paramount_Botulus_2hr_Used", 4);
+        elseif (Paramount_Botulus_2hr_Used == 4) then
+            mob:useMobAbility(436); 
+            mob:setLocalVar("Paramount_Botulus_2hr_Used", 5);
+        end
+    elseif (mob:getHPP() <= 25) then 
+        if (Paramount_Botulus_2hr_Used == 2) then
+            mob:useMobAbility(436); 
+            mob:setLocalVar("Paramount_Botulus_2hr_Used", 3);
+        end
+    elseif (mob:getHPP() <= 50) then 
+        if (Paramount_Botulus_2hr_Used == 1) then
+            mob:useMobAbility(436); 
+            mob:setLocalVar("Paramount_Botulus_2hr_Used", 2);
+        end
+    elseif (mob:getHPP() <= 75) then 
+        if (Paramount_Botulus_2hr_Used == 0) then
+            mob:useMobAbility(436); 
+            mob:setLocalVar("Paramount_Botulus_2hr_Used", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +106,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 125);
+    mob:spawnMob(mob:getID()-1) -- Spawns Paramount_Gallu	
 end;

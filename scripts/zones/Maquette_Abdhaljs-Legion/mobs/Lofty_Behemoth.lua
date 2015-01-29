@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Lofty_Behemoth 
 
 -----------------------------------
 
@@ -16,7 +16,6 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     -- MobMods
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
 end
 
 -----------------------------------
@@ -25,6 +24,8 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_REGEN,25);		
 end;
 
 -----------------------------------
@@ -41,7 +42,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Lofty_Behemoth_2hr = 0;
+    if (mob:getLocalVar("Lofty_Behemoth_2hr") ~= nil) then
+        Lofty_Behemoth_2hr = mob:getLocalVar("Lofty_Behemoth_2hr");
+    end
 
+    if (mob:getHPP() <= 10) then 
+        if (Lofty_Behemoth_2hr == 0) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Lofty_Behemoth_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +84,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 10);
+    mob:spawnMob(mob:getID()+3) -- Spawns Lofty_Elasmoth
 end;

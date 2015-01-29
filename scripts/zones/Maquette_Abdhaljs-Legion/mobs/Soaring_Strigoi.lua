@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+-- Soaring_Strigoi 
 
 -----------------------------------
 
@@ -25,6 +25,11 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REFRESH, 20);
+    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 10);
+    mob:setMod(MOD_UFASTCAST, 25);	
 end;
 
 -----------------------------------
@@ -41,7 +46,23 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local BattleStart = mob:getLocalVar("BattleStart");
+    local Soaring_Strigoi_2hr = 0;
+    if (mob:getLocalVar("Soaring_Strigoi_2hr") ~= nil) then
+        Soaring_Strigoi_2hr = mob:getLocalVar("Soaring_Strigoi_2hr");
+    end
 
+    if (mob:getHPP() <= 15) then 
+        if (Soaring_Strigoi_2hr == 1) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("Soaring_Strigoi_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 60) then 
+        if (Soaring_Strigoi_2hr == 0) then
+            mob:useMobAbility(435); -- MF
+            mob:setLocalVar("Soaring_Strigoi_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
@@ -72,5 +93,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    killer:addCurrency("legion_point", 25);
+    mob:spawnMob(mob:getID()+1) -- Spawns Soaring_Naraka
 end;
