@@ -9,8 +9,7 @@ require("scripts/globals/conflux");
 require("scripts/globals/settings");
 require("scripts/globals/teleports");
 require("scripts/globals/quests");
-package.loaded["scripts/zones/Abyssea-Uleguerand/TextIDs"] = nil;
-require("scripts/zones/Abyssea-Uleguerand/TextIDs");
+require("scripts/zones/Abyssea-Konschtat/TextIDs");
 -----------------------------------
 -- onTrade Action
 -----------------------------------
