@@ -13149,7 +13149,7 @@ INSERT INTO `mob_droplist` VALUES (2133,0,10279,150);
 INSERT INTO `mob_droplist` VALUES (2133,0,11669,100);
 INSERT INTO `mob_droplist` VALUES (2133,0,2630,1000);
 INSERT INTO `mob_droplist` VALUES (2133,0,16342,520);
-INSERT INTO `mob_droplist` VALUES (2133,0,19008,100); 
+INSERT INTO `mob_droplist` VALUES (2133,0,19008,100);
 INSERT INTO `mob_droplist` VALUES (2133,0,18994,100);
 INSERT INTO `mob_droplist` VALUES (2133,0,18990,100);
 INSERT INTO `mob_droplist` VALUES (2134,0,953,90);
@@ -32571,7 +32571,7 @@ INSERT INTO `mob_droplist` VALUES (1786,0,12093,340);
 INSERT INTO `mob_droplist` VALUES (1966,0,12088,340);
 INSERT INTO `mob_droplist` VALUES (962,0,12090,340);
 
----------- Begin Legion Drop -- In Progress - Jewels-Trophy-MainGear Only ATM -----
+-- -------- Begin Legion Drop -- In Progress - Jewels-Trophy-MainGear Only ATM -----
 
 INSERT INTO `mob_droplist` VALUES (9000,0,3925,1000);
 INSERT INTO `mob_droplist` VALUES (9000,0,3925,200);
@@ -32591,9 +32591,9 @@ INSERT INTO `mob_droplist` VALUES (9004,0,3925,200);
 INSERT INTO `mob_droplist` VALUES (9005,0,3925,1000);
 INSERT INTO `mob_droplist` VALUES (9005,0,3925,200);
 
-INSERT INTO `mob_droplist` VALUES (9006,0,3925,1000); -- Harpia - Feet 
+INSERT INTO `mob_droplist` VALUES (9006,0,3925,1000); -- Harpia - Feet
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,1000);
-INSERT INTO `mob_droplist` VALUES (9006,0,3529,1000); 
+INSERT INTO `mob_droplist` VALUES (9006,0,3529,1000);
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,200);
 INSERT INTO `mob_droplist` VALUES (9026,0,28345,200);
 INSERT INTO `mob_droplist` VALUES (9026,0,28344,200);
@@ -32619,7 +32619,7 @@ INSERT INTO `mob_droplist` VALUES (9025,0,3925,200);
 
 INSERT INTO `mob_droplist` VALUES (9026,0,3925,1000); -- Mantis - Legs
 INSERT INTO `mob_droplist` VALUES (9026,0,3925,1000);
-INSERT INTO `mob_droplist` VALUES (9026,0,3530,1000); 
+INSERT INTO `mob_droplist` VALUES (9026,0,3530,1000);
 INSERT INTO `mob_droplist` VALUES (9026,0,3925,200);
 INSERT INTO `mob_droplist` VALUES (9026,0,28205,200);
 INSERT INTO `mob_droplist` VALUES (9026,0,28204,200);
@@ -32645,7 +32645,7 @@ INSERT INTO `mob_droplist` VALUES (9035,0,3925,200);
 
 INSERT INTO `mob_droplist` VALUES (9036,0,3925,1000); -- Nakara - Hands
 INSERT INTO `mob_droplist` VALUES (9036,0,3925,1000);
-INSERT INTO `mob_droplist` VALUES (9036,0,3531,1000); 
+INSERT INTO `mob_droplist` VALUES (9036,0,3531,1000);
 INSERT INTO `mob_droplist` VALUES (9036,0,3925,200);
 INSERT INTO `mob_droplist` VALUES (9036,0,28065,200);
 INSERT INTO `mob_droplist` VALUES (9036,0,28064,200);
@@ -32671,7 +32671,7 @@ INSERT INTO `mob_droplist` VALUES (9045,0,3925,200);
 
 INSERT INTO `mob_droplist` VALUES (9046,0,3925,1000); -- Iron Clad - Heads
 INSERT INTO `mob_droplist` VALUES (9046,0,3925,1000);
-INSERT INTO `mob_droplist` VALUES (9046,0,3532,1000); 
+INSERT INTO `mob_droplist` VALUES (9046,0,3532,1000);
 INSERT INTO `mob_droplist` VALUES (9046,0,3925,200);
 INSERT INTO `mob_droplist` VALUES (9046,0,27785,200);
 INSERT INTO `mob_droplist` VALUES (9046,0,27784,200);
@@ -32731,63 +32731,46 @@ INSERT INTO `mob_droplist` VALUES (9059,0,3925,1000);
 INSERT INTO `mob_droplist` VALUES (9059,0,3925,200);
 INSERT INTO `mob_droplist` VALUES (9059,0,4851,200);
 
--------- End Legion
+-- ------ End Legion
 
 
--- New 7 HNM 
-INSERT INTO `mob_droplist` VALUES (9085,0,27781,66);
-INSERT INTO `mob_droplist` VALUES (9085,0,28201,63);
-INSERT INTO `mob_droplist` VALUES (9085,0,10597,72):
-INSERT INTO `mob_droplist` VALUES (9085,0,28463,70);
-INSERT INTO `mob_droplist` VALUES (9089,0,27779,67);
-INSERT INTO `mob_droplist` VALUES (9089,0,28062,66);
-INSERT INTO `mob_droplist` VALUES (9089,0,28579,69);
-INSERT INTO `mob_droplist` VALUES (9091,0,27780,67);
-INSERT INTO `mob_droplist` VALUES (9091,0,28343,65);
-INSERT INTO `mob_droplist` VALUES (9091,0,28401,69);
-INSERT INTO `mob_droplist` VALUES (9084,0,20548,225); 
-INSERT INTO `mob_droplist` VALUES (9084,0,27774,70); 
+-- New 7 HNM
+INSERT INTO `mob_droplist` VALUES (9084,0,20548,225);
+INSERT INTO `mob_droplist` VALUES (9084,0,27774,70);
 INSERT INTO `mob_droplist` VALUES (9084,0,27766,70);
-INSERT INTO `mob_droplist` VALUES (9084,0,21389,350); 
+INSERT INTO `mob_droplist` VALUES (9084,0,21389,350);
 INSERT INTO `mob_droplist` VALUES (9084,0,21429,350);
+INSERT INTO `mob_droplist` VALUES (9085,0,10597,72);
+INSERT INTO `mob_droplist` VALUES (9085,0,20738,220);
 INSERT INTO `mob_droplist` VALUES (9085,0,27781,66);
 INSERT INTO `mob_droplist` VALUES (9085,0,28201,63);
-INSERT INTO `mob_droplist` VALUES (9085,0,10597,72):
 INSERT INTO `mob_droplist` VALUES (9085,0,28463,70);
-INSERT INTO `mob_droplist` VALUES (9085,0,20738,220); 
-INSERT INTO `mob_droplist` VALUES (9085,0,28663,370); 
+INSERT INTO `mob_droplist` VALUES (9085,0,28663,370);
+INSERT INTO `mob_droplist` VALUES (9089,0,20861,225);
 INSERT INTO `mob_droplist` VALUES (9089,0,27779,67);
+INSERT INTO `mob_droplist` VALUES (9089,0,28381,325);
 INSERT INTO `mob_droplist` VALUES (9089,0,28062,66);
 INSERT INTO `mob_droplist` VALUES (9089,0,28579,69);
-INSERT INTO `mob_droplist` VALUES (9089,0,20861,225); 
-INSERT INTO `mob_droplist` VALUES (9089,0,28381,325); 
 INSERT INTO `mob_droplist` VALUES (9090,0,21176,220);
-INSERT INTO `mob_droplist` VALUES (9090,0,28050,70); 
-INSERT INTO `mob_droplist` VALUES (9090,0,28331,70); 
-INSERT INTO `mob_droplist` VALUES (9090,0,28389,350); 
-INSERT INTO `mob_droplist` VALUES (9090,0,28449,320); 
+INSERT INTO `mob_droplist` VALUES (9090,0,28050,70);
+INSERT INTO `mob_droplist` VALUES (9090,0,28331,70);
+INSERT INTO `mob_droplist` VALUES (9090,0,28389,350);
+INSERT INTO `mob_droplist` VALUES (9090,0,28449,320);
+INSERT INTO `mob_droplist` VALUES (9091,0,20618,350);
+INSERT INTO `mob_droplist` VALUES (9091,0,20997,369);
 INSERT INTO `mob_droplist` VALUES (9091,0,27780,67);
 INSERT INTO `mob_droplist` VALUES (9091,0,28343,65);
 INSERT INTO `mob_droplist` VALUES (9091,0,28401,69);
-INSERT INTO `mob_droplist` VALUES (9091,0,20618,350); 
-INSERT INTO `mob_droplist` VALUES (9091,0,20997,369); 
-INSERT INTO `mob_droplist` VALUES (9093,0,21052,220); 
-INSERT INTO `mob_droplist` VALUES (9093,0,27767,72); 
-INSERT INTO `mob_droplist` VALUES (9093,0,28201,72); 
-INSERT INTO `mob_droplist` VALUES (9093,0,28354,332); 
+INSERT INTO `mob_droplist` VALUES (9093,0,21052,220);
+INSERT INTO `mob_droplist` VALUES (9093,0,27767,72);
+INSERT INTO `mob_droplist` VALUES (9093,0,28201,72);
+INSERT INTO `mob_droplist` VALUES (9093,0,28354,332);
 INSERT INTO `mob_droplist` VALUES (9093,0,28535,336);
-INSERT INTO `mob_droplist` VALUES (9105,0,20905,220);
 INSERT INTO `mob_droplist` VALUES (9105,0,20762,220);
-INSERT INTO `mob_droplist` VALUES (9105,0,28337,80); 
-INSERT INTO `mob_droplist` VALUES (9105,0,27781,60); 
-INSERT INTO `mob_droplist` VALUES (9105,0,21421,360); 
-
-
--- SlenderMan
--- INSERT INTO `mob_droplist` VALUES (9666,0,0,0); -- No drops yet
-
--- Minerva
--- INSERT INTO `mob_droplist` VALUES (9777,0,0,0); -- No drops yet
+INSERT INTO `mob_droplist` VALUES (9105,0,20905,220);
+INSERT INTO `mob_droplist` VALUES (9105,0,21421,360);
+INSERT INTO `mob_droplist` VALUES (9105,0,27781,60);
+INSERT INTO `mob_droplist` VALUES (9105,0,28337,80);
 
 /*!40000 ALTER TABLE `mob_droplist` ENABLE KEYS */;
 UNLOCK TABLES;
