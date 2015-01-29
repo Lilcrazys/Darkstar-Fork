@@ -1667,7 +1667,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 229, 1, 255); 
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 315, 1, 255); -- Enstone 2
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 360, 1, 255); -- Dispelga
-INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 365, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 365, 1, 255); -- Breakga
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 366, 1, 255); -- Graviga
 
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Wyrm', 605, 47, 1, 255); -- Protect 5 
