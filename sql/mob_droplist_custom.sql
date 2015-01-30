@@ -22,3 +22,5 @@
 
 
 INSERT INTO `mob_droplist` VALUES (2473,0,20762,150);
+
+INSERT INTO `mob_droplist` VALUES (2478,0,10828,150);
