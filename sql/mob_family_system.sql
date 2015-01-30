@@ -663,12 +663,16 @@ INSERT INTO `mob_family_system` VALUES (945,'Veiled_Gigaworm',1,'Amorph',5,40,15
 INSERT INTO `mob_family_system` VALUES (946,'Veiled_Ironclad',3,'Arcana',5,40,130,130,2,3,3,3,3,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1.125,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (954,'Paramount_Gallu',9,'Demon',2,70,110,140,1,2,4,4,1,2,4,3,3,3,3,1,1,1,1,0.75,0.75,0.75,0.75,0.75,0.75,1.25,0.75,8);
 INSERT INTO `mob_family_system` VALUES (955,'Paramount_Botulus',1,'Amorph',4,40,70,140,6,3,6,3,1,5,4,3,3,3,3,0.875,1,0.75,0.75,1.25,1.25,1.25,1.125,1.125,1.125,1.125,1.125,6);
-
+INSERT INTO `mob_family_system` VALUES (956,'Paramount_Harpeia',8,'Bird',3,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
+INSERT INTO `mob_family_system` VALUES (957,'Paramount_Mantis',20,'Vermin',1,40,105,120,3,18,4,3,3,6,5,3,5,18,3,1,1,1,1,1,1.25,1,1,1.25,1,1.125,1.25,4);
+INSERT INTO `mob_family_system` VALUES (958,'Paramount_Naraka',19,'Undead',2,40,70,140,6,3,6,3,8,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
+INSERT INTO `mob_family_system` VALUES (959,'Paramount_Ironclad',3,'Arcana',5,40,130,130,2,3,3,3,3,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1.125,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (982,'Odin',5,'Avatar',2,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1.125,1,0);
 INSERT INTO `mob_family_system` VALUES (983,'Alexander',5,'Avatar',4,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0);
 INSERT INTO `mob_family_system` VALUES (984,'Tchakka',2,'Aquan',2,40,120,140,6,5,4,5,3,3,4,4,4,2,2,1,1,1,1,1,1.25,1,1,1.25,0.75,1,1,6);
 INSERT INTO `mob_family_system` VALUES (987,'Bismark',2,'Aquan',4,40,120,140,6,5,4,5,3,3,4,4,4,2,2,1,1,1,1,1,1.25,1,1,1.25,0.75,1,1,6);
 
+INSERT INTO `mob_family_system` VALUES (990,'Ravenous_Cracklaw',2,'Aquan',1,80,108,120,4,3,1,5,3,3,4,3,3,3,3,0.9,0.9,0.9,0.9,0.875,1,0.875,0.875,1,0.75,0.875,0.875,6);
 
 
 

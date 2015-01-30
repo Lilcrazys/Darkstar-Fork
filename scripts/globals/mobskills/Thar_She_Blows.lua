@@ -15,13 +15,9 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    target:SpoofChatPlayer( "3.....2.....1.....", MESSAGE_SAY, mob:getID() )    
+	local typeEffect = EFFECT_KO;
 
-	MobStatusEffectMove(mob, target, EFFECT_KO, 1, 0, 1);
-
-
-	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_EARTH, 0);
-
-	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
-	target:delHP(dmg);
-	return dmg;
+    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 1));
+    return typeEffect;
 end;

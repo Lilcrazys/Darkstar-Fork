@@ -14,12 +14,25 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-
+	local NM = mob:getID();
+	local HP = mob:getHPP();
 end;
 
 function onMobWeaponSkill(target, mob, skill)
- 	local typeEffect = EFFECT_KO;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 1));
-    return typeEffect;
+    local targetcurrentHP = target:getHP();
+    local targetmaxHP = target:getMaxHP(); 
+    local hpset=targetmaxHP*0.15;
+   	local typeEffect = EFFECT_BIND;
+		
+	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
+	
+	if(targetcurrentHP > hpset)then     
+		dmg= targetcurrentHP - hpset;
+	else
+		dmg=0;
+	end
+	  
+		target:delHP(dmg);
+	return dmg;
 end

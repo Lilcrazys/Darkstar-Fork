@@ -19,3 +19,6 @@
 -- DELETE FROM `mob_droplist` WHERE 'dropid'=1 and 'type'=2 and 'itemid'=3 'droprate'=4;
 -- INSERT INTO `mob_droplist` VALUES (5,6,7,8);
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
+
+
+INSERT INTO `mob_droplist` VALUES (2773,0,20762,150);

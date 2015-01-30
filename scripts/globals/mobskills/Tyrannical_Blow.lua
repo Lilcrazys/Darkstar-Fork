@@ -13,7 +13,7 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-
+	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)

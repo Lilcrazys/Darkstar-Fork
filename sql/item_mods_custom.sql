@@ -120,10 +120,15 @@ INSERT INTO `item_mods` VALUES(16002, 491, 5);
 
 REPLACE INTO `item_mods` VALUES(18852, 289, 50); -- MODDED OCTAVE CLUB
 
-
-INSERT INTO `item_mods` VALUES(20742, 82, 54); -- Iztaasu
+-- Iztaasu
+INSERT INTO `item_mods` VALUES(20742, 82, 54); 
 INSERT INTO `item_mods` VALUES(20742, 110, 54);
 INSERT INTO `item_mods` VALUES(20742, 30, 42);
+
+-- Ukudyoni
+INSERT INTO `item_mods` VALUES(20762, 83, 242); -- GS skill
+INSERT INTO `item_mods` VALUES(20762, 110, 242); -- parry skill
+INSERT INTO `item_mods` VALUES(20762, 30, 188); -- Macc
 
 -- Honed Tathlum
 INSERT INTO `item_mods` VALUES(21389, 25, 15); -- acc
