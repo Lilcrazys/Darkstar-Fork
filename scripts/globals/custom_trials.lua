@@ -3,6 +3,8 @@
 -- Functions for LegionXI custom trials content
 -- Author: Teo & Omni LegionFFXI
 -----------------------------------
+require("scripts/globals/utils");
+-----------------------------------
 
 -- ID Tables
 local Relic1 = {18318, 15070, 18336, 18306, 18294, 18330, 18276, 18342, 18300, 18288, 18312, 18270, 18324, 18282, 18264, 18348}
@@ -14,15 +16,6 @@ local Mythic2 = {19088, 19086, 19089, 19080, 19096, 19090, 19081, 19091, 19803, 
 local Mythic3 = {19718, 19716, 19719, 19710, 19726, 19720, 19711, 19721, 19713, 19717, 19714, 19722, 19724, 19723, 19728, 19725, 19729}
 -- local Mythic4 = {19827, 19825, 19828, 19819, 19835, 19829, 19820, 19830, 19822, 19826, 19823, 19831, 19962, 19832, 19837, 19834, 19838}
 
--- Check if ID exists in a table
-function table.contains(table, element)
-	for _, value in pairs(table) do
-		if value == element then
-			return true
-		end
-	end
-	return false
-end;
 
 -- function doCustomTrial(mob, killer, isKillShot, killType)
 function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
@@ -72,7 +65,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if (table.contains(Relic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(Relic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (SewwTheSquidLimbedKillCount < 4 and mob:getID() == 17498301) then
 			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwTheSquidLimbedKillCount + 1);
 		end
@@ -125,7 +118,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if (table.contains(Relic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(Relic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (AdamantoiseKillCount < 7 and mob:getID() == 17301537) then
 			killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
 		end
@@ -171,7 +164,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		NidhoggKillCount = killer:getVar("Nidhogg_KILLS")
 	end
 
-	if (table.contains(Relic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(Relic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (JugglerKillCount < 4 and mob:getID() == 17580248) then
 			killer:setVar("Juggler_Hecatomb_KILLS", JugglerKillCount + 1);
 		end
@@ -229,7 +222,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if (table.contains(Mythic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(Mythic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (ZareehklKillCount < 5 and mob:getID() == 16998873) then
 			killer:setVar("Zareehkl_the_Jubilant_KILLS", ZareehklKillCount + 1);
 		end
@@ -285,7 +278,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if (table.contains(Mythic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(Mythic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (ExperimentalLamiaKillCount < 4 and mob:getID() == 17101205) then
 			killer:setVar("Expermimental_Lamia_KILLS", ExperimentalLamiaKillCount + 1);
 		end
@@ -342,7 +335,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	-- Trial start count
 	---------------------
 
-	if (table.contains(Mythic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(Mythic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (GurfurlurKillCount < 3 and mob:getID() == 17031592) then
 			killer:setVar("Gurfurlur_the_Menacing_KILLS", GurfurlurKillCount + 1);
 		end

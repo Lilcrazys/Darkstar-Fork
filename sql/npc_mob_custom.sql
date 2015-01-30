@@ -342,6 +342,8 @@ INSERT INTO `mob_spawn_points` VALUES (16977945,'Trembling_Tilfaire','Achuka',90
 
 
 -- Super experimental, will not spawn without script or GM command.
+-- INSERT INTO `mob_spawn_points` VALUES (16978938,'Zombaru','Zombaru',96665,-24,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978939,'Zombaru','Zombaru',96665,-24,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978940,'SlenderMan','SlenderMan',96666,-24,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978941,'Mars','Mars',97600,-5,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,0,0);

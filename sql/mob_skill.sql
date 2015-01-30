@@ -4777,6 +4777,7 @@ INSERT INTO `mob_skill` VALUES (1424,6666,392,'Predatory_Glare', 4, 16.0, 2000, 
 INSERT INTO `mob_skill` VALUES (437,6666,432,'Perfect_Dodge', 0, 7.0, 2000, 0, 1, 2, 0, 0); -- sub Slendy_Tentacle when not at correct hp%
 INSERT INTO `mob_skill` VALUES (439,6666,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0); -- sub Slendy_Gate_of_Tartarus when not at correct hp%
 INSERT INTO `mob_skill` VALUES (475,6666,18,'Slendy_Mijin_Gakure', 1, 20.0, 2000, 0, 4, 2, 0, 0); -- sub Slendy_Dimensional_Death when not at correct hp%
+-- INSERT INTO `mob_skill` VALUES (728,263,708,'Summon_Proxies', 0, 18.0, 2000, 0, 1, 0, 0, 0);
 -- 239??
 -- 249 thrown thingy
 
