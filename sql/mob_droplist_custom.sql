@@ -21,4 +21,4 @@
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
 
 
-INSERT INTO `mob_droplist` VALUES (2773,0,20762,150);
+INSERT INTO `mob_droplist` VALUES (2473,0,20762,150);
