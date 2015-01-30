@@ -4755,7 +4755,7 @@ INSERT INTO `mob_skill` VALUES (2701,990,2180,'Cracklaw_Impenetrable_carapace',1
 INSERT INTO `mob_skill` VALUES (2702,990,2181,'Cracklaw_Rending_Deluge',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2703,990,2182,'Cracklaw_Sundering_Snip',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2704,990,2183,'Cracklaw_Viscid_Spindrift',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2705,990,2184,'Cracklaw_Riptide_Eupnea',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2705,990,2184,'Cracklaw_Riptide_Eupnea',1,18.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (432,990,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 INSERT INTO `mob_skill` VALUES (439,990,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
