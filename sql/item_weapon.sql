@@ -3818,6 +3818,7 @@ INSERT INTO `item_weapon` VALUES (21387,'convocaller',0,0,0,1,759,0,0);
 INSERT INTO `item_weapon` VALUES (21388,'dashavatara_sachet',0,0,0,1,759,0,0);
 INSERT INTO `item_weapon` VALUES (21389,'honed_tathlum',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (21409,'forefront_flute',42,0,0,1,0,0,0);
+INSERT INTO `item_weapon` VALUES (21421,'immolation_grip',0,0,0,1,-240,0,0);
 INSERT INTO `item_weapon` VALUES (21428,'tzacab_grip',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (21429,'mephitis_grip',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (21454,'forefront_animator',0,10,0,1,759,0,0);
