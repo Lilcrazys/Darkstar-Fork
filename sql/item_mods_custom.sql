@@ -128,7 +128,7 @@ INSERT INTO `item_mods` VALUES(20742, 30, 42);
 -- Ukudyoni
 INSERT INTO `item_mods` VALUES(20762, 83, 242); -- GS skill
 INSERT INTO `item_mods` VALUES(20762, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES(20762, 30, 188): -- Macc
+INSERT INTO `item_mods` VALUES(20762, 30, 188); -- Macc
 
 -- Honed Tathlum
 INSERT INTO `item_mods` VALUES(21389, 25, 15); -- acc
