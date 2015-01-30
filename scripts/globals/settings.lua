@@ -184,7 +184,7 @@ BETWEEN_2COSMOCLEANSE_WAIT_TIME = 1; -- day between 2 limbus keyitem  (default 3
 DIMENSIONAL_PORTAL_UNLOCK = false; -- Set true to bypass requirements for using dimensional portals to reach sea for Limbus
 
 --ABYSSEA
-FREE_CONFLUX = false; -- Set to true if you want Veridical Conflux activation/teleportation to cost 0 cruor (Default: false)
+FREE_CONFLUX = true; -- Set to true if you want Veridical Conflux activation/teleportation to cost 0 cruor (Default: false)
 ALL_CONFLUX = true; -- Set to true if you want all new players to start with all Veridical Conflux warps (Default: false)
 MAW_UNLOCK = true; -- Set to true to unlock all Maw teleports.
 VISITANT_BONUS = 1.00; -- Default: 1.00 - (retail) - Multiplies the base time value of each Traverser Stone.
