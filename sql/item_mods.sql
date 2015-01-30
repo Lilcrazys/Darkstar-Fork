@@ -341,7 +341,7 @@ INSERT INTO `item_mods` VALUES(10636, 5, 35); --
 INSERT INTO `item_mods` VALUES(10636, 8, 9); --
 INSERT INTO `item_mods` VALUES(10636, 10, 9); --
 INSERT INTO `item_mods` VALUES(10636, 23, 14); --
-INSERT INTO `item_mods` VALUES(10636, 167, 5); --
+INSERT INTO `item_mods` VALUES(10636, 384, 50); --
 INSERT INTO `item_mods` VALUES(10637, 1, 28); --
 INSERT INTO `item_mods` VALUES(10637, 8, 7); --
 INSERT INTO `item_mods` VALUES(10637, 11, 7); --
