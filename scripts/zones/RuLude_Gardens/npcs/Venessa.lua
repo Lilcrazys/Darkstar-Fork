@@ -47,7 +47,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18674);
 		elseif (trade:hasItemQty(19755,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Amanomurakumo [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Amanomurakumo [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19755);
 
@@ -69,7 +69,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 16198);
 		elseif (trade:hasItemQty(11927,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Aegis [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Aegis [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 11927);
 
@@ -91,7 +91,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18677);
 		elseif (trade:hasItemQty(19758,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Annihilator [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Annihilator [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19758);
 
@@ -113,7 +113,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18672);
 		elseif (trade:hasItemQty(19753,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Apocalypse [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Apocalypse [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19753);
 
@@ -135,7 +135,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18670);
 		elseif (trade:hasItemQty(19751,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Bravura [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Bravura [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19751);
 
@@ -157,7 +157,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18676);
 		elseif (trade:hasItemQty(19757,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Claustrum [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Claustrum [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19757);
 
@@ -179,7 +179,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18667);
 		elseif (trade:hasItemQty(19748,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Excalibur [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Excalibur [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19748);
 
@@ -201,7 +201,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18580);
 		elseif (trade:hasItemQty(18572,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Gjallarhorn [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Gjallarhorn [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 18572);
 
@@ -223,7 +223,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18671);
 		elseif (trade:hasItemQty(19752,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Gungnir [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Gungnir [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19752);
 
@@ -245,7 +245,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18669);
 		elseif (trade:hasItemQty(19750,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Guttler [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Guttler [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19750);
 
@@ -267,7 +267,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18673);
 		elseif (trade:hasItemQty(19754,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Kikoku [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Kikoku [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19754);
 
@@ -289,7 +289,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18666);
 		elseif (trade:hasItemQty(19747,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Mandau [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Mandau [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19747);
 
@@ -311,7 +311,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18675);
 		elseif (trade:hasItemQty(19756,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Mjollnir [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Mjollnir [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19756);
 
@@ -333,7 +333,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18668);
 		elseif (trade:hasItemQty(19749,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Ragnarok [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Ragnarok [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19749);
 
@@ -355,7 +355,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18665);
 		elseif (trade:hasItemQty(19746,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Spharai [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Spharai [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19746);
 
@@ -377,7 +377,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 18678);
 		elseif (trade:hasItemQty(19759,1) and trade:getItemCount() == 1) then
 			textRelic1(player,npc,trade);
-			player:SpoofChatPlayer( "Yoichinoyumi [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Yoichinoyumi [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textRelic5(player,npc,trade);
 			player:setVar("CustomTrial", 19759);
 		---------------------
@@ -386,7 +386,7 @@ function onTrade(player,npc,trade)
 		end
 	else
 		-- Completed trial via kill counts.
-		if (player:getVar("TRIAL_COMPLETE") == 1) then -- Only triggers if trial active AND done.
+		if (player:getVar("TRIAL_COMPLETE") >= 1) then -- Only triggers if trial active AND done.
 			player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
 			GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
@@ -394,6 +394,7 @@ function onTrade(player,npc,trade)
 
 		-- Complete trial via trade
 		elseif (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
+			player:setVar("TRIAL_COMPLETE",2);
 			player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
@@ -435,7 +436,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	if (player:getVar("TRIAL_COMPLETE") == 1) then -- Only triggers if trial active AND done.
+	if (player:getVar("TRIAL_COMPLETE") >= 1) then -- Only triggers if trial active AND done.
 		player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
 		GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
@@ -488,7 +489,7 @@ end;
 function textRelic5(player,npc,trade)
 	player:injectActionPacket(4, 918);
 	player:SpoofChatPlayer( "Objective: Item gathering.", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "Collect 50 Tanzanite Jewels and bring them to me.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Bring me 50 Tanzanite Jewels.", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 free inventory space.", MESSAGE_ECHO, npc:getID() );
 end;
 

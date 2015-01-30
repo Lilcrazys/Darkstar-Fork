@@ -18,13 +18,13 @@ function onTrade(player,npc,trade)
 	local CUSTOM_TRIAL_ID = player:getVar("CustomTrial");
 	local REWARD = 0;
 
-	if (player:getVar("TRIAL_COMPLETE") == 1) then
-		------------------------
-		-- Custom trial complete
-		------------------------
+	if (player:getVar("TRIAL_COMPLETE") >= 1) then
 		if (player:getFreeSlotsCount() >= 1) then
-			if (trade:getItemCount() == 1) then -- NM kill related trials.
-				-- Relic 1
+			------------------------
+			-- Custom trial complete
+			------------------------
+			if (trade:getItemCount() == 1) then
+				-- Relic 1 (NM kills)
 				if (CUSTOM_TRIAL_ID == 18318 and trade:hasItemQty(18318,1)) then
 					REWARD = 18646;
 					RelicComplete1(player,npc,trade);
@@ -74,7 +74,7 @@ function onTrade(player,npc,trade)
 					REWARD = 18650;
 					RelicComplete1(player,npc,trade);
 
-				-- Relic 2
+				-- Relic 2 (NM kills)
 				elseif (CUSTOM_TRIAL_ID == 18646 and trade:hasItemQty(18646,1)) then
 					REWARD = 18674;
 					RelicComplete2(player,npc,trade);
@@ -124,7 +124,7 @@ function onTrade(player,npc,trade)
 					REWARD = 18678;
 					RelicComplete2(player,npc,trade);
 
-				-- Relic 3
+				-- Relic 3 (NM kills)
 				elseif (CUSTOM_TRIAL_ID == 18674 and trade:hasItemQty(18674,1)) then
 					REWARD = 19755;
 					RelicComplete3(player,npc,trade);
@@ -173,12 +173,9 @@ function onTrade(player,npc,trade)
 				elseif (CUSTOM_TRIAL_ID == 18678 and trade:hasItemQty(18678,1)) then
 					REWARD = 19759;
 					RelicComplete3(player,npc,trade);
-				-- End NM kill trials
-				end
 
-			-- Relic Final: 50 Tanzenite jewel
-			elseif (trade:getItemCount() == 51 and trade:hasItemQty(3925,50)) then
-				if (CUSTOM_TRIAL_ID == 19755 and trade:hasItemQty(19755,1)) then
+				-- Relic Final: 50 Tanzenite jewel
+				elseif (CUSTOM_TRIAL_ID == 19755 and trade:hasItemQty(19755,1)) then
 					REWARD = 21016;
 					RelicComplete4(player,npc,trade);
 				elseif (CUSTOM_TRIAL_ID == 11927 and trade:hasItemQty(11927,1)) then
@@ -226,11 +223,9 @@ function onTrade(player,npc,trade)
 				elseif (CUSTOM_TRIAL_ID == 19759 and trade:hasItemQty(19759,1)) then
 					REWARD = 21211;
 					RelicComplete4(player,npc,trade);
-				end
 
-			-- Mythic 1
-			elseif (trade:getItemCount() == 1) then
-				if (CUSTOM_TRIAL_ID == 18999 and trade:hasItemQty(18999,1)) then
+				-- Mythic 1 (NM kills)
+				elseif (CUSTOM_TRIAL_ID == 18999 and trade:hasItemQty(18999,1)) then
 					REWARD = 19088;
 					MythicComplete1(player,npc,trade);
 				elseif (CUSTOM_TRIAL_ID == 18997 and trade:hasItemQty(18997,1)) then
@@ -282,7 +277,7 @@ function onTrade(player,npc,trade)
 					REWARD = 19099;
 					MythicComplete1(player,npc,trade);
 
-				-- Mythic 2 85-95
+				-- Mythic 2 85-95 (NM kills)
 				elseif (CUSTOM_TRIAL_ID == 19088 and trade:hasItemQty(19088,1)) then
 					REWARD = 19718;
 					MythicComplete2(player,npc,trade);
@@ -335,7 +330,7 @@ function onTrade(player,npc,trade)
 					REWARD = 19729;
 					MythicComplete2(player,npc,trade);
 
-				-- Mythic 3 95-99
+				-- Mythic 3 95-99 (NM kills)
 				elseif (CUSTOM_TRIAL_ID == 19718 and trade:hasItemQty(19718,1)) then
 					REWARD = 19827;
 					MythicComplete3(player,npc,trade);
@@ -387,12 +382,9 @@ function onTrade(player,npc,trade)
 				elseif (CUSTOM_TRIAL_ID == 19729 and trade:hasItemQty(19729,1)) then
 					REWARD = 19838;
 					MythicComplete3(player,npc,trade);
-				-- End NM kill trials
-				end
 
-			-- Mythic Final: 50 Tanzenite jewel
-			elseif (trade:getItemCount() == 51 and trade:hasItemQty(3925,50)) then
-				if (CUSTOM_TRIAL_ID == 19827 and trade:hasItemQty(19827,1)) then
+				-- Mythic Final: 50 Tanzenite jewel
+				elseif (CUSTOM_TRIAL_ID == 19827 and trade:hasItemQty(19827,1)) then
 					REWARD = 20793;
 					MythicComplete4(player,npc,trade);
 				elseif (CUSTOM_TRIAL_ID == 19825 and trade:hasItemQty(19825,1)) then

@@ -47,7 +47,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19718);
 		elseif (trade:hasItemQty(19827,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Aymur [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Aymur [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19827);
 
@@ -69,7 +69,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19716);
 		elseif (trade:hasItemQty(19825,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Burtgang [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Burtgang [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19825);
 
@@ -91,7 +91,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19719);
 		elseif (trade:hasItemQty(19828,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Carnwenhan [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Carnwenhan [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19828);
 
@@ -113,7 +113,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19710);
 		elseif (trade:hasItemQty(19819,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Conqueror [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Conqueror [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19819);
 
@@ -135,7 +135,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19726);
 		elseif (trade:hasItemQty(19835,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Death Penalty [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Death Penalty [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19835);
 
@@ -157,7 +157,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19720);
 		elseif (trade:hasItemQty(19829,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Gastraphetes [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Gastraphetes [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19829);
 
@@ -179,7 +179,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19711);
 		elseif (trade:hasItemQty(19820,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Glanzfaust [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Glanzfaust [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19820);
 
@@ -201,7 +201,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19721);
 		elseif (trade:hasItemQty(19830,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Kogarasumaru [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Kogarasumaru [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19830);
 
@@ -223,7 +223,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19713);
 		elseif (trade:hasItemQty(19822,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Laevateinn [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Laevateinn [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19822);
 
@@ -245,7 +245,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19717);
 		elseif (trade:hasItemQty(19826,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Liberator [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Liberator [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19826);
 
@@ -267,7 +267,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19714);
 		elseif (trade:hasItemQty(19823,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Murgleis [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Murgleis [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19823);
 
@@ -289,7 +289,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19722);
 		elseif (trade:hasItemQty(19831,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Nagi [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Nagi [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19831);
 
@@ -311,7 +311,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19724);
 		elseif (trade:hasItemQty(19962,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Nirvana [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Nirvana [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19962);
 
@@ -333,7 +333,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19723);
 		elseif (trade:hasItemQty(19832,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Ryunohige [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Ryunohige [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19832);
 
@@ -355,7 +355,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19728);
 		elseif (trade:hasItemQty(19837,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Terpsichore [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Terpsichore [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19837);
 
@@ -377,7 +377,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19725);
 		elseif (trade:hasItemQty(19834,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Tizona [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Tizona [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19834);
 
@@ -399,7 +399,7 @@ function onTrade(player,npc,trade)
 			player:setVar("CustomTrial", 19729);
 		elseif (trade:hasItemQty(19838,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
-			player:SpoofChatPlayer( "Tupsimati [(99-1)-(99-4)]", MESSAGE_ECHO, npc:getID() );
+			player:SpoofChatPlayer( "Tupsimati [99-99+4]", MESSAGE_ECHO, npc:getID() );
 			textMythic5(player,npc,trade);
 			player:setVar("CustomTrial", 19838);
 		---------------------
@@ -408,14 +408,15 @@ function onTrade(player,npc,trade)
 		end
 	else
 		-- Completed trial via kill counts.
-		if (player:getVar("TRIAL_COMPLETE") == 1) then -- Only triggers if trial active AND done.
+		if (player:getVar("TRIAL_COMPLETE") >= 1) then -- Only triggers if trial active AND done.
 			player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
-			GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
+			GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
 			player:injectActionPacket(6, 617);
 
 		-- Complete trial via trade
 		elseif (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
+			player:setVar("TRIAL_COMPLETE",2);
 			player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
@@ -439,10 +440,10 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	if (player:getVar("TRIAL_COMPLETE") == 1) then
+	if (player:getVar("TRIAL_COMPLETE") >= 1) then
 		player:SpoofChatPlayer( "Well done, now trade your item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
-		GetNPCByID(npc:getID()+1):setStatus(STATUS_NORMAL);
+		GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
 		player:injectActionPacket(6, 617);
 	else
 		player:SpoofChatPlayer( "What you looking at? Try bringing me something of interest.", MESSAGE_SAY, npc:getID() );
@@ -505,7 +506,7 @@ end;
 function textMythic5(player,npc,trade)
 	player:injectActionPacket(4, 918);
 	player:SpoofChatPlayer( "Objective: Item gathering.", MESSAGE_SAY, npc:getID() );
-	player:SpoofChatPlayer( "Collect 50 Tanzanite Jewels and bring them to me.", MESSAGE_SAY, npc:getID() );
+	player:SpoofChatPlayer( "Bring me 50 Tanzanite Jewels.", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 free inventory space.", MESSAGE_ECHO, npc:getID() );
 end;
 
