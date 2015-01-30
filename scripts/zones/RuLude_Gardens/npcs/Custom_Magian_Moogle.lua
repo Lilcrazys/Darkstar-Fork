@@ -499,6 +499,8 @@ end;
 
 function RelicComplete4(player,npc,trade)
 	player:injectActionPacket(6, 206);
+	player:setVar("CustomTrial",0);
+	player:setVar("TRIAL_COMPLETE",0);
 	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:SpoofChatPlayer( "Mog: All trials complete for this Item!", MESSAGE_SYS_SAY, npc:getID() );
 end;
@@ -542,6 +544,8 @@ end;
 
 function MythicComplete4(player,npc,trade)
 	player:injectActionPacket(6, 206);
+	player:setVar("CustomTrial",0);
+	player:setVar("TRIAL_COMPLETE",0);
 	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:SpoofChatPlayer( "Mog: All trials complete for this Item!", MESSAGE_SYS_SAY, npc:getID() );
 end;
