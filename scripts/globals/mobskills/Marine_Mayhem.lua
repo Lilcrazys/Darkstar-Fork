@@ -15,7 +15,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    target:SpoofChatPlayer( "Most are smart enough to run from...", MESSAGE_SAY, mob:getID() )    
+    -- target:SpoofChatPlayer( "Most are smart enough to run from...", MESSAGE_SAY, mob:getID() )    
 	local typeEffect = EFFECT_KO;
 
     skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 1));
