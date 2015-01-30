@@ -19,19 +19,19 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
+
     local targetcurrentHP = target:getHP();
     local targetmaxHP = target:getMaxHP(); 
-    local hpset=targetmaxHP*0.00;
-   	local typeEffect = EFFECT_KO;
-		
-	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
+    local hpset=targetmaxHP*0.25;
+   	local typeEffect = EFFECT_BIND;
+   	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
 	
-	if(targetcurrentHP > hpset)then     
-		dmg= targetcurrentHP - hpset;
-	else
-		dmg=0;
-	end
+      if(targetcurrentHP > hpset)then     
+        dmg = targetcurrentHP - hpset;
+      else
+        dmg = 0;
+	  end
 	  
-		target:delHP(dmg);
-	return dmg;
+	target:delHP(dmg);
+    return dmg;
 end
