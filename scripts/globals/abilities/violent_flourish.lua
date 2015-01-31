@@ -74,9 +74,9 @@ function onUseAbility(player, target, ability)
 		local bonus = 50 - target:getMod(MOD_STUNRES) + player:getMod(MOD_VFLOURISH_MACC);
 		local spell = getSpell(252);
 		local resist = applyResistance(player,spell,target,0,player:getSkillLevel(player:getWeaponSkillType(SLOT_MAIN)),bonus);
-		
+		local duration = math.random(2,5);
 		if resist > 0.25 then
-			target:addStatusEffect(EFFECT_STUN, 1, 0, 2);
+			target:addStatusEffect(EFFECT_STUN, 1, 0, duration);
 		else
 			ability:setMsg(110);
 		end

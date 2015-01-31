@@ -44,6 +44,7 @@ function onUseAbility(player, target, ability)
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_3,1,0,duration+30);
 					daze = 3;
 					effect = 3;
+					player:delStatusEffectSilent(EFFECT_PRESTO);
 				else
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_2,1,0,duration+30);
 					daze = 2;
@@ -57,6 +58,7 @@ function onUseAbility(player, target, ability)
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_4,1,0,duration+30);
 					daze = 3;
 					effect = 4;
+					player:delStatusEffectSilent(EFFECT_PRESTO);
 				else
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_3,1,0,duration+30);
 					daze = 2;
@@ -70,6 +72,7 @@ function onUseAbility(player, target, ability)
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_5,1,0,duration+30);
 					daze = 3;
 					effect = 5;
+					player:delStatusEffectSilent(EFFECT_PRESTO);
 				else
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_4,1,0,duration+30);
 					daze = 2;
@@ -81,6 +84,7 @@ function onUseAbility(player, target, ability)
 				target:delStatusEffectSilent(EFFECT_LETHARGIC_DAZE_4);
 				if (player:hasStatusEffect(EFFECT_PRESTO)) then
 					daze = 3;
+					player:delStatusEffectSilent(EFFECT_PRESTO);
 				else
 					daze = 2;
 				end
@@ -99,6 +103,7 @@ function onUseAbility(player, target, ability)
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_2,1,0,60);
 					daze = 3;
 					effect = 2;
+					player:delStatusEffectSilent(EFFECT_PRESTO);
 				else
 					target:addStatusEffect(EFFECT_LETHARGIC_DAZE_1,1,0,60);
 					daze = 2;

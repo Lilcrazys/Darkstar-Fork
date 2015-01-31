@@ -244,6 +244,20 @@ void CAttackRound::CreateAttacks(CItemWeapon* PWeapon, PHYSICAL_ATTACK_DIRECTION
     if (direction == LEFTATTACK && WELL512::irand() % 100 < m_attacker->getMod(MOD_EXTRA_DUAL_WIELD_ATTACK))
 		AddAttackSwing(ATTACK_NORMAL, RIGHTATTACK, 1);
 
+	// Striking Flourish - double attack rounds based on finishing moves used.
+	if (m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_STRIKING_FLOURISH) && m_attacker->m_Weapons[SLOT_MAIN]->getID() == PWeapon->getID())
+	{
+		AddAttackSwing(DOUBLE_ATTACK, direction, 1);
+	}
+	m_attacker->StatusEffectContainer->DelStatusEffect(EFFECT_STRIKING_FLOURISH);
+		
+	// Ternary Flourish - triple attack rounds based on finishing moves used.
+	if (m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_TERNARY_FLOURISH) && m_attacker->m_Weapons[SLOT_MAIN]->getID() == PWeapon->getID())
+	{
+		AddAttackSwing(TRIPLE_ATTACK, direction, 2);
+	}
+	m_attacker->StatusEffectContainer->DelStatusEffect(EFFECT_TERNARY_FLOURISH);
+
 }
 
 /************************************************************************

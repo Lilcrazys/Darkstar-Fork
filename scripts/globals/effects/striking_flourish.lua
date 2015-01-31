@@ -3,12 +3,14 @@
 --
 --
 -----------------------------------
-
+require("scripts/globals/status");
 -----------------------------------
 -- onEffectGain Action
 -----------------------------------
 
 function onEffectGain(target,effect)
+    local critlvl = effect:getSubPower();
+    target:addMod(MOD_CRITHITRATE, critlvl);
 end;
 
 -----------------------------------
@@ -16,6 +18,7 @@ end;
 -----------------------------------
 
 function onEffectTick(target,effect)
+	
 end;
 
 -----------------------------------
@@ -23,4 +26,6 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
+    local critlvl = effect:getSubPower();
+	target:delMod(MOD_CRITHITRATE, critlvl);
 end;

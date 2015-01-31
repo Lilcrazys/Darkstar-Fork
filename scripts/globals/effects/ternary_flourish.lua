@@ -3,13 +3,13 @@
 --
 --
 -----------------------------------
-
+require("scripts/globals/status");
 -----------------------------------
 -- onEffectGain Action
 -----------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_EVAP, -1);
+
 end;
 
 -----------------------------------
@@ -17,6 +17,7 @@ end;
 -----------------------------------
 
 function onEffectTick(target,effect)
+	
 end;
 
 -----------------------------------
@@ -24,5 +25,5 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_EVAP, -1);
+
 end;
