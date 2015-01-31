@@ -510,6 +510,7 @@ public:
     int32 setGMHidden(lua_State* L);
     int32 PrintToPlayer(lua_State* L);    // for sending debugging messages/command confirmations to the player's client
     int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
+    int32 SpoofChatParty(lua_State* L);   // Sends a faked chat packet from a Mob to a party/alliance in battle.
     int32 SpoofChatServer(lua_State* L);  // Sends a faked chat packet to the entire server.
 
     // == Pathfind Methods ==

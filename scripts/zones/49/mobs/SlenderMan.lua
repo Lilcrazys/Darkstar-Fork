@@ -44,7 +44,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    target:SpoofChatPlayer("I'll swallow your soul!", MESSAGE_SAY, mob:getID() )
+    mob:SpoofChatParty("I'll swallow your soul!", MESSAGE_SAY)
 end;
 
 -----------------------------------
@@ -64,7 +64,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    -- killer:SpoofChatPlayer( "victory message here", MESSAGE_SAY, mob:getID() )
+    -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
 end;
 
 -----------------------------------

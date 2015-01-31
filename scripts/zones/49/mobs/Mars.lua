@@ -75,8 +75,8 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    target:SpoofChatPlayer( "I am Mars, god of war. Have you entered this hall to challenge me mortal?", MESSAGE_SAY, mob:getID() )
-    target:SpoofChatPlayer( "Do you think yourself fit to battle a god?", MESSAGE_SAY, mob:getID() )
+    mob:SpoofChatParty("I am Mars, god of war. Have you entered this hall to challenge me mortal?", MESSAGE_SAY)
+    mob:SpoofChatParty("Do you think yourself fit to battle a god?", MESSAGE_SAY)
 end;
 
 -----------------------------------
@@ -91,13 +91,13 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 9) then -- Time for BW(3rd use) and MS(2nd use) together!
         if (Mars_2hr_Used == 3) then
-            target:SpoofChatPlayer("That you should fight a god this far...Deplorable.", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("That you should fight a god this far...Deplorable.", MESSAGE_SAY);
             mob:useMobAbility(432); -- Do Mighty Strikes!
             mob:setLocalVar("Mars_2hr", 4);
             mob:addMod(MOD_TRIPLE_ATTACK, 1);
         elseif (Mars_2hr_Used == 4) then
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-            target:SpoofChatPlayer("You shall not survive this day, I AM THE GOD OF WAR!!!", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("You shall not survive this day, I AM THE GOD OF WAR!!!", MESSAGE_SAY);
             mob:useMobAbility(439); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 5);
             mob:setLocalVar("MagicElement", 0);
@@ -106,21 +106,21 @@ function onMobFight(mob, target)
         end
     elseif (mob:getHPP() <= 25) then -- 2nd BW time!
         if (Mars_2hr_Used == 2) then
-            target:SpoofChatPlayer("It has been over 1000 years since I have been so...Entertained.", MESSAGE_SAY, mob:getID() );
-            target:SpoofChatPlayer("Show me more, mortal! More! Bleed for the god of war!", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("It has been over 1000 years since I have been so...Entertained.", MESSAGE_SAY);
+            mob:SpoofChatParty("Show me more, mortal! More! Bleed for the god of war!", MESSAGE_SAY);
             mob:useMobAbility(439); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 3);
         end
     elseif (mob:getHPP() <= 70) then -- 1st MS time!
         if (Mars_2hr_Used == 1) then
-            target:SpoofChatPlayer("Hmmph. You've managed to scratch me.", MESSAGE_SAY, mob:getID() );
-            target:SpoofChatPlayer("Very well then, I shall show you my full might!", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("Hmmph. You've managed to scratch me.", MESSAGE_SAY);
+            mob:SpoofChatParty("Very well then, I shall show you my full might!", MESSAGE_SAY);
             mob:useMobAbility(432); -- Do Mighty Strikes!
             mob:setLocalVar("Mars_2hr", 2);
         end
     elseif (mob:getHPP() <= 85) then -- 1st BW time!
         if (Mars_2hr_Used == 0) then
-            target:SpoofChatPlayer("Such hubris...You shall learn to show me the proper respect, mortal!", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("Such hubris...You shall learn to show me the proper respect, mortal!", MESSAGE_SAY);
             mob:useMobAbility(439); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 1);
         end
@@ -186,8 +186,8 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:SpoofChatPlayer( "...I...Defeated...Content...At last...", MESSAGE_SAY, mob:getID() )
-    killer:SpoofChatPlayer( "As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO, nil )
+    mob:SpoofChatParty("...I...Defeated...Content...At last...", MESSAGE_SAY)
+    mob:SpoofChatParty("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO)
     -- insert code to spawn lootbox here, move battlefield win stuff into lootbox?
     -- mob:getBattlefield():win();
 end;

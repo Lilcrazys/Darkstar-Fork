@@ -56,16 +56,16 @@ function onMobFight(mob, target)
             TABULA_RASA = mob:getLocalVar("Minerva_Used_Tabula_Rasa");
         end
         if (TABULA_RASA == 0) then
-            target:SpoofChatPlayer("Placeholder: message here", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("Placeholder: message here", MESSAGE_SAY);
             -- mob:useMobAbility(626); -- Do Tabula Rasa!
             mob:setLocalVar("Minerva_Used_Tabula_Rasa", 1);
             target:PrintToPlayer("Tabula Rasa for mobs not yet implemented");
         else
-            target:SpoofChatPlayer( "Placeholder message here", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
             mob:useMobAbility(438); -- Do Invincible!
         end
     elseif (mob:getHPP() < 40) then
-        target:SpoofChatPlayer( "Placeholder message here", MESSAGE_SAY, mob:getID() );
+        mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
         mob:useMobAbility(436); -- Do 3rd Chainspell!
     elseif (mob:getHPP() < 60) then
         local MANAFONT = 0;
@@ -73,14 +73,14 @@ function onMobFight(mob, target)
             MANAFONT = mob:getLocalVar("Minerva_Used_Manafont");
         end
         if (MANAFONT == 0) then
-            target:SpoofChatPlayer( "Placeholder message here", MESSAGE_SAY, mob:getID() );
+            mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
             mob:useMobAbility(436); -- Do Manafont!
             mob:setLocalVar("Minerva_Used_Manafont", 1);
         else
             mob:useMobAbility(436); -- Do 2nd Chainspell!
         end
     elseif (mob:getHPP() < 80) then
-        target:SpoofChatPlayer( "Placeholder message here", MESSAGE_SAY, mob:getID() );
+        mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
         mob:useMobAbility(436); -- Do 1st Chainspell!
     end
     ]]--
@@ -91,7 +91,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    -- killer:SpoofChatPlayer( "victory message here", MESSAGE_SAY, mob:getID() )
+    -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
     -- mob:getBattlefield():win();
 end;
 
