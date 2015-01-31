@@ -22,7 +22,7 @@ function onSpellCast(caster,target,spell)
 if(target:hasStatusEffect(EFFECT_STUN)) then
     return damage;
 	    else	
-		target:addStatusEffect(EFFECT_STUN,15,0,20);
+		target:addStatusEffect(EFFECT_STUN,3,0,3);
 		   end
 
     return damage;
