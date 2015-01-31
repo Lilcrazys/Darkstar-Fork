@@ -16,7 +16,7 @@ function onMobInitialize(mob)
 	
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_MACC,350);	
-    mob:addMod(MOD_MATT,100);	
+    mob:addMod(MOD_MATT,200);	
     mob:addMod(MOD_DOUBLE_ATTACK,10)
     mob:addMod(MOD_MDEF, 50);	
     mob:addMod(MOD_DEF, -50);	
