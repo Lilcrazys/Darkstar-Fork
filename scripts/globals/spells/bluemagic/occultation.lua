@@ -25,11 +25,11 @@ function onSpellCast(caster,target,spell)
     local shadows = 2;
     local duration = 300;
 
-    -- 400 skill = 8 shadows, 450 = 9 shadows, so I am assuming every 50 skill is a shadow.
+
     -- Also assuming minimum of 2 shadows.
     -- I've never seen the spell cast with under 100 skill, so I could be wrong.
     if (skill > 100) then
-        shadows = (skill / 50);
+        shadows = (skill / 100);
     end
 
     if(caster:hasStatusEffect(EFFECT_DIFFUSION)) then
