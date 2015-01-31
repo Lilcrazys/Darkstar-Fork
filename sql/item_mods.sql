@@ -200,16 +200,6 @@ INSERT INTO `item_mods` VALUES(10514, 30, 11); -- Should be 10  added to compens
 INSERT INTO `item_mods` VALUES(10514, 170, 3); -- Amount unsure
 INSERT INTO `item_mods` VALUES(10514, 27, -3); --
 
-INSERT INTO `item_mods` VALUES(10541, 1, 30); --
-INSERT INTO `item_mods` VALUES(10541, 8, 9); --
-INSERT INTO `item_mods` VALUES(10541, 12, 9); --
-INSERT INTO `item_mods` VALUES(10541, 13, 9); --
-INSERT INTO `item_mods` VALUES(10541, 30, 6); --
-INSERT INTO `item_mods` VALUES(10541, 122, 8); --
-INSERT INTO `item_mods` VALUES(10542, 1, 29); --
-INSERT INTO `item_mods` VALUES(10542, 5, 60); --
-INSERT INTO `item_mods` VALUES(10542, 168, 20); --
-
 INSERT INTO `item_mods` VALUES(10539, 1, 38); --
 INSERT INTO `item_mods` VALUES(10539, 2, 40); --
 INSERT INTO `item_mods` VALUES(10539, 5, 40); --
@@ -222,8 +212,16 @@ INSERT INTO `item_mods` VALUES(10540, 11, 8); --
 INSERT INTO `item_mods` VALUES(10540, 25, 10); --
 INSERT INTO `item_mods` VALUES(10540, 23, 10); --
 INSERT INTO `item_mods` VALUES(10540, 289, 7); --
-INSERT INTO `item_mods` VALUES(10540, 167, 4); --
-
+INSERT INTO `item_mods` VALUES(10540, 384, 40); --
+INSERT INTO `item_mods` VALUES(10541, 1, 30); --
+INSERT INTO `item_mods` VALUES(10541, 8, 9); --
+INSERT INTO `item_mods` VALUES(10541, 12, 9); --
+INSERT INTO `item_mods` VALUES(10541, 13, 9); --
+INSERT INTO `item_mods` VALUES(10541, 30, 6); --
+INSERT INTO `item_mods` VALUES(10541, 122, 8); --
+INSERT INTO `item_mods` VALUES(10542, 1, 29); --
+INSERT INTO `item_mods` VALUES(10542, 5, 60); --
+INSERT INTO `item_mods` VALUES(10542, 168, 20); --
 INSERT INTO `item_mods` VALUES(10543, 1, 27); --
 INSERT INTO `item_mods` VALUES(10543, 14, 12); --
 INSERT INTO `item_mods` VALUES(10543, 30, 10); --
@@ -14648,7 +14646,7 @@ INSERT INTO `item_mods` VALUES(15473, 118, 5);
 INSERT INTO `item_mods` VALUES(15473, 119, 5);
 INSERT INTO `item_mods` VALUES(15474, 1, 6); --
 INSERT INTO `item_mods` VALUES(15474, 353, 10); --
-INSERT INTO `item_mods` VALUES(15474, 167, 3); --
+INSERT INTO `item_mods` VALUES(15474, 384, 30); --
 INSERT INTO `item_mods` VALUES(15475, 1, 7);
 INSERT INTO `item_mods` VALUES(15475, 23, 20);
 INSERT INTO `item_mods` VALUES(15475, 24, -10);

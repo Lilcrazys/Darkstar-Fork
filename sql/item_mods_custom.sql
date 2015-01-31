@@ -27,7 +27,7 @@ INSERT INTO `item_mods` VALUES(10528, 10, 8);
 INSERT INTO `item_mods` VALUES(10528, 11, 8);
 INSERT INTO `item_mods` VALUES(10528, 25, 9);
 INSERT INTO `item_mods` VALUES(10528, 170, 40);
-INSERT INTO `item_mods` VALUES(10528, 167, 3);
+INSERT INTO `item_mods` VALUES(10528, 384, 30);
 
 INSERT INTO `item_mods` VALUES(10533, 1, 24);
 INSERT INTO `item_mods` VALUES(10533, 6, 3);
@@ -40,7 +40,7 @@ INSERT INTO `item_mods` VALUES(10554, 9, 10);
 INSERT INTO `item_mods` VALUES(10554, 10, 10);
 INSERT INTO `item_mods` VALUES(10554, 23, 24);
 INSERT INTO `item_mods` VALUES(10554, 73, 6);
-INSERT INTO `item_mods` VALUES(10554, 167, 6);
+INSERT INTO `item_mods` VALUES(10554, 384, 60);
 
 INSERT INTO `item_mods` VALUES(10559, 1, 47);
 INSERT INTO `item_mods` VALUES(10559, 2, 40);
@@ -48,7 +48,7 @@ INSERT INTO `item_mods` VALUES(10559, 8, 9);
 INSERT INTO `item_mods` VALUES(10559, 11, 9);
 INSERT INTO `item_mods` VALUES(10559, 25, 14);
 INSERT INTO `item_mods` VALUES(10559, 23, 14);
-INSERT INTO `item_mods` VALUES(10559, 167, 6);
+INSERT INTO `item_mods` VALUES(10559, 384, 60);
 
 INSERT INTO `item_mods` VALUES(10564, 1, 42);
 INSERT INTO `item_mods` VALUES(10564, 3, 4);
@@ -90,12 +90,12 @@ INSERT INTO `item_mods` VALUES(10819, 1, 12); -- def +12
 INSERT INTO `item_mods` VALUES(10819, 161, -4); -- phy dmg taken -4%
 INSERT INTO `item_mods` VALUES(10819, 426, 2); -- convert dmg > MP 2%
 
-INSERT INTO `item_mods` VALUES(10901, 1, 36);
-INSERT INTO `item_mods` VALUES(10901, 25, 10);
-INSERT INTO `item_mods` VALUES(10901, 23, 10);
-INSERT INTO `item_mods` VALUES(10901, 73, 5);
-INSERT INTO `item_mods` VALUES(10901, 167, 7);
-INSERT INTO `item_mods` VALUES(10901, 289, 5);
+INSERT INTO `item_mods` VALUES(10901, 1, 36); -- def
+INSERT INTO `item_mods` VALUES(10901, 25, 10); -- acc
+INSERT INTO `item_mods` VALUES(10901, 23, 10); -- atk
+INSERT INTO `item_mods` VALUES(10901, 73, 5); -- store tp
+INSERT INTO `item_mods` VALUES(10901, 384, 70); -- gear haste
+INSERT INTO `item_mods` VALUES(10901, 289, 5); -- sub blow
 
 INSERT INTO `item_mods` VALUES(10906, 1, 34);
 INSERT INTO `item_mods` VALUES(10906, 8, 6);
