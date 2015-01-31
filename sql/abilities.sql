@@ -289,10 +289,10 @@ INSERT INTO `abilities` VALUES ('241', 'double_shot', '11', '79', '1', '180', '1
 INSERT INTO `abilities` VALUES ('242', 'sengikori', '12', '77', '1', '180', '141', '0', '0', '226', '20.0', '0', '1', '80', '0', '0','ABYSSEA');
 INSERT INTO `abilities` VALUES ('243', 'futae', '13', '77', '1', '180', '148', '0', '0', '232', '20.0', '0', '1', '0', '0', '0','ABYSSEA');
 INSERT INTO `abilities` VALUES ('244', 'spirit_jump', '14', '77', '4', '60', '158', '110', '0', '232', '10.0', '0', '1', '0', '1218', '0',null);
-INSERT INTO `abilities` VALUES ('245', 'presto', '19', '77', '1', '30', '236', '0', '0', '229', '20.0', '0', '1', '80', '0', '0',null);
-INSERT INTO `abilities` VALUES ('246', 'divine_waltz_ii', '19', '78', '27', '20', '217', '306', '0', '35', '20.0', '1', '3', '3', '0', '0',null);
+INSERT INTO `abilities` VALUES ('245', 'presto', '19', '77', '1', '30', '236', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
+INSERT INTO `abilities` VALUES ('246', 'divine_waltz_ii', '19', '78', '27', '20', '217', '306', '0', '11', '20.0', '1', '3', '3', '0', '0',null);
 INSERT INTO `abilities` VALUES ('247', 'flourishes_iii', '19', '80', '1', '0', '0', '0', '0', '0', '20.0', '0', '0', '0', '0', '0',null);
-INSERT INTO `abilities` VALUES ('248', 'climactic_flourish', '19', '80', '1', '90', '226', '0', '0', '229', '20.0', '0', '1', '0', '0', '0',null);
+INSERT INTO `abilities` VALUES ('248', 'climactic_flourish', '19', '80', '1', '90', '226', '0', '0', '232', '20.0', '0', '1', '0', '0', '0',null);
 INSERT INTO `abilities` VALUES ('249', 'libra', '20', '76', '2', '60', '237', '0', '0', '231', '11.0', '0', '0', '0', '0', '0',null);
 INSERT INTO `abilities` VALUES ('250', 'tactical_switch', '18', '79', '1', '180', '213', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('251', 'blood_rage', '1', '87', '1', '300', '11', '0', '0', '232', '13.9', '1', '1', '300', '0', '0',null);
@@ -330,10 +330,10 @@ INSERT INTO `abilities` VALUES ('288', 'companions_roll', '17', '95', '1', '60',
 INSERT INTO `abilities` VALUES ('289', 'avengers_roll', '17', '97', '1', '60', '193', '420', '0', '266', '8.0', '1', '1', '80', '0', '8',null);
 INSERT INTO `abilities` VALUES ('293', 'cooldown', '18', '95', '1', '300', '114', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('294', 'deus_ex_automata', '18', '5', '1', '60', '115', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
-INSERT INTO `abilities` VALUES ('295', 'curing_waltz_v', '19', '87', '27', '17', '217', '306', '0', '35', '20.0', '0', '3', '3', '0', '0',null);
-INSERT INTO `abilities` VALUES ('296', 'feather_step', '19', '83', '4', '15', '220', '0', '0', '14', '4.5', '0', '1', '0', '0', '0',null);
-INSERT INTO `abilities` VALUES ('297', 'striking_flourish', '19', '89', '1', '120', '226', '0', '0', '230', '20.0', '0', '1', '80', '0', '0',null);
-INSERT INTO `abilities` VALUES ('298', 'ternary_flourish', '19', '93', '1', '150', '226', '0', '0', '243', '20.0', '0', '1', '80', '0', '0',null);
+INSERT INTO `abilities` VALUES ('295', 'curing_waltz_v', '19', '87', '27', '17', '217', '306', '0', '9', '20.0', '0', '3', '3', '0', '0',null);
+INSERT INTO `abilities` VALUES ('296', 'feather_step', '19', '83', '4', '15', '220', '0', '0', '220', '20.0', '0', '1', '0', '0', '0',null);
+INSERT INTO `abilities` VALUES ('297', 'striking_flourish', '19', '89', '1', '120', '226', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
+INSERT INTO `abilities` VALUES ('298', 'ternary_flourish', '19', '93', '1', '150', '226', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('300', 'perpetuance', '20', '87', '1', '300', '231', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('301', 'immanence', '20', '87', '1', '300', '231', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('302', 'smiting_breath', '14', '90', '1', '60', '238', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
@@ -343,7 +343,6 @@ INSERT INTO `abilities` VALUES ('305', 'bully', '6', '93', '4', '180', '240', '0
 INSERT INTO `abilities` VALUES ('306', 'maintenance', '18', '30', '1', '60', '214', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('311', 'stymie', '5', '96', '1', '3600', '254', '0', '0', '275', '20.0', '0', '1', '0', '0', '0','SOA');
 INSERT INTO `abilities` VALUES ('319', 'mikage', '13', '96', '1', '3600', '254', '0', '0', '283', '20.0', '0', '1', '0', '0', '0','SOA');
-INSERT INTO `abilities` VALUES ('325', 'grand_pas', '19', '96', '1', '3600', '0', '0', '0', '184', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('327', 'bolster', '21', '0', '1', '3600', '0', '0', '0', '33', '20.0', '0', '1', '300', '0', '0',null);
 INSERT INTO `abilities` VALUES ('329', 'full_circle', '21', '5', '1', '10', '243', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
 INSERT INTO `abilities` VALUES ('330', 'lasting_emanation', '21', '25', '1', '300', '244', '0', '0', '232', '20.0', '0', '1', '80', '0', '0',null);
@@ -384,7 +383,6 @@ INSERT INTO `abilities` VALUES ('364', 'effusion', '22', '25', '1', '300', '143'
 INSERT INTO `abilities` VALUES ('365', 'chocobo_jig_ii', '19', '70', '1', '60', '218', '126', '0', '13', '20.0', '1', '1', '300', '0', '0',null);
 
 INSERT INTO `abilities` VALUES ('367', 'Vivacious_pulse', '22', '1', '1', '300', '0', '0', '0', '327', '20.0', '0', '1', '300', '0', '0',null);
--- INSERT INTO `abilities` VALUES ('368', 'Contradance', '19', '50', '1', '300', '0', '0', '0', '229', '20.0', '0', '1', '300', '0', '0','WOTG');
 
 -- run
 

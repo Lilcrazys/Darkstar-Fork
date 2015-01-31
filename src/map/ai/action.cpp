@@ -351,11 +351,7 @@ CActionPacket::CActionPacket(CBattleEntity * PEntity)
             case 189:   // desperate flourish
             case 191:   // violent flourish
             case 193:   // wild flourish
-			case 246:	// divine waltz 2
-			case 295:	// waltz 5
-			case 296:	// feather step
             case 304:   // konzen-ittai
-			case 365:	// chocobo jig 2
 
 				ActionTypeNumber += 8;
 				break;

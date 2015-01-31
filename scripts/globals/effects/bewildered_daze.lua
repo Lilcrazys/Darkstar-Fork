@@ -9,7 +9,6 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_EVAP, -1);
 end;
 
 -----------------------------------
@@ -24,5 +23,4 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_EVAP, -1);
 end;

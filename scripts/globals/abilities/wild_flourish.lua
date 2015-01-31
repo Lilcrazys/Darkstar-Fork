@@ -13,8 +13,6 @@ require("scripts/globals/weaponskills");
 function onAbilityCheck(player,target,ability)
 	if (player:getAnimation() ~= 1) then
 		return MSGBASIC_REQUIRES_COMBAT,0;
-	elseif (player:hasStatusEffect(EFFECT_GRAND_PAS)) then
-			return 0,0;
 	else
 		if (player:hasStatusEffect(EFFECT_FINISHING_MOVE_1)) then
 			return MSGBASIC_NO_FINISHINGMOVES,0;
@@ -32,7 +30,7 @@ function onAbilityCheck(player,target,ability)
 		elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_5)) then
 			player:delStatusEffectSilent(EFFECT_FINISHING_MOVE_5);
 			player:addStatusEffect(EFFECT_FINISHING_MOVE_3,1,0,7200);
-			return 0,0;
+			return 0,0;		
 		else	
 			return MSGBASIC_NO_FINISHINGMOVES,0;
 		end

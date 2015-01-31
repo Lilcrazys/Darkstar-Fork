@@ -10,28 +10,25 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onAbilityCheck(player,target,ability)
-	if (player:hasStatusEffect(EFFECT_GRAND_PAS)) then
+
+	if (player:hasStatusEffect(EFFECT_FINISHING_MOVE_1)) then
 		return 0,0;
-	else
-		if (player:hasStatusEffect(EFFECT_FINISHING_MOVE_1)) then
-			return 0,0;
 
-		elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_2)) then
-			return 0,0;
+	elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_2)) then
+		return 0,0;
 
-		elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_3)) then
-			return 0,0;
+	elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_3)) then
+		return 0,0;
 
-		elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_4)) then
-			return 0,0;
+	elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_4)) then
+		return 0,0;
 
-		elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_5)) then
-			return 0,0;
+	elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_5)) then
+		return 0,0;
 	
-		else	
-			return MSGBASIC_NO_FINISHINGMOVES,0;
-		end
-	end
+	else	
+		return MSGBASIC_NO_FINISHINGMOVES,0;
+	end;
 end;
 
 function onUseAbility(player, target, ability)
@@ -61,17 +58,12 @@ function onUseAbility(player, target, ability)
 		TPGain = 9.5 * 5 + STM * 5 ^ 2 + Merits;
 	end;
 	
-	if (player:hasStatusEffect(EFFECT_GRAND_PAS)) then
-		TPGain = 300;
-		player:addTP(TPGain);
-	elseif (not player:hasStatusEffect(EFFECT_GRAND_PAS)) then
-		player:addTP(TPGain);
-		player:delStatusEffect(EFFECT_FINISHING_MOVE_1);
-		player:delStatusEffect(EFFECT_FINISHING_MOVE_2);
-		player:delStatusEffect(EFFECT_FINISHING_MOVE_3);
-		player:delStatusEffect(EFFECT_FINISHING_MOVE_4);
-		player:delStatusEffect(EFFECT_FINISHING_MOVE_5);
-	end
+	player:addTP(TPGain);
+	player:delStatusEffect(EFFECT_FINISHING_MOVE_1);
+	player:delStatusEffect(EFFECT_FINISHING_MOVE_2);
+	player:delStatusEffect(EFFECT_FINISHING_MOVE_3);
+	player:delStatusEffect(EFFECT_FINISHING_MOVE_4);
+	player:delStatusEffect(EFFECT_FINISHING_MOVE_5);
 	
 	return TPGain;
 end;

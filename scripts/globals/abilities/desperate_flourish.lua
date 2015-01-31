@@ -14,8 +14,6 @@ require("scripts/globals/magic");
 function onAbilityCheck(player,target,ability)
 	if (player:getAnimation() ~= 1) then
 		return MSGBASIC_REQUIRES_COMBAT,0;
-	elseif (player:hasStatusEffect(EFFECT_GRAND_PAS)) then
-			return 0,0;
 	else
 		if (player:hasStatusEffect(EFFECT_FINISHING_MOVE_1)) then
 			player:delStatusEffect(EFFECT_FINISHING_MOVE_1);

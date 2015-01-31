@@ -312,33 +312,6 @@ void CAttack::ProcessDamage()
 		m_trickAttackDamage += m_attacker->AGI();
 	}
 
-	// Climactic flourish.
-	if (m_attacker->GetMJob() == JOB_DNC &&
-		m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_CLIMACTIC_FLOURISH))
-	{
-		m_damage = (uint32)(((m_attacker->GetMainWeaponDmg() + m_trickAttackDamage + m_attacker->getMod(MOD_CHR) +
-			battleutils::GetFSTR(m_attacker, m_victim, GetWeaponSlot())) * m_damageRatio));
-	}
-	m_attacker->StatusEffectContainer->DelStatusEffect(EFFECT_STRIKING_FLOURISH);
-
-	// Striking flourish.
-	if (m_attacker->GetMJob() == JOB_DNC &&
-		m_isFirstSwing &&
-		m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_STRIKING_FLOURISH))
-	{
-		m_damage = (uint32)(((m_attacker->GetMainWeaponDmg() + m_trickAttackDamage + m_attacker->getMod(MOD_CHR) +
-			battleutils::GetFSTR(m_attacker, m_victim, GetWeaponSlot())) * m_damageRatio));
-	}
-
-	// Ternary flourish.
-	if (m_attacker->GetMJob() == JOB_DNC &&
-		m_isFirstSwing &&
-		m_attacker->StatusEffectContainer->HasStatusEffect(EFFECT_TERNARY_FLOURISH))
-	{
-		m_damage = (uint32)(((m_attacker->GetMainWeaponDmg() + m_trickAttackDamage + m_attacker->getMod(MOD_CHR) +
-			battleutils::GetFSTR(m_attacker, m_victim, GetWeaponSlot())) * m_damageRatio));
-	}
-
 	// H2H.
 	if (m_attackRound->IsH2H())
 	{

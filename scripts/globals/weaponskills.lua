@@ -103,18 +103,9 @@ function doPhysicalWeaponskill(attacker, target, params)
 	if(isAssassinValid and not attacker:hasTrait(68)) then
 		isAssassinValid = false;
 	end
-    
-    local flourishclim = attacker:getStatusEffect(EFFECT_CLIMACTIC_FLOURISH);
-    local flourishstrik = attacker:getStatusEffect(EFFECT_STRIKING_FLOURISH);
-    local flourishtern = attacker:getStatusEffect(EFFECT_TERNARY_FLOURISH); 
-    
-    
+
 	local critrate = 0;
     local nativecrit = 0;
-    
-    if (attacker:hasStatusEffect(EFFECT_CLIMACTIC_FLOURISH)) then
-        critrate = 100;
-    end
     
 	if(params.canCrit) then --work out critical hit ratios, by +1ing
 		critrate = fTP(attacker:getTP(),params.crit100,params.crit200,params.crit300);
@@ -152,12 +143,12 @@ function doPhysicalWeaponskill(attacker, target, params)
 
 	local tpHitsLanded = 0;
 	local tpHits = 0;
-	if ((firsthit <= hitrate or isSneakValid or isAssassinValid or math.random() < attacker:getMod(MOD_ZANSHIN)/100 or attacker:getStatusEffect(EFFECT_CLIMACTIC_FLOURISH)) and
+	if ((firsthit <= hitrate or isSneakValid or isAssassinValid or math.random() < attacker:getMod(MOD_ZANSHIN)/100) and
             not target:hasStatusEffect(EFFECT_PERFECT_DODGE) and not target:hasStatusEffect(EFFECT_ALL_MISS) ) then
         dmg = base * ftp;
 		if(params.canCrit or isSneakValid or isAssassinValid) then
 			local critchance = math.random();
-			if(critchance <= critrate or hasMightyStrikes or isSneakValid or isAssassinValid  or flourishclim or flourishstrik or flourishtern) then --crit hit!
+			if(critchance <= critrate or hasMightyStrikes or isSneakValid or isAssassinValid) then --crit hit!
 				local cpdif = generatePdif(ccritratio[1], ccritratio[2], true);
 				finaldmg = dmg * cpdif;
 				if(isSneakValid and attacker:getMainJob()==6) then --have to add on DEX bonus if on THF main
@@ -183,9 +174,9 @@ function doPhysicalWeaponskill(attacker, target, params)
 
 	tpHits = 1;
 	if((attacker:getOffhandDmg() ~= 0) and (attacker:getOffhandDmg() > 0 or attacker:getWeaponSkillType(0)==1)) then
-		local flourishClimactic = attacker:getStatusEffect(EFFECT_CLIMACTIC_FLOURISH);
+
 		local chance = math.random();
-		if ((chance<=hitrate or math.random() < attacker:getMod(MOD_ZANSHIN)/100 or isSneakValid or flourishclim or flourishstrik or flourishtern)
+		if ((chance<=hitrate or math.random() < attacker:getMod(MOD_ZANSHIN)/100 or isSneakValid)
                 and not target:hasStatusEffect(EFFECT_PERFECT_DODGE) and not target:hasStatusEffect(EFFECT_ALL_MISS) ) then --it hit
 			pdif = generatePdif(cratio[1], cratio[2], true);
 			if(params.canCrit) then
@@ -219,7 +210,7 @@ function doPhysicalWeaponskill(attacker, target, params)
 				pdif = generatePdif(cratio[1], cratio[2], true);
 				if(params.canCrit) then
 					critchance = math.random();
-					if(critchance <= nativecrit or hasMightyStrikes or flourishstrik or flourishtern) then --crit hit!
+					if(critchance <= nativecrit or hasMightyStrikes) then --crit hit!
 						criticalHit = true;
 						cpdif = generatePdif(ccritratio[1], ccritratio[2], true);
 						finaldmg = finaldmg + base * cpdif;
@@ -240,9 +231,6 @@ function doPhysicalWeaponskill(attacker, target, params)
 	finaldmg = target:physicalDmgTaken(finaldmg);
 
 	attacker:delStatusEffectSilent(EFFECT_BUILDING_FLOURISH);
-	attacker:delStatusEffectSilent(EFFECT_CLIMACTIC_FLOURISH);
-    attacker:delStatusEffectSilent(EFFECT_STRIKING_FLOURISH);
-    attacker:delStatusEffectSilent(EFFECT_TERNARY_FLOURISH);
 	return finaldmg, criticalHit, tpHitsLanded, extraHitsLanded;
 end;
 
@@ -764,9 +752,8 @@ function getMultiAttacks(attacker, numHits)
 	local tripleChances = 1;
 	local doubleRate = attacker:getMod(MOD_DOUBLE_ATTACK)/100;
 	local tripleRate = attacker:getMod(MOD_TRIPLE_ATTACK)/100;
-    local flourishstrik = attacker:getStatusEffect(EFFECT_STRIKING_FLOURISH);
-    local flourishtern = attacker:getStatusEffect(EFFECT_TERNARY_FLOURISH); 
-    --triple only procs on first hit, or first two hits if dual wielding
+
+	--triple only procs on first hit, or first two hits if dual wielding
 	if(attacker:getOffhandDmg() > 0) then
 		tripleChances = 2;
 	end
@@ -800,11 +787,6 @@ function getMultiAttacks(attacker, numHits)
 	if ((numHits + bonusHits ) > 8) then
 		return 8;
 	end
-    if attacker:hasStatusEffect(EFFECT_STRIKING_FLOURISH) then
-        bonusHits = bonusHits + 1;
-    elseif attacker:hasStatusEffect(EFFECT_TERNARY_FLOURISH) then
-        bonusHits = bonusHits + 2;
-    end
 	return numHits + bonusHits;
 end;
 
