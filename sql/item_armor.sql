@@ -9872,6 +9872,7 @@ INSERT INTO `item_armor` VALUES ('27732', 'hagondes_hat_+1', '99', '1605656', '2
 INSERT INTO `item_armor` VALUES ('27739', 'otomi_helm', '99', '10689', '348', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('27765', 'chocobo_masque', '1', '4194303', '353', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('27767', 'buremte_hat', '99', '1589788', '352', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27766', 'ukuxkaj_cap', '99', '2593826', '330', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('27773', 'yaoyotl_helm', '99', '10689', '348', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('27774', 'whirlpool_mask', '99', '2593826', '347', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('27775', 'nahtirah_hat', '99', '3179576', '346', '0', '0', '16', '0');
@@ -9909,7 +9910,7 @@ INSERT INTO `item_armor` VALUES ('27917', 'mikinaak_breastplate', '99', '21378',
 INSERT INTO `item_armor` VALUES ('27918', 'manibozho_jerkin', '99', '5187652', '0', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27919', 'bokwus_robe', '99', '3179576', '0', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27920', 'pak_corselet', '99', '192', '0', '0', '0', '32', '0');
-INSERT INTO `item_armor` VALUES ('27921', 'pak_corselet_+1', '99', '192', '0', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('27921', 'pak_corselet_+1', '99', '192', '179', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27922', 'orvail_robe', '99', '3850780', '344', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27924', 'thurandaut_tabard', '99', '2593826', '343', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27925', 'karieyh_haubert', '99', '10689', '342', '0', '0', '32', '0');
@@ -9935,7 +9936,7 @@ INSERT INTO `item_armor` VALUES ('28021', 'gendewitha_gages_+1', '99', '524820',
 INSERT INTO `item_armor` VALUES ('28022', 'hagondes_cuffs_+1', '99', '1605656', '262', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28027', 'boor_bracelets', '99', '2472947', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28050', 'buremte_gloves', '99', '2473969', '250', '0', '0', '64', '0'); -- mID is wrong but meh
-INSERT INTO `item_armor` VALUES ('28056', 'yaoyotl_gloves', '99', '1589788', '264', '0', '0', '64', '0'); -- mID was 348 but looked like leather gloves
+INSERT INTO `item_armor` VALUES ('28056', 'yaoyotl_gloves', '99', '1589788', '328', '0', '0', '64', '0'); -- mID was 348 but looked like leather gloves
 INSERT INTO `item_armor` VALUES ('28057', 'mikinaak_gauntlets', '99', '21378', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28058', 'manibozho_gloves', '99', '5187652', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28059', 'bokwus_gloves', '99', '3179576', '0', '0', '0', '64', '0');
@@ -9998,13 +9999,14 @@ INSERT INTO `item_armor` VALUES ('28298', 'otronif_boots_+1', '99', '137218', '2
 INSERT INTO `item_armor` VALUES ('28299', 'iuitl_gaiters_+1', '99', '361760', '256', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28300', 'gendewitha_galoshes_+1', '99', '524820', '265', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28301', 'hagondes_sabots_+1', '99', '1605656', '262', '0', '0', '256', '0');
-INSERT INTO `item_armor` VALUES ('28337', 'whirlpool_greaves', '99', '21378', '195', '0', '0', '256', '0');
+INSERT INTO `item_armor` VALUES ('28331', 'ukuxkaj_boots', '99', '1589788', '330', '0', '0', '256', '0');
+INSERT INTO `item_armor` VALUES ('28337', 'whirlpool_greaves', '99', '21378', '328', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28338', 'mikinaak_greaves', '99', '21378', '0', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28339', 'manibozho_boots', '99', '5187652', '0', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28340', 'bokwus_boots', '99', '3179576', '0', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28341', 'agrarian_boots', '30', '4194303', '0', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28342', 'orvail_souliers', '99', '3850780', '344', '0', '0', '256', '0');
-INSERT INTO `item_armor` VALUES ('28343', 'chocaliztli_boots', '99', '10689', '195', '0', '0', '256', '0'); -- mID was 347 but looked like leather high boots
+INSERT INTO `item_armor` VALUES ('28343', 'chocaliztli_boots', '99', '10689', '328', '0', '0', '256', '0'); -- mID was 347 but looked like leather high boots
 INSERT INTO `item_armor` VALUES ('28344', 'thurandaut_boots', '99', '2593826', '343', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28345', 'karieyh_sollerets', '99', '10689', '342', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28354', 'voltsurge_torge', '99', '4194303', '0', '0', '0', '512', '0');
