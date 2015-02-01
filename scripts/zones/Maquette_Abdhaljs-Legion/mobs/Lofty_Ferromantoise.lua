@@ -17,6 +17,7 @@ function onMobInitialize(mob)
     -- MobMods
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
+
 end
 
 -----------------------------------
@@ -26,7 +27,8 @@ end
 function onMobSpawn(mob)
     -- Mods
     mob:setMod(MOD_REGAIN,25);
-    mob:setMod(MOD_REGEN,35);		
+    mob:setMod(MOD_REGEN,35);	
+    mob:addMod(MOD_MACC,425);		
 end;
 
 -----------------------------------

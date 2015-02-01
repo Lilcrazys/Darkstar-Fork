@@ -32,6 +32,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 15);
     mob:setMod(MOD_COUNTER, 20);	
+    mob:addMod(MOD_MACC,425);		
 end;
 
 -----------------------------------
