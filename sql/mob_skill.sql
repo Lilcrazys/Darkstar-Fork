@@ -3625,7 +3625,7 @@ INSERT INTO `mob_skill` VALUES (2908,491,2339,'12_blades_of_remorse',1,18.0,2000
 
 -- Darrcuiln model 0x0000660a not cs one 0x0000b00a
 -- special melee 2320 2321 2322
-INSERT INTO `mob_skill` VALUES (2912,489,2323,'Aurous_Charge',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2912,489,2323,'Aurous_Charge',0,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2913,489,2324,'Howling_Gust',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2914,489,2325,'Righteous_Rasp',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2915,489,2326,'Starward_Yowl',1,18.0,2000,1000,4,0,0,0);
