@@ -22,6 +22,8 @@ function onMobSpawn(mob)
 	mob:addMod(MOD_EVA,-200);
 	mob:addMod(MOD_DEF,-200);
 	mob:addMod(MOD_REGAIN,33);	
+	mob:addMod(MOD_MEVA,-50);
+	mob:addMod(MOD_MDEF,-100);	
 end;
 
 -----------------------------------
