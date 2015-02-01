@@ -10023,6 +10023,7 @@ INSERT INTO `item_armor` VALUES ('28440', 'windbuffet_belt_+1', '99', '4194303',
 INSERT INTO `item_armor` VALUES ('28443', 'yamabuki-no-obi', '99', '3851870', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28449', 'metalsinger_belt', '99', '2473969', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28450', 'chaac_belt', '99', '4194303', '0', '0', '0', '1024', '0');
+INSERT INTO `item_armor` VALUES ('28460', 'cetl_belt', '99', '4194303', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28462', 'hurchlan_sash', '99', '5188164', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28463', 'zorans_belt', '99', '17282', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28464', 'pyaekue_belt', '99', '4947938', '0', '0', '0', '1024', '0');
