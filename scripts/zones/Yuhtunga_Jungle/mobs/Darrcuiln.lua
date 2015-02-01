@@ -8,6 +8,7 @@
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMod(MOD_EVA,-100);		
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_TRIPLE_ATTACK,10)
     mob:setMod(MOD_REGEN, 30);
@@ -21,7 +22,6 @@ end;
 
 function OnMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_EVA,400);	
 end;
 
 -----------------------------------
