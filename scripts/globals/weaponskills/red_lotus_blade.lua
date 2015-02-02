@@ -6,18 +6,17 @@
 -- Aligned with the Flame Gorget & Breeze Gorget.
 -- Aligned with the Flame Belt & Breeze Belt.
 -- Element: Fire
--- Modifiers: STR:30% ; INT:20%
+-- Modifiers: STR:40% ; INT:40%
 -- 100%TP    200%TP    300%TP
--- 1.00      2.38      3.00
+-- 1.00      2.38      3.75
 -----------------------------------
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/settings");
-require("scripts/globals/abyssea");
 require("scripts/globals/weaponskills");
 -----------------------------------
 
 function onUseWeaponSkill(player, target, wsID)
-
 	local RedTrigger = player:getVar("RedTrigger");
 	if (RedTrigger == 34) then
 		WeaknessTriggerRed(player, target, wsID);
@@ -26,6 +25,8 @@ function onUseWeaponSkill(player, target, wsID)
 			TriggerHintRED(player, target, wsID);
 		end
 	end
+
+
 	local params = {};
 	params.numHits = 1;
 	params.ftp100 = 1; params.ftp200 = 2.38; params.ftp300 = 3;
@@ -34,6 +35,12 @@ function onUseWeaponSkill(player, target, wsID)
 	params.canCrit = false;
 	params.acc100 = 0.0; params.acc200= 0.0; params.acc300= 0.0;
 	params.atkmulti = 1;
+
+	if (USE_ADOULIN_WEAPON_SKILL_CHANGES == true) then
+		params.ftp300 = 3.75;
+		params.str_wsc = 0.4; params.int_wsc = 0.4;
+	end
+
 	local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
 
 	return tpHits, extraHits, criticalHit, damage;
