@@ -9,7 +9,7 @@ require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
 -----------------------------------------
--- OnSpellCast
+-- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -25,11 +25,11 @@ function onSpellCast(caster,target,spell)
     local shadows = 2;
     local duration = 300;
 
-
+    -- 400 skill = 8 shadows, 450 = 9 shadows, so I am assuming every 50 skill is a shadow.
     -- Also assuming minimum of 2 shadows.
     -- I've never seen the spell cast with under 100 skill, so I could be wrong.
     if (skill > 100) then
-        shadows = (skill / 100);
+        shadows = (skill / 100); -- Temp set fewer shadows because proc rate is wrong.
     end
 
     if(caster:hasStatusEffect(EFFECT_DIFFUSION)) then

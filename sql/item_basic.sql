@@ -15639,6 +15639,7 @@ INSERT INTO `item_basic` VALUES (21388,0,'dashavatara_sachet','dashavatara_sache
 INSERT INTO `item_basic` VALUES (21389,0,'honed_tathlum','honed_tathlum',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21408,0,'camaraderie_harp','cama_harp',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21409,0,'forefront_flute','forefront_flute',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (21421,0,'immolation_grip','immolation_grip',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21423,0,'tardus_grup','tardus_grup',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21424,0,'zuuxowu_grip','zuuxowu_grip',1,34816,62,0,100);
 INSERT INTO `item_basic` VALUES (21426,0,'achaq_grip','achaq_grip',1,34816,62,0,100);
@@ -16036,6 +16037,9 @@ INSERT INTO `item_basic` VALUES (28344,0,'thurandaut_boots','thurandaut_boots',1
 INSERT INTO `item_basic` VALUES (28345,0,'karieyh_sollerets','karieyh_sollerets',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28346,0,'geomancy_sandals','geomancy_sandals',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28347,0,'runeist_bottes','runeist_bottes',1,63568,0,1,0);
+
+INSERT INTO `item_basic` VALUES (28354,0,'voltsurge_torque','voltsurge_torque',1,63552,0,1,0);
+
 INSERT INTO `item_basic` VALUES (28381,0,'imbodla_necklace','imbodla_necklace',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28383,0,'pentalagus_charm','pentalagus_charm',1,34816,22,0,100);
 INSERT INTO `item_basic` VALUES (28384,0,'huani_collar','huani_collar',1,34816,22,0,100);
@@ -16095,6 +16099,8 @@ INSERT INTO `item_basic` VALUES (28530,0,'dumakulems_ring','dumakulems_ring',1,3
 INSERT INTO `item_basic` VALUES (28531,0,'milvus_ring','milvus_ring',1,34816,0,1,0);
 INSERT INTO `item_basic` VALUES (28532,0,'candent_ring','candent_ring',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28554,0,'acumen_ring','acumen_ring',1,60480,0,1,1918);
+INSERT INTO `item_basic` VALUES (28535,0,'supershear_earring','supershear_earring',1,63568,0,1,0);
+
 INSERT INTO `item_basic` VALUES (28571,0,'waterfall_ring','waterfall_ring',1,34816,25,0,100);
 INSERT INTO `item_basic` VALUES (28572,0,'jwalamukhi_ring','jwalamukhi_ring',1,34816,25,0,100);
 INSERT INTO `item_basic` VALUES (28573,0,'wuji_ring','wuji_ring',1,34816,25,0,100);
