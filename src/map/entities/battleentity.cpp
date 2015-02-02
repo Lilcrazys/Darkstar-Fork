@@ -499,6 +499,7 @@ int32 CBattleEntity::addMP(int32 mp)
 uint16 CBattleEntity::STR()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_STR], 0, 999);
     }
     else
@@ -510,6 +511,7 @@ uint16 CBattleEntity::STR()
 uint16 CBattleEntity::DEX()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_DEX], 0, 999);
     }
     else
@@ -521,6 +523,7 @@ uint16 CBattleEntity::DEX()
 uint16 CBattleEntity::VIT()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_VIT], 0, 999);
     }
     else
@@ -532,6 +535,7 @@ uint16 CBattleEntity::VIT()
 uint16 CBattleEntity::AGI()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_AGI], 0, 999);
     }
     else
@@ -543,6 +547,7 @@ uint16 CBattleEntity::AGI()
 uint16 CBattleEntity::INT()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_INT], 0, 999);
     }
     else
@@ -554,6 +559,7 @@ uint16 CBattleEntity::INT()
 uint16 CBattleEntity::MND()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_MND], 0, 999);
     }
     else
@@ -565,6 +571,7 @@ uint16 CBattleEntity::MND()
 uint16 CBattleEntity::CHR()
 {
     if (objtype == TYPE_PC)
+    {
         return dsp_cap(stats.DEX + m_modStat[MOD_CHR], 0, 999);
     }
     else
