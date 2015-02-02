@@ -1159,10 +1159,6 @@ void CAICharNormal::ActionRangedFinish()
 			Monster->m_HiPCLvl = m_PChar->GetMLevel();
 		}
 
-		// to catch high damage bugs
-		if (damage > 8000)
-			ShowError(CL_RED"Warning: %s did 8000+ ranged damage, job = %u \n" CL_RESET, m_PChar->GetName(), m_PChar->GetMJob());
-
 		// remove barrage effect if present
 		if (m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_BARRAGE,0)){
 			m_PChar->StatusEffectContainer->DelStatusEffect(EFFECT_BARRAGE,0);
@@ -2700,10 +2696,6 @@ void CAICharNormal::ActionWeaponSkillFinish()
             m_PChar->m_ActionList.push_back(Action);
         }
 	}
-
-	// to catch high damage bugs
-	if (damage > 8000)
-		ShowError(CL_RED"Warning: %s did 8000+ weaponskill damage, job = %u \n" CL_RESET, m_PChar->GetName(), m_PChar->GetMJob());
 
 	charutils::UpdateHealth(m_PChar);
 

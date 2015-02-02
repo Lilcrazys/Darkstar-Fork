@@ -25,6 +25,7 @@ end
 
 function onMobSpawn(mob)
     -- Mods
+    mob:addMod(MOD_MACC,425);		
 end;
 
 -----------------------------------
