@@ -500,11 +500,11 @@ uint16 CBattleEntity::STR()
 {
     if (objtype == TYPE_PC)
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_STR], 0, 999);
+        return dsp_cap(stats.STR + m_modStat[MOD_STR], 0, 999);
     }
     else
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_STR], 0, 9999);
+        return dsp_cap(stats.STR + m_modStat[MOD_STR], 0, 9999);
     }
 }
 
@@ -524,11 +524,11 @@ uint16 CBattleEntity::VIT()
 {
     if (objtype == TYPE_PC)
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_VIT], 0, 999);
+        return dsp_cap(stats.VIT + m_modStat[MOD_VIT], 0, 999);
     }
     else
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_VIT], 0, 9999);
+        return dsp_cap(stats.VIT + m_modStat[MOD_VIT], 0, 9999);
     }
 }
 
@@ -536,11 +536,11 @@ uint16 CBattleEntity::AGI()
 {
     if (objtype == TYPE_PC)
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_AGI], 0, 999);
+        return dsp_cap(stats.AGI + m_modStat[MOD_AGI], 0, 999);
     }
     else
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_AGI], 0, 9999);
+        return dsp_cap(stats.AGI + m_modStat[MOD_AGI], 0, 9999);
     }
 }
 
@@ -548,11 +548,11 @@ uint16 CBattleEntity::INT()
 {
     if (objtype == TYPE_PC)
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_INT], 0, 999);
+        return dsp_cap(stats.INT + m_modStat[MOD_INT], 0, 999);
     }
     else
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_INT], 0, 9999);
+        return dsp_cap(stats.INT + m_modStat[MOD_INT], 0, 9999);
     }
 }
 
@@ -560,11 +560,11 @@ uint16 CBattleEntity::MND()
 {
     if (objtype == TYPE_PC)
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_MND], 0, 999);
+        return dsp_cap(stats.MND + m_modStat[MOD_MND], 0, 999);
     }
     else
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_MND], 0, 9999);
+        return dsp_cap(stats.MND + m_modStat[MOD_MND], 0, 9999);
     }
 }
 
@@ -572,11 +572,11 @@ uint16 CBattleEntity::CHR()
 {
     if (objtype == TYPE_PC)
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_CHR], 0, 999);
+        return dsp_cap(stats.CHR + m_modStat[MOD_CHR], 0, 999);
     }
     else
     {
-        return dsp_cap(stats.DEX + m_modStat[MOD_CHR], 0, 9999);
+        return dsp_cap(stats.CHR + m_modStat[MOD_CHR], 0, 9999);
     }
 }
 
