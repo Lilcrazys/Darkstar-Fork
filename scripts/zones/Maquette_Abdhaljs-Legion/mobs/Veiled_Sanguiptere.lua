@@ -27,11 +27,12 @@ function onMobSpawn(mob)
     -- Mods
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REFRESH, 30);
-    mob:setMod(MOD_REGAIN, 25);
-    mob:setMod(MOD_HASTE_ABILITY, 10);
-    mob:setMod(MOD_UFASTCAST, 25);
+    mob:setMod(MOD_REGAIN, 35);
+    mob:setMod(MOD_HASTE_ABILITY, 15);
+    mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_COUNTER, 15);	
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);	
+    mob:addMod(MOD_DEF,125);	
 end;
 
 -----------------------------------
@@ -96,5 +97,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 30);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Veiled_IronClad
+    SpawnMob(mob:getID()+3) -- Spawns Veiled_IronClad
 end;

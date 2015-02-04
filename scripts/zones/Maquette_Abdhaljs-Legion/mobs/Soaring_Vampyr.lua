@@ -27,7 +27,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,20);
     mob:setMod(MOD_REGEN,35);	
     mob:setMod(MOD_HASTE_ABILITY, 10);	
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);	
+    mob:addMod(MOD_MDEF,95);
+    mob:addMod(MOD_DEF,125);
+    mob:addMod(MOD_ACC,125);	
 end;
 
 -----------------------------------
@@ -87,5 +90,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Soaring_Strigoi
+    SpawnMob(mob:getID()+3) -- Spawns Soaring_Strigoi
 end;

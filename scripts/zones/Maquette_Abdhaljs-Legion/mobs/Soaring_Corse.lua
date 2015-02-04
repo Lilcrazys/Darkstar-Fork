@@ -90,5 +90,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Soaring_Kumakatok
+    SpawnMob(mob:getID()+3) -- Spawns Soaring_Kumakatok
 end;

@@ -27,7 +27,9 @@ function onMobSpawn(mob)
     -- Mods
     mob:setMod(MOD_REGAIN,20);
     mob:setMod(MOD_REGEN,35);		
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);
+    mob:addMod(MOD_DEF,75);
+	
 end;
 
 -----------------------------------
@@ -92,5 +94,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 25);
-    mob:SpawnMob(mob:getID()+2) -- Spawns Lofty_Harpeia
+    SpawnMob(mob:getID()+2) -- Spawns Lofty_Harpeia
 end;

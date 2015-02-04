@@ -17,21 +17,12 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 3;
+	local numhits = 2;
 	local accmod = 1;
 	local dmgmod = 1;
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
 	target:delHP(dmg);
-
-	if (mob:getName() == "Faust") then
-		if (mob:getExtraVar(1) == 0) then
-			mob:useMobAbility(283);
-			mob:setExtraVar(1); 
-		else
-			mob:setExtraVar(0);
-		end	
-	end	
 
 	return dmg;
 end;

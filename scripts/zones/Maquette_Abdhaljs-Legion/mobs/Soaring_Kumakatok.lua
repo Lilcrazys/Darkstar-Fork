@@ -25,12 +25,15 @@ end
 
 function onMobSpawn(mob)
     -- Mods
-    mob:setMod(MOD_REGEN, 25);
+    mob:setMod(MOD_REGEN, 45);
     mob:setMod(MOD_REFRESH, 25);
-    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-    mob:setMod(MOD_UFASTCAST, 25);	
+    mob:setMod(MOD_UFASTCAST, 65);	
     mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_DEF,145);	
+    mob:addMod(MOD_MDEF,50);	
+
 end;
 
 -----------------------------------

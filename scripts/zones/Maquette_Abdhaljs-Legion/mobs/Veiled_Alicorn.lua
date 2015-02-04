@@ -18,7 +18,7 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
 	
-    mob:addMod(MOD_DOUBLE_ATTACK, 10);
+    mob:addMod(MOD_DOUBLE_ATTACK, 20);
     mob:addMod(MOD_TRIPLE_ATTACK, 15);	
 end
 
@@ -31,7 +31,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,30);
     mob:setMod(MOD_REGEN,35);	
     mob:setMod(MOD_HASTE_ABILITY, 10);	
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);	
+    mob:addMod(MOD_ACC,225);	
+    mob:addMod(MOD_MDEF,55);
+    mob:addMod(MOD_DEF,95);		
 end;
 
 -----------------------------------

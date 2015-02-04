@@ -31,6 +31,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 25);	
     mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MDEF,25);
+    mob:addMod(MOD_DEF,75);	
 end;
 
 -----------------------------------
@@ -90,5 +92,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Soaring_Dweorg
+    SpawnMob(mob:getID()+3) -- Spawns Soaring_Dweorg
 end;

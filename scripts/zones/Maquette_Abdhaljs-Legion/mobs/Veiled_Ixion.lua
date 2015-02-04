@@ -28,9 +28,11 @@ end
 
 function onMobSpawn(mob)
     -- Mods
-    mob:setMod(MOD_REGAIN,25);
+    mob:setMod(MOD_REGAIN,35);
     mob:setMod(MOD_REGEN,35);	
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);	
+    mob:addMod(MOD_ATT,105);
+    mob:addMod(MOD_DEF,95);		
 end;
 
 -----------------------------------
@@ -90,5 +92,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 15);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Veiled_Alicorn
+    SpawnMob(mob:getID()+3) -- Spawns Veiled_Alicorn
 end;

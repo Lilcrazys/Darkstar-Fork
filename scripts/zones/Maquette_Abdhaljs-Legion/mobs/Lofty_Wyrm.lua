@@ -28,6 +28,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_REGEN,25);	
     mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MATT,45);
+    mob:addMod(MOD_MDEF,25);	
 end;
 
 -----------------------------------
@@ -130,5 +132,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Lofty_Zilant
+    SpawnMob(mob:getID()+3) -- Spawns Lofty_Zilant
 end;

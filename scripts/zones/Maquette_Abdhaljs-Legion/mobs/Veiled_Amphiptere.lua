@@ -25,13 +25,15 @@ end
 
 function onMobSpawn(mob)
     -- Mods
-    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REFRESH, 20);
-    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_REGAIN, 45);
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 15);
-    mob:setMod(MOD_COUNTER, 15);	
-    mob:addMod(MOD_MACC,425);		
+    mob:setMod(MOD_COUNTER, 35);	
+    mob:addMod(MOD_MACC,425);
+	mob:addMod(MOD_DEF,125);
+    mob:addMod(MOD_MATT,35);	
 end;
 
 -----------------------------------
@@ -91,5 +93,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 15);
-    mob:SpawnMob(mob:getID()+3) -- Spawns Veiled_Sanguiptere
+    SpawnMob(mob:getID()+3) -- Spawns Veiled_Sanguiptere
 end;
