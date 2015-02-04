@@ -96,5 +96,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 30);
-    mob:spawnMob(mob:getID()+3) -- Spawns Veiled_IronClad
+    mob:SpawnMob(mob:getID()+3) -- Spawns Veiled_IronClad
 end;

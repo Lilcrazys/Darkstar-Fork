@@ -85,5 +85,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:spawnMob(mob:getID()+3) -- Spawns Lofty_Ferromantoise
+    mob:SpawnMob(mob:getID()+3) -- Spawns Lofty_Ferromantoise
 end;

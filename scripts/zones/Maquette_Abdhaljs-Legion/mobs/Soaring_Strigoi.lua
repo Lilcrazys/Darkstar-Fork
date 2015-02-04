@@ -95,5 +95,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 25);
-    mob:spawnMob(mob:getID()+1) -- Spawns Soaring_Naraka
+    mob:SpawnMob(mob:getID()+1) -- Spawns Soaring_Naraka
 end;

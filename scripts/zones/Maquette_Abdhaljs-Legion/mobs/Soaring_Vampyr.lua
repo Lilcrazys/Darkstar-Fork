@@ -87,5 +87,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:spawnMob(mob:getID()+3) -- Spawns Soaring_Strigoi
+    mob:SpawnMob(mob:getID()+3) -- Spawns Soaring_Strigoi
 end;

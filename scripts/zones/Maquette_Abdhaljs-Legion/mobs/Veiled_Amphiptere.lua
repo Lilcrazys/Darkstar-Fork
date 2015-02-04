@@ -91,5 +91,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 15);
-    mob:spawnMob(mob:getID()+3) -- Spawns Veiled_Sanguiptere
+    mob:SpawnMob(mob:getID()+3) -- Spawns Veiled_Sanguiptere
 end;

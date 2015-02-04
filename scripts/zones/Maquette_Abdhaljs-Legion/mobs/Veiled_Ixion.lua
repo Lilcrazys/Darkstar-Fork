@@ -90,5 +90,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 15);
-    mob:spawnMob(mob:getID()+3) -- Spawns Veiled_Alicorn
+    mob:SpawnMob(mob:getID()+3) -- Spawns Veiled_Alicorn
 end;

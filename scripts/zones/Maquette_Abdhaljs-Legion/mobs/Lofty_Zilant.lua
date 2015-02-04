@@ -92,5 +92,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 25);
-    mob:spawnMob(mob:getID()+2) -- Spawns Lofty_Harpeia
+    mob:SpawnMob(mob:getID()+2) -- Spawns Lofty_Harpeia
 end;
