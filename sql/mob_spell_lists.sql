@@ -1628,7 +1628,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 356, 1, 255); -- Par
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 359, 1, 255); -- Silencega
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 360, 1, 255); -- Dispelga
-INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 262, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 366, 1, 255); -- Graviga
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 314, 1, 255); -- Enaero 2
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Harpeia', 602, 286, 1, 255); -- Addle
@@ -1910,7 +1910,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 356, 1, 255); --
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 359, 1, 255); -- Silencega
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 360, 1, 255); -- Dispelga
-INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 262, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 366, 1, 255); -- Graviga
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 314, 1, 255); -- Enaero 2
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Harpeia', 624, 286, 1, 255); -- Addle

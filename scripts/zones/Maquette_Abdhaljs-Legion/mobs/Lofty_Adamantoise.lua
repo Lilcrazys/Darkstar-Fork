@@ -25,7 +25,9 @@ end
 function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_REGEN,25);
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);
+    mob:addMod(MOD_MATT,50);
+    mob:addMod(MOD_EVA,-115);	
 end;
 
 -----------------------------------
@@ -85,5 +87,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:spawnMob(mob:getID()+3) -- Spawns Lofty_Ferromantoise
+    SpawnMob(mob:getID()+3) -- Spawns Lofty_Ferromantoise
 end;

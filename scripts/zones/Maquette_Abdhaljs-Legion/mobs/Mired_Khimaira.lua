@@ -26,7 +26,8 @@ function onMobSpawn(mob)
     -- Mods
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_REGEN,25);	
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);	
+    mob:addMod(MOD_DEF,95);	
 end;
 
 -----------------------------------
@@ -86,5 +87,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    mob:spawnMob(mob:getID()+3) -- Spawns Mired_Khrysokhimaira
+    SpawnMob(mob:getID()+3) -- Spawns Mired_Khrysokhimaira
 end;

@@ -25,12 +25,13 @@ end
 
 function onMobSpawn(mob)
     -- Mods
-    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REFRESH, 20);
-    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-    mob:setMod(MOD_UFASTCAST, 25);	
-    mob:addMod(MOD_MACC,425);		
+    mob:setMod(MOD_UFASTCAST, 55);	
+    mob:addMod(MOD_MACC,425);
+    mob:addMod(MOD_DEF,125);	
 end;
 
 -----------------------------------
@@ -90,5 +91,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 15);
-    mob:spawnMob(mob:getID()+3) -- Spawns Veiled_Gigaworm
+    SpawnMob(mob:getID()+3) -- Spawns Veiled_Gigaworm
 end;

@@ -38,7 +38,8 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-
+    mob:addMod(MOD_ACC,125);
+	mob:addMod(MOD_ATT,125);
 end;
 
 -----------------------------------
