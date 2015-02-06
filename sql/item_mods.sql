@@ -25247,3 +25247,51 @@ INSERT INTO `item_mods` VALUES(17527, 60, 10);
 INSERT INTO `item_mods` VALUES(17654, 2, 20);
 INSERT INTO `item_mods` VALUES(17654, 54, 10);
 INSERT INTO `item_mods` VALUES(17654, 56, 10);
+
+-- mes_haubergeon
+INSERT INTO `item_mods` VALUES(27886, 1, 140); -- DEF
+INSERT INTO `item_mods` VALUES(27886, 2, 63); -- HP 
+INSERT INTO `item_mods` VALUES(27886, 5, 35); -- MP
+INSERT INTO `item_mods` VALUES(27886, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES(27886, 9, 29); -- DEX
+INSERT INTO `item_mods` VALUES(27886, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES(27886, 11, 6); -- AGI
+INSERT INTO `item_mods` VALUES(27886, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES(27886, 13, 6); -- MND
+INSERT INTO `item_mods` VALUES(27886, 14, 6); -- CHR
+INSERT INTO `item_mods` VALUES(27886, 25, 30); -- ACC
+INSERT INTO `item_mods` VALUES(27886, 23, 30); -- ATT
+INSERT INTO `item_mods` VALUES(27886, 167, 30); -- Haste
+INSERT INTO `item_mods` VALUES(27886, 288, 20); -- DBL ATT
+
+-- onimusha_no_kote
+INSERT INTO `item_mods` VALUES(28009, 1, 90); -- DEF
+INSERT INTO `item_mods` VALUES(28009, 2, 25); -- HP 
+INSERT INTO `item_mods` VALUES(28009, 8, 10); -- STR
+INSERT INTO `item_mods` VALUES(28009, 9, 34); -- DEX
+INSERT INTO `item_mods` VALUES(28009, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES(28009, 11, 6); -- AGI
+INSERT INTO `item_mods` VALUES(28009, 12, 10); -- INT
+INSERT INTO `item_mods` VALUES(28009, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES(28009, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES(28009, 23, 30); -- ATT
+INSERT INTO `item_mods` VALUES(28009, 29, 1); -- MDB
+INSERT INTO `item_mods` VALUES(28009, 167, 50); -- Haste
+INSERT INTO `item_mods` VALUES(28009, 73, 4); -- STP
+
+-- mes'yohi_slacks
+INSERT INTO `item_mods` VALUES(28172, 1, 107); -- DEF
+INSERT INTO `item_mods` VALUES(28172, 2, 43); -- HP 
+INSERT INTO `item_mods` VALUES(28172, 5, 29); -- MP
+INSERT INTO `item_mods` VALUES(28172, 8, 25); -- STR
+INSERT INTO `item_mods` VALUES(28172, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES(28172, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES(28172, 12, 39); -- INT
+INSERT INTO `item_mods` VALUES(28172, 13, 29); -- MND
+INSERT INTO `item_mods` VALUES(28172, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES(28172, 30, 20); -- MACC
+INSERT INTO `item_mods` VALUES(28172, 68, 27); -- EVA
+INSERT INTO `item_mods` VALUES(28172, 31, 107); -- MEVA
+INSERT INTO `item_mods` VALUES(28172, 29, 8); -- MDB
+INSERT INTO `item_mods` VALUES(28172, 167, 50); -- Haste
+INSERT INTO `item_mods` VALUES(28172, 30, 25); -- MACC (depending on day) 

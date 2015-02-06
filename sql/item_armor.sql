@@ -9908,6 +9908,7 @@ INSERT INTO `item_armor` VALUES ('27875', 'otronif_harness_+1', '99', '137218', 
 INSERT INTO `item_armor` VALUES ('27876', 'iuitl_vest_+1', '99', '361760', '256', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27877', 'gendewitha_bilaut_+1', '99', '524820', '265', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27878', 'hagondes_coat_+1', '99', '1605656', '262', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('27886', 'mes'yohi_haubergeon', '99', '6593', '40', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27907', 'gorney_haubert', '99', '10689', '354', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27908', 'shneddick_tabard', '99', '2593826', '355', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27909', 'weatherspoon_robe', '99', '3719708', '356', '0', '0', '32', '0');
@@ -9935,6 +9936,7 @@ INSERT INTO `item_armor` VALUES ('27939', 'idis_gloves', '45', '2426144', '0', '
 INSERT INTO `item_armor` VALUES ('27940', 'genta_gote', '45', '137218', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('27941', 'namrus_dastanas', '45', '16900', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('27942', 'neits_cuffs', '45', '1605656', '0', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28009', 'onimusha_no_kote', '99', '6146', '9', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28018', 'cizin_mufflers_+1', '99', '8385', '274', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28019', 'otronif_gloves_+1', '99', '137218', '247', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28020', 'iuitl_wristbands_+1', '99', '361760', '256', '0', '0', '64', '0');
@@ -9979,6 +9981,7 @@ INSERT INTO `item_armor` VALUES ('28162', 'iuitl_tights_+1', '99', '361760', '25
 INSERT INTO `item_armor` VALUES ('28163', 'gendewitha_spats_+1', '99', '524820', '265', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28164', 'hagondes_pants_+1', '99', '1605656', '262', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28166', 'quiahuiz_trousers', '99', '2593826', '320', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28172', 'mes'yohi_slacks', '99', '2', '11', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28188', 'gorney_brayettes', '99', '10689', '354', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28189', 'shneddick_tights', '99', '2593826', '355', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28190', 'weatherspoon_pants', '99', '3719708', '356', '0', '0', '128', '0');
