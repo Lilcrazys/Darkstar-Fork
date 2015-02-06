@@ -1,8 +1,16 @@
------------------------------------
+------------------------------------
 --
 -- 	STATUSES AND MODS
 --
------------------------------------
+-- Contains variable-ized definitions of things like core enums for use in lua scripts.
+------------------------------------
+
+
+
+------------------------------------
+-- Job IDs
+------------------------------------
+
 JOB_NON             = 0;
 JOB_WAR             = 1;
 JOB_MNK             = 2;
@@ -27,6 +35,10 @@ JOB_SCH             = 20;
 JOB_GEO             = 21;
 JOB_RUN             = 22;
 
+------------------------------------
+-- 
+------------------------------------
+
 STATUS_NORMAL			= 0;
 STATUS_UPDATE			= 1;
 STATUS_DISAPPEAR		= 2;
@@ -36,10 +48,10 @@ STATUS_CUTSCENE_ONLY	= 6;
 STATUS_18				= 18;
 STATUS_SHUTDOWN			= 20;
 
------------------------------------
+------------------------------------
 -- These codes represent the subeffects for
 -- additional effects animations from battleentity.h
------------------------------------
+------------------------------------
 
 -- ATTACKS
 	SUBEFFECT_FIRE_DAMAGE       = 1;   -- 110000        3
@@ -97,10 +109,10 @@ STATUS_SHUTDOWN			= 20;
     SUBEFFECT_NONE              = 0;
 
 
------------------------------------
+------------------------------------
 -- These codes represent the actual status effects.
 -- They are simply for convenience.
------------------------------------
+------------------------------------
 
 EFFECT_KO						= 0
 EFFECT_WEAKNESS					= 1
@@ -675,17 +687,18 @@ EFFECT_COMMITMENT               = 579
 EFFECT_HASTE_II                 = 580
 EFFECT_FLURRY_II                = 581
 
+-- Effect icons in packet can go from 0-767, so no custom effects should go in that range.
 
 -- Purchased from Cruor Prospector
-EFFECT_ABYSSEA_STR              = 768 --
-EFFECT_ABYSSEA_DEX              = 769 --
-EFFECT_ABYSSEA_VIT              = 770 --
-EFFECT_ABYSSEA_AGI              = 771 --
-EFFECT_ABYSSEA_INT              = 772 --
-EFFECT_ABYSSEA_MND              = 773 --
-EFFECT_ABYSSEA_CHR              = 774 --
-EFFECT_ABYSSEA_HP               = 775 --
-EFFECT_ABYSSEA_MP               = 776 --
+EFFECT_ABYSSEA_STR              = 768
+EFFECT_ABYSSEA_DEX              = 769
+EFFECT_ABYSSEA_VIT              = 770
+EFFECT_ABYSSEA_AGI              = 771
+EFFECT_ABYSSEA_INT              = 772
+EFFECT_ABYSSEA_MND              = 773
+EFFECT_ABYSSEA_CHR              = 774
+EFFECT_ABYSSEA_HP               = 775
+EFFECT_ABYSSEA_MP               = 776
 
 -- *Prowess increases not currently retail accurate.
 -- GoV Prowess bonus effects, real effect at ID 474
@@ -714,11 +727,10 @@ EFFECT_TELEPORT					= 797
 EFFECT_CHAINBOUND				= 798
 EFFECT_SKILLCHAIN               = 799
 EFFECT_DYNAMIS                  = 800
-EFFECT_ATMA_DUMMY_1             = 801
-EFFECT_ATMA_DUMMY_2             = 802
-EFFECT_ATMA_DUMMY_3             = 803
-EFFECT_ATMACITE_DUMMY_1         = 804
-EFFECT_ATMACITE_DUMMY_2         = 805
+EFFECT_MEDITATE                 = 801 -- Dummy effect for SAM Meditate JA
+-- EFFECT_PLACEHOLDER              = 802 -- Description
+-- 802-1022
+-- EFFECT_PLACEHOLDER             = 1023 -- The client dat file seems to have only this many "slots", results of exceeding that are untested.
 
 ------------------------------------------------
 -- Start of LegionXI custom section
@@ -739,6 +751,11 @@ EFFECT_LEGION                          = 999
 ------------------------------------------------
 
 
+
+----------------------------------
+-- SC masks
+----------------------------------
+
 EFFECT_SKILLCHAIN0              = 0x200
 EFFECT_SKILLCHAIN1              = 0x400
 EFFECT_SKILLCHAIN2              = 0x800
@@ -746,6 +763,10 @@ EFFECT_SKILLCHAIN3              = 0x1000
 EFFECT_SKILLCHAIN4              = 0x2000
 EFFECT_SKILLCHAIN5              = 0x4000
 EFFECT_SKILLCHAINMASK           = 0x7C00
+
+------------------------------------
+-- Effect Flags
+------------------------------------
 
 EFFECTFLAG_NONE             = 0x0000
 EFFECTFLAG_DISPELABLE       = 0x0001
@@ -766,6 +787,8 @@ EFFECTFLAG_FOOD                 = 0x8000
 EFFECTFLAG_SONG             = 0x10000
 EFFECTFLAG_ROLL             = 0x20000
 
+------------------------------------
+
 function removeSleepEffects(target)
 	target:delStatusEffect(EFFECT_SLEEP_I);
 	target:delStatusEffect(EFFECT_SLEEP_II);
@@ -781,7 +804,7 @@ function hasSleepEffects(target)
 	return false;
 end;
 
------------------------------------
+------------------------------------
 -- These codes are the gateway to directly interacting with the pXI core program with status effects.
 -- These are NOT the actual status effects such as weakness or silence,
 -- but rather arbitrary codes chosen to represent different modifiers to the effected characters and mobs.
@@ -790,7 +813,7 @@ end;
 --
 -- Example: target:getMod(MOD_STR) will get the sum of STR bonuses/penalties from gear, food, STR Etude, Absorb-STR, and any other STR-related buff/debuff.
 -- Note that the above will ignore base statistics, and that getStat() should be used for stats, Attack, and Defense, while getACC(), getRACC(), and getEVA() also exist.
------------------------------------
+------------------------------------
 
 MOD_NONE			= 0x00
 MOD_DEF				= 0x01
@@ -1208,17 +1231,18 @@ MOD_FERAL_HOWL_DURATION       =0x1F7 -- +20% duration per merit when wearing aug
 MOD_MANEUVER_BONUS            =0x1F8 -- Maneuver Stat Bonus
 MOD_OVERLOAD_THRESH           =0x1F9 -- Overload Threshold Bonus
 
--- MOD_SPARE =0x1FA -- (modId = 506)
--- MOD_SPARE =0x1FB -- (modId = 507)
+MOD_EXTRA_DMG_CHANCE          =0x1FA -- Proc rate of MOD_OCC_DO_EXTRA_DMG. 111 would be 11.1% (modId = 506)
+MOD_OCC_DO_EXTRA_DMG          =0x1FB -- Multiplier for "Occasionally do x times normal damage". 250 would be 2.5 times damage. (modId = 507)
+
 -- MOD_SPARE =0x1FC -- (modId = 508)
 -- MOD_SPARE =0x1FD -- (modId = 509)
 -- MOD_SPARE =0x1FE -- (modId = 510)
 -- MOD_SPARE =0x1FF -- (modId = 511)
 -- MOD_SPARE =0x200 -- (modId = 512)
 
------------------------------------
+------------------------------------
 -- Merit Definitions
------------------------------------
+------------------------------------
 
 MCATEGORY_HP_MP      = 0x0040
 MCATEGORY_ATTRIBUTES = 0x0080
@@ -1637,9 +1661,9 @@ MERIT_STORMSURGE                = MCATEGORY_SCH_2 + 0x0A
 
 
 
------------------------------------
+------------------------------------
 -- Slot Definitions
------------------------------------
+------------------------------------
 
 SLOT_MAIN 		= 0
 SLOT_SUB		= 1
@@ -1678,9 +1702,9 @@ ALLEGIANCE_SAN_DORIA	= 2
 ALLEGIANCE_BASTOK		= 3
 ALLEGIANCE_WINDURST		= 4
 
------------------------------------
+------------------------------------
 -- Inventory enum
------------------------------------
+------------------------------------
 
 LOC_INVENTORY   = 0
 LOC_MOGSAFE     = 1
@@ -1690,9 +1714,9 @@ LOC_MOGLOCKER   = 4
 LOC_MOGSATCHEL  = 5
 LOC_MOGSACK     = 6
 
------------------------------------
--- Message enum                  --
------------------------------------
+------------------------------------
+-- Message enum
+------------------------------------
 
 MSGBASIC_DEFEATS_TARG			= 6 -- The <player> defeats <target>.
 MSGBASIC_ALREADY_CLAIMED		= 12 -- Cannot attack. Your target is already claimed.
@@ -1768,6 +1792,10 @@ MSGBASIC_ROLL_ALREADY_ACTIVE	= 429 -- The same roll is already active on the <pl
 MSGBASIC_EFFECT_ALREADY_ACTIVE  = 523 -- The same effect is already active on <player>.
 MSGBASIC_NO_FINISHINGMOVES		= 524 -- You have not earned enough finishing moves to perform that action.
 
+------------------------------------
+-- Spell Groups
+------------------------------------
+
 SPELLGROUP_NONE		 = 0
 SPELLGROUP_SONG		 = 1
 SPELLGROUP_BLACK	 = 2
@@ -1775,6 +1803,10 @@ SPELLGROUP_BLUE		 = 3
 SPELLGROUP_NINJUTSU	 = 4
 SPELLGROUP_SUMMONING = 5
 SPELLGROUP_WHITE	 = 6
+
+------------------------------------
+-- MOBMODs
+------------------------------------
 
 MOBMOD_GIL_MIN = 1
 MOBMOD_GIL_MAX = 2
@@ -1823,8 +1855,11 @@ MOBMOD_DUAL_WIELD = 44
 MOBMOD_ADD_EFFECT = 45
 MOBMOD_AUTO_SPIKES = 46
 MOBMOD_SPAWN_LEASH = 47
+MOBMOD_SHARE_TARGET = 48
 
---skills
+------------------------------------
+-- Skills
+------------------------------------
 
     SKILL_NON           = 0
 	SKILL_H2H			= 1
@@ -1879,11 +1914,9 @@ MOBMOD_SPAWN_LEASH = 47
     RECAST_MAGIC    = 1
     RECAST_ABILITY  = 2
 
------------------------------------
---
+------------------------------------
 --	ACTION IDs
---
------------------------------------
+------------------------------------
 
 ACTION_NONE						= 0;
 ACTION_ATTACK					= 1;
@@ -1923,11 +1956,9 @@ ACTION_MOBABILITY_USING			= 34;
 ACTION_MOBABILITY_INTERRUPT		= 35;
 ACTION_LEAVE					= 36;
 
------------------------------------
---
+------------------------------------
 --	ECOSYSTEM IDs
---
------------------------------------
+------------------------------------
 
 SYSTEM_ERROR			= 0;
 SYSTEM_AMORPH			= 1;
@@ -1952,11 +1983,9 @@ SYSTEM_UNDEAD			= 19;
 SYSTEM_VERMIN			= 20;
 SYSTEM_VORAGEAN			= 21;
 
------------------------------------
---
+------------------------------------
 --	Spell AOE IDs
---
------------------------------------
+------------------------------------
 
 SPELLAOE_NONE           = 0;
 SPELLAOE_RADIAL         = 1;
@@ -1966,20 +1995,16 @@ SPELLAOE_RADIAL_ACCE    = 4;  -- AOE when under SCH stratagem Accession
 SPELLAOE_PIANISSIMO     = 5;  -- Single target when under BRD JA Pianissimo
 SPELLAOE_DIFFUSION		= 6;   -- AOE when under Diffusion
 
------------------------------------
---
+------------------------------------
 --	Spell flag bits
---
------------------------------------
+------------------------------------
 
 SPELLFLAG_NONE		= 0;
 SPELLFLAG_HIT_ALL	= 1;		-- hit all targets in range regardless of party
 
------------------------------------
---
+------------------------------------
 --	Behaviour bits
---
------------------------------------
+------------------------------------
 
 BEHAVIOUR_NONE				= 0x000;
 BEHAVIOUR_NO_DESPAWN		= 0x001; -- mob does not despawn on death
@@ -1989,10 +2014,9 @@ BEHAVIOUR_AGGRO_AMBUSH		= 0x200; -- mob aggroes by ambush
 BEHAVIOUR_NO_TURN           = 0x400; -- mob does not turn to face target
 
 ------------------------------------
---
 -- Elevator IDs
---
 ------------------------------------
+
 ELEVATOR_KUFTAL_TUNNEL_DSPPRNG_RCK		= 1;
 ELEVATOR_PORT_BASTOK_DRWBRDG			= 2;
 ELEVATOR_DAVOI_LIFT                     = 3;

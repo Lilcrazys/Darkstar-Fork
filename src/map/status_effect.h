@@ -640,8 +640,18 @@ enum EFFECT
     EFFECT_HASTE_II                 = 580,
     EFFECT_FLURRY_II                = 581,
 
+    // Effect icons in packet can go from 0-767, so no custom effects should go in that range.
 
-    // EFFECT_PLACEHOLDER              = 640, // Polutils list ends at 639 so 640+ shouldn't collide with anything
+    // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_STR              = 768,
+    EFFECT_ABYSSEA_DEX              = 769, 
+    EFFECT_ABYSSEA_VIT              = 770, 
+    EFFECT_ABYSSEA_AGI              = 771, 
+    EFFECT_ABYSSEA_INT              = 772, 
+    EFFECT_ABYSSEA_MND              = 773, 
+    EFFECT_ABYSSEA_CHR              = 774, 
+    EFFECT_ABYSSEA_HP               = 775, 
+    EFFECT_ABYSSEA_MP               = 776, 
 
     EFFECT_ABYSSEA_STR              = 768, // Purchased from Cruor Prospector
     EFFECT_ABYSSEA_DEX              = 769, // Purchased from Cruor Prospector
@@ -680,11 +690,10 @@ enum EFFECT
     EFFECT_CHAINBOUND               = 798,
     EFFECT_SKILLCHAIN               = 799,
 	EFFECT_DYNAMIS					= 800,
-	EFFECT_ATMA_DUMMY_1             = 801,
-	EFFECT_ATMA_DUMMY_2             = 802,
-	EFFECT_ATMA_DUMMY_3             = 803,
-	EFFECT_ATMACITE_DUMMY_1         = 804,
-	EFFECT_ATMACITE_DUMMY_2         = 805,
+    EFFECT_MEDITATE                 = 801, // Dummy effect for SAM Meditate JA
+    // EFFECT_PLACEHOLDER              = 802 // Description
+    // 802-1022
+    // EFFECT_PLACEHOLDER             = 1023 // The client dat file seems to have only this many "slots", results of exceeding that are untested.
 
 //==========================================================//
 	// Start of LegionXI custom section
