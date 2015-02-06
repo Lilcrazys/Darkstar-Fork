@@ -25294,4 +25294,4 @@ INSERT INTO `item_mods` VALUES(28172, 68, 27); -- EVA
 INSERT INTO `item_mods` VALUES(28172, 31, 107); -- MEVA
 INSERT INTO `item_mods` VALUES(28172, 29, 8); -- MDB
 INSERT INTO `item_mods` VALUES(28172, 167, 50); -- Haste
-INSERT INTO `item_mods` VALUES(28172, 30, 25); -- MACC (depending on day) 
+
