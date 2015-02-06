@@ -303,6 +303,7 @@ void CAICharNormal::ActionEngage()
 
 					m_PChar->status = STATUS_UPDATE;
 					m_PChar->animation = ANIMATION_ATTACK;
+                    m_PChar->PLatentEffectContainer->CheckLatentsWeaponDraw(true);
 					m_PChar->pushPacket(new CLockOnPacket(m_PChar, m_PBattleTarget));
 					m_PChar->pushPacket(new CCharUpdatePacket(m_PChar));
                     m_PChar->updatemask |= UPDATE_HP;
@@ -391,6 +392,7 @@ void CAICharNormal::ActionDisengage()
 	m_PChar->animation = ANIMATION_NONE;
     m_PChar->updatemask |= UPDATE_HP;
 	m_PChar->pushPacket(new CCharUpdatePacket(m_PChar));
+    m_PChar->PLatentEffectContainer->CheckLatentsWeaponDraw(false);
 
     if (m_PChar->PPet != NULL && m_PChar->PPet->objtype == TYPE_PET && ((CPetEntity*)m_PChar->PPet)->getPetType() == PETTYPE_WYVERN)
     {
@@ -674,7 +676,8 @@ void CAICharNormal::ActionItemFinish()
 	{
         if(battleutils::IsParalyzed(m_PChar)){
             m_PChar->loc.zone->PushPacket(m_PChar, CHAR_INRANGE_SELF, new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0,MSGBASIC_IS_PARALYZED));
-        } else {
+        }
+        else {
 
             m_PChar->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_INVISIBLE);
 
@@ -780,7 +783,8 @@ void CAICharNormal::ActionRangedStart()
 
         if(PAmmo != NULL && PAmmo->isThrowing()){
             SkillType = PAmmo->getSkillType();
-        } else {
+        }
+        else {
             SkillType = PRanged->getSkillType();
         }
 
@@ -834,7 +838,8 @@ void CAICharNormal::ActionRangedStart()
 			}
 		}
 
-	}else{
+    }
+    else{
 
 		m_ActionTargetID = 0;
 		TransitionBack();
@@ -1427,7 +1432,8 @@ void CAICharNormal::ActionJobAbilityStart()
 						return;
 					}
 				}
-			}else{
+            }
+            else{
 				PItem = (CItemWeapon*)m_PChar->getEquip(SLOT_AMMO);
 
 				if (PItem == NULL ||
@@ -1523,7 +1529,8 @@ void CAICharNormal::ActionJobAbilityFinish()
     {
         if(m_PChar->getMod(MOD_BP_DELAY) > 15){
             RecastTime -= 15;
-        }else{
+        }
+        else{
             RecastTime -= m_PChar->getMod(MOD_BP_DELAY);
         }
     }
@@ -1532,7 +1539,8 @@ void CAICharNormal::ActionJobAbilityFinish()
     if(battleutils::IsParalyzed(m_PChar)){
         // display paralyzed
         m_PChar->loc.zone->PushPacket(m_PChar, CHAR_INRANGE_SELF, new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0,MSGBASIC_IS_PARALYZED));
-    } else {
+    }
+    else {
 
         // remove invisible if aggresive
         if(m_PJobAbility->getID() != ABILITY_FIGHT)
@@ -1540,7 +1548,8 @@ void CAICharNormal::ActionJobAbilityFinish()
 	        if(m_PJobAbility->getValidTarget() & TARGET_ENEMY){
 	            // aggresive action
 	            m_PChar->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_DETECTABLE);
-	        } else if(m_PJobAbility->getID() != ABILITY_TRICK_ATTACK) {
+            }
+            else if (m_PJobAbility->getID() != ABILITY_TRICK_ATTACK) {
 	            // remove invisible only
 	            m_PChar->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_INVISIBLE);
 	        }
@@ -1601,23 +1610,28 @@ void CAICharNormal::ActionJobAbilityFinish()
     					if (PTarget->id == m_PChar->id){
     						if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
     							Action.messageID = MSGBASIC_ROLL_MAIN_FAIL;
-    						} else {
+                            }
+                            else {
     							Action.messageID = m_PJobAbility->getMessage();
     						}
-    					} else if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
+                        }
+                        else if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
     						Action.messageID  = MSGBASIC_ROLL_SUB_FAIL;
-    					} else {
+                        }
+                        else {
     						Action.messageID  = MSGBASIC_ROLL_SUB;
     					}
     					m_PChar->m_ActionList.push_back(Action);
     				}
     			}
-    		} else {
+            }
+            else {
     			Action.ActionTarget = m_PBattleSubTarget;
                 luautils::OnUseAbilityRoll(m_PChar, Action.ActionTarget, GetCurrentJobAbility(), roll);
     			if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
     				Action.messageID = MSGBASIC_ROLL_MAIN_FAIL;
-    			} else {
+                }
+                else {
     				Action.messageID = m_PJobAbility->getMessage();
     			}
 
@@ -1719,14 +1733,16 @@ void CAICharNormal::ActionJobAbilityFinish()
     						if (PTarget->id == m_PChar->id){
     							Action.messageID = MSGBASIC_DOUBLEUP_BUST;
     							luautils::OnUseAbilityRoll(m_PChar, Action.ActionTarget, rollAbility, total);
-    						} else {
+                                }
+                                else {
     							Action.messageID = MSGBASIC_DOUBLEUP_BUST_SUB;
     						}
     						PTarget->StatusEffectContainer->DelStatusEffectSilent(battleutils::getCorsairRollEffect(m_CorsairDoubleUp));
     						m_PChar->m_ActionList.push_back(Action);
     					}
     				}
-    			} else {
+                    }
+                    else {
     				Action.ActionTarget = m_PBattleSubTarget;
     				luautils::OnUseAbilityRoll(m_PChar, Action.ActionTarget, rollAbility, total);
     				Action.messageID	= MSGBASIC_DOUBLEUP_BUST;
@@ -1734,7 +1750,8 @@ void CAICharNormal::ActionJobAbilityFinish()
     				m_PChar->m_ActionList.push_back(Action);
     			}
     			m_PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_DOUBLE_UP_CHANCE);
-    		} else {
+                }
+                else {
     			if (total == 11)
     			{
     				m_PChar->PRecastContainer->Del(RECAST_ABILITY, 193); //phantom roll
@@ -1754,23 +1771,28 @@ void CAICharNormal::ActionJobAbilityFinish()
     					if (PTarget->id == m_PChar->id){
     						if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
     							Action.messageID = MSGBASIC_DOUBLEUP_FAIL;
-    						} else {
+                                    }
+                                    else {
     							Action.messageID = m_PJobAbility->getMessage();
     						}
-    					} else if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
+                                }
+                                else if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
     						Action.messageID  = MSGBASIC_ROLL_SUB_FAIL;
-    					} else {
+                                }
+                                else {
     						Action.messageID  = MSGBASIC_ROLL_SUB;
     					}
     						m_PChar->m_ActionList.push_back(Action);
     					}
     				}
-    			} else {
+                    }
+                    else {
     				Action.ActionTarget = m_PBattleSubTarget;
     				luautils::OnUseAbilityRoll(m_PChar, Action.ActionTarget, rollAbility, total);
     				if (m_PJobAbility->getMessage() == MSGBASIC_ROLL_SUB_FAIL){
     					Action.messageID = MSGBASIC_DOUBLEUP_FAIL;
-    				} else {
+                        }
+                        else {
     					Action.messageID = m_PJobAbility->getMessage();
     				}
     				m_PChar->m_ActionList.push_back(Action);
@@ -1795,7 +1817,8 @@ void CAICharNormal::ActionJobAbilityFinish()
     				if(m_PChar->health.mp >= m_PChar->GetMLevel() * 2){
     					m_PChar->addMP(-m_PChar->GetMLevel() * 2);
     				}
-    			} else {
+                }
+                else {
     				m_PChar->addMP(-m_PJobAbility->getAnimationID()); // TODO: ...
     			}
     			m_PChar->m_ActionList.push_back(Action);
@@ -1833,7 +1856,8 @@ void CAICharNormal::ActionJobAbilityFinish()
 
                 if(msg == 0){
                     msg = m_PJobAbility->getMessage();
-                } else {
+                }
+                else {
                     msg = m_PJobAbility->getAoEMsg();
                 }
 
@@ -1875,7 +1899,8 @@ void CAICharNormal::ActionJobAbilityFinish()
                     m_PBattleSubTarget->loc.zone->PushPacket(m_PBattleSubTarget,CHAR_INRANGE_SELF, new CMessageBasicPacket(m_PBattleSubTarget,m_PBattleSubTarget,0,1, MSGBASIC_SHADOW_ABSORB));
 
                     battleutils::ClaimMob(m_PBattleSubTarget, m_PChar);
-                } else {
+                }
+                else {
 
         			float pdif = battleutils::GetRangedPDIF(m_PChar,m_PBattleSubTarget);
 
@@ -2090,18 +2115,23 @@ void CAICharNormal::ActionJobAbilityFinish()
     				{
     					//NM, Beastman or Arcana, cannot charm at all !
     					m_PChar->pushPacket(new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0, MSGBASIC_CANNOT_CHARM));
-    				}else{
+                    }
+                    else{
     					uint16 baseExp = charutils::GetRealExp(m_PChar->GetMLevel(),m_PBattleSubTarget->GetMLevel());
 
     					if(baseExp >= 400) {//IT
     						m_PChar->pushPacket(new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0, MSGBASIC_VERY_DIFFICULT_CHARM));
-    					} else if(baseExp >= 240) {//VT
+                        }
+                        else if (baseExp >= 240) {//VT
     						m_PChar->pushPacket(new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0, MSGBASIC_DIFFICULT_TO_CHARM));
-    					} else if(baseExp >= 120) {//T
+                        }
+                        else if (baseExp >= 120) {//T
     						m_PChar->pushPacket(new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0, MSGBASIC_MIGHT_BE_ABLE_CHARM));
-    					} else if(baseExp >= 100) {//EM
+                        }
+                        else if (baseExp >= 100) {//EM
     						m_PChar->pushPacket(new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0, MSGBASIC_SHOULD_BE_ABLE_CHARM));
-    					} else {
+                        }
+                        else {
     						m_PChar->pushPacket(new CMessageBasicPacket(m_PChar,m_PBattleSubTarget,0,0, MSGBASIC_SHOULD_BE_ABLE_CHARM));
     					}
     				}
@@ -2471,7 +2501,8 @@ void CAICharNormal::ActionWeaponSkillFinish()
         // if no hits landed, deal no damage
         if(landedHits == 0){
             damage = 0;
-        } else {
+        }
+        else {
             //divide damage by amount of shadows taken
             damage *= 1 - ((float)shadowsTaken / totalHits);
         }
