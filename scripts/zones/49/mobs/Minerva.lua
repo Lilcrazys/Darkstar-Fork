@@ -14,8 +14,21 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
+    -- MobMods
+    mob:setMobMod(MOBMOD_SPECIAL_COOL, 15); -- Melee special
+    mob:setMobMod(MOBMOD_SPECIAL_SKILL, 1849); -- Melee special
+    mob:setMobMod(MOBMOD_NA_CHANCE, 55); -- Chance to remove debuff
+    mob:setMobMod(MOBMOD_GA_CHANCE, 35); -- Chance to select an AoE nuke
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 32); -- Time between Cast Attempts
+    mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID());
+    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID());
+
+    -- Mods
+    mob:addMod(MOD_MATT, 33);
+    mob:addMod(MOD_MACC, 100);
+    mob:addMod(MOD_INT, 10);
+    mob:addMod(MOD_MND, 5);
+    mob:addMod(MOD_CHR, 12);
 end
 
 -----------------------------------
@@ -26,12 +39,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 20);
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 20);
-    mob:setMod(MOD_FASTCAST, 80);
-    mob:addMod(MOD_MATT, 33);
-    mob:addMod(MOD_MACC, 100);
-    mob:addMod(MOD_INT, 10);
-    mob:addMod(MOD_MND, 5);
-    mob:addMod(MOD_CHR, 12);
+    mob:setMod(MOD_UFASTCAST, 80);
+    mob:SetMobSkillAttack(true); -- Use Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -39,6 +48,25 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
+    if (target:getParty() ~= nil) then
+        local targets = target:getParty(); -- local targets = mob:getEnmityList();
+        for hey, dude in pairs(targets) do
+            if (dude:isPC()) then
+                dude:ChangeMusic(0, 187); -- Background Music (Day time, 7:00 -> 18:00)
+                dude:ChangeMusic(1, 187); -- Background Music (Night time, 18:00 -> 7:00)
+                dude:ChangeMusic(2, 187); -- SoloBattle Music
+                dude:ChangeMusic(3, 187); -- Party Battle Music
+            end
+        end
+    elseif (target:isPC()) then
+        target:ChangeMusic(0, 187); -- Background Music (Day time, 7:00 -> 18:00)
+        target:ChangeMusic(1, 187); -- Background Music (Night time, 18:00 -> 7:00)
+        target:ChangeMusic(2, 187); -- SoloBattle Music
+        target:ChangeMusic(3, 187); -- Party Battle Music
+    end
+
+    mob:SpoofChatParty("The heart of the crystal..This power can sustain gods..", MESSAGE_SAY);
+    mob:SpoofChatParty("It is a pity, but I must end your world for the good of mine.", MESSAGE_SAY);
 end;
 
 -----------------------------------
@@ -46,44 +74,58 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
--- Possibly broken, mobMod method only allow 2 jobs 2hrs,
--- skill method requires it be an actual skill...
--- ...Can 2hr get selected as random TP move? That would suck.
-    --[[
-    if (mob:getHPP() < 11) then
-        local TABULA_RASA = 0;
-        if (mob:setLocalVar("Minerva_Used_Tabula_Rasa") ~= nil) then
-            TABULA_RASA = mob:getLocalVar("Minerva_Used_Tabula_Rasa");
-        end
-        if (TABULA_RASA == 0) then
-            mob:SpoofChatParty("Placeholder: message here", MESSAGE_SAY);
-            -- mob:useMobAbility(626); -- Do Tabula Rasa!
-            mob:setLocalVar("Minerva_Used_Tabula_Rasa", 1);
-            target:PrintToPlayer("Tabula Rasa for mobs not yet implemented");
-        else
-            mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
+    local Minerva_2hr_Used = mob:getLocalVar("Minerva_2hr");
+    local Ambrosia = mob:getLocalVar("Minerva_Ambrosia");
+
+    if (mob:getHPP() <= 11) then -- Tabula Rasa and Invincible together!
+        if (Minerva_2hr_Used == 4) then
+            mob:SpoofChatParty("No! I will not fall so close to the power I sought!", MESSAGE_SAY);
             mob:useMobAbility(438); -- Do Invincible!
+            mob:setLocalVar("Minerva_2hr", 5);
+        elseif (Minerva_2hr_Used == 5 and Ambrosia == 0) then
+            mob:setMobMod(MOBMOD_BUFF_CHANCE, 5); -- Dropping chance of doing non nuke spells
+            mob:setMobMod(MOBMOD_HEAL_CHANCE, 4); -- Dropping chance of doing non nuke spells
+            mob:setMobMod(MOBMOD_HP_HEAL_CHANCE, 4); -- Dropping chance of doing non nuke spells
+            mob:setMobMod(MOBMOD_NA_CHANCE, 20); -- Dropping chance removing debuffs
+            mob:setMobMod(MOBMOD_GA_CHANCE, 20); -- Dropping chance to select an AoE nuke
+            -- The above should result in selecting single target nukes more frequently...
+            mob:SpoofChatParty("Olympus here me! Grant me the last of our power for this task!", MESSAGE_SAY);
+            mob:useMobAbility(1231);
+            mob:setLocalVar("Minerva_Ambrosia", 1);
+        elseif (Minerva_2hr_Used == 5 and Ambrosia == 1) then
+            mob:setMobMod(MOBMOD_MAGIC_COOL, 15); -- Reducing time between cast attempts
+            mob:setMod(MOD_UFASTCAST, 95); -- Casting even faster than we already were.
+            mob:addMod(MOD_MATT, 40);
+            mob:addMod(MOD_MACC, 80);
+            mob:addMod(MOD_INT, 20);
+            mob:addMod(MOD_MND, 25);
+            mob:addMod(MOD_CHR, 10);
+            mob:useMobAbility(2102); -- Do Tabula Rasa! Single target nukes now AoE yet do full dmg to all targets.
+            mob:setLocalVar("Minerva_2hr", 6);
         end
-    elseif (mob:getHPP() < 40) then
-        mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
-        mob:useMobAbility(436); -- Do 3rd Chainspell!
-    elseif (mob:getHPP() < 60) then
-        local MANAFONT = 0;
-        if (mob:getLocalVar("Minerva_Used_Manafont") ~= nil) then
-            MANAFONT = mob:getLocalVar("Minerva_Used_Manafont");
+    elseif (mob:getHPP() <= 40) then -- 3rd Chainspell time!
+        if (Minerva_2hr_Used == 3) then
+            mob:SpoofChatParty("For Olympus!", MESSAGE_SAY);
+            mob:useMobAbility(436); -- Do 3rd Chainspell!
+            mob:setLocalVar("Minerva_2hr", 4);
         end
-        if (MANAFONT == 0) then
-            mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
-            mob:useMobAbility(436); -- Do Manafont!
-            mob:setLocalVar("Minerva_Used_Manafont", 1);
-        else
+    elseif (mob:getHPP() <= 60) then -- Manafont and Chainspell together!
+        if (Minerva_2hr_Used == 1) then
+            mob:useMobAbility(435); -- Do Manafont!
+            mob:SpoofChatParty("You are the one who defeated Mars?", MESSAGE_SAY);
+            mob:setLocalVar("Minerva_2hr", 2);
+        elseif (Minerva_2hr_Used == 2) then
+            mob:SpoofChatParty("He was but a brute, I am the goddess of wisdom and strategy!", MESSAGE_SAY);
             mob:useMobAbility(436); -- Do 2nd Chainspell!
+            mob:setLocalVar("Minerva_2hr", 3);
         end
-    elseif (mob:getHPP() < 80) then
-        mob:SpoofChatParty("Placeholder message here", MESSAGE_SAY);
-        mob:useMobAbility(436); -- Do 1st Chainspell!
+    elseif (mob:getHPP() <= 80) then -- 1st Chainspell time!
+        if (Minerva_2hr_Used == 0) then
+            mob:SpoofChatParty("Your dimension must collapse that mine may be spared!", MESSAGE_SAY);
+            mob:useMobAbility(436); -- Do 1st Chainspell!
+            mob:setLocalVar("Minerva_2hr", 1);
+        end
     end
-    ]]--
 end;
 
 -----------------------------------
@@ -91,6 +133,23 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    if (killer:getParty() ~= nil) then
+        local targets = killer:getParty(); -- local targets = mob:getEnmityList();
+        for hey, dude in pairs(targets) do
+            if (dude:isPC()) then
+                dude:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+                dude:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+                dude:ChangeMusic(2, 187); -- SoloBattle Music
+                dude:ChangeMusic(3, 187); -- Party Battle Music
+            end
+        end
+    elseif (killer:isPC()) then
+        killer:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+        killer:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+        killer:ChangeMusic(2, 187); -- SoloBattle Music
+        killer:ChangeMusic(3, 187); -- Party Battle Music
+    end
+
     -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
     -- mob:getBattlefield():win();
 end;

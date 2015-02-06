@@ -52,12 +52,53 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[
-    if (mob:getHPP() <= 3) then
+    local Slendy_2hr_Used = mob:getLocalVar("Slendy_2hr");
+    -- local Proxies_Called = mob:getLocalVar("GetMyMinions");
+
+    if (mob:getHPP() < 5 and Slendy_2hr_Used == 3) then
         mob:useMobAbility(475); -- Do Mijin Gakure!
+        mob:setLocalVar("Slendy_2hr", 0);
+        mob:setHP(0); -- Auto Die
+    elseif (mob:getHPP() < 5 and Slendy_2hr_Used == 2) then
+        mob:SpoofChatParty("You can't kill me!", MESSAGE_SAY);
+        mob:useMobAbility(475); -- Do Mijin Gakure!
+        mob:setLocalVar("Slendy_2hr", 3);
+    elseif (mob:getHPP() <= 25 and Slendy_2hr_Used == 1) then
+        mob:useMobAbility(437); -- Do Perfect Dodge!
+        mob:setLocalVar("Slendy_2hr", 2);
+    elseif (mob:getHPP() <= 50 and Slendy_2hr_Used == 0) then
+        mob:useMobAbility(439); -- Do Blood Weapon!
+        mob:setLocalVar("Slendy_2hr", 1);
+    -- elseif (mob:getBattleTime() - Proxies_Called > 20) then
+        -- if ( zombaru_1 not up ) then
+            -- spawn new zombaru_1
+        -- end
+        -- if ( zombaru_2 not up ) then
+            -- spawn new zombaru_2
+        -- end
+        -- mob:setLocalVar("GetMyMinions", os.time())
     end
-    ]]--
+
+    -- if ( my target changed or mob:getLocalVar("I_WAS_NUKED") == 1) then
+        -- Do AoE Knockback and Bind
+        -- Do single Target Draw In
+    -- end
 end;
+
+-----------------------------------
+-- onMagicHit
+-----------------------------------
+
+-- function onMagicHit(caster, target, spell)
+    --if (caster:isPC() == true and target:isMOB() == true) then
+        -- if ( caster is not my target and is prohibited spell ) then
+            -- I was nuked!
+            -- target:setLocalVar("I_WAS_NUKED", 1);
+            -- instant cast strong nuke at caster
+        -- end
+    -- end
+    -- return spell;
+-- end;
 
 -----------------------------------
 -- onMobDeath
@@ -73,16 +114,17 @@ end;
 
 function onAdditionalEffect(mob,target,damage)
     local RAND = math.random(0,99);
-    target:PrintToPlayer(string.format(" 'u' ", RAND));
+    -- target:PrintToPlayer(string.format(" '%u' ", RAND));
     if (RAND >= 33) then
         return 0,0,0;
     else
         local dmg = damage * 0.34;
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
         if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20) / 2;
+            INT_diff = 20 + (INT_diff - 20);
         end
-        dmg = INT_diff+LV_diff+damage/2;
+        INT_diff = INT_diff * 0.25;
+        dmg = dmg + INT_diff;
         dmg = utils.clamp(dmg, 5, 66);
         return SUBEFFECT_FIRE_DAMAGE,163,dmg;
     end
@@ -94,7 +136,7 @@ end;
 
 function onSpikesDamage(mob,target,damage)
     local RAND = math.random(0,99);
-    target:PrintToPlayer(string.format(" 'u' ", RAND));
+    -- target:PrintToPlayer(string.format(" '%u' ", RAND));
     if (RAND >= 33) then
         return 0,0,0;
     else

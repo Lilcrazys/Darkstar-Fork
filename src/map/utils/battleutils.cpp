@@ -4097,12 +4097,14 @@ CMobSkill* GetTwoHourMobSkill(JOBTYPE job)
         case JOB_SAM: id = 474; break;
         case JOB_NIN: id = 475; break;
         case JOB_DRG: id = 476; break;
-        //case JOB_SMN: id = ???; break;
-        //case JOB_PUP: id = ???; break;
-        //case JOB_BLU: id = ???; break;
-        //case JOB_COR: id = ???; break;
-        //case JOB_DNC: id = ???; break;
-        //case JOB_SCH: id = ???; break;
+        // case JOB_SMN: id = 478; break;  // alt 2000
+        // case JOB_BLU: id = 1933; break; // alt 2001
+        // case JOB_COR: id = 1934; break; // alt 2002
+        // case JOB_PUP: id = 1935; break; // alt 2003
+        // case JOB_DNC: id = 2454; break; // alt 2004
+        // case JOB_SCH: id = 2102 break;  // alt 2005
+        // case JOB_GEO: id = ??? break;
+        // case JOB_RUN: id = 3009 break;
         default: return NULL;
     }
     return GetMobSkill(id);
@@ -4141,6 +4143,9 @@ void assistTarget(CCharEntity* PChar, uint16 TargID)
 
 uint8 GetSpellAoEType(CBattleEntity* PCaster, CSpell* PSpell)
 {
+    if (PCaster->objtype == TYPE_MOB && PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_TABULA_RASA))
+        return SPELLAOE_RADIAL;
+
     if (PSpell->getAOE() == SPELLAOE_RADIAL_ACCE)
         if (PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_ACCESSION))
             return SPELLAOE_RADIAL;
