@@ -9946,7 +9946,7 @@ INSERT INTO `item_armor` VALUES ('28027', 'boor_bracelets', '99', '2472947', '0'
 INSERT INTO `item_armor` VALUES ('28046', 'gorney_moufles', '99', '10689', '354', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28047', 'shneddick_gloves', '99', '2593826', '355', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28048', 'weatherspoon_cuffs', '99', '3719708', '356', '0', '0', '64', '0');
-INSERT INTO `item_armor` VALUES ('28050', 'buremte_gloves', '99', '2473969', '250', '0', '0', '64', '0'); -- mID is wrong but meh
+INSERT INTO `item_armor` VALUES ('28050', 'buremte_gloves', '99', '2473969', '249', '0', '0', '64', '0'); 
 INSERT INTO `item_armor` VALUES ('28056', 'yaoyotl_gloves', '99', '1589788', '328', '0', '0', '64', '0'); -- mID was 348 but looked like leather gloves
 INSERT INTO `item_armor` VALUES ('28057', 'mikinaak_gauntlets', '99', '21378', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28058', 'manibozho_gloves', '99', '5187652', '0', '0', '0', '64', '0');
