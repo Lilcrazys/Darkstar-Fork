@@ -587,7 +587,7 @@ bool HandleSpikesDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, apAc
                 break;
 
             case SPIKE_REPRISAL:
-                if (Action->reaction == REACTION_BLOCK)
+                if (Action->reaction == REACTION_BLOCK || PDefender->objtype == TYPE_MOB) // Mobs don't need a shield.
                 {
                     PAttacker->addHP(-Action->spikesParam);
                 }
