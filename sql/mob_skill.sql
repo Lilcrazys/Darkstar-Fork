@@ -4847,20 +4847,20 @@ INSERT INTO `mob_skill` VALUES (439,7600,432,'Blood_Weapon',0,7.0,2000,0,1,2,75,
 
 -- Minerva
 INSERT INTO `mob_skill` VALUES (1849,0,1861,'Minerva_Melee_Special', 0, 9.5, 2000, 0, 4, 16, 0, 0);
-INSERT INTO `mob_skill` VALUES (574,7777,1015,'Minerva_Light_Blade',0,30.0,2000,1500,4,0,0,0); -- Restores EnLight
+INSERT INTO `mob_skill` VALUES (574,7777,1015,'Minerva_Light_Blade',0,30.0,2000,1500,4,0,0,0); -- Grants/Restores EnLight
 INSERT INTO `mob_skill` VALUES (729,7777,1750,'Minerva_Stellar_burst',2,7.0,5000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1130,7777,1021,'Minerva_Medusa_Javelin',0,6.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1123,7777,1011,'Minerva_Auroral_Wind',1,10.0,2000,1500,12,0,0,0); -- Restores Light spikes
-INSERT INTO `mob_skill` VALUES (1252,7777,1581,'Minerva_Luminous_Lance',0,20.0,2000,1500,4,0,0,0); -- Restores EnLight
-INSERT INTO `mob_skill` VALUES (1885,7777,1465,'Minerva_Radiant_sacrament',1,18.0,2000,1200,4,0,0,0); -- Restores Light spikes
-INSERT INTO `mob_skill` VALUES (1886,7777,1471,'Minerva_Mega_holy',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1888,7777,1581,'Minerva_Divine_spear',1,18.0,2000,1500,4,0,0,0); -- Restores EnLight
-INSERT INTO `mob_skill` VALUES (1891,7777,1468,'Minerva_Divine_Jugement',1,10.0,600,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2078,7777,1854,'Minerva_Wrath_of_zeus',4,10.0,2000,1000,4,0,0,0); -- Shock spikes,EnThunder
-INSERT INTO `mob_skill` VALUES (2079,7777,1581,'Minerva_Lightning_spear',4,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2114,7777,1465,'Minerva_Grace_of_Hera',0,7.0,2000,1000,1,0,0,0); -- Restores Light spikes
-INSERT INTO `mob_skill` VALUES (2434,7777,1856,'Dark_Moon',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2435,7777,1857,'Dark_Sun',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1130,7777,1021,'Minerva_Medusa_Javelin',0,6.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1123,7777,1011,'Minerva_Auroral_Wind',1,10.0,2000,1500,12,0,0,0); -- Grants/Restores Light spikes
+INSERT INTO `mob_skill` VALUES (1252,7777,1581,'Minerva_Luminous_Lance',0,20.0,2000,1500,4,0,0,0); -- Grants/Restores EnLight
+INSERT INTO `mob_skill` VALUES (1885,7777,1465,'Minerva_Radiant_sacrament',1,18.0,2000,1200,4,0,0,0); -- Grants/Restores Light spikes
+INSERT INTO `mob_skill` VALUES (1886,7777,1471,'Minerva_Mega_holy',1,18.0,2000,1000,4,0,0,0); -- need script
+INSERT INTO `mob_skill` VALUES (1888,7777,1581,'Minerva_Divine_spear',1,18.0,2000,1500,4,0,0,0); -- Grants/Restores EnLight
+INSERT INTO `mob_skill` VALUES (1891,7777,1468,'Minerva_Divine_Jugement',1,10.0,600,1500,4,0,0,0); -- need script
+INSERT INTO `mob_skill` VALUES (2078,7777,1854,'Minerva_Wrath_of_zeus',4,10.0,2000,1000,4,0,0,0); -- Grants/Restores Shock spikes and EnThunder
+INSERT INTO `mob_skill` VALUES (2079,7777,1581,'Minerva_Lightning_spear',4,10.0,2000,1000,4,0,0,0); -- need script
+INSERT INTO `mob_skill` VALUES (2114,7777,1465,'Minerva_Grace_of_Hera',0,7.0,2000,1000,1,0,0,0); -- Grants/Restores Light spikes
+INSERT INTO `mob_skill` VALUES (2434,7777,1856,'Dark_Moon',1,18.0,2000,1000,4,0,0,0); -- need script
+INSERT INTO `mob_skill` VALUES (2435,7777,1857,'Dark_Sun',1,18.0,2000,1000,4,0,0,0); -- need script
 INSERT INTO `mob_skill` VALUES (435,7777,2116,'Manafont',0,7.0,2000,0,1,2,90,0);
 INSERT INTO `mob_skill` VALUES (436,7777,2114,'Chainspell',0,7.0,2000,0,1,2,90,0);
 INSERT INTO `mob_skill` VALUES (438,7777,1092,'Invincible',0,7.0,2000,0,1,2,60,0);

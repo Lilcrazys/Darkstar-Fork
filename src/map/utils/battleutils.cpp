@@ -4143,9 +4143,6 @@ void assistTarget(CCharEntity* PChar, uint16 TargID)
 
 uint8 GetSpellAoEType(CBattleEntity* PCaster, CSpell* PSpell)
 {
-    if (PCaster->objtype == TYPE_MOB && PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_TABULA_RASA))
-        return SPELLAOE_RADIAL;
-
     if (PSpell->getAOE() == SPELLAOE_RADIAL_ACCE)
         if (PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_ACCESSION))
             return SPELLAOE_RADIAL;

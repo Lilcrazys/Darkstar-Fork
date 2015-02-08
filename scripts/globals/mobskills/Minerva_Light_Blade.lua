@@ -27,7 +27,7 @@ function onMobWeaponSkill(target, mob, skill)
     local distance = mob:checkDistance(target)
     utils.clamp(distance, 0, 40)
     dmg = dmg * ((50 - distance) / 50);
-    mob:addStatusEffectEx(EFFECT_MINERVA_ENLIGHT, EFFECT_ENLIGHT, 1, 0, 600);
+    mob:addStatusEffect(EFFECT_ENLIGHT, 1, 0, 600);
     target:delHP(dmg);
     return dmg;
 end;

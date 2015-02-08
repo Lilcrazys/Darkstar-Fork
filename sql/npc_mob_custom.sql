@@ -1537,15 +1537,15 @@ REPLACE INTO `mob_spawn_points` VALUES (17686540,'CrystalFetter','Crystal Fetter
 -- REPLACE INTO `mob_spawn_points` VALUES (17686576,'Wazir','Wazir',11009,0,0,0,0);
 
 -- INSERT INTO `mob_spawn_points` VALUES (17687542,'Minerva','Minerva',97777,-580,-228.5,540,64);
--- INSERT INTO `mob_spawn_points` VALUES (17687543,'Steller_Elemental','Baelfyr',97778,0,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (17687544,'Olympian_Elemental','Ungeweder',97779,0,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (17687543,'Stellar_Elemental','Baelfyr',97778,-581,-228.5,539,64);
+-- INSERT INTO `mob_spawn_points` VALUES (17687544,'Olympian_Elemental','Ungeweder',97779,-579,-228.5,541,64);
 -- INSERT INTO `mob_spawn_points` VALUES (17687545,'Minerva','Minerva',97777,0,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (17687546,'Steller_Elemental','Baelfyr',97778,0,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (17687546,'Stellar_Elemental','Baelfyr',97778,0,0,0,0);
 -- INSERT INTO `mob_spawn_points` VALUES (17687547,'Olympian_Elemental','Ungeweder',97779,0,0,0,0);
 -- INSERT INTO `mob_spawn_points` VALUES (17687548,'Minerva','Minerva',97777,0,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (17687549,'Steller_Elemental','Baelfyr',97778,0,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (17687549,'Stellar_Elemental','Baelfyr',97778,0,0,0,0);
 -- INSERT INTO `mob_spawn_points` VALUES (17687550,'Olympian_Elemental','Ungeweder',97779,0,0,0,0);
--- INSERT INTO `npc_list` VALUES (17687551,'Minerva_Loot_Box','Minerva Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17687551,'Minerva_Loot_Box','Minerva Loot Box',64,-580,-228.5,540,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------

@@ -1,7 +1,6 @@
 -----------------------------------------
 -- Spell: Dia V
--- Lowers an enemy's defense and gradually
--- deals light elemental damage.
+-- Lowers an enemy's defense and gradually deals light elemental damage.
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -33,7 +32,7 @@ function onSpellCast(caster,target,spell)
 	--add on bonuses (staff/day/weather/jas/mab/etc all go in this function)
 	dmg = addBonuses(caster,spell,target,dmg);
 	--add in target adjustment
-	dmg = adjustForTarget(target,dmg);
+	dmg = adjustForTarget(target,dmg,spell:getElement());
 	--add in final adjustments including the actual damage dealt
 	local final = finalMagicAdjustments(caster,target,spell,dmg);
 

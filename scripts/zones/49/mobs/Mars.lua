@@ -15,15 +15,16 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     -- MobMods
+    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
     -- mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); -- Enables Blood Weapon
     -- mob:setMobMod(MOBMOD_SUB_2HOUR, 1); -- Enables Mighty Strikes
 
     -- Mods
+    mob:addMod(MOD_ACC, 25);
     mob:addMod(MOD_DOUBLE_ATTACK, 5);
     mob:addMod(MOD_MATT, 25);
     mob:addMod(MOD_MACC, 80);
     mob:addMod(MOD_INT, 10);
-    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
 
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
@@ -310,37 +311,47 @@ function onSpikesDamage(mob,target,damage)
     local dmg = math.random(6,12);
     -- target:PrintToPlayer( string.format( "Spike Ele: '%u' ", SPIKE_ELEMENT) );
     if (SPIKE_ELEMENT == 6) then -- Water
-        if (math.random(0,99) >= 33) then
+        if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_DROWN, dmg*0.5, 3, 90, FLAG_ERASBLE);
+        end
+        if (math.random(0,99) <= 20) then
+            target:addStatusEffect(EFFECT_ATTACK_DOWN, 10, 0, 60);
         end
         return SUBEFFECT_DELUGE_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 5) then -- Lightning
-        if (math.random(0,99) >= 33) then
+        if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_SHOCK, dmg*0.5, 3, 90, FLAG_ERASBLE);
         end
         return SUBEFFECT_SHOCK_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 4) then -- Earth
-        if (math.random(0,99) >= 33) then
+        if (math.random(0,99) <= 25) then
+            target:addStatusEffect(EFFECT_PETRIFICATION, 1, 0, math.random(15,30))
+        end
+        if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_RASP, dmg*0.5, 3, 90, FLAG_ERASBLE);
         end
         return SUBEFFECT_STONE_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 3) then -- Wind
-        if (math.random(0,99) >= 33) then
+        if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_CHOKE, dmg*0.5, 3, 90, FLAG_ERASBLE);
+        end
+        if (math.random(0,99) <= 20) then
+            target:addStatusEffect(EFFECT_DEFENSE_DOWN, 10, 0, 60);
         end
         return SUBEFFECT_WIND_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 2) then -- Ice
-        if (math.random(0,99) >= 33) then
+        if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_FROST, dmg*0.5, 3, 90, FLAG_ERASBLE);
         end
         return SUBEFFECT_ICE_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 1) then -- Fire
-        if (math.random(0,99) >= 33) then
+        if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_BURN, dmg*0.5, 3, 90, FLAG_ERASBLE);
         end
+        dmg = dmg+5;
         return SUBEFFECT_BLAZE_SPIKES,44,dmg;
     else -- Retaliation. Just straight dmg and extra TP for Mars.
-        if (math.random(0,99) <= getHitRate(mob,target,true)) then
+        if (math.random(0,99) <= getHitRate(mob,target,true)) then -- Evading means no retaliation proc.
             local STRVIT = mob:getStat(MOD_STR) - target:getStat(MOD_VIT);
             if (STRVIT > 20) then
                 STRVIT = 20 + (STRVIT - 20);

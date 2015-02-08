@@ -729,26 +729,22 @@ EFFECT_SKILLCHAIN               = 799
 EFFECT_DYNAMIS                  = 800
 EFFECT_MEDITATE                 = 801 -- Dummy effect for SAM Meditate JA
 -- EFFECT_PLACEHOLDER              = 802 -- Description
--- 802-1022
--- EFFECT_PLACEHOLDER             = 1023 -- The client dat file seems to have only this many "slots", results of exceeding that are untested.
-
+-- 802-1013
 ------------------------------------------------
 -- Start of LegionXI custom section
-EFFECT_WIND_SPIKES                     = 890
-EFFECT_STONE_SPIKES                    = 891
-EFFECT_DARK_SPIKES                     = 892
--- 893/894/895 reserved.
-EFFECT_MINERVA_ENTHUNDER               = 896
-EFFECT_MINERVA_ENLIGHT                 = 897
-EFFECT_MINERVA_SHOCK_SPIKES            = 898
-EFFECT_MINERVA_LIGHT_SPIKES            = 899
-EFFECT_SJCAP_BOOST                     = 900
-EFFECT_RAGE                            = 901 -- NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
--- EFFECT_PLACEHOLDER                     = 902 -- Next custom effect goes right here.
-
-EFFECT_LEGION                          = 999
+-- EFFECT_PLACEHOLDER              = 1014 -- Description
+-- EFFECT_PLACEHOLDER              = 1015 -- Description
+-- EFFECT_PLACEHOLDER              = 1016 -- Description
+EFFECT_WIND_SPIKES              = 1017
+EFFECT_STONE_SPIKES             = 1018
+EFFECT_DARK_SPIKES              = 1019
+EFFECT_SJCAP_BOOST              = 1020
+EFFECT_RAGE                     = 1021 -- NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
+EFFECT_LEGION                   = 1022
 -- End of LegionXI Custom Section
 ------------------------------------------------
+-- EFFECT_PLACEHOLDER             = 1023 -- The client dat file seems to have only this many "slots", results of exceeding that are untested.
+
 
 
 

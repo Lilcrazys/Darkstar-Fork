@@ -20,8 +20,7 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     local erase = mob:eraseStatusEffect();
-    -- why are the light spikes crashing on addMod() ?
-    -- mob:addStatusEffectEx(EFFECT_MINERVA_LIGHT_SPIKES, EFFECT_REPRISAL, 1, 0, 600);
+    mob:addStatusEffect(EFFECT_REPRISAL, 10, 0, 600);
 
     if (mob:eraseStatusEffect() == EFFECT_NONE) then
         skill:setMsg(MSG_SELF_HEAL);

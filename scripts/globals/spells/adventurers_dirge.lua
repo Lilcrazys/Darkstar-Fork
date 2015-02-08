@@ -16,6 +16,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+--[[
 	local duration = 120;
 	local power = 20;
 	if(caster:getObjType() == TYPE_PC) then
@@ -35,4 +36,5 @@ function onSpellCast(caster,target,spell)
     target:addStatusEffect(EFFECT_DIRGE,power,3,duration);
     spell:setMsg(230);
     return EFFECT_DIRGE;
+]]
 end;
