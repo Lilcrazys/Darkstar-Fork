@@ -2196,10 +2196,11 @@ INSERT INTO `mob_skill` VALUES (335,410,335,'Bomb_Toss',2,8,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2158,410,2414,'Saucepan',4,7.0,2000,1500,4,0,0,0);
 
 -- Seed Crystal
--- INSERT INTO `mob_skill` VALUES (2160,411,2416,'Seed of Deception',0,0.0,0000,0000,0,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2161,411,2417,'Seed of Deference',0,0.0,0000,0000,0,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2162,411,2418,'Seed of Nihility',0,0.0,0000,0000,0,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2163,411,2419,'Seed of Judgment',0,0.0,0000,0000,0,0,0,0);
+-- melee move 1494
+-- INSERT INTO `mob_skill` VALUES (2160,411,1495,'Seed of Deception',0,0.0,0000,0000,0,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2161,411,1496,'Seed of Deference',0,0.0,0000,0000,0,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2162,411,1497,'Seed of Nihility',0,0.0,0000,0000,0,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2163,411,1498,'Seed of Judgment',0,0.0,0000,0000,0,0,0,0);
 
 -- Seed Thrall
 -- Family ID: 412
@@ -2230,6 +2231,12 @@ INSERT INTO `mob_skill` VALUES (716,483,670,'Royal_savior-protect',1,15,2000,200
 INSERT INTO `mob_skill` VALUES (712,483,676,'red_lotus_blade',0,7,2500,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (713,483,677,'Flat_blade',0,7,2500,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (714,483,678,'Savage_blade',0,7,2500,1500,4,0,0,0);
+
+-- Ajido Marujido
+INSERT INTO `mob_skill` VALUES (714,484,674,'Warp_in',0,7,900,0,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (715,484,675,'Warp_out',0,7,900,0,1,0,0,0);
+
+
 
 -- Kam'lanaut
 -- TODO: Script these when mob additional effects work.
