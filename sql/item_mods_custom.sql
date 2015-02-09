@@ -838,32 +838,6 @@ INSERT INTO `item_mods` VALUES(27922, 31, 31);
 INSERT INTO `item_mods` VALUES(27922, 27, -5);
 INSERT INTO `item_mods` VALUES(27922, 369, 2);
 
--- Orvail Pants
-INSERT INTO `item_mods` VALUES(28203, 1, 48);
-INSERT INTO `item_mods` VALUES(28203, 5, 20);
-INSERT INTO `item_mods` VALUES(28203, 8, 8);
-INSERT INTO `item_mods` VALUES(28203, 10, 4);
-INSERT INTO `item_mods` VALUES(28203, 11, 5);
-INSERT INTO `item_mods` VALUES(28203, 12, 16);
-INSERT INTO `item_mods` VALUES(28203, 13, 7);
-INSERT INTO `item_mods` VALUES(28203, 14, 6);
-INSERT INTO `item_mods` VALUES(28203, 31, 42);
-INSERT INTO `item_mods` VALUES(28203, 30, 6);
-INSERT INTO `item_mods` VALUES(28203, 170, 5);
-
--- Orvail Souliers
-INSERT INTO `item_mods` VALUES(28342, 1, 29);
-INSERT INTO `item_mods` VALUES(28342, 5, 10);
-INSERT INTO `item_mods` VALUES(28342, 8, 3);
-INSERT INTO `item_mods` VALUES(28342, 9, 3);
-INSERT INTO `item_mods` VALUES(28342, 10, 3);
-INSERT INTO `item_mods` VALUES(28342, 11, 10);
-INSERT INTO `item_mods` VALUES(28342, 12, 5);
-INSERT INTO `item_mods` VALUES(28342, 13, 14);
-INSERT INTO `item_mods` VALUES(28342, 14, 10);
-INSERT INTO `item_mods` VALUES(28342, 30, 8);
-INSERT INTO `item_mods` VALUES(28342, 31, 42);
-INSERT INTO `item_mods` VALUES(28342, 27, -5);
 
 -- Gorney Moufles
 INSERT INTO `item_mods` VALUES(28046, 1, 63); -- def
@@ -1003,6 +977,20 @@ INSERT INTO `item_mods` VALUES(28201, 29, 1);
 INSERT INTO `item_mods` VALUES(28201, 31, 40);
 INSERT INTO `item_mods` VALUES(28201, 384, 70);
 
+-- Orvail Pants
+INSERT INTO `item_mods` VALUES(28203, 1, 48);
+INSERT INTO `item_mods` VALUES(28203, 5, 20);
+INSERT INTO `item_mods` VALUES(28203, 8, 8);
+INSERT INTO `item_mods` VALUES(28203, 10, 4);
+INSERT INTO `item_mods` VALUES(28203, 11, 5);
+INSERT INTO `item_mods` VALUES(28203, 12, 16);
+INSERT INTO `item_mods` VALUES(28203, 13, 7);
+INSERT INTO `item_mods` VALUES(28203, 14, 6);
+INSERT INTO `item_mods` VALUES(28203, 31, 42);
+INSERT INTO `item_mods` VALUES(28203, 30, 6);
+INSERT INTO `item_mods` VALUES(28203, 170, 5);
+
+
 -- Gorney Sollerets
 INSERT INTO `item_mods` VALUES(28327, 1, 52); -- def
 INSERT INTO `item_mods` VALUES(28327, 2, 27); -- hp
@@ -1064,6 +1052,20 @@ INSERT INTO `item_mods` VALUES(28331, 68, 43); -- eva
 INSERT INTO `item_mods` VALUES(28331, 31, 93); -- Meva
 INSERT INTO `item_mods` VALUES(28331, 29, 4); -- MDB
 -- INSERT INTO `item_mods` VALUES(28331, ???, ?); -- enhances enfeebling magic effect
+
+-- Orvail Souliers
+INSERT INTO `item_mods` VALUES(28342, 1, 29);
+INSERT INTO `item_mods` VALUES(28342, 5, 10);
+INSERT INTO `item_mods` VALUES(28342, 8, 3);
+INSERT INTO `item_mods` VALUES(28342, 9, 3);
+INSERT INTO `item_mods` VALUES(28342, 10, 3);
+INSERT INTO `item_mods` VALUES(28342, 11, 10);
+INSERT INTO `item_mods` VALUES(28342, 12, 5);
+INSERT INTO `item_mods` VALUES(28342, 13, 14);
+INSERT INTO `item_mods` VALUES(28342, 14, 10);
+INSERT INTO `item_mods` VALUES(28342, 30, 8);
+INSERT INTO `item_mods` VALUES(28342, 31, 42);
+INSERT INTO `item_mods` VALUES(28342, 27, -5);
 
 
 -- Imbodla Necklace
