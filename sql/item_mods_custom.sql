@@ -739,6 +739,20 @@ INSERT INTO `item_mods` VALUES(27781, 29, 1);
 INSERT INTO `item_mods` VALUES(27781, 31, 43);
 INSERT INTO `item_mods` VALUES(27781, 384, 50);
 
+-- Orvail Corona
+INSERT INTO `item_mods` VALUES(27782, 1, 43);
+INSERT INTO `item_mods` VALUES(27782, 5, 22);
+INSERT INTO `item_mods` VALUES(27782, 8, 12);
+INSERT INTO `item_mods` VALUES(27782, 9, 12);
+INSERT INTO `item_mods` VALUES(27782, 10, 12);
+INSERT INTO `item_mods` VALUES(27782, 11, 12);
+INSERT INTO `item_mods` VALUES(27782, 12, 14);
+INSERT INTO `item_mods` VALUES(27782, 13, 14);
+INSERT INTO `item_mods` VALUES(27782, 14, 14);
+INSERT INTO `item_mods` VALUES(27782, 30, 8);
+INSERT INTO `item_mods` VALUES(27782, 31, 29);
+INSERT INTO `item_mods` VALUES(27782, 71, 4);
+
 -- Gorney Haubert
 INSERT INTO `item_mods` VALUES(27907, 1, 90); -- def
 INSERT INTO `item_mods` VALUES(27907, 2, 20); -- hp
@@ -810,6 +824,47 @@ INSERT INTO `item_mods` VALUES(27921, 78, 4); -- store TP
 INSERT INTO `item_mods` VALUES(27921, 288, 4); -- double atk
 INSERT INTO `item_mods` VALUES(27921, 384, 30); -- gear haste
 
+-- Orvail Robe
+INSERT INTO `item_mods` VALUES(27922, 1, 56);
+INSERT INTO `item_mods` VALUES(27922, 5, 40);
+INSERT INTO `item_mods` VALUES(27922, 8, 9);
+INSERT INTO `item_mods` VALUES(27922, 9, 9);
+INSERT INTO `item_mods` VALUES(27922, 10, 9);
+INSERT INTO `item_mods` VALUES(27922, 11, 9);
+INSERT INTO `item_mods` VALUES(27922, 12, 18);
+INSERT INTO `item_mods` VALUES(27922, 13, 18);
+INSERT INTO `item_mods` VALUES(27922, 14, 18);
+INSERT INTO `item_mods` VALUES(27922, 31, 31);
+INSERT INTO `item_mods` VALUES(27922, 27, -5);
+INSERT INTO `item_mods` VALUES(27922, 369, 2);
+
+-- Orvail Pants
+INSERT INTO `item_mods` VALUES(28203, 1, 48);
+INSERT INTO `item_mods` VALUES(28203, 5, 20);
+INSERT INTO `item_mods` VALUES(28203, 8, 8);
+INSERT INTO `item_mods` VALUES(28203, 10, 4);
+INSERT INTO `item_mods` VALUES(28203, 11, 5);
+INSERT INTO `item_mods` VALUES(28203, 12, 16);
+INSERT INTO `item_mods` VALUES(28203, 13, 7);
+INSERT INTO `item_mods` VALUES(28203, 14, 6);
+INSERT INTO `item_mods` VALUES(28203, 31, 42);
+INSERT INTO `item_mods` VALUES(28203, 30, 6);
+INSERT INTO `item_mods` VALUES(28203, 170, 5);
+
+-- Orvail Souliers
+INSERT INTO `item_mods` VALUES(28342, 1, 29);
+INSERT INTO `item_mods` VALUES(28342, 5, 10);
+INSERT INTO `item_mods` VALUES(28342, 8, 3);
+INSERT INTO `item_mods` VALUES(28342, 9, 3);
+INSERT INTO `item_mods` VALUES(28342, 10, 3);
+INSERT INTO `item_mods` VALUES(28342, 11, 10);
+INSERT INTO `item_mods` VALUES(28342, 12, 5);
+INSERT INTO `item_mods` VALUES(28342, 13, 14);
+INSERT INTO `item_mods` VALUES(28342, 14, 10);
+INSERT INTO `item_mods` VALUES(28342, 30, 8);
+INSERT INTO `item_mods` VALUES(28342, 31, 42);
+INSERT INTO `item_mods` VALUES(28342, 27, -5);
+
 -- Gorney Moufles
 INSERT INTO `item_mods` VALUES(28046, 1, 63); -- def
 INSERT INTO `item_mods` VALUES(28046, 2, 25); -- hp
@@ -872,6 +927,7 @@ INSERT INTO `item_mods` VALUES(28050, 29, 1); -- MDB
 INSERT INTO `item_mods` VALUES(28050, 384, 30); -- haste gear
 INSERT INTO `item_mods` VALUES(28050, 375, 13); -- cure received %
 
+-- Orvail Cuffs
 INSERT INTO `item_mods` VALUES(28061, 1, 53);
 INSERT INTO `item_mods` VALUES(28061, 2, 7); 
 INSERT INTO `item_mods` VALUES(28061, 5, 70); 
