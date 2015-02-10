@@ -9825,11 +9825,13 @@ INSERT INTO `item_armor` VALUES ('21291', 'shadeshot_gun', '99', '66560', '0', '
 INSERT INTO `item_armor` VALUES ('21292', 'bandeiras_gun', '99', '66560', '0', '0', '0', '4', '0');
 INSERT INTO `item_armor` VALUES ('21293', 'bandeiras_gun_+1', '99', '66560', '0', '0', '0', '4', '0');
 INSERT INTO `item_armor` VALUES ('21294', 'hgafircian', '99', '66560', '83', '0', '0', '4', '0');
+INSERT INTO `item_armor` VALUES ('21305', 'tulfaire_arrow', '99', '7665', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21308', 'mantid_arrow', '99', '1024', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21309', 'chapuli_arrow', '99', '7665', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21322', 'damascus_bolt', '99', '1024', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21323', 'oxidant_bolt', '99', '1185', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21324', 'midrium_bolt', '99', '1024', '0', '0', '0', '8', '0');
+INSERT INTO `item_armor` VALUES ('21335', 'titanium_bullet', '99', '66560', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21338', 'damascus_bullet', '99', '1024', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21339', 'midrium_bullet', '99', '1024', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21340', 'halakaala', '99', '4194303', '28', '0', '0', '4', '0');
