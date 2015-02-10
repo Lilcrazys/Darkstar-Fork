@@ -55,6 +55,8 @@ function onTrigger(player,page)
             4151,   800,    -- Echo drops
             4112,   910,    -- Potion
             4128,   4832,   -- Ether
+			21335,   1000,  -- Titanium Bullet
+			21305,   1000,  -- Tulfaire Arrow
         };
         showShop(player, STATIC, stock_3);
 
