@@ -19,7 +19,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dis2 = target:dispelStatusEffect();
 	local typeEffect = EFFECT_WEAKNESS;
 	
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 90);
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 30);
 	
     if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
         skill:setMsg(MSG_DISAPPEAR_NUM);
