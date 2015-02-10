@@ -25368,6 +25368,9 @@ INSERT INTO `item_mods` VALUES(27840, 29, 4); -- MDB
 INSERT INTO `item_mods` VALUES(27840, 289, 7); -- SB
 INSERT INTO `item_mods` VALUES(27840, 167, 4); -- HASTE
 INSERT INTO `item_mods` VALUES(27840, 259, 8); -- DW
+INSERT INTO `item_mods` VALUES(27840, 499, 5); -- ShockSpikes
+INSERT INTO `item_mods` VALUES(27840, 500, 20); -- spike dmg
+INSERT INTO `item_mods` VALUES(27840, 501, 35); -- spike duration
 
 -- hachiya_hakama_+1
 INSERT INTO `item_mods` VALUES(28123, 1, 114); -- DEF
