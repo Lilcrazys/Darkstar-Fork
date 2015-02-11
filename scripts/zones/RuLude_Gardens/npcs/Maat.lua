@@ -323,7 +323,7 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 5) then -- RDM
 				aug_1 = 554; val_1 = 1; aug_2 = 59; val_2 = 0; -- INT+2 MND+2, Latent effect: Regain+1
 			elseif (Job == 6) then -- THF
-				aug_1 = 553; val_1 = 1; aug_2 = 328; val_2 = 0; -- DEX+2 AGI+2, Triple Atk.+1
+				aug_1 = 553; val_1 = 1; aug_2 = 144; val_2 = 0; -- DEX+2 AGI+2, Triple Atk.+1
 			elseif (Job == 7) then -- PLD
 				aug_1 = 551; val_1 = 1; aug_2 = 286; val_2 = 3; -- STR+2 VIT+2, Shield skill+4
 			elseif (Job == 8) then -- DRK
