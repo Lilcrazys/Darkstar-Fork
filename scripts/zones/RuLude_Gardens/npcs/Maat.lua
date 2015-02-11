@@ -40,11 +40,11 @@ function onTrade(player,npc,trade)
 	if (trade:hasItemQty(28390,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,IN_DEFIANT_CHALLENGE) == QUEST_COMPLETED) then
 		doLimitBreakReward(player, 28390, 1);
 	end
-	if (trade:hasItemQty(14656,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,ATOP_THE_HIGHEST_MOUNTAINS) == QUEST_COMPLETED) then
-		doLimitBreakReward(player, 14656, 1);
-	end
-	if (trade:hasItemQty(15931,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,WHENCE_BLOWS_THE_WIND) == QUEST_COMPLETED) then
+	if (trade:hasItemQty(15931,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,ATOP_THE_HIGHEST_MOUNTAINS) == QUEST_COMPLETED) then
 		doLimitBreakReward(player, 15931, 1);
+	end
+	if (trade:hasItemQty(15849,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,WHENCE_BLOWS_THE_WIND) == QUEST_COMPLETED) then
+		doLimitBreakReward(player, 15849, 1);
 	end
 	if (trade:hasItemQty(19219,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,RIDING_ON_THE_CLOUDS) == QUEST_COMPLETED) then
 		doLimitBreakReward(player, 19219, 1);
@@ -69,11 +69,11 @@ function onTrigger(player,npc)
 	if (inDefiantChallenge == QUEST_COMPLETED and player:hasItem(28390) == false) then
 		doLimitBreakReward(player, 28390, 0);
 	end
-	if (atopTheHighestMountains == QUEST_COMPLETED and player:hasItem(14656) == false) then
-		doLimitBreakReward(player, 14656, 0);
-	end
-	if (whenceBlowsTheWind == QUEST_COMPLETED and player:hasItem(15931) == false) then
+	if (atopTheHighestMountains == QUEST_COMPLETED and player:hasItem(15931) == false) then
 		doLimitBreakReward(player, 15931, 0);
+	end
+	if (whenceBlowsTheWind == QUEST_COMPLETED and player:hasItem(15849) == false) then
+		doLimitBreakReward(player, 15849, 0);
 	end
 	if (ridingOnTheClouds == QUEST_COMPLETED and player:hasItem(19219) == false) then
 		doLimitBreakReward(player, 19219, 0);
@@ -357,7 +357,7 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 22) then -- RUN
 				aug_1 = 551; val_1 = 1; aug_2 = 55; val_2 = 3; -- STR+2 VIT+2, Magic dmg. taken -4%
 			end
-		elseif (itemID == 14656) then -- Augmented Poseidon's Ring for clearing G3
+		elseif (itemID == 15849) then -- Augmented Krousis Ring for clearing G3
 			if (job == 1) then -- WAR
 				aug_1 = 25; val_1 = 3; aug_2 = 327; val_2 = 3; -- Attack+4, Weapon skill damage+4%
 			elseif (Job == 2) then -- MNK
