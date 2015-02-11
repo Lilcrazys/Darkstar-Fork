@@ -375,7 +375,7 @@ INSERT INTO `item_mods` VALUES(19751, 507, 200); -- Occ. 2x dmg
 -- -------------------------------------------------------
 -- Gungnir (99-1)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES(18752, 25, 40);
+REPLACE INTO `item_mods` VALUES(18752, 25, 40);
 INSERT INTO `item_mods` VALUES(18752, 355, 121);
 INSERT INTO `item_mods` VALUES(18752, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES(18752, 507, 250); -- Occ. 2.5x dmg
