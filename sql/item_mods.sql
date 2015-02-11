@@ -19257,7 +19257,7 @@ INSERT INTO `item_mods` VALUES(18264, 23, 20);
 INSERT INTO `item_mods` VALUES(18264, 291, 5);
 INSERT INTO `item_mods` VALUES(18264, 355, 10);
 INSERT INTO `item_mods` VALUES(18264, 506, 160); -- 16% chance of extra dmg.
-INSERT INTO `item_mods` VALUES(18264, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES(18264, 507, 300); -- Occ. 3x dmg / was 2.5 wiki says 3x
 
 INSERT INTO `item_mods` VALUES(18269, 356, 26);
 
