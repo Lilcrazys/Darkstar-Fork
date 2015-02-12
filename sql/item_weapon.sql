@@ -2775,7 +2775,7 @@ INSERT INTO `item_weapon` VALUES (19184,'dark_adaman_bullet',26,1,0,1,240,105,0)
 INSERT INTO `item_weapon` VALUES (19185,'can_of_automaton_oil_+3',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (19186,'tiny_tathlum',0,0,0,1,999,0,0);
 INSERT INTO `item_weapon` VALUES (19187,'murti_bow',19,0,1,1,524,91,0);
-INSERT INTO `item_weapon` VALUES (19188,'killer_shortbow',19,0,1,1,296,39,0);
+INSERT INTO `item_weapon` VALUES (19188,'killer_shortbow',25,0,1,1,296,39,0);
 INSERT INTO `item_weapon` VALUES (19189,'virtus_crossbow',26,0,1,1,436,60,0);
 INSERT INTO `item_weapon` VALUES (19190,'fluid_crossbow',26,0,1,1,188,20,0);
 INSERT INTO `item_weapon` VALUES (19191,'exequy_gun',26,1,1,1,582,52,0);

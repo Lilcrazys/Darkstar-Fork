@@ -18,9 +18,9 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    mob:addStatusEffectEx(EFFECT_MINERVA_SHOCK_SPIKES, 0, 1, 0, 600);
+    mob:addStatusEffect(EFFECT_SHOCK_SPIKES, 10, 0, 600);
     target:addStatusEffect(EFFECT_SILENCE, 1, 0, 90);
-    mob:addStatusEffectEx(EFFECT_MINERVA_ENTHUNDER, EFFECT_ENTHUNDER, 1, 0, 600);
+    mob:addStatusEffect(EFFECT_ENTHUNDER, 1, 0, 600);
 
     local dmgmod = 1;
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 2.5,ELE_LIGHTNING,dmgmod,TP_MAB_BONUS,1);

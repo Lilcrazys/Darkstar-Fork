@@ -640,18 +640,18 @@ enum EFFECT
     EFFECT_HASTE_II                 = 580,
     EFFECT_FLURRY_II                = 581,
 
+    // Effect icons in packet can go from 0-767, so no custom effects should go in that range.
 
-    // EFFECT_PLACEHOLDER              = 640, // Polutils list ends at 639 so 640+ shouldn't collide with anything
-
-    EFFECT_ABYSSEA_STR              = 768, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_DEX              = 769, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_VIT              = 770, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_AGI              = 771, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_INT              = 772, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_MND              = 773, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_CHR              = 774, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_HP               = 775, // Purchased from Cruor Prospector
-    EFFECT_ABYSSEA_MP               = 776, // Purchased from Cruor Prospector
+    // Purchased from Cruor Prospector
+    EFFECT_ABYSSEA_STR              = 768,
+    EFFECT_ABYSSEA_DEX              = 769,
+    EFFECT_ABYSSEA_VIT              = 770,
+    EFFECT_ABYSSEA_AGI              = 771,
+    EFFECT_ABYSSEA_INT              = 772,
+    EFFECT_ABYSSEA_MND              = 773,
+    EFFECT_ABYSSEA_CHR              = 774,
+    EFFECT_ABYSSEA_HP               = 775,
+    EFFECT_ABYSSEA_MP               = 776,
 
     // *Prowess increases not currently retail accurate.
     // GoV Prowess bonus effects, real effect at ID 474
@@ -680,29 +680,23 @@ enum EFFECT
     EFFECT_CHAINBOUND               = 798,
     EFFECT_SKILLCHAIN               = 799,
 	EFFECT_DYNAMIS					= 800,
-	EFFECT_ATMA_DUMMY_1             = 801,
-	EFFECT_ATMA_DUMMY_2             = 802,
-	EFFECT_ATMA_DUMMY_3             = 803,
-	EFFECT_ATMACITE_DUMMY_1         = 804,
-	EFFECT_ATMACITE_DUMMY_2         = 805,
-
+    EFFECT_MEDITATE                 = 801, // Dummy effect for SAM Meditate JA
+    // EFFECT_PLACEHOLDER              = 802, // Description
+    // 802-1013
 //==========================================================//
-	// Start of LegionXI custom section
-	EFFECT_WIND_SPIKES                     = 890,
-	EFFECT_STONE_SPIKES                    = 891,
-	EFFECT_DARK_SPIKES                     = 892,
-	// 893/894/895 reserved.
-	EFFECT_MINERVA_ENTHUNDER               = 896,
-	EFFECT_MINERVA_ENLIGHT                 = 897,
-	EFFECT_MINERVA_SHOCK_SPIKES            = 898,
-	EFFECT_MINERVA_LIGHT_SPIKES            = 899,
-	EFFECT_SJCAP_BOOST                     = 900,
-	EFFECT_RAGE                            = 901, // NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
-	// EFFECT_PLACEHOLDER                     = 902, // Next custom effect goes right here.
-
-	EFFECT_LEGION                          = 999,
-	// End of LegionXI Custom Section
+    // Start of LegionXI custom section
+    // EFFECT_PLACEHOLDER              = 1014, // Description
+    // EFFECT_PLACEHOLDER              = 1015, // Description
+    // EFFECT_PLACEHOLDER              = 1016, // Description
+    EFFECT_WIND_SPIKES              = 1017,
+    EFFECT_STONE_SPIKES             = 1018,
+    EFFECT_DARK_SPIKES              = 1019,
+    EFFECT_SJCAP_BOOST              = 1020,
+    EFFECT_RAGE                     = 1021, // NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
+    EFFECT_LEGION                   = 1022,
+    // End of LegionXI Custom Section
 //==========================================================//
+    // EFFECT_PLACEHOLDER             = 1023 // The client dat file seems to have only this many "slots", results of exceeding that are untested.
 
 };
 

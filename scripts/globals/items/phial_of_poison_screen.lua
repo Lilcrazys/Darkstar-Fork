@@ -1,8 +1,7 @@
 -----------------------------------------
 -- ID: 5880
--- Item: Phial of Poison Screen
--- Item Effect: Temporarily provides immunity to Poison
--- Duration: 2 Mins
+-- Item: Poison Screen
+-- Effect: 2 Mins of immunity to "Poison" effects.
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -12,11 +11,10 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
-	if (target:hasStatusEffect(EFFECT_MEDICINE)) then
-		result = 111;
-	end
-return result;
+    if (target:hasStatusEffect(EFFECT_NEGATE_POISON)) then
+        return 56;
+    end
+    return 0;
 end;
 
 -----------------------------------------
@@ -24,24 +22,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_MEDICINE,0,0,120);
-	if(target:addStatusEffect(EFFECT_NEGATE_POISON,0,0,120)) then
-		target:messageBasic(205);
-	else
-        	target:messageBasic(423); -- no effect
-        end
-end;
-
------------------------------------------
--- onEffectGain Action
------------------------------------------
-
-function onEffectGain(target,effect)
-end;
-
------------------------------------------
--- onEffectLose Action
------------------------------------------
-
-function onEffectLose(target,effect)
+    target:addStatusEffect(EFFECT_NEGATE_POISON,1,0,120);
 end;

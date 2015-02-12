@@ -10,7 +10,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_WEAKNESS;
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60);
+    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
 	local numhits = 2;
 	local accmod = 1;
 	local dmgmod = 1;

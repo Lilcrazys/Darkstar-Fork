@@ -839,12 +839,12 @@ function onTrade(player,npc,trade)
 		player:messageSpecial(ITEM_OBTAINED,11095);
 		player:tradeComplete();
 	end
-	if (trade:hasItemQty(3161,6) and trade:hasItemQty(11215,1) and trade:getItemCount() == 7) then				--hands
+	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11215,1) and trade:getItemCount() == 7) then				--hands
 		player:addItem(11115);
 		player:messageSpecial(ITEM_OBTAINED,11115);
 		player:tradeComplete();
 	end
-	if (trade:hasItemQty(3220,6) and trade:hasItemQty(11235,1) and trade:getItemCount() == 7) then				--legs
+	if (trade:hasItemQty(3224,6) and trade:hasItemQty(11235,1) and trade:getItemCount() == 7) then				--legs
 		player:addItem(11135);
 		player:messageSpecial(ITEM_OBTAINED,11135);
 		player:tradeComplete();

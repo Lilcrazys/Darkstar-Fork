@@ -27,10 +27,13 @@ function onMobSpawn(mob)
     -- Mods
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REFRESH, 20);
-    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 25);	
     mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MDEF,25);
+    mob:addMod(MOD_DEF,125);	
+    mob:addMod(MOD_MATT,25);	
 end;
 
 -----------------------------------
@@ -78,7 +81,7 @@ end;
 -----------------------------------
 
 function onMagicHit(caster, target, spell)
-
+    return 0
 end
 
 -----------------------------------
@@ -95,5 +98,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 25);
-    mob:spawnMob(mob:getID()+1) -- Spawns Soaring_Naraka
+    SpawnMob(mob:getID()+1) -- Spawns Soaring_Naraka
 end;
