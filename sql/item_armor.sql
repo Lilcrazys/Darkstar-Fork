@@ -8204,7 +8204,7 @@ INSERT INTO `item_armor` VALUES ('18520', 'laceratrice', '95', '1', '96', '0', '
 INSERT INTO `item_armor` VALUES ('18521', 'dies_irae', '99', '1', '348', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18522', 'firnaxe', '97', '2097281', '93', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18523', 'firnaxe_+1', '97', '2097281', '93', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('18524', 'huskarl_axe', '99', '1', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('18524', 'huskarl_axe', '99', '1', '603', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18525', 'himthige', '99', '1', '603', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18531', 'veldt_axe_+1', '42', '2098561', '77', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18532', 'cleofun_axe', '85', '256', '91', '0', '0', '3', '0');
