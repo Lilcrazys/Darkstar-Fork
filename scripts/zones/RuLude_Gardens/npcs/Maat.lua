@@ -432,6 +432,7 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 9) then -- BST
 				aug_1 = 324; val_1 = 0; aug_2 = 1288; val_2 = 9; -- Call Beast ability delay -10, Enhances Familiar effect (duration +10 min, pet haste +10)
 			elseif (Job == 10) then -- BRD
+				itemID = 16246;
 				aug_1 = 67; val_1 = 0; aug_2 = 1289; val_2 = 29; -- All Songs+1, Enhances Soul Voice effect (duration +30 sec)
 			elseif (Job == 11) then -- RNG
 				itemID = 16246;
@@ -489,7 +490,6 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 				itemID = 19219;
 				aug_1 = 324; val_1 = 0; aug_2 = 1288; val_2 = 9; -- Call Beast ability delay -10, Enhances Familiar effect (duration +10 min, pet haste +10)
 			elseif (Job == 10) then -- BRD
-				itemID = 19219;
 				aug_1 = 67; val_1 = 0; aug_2 = 1289; val_2 = 29; -- All Songs+1, Enhances Soul Voice effect (duration +30 sec)
 			elseif (Job == 11) then -- RNG
 				aug_1 = 338; val_1 = 1; aug_2 = 1290; val_2 = 19; -- Barrage+1, Enhances Eagle Eye Shot effect (damage +20%)
