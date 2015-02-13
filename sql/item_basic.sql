@@ -15650,10 +15650,15 @@ INSERT INTO `item_basic` VALUES (21455,0,'alternator','alternator',1,63568,0,1,0
 INSERT INTO `item_basic` VALUES (21460,0,'matre_bell','matre_bell',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21461,0,'filiae_bell','filiae_bell',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (26631,0,'archmages_petasos_+1','archmages_petasos_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26655,0,'luhlaza_keffiyeh_+1','mirage_keffiyeh_+2',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26807,0,'archmages_coat_+1','archmages_coat_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26831,0,'luhlaza_jubbah_+1','mirage_jubbah_+2',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26983,0,'archmages_gloves_+1','archmages_gloves_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27007,0,'luhlaza_bazubands_+1','mrg_bazubands_+2',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (27159,0,'archmages_tonban_+1','archmages_tonban_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27183,0,'luhlaza_shalwar_+1','mirage_shalwar_+2',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (27335,0,'archmages_sabots_+1','archmages_sabots_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27359,0,'luhlaza_charuqs_+1','mirage_charuqs_+2',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (27565,0,'ifrit_ring_+1','ifrit_ring_+1',1,2144,25,0,1);
 INSERT INTO `item_basic` VALUES (27575,0,'shiva_ring_+1','shiva_ring_+1',1,2144,25,0,1);
 INSERT INTO `item_basic` VALUES (27648,0,'ares_mask_+1','ares_mask_+1',1,63568,0,1,0);

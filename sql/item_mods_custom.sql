@@ -1243,3 +1243,95 @@ INSERT INTO `item_mods` VALUES(28256, 68, 69); -- EVA
 INSERT INTO `item_mods` VALUES(28256, 31, 64); -- MEVA
 INSERT INTO `item_mods` VALUES(28256, 29, 3); -- MDB
 INSERT INTO `item_mods` VALUES(28256, 167, 4); -- HASTE
+
+-- luhlaza_keffiyeh_+1
+INSERT INTO `item_mods` VALUES(26655, 1, 101); -- DEF
+INSERT INTO `item_mods` VALUES(26655, 2, 71); -- HP
+INSERT INTO `item_mods` VALUES(26655, 5, 58); -- MP
+INSERT INTO `item_mods` VALUES(26655, 8, 20); -- STR
+INSERT INTO `item_mods` VALUES(26655, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES(26655, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES(26655, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES(26655, 12, 20); -- INT
+INSERT INTO `item_mods` VALUES(26655, 13, 20); -- MND
+INSERT INTO `item_mods` VALUES(26655, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES(26655, 68, 44); -- EVA
+INSERT INTO `item_mods` VALUES(26655, 31, 53); -- MEVA
+INSERT INTO `item_mods` VALUES(26655, 29, 2); -- MDB
+INSERT INTO `item_mods` VALUES(26655, 122, 13); -- BLU
+INSERT INTO `item_mods` VALUES(26655, 167, 80); -- HASTE
+INSERT INTO `item_mods` VALUES(26655, 162, 20); -- BREATH
+
+-- luhlaza_jubbah_+1
+INSERT INTO `item_mods` VALUES(26831, 1, 135); -- DEF
+INSERT INTO `item_mods` VALUES(26831, 2, 59); -- HP
+INSERT INTO `item_mods` VALUES(26831, 5, 44); -- MP
+INSERT INTO `item_mods` VALUES(26831, 8, 27); -- STR
+INSERT INTO `item_mods` VALUES(26831, 9, 32); -- DEX
+INSERT INTO `item_mods` VALUES(26831, 10, 24); -- VIT
+INSERT INTO `item_mods` VALUES(26831, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES(26831, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES(26831, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES(26831, 14, 23); -- CHR
+INSERT INTO `item_mods` VALUES(26831, 25, 21); -- ACC
+INSERT INTO `item_mods` VALUES(26831, 23, 21); -- ATT
+INSERT INTO `item_mods` VALUES(26831, 68, 49); -- EVA
+INSERT INTO `item_mods` VALUES(26831, 31, 64); -- MEVA
+INSERT INTO `item_mods` VALUES(26831, 29, 6); -- MDB
+INSERT INTO `item_mods` VALUES(26831, 167, 40); -- HASTE
+INSERT INTO `item_mods` VALUES(26831, 170, 70); -- FASTCAST
+INSERT INTO `item_mods` VALUES(26831, 369, 20); -- REFRESH
+
+-- luhlaza_bazubands_+1
+INSERT INTO `item_mods` VALUES(27007, 1, 89); -- DEF
+INSERT INTO `item_mods` VALUES(27007, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES(27007, 5, 25); -- MP
+INSERT INTO `item_mods` VALUES(27007, 8, 11); -- STR
+INSERT INTO `item_mods` VALUES(27007, 9, 39); -- DEX
+INSERT INTO `item_mods` VALUES(27007, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES(27007, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES(27007, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES(27007, 13, 34); -- MND
+INSERT INTO `item_mods` VALUES(27007, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES(27007, 15, 13); -- ACC
+INSERT INTO `item_mods` VALUES(27007, 68, 37); -- EVA
+INSERT INTO `item_mods` VALUES(27007, 31, 37); -- MEVA
+INSERT INTO `item_mods` VALUES(27007, 29, 2); -- MDB
+INSERT INTO `item_mods` VALUES(27007, 167, 50); -- HASTE
+INSERT INTO `item_mods` VALUES(27007, 289, 9); -- SB
+
+-- luhlaza_shalwar_+1
+INSERT INTO `item_mods` VALUES(27183, 1, 113); -- DEF
+INSERT INTO `item_mods` VALUES(27183, 2, 67); -- HP
+INSERT INTO `item_mods` VALUES(27183, 5, 20); -- MP
+INSERT INTO `item_mods` VALUES(27183, 8, 31); -- STR
+INSERT INTO `item_mods` VALUES(27183, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES(27183, 11, 22); -- AGI
+INSERT INTO `item_mods` VALUES(27183, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES(27183, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES(27183, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES(27183, 15, 13); -- ACC
+INSERT INTO `item_mods` VALUES(27183, 30, 13); -- MACC
+INSERT INTO `item_mods` VALUES(27183, 28, 13); -- MATT
+INSERT INTO `item_mods` VALUES(27183, 68, 38); -- EVA
+INSERT INTO `item_mods` VALUES(27183, 31, 69); -- MEVA
+INSERT INTO `item_mods` VALUES(27183, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES(27183, 167, 60); -- HASTE
+
+-- luhlaza_charuqs_+1
+INSERT INTO `item_mods` VALUES(27359, 1, 73); -- DEF
+INSERT INTO `item_mods` VALUES(27359, 1, 13); -- HP
+INSERT INTO `item_mods` VALUES(27359, 1, 36); -- MP
+INSERT INTO `item_mods` VALUES(27359, 1, 12); -- STR
+INSERT INTO `item_mods` VALUES(27359, 1, 24); -- DEX
+INSERT INTO `item_mods` VALUES(27359, 1, 12); -- VIT
+INSERT INTO `item_mods` VALUES(27359, 1, 37); -- AGI
+INSERT INTO `item_mods` VALUES(27359, 1, 12); -- INT
+INSERT INTO `item_mods` VALUES(27359, 1, 12); -- MND
+INSERT INTO `item_mods` VALUES(27359, 1, 30); -- CHR
+INSERT INTO `item_mods` VALUES(27359, 1, 25); -- ATT
+INSERT INTO `item_mods` VALUES(27359, 1, 72); -- EVA
+INSERT INTO `item_mods` VALUES(27359, 1, 69); -- MEVA
+INSERT INTO `item_mods` VALUES(27359, 1, 5); -- MDB
+INSERT INTO `item_mods` VALUES(27359, 1, 8); -- BLU
+INSERT INTO `item_mods` VALUES(27359, 1, 40); -- HASTE
