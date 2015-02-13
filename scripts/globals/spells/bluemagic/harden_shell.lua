@@ -9,7 +9,11 @@ require("scripts/globals/bluemagic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-      return 0;
+    if caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) then
+       return 0;
+    else
+      return MSGBASIC_STATUS_PREVENTS;
+    end
 end;
 
 function onSpellCast(caster, target, spell)
