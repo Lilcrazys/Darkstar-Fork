@@ -268,6 +268,8 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 	local val_1 = 0;
 	local aug_2 = 0;
 	local val_2 = 0;
+	local aug_3 = 0;
+	local val_3 = 0;
 	-- These augments are job specific per item, not random.
 	-- Values are +1 more than stated here because zero = +1 of an aug stat, max 31 (32 of a stat).
 	if (player:getFreeSlotsCount() >= 1) then
@@ -319,55 +321,55 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			end
 		elseif (itemID == 15931) then -- Augmented Goblin Cest (belt slot) for clearing G2
 			if (Job == 1) then -- WAR
-				aug_1 = 551; val_1 = 1; aug_2 = 143; val_2 = 1; -- STR+2 VIT+2, Dbl.Atk.+2
+				aug_1 = 551; val_1 = 1; aug_2 = 513; val_2 = 0; aug_3 = 143; val_3 = 1; -- STR+2 VIT+2, DEX+1, Dbl.Atk.+2
 			elseif (Job == 2) then -- MNK
-				aug_1 = 550; val_1 = 1; aug_2 = 327; val_2 = 4; -- STR+2 DEX+2, Weapon skill damage+5%
+				aug_1 = 550; val_1 = 1; aug_2 = 514; val_2 = 0; aug_3 = 327; val_3 = 4; -- STR+2 DEX+2, VIT +1, Weapon skill damage+5%
 			elseif (Job == 3) then -- WHM
-				aug_1 = 555; val_1 = 1; aug_2 = 138; val_2 = 0; -- INT+2 MND+2, Refresh+1
+				aug_1 = 555; val_1 = 1; aug_2 = 517; val_2 = 0; aug_3 = 138; val_3 = 0; -- INT+2 MND+3, Refresh+1
 			elseif (Job == 4) then -- BLM
-				aug_1 = 554; val_1 = 1; aug_2 = 351; val_2 = 2; -- INT+2 MND+2, Occ. quickens spellcasting+2%
+				aug_1 = 554; val_1 = 1; aug_2 = 516; val_2 = 0; aug_3 = 351; val_3 = 2; -- INT+3 MND+2, Occ. quickens spellcasting+2%
 			elseif (Job == 5) then -- RDM
-				aug_1 = 554; val_1 = 1; aug_2 = 59; val_2 = 0; -- INT+2 MND+2, Latent effect: Regain+1
+				aug_1 = 554; val_1 = 1; aug_2 = 512; val_2 = 0; aug_3 = 59; val_3 = 0; -- INT+2 MND+2, STR+1 Latent effect: Regain+1
 			elseif (Job == 6) then -- THF
-				aug_1 = 553; val_1 = 1; aug_2 = 144; val_2 = 0; -- DEX+2 AGI+2, Triple Atk.+1
+				aug_1 = 553; val_1 = 1; aug_2 = 518; val_2 = 0; aug_3 = 144; val_3 = 0; -- DEX+2 AGI+2, CHR+1, Triple Atk.+1
 			elseif (Job == 7) then -- PLD
-				aug_1 = 551; val_1 = 1; aug_2 = 286; val_2 = 3; -- STR+2 VIT+2, Shield skill+4
+				aug_1 = 551; val_1 = 1; aug_2 = 517; val_2 = 0; aug_3 = 286; val_3 = 3; -- STR+2 VIT+2, MND+1, Shield skill+4
 			elseif (Job == 8) then -- DRK
-				aug_1 = 554; val_1 = 1; aug_2 = 137; val_2 = 1; -- INT+2 MND+2, Regen+2
+				aug_1 = 551; val_1 = 1; aug_2 = 554; val_2 = 0; aug_3 = 137; val_3 = 1; -- STR+2, INT+1 MND+1, Regen+2
 			elseif (Job == 9) then -- BST
-				aug_1 = 551; val_1 = 1; aug_2 = 336; val_2 = 4; -- STR+2 VIT+2, Sic and Ready ability delay -5
+				aug_1 = 551; val_1 = 1; aug_2 = 518; val_2 = 0; aug_3 = 336; val_3 = 4; -- STR+2 VIT+2, CHR+1, Sic and Ready ability delay -5
 			elseif (Job == 10) then -- BRD
-				aug_1 = 555; val_1 = 1; aug_2 = 37; val_2 = 3; -- MND+2 CHR+2, Mag.Evasion+4
+				aug_1 = 555; val_1 = 1; aug_2 = 518; val_2 = 0; aug_3 = 37; val_3 = 3; -- MND+2 CHR+3, Mag.Evasion+4
 			elseif (Job == 11) then -- RNG
-				aug_1 = 552; val_1 = 1; aug_2 = 29; val_2 = 7; -- STR+2 AGI+2, Rng.Atk.+8
+				aug_1 = 552; val_1 = 1; aug_2 = 515; val_2 = 0; aug_3 = 29; val_3 = 7; -- STR+2 AGI+3, Rng.Atk.+8
 			elseif (Job == 12) then -- SAM
-				aug_1 = 551; val_1 = 1; aug_2 = 332; val_2 = 4; -- STR+2 VIT+2, Sklchn.dmg.+5%
+				aug_1 = 551; val_1 = 1; aug_2 = 513; val_2 = 0; aug_3 = 332; val_3 = 4; -- STR+2 VIT+2, DEX+1, Sklchn.dmg.+5%
 			elseif (Job == 13) then -- NIN
-				aug_1 = 552; val_1 = 1; aug_2 = 42; val_2 = 2; -- STR+2 AGI+2, Ninja tool Expertise +3
+				aug_1 = 552; val_1 = 1; aug_2 = 513; val_2 = 0; aug_3 = 42; val_3 = 2; -- STR+2 AGI+2, DEX+1, Ninja tool Expertise +3
 			elseif (Job == 14) then -- DRG
-				aug_1 = 551; val_1 = 1; aug_2 = 105; val_2 = 2; -- STR+2 VIT+2, Pet: Enmity-3
+				aug_1 = 551; val_1 = 1; aug_2 = 513; val_2 = 0; aug_3 = 105; val_3 = 2; -- STR+2 VIT+2, DEX+1, Pet: Enmity-3
 			elseif (Job == 15) then -- SMN
-				aug_1 = 555; val_1 = 1; aug_2 = 321; val_2 = 0; -- MND+2 CHR+2, Avatar perpetuation cost -1
+				aug_1 = 555; val_1 = 1; aug_2 = 37; val_2 = 1; aug_3 = 321; val_3 = 0; -- MND+2 CHR+2, Mag.Evasion+2, Avatar perpetuation cost -1
 			elseif (Job == 16) then -- BLU
-				aug_1 = 552; val_1 = 1; aug_2 = 140; val_2 = 1; -- STR+2 AGI+2, Fast Cast+2
+				aug_1 = 552; val_1 = 1; aug_2 = 513; val_2 = 0; aug_3 = 140; val_3 = 1; -- STR+2 AGI+2, DEX+1, Fast Cast+2
 			elseif (Job == 17) then -- COR
-				aug_1 = 553; val_1 = 1; aug_2 = 27; val_2 = 4; -- DEX+2 AGI+2, Rng.Acc.+5
+				aug_1 = 553; val_1 = 1; aug_2 = 512; val_2 = 0; aug_3 = 27; val_3 = 4; -- DEX+2 AGI+2, STR+1, Rng.Acc.+5
 			elseif (Job == 18) then -- PUP
-				aug_1 = 553; val_1 = 1; aug_2 = 341; val_2 = 4; -- DEX+2 AGI+2, Repair potency+5%
+				aug_1 = 553; val_1 = 1; aug_2 = 512; val_2 = 0; aug_3 = 341; val_3 = 4; -- DEX+2 AGI+2, STR+1, Repair potency+5%
 			elseif (Job == 19) then -- DNC
-				aug_1 = 555; val_1 = 1; aug_2 = 331; val_2 = 4; -- MND+2 CHR+2, Waltz ability delay -5
+				aug_1 = 555; val_1 = 1; aug_2 = 515; val_2 = 0; aug_3 = 331; val_3 = 4; -- MND+2 CHR+2, AGI+1, Waltz ability delay -5
 			elseif (Job == 20) then -- SCH
-				aug_1 = 554; val_1 = 1; aug_2 = 134; val_2 = 1; -- INT+2 MND+2, Mag.Def.Bns.+2
+				aug_1 = 554; val_1 = 2; aug_2 = 0; val_2 = 0; aug_3 = 134; val_3 = 1; -- INT+3 MND+3, Mag.Def.Bns.+2
 			elseif (Job == 21) then -- GEO
-				aug_1 = 554; val_1 = 2; aug_2 = 133; val_2 = 0; -- INT+3 MND+3, Mag.Atk.Bns.+1
+				aug_1 = 554; val_1 = 2; aug_2 = 0; val_2 = 0; aug_3 = 133; val_3 = 0; -- INT+3 MND+3, Mag.Atk.Bns.+1
 			elseif (Job == 22) then -- RUN
-				aug_1 = 551; val_1 = 1; aug_2 = 55; val_2 = 3; -- STR+2 VIT+2, Magic dmg. taken -4%
+				aug_1 = 551; val_1 = 1; aug_2 = 33; val_2 = 10; aug_3 = 55; val_3 = 3; -- STR+2 VIT+2, DEF+10, Magic dmg. taken -4%
 			end
 		elseif (itemID == 15849) then -- Augmented Krousis Ring for clearing G3
 			if (Job == 1) then -- WAR
 				aug_1 = 25; val_1 = 3; aug_2 = 327; val_2 = 3; -- Attack+4, Weapon skill damage+4%
 			elseif (Job == 2) then -- MNK
-				aug_1 = 31; val_1 = 3; aug_2 = 49; val_2 = 1; -- Evasion+4, Haste+2% 
+				aug_1 = 31; val_1 = 3; aug_2 = 49; val_2 = 1; -- Evasion+4, Haste+2%
 			elseif (Job == 3) then -- WHM
 				aug_1 = 286; val_1 = 3; aug_2 = 289; val_2 = 3; -- Shield skill+4, Healing magic skill+4
 			elseif (Job == 4) then -- BLM
@@ -401,7 +403,7 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 18) then -- PUP
 				aug_1 = 145; val_1 = 3; aug_2 = 112; val_2 = 3; -- Counter+4, Pet: Damage taken -4%
 			elseif (Job == 19) then -- DNC
-				aug_1 = 342; val_1 = 3; aug_2 = 49; val_2 = 1; -- Waltz TP cost -4, Haste+1% 
+				aug_1 = 342; val_1 = 3; aug_2 = 49; val_2 = 1; -- Waltz TP cost -4, Haste+1%
 			elseif (Job == 20) then -- SCH
 				aug_1 = 335; val_1 = 3; aug_2 = 350; val_2 = 3; -- Mag. crit. hit dmg.+4, Occ. maximizes magic accuracy+4%
 			elseif (Job == 21) then -- GEO
@@ -526,7 +528,7 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 		if (tradeFlag == 1) then
 			player:tradeComplete();
 		end
-		player:addItem(itemID, 1, aug_1, val_1, aug_2, val_2);
+		player:addItem(itemID, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
 		player:messageSpecial(ITEM_OBTAINED, itemID);
 	else
 		player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, itemID);
