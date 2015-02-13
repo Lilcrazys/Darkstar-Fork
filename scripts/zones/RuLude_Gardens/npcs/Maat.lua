@@ -168,6 +168,7 @@ function onEventFinish(player,csid,option)
 		player:tradeComplete();
 		player:addTitle(HORIZON_BREAKER);
 		-- player:levelCap(55);
+		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_55);
 		player:completeQuest(JEUNO,IN_DEFIANT_CHALLENGE);
 		player:addFame(JEUNO, JEUNO_FAME*30);
 	-- Genkai 2
@@ -179,7 +180,7 @@ function onEventFinish(player,csid,option)
 		player:delKeyItem(SQUARE_FRIGICITE);
 		player:delKeyItem(TRIANGULAR_FRIGICITE);
 		-- player:levelCap(60);
-		player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_60);
+		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_60);
 		player:completeQuest(JEUNO,ATOP_THE_HIGHEST_MOUNTAINS);
 		player:addFame(JEUNO, JEUNO_FAME*40);
 	-- Genkai 3
@@ -191,7 +192,7 @@ function onEventFinish(player,csid,option)
 		player:delKeyItem(QUADAV_CREST);
 		player:delKeyItem(YAGUDO_CREST);
 		-- player:levelCap(65);
-		player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_65);
+		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_65);
 		player:completeQuest(JEUNO,WHENCE_BLOWS_THE_WIND);
 		player:addFame(JEUNO, JEUNO_FAME*50);
 	elseif(csid == 0x0058) then
@@ -210,7 +211,7 @@ function onEventFinish(player,csid,option)
 		player:delKeyItem(SOMBER_STONE);
 		player:delKeyItem(SPIRITED_STONE);
 		-- player:levelCap(70);
-		player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_70);
+		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_70);
 		player:completeQuest(JEUNO,RIDING_ON_THE_CLOUDS);
 		player:addFame(JEUNO, JEUNO_FAME*60);
 	elseif(csid == 0x005c) then
