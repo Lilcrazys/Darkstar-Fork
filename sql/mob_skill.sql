@@ -63,20 +63,20 @@ INSERT INTO `mob_skill` VALUES (22,0,812,'Pit_Ambush', 0, 9.0, 2000, 0, 4, 0, 0,
 
 -- Two Hours
 -- make a mob 2 hour by setting mobmod_main_2hour
-INSERT INTO `mob_skill` VALUES (432,0,432,'Mighty_Strikes', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (434,0,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (433,0,432,'Benediction', 1, 20.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (435,0,432,'Manafont', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (436,0,432,'Chainspell', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (437,0,432,'Perfect_Dodge', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (438,0,432,'Invincible', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (439,0,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (484,0,432,'Familiar', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (440,0,432,'Soul_Voice', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (479,0,20,'Eagle_Eye_Shot', 0, 25.0, 2000, 0, 4, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (474,0,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (475,0,18,'Mijin_Gakure', 1, 20.0, 2000, 0, 4, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (476,0,432,'Call_Wyvern', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (432,0,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (434,0,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (433,0,432,'Benediction',1,20.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (435,0,432,'Manafont',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (436,0,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (437,0,432,'Perfect_Dodge',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (438,0,432,'Invincible',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (439,0,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (484,0,432,'Familiar',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (440,0,432,'Soul_Voice',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (479,0,20,'Eagle_Eye_Shot',0,25.0,2000,0,4,2,0,0);
+INSERT INTO `mob_skill` VALUES (474,0,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (475,0,18,'Mijin_Gakure',1,20.0,2000,0,4,2,0,0);
+INSERT INTO `mob_skill` VALUES (476,0,432,'Call_Wyvern',0,7.0,2000,0,1,2,0,0);
 -- INSERT INTO `mob_skill` VALUES (478,0,432,'Astral_Flow',0,7.0,2000,0,1,2,0,0); -- Most NM use this version and animation.
 -- INSERT INTO `mob_skill` VALUES (2000,0,724,'Astral_Flow',0,7.0,2000,0,1,2,0,0); -- Only looks alright with small or human-like Mob Models
 -- INSERT INTO `mob_skill` VALUES (1933,0,432,'Azure Lore',0,7.0,2000,0,1,2,0,0); -- Mammol Ja
@@ -4846,7 +4846,7 @@ INSERT INTO `mob_skill` VALUES (432,7600,2111,'Mighty_Strikes',0,7.0,2000,0,1,2,
 INSERT INTO `mob_skill` VALUES (439,7600,432,'Blood_Weapon',0,7.0,2000,0,1,2,75,0);
 
 -- Minerva
-INSERT INTO `mob_skill` VALUES (1849,0,1861,'Minerva_Melee_Special', 0, 9.5, 2000, 0, 4, 16, 0, 0);
+INSERT INTO `mob_skill` VALUES (1849,7777,1861,'Minerva_Melee_Special', 0, 9.5, 2000, 0, 4, 16, 0, 0);
 INSERT INTO `mob_skill` VALUES (574,7777,1015,'Minerva_Light_Blade',0,30.0,2000,1500,4,0,0,0); -- Grants/Restores EnLight
 INSERT INTO `mob_skill` VALUES (729,7777,1750,'Minerva_Stellar_burst',2,7.0,5000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1130,7777,1021,'Minerva_Medusa_Javelin',0,6.0,2000,1500,4,0,0,0);

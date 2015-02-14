@@ -1436,6 +1436,61 @@ int32 OnEventUpdate(CCharEntity* PChar, uint16 eventID, uint32 result)
 	return 0;
 }
 
+int32 OnEventUpdate(CCharEntity* PChar, int8* string)
+{
+    int32 oldtop = lua_gettop(LuaHandle);
+
+    lua_pushnil(LuaHandle);
+    lua_setglobal(LuaHandle, "onEventUpdate");
+
+    int8 File[255];
+    if (luaL_loadfile(LuaHandle, PChar->m_event.Script.c_str()) || lua_pcall(LuaHandle, 0, 0, 0))
+    {
+        lua_pop(LuaHandle, 1);
+        memset(File, 0, sizeof(File));
+        snprintf(File, sizeof(File), "scripts/zones/%s/Zone.lua", PChar->loc.zone->GetName());
+
+        if (luaL_loadfile(LuaHandle, File) || lua_pcall(LuaHandle, 0, 0, 0))
+        {
+            ShowError("luautils::onEventUpdate %s\n", lua_tostring(LuaHandle, -1));
+            ShowError("luautils::onEventUpdate: %s\n", lua_tostring(LuaHandle, -1));
+            lua_pop(LuaHandle, 1);
+            return -1;
+        }
+    }
+
+    lua_getglobal(LuaHandle, "onEventUpdate");
+    if (lua_isnil(LuaHandle, -1))
+    {
+        ShowError("luautils::onEventUpdate: undefined procedure onEventUpdate\n");
+        lua_pop(LuaHandle, 1);
+        return -1;
+    }
+
+    CLuaBaseEntity LuaBaseEntity(PChar);
+    Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaBaseEntity);
+
+    lua_pushinteger(LuaHandle, PChar->m_event.EventID);
+    lua_pushstring(LuaHandle, string);
+
+    CLuaBaseEntity LuaTargetEntity(PChar->m_event.Target);
+    Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaTargetEntity);
+
+    if (lua_pcall(LuaHandle, 4, LUA_MULTRET, 0))
+    {
+        ShowError("luautils::onEventUpdate: %s\n", lua_tostring(LuaHandle, -1));
+        lua_pop(LuaHandle, 1);
+        return -1;
+    }
+    int32 returns = lua_gettop(LuaHandle) - oldtop;
+    if (returns > 0)
+    {
+        ShowError("luautils::onEventUpdate (%s): 0 returns expected, got %d\n", File, returns);
+        lua_pop(LuaHandle, returns);
+    }
+    return 0;
+}
+
 /************************************************************************
 *																		*
 *  Событие завершилось, результат события хранится в result				*
@@ -2360,32 +2415,35 @@ int32 OnMobDeath(CBaseEntity* PMob, CBaseEntity* PKiller)
         // onMobDeathEx
         lua_prepscript("scripts/globals/mobs.lua");
 
-        PChar->ForAlliance([PMob, PKiller, PChar, &File](CBattleEntity* PMember)
+        PChar->ForAlliance([PChar, PMob, PKiller, &File](CBattleEntity* PMember)
         {
             if (prepFile(File, "onMobDeathEx"))
             {
                 return;
             }
 
-            CLuaBaseEntity LuaMobEntity(PMob);
-            CLuaBaseEntity LuaKillerEntity(PMember);
-
-            bool isKillShot = PMember->id == PKiller->id;
-            bool isWeaponSkillKill = PChar->getWeaponSkillKill();
-
-            Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaMobEntity);
-            Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaKillerEntity);
-            lua_pushboolean(LuaHandle, isKillShot);
-            lua_pushboolean(LuaHandle, isWeaponSkillKill);
-            // lua_pushboolean(LuaHandle, isMagicKill);
-            // lua_pushboolean(LuaHandle, isPetKill);
-            // Rather than use even more bools for this, I'm thinking it's better to replace isWeaponSkillKill with a "killType" value
-            // Checking that sort of thing could also make Colibri mimic and Jailer of Fortitude reflect easier to do.
-
-            if (lua_pcall(LuaHandle, 4, 0, 0))
+            if (PMember->getZone() == PChar->getZone())
             {
-                ShowError("luautils::onMobDeathEx: %s\n", lua_tostring(LuaHandle, -1));
-                lua_pop(LuaHandle, 1);
+                CLuaBaseEntity LuaMobEntity(PMob);
+                CLuaBaseEntity LuaKillerEntity(PMember);
+
+                bool isKillShot = PMember->id == PKiller->id;
+                bool isWeaponSkillKill = PChar->getWeaponSkillKill();
+                
+                Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaMobEntity);
+                Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaKillerEntity);
+                lua_pushboolean(LuaHandle, isKillShot);
+                lua_pushboolean(LuaHandle, isWeaponSkillKill);
+                // lua_pushboolean(LuaHandle, isMagicKill);
+                // lua_pushboolean(LuaHandle, isPetKill);
+                // Rather than use even more bools for this, I'm thinking it's better to replace isWeaponSkillKill with a "killType" value
+                // Checking that sort of thing could also make Colibri mimic and Jailer of Fortitude reflect easier to do.
+                
+                if (lua_pcall(LuaHandle, 4, 0, 0))
+                {
+                    ShowError("luautils::onMobDeathEx: %s\n", lua_tostring(LuaHandle, -1));
+                    lua_pop(LuaHandle, 1);
+                }
             }
         } );
 
@@ -2397,54 +2455,56 @@ int32 OnMobDeath(CBaseEntity* PMob, CBaseEntity* PKiller)
 
         snprintf( File, sizeof(File), "scripts/zones/%s/mobs/%s.lua", PMob->loc.zone->GetName(), PMob->GetName());
 
-        PChar->ForAlliance([PMob, &File, oldtop](CBattleEntity* PPartyMember)
+        PChar->ForAlliance([PChar, PMob, &File, oldtop](CBattleEntity* PPartyMember)
         {
             CCharEntity* PMember = (CCharEntity*)PPartyMember;
-
-            CLuaBaseEntity LuaMobEntity(PMob);
-            CLuaBaseEntity LuaKillerEntity(PMember);
-
-            PMember->m_event.reset();
-            PMember->m_event.Target = PMob;
-            PMember->m_event.Script.insert(0, File);
-
-            if ( luaL_loadfile(LuaHandle,File) || lua_pcall(LuaHandle,0,0,0) )
+            if (PMember->getZone() == PChar->getZone())
             {
-                lua_pop(LuaHandle, 1);
-                return;
-            }
-
-            lua_getglobal(LuaHandle, "onMobDeath");
-            if ( lua_isnil(LuaHandle,-1) )
-            {
-                ShowError("luautils::onMobDeath: undefined procedure onMobDeath\n");
-                lua_pop(LuaHandle, 1);
-                return;
-            }
-
-            Lunar<CLuaBaseEntity>::push(LuaHandle,&LuaMobEntity);
-            if (PMember)
-            {
+                CLuaBaseEntity LuaMobEntity(PMob);
                 CLuaBaseEntity LuaKillerEntity(PMember);
-                Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaKillerEntity);
-            }
-            else
-            {
-                lua_pushnil(LuaHandle);
-            }
-
-            if ( lua_pcall(LuaHandle,2,LUA_MULTRET,0) )
-            {
-                ShowError("luautils::onMobDeath: %s\n",lua_tostring(LuaHandle,-1));
-                lua_pop(LuaHandle, 1);
-                return;
-            }
-
-            int32 returns = lua_gettop(LuaHandle) - oldtop;
-            if (returns > 0)
-            {
-                ShowError("luautils::onMobDeath (%s): 0 returns expected, got %d\n", File, returns);
-                lua_pop(LuaHandle, returns);
+                
+                PMember->m_event.reset();
+                PMember->m_event.Target = PMob;
+                PMember->m_event.Script.insert(0, File);
+                
+                if ( luaL_loadfile(LuaHandle,File) || lua_pcall(LuaHandle,0,0,0) )
+                {
+                    lua_pop(LuaHandle, 1);
+                    return;
+                }
+                
+                lua_getglobal(LuaHandle, "onMobDeath");
+                if ( lua_isnil(LuaHandle,-1) )
+                {
+                    ShowError("luautils::onMobDeath: undefined procedure onMobDeath\n");
+                    lua_pop(LuaHandle, 1);
+                    return;
+                }
+                
+                Lunar<CLuaBaseEntity>::push(LuaHandle,&LuaMobEntity);
+                if (PMember)
+                {
+                    CLuaBaseEntity LuaKillerEntity(PMember);
+                    Lunar<CLuaBaseEntity>::push(LuaHandle, &LuaKillerEntity);
+                }
+                else
+                {
+                    lua_pushnil(LuaHandle);
+                }
+                
+                if ( lua_pcall(LuaHandle,2,LUA_MULTRET,0) )
+                {
+                    ShowError("luautils::onMobDeath: %s\n",lua_tostring(LuaHandle,-1));
+                    lua_pop(LuaHandle, 1);
+                    return;
+                }
+                
+                int32 returns = lua_gettop(LuaHandle) - oldtop;
+                if (returns > 0)
+                {
+                    ShowError("luautils::onMobDeath (%s): 0 returns expected, got %d\n", File, returns);
+                    lua_pop(LuaHandle, returns);
+                }
             }
         } );
     }

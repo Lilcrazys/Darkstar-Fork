@@ -6,7 +6,7 @@
 -----------------------------------------
 -- Enchantment: Synthesis image support
 -- Duration: 2Min
--- Woodworking Skill +1
+-- Woodworking Skill +3
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -16,11 +16,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-    local result = 0;
-    if (target:hasStatusEffect(EFFECT_WOODWORKING_IMAGERY) == true) then
-        result = 236;
-    end
-    return result;
+local result = 0;
+	if (target:hasStatusEffect(EFFECT_WOODWORKING_IMAGERY) == true) then
+		result = 236;
+	end
+return result;
 end;
 
 -----------------------------------------
@@ -28,7 +28,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:addStatusEffect(EFFECT_WOODWORKING_IMAGERY,49,0,120);
+	target:addStatusEffect(EFFECT_WOODWORKING_IMAGERY,3,0,120);
 end;
 
 -----------------------------------------
@@ -36,7 +36,7 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_SKILL_WDW, 1);
+	target:addMod(MOD_SKILL_WDW, 1);
 end;
 
 -----------------------------------------

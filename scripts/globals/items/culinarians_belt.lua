@@ -6,7 +6,7 @@
 -----------------------------------------
 -- Enchantment: Synthesis image support
 -- Duration: 2Min
--- Alchemy Skill +1
+-- Alchemy Skill +3
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -16,11 +16,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-    local result = 0;
-    if (target:hasStatusEffect(EFFECT_COOKING_IMAGERY) == true) then
-        result = 243;
-    end
-    return result;
+local result = 0;
+	if (target:hasStatusEffect(EFFECT_COOKING_IMAGERY) == true) then
+		result = 243;
+	end
+return result;
 end;
 
 -----------------------------------------
@@ -28,7 +28,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:addStatusEffect(EFFECT_COOKING_IMAGERY,56,0,120);
+	target:addStatusEffect(EFFECT_COOKING_IMAGERY,3,0,120);
 end;
 
 -----------------------------------------
@@ -36,7 +36,7 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_SKILL_COK, 1);
+	target:addMod(MOD_SKILL_COK, 1);
 end;
 
 -----------------------------------------

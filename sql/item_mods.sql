@@ -17284,6 +17284,11 @@ INSERT INTO `item_mods` VALUES(16501, 431, 1); -- Additional Effect: Weakens Def
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES(16508, 431, 1); -- Additional Effect: Silence
 
+-- -------------------------------------------------------
+-- Aspir Knife
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(16509, 431, 1); -- Additional Effect: MP Drain
+
 INSERT INTO `item_mods` VALUES(16520, 5, 18);
 INSERT INTO `item_mods` VALUES(16520, 110, 7);
 INSERT INTO `item_mods` VALUES(16521, 110, 5);
@@ -18276,6 +18281,12 @@ INSERT INTO `item_mods` VALUES(17506, 9, 2);
 INSERT INTO `item_mods` VALUES(17506, 11, -1);
 INSERT INTO `item_mods` VALUES(17506, 25, 4);
 INSERT INTO `item_mods` VALUES(17508, 241, 2);
+
+-- -------------------------------------------------------
+-- Vampiric Claws
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(17510, 431, 1); -- Additional Effect: HP Drain
+
 INSERT INTO `item_mods` VALUES(17511, 302, 1);
 INSERT INTO `item_mods` VALUES(17518, 10, 3);
 INSERT INTO `item_mods` VALUES(17520, 2, 12);
@@ -19735,7 +19746,13 @@ INSERT INTO `item_mods` VALUES(18595, 25, -4); -- Accuracy-4
 INSERT INTO `item_mods` VALUES(18595, 73, 5); -- "Store TP"+5
 
 INSERT INTO `item_mods` VALUES(18596, 29, 5);
-INSERT INTO `item_mods` VALUES(18599, 5, 10);
+
+-- -------------------------------------------------------
+-- Pestle
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(18599, 5, 10); -- Max MP +10
+INSERT INTO `item_mods` VALUES(18599, 431, 1); -- Additional Effect: MP Drain
+
 INSERT INTO `item_mods` VALUES(18600, 57, 2);
 INSERT INTO `item_mods` VALUES(18604, 12, 2);
 INSERT INTO `item_mods` VALUES(18604, 30, 3);
