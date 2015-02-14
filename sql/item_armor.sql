@@ -10084,8 +10084,12 @@ INSERT INTO `item_armor` VALUES ('28584', 'vexer_ring_+1', '99', '4194303', '0',
 INSERT INTO `item_armor` VALUES ('28585', 'craftkeepers_ring', '1', '4194303', '0', '0', '0', '24576', '0');
 INSERT INTO `item_armor` VALUES ('28586', 'craftmasters_ring', '1', '4194303', '0', '0', '0', '24576', '0');
 INSERT INTO `item_armor` VALUES ('28587', 'artificers_ring', '1', '4194303', '0', '0', '0', '24576', '0');
-INSERT INTO `item_armor` VALUES ('28612', 'buquwik_cape', '99', '4194303', '0', '0', '0', '32768', '0');
 
+INSERT INTO `item_armor` VALUES ('28610', 'ik_cape', '99', '4194303', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('28611', 'tuilha_cape', '99', '4194303', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('28612', 'buquwik_cape', '99', '4194303', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('28613', 'kayapa_cape', '99', '4194303', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('28614', 'iximulew_cape', '99', '4194303', '0', '0', '0', '32768', '0');
 INSERT INTO `item_armor` VALUES ('28615', 'toro_cape', '99', '4194303', '0', '0', '0', '32768', '0');
 
 INSERT INTO `item_armor` VALUES ('28623', 'weard_mantle', '99', '64', '0', '0', '0', '32768', '0');
