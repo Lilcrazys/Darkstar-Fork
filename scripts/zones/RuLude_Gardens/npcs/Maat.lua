@@ -336,7 +336,7 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 7) then -- PLD
 				aug_1 = 551; val_1 = 1; aug_2 = 517; val_2 = 0; aug_3 = 286; val_3 = 3; -- STR+2 VIT+2, MND+1, Shield skill+4
 			elseif (Job == 8) then -- DRK
-				aug_1 = 551; val_1 = 1; aug_2 = 554; val_2 = 0; aug_3 = 137; val_3 = 1; -- STR+2, INT+1 MND+1, Regen+2
+				aug_1 = 512; val_1 = 1; aug_2 = 554; val_2 = 0; aug_3 = 137; val_3 = 1; -- STR+2, INT+1 MND+1, Regen+2
 			elseif (Job == 9) then -- BST
 				aug_1 = 551; val_1 = 1; aug_2 = 518; val_2 = 0; aug_3 = 336; val_3 = 4; -- STR+2 VIT+2, CHR+1, Sic and Ready ability delay -5
 			elseif (Job == 10) then -- BRD
