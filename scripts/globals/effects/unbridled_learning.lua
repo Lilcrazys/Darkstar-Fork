@@ -20,7 +20,6 @@ end;
 -----------------------------------
 
 function onEffectTick(target,effect)
-    return 0;
 end;
 
 -----------------------------------
