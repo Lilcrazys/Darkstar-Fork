@@ -3629,6 +3629,8 @@ INSERT INTO `item_weapon` VALUES (20793,'aymur',5,0,2,2,312,155,0);
 INSERT INTO `item_weapon` VALUES (20794,'farsha',5,0,2,1,276,140,0);
 INSERT INTO `item_weapon` VALUES (20795,'farsha',5,0,2,1,276,140,0);
 INSERT INTO `item_weapon` VALUES (20812,'izizoeksi',5,0,2,1,288,156,0);
+INSERT INTO `item_weapon` VALUES (20818,'hurlbat',5,0,2,1,288,104,0);
+INSERT INTO `item_weapon` VALUES (20819,'antican_axe',5,0,2,1,288,90,0);
 INSERT INTO `item_weapon` VALUES (20824,'faizzeer_+1',5,0,2,1,288,119,0);
 INSERT INTO `item_weapon` VALUES (20825,'forefront_axe',5,0,2,1,288,83,0);
 INSERT INTO `item_weapon` VALUES (20826,'hunahpu',5,0,2,1,288,140,0);
