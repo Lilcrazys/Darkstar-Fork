@@ -1,7 +1,7 @@
 ﻿/*
 ===========================================================================
 
-  Copyright (c) 2010-2014 Darkstar Dev Teams
+  Copyright (c) 2010-2015 Darkstar Dev Teams
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -155,7 +155,7 @@ uint32 CheckForDamageMultiplier(CCharEntity* PChar, CItemWeapon* PWeapon, uint32
 	if (PWeapon->getModifier(MOD_OCC_DO_EXTRA_DMG) > 0 && PWeapon->getModifier(MOD_EXTRA_DMG_CHANCE) > 0)
 	{
 		// Relic weapons have 16% (ffxiclopedia) chance to do x times damage, cannot proc with weapon skills
-		if (WELL512::irand()%100 <= (PWeapon->getModifier(MOD_EXTRA_DMG_CHANCE)/100))
+		if (WELL512::irand()%100 <= (PWeapon->getModifier(MOD_EXTRA_DMG_CHANCE)/10))
 		{
 			return (damage = (damage * (PWeapon->getModifier(MOD_OCC_DO_EXTRA_DMG)/100)));
 		}

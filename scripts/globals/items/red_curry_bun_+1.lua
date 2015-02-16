@@ -44,8 +44,8 @@ function onEffectGain(target,effect)
 	target:addMod(MOD_AGI, 20);
 	target:addMod(MOD_DEX, 20);
 	target:addMod(MOD_FOOD_ACCP, 10);
-	target:addMod(MOD_FOOD_RATTP, 25);
-	target:addMod(MOD_FOOD_RATT_CAP, 250);
+	target:addMod(MOD_FOOD_RATTP, 50);
+	target:addMod(MOD_FOOD_RATT_CAP, 500);
 	target:addMod(MOD_FOOD_RACCP, 20);
 end;
 
@@ -58,7 +58,7 @@ function onEffectLose(target,effect)
 	target:delMod(MOD_AGI, 20);
 	target:delMod(MOD_DEX, 20);
 	target:delMod(MOD_FOOD_ACCP, 10);
-	target:delMod(MOD_FOOD_RATTP, 25);
-	target:delMod(MOD_FOOD_RATT_CAP, 250);
+	target:delMod(MOD_FOOD_RATTP, 50);
+	target:delMod(MOD_FOOD_RATT_CAP, 500);
 	target:delMod(MOD_FOOD_RACCP, 20);
 end;

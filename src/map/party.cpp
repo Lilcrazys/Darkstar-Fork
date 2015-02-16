@@ -1,7 +1,7 @@
 ﻿/*
 ===========================================================================
 
-  Copyright (c) 2010-2014 Darkstar Dev Teams
+  Copyright (c) 2010-2015 Darkstar Dev Teams
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -375,8 +375,16 @@ void CParty::PopMember(CBattleEntity* PEntity)
         }
     }
     //free memory, party will re reinsatiated when they zone back in
-    if (members.empty() && !m_PAlliance)
+    if (members.empty())
     {
+        if (m_PAlliance)
+        {
+            for (uint8 i = 0; i < m_PAlliance->partyList.size(); ++i)
+            {
+                if (this == m_PAlliance->partyList.at(i))
+                    m_PAlliance->partyList.erase(m_PAlliance->partyList.begin() + i);
+            }
+        }
         delete this;
     }
 }

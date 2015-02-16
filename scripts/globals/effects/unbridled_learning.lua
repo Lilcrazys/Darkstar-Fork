@@ -1,6 +1,6 @@
 -----------------------------------
 --
--- 	Unbridled Learning
+-- Unbridled Learning
 --
 -----------------------------------
 
@@ -11,7 +11,7 @@ require("scripts/globals/status");
 -- onEffectGain Action
 -----------------------------------
 
-function onEffectGain(target,effect)    
+function onEffectGain(target,effect)
 end;
 
 -----------------------------------
@@ -19,7 +19,6 @@ end;
 -----------------------------------
 
 function onEffectTick(target,effect)
-    
 end;
 
 -----------------------------------
@@ -28,5 +27,3 @@ end;
 
 function onEffectLose(target,effect)
 end;
-
-
