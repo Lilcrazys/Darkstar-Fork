@@ -1,6 +1,6 @@
 -----------------------------------
 --
--- 	Unbridled Learning
+-- Unbridled Learning
 --
 -----------------------------------
 
@@ -11,8 +11,7 @@ require("scripts/globals/status");
 -- onEffectGain Action
 -----------------------------------
 
-function onEffectGain(target,effect)    
-   target:addMod(MOD_MACC,25);
+function onEffectGain(target,effect)
 end;
 
 -----------------------------------
@@ -27,7 +26,4 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-   target:delMod(MOD_MACC,25);
 end;
-
-
