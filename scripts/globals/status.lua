@@ -1146,7 +1146,7 @@ MOD_DOUBLE_SHOT_RATE		  =0x1A6 -- The rate that double shot can proc
 MOD_VELOCITY_SNAPSHOT_BONUS	  =0x1A7 -- Increases Snapshot whilst Velocity Shot is up.
 MOD_VELOCITY_RATT_BONUS		  =0x1A8 -- Increases Ranged Attack whilst Velocity Shot is up.
 MOD_SHADOW_BIND_EXT		  	  =0x1A9 -- Extends the time of shadowbind
-MOD_ABSORB_DMG_TO_MP		  =0x1AA --	Absorbs a percentage of damage taken to MP.
+MOD_ABSORB_DMG_TO_MP		  = 0x1AA -- Absorbs a percentage of damage taken to MP.
 MOD_ENMITY_REDUCTION_PHYSICAL =0x1AB -- Reduces Enmity decrease when taking physical damage
 MOD_SHIELD_MASTERY_TP         =0x1E5 -- Shield mastery TP bonus when blocking with a shield (modId = 485)
 MOD_PERFECT_COUNTER_ATT		  =0x1AC -- Raises weapon damage by 20 when countering while under the Perfect Counter effect. This also affects Weapon Rank (though not if fighting barehanded).
@@ -1172,12 +1172,10 @@ MOD_HYMNUS_EFFECT	          =0x1C1-- (modId = 449)
 MOD_VIRELAI_EFFECT	          =0x1C2-- (modId = 450)
 MOD_SCHERZO_EFFECT            =0x1C3-- (modId = 451)
 MOD_ALL_SONGS_EFFECT          =0x1C4-- (modId = 452)
-MOD_MAXIMUM_SONGS_BONUS       =0x1C5
-MOD_SONG_DURATION_BONUS       =0x1C6
+MOD_MAXIMUM_SONGS_BONUS       = 0x1C5 -- (modId = 453)
+MOD_SONG_DURATION_BONUS       = 0x1C6 -- (modId = 454)
 
-MOD_EAT_RAW_FISH			  = 409
-MOD_EAT_RAW_MEAT			  = 410
-MOD_QUICK_DRAW_DMG = 411
+MOD_QUICK_DRAW_DMG            = 0x19B -- (modId = 411)
 
 MOD_QUAD_ATTACK				  =0x1AE -- Quadruple attack chance.
 
@@ -1219,6 +1217,11 @@ MOD_INHIBIT_TP                =0x1E8 -- Inhibits TP Gain (percent) (modId = 488)
 
 MOD_GOV_CLEARS                =0x1F0 -- Tracks GoV page completion (for 4% bonus on rewards).
 
+-- Reraise (Auto Reraise, will be used by ATMA)
+MOD_RERAISE_I                 = 0x1C8 -- Reraise. (modId = 456)
+MOD_RERAISE_II                = 0x1C9 -- Reraise II. (modId = 457)
+MOD_RERAISE_III               = 0x1CA -- Reraise III. (modId = 458)
+
 MOD_ITEM_SPIKES_TYPE          =0x1F3 -- Type spikes an item has (modId = 499)
 MOD_ITEM_SPIKES_DMG           =0x1F4 -- Damage of an items spikes (modId = 500)
 MOD_ITEM_SPIKES_CHANCE        =0x1F5 -- Chance of an items spike proc (modId = 501)
@@ -1231,11 +1234,20 @@ MOD_OVERLOAD_THRESH           =0x1F9 -- Overload Threshold Bonus
 MOD_EXTRA_DMG_CHANCE          =0x1FA -- Proc rate of MOD_OCC_DO_EXTRA_DMG. 111 would be 11.1% (modId = 506)
 MOD_OCC_DO_EXTRA_DMG          =0x1FB -- Multiplier for "Occasionally do x times normal damage". 250 would be 2.5 times damage. (modId = 507)
 
--- MOD_SPARE =0x1FC -- (modId = 508)
+MOD_EAT_RAW_FISH              = 0x19C -- (modId = 412)
+MOD_EAT_RAW_MEAT              = 0x19D -- (modId = 413)
+
+MOD_RETALIATION               = 0x19E -- Increases damage of Retaliation hits (modId = 414)
+MOD_AUGMENTS_THIRD_EYE        = 0x1FC -- Adds counter to 3rd eye anticipates & if using Seigan counter rate is increased by 15% (modId = 508)
+
 -- MOD_SPARE =0x1FD -- (modId = 509)
 -- MOD_SPARE =0x1FE -- (modId = 510)
 -- MOD_SPARE =0x1FF -- (modId = 511)
 -- MOD_SPARE =0x200 -- (modId = 512)
+-- MOD_SPARE = 0x201 -- (modId = 513)
+-- MOD_SPARE = 0x202 -- (modId = 514)
+-- MOD_SPARE = 0x203 -- (modId = 515)
+-- MOD_SPARE = 0x204 -- (modId = 516)
 
 ------------------------------------
 -- Merit Definitions
