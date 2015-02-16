@@ -1,7 +1,7 @@
 /*
 ===========================================================================
 
-  Copyright (c) 2010-2014 Darkstar Dev Teams
+  Copyright (c) 2010-2015 Darkstar Dev Teams
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -58,7 +58,7 @@ namespace mobutils
 	void  AddCustomMods(CMobEntity* PMob);
 	void  SetupMaat(CMobEntity* PMob, JOBTYPE job);
 	void  SetSpellList(CMobEntity*, uint16);
-	CMobEntity* InstantiateAlly(uint32 groupid, uint16 zoneID);
+	CMobEntity* InstantiateAlly(uint32 groupid, uint16 zoneID, CInstance* = NULL);
     void WeaknessTrigger(CBaseEntity* PTarget, WeaknessType level);
 };
 

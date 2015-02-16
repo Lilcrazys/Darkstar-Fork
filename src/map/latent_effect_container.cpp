@@ -1,7 +1,7 @@
 /*
 ===========================================================================
 
-Copyright (c) 2010-2014 Darkstar Dev Teams
+Copyright (c) 2010-2015 Darkstar Dev Teams
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -594,6 +594,9 @@ void CLatentEffectContainer::CheckLatentsEquip(uint8 slot)
                 CheckLatentsWeaponDraw(m_POwner->animation == ANIMATION_ATTACK);
             }
             break;
+            case LATENT_SONG_ROLL_ACTIVE:
+                    CheckLatentsRollSong(m_POwner->StatusEffectContainer->HasStatusEffectByFlag(EFFECTFLAG_ROLL | EFFECTFLAG_SONG));
+                break;
             default:
                 ShowWarning("Latent ID %d unhandled in CheckLatentsEquip\n", m_LatentEffectList.at(i)->GetConditionsID());
                 break;

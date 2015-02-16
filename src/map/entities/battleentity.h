@@ -1,7 +1,7 @@
 ﻿/*
 ===========================================================================
 
-  Copyright (c) 2010-2014 Darkstar Dev Teams
+  Copyright (c) 2010-2015 Darkstar Dev Teams
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -300,11 +300,11 @@ enum SUBEFFECT
     SUBEFFECT_CURSE_SPIKES      = 4, // 01-0010	18
     SUBEFFECT_SHOCK_SPIKES      = 5, // 01-1010	22
     SUBEFFECT_REPRISAL          = 6, // 01-0110	26
-    SUBEFFECT_WIND_SPIKES       = 7,
-    SUBEFFECT_STONE_SPIKES      = 8,
-    SUBEFFECT_DELUGE_SPIKES     = 9,
+    SUBEFFECT_WIND_SPIKES       = 7,  // Present in client but currently unused.
+    SUBEFFECT_STONE_SPIKES      = 8,  // Present in client but currently unused.
+    SUBEFFECT_DELUGE_SPIKES     = 9,  // Present in client but currently unused.
     SUBEFFECT_DARK_SPIKES       = 10,
-    SUBEFFECT_COUNTER           = 63, // Retaliation
+    SUBEFFECT_COUNTER           = 63, // Also used by Retaliation
 
     // SKILLCHAINS
 	SUBEFFECT_LIGHT				= 1,
