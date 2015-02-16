@@ -801,11 +801,6 @@ INSERT INTO `item_mods` VALUES(10720, 11, 4); --
 INSERT INTO `item_mods` VALUES(10720, 26, 11); --
 INSERT INTO `item_mods` VALUES(10720, 24, 11); --
 INSERT INTO `item_mods` VALUES(10720, 27, -4); --
-INSERT INTO `item_mods` VALUES(10721, 1, 52); --
-INSERT INTO `item_mods` VALUES(10721, 8, 6); --
-INSERT INTO `item_mods` VALUES(10721, 11, 6); --
-INSERT INTO `item_mods` VALUES(10721, 23, 8); --
-INSERT INTO `item_mods` VALUES(10721, 68, 8); -- Sao. Haidate +2 Augments "Third Eye" unknown not added
 INSERT INTO `item_mods` VALUES(10722, 1, 40); --
 INSERT INTO `item_mods` VALUES(10722, 2, 56); --
 INSERT INTO `item_mods` VALUES(10722, 11, 6); --
@@ -1043,7 +1038,6 @@ INSERT INTO `item_mods` VALUES(10864, 1, 31); --
 INSERT INTO `item_mods` VALUES(10864, 9, 12); --
 INSERT INTO `item_mods` VALUES(10864, 11, 12); --
 INSERT INTO `item_mods` VALUES(10864, 384, 60); --
-INSERT INTO `item_mods` VALUES(10864, 370, 1); --
 INSERT INTO `item_mods` VALUES(10865, 1, 30); --
 INSERT INTO `item_mods` VALUES(10865, 5, 20); --
 INSERT INTO `item_mods` VALUES(10865, 30, 5); --
