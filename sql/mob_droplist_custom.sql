@@ -19,14 +19,19 @@
 -- DELETE FROM `mob_droplist` WHERE 'dropid'=1 and 'type'=2 and 'itemid'=3 'droprate'=4;
 -- INSERT INTO `mob_droplist` VALUES (5,6,7,8);
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
-
+INSERT INTO `mob_droplist` VALUES (32,0,12094,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (52,0,3291,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (52,0,3291,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (75,0,19405,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (83,0,12105,340); -- COMMENT ME
 DELETE FROM `mob_droplist` WHERE `dropId`=92 and `type`=0 and `itemId`=3089 and `rate`=100; -- Orobon Cheekmeat from Ancient Orbon
 DELETE FROM `mob_droplist` WHERE `dropId`=92 and `type`=0 and `itemId`=5563 and `rate`=100; -- Orobon Meat from Ancient Orbon
 INSERT INTO `mob_droplist` VALUES (92,0,3172,60); -- Orison seal leg from Cep-Kamuy to Ancient Orbon
 INSERT INTO `mob_droplist` VALUES (92,0,3181,60); -- Unkai seal leg from Cep-Kamuy to Ancient Orbon
 INSERT INTO `mob_droplist` VALUES (92,0,3177,60); -- Bale seal leg from Cep-Kamuy to Ancient Orbon
 INSERT INTO `mob_droplist` VALUES (92,0,3185,60); -- Mavi seal leg from Cep-Kamuy to Ancient Orbon
-
+INSERT INTO `mob_droplist` VALUES (151,0,3289,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- COMMENT ME
 DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3176 and `rate`=100; -- Creed seal leg from Asanbosam
 DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3179 and `rate`=100; -- Aoidos seal leg from Asanbosam
 DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3180 and `rate`=100; -- Sylvan seal leg from Asanbosam
@@ -67,7 +72,22 @@ INSERT INTO `mob_droplist` VALUES (198,0,3182,460); -- Iga seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3182,490); -- Iga seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3188,320); -- Charis seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3188,350); -- Charis seal leg from Athamas
-
+INSERT INTO `mob_droplist` VALUES (203,0,12102,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (222,0,3292,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (222,0,3292,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (229,0,12106,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (231,0,12097,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (321,0,12098,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (396,0,2929,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (396,0,2929,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (424,0,2966,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (424,0,2966,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (424,0,19409,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (466,0,2930,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (466,0,2930,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (529,0,2965,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (529,0,2965,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (529,0,19406,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (534,0,11434,60); -- Sapientia Sabots From Div-e Sepid to Clammy Imp
 INSERT INTO `mob_droplist` VALUES (534,0,3206,60); -- Navarch's seal feet From Div-e Sepid to Clammy Imp
 INSERT INTO `mob_droplist` VALUES (534,0,3192,60); -- Orison seal feet From Div-e Sepid to Clammy Imp
@@ -82,6 +102,30 @@ INSERT INTO `mob_droplist` VALUES (551,0,3183,60); -- Lancer seal leg from Avale
 INSERT INTO `mob_droplist` VALUES (551,0,3179,60); -- Aoidos seal leg from Avalerion to Coastal colibri
 INSERT INTO `mob_droplist` VALUES (551,0,3189,60); -- Savant's seal leg from Avalerion to Coastal
 INSERT INTO `mob_droplist` VALUES (551,0,3171,60); -- Tantra seal leg from Avalerion to Coastal colibri
+INSERT INTO `mob_droplist` VALUES (727,0,19402,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (788,0,3288,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (788,0,3288,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (788,0,10255,240); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (838,0,12091,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (838,0,19407,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (962,0,2931,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (962,0,2931,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (962,0,12090,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1621,0,16192,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1645,0,19397,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1668,0,12095,340); -- COMMENT ME
+DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3198 and `rate`=100; -- Ferine seal feet from Hrosshvalur 
+DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3200 and `rate`=100; -- Sylvan seal feet from Hrosshvalur
+DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3204 and `rate`=100; -- Callers seal feet from Hrosshvalur
+DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3205 and `rate`=100; -- Mavi seal feet from Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3198,370); -- Ferine seal feet into Hrosshvalur 
+INSERT INTO `mob_droplist` VALUES (1708,0,3198,170); -- Ferine seal feet into Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3200,510); -- Sylvan seal feet into Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3200,310); -- Sylvan seal feet into Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3204,370); -- Callers seal feet into Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3204,170); -- Callers seal feet into Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3205,380); -- Mavi seal feet into Hrosshvalur
+INSERT INTO `mob_droplist` VALUES (1708,0,3205,180); -- Mavi seal feet into Hrosshvalur
 
 DELETE FROM `mob_droplist` WHERE `dropId`=1774 and `type`=0 and `itemId`=3194 and `rate`=100; -- Estoqueur`s Seal Feet from Iktomi
 DELETE FROM `mob_droplist` WHERE `dropId`=1774 and `type`=0 and `itemId`=3195 and `rate`=100; -- Raider`s Seal Feet from Iktomi
@@ -95,102 +139,51 @@ INSERT INTO `mob_droplist` VALUES (1774,0,3196,490); -- Creed Seal Feet from Ikt
 INSERT INTO `mob_droplist` VALUES (1774,0,3196,520); -- Creed Seal Feet from Iktomi
 INSERT INTO `mob_droplist` VALUES (1774,0,3201,480); -- Unkai Seal Feet from Iktomi
 INSERT INTO `mob_droplist` VALUES (1774,0,3201,510); -- Unkai Seal Feet from Iktomi
+INSERT INTO `mob_droplist` VALUES (1786,0,12093,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1786,0,19404,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1794,0,12092,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1810,0,3290,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1810,0,3290,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1812,0,2962,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1812,0,2962,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1812,0,19400,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1841,0,3191,60); -- Tantra Seal Feet from Iku-Turso to Jasconius
 INSERT INTO `mob_droplist` VALUES (1841,0,3202,60); -- Iga Seal Feet from Iku-Turso to Jasconius
 INSERT INTO `mob_droplist` VALUES (1841,0,3195,60); -- Raider`s Seal Feet from Iku-Turso to Jasconius
 INSERT INTO `mob_droplist` VALUES (1841,0,3208,60); -- Charis Seal Feet from Iku-Turso to Jasconius
 INSERT INTO `mob_droplist` VALUES (1841,0,19057,60); -- Caucus Grip from Iku-Turso to Jasconius
-
+INSERT INTO `mob_droplist` VALUES (1966,0,2932,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1966,0,2932,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (1966,0,12088,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (2080,0,12100,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (2473,0,20762,150); -- ukudyoni
-
 INSERT INTO `mob_droplist` VALUES (2487,0,28440,150); -- Windbuffet Belt +1
-
+INSERT INTO `mob_droplist` VALUES (2721,0,3287,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (2721,0,3287,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (2732,0,18574,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3106,0,2967,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3106,0,2967,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3106,0,19398,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3241,0,19410,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3273,0,2964,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3273,0,2964,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3273,0,19408,340); -- COMMENT ME
 DELETE FROM `mob_droplist` WHERE `dropId`=3299 and `type`=0 and `itemId`=3107 and `rate`=180; -- Shockshroom used to spawn Armillaria
 INSERT INTO `mob_droplist` VALUES (3299,0,3203,60); -- Lancer`s Seal Feet from Armillaria to Speltercap
 INSERT INTO `mob_droplist` VALUES (3299,0,3190,60); -- Ravager`s Seal Feet from Armillaria to Speltercap
 INSERT INTO `mob_droplist` VALUES (3299,0,3195,60); -- Raiders`s Seal Feet from Armillaria to Speltercap
 INSERT INTO `mob_droplist` VALUES (3299,0,3208,60); -- Charis Seal Feet from Armillaria to Speltercap
 INSERT INTO `mob_droplist` VALUES (3299,0,18803,60); -- Pax Grip from Armillaria to Speltercap
-
--- ----------
--- SORT ME
-INSERT INTO `mob_droplist` VALUES (222,0,3292,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3106,0,2967,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1966,0,2932,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (52,0,3291,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (424,0,2966,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (962,0,2931,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1810,0,3290,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (529,0,2965,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (466,0,2930,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3273,0,2964,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (396,0,2929,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (2721,0,3287,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1812,0,2962,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,2927,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (788,0,3288,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3648,0,2963,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (222,0,3292,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3106,0,2967,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1966,0,2932,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (52,0,3291,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (424,0,2966,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (962,0,2931,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1810,0,3290,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (529,0,2965,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (466,0,2930,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (151,0,3289,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3273,0,2964,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (396,0,2929,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (2721,0,3287,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1812,0,2962,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,2927,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (788,0,3288,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3648,0,2963,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,2928,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (788,0,10255,240); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3648,0,19399,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3241,0,19410,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1812,0,19400,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (2732,0,18574,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4519,0,19401,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (838,0,19407,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (424,0,19409,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3273,0,19408,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (75,0,19405,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (529,0,19406,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1621,0,16192,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3632,0,19403,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1786,0,19404,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3106,0,19398,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (727,0,19402,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1645,0,19397,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (231,0,12097,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (3632,0,12096,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (838,0,12091,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4519,0,12103,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,12104,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (229,0,12106,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1668,0,12095,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4542,0,12101,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4543,0,12089,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (2080,0,12100,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (32,0,12094,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (83,0,12105,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (321,0,12098,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1794,0,12092,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3529,0,12099,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3632,0,12096,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3632,0,19403,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3648,0,2963,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3648,0,2963,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (3648,0,19399,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4071,0,12107,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (203,0,12102,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1786,0,12093,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1966,0,12088,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (962,0,12090,340); -- COMMENT ME
--- SORT ME!!!!!
--- -----------
-
 INSERT INTO `mob_droplist` VALUES (4516,0,19302,330); -- COMMENT ME
-
+INSERT INTO `mob_droplist` VALUES (4519,0,12103,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4519,0,19401,340); -- COMMENT ME
 
 DELETE FROM `mob_droplist` WHERE `dropId`=4519 and `type`=0 and `itemId`=17854 and `rate`=133; -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,13791,420); -- COMMENT ME
@@ -203,6 +196,7 @@ DELETE FROM `mob_droplist` WHERE `dropId`=4520 and `type`=0 and `itemId`=11409 a
 INSERT INTO `mob_droplist` VALUES (4520,0,11525,520); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4521,0,11594,108); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4521,0,11735,631); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4523,0,2928,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4523,0,2928,245); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4523,0,2928,82); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4522,0,11642,250); -- COMMENT ME
@@ -226,6 +220,8 @@ INSERT INTO `mob_droplist` VALUES (4525,0,2939,120); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4526,0,19249,300); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4526,0,3223,217); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4526,0,3225,193); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4527,0,2927,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4527,0,2927,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4527,0,11508,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4527,0,11523,250); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4527,0,3222,288); -- COMMENT ME
@@ -241,6 +237,7 @@ INSERT INTO `mob_droplist` VALUES (4531,0,11729,92); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4531,0,11507,231); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4531,0,3224,142); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4531,0,3222,142); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4531,0,12104,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4531,0,20641,103); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4532,0,11604,250); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4532,0,11737,420); -- COMMENT ME
@@ -279,6 +276,9 @@ INSERT INTO `mob_droplist` VALUES (4542,0,3206,330); -- Navarch's seal feet from
 INSERT INTO `mob_droplist` VALUES (4542,0,3206,360); -- Navarch's seal feet from Pascerpot
 INSERT INTO `mob_droplist` VALUES (4542,0,3191,400); -- Tantra seal feet from Pascerpot
 INSERT INTO `mob_droplist` VALUES (4542,0,3191,430); -- Tantra seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (4542,0,12101,340); -- COMMENT ME
+
+INSERT INTO `mob_droplist` VALUES (4543,0,12089,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,28404,225); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,11361,87); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,19255,1000); -- COMMENT ME
