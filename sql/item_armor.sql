@@ -9651,6 +9651,8 @@ INSERT INTO `item_armor` VALUES ('20650', 'burtgang', '99', '64', '560', '0', '0
 INSERT INTO `item_armor` VALUES ('20652', 'tizona', '99', '32768', '568', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20653', 'almace', '99', '32848', '466', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20654', 'almace', '99', '32848', '572', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20733', 'anahera_saber', '99', '32784', '584', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20734', 'anahera_sword', '99', '2097345', '585', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20736', 'iztaasu_+1', '99', '32848', '460', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20738', 'buramenkah', '99', '32848', '616', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20739', 'halachuinic_sword', '99', '4419554', '0', '0', '0', '3', '0');
@@ -9664,6 +9666,7 @@ INSERT INTO `item_armor` VALUES ('20746', 'ragnarok', '99', '193', '546', '0', '
 INSERT INTO `item_armor` VALUES ('20747', 'caladbolg', '99', '192', '467', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20748', 'caladbolg', '99', '192', '573', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20762', 'ukudyoni', '99', '2097345', '638', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20765', 'tunglmyrkvi', '99', '2097345', '377', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20775', 'crobaci_+1', '99', '2097344', '712', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20778', 'bereaver', '99', '4194688', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20779', 'senbaak_nagan', '99', '4194688', '0', '0', '0', '1', '0');
@@ -9684,6 +9687,7 @@ INSERT INTO `item_armor` VALUES ('20795', 'farsha', '99', '257', '574', '0', '0'
 INSERT INTO `item_armor` VALUES ('20812', 'izizoeksi', '99', '257', '621', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20818', 'hurlbat', '99', '1024', '91', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20819', 'antican_axe', '99', '2098561', '82', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20822', 'anahera_tabar', '99', '256', '587', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20824', 'faizzeer_+1', '99', '257', '617', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20827', 'kerehcatl', '99', '257', '713', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20828', 'brethren_axe', '99', '512', '0', '0', '0', '3', '0');
@@ -9698,6 +9702,7 @@ INSERT INTO `item_armor` VALUES ('20838', 'conqueror', '99', '1', '555', '0', '0
 INSERT INTO `item_armor` VALUES ('20839', 'ukonvasara', '99', '1', '469', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20840', 'ukonvasara', '99', '1', '575', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20861', 'qalgwer', '99', '1', '448', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20864', 'castigation', '99', '1', '448', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20870', 'iclamar_+1', '99', '1', '623', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20873', 'bloodbath_axe', '99', '2', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20874', 'razorfury', '99', '2', '0', '0', '0', '1', '0');
@@ -9714,6 +9719,7 @@ INSERT INTO `item_armor` VALUES ('20884', 'redemption', '99', '128', '470', '0',
 INSERT INTO `item_armor` VALUES ('20885', 'redemption', '99', '128', '576', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20905', 'tajabit', '99', '128', '622', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20909', 'hoe', '1', '4194303', '639', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20913', 'anahera_scythe', '99', '128', '586', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20915', 'iizamal_+1', '99', '128', '715', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20918', 'dimmet_scythe', '99', '256', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20919', 'lacryma_sickle', '99', '256', '0', '0', '0', '1', '0');
@@ -9738,6 +9744,7 @@ INSERT INTO `item_armor` VALUES ('20971', 'kikoku', '99', '4096', '551', '0', '0
 INSERT INTO `item_armor` VALUES ('20973', 'nagi', '99', '4096', '565', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20974', 'kannagi', '99', '4096', '513', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20975', 'kannagi', '99', '4096', '578', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20990', 'jushimatsu', '99', '4096', '605', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20997', 'raimitsukane', '99', '4096', '589', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('21004', 'kannakiri_+1', '99', '4096', '717', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('21005', 'kiji', '99', '8192', '0', '0', '0', '3', '0');
@@ -9754,6 +9761,7 @@ INSERT INTO `item_armor` VALUES ('21017', 'kogarasumaru', '99', '2048', '564', '
 INSERT INTO `item_armor` VALUES ('21018', 'kogarasumaru', '99', '2048', '424', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21019', 'masamune', '99', '2048', '514', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21020', 'masamune', '99', '2048', '579', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('21049', 'anahera_blade', '99', '2048', '588', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21051', 'shichishito_+1', '99', '2048', '718', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21052', 'tsurumaru', '99', '2048', '602', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21053', 'uguisumaru', '99', '4096', '0', '0', '0', '1', '0');
@@ -9783,6 +9791,7 @@ INSERT INTO `item_armor` VALUES ('21142', 'nirvana', '99', '16384', '567', '0', 
 INSERT INTO `item_armor` VALUES ('21143', 'hvergelmir', '99', '540680', '516', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21144', 'hvergelmir', '99', '540680', '581', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21176', 'ngqoqwanb', '99', '1589788', '720', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('21181', 'venabulum', '99', '1064960', '438', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21194', 'lehbrailg_+1', '99', '1589788', '462', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21195', 'uffrat_+1', '99', '16384', '442', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21198', 'soothsayer_staff', '99', '3179576', '0', '0', '0', '1', '0');
