@@ -15611,8 +15611,8 @@ INSERT INTO `item_basic` VALUES (21304,0,'raaz_arrow','raaz_arrow',99,2048,15,0,
 INSERT INTO `item_basic` VALUES (21305,0,'tulfaire_arrow','tulfaire_arrow',99,2048,15,0,10);
 INSERT INTO `item_basic` VALUES (21306,0,'adlivun_arrow','adlivun_arrow',99,30800,15,1,0);
 INSERT INTO `item_basic` VALUES (21307,0,'achiyalabopa_arrow','achiyal_arrow',99,30800,15,1,0);
-INSERT INTO `item_basic` VALUES (21308,0,'mantid_arrow','mantid_arrow',99,2048,0,1,0);
-INSERT INTO `item_basic` VALUES (21309,0,'chapuli_arrow','chapuli_arrow',99,2048,0,1,0);
+INSERT INTO `item_basic` VALUES (21308,0,'mantid_arrow','mantid_arrow',99,2048,15,1,0);
+INSERT INTO `item_basic` VALUES (21309,0,'chapuli_arrow','chapuli_arrow',99,2048,15,1,0);
 INSERT INTO `item_basic` VALUES (21318,0,'bismuth_bolt','bismuth_bolt',99,2048,15,0,10);
 INSERT INTO `item_basic` VALUES (21319,0,'titanium_bolt','titanium_bolt',99,2048,15,0,10);
 INSERT INTO `item_basic` VALUES (21320,0,'adlivun_bolt','adlivun_bolt',99,30800,15,1,0);
@@ -15625,8 +15625,8 @@ INSERT INTO `item_basic` VALUES (21334,0,'animikii_bullet','animikii_bullet',1,3
 INSERT INTO `item_basic` VALUES (21335,0,'titanium_bullet','titanium_bullet',99,2048,15,0,10);
 INSERT INTO `item_basic` VALUES (21336,0,'adlivun_bullet','adlivun_bullet',99,30800,15,1,0);
 INSERT INTO `item_basic` VALUES (21337,0,'achiyalabopa_bullet','achiyal_bullet',99,30800,15,1,0);
-INSERT INTO `item_basic` VALUES (21338,0,'damascus_bullet','damascus_bullet',99,2048,0,1,0);
-INSERT INTO `item_basic` VALUES (21339,0,'midrium_bullet','midrium_bullet',99,2048,0,1,0);
+INSERT INTO `item_basic` VALUES (21338,0,'damascus_bullet','damascus_bullet',99,2048,15,1,0);
+INSERT INTO `item_basic` VALUES (21339,0,'midrium_bullet','midrium_bullet',99,2048,15,1,0);
 INSERT INTO `item_basic` VALUES (21340,0,'halakaala','halakaala',1,34816,99,0,0);
 INSERT INTO `item_basic` VALUES (21341,0,'oreiads_tathlum','oreiads_tathlum',1,34816,99,0,0);
 INSERT INTO `item_basic` VALUES (21342,0,'erlenes_notebook','erlenes_notebook',1,63568,0,1,0);

@@ -3795,7 +3795,7 @@ INSERT INTO `item_weapon` VALUES (21291,'shadeshot_gun',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (21292,'bandeiras_gun',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (21293,'bandeiras_gun_+1',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (21294,'hgafircian',26,1,1,1,420,70,0);
-INSERT INTO `item_weapon` VALUES (21305,'tulfaire_arrow',25,0,1,1,90,65,0);
+INSERT INTO `item_weapon` VALUES (21305,'tulfaire_arrow',25,0,1,1,-150,65,0);
 INSERT INTO `item_weapon` VALUES (21306,'adlivun_arrow',25,0,1,1,-150,74,0);
 INSERT INTO `item_weapon` VALUES (21307,'achiyalabopa_arrow',25,0,1,1,-150,87,0);
 INSERT INTO `item_weapon` VALUES (21308,'mantid_arrow',25,0,0,1,0,0,0);
