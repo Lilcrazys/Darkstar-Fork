@@ -710,8 +710,8 @@ namespace charutils
         BuildingCharTraitsTable(PChar);
 
         PChar->animation = (HP == 0 ? ANIMATION_DEATH : ANIMATION_NONE);
-        PChar->m_event.EventID = luautils::OnZoneIn(PChar);
         charutils::LoadInventory(PChar);
+        PChar->m_event.EventID = luautils::OnZoneIn(PChar);
 
         charutils::LoadEquip(PChar);
         PChar->health.hp = HP;
