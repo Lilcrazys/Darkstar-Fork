@@ -5889,7 +5889,7 @@ INSERT INTO `item_mods` VALUES(28623, 160, -3); --
 INSERT INTO `item_mods` VALUES(28757, 23, 14); --
 INSERT INTO `item_mods` VALUES(28757, 27, -3); --
 
-+-- Hurlbat 
+-- Hurlbat 
 INSERT INTO `item_mods` VALUES(20818, 11, 8); -- AGI 
 INSERT INTO `item_mods` VALUES(20818, 84, 108); -- AXE 
 INSERT INTO `item_mods` VALUES(20818, 110, 108); -- PARRY 

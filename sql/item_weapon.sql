@@ -3652,7 +3652,7 @@ INSERT INTO `item_weapon` VALUES (20839,'ukonvasara',6,0,2,1,482,245,0);
 INSERT INTO `item_weapon` VALUES (20840,'ukonvasara',6,0,2,1,482,245,0);
 INSERT INTO `item_weapon` VALUES (20845,'kenkonken',1,0,4,3,526,93,0);
 INSERT INTO `item_weapon` VALUES (20861,'qalgwer',6,0,2,1,504,272,0);
-INSERT INTO `item_weapon` VALUES (20864,'castigation',6,0,2,1,504,273,0)
+INSERT INTO `item_weapon` VALUES (20864,'castigation',6,0,2,1,504,273,0);
 INSERT INTO `item_weapon` VALUES (20870,'iclamar_+1',6,0,2,1,504,208,0);
 INSERT INTO `item_weapon` VALUES (20871,'forefront_labrys',6,0,2,1,504,146,0);
 INSERT INTO `item_weapon` VALUES (20872,'ixtab',6,0,2,1,504,245,0);
