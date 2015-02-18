@@ -9791,7 +9791,7 @@ INSERT INTO `item_armor` VALUES ('21142', 'nirvana', '99', '16384', '567', '0', 
 INSERT INTO `item_armor` VALUES ('21143', 'hvergelmir', '99', '540680', '516', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21144', 'hvergelmir', '99', '540680', '581', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21176', 'ngqoqwanb', '99', '1589788', '720', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('21181', 'venabulum', '99', '1064960', '438', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('21181', 'venabulum', '99', '1589788', '438', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21194', 'lehbrailg_+1', '99', '1589788', '462', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21195', 'uffrat_+1', '99', '16384', '442', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21198', 'soothsayer_staff', '99', '3179576', '0', '0', '0', '1', '0');
