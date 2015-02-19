@@ -9,7 +9,15 @@
 -----------------------------------------
 
 function onItemCheck(target)
-	return target:canLearnSpell(218);
+	-- return target:canLearnSpell(218);
+	local hasSpell = true;
+	if (target:hasSpell(218) == true) then
+		return 96;
+	elseif (target:getMainLvl() == 99 and target:getMainJob() == 4) then
+		return 0;
+	else
+		return 95;
+	end
 end;
 
 -----------------------------------------
