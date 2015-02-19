@@ -4866,3 +4866,10 @@ INSERT INTO `mob_skill` VALUES (436,7777,2114,'Chainspell',0,7.0,2000,0,1,2,90,0
 INSERT INTO `mob_skill` VALUES (438,7777,1092,'Invincible',0,7.0,2000,0,1,2,60,0);
 INSERT INTO `mob_skill` VALUES (2102,7777,1091,'Minerva_Tabula_Rasa',0,7.0,2000,0,1,2,90,0);
 INSERT INTO `mob_skill` VALUES (1231,7777,1849,'Minerva_Ambrosia',0,7.0,2000,0,1,2,0,0);
+
+-- Tefenet of Courel NM
+INSERT INTO `mob_skill` VALUES (396,991,396,'Blaster', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (397,991,397,'Chaotic_Eye', 4, 10.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (224,991,288,'Petrifactive_Breath', 4, 10.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (226,991,290,'Pounce', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
+INSERT INTO `mob_skill` VALUES (227,991,291,'Charged_Whisker', 1, 12.5, 2000, 1500, 4, 0, 0, 0);
