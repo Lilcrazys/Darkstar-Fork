@@ -6116,3 +6116,92 @@ INSERT INTO `item_mods` VALUES(20734, 302, 3); -- TA
 INSERT INTO `item_mods` VALUES(20734, 23, 36); -- ATT
 INSERT INTO `item_mods` VALUES(20734, 28, 10); -- MATT
 
+-- hanqaku-no-yumi
+INSERT INTO `item_mods` VALUES(21227, 26, 15); -- RACC
+INSERT INTO `item_mods` VALUES(21227, 24, 25); -- RATT
+INSERT INTO `item_mods` VALUES(21227, 104, 242); -- Archery Skill
+INSERT INTO `item_mods` VALUES(21227, 359, 1); -- True Shot
+INSERT INTO `item_mods` VALUES(21227, 345, 1000); -- TP Bonus
+
+-- achiyalabopa_arrow
+INSERT INTO `item_mods` VALUES(21307, 26, 20); -- RACC
+INSERT INTO `item_mods` VALUES(21307, 24, 20); -- RATT
+
+-- achiyalabopa_bullet
+INSERT INTO `item_mods` VALUES(21337, 26, 20); -- RACC
+INSERT INTO `item_mods` VALUES(21337, 24, 20); -- RATT
+
+-- titanium_bullet
+INSERT INTO `item_mods` VALUES(21335, 26, 10); -- RACC
+INSERT INTO `item_mods` VALUES(21335, 24, 10); -- RATT
+
+-- tulfaire_arrow
+INSERT INTO `item_mods` VALUES(21305, 26, 10); -- RACC
+INSERT INTO `item_mods` VALUES(21305, 24, 10); -- RATT
+
+-- lighreaver
+INSERT INTO `item_mods` VALUES(20858, 8, 7); -- STR
+INSERT INTO `item_mods` VALUES(20858, 9, 7); -- VIT
+INSERT INTO `item_mods` VALUES(20858, 25, 20); -- ACC
+INSERT INTO `item_mods` VALUES(20858, 85, 242); -- GA
+INSERT INTO `item_mods` VALUES(20858, 110, 242); -- PARRY
+INSERT INTO `item_mods` VALUES(20858, 30, 188); -- MACC
+INSERT INTO `item_mods` VALUES(20858, 73, 5); -- STP
+INSERT INTO `item_mods` VALUES(20858, 431, 1); -- Additional effect
+
+-- chidpri
+INSERT INTO `item_mods` VALUES(20991, 25, 15); -- ACC
+INSERT INTO `item_mods` VALUES(20991, 28, 15); -- MDMG
+INSERT INTO `item_mods` VALUES(20991, 68, 37); -- EVA
+INSERT INTO `item_mods` VALUES(20991, 88, 242); -- Katana
+INSERT INTO `item_mods` VALUES(20991, 110, 242); -- PARRY
+INSERT INTO `item_mods` VALUES(20991, 30, 188); -- MACC
+INSERT INTO `item_mods` VALUES(20991, 170, 5); -- Fast Cast
+
+-- Vanir Gun
+INSERT INTO `item_mods` VALUES(21284, 105, 242); -- MARK
+INSERT INTO `item_mods` VALUES(21284, 24, 20); -- RATT
+INSERT INTO `item_mods` VALUES(21284, 28, 10); -- MATT
+
+-- Scufflers Cosciales 
+INSERT INTO `item_mods` VALUES(28155, 1, 50); -- HP 
+INSERT INTO `item_mods` VALUES(28155, 8, 33); -- STR
+INSERT INTO `item_mods` VALUES(28155, 10, 24); -- VIT
+INSERT INTO `item_mods` VALUES(28155, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES(28155, 12, 26); -- INT
+INSERT INTO `item_mods` VALUES(28155, 13, 16); -- MND
+INSERT INTO `item_mods` VALUES(28155, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES(28155, 23, 28); -- ATT
+INSERT INTO `item_mods` VALUES(28155, 68, 22); -- EVA 
+INSERT INTO `item_mods` VALUES(28155, 31, 75); -- MEVA
+INSERT INTO `item_mods` VALUES(28155, 29, 3); -- MDB
+INSERT INTO `item_mods` VALUES(28155, 167, 50); -- HASTE
+INSERT INTO `item_mods` VALUES(28155, 288, 2); -- DBL ATT
+INSERT INTO `item_mods` VALUES(28155, 162, -8); -- BREATH DMG 
+
+-- shetal stone
+INSERT INTO `item_mods` VALUES(28445, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES(28445, 14, 5); -- CHR
+INSERT INTO `item_mods` VALUES(28445, 259, 6); -- Dual 
+INSERT INTO `item_mods` VALUES(28445, 23, 10); -- ATT
+INSERT INTO `item_mods` VALUES(28445, 68, 10); -- EVA
+
+-- Floestone
+INSERT INTO `item_mods` VALUES(21366, 8, 3); -- STR
+INSERT INTO `item_mods` VALUES(21366, 12, 5); -- INT
+INSERT INTO `item_mods` VALUES(21366, 23, 10); -- ATT
+
+-- Durgai leggings
+INSERT INTO `item_mods` VALUES(28287, 1, 13); -- HP
+INSERT INTO `item_mods` VALUES(28287, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES(28287, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES(28287, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES(28287, 11, 37); -- AGI
+INSERT INTO `item_mods` VALUES(28287, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES(28287, 14, 30); -- CHR
+INSERT INTO `item_mods` VALUES(28287, 25, 15); -- ACC
+INSERT INTO `item_mods` VALUES(28287, 68, 72); -- EVA
+INSERT INTO `item_mods` VALUES(28287, 30, 69); -- MEVA
+INSERT INTO `item_mods` VALUES(28287, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES(28287, 167, 40); -- HASTE
+INSERT INTO `item_mods` VALUES(28287, 27, -5); -- ENM
