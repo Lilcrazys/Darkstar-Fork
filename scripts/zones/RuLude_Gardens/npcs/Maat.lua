@@ -38,19 +38,19 @@ function onTrade(player,npc,trade)
 
 	-- Begin custom content
 	if (trade:hasItemQty(28390,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,IN_DEFIANT_CHALLENGE) == QUEST_COMPLETED) then
-		doLimitBreakReward(player, 28390, 1); -- Augmented Fiend Torque for clearing G1
+		doLimitBreakReward(player, 1, 1); -- Augmented Fiend Torque for clearing G1
 	end
 	if (trade:hasItemQty(15931,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,ATOP_THE_HIGHEST_MOUNTAINS) == QUEST_COMPLETED) then
-		doLimitBreakReward(player, 15931, 1); -- Augmented Goblin Cest (belt slot) for clearing G2
+		doLimitBreakReward(player, 2, 1); -- Augmented Goblin Cest (belt slot) for clearing G2
 	end
 	if (trade:hasItemQty(15849,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,WHENCE_BLOWS_THE_WIND) == QUEST_COMPLETED) then
-		doLimitBreakReward(player, 15849, 1); -- Augmented Krousis Ring for clearing G3
+		doLimitBreakReward(player, 3, 1); -- Augmented Krousis Ring for clearing G3
 	end
 	if (trade:hasItemQty(19219,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,RIDING_ON_THE_CLOUDS) == QUEST_COMPLETED) then
-		doLimitBreakReward(player, 19219, 1); -- Augmented Iwatsube (melee's only, ammo slot) for clearing G4
+		doLimitBreakReward(player, 4, 1); -- Augmented Iwatsube (melee's only, ammo slot) for clearing G4
 	end
 	if (trade:hasItemQty(16246,1) and tradeCount == 1 and player:getQuestStatus(JEUNO,RIDING_ON_THE_CLOUDS) == QUEST_COMPLETED) then
-		doLimitBreakReward(player, 16246, 1); -- Augmented Viator Cape (RNG and COR only, back slot) for clearing G4
+		doLimitBreakReward(player, 4, 1); -- Augmented Viator Cape (RNG and COR only, back slot) for clearing G4
 	end
 	-- End custom content
 end;
@@ -70,19 +70,16 @@ function onTrigger(player,npc)
 
 	-- Begin custom content
 	if (inDefiantChallenge == QUEST_COMPLETED and player:hasItem(28390) == false) then
-		doLimitBreakReward(player, 28390, 0); -- Augmented Fiend Torque for clearing G1
+		doLimitBreakReward(player, 1, 0); -- Augmented Fiend Torque for clearing G1
 	end
 	if (atopTheHighestMountains == QUEST_COMPLETED and player:hasItem(15931) == false) then
-		doLimitBreakReward(player, 15931, 0); -- Augmented Goblin Cest (belt slot) for clearing G2
+		doLimitBreakReward(player, 2, 0); -- Augmented Goblin Cest (belt slot) for clearing G2
 	end
 	if (whenceBlowsTheWind == QUEST_COMPLETED and player:hasItem(15849) == false) then
-		doLimitBreakReward(player, 15849, 0); -- Augmented Krousis Ring for clearing G3
+		doLimitBreakReward(player, 3, 0); -- Augmented Krousis Ring for clearing G3
 	end
-	if (ridingOnTheClouds == QUEST_COMPLETED and player:hasItem(19219) == false) then
-		doLimitBreakReward(player, 19219, 0); -- Augmented Iwatsube (melee's only, ammo slot) for clearing G4
-	end
-	if (ridingOnTheClouds == QUEST_COMPLETED and player:hasItem(16246) == false) then
-		doLimitBreakReward(player, 16246, 0); -- Augmented Viator Cape (RNG and COR only, back slot) for clearing G4
+	if (ridingOnTheClouds == QUEST_COMPLETED and player:hasItem(16246) == false and player:hasItem(19219) == false) then
+		doLimitBreakReward(player, 4, 0); -- Augmented Iwatsube or Viator Cape for clearing G4
 	end
 	-- End custom content
 
@@ -169,6 +166,7 @@ function onEventFinish(player,csid,option)
 		player:addTitle(HORIZON_BREAKER);
 		-- player:levelCap(55);
 		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_55);
+		doLimitBreakReward(player, 1, 0); -- Augmented Fiend Torque for clearing G1
 		player:completeQuest(JEUNO,IN_DEFIANT_CHALLENGE);
 		player:addFame(JEUNO, JEUNO_FAME*30);
 	-- Genkai 2
@@ -181,6 +179,7 @@ function onEventFinish(player,csid,option)
 		player:delKeyItem(TRIANGULAR_FRIGICITE);
 		-- player:levelCap(60);
 		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_60);
+		doLimitBreakReward(player, 2, 0); -- Augmented Goblin Cest (belt slot) for clearing G2
 		player:completeQuest(JEUNO,ATOP_THE_HIGHEST_MOUNTAINS);
 		player:addFame(JEUNO, JEUNO_FAME*40);
 	-- Genkai 3
@@ -193,6 +192,7 @@ function onEventFinish(player,csid,option)
 		player:delKeyItem(YAGUDO_CREST);
 		-- player:levelCap(65);
 		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_65);
+		doLimitBreakReward(player, 3, 0); -- Augmented Krousis Ring for clearing G3
 		player:completeQuest(JEUNO,WHENCE_BLOWS_THE_WIND);
 		player:addFame(JEUNO, JEUNO_FAME*50);
 	elseif(csid == 0x0058) then
@@ -212,6 +212,7 @@ function onEventFinish(player,csid,option)
 		player:delKeyItem(SPIRITED_STONE);
 		-- player:levelCap(70);
 		-- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_70);
+		doLimitBreakReward(player, 4, 0); -- Augmented Iwatsube or Viator Cape for clearing G4
 		player:completeQuest(JEUNO,RIDING_ON_THE_CLOUDS);
 		player:addFame(JEUNO, JEUNO_FAME*60);
 	elseif(csid == 0x005c) then
@@ -263,7 +264,7 @@ function onEventFinish(player,csid,option)
 end;
 
 -- Custom content function
-function doLimitBreakReward(player, itemID, tradeFlag)
+function doLimitBreakReward(player, Reward, tradeFlag)
 	local Job = player:getMainJob();
 	local aug_1 = 0;
 	local val_1 = 0;
@@ -274,7 +275,8 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 	-- These augments are job specific per item, not random.
 	-- Values are +1 more than stated here because zero = +1 of an aug stat, max 31 (32 of a stat).
 	if (player:getFreeSlotsCount() >= 1) then
-		if (itemID == 28390) then -- Augmented Fiend Torque for clearing G1
+		if (Reward == 1) then
+			PRIZE = 28390; -- Augmented Fiend Torque for clearing G1
 			if (Job == 1) then -- WAR
 				aug_1 = 41; val_1 = 3; aug_2 = 328; val_2 = 5; -- Crit.hit rate+4, Crit. hit damage+6%
 			elseif (Job == 2) then -- MNK
@@ -320,7 +322,8 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 22) then -- RUN
 				aug_1 = 37; val_1 = 3; aug_2 = 796; val_2 = 3; -- Mag.Evasion+4, All elemental Resists +4
 			end
-		elseif (itemID == 15931) then -- Augmented Goblin Cest (belt slot) for clearing G2
+		elseif (Reward == 2) then
+			PRIZE = 15931; -- Augmented Goblin Cest (belt slot) for clearing G2
 			if (Job == 1) then -- WAR
 				aug_1 = 551; val_1 = 1; aug_2 = 513; val_2 = 0; aug_3 = 143; val_3 = 1; -- STR+2 VIT+2, DEX+1, Dbl.Atk.+2
 			elseif (Job == 2) then -- MNK
@@ -366,7 +369,8 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 22) then -- RUN
 				aug_1 = 551; val_1 = 1; aug_2 = 33; val_2 = 10; aug_3 = 55; val_3 = 3; -- STR+2 VIT+2, DEF+10, Magic dmg. taken -4%
 			end
-		elseif (itemID == 15849) then -- Augmented Krousis Ring for clearing G3
+		elseif (Reward == 3) then
+			PRIZE = 15849; -- Augmented Krousis Ring for clearing G3
 			if (Job == 1) then -- WAR
 				aug_1 = 25; val_1 = 3; aug_2 = 327; val_2 = 3; -- Attack+4, Weapon skill damage+4%
 			elseif (Job == 2) then -- MNK
@@ -412,126 +416,64 @@ function doLimitBreakReward(player, itemID, tradeFlag)
 			elseif (Job == 22) then -- RUN
 				aug_1 = 326; val_1 = 3; aug_2 = 134; val_2 = 2; -- Weapon Skill Acc.+4, Mag.Def.Bns.+3
 			end
-		elseif (itemID == 19219) then -- Augmented Iwatsubute (ammo slot) for clearing G4
-			if (Job == 1) then -- WAR
-				aug_1 = 326; val_1 = 4; aug_2 = 1280; val_2 = 14; -- Weapon Skill Acc.+5%, Enhances Mighty Strikes effect (duration +15 sec)
-			elseif (Job == 2) then -- MNK
-				aug_1 = 145; val_1 = 4; aug_2 = 1281; val_2 = 14; -- Counter+5, Enhances Hundred Fists effect (duration +15 sec)
-			elseif (Job == 3) then -- WHM
-				aug_1 = 323; val_1 = 4; aug_2 = 1282; val_2 = 49; -- Cure spellcasting time -5%, Enhances Benediction effect (gives Benediction enmity -50.)
-			elseif (Job == 4) then -- BLM
-				aug_1 = 292; val_1 = 4; aug_2 = 1283; val_2 = 29; -- Elem. magic skill+5, Enhances Manafont effect (duration +30 sec)
-			elseif (Job == 5) then -- RDM
-				aug_1 = 291; val_1 = 4; aug_2 = 1284; val_2 = 19; -- Enfb.mag. skill+5, Enhances Chainspell effect (duration +20 sec)
-			elseif (Job == 6) then -- THF
-				aug_1 = 31; val_1 = 4; aug_2 = 1285; val_2 = 9; -- Evasion+5, Enhances Perfect Dodge effect (duration +10 sec)
-			elseif (Job == 7) then -- PLD
-				aug_1 = 33; val_1 = 19; aug_2 = 1286; val_2 = 9; -- Def+20, Enhances Invincible effect (duration +10 sec)
-			elseif (Job == 8) then -- DRK
-				aug_1 = 343; val_1 = 9; aug_2 = 1287; val_2 = 9; -- Drain/Aspir Potency +10, Enhances Blood Weapon effect (duration +10 sec)
-			elseif (Job == 9) then -- BST
-				aug_1 = 324; val_1 = 0; aug_2 = 1288; val_2 = 9; -- Call Beast ability delay -10, Enhances Familiar effect (duration +10 min, pet haste +10)
-			elseif (Job == 10) then -- BRD
-				itemID = 16246;
-				aug_1 = 67; val_1 = 0; aug_2 = 1289; val_2 = 29; -- All Songs+1, Enhances Soul Voice effect (duration +30 sec)
-			elseif (Job == 11) then -- RNG
-				itemID = 16246;
-				aug_1 = 338; val_1 = 1; aug_2 = 1290; val_2 = 19; -- Barrage+1, Enhances Eagle Eye Shot effect (damage +20%)
-			elseif (Job == 12) then -- SAM
-				aug_1 = 353; val_1 = 9; aug_2 = 1291; val_2 = 4; -- TP Bonus +500, Enhances Meikyo Shisui effect (Reduces the cost of weapon skills to 750/3000 TP)
-			elseif (Job == 13) then -- NIN
-				aug_1 = 140; val_1 = 4; aug_2 = 1292; val_2 = 49; -- Fast Cast +5, Enhances Mijin Gakure effect (damage +50%)
-			elseif (Job == 14) then -- DRG
-				aug_1 = 56; val_1 = 4; aug_2 = 1293; val_2 = 19; -- Breath dmg. taken -5%, Enhances Spirit Surge effect (duration +20 sec)
-			elseif (Job == 15) then -- SMN
-				aug_1 = 53; val_1 = 4; aug_2 = 1294; val_2 = 29; -- Spell interruption rate down 5%, Enhances Astral Flow effect (duration +30 sec)
-			elseif (Job == 16) then -- BLU
-				aug_1 = 332; val_1 = 4; aug_2 = 1295; val_2 = 9; -- Sklchn.dmg.+5%, Enhances Azure Lore effect (duration +10 sec)
-			elseif (Job == 17) then -- COR
-				itemID = 16246;
-				aug_1 = 340; val_1 = 4; aug_2 = 1296; val_2 = 0; -- Phantom Roll ability delay -5, Enhances Wild Card effect (one invisible re-roll if the initial roll lands on a 1 or 2)
-			elseif (Job == 18) then -- PUP
-				aug_1 = 111; val_1 = 4; aug_2 = 1297; val_2 = 19; -- Pet: Haste+5, Enhances Overdrive effect (duration +20 sec)
-			elseif (Job == 19) then -- DNC
-				aug_1 = 330; val_1 = 4; aug_2 = 1298; val_2 = 19; -- Waltz potency +5%, Enhances Trance effect (duration +20 sec)
-			elseif (Job == 20) then -- SCH
-				aug_1 = 57; val_1 = 4; aug_2 = 1299; val_2 = 29; -- Magic crit. hit rate+5, Enhances Tablua Rasa effect (duration +30 sec)
-			elseif (Job == 21) then -- GEO
-				aug_1 = 37; val_1 = 4; aug_2 = 1300; val_2 = 29; -- Mag.Evasion+5, Enhances Bolster effect (duration +30 sec)
-			elseif (Job == 22) then -- RUN
-				aug_1 = 327; val_1 = 4; aug_2 = 1301; val_2 = 9; -- Weapon skill damage+5%, Enhances Elemental Sforzo effect (duration +10 sec)
+		elseif (Reward == 4) then
+			if (Job == BRD or Job == RNG or Job == COR) then
+				PRIZE = 16246; -- Augmented Viator Cape (RNG and COR only, back slot) for clearing G4
+			else
+				PRIZE = 19219; -- Augmented Iwatsubute (everybody else, ammo slot) for clearing G4
 			end
-		elseif (itemID == 16246) then -- Augmented Viator Cape (RNG and COR only, back slot) for clearing G4
 			if (Job == 1) then -- WAR
-				itemID = 19219;
 				aug_1 = 326; val_1 = 4; aug_2 = 1280; val_2 = 14; -- Weapon Skill Acc.+5%, Enhances Mighty Strikes effect (duration +15 sec)
 			elseif (Job == 2) then -- MNK
-				itemID = 19219;
 				aug_1 = 145; val_1 = 4; aug_2 = 1281; val_2 = 14; -- Counter+5, Enhances Hundred Fists effect (duration +15 sec)
 			elseif (Job == 3) then -- WHM
-				itemID = 19219;
 				aug_1 = 323; val_1 = 4; aug_2 = 1282; val_2 = 49; -- Cure spellcasting time -5%, Enhances Benediction effect (gives Benediction enmity -50.)
 			elseif (Job == 4) then -- BLM
-				itemID = 19219;
 				aug_1 = 292; val_1 = 4; aug_2 = 1283; val_2 = 29; -- Elem. magic skill+5, Enhances Manafont effect (duration +30 sec)
 			elseif (Job == 5) then -- RDM
-				itemID = 19219;
 				aug_1 = 291; val_1 = 4; aug_2 = 1284; val_2 = 19; -- Enfb.mag. skill+5, Enhances Chainspell effect (duration +20 sec)
 			elseif (Job == 6) then -- THF
-				itemID = 19219;
-				aug_1 = 31; val_1 = 4; aug_2 = 1285; val_2 = 9; -- Evasion+5, Enhances Perfect Dodge effect (duration +10 sec)
+				aug_1 = 552; val_1 = 2; aug_2 = 1285; val_2 = 9; -- STR+3 AGI+3, Enhances Perfect Dodge effect (duration +10 sec)
 			elseif (Job == 7) then -- PLD
-				itemID = 19219;
 				aug_1 = 33; val_1 = 19; aug_2 = 1286; val_2 = 9; -- Def+20, Enhances Invincible effect (duration +10 sec)
 			elseif (Job == 8) then -- DRK
-				itemID = 19219;
 				aug_1 = 343; val_1 = 9; aug_2 = 1287; val_2 = 9; -- Drain/Aspir Potency +10, Enhances Blood Weapon effect (duration +10 sec)
 			elseif (Job == 9) then -- BST
-				itemID = 19219;
 				aug_1 = 324; val_1 = 0; aug_2 = 1288; val_2 = 9; -- Call Beast ability delay -10, Enhances Familiar effect (duration +10 min, pet haste +10)
 			elseif (Job == 10) then -- BRD
 				aug_1 = 67; val_1 = 0; aug_2 = 1289; val_2 = 29; -- All Songs+1, Enhances Soul Voice effect (duration +30 sec)
 			elseif (Job == 11) then -- RNG
 				aug_1 = 338; val_1 = 1; aug_2 = 1290; val_2 = 19; -- Barrage+1, Enhances Eagle Eye Shot effect (damage +20%)
 			elseif (Job == 12) then -- SAM
-				itemID = 19219;
 				aug_1 = 353; val_1 = 9; aug_2 = 1291; val_2 = 4; -- TP Bonus +500, Enhances Meikyo Shisui effect (Reduces the cost of weapon skills to 750/3000 TP)
 			elseif (Job == 13) then -- NIN
-				itemID = 19219;
 				aug_1 = 140; val_1 = 4; aug_2 = 1292; val_2 = 49; -- Fast Cast +5, Enhances Mijin Gakure effect (damage +50%)
 			elseif (Job == 14) then -- DRG
-				itemID = 19219;
 				aug_1 = 56; val_1 = 4; aug_2 = 1293; val_2 = 19; -- Breath dmg. taken -5%, Enhances Spirit Surge effect (duration +20 sec)
 			elseif (Job == 15) then -- SMN
-				itemID = 19219;
 				aug_1 = 53; val_1 = 4; aug_2 = 1294; val_2 = 29; -- Spell interruption rate down 5%, Enhances Astral Flow effect (duration +30 sec)
 			elseif (Job == 16) then -- BLU
-				itemID = 19219;
 				aug_1 = 332; val_1 = 4; aug_2 = 1295; val_2 = 9; -- Sklchn.dmg.+5%, Enhances Azure Lore effect (duration +10 sec)
 			elseif (Job == 17) then -- COR
 				aug_1 = 340; val_1 = 4; aug_2 = 1296; val_2 = 0; -- Phantom Roll ability delay -5, Enhances Wild Card effect (one invisible re-roll if the initial roll lands on a 1 or 2)
 			elseif (Job == 18) then -- PUP
-				itemID = 19219;
 				aug_1 = 111; val_1 = 4; aug_2 = 1297; val_2 = 19; -- Pet: Haste+5, Enhances Overdrive effect (duration +20 sec)
 			elseif (Job == 19) then -- DNC
-				itemID = 19219;
 				aug_1 = 330; val_1 = 4; aug_2 = 1298; val_2 = 19; -- Waltz potency +5%, Enhances Trance effect (duration +20 sec)
 			elseif (Job == 20) then -- SCH
-				itemID = 19219;
 				aug_1 = 57; val_1 = 4; aug_2 = 1299; val_2 = 29; -- Magic crit. hit rate+5, Enhances Tablua Rasa effect (duration +30 sec)
 			elseif (Job == 21) then -- GEO
 				aug_1 = 37; val_1 = 4; aug_2 = 1300; val_2 = 29; -- Mag.Evasion+5, Enhances Bolster effect (duration +30 sec)
 			elseif (Job == 22) then -- RUN
-				itemID = 19219;
 				aug_1 = 327; val_1 = 4; aug_2 = 1301; val_2 = 9; -- Weapon skill damage+5%, Enhances Elemental Sforzo effect (duration +10 sec)
 			end
 		end
 		if (tradeFlag == 1) then
 			player:tradeComplete();
 		end
-		player:addItem(itemID, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
-		player:messageSpecial(ITEM_OBTAINED, itemID);
+		player:addItem(PRIZE, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
+		player:messageSpecial(ITEM_OBTAINED, PRIZE);
 	else
-		player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, itemID);
+		player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
 	end
 end;
