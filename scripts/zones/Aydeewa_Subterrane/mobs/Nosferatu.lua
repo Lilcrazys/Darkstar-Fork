@@ -50,22 +50,22 @@ function onMobFight(mob,target)
     end	
 	
 	
-	if(mobHP <= 25) then
-	    if (Nos_SMN_Used == 2) then
-		    SpawnMob(petIDs3[i],800):updateEnmity(target);
-			mob:setLocalVar("Nos_SMN", 3);
-		end
-	elseif (mobHP <= 50) then
-		if (Nos_SMN_Used == 1) then
-			SpawnMob(petIDs2[i],800):updateEnmity(target);
-			mob:setLocalVar("Nos_SMN", 2);
-		end
-	elseif (mobHP <= 75) then	
-		if (Nos_SMN_Used == 0) then
-			SpawnMob(petIDs3[i],800):updateEnmity(target);
- 			mob:setLocalVar("Nos_SMN", 1);
-		end	
-	end	   
+    if(mobHP <= 25) then
+        if (Nos_SMN_Used == 2) then
+            SpawnMob(petIDs3[i],800):updateEnmity(target);
+            mob:setLocalVar("Nos_SMN", 3);
+        end
+    elseif (mobHP <= 50) then
+        if (Nos_SMN_Used == 1) then
+            SpawnMob(petIDs2[i],800):updateEnmity(target);
+            mob:setLocalVar("Nos_SMN", 2);
+        end
+    elseif (mobHP <= 75) then	
+        if (Nos_SMN_Used == 0) then
+            SpawnMob(petIDs3[i],800):updateEnmity(target);
+            mob:setLocalVar("Nos_SMN", 1);
+        end	
+    end	   
 end;
 
 -----------------------------------
