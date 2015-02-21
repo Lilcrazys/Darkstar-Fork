@@ -31,7 +31,11 @@ end;
 function onMobDeath(mob, killer)
 
     killer:addTitle(FAFNIR_SLAYER);
-
+    local SPELL_ID = 738;
+    local CHANCE = 25;
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU) and killer:player:hasSpell(SPELL_ID) == false) then
+        killer:addSpell(SPELL_ID);
+    end
     local Fafnir  = mob:getID();
     local Nidhogg = 17408019;
     local ToD     = GetServerVariable("[POP]Nidhogg");

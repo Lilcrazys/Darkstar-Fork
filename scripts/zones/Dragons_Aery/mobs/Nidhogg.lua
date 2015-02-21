@@ -45,6 +45,13 @@ function onMobDeath(mob, killer)
 
     killer:addTitle(NIDHOGG_SLAYER);
 
+    local SPELL_ID = 738;
+    local CHANCE = 25;
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU) and killer:player:hasSpell(SPELL_ID) == false) then
+        killer:addSpell(SPELL_ID);
+    end
+
+	
     -- Set Nidhogg's Window Open Time
     if (LandKingSystem_HQ == 0 or LandKingSystem_HQ == 2) then
         local wait = 72 * 3600
