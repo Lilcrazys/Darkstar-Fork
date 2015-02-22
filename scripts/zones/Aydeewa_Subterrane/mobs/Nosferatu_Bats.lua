@@ -1,20 +1,15 @@
 -----------------------------------
--- Area: 
--- NPC:  Nos Bats
+-- Area: Arrapago Reef
+--  Mob: Nosferatu Bats
 -----------------------------------
 
-require("/scripts/globals/fieldsofvalor");
-package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function OnMobSpawn(mob)
-	mob:setMod(MOD_REGAIN,50);
 end;
 
 -----------------------------------
@@ -22,6 +17,7 @@ end;
 -----------------------------------
 
 function OnMobEngaged(mob,target)
+	mob:setMod(MOD_REGAIN,50);
 end;
 
 -----------------------------------

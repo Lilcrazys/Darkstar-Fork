@@ -1,23 +1,24 @@
 -----------------------------------
 -- Area: Aydeewa Subterrane
--- NPC:  Nosferatu
+--  NM:  Nosferatu
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
+-- require("scripts/globals/titles"); if its not being used why is it here?
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-	mob:setMod(MOD_REGAIN,20);
 end;
 
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
 
-function onMobSpawn(mob)	
+function onMobSpawn(mob)
+	mob:setMod(MOD_REGAIN,20);
 end;
 
 -----------------------------------
@@ -25,7 +26,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	
+
 end;
 
 -----------------------------------
@@ -33,23 +34,22 @@ end;
 -----------------------------------
 function onMobFight(mob,target)
 	local mobHP = mob:getHPP();
-	local mobID = mob:getID();
-	local petIDs1 = {17056158,17056159,17056160};
-	local petIDs2 = {17056161,17056162,17056163};
-	local petIDs3 = {17056164,17056165,17056166};
+	local MobID = mob:getID();
+	local petIDs1 = {MobID+1, MobID+2, MobID+3}; -- Nosferatu_Bats
+	local petIDs2 = {MobID+4, MobID+5, MobID+6}; -- Nosferatu_Wolf
+	local petIDs3 = {MobID+7, MobID+8, MobID+9}; -- Nosferatu_Murk
 
-	
 	if(target:getAnimation() == 0) then
 		mob:resetEnmity(target);
 		mob:ActionDisengage(true);
 	end
-	
+
     local Nos_SMN_Used = 0;
     if (mob:getLocalVar("Nos_SMN") ~= nil) then
         Nos_SMN_Used = mob:getLocalVar("Nos_SMN");
-    end	
-	
-	
+    end
+
+
     if(mobHP <= 25) then
         if (Nos_SMN_Used == 2) then
             SpawnMob(petIDs3[i],800):updateEnmity(target);
@@ -60,12 +60,12 @@ function onMobFight(mob,target)
             SpawnMob(petIDs2[i],800):updateEnmity(target);
             mob:setLocalVar("Nos_SMN", 2);
         end
-    elseif (mobHP <= 75) then	
+    elseif (mobHP <= 75) then
         if (Nos_SMN_Used == 0) then
             SpawnMob(petIDs3[i],800):updateEnmity(target);
             mob:setLocalVar("Nos_SMN", 1);
-        end	
-    end	   
+        end
+    end
 end;
 
 -----------------------------------
@@ -73,13 +73,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	local petIDs1 = {17056160,17056161,17056159};
-	local petIDs2 = {17056162,17056163,17056164};
-	local petIDs3 = {17056165,17056166,17056167};
-	
+	local MobID = mob:getID();
+	local petIDs1 = {MobID+1, MobID+2, MobID+3}; -- Nosferatu_Bats
+	local petIDs2 = {MobID+4, MobID+5, MobID+6}; -- Nosferatu_Wolf
+	local petIDs3 = {MobID+7, MobID+8, MobID+9}; -- Nosferatu_Murk
 	for i = 1, 3 do
 		DespawnMob(petIDs1[i]);
 		DespawnMob(petIDs2[i]);
 		DespawnMob(petIDs3[i]);
-	end	
+	end
 end;
