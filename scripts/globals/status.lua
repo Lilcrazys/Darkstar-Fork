@@ -735,7 +735,7 @@ EFFECT_MEDITATE                 = 801 -- Dummy effect for SAM Meditate JA
 -- Start of LegionXI custom section
 -- EFFECT_PLACEHOLDER              = 1014 -- Description
 -- EFFECT_PLACEHOLDER              = 1015 -- Description
--- EFFECT_PLACEHOLDER              = 1016 -- Description
+EFFECT_CUSTOM_ENSPELL           = 1016 -- Used by mobs with dispellable custom Enspells
 EFFECT_WIND_SPIKES              = 1017
 EFFECT_STONE_SPIKES             = 1018
 EFFECT_DARK_SPIKES              = 1019
