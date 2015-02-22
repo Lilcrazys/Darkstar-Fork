@@ -4322,7 +4322,7 @@ INSERT INTO `item_mods` VALUES(20861, 10, 12); --
 INSERT INTO `item_mods` VALUES(20861, 85, 242); --
 INSERT INTO `item_mods` VALUES(20861, 110, 242); --
 INSERT INTO `item_mods` VALUES(20861, 30, 188); --
--- INSERT INTO `item_mods` VALUES(20861, ???, 20); -- Retaliation +20  unknown
+INSERT INTO `item_mods` VALUES(20861, 414, 20); -- Retaliation 
 INSERT INTO `item_mods` VALUES(20861, 161, -5); --
 INSERT INTO `item_mods` VALUES(20870, 85, 162); --
 INSERT INTO `item_mods` VALUES(20870, 110, 162); --
