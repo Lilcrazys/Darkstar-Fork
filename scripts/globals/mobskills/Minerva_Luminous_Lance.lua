@@ -1,16 +1,13 @@
 ---------------------------------------------
---  Luminous Lance (Minerva's custom version)
+-- Luminous Lance (Minerva's custom version)
 --
 -- Single target light element damage and stun.
 -- Damage increases with distance.
 -- Adds custom EnLight effect.
--- 
 ---------------------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -24,8 +21,11 @@ function onMobWeaponSkill(target, mob, skill)
     local dmgmod = 1.4 + (distance * 0.15);
     local info = MobRangedMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_RANGED,MOBPARAM_PIERCE,info.hitslanded);
-    mob:addStatusEffect(EFFECT_ENLIGHT, 1, 0, 600);
+
+    mob:SetMobSkillAttack(false);
     target:addStatusEffect(EFFECT_STUN, 0, 0, 20);
+    mob:addStatusEffectEx(EFFECT_CUSTOM_ENSPELL, EFFECT_ENLIGHT, 7, 0, 600);
     target:delHP(dmg);
+
     return dmg;
 end;

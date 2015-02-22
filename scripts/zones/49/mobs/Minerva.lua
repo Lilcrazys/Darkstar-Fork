@@ -14,8 +14,6 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_SPECIAL_COOL, 20); -- Time between Melee special uses
-    mob:setMobMod(MOBMOD_SPECIAL_SKILL, 1861); -- Melee special MobSkill ID
     mob:setMobMod(MOBMOD_MAGIC_COOL, 28); -- Time between Magic Cast attempts
     mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID());
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID());
@@ -26,11 +24,16 @@ end
 -----------------------------------
 
 function onMobSpawn(mob)
+    mob:addMod(MOD_DIVINE, 200);
+    mob:addMod(MOD_HEALING, 60);
+    mob:addMod(MOD_ENHANCE, 60);
+    mob:addMod(MOD_ENFEEBLE, 60);
+    mob:addMod(MOD_ELEM, 100);
     mob:addMod(MOD_INT, 20);
     mob:addMod(MOD_MND, 10);
     mob:addMod(MOD_CHR, 24);
-    mob:addMod(MOD_MATT, 33);
-    mob:addMod(MOD_MACC, 100);
+    mob:addMod(MOD_MATT, 40);
+    mob:addMod(MOD_MACC, 124);
     mob:setMod(MOD_REGEN, 20);
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 20);
@@ -77,7 +80,9 @@ function onMobFight(mob, target)
     -- target:PrintToPlayer(string.format("2hr lv: %u ", Minerva_2hr_Used));
 
     -- if (BattleTime - LastElemental > 30) then
-        -- pop my elementals again.
+        -- Pop my elementals again. (spawnPet calls petutils::SpawnMobPet when used by a mob)
+        -- mob:spawnPet(mob:getID()+1) -- Stellar Elemental
+        -- mob:spawnPet(mob:getID()+2) -- Olympian Elemental
     -- end
 
     if (mob:hasStatusEffect(EFFECT_TABULA_RASA) == true) then
@@ -150,78 +155,71 @@ function onAdditionalEffect(mob,target,damage)
     local IntMndBonus = 0;
     -- target:PrintToPlayer( string.format( "Enspell base Dmg: '%u' ", dmg ) );
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+    -- target:PrintToPlayer( string.format( "INT diff: '%u' ", INT_diff) );
     local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
-    if (mob:hasStatusEffect(EFFECT_MINERVA_ENLIGHT) == true) then
+    -- target:PrintToPlayer( string.format( "MND diff: '%u' ", MND_diff) );
+    if (mob:hasStatusEffect(EFFECT_CUSTOM_ENSPELL) == true) then
         mob:SetMobSkillAttack(false); -- Disable Special Animation for melee attacks during effect.
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20);
-            INT_diff = INT_diff * 0.34;
-        end
-
-        if (MND_diff > 20) then
-            MND_diff = 20 + (MND_diff - 20);
-            MND_diff = MND_diff * 0.5;
-        end
-        IntMndBonus = INT_diff + MND_diff;
-        IntMndBonus = IntMndBonus * 0.2;
-        -- target:PrintToPlayer( string.format( "Enspell int+mnd bonus: '%u' ", IntMndBonus) );
-        dmg = dmg + IntMndBonus;
-        dmg = dmg -10; -- Minerva's EnLight doesn't hit as hard as her Enthunder
-        -- target:PrintToPlayer( string.format( "Enspell Dmg before clamp: '%u' ", dmg ) );
-        dmg = utils.clamp(dmg, 20, 40);
-        if (math.random(0,99) >= 66) then
-            target:delMP(dmg * 0.5);
-            target:delTP(dmg * 0.25)
-            if (mob:getLocalVar("Minerva_Boost_from_Enspell") == nil) then
-                Enspell_Enfeeb = 0;
+        if (mob:getStatusEffect(EFFECT_CUSTOM_ENSPELL):getPower() == 7) then -- Enlight
+            IntMndBonus = (INT_diff * 0.25) + (MND_diff * 0.5);
+            -- target:PrintToPlayer( string.format( "Enspell int+mnd bonus: '%u' ", IntMndBonus) );
+            dmg = dmg + (IntMndBonus * 0.25);
+            dmg = dmg -10; -- Minerva's EnLight doesn't hit as hard as her Enthunder
+            -- target:PrintToPlayer( string.format( "Enspell Dmg before clamp: '%u' ", dmg ) );
+            dmg = utils.clamp(dmg, 20, 40);
+            if (math.random(0,99) >= 66) then
+                target:delMP(dmg * 0.5);
+                target:delTP(dmg * 0.25)
+                if (mob:getLocalVar("Minerva_Boost_from_Enspell") == nil) then
+                    Enspell_Enfeeb = 0;
+                else
+                    Enspell_Enfeeb = mob:getLocalVar("Minerva_Boost_from_Enspell");
+                end
+                Enspell_Enfeeb = Enspell_Enfeeb + 1
+                if (Enspell_Enfeeb > 200) then
+                    Enspell_Enfeeb = 200;
+                end
+                mob:setLocalVar("Minerva_Boost_from_Enspell", Enspell_Enfeeb);
+                target:delStatusEffectSilent(EFFECT_MAGIC_DEF_DOWN);
+                target:addStatusEffect(EFFECT_MAGIC_DEF_DOWN, Enspell_Enfeeb * 5, 0, 150);
+                -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
+                return SUBEFFECT_LIGHT_DAMAGE,163,dmg;
             else
-                Enspell_Enfeeb = mob:getLocalVar("Minerva_Boost_from_Enspell");
+                target:delMP(dmg * 0.5);
+                target:delTP(dmg * 0.25)
+                -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
+                return SUBEFFECT_LIGHT_DAMAGE,163,dmg;
             end
-            Enspell_Enfeeb = Enspell_Enfeeb + 1
-            mob:setLocalVar("Minerva_Boost_from_Enspell", Enspell_Enfeeb);
-            target:delStatusEffectSilent(EFFECT_MAGIC_DEF_DOWN);
-            target:addStatusEffect(EFFECT_MAGIC_DEF_DOWN,Enspell_Enfeeb * 5,0,150);
-            -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-            return SUBEFFECT_LIGHT_DAMAGE,163,dmg;
-        else
-            target:delMP(dmg * 0.5);
-            target:delTP(dmg * 0.25)
-            -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-            return SUBEFFECT_LIGHT_DAMAGE,163,dmg;
-        end
-    elseif (mob:hasStatusEffect(EFFECT_MINERVA_ENTHUNDER) == true) then
-        mob:SetMobSkillAttack(false); -- Disable Special Animation for melee attacks during effect.
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20);
-            INT_diff = INT_diff * 0.5;
-        end
-
-        if (MND_diff > 20) then
-            MND_diff = 20 + (MND_diff - 20);
-            MND_diff = MND_diff * 0.34;
-        end
-        IntMndBonus = INT_diff + MND_diff;
-        IntMndBonus = IntMndBonus * 0.20;
-        -- target:PrintToPlayer( string.format( "Enspell int+mnd bonus: '%u' ", IntMndBonus) );
-        dmg = dmg + IntMndBonus;
-        dmg = dmg + 15; -- Minerva's Enthunder hits harder than her Enlight
-        -- target:PrintToPlayer( string.format( "Enspell Dmg before clamp: '%u' ", dmg ) );
-        dmg = utils.clamp(dmg, 40, 80);
-        if (math.random(0,99) >= 66) then
-            if (mob:getLocalVar("Minerva_Boost_from_Enspell") == nil) then
-                Enspell_Enfeeb = 0;
+        elseif (mob:getStatusEffect(EFFECT_CUSTOM_ENSPELL):getPower() == 5) then -- Enthunder
+            IntMndBonus = (INT_diff * 0.5) + (MND_diff * 0.25);
+            -- target:PrintToPlayer( string.format( "Enspell int+mnd bonus: '%u' ", IntMndBonus) );
+            dmg = dmg + (IntMndBonus * 0.25);
+            dmg = dmg + 15; -- Minerva's Enthunder hits harder than her Enlight
+            -- target:PrintToPlayer( string.format( "Enspell Dmg before clamp: '%u' ", dmg ) );
+            dmg = utils.clamp(dmg, 40, 80);
+            if (math.random(0,99) >= 66) then
+                if (mob:getLocalVar("Minerva_Boost_from_Enspell") == nil) then
+                    Enspell_Enfeeb = 0;
+                else
+                    Enspell_Enfeeb = mob:getLocalVar("Minerva_Boost_from_Enspell");
+                end
+                Enspell_Enfeeb = Enspell_Enfeeb + 1;
+                if (Enspell_Enfeeb > 200) then
+                    Enspell_Enfeeb = 200;
+                end
+                mob:setLocalVar("Minerva_Boost_from_Enspell", Enspell_Enfeeb);
+                target:delStatusEffectSilent(EFFECT_MAGIC_EVASION_DOWN);
+                target:addStatusEffect(EFFECT_MAGIC_EVASION_DOWN, Enspell_Enfeeb * 10, 0, 150);
+                -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
+                return SUBEFFECT_LIGHTNING_DAMAGE,163,dmg;
             else
-                Enspell_Enfeeb = mob:getLocalVar("Minerva_Boost_from_Enspell");
+                -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
+                return SUBEFFECT_LIGHTNING_DAMAGE,163,dmg;
             end
-            Enspell_Enfeeb = Enspell_Enfeeb + 1
-            mob:setLocalVar("Minerva_Boost_from_Enspell", Enspell_Enfeeb);
-            target:delStatusEffectSilent(EFFECT_MAGIC_EVASION_DOWN);
-            target:addStatusEffect(EFFECT_MAGIC_EVASION_DOWN,Enspell_Enfeeb * 10,0,150);
-            -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-            return SUBEFFECT_LIGHTNING_DAMAGE,163,dmg;
         else
-            -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-            return SUBEFFECT_LIGHTNING_DAMAGE,163,dmg;
+            target:PrintToPlayer("Unknown error with custom enspell. Bug report immediately.");
+            mob:setLocalVar("Minerva_Boost_from_Enspell", 0);
+            return 0,0,0;
         end
     else
         mob:SetMobSkillAttack(true); -- Re-enable Special Animation for melee attacks.
@@ -240,19 +238,9 @@ function onSpikesDamage(mob,target,damage)
     local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
     if (mob:hasStatusEffect(EFFECT_REPRISAL) == true) then
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20);
-            INT_diff = INT_diff * 0.34;
-        end
-
-        if (MND_diff > 20) then
-            MND_diff = 20 + (MND_diff - 20);
-            MND_diff = MND_diff * 0.5;
-        end
-        IntMndBonus = INT_diff + MND_diff;
-        IntMndBonus = IntMndBonus * 0.2;
+        IntMndBonus = (INT_diff * 0.25) + (MND_diff * 0.5);
         -- target:PrintToPlayer( string.format( "Spikes int+mnd bonus: '%u' ", IntMndBonus) );
-        dmg = dmg + IntMndBonus;
+        dmg = dmg + (IntMndBonus * 0.25);
         dmg = dmg -10; -- Minerva's Light Spikes don't hit as hard as her Shock Spikes
         -- target:PrintToPlayer( string.format( "Spikes Dmg before clamp: '%u' ", dmg ) );
         dmg = utils.clamp(dmg, 20, 40);
@@ -269,8 +257,8 @@ function onSpikesDamage(mob,target,damage)
             mob:setLocalVar("Minerva_Boost_from_Spikes", Magic_Boost);
             mob:delStatusEffectSilent(EFFECT_MAGIC_ATK_BOOST);
             mob:delStatusEffectSilent(EFFECT_MAGIC_ACC_BOOST_II);
-            mob:addStatusEffect(EFFECT_MAGIC_ATK_BOOST,Magic_Boost * 2,0,0);
-            mob:addStatusEffect(EFFECT_MAGIC_ACC_BOOST_II,Magic_Boost * 5,0,0);
+            mob:addStatusEffect(EFFECT_MAGIC_ATK_BOOST, Magic_Boost * 2, 0, 0);
+            mob:addStatusEffect(EFFECT_MAGIC_ACC_BOOST_II, Magic_Boost * 5, 0, 0);
             -- target:PrintToPlayer( string.format( "Spikes Dmg after clamp: '%u' ", dmg ) );
             return SUBEFFECT_REPRISAL,44,dmg;
         else
@@ -278,18 +266,9 @@ function onSpikesDamage(mob,target,damage)
             return SUBEFFECT_REPRISAL,44,dmg;
         end
     elseif (mob:hasStatusEffect(EFFECT_SHOCK_SPIKES) == true) then
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20);
-            INT_diff = INT_diff * 0.5;
-        end
-
-        if (MND_diff > 20) then
-            MND_diff = 20 + (MND_diff - 20);
-            MND_diff = MND_diff * 0.34;
-        end     IntMndBonus = INT_diff + MND_diff;
-        IntMndBonus = IntMndBonus * 0.2;
+        IntMndBonus = (INT_diff * 0.5) + (MND_diff * 0.25);
         -- target:PrintToPlayer( string.format( "Spikes int+mnd bonus: '%u' ", IntMndBonus) );
-        dmg = dmg + IntMndBonus;
+        dmg = dmg + (IntMndBonus * 0.25);
         dmg = dmg + 15; -- Minerva's Shock Spikes hit harder than her Light Spikes
         -- target:PrintToPlayer( string.format( "Spikes Dmg before clamp: '%u' ", dmg ) );
         dmg = utils.clamp(dmg, 40, 80);
