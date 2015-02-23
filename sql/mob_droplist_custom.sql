@@ -287,6 +287,7 @@ INSERT INTO `mob_droplist` VALUES (4543,0,11750,1000); -- COMMENT ME
 
 INSERT INTO `mob_droplist` VALUES (4544,0,21227,230); -- hanqaku-no-yumi
 INSERT INTO `mob_droplist` VALUES (4544,0,20858,180); -- Lightreaver
+INSERT INTO `mob_droplist` VALUES (4544,0,21364,380); -- Elders Grip
 INSERT INTO `mob_droplist` VALUES (4544,0,28665,100); -- Killedar_Shield_+1
 INSERT INTO `mob_droplist` VALUES (4544,0,20991,240); -- Chidori
 INSERT INTO `mob_droplist` VALUES (4544,0,21284,190); -- Vanir_Gun
