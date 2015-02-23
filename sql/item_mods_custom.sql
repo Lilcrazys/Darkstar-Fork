@@ -2736,7 +2736,7 @@ INSERT INTO `item_mods` VALUES(13001, 12, 8); --
 INSERT INTO `item_mods` VALUES(13001, 115, 3); --
 INSERT INTO `item_mods` VALUES(13001, 116, 3); --
 INSERT INTO `item_mods` VALUES(13001, 170, 30); --
-
+INSERT INTO `item_mods` VALUES(13215, 2, 9999); -- HP to GM belt to test things
 INSERT INTO `item_mods` VALUES(13573, 1, 6); --
 INSERT INTO `item_mods` VALUES(13573, 28, 5); --
 INSERT INTO `item_mods` VALUES(13573, 27, 5); --
