@@ -2194,6 +2194,10 @@ INSERT INTO `item_mods` VALUES(11638, 1, 8); --
 INSERT INTO `item_mods` VALUES(11638, 5, 10); --
 INSERT INTO `item_mods` VALUES(11638, 27, -4); --
 
+-- Epona's Ring
+INSERT INTO `item_mods` VALUES(11651, 288, 3); -- dounle atk
+INSERT INTO `item_mods` VALUES(11651, 302, 3); -- triple atk
+
 REPLACE INTO `item_mods` VALUES(11657, 12, 7);
 
 INSERT INTO `item_mods` VALUES(11669, 30, 2); --
