@@ -1011,6 +1011,11 @@ INSERT INTO `item_mods` VALUES(10822, 121, 5); --
 INSERT INTO `item_mods` VALUES(10823, 1, 5); --
 INSERT INTO `item_mods` VALUES(10823, 117, 5); --
 INSERT INTO `item_mods` VALUES(10823, 118, 5); --
+-- Casso Sash
+INSERT INTO `item_mods` VALUES(10824, 1, 5); -- def
+INSERT INTO `item_mods` VALUES(10824, 114, 5); -- enfeebling skill
+INSERT INTO `item_mods` VALUES(10824, 116, 5); -- dark skill
+
 INSERT INTO `item_mods` VALUES(10825, 1, 8); --
 INSERT INTO `item_mods` VALUES(10825, 9, 7); --
 INSERT INTO `item_mods` VALUES(10825, 409, 2); --
