@@ -42,6 +42,3 @@ REPLACE INTO `item_usable` VALUES (4142,'pro-ether_+2',1,13,33,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4143,'pro-ether_+3',1,13,33,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4144,'hi-elixir',1,20,34,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4145,'elixir',1,20,34,9,0,0,0,0);
-
--- Remove this after Teo's pull request for Scroll of Meteor gets merged into darkstar and Legion pulls the update.
-INSERT INTO `item_usable` VALUES (4851,'scroll_of_meteor',1,1,12,5,0,0,0,0);
