@@ -958,6 +958,11 @@ INSERT INTO `item_mods` VALUES(10752, 5, 20); --
 INSERT INTO `item_mods` VALUES(10752, 27, -3); --
 INSERT INTO `item_mods` VALUES(10752, 170, 2); --
 
+-- Arvina Ringlet
+INSERT INTO `item_mods` VALUES(10765, 11, 4); -- agi
+INSERT INTO `item_mods` VALUES(10765, 105, 3); -- marksmanship skill
+INSERT INTO `item_mods` VALUES(10765, 30, 2); -- Macc
+
 INSERT INTO `item_mods` VALUES(10771, 292, 7); --
 INSERT INTO `item_mods` VALUES(10771, 289, 7); --
 
