@@ -4754,7 +4754,10 @@ INSERT INTO `item_mods` VALUES(21364, 5, 35); --
 INSERT INTO `item_mods` VALUES(21364, 30, 4); --
 INSERT INTO `item_mods` VALUES(21364, 28, 4); --
 INSERT INTO `item_mods` VALUES(21364, 27, -2); --
+
+-- Dosis Tathlum
 INSERT INTO `item_mods` VALUES(21382, 28, 6); -- Should be Magic Damage +13  added MAB
+
 INSERT INTO `item_mods` VALUES(21385, 2, 20); --
 INSERT INTO `item_mods` VALUES(21385, 8, 5); --
 INSERT INTO `item_mods` VALUES(21385, 27, 2); --
