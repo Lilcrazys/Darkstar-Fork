@@ -54,8 +54,9 @@ function doPhysicalWeaponskill(attacker, target, params)
 
 	--apply WSC
 	local weaponDamage = attacker:getWeaponDmg();
+	local weaponType = attacker:getWeaponSkillType(0);
 
-	if (attacker:getWeaponSkillType(0) == 1) then
+	if (weaponType == SKILL_H2H) then
 		local h2hSkill = ((attacker:getSkillLevel(1) * 0.11) + 3);
 		weaponDamage = attacker:getWeaponDmg()-3;
 
@@ -170,7 +171,7 @@ function doPhysicalWeaponskill(attacker, target, params)
 	end
 
 	tpHits = 1;
-	if((attacker:getOffhandDmg() ~= 0) and (attacker:getOffhandDmg() > 0 or attacker:getWeaponSkillType(0)==1)) then
+	if((attacker:getOffhandDmg() ~= 0) and (attacker:getOffhandDmg() > 0 or weaponType==SKILL_H2H)) then
 
 		local chance = math.random();
 		if ((chance<=hitrate or math.random() < attacker:getMod(MOD_ZANSHIN)/100 or isSneakValid)
@@ -226,6 +227,17 @@ function doPhysicalWeaponskill(attacker, target, params)
 	-- print("Landed " .. hitslanded .. "/" .. numHits .. " hits with hitrate " .. hitrate .. "!");
 
 	finaldmg = target:physicalDmgTaken(finaldmg);
+	
+    if (weaponType == SKILL_H2H) then
+        finaldmg = finaldmg * target:getMod(MOD_HTHRES) / 1000;
+    elseif (weaponType == SKILL_DAG or weaponType == SKILL_POL) then
+        finaldmg = finaldmg * target:getMod(MOD_PIERCERES) / 1000;
+    elseif (weaponType == SKILL_CLB or weaponType == SKILL_STF) then
+        finaldmg = finaldmg * target:getMod(MOD_IMPACTRES) / 1000;
+    else
+        finaldmg = finaldmg * target:getMod(MOD_SLASHRES) / 1000;
+    end
+    
 
 	attacker:delStatusEffectSilent(EFFECT_BUILDING_FLOURISH);
 	return finaldmg, criticalHit, tpHitsLanded, extraHitsLanded;
@@ -284,8 +296,6 @@ function doMagicWeaponskill(attacker, target, params)
 	dmg = addBonusesAbility(attacker, params.ele, target, dmg, params);
 	dmg = dmg * applyResistanceAbility(attacker,target,params.ele,params.skill, 0);
 	dmg = adjustForTarget(target,dmg,params.ele);
-	
-	dmg = utils.stoneskin(target, dmg);
     
     return dmg, false, 1, 0;
 end
@@ -621,48 +631,50 @@ end;
 
 --obtains alpha, used for working out WSC
 function getAlpha(level)
-alpha = 1.00;
-if (level <= 5) then
-	alpha = 1.00;
-elseif (level <= 11) then
-	alpha = 0.99;
-elseif (level <= 17) then
-	alpha = 0.98;
-elseif (level <= 23) then
-	alpha = 0.97;
-elseif (level <= 29) then
-	alpha = 0.96;
-elseif (level <= 35) then
-	alpha = 0.95;
-elseif (level <= 41) then
-	alpha = 0.94;
-elseif (level <= 47) then
-	alpha = 0.93;
-elseif (level <= 53) then
-	alpha = 0.92;
-elseif (level <= 59) then
-	alpha = 0.91;
-elseif (level <= 61) then
-	alpha = 0.90;
-elseif (level <= 63) then
-	alpha = 0.89;
-elseif (level <= 65) then
-	alpha = 0.88;
-elseif (level <= 67) then
-	alpha = 0.87;
-elseif (level <= 69) then
-	alpha = 0.86;
-elseif (level <= 71) then
-	alpha = 0.85;
-elseif (level <= 73) then
-	alpha = 0.84;
-elseif (level <= 75) then
-	alpha = 0.83;
-elseif (level <= 99) then
-	alpha = 0.85;
-end
-return alpha;
- end;
+    alpha = 1.00;
+    if (level <= 5) then
+        alpha = 1.00;
+    elseif (level <= 11) then
+        alpha = 0.99;
+    elseif (level <= 17) then
+        alpha = 0.98;
+    elseif (level <= 23) then
+        alpha = 0.97;
+    elseif (level <= 29) then
+        alpha = 0.96;
+    elseif (level <= 35) then
+        alpha = 0.95;
+    elseif (level <= 41) then
+        alpha = 0.94;
+    elseif (level <= 47) then
+        alpha = 0.93;
+    elseif (level <= 53) then
+        alpha = 0.92;
+    elseif (level <= 59) then
+        alpha = 0.91;
+    elseif (level <= 61) then
+        alpha = 0.90;
+    elseif (level <= 63) then
+        alpha = 0.89;
+    elseif (level <= 65) then
+        alpha = 0.88;
+    elseif (level <= 67) then
+        alpha = 0.87;
+    elseif (level <= 69) then
+        alpha = 0.86;
+    elseif (level <= 71) then
+        alpha = 0.85;
+    elseif (level <= 73) then
+        alpha = 0.84;
+    elseif (level <= 75) then
+        alpha = 0.83;
+    elseif (level < 99) then
+        alpha = 0.85;
+    else
+        alpha = 1; -- Retail has no alpha anymore!
+    end
+    return alpha;
+end;
 
  --params contains: ftp100, ftp200, ftp300, str_wsc, dex_wsc, vit_wsc, int_wsc, mnd_wsc, canCrit, crit100, crit200, crit300, acc100, acc200, acc300, ignoresDef, ignore100, ignore200, ignore300, atkmulti
  function doRangedWeaponskill(attacker, target, params)
@@ -799,6 +811,7 @@ return alpha;
 	--print("Landed " .. hitslanded .. "/" .. numHits .. " hits with hitrate " .. hitrate .. "!");
 
 	finaldmg = target:rangedDmgTaken(finaldmg);
+    finaldmg = finaldmg * target:getMod(MOD_PIERCERES) / 1000;
 
 	return finaldmg, tpHitsLanded, extraHitsLanded;
 end;

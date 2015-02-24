@@ -1,27 +1,31 @@
----------------------------------------------------
--- Microquake
--- damages targets in an area of effect. Additional effect: Terror
----------------------------------------------------
-
+---------------------------------------------
+--  Microquake
+--
+--  Description: Deals heavy damage to a single target.
+--  Type: Physical
+--  2-3 Shadows
+--  Range: Unknown
+---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
 require("/scripts/globals/monstertpmoves");
 
----------------------------------------------------
-
+---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    if (mob:AnimationSub() == 2) then
+        return 0;
+    end
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 1;
-	local accmod = 1;
-	local dmgmod = 2.5;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
-    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_TERROR, 1, 0, 9);
-    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_BIND, 1, 0, 30);
-	target:delHP(dmg);
-    mob:resetEnmity(target);
-	return dmg;
+
+    local numhits = 1;
+    local accmod = 1;
+    local dmgmod = 3;
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_1_SHADOW);
+
+    target:delHP(dmg);
+    return dmg;
 end;

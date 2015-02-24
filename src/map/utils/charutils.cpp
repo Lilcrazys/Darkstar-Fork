@@ -42,10 +42,12 @@ This file is part of DarkStar-server source code.
 #include "../packets/char_jobs.h"
 #include "../packets/char_job_extra.h"
 #include "../packets/char_health.h"
+#include "../packets/char_recast.h"
 #include "../packets/char_skills.h"
 #include "../packets/char_stats.h"
 #include "../packets/char_sync.h"
 #include "../packets/char_update.h"
+#include "../packets/conquest_map.h"
 #include "../packets/delivery_box.h"
 #include "../packets/inventory_item.h"
 #include "../packets/inventory_assign.h"
@@ -59,7 +61,7 @@ This file is part of DarkStar-server source code.
 #include "../packets/message_special.h"
 #include "../packets/message_standard.h"
 #include "../packets/quest_mission_log.h"
-#include "../packets/conquest_map.h"
+#include "../packets/server_ip.h"
 
 #include "../ability.h"
 #include "../grades.h"
@@ -1167,6 +1169,7 @@ namespace charutils
         PChar->pushPacket(new CCharJobsPacket(PChar));
         PChar->pushPacket(new CCharStatsPacket(PChar));
         PChar->pushPacket(new CCharSkillsPacket(PChar));
+        PChar->pushPacket(new CCharRecastPacket(PChar));
         PChar->pushPacket(new CCharAbilitiesPacket(PChar));
         PChar->pushPacket(new CCharUpdatePacket(PChar));
         PChar->pushPacket(new CMenuMeritPacket(PChar));
@@ -1748,7 +1751,6 @@ namespace charutils
             if (equipSlotID == 0 && PSubItem && !PSubItem->IsShield())
                 RemoveSub(PChar);
 
-            PChar->status = STATUS_UPDATE;
             PChar->pushPacket(new CEquipPacket(slotID, equipSlotID, containerID));
         }
         else
@@ -1789,7 +1791,6 @@ namespace charutils
                     PChar->PLatentEffectContainer->AddLatentEffects(&PItem->latentList, ((CItemArmor*)PItem)->getReqLvl(), equipSlotID);
                     PChar->PLatentEffectContainer->CheckLatentsEquip(equipSlotID);
 
-                    PChar->status = STATUS_UPDATE;
                     PChar->pushPacket(new CEquipPacket(slotID, equipSlotID, containerID));
                     PChar->pushPacket(new CInventoryAssignPacket(PItem, INV_NODROP));
                 }
@@ -2699,7 +2700,7 @@ namespace charutils
     {
         DSP_DEBUG_BREAK_IF(PChar->objtype != TYPE_PC);
 
-        if (PChar->status == STATUS_NORMAL) PChar->status = STATUS_UPDATE;
+        PChar->updatemask |= UPDATE_HP;
 
         if (PChar->PParty != NULL)
         {
@@ -3310,6 +3311,7 @@ namespace charutils
             PChar->pushPacket(new CCharJobsPacket(PChar));
             PChar->pushPacket(new CCharUpdatePacket(PChar));
             PChar->pushPacket(new CCharSkillsPacket(PChar));
+            PChar->pushPacket(new CCharRecastPacket(PChar));
             PChar->pushPacket(new CCharAbilitiesPacket(PChar));
             PChar->pushPacket(new CMenuMeritPacket(PChar));
             PChar->pushPacket(new CCharJobExtraPacket(PChar, true));
@@ -3511,6 +3513,7 @@ namespace charutils
                 PChar->pushPacket(new CCharJobsPacket(PChar));
                 PChar->pushPacket(new CCharUpdatePacket(PChar));
                 PChar->pushPacket(new CCharSkillsPacket(PChar));
+                PChar->pushPacket(new CCharRecastPacket(PChar));
                 PChar->pushPacket(new CCharAbilitiesPacket(PChar));
                 PChar->pushPacket(new CMenuMeritPacket(PChar));
                 PChar->pushPacket(new CCharJobExtraPacket(PChar, true));
@@ -4497,6 +4500,36 @@ namespace charutils
             DSP_DEBUG_BREAK_IF(true);
             return NULL;
         }
+    }
+
+    void SendToZone(CCharEntity* PChar, uint8 type, uint64 ipp)
+    {
+        Sql_Query(SqlHandle, "UPDATE accounts_sessions SET server_addr = %u, server_port = %u WHERE charid = %u;",
+            (uint32)ipp, (uint32)(ipp >> 32), PChar->id);
+
+        const int8* Query =
+            "UPDATE chars "
+            "SET "
+            "pos_zone = %u,"
+            "pos_prevzone = %u,"
+            "pos_rot = %u,"
+            "pos_x = %.3f,"
+            "pos_y = %.3f,"
+            "pos_z = %.3f,"
+            "boundary = %u "
+            "WHERE charid = %u;";
+
+        Sql_Query(SqlHandle, Query,
+            PChar->loc.destination,
+            PChar->m_moghouseID ? 0 : PChar->getZone(),
+            PChar->loc.p.rotation,
+            PChar->loc.p.x,
+            PChar->loc.p.y,
+            PChar->loc.p.z,
+            PChar->loc.boundary,
+            PChar->id);
+
+        PChar->pushPacket(new CServerIPPacket(PChar, type, ipp));
     }
 
 }; // namespace charutils

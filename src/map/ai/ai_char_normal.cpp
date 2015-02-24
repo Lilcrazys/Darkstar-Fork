@@ -47,8 +47,10 @@ Copyright (c) 2010-2015 Darkstar Dev Teams
 #include "../packets/char.h"
 #include "../packets/char_abilities.h"
 #include "../packets/char_health.h"
+#include "../packets/char_recast.h"
 #include "../packets/char_skills.h"
 #include "../packets/char_stats.h"
+
 #include "../packets/char_update.h"
 #include "../packets/inventory_assign.h"
 #include "../packets/inventory_finish.h"
@@ -301,8 +303,7 @@ void CAICharNormal::ActionEngage()
 					m_ActionType = ACTION_ATTACK;
 					m_LastMeleeTime = m_Tick - m_PChar->m_Weapons[SLOT_MAIN]->getDelay() + 1500;
 
-					m_PChar->status = STATUS_UPDATE;
-					m_PChar->animation = ANIMATION_ATTACK;
+                    m_PChar->animation = ANIMATION_ATTACK;
                     m_PChar->PLatentEffectContainer->CheckLatentsWeaponDraw(true);
 					m_PChar->pushPacket(new CLockOnPacket(m_PChar, m_PBattleTarget));
 					m_PChar->pushPacket(new CCharUpdatePacket(m_PChar));
@@ -387,9 +388,7 @@ void CAICharNormal::ActionDisengage()
     m_PBattleTarget = NULL;
 	m_PBattleSubTarget = NULL;
 
-	if (m_PChar->status != STATUS_DISAPPEAR)
-		m_PChar->status = STATUS_UPDATE;
-	m_PChar->animation = ANIMATION_NONE;
+    m_PChar->animation = ANIMATION_NONE;
     m_PChar->updatemask |= UPDATE_HP;
 	m_PChar->pushPacket(new CCharUpdatePacket(m_PChar));
     m_PChar->PLatentEffectContainer->CheckLatentsWeaponDraw(false);
@@ -1689,10 +1688,41 @@ void CAICharNormal::ActionJobAbilityFinish()
     		uint8 roll = (WELL512::irand() % 6) + 1;
     		CStatusEffect* doubleUpEffect = m_PChar->StatusEffectContainer->GetStatusEffect(EFFECT_DOUBLE_UP_CHANCE);
 
-            if (m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SNAKE_EYE))
+                    if (!PTarget->isDead() &&
+                        PTarget->getZone() == m_PChar->getZone() &&
+                        distance(m_PChar->loc.p, PTarget->loc.p) <= m_PJobAbility->getRange())
+                    {
+                        Action.ActionTarget = PTarget;
+                        battleutils::DoWildCardToEntity(m_PChar, PTarget, roll);
+                        PTarget->pushPacket(new CCharSkillsPacket(PTarget));
+                        PTarget->pushPacket(new CCharRecastPacket(PTarget));
+                        PTarget->pushPacket(new CCharHealthPacket(PTarget));
+                        Action.messageID = m_PJobAbility->getMessage();
+                        m_PChar->m_ActionList.push_back(Action);
+                    }
+                }
+            }
+            else
             {
-                //check for instant 11 via Snake Eye merits
-                if (doubleUpEffect->GetPower() >= 5 && WELL512::irand() % 100 < m_PChar->StatusEffectContainer->GetStatusEffect(EFFECT_SNAKE_EYE)->GetPower())
+                battleutils::DoWildCardToEntity(m_PChar, m_PChar, roll);
+                Action.ActionTarget = m_PBattleSubTarget;
+                m_PChar->pushPacket(new CCharSkillsPacket(m_PChar));
+                m_PChar->pushPacket(new CCharRecastPacket(m_PChar));
+                m_PChar->pushPacket(new CCharHealthPacket(m_PChar));
+                Action.messageID = m_PJobAbility->getMessage();
+                m_PChar->m_ActionList.push_back(Action);
+            }
+            luautils::OnUseAbilityRoll(m_PChar, Action.ActionTarget, rollAbility, roll);
+        }
+        else if (m_PJobAbility->getID() == ABILITY_DOUBLE_UP)
+        {
+            if (m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_DOUBLE_UP_CHANCE))
+            {
+                //TODO: some reason cosair double up chance is sometimes null
+                uint8 roll = (WELL512::irand() % 6) + 1;
+                CStatusEffect* doubleUpEffect = m_PChar->StatusEffectContainer->GetStatusEffect(EFFECT_DOUBLE_UP_CHANCE);
+
+                if (m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SNAKE_EYE))
                 {
                     roll = 11 - doubleUpEffect->GetPower();
                 }
@@ -2236,7 +2266,7 @@ void CAICharNormal::ActionJobAbilityFinish()
         maxCharges = charge->maxCharges;
     }
     m_PChar->PRecastContainer->Add(RECAST_ABILITY, m_PJobAbility->getRecastId(), RecastTime, chargeTime, maxCharges);
-    m_PChar->pushPacket(new CCharSkillsPacket(m_PChar));
+    m_PChar->pushPacket(new CCharRecastPacket(m_PChar));
 
 	m_PJobAbility = NULL;
 	TransitionBack();
@@ -2478,11 +2508,11 @@ void CAICharNormal::ActionWeaponSkillFinish()
 	}
 
 
-	float wsTP = m_PChar->health.tp;
-	uint16 tpHitsLanded = 0;
-	uint16 extraHitsLanded = 0;
-	uint16 damage = 0;
-	m_PChar->PLatentEffectContainer->CheckLatentsTP(0);
+    float wsTP = m_PChar->health.tp;
+    uint16 tpHitsLanded = 0;
+    uint16 extraHitsLanded = 0;
+    int32 damage = 0;
+    m_PChar->PLatentEffectContainer->CheckLatentsTP(0);
 
 	damage = luautils::OnUseWeaponSkill(m_PChar, m_PBattleSubTarget, &tpHitsLanded, &extraHitsLanded);
 
@@ -2527,26 +2557,11 @@ void CAICharNormal::ActionWeaponSkillFinish()
 	//incase a TA party member is available
 	CBattleEntity* taChar = NULL;
 
-	//trick attack agi bonus for thf main job
-	if (m_PChar->GetMJob() == JOB_THF && m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
-	{
-		taChar = battleutils::getAvailableTrickAttackChar(m_PChar,m_PBattleTarget);
-		if(taChar != NULL) damage += m_PChar->AGI();
-	}
+    if (m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
+        taChar = battleutils::getAvailableTrickAttackChar(m_PChar, m_PBattleSubTarget);
 
-	//check if other jobs have trick attack active to change enmity lateron
-	if (taChar == NULL && m_PChar->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
-		taChar = battleutils::getAvailableTrickAttackChar(m_PChar,m_PBattleTarget);
-
-
-	if (!battleutils::isValidSelfTargetWeaponskill(m_PWeaponSkill->getID()))
-	{
-		// add overwhelm damage bonus
-		damage = battleutils::getOverWhelmDamageBonus(m_PChar, m_PBattleSubTarget, damage);
-
-		damage = battleutils::TakePhysicalDamage(m_PChar, m_PBattleSubTarget, damage, false, damslot, tpHitsLanded, taChar, true);
-		m_PBattleSubTarget->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_DAMAGE);
-	}
+    if (!battleutils::isValidSelfTargetWeaponskill(m_PWeaponSkill->getID()))
+        damage = battleutils::TakeWeaponskillDamage(m_PChar, m_PBattleSubTarget, damage, damslot, tpHitsLanded, taChar);
 
 	m_PChar->addTP(extraHitsLanded * 10);
 	float afterWsTP = m_PChar->health.tp;
@@ -2559,12 +2574,12 @@ void CAICharNormal::ActionWeaponSkillFinish()
 
 	apAction_t Action;
 
-	Action.ActionTarget = m_PBattleSubTarget;
-	Action.reaction = REACTION_HIT;
-	Action.speceffect = SPECEFFECT_RECOIL;
-	Action.animation = m_PWeaponSkill->getAnimationId();
-	Action.param = damage;
-    Action.knockback  = 0;
+    Action.ActionTarget = m_PBattleSubTarget;
+    Action.reaction = REACTION_HIT;
+    Action.speceffect = (damage > 0 ? SPECEFFECT_RECOIL : SPECEFFECT_NONE);
+    Action.animation = m_PWeaponSkill->getAnimationId();
+    Action.param = damage;
+    Action.knockback = 0;
 
     m_PTargetFind->reset();
     m_PChar->m_ActionList.clear();
@@ -2611,9 +2626,9 @@ void CAICharNormal::ActionWeaponSkillFinish()
             recycleChance = 100;
         }
         // ranged WS will apply ammo additional effects silently
-        if (Action.reaction == REACTION_HIT && PAmmo != NULL && PAmmo->getModifier(MOD_ADDITIONAL_EFFECT) > 0)
+        if (Action.reaction == REACTION_HIT && PAmmo != NULL && PAmmo->getModifier(MOD_ADDITIONAL_EFFECT) > 0 && damage >= 0)
         {
-            luautils::OnAdditionalEffect(m_PChar, m_PBattleSubTarget, PAmmo, &Action, damage);
+            luautils::OnAdditionalEffect(m_PChar, m_PBattleSubTarget, PAmmo, &Action, (uint32)damage);
             Action.additionalEffect = SUBEFFECT_NONE;
         }
 		if(PAmmo!=NULL && WELL512::irand()%100 > recycleChance)
@@ -2636,17 +2651,14 @@ void CAICharNormal::ActionWeaponSkillFinish()
     // DO NOT REMOVE!  This is here for a reason...
     // Skill chains should not be affected by MISSED weapon skills or non-elemental
     // weapon skills such as: Spirits Within, Spirit Taker, Energy Steal, Energy Drain, Starlight, and Moonlight.
-    if(Action.reaction == REACTION_HIT && (m_PWeaponSkill->getPrimarySkillchain() != 0))
+    if (Action.reaction == REACTION_HIT && m_PWeaponSkill->getPrimarySkillchain() != 0 && !(m_PBattleSubTarget->isDead()))
     {
         // NOTE: GetSkillChainEffect is INSIDE this if statement because it
         //  ALTERS the state of the resonance, which misses and non-elemental skills should NOT do.
         SUBEFFECT effect = battleutils::GetSkillChainEffect(m_PBattleSubTarget, GetCurrentWeaponSkill());
         if (effect != SUBEFFECT_NONE)
         {
-	        uint16 skillChainDamage = battleutils::TakeSkillchainDamage(m_PChar, m_PBattleSubTarget, damage);
-
-
-            Action.addEffectParam = skillChainDamage;
+            Action.addEffectParam = battleutils::TakeSkillchainDamage(m_PChar, m_PBattleSubTarget, damage);
             Action.addEffectMessage = 287 + effect;
             Action.additionalEffect = effect;
 
@@ -2712,16 +2724,9 @@ void CAICharNormal::ActionWeaponSkillFinish()
                 msg = 282;
             }
 
-        	Action.param = battleutils::TakePhysicalDamage(m_PChar, PTarget, damage, false, SLOT_MAIN, 0, taChar, true);
+            Action.param = battleutils::TakeWeaponskillDamage(m_PChar, PTarget, damage, SLOT_MAIN, 0, taChar);
 
             Action.messageID = msg;
-
-            // create hate on mob
-            if(PTarget->objtype == TYPE_MOB){
-
-                CMobEntity* mob = (CMobEntity*)PTarget;
-                mob->PEnmityContainer->UpdateEnmityFromDamage(m_PChar, Action.param);
-            }
 
             if (Action.speceffect == SPECEFFECT_HIT && Action.param > 0)
                 Action.speceffect = SPECEFFECT_RECOIL;

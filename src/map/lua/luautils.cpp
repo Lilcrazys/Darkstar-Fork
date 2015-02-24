@@ -764,7 +764,7 @@ int32 SpawnMob(lua_State* L)
 			CLuaInstance* PLuaInstance = Lunar<CLuaInstance>::check(L, 2);
 			PMob = (CMobEntity*)PLuaInstance->GetInstance()->GetEntity(mobid & 0xFFF, TYPE_MOB);
 		}
-		else
+        else if (((mobid >> 12) & 0x0FFF) < MAX_ZONEID)
 		{
 			PMob = (CMobEntity*)zoneutils::GetEntity(mobid, TYPE_MOB);
 		}
@@ -2101,7 +2101,7 @@ int32 OnMagicHit(CBattleEntity* PCaster, CBattleEntity* PTarget, CSpell* PSpell)
 {
     DSP_DEBUG_BREAK_IF(PSpell == NULL);
 
-    lua_prepscript("scripts/zones/%s/mobs/%s.lua", PCaster->loc.zone->GetName(), PCaster->GetName());
+    lua_prepscript("scripts/zones/%s/mobs/%s.lua", PTarget->loc.zone->GetName(), PTarget->GetName());
 
     if (prepFile(File, "onMagicHit"))
     {

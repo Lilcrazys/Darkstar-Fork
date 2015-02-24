@@ -1004,7 +1004,7 @@ MOD_GRAVITYRES			= 0xF9
 MOD_SLOWRES			= 0xFA
 MOD_STUNRES			= 0xFB
 MOD_CHARMRES			= 0xFC
-MOD_UNKNOWN			= 0xFF
+MOD_DEATHRES			= 0xFF
 MOD_PARALYZE			= 0x101
 MOD_MIJIN_GAKURE		= 0x102
 MOD_DUAL_WIELD			= 0x103
@@ -1205,8 +1205,9 @@ MOD_LTNG_NULL                 =0x1D8 -- (modId = 472)
 MOD_LIGHT_NULL                =0x1D9 -- (modId = 473)
 MOD_DARK_NULL                 =0x1DA -- (modId = 474)
 
-MOD_MAGIC_ABSORB              =0x1DB -- (modId = 475)
-MOD_MAGIC_NULL                =0x1DC -- (modId = 476)
+MOD_PHYS_ABSORB               = 0x200 -- (modId = 512)
+
+MOD_WARCRY_DURATION           = 0x1E3 -- Warcy duration bonus from gear
 
 MOD_WARCRY_DURATION           =0x1E3 -- Warcy duration bonus from gear
 
@@ -1240,14 +1241,17 @@ MOD_EAT_RAW_MEAT              = 0x19D -- (modId = 413)
 MOD_RETALIATION               = 0x19E -- Increases damage of Retaliation hits (modId = 414)
 MOD_AUGMENTS_THIRD_EYE        = 0x1FC -- Adds counter to 3rd eye anticipates & if using Seigan counter rate is increased by 15% (modId = 508)
 
--- MOD_SPARE =0x1FD -- (modId = 509)
--- MOD_SPARE =0x1FE -- (modId = 510)
--- MOD_SPARE =0x1FF -- (modId = 511)
--- MOD_SPARE =0x200 -- (modId = 512)
--- MOD_SPARE = 0x201 -- (modId = 513)
--- MOD_SPARE = 0x202 -- (modId = 514)
--- MOD_SPARE = 0x203 -- (modId = 515)
+MOD_CLAMMING_IMPROVED_RESULTS = 0x1FD -- (modId = 509)
+MOD_CLAMMING_REDUCED_INCIDENTS= 0x1FE -- (modId = 510)
+
+MOD_CHOCOBO_RIDING_TIME       = 0x1FF -- Increases chocobo riding time (modId = 511)
+
+MOD_HARVESTING_RESULT         = 0x201 -- Improves harvesting results (modId = 513)
+MOD_LOGGING_RESULT            = 0x202 -- Improves logging results (modId = 514)
+MOD_MINNING_RESULT            = 0x203 -- Improves mining results (modId = 515)
+
 -- MOD_SPARE = 0x204 -- (modId = 516)
+-- MOD_SPARE = 0x205 -- (modId = 517
 
 ------------------------------------
 -- Merit Definitions
@@ -1854,7 +1858,7 @@ MOBMOD_MAGIC_COOL = 34
 MOBMOD_STANDBACK_TIME = 35
 MOBMOD_ROAM_COOL = 36
 MOBMOD_ALWAYS_AGGRO = 37
-MOBMOD_REFLECT = 38
+-- ID 38 available for use.
 MOBMOD_SHARE_POS = 39
 MOBMOD_TELEPORT_CD = 40
 MOBMOD_TELEPORT_START = 41

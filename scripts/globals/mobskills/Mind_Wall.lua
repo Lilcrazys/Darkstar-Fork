@@ -1,23 +1,27 @@
 ---------------------------------------------
 --  Mind Wall
 --
---  Description: Absorbs Magic
---  Type: Buff
+--  Description: Activates a shield to absorb all incoming magical damage.
+--  Type: Magical
 ---------------------------------------------
 
-require("scripts/globals/settings");
-require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
+require("/scripts/globals/settings");
+require("/scripts/globals/status");
+require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+    if (mob:AnimationSub() == 3) then
+        return 0;
+    end
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_MAGIC_SHIELD;
 
-    skill:setMsg(MobBuffMove(mob, typeEffect, 2, 0, 30));
-    return typeEffect;
+    MobBuffMove(mob, EFFECT_MAGIC_SHIELD, 2, 0, 30);
+    skill:setMsg(0);
+
+	return 0;
 end;

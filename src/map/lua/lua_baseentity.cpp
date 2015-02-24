@@ -47,6 +47,7 @@
 #include "../packets/char_job_extra.h"
 #include "../packets/char_equip.h"
 #include "../packets/char_health.h"
+#include "../packets/char_recast.h"
 #include "../packets/char_skills.h"
 #include "../packets/char_spells.h"
 #include "../packets/char_stats.h"
@@ -224,7 +225,7 @@ inline int32 CLuaBaseEntity::warp(lua_State *L)
     ((CCharEntity*)m_PBaseEntity)->animation = ANIMATION_NONE;
 
     ((CCharEntity*)m_PBaseEntity)->clearPacketList();
-    ((CCharEntity*)m_PBaseEntity)->pushPacket(new CServerIPPacket((CCharEntity*)m_PBaseEntity, 2, zoneutils::GetZoneIPP(m_PBaseEntity->loc.destination)));
+    charutils::SendToZone((CCharEntity*)m_PBaseEntity, 2, zoneutils::GetZoneIPP(m_PBaseEntity->loc.destination));
 
     return 0;
 }
@@ -688,11 +689,14 @@ inline int32 CLuaBaseEntity::setPos(lua_State *L)
     {
         if( !lua_isnil(L,5) && lua_isnumber(L,5) )
         {
+            if ((uint16)lua_tointeger(L, 5) >= MAX_ZONEID)
+                return 0;
+
             ((CCharEntity*)m_PBaseEntity)->loc.destination = (uint16)lua_tointeger(L,5);
             ((CCharEntity*)m_PBaseEntity)->status = STATUS_DISAPPEAR;
             ((CCharEntity*)m_PBaseEntity)->loc.boundary = 0;
             ((CCharEntity*)m_PBaseEntity)->clearPacketList();
-            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CServerIPPacket((CCharEntity*)m_PBaseEntity, 2, zoneutils::GetZoneIPP(m_PBaseEntity->loc.destination)));
+            charutils::SendToZone((CCharEntity*)m_PBaseEntity, 2, zoneutils::GetZoneIPP(m_PBaseEntity->loc.destination));
             //((CCharEntity*)m_PBaseEntity)->loc.zone->DecreaseZoneCounter(((CCharEntity*)m_PBaseEntity));
         }
         else if (((CCharEntity*)m_PBaseEntity)->status != STATUS_DISAPPEAR)
@@ -2494,6 +2498,7 @@ inline int32 CLuaBaseEntity::sjRestriction(lua_State* L)
     PChar->pushPacket(new CCharHealthPacket(PChar));
     PChar->pushPacket(new CCharStatsPacket(PChar));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
+    PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
     PChar->pushPacket(new CCharJobExtraPacket(PChar, true));
     PChar->pushPacket(new CCharJobExtraPacket(PChar, false));
@@ -4151,7 +4156,6 @@ inline int32 CLuaBaseEntity::costume(lua_State *L)
             PChar->status   != STATUS_DISAPPEAR)
         {
             PChar->m_Costum = costum;
-            PChar->status   = STATUS_UPDATE;
             PChar->updatemask |= UPDATE_HP;
             PChar->pushPacket(new CCharUpdatePacket(PChar));
         }
@@ -4183,7 +4187,6 @@ inline int32 CLuaBaseEntity::costume2(lua_State *L)
 			PChar->status != STATUS_DISAPPEAR)
 		{
 			PChar->m_Monstrosity = model;
-			PChar->status = STATUS_UPDATE;
             PChar->updatemask |= UPDATE_LOOK;
 			PChar->pushPacket(new CCharAppearancePacket(PChar));
 		}
@@ -5213,6 +5216,7 @@ inline int32 CLuaBaseEntity::changeJob(lua_State *L)
     PChar->pushPacket(new CCharJobsPacket(PChar));
     PChar->pushPacket(new CCharStatsPacket(PChar));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
+    PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
     PChar->pushPacket(new CCharUpdatePacket(PChar));
     PChar->pushPacket(new CMenuMeritPacket(PChar));
@@ -5290,6 +5294,7 @@ inline int32 CLuaBaseEntity::setsLevel(lua_State *L)
     PChar->pushPacket(new CCharJobsPacket(PChar));
     PChar->pushPacket(new CCharStatsPacket(PChar));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
+    PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
     PChar->pushPacket(new CCharUpdatePacket(PChar));
     PChar->pushPacket(new CMenuMeritPacket(PChar));
@@ -5336,6 +5341,7 @@ inline int32 CLuaBaseEntity::setLevel(lua_State *L)
     PChar->pushPacket(new CCharJobsPacket(PChar));
     PChar->pushPacket(new CCharStatsPacket(PChar));
     PChar->pushPacket(new CCharSkillsPacket(PChar));
+    PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
     PChar->pushPacket(new CCharUpdatePacket(PChar));
     PChar->pushPacket(new CMenuMeritPacket(PChar));
@@ -5624,8 +5630,8 @@ inline int32 CLuaBaseEntity::lockEquipSlot(lua_State *L)
     PChar->pushPacket(new CCharAppearancePacket(PChar));
 	PChar->pushPacket(new CEquipPacket(0, SLOT, LOC_INVENTORY));
     PChar->pushPacket(new CCharJobsPacket(PChar));
+    PChar->updatemask |= UPDATE_LOOK;
 
-    if (PChar->status == STATUS_NORMAL) PChar->status = STATUS_UPDATE;
     return 0;
 }
 
@@ -5651,7 +5657,6 @@ inline int32 CLuaBaseEntity::unlockEquipSlot(lua_State *L)
     PChar->m_EquipBlock &= ~(1 << SLOT);
     PChar->pushPacket(new CCharJobsPacket(PChar));
 
-    if (PChar->status == STATUS_NORMAL) PChar->status = STATUS_UPDATE;
     return 0;
 }
 
@@ -6622,6 +6627,7 @@ inline int32 CLuaBaseEntity::resetRecasts(lua_State *L)
         PChar->PRecastContainer->Del(RECAST_MAGIC);
         PChar->PRecastContainer->Del(RECAST_ABILITY);
         PChar->pushPacket(new CCharSkillsPacket(PChar));
+        PChar->pushPacket(new CCharRecastPacket(PChar));
         return 0;
     }
 
@@ -6650,6 +6656,7 @@ inline int32 CLuaBaseEntity::resetRecast(lua_State *L)
         }
 
         PChar->pushPacket(new CCharSkillsPacket(PChar));
+        PChar->pushPacket(new CCharRecastPacket(PChar));
         return 0;
     }
 
@@ -8439,6 +8446,7 @@ inline int32 CLuaBaseEntity::recalculateSkillsTable(lua_State* L)
     charutils::BuildingCharWeaponSkills(PChar);
 
     PChar->pushPacket(new CCharSkillsPacket(PChar));
+    PChar->pushPacket(new CCharRecastPacket(PChar));
     PChar->pushPacket(new CCharAbilitiesPacket(PChar));
     return 0;
 }

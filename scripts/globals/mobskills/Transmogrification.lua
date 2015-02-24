@@ -1,11 +1,8 @@
 ---------------------------------------------
---  Transmogrification
+--  Mind Wall
 --
---  Absorbs all Physical hits for a period of time.
---  Type: Enhancing
---  Utsusemi/Blink absorb: N/A
---  Range: Self
---  Notes:
+--  Description: Activates a shield to absorb all incoming magical damage.
+--  Type: Magical
 ---------------------------------------------
 
 require("/scripts/globals/settings");
@@ -15,15 +12,16 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    if (mob:AnimationSub() == 3) then
+        return 0;
+    end
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local power = 100;
-	local duration = 180;
-	local typeEffect = MOD_ABSORB_DMG_CHANCE;
 
-    skill:setMsg(MobBuffMove(mob, typeEffect, power, 0, duration));
+    MobBuffMove(mob, EFFECT_PHYSICAL_SHIELD, 2, 0, 30);
+    skill:setMsg(0);
 
-	return typeEffect;
+	return 0;
 end;

@@ -94,6 +94,10 @@ CParty::CParty(uint32 id)
 
 void CParty::DisbandParty(bool playerInitiated, Sql_t* sql)
 {
+    if (m_PAlliance)
+    {
+        m_PAlliance->delParty(this);
+    }
 	DisableSync();
 	SetQuarterMaster(NULL);
 
@@ -379,6 +383,10 @@ void CParty::PopMember(CBattleEntity* PEntity)
     {
         if (m_PAlliance)
         {
+            if (m_PAlliance->getMainParty() == this)
+            {
+                m_PAlliance->setMainParty(NULL);
+            }
             for (uint8 i = 0; i < m_PAlliance->partyList.size(); ++i)
             {
                 if (this == m_PAlliance->partyList.at(i))
@@ -387,6 +395,7 @@ void CParty::PopMember(CBattleEntity* PEntity)
         }
         delete this;
     }
+    PEntity->PParty = NULL;
 }
 
 /************************************************************************
@@ -456,7 +465,6 @@ void CParty::AddMember(CBattleEntity* PEntity, Sql_t* sql)
 
             charutils::SaveCharStats(PChar);
 
-		    PChar->status = STATUS_UPDATE;
 		    PChar->pushPacket(new CMenuConfigPacket(PChar));
 		    PChar->pushPacket(new CCharUpdatePacket(PChar));
 		    PChar->pushPacket(new CCharSyncPacket(PChar));
@@ -656,6 +664,22 @@ void CParty::ReloadParty()
                 if (!found)
                 {
                     m_PQuaterMaster = NULL;
+                }
+            }
+            if (memberflags & ALLIANCE_LEADER && m_PAlliance)
+            {
+                bool found = false;
+                for (auto member : members)
+                {
+                    if (member->id == charid)
+                    {
+                        m_PAlliance->setMainParty(this);
+                        found = true;
+                    }
+                }
+                if (!found)
+                {
+                    m_PAlliance->setMainParty(NULL);
                 }
             }
         }

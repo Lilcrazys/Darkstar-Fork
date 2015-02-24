@@ -1,31 +1,29 @@
----------------------------------------------------
--- Tremorous Tread
--- Ramuh delivers a three-hit attack that also stuns target.
----------------------------------------------------
-
+---------------------------------------------
+--  Tremorous Tread
+--
+--  Description: Deals damage to players in an area of effect. Additional effect: Stun
+--  Type: Physical
+--  2-3 Shadows
+--  Range: Unknown
+---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
 require("/scripts/globals/monstertpmoves");
 
----------------------------------------------------
-
+---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
+    local numhits = 1;
+    local accmod = 1;
+    local dmgmod = 1;
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_2_SHADOW);
 
-	local numhits = 1;
-	local accmod = 1;
-	local dmgmod = 1.1;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,2,3);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
-	target:delHP(dmg);
-
-	local typeEffect = EFFECT_STUN;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 10);
-
-	return dmg;
-
-end
+    target:delHP(dmg);
+    MobStatusEffectMove(mob, target, EFFECT_STUN, 1, 0, 3);
+    return dmg;
+end;
