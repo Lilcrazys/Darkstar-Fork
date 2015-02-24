@@ -14,4 +14,5 @@
 -- INSERT INTO `item_armor` VALUES ('itemId', 'name', 'level', 'jobs', 'MId', 'shieldSize', 'scriptType', 'slot', 'rslot');
 -- New entries below this line, and sorted by itemID please.
 
-INSERT INTO `item_armor` VALUES ('21382', 'Dosis_tathlum', '99', '4194303', '0', '0', '0', '8', '0');
+INSERT INTO `item_armor` VALUES ('21382', 'dosis_tathlum', '99', '4194303', '0', '0', '0', '8', '0');
+INSERT INTO `item_armor` VALUES ('21424', 'zuuxowu_grip', '99', '4194303', '0', '0', '0', '2', '0');

@@ -4771,7 +4771,9 @@ INSERT INTO `item_mods` VALUES(21421, 8, 6); -- str
 INSERT INTO `item_mods` VALUES(21421, 10, 3); -- vit
 INSERT INTO `item_mods` VALUES(21421, 73, 3); -- store tp
 
+-- Zuuxowu Grip
 INSERT INTO `item_mods` VALUES(21424, 28, 5); -- Should be Magic Damage +10  added MAB
+
 INSERT INTO `item_mods` VALUES(21428, 2, 50); --
 INSERT INTO `item_mods` VALUES(21428, 25, 10); --
 INSERT INTO `item_mods` VALUES(21428, 23, 10); --
