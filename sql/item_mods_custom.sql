@@ -1261,6 +1261,11 @@ INSERT INTO `item_mods` VALUES(10990, 475, 5); --
 INSERT INTO `item_mods` VALUES(10991, 1, 15); --
 INSERT INTO `item_mods` VALUES(10991, 23, 17); --
 
+-- Evergreen Earring
+INSERT INTO `item_mods` VALUES(11034, 25, 3); -- acc
+INSERT INTO `item_mods` VALUES(11034, 68, 3); -- eva
+INSERT INTO `item_mods` VALUES(11034, 289, 3); -- subtle blow
+
 INSERT INTO `item_mods` VALUES(11036, 14, 4); --
 INSERT INTO `item_mods` VALUES(11036, 30, 2); --
 INSERT INTO `item_mods` VALUES(11037, 57, 10);
