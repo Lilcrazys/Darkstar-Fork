@@ -20,13 +20,15 @@ require("scripts/globals/weaponskills");
 
 function onUseWeaponSkill(player, target, wsID)
     local params = {};
-    params.ftp100 = 8.5; params.ftp200 = 9.0; params.ftp300 = 9.5;
+    params.ftp100 = 10.5; params.ftp200 = 11.0; params.ftp300 = 11.5;
     params.str_wsc = 0.0; params.dex_wsc = 0.0; params.vit_wsc = 0.0;
-    params.agi_wsc = 0.9; params.int_wsc = 0.0; params.mnd_wsc = 0.0;
+    params.agi_wsc = 0.95; params.int_wsc = 0.0; params.mnd_wsc = 0.0;
     params.chr_wsc = 0.0;
     params.ele = ELE_FIRE;
     params.skill = SKILL_MRK;
+    params.canCrit = true;
     params.includemab = true;
+    params.atkmulti = 1;
 
     -- TODO: needs to give enmity down at varying tp percent's that is treated separately than the gear cap of -50% enmity http://www.bg-wiki.com/bg/Wildfire
     -- TODO: also needs aftermath effects added
