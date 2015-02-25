@@ -137,8 +137,8 @@ INSERT INTO `blue_spell_list` VALUES ('654','2180','4','22','1','0','0');    -- 
 INSERT INTO `blue_spell_list` VALUES ('655','2167','3','0','1','0','0');     -- Triumphant Roar
 INSERT INTO `blue_spell_list` VALUES ('656','2306','3','24','1','0','0');    -- Acrid Stream
 INSERT INTO `blue_spell_list` VALUES ('657','2308','3','25','1','0','0');    -- Blazing Bound
-INSERT INTO `blue_spell_list` VALUES ('658','1918','4','0','1','0','0');     -- Plenilune Embrace
 INSERT INTO `blue_spell_list` VALUES ('658','1917','4','0','1','0','0');     -- Plenilune Embrace
+INSERT INTO `blue_spell_list` VALUES ('658','1918','4','0','1','0','0');     -- Plenilune Embrace
 INSERT INTO `blue_spell_list` VALUES ('659','1845','4','24','1','0','0');    -- Demoralizing Roar
 INSERT INTO `blue_spell_list` VALUES ('660','1905','3','27','1','0','0');    -- Cimicine Discharge
 INSERT INTO `blue_spell_list` VALUES ('661','1526','5','25','1','0','0');    -- Animating Wail
@@ -204,4 +204,3 @@ INSERT INTO `blue_spell_list` VALUES ('743','1850','0','0','0','10','0');    -- 
 INSERT INTO `blue_spell_list` VALUES ('744','2749','0','0','0','0','0');     -- Droning Whirlwind
 INSERT INTO `blue_spell_list` VALUES ('745','2758','0','0','0','0','0');     -- Carcharian Verve
 INSERT INTO `blue_spell_list` VALUES ('746','2764','0','0','0','0','0');     -- Blistering Roar
-
