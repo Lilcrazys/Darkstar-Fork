@@ -15,7 +15,8 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1); -- end
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
@@ -104,7 +105,8 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
--- function onAdditionalEffect(mob,target,damage)   --end;
+-- function onAdditionalEffect(mob,target,damage)
+-- end;
 
 -----------------------------------
 -- onMagicHit
@@ -126,4 +128,5 @@ end;
 
 function onMobDeath(mob,killer)
     killer:addCurrency("legion_point", 10);
-    SpawnMob(mob:getID()+3) -- Spawns Lofty_Zilant--end;
+    SpawnMob(mob:getID()+3) -- Spawns Lofty_Zilant
+end;

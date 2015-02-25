@@ -15,7 +15,8 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);-- end
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+end;
 
 -----------------------------------
 -- onMobSpawn Action

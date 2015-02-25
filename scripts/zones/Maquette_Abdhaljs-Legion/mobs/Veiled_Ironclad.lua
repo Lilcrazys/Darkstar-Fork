@@ -77,7 +77,8 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
--- function onAdditionalEffect(mob,target,damage)   if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
         return 0,0,0;
     else
         local duration = 5;
