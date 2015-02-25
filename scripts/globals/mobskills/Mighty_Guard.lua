@@ -15,9 +15,14 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 
     local potency = skill:getParam();
+    local mobhp = mob:getHPP();
+
+    if mobhp > 50 then
+        return 0;
+    else
 
     if(potency == 0) then
-    	potency = 20;
+        potency = 10;
     end
 
     potency = potency - math.random(0, potency/1);
