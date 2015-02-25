@@ -10,6 +10,12 @@ require("scripts/globals/titles");
 -- onMobInitialize Action
 -----------------------------------
 
+
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMod(MOD_REGEN, 30);
@@ -17,13 +23,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,10)
     mob:addMod(MOD_DEF,-80);
-end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
-
-function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
 end;
 
@@ -55,17 +54,17 @@ function onMobFight(mob, target)
         Kumhau_2hr_Used = mob:getLocalVar("Kumhau_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Kamhau_2hr_Used == 2) then
             mob:useMobAbility(438); -- Invincible
             mob:setLocalVar("Kumhau_2hr", 3);
         end
-    elseif (mob:getHPP() <= 30) then 
+    elseif (mob:getHPP() <= 30) then
         if (Kamhau_2hr_Used == 1) then
             mob:useMobAbility(438); -- Invincible
             mob:setLocalVar("Kumhau_2hr", 2);
         end
-    elseif (mob:getHPP() <= 70) then 
+    elseif (mob:getHPP() <= 70) then
         if (Kamhau_2hr_Used == 0) then
             mob:useMobAbility(438); -- Invincible
             mob:setLocalVar("Kamhau_2hr", 1);

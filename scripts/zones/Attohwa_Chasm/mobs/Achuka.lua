@@ -10,6 +10,11 @@ require("scripts/globals/status");
 -- onMobInitialize Action
 -----------------------------------
 
+
+
+-----------------------------------
+-- OnMobSpawn
+-----------------------------------
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:addMod(MOD_ACC,150);
@@ -17,15 +22,9 @@ function onMobInitialize(mob)
     mob:addMod(MOD_REGEN, 30);
     mob:addMod(MOD_MDEF, 50);
     mob:addMod(MOD_DEF, -50);
-end;
-
------------------------------------
--- OnMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
 end;
+
 
 -----------------------------------
 -- onMobEngaged Action
@@ -55,17 +54,17 @@ function onMobFight(mob, target)
         Achuka_2hr_Used = mob:getLocalVar("Achuka_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Achuka_2hr_Used == 2) then
             mob:useMobAbility(432); -- PD
             mob:setLocalVar("Achuka_2hr", 3);
         end
-    elseif (mob:getHPP() <= 30) then 
+    elseif (mob:getHPP() <= 30) then
         if (Achuka_2hr_Used == 1) then
             mob:useMobAbility(432); -- PD
             mob:setLocalVar("Achuka_2hr", 2);
         end
-    elseif (mob:getHPP() <= 70) then 
+    elseif (mob:getHPP() <= 70) then
         if (Achuka_2hr_Used == 0) then
             mob:useMobAbility(432); -- PD
             mob:setLocalVar("Achuka_2hr", 1);

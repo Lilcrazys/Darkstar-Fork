@@ -12,11 +12,6 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
-    mob:addMod(MOD_ZANSHIN, 30);
-    mob:addMod(MOD_MDEF, 50);	
-    mob:addMod(MOD_DEF, -50);	
 end;
 
 -----------------------------------
@@ -25,7 +20,12 @@ end;
 
 function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_REGEN, 30);	
+    mob:setMod(MOD_REGEN, 30);
+    mob:addMod(MOD_ACC,150);
+    mob:addMod(MOD_DOUBLE_ATTACK,10)
+    mob:addMod(MOD_ZANSHIN, 30);
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_DEF, -50);
 end;
 
 -----------------------------------
@@ -56,17 +56,17 @@ function onMobFight(mob, target)
         Colkhab_2hr_Used = mob:getLocalVar("Colkhab_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Colkhab_2hr_Used == 2) then
             mob:useMobAbility(474); -- SAM
             mob:setLocalVar("Colkhab_2hr", 3);
         end
-    elseif (mob:getHPP() <= 30) then 
+    elseif (mob:getHPP() <= 30) then
         if (Colkhab_2hr_Used == 1) then
             mob:useMobAbility(474); -- SAM
             mob:setLocalVar("Colkhab_2hr", 2);
         end
-    elseif (mob:getHPP() <= 70) then 
+    elseif (mob:getHPP() <= 70) then
         if (Colkhab_2hr_Used == 0) then
             mob:useMobAbility(474); -- SAM
             mob:setLocalVar("Colkhab_2hr", 1);
@@ -84,5 +84,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-   -- mob:setRespawnTime(math.random((259200),(432000)));	-- 3 to 5 days
+   -- mob:setRespawnTime(math.random((259200),(432000)));   -- 3 to 5 days
 end;

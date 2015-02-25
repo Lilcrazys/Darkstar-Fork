@@ -10,6 +10,12 @@ require("scripts/globals/status");
 -- onMobInitialize Action
 -----------------------------------
 
+
+
+-----------------------------------
+-- OnMobSpawn
+-----------------------------------
+
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMod(MOD_COUNTER,15);
@@ -19,13 +25,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MDEF, 50);
     mob:addMod(MOD_DEF, -50);
     mob:addMod(MOD_ATT, -50);
-end;
-
------------------------------------
--- OnMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,10);
 end;
 
@@ -56,6 +55,13 @@ function onMobFight(mob, target)
     if (mob:getHPP() <= 10) then
         if (Shinryu_2hr_Used == 2) then
             mob:useMobAbility(432); -- MS
+            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+            mob:setMod(MOD_REGAIN,20);
+            mob:setMod(MOD_TRIPLE_ATTACK, 15);
+            mob:setMod(MOD_UFASTCAST, 75);
+            mob:addMod(MOD_MDEF, -350);
+            mob:addMod(MOD_DEF, -350);
+            mob:addMod(MOD_ATT, 150);
             mob:setLocalVar("Shinryu_2hr", 3);
         end
     elseif (mob:getHPP() <= 30) then
@@ -67,15 +73,6 @@ function onMobFight(mob, target)
         if (Shinryu_2hr_Used == 0) then
             mob:useMobAbility(432); -- MS
             mob:setLocalVar("Shinryu_2hr", 1);
-        end
-    elseif (Shinryu_2hr_Used == 3) then
-            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-            mob:setMod(MOD_REGAIN,20);
-            mob:setMod(MOD_TRIPLE_ATTACK, 15);
-            mob:setMod(MOD_UFASTCAST, 75);
-            mob:addMod(MOD_MDEF, -350);
-            mob:addMod(MOD_DEF, -350);
-            mob:addMod(MOD_ATT, 150);
         end
     end
 end;

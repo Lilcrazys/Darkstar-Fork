@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Bibiki Bay 
+-- Area: Bibiki Bay
 -- NPC:  Tchakka
 -----------------------------------
 
@@ -12,12 +12,7 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);	
-	
-    mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_COUNTER,12)
-    mob:addMod(MOD_MDEF, 50);	
-    mob:addMod(MOD_DEF, -50);	
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 end;
 
 -----------------------------------
@@ -26,7 +21,11 @@ end;
 
 function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_REGEN, 30);	
+    mob:setMod(MOD_REGEN, 30);
+    mob:addMod(MOD_ACC,150);
+    mob:addMod(MOD_COUNTER,12)
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_DEF, -50);
 end;
 
 -----------------------------------
@@ -57,27 +56,27 @@ function onMobFight(mob, target)
         Tchakka_2hr_Used = mob:getLocalVar("Tchakka_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Tchakka_2hr_Used == 3) then
-            mob:useMobAbility(432); 
+            mob:useMobAbility(432);
             mob:setLocalVar("Tchakka_2hr", 4);
         elseif (Tchakka_2hr_Used == 4) then
-            mob:useMobAbility(434); 
+            mob:useMobAbility(434);
             mob:setLocalVar("Tchakka_2hr", 5);
         end
-    elseif (mob:getHPP() <= 25) then 
+    elseif (mob:getHPP() <= 25) then
         if (Tchakka_2hr_Used == 2) then
-            mob:useMobAbility(434); 
+            mob:useMobAbility(434);
             mob:setLocalVar("Tchakka_2hr", 3);
         end
-    elseif (mob:getHPP() <= 50) then 
+    elseif (mob:getHPP() <= 50) then
         if (Tchakka_2hr_Used == 1) then
-            mob:useMobAbility(432); 
+            mob:useMobAbility(432);
             mob:setLocalVar("Tchakka_2hr", 2);
         end
-    elseif (mob:getHPP() <= 75) then 
+    elseif (mob:getHPP() <= 75) then
         if (Tchakka_2hr_Used == 0) then
-            mob:useMobAbility(434); 
+            mob:useMobAbility(434);
             mob:setLocalVar("Tchakka_2hr", 1);
         end
     elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
@@ -91,5 +90,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-   -- mob:setRespawnTime(math.random((259200),(432000)));	-- 3 to 5 days
+   -- mob:setRespawnTime(math.random((259200),(432000)));   -- 3 to 5 days
 end;

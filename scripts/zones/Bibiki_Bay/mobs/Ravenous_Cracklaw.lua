@@ -12,7 +12,13 @@ require("scripts/globals/utils");
 -- onMobInitialize Action
 -----------------------------------
 
-function onMobInitialize(mob)
+
+
+-----------------------------------
+-- OnMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
     -- MobMods
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     -- mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
@@ -26,22 +32,14 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DOUBLE_ATTACK,10)
     mob:addMod(MOD_DEF, -50);
     mob:addMod(MOD_ATT, -100);
+    mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_UFASTCAST, 60);
 
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0);
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32);
 end;
-
------------------------------------
--- OnMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
-    mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_REGEN, 30);
-    mob:setMod(MOD_UFASTCAST, 60);
-end;
-
 -----------------------------------
 -- onMobDisEngage Action
 -----------------------------------

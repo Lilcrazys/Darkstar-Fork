@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Canyon 
+-- Area: Canyon
 -- NPC:  Hurkan
 -----------------------------------
 
@@ -12,14 +12,7 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);	
-	
-    mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_MACC,350);	
-    mob:addMod(MOD_MATT,100);	
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
-    mob:addMod(MOD_MDEF, 50);	
-    mob:addMod(MOD_DEF, -50);	
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 end;
 
 -----------------------------------
@@ -28,10 +21,14 @@ end;
 
 function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_MACC,950);	
-    mob:setMod(MOD_MATT,150);	
-    mob:setMod(MOD_REGEN, 30);	
-	mob:setMod(MOD_UFASTCAST, 25);
+    mob:setMod(MOD_MACC,950);
+    mob:setMod(MOD_MATT,150);
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_UFASTCAST, 25);
+    mob:addMod(MOD_ACC,150);
+    mob:addMod(MOD_DOUBLE_ATTACK,10)
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_DEF, -50);
 end;
 
 -----------------------------------
@@ -62,24 +59,24 @@ function onMobFight(mob, target)
         Hurkan_2hr_Used = mob:getLocalVar("Hurkan_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Hurkan_2hr_Used == 3) then
-            mob:useMobAbility(436); 
+            mob:useMobAbility(436);
             mob:setLocalVar("Hurkan_2hr", 4);
         end
-    elseif (mob:getHPP() <= 25) then 
+    elseif (mob:getHPP() <= 25) then
         if (Hurkan_2hr_Used == 2) then
-            mob:useMobAbility(439); 
+            mob:useMobAbility(439);
             mob:setLocalVar("Hurkan_2hr", 3);
         end
-    elseif (mob:getHPP() <= 50) then 
+    elseif (mob:getHPP() <= 50) then
         if (Hurkan_2hr_Used == 1) then
-            mob:useMobAbility(436); 
+            mob:useMobAbility(436);
             mob:setLocalVar("Hurkan_2hr", 2);
         end
-    elseif (mob:getHPP() <= 75) then 
+    elseif (mob:getHPP() <= 75) then
         if (Hurkan_2hr_Used == 0) then
-            mob:useMobAbility(439); 
+            mob:useMobAbility(439);
             mob:setLocalVar("Hurkan_2hr", 1);
         end
     elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
@@ -93,5 +90,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-   -- mob:setRespawnTime(math.random((259200),(432000)));	-- 3 to 5 days
+   -- mob:setRespawnTime(math.random((259200),(432000)));   -- 3 to 5 days
 end;
