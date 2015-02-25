@@ -31,16 +31,18 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
+    mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_COUNTER,15);
+    mob:addMod(MOD_DOUBLE_ATTACK,10)
     mob:setMod(MOD_UFASTCAST, 45);
+    mob:setMod(MOD_MACC,950);
+    mob:setMod(MOD_MATT,100);
 
     -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
-    mob:addMod(MOD_REGEN, 30);
-    mob:addMod(MOD_MDEF, 50);
-    mob:addMod(MOD_DEF, -50);
-    mob:addMod(MOD_ATT, -50);
+    mob:addMod(MOD_MDEF, -50);
+    mob:addMod(MOD_DEF, -150);
+    mob:addMod(MOD_ATT, -150);
 end;
 
 -----------------------------------
@@ -48,7 +50,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	-- WeaknessTriggerSet(mob,target,ws,spell);
+    -- WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
@@ -92,31 +94,31 @@ end;
 
 function onMobDeath(mob, killer)
     killer:addTitle(WYRM_GOD_DEFIER);
-	-- killer:getBCNMloot();
-	--[[
-	-- local keyId = KEYITEM_ID_HERE;
-	if (killer:getVar("RED_PROC") == 1) then
-		-- if (killer:hasKeyItem(keyId) == false) then -- Uncomment to use
-			-- killer:addKeyItem(keyId);
-			-- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
-		-- end
-	end
+    -- killer:getBCNMloot();
+    --[[
+    -- local keyId = KEYITEM_ID_HERE;
+    if (killer:getVar("RED_PROC") == 1) then
+        -- if (killer:hasKeyItem(keyId) == false) then -- Uncomment to use
+            -- killer:addKeyItem(keyId);
+            -- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
+        -- end
+    end
 
-	if (killer:getVar("BLUE_PROC") == 1) then
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-	end
+    if (killer:getVar("BLUE_PROC") == 1) then
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+    end
 
-	if (killer:getVar("YELLOW_PROC") == 1) then
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-	end
-	]]
+    if (killer:getVar("YELLOW_PROC") == 1) then
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+    end
+    ]]
 end;
 
