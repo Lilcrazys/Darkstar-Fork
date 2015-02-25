@@ -3224,8 +3224,14 @@ INSERT INTO `item_mods` VALUES (11653, 23, 7);
 INSERT INTO `item_mods` VALUES (11653, 25, 3);
 INSERT INTO `item_mods` VALUES (11656, 8, 7);
 INSERT INTO `item_mods` VALUES (11656, 13, -3);
-INSERT INTO `item_mods` VALUES (11657, 8, -3);
-INSERT INTO `item_mods` VALUES (11657, 12, 7);
+
+-- -------------------------------------------------------
+-- Icesoul Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11657, 8, -3); -- STR -3
+INSERT INTO `item_mods` VALUES (11657, 12, 7); -- INT +7
+INSERT INTO `item_mods` VALUES (11657, 244, 5); -- Enhances "Resist Silence" effect
+
 INSERT INTO `item_mods` VALUES (11658, 11, 7);
 INSERT INTO `item_mods` VALUES (11658, 12, -3);
 INSERT INTO `item_mods` VALUES (11659, 10, 7);
@@ -3962,11 +3968,15 @@ INSERT INTO `item_mods` VALUES (11957, 1, 1); -- DEF:1
 INSERT INTO `item_mods` VALUES (11957, 5, 9); -- MP+9
 INSERT INTO `item_mods` VALUES (11957, 61, 9); -- [Element: Dark]+9
 
-INSERT INTO `item_mods` VALUES (11958, 1, 46);
-INSERT INTO `item_mods` VALUES (11958, 25, -8);
-INSERT INTO `item_mods` VALUES (11958, 288, 2);
-INSERT INTO `item_mods` VALUES (11958, 302, 2);
-INSERT INTO `item_mods` VALUES (11958, 384, 30);
+-- -------------------------------------------------------
+-- Calmecac Trousers
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (11958, 1, 46); -- DEF:46
+INSERT INTO `item_mods` VALUES (11958, 25, -8); -- Accuracy-8
+INSERT INTO `item_mods` VALUES (11958, 288, 2); -- Double Attack +2%
+INSERT INTO `item_mods` VALUES (11958, 302, 2); -- Triple Attack +2%
+INSERT INTO `item_mods` VALUES (11958, 384, 30); -- Haste+3% (30/1024 = 30.72)
+
 INSERT INTO `item_mods` VALUES (11959, 1, 50);
 INSERT INTO `item_mods` VALUES (11959, 8, 7);
 INSERT INTO `item_mods` VALUES (11959, 25, 16);
@@ -16095,7 +16105,7 @@ INSERT INTO `item_mods` VALUES (15964, 432, 3);
 INSERT INTO `item_mods` VALUES (15965, 2, 15);
 INSERT INTO `item_mods` VALUES (15965, 23, 5);
 INSERT INTO `item_mods` VALUES (15965, 68, 5);
-INSERT INTO `item_mods` VALUES (15965, 426, 3);
+INSERT INTO `item_mods` VALUES (15965, 516, 3);
 INSERT INTO `item_mods` VALUES (15966, 24, 2);
 
 -- -------------------------------------------------------
