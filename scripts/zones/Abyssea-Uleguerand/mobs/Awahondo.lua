@@ -9,7 +9,7 @@
 -- OnMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -17,31 +17,33 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_EVA,-100);
-	mob:addMod(MOD_DEF,-200);	
-	mob:addMod(MOD_REGAIN,20);
-	mob:addMod(MOD_DOUBLE_ATTACK,35);		
+    -- setMod
+    mob:setMod(MOD_REGAIN,20);
+
+    -- addMod
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_EVA,-100);
+    mob:addMod(MOD_DEF,-200);
+    mob:addMod(MOD_DOUBLE_ATTACK,35);
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
-

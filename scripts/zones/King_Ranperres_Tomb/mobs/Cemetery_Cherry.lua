@@ -5,14 +5,7 @@
 -----------------------------------
 
 require("scripts/globals/titles");
-require("/scripts/globals/fieldsofvalor");
-package.loaded["scripts/zones/King_Ranperres_Tomb/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
------------------------------------
--- onMobInitialize
------------------------------------
 
 function onMobInitialize(mob)
 	mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
@@ -24,6 +17,10 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+	mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
 	mob:addMod(MOD_STR,77);
 	mob:addMod(MOD_INT,30);
 	mob:addMod(MOD_MATT,400);
@@ -33,12 +30,11 @@ function onMobSpawn(mob)
 	mob:addMod(MOD_ATT,412);
 	mob:addMod(MOD_ACC,400);
 	mob:addMod(MOD_EVA,132);
-	mob:addMod(MOD_REGAIN,33);
 	mob:addMod(MOD_CRIT_DMG_INCREASE,15);
 	mob:addMod(MOD_CRITHITRATE,22);
 	mob:addMod(MOD_DOUBLE_ATTACK,35);
-end;	
-	
+end;
+
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
@@ -50,10 +46,6 @@ end;
 -- onMobFight
 -----------------------------------
 function onMobFight(mob,target)
-    local MobHP = mob:getHPP();
-	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
-	end
 end
 
 -----------------------------------

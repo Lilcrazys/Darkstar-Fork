@@ -11,23 +11,26 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMod
+	mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
 	mob:addMod(MOD_MATT,25);
 	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_REGAIN,33);	
 end;
 
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
 
-function onMobSpawn(mob)	
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 	WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
@@ -35,14 +38,14 @@ end;
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 	-- local keyId = KEYITEM_ID_HERE;
 	if (killer:getVar("RED_PROC") == 1) then
 		-- if (killer:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--

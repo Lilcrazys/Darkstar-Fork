@@ -3,13 +3,12 @@
 --   Mob: Hadhayosh
 -----------------------------------
 
--- require("scripts/zones/Abyssea-La_Theine/MobIDs");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -17,30 +16,32 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+	mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
 	mob:addMod(MOD_MATT,35);
 	mob:addMod(MOD_MACC,200);
 	mob:addMod(MOD_EVA,-32);
-	mob:addMod(MOD_REGAIN,33);
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
-

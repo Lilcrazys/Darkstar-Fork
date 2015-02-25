@@ -12,7 +12,7 @@ require("/scripts/globals/monstertpmoves");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 
 end;
 

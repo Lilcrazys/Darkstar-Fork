@@ -13,17 +13,21 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
 end;
+
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MACC,400);
-	mob:addMod(MOD_ACC,400);	
-	mob:addMod(MOD_REGAIN,33);
-	mob:addMod(MOD_DOUBLE_ATTACK,15);
-end;	
------------
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_ACC,400);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
+end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

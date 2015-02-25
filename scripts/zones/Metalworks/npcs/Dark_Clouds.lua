@@ -7,7 +7,6 @@ package.loaded["scripts/zones/Metalworks/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/zones/Metalworks/TextIDs");
-require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/spoofchat");
 

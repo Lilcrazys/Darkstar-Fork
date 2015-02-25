@@ -52,15 +52,10 @@ function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
--- onMobDisEngage
------------------------------------
-
------------------------------------
 -- onMobFight
 -----------------------------------
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
     local Shinryu_2hr_Used = 0;
     if (mob:getLocalVar("Shinryu_2hr") ~= nil) then
         Shinryu_2hr_Used = mob:getLocalVar("Shinryu_2hr");

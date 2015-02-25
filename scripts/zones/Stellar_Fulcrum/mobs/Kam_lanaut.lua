@@ -14,7 +14,7 @@ local blades = {567, 570, 572, 569, 568, 571};
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 function onMobFight(mob, target)

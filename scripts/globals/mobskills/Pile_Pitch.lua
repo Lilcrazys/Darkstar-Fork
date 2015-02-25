@@ -33,7 +33,6 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-
     local targetcurrentHP = target:getHP();
     local targetmaxHP = target:getMaxHP(); 
     local hpset=targetmaxHP*0.50;

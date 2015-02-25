@@ -3,10 +3,12 @@
 --   Mysterious Light
 --
 -----------------------------------------
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
 require("scripts/globals/abyssea");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -34,7 +36,7 @@ function onSpellCast(caster,target,spell)
 	params.str_wsc = 0.0; params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.0; params.mnd_wsc = 0.0; params.chr_wsc = 0.2;
     damage = BlueMagicalSpell(caster, target, spell, params, CHR_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-
+	
 	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
 
 	if(damage > 0 and resist > 0.0625) then
@@ -42,6 +44,6 @@ function onSpellCast(caster,target,spell)
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,4,0,getBlueEffectDuration(caster,resist,typeEffect));
 	end
-
+	
     return damage;
 end;

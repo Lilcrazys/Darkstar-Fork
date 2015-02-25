@@ -37,7 +37,7 @@ end;
 -- onMobFight
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 function onMobFight(mob, target)

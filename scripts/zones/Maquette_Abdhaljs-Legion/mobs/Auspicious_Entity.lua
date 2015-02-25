@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
---  
+--
 
 -----------------------------------
 
@@ -14,18 +14,14 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
-end
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- Mods
-    mob:addMod(MOD_MACC,425);		
+    mob:addMod(MOD_MACC,425);
 end;
 
 -----------------------------------
@@ -33,45 +29,39 @@ end;
 -- onMobEngaged Action
 -----------------------------------
 
-function onMobEngaged(mob, target)
-
-end;
+-- function onMobEngaged(mob, target)
+-- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob, target)
-
-end;
+-- function onMobFight(mob, target)
+-- end;
 
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
-function onAdditionalEffect(mob,target,damage)
-    
-end;
+-- function onAdditionalEffect(mob,target,damage)
+-- end;
 
 -----------------------------------
 -- onMagicHit
 -----------------------------------
 
-function onMagicHit(caster, target, spell)
-
-end
+-- function onMagicHit(caster, target, spell)
+-- end
 
 -----------------------------------
 -- onSpikesDamage
 -----------------------------------
 
-function onSpikesDamage(mob,target,damage)
-
-end;
+-- function onSpikesDamage(mob,target,damage)
+-- end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
 end;

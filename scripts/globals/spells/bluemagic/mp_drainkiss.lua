@@ -2,9 +2,11 @@
 -- Spell: MP Drainkiss
 -- Drain functions only on skill level!!
 -----------------------------------------
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------

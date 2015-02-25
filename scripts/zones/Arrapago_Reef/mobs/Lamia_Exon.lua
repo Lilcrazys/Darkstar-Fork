@@ -9,25 +9,26 @@ require("scripts/globals/status");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
-   mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
-   
+function onMobSpawn(mob)
+    mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
 end;
 
 -----------------------------------
 -- onMobEngaged Action
 -----------------------------------
 
-function OnMobEngaged(mob, target)
-    
+function onMobEngaged(mob, target)
 end;
+
+-----------------------------------
+-- onMobFight Action
+-----------------------------------
+
 function onMobFight(mob,target)
-    
 end;
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, killer)
-   
 end;

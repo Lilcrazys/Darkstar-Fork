@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
--- Soaring_Corse 
+-- Soaring_Corse
 
 -----------------------------------
 
@@ -14,23 +14,24 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
-end
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- Mods
+    -- setMod
     mob:setMod(MOD_REGEN, 20);
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 25);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-    mob:setMod(MOD_UFASTCAST, 25);	
-    mob:addMod(MOD_MACC,425);		
+    mob:setMod(MOD_UFASTCAST, 25);
+
+    -- addMod
+    mob:addMod(MOD_MACC,425); 
 end;
 
 -----------------------------------
@@ -38,51 +39,46 @@ end;
 -- onMobEngaged Action
 -----------------------------------
 
-function onMobEngaged(mob, target)
-
-end;
+-- function onMobEngaged(mob, target)-- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
     local Soaring_Corse_2hr = 0;
     if (mob:getLocalVar("Soaring_Corse_2hr") ~= nil) then
         Soaring_Corse_2hr = mob:getLocalVar("Soaring_Corse_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Soaring_Corse_2hr == 0) then
             mob:useMobAbility(439); -- BW
             mob:setLocalVar("Soaring_Corse_2hr", 1);
         end
-    end
+    end 
 end;
 
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
-function onAdditionalEffect(mob,target,damage)
-    
-end;
+
+-- function onAdditionalEffect(mob,target,damage)
+-- end;
 
 -----------------------------------
 -- onMagicHit
 -----------------------------------
 
-function onMagicHit(caster, target, spell)
-
-end
+-- function onMagicHit(caster, target, spell)
+-- end
 
 -----------------------------------
 -- onSpikesDamage
 -----------------------------------
 
-function onSpikesDamage(mob,target,damage)
-
-end;
+-- function onSpikesDamage(mob,target,damage)
+-- end;
 
 -----------------------------------
 -- onMobDeath

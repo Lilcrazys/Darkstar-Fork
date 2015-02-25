@@ -11,8 +11,8 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
 	if (mob:AnimationSub() == 0) then
 		return 1;
-	else	
-	return 0;
+	else
+		return 0;
 	end
 end;
 

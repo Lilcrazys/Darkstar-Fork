@@ -17,9 +17,9 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onInitialize(zone)
-	zone:registerRegion(1,-78,10,-39,0,0,0); -- PLD AF2 "A boy's dream"(Spawns Odontotyrannus if the player has the item "giant shell bug".
+    zone:registerRegion(1,-78,10,-39,0,0,0); -- PLD AF2 "A boy's dream"(Spawns Odontotyrannus if the player has the item "giant shell bug".
 
-	-- Yagudo Avatar
+    -- Yagudo Avatar
     SetRespawnTime(17396134, 900, 10800);
 
     UpdateTreasureSpawnPoint(17396206);

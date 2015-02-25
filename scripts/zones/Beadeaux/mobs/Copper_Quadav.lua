@@ -13,7 +13,7 @@ require("scripts/zones/Beadeaux/TextIDs");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------

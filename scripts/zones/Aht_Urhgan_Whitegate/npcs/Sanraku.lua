@@ -18,13 +18,16 @@ require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    local stock ={
-	              2580,10000,
-	              2581,10000,
-				  2582,10000,
-				  2590,10000,
-				  2591,10000,
-				  2592,10000};
+	local stock =
+	{
+		2580, 10000,
+		2581, 10000,
+		2582, 10000,
+		2590, 10000,
+		2591, 10000,
+		2592, 10000
+	}
+
 	if(trade:getItemCount() == 1) then
 		if(trade:hasItemQty(2477,1)) then -- Trade Soul Plate
 			zeni = math.random(1,200); -- random value since soul plates aren't implemented yet.
@@ -52,7 +55,7 @@ function onTrade(player,npc,trade)
 			player:addZeni(bronze);
 			player:startEvent(0x038E,bronze);
         elseif(trade:getGil() == 100 and trade:getItemCount() == 1) then
-            showShop(player, STATIC, stock);		
+            showShop(player, STATIC, stock);
 		else
 			znm = -1;
 			found = false;

@@ -13,7 +13,7 @@ require("scripts/globals/monstertpmoves");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 	mob:addMod(MOD_MACC,420);
 	mob:addMod(MOD_MATT,115);
 end;
@@ -22,7 +22,7 @@ end;
 -- onMobEngaged Action
 -----------------------------------
 
-function OnMobEngaged(mob,target)
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------

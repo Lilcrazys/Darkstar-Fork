@@ -10,7 +10,7 @@ require("scripts/zones/Qulun_Dome/TextIDs");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------

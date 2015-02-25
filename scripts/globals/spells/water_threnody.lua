@@ -23,7 +23,6 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
 	return handleThrenody(caster, target, spell, 50, 60, MOD_WATERRES);
 end;
-
--- 459

@@ -3,10 +3,10 @@
 -- Deals dark damage that weakens an enemy's attacks and gradually reduces its HP.
 -----------------------------------------
 
-require("scripts/globals/abyssea");
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/abyssea");
 
 -----------------------------------------
 -- OnSpellCast

@@ -3,18 +3,14 @@
 --   Mob: Aggressor_Antlion
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Attohwa/MobIDs");
-
-package.loaded["scripts/globals/abyssea"] = nil;
-require("scripts/zones/Abyssea-Attohwa/MobIDs");
-require("scripts/zones/Abyssea-Attohwa/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -22,30 +18,32 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MATT,100);
-	mob:addMod(MOD_ATT,75);	
-	mob:addMod(MOD_MACC,1500);	
-	mob:addMod(MOD_REGAIN,33);	
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_MATT,100);
+    mob:addMod(MOD_ATT,75);
+    mob:addMod(MOD_MACC,1500);
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
-

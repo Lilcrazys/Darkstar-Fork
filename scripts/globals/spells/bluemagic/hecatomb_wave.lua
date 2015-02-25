@@ -3,9 +3,11 @@
 -- http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
 --
 -----------------------------------------
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------

@@ -4,20 +4,26 @@
 --  Type: Standard NPC
 --  @pos 25.505 -6.999 126.478 50
 -----------------------------------
-
---  Quest 'Arts and Crafts'(Involved)
------------------------------------
--- Includes
-require("scripts/globals/settings");
-require("scripts/globals/quests");
 package.loaded["scripts/zones/Aht_Urhgan_Whitegate/TextIDs"] = nil;
+-----------------------------------
+
+require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
+require("scripts/globals/quests");
+
+-----------------------------------
+-- onTrade Action
+-----------------------------------
+
+function onTrade(player,npc,trade)
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
+
 function onTrigger(player,npc)
-		artsAndCrafts = player:getQuestStatus(AHT_URHGAN,ARTS_AND_CRAFTS);
-artsAndCrafts_Balakaf = player:getVar("QUEST_ARTSANDCRAFTS_BALAKAF");
+	local artsAndCrafts = player:getQuestStatus(AHT_URHGAN,ARTS_AND_CRAFTS);
+	local artsAndCrafts_Balakaf = player:getVar("QUEST_ARTSANDCRAFTS_BALAKAF");
 
 	if (artsAndCrafts == QUEST_ACCEPTED and artsAndCrafts_Balakaf ~= 1) then
 		player:startEvent(0x0203);
@@ -27,16 +33,23 @@ artsAndCrafts_Balakaf = player:getVar("QUEST_ARTSANDCRAFTS_BALAKAF");
 end;
 
 -----------------------------------
--- onTrade Action
+-- onEventUpdate
 -----------------------------------
-function onTrade(player,npc,trade)
+
+function onEventUpdate(player,csid,option)
+	-- printf("CSID: %u",csid);
+	-- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
--- onEventFinish Action
+-- onEventFinish
 -----------------------------------
+
 function onEventFinish(player,csid,option)
+	-- printf("CSID: %u",csid);
+	-- printf("RESULT: %u",option);
 	if (csid == 0x0203) then
 		player:setVar("QUEST_ARTSANDCRAFTS_BALAKAF",1);
 	end
 end;
+

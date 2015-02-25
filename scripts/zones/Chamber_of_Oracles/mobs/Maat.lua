@@ -12,7 +12,7 @@ require("scripts/zones/Chamber_of_Oracles/TextIDs");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
@@ -32,7 +32,7 @@ end;
 -- onMobEngaged Action
 -----------------------------------
 
-function OnMobEngaged(mob,target)
+function onMobEngaged(mob,target)
 	target:showText(mob,YOU_DECIDED_TO_SHOW_UP);
 	printf("Maat Chamber of Oracles works");
 	-- When he take damage: target:showText(mob,THAT_LL_HURT_IN_THE_MORNING);

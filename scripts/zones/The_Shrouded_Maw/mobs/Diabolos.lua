@@ -16,7 +16,7 @@
 -- onMobEngaged
 -----------------------------------	
 
-function OnMobEngaged(mob)
+function onMobEngaged(mob)
 end;	
 	
 -----------------------------------	
@@ -29,7 +29,7 @@ end;
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 	
 -----------------------------------

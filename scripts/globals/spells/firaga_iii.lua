@@ -2,9 +2,11 @@
 -- Spell: Firaga 3
 -- Deals fire damage to an enemy.
 -----------------------------------------
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/abyssea");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -24,6 +26,7 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
 	--doElementalNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus)
 	local dmg = doElementalNuke(589,1.5,caster,spell,target,false,1.0);
 	return dmg;

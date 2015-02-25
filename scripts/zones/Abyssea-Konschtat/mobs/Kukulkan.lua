@@ -21,9 +21,12 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+	mob:setMod(MOD_REGAIN,20);
+
+    -- addMod
 	mob:addMod(MOD_MATT,100);
 	mob:addMod(MOD_MACC,200);
-	mob:addMod(MOD_REGAIN,20);
 	mob:addMod(MOD_EVA,-50);
 	mob:addMod(MOD_DEF,-50);
 end;
@@ -47,11 +50,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
-	local result = -- DoCruor(killer,result);
+	-- local result = -- DoCruor(killer,result);
 	-- DoExp(killer,bonus);
     -- DoLights(mob,killer);
-	PyxisSpawn(mob,killer,npc);
+	-- PyxisSpawn(mob,killer,npc);
 
-	killer:messageSpecial(CRUOR_OBTAINED,result);
+	-- killer:messageSpecial(CRUOR_OBTAINED,result);
 end;

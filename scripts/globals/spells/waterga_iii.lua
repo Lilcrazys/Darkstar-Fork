@@ -6,6 +6,7 @@
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/abyssea");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -25,6 +26,7 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
 	--doElementalNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus)
 	local dmg = doElementalNuke(480,1.5,caster,spell,target,false,1.0);
 	return dmg;

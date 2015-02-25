@@ -6,19 +6,24 @@
 require("scripts/globals/titles");
 require("scripts/globals/status");
 -----------------------------------
+
 function onMobInitialize(mob)
-	mob:addMod(MOD_ATT,200);
-	mob:addMod(MOD_STR,125);
-	mob:addMod(MOD_DEF,75);
-	mob:addMod(MOD_ACC,75);
-	mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_REGAIN,33);
 end;
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_ATT,200);
+    mob:addMod(MOD_STR,125);
+    mob:addMod(MOD_DEF,75);
+    mob:addMod(MOD_ACC,75);
+    mob:addMod(MOD_MACC,500);
 end;
 
 

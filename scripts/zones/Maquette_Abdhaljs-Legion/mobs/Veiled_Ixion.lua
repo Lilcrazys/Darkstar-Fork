@@ -14,31 +14,30 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 
-    -- mods
-    mob:addMod(MOD_DOUBLE_ATTACK, 10);
-    mob:addMod(MOD_TRIPLE_ATTACK, 15);
-
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
-end
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- Mods
+    -- setMod
     mob:setMod(MOD_REGAIN,35);
     mob:setMod(MOD_REGEN,35);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 10);
+    mob:addMod(MOD_TRIPLE_ATTACK, 15);
     mob:addMod(MOD_MACC,425);
     mob:addMod(MOD_ATT,105);
-    mob:addMod(MOD_DEF,95);
+    mob:addMod(MOD_DEF,95); 
 end;
 
 -----------------------------------
@@ -54,7 +53,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
     local Veiled_Ixion_2hr = 0;
     if (mob:getLocalVar("Veiled_Ixion_2hr") ~= nil) then
         Veiled_Ixion_2hr = mob:getLocalVar("Veiled_Ixion_2hr");
@@ -65,7 +63,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Veiled_Ixion_2hr", 1);
         end
-    end
+    end 
 end;
 
 -----------------------------------
@@ -80,7 +78,6 @@ end;
 -----------------------------------
 
 -- function onMagicHit(caster, target, spell)
-    -- return spell
 -- end
 
 -----------------------------------

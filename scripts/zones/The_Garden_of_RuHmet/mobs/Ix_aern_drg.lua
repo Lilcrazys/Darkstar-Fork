@@ -8,7 +8,7 @@ require( "scripts/globals/status" );
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 	
 end;
 -----------------------------------

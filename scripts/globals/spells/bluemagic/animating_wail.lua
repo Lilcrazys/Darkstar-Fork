@@ -5,16 +5,16 @@
 -- Lv: 79 MP Cost: 53 Blue Points: 5
 -----------------------------------------
 
-require("scripts/globals/magic");
 require("scripts/globals/status");
+require("scripts/globals/magic");
 require("scripts/globals/bluemagic");
 
 -----------------------------------------
--- OnSpellCast
+-- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 -----------------------------------------

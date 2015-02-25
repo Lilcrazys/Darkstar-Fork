@@ -21,6 +21,7 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
     local params = {};
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
 	local multi = 2.90;
@@ -39,12 +40,12 @@ function onSpellCast(caster,target,spell)
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,35,0,getBlueEffectDuration(caster,resist,typeEffect));
 	end
-
+	
 	if(damage > 0 and resist > 0.3) then
 	local typeEffect = EFFECT_SILENCE;
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,25,0,getBlueEffectDuration(caster,resist,typeEffect));
 	end
-
+	
     return damage;
 end;

@@ -3,13 +3,12 @@
 --   Mob: Carabosse
 -----------------------------------
 
--- require("scripts/zones/Abyssea-La_Theine/MobIDs");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -17,31 +16,33 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MATT,80);
-	mob:addMod(MOD_MACC,300);
-	mob:addMod(MOD_DEF,-77);
-	mob:addMod(MOD_EVA,-77);
-	mob:addMod(MOD_REGAIN,33);	
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- setMod
+    mob:addMod(MOD_MATT,80);
+    mob:addMod(MOD_MACC,300);
+    mob:addMod(MOD_DEF,-77);
+    mob:addMod(MOD_EVA,-77);
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
-

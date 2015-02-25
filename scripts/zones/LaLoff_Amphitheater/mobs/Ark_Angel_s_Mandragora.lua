@@ -14,7 +14,7 @@ require("scripts/zones/LaLoff_Amphitheater/TextIDs");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------

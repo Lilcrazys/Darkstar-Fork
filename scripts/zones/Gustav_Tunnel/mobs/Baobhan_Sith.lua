@@ -2,14 +2,10 @@
 -- Area: Gustav Tunnel
 --   NM: Baobhan Sith
 -----------------------------------	
-
+  
 require("scripts/globals/titles");
-require("/scripts/globals/groundsofvalor");
-require("scripts/zones/Gustav_Tunnel/MobIDs");
-package.loaded["scripts/zones/Gustav_Tunnel/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -39,10 +35,6 @@ end;
 -- onMobFight
 -----------------------------------
 function onMobFight(mob,target)
-    local MobHP = mob:getHPP();
-	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
-	end
 end
 
 -----------------------------------	
@@ -50,7 +42,6 @@ end
 -----------------------------------	
 	
 function onMobDeath(mob,killer)	
-
 	killer:addTitle(GHOSTIE_BUSTER);
   
     -- Set Baobhan Sith's Window Open Time

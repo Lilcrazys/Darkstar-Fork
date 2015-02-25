@@ -1,29 +1,28 @@
-----------------------------------	
--- Area: Kuftal Tunnel	
+----------------------------------
+-- Area: Kuftal Tunnel
 --   NM: Guivre
------------------------------------	
+-----------------------------------
 
 require("scripts/globals/titles");
-require("/scripts/globals/groundsofvalor");
-require("scripts/zones/Kuftal_Tunnel/MobIDs");
-package.loaded["scripts/zones/Kuftal_Tunnel/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
+
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_STR,7);
-	mob:addMod(MOD_DEX,7);
-	mob:addMod(MOD_ATT,112);
-	mob:addMod(MOD_ACC,200);
-	mob:addMod(MOD_EVA,132);
-	mob:addMod(MOD_REGAIN,33);
-	mob:addMod(MOD_DOUBLE_ATTACK,15);
-end;	
-	
+    -- setMod
+	mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_STR,7);
+    mob:addMod(MOD_DEX,7);
+    mob:addMod(MOD_ATT,112);
+    mob:addMod(MOD_ACC,200);
+    mob:addMod(MOD_EVA,132);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
+end;
+
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
@@ -35,15 +34,11 @@ end;
 -- onMobFight
 -----------------------------------
 function onMobFight(mob,target)
-    local MobHP = mob:getHPP();
-	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
-	end	
 end
 
------------------------------------	
--- onMobDeath	
------------------------------------	
+-----------------------------------
+-- onMobDeath
+-----------------------------------
 
 local path = {
 106.836830, 0.753614, -3.944333,
@@ -428,10 +423,8 @@ function onMobRoam(mob)
 	end
 end;
 
-function onMobDeath(mob,killer)	
-
+function onMobDeath(mob,killer)
 	killer:addTitle(SKULLCRUSHER);
-	
     -- Set Guivre's spawnpoint and respawn time (18-24 hours)
     UpdateNMSpawnPoint(mob:getID());
     mob:setRespawnTime(math.random((64800),(86400)));

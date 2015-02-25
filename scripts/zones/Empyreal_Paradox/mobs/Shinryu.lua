@@ -10,43 +10,33 @@ require("scripts/globals/status");
 -- onMobInitialize Action
 -----------------------------------
 
-
+function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+end;
 
 -----------------------------------
 -- OnMobSpawn
 -----------------------------------
 
-function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_COUNTER,15);
     mob:addMod(MOD_DOUBLE_ATTACK,10)
     mob:setMod(MOD_UFASTCAST, 45);
-    mob:addMod(MOD_REGEN, 30);
+
+    -- addMod
     mob:addMod(MOD_MDEF, 50);
     mob:addMod(MOD_DEF, -50);
     mob:addMod(MOD_ATT, -50);
-    mob:setMod(MOD_REGAIN,10);
 end;
-
------------------------------------
--- onMobEngaged Action
------------------------------------
-
-
-
------------------------------------
--- onMobDisEngage Action
------------------------------------
-
-
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
-
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
     local Shinryu_2hr_Used = 0;
     if (mob:getLocalVar("Shinryu_2hr") ~= nil) then
         Shinryu_2hr_Used = mob:getLocalVar("Shinryu_2hr");

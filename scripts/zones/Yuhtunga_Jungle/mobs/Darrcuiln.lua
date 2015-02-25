@@ -2,6 +2,8 @@
 -- Area: Yuhtunga Jungle
 -- NPC:  Darrcuiln
 -----------------------------------
+require("scripts/globals/status");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -14,7 +16,7 @@ end;
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REGAIN,15);
@@ -49,7 +51,7 @@ end;
 
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
+    local BattleTime = mob:getBattleTime();
     local Darrcuiln_2hr_Used = 0;
     if (mob:getLocalVar("Darrcuiln_2hr") ~= nil) then
         Darrcuiln_2hr_Used = mob:getLocalVar("Darrcuiln_2hr");
@@ -59,6 +61,7 @@ function onMobFight(mob, target)
         if (Darrcuiln_2hr_Used == 2) then
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Darrcuiln_2hr", 3);
+        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
     elseif (mob:getHPP() <= 30) then 
         if (Darrcuiln_2hr_Used == 1) then
@@ -70,9 +73,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Darrcuiln_2hr", 1);
         end
-    elseif (Darrcuiln_2hr_Used == 3) then
-        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-    elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
+    elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end

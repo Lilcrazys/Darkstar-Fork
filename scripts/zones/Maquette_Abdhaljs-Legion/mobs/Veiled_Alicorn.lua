@@ -14,33 +14,32 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
+    -- mobMods
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 
-    -- Mods
-    mob:addMod(MOD_DOUBLE_ATTACK, 20);
-    mob:addMod(MOD_TRIPLE_ATTACK, 15);
-
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
-    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
-end
+    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.-- end
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- Mods
+    -- setMod
     mob:setMod(MOD_REGAIN,30);
     mob:setMod(MOD_REGEN,35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 20);
+    mob:addMod(MOD_TRIPLE_ATTACK, 15);
     mob:addMod(MOD_MACC,425);
     mob:addMod(MOD_ACC,225);
     mob:addMod(MOD_MDEF,55);
-    mob:addMod(MOD_DEF,95);
+    mob:addMod(MOD_DEF,95); 
 end;
 
 -----------------------------------
@@ -68,7 +67,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(432); -- MS
             mob:setLocalVar("Veiled_Alicorn_2hr", 1);
         end
-    end
+    end 
 end;
 
 -----------------------------------
@@ -83,7 +82,6 @@ end;
 -----------------------------------
 
 -- function onMagicHit(caster, target, spell)
-    -- return spell
 -- end
 
 -----------------------------------
@@ -109,5 +107,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 30);
+    killer:addCurrency("legion_point", 30); 
 end;

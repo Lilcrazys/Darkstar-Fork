@@ -13,12 +13,15 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_ATT,250);
-	mob:addMod(MOD_DEX,125);
-	mob:addMod(MOD_AGI,125);
-	mob:addMod(MOD_DEF,75);
-	mob:addMod(MOD_ACC,75);
+    -- setMod
     mob:addMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_ATT,250);
+    mob:addMod(MOD_DEX,125);
+    mob:addMod(MOD_AGI,125);
+    mob:addMod(MOD_DEF,75);
+    mob:addMod(MOD_ACC,75);
 end;
 
 -----------------------------------
@@ -26,7 +29,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	
 end;
 
 -----------------------------------

@@ -1,8 +1,8 @@
 -----------------------------------------
 -- Spell: Threnody - MOD_WINDRES
 -----------------------------------------
-require("scripts/globals/magic");
 require("scripts/globals/status");
+require("scripts/globals/magic");
 require("scripts/globals/abyssea");
 -----------------------------------------
 -- OnSpellCast
@@ -23,5 +23,6 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
 	return handleThrenody(caster, target, spell, 50, 60, MOD_WINDRES);
 end;

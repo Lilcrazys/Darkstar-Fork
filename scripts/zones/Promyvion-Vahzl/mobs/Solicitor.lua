@@ -10,7 +10,7 @@ require("scripts/globals/missions");
 -- onMobSpawn
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------

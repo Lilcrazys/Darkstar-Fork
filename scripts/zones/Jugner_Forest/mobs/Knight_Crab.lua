@@ -9,7 +9,7 @@ require("scripts/globals/titles");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 	SetServerVariable("[POP]King_Arthro",0);
 end;
 

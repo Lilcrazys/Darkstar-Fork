@@ -36,7 +36,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    mob:setLocalVar("BattleStart", os.time());
 end;
 
 -----------------------------------
@@ -53,8 +52,9 @@ end;
 
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
+    local BattleTime = mob:getBattleTime();
     local Colkhab_2hr_Used = 0;
+
     if (mob:getLocalVar("Colkhab_2hr") ~= nil) then
         Colkhab_2hr_Used = mob:getLocalVar("Colkhab_2hr");
     end
@@ -63,6 +63,7 @@ function onMobFight(mob, target)
         if (Colkhab_2hr_Used == 2) then
             mob:useMobAbility(474); -- SAM
             mob:setLocalVar("Colkhab_2hr", 3);
+            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
     elseif (mob:getHPP() <= 30) then 
         if (Colkhab_2hr_Used == 1) then
@@ -74,9 +75,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(474); -- SAM
             mob:setLocalVar("Colkhab_2hr", 1);
         end
-    elseif (Colkhab_2hr_Used == 3) then
-        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-    elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
+    elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end

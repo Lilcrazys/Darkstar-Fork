@@ -23,13 +23,13 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_UFASTCAST, 25);
 
     -- addMod
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,10)
     mob:addMod(MOD_MACC,150);
     mob:addMod(MOD_MATT,150);
-    mob:setMod(MOD_UFASTCAST, 25);
     mob:addMod(MOD_MDEF, 50);
     mob:addMod(MOD_DEF, -50);
 end;

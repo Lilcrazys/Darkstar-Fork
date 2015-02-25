@@ -2,10 +2,12 @@
 -- Spell: Aspir
 -- Drain functions only on skill level!!
 -----------------------------------------
+
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/settings");
 require("scripts/globals/abyssea");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -25,6 +27,7 @@ function onSpellCast(caster,target,spell)
 			end
 		end
 	end
+
 	--calculate raw damage (unknown function  -> only dark skill though) - using http://www.bluegartr.com/threads/44518-Drain-Calculations
 	-- also have small constant to account for 0 dark skill
 	local dmg = 5 + 0.375 * (caster:getSkillLevel(DARK_MAGIC_SKILL) + caster:getMod(79 + DARK_MAGIC_SKILL));
@@ -41,7 +44,7 @@ function onSpellCast(caster,target,spell)
     if (dmg < 0) then
         dmg = 0
     end
-
+    
 	if(target:isUndead()) then
 		spell:setMsg(75); -- No effect
 		return dmg;

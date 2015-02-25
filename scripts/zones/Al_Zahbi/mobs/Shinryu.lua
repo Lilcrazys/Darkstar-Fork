@@ -9,7 +9,7 @@ require("scripts/globals/settings");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
@@ -28,7 +28,7 @@ end;
 -- OnMobRoam
 -----------------------------------
 
-function OnMobRoam(mob)
+function onMobRoam(mob)
 
 	mob:addHP( 250000 );
 end;
@@ -38,7 +38,7 @@ end;
 -- OnMobDisengage
 -----------------------------------
 
-function OnMobDisengage(mob)
+function onMobDisengage(mob)
 
 	mob:addHP( 250000 );
 end;

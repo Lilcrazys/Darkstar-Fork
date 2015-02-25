@@ -32,11 +32,11 @@ path = {-13, 28, 305,
 function onMobSpawn(mob)
     OnMobRoam(mob);
 end;
-function OnMobPath(mob)
+function onMobPath(mob)
     pathfind.patrol(mob, path);
 
 end;
-function OnMobRoam(mob)
+function onMobRoam(mob)
 -- move to start position if not moving
     if(mob:isFollowingPath() == false) then
        mob:pathThrough(pathfind.first(path));

@@ -14,25 +14,26 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
-end
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- Mods
+    -- setMod
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REFRESH, 30);
     mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_COUNTER, 15);	
-    mob:addMod(MOD_MACC,425);	
-    mob:addMod(MOD_DEF,125);	
+    mob:setMod(MOD_COUNTER, 15);
+
+    -- addMod
+    mob:addMod(MOD_MACC,425);
+    mob:addMod(MOD_DEF,125); 
 end;
 
 -----------------------------------
@@ -40,16 +41,14 @@ end;
 -- onMobEngaged Action
 -----------------------------------
 
-function onMobEngaged(mob, target)
-
-end;
+-- function onMobEngaged(mob, target)
+-- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
     local Veiled_Sanguiptere_2hr = 0;
     if (mob:getLocalVar("Veiled_Sanguiptere_2hr") ~= nil) then
         Veiled_Sanguiptere_2hr = mob:getLocalVar("Veiled_Sanguiptere_2hr");
@@ -65,31 +64,28 @@ function onMobFight(mob, target)
             mob:useMobAbility(434); -- HF
             mob:setLocalVar("Veiled_Sanguiptere_2hr", 1);
         end
-    end
+    end 
 end;
 
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
-function onAdditionalEffect(mob,target,damage)
-    
-end;
+-- function onAdditionalEffect(mob,target,damage) 
+-- end;
 
 -----------------------------------
 -- onMagicHit
 -----------------------------------
 
-function onMagicHit(caster, target, spell)
-
-end
+-- function onMagicHit(caster, target, spell)
+-- end
 
 -----------------------------------
 -- onSpikesDamage
 -----------------------------------
 
-function onSpikesDamage(mob,target,damage)
-
-end;
+-- function onSpikesDamage(mob,target,damage)
+-- end;
 
 -----------------------------------
 -- onMobDeath

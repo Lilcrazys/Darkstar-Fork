@@ -10,11 +10,11 @@
 -- 100%TP    200%TP    300%TP
 -- 1.00      1.50      3.00
 -----------------------------------
-require("scripts/globals/abyssea");
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/settings");
 require("scripts/globals/weaponskills");
+require("scripts/globals/abyssea");
 -----------------------------------
 
 function onUseWeaponSkill(player, target, wsID)

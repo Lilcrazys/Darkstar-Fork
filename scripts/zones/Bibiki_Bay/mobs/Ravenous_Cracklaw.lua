@@ -88,15 +88,6 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onMobDeath
------------------------------------
-
-function onMobDeath(mob, killer)
-    mob:setLocalVar("RAGED", 0);
-   -- mob:setRespawnTime(math.random((259200),(432000)));   -- 3 to 5 days
-end;
-
------------------------------------
 -- onSpikesDamage
 -----------------------------------
 
@@ -107,11 +98,7 @@ function onSpikesDamage(mob,target,damage)
     else
         local dmg = math.random(9,27);
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20);
-        end
-        INT_diff = INT_diff * 0.25;
-        dmg = dmg + INT_diff;
+        dmg = dmg + (INT_diff * 0.25);
         dmg = utils.clamp(dmg, 1, 99);
         target:delStatusEffect(EFFECT_DEFENSE_BOOST)
         if (not target:hasStatusEffect(EFFECT_DEFENSE_DOWN)) then
@@ -123,4 +110,13 @@ function onSpikesDamage(mob,target,damage)
         end
         return SUBEFFECT_DELUGE_SPIKES,44,dmg;
     end
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob, killer)
+    mob:setLocalVar("RAGED", 0);
+   -- mob:setRespawnTime(math.random((259200),(432000)));   -- 3 to 5 days
 end;

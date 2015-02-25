@@ -3,15 +3,13 @@
 --   Mob: Ovni
 -----------------------------------
 
--- require("scripts/zones/Abyssea-La_Theine/MobIDs");
-package.loaded["scripts/zones/Abyssea-La_Theine/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -24,7 +22,7 @@ function onMobSpawn(mob)
     mob:AnimationSub(5);
 	mob:addMod(MOD_MATT,600);
 	mob:addMod(MOD_MACC,300);
-	mob:addMod(MOD_REGAIN,33);	
+	mob:addMod(MOD_REGAIN,33);
 end;
 
 -----------------------------------
@@ -41,13 +39,12 @@ end;
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
-

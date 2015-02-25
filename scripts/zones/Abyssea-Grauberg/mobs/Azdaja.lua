@@ -3,15 +3,13 @@
 --   Mob: Azdaja
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Grauberg/MobIDs");
-package.loaded["scripts/zones/Abyssea-Grauberg/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -19,34 +17,30 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_EVA,-100);
-	mob:addMod(MOD_DEF,-200);	
-	mob:addMod(MOD_REGAIN,20);	
+    -- setMod
+    mob:setMod(MOD_REGAIN,20);
+
+    -- addMod
+    mob:addMod(MOD_DMGMAGIC, -50);
+    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_EVA,-100);
+    mob:addMod(MOD_DEF,-200);
 end;
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobInitialize(mob)
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -50);
-end;
-
------------------------------------
--- onMobFight Action
------------------------------------
-
 function onMobFight(mob,target)
-	
-	-- Gains a large attack boost when health is under 25% which cannot be Dispelled. 
+
+	-- Gains a large attack boost when health is under 25% which cannot be Dispelled.
 	if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
 		if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
 			mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
@@ -57,12 +51,12 @@ function onMobFight(mob,target)
         local changeTime = mob:getLocalVar("changeTime")
         local twohourTime = mob:getLocalVar("twohourTime")
         local changeHP = mob:getLocalVar("changeHP")
-        
+
         if (twohourTime == 0) then
             twohourTime = math.random(8, 14);
             mob:setLocalVar("twohourTime", twohourTime);
         end
-        
+
         if (mob:AnimationSub() == 2 and mob:getBattleTime()/15 > twohourTime) then
             mob:useMobAbility(432);
             mob:setLocalVar("twohourTime", math.random((mob:getBattleTime()/15)+4, (mob:getBattleTime()/15)+8));
@@ -95,6 +89,6 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
 

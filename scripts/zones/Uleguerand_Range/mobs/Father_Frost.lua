@@ -6,7 +6,6 @@ require("scripts/globals/titles");
 require("/scripts/globals/fieldsofvalor");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -21,19 +20,19 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_STR,77);
-	mob:addMod(MOD_INT,30);
-	mob:addMod(MOD_MATT,400);
-	mob:addMod(MOD_MACC,400);
-	mob:addMod(MOD_DEX,77);
-	mob:addMod(MOD_DMGPHYS,77);
-	mob:addMod(MOD_ATT,412);
-	mob:addMod(MOD_ACC,400);
-	mob:addMod(MOD_EVA,132);
-	mob:addMod(MOD_REGAIN,33);
-	mob:addMod(MOD_CRIT_DMG_INCREASE,15);
-	mob:addMod(MOD_CRITHITRATE,22);
-	mob:addMod(MOD_DOUBLE_ATTACK,35);
+    mob:setMod(MOD_REGAIN,33);
+    mob:addMod(MOD_STR,77);
+    mob:addMod(MOD_INT,30);
+    mob:addMod(MOD_MATT,400);
+    mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_DEX,77);
+    mob:addMod(MOD_DMGPHYS,77);
+    mob:addMod(MOD_ATT,412);
+    mob:addMod(MOD_ACC,400);
+    mob:addMod(MOD_EVA,132);
+    mob:addMod(MOD_CRIT_DMG_INCREASE,15);
+    mob:addMod(MOD_CRITHITRATE,22);
+    mob:addMod(MOD_DOUBLE_ATTACK,35);
 end;	
 	
 -----------------------------------
@@ -47,11 +46,6 @@ end;
 -- onMobFight
 -----------------------------------
 function onMobFight(mob,target)
-    local MobHP = mob:getHPP();
-	mob:addStatusEffect(EFFECT_MIGHTY_STRIKES,1,0,6000);
-	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
-	end
 end
 
 -----------------------------------

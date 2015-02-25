@@ -12,7 +12,7 @@ require("scripts/zones/QuBia_Arena/TextIDs");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 end;
 
 -----------------------------------

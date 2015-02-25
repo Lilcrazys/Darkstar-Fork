@@ -83,17 +83,8 @@ end;
 -- onRegionLeave	
 -----------------------------------	
 
-function onRegionLeave(player,region)
-
+function onRegionLeave(player,region)	
 end;	
-
------------------------------------
--- onGameHour Action
------------------------------------
-
-function OnGameHour(player,npc)
-    
-end;
 
 -----------------------------------		
 -- onTransportEvent		

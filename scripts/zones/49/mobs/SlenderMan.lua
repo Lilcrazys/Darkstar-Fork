@@ -29,10 +29,13 @@ end
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REFRESH, 3);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_UFASTCAST, 80);
+
+    -- addmod
     mob:addMod(MOD_HUMANOID_KILLER, 11);
     mob:addMod(MOD_MATT, 20);
     mob:addMod(MOD_MACC, 100);

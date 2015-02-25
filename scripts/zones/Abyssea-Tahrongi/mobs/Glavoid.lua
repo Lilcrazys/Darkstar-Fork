@@ -3,46 +3,46 @@
 --   Mob: Caoineag
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Tahrongi/MobIDs");
-package.loaded["scripts/zones/Abyssea-Tahrongi/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-	mob:addMod(MOD_MATT,275);
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_REGAIN,33);	
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_MATT,275);
+    mob:addMod(MOD_MACC,500);
 end;
 
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
 
-function onMobSpawn(mob)	
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
 end;
 

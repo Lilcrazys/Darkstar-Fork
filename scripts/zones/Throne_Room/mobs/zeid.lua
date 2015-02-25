@@ -15,7 +15,7 @@ require("scripts/zones/Throne_Room/TextIDs");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
+function onMobSpawn(mob)
 
 end;
 

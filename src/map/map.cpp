@@ -1121,6 +1121,10 @@ int32 map_config_read(const int8* cfgName)
         {
             map_config.engage_delay_mod = atoi(w2);
         }
+        else if (strcmp(w1,"engage_delay_mod") == 0)
+        {
+            map_config.engage_delay_mod = atof(w2);
+        }
         else if (strcmp(w1,"speed_mod") == 0)
         {
             map_config.speed_mod = atoi(w2);

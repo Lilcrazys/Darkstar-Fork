@@ -9,14 +9,17 @@ require("scripts/globals/titles");
 -- onMobSpawn Action
 -----------------------------------
 
-function OnMobSpawn(mob)
-	mob:addMod(MOD_STR,5);
-	mob:addMod(MOD_DEX,7);
-	mob:addMod(MOD_ATT,100);
-	mob:addMod(MOD_ACC,200);
-	mob:addMod(MOD_MACC,400);
-    mob:addMod(MOD_REGAIN,33);
-	mob:addMod(MOD_DOUBLE_ATTACK,15);
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_STR,5);
+    mob:addMod(MOD_DEX,7);
+    mob:addMod(MOD_ATT,100);
+    mob:addMod(MOD_ACC,200);
+    mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------

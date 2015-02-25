@@ -1,12 +1,15 @@
 -----------------------------------
 -- Spell: Reactor Cool
 -----------------------------------
-require("scripts/globals/magic");
+
+require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
------------------------------------------
--- OnSpellCast
------------------------------------------
+require("scripts/globals/magic");
+
+-----------------------------------
+-- onSpellcast
+-----------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
 	return 0;

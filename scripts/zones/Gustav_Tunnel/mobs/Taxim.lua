@@ -2,20 +2,14 @@
 -- Area: Gustav Tunnel
 --   NM: Taxim
 -----------------------------------	
-
-require("scripts/globals/titles");
-require("/scripts/globals/groundsofvalor");
-require("scripts/zones/Gustav_Tunnel/MobIDs");
-package.loaded["scripts/zones/Gustav_Tunnel/TextIDs"] = nil;
+  
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-	
 end;
 
 -----------------------------------
@@ -25,8 +19,8 @@ end;
 function onMobSpawn(mob)
 	mob:addMod(MOD_MATT,40);
 	mob:addMod(MOD_MACC,400);
-end;	
-	
+end;
+
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
@@ -38,10 +32,6 @@ end;
 -- onMobFight
 -----------------------------------
 function onMobFight(mob,target)
-    local MobHP = mob:getHPP();
-	if (MobHP < 75) then
-		mob:addStatusEffect(EFFECT_HASTE,1,0,6000);
-	end
 end
 
 -----------------------------------	
