@@ -4878,4 +4878,4 @@ INSERT INTO `mob_skill` VALUES (438,7777,1092,'Invincible',0,7.0,2000,0,1,2,60,0
 INSERT INTO `mob_skill` VALUES (2102,7777,1091,'Minerva_Tabula_Rasa',0,7.0,2000,0,1,2,90,0);
 INSERT INTO `mob_skill` VALUES (1231,7777,1849,'Minerva_Ambrosia',0,7.0,2000,0,1,2,0,0);
 
---Thinking of placing a new entry right here? DO NOT. Scroll your butt up past Slendy!
+-- Thinking of placing a new entry right here? DO NOT. Scroll your butt up past Slendy!
