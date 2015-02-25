@@ -10,21 +10,25 @@ require("scripts/globals/status");
 -- onMobInitialize Action
 -----------------------------------
 
-
+function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+end;
 
 -----------------------------------
 -- OnMobSpawn
 -----------------------------------
-function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGAIN,15);
+
+    -- addMod
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,10)
-    mob:addMod(MOD_REGEN, 30);
     mob:addMod(MOD_MDEF, 50);
     mob:addMod(MOD_DEF, -50);
-    mob:setMod(MOD_REGAIN,15);
 end;
-
 
 -----------------------------------
 -- onMobEngaged Action
@@ -58,6 +62,7 @@ function onMobFight(mob, target)
         if (Achuka_2hr_Used == 2) then
             mob:useMobAbility(432); -- PD
             mob:setLocalVar("Achuka_2hr", 3);
+        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
     elseif (mob:getHPP() <= 30) then
         if (Achuka_2hr_Used == 1) then
@@ -69,8 +74,6 @@ function onMobFight(mob, target)
             mob:useMobAbility(432); -- PD
             mob:setLocalVar("Achuka_2hr", 1);
         end
-    elseif (Achuka_2hr_Used == 3) then
-        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
     elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
