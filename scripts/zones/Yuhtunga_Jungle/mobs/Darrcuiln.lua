@@ -25,8 +25,9 @@ function onMobSpawn(mob)
     mob:addMod(MOD_EVA,-100);
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_TRIPLE_ATTACK,10)
-    mob:addMod(MOD_MDEF,100);
-    mob:addMod(MOD_DEF,-100);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,-150);
+    mob:addMod(MOD_ATT,-100);
 end;
 
 -----------------------------------
@@ -57,18 +58,18 @@ function onMobFight(mob, target)
         Darrcuiln_2hr_Used = mob:getLocalVar("Darrcuiln_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Darrcuiln_2hr_Used == 2) then
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Darrcuiln_2hr", 3);
         mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
-    elseif (mob:getHPP() <= 30) then 
+    elseif (mob:getHPP() <= 30) then
         if (Darrcuiln_2hr_Used == 1) then
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Darrcuiln_2hr", 2);
         end
-    elseif (mob:getHPP() <= 70) then 
+    elseif (mob:getHPP() <= 70) then
         if (Darrcuiln_2hr_Used == 0) then
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Darrcuiln_2hr", 1);
