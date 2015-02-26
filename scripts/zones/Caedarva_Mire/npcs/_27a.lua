@@ -18,6 +18,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+	player:startEvent(0x0130);
 	--[[
 	if(player:hasKeyItem(CYAN_DEEP_SALT)) then
 		player:startEvent(0x0130);

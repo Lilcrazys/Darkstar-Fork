@@ -18,6 +18,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+	player:startEvent(0x0202);
 	--[[
 	if(player:hasKeyItem(SICKLEMOON_SALT)) then
 		player:startEvent(0x0202);

@@ -18,6 +18,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+	player:startEvent(0x000c);
 	--[[
 	if(player:hasKeyItem(SILVER_SEA_SALT)) then
 		player:startEvent(0x000c);
