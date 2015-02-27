@@ -3701,6 +3701,7 @@ INSERT INTO `item_weapon` VALUES (20973,'nagi',9,0,2,2,227,113,0);
 INSERT INTO `item_weapon` VALUES (20974,'kannagi',9,0,2,1,210,106,0);
 INSERT INTO `item_weapon` VALUES (20975,'kannagi',9,0,2,1,210,106,0);
 INSERT INTO `item_weapon` VALUES (20990,'jushimatsu',9,0,2,1,227,122,0);
+INSERT INTO `item_weapon` VALUES (20991,'chidori',9,0,2,1,227,122,0);
 INSERT INTO `item_weapon` VALUES (20997,'raimitsukane',9,0,2,1,227,122,0);
 INSERT INTO `item_weapon` VALUES (21004,'kannakiri',9,0,2,1,227,94,0);
 INSERT INTO `item_weapon` VALUES (21005,'kiji',0,0,0,1,0,0,0);

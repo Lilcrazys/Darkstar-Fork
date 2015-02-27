@@ -9746,6 +9746,7 @@ INSERT INTO `item_armor` VALUES ('20973', 'nagi', '99', '4096', '565', '0', '0',
 INSERT INTO `item_armor` VALUES ('20974', 'kannagi', '99', '4096', '513', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20975', 'kannagi', '99', '4096', '578', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20990', 'jushimatsu', '99', '4096', '605', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20991', 'chidori', '99', '4096', '309', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('20997', 'raimitsukane', '99', '4096', '589', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('21004', 'kannakiri_+1', '99', '4096', '717', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('21005', 'kiji', '99', '8192', '0', '0', '0', '3', '0');

@@ -15513,6 +15513,7 @@ INSERT INTO `item_basic` VALUES (20973,0,'nagi','nagi',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (20974,0,'kannagi','kannagi',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (20975,0,'kannagi','kannagi',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (20990,0,'jushimatsu','jushimatsu',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (20991,0,'chidori','chidori',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (20997,0,'raimitsukane','raimitsukane',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21004,0,'kannakiri_+1','kannakiri_+1',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (21005,0,'kiji','kiji',1,63568,0,1,0);
