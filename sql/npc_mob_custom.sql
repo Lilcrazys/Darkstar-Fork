@@ -315,6 +315,308 @@ REPLACE INTO `mob_spawn_points` VALUES (16839072,'Eccentric_eve','Eccentric Eve'
 -- 16974847
 -- ------------------------------------------------------------
 
+REPLACE INTO `mob_spawn_points` VALUES (16973825,'Mamool_Ja_Sapper','Mamool Ja Sapper',1546,-25,0,-34,24); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973826,'Mamool_Ja_Hospitaler','Mamool Ja Hospitaler',1543,-25,0,-34,24); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973827,'Mamool_Ja_Fetial','Mamool Ja Fetial',1541,-25,0,-34,24); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973828,'Mamool_Ja_Spotter','Mamool Ja Spotter',1547,40,0,58,64);  -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973829,'Mamool_Ja_Handler','Mamool Ja Handler',1542,40,0,58,64); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973830,'Mamool_Ja_Lizard','Mamool Ja\'s Lizard',1548,1,1,1,1); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973831,'Mamool_Ja_Cataphract','Mamool Ja Cataphract',1539,40,0,21,191); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973832,'Mamool_Ja_Wyvern','Mamool Ja\'s Wyvern',1549,40,0,21,191); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973833,'Mamool_Ja_Entrancer','Mamool Ja Entrancer',1540,40,0,21,191); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973834,'Mamool_Ja_Sapper','Mamool Ja Sapper',1546,28,0,-33,219); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973835,'Mamool_Ja_Hospitaler','Mamool Ja Hospitaler',1543,28,0,-33,219); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973836,'Mamool_Ja_Fetial','Mamool Ja Fetial',1541,28,0,-33,219); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973837,'Mamool_Ja_Spotter','Mamool Ja Spotter',1547,60,0,-33,193); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973838,'Mamool_Ja_Handler','Mamool Ja Handler',1542,60,0,-33,193); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973839,'Mamool_Ja_Lizard','Mamool Ja\'s Lizard',1548,1,1,1,1); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973840,'Mamool_Ja_Cataphract','Mamool Ja Cataphract',1539,-60,0,-38,193); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973841,'Mamool_Ja_Wyvern','Mamool Ja\'s Wyvern',1549,-60,0,-38,193); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973842,'Mamool_Ja_Entrancer','Mamool Ja Entrancer',1540,-60,0,-38,193); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973843,'Mamool_Ja_Sapper','Mamool Ja Sapper',1546,-24,0,-122,175); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973844,'Mamool_Ja_Hospitaler','Mamool Ja Hospitaler',1543,-24,0,-122,175); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973845,'Mamool_Ja_Fetial','Mamool Ja Fetial',1541,-24,0,-122,175); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973846,'Mamool_Ja_Spotter','Mamool Ja Spotter',1547,-53,0,-99,8); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973847,'Mamool_Ja_Handler','Mamool Ja Handler',1542,-53,0,-99,8); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973848,'Mamool_Ja_Lizard','Mamool Ja\'s Lizard',1548,1,1,1,1); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973849,'Mamool_Ja_Cataphract','Mamool Ja Cataphract',1539,-55,0,50,29); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973850,'Mamool_Ja_Wyvern','Mamool Ja\'s Wyvern',1549,-55,0,50,29); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973851,'Mamool_Ja_Entrancer','Mamool Ja Entrancer',1540,-55,0,50,29); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973852,'Scout_Puk','Scout Puk',1569,13,-6,66,27); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973853,'Scout_Puk','Scout Puk',1569,13,-6,14,224); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973854,'Scout_Puk','Scout Puk',1569,31,-6,-12,126); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973855,'Scout_Puk','Scout Puk',1569,12,-6,-32,190); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973856,'Scout_Puk','Scout Puk',1569,-12,-6,-32,195); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973857,'Raid_Raptor','Raid Raptor',1566,-27,-6,-45,60); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973858,'Raid_Raptor','Raid Raptor',1566,-47,-6,-12,126); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973859,'Raid_Raptor','Raid Raptor',1566,-67,-6,-34,191); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973860,'Raid_Raptor','Raid Raptor',1566,-67,-6,-67,225); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973861,'Raid_Raptor','Raid Raptor',1566,-12,-6,-92,101); -- Mamool 1
+REPLACE INTO `mob_spawn_points` VALUES (16973862,'Attack_Ziz','Attack Ziz',1490,-68,-6,-91,33); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973863,'Attack_Ziz','Attack Ziz',1490,-64,-6,-12,254); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973864,'Attack_Ziz','Attack Ziz',1490,-63,-6,12,227); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973865,'Attack_Ziz','Attack Ziz',1490,-12,-6,48,189); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973866,'Attack_Ziz','Attack Ziz',1490,51,-6,91,255); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973867,'Battering_Bugard','Battering Bugard',1491,-25,0,-34,24); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973868,'Battering_Bugard','Battering Bugard',1491,28,0,-33,219); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973869,'Battering_Bugard','Battering Bugard',1491,-60,0,-38,193); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973870,'Battering_Bugard','Battering Bugard',1491,-53,0,-99,8); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973871,'Battering_Bugard','Battering Bugard',1491,-55,0,50,29); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973872,'War_Wyvern','War Wyvern',1593,-25,0,-34,24); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973873,'War_Wyvern','War Wyvern',1593,28,0,-33,219); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973874,'War_Wyvern','War Wyvern',1593,-60,0,-38,193); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973875,'War_Wyvern','War Wyvern',1593,-53,0,-99,8); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973876,'War_Wyvern','War Wyvern',1593,-55,0,50,29); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973877,'Poroggo_Charmer','Poroggo Charmer',1560,40,0,58,64); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973878,'Poroggo_Charmer','Poroggo Charmer',1560,28,0,-33,219); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973879,'Poroggo_Charmer','Poroggo Charmer',1560,-60,0,-38,193); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973880,'Poroggo_Charmer','Poroggo Charmer',1560,40,0,21,191); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973881,'Poroggo_Charmer','Poroggo Charmer',1560,-53,0,-99,8); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973882,'Phantasmal_Puk','Phantasmal Puk',1558,40,0,58,64); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973883,'Dive-Puk','Dive-Puk',1501,40,0,58,64); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973884,'Dive-Puk','Dive-Puk',1501,60,0,-33,193); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973885,'Dive-Puk','Dive-Puk',1501,-24,0,-122,175); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973886,'Dive-Puk','Dive-Puk',1501,-53,0,-99,8); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973887,'Phantasmal_Puk','Phantasmal Puk',1558,60,0,-33,193); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973888,'Dive-Puk','Dive-Puk',1501,12,-6,-32,190); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973889,'Dive-Puk','Dive-Puk',1501,31,-6,-12,126); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973890,'Dive-Puk','Dive-Puk',1501,13,-6,14,224); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973891,'Dive-Puk','Dive-Puk',1501,13,-6,66,27); -- Mamool 2
+REPLACE INTO `mob_spawn_points` VALUES (16973892,'Fleetfingered_Mobel_Ja','Fleetfingered Mobel Ja',1507,-39,0,-108,193); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973893,'Mamool_Ja_Ravager','Mamool Ja Ravager',1545,-43,0,-108,193); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973894,'Mamool_Ja_Ravager','Mamool Ja Ravager',1545,-35,0,-108,193); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973895,'Mamool_Ja_Ravager','Mamool Ja Ravager',1545,-39,0,-104,193); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973896,'Brontobugard','Brontobugard',1495,-40,0,25,62); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973897,'Bull_Bugard','Bull Bugard',1496,-34,0,26,83); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973898,'Bull_Bugard','Bull Bugard',1496,-46,0,24,40); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973899,'Bull_Bugard','Bull Bugard',1496,-40,0,19,65); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973900,'Gulool_Ja_Ja','Gulool Ja Ja',1517,40,0,-59,189); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973901,'Illuyankas','Illuyankas',1520,60,0,40,255); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973902,'Decimator_Mabel_Ja','Decimator Mabel Ja',1500,-54,0,-57,210); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973903,'Thunderclap_Sareel_Ja','Thunderclap Sareel Ja',1576,-52,0,-59,193); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973904,'Thunderbolt_Piraal_Ja','Thunderbolt Piraal Ja',1575,1,1,1,1); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973905,'Panurgic_Ryubool_Ja','Panurgic Ryubool Ja',1557,19,0,49,35); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973906,'Sagelord_Molaal_Ja','Sagelord Molaal Ja',1567,18,0,40,254); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973907,'Strifelord_Bakool_Ja','Strifelord Bakool Ja',1573,40,0,107,63); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973908,'Mamool_Ja_Wyvern','Mamool Ja\'s Wyvern',1549,42,0,107,63); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973909,'Mamool_Ja_Wyvern','Mamool Ja\'s Wyvern',1549,40,0,103,63); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973910,'Mamool_Ja_Wyvern','Mamool Ja\'s Wyvern',1549,-38,0,107,63); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973911,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-63,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973912,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-62,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973913,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-61,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973914,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-60,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973915,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-64,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973916,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-65,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973917,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-66,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973918,'Eidolic_Qufeel_Ja','Eidolic Qufeel Ja',1503,-67,2,92,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973919,'Searing_Vogaal_Ja','Searing Vogaal Ja',1570,-95,2,38,32); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973920,'Scalding_Fafool_Ja','Scalding Fafool Ja',1568,48,0,40,255); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973921,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,13,-6,66,27); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973922,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,13,-6,14,224); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973923,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,31,-6,-12,126); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973924,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,12,-6,-32,190); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973925,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,-12,-6,-32,195); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973926,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,-27,-6,-45,60); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973927,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,-47,-6,-12,126); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973928,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,-67,-6,-34,191); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973929,'Mamool_Ja_Hussar','Mamool Ja Hussar',1544,-67,-6,-67,225); -- Mamool 3
+REPLACE INTO `mob_spawn_points` VALUES (16973930,'Troll_Paviser','Troll Paviser',1581,-25,0,-34,24); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973931,'Troll_Stormer','Troll Stormer',1584,-25,0,-34,24); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973932,'Troll_Hoplite','Troll Hoplite',1580,-25,0,-34,24); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973933,'Troll_Pezhetairoi','Troll Pezhetairoi',1582,40,0,58,64); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973934,'Troll_Cannoneer','Troll Cannoneer',1577,40,0,58,64); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973935,'Troll_Velites','Troll Velites',1586,40,0,58,64); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973936,'Troll_Speculator','Troll Speculator',1583,40,0,21,191); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973937,'Troll_Automaton','Troll\'s Automaton',1585,40,0,21,191); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973938,'Troll_Paviser','Troll Paviser',1581,40,0,21,191); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973939,'Troll_Stormer','Troll Stormer',1584,28,0,-33,219); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973940,'Troll_Hoplite','Troll Hoplite',1580,28,0,-33,219); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973941,'Troll_Pezhetairoi','Troll Pezhetairoi',1582,28,0,-33,219); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973942,'Troll_Cannoneer','Troll Cannoneer',1577,60,0,-33,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973943,'Troll_Velites','Troll Velites',1586,60,0,-33,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973944,'Troll_Speculator','Troll Speculator',1583,60,0,-33,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973945,'Troll_Automaton','Troll\'s Automaton',1585,60,0,-33,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973946,'Troll_Paviser','Troll Paviser',1581,-60,0,-38,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973947,'Troll_Stormer','Troll Stormer',1584,-60,0,-38,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973948,'Troll_Hoplite','Troll Hoplite',1580,-60,0,-38,193); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973949,'Troll_Pezhetairoi','Troll Pezhetairoi',1582,-24,0,-122,175); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973950,'Troll_Cannoneer','Troll Cannoneer',1577,-24,0,-122,175); -- Level 1
+REPLACE INTO `mob_spawn_points` VALUES (16973951,'Troll_Velites','Troll Velites',1586,-24,0,-122,175); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973952,'Troll_Speculator','Troll Speculator',1583,-53,0,-99,8); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973953,'Troll_Automaton','Troll\'s Automaton',1585,-53,0,-99,8); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973954,'Flame_Eruca','Flame Eruca',1506,13,-6,66,27); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973955,'Flame_Eruca','Flame Eruca',1506,13,-6,14,224); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973956,'Flame_Eruca','Flame Eruca',1506,31,-6,-12,126); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973957,'Flame_Eruca','Flame Eruca',1506,12,-6,-32,190); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973958,'Flame_Eruca','Flame Eruca',1506,-12,-6,-32,195); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973959,'War_Wamouracampa','War Wamouracampa',1592,-27,-6,-45,60); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973960,'War_Wamouracampa','War Wamouracampa',1592,-47,-6,-12,126); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973961,'War_Wamouracampa','War Wamouracampa',1592,-67,-6,-34,191); -- Troll 1
+REPLACE INTO `mob_spawn_points` VALUES (16973962,'War_Wamouracampa','War Wamouracampa',1592,-67,-6,-67,225); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973963,'War_Wamouracampa','War Wamouracampa',1592,-12,-6,-92,101); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973964,'Incendiary_Bombs','Incendiary Bombs',1523,-25,0,-34,24); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973965,'Incendiary_Bombs','Incendiary Bombs',1523,40,0,58,64); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973966,'Incendiary_Bombs','Incendiary Bombs',1523,40,0,21,191); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973967,'Incendiary_Bombs','Incendiary Bombs',1523,28,0,-33,219); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973968,'Incendiary_Bombs','Incendiary Bombs',1523,60,0,-33,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973969,'Fighting_Flan','Fighting Flan',1505,-25,0,-34,24); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973970,'Fighting_Flan','Fighting Flan',1505,40,0,58,64); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973971,'Fighting_Flan','Fighting Flan',1505,40,0,21,191); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973972,'Fighting_Flan','Fighting Flan',1505,28,0,-33,219); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973973,'Fighting_Flan','Fighting Flan',1505,60,0,-33,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973974,'Siege_Scorpion','Siege Scorpion',1571,-25,0,-34,24); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973975,'Siege_Scorpion','Siege Scorpion',1571,40,0,58,64); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973976,'Siege_Scorpion','Siege Scorpion',1571,40,0,21,191); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973977,'Siege_Scorpion','Siege Scorpion',1571,28,0,-33,219); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973978,'Siege_Scorpion','Siege Scorpion',1571,60,0,-33,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973979,'War_Wamoura','War Wamoura',1592-25,0,-34,24); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973980,'War_Wamoura','War Wamoura',1592,40,0,58,64); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973981,'War_Wamoura','War Wamoura',1592,40,0,21,191); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973982,'War_Wamoura','War Wamoura',1592,28,0,-33,219); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973983,'War_Wamoura','War Wamoura',1592,60,0,-33,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973984,'Aerial_Torpedo','Aerial Torpedo',1487,-60,0,-38,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973985,'Bombshells','Bombshells',1493,-25,0,-34,24); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973986,'Bombshells','Bombshells',1493,40,0,58,64); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973987,'Bombshells','Bombshells',1493,40,0,21,191); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973988,'Bombshells','Bombshells',1493,28,0,-33,219); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973989,'Aerial_Torpedo','Aerial Torpedo',1487,-24,0,-122,175); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973990,'Bombshells','Bombshells',1493,60,0,-33,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973991,'Bombshells','Bombshells',1493,-60,0,-38,193); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973992,'Bombshells','Bombshells',1493,-24,0,-122,175); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973993,'Bombshells','Bombshells',1493,-24,0,-122,175); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973994,'Vyurvarjur_the_Nimble','Vyurvarjur the Nimble',1590,-53,0,-99,8); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973995,'Troll_Forager','Troll Forager',1579,-53,0,-99,8); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973996,'Troll_Forager','Troll Forager',1579,-53,0,-99,8); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973997,'Troll_Forager','Troll Forager',1579,-53,0,-99,8); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973998,'Killing_Claw','Killing Claw',1524,-55,0,50,29); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973999,'Slaughterous_Scorpion','Slaughterous Scorpion',1572,-55,0,50,29); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16974000,'Slaughterous_Scorpion','Slaughterous Scorpion',1572,-55,0,50,29); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16974001,'Slaughterous_Scorpion','Slaughterous Scorpion',1572,-40,0,25,62); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974002,'Gurfurlur_the_Menacing','Gurfurlur the Menacing',1518,40,0,-59,189); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974003,'Gere','Gere',1513,60,0,40,255); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974004,'Girzorhor_the_Imprudent','Girzorhor the Imprudent',1515-34,0,26,83); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974005,'Surmerdar_the_Unbridled','Surmerdar the Unbridled',1574,-46,0,24,40); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974006,'Dartorgor_the_Austere','Dartorgor the Austere',1499,-40,0,19,65); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974007,'Vorporlor_the_Barbaric','Vorporlor the Barbaric',1589,-54,0,-57,210); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974008,'Vorjirzur_the_Valiant','Vorjirzur the Valiant',1588,-52,0,-59,193); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974009,'Wordorbor_the_Artificer','Wordorbor the Artificer',1595,-39,0,-108,193); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974010,'Cobalt_Sentinel','Cobalt Sentinel',1498,-39,0,-108,193); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974011,'White_Sentinel','White Sentinel',1594,-39,0,-108,193); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974012,'Hazel_Sentinel','Hazel Sentinel',1519,-39,0,-108,193); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974013,'Carmine_Sentinel','Carmine Sentinel',1497,-39,0,-108,193); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974014,'Xarhorkur_the_Claviger','Xarhorkur the Claviger',1596,19,0,49,35); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974015,'Zurmurwur_the_Ruthless','Zurmurwur the Ruthless',1598,18,0,40,254); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974016,'Troll_Destroyer','Troll Destroyer',1578,13,-6,66,27); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974017,'Troll_Destroyer','Troll Destroyer',1578,13,-6,14,224); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974018,'Troll_Destroyer','Troll Destroyer',1578,31,-6,-12,126); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974019,'Troll_Destroyer','Troll Destroyer',1578,12,-6,-32,190); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974020,'Troll_Destroyer','Troll Destroyer',1578,-12,-6,-32,195); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974021,'Troll_Destroyer','Troll Destroyer',1578,-27,-6,-45,60); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974022,'Troll_Destroyer','Troll Destroyer',1578,-47,-6,-12,126); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974023,'Troll_Destroyer','Troll Destroyer',1578,-67,-6,-34,191); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974024,'Troll_Destroyer','Troll Destroyer',1578,-67,-6,-67,225); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974025,'Lamia_Immolator','Lamia Immolator',1527,-25,0,-34,24); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974026,'Lamia_Jaeger','Lamia Jaeger',1528,-25,0,-34,24); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974027,'Lamia_Commandress','Lamia Commandress',1525,40,0,58,64); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974028,'Lamia_Elemental','Lamia\'s Elemental',1538,1,1,1,1); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974029,'Lamia_Avatar','Lamia\'s Avatar',1537,40,0,58,64); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974030,'Lamia_Rover','Lamia Rover',1536,40,0,21,191); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974031,'Merrow_Seafarer','Merrow Seafarer',1554,40,0,21,191); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974032,'Merrow_Cantatrice','Merrow Cantatrice',1551,40,0,21,191); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974033,'Merrow_Shiranuhi','Merrow Shiranuhi',1555,28,0,-33,219); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974034,'Lamia_Immolator','Lamia Immolator',1527,28,0,-33,219); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974035,'Lamia_Jaeger','Lamia Jaeger',1528,28,0,-33,219); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974036,'Lamia_Commandress','Lamia Commandress',1525,60,0,-33,193); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974037,'Lamia_Elemental','Lamia\'s Elemental',1538,1,1,1,1); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974038,'Lamia_Avatar','Lamia\'s Avatar',1537,60,0,-33,193); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974039,'Lamia_Rover','Lamia Rover',1536,-60,0,-38,193); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974040,'Merrow_Seafarer','Merrow Seafarer',1554,-60,0,-38,193); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974041,'Merrow_Cantatrice','Merrow Cantatrice',1551,-60,0,-38,193); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974042,'Merrow_Shiranuhi','Merrow Shiranuhi',1555,-24,0,-122,175); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974043,'Lamia_Immolator','Lamia Immolator',1527,-91,2,57,1); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974044,'Lamia_Jaeger','Lamia Jaeger',1528,-91,2,57,1); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974045,'Lamia_Commandress','Lamia Commandress',1525,-24,0,-122,175); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974046,'Lamia_Elemental','Lamia\'s Elemental',1538,1,1,1,1); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974047,'Lamia_Avatar','Lamia\'s Avatar',1537,-24,0,-122,175); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974048,'Lamia_Rover','Lamia Rover',1536,-53,0,-99,8); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974049,'Merrow_Seafarer','Merrow Seafarer',1554,-53,0,-99,8); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974050,'Merrow_Cantatrice','Merrow Cantatrice',1551,-55,0,50,29); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974051,'Merrow_Shiranuhi','Merrow Shiranuhi',1555,-55,0,50,29); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974052,'Gespenst','Gespenst',1514,-25,0,-34,24); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974053,'Gespenst','Gespenst',1514,40,0,58,64); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974054,'Gespenst','Gespenst',1514,40,0,21,191); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974055,'Gespenst','Gespenst',1514,28,0,-33,219); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974056,'Assault_Draugar','Assault Draugar',1489,13,-6,66,27); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974057,'Assault_Draugar','Assault Draugar',1489,13,-6,14,224); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974058,'Assault_Draugar','Assault Draugar',1489,31,-6,-12,126); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974059,'Assault_Draugar','Assault Draugar',1489,12,-6,-32,190); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974060,'Assault_Draugar','Assault Draugar',1489,-12,-6,-32,195); -- Undead 1
+REPLACE INTO `mob_spawn_points` VALUES (16974061,'Assault_Draugar','Assault Draugar',1489,-27,-6,-45,60); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974062,'Assault_Draugar','Assault Draugar',1489,-47,-6,-12,126); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974063,'Draugar_Wyvern','Draugar\'s Wyvern',1502,-47,-6,-12,126); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974064,'Assault_Draugar','Assault Draugar',1489,-67,-6,-34,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974065,'Draugar_Wyvern','Draugar\'s Wyvern',1502,-67,-6,-34,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974066,'Assault_Bhoot','Assault Bhoot',1488,40,0,21,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974067,'Assault_Bhoot','Assault Bhoot',1488,28,0,-33,219); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974068,'Assault_Bhoot','Assault Bhoot',1488,-60,0,-38,193); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974069,'Assault_Bhoot','Assault Bhoot',1488,-53,0,-99,8); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974070,'Assault_Bhoot','Assault Bhoot',1488,-24,0,-122,175); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974071,'Qutrub_Extortionist','Qutrub Extortionist',1563,40,0,21,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974072,'Qutrub_Extortionist','Qutrub Extortionist',1563,60,0,-33,193); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974073,'Qutrub_Extortionist','Qutrub Extortionist',1563,-24,0,-122,175); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974074,'Qutrub_Extortionist','Qutrub Extortionist',1563,-55,0,50,29); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974075,'Qutrub_Wastrel','Qutrub Wastrel',1565,40,0,21,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974076,'Qutrub_Wastrel','Qutrub Wastrel',1565,60,0,-33,193); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974077,'Qutrub_Wastrel','Qutrub Wastrel',1565,-24,0,-122,175); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974078,'Qutrub_Wastrel','Qutrub Wastrel',1565,-55,0,50,29); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974079,'Expunger','Expunger',1504,28,0,-33,219); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974080,'Expunger','Expunger',1504,-60,0,-38,193); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974081,'Expunger','Expunger',1504,-53,0,-99,8); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974082,'Expunger','Expunger',1504,-55,0,50,29); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974083,'Expunger','Expunger',1504,40,0,21,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974084,'Bhoot_Invader','Bhoot Invader',1493,-12,-6,-92,101); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974085,'Bhoot_Intruder','Bhoot Intruder',1492,40,0,58,64); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974086,'Bhoot_Intruder','Bhoot Intruder',1492,40,0,58,64); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974087,'Bhoot_Intruder','Bhoot Intruder',1492,40,0,21,191); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974088,'Bhoot_Intruder','Bhoot Intruder',1492,28,0,-33,219); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974089,'Bhoot_Invader','Bhoot Invader',1493,-67,-6,-67,225); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974090,'Bhoot_Intruder','Bhoot Intruder',1492,-60,0,-38,193); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974091,'Bhoot_Intruder','Bhoot Intruder',1492,-24,0,-122,175); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974092,'Bhoot_Intruder','Bhoot Intruder',1492,-53,0,-99,8); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974093,'Bhoot_Intruder','Bhoot Intruder',1492,-55,0,50,29); -- Undead 2
+REPLACE INTO `mob_spawn_points` VALUES (16974094,'Lamia_No.4','Lamia No.4',1534,-39,0,-108,193); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974095,'Lamia_Freebooter','Lamia Freebooter',1526,-39,0,-108,193); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974096,'Lamia_Freebooter','Lamia Freebooter',1526,-39,0,-108,193); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974097,'Lamia_Freebooter','Lamia Freebooter',1526,-39,0,-108,193); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974098,'Pining_Abazohn','Pining Abazohn',1559,40,0,107,63); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974099,'Qutrub_Forayer','Qutrub Forayer',1564,42,0,107,63); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974100,'Qutrub_Forayer','Qutrub Forayer',1564,40,0,103,63); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974101,'Qutrub_Forayer','Qutrub Forayer',1564,-38,0,107,63); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974102,'Medusa','Medusa',1550,40,0,-59,189); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974103,'Nemean_Lion','Nemean Lion',1556,60,0,40,255); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974104,'Lamia_No.34','Lamia No.34',1533,-40,0,25,62); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974105,'Lamia_No.21','Lamia No.21',1531,-34,0,26,83); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974106,'Lamia_No.15','Lamia No.15',1529,-46,0,24,40); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974107,'Merrow_No.11','Merrow No.11',1552,-40,0,19,65); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974108,'Lamia_No.9','Lamia No.9',1535,-63,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974109,'Lamia_Elemental','Lamia\'s Elemental',1538,-62,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974110,'Lamia_Elemental','Lamia\'s Elemental',1538,-61,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974111,'Lamia_Elemental','Lamia\'s Elemental',1538,-60,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974112,'Lamia_Avatar','Lamia\'s Avatar',1537,-64,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974113,'Lamia_Avatar','Lamia\'s Avatar',1537,-65,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974114,'Lamia_Avatar','Lamia\'s Avatar',1537,-66,2,92,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974115,'Merrow_No.12','Merrow No.12',1553,-54,0,-57,210); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974116,'Lamia_No.3','Lamia No.3',1532,-52,0,-59,193); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974117,'Lamia _No.2','Lamia No.2',1530,48,0,40,255); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974118,'Acrolith','Acrolith',1486,13,-6,66,27); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974119,'Acrolith','Acrolith',1486,13,-6,14,224); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974120,'Acrolith','Acrolith',1486,31,-6,-12,126); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974121,'Acrolith','Acrolith',1486,12,-6,-32,190); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974122,'Acrolith','Acrolith',1486,-12,-6,-32,195); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974123,'Acrolith','Acrolith',1486,-27,-6,-45,60); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974124,'Acrolith','Acrolith',1486,-47,-6,-12,126); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974125,'Acrolith','Acrolith',1486,-67,-6,-34,191); -- Undead 3
+REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,-6,-67,225); -- Undead 3
 
 -- ------------------------------------------------------------
 -- The Grid - aka GM Test Area (Zone 49)

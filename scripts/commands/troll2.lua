@@ -4,7 +4,7 @@
 -- Besieged
 ---------------------------------------------------------------------------------------------------
 
-cmdprops = 
+cmdprops =
 {
     permission = 1,
     parameters = "iiii"
@@ -48,6 +48,6 @@ function onTrigger(player)
    SpawnMob('16973997'); --Troll_Forager
    SpawnMob('16973998'); --Killing_Claw
    SpawnMob('16973999'); --Slaughterous_Scorpion
-   SpawnMob('16973400'); --Slaughterous_Scorpion
+   SpawnMob('16974000'); --Slaughterous_Scorpion
 end
 
