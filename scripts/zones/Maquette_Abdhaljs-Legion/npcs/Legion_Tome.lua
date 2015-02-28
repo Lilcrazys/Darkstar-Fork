@@ -27,6 +27,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+--[[
 	if (player:getPartySize() < 3) then
 		player:messageSpecial(PARTY_TOO_SMALL);
 	else
@@ -37,6 +38,7 @@ function onTrigger(player,npc)
 			player:startEvent(10002, HALL_ID)
 		end
 	end
+]]
 end;
 
 -----------------------------------
@@ -55,6 +57,7 @@ end;
 function onEventFinish(player,csid,option)
 	-- printf("onFinish CSID: %u", csid);
 	-- printf("onFinish RESULT: %u", option);
+--[[
 	local party = player:getParty();
 	if (csid == 10000) then
 		-- ?
@@ -76,4 +79,5 @@ function onEventFinish(player,csid,option)
 		player:setVar("Legion_Hall_ID", 0);
 		player:setPos(237.5, 24.5, 466.4, 192, 110);
 	end
+]]
 end;
