@@ -12,6 +12,7 @@ cmdprops =
 };
 function onTrigger(player)
    SpawnMob('16973825'); --Mamool Ja Sapper
+   SpawnMob('16973903'); --Thunderclap_Sareel_Ja
    SpawnMob('16973826'); --Mamool Ja Hosplitaler
    SpawnMob('16973827'); --Mamool Ja Fetial
    SpawnMob('16973828'); --Mamool Ja Spotter
@@ -30,7 +31,7 @@ function onTrigger(player)
    SpawnMob('16973841'); --Mamool_Ja_Wyvern
    SpawnMob('16973842'); --Mamool_Ja_Entrancer
    SpawnMob('16973843'); --Mamool Ja Sapper
-   SpawnMob('16973844'); --Mamool Ja Hosplitaler
+   SpawnMob('16973844'); --Mamool_Ja_Hosplitaler
    SpawnMob('16973845'); --Mamool Ja Fetial
    SpawnMob('16973846'); --Mamool_Ja_Spotter
    SpawnMob('16973847'); --Mamool_Ja_Handler

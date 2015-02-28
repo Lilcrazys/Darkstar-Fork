@@ -11,6 +11,7 @@ cmdprops =
 };
 function onTrigger(player)
    SpawnMob('16973862'); --Attack_Ziz
+   SpawnMob('16973920'); --Scalding_Fafool_Ja
    SpawnMob('16973863'); --Attack_Ziz
    SpawnMob('16973864'); --Attack_Ziz
    SpawnMob('16973865'); --Attack_Ziz

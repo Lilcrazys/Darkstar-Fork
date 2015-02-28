@@ -10,6 +10,7 @@ cmdprops =
 };
 function onTrigger(player)
    SpawnMob('16974025'); --Lamia_Immolator
+   SpawnMob('16974094'); --Lamia_No.4
    SpawnMob('16974026'); --Lamia_Jaegerr
    SpawnMob('16974027'); --Lamia_Commandress
    SpawnMob('16974028'); --Lamia_Elemental

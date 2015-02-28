@@ -21,7 +21,6 @@ function onTrigger(player)
    SpawnMob('16973900'); --Gulool_Ja_Ja
    SpawnMob('16973901'); --Illuyankas
    SpawnMob('16973902'); --Decimator_Mabel_Ja
-   SpawnMob('16973903'); --Thunderclap_Sareel_Ja
    SpawnMob('16973904'); --Thunderbolt_Piraal_Ja
    SpawnMob('16973905'); --Panurgic_Ryubool_Ja
    SpawnMob('16973906'); --Sagelord_Molaal_Ja
@@ -38,7 +37,6 @@ function onTrigger(player)
    SpawnMob('16973917'); --Eidolic_Qufeel_Ja
    SpawnMob('16973918'); --Eidolic_Qufeel_Ja
    SpawnMob('16973919'); --Searing_Vogaal_Ja
-   SpawnMob('16973920'); --Scalding_Fafool_Ja
    SpawnMob('16973921'); --Mamool_Ja_Hussar
    SpawnMob('16973922'); --Mamool_Ja_Hussar
    SpawnMob('16973923'); --Mamool_Ja_Hussar

@@ -10,7 +10,6 @@ cmdprops =
     parameters = "iiii"
 };
 function onTrigger(player)
-   SpawnMob('16974094'); --Lamia_No.4
    SpawnMob('16974095'); --Lamia_Freebooter
    SpawnMob('16974096'); --Lamia_Freebooter
    SpawnMob('16974097'); --Lamia_Freebooter
