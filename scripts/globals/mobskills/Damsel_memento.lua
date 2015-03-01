@@ -11,10 +11,10 @@ require("/scripts/globals/monstertpmoves");
 
 function onMobSkillCheck(target,mob,skill)
    --if (mob:hasStatusEffect(EFFECT_HUNDRED_FISTS)) then
-	--	return 1;
-	--else
+    --  return 1;
+    --else
 
-	   return 0;
+       return 0;
 
 --end
    -- return 1;
@@ -24,13 +24,13 @@ function onMobWeaponSkill(target, mob, skill)
 
     local potency = skill:getParam();
 
-local typeEffect = EFFECT_HUNDRED_FISTS;
- 	local power = 1;
-	local duration = 240;
+    local typeEffect = EFFECT_HUNDRED_FISTS;
+    local power = 1;
+    local duration = 240;
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, power, 0, duration);
 
     if(potency == 0) then
-    	potency = 20;
+        potency = 20;
     end
 
     potency = potency - math.random(0, potency/4);

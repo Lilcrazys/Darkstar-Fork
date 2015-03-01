@@ -1,7 +1,7 @@
------------------------------------	
--- Area: The Boyhoda Tree	
--- MOB:  Unut	
------------------------------------	
+-----------------------------------
+-- Area: The Boyhoda Tree
+-- MOB:  Unut
+-----------------------------------
 
 require("/scripts/globals/fieldsofvalor");
 package.loaded["scripts/zones/The_Boyhoda_Tree/TextIDs"] = nil;
@@ -13,7 +13,7 @@ require("scripts/globals/monstertpmoves");
 -----------------------------------
 
 function onMobInitialize(mob)
-	
+
 end;
 
 -----------------------------------
@@ -21,8 +21,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-end;	
-	
+end;
+
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
@@ -34,11 +34,16 @@ end;
 -- onMobFight
 -----------------------------------
 
------------------------------------	
--- onMobDeath	
------------------------------------	
-	
-function onMobDeath(mob,killer)	
-	checkRegime(killer,mob,90,3);
-end;	
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob,killer)
+    local SPELL_ID = 578;
+    local CHANCE = 25;
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
+        killer:addSpell(SPELL_ID);
+    end
+    checkRegime(killer,mob,90,3);
+end;
 

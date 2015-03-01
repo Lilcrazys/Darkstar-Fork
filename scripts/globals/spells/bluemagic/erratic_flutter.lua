@@ -13,13 +13,13 @@ require("scripts/globals/bluemagic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
 
     local duration = 300;
-    
+
     if(caster:hasStatusEffect(EFFECT_DIFFUSION)) then
         local diffMerit = caster:getMerit(MERIT_DIFFUSION);
         if(diffMerit > 0) then
@@ -27,8 +27,8 @@ function onSpellCast(caster,target,spell)
         end
         caster:delStatusEffect(EFFECT_DIFFUSION);
     end
-    if(target:addStatusEffect(EFFECT_HASTE_II,300,0,duration) == false) then
-    	spell:setMsg(75);
+    if(target:addStatusEffect(EFFECT_HASTE,300,0,duration) == false) then
+        spell:setMsg(75);
     end
-    return EFFECT_HASTE_II;
+    return EFFECT_HASTE;
 end;

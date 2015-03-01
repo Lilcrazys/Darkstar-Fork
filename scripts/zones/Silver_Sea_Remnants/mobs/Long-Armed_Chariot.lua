@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: 
+-- Area:
 -- NPC:  Long-Armed_Chariot
 -----------------------------------
 
@@ -17,5 +17,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	killer:addTitle(MOON_CHARIOTEER);
+    killer:addTitle(MOON_CHARIOTEER);
+    local SPELL_ID = 713;
+    local CHANCE = 25;
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
+        killer:addSpell(SPELL_ID);
+    end
 end;

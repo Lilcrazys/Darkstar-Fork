@@ -10,25 +10,24 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
     local potency = skill:getParam();
+    local mobhp = mob:getHPP();
 
-local typeEffect = EFFECT_HUNDRED_FISTS;
- 	local power = 1;
-	local duration = 240;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, power, 0, duration);
+    if mobhp > 50 then
+        return 0;
+    else
 
     if(potency == 0) then
-    	potency = 20;
+        potency = 10;
     end
 
-    potency = potency - math.random(0, potency/4);
+    potency = potency - math.random(0, potency/1);
 
     skill:setMsg(MSG_SELF_HEAL);
 
-    return MobHealMove(mob, mob:getMaxHP() * potency / 100);
+    return MobHealMove(mob, mob:getMaxHP() * potency / 10);
 end;
