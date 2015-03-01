@@ -1,17 +1,17 @@
 -----------------------------------
--- Area: Abyssea - Altepa
+-- Area: Abyssea - La_Theine
 --  NPC: Cruor Prospector
 -- Type: Cruor NPC
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-La_Theine/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
+require("scripts/zones/Abyssea-La_Theine/TextIDs");
 
 -----------------------------------
 -- onTrade Action
@@ -171,10 +171,10 @@ function onEventFinish(player,csid,option)
         end
 
     -- Keyitems
-    elseif (option == 65539) then -- Map of Abyssea - Konschtat
-        if (player:hasKeyItem(MAP_OF_ABYSSEA_KONSCHTAT) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_KONSCHTAT);
-            player:addKeyItem(MAP_OF_ABYSSEA_KONSCHTAT);
+    elseif (option == 65539) then -- Map of Abyssea - La_Theine
+        if (player:hasKeyItem(MAP_OF_ABYSSEA_La_Theine) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_La_Theine);
+            player:addKeyItem(MAP_OF_ABYSSEA_La_Theine);
             player:delCurrency("cruor", 3500);
         end
     elseif (option == 131075) then -- Ivory Abyssite of Sojourn

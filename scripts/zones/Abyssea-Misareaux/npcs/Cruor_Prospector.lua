@@ -1,17 +1,17 @@
 -----------------------------------
--- Area: Abyssea - Altepa
+-- Area: Abyssea - Misareaux
 --  NPC: Cruor Prospector
 -- Type: Cruor NPC
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
+require("scripts/zones/Abyssea-Misareaux/TextIDs");
 
 -----------------------------------
 -- onTrade Action

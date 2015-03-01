@@ -1,17 +1,17 @@
 -----------------------------------
--- Area: Abyssea - Altepa
+-- Area: Abyssea - Ulelguerand
 --  NPC: Cruor Prospector
 -- Type: Cruor NPC
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-Ulelguerand/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
+require("scripts/zones/Abyssea-Ulelguerand/TextIDs");
 
 -----------------------------------
 -- onTrade Action
@@ -171,10 +171,10 @@ function onEventFinish(player,csid,option)
         end
 
     -- Keyitems
-    elseif (option == 65539) then -- Map of Abyssea - Konschtat
-        if (player:hasKeyItem(MAP_OF_ABYSSEA_KONSCHTAT) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_KONSCHTAT);
-            player:addKeyItem(MAP_OF_ABYSSEA_KONSCHTAT);
+    elseif (option == 65539) then -- Map of Abyssea - Ulelguerand
+        if (player:hasKeyItem(MAP_OF_ABYSSEA_Ulelguerand) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_Ulelguerand);
+            player:addKeyItem(MAP_OF_ABYSSEA_Ulelguerand);
             player:delCurrency("cruor", 3500);
         end
     elseif (option == 131075) then -- Ivory Abyssite of Sojourn
