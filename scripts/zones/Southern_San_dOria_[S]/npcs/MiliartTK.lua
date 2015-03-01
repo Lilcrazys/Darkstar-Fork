@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Southern SandOria [S]
 -- NPC: Miliart T.K
--- @zone 80
--- @pos 107 1 -31
+-- Sigil NPC
+-- @pos 107 1 -31 80
 -----------------------------------
 package.loaded["scripts/zones/Southern_San_dOria_[S]/TextIDs"] = nil;
 -----------------------------------
@@ -23,7 +23,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    local notes = player:getAlliedNotes();
+    local notes = player:getCurrency("allied_notes");
     local freelances = 99; -- Faking it for now
     local unknown = 12; -- Faking it for now
     local medal_rank = getMedalRank(player);
@@ -68,7 +68,7 @@ end;
 function onEventFinish(player,csid,option)
     printf("CSID: %u",csid);
     printf("RESULT: %u",option);
-    -- local notes = player:getAlliedNotes();
+    -- local notes = player:getCurrency("allied_notes");
     local medal_rank = getMedalRank(player);
     local Power = 0;
     local tick = 0;
@@ -83,46 +83,46 @@ function onEventFinish(player,csid,option)
             Power = ( (option - 1) / 4096 );
             if (option == 4097) then -- Regen
                 tick = 3;
-                player:delAlliedNotes(50);
+                player:delCurrency("allied_notes", 50);
             elseif (option == 8193) then -- Refresh
                 tick = 3;
-                player:delAlliedNotes(50);
+                player:delCurrency("allied_notes", 50);
             elseif (option == 12289) then -- Regen and Refresh
                 tick = 3;
-                player:delAlliedNotes(100);
+                player:delCurrency("allied_notes", 100);
             elseif (option == 16385) then -- Meal Duration
-                player:delAlliedNotes(50);
+                player:delCurrency("allied_notes", 50);
             elseif (option == 20481) then -- Regen and Meal Duration
                 tick = 3;
-                player:delAlliedNotes(100);
+                player:delCurrency("allied_notes", 100);
             elseif (option == 24577) then -- Refresh and Meal Duration
                 tick = 3;
-                player:delAlliedNotes(100);
+                player:delCurrency("allied_notes", 100);
             elseif (option == 28673) then -- Regen, Refresh, and Meal Duration
                 tick = 3;
-                player:delAlliedNotes(150);
+                player:delCurrency("allied_notes", 150);
             elseif (option == 32769) then -- Reduced EXP loss.
-                player:delAlliedNotes(100);
+                player:delCurrency("allied_notes", 100);
             elseif (option == 36865) then -- Regen and Reduced EXP loss.
                 tick = 3;
-                player:delAlliedNotes(150);
+                player:delCurrency("allied_notes", 150);
             elseif (option == 40961) then -- Refresh and Reduced EXP loss.
                 tick = 3;
-                player:delAlliedNotes(150);
+                player:delCurrency("allied_notes", 150);
             elseif (option == 45057) then -- Regen, Refresh, and Reduced EXP loss.
                 tick = 3;
-                player:delAlliedNotes(150);
+                player:delCurrency("allied_notes", 150);
             elseif (option == 49153) then -- Meal Duration and Reduced EXP loss.
-                player:delAlliedNotes(100);
+                player:delCurrency("allied_notes", 100);
             elseif (option == 53249) then -- Regen, Meal Duration, and Reduced EXP loss.
                 tick = 3;
-                player:delAlliedNotes(150);
+                player:delCurrency("allied_notes", 150);
             elseif (option == 57345) then -- Refresh, Meal Duration, and Reduced EXP loss.
                 tick = 3;
-                -- player:delAlliedNotes(150);
+                -- player:delCurrency("allied_notes", 150);
             elseif (option == 61441) then -- Everything
                 tick = 3;
-                player:delAlliedNotes(200);
+                player:delCurrency("allied_notes", 200);
             end
 
             player:delStatusEffect(EFFECT_SIGIL);
@@ -136,7 +136,7 @@ function onEventFinish(player,csid,option)
         -- currently only "ribbons" rank coded.
             item, price = getSandOriaNotesItem(option)
             if (player:getFreeSlotsCount() >= 1) then
-                player:delAlliedNotes(price);
+                player:delCurrency("allied_notes", price);
                 player:addItem(item);
                 player:messageSpecial(ITEM_OBTAINED,item);
             else
