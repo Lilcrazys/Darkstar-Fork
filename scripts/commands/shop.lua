@@ -57,6 +57,8 @@ function onTrigger(player,page)
             4128,   4832,   -- Ether
 			21335,   1000,  -- Titanium Bullet
 			21305,   1000,  -- Tulfaire Arrow
+			21336,   5000,  -- Adlivun Bullet
+			21306,   5000,  -- Adlivun Arrow			
         };
         showShop(player, STATIC, stock_3);
 
