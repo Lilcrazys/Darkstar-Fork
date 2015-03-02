@@ -4,14 +4,14 @@
 -- Type: Cruor NPC
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Ulelguerand/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-Uleguerand/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Ulelguerand/TextIDs");
+require("scripts/zones/Abyssea-Uleguerand/TextIDs");
 
 -----------------------------------
 -- onTrade Action
