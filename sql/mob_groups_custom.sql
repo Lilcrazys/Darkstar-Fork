@@ -895,6 +895,79 @@ REPLACE INTO `mob_groups` VALUES (13753,4705,197,7200,0,4516,65000,0,120,122,0);
 REPLACE INTO `mob_groups` VALUES (14087,3604,255,0,128,4544,180000,180000,140,142,0); -- Shinryu
 
 
+-- --------------------
+-- Conquest XP farm custom.
+
+-- Gustav Tunnel
+REPLACE INTO `mob_groups` VALUES (10761,4579,212,300,0,4368,0,0,103,105,0); -- Pygmtoise
+REPLACE INTO `mob_groups` VALUES (10760,4580,212,300,0,4369,0,0,100,105,0); -- Boulder Eater
+
+-- The Shrine of RuAvitau
+REPLACE INTO `mob_groups` VALUES (9267,289,178,330,0,4377,0,0,81,84,0); -- Aura Statue
+
+-- Crawlers Nest
+REPLACE INTO `mob_groups` VALUES (9816,1271,197,330,0,912,0,0,51,54,0); -- Death Jacket
+REPLACE INTO `mob_groups` VALUES (9810,940,197,330,0,662,0,0,40,42,0); -- Exoray
+REPLACE INTO `mob_groups` VALUES (9820,1990,197,330,0,1705,0,0,50,53,0); -- Hornfly
+REPLACE INTO `mob_groups` VALUES (9838,4375,197,330,0,4187,0,0,40,44,0); -- Worker Crawler
+
+
+-- --------------------
+-- ToAU IS farm custom
+
+-- Arrapago Reef
+REPLACE INTO `mob_groups` VALUES (1807,220,54,10800,128,168,75000,145000,105,107,0); -- Archaic Mirror
+REPLACE INTO `mob_groups` VALUES (1845,2354,54,1056,0,0,50000,45000,101,103,0); -- Lamia Palace Guard
+
+-- Halvung
+REPLACE INTO `mob_groups` VALUES (2083,220,62,10800,128,168,75000,145000,105,107,0); -- Archaic Mirror
+REPLACE INTO `mob_groups` VALUES (2099,1948,62,300,128,0,50000,145000,101,103,0); -- Hilltroll Mirror Guard
+REPLACE INTO `mob_groups` VALUES (2131,4366,62,300,128,0,50000,145000,101,103,0); -- Woodtroll Mirror Guard
+
+-- Mamook
+REPLACE INTO `mob_groups` VALUES (2165,220,65,10800,128,168,75000,145000,105,107,0); -- Archaic Mirror
+REPLACE INTO `mob_groups` VALUES (2205,2543,65,300,0,0,50000,145000,101,103,0); -- Mamool Ja Treasurer
+REPLACE INTO `mob_groups` VALUES (2187,2512,65,300,0,0,50000,145000,101,103,0); -- Mamool Ja Conservator
+
+-- --------------------
+-- WotG an farm custom
+
+-- Crawlers Nest [S]
+REPLACE INTO `mob_groups` VALUES (8892,525,171,1056,0,392,0,0,81,85,0); -- Brass Quadav
+REPLACE INTO `mob_groups` VALUES (8894,538,171,1056,0,400,0,0,85,91,0); -- Bronze Quadav
+REPLACE INTO `mob_groups` VALUES (8914,1207,171,1056,0,861,0,0,87,91,0); -- Emerald Quadav
+REPLACE INTO `mob_groups` VALUES (8929,1917,171,1056,0,1653,0,0,85,91,0); -- Helidor Quadav
+REPLACE INTO `mob_groups` VALUES (8947,2965,171,1056,0,2531,0,0,85,91,0); -- Old Quadav
+REPLACE INTO `mob_groups` VALUES (8952,3200,171,1056,0,2829,0,0,83,88,0); -- Processionaire
+REPLACE INTO `mob_groups` VALUES (8963,3464,171,1056,0,3058,0,0,87,91,0); -- Sapphirine Quadav
+REPLACE INTO `mob_groups` VALUES (8972,3628,171,1056,0,3206,0,0,83,87,0); -- Silver Quadav
+
+-- Garlaige Citadel [S]
+REPLACE INTO `mob_groups` VALUES (8715,5479,164,330,0,4215,0,0,91,95,0); -- Yagudo Abbot
+REPLACE INTO `mob_groups` VALUES (8717,4421,164,0,128,0,0,0,80,80,0); -- Yagudo Guard
+REPLACE INTO `mob_groups` VALUES (8718,5492,164,330,0,4261,0,0,93,97,0); -- Yagudo Lutenist
+REPLACE INTO `mob_groups` VALUES (8719,4433,164,330,0,4267,0,0,95,101,0); -- Yagudo Missionary
+REPLACE INTO `mob_groups` VALUES (8720,5491,164,330,0,4293,0,0,93,97,0); -- Yagudo Prior
+REPLACE INTO `mob_groups` VALUES (8721,4447,164,330,0,4297,0,0,95,101,0); -- Yagudo Pythoness
+REPLACE INTO `mob_groups` VALUES (8722,4454,164,0,128,0,0,0,84,86,0); -- Yagudo's Elemental
+REPLACE INTO `mob_groups` VALUES (8726,5482,164,330,0,4324,0,0,93,99,0); -- Yagudo Zealot
+
+-- The Eldieme Necropolis [S]
+REPLACE INTO `mob_groups` VALUES (9089,1166,175,1056,0,0,0,0,96,99,0); -- Eastern Spriggan
+REPLACE INTO `mob_groups` VALUES (9129,2908,175,1056,0,0,0,0,96,99,0); -- Northern Spriggan
+REPLACE INTO `mob_groups` VALUES (9167,3710,175,1056,0,0,0,0,96,99,0); -- Southern Spriggan
+REPLACE INTO `mob_groups` VALUES (9178,4325,175,1056,0,0,0,0,96,99,0); -- Western Spriggan
+REPLACE INTO `mob_groups` VALUES (9177,4299,175,1056,0,4083,0,0,81,84,0); -- War Smilodon
+REPLACE INTO `mob_groups` VALUES (9101,1638,175,1056,0,1225,0,0,76,81,0); -- Goblin Blastmaster
+REPLACE INTO `mob_groups` VALUES (9102,1646,175,1056,0,1254,0,0,76,81,0); -- Goblin Corpsman
+REPLACE INTO `mob_groups` VALUES (9103,1664,175,1056,0,1307,0,0,76,81,0); -- Goblin Freesword
+REPLACE INTO `mob_groups` VALUES (9106,1698,175,1056,0,1415,0,0,76,81,0); -- Goblin Pioneer
+REPLACE INTO `mob_groups` VALUES (9134,2998,175,1056,0,2574,0,0,91,96,0); -- Orcish Brawler
+REPLACE INTO `mob_groups` VALUES (9135,3001,175,1056,0,2581,0,0,91,96,0); -- Orcish Chasseur
+REPLACE INTO `mob_groups` VALUES (9136,3004,175,1056,0,2589,0,0,91,96,0); -- Orcish Cursemaker
+REPLACE INTO `mob_groups` VALUES (9140,3039,175,1056,0,2692,0,0,91,96,0); -- Orcish Trooper
+
+-- --------------------
 -- Legion
 
 -- Hall of An
@@ -954,9 +1027,7 @@ INSERT INTO `mob_groups` VALUES (90057,9057,183,1800,128,9057,70000,100000,124,1
 INSERT INTO `mob_groups` VALUES (90058,9058,183,1800,128,9058,70000,100000,122,124,0); -- Paramount_Naraka
 INSERT INTO `mob_groups` VALUES (90059,9059,183,1800,128,9059,70000,100000,120,122,0); -- Paramount_Ironclad
 
-
-
-
+-- --------------------
 -- Test Zone Custom Section
 INSERT INTO `mob_groups` VALUES (90016,9016,49,1800,0,9016,60000,10000,110,115,0); -- Lofty_Zilant TEST
 INSERT INTO `mob_groups` VALUES (90017,9054,49,1800,0,9054,80000,10000,115,120,0); -- Paramount_Gallu TEST
@@ -990,6 +1061,7 @@ INSERT INTO `mob_groups` VALUES (90104,4903,49,1800,0,9093,60000,10000,130,135,0
 INSERT INTO `mob_groups` VALUES (90105,5214,4,1800,0,9105,160000,100000,140,143,0); -- Ravenous_Cracklaw
 
 
+-- --------------------
 -- Hazlam Testing
 REPLACE INTO `mob_groups` VALUES (2766,9082,78,900,0,9082,90000,10000,135,140,0);
 REPLACE INTO `mob_groups` VALUES (2767,9083,78,900,0,9083,80000,10000,130,140,0);
@@ -1003,69 +1075,15 @@ REPLACE INTO `mob_groups` VALUES (2774,9092,78,900,0,9092,80000,10000,130,130,0)
 REPLACE INTO `mob_groups` VALUES (2775,9093,78,900,0,9093,80000,10000,135,135,0);
 REPLACE INTO `mob_groups` VALUES (2776,4654,78,900,0,9093,130000,100000,140,145,0);
 
+
+
+
+
+-- ---------------------------------------------------------------------------
+-- Add nothing below this line please
+
 -- Super experimental z49 mobs, will not spawn without script or GM command.
 INSERT INTO `mob_groups` VALUES (96666,9666,49,0,128,9666,136666,6666,106,106,0); -- SlenderMan
 INSERT INTO `mob_groups` VALUES (97600,9760,49,0,128,9777,185000,7600,125,125,0); -- Mars
 INSERT INTO `mob_groups` VALUES (97777,9777,49,0,128,9777,444000,7777,140,140,0); -- Minerva
 
--- Gustav Tunnel
-REPLACE INTO `mob_groups` VALUES (10761,4579,212,300,0,4368,0,0,103,105,0); --Pygmtosie
-REPLACE INTO `mob_groups` VALUES (10760,4580,212,300,0,4369,0,0,100,105,0); -- Boulder Eater
-
--- The Shrine of RuAvitau
-REPLACE INTO `mob_groups` VALUES (9267,289,178,330,0,4377,0,0,81,84,0); -- Aura Statue
-
--- Crawlers Nest
-REPLACE INTO `mob_groups` VALUES (9816,1271,197,330,0,912,0,0,51,54,0); -- Death Jacket
-REPLACE INTO `mob_groups` VALUES (9810,940,197,330,0,662,0,0,40,42,0); -- Exoray
-REPLACE INTO `mob_groups` VALUES (9820,1990,197,330,0,1705,0,0,50,53,0); -- Hornfly
-REPLACE INTO `mob_groups` VALUES (9838,4375,197,330,0,4187,0,0,40,44,0); -- Worker Crawler
-
--- Arrapago Reef
-REPLACE INTO `mob_groups` VALUES (1807,220,54,10800,128,168,75000,145000,105,107,0); -- Archaic Mirror
-REPLACE INTO `mob_groups` VALUES (1845,2354,54,1056,0,0,50000,45000,101,103,0); -- Lamia Palace Guard
-
---Halvung
-REPLACE INTO `mob_groups` VALUES (2083,220,62,10800,128,168,75000,145000,105,107,0); -- Archaic Mirror
-REPLACE INTO `mob_groups` VALUES (2099,1948,62,300,128,0,50000,145000,101,103,0); -- Hilltroll Mirror Guard
-REPLACE INTO `mob_groups` VALUES (2131,4366,62,300,128,0,50000,145000,101,103,0); -- Woodtroll Mirror Guard
-
---Mamook
-REPLACE INTO `mob_groups` VALUES (2165,220,65,10800,128,168,75000,145000,105,107,0); -- Archaic Mirror
-REPLACE INTO `mob_groups` VALUES (2205,2543,65,300,0,0,50000,145000,101,103,0); -- Mamool Ja Treasurer
-REPLACE INTO `mob_groups` VALUES (2187,2512,65,300,0,0,50000,145000,101,103,0); -- Mamool Ja Conservator
-
---Crawlers Nest [S]
-REPLACE INTO `mob_groups` VALUES (8892,525,171,1056,0,392,0,0,81,85,0); -- Brass Quadav
-REPLACE INTO `mob_groups` VALUES (8894,538,171,1056,0,400,0,0,85,91,0); -- Bronze Quadav
-REPLACE INTO `mob_groups` VALUES (8914,1207,171,1056,0,861,0,0,87,91,0); -- Emerald Quadav
-REPLACE INTO `mob_groups` VALUES (8929,1917,171,1056,0,1653,0,0,85,91,0); -- Helidor Quadav
-REPLACE INTO `mob_groups` VALUES (8947,2965,171,1056,0,2531,0,0,85,91,0); -- Old Quadav
-REPLACE INTO `mob_groups` VALUES (8952,3200,171,1056,0,2829,0,0,83,88,0); -- Processionaire
-REPLACE INTO `mob_groups` VALUES (8963,3464,171,1056,0,3058,0,0,87,91,0); -- Sapphirine Quadav
-REPLACE INTO `mob_groups` VALUES (8972,3628,171,1056,0,3206,0,0,83,87,0); -- Silver Quadav
-
--- Garlaige Citadel [S]
-REPLACE INTO `mob_groups` VALUES (8715,5479,164,330,0,4215,0,0,91,95,0); -- Yagudo Abbot
-REPLACE INTO `mob_groups` VALUES (8717,4421,164,0,128,0,0,0,80,80,0); -- Yagudo Guard
-REPLACE INTO `mob_groups` VALUES (8718,5492,164,330,0,4261,0,0,93,97,0); -- Yagudo Lutenist
-REPLACE INTO `mob_groups` VALUES (8719,4433,164,330,0,4267,0,0,95,101,0); -- Yagudo Missionary
-REPLACE INTO `mob_groups` VALUES (8720,5491,164,330,0,4293,0,0,93,97,0); -- Yagudo Prior
-REPLACE INTO `mob_groups` VALUES (8721,4447,164,330,0,4297,0,0,95,101,0); -- Yagudo Pythoness
-REPLACE INTO `mob_groups` VALUES (8722,4454,164,0,128,0,0,0,84,86,0); -- Yagudo's Elemental
-REPLACE INTO `mob_groups` VALUES (8726,5482,164,330,0,4324,0,0,93,99,0); -- Yagudo Zealot
-
--- The Eldieme Necropolis [S]
-REPLACE INTO `mob_groups` VALUES (9089,1166,175,1056,0,0,0,0,96,99,0); -- Eastern Spriggan
-REPLACE INTO `mob_groups` VALUES (9129,2908,175,1056,0,0,0,0,96,99,0); -- Northern Spriggan
-REPLACE INTO `mob_groups` VALUES (9167,3710,175,1056,0,0,0,0,96,99,0); -- Southern Spriggan
-REPLACE INTO `mob_groups` VALUES (9178,4325,175,1056,0,0,0,0,96,99,0); -- Western Spriggan
-REPLACE INTO `mob_groups` VALUES (9177,4299,175,1056,0,4083,0,0,81,84,0); -- War Smilodon
-REPLACE INTO `mob_groups` VALUES (9101,1638,175,1056,0,1225,0,0,76,81,0); -- Goblin Blastmaster
-REPLACE INTO `mob_groups` VALUES (9102,1646,175,1056,0,1254,0,0,76,81,0); -- Goblin Corpsman
-REPLACE INTO `mob_groups` VALUES (9103,1664,175,1056,0,1307,0,0,76,81,0); -- Goblin Freesword
-REPLACE INTO `mob_groups` VALUES (9106,1698,175,1056,0,1415,0,0,76,81,0); -- Goblin Pioneer
-REPLACE INTO `mob_groups` VALUES (9134,2998,175,1056,0,2574,0,0,91,96,0); -- Orcish Brawler
-REPLACE INTO `mob_groups` VALUES (9135,3001,175,1056,0,2581,0,0,91,96,0); -- Orcish Chasseur
-REPLACE INTO `mob_groups` VALUES (9136,3004,175,1056,0,2589,0,0,91,96,0); -- Orcish Cursemaker
-REPLACE INTO `mob_groups` VALUES (9140,3039,175,1056,0,2692,0,0,91,96,0); -- Orcish Trooper

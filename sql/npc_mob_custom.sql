@@ -469,7 +469,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16973975,'Siege_Scorpion','Siege Scorpio
 REPLACE INTO `mob_spawn_points` VALUES (16973976,'Siege_Scorpion','Siege Scorpion',1571,40,0,21,191); -- Troll 2
 REPLACE INTO `mob_spawn_points` VALUES (16973977,'Siege_Scorpion','Siege Scorpion',1571,28,0,-33,219); -- Troll 2
 REPLACE INTO `mob_spawn_points` VALUES (16973978,'Siege_Scorpion','Siege Scorpion',1571,60,0,-33,193); -- Troll 2
-REPLACE INTO `mob_spawn_points` VALUES (16973979,'War_Wamoura','War Wamoura',1592-25,0,-34,24); -- Troll 2
+REPLACE INTO `mob_spawn_points` VALUES (16973979,'War_Wamoura','War Wamoura',1592,-25,0,-34,24); -- Troll 2
 REPLACE INTO `mob_spawn_points` VALUES (16973980,'War_Wamoura','War Wamoura',1592,40,0,58,64); -- Troll 2
 REPLACE INTO `mob_spawn_points` VALUES (16973981,'War_Wamoura','War Wamoura',1592,40,0,21,191); -- Troll 2
 REPLACE INTO `mob_spawn_points` VALUES (16973982,'War_Wamoura','War Wamoura',1592,28,0,-33,219); -- Troll 2
@@ -494,7 +494,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16974000,'Slaughterous_Scorpion','Slaugh
 REPLACE INTO `mob_spawn_points` VALUES (16974001,'Slaughterous_Scorpion','Slaughterous Scorpion',1572,-40,0,25,62); -- Troll 3
 REPLACE INTO `mob_spawn_points` VALUES (16974002,'Gurfurlur_the_Menacing','Gurfurlur the Menacing',1518,40,0,-59,189); -- Troll 3
 REPLACE INTO `mob_spawn_points` VALUES (16974003,'Gere','Gere',1513,60,0,40,255); -- Troll 3
-REPLACE INTO `mob_spawn_points` VALUES (16974004,'Girzorhor_the_Imprudent','Girzorhor the Imprudent',1515-34,0,26,83); -- Troll 3
+REPLACE INTO `mob_spawn_points` VALUES (16974004,'Girzorhor_the_Imprudent','Girzorhor the Imprudent',1515,-34,0,26,83); -- Troll 3
 REPLACE INTO `mob_spawn_points` VALUES (16974005,'Surmerdar_the_Unbridled','Surmerdar the Unbridled',1574,-46,0,24,40); -- Troll 3
 REPLACE INTO `mob_spawn_points` VALUES (16974006,'Dartorgor_the_Austere','Dartorgor the Austere',1499,-40,0,19,65); -- Troll 3
 REPLACE INTO `mob_spawn_points` VALUES (16974007,'Vorporlor_the_Barbaric','Vorporlor the Barbaric',1589,-54,0,-57,210); -- Troll 3
@@ -1473,21 +1473,22 @@ INSERT INTO `mob_spawn_points` VALUES (17429502,'Colkhab','Colkhab',90095,53,1,-
 -- 17527807
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',90000,-222,12,240,252);
-INSERT INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
 INSERT INTO `mob_spawn_points` VALUES (17526785,'Lofty_Behemoth','Lofty Behemoth',90002,-221,12,260,4);
-INSERT INTO `mob_spawn_points` VALUES (17526788,'Lofty_Elasmoth','Lofty Elasmoth',90003,-221,12,260,4);
-INSERT INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
 INSERT INTO `mob_spawn_points` VALUES (17526786,'Lofty_Wyrm','Lofty Wyrm',90005,-222,12,240,252);
 INSERT INTO `mob_spawn_points` VALUES (17526787,'Lofty_Adamantoise','Lofty_Adamantoise',90006,-223,12,220,1);
-INSERT INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526875,'Auspicious_Entity','Auspicious Entity',90009,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526876,'Auspicious_Entity','Auspicious Entity',90010,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity','Auspicious Entity',90011,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526878,'Auspicious_Entity','Auspicious Entity',90012,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity','Auspicious Entity',90013,0,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity','Auspicious Entity',90014,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (17526788,'Lofty_Elasmoth','Lofty Elasmoth',90003,-221,12,260,4);
+INSERT INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',90000,-222,12,240,252);
+INSERT INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
+INSERT INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
+
+INSERT INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,0.000,0.001,0.000,0); -- Hall of An : TE
+INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,0.000,0.001,0.000,0); -- Hall of Ki : TE
+INSERT INTO `mob_spawn_points` VALUES (17526875,'Auspicious_Entity','Auspicious Entity',90009,0.000,0.001,0.000,0); -- Hall of Im : TE
+INSERT INTO `mob_spawn_points` VALUES (17526876,'Auspicious_Entity','Auspicious Entity',90010,0.000,0.001,0.000,0); -- Hall of Muru : TE
+INSERT INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity_2','Auspicious Entity',90011,0.000,0.001,0.000,0); -- Hall of Muru : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526878,'Auspicious_Entity','Auspicious Entity',90012,0.000,0.001,0.000,0); -- Hall of Mul : TE
+INSERT INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity_2','Auspicious Entity',90013,0.000,0.001,0.000,0); -- Hall of Mul : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity_3','Auspicious Entity',90014,0.000,0.001,0.000,0); -- Hall of Mul : 2hr reset
 
 INSERT INTO `mob_spawn_points` VALUES (17526805,'Mired_Cerberus','Mired Cerberus',90020,182,12,219,116);
 INSERT INTO `mob_spawn_points` VALUES (17526806,'Mired_Khimaira','Mired Khimaira',90021,181,12,239,130);
@@ -1525,23 +1526,24 @@ INSERT INTO `mob_spawn_points` VALUES (17526851,'Paramount_Naraka','Paramount_Na
 INSERT INTO `mob_spawn_points` VALUES (17526854,'Paramount_Ironclad','Paramount_Ironclad',90059,-52,9,-12,255);
 
 INSERT INTO `npc_list` VALUES (17526884,'Achieve_Master','Achieve Master',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
-INSERT INTO `npc_list` VALUES (17526885,'EXIT_AN','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
-INSERT INTO `npc_list` VALUES (17526886,'EXIT_KI','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
-INSERT INTO `npc_list` VALUES (17526887,'EXIT_IM','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null); -- used in csid 10000
-INSERT INTO `npc_list` VALUES (17526888,'EXIT_MURU','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526885,'EXIT_AN','Gap',0,0.000,0.001,0.000,6,40,40,0,12,100,2,3,0x0000F20800000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526886,'EXIT_KI','Gap',0,0.000,0.001,0.000,6,40,40,0,12,100,2,3,0x0000F20800000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526887,'EXIT_IM','Gap',0,0.000,0.001,0.000,6,40,40,0,12,100,2,3,0x0000F20800000000000000000000000000000000,0,null); -- used in csid 10000
+INSERT INTO `npc_list` VALUES (17526888,'EXIT_MURU','Gap',0,0.000,0.001,0.000,6,40,40,0,12,100,2,3,0x0000F20800000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526889,'Blank','Blank',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526890,'Legion_Portal_1','Legion Portal',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526891,'Legion_Portal_2','Legion Portal',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
-INSERT INTO `npc_list` VALUES (17526892,'Legion_Tome','Legion Tome',64,180.000,12.000,-251.000,1,40,40,0,16,32,0,3,0x0000F20800000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17526892,'Legion_Tome','Legion Tome',192,180.000,12.000,-251.000,1,40,40,0,16,32,0,3,0x0000F20800000000000000000000000000000000,0,null); -- retail pos
+INSERT INTO `npc_list` VALUES (17526892,'Legion_Tome','Legion Tome',64,180.000,12.000,-279.500,1,40,40,0,16,32,0,3,0x0000F20800000000000000000000000000000000,0,null); -- Temp Pos for lack of instancing for "Hall of Mars".
 INSERT INTO `npc_list` VALUES (17526893,'Legion_Libretto','Legion Libretto',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
-INSERT INTO `npc_list` VALUES (17526894,'EXIT_MUL','Gap',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17526894,'EXIT_MUL','Gap',0,0.000,0.001,0.000,6,40,40,0,12,100,2,3,0x0000F20800000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526895,'Moogle1','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526896,'Moogle2','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526897,'Moogle3','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 INSERT INTO `npc_list` VALUES (17526898,'Moogle4','Moogle',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 
--- INSERT INTO `mob_spawn_points` VALUES (17527806,'Mars','Mars',0,0,0,0,0);
-INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `mob_spawn_points` VALUES (17527806,'Mars','Mars',97600,64,180.000,12.000,-252.525); -- Temp Pos for lack of instancing.
+INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,180.000,12.000,-251.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 
 
 
