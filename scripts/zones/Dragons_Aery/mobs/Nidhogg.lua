@@ -21,8 +21,8 @@ function onMobFight(mob, target)
         mob:setLocalVar("twohourTime",math.random(30,90));
     end
     if (battletime >= twohourTime) then
-        mob:useMobAbility(700); 
-        -- technically aerial hurricane wing, but I'm using 700 for his two hour 
+        mob:useMobAbility(700);
+        -- technically aerial hurricane wing, but I'm using 700 for his two hour
         --(since I have no inclination to spend millions on a PI to cap one name you never see)
         mob:setLocalVar("twohourTime",battletime + math.random(60,120));
     end
@@ -35,6 +35,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_DRAW_IN);
 
     -- addMod
     mob:addMod(MOD_MACC,400);
