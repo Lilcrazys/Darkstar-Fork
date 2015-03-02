@@ -13,9 +13,7 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    local typeEffect = EFFECT_DRAW_IN;
-    MobStatusEffectMove(mob, target, typeEffect, 3, 0, 1);
-    return typeEffect;
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
