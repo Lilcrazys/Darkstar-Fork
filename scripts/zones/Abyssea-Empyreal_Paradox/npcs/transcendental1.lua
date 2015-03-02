@@ -38,9 +38,9 @@ end;
 
 function onTrigger(player,npc)
 
-	-- if(EventTriggerBCNM(player,npc))then
-		-- return;
-	-- end
+	if(EventTriggerBCNM(player,npc))then
+	    return;
+	end
 
 end;
 
