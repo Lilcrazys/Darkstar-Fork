@@ -18,7 +18,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-	
+
 end;
 
 -----------------------------------
@@ -26,9 +26,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	
+
 	if(killer:getCurrentMission(SANDORIA) == COMING_OF_AGE and killer:getVar("MissionStatus") == 2) then
 		killer:setVar("MissionStatus",3);
 	end
-	
+
 end;

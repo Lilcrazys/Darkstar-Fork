@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Fomor Beastmaster
--- zone : Sacrarium 
+-- zone : Sacrarium
 -----------------------------------
 
 

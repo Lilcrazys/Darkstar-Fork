@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Orcish Gladiator
--- zone : Lufaise_Meadows 
+-- zone : Lufaise_Meadows
 -----------------------------------
 
 

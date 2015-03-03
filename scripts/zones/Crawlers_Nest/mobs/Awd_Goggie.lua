@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: 
+-- Area:
 -- NPC:  Awd_Goggie
 -- Area: Crawler's Nest
 -- NPC:  Awd Goggie

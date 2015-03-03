@@ -1,6 +1,6 @@
 -----------------------------------
 -- mob : Fomor Dark Knight
--- zone : Phomiuna_Aqueducts  
+-- zone : Phomiuna_Aqueducts
 -----------------------------------
 
 -----------------------------------

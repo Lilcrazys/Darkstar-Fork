@@ -21,7 +21,7 @@ function onMobFight(mob, target)
 
     local changeTime = mob:getLocalVar("changeTime");
     local element = mob:getLocalVar("element");
-    
+
     if (changeTime == 0) then
         mob:setLocalVar("changeTime",math.random(1,3)*15)
         return;

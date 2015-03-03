@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Pso'xja
--- NPC:  Nunyunuwi 
+-- NPC:  Nunyunuwi
 -----------------------------------
 
 require("scripts/globals/missions");

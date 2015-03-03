@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Sauromugue Champaign	
+-- Area: Sauromugue Champaign
 -- NM:   Yilbegan
 -----------------------------------
 

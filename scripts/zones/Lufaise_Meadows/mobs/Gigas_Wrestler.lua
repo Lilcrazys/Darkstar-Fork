@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Gigas Wrestler
--- zone : Lufaise_Meadows 
+-- zone : Lufaise_Meadows
 -----------------------------------
 
 

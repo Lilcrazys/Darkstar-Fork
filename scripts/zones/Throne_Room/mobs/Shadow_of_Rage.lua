@@ -24,7 +24,7 @@ end;
 
 function onMobFight(mob,target)
 end;
-	
+
 
 -----------------------------------
 -- onMobDeath

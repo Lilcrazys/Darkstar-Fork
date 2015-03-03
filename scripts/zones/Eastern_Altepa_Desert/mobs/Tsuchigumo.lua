@@ -17,10 +17,10 @@ end;
 -- onMobDeath Action
 -----------------------------------
 
-function onMobDeath(mob, killer)	
-	
+function onMobDeath(mob, killer)
+
 	if(killer:getVar("twentyInPirateYearsCS") == 3) then
 		killer:setVar("TsuchigumoKilled",killer:getVar("TsuchigumoKilled") + 1);
 	end
-	
+
 end;

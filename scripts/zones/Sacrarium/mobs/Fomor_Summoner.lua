@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Fomor Summoner
--- zone : Sacrarium 
+-- zone : Sacrarium
 -----------------------------------
 
 

@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Fomor Dragoon
--- zone : Sacrarium 
+-- zone : Sacrarium
 -----------------------------------
 
 

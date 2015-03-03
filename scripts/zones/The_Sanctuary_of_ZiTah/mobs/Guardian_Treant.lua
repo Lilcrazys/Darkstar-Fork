@@ -12,7 +12,7 @@ require("scripts/globals/settings");
 function onMobSpawn(mob)
 end;
 
-function onMobDeath(mob, killer)	
+function onMobDeath(mob, killer)
 	killer:setVar("ForgeYourDestiny_killed",1);
 end;
 

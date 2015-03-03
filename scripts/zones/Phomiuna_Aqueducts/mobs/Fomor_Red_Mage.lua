@@ -1,6 +1,6 @@
 -----------------------------------
 -- mob : Fomor Red mage
--- zone : Phomiuna_Aqueducts  
+-- zone : Phomiuna_Aqueducts
 -----------------------------------
 
 -----------------------------------

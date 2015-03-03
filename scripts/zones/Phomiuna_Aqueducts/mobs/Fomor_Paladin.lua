@@ -1,6 +1,6 @@
 -----------------------------------
 -- mob : Fomor Paladin
--- zone : Phomiuna_Aqueducts  
+-- zone : Phomiuna_Aqueducts
 -----------------------------------
 
 -----------------------------------

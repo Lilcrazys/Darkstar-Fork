@@ -1,6 +1,6 @@
 -----------------------------------
 -- mob : Fomor Warrior
--- zone : Phomiuna_Aqueducts  
+-- zone : Phomiuna_Aqueducts
 -----------------------------------
 
 -----------------------------------

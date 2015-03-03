@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Orcish Footsoldier
--- zone : Lufaise_Meadows 
+-- zone : Lufaise_Meadows
 -----------------------------------
 
 

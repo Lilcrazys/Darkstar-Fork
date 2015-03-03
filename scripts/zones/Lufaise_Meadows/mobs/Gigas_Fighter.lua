@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Gigas Fighter
--- zone : Lufaise_Meadows 
+-- zone : Lufaise_Meadows
 -----------------------------------
 
 

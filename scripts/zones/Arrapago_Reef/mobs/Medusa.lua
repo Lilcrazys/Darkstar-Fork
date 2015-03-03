@@ -6,6 +6,7 @@
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
@@ -20,13 +21,14 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-end;
 
+end;
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob,target)
+--[[
     local mobHP = mob:getHPP();
     local mobID = mob:getID();
     local petIDs = {16998863,16998864,16998865,16998866};
@@ -49,7 +51,7 @@ function onMobFight(mob,target)
         mob:setMod(MOD_REGAIN,1);
     end
 
-    if(mobHP < 10) then
+    if(mobHP < 10) then -- WHAT THE FUCK this is NOT how you make mobs 2hr.
         GetMobByID(16998863):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
         GetMobByID(16998864):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
         GetMobByID(16998865):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
@@ -61,6 +63,7 @@ function onMobFight(mob,target)
             GetMobByID(petIDs[i],800):updateEnmity(target);
         end
     end
+]]
 end;
 
 -----------------------------------

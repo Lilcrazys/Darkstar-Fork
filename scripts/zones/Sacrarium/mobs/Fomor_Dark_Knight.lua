@@ -1,7 +1,7 @@
 
 -----------------------------------
 -- mob : Fomor Dark knight
--- zone : Sacrarium 
+-- zone : Sacrarium
 -----------------------------------
 
 

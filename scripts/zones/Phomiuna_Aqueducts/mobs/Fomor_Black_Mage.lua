@@ -1,6 +1,6 @@
 -----------------------------------
 -- mob : Fomor Black Mage
--- zone : Phomiuna_Aqueducts 
+-- zone : Phomiuna_Aqueducts
 -----------------------------------
 
 -----------------------------------

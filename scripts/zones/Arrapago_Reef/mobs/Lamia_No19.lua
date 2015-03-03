@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Arrapago Reef
--- NPC:  Medusa
+-- NPC:  Lamia no.19
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -17,10 +17,10 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	
+
 	SpawnMob(16998869,180):updateEnmity(target);
 	SpawnMob(16998870,180):updateEnmity(target);
-	
+
 end;
 
 -----------------------------------

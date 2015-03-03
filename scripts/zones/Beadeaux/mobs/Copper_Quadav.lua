@@ -29,5 +29,5 @@ function onMobDeath(mob, killer)
 			killer:setVar("MissionStatus", missionStatus + 1)
 		end
 	end
-	
+
 end;

@@ -1276,7 +1276,7 @@ void SmallPacket0x03A(map_session_data_t* session, CCharEntity* PChar, int8* dat
             ShowWarning(CL_YELLOW"lightluggage detected: <%s> will be removed from server\n" CL_RESET, PChar->GetName());
 
             PChar->status = STATUS_SHUTDOWN;
-            PChar->pushPacket(new CServerIPPacket(PChar, 1, 0));
+            charutils::SendToZone(PChar, 1, 0);
         }
         return;
     }
@@ -1556,12 +1556,24 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, int8* dat
         uint32 quantity = RBUFL(data, (0x08));
         CItem* PItem = PChar->getStorage(LOC_INVENTORY)->GetItem(invslot);
 
-        if (PItem && PItem->getQuantity() >= quantity && PChar->UContainer->IsSlotEmpty(slotID) && !(PItem->getFlag() & ITEM_FLAG_EX))
+        if (PItem && PItem->getQuantity() >= quantity && PChar->UContainer->IsSlotEmpty(slotID))
         {
-            int32 ret = Sql_Query(SqlHandle, "SELECT charid FROM chars WHERE charname = '%s' LIMIT 1", data + 0x10);
+            int32 ret = Sql_Query(SqlHandle, "SELECT charid, accid FROM chars WHERE charname = '%s' LIMIT 1;", data + 0x10);
             if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) > 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
             {
                 uint32 charid = Sql_GetUIntData(SqlHandle, 0);
+
+                if (PItem->getFlag() & ITEM_FLAG_NODELIVERY)
+                {
+                    if (!(PItem->getFlag() & ITEM_FLAG_DELIVERYINNER))
+                        return;
+                    
+                    uint32 accid = Sql_GetUIntData(SqlHandle, 1);
+                    int32 ret = Sql_Query(SqlHandle, "SELECT COUNT(*) FROM chars WHERE charid = '%u' AND accid = '%u' LIMIT 1;", PChar->id, accid);
+                    if (ret == SQL_ERROR || Sql_NextRow(SqlHandle) != SQL_SUCCESS || Sql_GetUIntData(SqlHandle, 0) == 0)
+                        return;
+                }
+
                 CItem* PUBoxItem = itemutils::GetItem(PItem->getID());
                 PUBoxItem->setReceiver(data + 0x10);
                 PUBoxItem->setSender((int8*)PChar->GetName());
@@ -2011,12 +2023,22 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, int8* dat
     }
     case 0x0C: // Confirm name (send box)
     {
-        int32 ret = Sql_Query(SqlHandle, "SELECT charid FROM chars WHERE charname = '%s' LIMIT 1", data + 0x10);
+        int32 ret = Sql_Query(SqlHandle, "SELECT accid FROM chars WHERE charname = '%s' LIMIT 1", data + 0x10);
 
-        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0)
+        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) > 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
         {
-            PChar->pushPacket(new CDeliveryBoxPacket(action, boxtype, 0xFF, 0x02));
-            PChar->pushPacket(new CDeliveryBoxPacket(action, boxtype, 0x00, 0x01));
+            uint32 accid = Sql_GetUIntData(SqlHandle, 0);
+            ret = Sql_Query(SqlHandle, "SELECT COUNT(*) FROM chars WHERE charid = '%u' AND accid = '%u' LIMIT 1;", PChar->id, accid);
+            if (ret != SQL_ERROR && Sql_NextRow(SqlHandle) == SQL_SUCCESS && Sql_GetUIntData(SqlHandle, 0))
+            {
+                PChar->pushPacket(new CDeliveryBoxPacket(action, boxtype, 0xFF, 0x02));
+                PChar->pushPacket(new CDeliveryBoxPacket(action, boxtype, 0x01, 0x01));
+            }
+            else
+            {
+                PChar->pushPacket(new CDeliveryBoxPacket(action, boxtype, 0xFF, 0x02));
+                PChar->pushPacket(new CDeliveryBoxPacket(action, boxtype, 0x00, 0x01));
+            }
         }
         else
         {
@@ -4327,7 +4349,7 @@ void SmallPacket0x0E7(map_session_data_t* session, CCharEntity* PChar, int8* dat
         PChar->m_GMlevel > 0)
     {
         PChar->status = STATUS_SHUTDOWN;
-        PChar->pushPacket(new CServerIPPacket(PChar, 1, 0));
+        charutils::SendToZone(PChar, 1, 0);
     }
     else if (PChar->animation == ANIMATION_NONE)
     {

@@ -25,7 +25,7 @@ function onMobEngaged(mob,target)
    local mobid = mob:getID()
 
    for member = mobid-2, mobid+5 do
-      if (GetMobAction(member) == 16) then 
+      if (GetMobAction(member) == 16) then
          GetMobByID(member):updateEnmity(target);
       end
    end

@@ -1,6 +1,6 @@
 -----------------------------------
 -- mob : Orcish Stonelauncher
--- zone : Misareaux_Coast 
+-- zone : Misareaux_Coast
 -----------------------------------
 
 -----------------------------------

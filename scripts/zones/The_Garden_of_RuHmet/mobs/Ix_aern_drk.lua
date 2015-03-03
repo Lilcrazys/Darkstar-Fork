@@ -8,7 +8,7 @@
 -----------------------------------
 
 function onMobSpawn(mob)
-	
+
 end;
 
 -----------------------------------
@@ -16,6 +16,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	--SetServerVariable("[PH]Ix_aern_drk", 0);		
-	
+	--SetServerVariable("[PH]Ix_aern_drk", 0);
+
 end;
