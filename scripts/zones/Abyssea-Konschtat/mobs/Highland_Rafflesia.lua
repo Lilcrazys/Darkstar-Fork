@@ -42,11 +42,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local SPELL_ID = 650;
+    local CHANCE = 25;
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
+        killer:addSpell(SPELL_ID);
+    end
 
-	local result = -- DoCruor(killer,result);
-	-- DoExp(killer,bonus);
-    -- DoLights(mob,killer);
-	PyxisSpawn(mob,killer,npc);
-
-	killer:messageSpecial(CRUOR_OBTAINED,result);
+    killer:messageSpecial(CRUOR_OBTAINED,result);
 end;
