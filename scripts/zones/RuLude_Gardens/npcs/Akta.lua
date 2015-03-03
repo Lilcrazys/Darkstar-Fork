@@ -417,8 +417,8 @@ function onTrade(player,npc,trade)
 		-- Complete trial via trade
 		elseif (trade:hasItemQty(3925,50) and trade:getItemCount() == 50) then
 			player:setVar("TRIAL_COMPLETE",2);
-			player:SpoofChatPlayer( "Well done, I see you have brought me the items I requested.", MESSAGE_SAY, npc:getID() );
-			player:SpoofChatPlayer( "Trade them along with the trial item to my friend here for your reward.", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "Well done, I see you have brought the requested items.", MESSAGE_SAY, npc:getID() );
+			player:SpoofChatPlayer( "Trade them with the trial item to my friend here.", MESSAGE_SAY, npc:getID() );
 			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
 			GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
 			player:injectActionPacket(6, 617);
