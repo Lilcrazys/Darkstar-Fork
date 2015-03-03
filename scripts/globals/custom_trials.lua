@@ -280,9 +280,9 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 
 	if (utils.inTable(Mythic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		if (ExperimentalLamiaKillCount < 4 and mob:getID() == 17101205) then
-			killer:setVar("Expermimental_Lamia_KILLS", ExperimentalLamiaKillCount + 1);
+			killer:setVar("Experimental_Lamia_KILLS", ExperimentalLamiaKillCount + 1);
 		end
-		if (NosferatuKillCount < 4 and mob:getID() == 17056158) then
+		if (NosferatuKillCount < 4 and mob:getID() == 17056157) then
 			killer:setVar("Nosferatu_KILLS", NosferatuKillCount + 1);
 		end
 		if (GearsKillCount < 4 and mob:getID() == 17072178) then
