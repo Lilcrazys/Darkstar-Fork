@@ -2112,7 +2112,8 @@ INSERT INTO `mob_skill` VALUES (2572,141,911,'Jettatura',4,10,2000,3000,4,0,0,0)
 -- Waktza (check nakual achuka)
 
 
--- Corpselights
+-- Corpselights (91)
+INSERT INTO `mob_skill` VALUES (2255,91,1463,'Corpse_Breath',0,10.0,2000,1500,4,0,0,0);
 
 
 -- Zilant (check yilbegan)
@@ -2135,12 +2136,12 @@ INSERT INTO `mob_skill` VALUES (2572,141,911,'Jettatura',4,10,2000,3000,4,0,0,0)
 -- INSERT INTO `mob_skill` VALUES (2209,?,?,'Bill_Toss',4,10.0,2000,1500,4,0,0,0); -- Riko Kupenreich only
 
 -- Rafflesia regular mob
--- INSERT INTO `mob_skill` VALUES (1911,?,1553,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- noncharmed vers.?
--- INSERT INTO `mob_skill` VALUES (1910,?,1552,'Floral_Bouquet',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1909,?,1551,'Rotten_Stench',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1908,?,1550,'Viscid_Emission',4,10.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1907,?,1549,'Seedspray',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1912,?,1554,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- charmed vers.?
+INSERT INTO `mob_skill` VALUES (1911,207,1553,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- noncharmed vers.?
+INSERT INTO `mob_skill` VALUES (1910,207,1552,'Floral_Bouquet',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1909,207,1551,'Rotten_Stench',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1908,207,1550,'Viscid_Emission',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1907,207,1549,'Seedspray',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1912,207,1554,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- charmed vers.?
 
 -- INSERT INTO `mob_skill` VALUES (1913,?,1555,'Soothing_Aroma',0,7.0,2000,1500,4,0,0,0); -- certain nm only
 
