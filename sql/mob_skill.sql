@@ -1644,23 +1644,30 @@ INSERT INTO `mob_skill` VALUES (1699,253,1349,'Exuviation',0,7.0,2000,1000,1,0,0
 -- INSERT INTO `mob_skill` VALUES (1700,253,1350,'Fire_break',0,7.0,2000,1000,4,0,0,0); -- NM only
 
 -- Gears
--- INSERT INTO `mob_skill` VALUES (?,?,?,'Antigravity',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (?,?,?,'Artificial_Gravity',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (?,?,?,'Rail_Cannon',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (?,?,?,'Restoral',0,7.0,2000,1500,2,0,0,0);
+INSERT INTO `mob_skill` VALUES (1791,120,1388,'Antigravity',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1787,120,1390,'Artificial_Gravity',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1789,120,1378,'Rail_Cannon',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1785,120,1376,'Restoral',0,7.0,2000,1500,2,0,0,0);
+
+-- Gear (single)
+-- INSERT INTO `mob_skill` VALUES (1791,119,1388,'Antigravity',1,15.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1787,119,1390,'Artificial_Gravity',1,15.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1789,119,1378,'Rail_Cannon',1,15.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1785,119,1376,'Restoral',0,7.0,2000,1500,2,0,0,0)
+
 
 -- Ramparts
--- INSERT INTO `mob_skill` VALUES (1780,?,?,'Astral_Gate',4,10.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1778,?,?,'Reinforcements',0,7.0,2000,4000,1,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1777,?,?,'Choke_Chain',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1776,?,?,'Roller_Chain',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1779,?,?,'Biomagnet',0,30.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1780,209,?,'Astral_Gate',4,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1778,209,?,'Reinforcements',0,7.0,2000,4000,1,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1777,209,?,'Choke_Chain',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1776,209,?,'Roller_Chain',1,15.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1779,209,?,'Biomagnet',0,30.0,2000,1500,4,0,0,0);
 
 -- Chariots
 INSERT INTO `mob_skill` VALUES (1798,63,1407,'Diffusion_ray',4,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1799,63,1408,'Intertia_stream',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1800,63,1399,'Discharge',1,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1801,63,1401,'Mortal_revolution',1,15.0,2000,1000,4,0,0,0); -- Certain NMs only
+INSERT INTO `mob_skill` VALUES (1801,63,1401,'Mortal_revolution',1,15.0,2000,1000,4,0,0,1); -- Certain NMs only
 INSERT INTO `mob_skill` VALUES (1802,63,1400,'Homing_missile',2,20.0,2000,1000,4,0,0,0); -- Certain NMs only
 INSERT INTO `mob_skill` VALUES (1803,63,1402,'Discoid',4,10.0,2000,1000,4,0,0,0); -- Certain NMs only
 INSERT INTO `mob_skill` VALUES (1804,63,1403,'Brainjack',0,10.0,2000,1000,4,0,0,0); -- Only used by Long-Armed Chariot and Long-Horned Chariot.
