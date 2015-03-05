@@ -95,7 +95,7 @@ REPLACE INTO `mob_groups` VALUES (1458,2129,45,60,0,1831,10000,0,104,106,0); -- 
 REPLACE INTO `mob_groups` VALUES (1459,2323,45,60,0,1990,10000,0,104,106,0); -- Lamenter
 REPLACE INTO `mob_groups` VALUES (1460,2813,45,60,0,0,10000,0,104,106,0); -- Naul
 REPLACE INTO `mob_groups` VALUES (1461,3082,45,60,0,2733,10000,0,104,106,0); -- Pachypodium
-REPLACE INTO `mob_groups` VALUES (1462,3409,45,60,0,0,10000,10000,104,106,0); -- Rubicund Adenium
+REPLACE INTO `mob_groups` VALUES (1462,3409,45,60,0,0,40000,10000,110,115,0); -- Rubicund Adenium
 REPLACE INTO `mob_groups` VALUES (1463,3798,45,60,0,0,0,0,0,0,0); -- Sturdy Pyxis \\these are boxes so dont need stats//
 REPLACE INTO `mob_groups` VALUES (12950,4534,45,60,0,0,10000,0,104,106,0); -- Thalassinon Abyssea-Tharongi
 REPLACE INTO `mob_groups` VALUES (12951,4533,45,60,0,0,10000,0,104,106,0); -- Vermes Carnium Abyssea-Tharongi
@@ -131,6 +131,7 @@ REPLACE INTO `mob_groups` VALUES (12980,4538,45,60,0,0,10000,10000,104,106,0);
 REPLACE INTO `mob_groups` VALUES (12981,4539,45,600,0,0,60000,10000,110,112,0); -- Bhumi
 REPLACE INTO `mob_groups` VALUES (12982,4540,45,60,0,0,10000,10000,104,106,0);
 REPLACE INTO `mob_groups` VALUES (12983,4541,45,60,0,0,10000,10000,104,106,0);
+
 
 -- Custom Besieged
 
