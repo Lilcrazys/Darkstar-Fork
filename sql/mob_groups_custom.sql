@@ -1124,9 +1124,18 @@ REPLACE INTO `mob_groups` VALUES (2774,9092,78,900,0,9092,80000,10000,130,130,0)
 REPLACE INTO `mob_groups` VALUES (2775,9093,78,900,0,9093,80000,10000,135,135,0);
 REPLACE INTO `mob_groups` VALUES (2776,4654,78,900,0,9093,130000,100000,140,145,0);
 
+-- -----------------Missing Abyssea Mobs---------------------------------------------------
 
-
-
+INSERT INTO `mob_groups` VALUES (90200,86,15,600,0,0,40000,10000,112,116,0); -- Alkonost
+INSERT INTO `mob_groups` VALUES (90201,261,15,600,0,0,40000,10000,110,112,0); -- Ashtaerth the Gall
+INSERT INTO `mob_groups` VALUES (90202,457,15,600,0,0,40000,10000,110,112,0); -- Bloodeye
+INSERT INTO `mob_groups` VALUES (90203,491,15,600,0,0,40000,10000,110,112,0); -- Bombadeel
+INSERT INTO `mob_groups` VALUES (90204,742,15,600,0,0,40000,20999,110,112,0); -- Clingy Clare
+INSERT INTO `mob_groups` VALUES (90205,1840,15,600,0,0,40000,10000,110,112,0); -- Guimauve
+INSERT INTO `mob_groups` VALUES (90206,2209,15,600,0,0,40000,20999,110,112,0); -- Keratyrannos
+INSERT INTO `mob_groups` VALUES (90207,3107,15,600,0,0,40000,10000,110,112,0); -- Pavan
+INSERT INTO `mob_groups` VALUES (90208,3466,15,600,0,0,40000,20999,110,112,0); -- Sarcophilus
+INSERT INTO `mob_groups` VALUES (90209,3633,15,600,0,0,40000,10000,110,112,0); -- Siranpa Kamuy
 
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please
