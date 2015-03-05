@@ -116,7 +116,15 @@ INSERT INTO `mob_spawn_points` VALUES (16806910,'Achuka','Achuka',90089,324,-25,
 REPLACE INTO `mob_spawn_points` VALUES (16839007,'Eccentric_Eve','Eccentric Eve',429,215,32,280,90);
 REPLACE INTO `mob_spawn_points` VALUES (16839069,'Eccentric_eve','Eccentric Eve',429,230,32,281,92);
 REPLACE INTO `mob_spawn_points` VALUES (16839072,'Eccentric_eve','Eccentric Eve',429,245,31,280,92);
-
+REPLACE INTO `mob_spawn_points` VALUES (16838979,'Alkonost','Alkonost',90200,52,30,413,88);
+REPLACE INTO `mob_spawn_points` VALUES (16838718,'Ashtaerh_the_Gallvexed','Ashtaerh the Gallvexed',90201,360,-16,-400,11);
+REPLACE INTO `mob_spawn_points` VALUES (16839068,'Bloodeye_Vileberry','Bloodeye Vileberry',90202,539,24,714,103);
+REPLACE INTO `mob_spawn_points` VALUES (16838782,'Bombadeel','Bombadeel',90203,-358,8,-42,84);
+REPLACE INTO `mob_spawn_points` VALUES (16838946,'Clingy_Clare','Clingy Clare',90204,370,1,9,151);
+REPLACE INTO `mob_spawn_points` VALUES (16838912,'Guimauve','Guimauve',90205,-242,66,617,0);
+REPLACE INTO `mob_spawn_points` VALUES (16838871,'Keratyrannos','Keratyrannos',90206,-134,47,416,162);
+REPLACE INTO `mob_spawn_points` VALUES (16838767,'Sarcophilus','Sarcophilus',90208,-166,-7,-84,106);
+REPLACE INTO `mob_spawn_points` VALUES (16838962,'Siranpa-kamuy','Siranpa-kamuy',90209,371,1,8,174);
 
 -- ------------------------------------------------------------
 -- Promyvion - Holla (Zone 16)
