@@ -1087,7 +1087,7 @@ function onTrade(player,npc,trade)
 		player:tradeComplete();
 	end
 --------------------------------Armageddon-------------------------------------
-	if (trade:hasItemQty(19399,1) and trade:hasItemQty(2930,50) and trade:getItemCount() == 51) then -- 80-85
+	if (trade:hasItemQty(19410,1) and trade:hasItemQty(2930,50) and trade:getItemCount() == 51) then -- 80-85
 		player:addItem(19469);
 		player:messageSpecial(ITEM_OBTAINED,19469);
 		player:tradeComplete();
@@ -1261,11 +1261,11 @@ function onTrade(player,npc,trade)
 		player:tradeComplete();
 	end
 	if (trade:hasItemQty(19465,1) and trade:hasItemQty(2965,50) and trade:getItemCount() == 51) then -- 85-95
-		player:addItem(16641, 1);
-		player:messageSpecial(ITEM_OBTAINED,16641);
+		player:addItem(19641, 1);
+		player:messageSpecial(ITEM_OBTAINED,19641);
 		player:tradeComplete();
 	end
-	if (trade:hasItemQty(16641,1) and trade:hasItemQty(3290,50) and trade:getItemCount() == 51) then -- 95-99/1
+	if (trade:hasItemQty(19641,1) and trade:hasItemQty(3290,50) and trade:getItemCount() == 51) then -- 95-99/1
 		player:addItem(19814, 1);
 		player:messageSpecial(ITEM_OBTAINED,19814);
 		player:tradeComplete();
