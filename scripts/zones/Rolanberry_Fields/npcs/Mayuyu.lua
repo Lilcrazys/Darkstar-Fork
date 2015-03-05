@@ -11,6 +11,7 @@ require("scripts/globals/settings");
 require("scripts/globals/keyitems");
 require("scripts/globals/titles");
 require("scripts/zones/Rolanberry_Fields/TextIDs");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
@@ -38,7 +39,7 @@ function onTrigger(player,npc)
     end
 
     -- player:startEvent(8008, 0, LEGENDARY, CAPACITY);
-    player:SpoofChatPlayer( "I'm disabled because Teo punted me for not doing my job!", MESSAGE_SYS_SAY, npc:getID() );
+    player:SpoofChatPlayer( "I'm disabled because Teo punted me for not doing my job!", MESSAGE_SAY, npc:getID() );
 end;
 
 -----------------------------------
