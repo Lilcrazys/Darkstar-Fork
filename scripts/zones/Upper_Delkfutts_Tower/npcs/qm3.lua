@@ -21,7 +21,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	player:startEvent(0x0011);
+	player:setPos(-355, -144, 90, 64, 158);
+	-- player:startEvent(0x0011);
 end;
 
 -----------------------------------
