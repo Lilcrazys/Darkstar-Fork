@@ -26,7 +26,7 @@ CREATE TABLE `item_armor` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=37 PACK_KEYS=1 CHECKSUM=1;
 
 -- ----------------------------
--- Records 
+-- Records
 -- ----------------------------
 INSERT INTO `item_armor` VALUES ('10240', 'hexed_haubert', '99', '8641', '0', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('10241', 'hexed_domaru', '99', '137218', '0', '0', '0', '32', '0');
@@ -9982,7 +9982,7 @@ INSERT INTO `item_armor` VALUES ('28027', 'boor_bracelets', '99', '2472947', '0'
 INSERT INTO `item_armor` VALUES ('28046', 'gorney_moufles', '99', '10689', '354', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28047', 'shneddick_gloves', '99', '2593826', '355', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28048', 'weatherspoon_cuffs', '99', '3719708', '356', '0', '0', '64', '0');
-INSERT INTO `item_armor` VALUES ('28050', 'buremte_gloves', '99', '2473969', '249', '0', '0', '64', '0'); 
+INSERT INTO `item_armor` VALUES ('28050', 'buremte_gloves', '99', '2473969', '249', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28056', 'yaoyotl_gloves', '99', '1589788', '328', '0', '0', '64', '0'); -- mID was 348 but looked like leather gloves
 INSERT INTO `item_armor` VALUES ('28057', 'mikinaak_gauntlets', '99', '21378', '0', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28058', 'manibozho_gloves', '99', '5187652', '0', '0', '0', '64', '0');
@@ -10085,8 +10085,8 @@ INSERT INTO `item_armor` VALUES ('28450', 'chaac_belt', '99', '4194303', '0', '0
 INSERT INTO `item_armor` VALUES ('28460', 'cetl_belt', '99', '4194303', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28462', 'hurchlan_sash', '99', '5188164', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28463', 'zorans_belt', '99', '8641', '0', '0', '0', '1024', '0');
-INSERT INTO `item_armor` VALUES ('28464', 'pyaekue_belt', '99', '4947938', '0', '0', '0', '1024', '0');
-INSERT INTO `item_armor` VALUES ('28465', 'pyaekue_belt_+1', '99', '4947938', '0', '0', '0', '1024', '0');
+INSERT INTO `item_armor` VALUES ('28464', 'pyaekue_belt', '99', '2473969', '0', '0', '0', '1024', '0');
+INSERT INTO `item_armor` VALUES ('28465', 'pyaekue_belt_+1', '99', '2473969', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28466', 'dynamic_belt', '99', '2473969', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28467', 'dynamic_belt_+1', '99', '2473969', '0', '0', '0', '1024', '0');
 INSERT INTO `item_armor` VALUES ('28468', 'matanki_earring', '99', '4194303', '0', '0', '0', '6144', '0');
