@@ -29,7 +29,7 @@ end;
 function onTrigger(player,npc)
 	
 	if(player:hasKeyItem(DELKFUTT_KEY)) then
-		player:setPos(260, 19, 20, 0,158
+		player:setPos(260, 19, 20, 0, 158);
 		-- player:startEvent(0x0006);
 	else
 		player:messageSpecial(THIS_ELEVATOR_GOES_DOWN);
