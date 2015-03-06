@@ -3,8 +3,8 @@
 --   Mob: Isgebind
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Uleguerand/MobIDs");
-
+require("scripts/zones/Abyssea-Uleguerand/TextIDs");
+require("scripts/globals/keyitems");
 -----------------------------------
 -- OnMobInitialize
 -----------------------------------
@@ -21,11 +21,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,20);
 
     -- addMod
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_MATT,80);
     mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_EVA,-100);
-    mob:addMod(MOD_DEF,-200);
+    mob:addMod(MOD_DEF,-100);
 end;
 
 -----------------------------------
@@ -91,5 +89,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 15;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
+        killer:addKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE);
+        killer:messageSpecial(6385, IVORY_ABYSSITE_OF_FURTHERANCE);
+    end
 end;
 

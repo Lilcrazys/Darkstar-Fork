@@ -1,11 +1,15 @@
 -----------------------------------
---  Area: Abyssea - Misareaux (216)
---   Mob: Flame_Skimmer
+--  Area: Abyssea - Tahrongi (45)
+--   Mob: Mictlantecuhtli
 -----------------------------------
-
-require("scripts/zones/Abyssea-Misareaux/MobIDs");
+require("/scripts/globals/abyssea");
+require("scripts/zones/Abyssea-Tahrongi/MobIDs");
+package.loaded["scripts/zones/Abyssea-Tahrongi/TextIDs"] = nil;
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/keyitems");
-require("scripts/zones/Abyssea-Misareaux/TextIDs");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -18,14 +22,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_DEF,75);
-    mob:addMod(MOD_ATT,75);
-    mob:addMod(MOD_MATT,75);
-    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_MATT,90);
+    mob:addMod(MOD_MACC,300);
 end;
 
 -----------------------------------
@@ -47,10 +45,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 10;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SAPPHIRE_ABYSSITE_OF_FURTHERANCE) == false) then
-        killer:addKeyItem(SAPPHIRE_ABYSSITE_OF_FURTHERANCE);
-        killer:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_FURTHERANCE);
+    local CHANCE = 17;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
+        killer:addKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT);
     end
 end;
 

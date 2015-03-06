@@ -6,6 +6,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/zones/Abyssea-Misareaux/TextIDs");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -43,33 +44,11 @@ end;
 -- onMobDeath
 -----------------------------------
 function onMobDeath(mob,killer)
-    -- local keyId = KEYITEM_ID_HERE;
-    if (killer:getVar("RED_PROC") == 1) then
-        -- if (killer:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
-            -- killer:addKeyItem(keyId);
-            -- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
-        -- end
+    local CHANCE = 17;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT) == false) then
+        killer:addKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT);
+        killer:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_MERIT);
     end
-
-    if (killer:getVar("BLUE_PROC") == 1) then
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);  --[[ Uncomment to use]]--
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-    end
-
-    if (killer:getVar("YELLOW_PROC") == 1) then
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);  --[[ Uncomment to use]]--
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-    end
-    -- DoExp(mob,killer);
-    -- DoCruor(mob,killer);
-    -- DoLights(mob,killer);
-    -- PyxisSpawn(mob,killer,npc);
 end;
 
 
