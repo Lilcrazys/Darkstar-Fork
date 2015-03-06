@@ -38,7 +38,7 @@ itemid_bcnmid_map = { 6,{0,0},-- Bearclaw_Pinnacle
 					 207,{1544,545}, -- Cloister of Flames
 					 209,{1547,578,1169,577}, -- Cloister of Tremors
 					 211,{1549,609}, -- Cloister of Tides
-					 255,{3924,1308}}; -- Abyssea Empyreal Paradox (Shinryu)
+					 255,{3924,1308}}; -- Abyssea Empyreal Paradox (Custom Shinryu)
 					 
 -- array to map (for each zone) the BCNM ID to the Event Parameter corresponding to this ID.
 -- DO NOT INCLUDE MAAT FIGHTS (only included one for testing!)
@@ -76,7 +76,7 @@ bcnmid_param_map = {6,{640,0},
 					207,{544,0,545,1,547,3},
 					209,{576,0,577,1,578,2,580,4},
 					211,{608,0,609,1,611,3},
-					255,{1308,0,1308,3,1308,5}};
+					255,{1308,0,1308,3,1308,5}}; -- Abyssea Empyreal Paradox (Retail Shinryu)
 					
 -- Call this onTrade for burning circles
 function TradeBCNM(player,zone,trade,npc)

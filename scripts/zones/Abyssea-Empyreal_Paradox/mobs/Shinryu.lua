@@ -23,6 +23,7 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOD_DRAW_IN, 1);
 end;
 
 -----------------------------------
@@ -32,13 +33,12 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 30);
-    mob:setMod(MOD_REGAIN,10);
-    mob:setMod(MOD_COUNTER,15);
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_COUNTER, 15);
+    mob:addMod(MOD_DOUBLE_ATTACK, 10)
     mob:setMod(MOD_UFASTCAST, 45);
-    mob:setMod(MOD_MACC,950);
-    mob:setMod(MOD_MATT,120);
-    mob:setMod(MOD_DRAW_IN,1);
+    mob:setMod(MOD_MACC, 950);
+    mob:setMod(MOD_MATT, 120);
 
     -- addMod
     mob:addMod(MOD_MDEF, -50);
