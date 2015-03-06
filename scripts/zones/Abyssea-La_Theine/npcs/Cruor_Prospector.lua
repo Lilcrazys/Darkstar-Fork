@@ -172,9 +172,9 @@ function onEventFinish(player,csid,option)
 
     -- Keyitems
     elseif (option == 65539) then -- Map of Abyssea - La_Theine
-        if (player:hasKeyItem(MAP_OF_ABYSSEA_La_Theine) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_La_Theine);
-            player:addKeyItem(MAP_OF_ABYSSEA_La_Theine);
+        if (player:hasKeyItem(MAP_OF_ABYSSEA_LA_THEINE) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_LA_THEINE);
+            player:addKeyItem(MAP_OF_ABYSSEA_LA_THEINE);
             player:delCurrency("cruor", 3500);
         end
     elseif (option == 131075) then -- Ivory Abyssite of Sojourn
