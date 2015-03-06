@@ -2074,10 +2074,10 @@ REPLACE INTO `npc_list` VALUES (17784939,'AF3_Trade_Moogle','Moogle',183,-50.000
 
 REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infustionist','Atma Infusionist',168,545,-500.5,-584,7,'50','50','0','0','0','0','3',0x0000150400000000000000000000000000000000,0,null);
 
-REPLACE INTO `npc_list` VALUES (17821710,'transcendental1','Transcendental Radiance',0,540,-500,-599,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
-REPLACE INTO `npc_list` VALUES (17821711,'transcendental2','Transcendental Radiance',0,-480,0,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
-REPLACE INTO `npc_list` VALUES (17821712,'transcendental3','Transcendental Radiance',195,520,-500,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
-INSERT INTO `npc_list` VALUES (17821713,'transcendental4','Transcendental Radiance',195,-480,-1000,-515,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
+REPLACE INTO `npc_list` VALUES (17821710,'Transcendental_Radiance','Transcendental Radiance',0,540,-500,-599,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
+REPLACE INTO `npc_list` VALUES (17821711,'Transcendental_Radiance','Transcendental Radiance',0,-480,0,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
+REPLACE INTO `npc_list` VALUES (17821712,'Transcendental_Radiance','Transcendental Radiance',195,520,-500,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
+INSERT INTO `npc_list` VALUES (17821713,'Transcendental_Radiance','Transcendental Radiance',195,-480,-1000,-515,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
 
 REPLACE INTO `npc_list` VALUES (17821720,'blank','     ',0,-480,0,480,1,'50','50','0','0','0','2','2051',0x0000340000000000000000000000000000000000,0,null);
 

@@ -2,7 +2,6 @@
 -- Area: Abyssea Empyreal Paradox
 -- NPC: Transcendental Radiance
 -- @zone 255
--- Note: Used to spawn Shinryu
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Empyreal_Paradox/TextIDs"] = nil;
 package.loaded["scripts/globals/bcnm"] = nil;
@@ -14,11 +13,8 @@ require("scripts/globals/missions");
 require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 
 	-- events:
-	-- 7D00 : BC menu
-
-	-- 1/1: The Wyrm God
-	-- 2/3: The Wyrm God
-	-- 3/5: The Wyrm God
+	-- 7D00 : BCNM menu (1/1~1/3: The Wyrm God)
+	-- 7D03 : run away from BCNM
 
 -----------------------------------
 -- onTrade Action

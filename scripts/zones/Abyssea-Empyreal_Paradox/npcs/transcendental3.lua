@@ -8,16 +8,36 @@ package.loaded["scripts/globals/bcnm"] = nil;
 -----------------------------------
 
 require("scripts/globals/bcnm");
+require("scripts/globals/quests");
 require("scripts/globals/missions");
 require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 
+	-- events:
+	-- 7D00 : BCNM menu (1/1~1/3: The Wyrm God)
+	-- 7D03 : run away from BCNM
+
 -----------------------------------
--- onTrigger
+-- onTrade Action
+-----------------------------------
+
+function onTrade(player,npc,trade)
+
+	if(TradeBCNM(player,player:getZoneID(),trade,npc))then
+		return;
+	end
+
+end;
+
+-----------------------------------
+-- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	player:startEvent(0x7d03);
-	return 1;
+
+	if(EventTriggerBCNM(player,npc))then
+	    return;
+	end
+
 end;
 
 -----------------------------------
@@ -25,8 +45,13 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-	printf("onUpdate CSID: %u",csid);
-	printf("onUpdate RESULT: %u",option);
+	-- printf("onUpdate CSID: %u",csid);
+	-- printf("onUpdate RESULT: %u",option);
+
+	if(EventUpdateBCNM(player,csid,option))then
+		return;
+	end
+
 end;
 
 -----------------------------------
@@ -34,19 +59,11 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-	printf("onFinish CSID: %u",csid);
-	printf("onFinish RESULT: %u",option);
+	-- printf("onFinish CSID: %u",csid);
+	-- printf("onFinish RESULT: %u",option);
 
-	local pZone = player:getZoneID();
-
-	if(csid == 0x7d03 and option == 4) then
-		if(player:getVar(tostring(pZone) .. "_Fight") == 100) then
-			player:setVar("BCNM_Killed",0);
-			player:setVar("BCNM_Timer",0);
-		end
-		player:setVar(tostring(pZone) .. "_Runaway",1);
-		player:delStatusEffect(EFFECT_BATTLEFIELD);
-		player:setVar(tostring(pZone) .. "_Runaway",0)
+	if(EventFinishBCNM(player,csid,option))then
+		return;
 	end
 
 end;

@@ -2,10 +2,11 @@
 -- Area: Abyssea Empyreal Paradox
 -- NPC: Transcendental Radiance
 -- @zone 255
+-- Note: Used to spawn Shinryu
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Empyreal_Paradox/TextIDs"] = nil;
 package.loaded["scripts/globals/bcnm"] = nil;
------------------------------------
+-------------------------------------
 
 require("scripts/globals/bcnm");
 require("scripts/globals/quests");
