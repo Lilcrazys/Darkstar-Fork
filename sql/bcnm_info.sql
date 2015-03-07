@@ -296,7 +296,7 @@ INSERT INTO `bcnm_info` VALUES ('1305', '37', 'Central_Temenos_3rd_Floor', null,
 INSERT INTO `bcnm_info` VALUES ('1306', '37', 'Central_Temenos_4th_Floor', null, null, '3600', '0', '18', '0', '7');
 INSERT INTO `bcnm_info` VALUES ('1307', '37', 'Central_Temenos_4th_Floor_II', null, null, '3600', '0', '18', '0', '7');
 
-INSERT INTO `bcnm_info` VALUES ('1308', '255', 'The_Wyrm_God', null, null, '1800', '0', '6', '200', '15');
+INSERT INTO `bcnm_info` VALUES ('1308', '255', 'The_Wyrm_God', null, null, '1800', '0', '18', '200', '15');
 
 
 
