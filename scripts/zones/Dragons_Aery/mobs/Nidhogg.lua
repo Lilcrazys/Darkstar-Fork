@@ -35,7 +35,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
-    mob:setMod(MOD_DRAW_IN,1);
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
 
     -- addMod
     mob:addMod(MOD_MACC,400);
