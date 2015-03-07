@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: dspdb
 -- ------------------------------------------------------
--- Server version	5.6.13-log
+-- Server version   5.6.13-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -556,7 +556,7 @@ INSERT INTO `mob_family_system` VALUES (527,'Carabosse',18,'Unclassified',0,40,9
 INSERT INTO `mob_family_system` VALUES (528,'Mictlantecuhtli',19,'Undead',1,40,111,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,0.75,0.75,0.75,0.75,1.25,0.5,8);
 INSERT INTO `mob_family_system` VALUES (529,'Iratham',3,'Arcana',1,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0);
 INSERT INTO `mob_family_system` VALUES (530,'Lacovie',14,'Lizard',3,30,120,90,2,5,1,6,8,4,3,3,3,3,4,1,1,1,1,1,1.25,1,0.875,1.125,0.875,1,1,4);
-INSERT INTO `mob_family_system` VALUES (531,'Chloris',17,'Plantoid',0,40,107,120,3,3,4,5,4,4,2,4,4,4,3,1,1.25,1,1,1.25,1.25,1.25,1,1.25,1,0.875,1.25,4);
+INSERT INTO `mob_family_system` VALUES (531,'Chloris',17,'Plantoid',1,40,107,120,3,3,4,5,4,4,2,4,4,4,3,1,1.25,1,1,1.25,1.25,1.25,1,1.25,1,0.875,1.25,4);
 INSERT INTO `mob_family_system` VALUES (532,'Amhuluk',8,'Bird',4,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0);
 INSERT INTO `mob_family_system` VALUES (533,'Sobek',14,'Lizard',1,40,115,110,1,2,2,3,4,4,3,3,3,3,3,1,1,1,1,1,1.125,1,1,1,1,1,1,1);
 INSERT INTO `mob_family_system` VALUES (534,'Heqet',7,'Beastmen',0,40,70,140,6,3,6,3,1,5,4,3,3,3,3,1,1,1,1,1,1.125,1,1,1.125,0.5,0.5,1,6);
