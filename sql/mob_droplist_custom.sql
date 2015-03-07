@@ -114,11 +114,11 @@ INSERT INTO `mob_droplist` VALUES (962,0,12090,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1621,0,16192,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1645,0,19397,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1668,0,12095,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3198 and `rate`=100; -- Ferine seal feet from Hrosshvalur 
+DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3198 and `rate`=100; -- Ferine seal feet from Hrosshvalur
 DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3200 and `rate`=100; -- Sylvan seal feet from Hrosshvalur
 DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3204 and `rate`=100; -- Callers seal feet from Hrosshvalur
 DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3205 and `rate`=100; -- Mavi seal feet from Hrosshvalur
-INSERT INTO `mob_droplist` VALUES (1708,0,3198,370); -- Ferine seal feet into Hrosshvalur 
+INSERT INTO `mob_droplist` VALUES (1708,0,3198,370); -- Ferine seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3198,170); -- Ferine seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3200,510); -- Sylvan seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3200,310); -- Sylvan seal feet into Hrosshvalur
@@ -285,15 +285,15 @@ INSERT INTO `mob_droplist` VALUES (4543,0,19255,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,19256,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,11750,1000); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4544,0,21227,230); -- hanqaku-no-yumi
-INSERT INTO `mob_droplist` VALUES (4544,0,20858,180); -- Lightreaver
+INSERT INTO `mob_droplist` VALUES (4544,0,21227,110); -- hanqaku-no-yumi
+INSERT INTO `mob_droplist` VALUES (4544,0,20858,120); -- Lightreaver
 INSERT INTO `mob_droplist` VALUES (4544,0,21364,380); -- Elders Grip
 INSERT INTO `mob_droplist` VALUES (4544,0,28665,100); -- Killedar_Shield_+1
-INSERT INTO `mob_droplist` VALUES (4544,0,20991,240); -- Chidori
-INSERT INTO `mob_droplist` VALUES (4544,0,21284,190); -- Vanir_Gun
+INSERT INTO `mob_droplist` VALUES (4544,0,20991,140); -- Chidori
+INSERT INTO `mob_droplist` VALUES (4544,0,21284,120); -- Vanir_Gun
 INSERT INTO `mob_droplist` VALUES (4544,0,28155,110); -- Scuff._Cosciales
 INSERT INTO `mob_droplist` VALUES (4544,0,28287,100); -- Durgai_Leggings
-INSERT INTO `mob_droplist` VALUES (4544,0,28465,190); -- Pya'ekue Belt +1
+INSERT INTO `mob_droplist` VALUES (4544,0,28465,120); -- Pya'ekue Belt +1
 INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
 INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
 INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
@@ -518,6 +518,6 @@ INSERT INTO `mob_droplist` VALUES (9105,0,21421,360);
 INSERT INTO `mob_droplist` VALUES (9105,0,27781,60);
 INSERT INTO `mob_droplist` VALUES (9105,0,28337,80);
 
--- besieged boss drops 
+-- besieged boss drops
 INSERT INTO `mob_droplist` VALUES (9106,0,3925,10);
 INSERT INTO `mob_droplist` VALUES (9106,0,4023,30);
