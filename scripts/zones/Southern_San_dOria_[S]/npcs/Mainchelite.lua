@@ -15,6 +15,7 @@
 -- 0x00D = "How fares the search, <player>?"
 -- 0x00E = "How fares the search, <player>?"
 -- 0x00F = No Red Recommendation Letter and has no nation affiliation
+-- Todo: medal loss from nation switching. Since there is no rank-up yet, this isn't so important for now.
 -----------------------------------
 package.loaded["scripts/zones/Southern_San_dOria_[S]/TextIDs"] = nil;
 -----------------------------------
@@ -97,14 +98,30 @@ function onEventFinish(player,csid,option)
     elseif (csid == 0x00B and option == 0) then
         player:addQuest(CRYSTAL_WAR, STEAMED_RAMS);
     elseif (csid == 0x00C and option == 0) then
-        player:setVar("Campaign_Nation",1);
-        player:addTitle(KNIGHT_OF_THE_IRON_RAM);
-        player:addKeyItem(BRONZE_RIBBON_OF_SERVICE);
-        player:completeQuest(CRYSTAL_WAR,STEAMED_RAMS);
-        player:delKeyItem(CHARRED_PROPELLER);
-        player:delKeyItem(OXIDIZED_PLATE);
-        player:delKeyItem(PIECE_OF_SHATTERED_LUMBER);
-        player:messageSpecial(KEYITEM_OBTAINED,BRONZE_RIBBON_OF_SERVICE);
+        -- Is first join, so add Sprinter's Shoes and brone medal
+        if (player:getVar("Campaign_Nation") == 0) then
+            if (player:getFreeSlotsCount() >= 1) then
+                player:setVar("Campaign_Nation",1);
+                player:addTitle(KNIGHT_OF_THE_IRON_RAM);
+                player:addKeyItem(BRONZE_RIBBON_OF_SERVICE);
+                player:addItem(15754);
+                player:completeQuest(CRYSTAL_WAR,STEAMED_RAMS);
+                player:delKeyItem(CHARRED_PROPELLER);
+                player:delKeyItem(OXIDIZED_PLATE);
+                player:delKeyItem(PIECE_OF_SHATTERED_LUMBER);
+                player:messageSpecial(KEYITEM_OBTAINED, BRONZE_RIBBON_OF_SERVICE);
+                player:messageSpecial(ITEM_OBTAINED, 15754);
+            else
+                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 15754);
+            end
+        else
+            player:setVar("Campaign_Nation",1);
+            player:addTitle(KNIGHT_OF_THE_IRON_RAM);
+            player:completeQuest(CRYSTAL_WAR,STEAMED_RAMS);
+            player:delKeyItem(CHARRED_PROPELLER);
+            player:delKeyItem(OXIDIZED_PLATE);
+            player:delKeyItem(PIECE_OF_SHATTERED_LUMBER);
+        end
     elseif (csid == 0x00D and option == 1) then
         player:delQuest(CRYSTAL_WAR,STEAMED_RAMS);
     end
