@@ -521,3 +521,674 @@ INSERT INTO `mob_droplist` VALUES (9105,0,28337,80);
 -- besieged boss drops
 INSERT INTO `mob_droplist` VALUES (9106,0,3925,10);
 INSERT INTO `mob_droplist` VALUES (9106,0,4023,30);
+
+-- ------------------ Alkonost ------------------------------
+INSERT INTO `mob_droplist` VALUES (9200,0,11563,181); -- Mesmeric Cape
+INSERT INTO `mob_droplist` VALUES (9200,0,1311,18); -- Oxblood
+INSERT INTO `mob_droplist` VALUES (9200,0,4377,28); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9200,0,1294,24); -- Arachne Thread
+INSERT INTO `mob_droplist` VALUES (9200,0,942,19); -- Philosopher's Stone
+INSERT INTO `mob_droplist` VALUES (9200,0,887,23); -- Coral Fragment
+INSERT INTO `mob_droplist` VALUES (9200,0,823,21); -- Gold Thread
+INSERT INTO `mob_droplist` VALUES (9200,0,830,18); -- Rainbow Cloth
+INSERT INTO `mob_droplist` VALUES (9200,0,1634,25); -- Rhodonite
+INSERT INTO `mob_droplist` VALUES (9200,0,1997,25); -- Sailcloth
+INSERT INTO `mob_droplist` VALUES (9200,0,5152,21); -- Buffalo Meat
+
+-- ------------------ Ashtaerth the Gall ------------------------------
+INSERT INTO `mob_droplist` VALUES (9201,0,11560,222); -- Pedant cape
+INSERT INTO `mob_droplist` VALUES (9201,0,5152,21); -- Buffalo Meat
+INSERT INTO `mob_droplist` VALUES (9201,0,1633,28); -- Clot Plasma
+INSERT INTO `mob_droplist` VALUES (9201,0,830,18); -- Rainbow Cloth
+INSERT INTO `mob_droplist` VALUES (9201,0,1634,25); -- Rhodonite
+
+-- ------------------ Bloodeye Vileberry ------------------------------
+INSERT INTO `mob_droplist` VALUES (9202,0,12921,222); -- Ace's Hose
+INSERT INTO `mob_droplist` VALUES (9202,0,13001,740); -- Augur's Gaiters
+INSERT INTO `mob_droplist` VALUES (9202,0,11516,1000); -- Kanja Hachimaki
+INSERT INTO `mob_droplist` VALUES (9202,0,3211,50); -- Coin of Vision
+INSERT INTO `mob_droplist` VALUES (9202,0,3213,519); -- Card of Vision
+INSERT INTO `mob_droplist` VALUES (9202,0,1119,10); -- Tonberry coat
+INSERT INTO `mob_droplist` VALUES (9202,0,1162,5); -- Tonberry lantern
+INSERT INTO `mob_droplist` VALUES (9202,0,646,15); -- Chunk of adaman ore
+INSERT INTO `mob_droplist` VALUES (9202,0,836,15); -- Square of damascene cloth
+INSERT INTO `mob_droplist` VALUES (9202,0,739,8); -- Chunk of orichalcum ore
+
+-- ------------------ Bombadeel ------------------------------
+INSERT INTO `mob_droplist` VALUES (9203,0,11740,200); -- Thiazi's Belt
+INSERT INTO `mob_droplist` VALUES (9203,0,1133,28); -- Dragon Blood
+INSERT INTO `mob_droplist` VALUES (9203,0,830,46); -- Rainbow Cloth
+INSERT INTO `mob_droplist` VALUES (9203,0,887,37); -- Coral Fragment
+INSERT INTO `mob_droplist` VALUES (9203,0,942,19); -- Philosopher's Stone
+INSERT INTO `mob_droplist` VALUES (9203,0,1740,18); -- Iolite
+
+-- ------------------ Clingy Clare ------------------------------
+INSERT INTO `mob_droplist` VALUES (9204,0,11561,315); -- Salvus Mantle
+INSERT INTO `mob_droplist` VALUES (9204,0,4272,13); -- Dragon Meat
+INSERT INTO `mob_droplist` VALUES (9204,0,942,18); -- Philosopher's Stone
+INSERT INTO `mob_droplist` VALUES (9204,0,1633,27); -- Handful of clot plasma
+INSERT INTO `mob_droplist` VALUES (9204,0,887,27); -- Coral fragment
+INSERT INTO `mob_droplist` VALUES (9204,0,1311,29); -- Piece of oxblood
+INSERT INTO `mob_droplist` VALUES (9204,0,1634,40); -- Rhodonite
+
+-- ------------------ Guimauve ------------------------------
+INSERT INTO `mob_droplist` VALUES (9205,0,11416,300); -- Clout Boots
+INSERT INTO `mob_droplist` VALUES (9205,0,19247,83); -- Savant's Treatise
+INSERT INTO `mob_droplist` VALUES (9205,0,1259,9); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (9205,0,887,28); -- Coral Fragment
+INSERT INTO `mob_droplist` VALUES (9205,0,1294,21); -- Arachne Thread
+INSERT INTO `mob_droplist` VALUES (9205,1634,24); -- Rhodonite
+INSERT INTO `mob_droplist` VALUES (9205,0,830,24); -- Rainbow Cloth
+INSERT INTO `mob_droplist` VALUES (9205,0,1311,29); -- Piece of oxblood
+
+-- ------------------ Keratyrannos ------------------------------
+INSERT INTO `mob_droplist` VALUES (9206,0,11643,237); -- Odium Ring
+INSERT INTO `mob_droplist` VALUES (9206,0,830,14); -- Rainbow Cloth
+INSERT INTO `mob_droplist` VALUES (9206,0,645,2); -- Darksteel Ore
+INSERT INTO `mob_droplist` VALUES (9206,0,1311,24); -- Piece of oxblood
+INSERT INTO `mob_droplist` VALUES (9206,0,1997,30); -- Sailcloth
+INSERT INTO `mob_droplist` VALUES (9206,0,1829,17); -- Red Grass Cloth
+INSERT INTO `mob_droplist` VALUES (9206,0,1740,14); -- Iolite
+INSERT INTO `mob_droplist` VALUES (9206,0,739,7); -- Orichalcum Ore
+INSERT INTO `mob_droplist` VALUES (9206,0,1262,0); -- Dark Ore
+INSERT INTO `mob_droplist` VALUES (9206,0,1634,19); -- Rhodonite
+INSERT INTO `mob_droplist` VALUES (9206,0,1133,4); -- Dragon Blood
+
+-- ------------------ Pavan - note only temp items drop ------------------------------
+INSERT INTO `mob_droplist` VALUES (9207,0,5831,50); -- Lucid Elixir II-temp item
+INSERT INTO `mob_droplist` VALUES (9207,0,5846,50); -- Fool's Tonic-temp item
+INSERT INTO `mob_droplist` VALUES (9207,0,5439,50); -- Vicar's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9207,0,5844,50); -- Champion's Gambir-temp item
+INSERT INTO `mob_droplist` VALUES (9207,0,5845,50); -- Fanatic's Tonic-temp item
+
+-- ------------------ Sarcophilus ------------------------------
+INSERT INTO `mob_droplist` VALUES (9208,0,11526,176); -- Bersail Cap
+INSERT INTO `mob_droplist` VALUES (9208,0,4272,39); -- Dragon Meat
+INSERT INTO `mob_droplist` VALUES (9208,0,645,15); -- Darksteel Ore
+INSERT INTO `mob_droplist` VALUES (9208,0,1623,20); -- Eft Skin
+INSERT INTO `mob_droplist` VALUES (9208,0,1741,8); -- High-Quality Eft Skin
+INSERT INTO `mob_droplist` VALUES (9208,0,1255,15); -- Fire Ore
+INSERT INTO `mob_droplist` VALUES (9208,0,1829,25); -- Red Grass Cloth
+INSERT INTO `mob_droplist` VALUES (9208,0,942,45); -- Philosopher's Stone
+
+-- ------------------ Siranpa Kamuy ------------------------------
+INSERT INTO `mob_droplist` VALUES (9209,0,11639,129); -- Blason Ring
+INSERT INTO `mob_droplist` VALUES (9209,0,4377,28); -- Coeurl Meat
+
+-- ------------------ Ironclad Sunderer ------------------------------
+INSERT INTO `mob_droplist` VALUES (9210,0,19732,147); -- Miramar Gun
+INSERT INTO `mob_droplist` VALUES (9210,0,3148,75); -- Charis Seal: Body DNC
+INSERT INTO `mob_droplist` VALUES (9210,0,3148,76); -- Charis Seal: Body DNC
+INSERT INTO `mob_droplist` VALUES (9210,0,3148,77); -- Charis Seal: Body DNC
+INSERT INTO `mob_droplist` VALUES (9210,0,3136,131); -- Creed Seal: Body PLD
+INSERT INTO `mob_droplist` VALUES (9210,0,3136,132); -- Creed Seal: Body PLD
+INSERT INTO `mob_droplist` VALUES (9210,0,3136,133); -- Creed Seal: Body PLD
+INSERT INTO `mob_droplist` VALUES (9210,0,3138,67); -- Ferine Seal: Body BST
+INSERT INTO `mob_droplist` VALUES (9210,0,3138,69); -- Ferine Seal: Body BST
+INSERT INTO `mob_droplist` VALUES (9210,0,3138,68); -- Ferine Seal: Body BST
+INSERT INTO `mob_droplist` VALUES (9210,0,3140,141); -- Sylvan Seal: Body RNG
+INSERT INTO `mob_droplist` VALUES (9210,0,3140,142); -- Sylvan Seal: Body RNG
+INSERT INTO `mob_droplist` VALUES (9210,0,3293,210); -- Iron Plate
+INSERT INTO `mob_droplist` VALUES (9210,0,3293,900); -- Iron Plate
+
+-- ------------------ Lorelei ------------------------------
+INSERT INTO `mob_droplist` VALUES (9211,0,11702,224); -- Centaurus Earring
+INSERT INTO `mob_droplist` VALUES (9211,0,3263,257); -- Naiad's Lock
+INSERT INTO `mob_droplist` VALUES (9211,0,3162,171); -- Iga Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3162,172); -- Iga Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3166,185); -- Navarch's Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3166,186); -- Navarch's Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3151,328); -- Tantra Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3151,329); -- Tantra Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3156,228); -- Creed Seal: Hands
+INSERT INTO `mob_droplist` VALUES (9211,0,3156,229); -- Creed Seal: Hands
+
+-- ------------------ Teugghia ------------------------------
+INSERT INTO `mob_droplist` VALUES (9212,0,11907,211); -- Torrid Gages
+INSERT INTO `mob_droplist` VALUES (9212,0,3143,55); -- Lancer's Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3143,56); -- Lancer's Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3143,57); -- Lancer's Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3133,81); -- Goetia Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3133,82); -- Goetia Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3133,83); -- Goetia Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3133,84); -- Goetia Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3142,55); -- Iga Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3142,56); -- Iga Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3142,57); -- Iga Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3137,83); -- Bale Seal: Body
+INSERT INTO `mob_droplist` VALUES (9212,0,3137,84); -- Bale Seal: Body
+
+-- ------------------ Fulmotondro - note only temp items drop ------------------------------
+INSERT INTO `mob_droplist` VALUES (9213,0,5831,50); -- Lucid Elixir II-temp item
+INSERT INTO `mob_droplist` VALUES (9213,0,5846,50); -- Fool's Tonic-temp item
+INSERT INTO `mob_droplist` VALUES (9213,0,5439,50); -- Vicar's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9213,0,5844,50); -- Champion's Gambir-temp item
+INSERT INTO `mob_droplist` VALUES (9213,0,5845,50); -- Fanatic's Tonic-temp item
+
+-- ------------------ Gnawtooth Gary ------------------------------
+INSERT INTO `mob_droplist` VALUES (9214,0,0,65); -- Clarus Stone
+INSERT INTO `mob_droplist` VALUES (9214,0,0,21); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,0,22); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,0,222); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,0,122); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,0,62); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,0,63); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,0,64); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,0,65); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,0,63); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,0,64); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,0,65); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,0,66); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,0,70); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,0,71); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,0,73); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,0,72); -- Aoidos' Seal: Feet BRD
+
+-- ------------------ Iku-Turso ------------------------------
+INSERT INTO `mob_droplist` VALUES (9215,0,19057,112); -- Caecus Grip
+INSERT INTO `mob_droplist` VALUES (9215,0,3191,125); -- Tantra Seal: Feet MNK
+INSERT INTO `mob_droplist` VALUES (9215,0,3191,126); -- Tantra Seal: Feet MNK
+INSERT INTO `mob_droplist` VALUES (9215,0,3191,127); -- Tantra Seal: Feet MNK
+INSERT INTO `mob_droplist` VALUES (9215,0,3191,128); -- Tantra Seal: Feet MNK
+INSERT INTO `mob_droplist` VALUES (9215,0,3202,133); -- Iga Seal: Feet NIN
+INSERT INTO `mob_droplist` VALUES (9215,0,3202,134); -- Iga Seal: Feet NIN
+INSERT INTO `mob_droplist` VALUES (9215,0,3202,132); -- Iga Seal: Feet NIN
+INSERT INTO `mob_droplist` VALUES (9215,0,3195,79); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9215,0,3195,78); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9215,0,3195,77); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9215,0,3208,76); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9215,0,3208,85); -- Charis Seal: Feet DNC
+INSERT INTO `mob_droplist` VALUES (9215,0,3208,86); -- Charis Seal: Feet DNC
+INSERT INTO `mob_droplist` VALUES (9215,0,3208,87); -- Charis Seal: Feet DNC
+
+-- ------------------ Kadraeth the Hatespawn ------------------------------
+INSERT INTO `mob_droplist` VALUES (9216,0,0,91); -- Qirmiz Tathlum
+INSERT INTO `mob_droplist` VALUES (9216,0,0,231); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9216,0,0,149); -- Creed Seal: Feet PLD
+INSERT INTO `mob_droplist` VALUES (9216,0,0,148); -- Creed Seal: Feet PLD
+INSERT INTO `mob_droplist` VALUES (9216,0,0,220); -- Mavi Seal: Feet BLU
+INSERT INTO `mob_droplist` VALUES (9216,0,0,237); -- Sylvan Seal: Feet RNG
+
+-- ------------------ Karkadann ------------------------------
+INSERT INTO `mob_droplist` VALUES (9217,0,11615,1000); -- Orison Locket
+INSERT INTO `mob_droplist` VALUES (9217,0,16207,1000); -- Iga Dochugappa
+INSERT INTO `mob_droplist` VALUES (9217,0,11935,205); -- Ambusher's Hose
+INSERT INTO `mob_droplist` VALUES (9217,0,3217,436); -- Card of Ardor
+INSERT INTO `mob_droplist` VALUES (9217,0,3221,513); -- Card of Wieldance
+INSERT INTO `mob_droplist` VALUES (9217,0,729,77); -- Bloodwood log
+INSERT INTO `mob_droplist` VALUES (9217,0,1301,26); -- Wind bead
+INSERT INTO `mob_droplist` VALUES (9217,0,4448,26); -- Puffball
+INSERT INTO `mob_droplist` VALUES (9217,0,1299,26); -- Fire bead
+
+-- ------------------ Khalkotaur ------------------------------
+INSERT INTO `mob_droplist` VALUES (9218,0,3197,90); -- Bale Seal: Feet DRK
+INSERT INTO `mob_droplist` VALUES (9218,0,3197,91); -- Bale Seal: Feet DRK
+INSERT INTO `mob_droplist` VALUES (9218,0,3197,89); -- Bale Seal: Feet DRK
+INSERT INTO `mob_droplist` VALUES (9218,0,3203,208); -- Lancer's Seal: Feet DRG
+INSERT INTO `mob_droplist` VALUES (9218,0,3190,331); -- Ravager's Seal: Feet WAR
+INSERT INTO `mob_droplist` VALUES (9218,0,3201,112); -- Unkai Seal: Feet SAM
+INSERT INTO `mob_droplist` VALUES (9218,0,3201,111); -- Unkai Seal: Feet SAM
+INSERT INTO `mob_droplist` VALUES (9218,0,19058,154); -- Vox Grip
+
+-- ------------------ Quasimodo ------------------------------
+INSERT INTO `mob_droplist` VALUES (9219,0,18968,78); -- Bounty Sickle
+INSERT INTO `mob_droplist` VALUES (9219,0,3193,75); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9219,0,3193,76); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9219,0,3193,77); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9219,0,3193,78); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9219,0,3194,90); -- Estoqueur's Seal: Feet RDM
+INSERT INTO `mob_droplist` VALUES (9219,0,3194,93); -- Estoqueur's Seal: Feet RDM
+INSERT INTO `mob_droplist` VALUES (9219,0,3194,91); -- Estoqueur's Seal: Feet RDM
+INSERT INTO `mob_droplist` VALUES (9219,0,3194,92); -- Estoqueur's Seal: Feet RDM
+INSERT INTO `mob_droplist` VALUES (9219,0,3192,79); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9219,0,3192,78); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9219,0,3192,80); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9219,0,3192,81); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9219,0,3209,69); -- Savant's Seal: Feet SCH
+INSERT INTO `mob_droplist` VALUES (9219,0,3209,68); -- Savant's Seal: Feet SCH
+INSERT INTO `mob_droplist` VALUES (9219,0,3209,67); -- Savant's Seal: Feet SCH
+INSERT INTO `mob_droplist` VALUES (9219,0,3209,66); -- Savant's Seal: Feet SCH
+
+-- ------------------ Rakshas ------------------------------
+INSERT INTO `mob_droplist` VALUES (9220,0,19316,316); -- Fetter Lance
+INSERT INTO `mob_droplist` VALUES (9220,0,4377,20); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9220,0,4447,19); -- Scream Fungus
+INSERT INTO `mob_droplist` VALUES (9220,0,2315,31); -- Karakul Wool
+INSERT INTO `mob_droplist` VALUES (9220,0,942,51); -- Philosopher's Stone
+
+-- ------------------ Seps ------------------------------
+INSERT INTO `mob_droplist` VALUES (9221,0,17856,298); -- Syrinx
+INSERT INTO `mob_droplist` VALUES (9221,0,3194,94); -- Estoqueur's Seal: Feet (RDM)
+INSERT INTO `mob_droplist` VALUES (9221,0,3194,93); -- Estoqueur's Seal: Feet (RDM)
+INSERT INTO `mob_droplist` VALUES (9221,0,3194,95); -- Estoqueur's Seal: Feet (RDM)
+INSERT INTO `mob_droplist` VALUES (9221,0,3194,94); -- Estoqueur's Seal: Feet (RDM)
+INSERT INTO `mob_droplist` VALUES (9221,0,3209,93); -- Savant's Seal: Feet (SCH)
+INSERT INTO `mob_droplist` VALUES (9221,0,3209,94); -- Savant's Seal: Feet (SCH)
+INSERT INTO `mob_droplist` VALUES (9221,0,3209,95); -- Savant's Seal: Feet (SCH)
+INSERT INTO `mob_droplist` VALUES (9221,0,3198,73); -- Ferine Seal: Feet (BST)
+INSERT INTO `mob_droplist` VALUES (9221,0,3198,74); -- Ferine Seal: Feet (BST)
+INSERT INTO `mob_droplist` VALUES (9221,0,3198,75); -- Ferine Seal: Feet (BST)
+INSERT INTO `mob_droplist` VALUES (9221,0,3198,76); -- Ferine Seal: Feet (BST)
+INSERT INTO `mob_droplist` VALUES (9221,0,3200,128); -- Sylvan Seal: Feet (RNG)
+INSERT INTO `mob_droplist` VALUES (9221,0,3200,127); -- Sylvan Seal: Feet (RNG)
+INSERT INTO `mob_droplist` VALUES (9221,0,3200,129); -- Sylvan Seal: Feet (RNG)
+
+-- ------------------ Xan ------------------------------
+INSERT INTO `mob_droplist` VALUES (9222,0,11753,353); -- Emphatikos Rope
+INSERT INTO `mob_droplist` VALUES (9222,0,4377,39); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9222,0,4272,20); -- Dragon Meat
+INSERT INTO `mob_droplist` VALUES (9222,0,2315,98); -- Karakul Wool
+INSERT INTO `mob_droplist` VALUES (9222,0,4387,20); -- Wild Onion
+
+-- ------------------ Armillaria ------------------------------
+INSERT INTO `mob_droplist` VALUES (9223,0,18803,235); -- Pax Grip
+INSERT INTO `mob_droplist` VALUES (9223,0,3203,109); -- Lancer's Seal: Feet DRG
+INSERT INTO `mob_droplist` VALUES (9223,0,3203,118); -- Lancer's Seal: Feet DRG
+INSERT INTO `mob_droplist` VALUES (9223,0,3203,112); -- Lancer's Seal: Feet DRG
+INSERT INTO `mob_droplist` VALUES (9223,0,3203,111); -- Lancer's Seal: Feet DRG
+INSERT INTO `mob_droplist` VALUES (9223,0,3190,114); -- Ravager's Seal: Feet WAR
+INSERT INTO `mob_droplist` VALUES (9223,0,3190,115); -- Ravager's Seal: Feet WAR
+INSERT INTO `mob_droplist` VALUES (9223,0,3190,121); -- Ravager's Seal: Feet WAR
+INSERT INTO `mob_droplist` VALUES (9223,0,3190,120); -- Ravager's Seal: Feet WAR
+INSERT INTO `mob_droplist` VALUES (9223,0,3195,117); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9223,0,3195,118); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9223,0,3195,119); -- Raider's Seal: Feet THF
+INSERT INTO `mob_droplist` VALUES (9223,0,3208,75); -- Charis Seal: Feet DNC
+INSERT INTO `mob_droplist` VALUES (9223,0,3208,76); -- Charis Seal: Feet DNC
+INSERT INTO `mob_droplist` VALUES (9223,0,3208,77); -- Charis Seal: Feet DNC
+INSERT INTO `mob_droplist` VALUES (9223,0,3208,78); -- Charis Seal: Feet DNC
+
+-- ------------------ Chhir Batti ------------------------------
+INSERT INTO `mob_droplist` VALUES (9224,0,19054,93); -- Fulcio Grip
+INSERT INTO `mob_droplist` VALUES (9224,0,3197,96); -- Bale Seal: Feet DRK
+INSERT INTO `mob_droplist` VALUES (9224,0,3197,97); -- Bale Seal: Feet DRK
+INSERT INTO `mob_droplist` VALUES (9224,0,3197,98); -- Bale Seal: Feet DRK
+INSERT INTO `mob_droplist` VALUES (9224,0,3201,87); -- Unkai Seal: Feet SAM
+INSERT INTO `mob_droplist` VALUES (9224,0,3201,88); -- Unkai Seal: Feet SAM
+INSERT INTO `mob_droplist` VALUES (9224,0,3201,89); -- Unkai Seal: Feet SAM
+INSERT INTO `mob_droplist` VALUES (9224,0,3192,82); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9224,0,3192,85); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9224,0,3192,86); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9224,0,3192,84); -- Orison Seal: Feet WHM
+INSERT INTO `mob_droplist` VALUES (9224,0,3205,60); -- Mavi Seal: Feet BLU
+INSERT INTO `mob_droplist` VALUES (9224,0,3205,62); -- Mavi Seal: Feet BLU
+INSERT INTO `mob_droplist` VALUES (9224,0,3205,63); -- Mavi Seal: Feet BLU
+INSERT INTO `mob_droplist` VALUES (9224,0,3205,64); -- Mavi Seal: Feet BLU
+
+-- ------------------ Div-e Sepid ------------------------------
+INSERT INTO `mob_droplist` VALUES (9225,0,11434,61); -- Sapientia Sabots
+INSERT INTO `mob_droplist` VALUES (9225,0,3208,100); -- Charis Seal: Feet (DNC)
+INSERT INTO `mob_droplist` VALUES (9225,0,3208,102); -- Charis Seal: Feet (DNC)
+INSERT INTO `mob_droplist` VALUES (9225,0,3208,101); -- Charis Seal: Feet (DNC)
+INSERT INTO `mob_droplist` VALUES (9225,0,3208,99); -- Charis Seal: Feet (DNC)
+INSERT INTO `mob_droplist` VALUES (9225,0,3190,85); -- Ravager's Seal: Feet (WAR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3190,88); -- Ravager's Seal: Feet (WAR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3190,89); -- Ravager's Seal: Feet (WAR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3190,87); -- Ravager's Seal: Feet (WAR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3190,86); -- Ravager's Seal: Feet (WAR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3192,99); -- Orison Seal: Feet (WHM)
+INSERT INTO `mob_droplist` VALUES (9225,0,3192,98); -- Orison Seal: Feet (WHM)
+INSERT INTO `mob_droplist` VALUES (9225,0,3192,97); -- Orison Seal: Feet (WHM)
+INSERT INTO `mob_droplist` VALUES (9225,0,3192,96); -- Orison Seal: Feet (WHM)
+INSERT INTO `mob_droplist` VALUES (9225,0,3206,116); -- Navarch's Seal: Feet (COR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3206,117); -- Navarch's Seal: Feet (COR)
+INSERT INTO `mob_droplist` VALUES (9225,0,3206,118); -- Navarch's Seal: Feet (COR)
+
+-- ------------------ Durinn ------------------------------
+INSERT INTO `mob_droplist` VALUES (9226,0,11431,1000); -- Ballerines
+INSERT INTO `mob_droplist` VALUES (9226,0,18966,114); -- Crisis Scythe
+INSERT INTO `mob_droplist` VALUES (9226,0,3228,800); -- Jewel of Voyage
+INSERT INTO `mob_droplist` VALUES (9226,0,3228,650); -- Jewel of Voyage
+INSERT INTO `mob_droplist` VALUES (9226,0,3228,350); -- Jewel of Voyage
+INSERT INTO `mob_droplist` VALUES (9226,0,3226,550); -- Stone of Voyage
+INSERT INTO `mob_droplist` VALUES (9226,0,3220,550); -- Jewel of Wieldance
+INSERT INTO `mob_droplist` VALUES (9226,0,3221,260); -- Card of Wieldance
+INSERT INTO `mob_droplist` VALUES (9226,0,5564,8); -- Hydra Meat
+INSERT INTO `mob_droplist` VALUES (9226,0,2703,2); -- Khromated Leather
+INSERT INTO `mob_droplist` VALUES (9226,0,729,2); -- Bloodwood Log
+INSERT INTO `mob_droplist` VALUES (9226,0,722,2); -- Divine Lumber
+INSERT INTO `mob_droplist` VALUES (9226,0,1306,1); -- Dark Bead
+INSERT INTO `mob_droplist` VALUES (9226,0,1302,1); -- Earth Bead
+INSERT INTO `mob_droplist` VALUES (9226,0,1300,1); -- Ice Bead
+INSERT INTO `mob_droplist` VALUES (9226,0,1303,1); -- Lightning Bead
+INSERT INTO `mob_droplist` VALUES (9226,0,1304,1); -- Water Bead
+INSERT INTO `mob_droplist` VALUES (9226,0,1301,1); -- Wind Bead
+
+-- ------------------ Dvalinn ------------------------------
+INSERT INTO `mob_droplist` VALUES (9227,0,11649,117); -- Solemn Ring
+INSERT INTO `mob_droplist` VALUES (9227,0,3206,86); -- Navarch's Seal: Feet COR
+INSERT INTO `mob_droplist` VALUES (9227,0,3206,87); -- Navarch's Seal: Feet COR
+INSERT INTO `mob_droplist` VALUES (9227,0,3206,88); -- Navarch's Seal: Feet COR
+INSERT INTO `mob_droplist` VALUES (9227,0,3198,102); -- Ferine Seal: Feet BST
+INSERT INTO `mob_droplist` VALUES (9227,0,3198,101); -- Ferine Seal: Feet BST
+INSERT INTO `mob_droplist` VALUES (9227,0,3198,103); -- Ferine Seal: Feet BST
+INSERT INTO `mob_droplist` VALUES (9227,0,3207,134); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9227,0,3207,135); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9227,0,3204,108); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9227,0,3204,109); -- Caller's Seal: Feet SMN
+
+-- ------------------ abyssic cluster ------------------------------
+INSERT INTO `mob_droplist` VALUES (9228,0,11621,314); -- Chrysopoeia Torque
+INSERT INTO `mob_droplist` VALUES (9228,0,18778,111); -- Marotte Claws
+INSERT INTO `mob_droplist` VALUES (9228,0,4377,41); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9228,0,887,41); -- Coral Fragment
+INSERT INTO `mob_droplist` VALUES (9228,0,722,22); -- Divine Log
+INSERT INTO `mob_droplist` VALUES (9228,0,902,11); -- Demon Horn
+INSERT INTO `mob_droplist` VALUES (9228,0,4272,18); -- Dragon Meat
+INSERT INTO `mob_droplist` VALUES (9228,0,2315,30); -- Karakul Wool
+INSERT INTO `mob_droplist` VALUES (9228,0,2152,15); -- Marid Leather
+INSERT INTO `mob_droplist` VALUES (9228,0,4387,41); -- Wild Onion
+INSERT INTO `mob_droplist` VALUES (9228,0,2428,11); -- Wivre Hide
+INSERT INTO `mob_droplist` VALUES (9228,0,885,26); -- Turtle Shell
+
+-- ------------------ avalerion ------------------------------
+INSERT INTO `mob_droplist` VALUES (9229,0,11648,261); -- Spiral Ring
+INSERT INTO `mob_droplist` VALUES (9229,0,3183,115); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9229,0,3183,117); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9229,0,3183,118); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9229,0,3183,116); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9229,0,3179,82); -- Aoidos' Seal: Legs BRD
+INSERT INTO `mob_droplist` VALUES (9229,0,3179,83); -- Aoidos' Seal: Legs BRD
+INSERT INTO `mob_droplist` VALUES (9229,0,3179,84); -- Aoidos' Seal: Legs BRD
+INSERT INTO `mob_droplist` VALUES (9229,0,3179,85); -- Aoidos' Seal: Legs BRD
+INSERT INTO `mob_droplist` VALUES (9229,0,3189,102); -- Savant's Seal: Legs SCH
+INSERT INTO `mob_droplist` VALUES (9229,0,3189,103); -- Savant's Seal: Legs SCH
+INSERT INTO `mob_droplist` VALUES (9229,0,3189,104); -- Savant's Seal: Legs SCH
+INSERT INTO `mob_droplist` VALUES (9229,0,3171,59); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9229,0,3171,57); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9229,0,3171,60); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9229,0,3171,61); -- Tantra Seal: Legs MNK
+
+-- ------------------ cep-kamuy ------------------------------
+INSERT INTO `mob_droplist` VALUES (9230,0,11696,140); -- Kemas Earring
+INSERT INTO `mob_droplist` VALUES (9230,0,3172,116); -- Orison Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3172,119); -- Orison Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3172,118); -- Orison Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3172,117); -- Orison Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3181,123); -- Unkai Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3181,122); -- Unkai Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3181,120); -- Unkai Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3181,121); -- Unkai Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3177,112); -- Bale Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3177,111); -- Bale Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3177,110); -- Bale Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3185,96); -- Mavi Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3185,95); -- Mavi Seal: Legs
+INSERT INTO `mob_droplist` VALUES (9230,0,3185,94); -- Mavi Seal: Legs
+
+-- ------------------ flame skimmer ------------------------------
+INSERT INTO `mob_droplist` VALUES (9231,0,19313,375); -- Magnus Lance
+INSERT INTO `mob_droplist` VALUES (9231,0,3184,94); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9231,0,3184,93); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9231,0,3184,91); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9231,0,3184,92); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9231,0,3187,96); -- Cirque Seal: Legs PUP
+INSERT INTO `mob_droplist` VALUES (9231,0,3187,97); -- Cirque Seal: Legs PUP
+INSERT INTO `mob_droplist` VALUES (9231,0,3187,98); -- Cirque Seal: Legs PUP
+INSERT INTO `mob_droplist` VALUES (9231,0,3187,99); -- Cirque Seal: Legs PUP
+INSERT INTO `mob_droplist` VALUES (9231,0,3178,147); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9231,0,3178,137); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9231,0,3178,127); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9231,0,3178,107); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9231,0,3178,117); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9231,0,3186,86); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9231,0,3186,87); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9231,0,3186,88); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9231,0,3186,89); -- Navarch's Seal: Legs COR
+
+-- ------------------ ironclad observer ------------------------------
+INSERT INTO `mob_droplist` VALUES (9232,0,19314,261); -- Quint Spear
+INSERT INTO `mob_droplist` VALUES (9232,0,887,45); -- Coral Fragment
+INSERT INTO `mob_droplist` VALUES (9232,0,722,1); -- Divine Log
+INSERT INTO `mob_droplist` VALUES (9232,0,1447,1); -- Lacquer Tree Lumber
+INSERT INTO `mob_droplist` VALUES (9232,0,2152,27); -- Marid Leather
+INSERT INTO `mob_droplist` VALUES (9232,0,1311,1); -- Oxblood
+INSERT INTO `mob_droplist` VALUES (9232,0,4387,81); -- Wild Onion
+INSERT INTO `mob_droplist` VALUES (9232,0,4377,54); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9232,0,5455,1); -- Ahtapot
+
+-- ------------------ ironclad pulverizer ------------------------------
+INSERT INTO `mob_droplist` VALUES (9233,0,16206,933); -- Unkai Sugemino
+INSERT INTO `mob_droplist` VALUES (9233,0,11620,1000); -- Savant's Chain
+INSERT INTO `mob_droplist` VALUES (9233,0,11936,67); -- Bustle Dirs
+INSERT INTO `mob_droplist` VALUES (9233,0,3215,333); -- Coin of Ardor
+INSERT INTO `mob_droplist` VALUES (9233,0,3219,533); -- Coin of Wieldance
+INSERT INTO `mob_droplist` VALUES (9233,0,655,1); -- Adaman Ingot
+INSERT INTO `mob_droplist` VALUES (9233,0,729,1); -- Bloodwood Log
+INSERT INTO `mob_droplist` VALUES (9233,0,4377,1); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9233,0,902,1); -- Demon Horn
+INSERT INTO `mob_droplist` VALUES (9233,0,5564,67); -- Hydra Meat
+INSERT INTO `mob_droplist` VALUES (9233,0,2703,67); -- Khromated Leather
+INSERT INTO `mob_droplist` VALUES (9233,0,1447,1); -- Lacquer Tree Lumber
+INSERT INTO `mob_droplist` VALUES (9233,0,1303,1); -- Lightning Bead
+INSERT INTO `mob_droplist` VALUES (9233,0,2152,1); -- Marid Leather
+INSERT INTO `mob_droplist` VALUES (9233,0,1711,1); -- Molybdenum Ingot
+INSERT INTO `mob_droplist` VALUES (9233,0,1313,1); -- Siren's Hair
+INSERT INTO `mob_droplist` VALUES (9233,0,885,1); -- Turtle Shell
+
+-- ------------------ ironclad severer ------------------------------
+INSERT INTO `mob_droplist` VALUES (9234,0,11360,69); -- Taranis's Harness
+INSERT INTO `mob_droplist` VALUES (9234,0,11619,746); -- Caller's Pendant
+INSERT INTO `mob_droplist` VALUES (9234,0,11751,899); -- Cirque Sash
+INSERT INTO `mob_droplist` VALUES (9234,0,16203,788); -- Goetia Mantle
+INSERT INTO `mob_droplist` VALUES (9234,0,655,32); -- Adaman Ingot
+INSERT INTO `mob_droplist` VALUES (9234,0,1312,17); -- Angel Skin
+INSERT INTO `mob_droplist` VALUES (9234,0,729,17); -- Bloodwood Log
+INSERT INTO `mob_droplist` VALUES (9234,0,836,33); -- Damascene Cloth
+INSERT INTO `mob_droplist` VALUES (9234,0,902,17); -- Demon Horn
+INSERT INTO `mob_droplist` VALUES (9234,0,722,50); -- Divine Log
+INSERT INTO `mob_droplist` VALUES (9234,0,723,17); -- Divine Lumber
+INSERT INTO `mob_droplist` VALUES (9234,0,1306,17); -- Dark Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,1305,17); -- Light Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,1302,17); -- Earth Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,5564,50); -- Hydra Meat
+INSERT INTO `mob_droplist` VALUES (9234,0,1300,17); -- Ice Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,1299,17); -- Fire Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,1304,17); -- Water Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,1301,17); -- Wind Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,1469,17); -- Wootz Ore
+INSERT INTO `mob_droplist` VALUES (9234,0,4387,17); -- Wild Onion
+INSERT INTO `mob_droplist` VALUES (9234,0,1303,17); -- Lightning Bead
+INSERT INTO `mob_droplist` VALUES (9234,0,3216,611); -- Jewel of Ardor
+INSERT INTO `mob_droplist` VALUES (9234,0,3220,556); -- Jewel of Wieldance
+
+-- ------------------ jala - note only temp items drop  ------------------------------
+INSERT INTO `mob_droplist` VALUES (9235,0,5831,15); -- Lucid Elixir II-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5440,15); -- Dusty Wing-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5836,15); -- Healing Salve II-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5851,15); -- Berserker's Tonic-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5834,15); -- Lucid Wings I-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5395,15); -- Cleric's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5397,15); -- Sprinter's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5435,15); -- Fool's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5826,15); -- Lucid Potion III-temp item
+INSERT INTO `mob_droplist` VALUES (9235,0,5829,15); -- Lucid Ether III-temp item
+
+-- ------------------ karkatakam ------------------------------
+INSERT INTO `mob_droplist` VALUES (9236,0,16210,536); -- Ebullient Cape
+INSERT INTO `mob_droplist` VALUES (9236,0,2315,33); -- Karakul Wool
+INSERT INTO `mob_droplist` VALUES (9236,0,887,36); -- Coral Fragment
+INSERT INTO `mob_droplist` VALUES (9236,0,793,36); -- Black Pearl
+INSERT INTO `mob_droplist` VALUES (9236,0,902,36); -- Demon Horn
+INSERT INTO `mob_droplist` VALUES (9236,0,1311,36); -- Oxblood
+INSERT INTO `mob_droplist` VALUES (9236,0,719,36); -- Ebony Lumber
+INSERT INTO `mob_droplist` VALUES (9236,0,885,1); -- Turtle Shell
+INSERT INTO `mob_droplist` VALUES (9236,0,722,36); -- Divine Log
+INSERT INTO `mob_droplist` VALUES (9236,0,2152,1); -- Marid Leather
+INSERT INTO `mob_droplist` VALUES (9236,0,4387,39); -- Wild Onion
+
+-- ------------------ manohra ------------------------------
+INSERT INTO `mob_droplist` VALUES (9237,0,11694,123); -- Bloodgem Earring
+INSERT INTO `mob_droplist` VALUES (9237,0,3170,80); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9237,0,3170,83); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9237,0,3170,82); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9237,0,3170,81); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9237,0,3175,147); -- Raider's Seal: Legs THF
+INSERT INTO `mob_droplist` VALUES (9237,0,3175,145); -- Raider's Seal: Legs THF
+INSERT INTO `mob_droplist` VALUES (9237,0,3175,146); -- Raider's Seal: Legs THF
+INSERT INTO `mob_droplist` VALUES (9237,0,3188,89); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9237,0,3188,86); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9237,0,3188,87); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9237,0,3188,88); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9237,0,3183,89); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9237,0,3183,86); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9237,0,3183,87); -- Lancer's Seal: Legs DRG
+INSERT INTO `mob_droplist` VALUES (9237,0,3183,88); -- Lancer's Seal: Legs DRG
+
+-- ------------------ minax bugard ------------------------------
+INSERT INTO `mob_droplist` VALUES (9238,0,19315,264); -- Erebus's Lance
+INSERT INTO `mob_droplist` VALUES (9238,0,3171,112); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9238,0,3171,115); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9238,0,3171,114); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9238,0,3171,116); -- Tantra Seal: Legs MNK
+INSERT INTO `mob_droplist` VALUES (9238,0,3186,144); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9238,0,3186,146); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9238,0,3186,145); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9238,0,3182,93); -- Iga Seal: Legs NIN
+INSERT INTO `mob_droplist` VALUES (9238,0,3182,95); -- Iga Seal: Legs NIN
+INSERT INTO `mob_droplist` VALUES (9238,0,3182,94); -- Iga Seal: Legs NIN
+INSERT INTO `mob_droplist` VALUES (9238,0,3176,95); -- Creed Seal: Legs PLD
+INSERT INTO `mob_droplist` VALUES (9238,0,3176,94); -- Creed Seal: Legs PLD
+INSERT INTO `mob_droplist` VALUES (9238,0,3176,93); -- Creed Seal: Legs PLD
+
+-- ------------------ nehebkau ------------------------------
+INSERT INTO `mob_droplist` VALUES (9239,0,19053,152); -- Curatio Grip
+INSERT INTO `mob_droplist` VALUES (9239,0,3176,86); -- Creed Seal: Legs PLD
+INSERT INTO `mob_droplist` VALUES (9239,0,3176,87); -- Creed Seal: Legs PLD
+INSERT INTO `mob_droplist` VALUES (9239,0,3176,88); -- Creed Seal: Legs PLD
+INSERT INTO `mob_droplist` VALUES (9239,0,3176,89); -- Creed Seal: Legs PLD
+INSERT INTO `mob_droplist` VALUES (9239,0,3174,75); -- Estoqueur's Seal: Legs RDM
+INSERT INTO `mob_droplist` VALUES (9239,0,3174,76); -- Estoqueur's Seal: Legs RDM
+INSERT INTO `mob_droplist` VALUES (9239,0,3174,77); -- Estoqueur's Seal: Legs RDM
+INSERT INTO `mob_droplist` VALUES (9239,0,3174,78); -- Estoqueur's Seal: Legs RDM
+INSERT INTO `mob_droplist` VALUES (9239,0,3181,183); -- Unkai Seal: Legs SAM
+INSERT INTO `mob_droplist` VALUES (9239,0,3181,182); -- Unkai Seal: Legs SAM
+INSERT INTO `mob_droplist` VALUES (9239,0,3181,180); -- Unkai Seal: Legs SAM
+INSERT INTO `mob_droplist` VALUES (9239,0,3181,181); -- Unkai Seal: Legs SAM
+INSERT INTO `mob_droplist` VALUES (9239,0,3175,136); -- Raider's Seal: Legs THF
+INSERT INTO `mob_droplist` VALUES (9239,0,3175,135); -- Raider's Seal: Legs THF
+INSERT INTO `mob_droplist` VALUES (9239,0,3175,134); -- Raider's Seal: Legs THF
+
+-- ------------------ nonno ------------------------------
+INSERT INTO `mob_droplist` VALUES (9240,0,19055,118); -- Macero Grip
+INSERT INTO `mob_droplist` VALUES (9240,0,3173,91); -- Goetia Seal: Legs BLM
+INSERT INTO `mob_droplist` VALUES (9240,0,3173,93); -- Goetia Seal: Legs BLM
+INSERT INTO `mob_droplist` VALUES (9240,0,3173,92); -- Goetia Seal: Legs BLM
+INSERT INTO `mob_droplist` VALUES (9240,0,3182,165); -- Iga Seal: Legs NIN
+INSERT INTO `mob_droplist` VALUES (9240,0,3182,164); -- Iga Seal: Legs NIN
+INSERT INTO `mob_droplist` VALUES (9240,0,3182,163); -- Iga Seal: Legs NIN
+INSERT INTO `mob_droplist` VALUES (9240,0,3177,86); -- Bale Seal: Legs DRK
+INSERT INTO `mob_droplist` VALUES (9240,0,3177,89); -- Bale Seal: Legs DRK
+INSERT INTO `mob_droplist` VALUES (9240,0,3177,87); -- Bale Seal: Legs DRK
+INSERT INTO `mob_droplist` VALUES (9240,0,3177,88); -- Bale Seal: Legs DRK
+INSERT INTO `mob_droplist` VALUES (9240,0,3187,94); -- Cirque Seal: Legs PUP
+INSERT INTO `mob_droplist` VALUES (9240,0,3187,96); -- Cirque Seal: Legs PUP
+INSERT INTO `mob_droplist` VALUES (9240,0,3187,95); -- Cirque Seal: Legs PUP
+
+-- ------------------ npfundlwa ------------------------------
+INSERT INTO `mob_droplist` VALUES (9241,0,19059,121); -- Quire Grip
+INSERT INTO `mob_droplist` VALUES (9241,0,3172,93); -- Orison Seal: Legs WHM
+INSERT INTO `mob_droplist` VALUES (9241,0,3172,83); -- Orison Seal: Legs WHM
+INSERT INTO `mob_droplist` VALUES (9241,0,3172,73); -- Orison Seal: Legs WHM
+INSERT INTO `mob_droplist` VALUES (9241,0,3172,173); -- Orison Seal: Legs WHM
+INSERT INTO `mob_droplist` VALUES (9241,0,3170,88); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9241,0,3170,78); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9241,0,3170,68); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9241,0,3170,168); -- Ravager's Seal: Legs WAR
+INSERT INTO `mob_droplist` VALUES (9241,0,3188,68); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9241,0,3188,98); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9241,0,3188,78); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9241,0,3188,88); -- Charis Seal: Legs DNC
+INSERT INTO `mob_droplist` VALUES (9241,0,3186,57); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9241,0,3186,67); -- Navarch's Seal: Legs COR
+INSERT INTO `mob_droplist` VALUES (9241,0,3186,167); -- Navarch's Seal: Legs COR
+
+-- ------------------ tuskertrap ------------------------------
+INSERT INTO `mob_droplist` VALUES (9242,0,11623,100); -- Noetic Torque
+INSERT INTO `mob_droplist` VALUES (9242,0,3184,64); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9242,0,3184,74); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9242,0,3184,84); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9242,0,3184,174); -- Caller's Seal: Legs SMN
+INSERT INTO `mob_droplist` VALUES (9242,0,3178,103); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9242,0,3178,123); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9242,0,3178,113); -- Ferine Seal: Legs BST
+INSERT INTO `mob_droplist` VALUES (9242,0,3185,83); -- Mavi Seal: Legs BLU
+INSERT INTO `mob_droplist` VALUES (9242,0,3185,93); -- Mavi Seal: Legs BLU
+INSERT INTO `mob_droplist` VALUES (9242,0,3185,183); -- Mavi Seal: Legs BLU
+INSERT INTO `mob_droplist` VALUES (9242,0,3180,110); -- Sylvan Seal: Legs RNG
+INSERT INTO `mob_droplist` VALUES (9242,0,3180,130); -- Sylvan Seal: Legs RNG
+INSERT INTO `mob_droplist` VALUES (9242,0,3180,120); -- Sylvan Seal: Legs RNG
+
+-- ------------------ gaizkin ------------------------------
+INSERT INTO `mob_droplist` VALUES (9243,0,19261,107); -- Jinx Discus
+INSERT INTO `mob_droplist` VALUES (9243,0,3119,97); -- Aoidos' Seal: Head BRD
+INSERT INTO `mob_droplist` VALUES (9243,0,3119,297); -- Aoidos' Seal: Head BRD
+INSERT INTO `mob_droplist` VALUES (9243,0,3119,197); -- Aoidos' Seal: Head BRD
+INSERT INTO `mob_droplist` VALUES (9243,0,3123,210); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9243,0,3123,110); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9243,0,3123,120); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9243,0,3111,174); -- Tantra Seal: Head MNK
+INSERT INTO `mob_droplist` VALUES (9243,0,3111,94); -- Tantra Seal: Head MNK
+INSERT INTO `mob_droplist` VALUES (9243,0,3111,84); -- Tantra Seal: Head MNK
+INSERT INTO `mob_droplist` VALUES (9243,0,3111,74); -- Tantra Seal: Head MNK
+INSERT INTO `mob_droplist` VALUES (9243,0,3129,140); -- Savant's Seal: Head SCH
+INSERT INTO `mob_droplist` VALUES (9243,0,3129,120); -- Savant's Seal: Head SCH
+INSERT INTO `mob_droplist` VALUES (9243,0,3129,130); -- Savant's Seal: Head SCH
+
+-- ------------------ gieremund ------------------------------
+INSERT INTO `mob_droplist` VALUES (9244,0,18456,349); -- Yoshihiro
+INSERT INTO `mob_droplist` VALUES (9244,0,3110,65); -- Ravager's Seal: Head WAR
+INSERT INTO `mob_droplist` VALUES (9244,0,3110,55); -- Ravager's Seal: Head WAR
+INSERT INTO `mob_droplist` VALUES (9244,0,3110,395); -- Ravager's Seal: Head WAR
+INSERT INTO `mob_droplist` VALUES (9244,0,3110,295); -- Ravager's Seal: Head WAR
+INSERT INTO `mob_droplist` VALUES (9244,0,3110,195); -- Ravager's Seal: Head WAR
+INSERT INTO `mob_droplist` VALUES (9244,0,3115,56); -- Raider's Seal: Head THF
+INSERT INTO `mob_droplist` VALUES (9244,0,3115,296); -- Raider's Seal: Head THF
+INSERT INTO `mob_droplist` VALUES (9244,0,3115,196); -- Raider's Seal: Head THF
+INSERT INTO `mob_droplist` VALUES (9244,0,3115,86); -- Raider's Seal: Head THF
+INSERT INTO `mob_droplist` VALUES (9244,0,3123,67); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9244,0,3123,57); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9244,0,3123,47); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9244,0,3123,37); -- Lancer's Seal: Head DRG
+INSERT INTO `mob_droplist` VALUES (9244,0,3128,76); -- Charis Seal: Head DNC
+INSERT INTO `mob_droplist` VALUES (9244,0,3128,46); -- Charis Seal: Head DNC
+INSERT INTO `mob_droplist` VALUES (9244,0,3128,86); -- Charis Seal: Head DNC
+INSERT INTO `mob_droplist` VALUES (9244,0,3128,56); -- Charis Seal: Head DNC
+INSERT INTO `mob_droplist` VALUES (9244,0,3128,66); -- Charis Seal: Head DNC
+
+-- ------------------ mielikki ------------------------------
+INSERT INTO `mob_droplist` VALUES (9245,0,16190,153); -- Bloom Buckler
+INSERT INTO `mob_droplist` VALUES (9245,0,3118,143); -- Ferine Seal: Head BST
+INSERT INTO `mob_droplist` VALUES (9245,0,3118,133); -- Ferine Seal: Head BST
+INSERT INTO `mob_droplist` VALUES (9245,0,3118,113); -- Ferine Seal: Head BST
+INSERT INTO `mob_droplist` VALUES (9245,0,3118,123); -- Ferine Seal: Head BST
+INSERT INTO `mob_droplist` VALUES (9245,0,3126,31); -- Navarch's Seal: Head COR
+INSERT INTO `mob_droplist` VALUES (9245,0,3126,41); -- Navarch's Seal: Head COR
+INSERT INTO `mob_droplist` VALUES (9245,0,3126,51); -- Navarch's Seal: Head COR
+INSERT INTO `mob_droplist` VALUES (9245,0,3126,61); -- Navarch's Seal: Head COR
+INSERT INTO `mob_droplist` VALUES (9245,0,3127,147); -- Cirque Seal: Head PUP
+INSERT INTO `mob_droplist` VALUES (9245,0,3127,167); -- Cirque Seal: Head PUP
+INSERT INTO `mob_droplist` VALUES (9245,0,3127,157); -- Cirque Seal: Head PUP
+INSERT INTO `mob_droplist` VALUES (9245,0,3124,55); -- Caller's Seal: Head SMN
+INSERT INTO `mob_droplist` VALUES (9245,0,3124,45); -- Caller's Seal: Head SMN
+INSERT INTO `mob_droplist` VALUES (9245,0,3124,35); -- Caller's Seal: Head SMN
+
+-- ------------------ svarbhanu ------------------------------
+INSERT INTO `mob_droplist` VALUES (9246,0,19188,250); -- Killer Shortbow
+INSERT INTO `mob_droplist` VALUES (9246,0,746,25); -- Platinum Ore
+INSERT INTO `mob_droplist` VALUES (9246,0,836,1); -- Damascene Cloth
+INSERT INTO `mob_droplist` VALUES (9246,0,4387,53); -- Wild Onion
+INSERT INTO `mob_droplist` VALUES (9246,0,902,16); -- Demon Horn
+INSERT INTO `mob_droplist` VALUES (9246,0,658,50); -- Damascus Ingot
+INSERT INTO `mob_droplist` VALUES (9246,0,654,49); -- Darksteel Ingot
+INSERT INTO `mob_droplist` VALUES (9246,0,745,29); -- Gold Ingot
+INSERT INTO `mob_droplist` VALUES (9246,0,2951,16); -- Malachite
+INSERT INTO `mob_droplist` VALUES (9246,0,1740,25); -- Iolite
+
+-- ------------------ tejas - note only temp items drop ------------------------------
+INSERT INTO `mob_droplist` VALUES (9247,0,5395,15); -- Cleric's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9247,0,2833,15); -- Flask of mana mist-temp item
+INSERT INTO `mob_droplist` VALUES (9247,0,5435,15); -- Fool's Drink-temp item
+INSERT INTO `mob_droplist` VALUES (9247,0,5836,15); -- Healing Salve II-temp item
+INSERT INTO `mob_droplist` VALUES (9247,0,5831,15); -- Lucid Elixir II-temp item
+INSERT INTO `mob_droplist` VALUES (9247,0,5397,15); -- Sprinter's Drink-temp item
