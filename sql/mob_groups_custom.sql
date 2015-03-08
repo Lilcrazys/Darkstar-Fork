@@ -1175,6 +1175,12 @@ INSERT INTO `mob_groups` VALUES (90239,2819,216,600,0,0,50000,10000,120,122,0); 
 INSERT INTO `mob_groups` VALUES (90240,2905,216,600,0,0,60000,10000,120,122,0); -- nonno
 INSERT INTO `mob_groups` VALUES (90241,2918,216,600,0,0,60000,20999,120,122,0); -- npfundlwa
 INSERT INTO `mob_groups` VALUES (90242,4056,216,600,0,0,60000,10000,120,122,0); -- tuskertrap
+
+INSERT INTO `mob_groups` VALUES (90243,1446,215,600,0,0,60000,20999,120,122,0); -- gaizkin
+INSERT INTO `mob_groups` VALUES (90244,1547,215,600,0,0,50000,10000,120,122,0); -- gieremund
+INSERT INTO `mob_groups` VALUES (90245,2650,215,600,0,0,60000,10000,120,122,0); -- mielikki
+INSERT INTO `mob_groups` VALUES (90246,4662,215,600,0,0,60000,20999,120,122,0); -- svarbhanu
+INSERT INTO `mob_groups` VALUES (90247,3861,215,600,0,0,60000,10000,120,122,0); -- tejas
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please
 
