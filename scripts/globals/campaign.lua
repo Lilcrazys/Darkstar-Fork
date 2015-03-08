@@ -15,15 +15,17 @@ PAST_WINDURST = 7;
 -- Returns the numerical Campaign Medal of the player.
 -- -------------------------------------------------------------------
 
-local medals = { 0x039C, 0x039D, 0x039E, 0x039F, 0x03A0, 0x03A1, 0x03A2, 0x03A3, 0x03A4, 0x03A5, 0x03A6, 0x03A7, 0x03A8, 0x03A9, 0x03AA, 0x03AB, 0x03AC, 0x03AD, 0x03AE, 0x03AF }
-
 function getMedalRank(player)
     local rank = 0;
-
-    while player:hasKeyItem(medals[rank + 1]) == true do
+    local medals =
+    {
+         0x039C, 0x039D, 0x039E, 0x039F, 0x03A0, 0x03A1, 0x03A2,
+         0x03A3, 0x03A4, 0x03A5, 0x03A6, 0x03A7, 0x03A8, 0x03A9,
+         0x03AA, 0x03AB, 0x03AC, 0x03AD, 0x03AE, 0x03AF
+    }
+    while (player:hasKeyItem(medals[rank + 1]) == true) do
         rank = rank + 1;
     end;
-
     return rank;
 end;
 
@@ -122,31 +124,17 @@ function getWindurstNotesItem(i)
 end;
 
 -- -------------------------------------------------------------------
--- getSigilDuration(player)
--- Base effect duration 3 hours but can never be less
--- than 3hr 15 min because can not be obtained without
--- at least 1 medal and every campaign medal adds 15 min
--- -------------------------------------------------------------------
-
-function getSigilDuration(player)
-    local medal_rank = getMedalRank(player);
-    local duration = 10800+((15*medal_rank)*60);
-
-    return duration;
-end;
-
--- -------------------------------------------------------------------
 -- getSigilTimeStamp(player)
 -- This is for the time-stamp telling player what day/time the
 -- effect will last until, NOT the actual status effect duration.
 -- -------------------------------------------------------------------
 
 function getSigilTimeStamp(player)
-    local TimeStamp = 0; -- zero'd till math is done.
+    local timeStamp = 0; -- zero'd till math is done.
 
     -- TODO: calculate time stamp for menu display of when it wears off
 
-    return TimeStamp;
+    return timeStamp;
 end;
 
 -----------------------------------

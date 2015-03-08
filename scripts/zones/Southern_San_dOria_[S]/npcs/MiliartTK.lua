@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Southern SandOria [S]
--- NPC: Miliart T.K
--- Sigil NPC
+--  NPC: Miliart T.K
+-- Type: Sigil NPC
 -- @pos 107 1 -31 80
 -----------------------------------
 package.loaded["scripts/zones/Southern_San_dOria_[S]/TextIDs"] = nil;
@@ -26,9 +26,9 @@ function onTrigger(player,npc)
     local notes = player:getCurrency("allied_notes");
     local freelances = 99; -- Faking it for now
     local unknown = 12; -- Faking it for now
-    local medal_rank = getMedalRank(player);
-    local bonus_effects = 0; -- 1= regen, 2= refresh, 4= meal duration, 8= exp loss reduction, 15 = all
-    local timestamp = 0; --getSigilTimeStamp(player);
+    local medalRank = getMedalRank(player);
+    local bonusEffects = 0; -- 1 = regen, 2 = refresh, 4 = meal duration, 8 = exp loss reduction, 15 = all
+    local timeStamp = 0; -- getSigilTimeStamp(player);
 
     -- if ( medal_rank > 25 and nation controls Throne_Room_S ) then
         -- medal_rank = 32;
@@ -38,7 +38,8 @@ function onTrigger(player,npc)
     if (medal_rank == 0) then
         player:startEvent(0x06F);
     else
-        player:startEvent(0x06E,0,notes,freelances,unknown,medal_rank,bonus_effects,timestamp,0);
+        player:PrintToPlayer("DEV NOTE: food duration and exp loss reduton enhancements are not yet implimented.");
+        player:startEvent(0x06E, 0, notes, freelances, unknown, medalRank, bonusEffects, timeStamp, 0);
     end
 
 end;
@@ -48,17 +49,15 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-    printf("CSID: %u",csid);
-    printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
     local itemid = 0;
     local canEquip = 2; -- Faking it for now.
-    -- 0= Wrong job, 1= wrong level, 2= Everything is in order, 3 or greater = menu exits...
-
+    -- 0 = Wrong job, 1 = wrong level, 2 = Everything is in order, 3 or greater = menu exits...
     if (csid == 0x06E and option >= 2 and option <= 2050) then
         itemid = getSandOriaNotesItem(option);
-        player:updateEvent(0,0,0,0,0,0,0,canEquip);  -- canEquip(player,itemid));  <- works for sanction NPC, wtf?
+        player:updateEvent(0, 0, 0, 0, 0, 0, 0, canEquip); -- canEquip(player,itemid));  <- works for sanction NPC, wtf?
     end
-
 end;
 
 -----------------------------------
@@ -66,81 +65,61 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-    printf("CSID: %u",csid);
-    printf("RESULT: %u",option);
-    -- local notes = player:getCurrency("allied_notes");
-    local medal_rank = getMedalRank(player);
-    local Power = 0;
-    local tick = 0;
-    local duration = getSigilDuration(player);
-    local subPower = 0; -- will use this to set % trigger for regen/refresh later
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    local medalRank = getMedalRank(player);
     if (csid == 0x06E) then
-        if (option == 1 or option == 4097 or option == 8193 or option == 12289
-        or option == 16385 or option == 20481 or option == 24577
-        or option == 28673 or option == 36865 or option == 40961
-        or option == 45057 or option == 49153 or option == 53249
-        or option == 57345 or option == 61441) then
-            Power = ( (option - 1) / 4096 );
-            if (option == 4097) then -- Regen
-                tick = 3;
-                player:delCurrency("allied_notes", 50);
-            elseif (option == 8193) then -- Refresh
-                tick = 3;
-                player:delCurrency("allied_notes", 50);
-            elseif (option == 12289) then -- Regen and Refresh
-                tick = 3;
-                player:delCurrency("allied_notes", 100);
-            elseif (option == 16385) then -- Meal Duration
-                player:delCurrency("allied_notes", 50);
-            elseif (option == 20481) then -- Regen and Meal Duration
-                tick = 3;
-                player:delCurrency("allied_notes", 100);
-            elseif (option == 24577) then -- Refresh and Meal Duration
-                tick = 3;
-                player:delCurrency("allied_notes", 100);
-            elseif (option == 28673) then -- Regen, Refresh, and Meal Duration
-                tick = 3;
-                player:delCurrency("allied_notes", 150);
-            elseif (option == 32769) then -- Reduced EXP loss.
-                player:delCurrency("allied_notes", 100);
-            elseif (option == 36865) then -- Regen and Reduced EXP loss.
-                tick = 3;
-                player:delCurrency("allied_notes", 150);
-            elseif (option == 40961) then -- Refresh and Reduced EXP loss.
-                tick = 3;
-                player:delCurrency("allied_notes", 150);
-            elseif (option == 45057) then -- Regen, Refresh, and Reduced EXP loss.
-                tick = 3;
-                player:delCurrency("allied_notes", 150);
-            elseif (option == 49153) then -- Meal Duration and Reduced EXP loss.
-                player:delCurrency("allied_notes", 100);
-            elseif (option == 53249) then -- Regen, Meal Duration, and Reduced EXP loss.
-                tick = 3;
-                player:delCurrency("allied_notes", 150);
-            elseif (option == 57345) then -- Refresh, Meal Duration, and Reduced EXP loss.
-                tick = 3;
-                -- player:delCurrency("allied_notes", 150);
-            elseif (option == 61441) then -- Everything
-                tick = 3;
-                player:delCurrency("allied_notes", 200);
-            end
-
-            player:delStatusEffect(EFFECT_SIGIL);
-            player:delStatusEffect(EFFECT_SANCTION);
-            player:delStatusEffect(EFFECT_SIGNET);
-            player:addStatusEffect(EFFECT_SIGIL,Power,tick,duration,0,subPower,0);
-            -- player:setPlayerVar(timestamp);
-            player:messageSpecial(ALLIED_SIGIL);
-
-        elseif (option >=2 and option <= 2050) then -- player bought item
+        -- Note: the event itself already verifies the player has enough AN, so no check needed here.
+        if (option >= 2 and option <= 2050) then -- player bought item
         -- currently only "ribbons" rank coded.
             item, price = getSandOriaNotesItem(option)
             if (player:getFreeSlotsCount() >= 1) then
                 player:delCurrency("allied_notes", price);
                 player:addItem(item);
-                player:messageSpecial(ITEM_OBTAINED,item);
+                player:messageSpecial(ITEM_OBTAINED, item);
             else
-                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,item);
+                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, item);
+            end
+
+        -- Please, don't change this elseif without knowing ALL the option results first.
+        elseif (option == 1 or option == 4097 or option == 8193 or option == 12289 or option == 16385
+        or option == 20481 or option == 24577 or option == 28673 or option == 36865 or option == 40961
+        or option == 45057 or option == 49153 or option == 53249 or option == 57345 or option == 61441) then
+            local cost = 0;
+            local power = ( (option - 1) / 4096 );
+            local tick = 0;
+            local duration = 10800+((15*medalRank)*60); -- 3hrs +15 min per medal (minimum 3hr 15 min with 1st medal)
+            local subPower = 45; -- Sets % trigger for regen/refresh. Static at minimum value for now.
+
+            if (power == 1 or power == 2 or power == 4) then
+            -- 1: Regen,  2: Refresh,  4: Meal Duration
+                cost = 50;
+            elseif (power == 3 or power == 5 or power == 6 or power == 8 or power == 12) then
+            -- 3: Regen + Refresh,  5: Regen + Meal Duration,  6: Refresh + Meal Duration
+            -- 8: Reduced EXP loss,  12: Meal Duration + Reduced EXP loss
+                cost = 100;
+            elseif (power == 7 or power == 9 or power == 10 or power == 11 or power == 13 or power == 14) then
+            -- 7: Regen + Refresh + Meal Duration,  9: Regen + Reduced EXP loss,
+            -- 10: Refresh + Reduced EXP loss,  11: Regen + Refresh + Reduced EXP loss
+            -- 13: Regen + Meal Duration + Reduced EXP loss,  14: Refresh + Meal Duration + Reduced EXP loss
+                cost = 150;
+            elseif (power == 15) then
+            -- 15: Everything
+                cost = 200;
+            end
+
+            if (power ~= 4 and power ~= 8 and power ~= 12) then
+                tick = 3;
+            end
+
+            player:delStatusEffect(EFFECT_SIGIL);
+            player:delStatusEffect(EFFECT_SANCTION);
+            player:delStatusEffect(EFFECT_SIGNET);
+            player:addStatusEffect(EFFECT_SIGIL, power, tick, duration, 0, subPower, 0);
+            player:messageSpecial(ALLIED_SIGIL);
+
+            if (cost > 0) then
+                player:delCurrency("allied_notes", cost);
             end
         end
     end
