@@ -1,6 +1,6 @@
 -----------------------------------
 --  Area: Abyssea - Tahrongi (45)
---   Mob: Mictlantecuhtli
+--   Mob: Vetehinen
 -----------------------------------
 require("scripts/zones/Abyssea-Tahrongi/textIDs");
 require("scripts/globals/abyssea");
@@ -19,8 +19,12 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    mob:addMod(MOD_ATT,90);
     mob:addMod(MOD_MATT,90);
+    mob:addMod(MOD_ACC,100);
     mob:addMod(MOD_MACC,300);
+    mob:addMod(MOD_REGEN,90);
+    mob:addMod(MOD_REGAIN,20);
 end;
 
 -----------------------------------
@@ -41,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    local CHANCE = 17;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
-        killer:addKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT);
-        killer:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_MERIT);
-    end
-end;
+-- function onMobDeath(mob,killer)
+    -- local CHANCE = 60;
+    -- if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TARNISHED_PINCER) == false) then
+        -- killer:addKeyItem(TARNISHED_PINCER);
+        -- killer:messageSpecial(6385, TARNISHED_PINCER);
+    -- end
+-- end;
 

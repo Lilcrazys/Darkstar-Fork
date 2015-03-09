@@ -2,8 +2,10 @@
 --  Area: Abyssea - Tahrongi (45)
 --   Mob: Caoineag
 -----------------------------------
-
+require("scripts/zones/Abyssea-Tahrongi/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -44,5 +46,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(CHIPPED_SANDWORM_TOOTH) == false) then
+        killer:addKeyItem(CHIPPED_SANDWORM_TOOTH);
+        killer:messageSpecial(6385, CHIPPED_SANDWORM_TOOTH);
+    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_DUNES) == false) then
+        killer:addKeyItem(ATMA_OF_DUNES);
+        killer:messageSpecial(6385, ATMA_OF_DUNES);
+    end
 end;
 

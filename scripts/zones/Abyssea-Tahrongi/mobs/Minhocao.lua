@@ -1,6 +1,6 @@
 -----------------------------------
 --  Area: Abyssea - Tahrongi (45)
---   Mob: Mictlantecuhtli
+--   Mob: Minhocao
 -----------------------------------
 require("scripts/zones/Abyssea-Tahrongi/textIDs");
 require("scripts/globals/abyssea");
@@ -12,6 +12,12 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_MATT,75);
+    mob:addMod(MOD_MACC,500);
 end;
 
 -----------------------------------
@@ -19,8 +25,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:addMod(MOD_MATT,90);
-    mob:addMod(MOD_MACC,300);
 end;
 
 -----------------------------------
@@ -42,10 +46,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 17;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
-        killer:addKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT);
-        killer:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_MERIT);
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SODDEN_SANDWORM_HUSK) == false) then
+        killer:addKeyItem(SODDEN_SANDWORM_HUSK);
+        killer:messageSpecial(6385, SODDEN_SANDWORM_HUSK);
     end
 end;
 
