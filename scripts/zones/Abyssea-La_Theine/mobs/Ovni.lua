@@ -2,8 +2,10 @@
 --  Area: Abyssea - La Theine (132)
 --   Mob: Ovni
 -----------------------------------
-
+require("scripts/zones/Abyssea-La_Theine/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -17,12 +19,12 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:hideName(true);
+    mob:hideName(true);
     mob:untargetable(true);
     mob:AnimationSub(5);
-	mob:addMod(MOD_MATT,600);
-	mob:addMod(MOD_MACC,300);
-	mob:addMod(MOD_REGAIN,33);
+    mob:addMod(MOD_MATT,600);
+    mob:addMod(MOD_MACC,300);
+    mob:addMod(MOD_REGAIN,33);
 end;
 
 -----------------------------------
@@ -30,7 +32,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	mob:hideName(false);
+    mob:hideName(false);
     mob:untargetable(false);
     mob:AnimationSub(6);
 end;
@@ -47,4 +49,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
+        killer:addKeyItem(SCARLET_ABYSSITE_OF_SOJOURN);
+        killer:messageSpecial(6385, SCARLET_ABYSSITE_OF_SOJOURN);
+    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_HEAVENS) == false) then
+        killer:addKeyItem(ATMA_OF_THE_HEAVENS);
+        killer:messageSpecial(6385, ATMA_OF_THE_HEAVENS);
+    end
 end;

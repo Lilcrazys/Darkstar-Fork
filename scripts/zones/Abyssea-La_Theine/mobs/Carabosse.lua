@@ -2,7 +2,10 @@
 --  Area: Abyssea - La Theine (132)
 --   Mob: Carabosse
 -----------------------------------
-
+require("scripts/zones/Abyssea-La_Theine/textIDs");
+require("scripts/globals/abyssea");
+require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -45,4 +48,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(GLITTERING_PIXIE_CHOKER) == false) then
+        killer:addKeyItem(GLITTERING_PIXIE_CHOKER);
+        killer:messageSpecial(6385, GLITTERING_PIXIE_CHOKER);
+    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_ALLURE) == false) then
+        killer:addKeyItem(ATMA_OF_ALLURE);
+        killer:messageSpecial(6385, ATMA_OF_ALLURE);
+    end
 end;

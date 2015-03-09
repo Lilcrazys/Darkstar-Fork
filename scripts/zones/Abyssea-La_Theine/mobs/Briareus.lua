@@ -2,8 +2,10 @@
 --  Area: Abyssea - La Theine (132)
 --   Mob: Briareus
 -----------------------------------
-
+require("scripts/zones/Abyssea-La_Theine/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -45,4 +47,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
+        killer:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);
+        killer:messageSpecial(6385, BLOOD_SMEARED_GIGAS_HELM);
+    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_STOUT_ARM) == false) then
+        killer:addKeyItem(ATMA_OF_THE_STOUT_ARM);
+        killer:messageSpecial(6385, ATMA_OF_THE_STOUT_ARM);
+    end
 end;

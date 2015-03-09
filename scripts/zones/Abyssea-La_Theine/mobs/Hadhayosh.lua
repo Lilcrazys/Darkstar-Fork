@@ -2,8 +2,10 @@
 --  Area: Abyssea - La Theine (132)
 --   Mob: Hadhayosh
 -----------------------------------
+require("scripts/zones/Abyssea-La_Theine/textIDs");
+require("scripts/globals/abyssea");
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
-require("scripts/zones/Abyssea-La_Theine/TextIDs");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -22,7 +24,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MATT,35);
     mob:addMod(MOD_MACC,200);
-    mob:addMod(MOD_EVA,-32);
+    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------
@@ -44,9 +46,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 10;
+    local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE) == false) then
         killer:addKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE);
         killer:messageSpecial(6385, SCARLET_ABYSSITE_OF_FURTHERANCE);
+    elseif (math.random(0,39) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_LION) == false) then
+        killer:addKeyItem(ATMA_OF_THE_LION);
+        killer:messageSpecial(6385, ATMA_OF_THE_LION);
     end
 end;
