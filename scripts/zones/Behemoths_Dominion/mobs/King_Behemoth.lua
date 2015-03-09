@@ -22,7 +22,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
-    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
