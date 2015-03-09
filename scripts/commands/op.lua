@@ -24,7 +24,12 @@ function onTrigger(player,op,target)
 
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-    -- Parse Outposts
+        if (targ:getZoneID() == 131)
+            player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
+            return
+        end
+
+        -- Parse Outposts
         if(op == "ronfa" or op == "Ronfa" or op == "ronfaure" or op == "Ronfaure") then
             targ:setPos(-445,-19,-220,0,100);
         elseif(op == "gusta" or op == "Gusta" or op == "gustaberg" or op == "Gustaberg") then

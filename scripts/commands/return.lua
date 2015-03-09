@@ -18,11 +18,15 @@ function onTrigger(player, target)
 
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-        ZoneID = targ:getPreviousZone();
-        if (ZoneID == nil or ZoneID == 0) then
-            player:PrintToPlayer( "Previous Zone was a Mog House or there was a problem fetching the ID.");
+        if (targ:getZoneID() ~= 131)
+            ZoneID = targ:getPreviousZone();
+            if (ZoneID == nil or ZoneID == 0) then
+                player:PrintToPlayer( "Previous Zone was a Mog House or there was a problem fetching the ID.");
+            else
+                targ:setPos( 0, 0, 0, 0, ZoneID );
+            end
         else
-            targ:setPos( 0, 0, 0, 0, ZoneID );
+            player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
         end
     else
         player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );

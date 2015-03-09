@@ -34,7 +34,12 @@ function onTrigger(player, tele, target)
     -- And now we check that the target exists and do the teleport if it does.
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-    -- Parse the Teleports
+        if (targ:getZoneID() == 131)
+            player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
+            return
+        end
+
+        -- Parse the Teleports
         if (tele == "dem" or tele == "Dem") then
             if (targ:hasKeyItem(DEM_GATE_CRYSTAL) or gmlvl >= 1) then
                 targ:injectActionPacket( 4, 122 );
