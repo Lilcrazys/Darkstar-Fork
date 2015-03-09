@@ -45,11 +45,5 @@ end;
 -- onMobDeath
 -----------------------------------
 
--- function onMobDeath(mob,killer)
-    -- local CHANCE = 60;
-    -- if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TARNISHED_PINCER) == false) then
-        -- killer:addKeyItem(TARNISHED_PINCER);
-        -- killer:messageSpecial(6385, TARNISHED_PINCER);
-    -- end
--- end;
+
 
