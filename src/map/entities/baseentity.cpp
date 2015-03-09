@@ -32,9 +32,9 @@ CBaseEntity::CBaseEntity()
 	m_TargID = 0;
 	namevis = 1;
 
-    PBattleAI = NULL;
-	PBCNM = NULL;
-	PInstance = NULL;
+    PBattleAI = nullptr;
+	PBCNM = nullptr;
+	PInstance = nullptr;
 
 	speed    = 40 + map_config.speed_mod;
 	speedsub = 40 + map_config.speed_mod;
@@ -51,7 +51,7 @@ CBaseEntity::CBaseEntity()
 
 CBaseEntity::~CBaseEntity()
 {
-	if(PBattleAI != NULL)
+	if(PBattleAI != nullptr)
 	{
 	    delete PBattleAI;
 	}
@@ -76,7 +76,7 @@ const int8* CBaseEntity::GetObjectName()
 
 uint16 CBaseEntity::getZone()
 {
-    return loc.zone != NULL ? loc.zone->GetID() : loc.destination;
+    return loc.zone != nullptr ? loc.zone->GetID() : loc.destination;
 }
 
 float CBaseEntity::GetXPos()

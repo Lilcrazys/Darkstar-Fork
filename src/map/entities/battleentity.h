@@ -62,8 +62,6 @@ enum ECOSYSTEM
 	SYSTEM_VORAGEAN			= 21,
 };
 
-#define MAX_MOB_FAMILY	9000
-
 enum JOBTYPE
 {
 	JOB_NON				= 0,
@@ -287,6 +285,7 @@ enum SUBEFFECT
     SUBEFFECT_STUN              = 16,
     SUBEFFECT_CURSE             = 17,
     SUBEFFECT_DEFENSE_DOWN      = 18, // 1-01001   37
+    SUBEFFECT_DEATH             = 19,
     SUBEFFECT_SHIELD            = 20,
     SUBEFFECT_HP_DRAIN          = 21, // 1-10101   43  This is retail correct animation
     SUBEFFECT_MP_DRAIN          = 22, // This is retail correct animation
@@ -404,7 +403,7 @@ struct apAction_t
 
     apAction_t()
     {
-        ActionTarget = NULL;
+        ActionTarget = nullptr;
         reaction = REACTION_NONE;
         animation = 0;
         speceffect = SPECEFFECT_NONE;
