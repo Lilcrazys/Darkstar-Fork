@@ -21,10 +21,10 @@ function onAdditionalEffect(player,target,damage)
             return 0,0,0;
         else
             target:setHP(0)
-            return SUBEFFECT_CURSE, 160, EFFECT_KO;
+            return SUBEFFECT_DEATH, 160, EFFECT_KO;
         end
     else
         target:setHP(0)
-        return SUBEFFECT_CURSE, 160, EFFECT_KO;
+        return SUBEFFECT_DEATH, 160, EFFECT_KO;
     end
 end;
