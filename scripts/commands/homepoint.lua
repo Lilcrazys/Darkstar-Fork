@@ -17,7 +17,11 @@ function onTrigger(player, target)
 
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-        targ:warp();
+        if (targ:getZoneID() ~= 131)
+            targ:warp();
+        else
+            player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
+        end
     else
         player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
     end
