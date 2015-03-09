@@ -8,6 +8,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -42,11 +43,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
-	local result = -- DoCruor(killer,result);
-	-- DoExp(killer,bonus);
-    -- DoLights(mob,killer);
-	PyxisSpawn(mob,killer,npc);
-
-	killer:messageSpecial(CRUOR_OBTAINED,result);
+    local CHANCE = 60;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(CRACKED_WIVRE_HORN) == false) then
+        killer:addKeyItem(CRACKED_WIVRE_HORN);
+        killer:messageSpecial(6385, CRACKED_WIVRE_HORN);
+    end
 end;

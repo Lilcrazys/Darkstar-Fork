@@ -8,6 +8,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -42,12 +43,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TATTERED_HIPPOGRYPH_WING) == false) then
+        killer:addKeyItem(TATTERED_HIPPOGRYPH_WING);
+        killer:messageSpecial(6385, TATTERED_HIPPOGRYPH_WING);
+    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_GALES) == false) then
+        killer:addKeyItem(ATMA_OF_GALES);
+        killer:messageSpecial(6385, ATMA_OF_GALES);
+    end
 end;
 
-function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
-    -- DoLights(killer,mob,action)
-	-- PyxisSpawn(mob,killer,npc);
-end;

@@ -8,7 +8,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
-
+require("scripts/globals/keyitems");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -21,7 +21,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:setMod(MOD_REGAIN,30);
+    mob:setMod(MOD_REGAIN,30);
 end;
 
 -----------------------------------
@@ -29,7 +29,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	WeaknessTriggerSet(mob,target,ws,spell);
+    WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
@@ -38,7 +38,7 @@ end;
 
 
 function onMobFight(mob,target)
-	TriggerHint(mob,target);
+    TriggerHint(mob,target);
 end;
 
 -----------------------------------
@@ -46,5 +46,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    local CHANCE = 35;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET) == false) then
+        killer:addKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET);
+        killer:messageSpecial(6385, ATMA_OF_THE_VORACIOUS_VIOLET);
+    end
 end;

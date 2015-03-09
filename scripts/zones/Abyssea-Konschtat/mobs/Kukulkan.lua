@@ -8,7 +8,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
-
+require("scripts/globals/keyitems");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -22,13 +22,13 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-	mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_REGAIN,30);
 
     -- addMod
-	mob:addMod(MOD_MATT,100);
-	mob:addMod(MOD_MACC,200);
-	mob:addMod(MOD_EVA,-50);
-	mob:addMod(MOD_DEF,-50);
+    mob:addMod(MOD_MATT,100);
+    mob:addMod(MOD_MACC,200);
+    mob:addMod(MOD_EVA,-50);
+    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------
@@ -50,10 +50,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	-- local result = -- DoCruor(killer,result);
-	-- DoExp(killer,bonus);
-    -- DoLights(mob,killer);
-	-- PyxisSpawn(mob,killer,npc);
-
-	-- killer:messageSpecial(CRUOR_OBTAINED,result);
+    local CHANCE = 55;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VENOMOUS_PEISTE_CLAW) == false) then
+        killer:addKeyItem(VENOMOUS_PEISTE_CLAW);
+        killer:messageSpecial(6385, VENOMOUS_PEISTE_CLAW);
+    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_NOXIOUS_FANG) == false) then
+        killer:addKeyItem(ATMA_OF_THE_NOXIOUS_FANG);
+        killer:messageSpecial(6385, ATMA_OF_THE_NOXIOUS_FANG);
+    end
 end;

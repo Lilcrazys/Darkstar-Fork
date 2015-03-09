@@ -8,6 +8,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -42,12 +43,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
+    local CHANCE = 60;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(MUCID_AHRIMAN_EYEBALL) == false) then
+        killer:addKeyItem(MUCID_AHRIMAN_EYEBALL);
+        killer:messageSpecial(6385, MUCID_AHRIMAN_EYEBALL);
+    end
 end;
 
-function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
-    -- DoLights(killer,mob,action)
-	-- PyxisSpawn(mob,killer,npc);
-end;

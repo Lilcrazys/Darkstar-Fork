@@ -8,7 +8,7 @@ package.loaded["scripts/globals/abyssea"] = nil;
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
-
+require("scripts/globals/keyitems");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -21,8 +21,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MATT,100);
-	mob:addMod(MOD_MACC,200);
+    mob:addMod(MOD_MATT,100);
+    mob:addMod(MOD_MACC,200);
 end;
 
 -----------------------------------
@@ -44,11 +44,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
-	local result = -- DoCruor(killer,result);
-	-- DoExp(killer,bonus);
-    -- DoLights(mob,killer);
-	PyxisSpawn(mob,killer,npc);
-
-	killer:messageSpecial(CRUOR_OBTAINED,result);
+    local CHANCE = 60;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TWISTED_TONBERRY_CROWN) == false) then
+        killer:addKeyItem(TWISTED_TONBERRY_CROWN);
+        killer:messageSpecial(6385, TWISTED_TONBERRY_CROWN);
+    end
 end;
