@@ -2,8 +2,10 @@
 --  Area: Abyssea - Grauberg (254)
 --   Mob: Raja
 -----------------------------------
-
+require("scripts/zones/Abyssea-Grauberg/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -23,7 +25,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MATT,25);
     mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_DEF,-100);
+    mob:addMod(MOD_DEF,-50);
 end;
 
 -----------------------------------
@@ -45,5 +47,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_DESPOT) == false) then
+        killer:addKeyItem(ATMA_OF_THE_DESPOT);
+        killer:messageSpecial(6385, ATMA_OF_THE_DESPOT);
+    end
 end;
 

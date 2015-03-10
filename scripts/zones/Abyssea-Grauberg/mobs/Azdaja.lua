@@ -2,8 +2,11 @@
 --  Area: Abyssea - Grauberg (254)
 --   Mob: Azdaja
 -----------------------------------
-
+require("scripts/zones/Abyssea-Grauberg/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
+require("scripts/globals/magic");
 
 -----------------------------------
 -- onMobInitialize
@@ -40,13 +43,13 @@ end;
 
 function onMobFight(mob,target)
 
-	-- Gains a large attack boost when health is under 25% which cannot be Dispelled.
-	if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
-		if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
-			mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
+    -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
+    if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
+        if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
+            mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-		end
-	end
+        end
+    end
     if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES) == false and mob:actionQueueEmpty() == true) then
         local changeTime = mob:getLocalVar("changeTime")
         local twohourTime = mob:getLocalVar("twohourTime")
@@ -82,7 +85,7 @@ function onMobFight(mob,target)
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
         end
-	end
+    end
 end;
 
 -----------------------------------
@@ -90,5 +93,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_WINGED_GLOOM) == false) then
+        killer:addKeyItem(ATMA_OF_THE_WINGED_GLOOM);
+        killer:messageSpecial(6385, ATMA_OF_THE_WINGED_GLOOM);
+    end
 end;
 

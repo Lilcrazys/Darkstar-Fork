@@ -93,33 +93,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addTitle(WYRM_GOD_DEFIER);
-    -- killer:getBCNMloot();
-    --[[
-    -- local keyId = KEYITEM_ID_HERE;
-    if (killer:getVar("RED_PROC") == 1) then
-        -- if (killer:hasKeyItem(keyId) == false) then -- Uncomment to use
-            -- killer:addKeyItem(keyId);
-            -- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
-        -- end
+function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_APOCALYPSE) == false) then
+        killer:addKeyItem(ATMA_OF_THE_APOCALYPSE);
+        killer:messageSpecial(6385, ATMA_OF_THE_APOCALYPSE);
+        killer:addTitle(WYRM_GOD_DEFIER);
     end
-
-    if (killer:getVar("BLUE_PROC") == 1) then
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-    end
-
-    if (killer:getVar("YELLOW_PROC") == 1) then
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate); -- Uncomment to use
-        -- SetDropRate(dropID,itemID,newrate);
-        -- SetDropRate(dropID,itemID,newrate);
-    end
-    ]]
 end;
+
 
