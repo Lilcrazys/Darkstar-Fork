@@ -2,8 +2,10 @@
 --  Area: Abyssea - Vunkerl (217)
 --   Mob: Bukhis
 -----------------------------------
-
--- require("scripts/zones/Abyssea-Vunkerl/MobIDs");
+require("scripts/zones/Abyssea-Vunkerl/textIDs");
+require("scripts/globals/abyssea");
+require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- OnMobInitialize
@@ -47,4 +49,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SANGUINE_SCYTHE) == false) then
+        killer:addKeyItem(ATMA_OF_THE_SANGUINE_SCYTHE);
+        killer:messageSpecial(6385, ATMA_OF_THE_SANGUINE_SCYTHE);
+    end
 end;
