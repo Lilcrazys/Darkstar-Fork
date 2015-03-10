@@ -3,15 +3,15 @@
 --   Mob: Sirrush
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Misareaux/MobIDs");
-package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Misareaux/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
-require("scripts/globals/magic");
+require("scripts/globals/keyitems");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -19,30 +19,35 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_INT,90);
-	mob:addMod(MOD_MATT,375);
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_MEVA,200);
+    mob:addMod(MOD_INT,90);
+    mob:addMod(MOD_MATT,375);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_MEVA,200);
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
+    local CHANCE = 60;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(GNARLED_LIZARD_NAIL) == false) then
+        killer:addKeyItem(GNARLED_LIZARD_NAIL);
+        killer:messageSpecial(6385, GNARLED_LIZARD_NAIL);
+    end
 end;
 
