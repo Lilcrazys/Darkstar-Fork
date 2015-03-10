@@ -46,11 +46,15 @@ end
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TURBID_SLIME_OIL) == false) then
+    local KI_CHANCE = 60;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(TURBID_SLIME_OIL) == false) then
         killer:addKeyItem(TURBID_SLIME_OIL);
         killer:messageSpecial(6385, TURBID_SLIME_OIL);
-    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_VICISSITUDE) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_VICISSITUDE) == false) then
         killer:addKeyItem(ATMA_OF_VICISSITUDE);
         killer:messageSpecial(6385, ATMA_OF_VICISSITUDE);
     end

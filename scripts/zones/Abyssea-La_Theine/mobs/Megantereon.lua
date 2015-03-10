@@ -40,13 +40,16 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(BLOODIED_SABER_TOOTH) == false) then
+    local KI_CHANCE = 60;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BLOODIED_SABER_TOOTH) == false) then
         killer:addKeyItem(BLOODIED_SABER_TOOTH);
         killer:messageSpecial(6385, BLOODIED_SABER_TOOTH);
-    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SAVAGE_TIGER) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_SAVAGE_TIGER) == false) then
         killer:addKeyItem(ATMA_OF_THE_SAVAGE_TIGER);
         killer:messageSpecial(6385, ATMA_OF_THE_SAVAGE_TIGER);
     end
 end;
-

@@ -14,7 +14,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local duration = 15;
+    local duration = 10;
 
     local dINT = caster:getStat(MOD_MND) - target:getStat(MOD_MND);
     local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
