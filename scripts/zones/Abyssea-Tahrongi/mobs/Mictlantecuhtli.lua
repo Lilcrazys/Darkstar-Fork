@@ -44,13 +44,16 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 17;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
+    local KI_CHANCE = 20;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
         killer:addKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT);
         killer:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_MERIT);
-    elseif (math.random(0,45) < CHANCE  and killer:hasKeyItem(ATMA_OF_BALEFUL_BONES) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_BALEFUL_BONES) == false) then
         killer:addKeyItem(ATMA_OF_BALEFUL_BONES);
         killer:messageSpecial(6385, ATMA_OF_BALEFUL_BONES);
     end
 end;
-

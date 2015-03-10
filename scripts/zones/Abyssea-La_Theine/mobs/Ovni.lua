@@ -49,11 +49,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
+    local KI_CHANCE = 60;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
         killer:addKeyItem(SCARLET_ABYSSITE_OF_SOJOURN);
         killer:messageSpecial(6385, SCARLET_ABYSSITE_OF_SOJOURN);
-    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_HEAVENS) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_HEAVENS) == false) then
         killer:addKeyItem(ATMA_OF_THE_HEAVENS);
         killer:messageSpecial(6385, ATMA_OF_THE_HEAVENS);
     end

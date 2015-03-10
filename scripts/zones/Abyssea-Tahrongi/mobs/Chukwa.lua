@@ -44,11 +44,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(MOSSY_ADAMANTOISE_SHELL) == false) then
+    local KI_CHANCE = 60;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(MOSSY_ADAMANTOISE_SHELL) == false) then
         killer:addKeyItem(MOSSY_ADAMANTOISE_SHELL);
         killer:messageSpecial(6385, MOSSY_ADAMANTOISE_SHELL);
-    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_ADAMANTINE) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_ADAMANTINE) == false) then
         killer:addKeyItem(ATMA_OF_THE_ADAMANTINE);
         killer:messageSpecial(6385, ATMA_OF_THE_ADAMANTINE);
     end

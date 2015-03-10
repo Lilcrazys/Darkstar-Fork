@@ -42,14 +42,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
+
 function onMobDeath(mob,killer)
-    local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TATTERED_HIPPOGRYPH_WING) == false) then
+    local KI_CHANCE = 60;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(TATTERED_HIPPOGRYPH_WING) == false) then
         killer:addKeyItem(TATTERED_HIPPOGRYPH_WING);
         killer:messageSpecial(6385, TATTERED_HIPPOGRYPH_WING);
-    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_GALES) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_GALES) == false) then
         killer:addKeyItem(ATMA_OF_GALES);
         killer:messageSpecial(6385, ATMA_OF_GALES);
     end
 end;
-

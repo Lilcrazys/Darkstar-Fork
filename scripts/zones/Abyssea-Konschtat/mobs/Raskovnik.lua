@@ -42,11 +42,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(FETID_RAFFLESIA_STALK) == false) then
+    local KI_CHANCE = 60;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(FETID_RAFFLESIA_STALK) == false) then
         killer:addKeyItem(FETID_RAFFLESIA_STALK);
         killer:messageSpecial(6385, FETID_RAFFLESIA_STALK);
-    elseif (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THRASHING_TENDRILS) == false) then
+    end
+
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THRASHING_TENDRILS) == false) then
         killer:addKeyItem(ATMA_OF_THRASHING_TENDRILS);
         killer:messageSpecial(6385, ATMA_OF_THRASHING_TENDRILS);
     end
