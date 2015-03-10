@@ -2,8 +2,9 @@
 --  Area: Abyssea - Uleguerand (253)
 --   Mob: Isgebind
 -----------------------------------
-
-require("scripts/zones/Abyssea-Uleguerand/TextIDs");
+require("scripts/zones/Abyssea-Uleguerand/textIDs");
+require("scripts/globals/abyssea");
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
 -----------------------------------
 -- OnMobInitialize
@@ -89,10 +90,16 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
+    local KI_CHANCE = 20;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
         killer:addKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE);
         killer:messageSpecial(6385, IVORY_ABYSSITE_OF_FURTHERANCE);
     end
-end;
 
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_FROZEN_FETTERS) == false) then
+        killer:addKeyItem(ATMA_OF_THE_FROZEN_FETTERS);
+        killer:messageSpecial(6385, ATMA_OF_THE_FROZEN_FETTERS);
+    end
+end;

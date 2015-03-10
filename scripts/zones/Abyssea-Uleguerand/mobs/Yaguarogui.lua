@@ -2,14 +2,16 @@
 --  Area: Abyssea - Uleguerand (253)
 --   Mob: Yaguarogui
 -----------------------------------
-
--- require("scripts/zones/Abyssea-Uleguerand/MobIDs");
+require("scripts/zones/Abyssea-Uleguerand/textIDs");
+require("scripts/globals/abyssea");
+require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -17,30 +19,35 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_ATT,-75);
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_EVA,-150);	
-	mob:addMod(MOD_DEF,-100);		
+    mob:addMod(MOD_ATT,-75);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_EVA,-150);
+    mob:addMod(MOD_DEF,-100);
 end;
 
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SUN_EATER) == false) then
+        killer:addKeyItem(ATMA_OF_THE_SUN_EATER);
+        killer:messageSpecial(6385, ATMA_OF_THE_SUN_EATER);
+    end
 end;
 
