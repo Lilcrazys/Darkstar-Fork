@@ -3,10 +3,10 @@
 --   Mob: Dragua
 -----------------------------------
 
+require("scripts/zones/Abyssea-Altepa/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
-require("scripts/globals/magic");
 require("scripts/globals/keyitems");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
 
 -----------------------------------
 -- onMobInitialize
@@ -95,10 +95,16 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(IVORY_ABYSSITE_OF_MERIT) == false) then
+    local KI_CHANCE = 20;
+    local ATMA_CHANCE = 30;
+
+    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(IVORY_ABYSSITE_OF_MERIT) == false) then
         killer:addKeyItem(IVORY_ABYSSITE_OF_MERIT);
         killer:messageSpecial(6385, IVORY_ABYSSITE_OF_MERIT);
     end
-end;
 
+    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_EARTH_WYRM) == false) then
+        killer:addKeyItem(ATMA_OF_THE_EARTH_WYRM);
+        killer:messageSpecial(6385, ATMA_OF_THE_EARTH_WYRM);
+    end
+end;

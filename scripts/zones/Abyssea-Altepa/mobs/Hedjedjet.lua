@@ -3,8 +3,10 @@
 --   Mob: Hedjedjet
 -----------------------------------
 
+require("scripts/zones/Abyssea-Altepa/textIDs");
+require("scripts/globals/abyssea");
 require("scripts/globals/status");
-require("scripts/globals/magic");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -49,5 +51,10 @@ end
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SCORPION_QUEEN) == false) then
+        killer:addKeyItem(ATMA_OF_THE_SCORPION_QUEEN);
+        killer:messageSpecial(6385, ATMA_OF_THE_SCORPION_QUEEN);
+    end
 end;
 
