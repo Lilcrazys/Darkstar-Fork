@@ -2,9 +2,10 @@
 --  Area: Abyssea - Attohwa (215)
 --   Mob: Smok
 -----------------------------------
-
+require("scripts/zones/Abyssea-Attohwa/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -19,11 +20,11 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-	mob:setMod(MOD_REGAIN,33);
+    mob:setMod(MOD_REGAIN,33);
 
     -- addMod
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_DOUBLE_ATTACK,15);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -48,13 +49,13 @@ end;
 
 function onMobFight(mob,target)
 
-	-- Gains a large attack boost when health is under 25% which cannot be Dispelled.
-	if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
-		if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
-			mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
+    -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
+    if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
+        if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
+            mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-		end
-	end
+        end
+    end
     if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES) == false and mob:actionQueueEmpty() == true) then
         local changeTime = mob:getLocalVar("changeTime")
         local twohourTime = mob:getLocalVar("twohourTime")
@@ -90,7 +91,7 @@ function onMobFight(mob,target)
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
         end
-	end
+    end
 end;
 
 -----------------------------------
@@ -98,5 +99,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 30;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SMOLDERING_SKY) == false) then
+        killer:addKeyItem(ATMA_OF_THE_SMOLDERING_SKY);
+        killer:messageSpecial(6385, ATMA_OF_THE_SMOLDERING_SKY);
+    end
 end;
 

@@ -2,9 +2,10 @@
 --  Area: Abyssea - Attohwa (215)
 --   Mob: Itzpapalotl
 -----------------------------------
-
+require("scripts/zones/Abyssea-Attohwa/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -46,4 +47,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
+    local CHANCE = 60;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_CLAWED_BUTTERFLY) == false) then
+        killer:addKeyItem(ATMA_OF_THE_CLAWED_BUTTERFLY);
+        killer:messageSpecial(6385, ATMA_OF_THE_CLAWED_BUTTERFLY);
+    end
 end;

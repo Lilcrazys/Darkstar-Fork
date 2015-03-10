@@ -1,6 +1,6 @@
 -----------------------------------
 --  Area: Abyssea - Attohwa (215)
---   Mob: Mielikki
+--   Mob: Kampe
 -----------------------------------
 require("scripts/zones/Abyssea-Attohwa/textIDs");
 require("scripts/globals/abyssea");
@@ -19,6 +19,14 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_MATT,75);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_MEVA,50);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -40,10 +48,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(JADE_ABYSSITE_OF_SOJOURN) == false) then
-        killer:addKeyItem(JADE_ABYSSITE_OF_SOJOURN);
-        killer:messageSpecial(6385, JADE_ABYSSITE_OF_SOJOURN);
+    local CHANCE = 60;
+    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(HOLLOW_DRAGON_EYE) == false) then
+        killer:addKeyItem(HOLLOW_DRAGON_EYE);
+        killer:messageSpecial(6385, HOLLOW_DRAGON_EYE);
     end
 end;
-
