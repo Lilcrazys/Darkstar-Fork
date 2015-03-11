@@ -577,7 +577,7 @@ INSERT INTO `mob_droplist` VALUES (9205,0,19247,83); -- Savant's Treatise
 INSERT INTO `mob_droplist` VALUES (9205,0,1259,9); -- Lightning Ore
 INSERT INTO `mob_droplist` VALUES (9205,0,887,28); -- Coral Fragment
 INSERT INTO `mob_droplist` VALUES (9205,0,1294,21); -- Arachne Thread
-INSERT INTO `mob_droplist` VALUES (9205,1634,24); -- Rhodonite
+INSERT INTO `mob_droplist` VALUES (9205,0,1634,24); -- Rhodonite
 INSERT INTO `mob_droplist` VALUES (9205,0,830,24); -- Rainbow Cloth
 INSERT INTO `mob_droplist` VALUES (9205,0,1311,29); -- Piece of oxblood
 
