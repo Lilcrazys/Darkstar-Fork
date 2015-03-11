@@ -34,7 +34,7 @@ function onTrigger(player, tele, target)
     -- And now we check that the target exists and do the teleport if it does.
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-        if (targ:getZoneID() == 131)
+        if (targ:getZoneID() == 131) then
             player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
             return
         end

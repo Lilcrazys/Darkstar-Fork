@@ -24,7 +24,7 @@ function onTrigger(player,op,target)
 
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-        if (targ:getZoneID() == 131)
+        if (targ:getZoneID() == 131) then
             player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
             return
         end

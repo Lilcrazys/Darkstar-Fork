@@ -18,7 +18,7 @@ function onTrigger(player, target)
 
     local targ = GetPlayerByName( target );
     if (targ ~= nil) then
-        if (targ:getZoneID() ~= 131)
+        if (targ:getZoneID() ~= 131) then
             ZoneID = targ:getPreviousZone();
             if (ZoneID == nil or ZoneID == 0) then
                 player:PrintToPlayer( "Previous Zone was a Mog House or there was a problem fetching the ID.");
