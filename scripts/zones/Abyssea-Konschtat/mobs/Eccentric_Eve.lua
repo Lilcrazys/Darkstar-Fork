@@ -29,7 +29,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    WeaknessTriggerSet(mob,target,ws,spell);
+
 end;
 
 -----------------------------------
@@ -38,7 +38,7 @@ end;
 
 
 function onMobFight(mob,target)
-    TriggerHint(mob,target);
+
 end;
 
 -----------------------------------
