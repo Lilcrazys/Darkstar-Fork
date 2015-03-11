@@ -48,5 +48,5 @@ function onMobDeath(mob,killer)
         killer:addSpell(SPELL_ID);
     end
 
-    killer:messageSpecial(CRUOR_OBTAINED,result);
+    -- killer:messageSpecial(CRUOR_OBTAINED,result);
 end;

@@ -44,7 +44,7 @@ end
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	-- local result = -- DoCruor(killer,result);
+	-- -- local result = DoCruor(killer,result);
 	-- DoExp(killer,bonus);
     -- DoLights(mob,killer);
 	-- PyxisSpawn(mob,killer,npc);
