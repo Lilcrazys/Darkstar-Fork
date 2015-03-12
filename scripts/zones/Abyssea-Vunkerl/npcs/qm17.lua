@@ -14,9 +14,9 @@ require("scripts/globals/keyitems");
 function onTrigger(player,npc)
     if (GetMobAction(17666508) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(GLOSSY_SEA_MONK_SUCKER) and player:hasKeyItem(SHIMMERING_PUGIL_SCALE) then
-            player:startEvent(1023, GLOSSY_SEA_MONK_SUCKER, SHIMMERING_PUGIL_SCALE); -- Ask if player wants to use KIs
+            player:startEvent(1015, GLOSSY_SEA_MONK_SUCKER, SHIMMERING_PUGIL_SCALE); -- Ask if player wants to use KIs
         else
-            player:startEvent(1024, GLOSSY_SEA_MONK_SUCKER, SHIMMERING_PUGIL_SCALE); -- Do not ask, because player is missing at least 1.
+            player:startEvent(1120, GLOSSY_SEA_MONK_SUCKER, SHIMMERING_PUGIL_SCALE); -- Do not ask, because player is missing at least 1.
         end
     end
 end;
@@ -37,7 +37,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    if (csid == 1023 and option == 1) then
+    if (csid == 1015 and option == 1) then
         SpawnMob(17666508, 300):updateEnmity(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
         player:delKeyItem(GLOSSY_SEA_MONK_SUCKER);
         player:delKeyItem(SHIMMERING_PUGIL_SCALE);
