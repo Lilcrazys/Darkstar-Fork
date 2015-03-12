@@ -1,41 +1,25 @@
 -----------------------------------
--- Area: Abyssea-Vunkeral
--- NPC:  ??? (Spawn Sedna)
------------------------------------
-package.loaded["scripts/zones/Abyssea-Vunkerl/TextIDs"] = nil;
+-- Zone: Abyssea-Vunkeral
+-- NPC: ???
+-- Spawns: Bukhis
 -----------------------------------
 
-require("scripts/zones/Abyssea-Vunkerl/TextIDs");
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
------------------------------------
--- onTrade Action
------------------------------------
-
-function onTrade(player,npc,trade)
-	
-	
-		
-	
-end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	local KI1 = GLOSSY_SEA_MONK_SUCKER;
-	local KI2 = SHIMMERING_PUGIL_SCALE;
-	local MOB = 17666504;
-	if player:hasKeyItem(KI1) and player:hasKeyItem(KI2) then
-		if (GetMobByID(MOB):getStatus() == STATUS_DISAPPEAR) then
-			player:startEvent(1115,KI1,KI2);
-		else
-			player:startEvent(1101,KI1,KI2);
-		end
-		
-	elseif (player:hasKeyItem(KI1) == false) and (player:hasKeyItem(KI2) == false) then
-		player:startEvent(1101,KI1,KI2);
-	end
+    if (GetMobAction(17666499) == ACTION_NONE) then -- NM not already spawned from this
+        if (player:hasKeyItem(INGROWN_TAURUS_NAIL) and player:hasKeyItem(OSSIFIED_GARGOUILLE_HAND)
+        and player:hasKeyItem(IMBRUED_VAMPYR_FANG) then -- I broke it into 3 lines at the 'and' because it was so long.
+            player:startEvent(1023, INGROWN_TAURUS_NAIL, OSSIFIED_GARGOUILLE_HAND, IMBRUED_VAMPYR_FANG); -- Ask if player wants to use KIs
+        else
+            player:startEvent(1024, INGROWN_TAURUS_NAIL, OSSIFIED_GARGOUILLE_HAND, IMBRUED_VAMPYR_FANG); -- Do not ask, because player is missing at least 1.
+        end
+    end
 end;
 
 -----------------------------------
@@ -43,8 +27,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
--- printf("CSID: %u",csid);
--- printf("RESULT: %u",option);
+    -- printf("CSID2: %u",csid);
+    -- printf("RESULT2: %u",option);
 end;
 
 -----------------------------------
@@ -52,16 +36,12 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-		local KI1 = GLOSSY_SEA_MONK_SUCKER;
-		local KI2 = SHIMMERING_PUGIL_SCALE;
-		local MOB = 17666504;
-		
-		if (option == 1) then
-			SpawnMob(MOB,180):updateEnmity(player);
-			player:delKeyItem(KI1);
-			player:delKeyItem(KI2);
-		end
-
-printf("CSID: %u",csid);
-printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    if (csid == 1023 and option == 1) then
+        SpawnMob(17666499, 300):updateEnmity(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+        player:delKeyItem(INGROWN_TAURUS_NAIL);
+        player:delKeyItem(OSSIFIED_GARGOUILLE_HAND);
+        player:delKeyItem(IMBRUED_VAMPYR_FANG);
+    end
 end;
