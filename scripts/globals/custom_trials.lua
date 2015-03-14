@@ -89,8 +89,8 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		-- Trial complete
 		------------------
 
-		if (MegalobugardKillCount == 4 and SewwTheSquidLimbedKillCount == 4 and MischievousCount == 4 and
-			Dune_WidowKillCount == 3 and Keeper_of_HalidomKillCount == 4 and  IntuloKillCount == 4) then
+		if (MegalobugardKillCount == 4 and SewwTheSquidLimbedKillCount == 4 and MischievousCount == 4
+		and DuneWidowKillCount == 3 and IntuloKillCount == 4 and KeeperKillCount == 4) then
 			killer:setVar("TRIAL_COMPLETE", 1);
 		end
 	end
