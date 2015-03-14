@@ -95,7 +95,7 @@ REPLACE INTO `mob_groups` VALUES (1461,3082,45,60,0,2733,10000,0,104,106,0); -- 
 REPLACE INTO `mob_groups` VALUES (1462,3409,45,60,0,0,60000,10000,110,115,0); -- Rubicund Adenium
 REPLACE INTO `mob_groups` VALUES (1463,3798,45,60,0,0,0,0,0,0,0); -- Sturdy Pyxis \\these are boxes so dont need stats//
 REPLACE INTO `mob_groups` VALUES (12950,4534,45,60,0,0,10000,0,104,106,0); -- Thalassinon Abyssea-Tharongi
-REPLACE INTO `mob_groups` VALUES (12951,4533,45,60,0,0,10000,0,104,106,0); -- Vermes Carnium Abyssea-Tharongi
+REPLACE INTO `mob_groups` VALUES (12951,4533,45,60,0,0,10000,10000,104,106,0); -- Vermes Carnium Abyssea-Tharongi
 REPLACE INTO `mob_groups` VALUES (12952,4535,45,60,0,0,10000,20000,104,106,0); -- Wiederganger Abyssea-Tharongi
 REPLACE INTO `mob_groups` VALUES (12953,4536,45,60,0,0,10000,10000,104,106,0); -- Nematocera Abyssea-Tharongi
 REPLACE INTO `mob_groups` VALUES (12954,4537,45,60,0,0,10000,20000,104,106,0); -- Bog Body Abyssea-Tharongi
