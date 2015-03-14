@@ -1,5 +1,5 @@
 -- ---------------------------------------------------------------------------
--- This file adds onto or modifies contents of item_mods.sql
+-- This file adds onto or modifies contents of item_mods_pet.sql
 -- and must be imported/executed AFTER that file
 --
 -- For new entries DarkStar does not have, use "INSERT INTO"
@@ -8,4 +8,4 @@
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
 
--- INSERT INTO `item_mods` VALUES(itemId, modId, value); --comment
+-- INSERT INTO `item_mods_pet` VALUES (itemId, modId, value); --comment
