@@ -38,7 +38,7 @@ function OnUseWeaponSkill(player, target, wsID)
     params.skill = SKILL_SWD;
     params.includemab = true;
 
-    local damage, tpHits, extraHits = doMagicWeaponskill(player, target, params);
+    local damage, criticalHit, tpHits, extraHits = doMagicWeaponskill(player, target, params);
     damage = damage * WEAPON_SKILL_POWER
 
     if (target:isUndead() == false) then
