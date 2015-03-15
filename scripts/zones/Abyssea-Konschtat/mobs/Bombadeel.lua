@@ -21,6 +21,12 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+
+    -- addMod
+    mob:addMod(MOD_MATT,25);
+    mob:addMod(MOD_MACC,500);
 end;
 
 -----------------------------------
@@ -46,8 +52,8 @@ function onMobDeath(mob,killer)
 end;
 
 function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
+    -- DoExp(mob,killer);
+    -- DoCruor(mob,killer);
     -- DoLights(killer,mob,action)
-	-- PyxisSpawn(mob,killer,npc);
+    -- PyxisSpawn(mob,killer,npc);
 end;
