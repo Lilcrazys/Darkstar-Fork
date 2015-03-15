@@ -1170,11 +1170,7 @@ REPLACE INTO `mob_groups` VALUES (2776,4654,78,900,0,9093,130000,100000,140,145,
 
 
 
-INSERT INTO `mob_groups` VALUES (90243,1446,215,600,0,9243,60000,20999,120,122,0); -- gaizkin
-INSERT INTO `mob_groups` VALUES (90244,1547,215,600,0,9244,50000,10000,120,122,0); -- gieremund
-INSERT INTO `mob_groups` VALUES (90245,2650,215,600,0,9245,60000,10000,120,122,0); -- mielikki
-INSERT INTO `mob_groups` VALUES (90246,4662,215,600,0,9246,60000,20999,120,122,0); -- svarbhanu
-INSERT INTO `mob_groups` VALUES (90247,3861,215,600,0,9247,60000,10000,120,122,0); -- tejas
+
 
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please
