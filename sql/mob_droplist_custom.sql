@@ -24,46 +24,12 @@ INSERT INTO `mob_droplist` VALUES (52,0,3291,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (52,0,3291,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (75,0,19405,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (83,0,12105,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE `dropId`=92 and `type`=0 and `itemId`=3089 and `rate`=100; -- Orobon Cheekmeat from Ancient Orbon
-DELETE FROM `mob_droplist` WHERE `dropId`=92 and `type`=0 and `itemId`=5563 and `rate`=100; -- Orobon Meat from Ancient Orbon
-INSERT INTO `mob_droplist` VALUES (92,0,3172,60); -- Orison seal leg from Cep-Kamuy to Ancient Orbon
-INSERT INTO `mob_droplist` VALUES (92,0,3181,60); -- Unkai seal leg from Cep-Kamuy to Ancient Orbon
-INSERT INTO `mob_droplist` VALUES (92,0,3177,60); -- Bale seal leg from Cep-Kamuy to Ancient Orbon
-INSERT INTO `mob_droplist` VALUES (92,0,3185,60); -- Mavi seal leg from Cep-Kamuy to Ancient Orbon
+
 INSERT INTO `mob_droplist` VALUES (151,0,3289,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3176 and `rate`=100; -- Creed seal leg from Asanbosam
-DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3179 and `rate`=100; -- Aoidos seal leg from Asanbosam
-DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3180 and `rate`=100; -- Sylvan seal leg from Asanbosam
-DELETE FROM `mob_droplist` WHERE `dropId`=186 and `type`=0 and `itemId`=3185 and `rate`=100; -- Mavi seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3176,450); -- Creed seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3176,480); -- Creed seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3179,460); -- Aoidos seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3179,490); -- Aoidos seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3180,430); -- Sylvan seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3180,460); -- Sylvan seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3185,410); -- Mavi seal leg from Asanbosam
-INSERT INTO `mob_droplist` VALUES (186,0,3185,430); -- Mavi seal leg from Asanbosam
 
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3171 and `rate`=600; -- Tantra seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3171 and `rate`=300; -- Tantra seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3171 and `rate`=200; -- Tantra seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3171 and `rate`=150; -- Tantra seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3171 and `rate`=120; -- Tantra seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3175 and `rate`=320; -- Raider's seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3175 and `rate`=160; -- Raider's seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3175 and `rate`=110; -- Raider's seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3175 and `rate`=80; -- Raider's seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3182 and `rate`=460; -- Iga seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3182 and `rate`=230; -- Iga seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3182 and `rate`=150; -- Iga seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3182 and `rate`=110; -- Iga seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3182 and `rate`=90; -- Iga seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3188 and `rate`=320; -- Charis seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3188 and `rate`=160; -- Charis seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3188 and `rate`=110; -- Charis seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3188 and `rate`=80; -- Charis seal leg from Athamas
-DELETE FROM `mob_droplist` WHERE `dropId`=198 and `type`=0 and `itemId`=3188 and `rate`=60; -- Charis seal leg from Athamas
+
+
 INSERT INTO `mob_droplist` VALUES (198,0,3171,600); -- Tantra seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3171,630); -- Tantra seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3175,320); -- Raider's seal leg from Athamas
@@ -88,20 +54,10 @@ INSERT INTO `mob_droplist` VALUES (466,0,2930,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (529,0,2965,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (529,0,2965,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (529,0,19406,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (534,0,11434,60); -- Sapientia Sabots From Div-e Sepid to Clammy Imp
-INSERT INTO `mob_droplist` VALUES (534,0,3206,60); -- Navarch's seal feet From Div-e Sepid to Clammy Imp
-INSERT INTO `mob_droplist` VALUES (534,0,3192,60); -- Orison seal feet From Div-e Sepid to Clammy Imp
-INSERT INTO `mob_droplist` VALUES (534,0,3208,60); -- Charis seal feet From Div-e Sepid to Clammy Imp
-INSERT INTO `mob_droplist` VALUES (534,0,3190,60); -- Ravager's seal feet From Div-e Sepid to Clammy Imp
 
-DELETE FROM `mob_droplist` WHERE `dropId`=551 and `type`=0 and `itemId`=2150 and `rate`=380; -- Colibri Feather from Coastal Colibri
-DELETE FROM `mob_droplist` WHERE `dropId`=551 and `type`=2 and `itemId`=2171 and `rate`=0; -- Colibri Beak from Coastal Colibri
-DELETE FROM `mob_droplist` WHERE `dropId`=551 and `type`=0 and `itemId`=2171 and `rate`=80; -- Colibri Beak from Coastal Colibri
-DELETE FROM `mob_droplist` WHERE `dropId`=551 and `type`=0 and `itemId`=3092 and `rate`=200; -- Mocking Beak from Coastal Colibri
-INSERT INTO `mob_droplist` VALUES (551,0,3183,60); -- Lancer seal leg from Avalerion to Coastal colibri
-INSERT INTO `mob_droplist` VALUES (551,0,3179,60); -- Aoidos seal leg from Avalerion to Coastal colibri
-INSERT INTO `mob_droplist` VALUES (551,0,3189,60); -- Savant's seal leg from Avalerion to Coastal
-INSERT INTO `mob_droplist` VALUES (551,0,3171,60); -- Tantra seal leg from Avalerion to Coastal colibri
+
+
+
 INSERT INTO `mob_droplist` VALUES (727,0,19402,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (788,0,3288,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (788,0,3288,1000); -- COMMENT ME
@@ -114,10 +70,7 @@ INSERT INTO `mob_droplist` VALUES (962,0,12090,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1621,0,16192,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1645,0,19397,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1668,0,12095,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3198 and `rate`=100; -- Ferine seal feet from Hrosshvalur
-DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3200 and `rate`=100; -- Sylvan seal feet from Hrosshvalur
-DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3204 and `rate`=100; -- Callers seal feet from Hrosshvalur
-DELETE FROM `mob_droplist` WHERE `dropId`=1708 and `type`=0 and `itemId`=3205 and `rate`=100; -- Mavi seal feet from Hrosshvalur
+
 INSERT INTO `mob_droplist` VALUES (1708,0,3198,370); -- Ferine seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3198,170); -- Ferine seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3200,510); -- Sylvan seal feet into Hrosshvalur
@@ -127,10 +80,7 @@ INSERT INTO `mob_droplist` VALUES (1708,0,3204,170); -- Callers seal feet into H
 INSERT INTO `mob_droplist` VALUES (1708,0,3205,380); -- Mavi seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3205,180); -- Mavi seal feet into Hrosshvalur
 
-DELETE FROM `mob_droplist` WHERE `dropId`=1774 and `type`=0 and `itemId`=3194 and `rate`=100; -- Estoqueur`s Seal Feet from Iktomi
-DELETE FROM `mob_droplist` WHERE `dropId`=1774 and `type`=0 and `itemId`=3195 and `rate`=100; -- Raider`s Seal Feet from Iktomi
-DELETE FROM `mob_droplist` WHERE `dropId`=1774 and `type`=0 and `itemId`=3196 and `rate`=100; -- Creed Seal Feet from Iktomi
-DELETE FROM `mob_droplist` WHERE `dropId`=1774 and `type`=0 and `itemId`=3201 and `rate`=100; -- Unkai Seal Feet from Iktomi
+
 INSERT INTO `mob_droplist` VALUES (1774,0,3194,320); -- Estoqueur`s Seal Feet from Iktomi
 INSERT INTO `mob_droplist` VALUES (1774,0,3194,350); -- Estoqueur`s Seal Feet from Iktomi
 INSERT INTO `mob_droplist` VALUES (1774,0,3195,330); -- Raider`s Seal Feet from Iktomi
@@ -147,11 +97,7 @@ INSERT INTO `mob_droplist` VALUES (1810,0,3290,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1812,0,2962,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1812,0,2962,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1812,0,19400,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (1841,0,3191,60); -- Tantra Seal Feet from Iku-Turso to Jasconius
-INSERT INTO `mob_droplist` VALUES (1841,0,3202,60); -- Iga Seal Feet from Iku-Turso to Jasconius
-INSERT INTO `mob_droplist` VALUES (1841,0,3195,60); -- Raider`s Seal Feet from Iku-Turso to Jasconius
-INSERT INTO `mob_droplist` VALUES (1841,0,3208,60); -- Charis Seal Feet from Iku-Turso to Jasconius
-INSERT INTO `mob_droplist` VALUES (1841,0,19057,60); -- Caucus Grip from Iku-Turso to Jasconius
+
 INSERT INTO `mob_droplist` VALUES (1966,0,2932,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1966,0,2932,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1966,0,12088,340); -- COMMENT ME
@@ -168,12 +114,8 @@ INSERT INTO `mob_droplist` VALUES (3241,0,19410,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3273,0,2964,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3273,0,2964,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3273,0,19408,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE `dropId`=3299 and `type`=0 and `itemId`=3107 and `rate`=180; -- Shockshroom used to spawn Armillaria
-INSERT INTO `mob_droplist` VALUES (3299,0,3203,60); -- Lancer`s Seal Feet from Armillaria to Speltercap
-INSERT INTO `mob_droplist` VALUES (3299,0,3190,60); -- Ravager`s Seal Feet from Armillaria to Speltercap
-INSERT INTO `mob_droplist` VALUES (3299,0,3195,60); -- Raiders`s Seal Feet from Armillaria to Speltercap
-INSERT INTO `mob_droplist` VALUES (3299,0,3208,60); -- Charis Seal Feet from Armillaria to Speltercap
-INSERT INTO `mob_droplist` VALUES (3299,0,18803,60); -- Pax Grip from Armillaria to Speltercap
+
+
 INSERT INTO `mob_droplist` VALUES (3529,0,12099,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3632,0,12096,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3632,0,19403,340); -- COMMENT ME
@@ -185,14 +127,14 @@ INSERT INTO `mob_droplist` VALUES (4516,0,19302,330); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,12103,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,19401,340); -- COMMENT ME
 
-DELETE FROM `mob_droplist` WHERE `dropId`=4519 and `type`=0 and `itemId`=17854 and `rate`=133; -- COMMENT ME
+
 INSERT INTO `mob_droplist` VALUES (4519,0,13791,420); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,11733,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,11637,700); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,3225,550); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,3224,550); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,20787,108); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE `dropId`=4520 and `type`=0 and `itemId`=11409 and `rate`=167; -- COMMENT ME
+
 INSERT INTO `mob_droplist` VALUES (4520,0,11525,520); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4521,0,11594,108); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4521,0,11735,631); -- COMMENT ME
