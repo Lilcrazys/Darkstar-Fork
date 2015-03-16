@@ -42,8 +42,8 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF, -50);
-    mob:addMod(MOD_DEF, -150);
-    mob:addMod(MOD_ATT, -150);
+    mob:addMod(MOD_DEF, -100);
+    mob:addMod(MOD_ATT, -100);
 end;
 
 -----------------------------------
@@ -69,12 +69,12 @@ function onMobFight(mob, target)
             mob:useMobAbility(432); -- MS
             mob:setLocalVar("Shinryu_2hr", 3);
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-            mob:setMod(MOD_REGAIN,20);
-            mob:setMod(MOD_TRIPLE_ATTACK, 15);
-            mob:setMod(MOD_UFASTCAST, 75);
+            mob:setMod(MOD_REGAIN,40);
+            mob:setMod(MOD_TRIPLE_ATTACK, 25);
+            mob:setMod(MOD_UFASTCAST, 95);
             mob:addMod(MOD_MDEF, -350);
             mob:addMod(MOD_DEF, -350);
-            mob:addMod(MOD_ATT, 150);
+            mob:addMod(MOD_ATT, 250);
         end
     elseif (mob:getHPP() <= 30) then
         if (Shinryu_2hr_Used == 1) then
@@ -95,10 +95,17 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 30;
+    local LUNAR = 13;
+
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_APOCALYPSE) == false) then
         killer:addKeyItem(ATMA_OF_THE_APOCALYPSE);
         killer:messageSpecial(6385, ATMA_OF_THE_APOCALYPSE);
         killer:addTitle(WYRM_GOD_DEFIER);
+    end
+
+    if (math.random(0,99) < LUNAR  and killer:hasKeyItem(LUNAR_ABYSSITE3) == false) then
+        killer:addKeyItem(LUNAR_ABYSSITE3);
+        killer:messageSpecial(6385, LUNAR_ABYSSITE3);
     end
 end;
 

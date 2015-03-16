@@ -4840,7 +4840,13 @@ INSERT INTO `mob_skill` VALUES (224,991,288,'Petrifactive_Breath',4,10.0,2000,15
 INSERT INTO `mob_skill` VALUES (226,991,290,'Pounce',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (227,991,291,'Charged_Whisker',1,12.5,2000,1500,4,0,0,0);
 
-
+-- Resheph (992)
+INSERT INTO `mob_skill` VALUES (474,992,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES(106,992,830,'Resheph_Double_Claw',0,7.0,2000,1500,4,0,0,1);
+INSERT INTO `mob_skill` VALUES(107,992,831,'Resheph_Grapple',4,12.5,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(108,992,832,'Resheph_Filamented_Hold',4,12.5,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(109,992,833,'Resheph_Spinning_Top',1,15.0,2000,1500,4,0,0,1);
+INSERT INTO `mob_skill` VALUES(2443,992,833,'Resheph_Tarsal_Slam',1,15.0,2000,1500,4,0,0,1);
 
 
 

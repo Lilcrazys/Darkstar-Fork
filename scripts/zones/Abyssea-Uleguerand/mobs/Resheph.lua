@@ -19,6 +19,13 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
+
+    mob:setMod(MOD_REGEN, 30);
+    mob:addMod(MOD_MEVA, 50);
+    mob:setMod(MOD_COUNTER, 15);
+    mob:addMod(MOD_DOUBLE_ATTACK, 10)
 end;
 
 -----------------------------------
@@ -33,6 +40,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
+    if (mob:getTPP() => 100) then
+        mob:useMobAbility(474);
+    end
 end;
 
 -----------------------------------
@@ -41,9 +51,16 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 30;
+    local LUNAR = 13;
+
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
         killer:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
         killer:messageSpecial(6385, ATMA_OF_THE_PLAGUEBRINGER);
+    end
+
+    if (math.random(0,99) < LUNAR  and killer:hasKeyItem(LUNAR_ABYSSITE2) == false) then
+        killer:addKeyItem(LUNAR_ABYSSITE2);
+        killer:messageSpecial(6385, LUNAR_ABYSSITE2);
     end
 end;
 

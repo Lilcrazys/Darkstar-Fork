@@ -1157,3 +1157,92 @@ INSERT INTO `mob_droplist` VALUES (9247,0,5435,15); -- Fool's Drink-temp item
 INSERT INTO `mob_droplist` VALUES (9247,0,5836,15); -- Healing Salve II-temp item
 INSERT INTO `mob_droplist` VALUES (9247,0,5831,15); -- Lucid Elixir II-temp item
 INSERT INTO `mob_droplist` VALUES (9247,0,5397,15); -- Sprinter's Drink-temp item
+
+-- ------------------ Naul ------------------------------
+INSERT INTO `mob_droplist` VALUES (9248,0,2490,11); -- Forbidden key 1.1%
+
+-- ------------------ Thalassinon ------------------------------
+INSERT INTO `mob_droplist` VALUES (9250,0,2490,12); -- Forbidden key 1.2%
+
+-- ------------------ Vermes Carnium ------------------------------
+INSERT INTO `mob_droplist` VALUES (9251,0,2490,12); -- Forbidden key 1.2%
+
+-- ------------------ Wiederganger ------------------------------
+INSERT INTO `mob_droplist` VALUES (9252,0,2490,14); -- Forbidden key 1.4%
+INSERT INTO `mob_droplist` VALUES (9252,0,1639,124); -- Corse robe 12.4%
+INSERT INTO `mob_droplist` VALUES (9252,0,1614,139); -- Corse bracelet 13.9%
+
+-- ------------------ Nematocera ------------------------------
+INSERT INTO `mob_droplist` VALUES (9253,0,2490,11); -- Forbidden key 1.1%
+INSERT INTO `mob_droplist` VALUES (9253,0,2522,208); -- Gnat wing 20.8%
+
+-- ------------------ Bog Body ------------------------------
+INSERT INTO `mob_droplist` VALUES (9254,0,2490,64); -- Forbidden key 6.4%
+INSERT INTO `mob_droplist` VALUES (9254,0,2212,132); -- Gunpowder swathe 13.2%
+INSERT INTO `mob_droplist` VALUES (9254,0,2165,14); -- Qutrub gorget 1.4%
+
+-- ------------------ Cannered Noz ------------------------------
+INSERT INTO `mob_droplist` VALUES (9255,0,2947,113); -- Exorcised skull 11.3%
+INSERT INTO `mob_droplist` VALUES (9255,0,11607,14); -- Artemis' Medal 1.4%
+INSERT INTO `mob_droplist` VALUES (9255,0,786,1); -- Ruby 0.1%
+INSERT INTO `mob_droplist` VALUES (9255,0,804,5); -- Spinel 0.5%
+INSERT INTO `mob_droplist` VALUES (9255,0,789,1); -- Topaz 0.1%
+INSERT INTO `mob_droplist` VALUES (9255,0,4771,1); -- Stone V 0.1%
+INSERT INTO `mob_droplist` VALUES (9255,0,4781,1); -- Water V 0.1%
+INSERT INTO `mob_droplist` VALUES (9255,0,5152,1); -- Buffalo Meat 0.1%
+
+-- ------------------ Bhumi ------------------------------
+INSERT INTO `mob_droplist` VALUES (9256,0,2490,12); -- Forbidden key 1.2%
+
+-- ------------------ Pasture Funguar ------------------------------
+INSERT INTO `mob_droplist` VALUES (9257,0,2490,11); -- Forbidden key 1.1%
+INSERT INTO `mob_droplist` VALUES (9257,0,4375,127); -- Danceshroom 12.7%
+INSERT INTO `mob_droplist` VALUES (9257,0,4374,134); -- Sleepshroom 13.4%
+INSERT INTO `mob_droplist` VALUES (9257,0,4373,134); -- Woozyshroom 13.4%
+
+-- ------------------ Chasm Gnat ------------------------------
+INSERT INTO `mob_droplist` VALUES (9258,0,2522,351); -- Gnat wing 35.1%
+
+-- ------------------ Funnel Antlion ------------------------------
+INSERT INTO `mob_droplist` VALUES (9259,0,1616,82); -- Antlion jaw 8.2%
+INSERT INTO `mob_droplist` VALUES (9259,0,1649,20); -- Scarlet stone 2%
+
+-- ------------------ Boartrap ------------------------------
+INSERT INTO `mob_droplist` VALUES (9260,0,3096,112); -- Spotted flyfrond 11.2%
+INSERT INTO `mob_droplist` VALUES (9260,0,1617,85); -- Flytrap leaf 8.5%
+
+-- ------------------ wily opo-opo ------------------------------
+INSERT INTO `mob_droplist` VALUES (9262,0,17296,332); -- Pebble 33.2%
+INSERT INTO `mob_droplist` VALUES (9262,0,4468,166); -- Bunch of pamamas 16.6%
+INSERT INTO `mob_droplist` VALUES (9262,0,4432,64); -- Kazham pineapple 6.4%
+INSERT INTO `mob_droplist` VALUES (9262,0,4412,18); -- Thundermelon 1.8%
+
+-- ------------------ Desert Clionid ------------------------------
+INSERT INTO `mob_droplist` VALUES (9263,0,2890,103); -- Clionid wing 10.3%
+INSERT INTO `mob_droplist` VALUES (9263,0,2888,28); -- Sanguinet 2.8%
+
+-- ------------------ Oasis Amoeban ------------------------------
+INSERT INTO `mob_droplist` VALUES (9264,0,2641,82); -- Amoeban pseudopod 8.2%
+INSERT INTO `mob_droplist` VALUES (9264,0,2888,8); --  Sanguinet 0.8%
+
+-- ------------------ Benumbed Vodoriga ------------------------------
+INSERT INTO `mob_droplist` VALUES (9265,0,2747,337); -- Gargouille shank 33.7%
+INSERT INTO `mob_droplist` VALUES (9265,0,3257,83); -- Benumbed eye 8.3%
+INSERT INTO `mob_droplist` VALUES (9265,0,2823,76); -- Iridium ingot 7.6%
+INSERT INTO `mob_droplist` VALUES (9265,0,2747,23); -- Gargouille horn 2.3%
+
+-- ------------------ Peak Pugil ------------------------------
+INSERT INTO `mob_droplist` VALUES (9267,0,868,341); -- Handful of pugil scales 34.1%
+INSERT INTO `mob_droplist` VALUES (9267,0,3270,48); -- High-quality pugil scale 4.8%
+
+-- ------------------ Ashtaerh the Gallvexed ------------------------------
+INSERT INTO `mob_droplist` VALUES (9268,0,11560,25); -- Pedant Cape 25%
+INSERT INTO `mob_droplist` VALUES (9268,0,5152,1); -- Buffalo Meat 0.1%
+INSERT INTO `mob_droplist` VALUES (9268,0,1633,1); -- Clot Plasma 0.1%
+INSERT INTO `mob_droplist` VALUES (9268,0,830,1); -- Rainbow Cloth 0.1%
+INSERT INTO `mob_droplist` VALUES (9268,0,1634,1); -- Rhodonite 0.1%
+
+-- ------------------ Highland Rafflesi ------------------------------
+INSERT INTO `mob_droplist` VALUES (9269,0,2513,130); -- Rafflesia vine 13%
+INSERT INTO `mob_droplist` VALUES (9269,0,2514,62); -- Rafflesia petal 6.2%
+INSERT INTO `mob_droplist` VALUES (9269,0,2490,12); -- Forbidden key 1.2%
