@@ -23,7 +23,7 @@ function onMobWeaponSkill(target, mob, skill)
     local hpset = 1
 
     if(targetcurrentHP > hpset) then
-        dmg = hpset;
+        dmg = target:getHP()-1;
     else
         dmg=0;
     end
