@@ -42,7 +42,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    if (mob:getTPP() => 100) and
+    if (mob:getTP() => 100) and
        (mob:hasStatusEffect(EFFECT_MEIKYO_SHISUI) == false) then
         mob:useMobAbility(474);
     end
