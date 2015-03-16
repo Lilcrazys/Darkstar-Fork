@@ -12,6 +12,8 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:addMod(MOD_DMGMAGIC, -50);
+    mob:addMod(MOD_DMGRANGE, -50);
 end;
 
 -----------------------------------
@@ -23,7 +25,7 @@ function onMobSpawn(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
 
     mob:setMod(MOD_REGEN, 30);
-    mob:addMod(MOD_MEVA, 50);
+    mob:setMod(MOD_ZANSHIN, 30);
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
 end;
@@ -40,7 +42,8 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    if (mob:getTPP() => 100) then
+    if (mob:getTPP() => 100) and
+       (mob:hasStatusEffect(EFFECT_MEIKYO_SHISUI) == false) then
         mob:useMobAbility(474);
     end
 end;

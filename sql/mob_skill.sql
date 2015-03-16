@@ -198,14 +198,10 @@ INSERT INTO `mob_skill` VALUES (64,186,64,'Sweet_Breath',4,15.0,2000,1500,4,0,0,
 -- INSERT INTO `mob_skill` VALUES (?,?,?,'Extremely_Bad_Breath',4,7.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
 
 -- Eccentric Eve
-INSERT INTO `mob_skill` VALUES (60,503,60,'Impale',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (61,503,61,'Vampiric_Lash',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (62,503,62,'Vampiric_Root',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (63,503,63,'Bad_Breath',4,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (64,503,64,'Sweet_Breath',4,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (470,503,1213,'Drain_Whip',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2318,503,60,'Thousand Spears',4,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1076,503,63,'Extremely_Bad_Breath',4,7.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
+INSERT INTO `mob_skill` VALUES (63,503,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (470,503,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2318,503,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1076,503,63,'EE_Extremely_Bad_Breath',4,7.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
 
 
 -- Cirrate Christelle
@@ -4843,8 +4839,7 @@ INSERT INTO `mob_skill` VALUES (227,991,291,'Charged_Whisker',1,12.5,2000,1500,4
 -- Resheph (992)
 INSERT INTO `mob_skill` VALUES (474,992,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES(106,992,830,'Resheph_Double_Claw',0,7.0,2000,1500,4,0,0,1);
-INSERT INTO `mob_skill` VALUES(107,992,831,'Resheph_Grapple',4,12.5,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(108,992,832,'Resheph_Filamented_Hold',4,12.5,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(107,992,831,'Resheph_Grapple',0,12.5,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(109,992,833,'Resheph_Spinning_Top',1,15.0,2000,1500,4,0,0,1);
 INSERT INTO `mob_skill` VALUES(2443,992,833,'Resheph_Tarsal_Slam',1,15.0,2000,1500,4,0,0,1);
 

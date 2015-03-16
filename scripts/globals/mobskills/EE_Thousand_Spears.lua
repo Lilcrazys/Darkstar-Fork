@@ -1,5 +1,5 @@
 ---------------------------------------------
---  Zantetsuken
+--  1000 Spears
 --
 
 --
@@ -14,9 +14,13 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local needles = 5000 / skill:getTotalTargets();
+    local typeEffect = EFFECT_AMNESIA;
+    local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
 
-    local typeEffect = EFFECT_KO;
+    target:delHP(dmg);
+    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 0, 90));
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 1));
-    return typeEffect;
+
+    return dmg;
 end;
