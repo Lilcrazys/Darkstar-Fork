@@ -26,7 +26,7 @@ REPLACE INTO `mob_groups` VALUES (424,853,15,60,0,606,10000,10000,104,106,0); --
 REPLACE INTO `mob_groups` VALUES (425,902,15,60,0,633,10000,10000,104,106,0); -- Dapifier Imp Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (426,951,15,60,0,668,10000,10000,104,106,0); -- Deep Eye Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (428,1150,15,60,0,820,60000,10000,112,116,0); -- Dybbuk Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (429,1171,15,0,128,838,60000,10000,110,112,0); -- Eccentric Eve Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (429,1171,15,0,128,838,110000,10000,120,120,0); -- Eccentric Eve Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (430,1244,15,60,0,887,10000,10000,104,106,0); -- Ephemeral Clionid Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (431,1245,15,60,0,889,10000,10000,104,106,0); -- Ephemeral Limule Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (432,1312,15,0,128,938,60000,20999,110,112,0); -- Fear Gorta Abyssea-Konschtat
