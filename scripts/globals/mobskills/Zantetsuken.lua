@@ -19,7 +19,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
     if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
-        MobStatusEffectMove(mob, target, EFFECT_KO, 0, 0, 0);
+        skill:setMsg(243); -- Effect of KO
         target:setHP(0);
         return EFFECT_KO;
     else

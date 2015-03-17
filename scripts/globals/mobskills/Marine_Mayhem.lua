@@ -17,11 +17,11 @@ function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_KO;
     -- target:SpoofChatParty( "Most are smart enough to run..", MESSAGE_SAY )
     if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
-        MobStatusEffectMove(mob, target, typeEffect, 0, 0, 0);
+        skill:setMsg(243); -- Effect of KO
         target:setHP(0);
     else
         typeEffect = EFFECT_NONE;
-        skill:setMsg(282);
+        skill:setMsg(282); -- Evades
     end
 
     return typeEffect;
