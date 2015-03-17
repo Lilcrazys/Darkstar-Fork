@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MACC,425);
     mob:addMod(MOD_MDEF,45);
-    mob:addMod(MOD_DEF,75); 
+    mob:addMod(MOD_DEF,75);
 end;
 
 -----------------------------------
@@ -70,7 +70,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(474); -- MK
             mob:setLocalVar("Soaring_Naraka_2hr_Used", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -100,5 +100,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 100); 
+    killer:addCurrency("legion_point", 100);
+    killer:addTitle(SUBJUGATOR_OF_THE_SOARING);
 end;

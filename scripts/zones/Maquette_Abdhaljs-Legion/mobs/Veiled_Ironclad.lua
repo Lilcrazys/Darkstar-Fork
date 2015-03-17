@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_ATT,105);
     mob:addMod(MOD_MDEF,55);
     mob:addMod(MOD_DEF,125);
-    mob:addMod(MOD_DOUBLE_ATTACK, 15); 
+    mob:addMod(MOD_DOUBLE_ATTACK, 15);
 end;
 
 -----------------------------------
@@ -71,7 +71,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(434); -- HF
             mob:setLocalVar("Veiled_Ironclad_2hr_Used", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -85,7 +85,7 @@ function onAdditionalEffect(mob,target,damage)
         target:addStatusEffect(EFFECT_STUN,1,0,duration);
         mob:resetEnmity(target);
         return SUBEFFECT_NONE,0,EFFECT_STUN;
-    end 
+    end
 end;
 
 -----------------------------------
@@ -107,5 +107,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 100); 
+    killer:addCurrency("legion_point", 100);
+    killer:addTitle(SUBJUGATOR_OF_THE_VEILED);
 end;
