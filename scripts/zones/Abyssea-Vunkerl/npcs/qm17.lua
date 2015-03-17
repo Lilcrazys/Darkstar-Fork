@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(17666508) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(GLOSSY_SEA_MONK_SUCKER) and player:hasKeyItem(SHIMMERING_PUGIL_SCALE) then
+        if (player:hasKeyItem(GLOSSY_SEA_MONK_SUCKER) and player:hasKeyItem(SHIMMERING_PUGIL_SCALE)) then
             player:startEvent(1015, GLOSSY_SEA_MONK_SUCKER, SHIMMERING_PUGIL_SCALE); -- Ask if player wants to use KIs
         else
             player:startEvent(1120, GLOSSY_SEA_MONK_SUCKER, SHIMMERING_PUGIL_SCALE); -- Do not ask, because player is missing at least 1.

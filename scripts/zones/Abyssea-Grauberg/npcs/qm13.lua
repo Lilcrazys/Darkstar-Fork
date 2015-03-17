@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(17818061) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(VACANT_BUGARD_EYE) then
+        if (player:hasKeyItem(VACANT_BUGARD_EYE)) then
             player:startEvent(1020, VACANT_BUGARD_EYE); -- Ask if player wants to use KIs
         else
             player:startEvent(1021, VACANT_BUGARD_EYE); -- Do not ask, because player is missing at least 1.

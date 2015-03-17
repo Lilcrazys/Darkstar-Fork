@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(17813913) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(DECAYING_DIREMITE_FANG) then
+        if (player:hasKeyItem(DECAYING_DIREMITE_FANG)) then
             player:startEvent(1020, DECAYING_DIREMITE_FANG); -- Ask if player wants to use KIs
         else
             player:startEvent(1021, DECAYING_DIREMITE_FANG); -- Do not ask, because player is missing at least 1.

@@ -14,7 +14,7 @@ require("scripts/globals/keyitems");
 function onTrigger(player,npc)
     if (GetMobAction(17658277) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(VENOMOUS_WAMOURA_FEELER) and player:hasKeyItem(BULBOUS_CRAWLER_COCOON)
-        and player:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN) then  -- I broke it into 3 lines at the 'and' because it was so long.
+        and player:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN)) then  -- I broke it into 3 lines at the 'and' because it was so long.
             player:startEvent(1022, VENOMOUS_WAMOURA_FEELER, BULBOUS_CRAWLER_COCOON, DISTENDED_CHIGOE_ABDOMEN); -- Ask if player wants to use KIs
         else
             player:startEvent(1023, VENOMOUS_WAMOURA_FEELER, BULBOUS_CRAWLER_COCOON, DISTENDED_CHIGOE_ABDOMEN); -- Do not ask, because player is missing at least 1.

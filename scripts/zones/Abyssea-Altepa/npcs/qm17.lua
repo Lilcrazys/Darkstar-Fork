@@ -14,7 +14,7 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(17670556) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(STEAMING_CERBERUS_TONGUE) then
+        if (player:hasKeyItem(STEAMING_CERBERUS_TONGUE)) then
             player:startEvent(1020, STEAMING_CERBERUS_TONGUE); -- Ask if player wants to use KIs
         else
             player:startEvent(1021, STEAMING_CERBERUS_TONGUE); -- Do not ask, because player is missing at least 1.

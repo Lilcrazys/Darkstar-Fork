@@ -14,7 +14,7 @@ require("scripts/globals/keyitems");
 function onTrigger(player,npc)
     if (GetMobAction(17662478) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(BLOODSTAINED_BUGARD_FANG) and player:hasKeyItem(GNARLED_LIZARD_NAIL)
-        and player:hasKeyItem(MOLTED_PEISTE_SKIN) then -- I broke it into 3 lines at the 'and' because it was so long.
+        and player:hasKeyItem(MOLTED_PEISTE_SKIN)) then -- I broke it into 3 lines at the 'and' because it was so long.
             player:startEvent(1021, BLOODSTAINED_BUGARD_FANG, GNARLED_LIZARD_NAIL, MOLTED_PEISTE_SKIN); -- Ask if player wants to use KIs
         else
             player:startEvent(1020, BLOODSTAINED_BUGARD_FANG, GNARLED_LIZARD_NAIL, MOLTED_PEISTE_SKIN); -- Do not ask, because player is missing at least 1.

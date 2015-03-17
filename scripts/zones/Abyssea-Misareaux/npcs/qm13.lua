@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(17662481) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(GLISTENING_OROBON_LIVER) and player:hasKeyItem(DOFFED_POROGGO_HAT) then
+        if (player:hasKeyItem(GLISTENING_OROBON_LIVER) and player:hasKeyItem(DOFFED_POROGGO_HAT)) then
             player:startEvent(1021, GLISTENING_OROBON_LIVER, DOFFED_POROGGO_HAT); -- Ask if player wants to use KIs
         else
             player:startEvent(1020, GLISTENING_OROBON_LIVER, DOFFED_POROGGO_HAT); -- Do not ask, because player is missing at least 1.

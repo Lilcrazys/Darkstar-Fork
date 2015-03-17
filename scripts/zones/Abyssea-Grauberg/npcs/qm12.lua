@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(17818060) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(VENOMOUS_HYDRA_FANG) then
+        if (player:hasKeyItem(VENOMOUS_HYDRA_FANG)) then
             player:startEvent(1020, VENOMOUS_HYDRA_FANG); -- Ask if player wants to use KIs
         else
             player:startEvent(1021, VENOMOUS_HYDRA_FANG); -- Do not ask, because player is missing at least 1.
