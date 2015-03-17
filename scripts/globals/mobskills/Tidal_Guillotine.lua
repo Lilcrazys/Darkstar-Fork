@@ -1,25 +1,28 @@
 ---------------------------------------------------
---  Deathgnash
 --
---  Description:  Reduces target's HP to 5% of its maximum value, ignores Utsusemi  ,Bind (30 sec)
---  Type: Magical
---  
-
+-- Tidal Guillotine
+--
+--
 ---------------------------------------------------
-
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
- 	local typeEffect = EFFECT_KO;
+    local typeEffect = EFFECT_KO;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 1));
+    if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
+        MobStatusEffectMove(mob, target, typeEffect, 0, 0, 0);
+        target:setHP(0);
+    else
+        typeEffect = EFFECT_NONE;
+        skill:setMsg(282);
+    end
+
     return typeEffect;
-end
+end;

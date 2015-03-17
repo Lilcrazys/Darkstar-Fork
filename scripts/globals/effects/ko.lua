@@ -9,7 +9,6 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
-	target:setHP(0);
 end;
 
 -----------------------------------

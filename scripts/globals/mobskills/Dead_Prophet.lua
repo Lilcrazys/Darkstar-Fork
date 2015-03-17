@@ -1,24 +1,28 @@
 ---------------------------------------------------
--- Absolute Terror
--- Causes Terror, which causes the victim to be stunned for the duration of the effect, this can not be removed.
+--
+-- Dead Prophet
+--
+--
 ---------------------------------------------------
-
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local typeEffect = EFFECT_KO;
 
-	local typeEffect = EFFECT_KO;
-	local power = 30;
-	local duration = 1;
-	skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, power, 0, duration));
-	return typeEffect;
+    if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
+        MobStatusEffectMove(mob, target, typeEffect, 0, 0, 0);
+        target:setHP(0);
+    else
+        typeEffect = EFFECT_NONE;
+        skill:setMsg(282);
+    end
 
+    return typeEffect;
 end

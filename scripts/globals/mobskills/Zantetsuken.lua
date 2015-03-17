@@ -1,22 +1,29 @@
 ---------------------------------------------
---  Zantetsuken
 --
+-- Zantetsuken
+--
+--
+---------------------------------------------
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
+---------------------------------------------
 
---
---
----------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
----------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local dmgmod = 2;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_DARK,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
-    local typeEffect = EFFECT_KO;
-
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 1));
-    return typeEffect;
+    if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
+        MobStatusEffectMove(mob, target, EFFECT_KO, 0, 0, 0);
+        target:setHP(0);
+        return EFFECT_KO;
+    else
+        target:delHP(dmg);
+        return dmg;
+    end
 end;

@@ -1,24 +1,28 @@
 ---------------------------------------------
---  Petro Gaze
---  Description: Petrifies opponents with a gaze attack.
---  Type: Gaze
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Single gaze
---  Notes: Nightmare Cockatrice extends this to a fan-shaped AOE.
+--
+-- Bane of tartarus
+--
+--
 ---------------------------------------------
-
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_KO;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 25));
+    if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
+        MobStatusEffectMove(mob, target, typeEffect, 0, 0, 0);
+        target:setHP(0);
+    else
+        typeEffect = EFFECT_NONE;
+        skill:setMsg(282);
+    end
+
     return typeEffect;
 end;
