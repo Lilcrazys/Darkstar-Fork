@@ -27,4 +27,5 @@ function onMobWeaponSkill(target, mob, skill)
         dmg= targetcurrentHP - hpset;
         target:delHP(dmg);
     return dmg;
+    end
 end
