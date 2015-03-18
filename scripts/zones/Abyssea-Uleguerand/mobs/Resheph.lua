@@ -21,9 +21,10 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGEN, 60);
     mob:setMod(MOD_MDEF, 50);
     mob:setMod(MOD_EVA, -150);
+    mob:setMod(MOD_ACC, 150);
     mob:setMod(MOD_ZANSHIN, 30);
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
