@@ -14,8 +14,6 @@ require("scripts/globals/keyitems");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -50);
 end;
 
 -----------------------------------
@@ -23,15 +21,14 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
-
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_MDEF, 50);
     mob:setMod(MOD_EVA, -150);
     mob:setMod(MOD_ZANSHIN, 30);
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
+    mob:addMod(MOD_DMGMAGIC, -50);
+    mob:addMod(MOD_DMGRANGE, -50);
 end;
 
 -----------------------------------
