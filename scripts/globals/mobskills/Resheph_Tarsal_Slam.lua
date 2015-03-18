@@ -25,8 +25,6 @@ function onMobWeaponSkill(target, mob, skill)
 
     if(targetcurrentHP > hpset)then
         dmg= targetcurrentHP - hpset;
-    else
-
         target:delHP(dmg);
     return dmg;
 end
