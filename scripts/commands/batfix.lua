@@ -2,7 +2,7 @@
 -- func: batfix <fix> <target player>
 -- auth: GM Batman!
 -- desc: This file will change pretty much everything I have to fix something.
--- Currently available fixes: 99cap
+-- Currently available fixes: fixtrialkills, finishtrial, 99cap
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
@@ -14,6 +14,8 @@ cmdprops =
 function onTrigger(player, fix, target)
 	if (fix == nil) then
 		player:PrintToPlayer("You didn't specify the fix!");
+		player:PrintToPlayer("use '@batfix fixtrialkills name' to force a recount of custom trial kills");
+		player:PrintToPlayer("use '@batfix finishtrial name' to force set the custom trials completion variable");
 		player:PrintToPlayer("use '@batfix 99cap name' to fix someone who's cap is 75 and should be 99");
 		return;
 	end
@@ -29,7 +31,14 @@ function onTrigger(player, fix, target)
 		return;
 	end
 
-	if (fix == "99cap") then
+	if (fix = "fixtrialkills") then
+		require("scripts/globals/custom_trial");
+		doCustomTrial(0, target, true, false)
+		player:PrintToPlayer("If the target player had their trial item equipped, their kill counts and completion status should now be accurate");
+	elseif (fix = "finishtrial") then
+		target:setVar("TRIAL_COMPLETE", 1);
+		player:PrintToPlayer("The target players custom trial NPCs should now see the trial requirements have been met.");
+	elseif (fix == "99cap") then
 		require("scripts/globals/titles");
 		require("scripts/globals/quests");
 		if (targ:levelCap() == 75) then
