@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
-    if (GetMobAction(16839070) == ACTION_NONE) then -- NM not already spawned from this
+    if (GetMobAction(16838872) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(TATTERED_HIPPOGRYPH_WING) and player:hasKeyItem(CRACKED_WIVRE_HORN)
         and player:hasKeyItem(MUCID_AHRIMAN_EYEBALL)) then -- I broke it into 3 lines at the 'and' because it was so long.
             player:startEvent(1020, TATTERED_HIPPOGRYPH_WING, CRACKED_WIVRE_HORN, MUCID_AHRIMAN_EYEBALL); -- Ask if player wants to use KIs

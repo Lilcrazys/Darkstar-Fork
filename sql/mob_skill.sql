@@ -201,7 +201,7 @@ INSERT INTO `mob_skill` VALUES (64,186,64,'Sweet_Breath',4,15.0,2000,1500,4,0,0,
 INSERT INTO `mob_skill` VALUES (63,503,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (470,503,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2318,503,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1076,503,63,'EE_Extremely_Bad_Breath',4,7.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
+INSERT INTO `mob_skill` VALUES (1076,503,63,'EE_Extremely_Bad_Breath',4,15.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
 
 
 -- Cirrate Christelle
