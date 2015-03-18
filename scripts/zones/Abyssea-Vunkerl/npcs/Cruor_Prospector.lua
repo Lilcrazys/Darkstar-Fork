@@ -172,9 +172,9 @@ function onEventFinish(player,csid,option)
 
     -- Keyitems
     elseif (option == 65539) then -- Map of Abyssea - Vunkerl
-        if (player:hasKeyItem(MAP_OF_ABYSSEA_Vunkerl) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_Vunkerl);
-            player:addKeyItem(MAP_OF_ABYSSEA_Vunkerl);
+        if (player:hasKeyItem(MAP_OF_ABYSSEA_VUNKERL) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_VUNKERL);
+            player:addKeyItem(MAP_OF_ABYSSEA_VUNKERL);
             player:delCurrency("cruor", 3500);
         end
     elseif (option == 131075) then -- Ivory Abyssite of Sojourn
