@@ -39,7 +39,7 @@ function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
     if (csid == 1020 and option == 1) then
-        SpawnMob(16839070, 300):updateEnmity(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+        SpawnMob(16838872, 300):updateEnmity(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
         player:delKeyItem(TATTERED_HIPPOGRYPH_WING);
         player:delKeyItem(CRACKED_WIVRE_HORN);
         player:delKeyItem(MUCID_AHRIMAN_EYEBALL);
