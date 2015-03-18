@@ -19,13 +19,8 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local targetcurrentHP = target:getHP();
-    local targetmaxHP = target:getMaxHP();
-    local hpset=targetmaxHP*0.001;
-
-    if(targetcurrentHP > hpset)then
-        dmg= targetcurrentHP - hpset;
+    local dmg = target:getHP()-1;
         target:delHP(dmg);
     return dmg;
     end
-end
+end;
