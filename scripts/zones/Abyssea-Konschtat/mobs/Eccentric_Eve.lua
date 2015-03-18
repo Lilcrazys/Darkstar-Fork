@@ -24,14 +24,14 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 30);
-    mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_REGEN, 60);
+    mob:setMod(MOD_REGAIN,35);
 
     -- addMod
     mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_DOUBLE_ATTACK,20)
-    mob:addMod(MOD_MDEF, 50);
-    mob:addMod(MOD_DEF, 50);
+    mob:addMod(MOD_DOUBLE_ATTACK,30)
+    mob:addMod(MOD_MDEF, 250);
+    mob:addMod(MOD_DEF, 250);
 end;
 
 -----------------------------------
