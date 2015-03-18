@@ -680,7 +680,7 @@ INSERT INTO `mob_family_system` VALUES (987,'Bismark',2,'Aquan',4,40,120,140,6,5
 
 INSERT INTO `mob_family_system` VALUES (990,'Ravenous_Cracklaw',2,'Aquan',1,80,108,120,4,3,1,5,3,3,4,3,3,3,3,0.9,0.9,0.9,0.9,0.875,1,0.875,0.875,1,0.75,0.875,0.875,6);
 INSERT INTO `mob_family_system` VALUES (991,'Tefenet',6,'Beast',1,60,94,90,1,1,4,2,6,6,2,3,3,3,3,1,1,1,1,1,1,1,1.25,0.875,1,1,1,5);
-INSERT INTO `mob_family_system` VALUES (992,'Diremite',20,'Vermin',1,40,86,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1.25,1.25,1,3);
+INSERT INTO `mob_family_system` VALUES (992,'Resheph',20,'Vermin',1,40,86,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1.25,1.25,1,3);
 
 
 
