@@ -82,7 +82,7 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 25;
-    local LUNAR = 10
+    local LUNAR = 20
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET) == false) then
         killer:addKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET);
         killer:messageSpecial(6385, ATMA_OF_THE_VORACIOUS_VIOLET);
