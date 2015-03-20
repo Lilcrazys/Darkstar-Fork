@@ -71,9 +71,9 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
 		elseif (killer:hasStatusEffect(EFFECT_SIGIL) and killer:checkDistance(mob) < 100
 		and killer:getCurrentRegion() >= 33 and killer:getCurrentRegion() <= 40 ) then
 			if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
-				killer:addCurrency("imperial_standing", 1+mob:getMainLvl()*0.5);
+				killer:addCurrency("allied_notes", 1+mob:getMainLvl()*0.5);
 			else -- Not an exp mob, no soup and only 1 point for you!
-				killer:addCurrency("imperial_standing", 1);
+				killer:addCurrency("allied_notes", 1);
 			end
 		end
 	end
