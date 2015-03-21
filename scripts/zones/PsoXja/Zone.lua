@@ -30,7 +30,7 @@ function onInitialize(zone)
 	zone:registerRegion(10, 300, 10, -60, 0, 0, 0); -- Elevator to/from Tenzen's Path Avatar Gate (A)
 	zone:registerRegion(11, -340, 10, -220, 0, 0, 0); -- Elevator to/from Avatar Gate (B)
 	zone:registerRegion(12, 260, 10, 300, 0, 0, 0); -- Elevator to/from Avatar Gate (C)
-	zone:registerRegion(13, 140, 10, 340, 0, 0, 0); -- Elevator to/from Avatar Gate (D)
+	zone:registerRegion(13, 140, 10, -340, 0, 0, 0); -- Elevator to/from Avatar Gate (D)
 	-- End workarounds for easily broken elevators
 
     UpdateTreasureSpawnPoint(16814557);
@@ -94,7 +94,7 @@ function onRegionEnter(player,region)
 		if (player:getYPos() < 1) then
 			-- player:PrintToPlayer("Going down!");
 			player:setPos(-20, 31, 33, 192);
-		elseif (player:getYPos() > 33 and player:getYPos() < 29) then
+		elseif (player:getYPos() > 29 and player:getYPos() < 33) then
 			-- player:PrintToPlayer("Going up!");
 			player:setPos(-28, -1, 20, 128);
 		else
@@ -141,7 +141,7 @@ function onRegionEnter(player,region)
 			player:PrintToPlayer("ERROR! Report Avatar Gate (B) elevator bug please!");
 		end
 	elseif (region:GetRegionID() == 12) then -- Avatar Gate (C) Elevator
-		if (player:getYPos() > 17 and player:getYPos() < 13) then
+		if (player:getYPos() > 13 and player:getYPos() < 17) then
 			-- player:PrintToPlayer("Going down!");
 			player:setPos(260, 48, 308, 192);
 		elseif (player:getYPos() > 40) then
@@ -151,12 +151,12 @@ function onRegionEnter(player,region)
 			player:PrintToPlayer("ERROR! Report Avatar Gate (C) elevator bug please!");
 		end
 	elseif (region:GetRegionID() == 13) then -- Avatar Gate (D) Elevator
-		if (player:getYPos() > 17 and player:getYPos() < 13) then
+		if (player:getYPos() > 13 and player:getYPos() < 17) then
 			-- player:PrintToPlayer("Going down!");
 			player:setPos(140, 48, -348, 64);
 		elseif (player:getYPos() > 46 and player:getYPos() < 50) then
 			-- player:PrintToPlayer("Going up!");
-			player:setPos(250, 15.5, -348, 64);
+			player:setPos(140, 15.5, -348, 64);
 		else
 			player:PrintToPlayer("ERROR! Report Avatar Gate (D) elevator bug please!");
 		end
