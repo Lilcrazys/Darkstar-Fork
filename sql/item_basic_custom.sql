@@ -57,8 +57,8 @@ INSERT INTO `item_basic` VALUES (26832,0,'lanun_frac','lanun_frac',1,63552,99,0,
 INSERT INTO `item_basic` VALUES (26834,0,'pitre_tobe','pitre_tobe',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26836,0,'horos_casaque','horos_casaque',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26838,0,'pedagogy_gown','pedagogy_gown',1,63552,99,0,0);
-INSERT INTO `item_basic` VALUES (10690,0,'agoge_mufflers','agoge_mufflers',1,63552,99,0,0);
-INSERT INTO `item_basic` VALUES (10691,0,'hesychasts_gloves','hesychasts_gloves',1,63552,99,0,0);
+INSERT INTO `item_basic` VALUES (26976,0,'agoge_mufflers','agoge_mufflers',1,63552,99,0,0);
+INSERT INTO `item_basic` VALUES (26978,0,'hesychasts_gloves','hesychasts_gloves',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26980,0,'piety_mitts','piety_mitts',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26982,0,'archmages_gloves','archmages_gloves',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (26984,0,'vitivation_gloves','vitivation_gloves',1,63552,99,0,0);

@@ -4931,10 +4931,10 @@ INSERT INTO `mob_skill` VALUES (207,1013,207,'Whirlwind',1,15.0,2000,1500,4,0,0,
 
 
 -- Muq Shabeel (1014)
-INSERT INTO `mob_skill` VALUES (432,1011,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
-INSERT INTO `mob_skill` VALUES (224,1011,288,'Petrifactive_Breath',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (226,1011,290,'Pounce',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (227,1011,291,'Charged_Whisker',1,12.5,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,1014,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (224,1014,288,'Petrifactive_Breath',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (226,1014,290,'Pounce',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (227,1014,291,'Charged_Whisker',1,12.5,2000,1500,4,0,0,0);
 
 
 -- Frost Flambeau (1015)

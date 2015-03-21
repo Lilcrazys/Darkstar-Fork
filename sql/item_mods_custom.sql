@@ -6585,7 +6585,7 @@ INSERT INTO `item_mods` VALUES(26626, 29, 2); --  Magic Def. Bonus+2 (used magic
 INSERT INTO `item_mods` VALUES(26626, 384, 72); --  Haste +7%
 INSERT INTO `item_mods` VALUES(26626, 27, -5); -- Enmity-5
 INSERT INTO `item_mods` VALUES(26626, 289, 9); -- Subtle Blow+9
---INSERT INTO `item_mods` VALUES(26626, 0, 0); -- Augmented with Adds "Enhances 'Penance' effect", Enhances Penance by increasing Inhibit TP effect by 2% per merit level.
+-- INSERT INTO `item_mods` VALUES(26626, 0, 0); -- Augmented with Adds "Enhances 'Penance' effect", Enhances Penance by increasing Inhibit TP effect by 2% per merit level.
 
 -- -------------------------------------------------------
 --   Hes. Cyclas (Body)
