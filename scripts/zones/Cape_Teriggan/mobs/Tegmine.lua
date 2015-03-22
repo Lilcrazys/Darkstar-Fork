@@ -46,7 +46,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob)
-    if (mob:getLocalVar("GO_BOOM") == 0 and mob:getHPP <= 20) then
+    if (mob:getLocalVar("GO_BOOM") == 0 and mob:getHPP() <= 20) then
         mob:setLocalVar("MagicAttackBonus", mob:getMod(MOD_MATT)); -- Store original amount of Magic Attack in a localVar
         mob:setMod(MOD_MATT, 99); -- Set new amount of Magic Attack
         mob:useMobAbility(475); -- I GOES BOOM NOW! (This may need tweaking, should land for a little under half players max hp).
@@ -61,7 +61,7 @@ end;
 function onMonsterMagicPrepare(mob,target)
     local sumDumVar = math.random(0,99);
 
-    if (mob:getHPP > 25) then -- Lets make Tegmine choose Katon more often above 25% and Hyoton more below 25%
+    if (mob:getHPP() > 25) then -- Lets make Tegmine choose Katon more often above 25% and Hyoton more below 25%
         sumDumVar = sumDumVar + 20;
     end
 
