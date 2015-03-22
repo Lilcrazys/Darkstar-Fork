@@ -438,7 +438,8 @@ void CAIMobDummy::ActionDropItems()
 			    }
 
 				//check for gil (beastmen drop gil, some NMs drop gil)
-				if(m_PMob->CanDropGil() || (map_config.all_mobs_gil_bonus > 0 && PChar->loc.zone->GetRegionID() != REGION_DYNAMIS))
+				if(m_PMob->CanDropGil() || (map_config.all_mobs_gil_bonus > 0
+				&& PChar->loc.zone->GetRegionID() != REGION_DYNAMIS && PChar->loc.zone->GetRegionID() != REGION_LIMBUS))
                 {
 					charutils::DistributeGil(PChar, m_PMob); // TODO: REALISATION MUST BE IN TREASUREPOOL
 				}
