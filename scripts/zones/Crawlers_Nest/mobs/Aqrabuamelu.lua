@@ -14,6 +14,20 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:addStatusEffect(EFFECT_ICE_SPIKES,45,0,0);
     mob:getStatusEffect(EFFECT_ICE_SPIKES):setFlag(32);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+end;
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 40);
+    mob:setMod(MOD_REGAIN, 20);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 30)
+    mob:addMod(MOD_ATT, 100);
 end;
 
 -----------------------------------
@@ -38,7 +52,7 @@ function onSpikesDamage(mob,target,damage)
     if (dmg < 0) then
         dmg = 10
     end
-    
+
     dmg = finalMagicNonSpellAdjustments(mob,target,ELE_ICE,dmg);
 
     return SUBEFFECT_ICE_SPIKES,44,dmg;
@@ -50,6 +64,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((7200),(7800))); -- 120 to 130 min
+    -- UpdateNMSpawnPoint(mob:getID());
+    -- mob:setRespawnTime(math.random((7200),(7800))); -- 120 to 130 min
 end;

@@ -15,6 +15,20 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:addStatusEffect(EFFECT_SHOCK_SPIKES,50,0,0);
     mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+end;
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 40);
+    mob:setMod(MOD_REGAIN, 20);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 30)
+    mob:addMod(MOD_ATT, 100);
 end;
 
 -----------------------------------
@@ -54,10 +68,10 @@ function onSpikesDamage(mob,target,damage)
     if (dmg < 0) then
         dmg = 10
     end
-    
+
     dmg = finalMagicNonSpellAdjustments(mob,target,ELE_THUNDER,dmg);
 
-    return SUBEFFECT_SHOCK_SPIKES,44,dmg;
+    return SUBEFFECT_SHOCK_SPIKES,64,dmg;
 
 end;
 
@@ -67,5 +81,5 @@ end;
 
 function onMobDeath(mob, killer)
     -- UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((7200),(10800))); -- 2 to 3 hrs
+    -- mob:setRespawnTime(math.random((7200),(10800))); -- 2 to 3 hrs
 end;

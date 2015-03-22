@@ -13,6 +13,22 @@ require("scripts/globals/magic");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+end;
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 40);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_MACC, 950);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 30)
+    mob:addMod(MOD_ATT, 100);
 end;
 
 -----------------------------------
@@ -22,7 +38,7 @@ end;
 function onAdditionalEffect(mob,target,damage)
     -- Wiki says nothing about proc rate, going with 80% for now.
     -- I remember it going off every hit when I fought him.
-    local chance = 80;
+    local chance = 90;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
     if (target:getMainLvl() > mob:getMainLvl()) then
@@ -50,7 +66,7 @@ function onAdditionalEffect(mob,target,damage)
         if (dmg < 0) then
             dmg = 10
         end
-        
+
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_WATER,dmg);
 
         return SUBEFFECT_WATER_DAMAGE,163,dmg;
@@ -64,5 +80,5 @@ end;
 
 function onMobDeath(mob, killer)
     -- UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((7200),(7800))); -- 120 to 130 min
+    -- mob:setRespawnTime(math.random((7200),(7800))); -- 120 to 130 min
 end;

@@ -16,6 +16,8 @@ function onMobInitialize(mob)
     -- MobMods
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0);

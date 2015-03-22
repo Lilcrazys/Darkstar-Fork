@@ -8756,17 +8756,17 @@ INSERT INTO `item_mods` VALUES(27154, 289, 8); -- Subtle Blow+8
 -- -------------------------------------------------------
 --   Hes. Gaiters (Feet)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES(27154, 1, 42); --  DEF:42
-INSERT INTO `item_mods` VALUES(27154, 2, 48); -- HP+48
-INSERT INTO `item_mods` VALUES(27154, 8, 12); --  STR+12
-INSERT INTO `item_mods` VALUES(27154, 9, 13); -- DEX+13
-INSERT INTO `item_mods` VALUES(27154, 10, 7); --  VIT+7
-INSERT INTO `item_mods` VALUES(27154, 11, 21); -- AGI+21
-INSERT INTO `item_mods` VALUES(27154, 13, 8); -- MND+8
-INSERT INTO `item_mods` VALUES(27154, 14, 18); --  CHR+18
-INSERT INTO `item_mods` VALUES(27154, 65, 32); --  Evasion+32
-INSERT INTO `item_mods` VALUES(27154, 31, 43); -- Magic Evasion+43
-INSERT INTO `item_mods` VALUES(27154, 29, 1); --  Magic Def. Bonus+1 (used magic defence ?)
-INSERT INTO `item_mods` VALUES(27154, 384, 41); --  Haste +4%
-INSERT INTO `item_mods` VALUES(27154, 291, 15); -- Counter attack +15
--- INSERT INTO `item_mods` VALUES(27350, 0, 0); -- Augmented with Adds "Enhances 'Meikyo Shisui' effect", Reduces the cost of weapon skills to 750 TP while Meikyo Shisui is in effect. Must remain equipped whilst performing weapon skills.
+INSERT INTO `item_mods` VALUES(27330, 1, 42); --  DEF:42
+INSERT INTO `item_mods` VALUES(27330, 2, 48); -- HP+48
+INSERT INTO `item_mods` VALUES(27330, 8, 12); --  STR+12
+INSERT INTO `item_mods` VALUES(27330, 9, 13); -- DEX+13
+INSERT INTO `item_mods` VALUES(27330, 10, 7); --  VIT+7
+INSERT INTO `item_mods` VALUES(27330, 11, 21); -- AGI+21
+INSERT INTO `item_mods` VALUES(27330, 13, 8); -- MND+8
+INSERT INTO `item_mods` VALUES(27330, 14, 18); --  CHR+18
+INSERT INTO `item_mods` VALUES(27330, 65, 32); --  Evasion+32
+INSERT INTO `item_mods` VALUES(27330, 31, 43); -- Magic Evasion+43
+INSERT INTO `item_mods` VALUES(27330, 29, 1); --  Magic Def. Bonus+1 (used magic defence ?)
+INSERT INTO `item_mods` VALUES(27330, 384, 41); --  Haste +4%
+INSERT INTO `item_mods` VALUES(27330, 291, 15); -- Counter attack +15
+-- INSERT INTO `item_mods` VALUES(27330, 0, 0); -- Augmented with Adds "Enhances 'Meikyo Shisui' effect", Reduces the cost of weapon skills to 750 TP while Meikyo Shisui is in effect. Must remain equipped whilst performing weapon skills.
