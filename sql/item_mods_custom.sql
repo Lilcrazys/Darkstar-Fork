@@ -7755,22 +7755,22 @@ INSERT INTO `item_mods` VALUES(26998, 161, -3); -- Physical damage taken -3%
 -- -------------------------------------------------------
 --   Sakonji Haidate (Legs)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES(27174, 1, 89); --  DEF:89
-INSERT INTO `item_mods` VALUES(27174, 2, 23); -- HP+23
-INSERT INTO `item_mods` VALUES(27174, 8, 21); --  STR+21
-INSERT INTO `item_mods` VALUES(27174, 10, 12); --  VIT+12
-INSERT INTO `item_mods` VALUES(27174, 11, 9); -- AGI+9
-INSERT INTO `item_mods` VALUES(27174, 12, 17); --  INT+17
-INSERT INTO `item_mods` VALUES(27174, 13, 10); -- MND+10
-INSERT INTO `item_mods` VALUES(27174, 14, 8); --  CHR+8
-INSERT INTO `item_mods` VALUES(27174, 23, 15); --  Attack+15
-INSERT INTO `item_mods` VALUES(27174, 65, 25); --  Evasion+25
-INSERT INTO `item_mods` VALUES(27174, 31, 51); -- Magic Evasion+51
-INSERT INTO `item_mods` VALUES(27174, 29, 1); --  Magic Def. Bonus+1 (used magic defence ?)
-INSERT INTO `item_mods` VALUES(27174, 384, 51); --  Haste +5%
-INSERT INTO `item_mods` VALUES(27174, 508, 35); -- Third Eye": "Counter" rate +35 **Not sure if this is right** Adds counter to 3rd eye anticipates & if using Seigan counter rate is increased by 15%
--- INSERT INTO `item_mods` VALUES(27174, 0, 16); -- "Counter" damage +16 ====> Needs Mod ID
--- INSERT INTO `item_mods` VALUES(27174, 0, 0); -- Augmented with Adds "Enhances 'Shikikoyo' effect", Enhances Shikikoyo effect by allowing the user to retain 10% of the gifted TP per merit level. (Someone with 5/5 merits and 180 TP would end up with 140 TP when using Shikikoyo. If they started with 300 TP, they would retain 200TP after Shikikoyo.)
+REPLACE INTO `item_mods` VALUES(27174, 1, 89); --  DEF:89
+REPLACE INTO `item_mods` VALUES(27174, 2, 23); -- HP+23
+REPLACE INTO `item_mods` VALUES(27174, 8, 21); --  STR+21
+REPLACE INTO `item_mods` VALUES(27174, 10, 12); --  VIT+12
+REPLACE INTO `item_mods` VALUES(27174, 11, 9); -- AGI+9
+REPLACE INTO `item_mods` VALUES(27174, 12, 17); --  INT+17
+REPLACE INTO `item_mods` VALUES(27174, 13, 10); -- MND+10
+REPLACE INTO `item_mods` VALUES(27174, 14, 8); --  CHR+8
+REPLACE INTO `item_mods` VALUES(27174, 23, 15); --  Attack+15
+REPLACE INTO `item_mods` VALUES(27174, 65, 25); --  Evasion+25
+REPLACE INTO `item_mods` VALUES(27174, 31, 51); -- Magic Evasion+51
+REPLACE INTO `item_mods` VALUES(27174, 29, 1); --  Magic Def. Bonus+1 (used magic defence ?)
+REPLACE INTO `item_mods` VALUES(27174, 384, 51); --  Haste +5%
+REPLACE INTO `item_mods` VALUES(27174, 508, 35); -- Third Eye": "Counter" rate +35 **Not sure if this is right** Adds counter to 3rd eye anticipates & if using Seigan counter rate is increased by 15%
+-- REPLACE INTO `item_mods` VALUES(27174, 0, 16); -- "Counter" damage +16 ====> Needs Mod ID
+-- REPLACE INTO `item_mods` VALUES(27174, 0, 0); -- Augmented with Adds "Enhances 'Shikikoyo' effect", Enhances Shikikoyo effect by allowing the user to retain 10% of the gifted TP per merit level. (Someone with 5/5 merits and 180 TP would end up with 140 TP when using Shikikoyo. If they started with 300 TP, they would retain 200TP after Shikikoyo.)
 
 -- -------------------------------------------------------
 --   Sakonji Sune-Ate (Feet)
