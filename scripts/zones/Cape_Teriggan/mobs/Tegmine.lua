@@ -16,6 +16,47 @@ function onMobInitialize(mob)
 end;
 
 -----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    mob:setMod(MOD_MACC, 500); -- My mad ninja skills do not miss/resist!
+    mob:setMod(MOD_MATT, 50); -- They don't hit very hard either though..
+    -- Adjust MOD_MATT as needed, Tegmine's nin nuke should not land zero but not land over 50 dmg on an average lv99 either.
+end;
+
+-----------------------------------
+-- onMobFight
+-----------------------------------
+
+function onMobFight(mob)
+    if (mob:getLocalVar("GO_BOOM") == 0 and mob:getHPP <= 20) then
+        mob:setLocalVar("MagicAttackBonus", mob:getMod(MOD_MATT)); -- Store original amount of Magic Attack in a localVar
+        mob:setMod(MOD_MATT, 99); -- Set new amount of Magic Attack
+        mob:useMobAbility(475); -- I GOES BOOM NOW! (This may need tweaking, should land for a little under half players max hp).
+        mob:setLocalVar("GO_BOOM", 1);
+        mob:setMod(MOD_MATT, mob:getLocalVar("MagicAttackBonus")); -- Restore old amount of Magic Attack
+    end
+end;
+
+-----------------------------------
+-- onMonsterMagicPrepare
+-----------------------------------
+function onMonsterMagicPrepare(mob,target)
+    local sumDumVar = math.random(0,99);
+
+    if (mob:getHPP > 25) then -- Lets make Tegmine choose Katon more often above 25% and Hyoton more below 25%
+        sumDumVar = sumDumVar + 20;
+    end
+
+    if (sumDumVar > 33) then
+        return 322; -- Katon: San, make target weak vs water.
+    else
+        return 325; -- Hyoton: San, make target weak vs fire.
+    end
+end;
+
+-----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
 
@@ -50,7 +91,7 @@ function onAdditionalEffect(mob,target,damage)
         if (dmg < 0) then
             dmg = 10
         end
-        
+
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_WATER,dmg);
 
         return SUBEFFECT_WATER_DAMAGE,163,dmg;
