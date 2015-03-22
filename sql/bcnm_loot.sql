@@ -1662,6 +1662,21 @@ INSERT INTO `bcnm_loot` VALUES ('155', '1958', '200', '6'); -- SMN
 INSERT INTO `bcnm_loot` VALUES ('155', '2658', '400', '6'); -- COR
 INSERT INTO `bcnm_loot` VALUES ('155', '1940', '200', '6'); -- THF
 
+-- ENM Like the Wind
+INSERT INTO `bcnm_loot` VALUES ('179','1763','30','1'); 
+INSERT INTO `bcnm_loot` VALUES ('179','1769','30','1'); 
+INSERT INTO `bcnm_loot` VALUES ('179','1764','30','1');
+INSERT INTO `bcnm_loot` VALUES ('179','1842','100','0');
+INSERT INTO `bcnm_loot` VALUES ('179','17946','100','2');
+INSERT INTO `bcnm_loot` VALUES ('179','18358','100','2');
+INSERT INTO `bcnm_loot` VALUES ('179','16976','100','2');
+INSERT INTO `bcnm_loot` VALUES ('179','4990','230','2');
+INSERT INTO `bcnm_loot` VALUES ('179','17946','100','3');
+INSERT INTO `bcnm_loot` VALUES ('179','18358','100','3');
+INSERT INTO `bcnm_loot` VALUES ('179','16976','100','3');
+INSERT INTO `bcnm_loot` VALUES ('179','4990','230','3');
+
+
 -- 		Shinryu BCNM		   lootID, ItemID,  Roll, lootgroup
 INSERT INTO `bcnm_loot` VALUES ('200', '646', '200', '0');
 INSERT INTO `bcnm_loot` VALUES ('200', '6061', '40', '0');

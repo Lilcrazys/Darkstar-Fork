@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 15288
---	Pellet Belt
---	When used, you will obtain 1 Stack of Pellets
+-- ID: 15288
+-- Pellet Belt
+-- When used, you will obtain 12 Pebbles
 -----------------------------------------
 
 -----------------------------------------
@@ -9,11 +9,11 @@
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
+	local result = 0;
 	if (target:getFreeSlotsCount() == 0) then
 		result = 308;
 	end
-return result;
+	return result;
 end;
 
 -----------------------------------------

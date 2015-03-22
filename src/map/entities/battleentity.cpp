@@ -495,86 +495,37 @@ int32 CBattleEntity::addMP(int32 mp)
 
 uint16 CBattleEntity::STR()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.STR + m_modStat[MOD_STR], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.STR + m_modStat[MOD_STR], 0, 9999);
-    }
+    return dsp_cap(stats.STR + m_modStat[MOD_STR], 0, 999);
 }
 
 uint16 CBattleEntity::DEX()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.DEX + m_modStat[MOD_DEX], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.DEX + m_modStat[MOD_DEX], 0, 9999);
-    }
+    return dsp_cap(stats.DEX + m_modStat[MOD_DEX], 0, 999);
 }
 
 uint16 CBattleEntity::VIT()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.VIT + m_modStat[MOD_VIT], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.VIT + m_modStat[MOD_VIT], 0, 9999);
-    }
+    return dsp_cap(stats.VIT + m_modStat[MOD_VIT], 0, 999);
 }
 
 uint16 CBattleEntity::AGI()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.AGI + m_modStat[MOD_AGI], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.AGI + m_modStat[MOD_AGI], 0, 9999);
-    }
+    return dsp_cap(stats.AGI + m_modStat[MOD_AGI], 0, 999);
 }
 
 uint16 CBattleEntity::INT()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.INT + m_modStat[MOD_INT], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.INT + m_modStat[MOD_INT], 0, 9999);
-    }
+    return dsp_cap(stats.INT + m_modStat[MOD_INT], 0, 999);
 }
 
 uint16 CBattleEntity::MND()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.MND + m_modStat[MOD_MND], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.MND + m_modStat[MOD_MND], 0, 9999);
-    }
+    return dsp_cap(stats.MND + m_modStat[MOD_MND], 0, 999);
 }
 
 uint16 CBattleEntity::CHR()
 {
-    if (objtype == TYPE_PC)
-    {
-        return dsp_cap(stats.CHR + m_modStat[MOD_CHR], 0, 999);
-    }
-    else
-    {
-        return dsp_cap(stats.CHR + m_modStat[MOD_CHR], 0, 9999);
-    }
+    return dsp_cap(stats.CHR + m_modStat[MOD_CHR], 0, 999);
 }
 
 uint16 CBattleEntity::ATT()
@@ -586,7 +537,11 @@ uint16 CBattleEntity::ATT()
 	} else {
 		ATT += (STR()) / 2;
 	}
-	if (this->objtype & TYPE_PC){
+	
+    if (this->StatusEffectContainer->HasStatusEffect(EFFECT_ENDARK))
+        ATT += this->getMod(MOD_ENSPELL_DMG);
+    
+    if (this->objtype & TYPE_PC){
 		ATT += GetSkill(m_Weapons[SLOT_MAIN]->getSkillType());
 	}
     else if (this->objtype == TYPE_PET && ((CPetEntity*)this)->getPetType() == PETTYPE_AUTOMATON)
@@ -754,6 +709,9 @@ void CBattleEntity::SetMLevel(uint8 mlvl)
 	m_modStat[MOD_DEF] -= m_mlvl + dsp_cap(m_mlvl-50,0,10);
 	m_mlvl = (mlvl == 0 ? 1 : mlvl);
 	m_modStat[MOD_DEF] += m_mlvl + dsp_cap(m_mlvl-50,0,10);
+
+    if (this->objtype & TYPE_PC)
+        Sql_Query(SqlHandle, "UPDATE char_stats SET mlvl = %u WHERE charid = %u LIMIT 1;", m_mlvl, this->id);
 }
 
 void CBattleEntity::SetSLevel(uint8 slvl)
@@ -766,6 +724,9 @@ void CBattleEntity::SetSLevel(uint8 slvl)
 	{
 		m_slvl = (slvl > (m_mlvl >> 1) ? (m_mlvl == 1 ? 1 : (m_mlvl >> 1)) : slvl);
 	}
+
+    if (this->objtype & TYPE_PC)
+        Sql_Query(SqlHandle, "UPDATE char_stats SET slvl = %u WHERE charid = %u LIMIT 1;", m_slvl, this->id);
 }
 
 /************************************************************************
