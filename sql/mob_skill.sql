@@ -4896,8 +4896,8 @@ INSERT INTO `mob_skill` VALUES (830,1006,748,'Paralysis_Shower',4,10.0,2000,1500
 INSERT INTO `mob_skill` VALUES (437,1007,432,'Perfect_Dodge',0,7.0,2000,0,1,2,0,0);
 
 
--- tegime (1008)
-INSERT INTO `mob_skill` VALUES (438,1008,432,'Invincible',0,7.0,2000,0,1,2,0,0);
+-- Tegime (1008)
+INSERT INTO `mob_skill` VALUES (475,1008,18,'Mijin_Gakure',1,20.0,2000,0,4,2,0,0);
 INSERT INTO `mob_skill` VALUES (188,1008,188,'Big_Scissors',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (187,1008,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (186,1008,186,'Tegmine_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);

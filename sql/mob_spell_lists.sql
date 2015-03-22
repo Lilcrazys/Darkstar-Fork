@@ -1366,6 +1366,9 @@ INSERT INTO `mob_spell_lists` VALUES ('Tyrant', 131, 112, 1, 255);
 -- INSERT INTO `mob_spell_lists` VALUES ('spell_list_name', spell_list_id, spell_id, min_level, max_level);
 -- Place new stuff right after this line. Please use gaps and comment spell names for easy readability.
 
+INSERT INTO `mob_spell_lists` VALUES ('Tegmine', 399, 322, 1, 255); -- Katon: San
+INSERT INTO `mob_spell_lists` VALUES ('Tegmine', 399, 325, 1, 255); -- Hyoton: San
+
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 148, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 152, 1, 255); -- Blizzard 4
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 153, 1, 255); -- Blizzard 5
