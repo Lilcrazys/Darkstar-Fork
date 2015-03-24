@@ -1246,3 +1246,54 @@ INSERT INTO `mob_droplist` VALUES (9268,0,1634,1); -- Rhodonite 0.1%
 INSERT INTO `mob_droplist` VALUES (9269,0,2513,130); -- Rafflesia vine 13%
 INSERT INTO `mob_droplist` VALUES (9269,0,2514,62); -- Rafflesia petal 6.2%
 INSERT INTO `mob_droplist` VALUES (9269,0,2490,12); -- Forbidden key 1.2%
+
+-- --------------------Aptant Drops ---------------------------------------
+INSERT INTO `mob_droplist` VALUES (9300,0,2813,200);
+INSERT INTO `mob_droplist` VALUES (9300,0,2812,150);
+INSERT INTO `mob_droplist` VALUES (9301,0,2812,200);
+INSERT INTO `mob_droplist` VALUES (9301,0,2817,150);
+INSERT INTO `mob_droplist` VALUES (9302,0,2820,200);
+INSERT INTO `mob_droplist` VALUES (9302,0,2812,150);
+INSERT INTO `mob_droplist` VALUES (9303,0,2811,200);
+INSERT INTO `mob_droplist` VALUES (9303,0,2812,150);
+INSERT INTO `mob_droplist` VALUES (9304,0,2815,200);
+INSERT INTO `mob_droplist` VALUES (9304,0,2817,200);
+INSERT INTO `mob_droplist` VALUES (9305,0,2813,150);
+INSERT INTO `mob_droplist` VALUES (9305,0,2818,200);
+INSERT INTO `mob_droplist` VALUES (9306,0,2811,200);
+INSERT INTO `mob_droplist` VALUES (9306,0,2815,150);
+INSERT INTO `mob_droplist` VALUES (9306,0,2819,200);
+INSERT INTO `mob_droplist` VALUES (9307,0,2816,200);
+INSERT INTO `mob_droplist` VALUES (9307,0,2815,150);
+INSERT INTO `mob_droplist` VALUES (9308,0,2814,200);
+INSERT INTO `mob_droplist` VALUES (9308,0,2813,200);
+INSERT INTO `mob_droplist` VALUES (9309,0,2814,150);
+INSERT INTO `mob_droplist` VALUES (9309,0,2811,200);
+INSERT INTO `mob_droplist` VALUES (9310,0,2818,200);
+INSERT INTO `mob_droplist` VALUES (9310,0,2814,200);
+INSERT INTO `mob_droplist` VALUES (9311,0,2821,200);
+INSERT INTO `mob_droplist` VALUES (9311,0,2813,150);
+INSERT INTO `mob_droplist` VALUES (9312,0,2811,200);
+INSERT INTO `mob_droplist` VALUES (9312,0,2813,200);
+INSERT INTO `mob_droplist` VALUES (9313,0,2813,150);
+INSERT INTO `mob_droplist` VALUES (9313,0,2816,200);
+INSERT INTO `mob_droplist` VALUES (9314,0,2819,200);
+INSERT INTO `mob_droplist` VALUES (9314,0,2821,200);
+INSERT INTO `mob_droplist` VALUES (9315,0,2820,150);
+INSERT INTO `mob_droplist` VALUES (9315,0,2819,200);
+INSERT INTO `mob_droplist` VALUES (9316,0,2821,150);
+INSERT INTO `mob_droplist` VALUES (9316,0,2820,200);
+INSERT INTO `mob_droplist` VALUES (9317,0,2817,200);
+INSERT INTO `mob_droplist` VALUES (9317,0,2820,200);
+INSERT INTO `mob_droplist` VALUES (9318,0,2822,150);
+INSERT INTO `mob_droplist` VALUES (9318,0,2821,200);
+INSERT INTO `mob_droplist` VALUES (9319,0,2816,200);
+INSERT INTO `mob_droplist` VALUES (9319,0,2821,200);
+INSERT INTO `mob_droplist` VALUES (9320,0,2817,200);
+INSERT INTO `mob_droplist` VALUES (9320,0,2818,150);
+INSERT INTO `mob_droplist` VALUES (9321,0,2818,200);
+INSERT INTO `mob_droplist` VALUES (9321,0,2816,200);
+INSERT INTO `mob_droplist` VALUES (9322,0,2822,150);
+INSERT INTO `mob_droplist` VALUES (9322,0,2818,200);
+INSERT INTO `mob_droplist` VALUES (9323,0,2816,200);
+INSERT INTO `mob_droplist` VALUES (9323,0,2817,150);
