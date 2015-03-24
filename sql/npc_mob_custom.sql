@@ -2551,7 +2551,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17277011,'Martinet','Martinet',90301,-19
 REPLACE INTO `mob_spawn_points` VALUES (17117295,'Warabouc','Warabouc',90302,75.93,-40.153,-108.196,196);
 REPLACE INTO `mob_spawn_points` VALUES (16806117,'Sargas','Sargas',90303,-247,2.750,-128,190); -- Pos data needs correction
 INSERT INTO `mob_spawn_points` VALUES (17277103,'Nargun','Nargun',90304,-107,4,114,115);
-INSERT INTO `mob_spawn_points` VALUES (17027228,'Chary_Apkallu','Chary_Apkallu',90305,641,-13,-60,186);
+REPLACE INTO `mob_spawn_points` VALUES (17027228,'Chary_Apkallu','Chary_Apkallu',90305,641,-13,-60,186);
 REPLACE INTO `mob_spawn_points` VALUES (16826474,'Sword_Sorcerer_Solisoq','Sword Sorcerer Solisoq',90306,6,15,-179,125);
 REPLACE INTO `mob_spawn_points` VALUES (16986188,'Chelicerata','Chelicerata',90307,415,-18,-44,141);
 REPLACE INTO `mob_spawn_points` VALUES (17240232,'Tegmine','Tegmine',90308,11,-0.999,-134,0); -- Pos data needs correction
