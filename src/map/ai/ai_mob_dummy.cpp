@@ -456,17 +456,217 @@ void CAIMobDummy::ActionDropItems()
 
                 if (validZone && charutils::GetRealExp(PChar->GetMLevel(),m_PMob->GetMLevel()) > 0)
                 {
-
-                    if (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && m_PMob->m_Element > 0 &&
-                        conquest::GetInfluenceGraphics(PChar->loc.zone->GetRegionID()) < 64 &&
-                        WELL512::irand()%100 < 20) // Need to move to SIGNET_CHANCE constant
+                    if (((PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && conquest::GetInfluenceGraphics(PChar->loc.zone->GetRegionID()) < 64) ||
+                       (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && PChar->loc.zone->GetRegionID() >= 28 && PChar->loc.zone->GetRegionID() <= 32) ||
+                       (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) && PChar->loc.zone->GetRegionID() >= 33 && PChar->loc.zone->GetRegionID() <= 40)) &&
+                        m_PMob->m_Element > 0 && WELL512::irand()%100 < 20) // Need to move to CRYSTAL_CHANCE constant
                     {
                         PChar->PTreasurePool->AddItem(4095 + m_PMob->m_Element, m_PMob);
                     }
 
+                    uint8 weather = m_PMob->loc.zone->GetWeather();
+                    uint8 day = (uint8)CVanaTime::getInstance()->getWeekday();
+
+                    // Avatarite. Both wiki say mobs lv 80+
+                    if (m_PMob->GetMLevel() >= 80 && WELL512::irand() % 100 < 80)
+                    {
+                        if (weather >=4 && weather <=19)
+                        {
+                            switch (weather)
+                            {
+                                case 4: // Fire
+                                case 5: // Double Fire
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3520, m_PMob); // Ifritite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
+                                    break;
+                                case 6: // Water
+                                case 7: // Double Water
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3525, m_PMob); // Leviatite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
+                                    break;
+                                case 8: // Earth
+                                case 9: // Double Earth
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3523, m_PMob); // Titanite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
+                                    break;
+                                case 10: // Wind
+                                case 11: // Double Wind
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3522, m_PMob); // Garudite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
+                                    break;
+                                case 12: // Ice
+                                case 13: // Double Ice
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3521, m_PMob); // Shivite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
+                                    break;
+                                case 14: // Thunder
+                                case 15: // Double Thunder
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3524, m_PMob); // Ramuite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
+                                    break;
+                                case 16: // Light
+                                case 17: // Double Light
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3526, m_PMob); // Carbite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
+                                    break;
+                                case 18: // Dark
+                                case 19: // Double Dark
+                                    if (WELL512::irand() % 100 < 55)
+                                        PChar->PTreasurePool->AddItem(3527, m_PMob); // Fenrite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        else if (WELL512::irand() % 100 < 20)
+                        {
+                            switch (day)
+                            {
+                                case 0: // Fire
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3520, m_PMob); // Ifritite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
+                                    break;
+                                case 1: // Earth
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3523, m_PMob); // Titanite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
+                                    break;
+                                case 2: // Water
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3525, m_PMob); // Leviatite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
+                                    break;
+                                case 3: // Wind
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3522, m_PMob); // Garudite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
+                                    break;
+                                case 4: // Ice
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3521, m_PMob); // Shivite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
+                                    break;
+                                case 5: // Thunder
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3524, m_PMob); // Ramuite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
+                                    break;
+                                case 6: // Light
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3526, m_PMob); // Carbite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
+                                    break;
+                                case 7: // Dark
+                                    if (WELL512::irand() % 100 < 45)
+                                        PChar->PTreasurePool->AddItem(3527, m_PMob); // Fenrite
+                                    else
+                                        PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
+                                    break;
+                            }
+                        }
+                    }
+                    // Geodes. Wiki's have conflicting info on mob lv required. One says 50 the other 75. I think 50 is correct.
+                    else if (m_PMob->GetMLevel() >= 50 && WELL512::irand() % 100 < 85)
+                    {
+                        if (weather >=4 && weather <=19)
+                        {
+                            switch (weather)
+                            {
+                                case 4: // Fire
+                                case 5: // Double Fire
+                                    PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
+                                    break;
+                                case 6: // Water
+                                case 7: // Double Water
+                                    PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
+                                    break;
+                                case 8: // Earth
+                                case 9: // Double Earth
+                                    PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
+                                    break;
+                                case 10: // Wind
+                                case 11: // Double Wind
+                                    PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
+                                    break;
+                                case 12: // Ice
+                                case 13: // Double Ice
+                                    PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
+                                    break;
+                                case 14: // Thunder
+                                case 15: // Double Thunder
+                                    PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
+                                    break;
+                                case 16: // Light
+                                case 17: // Double Light
+                                    PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
+                                    break;
+                                case 18: // Dark
+                                case 19: // Double Dark
+                                    PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        else if (WELL512::irand() % 100 < 20)
+                        {
+                            switch (day)
+                            {
+                                case 0: // Fire
+                                    PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
+                                    break;
+                                case 1: // Earth
+                                    PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
+                                    break;
+                                case 2: // Water
+                                    PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
+                                    break;
+                                case 3: // Wind
+                                    PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
+                                    break;
+                                case 4: // Ice
+                                    PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
+                                    break;
+                                case 5: // Thunder
+                                    PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
+                                    break;
+                                case 6: // Light
+                                    PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
+                                    break;
+                                case 7: // Dark
+                                    PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
+                                    break;
+                            }
+                        }
+                    }
+
                     if (WELL512::irand() % 100 < 20 && PChar->PTreasurePool->CanAddSeal() && !m_PMob->getMobMod(MOBMOD_NO_DROPS))
                     {
-                    //RULES: Only 1 kind may drop per mob
+                        //RULES: Only 1 kind may drop per mob
                         if (m_PMob->GetMLevel() >= 75 && luautils::IsExpansionEnabled("ABYSSEA")) //all 4 types
                         {
                             switch (WELL512::irand() % 4)
@@ -640,7 +840,7 @@ void CAIMobDummy::ActionSpawn()
 
         mobutils::CalculateStats(m_PMob);
         mobutils::GetAvailableSpells(m_PMob);
-        
+
         if (m_PMob->getMobMod(MOBMOD_MUG_GIL) == 0)
         {
             uint32 purse = m_PMob->GetRandomGil() / (4+(WELL512::irand()%3));
@@ -691,7 +891,7 @@ void CAIMobDummy::ActionSpawn()
         {
             m_PMob->m_StatPoppedMobs = false;
         }
-        
+
         luautils::OnMobSpawn( m_PMob );
     }
 }
@@ -850,7 +1050,7 @@ void CAIMobDummy::ActionAbilityStart()
         TransitionBack(true);
         return;
     }
-    
+
     if (!(m_PMob->m_Behaviour & BEHAVIOUR_NO_TURN))
     {
         m_PPathFind->LookAt(m_PBattleSubTarget->loc.p);
@@ -1194,7 +1394,7 @@ void CAIMobDummy::ActionStun()
         if (!(m_PMob->m_Behaviour & BEHAVIOUR_NO_TURN))
         {
             m_PPathFind->LookAt(m_PBattleSubTarget->loc.p);
-        }   
+        }
     }
 }
 
@@ -1678,7 +1878,7 @@ void CAIMobDummy::ActionAttack()
                                     {
                                         naturalh2hDMG = (float)(m_PBattleTarget->GetSkill(SKILL_H2H) * 0.11f) + 3;
                                     }
-                                    
+
                                     isCritical = (WELL512::irand() % 100 < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob, false));
                                     float DamageRatio = battleutils::GetDamageRatio(m_PBattleTarget, m_PMob, isCritical, 0);
                                     damage = (int32)((m_PBattleTarget->GetMainWeaponDmg() + naturalh2hDMG + battleutils::GetFSTR(m_PBattleTarget, m_PMob, SLOT_MAIN)) * DamageRatio);
@@ -1829,13 +2029,13 @@ void CAIMobDummy::ActionAttack()
                                     {
                                         naturalh2hDMG = (float)(m_PBattleTarget->GetSkill(SKILL_H2H) * 0.11f) + 3;
                                     }
-                                    
+
                                     isCritical = (WELL512::irand() % 100 < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob, false));
                                     float DamageRatio = battleutils::GetDamageRatio(m_PBattleTarget, m_PMob, isCritical, 0);
                                     damage = (int32)((m_PBattleTarget->GetMainWeaponDmg() + naturalh2hDMG + battleutils::GetFSTR(m_PBattleTarget, m_PMob, SLOT_MAIN)) * DamageRatio);
                                     Action.spikesParam = battleutils::TakePhysicalDamage(m_PBattleTarget, m_PMob, damage, false, SLOT_MAIN, 1, nullptr, true, false, true);
                                     Action.spikesMessage = 33;
-                                    
+
                                     if (m_PBattleTarget->objtype == TYPE_PC)
                                     {
                                         uint8 skilltype = (m_PBattleTarget->m_Weapons[SLOT_MAIN] == nullptr ? SKILL_H2H : m_PBattleTarget->m_Weapons[SLOT_MAIN]->getSkillType());
@@ -1944,7 +2144,7 @@ bool CAIMobDummy::TryDeaggro()
 
     //Hide allows you to lose aggro on certain types of enemies.
     //Generally works on monsters that don't track by scent, regardless of detection method.
-    //Can work on monsters that track by scent if the proper conditions are met (double rain weather, crossing over water, etc.) 
+    //Can work on monsters that track by scent if the proper conditions are met (double rain weather, crossing over water, etc.)
     if (tryTimeDeaggro && m_PBattleTarget->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE))
     {
         return true;
@@ -2353,7 +2553,7 @@ void CAIMobDummy::SetupEngage()
     }
 
     m_PBattleTarget = m_PMob->PEnmityContainer->GetHighestEnmity();
-    
+
     if (m_PBattleTarget != nullptr)
     {
         // clear the ActionQueue
