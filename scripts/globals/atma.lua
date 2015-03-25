@@ -291,5 +291,5 @@ function removeATMA(player)
         player:delStatusEffect(EFFECT_ATMA);
     end
     player:setVar("ACTIVE_ATMA_COUNT", 0);
-    player:setPos(player:getXPos(),player:getZYos(),player:getZPos(),player:getRotPos(),player:getZoneID()); -- Temp hotfix for stupid onEffectLose BS.
+    player:setPos(player:getXPos(),player:getYPos(),player:getZPos(),player:getRotPos(),player:getZoneID()); -- Temp hotfix for stupid onEffectLose BS.
 end;
