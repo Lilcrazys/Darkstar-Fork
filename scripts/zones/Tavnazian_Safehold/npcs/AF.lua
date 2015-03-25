@@ -20,7 +20,7 @@ function onTrade(player,npc,trade)
     local Zilart_clear = player:hasCompletedMission(ZILART,AWAKENING);
     local Chains_clear = player:hasCompletedMission(COP,DAWN);
 
-    if (Zilart_clear == false or Chains_clear == false)
+    if (Zilart_clear == false or Chains_clear == false) then
         player:PrintToPlayer( "Not so fast... CoP and ZM Clears are required before beginning these trials!" );
         return
     end
