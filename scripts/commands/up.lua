@@ -11,7 +11,7 @@ cmdprops =
 };
 
 function onTrigger(player, target, number)
-    local VALUE = targ:getYPos()
+    local VALUE = 0;
 
     if (target == nil) then
         target = player:getName();
@@ -25,6 +25,8 @@ function onTrigger(player, target, number)
 
     if (number ~= nil and number > 0) then
         VALUE = VALUE +number;
+    else
+        VALUE = VALUE +1;
     end
 
     targ:setPos(targ:getXPos(), VALUE, targ:getZPos(), targ:getRotPos());
