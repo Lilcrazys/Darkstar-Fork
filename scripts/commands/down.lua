@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
--- func: @down <optional target> <optional number>
+-- func: @down <optional number> <optional target>
 -- auth: TeoTwawki
 -- desc: Alters vertical coordinate
 ---------------------------------------------------------------------------------------------------
@@ -7,10 +7,10 @@
 cmdprops =
 {
     permission = 1,
-    parameters = "si"
+    parameters = "is"
 };
 
-function onTrigger(player, target, number)
+function onTrigger(player, number, target)
     local VALUE = 0;
 
     if (target == nil) then
