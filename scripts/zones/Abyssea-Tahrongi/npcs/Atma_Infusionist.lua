@@ -17,16 +17,7 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    if (player:hasStatusEffect(EFFECT_ATMA)) then
-        player:delStatusEffect(EFFECT_ATMA);
-    end
-    if (player:hasStatusEffect(EFFECT_ATMA)) then
-        player:delStatusEffect(EFFECT_ATMA);
-    end
-    if (player:hasStatusEffect(EFFECT_ATMA)) then
-        player:delStatusEffect(EFFECT_ATMA);
-    end
-    player:setVar("ACTIVE_ATMA_COUNT", 0);
+    removeATMA(player);
 end;
 
 -----------------------------------

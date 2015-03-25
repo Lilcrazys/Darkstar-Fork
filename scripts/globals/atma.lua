@@ -276,3 +276,20 @@ function applyATMA(player, pwr)
     end
 
 end;
+
+----------------------------------
+-- Remove ALL ATMA effects
+----------------------------------
+function removeATMA(player)
+    if (player:hasStatusEffect(EFFECT_ATMA)) then
+        player:delStatusEffect(EFFECT_ATMA);
+    end
+    if (player:hasStatusEffect(EFFECT_ATMA)) then
+        player:delStatusEffect(EFFECT_ATMA);
+    end
+    if (player:hasStatusEffect(EFFECT_ATMA)) then
+        player:delStatusEffect(EFFECT_ATMA);
+    end
+    player:setVar("ACTIVE_ATMA_COUNT", 0);
+    player:setPos(player:getXPos(),player:getZYos(),player:getZPos(),player:getRotPos,player:getZoneID()); -- Temp hotfix for stupid onEffectLose BS.
+end;
