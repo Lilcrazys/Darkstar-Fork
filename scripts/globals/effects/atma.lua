@@ -49,7 +49,7 @@ function onEffectGain(target, effect)
     elseif (pwr == 11) then -- ATMA_OF_THE_VORACIOUS_VIOLET
         target:addMod(MOD_STR, 50);
         target:addMod(MOD_DOUBLE_ATTACK, 10);
-        target:addMod(MOD_REGIAN, 2);
+        target:addMod(MOD_REGAIN, 2);
     elseif (pwr == 12) then -- ATMA_OF_CLOAK_AND_DAGGER
         target:addMod(MOD_ACC, 40);
         target:addMod(MOD_EVA, 40);
