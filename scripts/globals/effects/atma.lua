@@ -170,7 +170,7 @@ function onEffectGain(target, effect)
     elseif (pwr == 45) then -- ATMA_OF_THE_RAZED_RUINS
         target:addMod(MOD_DEX, 50);
         target:addMod(MOD_CRITHITRATE, 30);
-        target:addMod(MOD_CRIT_DMG_INCREASE, 30);
+        target:addMod(MOD_CRIT_DMG_INCREASE, 10);
     elseif (pwr == 46) then -- ATMA_OF_THE_BLUDGEONING_BRUTE
         target:addMod(MOD_REGAIN, 1);
         target:addMod(MOD_THUNDERRES, 50);
@@ -188,7 +188,7 @@ function onEffectGain(target, effect)
         target:addMod(MOD_TRIPLE_ATTACK, 5);
     elseif (pwr == 51) then -- ATMA_OF_THE_SANGUINE_SCYTHE
         target:addMod(MOD_HPP, 20);
-        target:addMod(MOD_CRIT_DMG_INCREASE, 30);
+        target:addMod(MOD_CRIT_DMG_INCREASE, 10);
         target:addMod(MOD_ENMITY, 20);
     elseif (pwr == 52) then -- ATMA_OF_THE_TUSKED_TERROR
         target:addMod(MOD_UFASTCAST, 20);
@@ -585,7 +585,7 @@ function onEffectLose(target, effect)
     elseif (pwr == 45) then -- ATMA_OF_THE_RAZED_RUINS
         target:delMod(MOD_DEX, 50);
         target:delMod(MOD_CRITHITRATE, 30);
-        target:delMod(MOD_CRIT_DMG_INCREASE, 30);
+        target:delMod(MOD_CRIT_DMG_INCREASE, 10);
     elseif (pwr == 46) then -- ATMA_OF_THE_BLUDGEONING_BRUTE
         target:delMod(MOD_REGAIN, 1);
         target:delMod(MOD_THUNDERRES, 50);
@@ -603,7 +603,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_TRIPLE_ATTACK, 5);
     elseif (pwr == 51) then -- ATMA_OF_THE_SANGUINE_SCYTHE
         target:delMod(MOD_HPP, 20);
-        target:delMod(MOD_CRIT_DMG_INCREASE, 30);
+        target:delMod(MOD_CRIT_DMG_INCREASE, 10);
         target:delMod(MOD_ENMITY, 20);
     elseif (pwr == 52) then -- ATMA_OF_THE_TUSKED_TERROR
         target:delMod(MOD_UFASTCAST, 20);
