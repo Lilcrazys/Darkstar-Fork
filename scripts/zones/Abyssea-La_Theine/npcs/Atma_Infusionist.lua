@@ -1,14 +1,14 @@
 -----------------------------------
--- Zone: Abyssea - Altepa
+-- Zone: Abyssea - La Theine
 --  NPC: Atma Infusionist.
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-La_Theine/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
+require("scripts/zones/Abyssea-La_Theine/TextIDs");
 require("scripts/globals/atma");
 require("scripts/globals/spoofchat");
 

@@ -1,14 +1,14 @@
 -----------------------------------
--- Zone: Abyssea - Altepa
+-- Zone: Abyssea - Vunkerl
 --  NPC: Atma Infusionist.
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-Vunkerl/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
+require("scripts/zones/Abyssea-Vunkerl/TextIDs");
 require("scripts/globals/atma");
 require("scripts/globals/spoofchat");
 

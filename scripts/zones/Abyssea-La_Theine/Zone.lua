@@ -23,6 +23,7 @@ end;
 
 function onZoneIn(player,prevZone)
     local cs = -1;
+    player:setVar("ACTIVE_ATMA_COUNT", 0); -- Need to reset this every time player enters Abyssea.
 
     if (player:getXPos() == 0 and player:getYPos() == 0 and player:getZPos() == 0) then
         player:setPos(-480.5,-0.5,794,62);

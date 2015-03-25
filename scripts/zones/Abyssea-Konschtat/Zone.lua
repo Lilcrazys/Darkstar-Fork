@@ -29,6 +29,7 @@ end;
 
 function onZoneIn(player,prevZone)
     local cs = -1;
+    player:setVar("ACTIVE_ATMA_COUNT", 0); -- Need to reset this every time player enters Abyssea.
     -- Note: in retail even tractor lands you back at searing ward, will handle later.
     if (player:getXPos() == 0 and player:getYPos() == 0 and player:getZPos() == 0) then
         player:setPos(153,-72,-840,140);

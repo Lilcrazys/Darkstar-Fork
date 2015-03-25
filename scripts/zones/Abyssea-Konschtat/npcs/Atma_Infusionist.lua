@@ -1,14 +1,14 @@
 -----------------------------------
--- Zone: Abyssea - Altepa
+-- Zone: Abyssea - Konschtat
 --  NPC: Atma Infusionist.
 --
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-Altepa/TextIDs");
+require("scripts/zones/Abyssea-Konschtat/TextIDs");
 require("scripts/globals/atma");
 require("scripts/globals/spoofchat");
 
