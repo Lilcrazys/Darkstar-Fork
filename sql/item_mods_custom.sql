@@ -8673,20 +8673,20 @@ INSERT INTO `item_mods` VALUES(28223, 288, 3); --  "Double Attack"+3%
 -- -------------------------------------------------------
 --   Anchorite's Crown (Head)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES(27664, 1, 72); --  DEF:72
+INSERT INTO `item_mods` VALUES(27664, 1, 72); -- DEF:72
 INSERT INTO `item_mods` VALUES(27664, 2, 17); -- HP+17
-INSERT INTO `item_mods` VALUES(27664, 8, 17); --  STR+17
+INSERT INTO `item_mods` VALUES(27664, 8, 17); -- STR+17
 INSERT INTO `item_mods` VALUES(27664, 9, 14); -- DEX+14
-INSERT INTO `item_mods` VALUES(27664, 10, 16); --  VIT+16
+INSERT INTO `item_mods` VALUES(27664, 10, 16); -- VIT+16
 INSERT INTO `item_mods` VALUES(27664, 11, 16); -- AGI+16
-INSERT INTO `item_mods` VALUES(27664, 12, 15); --  INT+15
+INSERT INTO `item_mods` VALUES(27664, 12, 15); -- INT+15
 INSERT INTO `item_mods` VALUES(27664, 13, 18); -- MND+18
-INSERT INTO `item_mods` VALUES(27664, 14, 15; --  CHR+15
-INSERT INTO `item_mods` VALUES(27664, 65, 17); --  Evasion+17
+INSERT INTO `item_mods` VALUES(27664, 14, 15); -- CHR+15
+INSERT INTO `item_mods` VALUES(27664, 65, 17); -- Evasion+17
 INSERT INTO `item_mods` VALUES(27664, 31, 29); -- Magic Evasion+29
-INSERT INTO `item_mods` VALUES(27664, 29, 2); --  Magic Def. Bonus+2 (used magic defence ?)
-INSERT INTO `item_mods` VALUES(27664, 384, 72); --  Haste +7%
--- INSERT INTO `item_mods` VALUES(27664, 0, 35); -- Enhances "Focus" effect, Enhances "Focus" effect potency to +35 Accuracy. ====> Needs Mod ID
+INSERT INTO `item_mods` VALUES(27664, 29, 2); -- Magic Def. Bonus+2 (used magic defence ?)
+INSERT INTO `item_mods` VALUES(27664, 384, 72); -- Haste +7%
+
 
 -- -------------------------------------------------------
 --   Anchorite's Cyclas (Body)
@@ -9084,7 +9084,7 @@ INSERT INTO `item_mods` VALUES(28227, 65, 25); -- Evasion+25
 INSERT INTO `item_mods` VALUES(28227, 31, 73); -- Magic Evasion+73
 INSERT INTO `item_mods` VALUES(28227, 29, 2); -- Magic Def. Bonus+2 (used magic defence ?)
 INSERT INTO `item_mods` VALUES(28227, 109, 13); -- Shield skill +13
-INSERT INTO `item_mods` VALUES(28227, 384, 41); -- Haste +4%
+REPLACE INTO `item_mods` VALUES(28227, 384, 41); -- Haste +4%
 
 -- -------------------------------------------------------
 --                Pillager's Attire Set (THF)
