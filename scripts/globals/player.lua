@@ -342,6 +342,8 @@ function CharCreate(player)
 
 	-- Needs Moghouse Intro
 	player:setVar("MoghouseExplication",1);
+    
+    player:setVar("[GUILD]currentGuild",-1);
 
 	----- Start of custom stuffs for new players -----
 
