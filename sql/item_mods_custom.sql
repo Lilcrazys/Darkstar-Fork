@@ -10564,7 +10564,7 @@ INSERT INTO `item_mods` VALUES(28243, 8, 6); --  STR+6
 INSERT INTO `item_mods` VALUES(28243, 9, 7); --  DEX+7
 INSERT INTO `item_mods` VALUES(28243, 10, 6); --  VIT+6
 INSERT INTO `item_mods` VALUES(28243, 11, 21); -- AGI+21
-INSERT INTO `item_mods` VALUES(28243, 11, 16); -- INT+16
+INSERT INTO `item_mods` VALUES(28243, 12, 16); -- INT+16
 INSERT INTO `item_mods` VALUES(28243, 13, 12); -- MND+12
 INSERT INTO `item_mods` VALUES(28243, 14, 21); --  CHR+21
 INSERT INTO `item_mods` VALUES(28243, 65, 25); --  Evasion+25
