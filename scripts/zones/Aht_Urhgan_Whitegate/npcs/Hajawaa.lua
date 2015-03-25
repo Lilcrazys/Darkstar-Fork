@@ -61,6 +61,29 @@ end;
 -- onTrigger Action
 -----------------------------------
 function onTrigger(player,npc)
+    -- Begind Temp Fix for broken AF quests
+    player:addKeyItem(654);
+    player:addKeyItem(655);
+    player:addKeyItem(656);
+    player:addKeyItem(657);
+    player:addKeyItem(658);
+    player:addKeyItem(659);
+    player:addKeyItem(660);
+    player:addKeyItem(661);
+    player:addKeyItem(662);
+    player:addKeyItem(663);
+    player:addKeyItem(664);
+    player:addKeyItem(665);
+    player:addKeyItem(666);
+    player:addKeyItem(667);
+    player:addKeyItem(668);
+    player:addKeyItem(1964);
+    player:addKeyItem(1965);
+    player:addKeyItem(1966);
+    player:addKeyItem(1967);
+    player:addKeyItem(1968);
+    player:addKeyItem(1969);
+    -- End Temp Fix
    CurrGil = player:getGil();
    for KeyItem = 11,ArraySize,11 do
       if player:hasKeyItem(StorageArray[KeyItem]) then
