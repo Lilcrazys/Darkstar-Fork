@@ -46,7 +46,7 @@ end;
 
 function onMobDeath(mob,killer)
     local KI_CHANCE = 20;
-    local ATMA_CHANCE = 30;
+    local ATMA_CHANCE = 15;
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT) == false) then
         killer:addKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT);

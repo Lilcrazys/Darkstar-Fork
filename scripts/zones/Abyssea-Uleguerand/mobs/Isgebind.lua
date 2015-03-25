@@ -91,7 +91,7 @@ end;
 
 function onMobDeath(mob,killer)
     local KI_CHANCE = 20;
-    local ATMA_CHANCE = 30;
+    local ATMA_CHANCE = 15;
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
         killer:addKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE);

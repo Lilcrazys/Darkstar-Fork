@@ -45,7 +45,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 30;
+    local CHANCE = 10;
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_BROTHER_WOLF) == false) then
         killer:addKeyItem(ATMA_OF_THE_BROTHER_WOLF);
         killer:messageSpecial(6385, ATMA_OF_THE_BROTHER_WOLF);

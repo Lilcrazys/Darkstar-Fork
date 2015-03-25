@@ -50,7 +50,7 @@ end;
 
 function onMobDeath(mob,killer)
     local KI_CHANCE = 60;
-    local ATMA_CHANCE = 30;
+    local ATMA_CHANCE = 15;
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
         killer:addKeyItem(SCARLET_ABYSSITE_OF_SOJOURN);

@@ -70,7 +70,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 30;
+    local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SOLITARY_ONE) == false) then
         killer:addKeyItem(ATMA_OF_THE_SOLITARY_ONE);
         killer:messageSpecial(6385, ATMA_OF_THE_SOLITARY_ONE);

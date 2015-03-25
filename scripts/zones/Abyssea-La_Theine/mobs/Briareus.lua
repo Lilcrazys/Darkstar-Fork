@@ -48,7 +48,7 @@ end;
 
 function onMobDeath(mob,killer)
     local KI_CHANCE = 60;
-    local ATMA_CHANCE = 30;
+    local ATMA_CHANCE = 15;
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
         killer:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);

@@ -46,7 +46,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 30;
+    local CHANCE = 20;
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_A_THOUSAND_NEEDLES) == false) then
         killer:addKeyItem(ATMA_OF_A_THOUSAND_NEEDLES);
         killer:messageSpecial(6385, ATMA_OF_A_THOUSAND_NEEDLES);
