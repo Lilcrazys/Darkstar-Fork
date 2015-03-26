@@ -56,7 +56,7 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 15;
-    local LUNAR = 20;
+    local LUNAR = 25;
 
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
         killer:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
