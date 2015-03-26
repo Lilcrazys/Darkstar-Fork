@@ -24,9 +24,9 @@ function onTrigger(player, number, target)
     end
 
     if (number ~= nil and number > 0) then
-        VALUE = VALUE -number;
+        VALUE = targ:getYPos() -number;
     else
-        VALUE = VALUE -1;
+        VALUE = targ:getYPos() -1;
     end
 
     targ:setPos(targ:getXPos(), VALUE, targ:getZPos(), targ:getRotPos());
