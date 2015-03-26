@@ -20,7 +20,6 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 
     local dmg = target:getHP()-1;
-        target:delHP(dmg);
+    target:delHP(dmg);
     return dmg;
-    end
 end;

@@ -95,7 +95,7 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 30;
-    local LUNAR = 13;
+    local LUNAR = 25;
 
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_APOCALYPSE) == false) then
         killer:addKeyItem(ATMA_OF_THE_APOCALYPSE);

@@ -22,9 +22,9 @@ end;
 
 function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 60);
-    mob:setMod(MOD_MDEF, 50);
-    mob:setMod(MOD_EVA, -150);
-    mob:setMod(MOD_ACC, 150);
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_EVA, -150);
+    mob:addMod(MOD_ACC, 150);
     mob:setMod(MOD_ZANSHIN, 30);
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
@@ -56,7 +56,7 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 15;
-    local LUNAR = 20;
+    local LUNAR = 25;
 
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
         killer:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
