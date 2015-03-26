@@ -2274,7 +2274,7 @@ REPLACE INTO `npc_list` VALUES (17818102,'qm22','???',0,-162.311,-32.000,-220.78
 -- 17822719
 -- ------------------------------------------------------------
 
-REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infustionist','Atma Infusionist',168,545,-500.5,-584,7,'50','50','0','0','0','0','3',0x0000150400000000000000000000000000000000,0,null);
+REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infusionist','Atma Infusionist',168,545,-500.5,-584,7,'50','50','0','0','0','0','3',0x0000150400000000000000000000000000000000,0,null);
 
 REPLACE INTO `npc_list` VALUES (17821710,'Transcendental_Radiance','Transcendental Radiance',0,540,-500,-599,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
 REPLACE INTO `npc_list` VALUES (17821711,'Transcendental_Radiance','Transcendental Radiance',0,-480,0,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);

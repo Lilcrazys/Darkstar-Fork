@@ -283,12 +283,12 @@ function onEffectGain(target, effect)
         target:addMod(MOD_ICE_AFFINITY, 10);
     elseif (pwr == 77) then -- ATMA_OF_THE_PLAGUEBRINGER
         target:addMod(MOD_REGEN, 10);
-        target:addMod(MOD_STORE_TP, 20);
+        target:addMod(MOD_STORETP, 20);
         target:addMod(MOD_DOUBLE_ATTACK, 7);
     elseif (pwr == 78) then -- ATMA_OF_THE_SHRIEKING_ONE
         target:addMod(MOD_DEF, 60);
         target:addMod(MOD_MDEF, 20);
-        target:addMod(MOD_STORE_TP, 20);
+        target:addMod(MOD_STORETP, 20);
     elseif (pwr == 79) then -- ATMA_OF_THE_HOLY_MOUNTAIN
         target:addMod(MOD_LIGHTRES, 100);
         target:addMod(MOD_LIGHTACC, 50);
@@ -307,13 +307,13 @@ function onEffectGain(target, effect)
         -- target:addMod(MOD_SONG_SPELLCASTING_TIME, -40);  this doesnt exist
         target:addMod(MOD_LIGHTACC, 40);
     elseif (pwr == 84) then -- ATMA_OF_THE_PERSISTENT_PREDATOR
-        target:addMod(MOD_STORE_TP, 40);
+        target:addMod(MOD_STORETP, 40);
         target:addMod(MOD_TP_BONUS, 10);
     elseif (pwr == 85) then -- ATMA_OF_THE_STONE_GOD
         target:addMod(MOD_SUBTLE_BLOW, 40);
         target:addMod(MOD_ENMITY, 40);
     elseif (pwr == 86) then -- ATMA_OF_THE_SUN_EATER
-        target:addMod(MOD_STORE_TP, 40);
+        target:addMod(MOD_STORETP, 40);
         target:addMod(MOD_TP_BONUS, 40);
     elseif (pwr == 87) then -- ATMA_OF_THE_DESPOT
         target:addMod(MOD_CHR, 50);
@@ -712,12 +712,12 @@ function onEffectLose(target, effect)
         target:delMod(MOD_ICE_AFFINITY, 10);
     elseif (pwr == 77) then -- ATMA_OF_THE_PLAGUEBRINGER
         target:delMod(MOD_REGEN, 10);
-        target:delMod(MOD_STORE_TP, 20);
+        target:delMod(MOD_STORETP, 20);
         target:delMod(MOD_DOUBLE_ATTACK, 7);
     elseif (pwr == 78) then -- ATMA_OF_THE_SHRIEKING_ONE
         target:delMod(MOD_DEF, 60);
         target:delMod(MOD_MDEF, 20);
-        target:delMod(MOD_STORE_TP, 20);
+        target:delMod(MOD_STORETP, 20);
     elseif (pwr == 79) then -- ATMA_OF_THE_HOLY_MOUNTAIN
         target:delMod(MOD_LIGHTRES, 100);
         target:delMod(MOD_LIGHTACC, 50);
@@ -736,13 +736,13 @@ function onEffectLose(target, effect)
         -- target:delMod(MOD_SONG_SPELLCASTING_TIME, -40);  this doesnt exist
         target:delMod(MOD_LIGHTACC, 40);
     elseif (pwr == 84) then -- ATMA_OF_THE_PERSISTENT_PREDATOR
-        target:delMod(MOD_STORE_TP, 40);
+        target:delMod(MOD_STORETP, 40);
         target:delMod(MOD_TP_BONUS, 10);
     elseif (pwr == 85) then -- ATMA_OF_THE_STONE_GOD
         target:delMod(MOD_SUBTLE_BLOW, 40);
         target:delMod(MOD_ENMITY, 40);
     elseif (pwr == 86) then -- ATMA_OF_THE_SUN_EATER
-        target:delMod(MOD_STORE_TP, 40);
+        target:delMod(MOD_STORETP, 40);
         target:delMod(MOD_TP_BONUS, 40);
     elseif (pwr == 87) then -- ATMA_OF_THE_DESPOT
         target:delMod(MOD_CHR, 50);
