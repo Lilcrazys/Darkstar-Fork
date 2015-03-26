@@ -343,8 +343,6 @@ function CharCreate(player)
 	-- Needs Moghouse Intro
 	player:setVar("MoghouseExplication",1);
     
-    player:setVar("[GUILD]currentGuild",-1);
-
 	----- Start of custom stuffs for new players -----
 
 	if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
