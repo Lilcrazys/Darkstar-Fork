@@ -30,7 +30,9 @@ REM Do not add tables below this line unless 100% positive that no character/acc
 REM ------------------------------------------------------------------
 ECHO Importing misc non character data tables...
 REM FOR %%X IN (augments.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (augments.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -	pIr0nd00r < %%X
+FOR %%X IN (augments.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+REM FOR %%X IN (status_effects.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+FOR %%X IN (status_effects.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 REM FOR %%X IN (synth_recipes.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 FOR %%X IN (synth_recipes.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 REM FOR %%X IN (zone_settings.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
