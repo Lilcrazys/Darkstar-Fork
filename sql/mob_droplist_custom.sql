@@ -230,11 +230,11 @@ INSERT INTO `mob_droplist` VALUES (4543,0,11750,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4544,0,21227,110); -- hanqaku-no-yumi
 INSERT INTO `mob_droplist` VALUES (4544,0,20858,120); -- Lightreaver
 INSERT INTO `mob_droplist` VALUES (4544,0,21364,380); -- Elders Grip
-INSERT INTO `mob_droplist` VALUES (4544,0,28665,100); -- Killedar_Shield_+1
+INSERT INTO `mob_droplist` VALUES (4544,0,28665,050); -- Killedar_Shield_+1
 INSERT INTO `mob_droplist` VALUES (4544,0,20991,140); -- Chidori
 INSERT INTO `mob_droplist` VALUES (4544,0,21284,120); -- Vanir_Gun
-INSERT INTO `mob_droplist` VALUES (4544,0,28155,110); -- Scuff._Cosciales
-INSERT INTO `mob_droplist` VALUES (4544,0,28287,100); -- Durgai_Leggings
+INSERT INTO `mob_droplist` VALUES (4544,0,28155,050); -- Scuff._Cosciales
+INSERT INTO `mob_droplist` VALUES (4544,0,28287,050); -- Durgai_Leggings
 INSERT INTO `mob_droplist` VALUES (4544,0,28465,120); -- Pya'ekue Belt +1
 INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
 INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
