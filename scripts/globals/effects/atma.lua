@@ -9,7 +9,7 @@
 -----------------------------------
 
 function onEffectGain(target, effect)
-    local pwr =effect:getPower();
+    local pwr = effect:getPower();
     if (pwr == 1) then -- ATMA of the Lion
         target:addMod(MOD_TRIPLE_ATTACK, 7);
         target:addMod(MOD_DMGPHYS, -10);
@@ -425,6 +425,7 @@ end;
 -----------------------------------
 
 function onEffectLose(target, effect)
+    local pwr = effect:getPower();
     if (pwr == 1) then -- ATMA of the Lion
         target:delMod(MOD_TRIPLE_ATTACK, 7);
         target:delMod(MOD_DMGPHYS, -10);
