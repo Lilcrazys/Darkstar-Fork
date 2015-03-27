@@ -3159,15 +3159,15 @@ INSERT INTO `mob_skill` VALUES (1254,477,1098,'Revelation',0,20.0,2000,0,4,0,0,0
 
 -- Tenzen
 -- ranged @ 1033 1034
-INSERT INTO `mob_skill` VALUES (1134,149,1036,'Amatsu_torimai',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1135,149,1037,'Amatsu_kazakiri',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1136,149,1038,'Amatsu_yukiarashi',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1137,149,1039,'Amatsu_tsukioboro',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1138,149,1040,'Amatsu_anaikusa',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1139,149,1041,'Amatsu_tsukikage',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1141,149,1042,'Oisoya',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1142,149,1032,'noname',0,15.0,2000,1500,1,0,0,0); -- riceball eating
-INSERT INTO `mob_skill` VALUES (1143,149,1035,'noname2',0,15.0,2000,1500,4,0,0,0); -- cosmic elucidation
+INSERT INTO `mob_skill` VALUES (1134,7500,1036,'Amatsu_torimai',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1135,7500,1037,'Amatsu_kazakiri',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1136,7500,1038,'Amatsu_yukiarashi',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1137,7500,1039,'Amatsu_tsukioboro',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1138,7500,1040,'Amatsu_anaikusa',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1139,7500,1041,'Amatsu_tsukikage',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1141,7500,1042,'Oisoya',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1142,7500,1032,'noname',0,15.0,2000,1500,1,0,0,0); -- riceball eating
+INSERT INTO `mob_skill` VALUES (1143,7500,1035,'noname2',0,15.0,2000,1500,4,0,0,0); -- cosmic elucidation
 
 -- Lady Lilith
 -- personal special melee 1840 1841 1842
