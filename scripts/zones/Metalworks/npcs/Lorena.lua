@@ -5,7 +5,10 @@
 --  @zone: 237
 --  @pos -104.990 1 30.995
 -----------------------------------
-
+function onTrigger(player,npc)
+    player:PrintToPlayer("NPC DISABLED BECAUSE OF CRASH");
+end;
+--[[
 package.loaded["scripts/zones/Metalworks/TextIDs"] = nil;
 require("scripts/zones/Metalworks/TextIDs");
 require("scripts/globals/keyitems");
@@ -121,4 +124,4 @@ function onEventFinish(player,csid,option)
         player:messageSpecial(GP_OBTAINED, option);
     end
 end;
-
+]]

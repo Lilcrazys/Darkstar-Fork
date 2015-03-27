@@ -5,7 +5,10 @@
 --  @zone: 234
 --  @pos 117.970 1.017 -10.438
 -----------------------------------
-
+function onTrigger(player,npc)
+    player:PrintToPlayer("NPC DISABLED BECAUSE OF CRASH");
+end;
+--[[
 package.loaded["scripts/zones/Bastok_Mines/TextIDs"] = nil;
 require("scripts/globals/keyitems");
 require("scripts/globals/crafting");
@@ -131,3 +134,4 @@ function onEventFinish(player,csid,option,target)
         player:messageSpecial(GP_OBTAINED, option);
     end
 end;
+]]

@@ -5,7 +5,10 @@
 --  @zone: 241
 --  @pos -38.173 -1.25 -113.679
 -----------------------------------
-
+function onTrigger(player,npc)
+    player:PrintToPlayer("NPC DISABLED BECAUSE OF CRASH");
+end;
+--[[
 package.loaded["scripts/zones/Windurst_Woods/TextIDs"] = nil;
 require("scripts/globals/keyitems");
 require("scripts/globals/crafting");
@@ -121,4 +124,4 @@ function onEventFinish(player,csid,option,target)
         player:messageSpecial(GP_OBTAINED, option);
     end
 end;
-
+]]
