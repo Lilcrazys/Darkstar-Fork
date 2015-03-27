@@ -1,9 +1,10 @@
 ----------------------------------
--- Abyssea Atma
+-- Abyssea ATMA handling
 ----------------------------------
 require("scripts/globals/common");
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 ----------------------------------
 -- Returns total lunar abyssites
@@ -27,6 +28,8 @@ end
 -- ATMA KI list
 ----------------------------------
 function hasATMA_KI(player)
+    -- This is temp just to make sure player has the an ATMA KI (any ATMA KI)
+    -- Later this will be replaced by loading WHICH ones they have into the mask(s) for the event.
     local result = false;
     local ATMA_KI =
     {
@@ -59,6 +62,7 @@ function hasATMA_KI(player)
 
     return result;
 
+    -- A quick breakdown of which bytes of param mask bytes hold which KI's:
     -- local param3_byte1 = {1279,1280,1281,1282,1283,1284,1285,1286};
     -- local param3_byte2 = {1287,1288,1289,1290,1291,1292,1293,1294};
     -- local param3_byte3 = {1295,1296,1297,1298,1299,1300,1301,1302};
@@ -83,12 +87,16 @@ function hasATMA_KI(player)
     -- local param8_byte2 = {};
     -- local param8_byte3 = {};
     -- local param8_byte4 = {};
+    -- Filling a byte past what it is supposed to have results in non ATMA key items displaying.
 end
 
 ----------------------------------
 -- Check for a single ATMA KI
 ----------------------------------
 function getATMA(player, pwr)
+    -- This needs redone to be much shorter.
+    -- Since ATMA ID is sequential, should be able to just get 3rd or 5th or whatever KI ID from array
+    -- Instead of copying what was done for sanction NPC's item list
     local ATMA = {}
     ATMA[1] = 1279;
     ATMA[2] = 1280;
@@ -269,8 +277,16 @@ function applyATMA(player, pwr)
         else
             player:PrintToPlayer("ERROR!")
         end
+
         player:setVar("ACTIVE_ATMA_COUNT", player:getVar("ACTIVE_ATMA_COUNT") +1);
-        player:addStatusEffect(EFFECT_ATMA, pwr, tick, 0); -- Duration zero should be infinite, effect will be lost on zone/dc/logout.
+
+        if (player:hasStatusEffect(EFFECT_ATMA_2)) then
+            player:addStatusEffectEx(EFFECT_ATMA_3, EFFECT_ATMA, pwr, tick, 0); -- Duration zero should be infinite, effect will be lost on zone/dc/logout.
+        elseif (player:hasStatusEffect(EFFECT_ATMA)) then
+            player:addStatusEffectEx(EFFECT_ATMA_2, EFFECT_ATMA, pwr, tick, 0); -- Duration zero should be infinite, effect will be lost on zone/dc/logout.
+        else
+            player:addStatusEffect(EFFECT_ATMA, pwr, tick, 0); -- Duration zero should be infinite, effect will be lost on zone/dc/logout.
+        end
     else
         player:PrintToPlayer("Can't apply that ATMA, key item not found.")
     end
@@ -281,15 +297,16 @@ end;
 -- Remove ALL ATMA effects
 ----------------------------------
 function removeATMA(player)
-    if (player:hasStatusEffect(EFFECT_ATMA)) then
-        player:delStatusEffect(EFFECT_ATMA);
+    if (player:hasStatusEffect(EFFECT_ATMA_3)) then
+        player:delStatusEffect(EFFECT_ATMA_3);
     end
-    if (player:hasStatusEffect(EFFECT_ATMA)) then
-        player:delStatusEffect(EFFECT_ATMA);
+    if (player:hasStatusEffect(EFFECT_ATMA_2)) then
+        player:delStatusEffect(EFFECT_ATMA_2);
     end
     if (player:hasStatusEffect(EFFECT_ATMA)) then
         player:delStatusEffect(EFFECT_ATMA);
     end
     player:setVar("ACTIVE_ATMA_COUNT", 0);
-    player:setPos(player:getXPos(),player:getYPos(),player:getZPos(),player:getRotPos(),player:getZoneID()); -- Temp hotfix for stupid onEffectLose BS.
+    -- This line only needed if using single effect with the duplicates allowed flag. Commented out now that I am using 2 dummy effects.
+    -- player:setPos(player:getXPos(),player:getYPos(),player:getZPos(),player:getRotPos(),player:getZoneID()); -- Temp hotfix for stupid onEffectLose BS. https://github.com/DarkstarProject/darkstar/issues/1151 
 end;

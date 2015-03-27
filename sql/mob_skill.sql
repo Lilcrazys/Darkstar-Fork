@@ -2873,6 +2873,8 @@ INSERT INTO `mob_skill` VALUES (1667,305,1267,'Firespit',0,30.0,2000,1000,4,0,0,
 INSERT INTO `mob_skill` VALUES (1668,305,1268,'Warm-Up',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1669,305,1269,'Stave_Toss',0,7.0,2000,1000,1,0,0,0); -- Linked with Staff
 INSERT INTO `mob_skill` VALUES (1670,305,1270,'Groundburst',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (433,305,432,'Benediction',1,20.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (435,305,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- Dea (306)
 INSERT INTO `mob_skill` VALUES (1843,306,1437,'Batterhorn',4,16.0,2000,1000,4,0,0,0);

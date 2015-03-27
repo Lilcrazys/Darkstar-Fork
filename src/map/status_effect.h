@@ -681,8 +681,10 @@ enum EFFECT
     EFFECT_SKILLCHAIN               = 799,
 	EFFECT_DYNAMIS					= 800,
     EFFECT_MEDITATE                 = 801, // Dummy effect for SAM Meditate JA
-    // EFFECT_PLACEHOLDER              = 802, // Description
-    // 802-1013
+    EFFECT_ATMA_2                   = 802, // Dummy for 2nd ATMA effect
+    EFFECT_ATMA_3                   = 803, // Dummy for 3rd ATMA effect
+    // EFFECT_PLACEHOLDER              = 804, // Description
+    // 804-1013
 //==========================================================//
     // Start of LegionXI custom section
     // EFFECT_PLACEHOLDER              = 1014, // Description
