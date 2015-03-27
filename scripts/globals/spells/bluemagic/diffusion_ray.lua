@@ -22,7 +22,7 @@ function onSpellCast(caster,target,spell)
     params.tpmod = TPMOD_ATTACK; params.dmgtype = DMGTYPE_BLUNT; params.scattr = SC_IMPACTION;
         params.numhits = 1;
         params.multiplier = 5.0; params.tp150 = 3.50; params.tp300 = 4.0; params.azuretp = 1.5; params.duppercap = 90;
-        params.str_wsc = 0.7; params.dex_wsc = 0.3; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 2.0; params.mnd_wsc = 0.0; params.chr_wsc = 0.0;
+        params.str_wsc = 0.7; params.dex_wsc = 0.3; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 1.75; params.mnd_wsc = 0.0; params.chr_wsc = 0.0;
     damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 

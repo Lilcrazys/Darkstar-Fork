@@ -18,10 +18,10 @@ end;
 function onSpellCast(caster,target,spell)
     local params = {};
 
-    local multi = 4;
+    local multi = 7;
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
     params.multiplier = multi; params.tMultiplier = 4.5; params.duppercap = 69;
-    params.str_wsc = 0.0; params.dex_wsc = 0.5; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 2.0; params.mnd_wsc = 0.0; params.chr_wsc = 0.0;
+    params.str_wsc = 0.0; params.dex_wsc = 0.5; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.2; params.mnd_wsc = 0.0; params.chr_wsc = 0.0;
     damage = BlueMagicalSpell(caster, target, spell, params, DEX_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
