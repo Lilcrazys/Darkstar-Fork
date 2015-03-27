@@ -320,7 +320,7 @@ INSERT INTO `status_effects` VALUES (283,'perfect_defense',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (284,'egg',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (285,'visitant',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (286,'baramnesia',33,106,0,0,0,0,0);
-INSERT INTO `status_effects` VALUES (287,'atma',256,0,0,4,0,0,0);
+INSERT INTO `status_effects` VALUES (287,'atma',256,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (288,'endark',33,94,51,0,0,0,0);
 INSERT INTO `status_effects` VALUES (289,'enmity_boost',32,0,0,0,0,0,1);
 INSERT INTO `status_effects` VALUES (290,'subtle_blow_plus',32,0,0,0,0,0,0);
@@ -641,6 +641,8 @@ INSERT INTO `status_effects` VALUES (798,'chainbound',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (799,'skillchain',32,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (800,'dynamis',0,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (801,'meditate',32,0,0,0,0,0,7);
+INSERT INTO `status_effects` VALUES (802,'atma',256,0,0,0,0,0,0); -- 2nd ATMA effect
+INSERT INTO `status_effects` VALUES (803,'atma',256,0,0,0,0,0,0); -- 3rd ATMA effect
 
 -- LegionXI custom effects
 INSERT INTO `status_effects` VALUES (1016,'custom_enspell',33,94,51,0,0,0,0);

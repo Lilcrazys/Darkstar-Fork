@@ -1408,6 +1408,65 @@ INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 247, 1, 255); -- Aspir
 
+-- list IDs 403 - 589 available for use! please use'em!
+
+-- Gotoh Zha the Redolent (BLM)
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 147, 1, 255); -- Fire 4
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 152, 1, 255); -- Blizzard 4
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 157, 1, 255); -- Aero 4
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 162, 1, 255); -- Stone 4
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 167, 1, 255); -- Thunder 4
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 172, 1, 255); -- Water 4
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 176, 1, 255); -- Firaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 181, 1, 255); -- Blizzaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 186, 1, 255); -- Aeroga 3
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 191, 1, 255); -- Stonega 3
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 196, 1, 255); -- Thundaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 201, 1, 255); -- Waterga 3
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 251, 1, 255); -- Shock Spikes
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 273, 1, 255); -- Sleepga
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 274, 1, 255); -- Sleepga II
+-- Gotoh Zha the Redolent (WHM)
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 5, 1, 255);  -- Cure V
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 10, 1, 255);  -- Curaga IV
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 14, 1, 255);  -- Poisona
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 15, 1, 255);  -- Paralyna
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 16, 1, 255);  -- Blindna
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 17, 1, 255);  -- Silena
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 18, 1, 255);  -- Stona
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 19, 1, 255);  -- Viruna
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 20, 1, 255);  -- Cursna
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 21, 1, 255);  -- Holy
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 40, 1, 255);  -- Banishga III
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 46, 1, 255);  -- Protect IV
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 51, 1, 255);  -- Shell IV
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 55, 1, 255);  -- Aquaveil
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 57, 1, 255);  -- Haste
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 59, 1, 255);  -- Silence
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 61, 1, 255);  -- Barblizzard
+INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 112, 1, 255);  -- Flash
+
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 252, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 277, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 501, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 503, 1, 255); -- Spell Name?
+
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 198, 1, 255); -- Thundaga 5
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 229, 1, 255); -- Poisonga 5
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 277, 1, 255); -- Dread Spikes
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 286, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 316, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 356, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 357, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 359, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 360, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 503, 1, 255); -- Spell Name?
+INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 504, 1, 255); -- Spell Name?
+
 -- Hades_v1 (Possessing Melvien)
 INSERT INTO `mob_spell_lists` VALUES ('Hades_v1', 599, 486, 1, 255); -- Gain-STR
 INSERT INTO `mob_spell_lists` VALUES ('Hades_v1', 599, 487, 1, 255); -- Gain-DEX
@@ -1496,27 +1555,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Hades_v2', 600, 277, 1, 255); -- Dread Sp
 INSERT INTO `mob_spell_lists` VALUES ('Hades_v2', 600, 360, 1, 255); -- Dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Hades_v2', 600, 503, 1, 255); -- Impact
 
-INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 229, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 246, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 252, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 277, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 501, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 990, 503, 1, 255); -- Spell Name?
-
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 168, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 197, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 198, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 229, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 277, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 286, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 316, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 356, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 357, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 359, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 360, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 503, 1, 255); -- Spell Name?
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 991, 504, 1, 255); -- Spell Name?
-
 -- -----------------------------------
 -- Customized Legion Mobs Mobs
 -- -----------------------------------
@@ -1565,7 +1603,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 277, 1, 255); -- Dr
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 274, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 275, 1, 255); -- Absorb TP
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 246, 1, 255); -- Drain 2
-INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 229, 1, 255); -- Poisionga 5
+INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 229, 1, 255); -- Poisonga 5
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Elasmoth', 603, 234, 1, 255); -- Bio 5
 
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Ferromantoise', 604, 162, 1, 255); -- Stone 4
@@ -1855,6 +1893,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 274, 1, 255); -- 
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 359, 1, 255); -- Silencega
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 503, 1, 255); -- Impact
 
+-- List ID's 627 - 665 available for use (likely use for WoE boss mobs).
+
 -- -----------------------------------
 -- The SlenderMan custom NM
 -- -----------------------------------
@@ -1884,6 +1924,8 @@ INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 365, 1, 255); -- Breakga
 INSERT INTO `mob_spell_lists` VALUES ('SlenderMan', 666, 366, 1, 255); -- Graviga
 
+-- List ID's 667 - 759 currently unused, reserved for future custom event mobs.
+
 -- -----------------------------------
 -- Custom "Hall of Mars" Legion event
 -- -----------------------------------
@@ -1900,6 +1942,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 275, 1, 255); -- Absorb-TP
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 247, 1, 255); -- Aspir
 INSERT INTO `mob_spell_lists` VALUES ('Mars', 760, 502, 1, 255); -- Kaustra
+
+-- List ID's 761 - 774 currently unused, reserved for future custom event mobs.
 
 -- -----------------------------------
 -- Provenance Custom BCNM
