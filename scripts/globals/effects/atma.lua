@@ -179,7 +179,7 @@ function onEffectGain(target, effect)
         target:addMod(MOD_TRIPLE_ATTACK, 5);
         target:addMod(MOD_DMGBREATH, -40);
     elseif (pwr == 48) then -- ATMA_OF_THE_WINGED_ENIGMA
-        target:addMod(MOD_HASTE, 5);
+        target:addMod(MOD_HASTE_GEAR, 5);
     elseif (pwr == 49) then -- ATMA_OF_THE_CRADLE
         target:addMod(MOD_VIT, 20);
         target:addMod(MOD_DEX, 20);
@@ -220,7 +220,7 @@ function onEffectGain(target, effect)
         target:addMod(MOD_DARKRES, 50);
         target:addMod(MOD_STUNRES, 30);
     elseif (pwr == 60) then -- ATMA_OF_THE_AVARICIOUS_APE
-        target:addMod(MOD_HASTE, 5);
+        target:addMod(MOD_HASTE_GEAR, 5);
         -- not implemented: Monster Correlation
     elseif (pwr == 61) then -- ATMA_OF_THE_MERCILESS_MATRIARCH
         target:addMod(MOD_MACC, 50);
@@ -236,7 +236,7 @@ function onEffectGain(target, effect)
         -- not implemented: Gain full benefit of Earthsday/earth weather bonuses
     elseif (pwr == 64) then -- ATMA_OF_THE_ASCENDING_ONE
         target:addMod(MOD_WINDRES, 100);
-        target:addMod(MOD_HASTE, 5);
+        target:addMod(MOD_HASTE_GEAR, 5);
         target:addMod(MOD_SNAP_SHOT, 5);
     elseif (pwr == 65) then -- ATMA_OF_THE_SCORPION_QUEEN
         target:addMod(MOD_STORETP, 20);
@@ -258,7 +258,7 @@ function onEffectGain(target, effect)
         target:addMod(MOD_ATT, 20);
         target:addMod(MOD_FIREATT, 30);
     elseif (pwr == 70) then -- ATMA_OF_THE_CRIMSON_SCALE
-        target:addMod(MOD_HASTE, 5);
+        target:addMod(MOD_HASTE_GEAR, 5);
         target:addMod(MOD_ENMITY, -20);
     elseif (pwr == 71) then -- ATMA_OF_THE_SCARLET_WING
         target:addMod(MOD_ELEM, 10);
@@ -271,7 +271,7 @@ function onEffectGain(target, effect)
         target:addMod(MOD_EVA, 40);
     elseif (pwr == 74) then -- ATMA_OF_THE_OMNIPOTENT
         target:addMod(MOD_DEX, 50);
-        target:addMod(MOD_HASTE, 10);
+        target:addMod(MOD_HASTE_GEAR, 10);
         target:addMod(MOD_ENMITY, 20);
     elseif (pwr == 75) then -- ATMA_OF_THE_WAR_LION
         target:addMod(MOD_DEX, 20);
@@ -328,9 +328,9 @@ function onEffectGain(target, effect)
         target:addMod(MOD_REGEN, 2);
     elseif (pwr == 90) then -- ATMA_OF_THE_SEA_DAUGHTER
         target:addMod(MOD_REGAIN, 5);
-        target:addMod(MOD_HASTE, -12);
+        target:addMod(MOD_HASTE_GEAR, -12);
         target:addMod(MOD_REGEN, 30);
-    elseif (pwr == 91) then
+    elseif (pwr == 91) then -- ATMA_OF_THE_HATEFUL_STREAM
         -- not implemented
         -- http://wiki.ffxiclopedia.org/wiki/Atma_of_the_Hateful_Stream
         -- No easy way to do this ATMA, no way I am doing bit shit in onTick for it..
@@ -363,7 +363,7 @@ function onEffectGain(target, effect)
         target:addMod(MOD_RATT, 40);
     elseif (pwr == 100) then -- ATMA_OF_THE_APOCALYPSE
         target:addMod(MOD_TRIPLE_ATTACK, 15);
-        target:addMod(MOD_GRIMOIRE_INSTANT_CAST, 10);
+        target:addMod(MOD_GRIMOIRE_INSTANT_CAST, 10); -- Wrong modifier, correct one not yet implimented.
         target:addMod(MOD_RERAISE_III, 1);
     elseif (pwr == 101) then -- ATMA_OF_THE_HEIR                         = 1655;
     elseif (pwr == 102) then -- ATMA_OF_THE_HERO                         = 1656;
@@ -595,7 +595,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_TRIPLE_ATTACK, 5);
         target:delMod(MOD_DMGBREATH, -40);
     elseif (pwr == 48) then -- ATMA_OF_THE_WINGED_ENIGMA
-        target:delMod(MOD_HASTE, 5);
+        target:delMod(MOD_HASTE_GEAR, 5);
     elseif (pwr == 49) then -- ATMA_OF_THE_CRADLE
         target:delMod(MOD_VIT, 20);
         target:delMod(MOD_DEX, 20);
@@ -636,7 +636,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_DARKRES, 50);
         target:delMod(MOD_STUNRES, 30);
     elseif (pwr == 60) then -- ATMA_OF_THE_AVARICIOUS_APE
-        target:delMod(MOD_HASTE, 5);
+        target:delMod(MOD_HASTE_GEAR, 5);
         target:delMod(MOD_FIREACC, 5);
         target:delMod(MOD_ICEACC, 5);
         target:delMod(MOD_WINDACC, 5);
@@ -666,7 +666,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_DARK_AFFINITY, 1);
     elseif (pwr == 64) then -- ATMA_OF_THE_ASCENDING_ONE
         target:delMod(MOD_WINDRES, 100);
-        target:delMod(MOD_HASTE, 5);
+        target:delMod(MOD_HASTE_GEAR, 5);
         target:delMod(MOD_SNAP_SHOT, 5);
     elseif (pwr == 65) then -- ATMA_OF_THE_SCORPION_QUEEN
         target:delMod(MOD_STORETP, 20);
@@ -688,7 +688,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_ATT, 20);
         target:delMod(MOD_FIREATT, 30);
     elseif (pwr == 70) then -- ATMA_OF_THE_CRIMSON_SCALE
-        target:delMod(MOD_HASTE, 5);
+        target:delMod(MOD_HASTE_GEAR, 5);
         target:delMod(MOD_ENMITY, -20);
     elseif (pwr == 71) then -- ATMA_OF_THE_SCARLET_WING
         target:delMod(MOD_ELEM, 10);
@@ -701,7 +701,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_EVA, 40);
     elseif (pwr == 74) then -- ATMA_OF_THE_OMNIPOTENT
         target:delMod(MOD_DEX, 50);
-        target:delMod(MOD_HASTE, 10);
+        target:delMod(MOD_HASTE_GEAR, 10);
         target:delMod(MOD_ENMITY, 20);
     elseif (pwr == 75) then -- ATMA_OF_THE_WAR_LION
         target:delMod(MOD_DEX, 20);
@@ -758,7 +758,7 @@ function onEffectLose(target, effect)
         target:delMod(MOD_REGEN, 2);
     elseif (pwr == 90) then -- ATMA_OF_THE_SEA_DAUGHTER
         target:delMod(MOD_REGAIN, 5);
-        target:delMod(MOD_HASTE, -12);
+        target:delMod(MOD_HASTE_GEAR, -12);
         target:delMod(MOD_REGEN, 30);
     elseif (pwr == 91) then -- ATMA_OF_THE_HATEFUL_STREAM
         -- not implemented
