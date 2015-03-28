@@ -1893,7 +1893,20 @@ INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 274, 1, 255); -- 
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 359, 1, 255); -- Silencega
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 503, 1, 255); -- Impact
 
--- List ID's 627 - 665 available for use (likely use for WoE boss mobs).
+-- List ID's 627 - 664 available for use (likely use for WoE boss mobs).
+
+-- -----------------------------------
+-- "The Jumping Crab" custom HNM
+-- -----------------------------------
+
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 5, 1, 255); -- Cure 5
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 64, 1, 255); -- Barthunder
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 106, 1, 255); -- Phalanx
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 112, 1, 255); -- Flash
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 215, 1, 255); -- Flood 2
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 260, 1, 255); -- Dispel
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 275, 1, 255); -- Absorb-TP
+INSERT INTO `mob_spell_lists` VALUES ('The_Jumping_Crab', 665, 493, 1, 255); -- Temper
 
 -- -----------------------------------
 -- The SlenderMan custom NM

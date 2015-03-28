@@ -4992,6 +4992,23 @@ INSERT INTO `mob_skill` VALUES (120,1023,120,'Foul_Breath',4,15.0,2000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (123,1023,123,'Zmey_Chomp_Rush',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (124,1023,124,'Scythe_Tail',0,7.0,2000,1500,4,0,0,1);
 
+-- The Jumping Crab
+INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback
+INSERT INTO `mob_skill` VALUES (186,6665,186,'Tegmine_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (187,6665,187,'Bubble_Curtain',1,8.0,2000,2500,1,0,0,0); -- Shell -50% magic damage taken
+INSERT INTO `mob_skill` VALUES (189,6665,189,'Scissor_Guard',0,7.0,2000,1500,1,0,0,0); -- +100% defense boost
+INSERT INTO `mob_skill` VALUES (192,6665,192,'Metallic_Body',0,7.0,2000,1500,1,0,0,0); -- 25HP Stoneskin
+INSERT INTO `mob_skill` VALUES (198,6665,198,'Water_Shield',0,7.0,2000,1500,1,0,0,0); -- Eva boost
+INSERT INTO `mob_skill` VALUES (462,6665,440,'Crab_Jump_1',0,9.5,2000,0,4,0,0,0); -- W/Spirit Surge: Reduce targets DEF
+INSERT INTO `mob_skill` VALUES (477,6665,441,'Crab_Jump_2',0,9.5,2000,0,4,0,0,0); -- W/Spirit Surge: Reduce targets TP
+INSERT INTO `mob_skill` VALUES (513,6665,513,'Crab_Flying_Punch',4,10.0,2000,1500,4,0,0,10); -- Heavy DMG+Knockback, only use during Spirit Surge or Elemental Sforzo
+INSERT INTO `mob_skill` VALUES (518,6665,446,'Bubble_Armor',0,7.0,2000,1500,1,0,0,0); -- Shell -50% magic damage taken
+INSERT INTO `mob_skill` VALUES (768,6665,706,'SuperDuperJump',0,7,900,0,1,0,0,0); -- Only used during depop
+INSERT INTO `mob_skill` VALUES (808,6665,442,'Crab_Jump_3',0,9.5,2000,0,4,0,0,0); -- W/Spirit Surge: Hate Reset
+INSERT INTO `mob_skill` VALUES (1181,6665,767,'Crab_Jump_4',1,8.0,2000,1000,4,0,0,0); -- AoE dmg (only triggered with Draw In)
+INSERT INTO `mob_skill` VALUES (1637,6665,432,'Crab_Spirit_Surge',0,7.0,2000,0,1,2,0,0); -- It's a bird! It's a plane! No its super crab!
+INSERT INTO `mob_skill` VALUES (2257,6665,188,'Mega_Scissors',4,10.0,2000,1500,4,0,0,0); -- Bigger than Big Scissors o.o;
+INSERT INTO `mob_skill` VALUES (3009,6665,432,'Elemental_Sforzo',0,7.0,2000,0,1,2,0,0); -- RUN 2hr (Magic Immunity)
 
 -- SlenderMan
 INSERT INTO `mob_skill` VALUES (190,6666,190,'Slendy_Dimensional_Death',0,7.0,2000,0,4,1,0,0);

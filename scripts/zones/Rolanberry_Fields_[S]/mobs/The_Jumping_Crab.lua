@@ -1,0 +1,349 @@
+-----------------------------------
+-- Zone: Rolanberry Fields [S]
+--  HNM: The Jumping Crab (ID: 17150970)
+-- @pos -724 -32 -362 91
+-- @pos 275 -32 -270 91
+-----------------------------------
+
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/utils");
+require("scripts/globals/titles");
+require("scripts/globals/spoofchat");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_DRAW_IN, 1); -- 1=Single target Draw In, 2=Alliance Draw in
+    mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID()); -- Give additional effect on melee
+    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Give Auto spikes
+    mob:addStatusEffect(EFFECT_DELUGE_SPIKES, 9, 0, 0); -- Needed for auto spikes to fire off
+    mob:getStatusEffect(EFFECT_DELUGE_SPIKES):setFlag(32); -- Can't dispel spikes
+end;
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 25);
+    mob:setMod(MOD_REGAIN, 5);
+    mob:setMod(MOD_COUNTER, 4);
+    mob:setMod(MOD_HUMANOID_KILLER, 3);
+    mob:setMod(MOD_WATER_ABSORB, 100);
+    mob:setMod(MOD_UFASTCAST, 65);
+    mob:setMod(MOD_CURE_POTENCY, 21);
+    mob:setMod(MOD_CURE_POTENCY_RCVD, 21);
+
+    -- addMod
+    mob:addMod(MOD_ATT, 50);
+    mob:addMod(MOD_ACC, 50);
+    mob:addMod(MOD_DEF, 50);
+    mob:addMod(MOD_STR, 50);
+    mob:addMod(MOD_DEX, 25);
+    mob:addMod(MOD_VIT, 50);
+    mob:addMod(MOD_AGI, 75);
+    mob:addMod(MOD_INT, 100);
+    mob:addMod(MOD_MND, 150);
+    mob:addMod(MOD_MATT, -20);
+    mob:addMod(MOD_MACC, 75);
+    mob:addMod(MOD_MEVA, 25);
+    mob:addMod(MOD_RDEF, 25);
+    mob:addMod(MOD_REVA, 25);
+
+    -- Checking if Crab should be at the alt pos according to serverVar..
+    -- This is done because otherwise server restarts would force it back to same pos.
+    if (GetServerVariable("JumpingCrabPos") == 1) then
+        mob:setSpawn(275, -32, -270); -- East side of Zone
+        mob:setPos(275, -32, -270); -- East side of Zone
+    else
+        mob:setSpawn(-724, -32, -362); -- West side of Zone
+        mob:setPos(-724, -32, -362); -- West side of Zone
+    end
+end;
+
+-----------------------------------
+-- onMobEngaged
+-----------------------------------
+
+function onMobEngaged(mob, target)
+    local claims = GetServerVariable("JumpingCrabClaim");
+    SetServerVariable("JumpingCrabClaim", claims +1);
+    mob:useMobAbility(462);
+end;
+
+-----------------------------------
+-- onMobDisengage
+-----------------------------------
+
+function onMobDisengage(mob, target)
+    mob:setLocalVar("isBoard", 0)
+    mob:setLocalVar("LaughingCrab", 0)
+end;
+
+-----------------------------------
+-- onMobFight
+-----------------------------------
+
+function onMobFight(mob, target)
+    local pos = GetServerVariable("JumpingCrabPos");
+    local BattleTime = mob:getBattleTime();
+    local J1 = mob:getLocalVar("J1");
+    local J2 = mob:getLocalVar("J2");
+    local J3 = mob:getLocalVar("J3");
+
+    -- Fight timer and claim tracking...
+	if (target:getHPP() <= 5 and mob:getLocalVar("LaughingCrab") == 0) then
+        mob:setLocalVar("LaughingCrab", 1)
+        mob:SpoofChatParty("Seems to be laughing..You didn't even know giant crabs could laugh..", MESSAGE_ECHO);
+    elseif (mob:getLocalVar("SuperDuperJump") == 1) then
+        mob:setLocalVar("SuperDuperJump", 2)
+        DespawnMob(mob:getID());
+        mob:SpoofChatParty("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky.", MESSAGE_ECHO);
+    elseif (BattleTime > 7200 and mob:getLocalVar("SuperDuperJump") == 0) then
+        -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
+        mob:setLocalVar("SuperDuperJump", 1)
+        mob:useMobAbility(768); -- SuperDuperJump
+    elseif (BattleTime > 3600 and mob:getLocalVar("isBoard") == 0 and mob:getLocalVar("SuperDuperJump") == 0) then
+        -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
+        -- target:PrintToPlayer(string.format("Claim count: %u ", GetServerVariable("JumpingCrabClaim")))
+        if (GetServerVariable("JumpingCrabClaim") == 3) then -- Strike 3, yer out (Lost claim too many times and fought past 1hr mark)!
+            mob:setLocalVar("SuperDuperJump", 1)
+            mob:useMobAbility(768); -- SuperDuperJump
+        else
+            mob:SpoofChatParty("Is beginning to look disinterested in the battle.", MESSAGE_ECHO);
+            mob:setLocalVar("isBoard", 1)
+            mob:castSpell(260);
+        end
+
+    -- 2hr AI, uses DRG and RUN 2hrs (Real DRG 2hr, not Call Wyvern..And doesn't even need the Wyvern to use!)
+    elseif (mob:getHPP() <= 9 and mob:getLocalVar("2hr") == 6) then
+        mob:setLocalVar("2hr", 7)
+        mob:addMod(MOD_HUMANOID_KILLER, 1);
+        mob:useMobAbility(1637); -- Do Spirit_Surge!
+    elseif (mob:getHPP() <= 33) then
+        if (mob:getLocalVar("2hr") == 5) then
+            mob:setLocalVar("2hr", 6)
+            mob:useMobAbility(1637); -- Do Spirit_Surge!
+        elseif (mob:getLocalVar("2hr") == 4) then
+            mob:setLocalVar("2hr", 5)
+            mob:addMod(MOD_HUMANOID_KILLER, 1);
+            mob:useMobAbility(3009); -- Do Elemental_Sforzo!
+        end
+    elseif (mob:getHPP() <= 50 and mob:getLocalVar("2hr") == 3) then
+        mob:setLocalVar("2hr", 4)
+        mob:useMobAbility(3009); -- Do Elemental_Sforzo!
+    elseif (mob:getHPP() <= 66 and mob:getLocalVar("2hr") == 2) then
+        mob:setLocalVar("2hr", 3)
+        mob:addMod(MOD_HUMANOID_KILLER, 1);
+        mob:useMobAbility(1637); -- Do Spirit_Surge!
+    elseif (mob:getHPP() <= 75) then
+        if (mob:getLocalVar("2hr") == 1) then
+            mob:setLocalVar("2hr", 2)
+            mob:useMobAbility(1637); -- Do Spirit_Surge!
+        elseif (mob:getLocalVar("2hr") == 0) then
+            mob:setLocalVar("2hr", 1)
+            mob:addMod(MOD_HUMANOID_KILLER, 1);
+            mob:useMobAbility(3009); -- Do Elemental_Sforzo!
+        end
+
+    -- 2/3 chance of using extra jump attacks every 30/45/90 seconds.
+    elseif (mob:getBattleTime() - J3 > 90) then
+        mob:setLocalVar("J3", mob:getBattleTime());
+        if (math.random(1,3) ~= 2) then
+            mob:useMobAbility(808); -- Crab_Jump_3
+        end
+    elseif (mob:getBattleTime() - J2 > 45) then
+        mob:setLocalVar("J2", mob:getBattleTime());
+        if (math.random(1,3) ~= 2) then
+            mob:useMobAbility(477); -- Crab_Jump_2
+        end
+    elseif (mob:getBattleTime() - J1 > 30) then
+        mob:setLocalVar("J1", mob:getBattleTime());
+        if (math.random(1,3) ~= 2) then
+            mob:useMobAbility(462); -- Crab_Jump_1
+        end
+    end
+end;
+
+-----------------------------------
+-- onSpellPrecast
+-----------------------------------
+
+function onSpellPrecast(mob, spell)
+    local RND = math.random(0,99);
+
+    -- These players are too slow, so Floodga2 their asses.
+    if (spell:getID() == 215 and mob:getLocalVar("isBoard") == 1) then
+        mob:setLocalVar("isBoard", 2)
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(25);
+        spell:setAnimation(909);
+
+    -- Randomly make Spells 25 yalm AoE
+    elseif (spell:getID() == 112) then
+        if (RND < 25) then
+            spell:setAoE(SPELLAOE_RADIAL);
+            spell:setFlag(SPELLFLAG_HIT_ALL);
+            spell:setRadius(25);
+            spell:setAnimation(1343);
+        end
+    elseif (spell:getID() == 215) then
+        if (RND < 20) then
+            spell:setAoE(SPELLAOE_RADIAL);
+            spell:setFlag(SPELLFLAG_HIT_ALL);
+            spell:setRadius(25);
+            spell:setAnimation(909);
+        end
+    elseif (spell:getID() == 260) then
+        if (RND < 33) then
+            spell:setAoE(SPELLAOE_RADIAL);
+            spell:setFlag(SPELLFLAG_HIT_ALL);
+            spell:setRadius(25);
+            spell:setAnimation(492);
+        end
+    elseif (spell:getID() == 275) then
+        if (RND < 40) then
+            spell:setAoE(SPELLAOE_RADIAL);
+            spell:setFlag(SPELLFLAG_HIT_ALL);
+            spell:setRadius(25);
+            spell:setAnimation(272);
+        end
+    end
+end
+
+-----------------------------------
+-- onMagicHit
+-----------------------------------
+
+function onMagicHit(caster, target, spell)
+    local RND = math.random(0,99);
+    local mob = nil;
+    if (target:isMob()) then
+        mob = target;
+    elseif (caster:isMob()) then
+        nmob = caster;
+    end
+    -- 11% chance of countering magic with cast of its own
+    if (RND >= 48 and RND <= 50) then -- 3% chance of copying spell
+        mob:castSpell(spell:getID())
+    elseif (RND >= 44 and RND <= 54) then -- 8% chance of casting Flood 2
+        mob:castSpell(260)
+	elseif (RND <= 25 or RND >= 75) then -- Or maybe your tank takes a Head Butt instead
+        mob:useMobAbility(44); -- Crab_Head_Butt
+    end
+    -- Get 1 hit duration of enhanced Deluge Spikes every time a spell lands (goes back to normal after)
+    mob:setLocalVar("DelugeSpikes", 1);
+    return 1;
+end;
+
+-----------------------------------
+-- onCriticalHit
+-----------------------------------
+
+function onCriticalHit(mob)
+    -- Get 5 extra TP and 1 hit duration Enwater every time a critical lands
+    mob:addTP(5);
+    mob:setLocalVar("Enwater", 1);
+end
+
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob, target, damage)
+    if (mob:getLocalVar("Enwater") == 1) then -- Do additional effect water damage.
+        local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+        local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
+        local dmg = 20 + ((INT_diff + MND_diff) * 0.5);
+        dmg = addBonusesAbility(mob, ELE_WATER, target, dmg, params);
+        dmg = dmg * applyResistanceAddEffect(mob, target, ELE_WATER, 0);
+        dmg = adjustForTarget(target, dmg, ELE_WATER);
+        dmg = finalMagicNonSpellAdjustments(mob, target, ELE_WATER, dmg);
+        dmg = utils.clamp(dmg, -250, 250);
+        local message = 163;
+        if (dmg < 0) then
+            message = 167;
+        end
+        mob:setLocalVar("Enwater", 0);
+        return SUBEFFECT_WATER_DAMAGE, message, dmg;
+    else -- No additional effect.
+        return 0, 0, 0;
+    end
+end;
+
+-----------------------------------
+-- onSpikesDamage
+-----------------------------------
+
+function onSpikesDamage(mob, target, damage)
+    if (mob:getLocalVar("DelugeSpikes") == 1) then -- use custom dmg
+        local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+        local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
+        local dmg = 20 + ((INT_diff + MND_diff) * 0.5);
+        dmg = addBonusesAbility(mob, ELE_WATER, target, dmg, params);
+        dmg = dmg * applyResistanceAddEffect(mob, target, ELE_WATER, 0);
+        dmg = adjustForTarget(target, dmg, ELE_WATER);
+        dmg = finalMagicNonSpellAdjustments(mob, target, ELE_WATER, dmg);
+        dmg = utils.clamp(dmg, -250, 250);
+        local message = 44;
+        if (dmg < 0) then
+            message = 383;
+        end
+        mob:setLocalVar("DelugeSpikes", 0);
+        return SUBEFFECT_DELUGE_SPIKES, message, dmg;
+    else -- Use normal spike dmg/effect from status
+        return SUBEFFECT_DELUGE_SPIKES, 44, damage;
+    end
+end;
+
+-----------------------------------
+-- onMobDrawIn
+-----------------------------------
+
+function onMobDrawIn(mob, target)
+    target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
+    mob:useMobAbility(1181); -- Crab_Jump_4
+    mob:addTP(100);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
+    if (GetServerVariable("JumpingCrabClaim") == 3) then
+        repop = math.random(3600, 10800); -- 1 to 3 hours because it wasn't killed.
+    end
+    SetServerVariable("JumpingCrabClaim",0);
+    mob:setRespawnTime(repop);
+    if (GetServerVariable("JumpingCrabPos") == 1) then
+        SetServerVariable("JumpingCrabPos", 0);
+        mob:setSpawn(-724, -32, -362); -- West side of Zone
+    else
+        SetServerVariable("JumpingCrabPos", 1);
+        mob:setSpawn(275, -32, -270); -- East side of Zone
+    end
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob, killer)
+    local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
+    SetServerVariable("JumpingCrabClaim",0);
+    mob:setRespawnTime(repop);
+    if (GetServerVariable("JumpingCrabPos") == 1) then
+        SetServerVariable("JumpingCrabPos", 0);
+        mob:setSpawn(-724, -32, -362); -- West side of Zone
+    else
+        SetServerVariable("JumpingCrabPos", 1);
+        mob:setSpawn(275, -32, -270); -- East side of Zone
+    end
+end;

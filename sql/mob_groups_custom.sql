@@ -7,6 +7,7 @@
 -- REPLACE tells MySQL to delete the old line and insert the new one.
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
+-- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
 
 
 REPLACE INTO `mob_groups` VALUES (99,2083,4,14400,0,1788,20000,20000,105,107,0); -- Intulo
@@ -1194,7 +1195,8 @@ INSERT INTO `mob_groups` VALUES (90323,9123,65,10800,0,9323,80000,100000,110,112
 
 
 
-
+-- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
+INSERT INTO `mob_groups` VALUES (96665,9665,91,3600,0,9665,140000,75000,128,128,0); -- The Jumping Crab
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please
 
