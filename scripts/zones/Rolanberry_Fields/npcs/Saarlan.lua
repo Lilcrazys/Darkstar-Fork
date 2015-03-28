@@ -53,9 +53,11 @@ function onTrigger(player,npc)
     end
 
     if (player:getVar("LegionStatus") == 0) then
-        player:startEvent(8004);
+        --player:startEvent(8004);
+		player:PrintToPlayer("Broken NPC, work is in progress to fix it.");
     elseif (player:getVar("LegionStatus") == 1) then
-        player:startEvent(8005, 0, TITLE, MAXIMUS, LP, MINIMUS);
+        --player:startEvent(8005, 0, TITLE, MAXIMUS, LP, MINIMUS);
+		player:PrintToPlayer("Broken NPC, work is in progress to fix it.");
     -- Begin LegionDS custom content
     -- elseif (player:getVar("LegionStatus") == 1 and TITLE == 31) then
         -- spoof message here
