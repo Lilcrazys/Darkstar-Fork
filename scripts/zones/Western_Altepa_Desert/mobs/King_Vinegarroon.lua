@@ -21,9 +21,9 @@ function onMobDeath(mob, killer)
 
     killer:addTitle(VINEGAR_EVAPORATOR);
 
-    -- Set King_Vinegarroon's spawnpoint and respawn time (21-24 hours)
+    -- Set King_Vinegarroon's spawnpoint and respawn time (1-2 hours)
     UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((75600),(86400)));
+    mob:setRespawnTime(math.random((3600),(5800)));
 
 end;
 

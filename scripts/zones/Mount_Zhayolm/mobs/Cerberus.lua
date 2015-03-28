@@ -27,5 +27,5 @@ end;
 
 function onMobDeath(mob, killer)
 	killer:addTitle(CERBERUS_MUZZLER);
-	mob:setRespawnTime(math.random((172800),(259200))); -- 48-72 hours
+	mob:setRespawnTime(math.random((75600),(86400))); -- 21-24 hours
 end;

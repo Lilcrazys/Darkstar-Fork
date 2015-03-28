@@ -72,5 +72,5 @@ end;
 
 function onMobDeath(mob, killer)
 	killer:addTitle(TIAMAT_TROUNCER);
-    mob:setRespawnTime(math.random((259200),(432000)));	-- 3 to 5 days	
+    mob:setRespawnTime(math.random((75600),(86400)));	-- 21 to 24 hours
 end;

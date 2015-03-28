@@ -10,7 +10,7 @@
 function onMobDeath(mob,killer)	
   
     -- Set Charybdis Window Open Time
-    wait = math.random(28800,43200) -- 8-12 hours 
+    wait = math.random(3600,5800) -- 1-2 hours 
     SetServerVariable("[POP]Charybdis", os.time(t) + wait ); 
     DeterMob(mob:getID(), true);
 

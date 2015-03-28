@@ -24,4 +24,5 @@ end;
 
 function onMobDeath(mob, killer)
 	killer:addTitle(KHIMAIRA_CARVER);
+	mob:setRespawnTime(math.random((75600),(86400))); -- 21-24 hours
 end;

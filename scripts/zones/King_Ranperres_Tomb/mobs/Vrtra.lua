@@ -67,6 +67,6 @@ function onMobDeath(mob, killer)
     
     -- Set Vrtra's spawnpoint and respawn time (3-5 days)
     UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((259200),(432000)));
+    mob:setRespawnTime(math.random((75600),(86400)));
     
 end;

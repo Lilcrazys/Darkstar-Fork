@@ -68,7 +68,7 @@ function onMobDeath(mob, killer)
         SetServerVariable("[PH]Nidhogg", 0);
         DeterMob(Fafnir, false);
         UpdateNMSpawnPoint(Fafnir);
-        GetMobByID(Fafnir):setRespawnTime(math.random((75600),(86400)));
+        GetMobByID(Fafnir):setRespawnTime(math.random((21600),(32400)));
     end
 
 end;

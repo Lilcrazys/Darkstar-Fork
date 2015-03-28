@@ -34,11 +34,10 @@ end
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    -- killer:addTitle(TARUTARU_MURDER_SUSPECT);  <- wtf?
-
+    
     -- Set LoO's Window Open Time
-    local wait = math.random((75600),(86400));
-    SetServerVariable("[POP]Lord_of_Onzozo", os.time(t) + wait); -- 18-24 hours
+    local wait = math.random((18000),(28800));
+    SetServerVariable("[POP]Lord_of_Onzozo", os.time(t) + wait); -- 5-8 Hours
     DeterMob(mob:getID(), true);
 
     -- Set PH back to normal, then set to respawn spawn

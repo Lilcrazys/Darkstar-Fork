@@ -32,16 +32,16 @@ function onMobDeath(mob, killer)
         if (ToD <= os.time(t) and GetMobAction(King_Behemoth) == 0) then
             if (math.random((1),(5)) == 3 or kills > 6) then
                 UpdateNMSpawnPoint(King_Behemoth);
-                GetMobByID(King_Behemoth):setRespawnTime(math.random((75600),(86400)));
+                GetMobByID(King_Behemoth):setRespawnTime(math.random((21600),(32400)));
             elseif (LandKingSystem_NQ == 0 or LandKingSystem_NQ == 2) then
                 UpdateNMSpawnPoint(Behemoth);
-                mob:setRespawnTime(math.random((75600),(86400)));
+                mob:setRespawnTime(math.random((21600),(32400)));
                 SetServerVariable("[PH]King_Behemoth", kills + 1);
             end
         end
     elseif (LandKingSystem_NQ == 0 or LandKingSystem_NQ == 2) then
         UpdateNMSpawnPoint(Behemoth);
-        mob:setRespawnTime(math.random((75600),(86400)));
+        mob:setRespawnTime(math.random((21600),(32400)));
         SetServerVariable("[PH]King_Behemoth", kills + 1);
     end
 

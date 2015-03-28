@@ -56,7 +56,7 @@ function onMobDeath(mob, killer)
         local Behemoth = 17297440;
         DeterMob(Behemoth, false);
         UpdateNMSpawnPoint(Behemoth);
-        GetMobByID(Behemoth):setRespawnTime(math.random((75600),(86400)));
+        GetMobByID(Behemoth):setRespawnTime(math.random((21600),(32400)));
     end
 end;
 
