@@ -3591,10 +3591,10 @@ INSERT INTO `mob_skill` VALUES (2900,448,2293,'Flight_of_the_Fluttyries',1,18.0,
 -- 2193,2194,2195 special melee
 INSERT INTO `mob_skill` VALUES (2755,452,2196,'Protolithic_puncture',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2756,452,2197,'Aquatic_lance',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2757,452,2198,'Pelagic_cleaver',1,18.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2757,452,2198,'Pelagic_cleaver',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2758,452,2199,'Carcharian_verve',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2759,452,2200,'Tidal_Guillotine',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2760,452,2201,'Marine_Mayhem',1,28.0,2000,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2760,452,2201,'Marine_Mayhem',1,28.0,2000,6000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (432,452,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (434,452,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
 
@@ -3625,7 +3625,7 @@ INSERT INTO `mob_skill` VALUES (2764,461,2145,'Blistering_Roar',1,18.0,2000,1000
 INSERT INTO `mob_skill` VALUES (2765,461,2146,'Searing_Serration',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2766,461,2147,'Volcanic_Stasis',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2767,461,2148,'Tyrannical_Blow',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2768,461,2149,'Batholithic_Shell',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2768,461,2149,'Batholithic_Shell',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2769,461,2150,'Pyroclastic_Surge',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2770,461,2151,'Incinerating_Lahar',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (432,461,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
@@ -4795,12 +4795,12 @@ INSERT INTO `mob_skill` VALUES (434,959,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0
 -- Tchakka
 INSERT INTO `mob_skill` VALUES (2755,984,2196,'Protolithic_Puncture',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2756,984,2197,'Aquatic_Lance',0,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2757,984,2198,'Pelagic_Cleaver',1,18.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2759,984,2200,'Tidal_Guillotine',0,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2760,984,2201,'Marine_Mayhem',1,28.0,2000,5000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2757,984,2198,'Pelagic_Cleaver',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2759,984,2200,'Tidal_Guillotine',0,18.0,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2760,984,2201,'Marine_Mayhem',1,28.0,2000,6000,4,0,0,0);
 
 -- Bismark
-INSERT INTO `mob_skill` VALUES (2620,987,2012,'Thar_She_Blows',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2620,987,2012,'Thar_She_Blows',1,18.0,2000,5000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2619,987,2010,'Waterspout',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2618,987,2011,'Angry_Seas',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2617,987,2009,'Blowhole_Blast',1,18.0,2000,1000,4,0,0,0);

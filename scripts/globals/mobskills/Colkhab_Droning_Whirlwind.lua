@@ -10,17 +10,17 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
     local dis1 = target:dispelStatusEffect();
     local dis2 = target:dispelStatusEffect();
-	local typeEffect = EFFECT_WEAKNESS;
-	
+    local typeEffect = EFFECT_MUTE;
+
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 30);
-	
+
     if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
         skill:setMsg(MSG_DISAPPEAR_NUM);
         return 2;
@@ -33,13 +33,13 @@ function onMobWeaponSkill(target, mob, skill)
     end
 
 
-	local dmgmod = 1;
-	
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 6,ELE_WATER,dmgmod,TP_NO_EFFECT,1);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
-	
-	target:delHP(dmg);
-	
-	return dmg;
+    local dmgmod = 1;
+
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 6,ELE_WATER,dmgmod,TP_NO_EFFECT,1);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
+
+    target:delHP(dmg);
+
+    return dmg;
 
 end
