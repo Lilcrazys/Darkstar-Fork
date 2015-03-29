@@ -10,7 +10,6 @@ package.loaded["scripts/globals/besieged"] = nil;
 
 require("scripts/globals/keyitems");
 require("scripts/globals/besieged");
-require("scripts/globals/shop");
 require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 
 -----------------------------------
@@ -18,45 +17,16 @@ require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-	local stock =
-	{
-		2580, 10000,
-		2581, 10000,
-		2582, 10000,
-		2590, 10000,
-		2591, 10000,
-		2592, 10000
-	}
 
+	--[[
 	if(trade:getItemCount() == 1) then
 		if(trade:hasItemQty(2477,1)) then -- Trade Soul Plate
 			zeni = math.random(1,200); -- random value since soul plates aren't implemented yet.
 			player:tradeComplete();
 			player:addCurrency("zeni_point", zeni);
 			player:startEvent(0x038E,zeni);
-		elseif(trade:hasItemQty(2187,1)) then -- Trade gold piece
-			gold = 75; -- random value since soul plates aren't implemented yet.
-			player:tradeComplete();
-			player:addZeni(gold);
-			player:startEvent(0x038E,gold);	
-		elseif(trade:hasItemQty(2186,1)) then -- Trade mythril piece
-			mythril = 45; -- random value since soul plates aren't implemented yet.
-			player:tradeComplete();
-			player:addZeni(mythril);
-			player:startEvent(0x038E,mythril);	
-		elseif(trade:hasItemQty(2185,1)) then -- Trade silver piece
-			silver = 20; -- random value since soul plates aren't implemented yet.
-			player:tradeComplete();
-			player:addZeni(silver);
-			player:startEvent(0x038E,silver);	
-		elseif(trade:hasItemQty(2184,1)) then -- Trade bronze piece
-			bronze = 5; -- random value since soul plates aren't implemented yet.
-			player:tradeComplete();
-			player:addZeni(bronze);
-			player:startEvent(0x038E,bronze);
-        elseif(trade:getGil() == 100 and trade:getItemCount() == 1) then
-            showShop(player, STATIC, stock);
 		else
+	]]
 			znm = -1;
 			found = false;
 
@@ -76,8 +46,11 @@ function onTrade(player,npc,trade)
 					player:messageSpecial(SANCTION + 8,seals[znm]); -- You already possess .. (not sure this is authentic)
 				end
 			end
+	--[[
 		end
 	end
+	]]
+
 end;
 
 -----------------------------------
@@ -85,10 +58,10 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:PrintToPlayer("*********Trade 100 Gil to open a shop for pop items.*********");
-	if(player:getVar("ZeniStatus") == 0) then
-		player:startEvent(0x038c);
-	else
+
+	-- if(player:getVar("ZeniStatus") == 0) then
+		-- player:startEvent(0x038c);
+	-- else
 		param = 2140136440; -- Defaut bitmask, Tier 1 ZNM Menu + don't ask option
 
 		-- Tinnin Path
@@ -127,7 +100,8 @@ function onTrigger(player,npc)
 		end;
 
 		player:startEvent(0x038D,param);
-	end
+	-- end
+
 end;
 
 -----------------------------------
@@ -137,7 +111,6 @@ end;
 function onEventUpdate(player,csid,option)
 	-- printf("CSID: %u",csid);
 	-- printf("updateRESULT: %u",option);
-    
 	if(csid == 0x038D) then
 		zeni = player:getCurrency("zeni_point");
 
@@ -218,7 +191,7 @@ function onEventUpdate(player,csid,option)
 				end
 			elseif(option == 500) then -- player has declined to buy a pop item
 				player:updateEvent(1,1); -- restore the "Gaining access to the islets" option.
-			--else
+			else
 				--print("onEventSelection - CSID:",csid);
 				--print("onEventSelection - option ===",option);
 			end
@@ -233,8 +206,10 @@ end;
 function onEventFinish(player,csid,option)
 	-- printf("CSID: %u",csid);
 	-- printf("finishRESULT: %u",option);
+	--[[
 	if(csid == 0x038c) then
 		player:setVar("ZeniStatus",1);
 		player:addCurrency("zeni_point", 2000);
 	end
+	]]
 end;
