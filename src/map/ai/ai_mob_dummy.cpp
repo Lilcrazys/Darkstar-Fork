@@ -468,7 +468,7 @@ void CAIMobDummy::ActionDropItems()
                     uint8 day = (uint8)CVanaTime::getInstance()->getWeekday();
 
                     // Avatarite. Both wiki say mobs lv 80+
-                    if (m_PMob->GetMLevel() >= 80 && WELL512::irand() % 100 < 80)
+                    if (m_PMob->GetMLevel() >= 80 && WELL512::GetRandomNumber(100) < 80)
                     {
                         if (weather >=4 && weather <=19)
                         {
@@ -476,56 +476,56 @@ void CAIMobDummy::ActionDropItems()
                             {
                                 case 4: // Fire
                                 case 5: // Double Fire
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3520, m_PMob); // Ifritite
                                     else
                                         PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
                                     break;
                                 case 6: // Water
                                 case 7: // Double Water
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3525, m_PMob); // Leviatite
                                     else
                                         PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
                                     break;
                                 case 8: // Earth
                                 case 9: // Double Earth
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3523, m_PMob); // Titanite
                                     else
                                         PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
                                     break;
                                 case 10: // Wind
                                 case 11: // Double Wind
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3522, m_PMob); // Garudite
                                     else
                                         PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
                                     break;
                                 case 12: // Ice
                                 case 13: // Double Ice
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3521, m_PMob); // Shivite
                                     else
                                         PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
                                     break;
                                 case 14: // Thunder
                                 case 15: // Double Thunder
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3524, m_PMob); // Ramuite
                                     else
                                         PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
                                     break;
                                 case 16: // Light
                                 case 17: // Double Light
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3526, m_PMob); // Carbite
                                     else
                                         PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
                                     break;
                                 case 18: // Dark
                                 case 19: // Double Dark
-                                    if (WELL512::irand() % 100 < 55)
+                                    if (WELL512::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3527, m_PMob); // Fenrite
                                     else
                                         PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
@@ -534,54 +534,54 @@ void CAIMobDummy::ActionDropItems()
                                     break;
                             }
                         }
-                        else if (WELL512::irand() % 100 < 20)
+                        else if (WELL512::GetRandomNumber(100) < 20)
                         {
                             switch (day)
                             {
                                 case 0: // Fire
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3520, m_PMob); // Ifritite
                                     else
                                         PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
                                     break;
                                 case 1: // Earth
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3523, m_PMob); // Titanite
                                     else
                                         PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
                                     break;
                                 case 2: // Water
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3525, m_PMob); // Leviatite
                                     else
                                         PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
                                     break;
                                 case 3: // Wind
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3522, m_PMob); // Garudite
                                     else
                                         PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
                                     break;
                                 case 4: // Ice
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3521, m_PMob); // Shivite
                                     else
                                         PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
                                     break;
                                 case 5: // Thunder
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3524, m_PMob); // Ramuite
                                     else
                                         PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
                                     break;
                                 case 6: // Light
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3526, m_PMob); // Carbite
                                     else
                                         PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
                                     break;
                                 case 7: // Dark
-                                    if (WELL512::irand() % 100 < 45)
+                                    if (WELL512::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3527, m_PMob); // Fenrite
                                     else
                                         PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
@@ -590,7 +590,7 @@ void CAIMobDummy::ActionDropItems()
                         }
                     }
                     // Geodes. Wiki's have conflicting info on mob lv required. One says 50 the other 75. I think 50 is correct.
-                    else if (m_PMob->GetMLevel() >= 50 && WELL512::irand() % 100 < 85)
+                    else if (m_PMob->GetMLevel() >= 50 && WELL512::GetRandomNumber(100) < 85)
                     {
                         if (weather >=4 && weather <=19)
                         {
@@ -632,7 +632,7 @@ void CAIMobDummy::ActionDropItems()
                                     break;
                             }
                         }
-                        else if (WELL512::irand() % 100 < 20)
+                        else if (WELL512::GetRandomNumber(100) < 20)
                         {
                             switch (day)
                             {
