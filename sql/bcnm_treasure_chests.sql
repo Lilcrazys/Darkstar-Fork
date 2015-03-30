@@ -116,7 +116,7 @@ INSERT INTO `bcnm_treasure_chests` VALUES ('673', '1', '16810019');
 
 
 -- Abyssea Empyreal Paradox
-INSERT INTO `bcnm_treasure_chests` VALUES ('1308', '1', '17821720');
-INSERT INTO `bcnm_treasure_chests` VALUES ('1308', '2', '17821722');
-INSERT INTO `bcnm_treasure_chests` VALUES ('1308', '3', '17821724');
+INSERT INTO `bcnm_treasure_chests` VALUES ('1308', '1', '17822710');
+INSERT INTO `bcnm_treasure_chests` VALUES ('1308', '2', '17822711');
+INSERT INTO `bcnm_treasure_chests` VALUES ('1308', '3', '17822712');
 
