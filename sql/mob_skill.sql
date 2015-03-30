@@ -1841,6 +1841,8 @@ INSERT INTO `mob_skill` VALUES (1112,144,1028,'Rapid_molt',0,7.0,2000,1000,1,0,0
 INSERT INTO `mob_skill` VALUES (1111,144,1031,'Temporal_Shift',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1110,144,1030,'Sinuate_rush',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1109,144,1029,'Tail_thrust',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (437,144,432,'Perfect_Dodge',0,7.0,2000,0,1,2,0,0);
+
 
 -- Trolls (light-armored model)
 -- INSERT INTO `mob_skill` VALUES (1485,246,1230,'Potent_Lunge',0,7.0,2000,1500,4,0,0,3);

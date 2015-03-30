@@ -22,6 +22,7 @@ REPLACE INTO `mob_groups` VALUES (217,3916,7,86400,128,3522,0,0,141,143,0); -- T
 
 REPLACE INTO `mob_groups` VALUES (862,21,33,0,128,4,200000,200000,125,125,0); -- Absolute Virtue
 REPLACE INTO `mob_groups` VALUES (868,2132,33,0,128,1834,100000,100000,125,125,0); -- Jailer of Hope
+REPLACE INTO `mob_groups` VALUES (871,2135,33,0,128,1837,100000,100000,125,125,0); -- Jailer of Prudence
 
 -- Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (412,29,15,60,0,10,5300,0,104,106,0); -- Ab xzomit
