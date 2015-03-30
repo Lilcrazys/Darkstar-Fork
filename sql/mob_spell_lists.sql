@@ -1456,6 +1456,11 @@ INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 359, 1, 255); -- s
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 360, 1, 255); -- dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 466, 1, 255); -- MAidens Virelai
 
+-- Jailer of Hope
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 168, 1, 255); -- thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 197, 1, 255); -- thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 198, 1, 255); -- thundaga 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 213, 1, 255); -- Burst 2
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?

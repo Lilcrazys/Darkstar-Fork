@@ -1825,6 +1825,7 @@ INSERT INTO `mob_skill` VALUES (1098,194,1005,'Vapor_Spray',4,12.0,2000,1000,4,0
 INSERT INTO `mob_skill` VALUES (1099,194,1006,'Spine_Lash',4,12.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1100,194,1007,'Voiceless_Storm',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1102,194,1009,'Plasma_Charge',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,194,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
 
 -- Xzomit
 INSERT INTO `mob_skill` VALUES (1091,269,998,'Dual_Strike',0,7.0,2000,1000,4,0,0,0);
