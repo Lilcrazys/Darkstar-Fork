@@ -3015,6 +3015,20 @@ INSERT INTO `mob_skill` VALUES (1124,329,1016,'Impact_Stream',1,10.0,2000,1500,1
 INSERT INTO `mob_skill` VALUES (1123,329,1011,'Auroral_Wind',1,10.0,2000,1500,12,0,0,0);
 INSERT INTO `mob_skill` VALUES (1122,329,1020,'Wing_Thrust',1,10.0,2000,1500,12,0,0,0);
 INSERT INTO `mob_skill` VALUES (1121,329,1013,'Fluorescence',0,6.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,329,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (434,329,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (433,329,432,'Benediction',1,20.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (435,329,432,'Manafont',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (436,329,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (437,329,432,'Perfect_Dodge',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (438,329,432,'Invincible',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (439,329,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (484,329,432,'Familiar',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (440,329,432,'Soul_Voice',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (479,329,20,'Eagle_Eye_Shot',0,25.0,2000,0,4,2,0,0);
+INSERT INTO `mob_skill` VALUES (474,329,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (475,329,18,'Mijin_Gakure',1,20.0,2000,0,4,2,0,0);
+INSERT INTO `mob_skill` VALUES (476,329,432,'Call_Wyvern',0,7.0,2000,0,1,2,0,0);
 
 -- exoplates
 INSERT INTO `mob_skill` VALUES (734,236,691,'Gaea_Stream_Eta',0,15.0,4000,1500,4,0,0,0);

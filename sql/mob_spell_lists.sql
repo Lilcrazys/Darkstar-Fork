@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: dspdb
 -- ------------------------------------------------------
--- Server version	5.6.13-log
+-- Server version   5.6.13-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1445,6 +1445,17 @@ INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 57, 1, 255)
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 59, 1, 255);  -- Silence
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 61, 1, 255);  -- Barblizzard
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 112, 1, 255);  -- Flash
+-- Absolute Virtue
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 188, 1, 255); -- Aeroga 5
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 209, 1, 255); -- Tornado 2
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 219, 1, 255); -- Comet
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 360, 1, 255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 466, 1, 255); -- MAidens Virelai
+
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?

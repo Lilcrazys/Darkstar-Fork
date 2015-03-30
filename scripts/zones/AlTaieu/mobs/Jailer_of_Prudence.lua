@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Love
+-- NPC:  Jailer of Hope
 -----------------------------------
 
 -----------------------------------
@@ -15,8 +15,4 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local CHANCE = 25;
-    if (math.random(0,99) < CHANCE then
-    SpawnMob(16912876,180):updateEnmity(killer);
-    end
 end;
