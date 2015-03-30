@@ -16,6 +16,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+--[[ Doesn't exist in DarkStar, mroe bullshit soem moron copied and pasted here without even testing
 	-- Mostly Guestimate ??
 	local duration = 120;
 	local power = 20;
@@ -30,4 +31,5 @@ function onSpellCast(caster,target,spell)
     target:addStatusEffect(EFFECT_GAVOTTE,power,0,duration);
     spell:setMsg(230);
     return EFFECT_GAVOTTE;
+]]
 end;
