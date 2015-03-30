@@ -19,10 +19,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:addMod(MOD_ATT,-75);
     mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_EVA,-150);
-    mob:addMod(MOD_DEF,-100);
+    mob:addMod(MOD_EVA,-50);
 end;
 
 -----------------------------------

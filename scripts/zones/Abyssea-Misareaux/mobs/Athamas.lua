@@ -11,7 +11,7 @@ require("scripts/globals/keyitems");
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
@@ -19,24 +19,24 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_INT,90);
-	mob:addMod(MOD_MATT,375);
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_MEVA,200);
+    mob:addMod(MOD_INT,90);
+    mob:addMod(MOD_MATT,375);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_MEVA,100);
 end;
 -----------------------------------
 -- onMobEngaged
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	WeaknessTriggerSet(mob,target,ws,spell);
+    WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onMobFight(mob,target)
 
 end;
 
@@ -45,32 +45,32 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	-- local keyId = KEYITEM_ID_HERE;
-	if (killer:getVar("RED_PROC") == 1) then
-		-- if (killer:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
-			-- killer:addKeyItem(keyId);
-			-- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
-		-- end
-	end
+    -- local keyId = KEYITEM_ID_HERE;
+    if (killer:getVar("RED_PROC") == 1) then
+        -- if (killer:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
+            -- killer:addKeyItem(keyId);
+            -- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
+        -- end
+    end
 
-	if (killer:getVar("BLUE_PROC") == 1) then
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);	--[[ Uncomment to use]]--
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-	end
+    if (killer:getVar("BLUE_PROC") == 1) then
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);  --[[ Uncomment to use]]--
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+    end
 
-	if (killer:getVar("YELLOW_PROC") == 1) then
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);	--[[ Uncomment to use]]--
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-	end
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
+    if (killer:getVar("YELLOW_PROC") == 1) then
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);  --[[ Uncomment to use]]--
+        -- SetDropRate(dropID,itemID,newrate);
+        -- SetDropRate(dropID,itemID,newrate);
+    end
+    -- DoExp(mob,killer);
+    -- DoCruor(mob,killer);
     -- DoLights(mob,killer);
-	-- PyxisSpawn(mob,killer,npc);
+    -- PyxisSpawn(mob,killer,npc);
 end;
 
