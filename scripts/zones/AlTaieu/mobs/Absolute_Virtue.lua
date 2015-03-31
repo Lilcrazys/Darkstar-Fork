@@ -75,253 +75,253 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 10) then
     if (AV_2hr_Used == 8) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 9);
         end
     elseif (mob:getHPP() <= 20) then
         if (AV_2hr_Used == 7) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 8);
         end
     elseif (mob:getHPP() <= 30) then
         if (AV_2hr_Used == 6) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 7);
         end
     elseif (mob:getHPP() <= 40) then
         if (AV_2hr_Used == 5) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 6);
         end
     elseif (mob:getHPP() <= 50) then
         if (AV_2hr_Used == 4) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 5);
         end
     elseif (mob:getHPP() <= 60) then
         if (AV_2hr_Used == 3) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 4);
         end
     elseif (mob:getHPP() <= 70) then
         if (AV_2hr_Used == 2) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 3);
         end
     elseif (mob:getHPP() <= 80) then
         if (AV_2hr_Used == 1) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 2);
         end
     elseif (mob:getHPP() <= 90) then
         if (AV_2hr_Used == 0) then
-        if (math.random(1,12) = 1) then
+        if (math.random(1,12) == 1) then
             mob:useMobAbility(432);
-        elseif (math.random(1,12) = 2) then
+        elseif (math.random(1,12) == 2) then
             mob:useMobAbility(433);
-        elseif (math.random(1,12) = 3) then
+        elseif (math.random(1,12) == 3) then
             mob:useMobAbility(434);
-        elseif (math.random(1,12) = 4) then
+        elseif (math.random(1,12) == 4) then
             mob:useMobAbility(435);
-        elseif (math.random(1,12) = 5) then
+        elseif (math.random(1,12) == 5) then
             mob:useMobAbility(436);
-        elseif (math.random(1,12) = 6) then
+        elseif (math.random(1,12) == 6) then
             mob:useMobAbility(437);
-        elseif (math.random(1,12) = 7) then
+        elseif (math.random(1,12) == 7) then
             mob:useMobAbility(438);
-        elseif (math.random(1,12) = 8) then
+        elseif (math.random(1,12) == 8) then
             mob:useMobAbility(439);
-        elseif (math.random(1,12) = 9) then
+        elseif (math.random(1,12) == 9) then
             mob:useMobAbility(440);
-        elseif (math.random(1,12) = 10) then
+        elseif (math.random(1,12) == 10) then
             mob:useMobAbility(474);
-        elseif (math.random(1,12) = 11) then
+        elseif (math.random(1,12) == 11) then
             mob:useMobAbility(475);
-        elseif (math.random(1,12) = 12) then
+        elseif (math.random(1,12) == 12) then
             mob:useMobAbility(479);
             mob:setLocalVar("AV_2hr", 1);
         end
