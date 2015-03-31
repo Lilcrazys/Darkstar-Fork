@@ -197,7 +197,7 @@ function getAdvImageSupportCost(player,craftID)
     return (Rank+1)*30
     
 end
-
+--[[
 function unionRepresentativeTrigger(player, guildID, csid, currency, keyitems)
     local gpItem, remainingPoints = player:getCurrentGPItem(guildID);
     local rank = player:getSkillRank(guildID + 48);
@@ -288,4 +288,4 @@ function unionRepresentativeTrade(player, npc, trade, csid, guildID)
             end
         end
     end
-end
+end]]

@@ -5,10 +5,7 @@
 --  @zone: 231
 --  @pos -191.738 11.001 138.656
 -----------------------------------
-function onTrigger(player,npc)
-    player:PrintToPlayer("NPC DISABLED BECAUSE OF CRASH");
-end;
---[[
+
 package.loaded["scripts/zones/Northern_San_dOria/TextIDs"] = nil;
 require("scripts/globals/keyitems");
 require("scripts/globals/crafting");
@@ -123,4 +120,4 @@ function onEventFinish(player,csid,option)
         player:messageSpecial(GP_OBTAINED, option);
     end
 end;
-]]
+
