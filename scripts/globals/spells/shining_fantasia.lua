@@ -16,6 +16,9 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+--[[ I think you mean "mostly broken crap" because its doing/calling things that don't exist on dsp
+     fucking copy paste shit from their forums from ages ago will NOT work in current trunk!!! ARG!
+
 	-- Mostly Guestimate ??
 	local duration = 120;
 	local power = 20;
@@ -30,4 +33,5 @@ function onSpellCast(caster,target,spell)
     target:addStatusEffect(EFFECT_FANTASIA,power,0,duration);
     spell:setMsg(230);
     return EFFECT_FANTASIA;
+]]
 end;
