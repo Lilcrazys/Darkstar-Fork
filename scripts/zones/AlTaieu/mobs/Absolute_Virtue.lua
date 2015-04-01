@@ -83,29 +83,29 @@ function onMobFight(mob, target)
     local RND = math.random(1,12);
     local AV2HR = nil;
 
-    if (RND) == 1) then
+    if (RND == 1) then
         AV2HR = 432;
-    elseif (RND) == 2) then
+    elseif (RND == 2) then
         AV2HR = 433;
-    elseif (RND) == 3) then
+    elseif (RND == 3) then
         AV2HR = 434;
-    elseif (RND) == 4) then
+    elseif (RND == 4) then
         AV2HR = 435;
-    elseif (RND) == 5) then
+    elseif (RND == 5) then
         AV2HR = 436;
-    elseif (RND) == 6) then
+    elseif (RND == 6) then
         AV2HR = 437;
-    elseif (RND) == 7) then
+    elseif (RND == 7) then
         AV2HR = 438;
-    elseif (RND) == 8) then
+    elseif (RND == 8) then
         AV2HR = 439;
-    elseif (RND) == 9) then
+    elseif (RND == 9) then
         AV2HR = 440;
-    elseif (RND) == 10) then
+    elseif (RND == 10) then
         AV2HR = 474;
-    elseif (RND) == 11) then
+    elseif (RND == 11) then
         AV2HR = 475;
-    elseif (RND) == 12) then
+    elseif (RND == 12) then
         AV2HR = 479;
     end
 
