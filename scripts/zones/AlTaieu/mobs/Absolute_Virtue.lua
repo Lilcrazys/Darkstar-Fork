@@ -115,31 +115,31 @@ function onMobFight(mob, target)
 
     if (AV2HR ~= nil) then
         if (mob:getHPP() <= 10 and DID2HR == 8) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 9);
         elseif (mob:getHPP() <= 20 and DID2HR == 7) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 8);
         elseif (mob:getHPP() <= 30 and DID2HR == 6) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 7);
         elseif (mob:getHPP() <= 40 and DID2HR == 5) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 6);
         elseif (mob:getHPP() <= 50 and DID2HR == 4) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 5);
         elseif (mob:getHPP() <= 60 and DID2HR == 3) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 4);
         elseif (mob:getHPP() <= 70 and DID2HR == 2) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 3);
         elseif (mob:getHPP() <= 80 and DID2HR == 1) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 2);
         elseif (mob:getHPP() <= 90 and DID2HR == 0) then
-            mob::useMobAbility(AV2hr);
+            mob:useMobAbility(AV2hr);
             mob:setLocalVar("AV_2hr", 1);
         end
     end
