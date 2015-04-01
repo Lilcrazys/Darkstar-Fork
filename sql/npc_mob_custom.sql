@@ -259,7 +259,47 @@ REPLACE INTO `npc_list` VALUES (16883850,'AF','Moogle',154,8,-9,-8,7,40,40,0,1,0
 -- Al'Taieu (Zone 33)
 -- 16913407
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (16912840,'JoJ_xzomit','Qn\'xzomit',90331,-286.194,-0.5,-470.361,246);
+REPLACE INTO `mob_spawn_points` VALUES (16912841,'JoJ_xzomit','Qn\'xzomit',90331,-295.663,-0.06,-448.272,149);
+REPLACE INTO `mob_spawn_points` VALUES (16912842,'JoJ_xzomit','Qn\'xzomit',90331,-287.525,-0.5,-464.5,69);
+REPLACE INTO `mob_spawn_points` VALUES (16912843,'JoJ_xzomit','Qn\'xzomit',90331,-284.194,-0.5,-470.361,246);
+REPLACE INTO `mob_spawn_points` VALUES (16912844,'JoJ_xzomit','Qn\'xzomit',90331,-295.663,-0.06,-448.272,149);
+REPLACE INTO `mob_spawn_points` VALUES (16912845,'JoJ_xzomit','Qn\'xzomit',90331,-287.525,-0.5,-464.5,69);
 
+REPLACE INTO `mob_spawn_points` VALUES (16912849,'JoL_phuabo','Ru\'phuabo',90334,477.480,-1.111,-565.864,39);
+REPLACE INTO `mob_spawn_points` VALUES (16912850,'JoL_phuabo','Ru\'phuabo',90334,477.550,-1.114,-566.001,38);
+REPLACE INTO `mob_spawn_points` VALUES (16912851,'JoL_phuabo','Ru\'phuabo',90334,477.622,-1.110,-566.194,37);
+REPLACE INTO `mob_spawn_points` VALUES (16912852,'JoL_phuabo','Ru\'phuabo',90334,480.104,-1.506,-561.952,252);
+REPLACE INTO `mob_spawn_points` VALUES (16912853,'JoL_phuabo','Ru\'phuabo',90334,480.242,-1.498,-561.964,252);
+REPLACE INTO `mob_spawn_points` VALUES (16912854,'JoL_phuabo','Ru\'phuabo',90334,480.110,-1.466,-562.257,248);
+REPLACE INTO `mob_spawn_points` VALUES (16912855,'JoL_phuabo','Ru\'phuabo',90334,476.961,-1.279,-560.968,247);
+REPLACE INTO `mob_spawn_points` VALUES (16912856,'JoL_phuabo','Ru\'phuabo',90334,477.169,-1.295,-560.921,247);
+REPLACE INTO `mob_spawn_points` VALUES (16912857,'JoL_phuabo','Ru\'phuabo',90334,477.550,-1.328,-561.215,242);
+REPLACE INTO `mob_spawn_points` VALUES (16912858,'JoL_xzomit','Qn\'xzomit',90333,482.157,-1.504,-561.017,92);
+REPLACE INTO `mob_spawn_points` VALUES (16912859,'JoL_xzomit','Qn\'xzomit',90333,478.351,-1.358,-561.169,31);
+REPLACE INTO `mob_spawn_points` VALUES (16912860,'JoL_xzomit','Qn\'xzomit',90333,479.613,-1.395,-561.4,46);
+REPLACE INTO `mob_spawn_points` VALUES (16912861,'JoL_xzomit','Qn\'xzomit',90333,480.343,-1.461,-562.054,250);
+REPLACE INTO `mob_spawn_points` VALUES (16912862,'JoL_xzomit','Qn\'xzomit',90333,480.538,-1.380,-561.452,4);
+REPLACE INTO `mob_spawn_points` VALUES (16912863,'JoL_xzomit','Qn\'xzomit',90333,480.093,-1.473,-561.951,252);
+REPLACE INTO `mob_spawn_points` VALUES (16912864,'JoL_xzomit','Qn\'xzomit',90333,479.049,-1.470,-560.512,248);
+REPLACE INTO `mob_spawn_points` VALUES (16912865,'JoL_xzomit','Qn\'xzomit',90333,478.548,-1.473,-560.292,40);
+REPLACE INTO `mob_spawn_points` VALUES (16912866,'JoL_xzomit','Qn\'xzomit',90333,477.643,-1.564,-561.005,26);
+REPLACE INTO `mob_spawn_points` VALUES (16912867,'JoL_hpemde','Qn\'hpemde',90332,480.014,-1.804,-560.765,13);
+REPLACE INTO `mob_spawn_points` VALUES (16912868,'JoL_hpemde','Qn\'hpemde',90332,479.857,-1.848,-560.908,10);
+REPLACE INTO `mob_spawn_points` VALUES (16912869,'JoL_hpemde','Qn\'hpemde',90332,479.691,-1.850,-560.698,41);
+REPLACE INTO `mob_spawn_points` VALUES (16912870,'JoL_hpemde','Qn\'hpemde',90332,480.161,-1.889,-560.058,59);
+REPLACE INTO `mob_spawn_points` VALUES (16912871,'JoL_hpemde','Qn\'hpemde',90332,479.138,-1.738,-560.684,119);
+REPLACE INTO `mob_spawn_points` VALUES (16912872,'JoL_hpemde','Qn\'hpemde',90332,481.643,-1.676,-560.652,83);
+REPLACE INTO `mob_spawn_points` VALUES (16912873,'JoL_hpemde','Qn\'hpemde',90332,479.042,-1.840,-559.745,28);
+REPLACE INTO `mob_spawn_points` VALUES (16912874,'JoL_hpemde','Qn\'hpemde',90332,478.761,-1.550,-559.849,25);
+REPLACE INTO `mob_spawn_points` VALUES (16912875,'JoL_hpemde','Qn\'hpemde',90332,479.025,-1.534,-559.847,27);
+
+REPLACE INTO `mob_spawn_points` VALUES (16912877,'AV_Wynav','Aern\'s Wynav',90330,463.115,-1.346,-571.896,181);
+REPLACE INTO `mob_spawn_points` VALUES (16912878,'AV_Wynav','Aern\'s Wynav',90330,463.214,-1.336,-573.022,202);
+REPLACE INTO `mob_spawn_points` VALUES (16912879,'AV_Wynav','Aern\'s Wynav',90330,463.557,-1.360,-574.178,193);
+REPLACE INTO `mob_spawn_points` VALUES (16912880,'AV_Wynav','Aern\'s Wynav',90330,463.115,-1.346,-571.896,181);
+REPLACE INTO `mob_spawn_points` VALUES (1691290332,'AV_Wynav','Aern\'s Wynav',90330,463.214,-1.336,-573.022,202);
+REPLACE INTO `mob_spawn_points` VALUES (1691290333,'AV_Wynav','Aern\'s Wynav',90330,463.557,-1.360,-574.178,193);
 
 -- ------------------------------------------------------------
 -- Grand Palace of Hu'Xzoi (Zone 34)
