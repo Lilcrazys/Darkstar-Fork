@@ -15,9 +15,9 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); -- Call Wyvern
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1); -- Allows multiple Call Wyvern
+    mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
 end;
 
 -----------------------------------
@@ -27,7 +27,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 500);
-    mob:setMod(MOD_REFRESH, 500);
+    mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 75);
@@ -39,6 +39,14 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,100);
+
+    -- Special check for regen modification by JoL pets killed
+    if (GetServerVariable("JoL_Qn_xzomit_Killed") == 9) then
+        mob:addMod(MOD_REGEN, -130)
+    end
+    if (GetServerVariable("JoL_Qn_hpemde_Killed") == 9) then
+        mob:addMod(MOD_REGEN, -130)
+    end
 end;
 
 -----------------------------------
@@ -49,39 +57,20 @@ function onMobDisEngage(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
 
-------------------------------------
--- onSpellPrecast
-------------------------------------
-
-function onSpellPrecast(mob, spell)
-    if (spell:getID() == 218) then
-        spell:setAoE(SPELLAOE_RADIAL);
-        spell:setFlag(SPELLFLAG_HIT_ALL);
-        spell:setRadius(30);
-        spell:setAnimation(280);
-        spell:setMPCost(1);
-    end
-end;
-
-------------------------------------
--- onMonsterMagicPrepare
-------------------------------------
-
-function onMonsterMagicPrepare(caster, target)
-    if (caster:hasStatusEffect(EFFECT_MANAFONT)) then
-        return 218;
-    elseif (caster:hasStatusEffect(EFFECT_SOUL_VOICE)) then
-        return 466;
-    end
-end;
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local DID2HR = 0;
+    local DID2HR = mob:getLocalVar("DID2HR");
     local RND = math.random(1,12);
     local AV2HR = nil;
+
+    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
+        -- In retail, this is where it'd just depop instead..Except we'd be tracking it from JoL's pop time instead of BattleTime.
+        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        mob:setLocalVar("RAGED", 1);
+    end
 
     if (RND == 1) then
         AV2HR = 432;
@@ -109,45 +98,85 @@ function onMobFight(mob, target)
         AV2HR = 479;
     end
 
-    if (mob:getLocalVar("DID2HR") ~= nil) then
-        DID2HR_Used = mob:getLocalVar("DID2HR");
-    end
-
     if (AV2HR ~= nil) then
         if (mob:getHPP() <= 10 and DID2HR == 8) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 9);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 9);
         elseif (mob:getHPP() <= 20 and DID2HR == 7) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 8);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 8);
         elseif (mob:getHPP() <= 30 and DID2HR == 6) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 7);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 7);
         elseif (mob:getHPP() <= 40 and DID2HR == 5) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 6);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 6);
         elseif (mob:getHPP() <= 50 and DID2HR == 4) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 5);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 5);
         elseif (mob:getHPP() <= 60 and DID2HR == 3) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 4);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 4);
         elseif (mob:getHPP() <= 70 and DID2HR == 2) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 3);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 3);
         elseif (mob:getHPP() <= 80 and DID2HR == 1) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 2);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 2);
         elseif (mob:getHPP() <= 90 and DID2HR == 0) then
-            mob:useMobAbility(AV2hr);
-            mob:setLocalVar("AV_2hr", 1);
+            mob:useMobAbility(AV2HR);
+            mob:setLocalVar("DID2HR", 1);
         end
     end
+end;
 
-    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
-        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
-        mob:setLocalVar("RAGED", 1);
+
+------------------------------------
+-- onSpellPrecast
+------------------------------------
+
+function onSpellPrecast(mob, spell)
+    if (spell:getID() == 218) then -- Meteor
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
+        spell:setAnimation(280); -- AoE Meteor Animation
+        spell:setMPCost(1);
     end
+end;
+
+------------------------------------
+-- onMonsterMagicPrepare
+------------------------------------
+
+function onMonsterMagicPrepare(caster, target)
+    if (caster:hasStatusEffect(EFFECT_MANAFONT)) then
+        if (math.random(1,3) ~= 2) then
+            return 218; -- Meteor
+        else
+            return 219; -- Comet
+        end
+    elseif (caster:hasStatusEffect(EFFECT_SOUL_VOICE)) then
+        return 466; -- Virelai
+    end
+end;
+
+-----------------------------------
+-- onMagicHit
+-----------------------------------
+
+function onMagicHit(caster, target, spell)
+    local REGEN = target:getMod(MOD_REGEN);
+    local DAY = VanadielDayElement();
+    local ELEM = spell:getElement();
+    if (GetServerVariable("AV_Regen_Reduction") < 60) then
+        -- Had to serverVar the regen instead of localVar because localVar reset on claim loss.
+        if (ELEM == DAY and (caster:isPC() or caster:isPet())) then
+            SetServerVariable("AV_Regen_Reduction", 1+GetServerVariable("AV_Regen_Reduction"));
+            target:addMod(MOD_REGEN, -2);
+        end
+    end
+    return 1;
 end;
 
 -----------------------------------
@@ -159,14 +188,23 @@ function onAdditionalEffect(mob,target,damage)
     else
         local duration = 5;
         target:addStatusEffect(EFFECT_TERROR,1,0,duration);
-        mob:resetEnmity(target);
         return SUBEFFECT_NONE,0,EFFECT_TERROR;
     end
 end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    SetServerVariable("AV_Regen_Reduction", 0);
+end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, killer)
     killer:addTitle(VIRTUOUS_SAINT);
+    SetServerVariable("AV_Regen_Reduction", 0);
 end;
