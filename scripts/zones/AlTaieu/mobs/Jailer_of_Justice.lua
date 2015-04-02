@@ -34,7 +34,7 @@ end;
 -- onMobFight Action
 -----------------------------------
 function onMobFight(mob, target)
-    if  mob:getBattleTime() >= (TIMER + 30) then  -- dont know what to do here.. need to get set a var for last pop time
+    if  (TIMER >= (TIMER + 30)) then  -- dont know what to do here.. need to get set a var for last pop time
 
 
         -- Make sure pets arent up
