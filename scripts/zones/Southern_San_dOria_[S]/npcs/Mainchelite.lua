@@ -39,9 +39,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    local Allegiance = player:getVar("Campaign_Nation");
+    local Allegiance = player:getCampaignAllegiance();
     -- 0 = none, 1 = San d'Oria Iron Rams, 2 = Bastok Fighting Fourth, 3 = Windurst Cobras
-    -- Todo: change this player var into a new db field for Campaign Nation Allegiance?
 
     local TheFightingFourth = player:getQuestStatus(CRYSTAL_WAR,THE_FIGHTING_FOURTH);
     local SnakeOnThePlains = player:getQuestStatus(CRYSTAL_WAR,SNAKE_ON_THE_PLAINS);
@@ -98,10 +97,11 @@ function onEventFinish(player,csid,option)
     elseif (csid == 0x00B and option == 0) then
         player:addQuest(CRYSTAL_WAR, STEAMED_RAMS);
     elseif (csid == 0x00C and option == 0) then
-        -- Is first join, so add Sprinter's Shoes and brone medal
+        -- Is first join, so add Sprinter's Shoes and bronze medal
         if (player:getVar("Campaign_Nation") == 0) then
             if (player:getFreeSlotsCount() >= 1) then
-                player:setVar("Campaign_Nation",1);
+                player:setCampaignAllegiance(1);
+                player:setVar("Used_RED_RECOMMENDATION_LETTER",0);
                 player:addTitle(KNIGHT_OF_THE_IRON_RAM);
                 player:addKeyItem(BRONZE_RIBBON_OF_SERVICE);
                 player:addItem(15754);
@@ -115,7 +115,8 @@ function onEventFinish(player,csid,option)
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 15754);
             end
         else
-            player:setVar("Campaign_Nation",1);
+            player:setCampaignAllegiance(1);
+            player:setVar("Used_RED_RECOMMENDATION_LETTER",0);
             player:addTitle(KNIGHT_OF_THE_IRON_RAM);
             player:completeQuest(CRYSTAL_WAR,STEAMED_RAMS);
             player:delKeyItem(CHARRED_PROPELLER);
