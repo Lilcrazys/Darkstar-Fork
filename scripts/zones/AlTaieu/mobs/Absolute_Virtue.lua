@@ -207,4 +207,9 @@ end;
 function onMobDeath(mob, killer)
     killer:addTitle(VIRTUOUS_SAINT);
     SetServerVariable("AV_Regen_Reduction", 0);
+
+    DespawnMob(16912877);
+    DespawnMob(16912878);
+    DespawnMob(16912879);
+    DespawnMob(16912880);
 end;

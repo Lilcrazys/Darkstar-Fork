@@ -298,8 +298,8 @@ REPLACE INTO `mob_spawn_points` VALUES (16912877,'AV_Wynav','Aern\'s Wynav',9033
 REPLACE INTO `mob_spawn_points` VALUES (16912878,'AV_Wynav','Aern\'s Wynav',90330,463.214,-1.336,-573.022,202);
 REPLACE INTO `mob_spawn_points` VALUES (16912879,'AV_Wynav','Aern\'s Wynav',90330,463.557,-1.360,-574.178,193);
 REPLACE INTO `mob_spawn_points` VALUES (16912880,'AV_Wynav','Aern\'s Wynav',90330,463.115,-1.346,-571.896,181);
-REPLACE INTO `mob_spawn_points` VALUES (1691290332,'AV_Wynav','Aern\'s Wynav',90330,463.214,-1.336,-573.022,202);
-REPLACE INTO `mob_spawn_points` VALUES (1691290333,'AV_Wynav','Aern\'s Wynav',90330,463.557,-1.360,-574.178,193);
+REPLACE INTO `mob_spawn_points` VALUES (16912881,'AV_Wynav','Aern\'s Wynav',90330,463.214,-1.336,-573.022,202);
+REPLACE INTO `mob_spawn_points` VALUES (16912882,'AV_Wynav','Aern\'s Wynav',90330,463.557,-1.360,-574.178,193);
 
 -- ------------------------------------------------------------
 -- Grand Palace of Hu'Xzoi (Zone 34)

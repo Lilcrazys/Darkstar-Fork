@@ -2,6 +2,9 @@
 -- Area: Al'Taieu
 -- NPC:  Jailer of Love
 -----------------------------------
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/utils");
 
 -----------------------------------
 -- onMobSpawn Action

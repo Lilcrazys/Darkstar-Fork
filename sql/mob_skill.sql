@@ -3031,7 +3031,7 @@ INSERT INTO `mob_skill` VALUES (440,329,432,'Soul_Voice',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (479,329,20,'Eagle_Eye_Shot',0,25.0,2000,0,4,2,0,0);
 INSERT INTO `mob_skill` VALUES (474,329,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (475,329,18,'Mijin_Gakure',1,20.0,2000,0,4,2,0,0);
-INSERT INTO `mob_skill` VALUES (476,329,432,'Call_Wyvern',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (476,329,432,'AV_Call_Wyvern',0,7.0,2000,0,1,2,0,0);
 
 -- exoplates
 INSERT INTO `mob_skill` VALUES (734,236,691,'Gaea_Stream_Eta',0,15.0,4000,1500,4,0,0,0);
