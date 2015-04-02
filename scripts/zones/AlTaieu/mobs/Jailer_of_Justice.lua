@@ -33,8 +33,8 @@ end;
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
-function onMobFight( mob, target )
-    if (mob:getBattleTime() ~= 0 and mob:getBattleTime() ??? + 30) then  -- dont know what to do here.. need to figure how to do in 30 sec intervals may need another var
+function onMobFight(mob, target)
+    if  mob:getBattleTime() >= (TIMER + 30) then  -- dont know what to do here.. need to get set a var for last pop time
 
 
         -- Make sure pets arent up
@@ -44,6 +44,7 @@ function onMobFight( mob, target )
         local PET4 = GetMobAction(16912843);
         local PET5 = GetMobAction(16912844);
         local PET6 = GetMobAction(16912845);
+        local TIMER = nil;
 
         if (PET1 = ACTION and PET2 = ACTION and PET3 = ACTION and PET4 = ACTION and PET5 = ACTION and PET6 = ACTION) then
             return;
@@ -67,19 +68,20 @@ function onMobFight( mob, target )
         until (GetMobAction(16912839) == ACTION_NONE) -- JoJ is dead
 
         -- Spawn the pet..
-        local pet = SpawnMob( ChosenPet );
-        pet:updateEnmity( target );
-        pet:setPos( mob:getXPos(), mob:getYPos(), mob:getZPos() );
+        local pet = SpawnMob(ChosenPet);
+        pet:updateEnmity(target);
+        pet:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
 
         -- Update extra vars..
         mob:setLocalVar(Popped, 1);
+        mob:setLocalVar(TIMER, 1);
     end
 
     -- Ensure all spawned pets are doing stuff..
     for pets = 16912840, 16912845 do
-        if (GetMobAction( pets ) == 16) then
+        if (GetMobAction(pets) == 16) then
             -- Send pet after current target..
-            GetMobByID( pets ):updateEnmity( target );
+            GetMobByID(pets):updateEnmity(target);
         end
     end
 end
