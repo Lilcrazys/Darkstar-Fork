@@ -16,8 +16,14 @@ require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 
 function onTrade(player,npc,trade)
 	if (trade:getGil() >= 10) then
-		player:addCurrency("zeni_point", trade:getGil() /10);
-		player:delGil(trade:getGil()); -- we don't use tradeComplete() for this.
+		if (trade:getGil() % 10 == 0) then
+			local MSG = string.format("exchanges your %i gil for %i zeni.", trade:getGil(), trade:getGil() *0.1 );
+			player:addCurrency("zeni_point", trade:getGil() *0.1);
+			player:delGil(trade:getGil()); -- we don't use tradeComplete() for this.
+			player:SpoofChatPlayer( MSG, MESSAGE_EMOTION, npc:getID() );
+		else
+			player:SpoofChatPlayer( "Please trade me amounts that are multiples of 10.", MESSAGE_SAY, npc:getID() );
+		end
 	else
 		player:SpoofChatPlayer( "I am sorry but at the current exchange rate 1 zeni is worth 10 gil.", MESSAGE_SAY, npc:getID() );
 	end
