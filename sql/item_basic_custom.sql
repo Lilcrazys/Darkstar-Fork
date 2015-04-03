@@ -118,6 +118,19 @@ INSERT INTO `item_basic` VALUES (27362,0,'pitre_babouches','ptn_babouches',1,635
 INSERT INTO `item_basic` VALUES (27364,0,'horos_toe_shoes','horos_shoes',1,63552,99,0,0);
 INSERT INTO `item_basic` VALUES (27366,0,'pedagogy_loafers','pedagogy_loafers',1,63552,99,0,0);
 
+INSERT INTO `item_basic` VALUES (27580,0,'adoulin_ring','adoulin_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27582,0,'weatherspoon_ring','weatherspoon_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27584,0,'renaye_ring','renaye_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27586,0,'haverton_ring','haverton_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27588,0,'vocane_ring','vocane_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27590,0,'shneddick_ring','shneddick_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27581,0,'woltaris_ring','woltaris_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27583,0,'janniston_ring','janniston_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27585,0,'gorney_ring','gorney_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27587,0,'karieyh_ring','karieyh_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27589,0,'thurandaut_ring','thurandaut_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27591,0,'orvail_ring','orvail_ring',1,63552,0,1,0);
+
 -- --------------------------------------- AF 109 ------------------------------------------
 REPLACE INTO `item_basic` VALUES (27663,0,'pummelers_mask','pummelers_mask',1,63552,0,1,0);
 REPLACE INTO `item_basic` VALUES (27664,0,'anchorites_crown','anchorites_crown',1,63552,0,1,0);

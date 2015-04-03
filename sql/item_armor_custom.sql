@@ -119,6 +119,19 @@ INSERT INTO `item_armor` VALUES ('27362', 'pitre_babouches', '99', '131072', '17
 INSERT INTO `item_armor` VALUES ('27364', 'horos_toe_shoes', '99', '262144', '172', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('27366', 'pedagogy_loafers', '99', '524288', '174', '0', '0', '256', '0');
 
+INSERT INTO `item_armor` VALUES ('27580', 'adoulin_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27582', 'weatherspoon_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27584', 'renaye_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27586', 'haverton_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27588', 'vocane_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27590', 'shneddick_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27581', 'woltaris_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27583', 'janniston_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27585', 'gorney_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27587', 'karieyh_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27589', 'thurandaut_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27591', 'orvail_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+
 -- ------------------------------- AF 109 ----------------------------------------------------
 INSERT INTO `item_armor` VALUES ('27663', 'pummelers_mask', '99', '1', '64', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('27664', 'anchorites_crown', '99', '2', '66', '0', '0', '16', '0');

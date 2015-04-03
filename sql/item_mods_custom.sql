@@ -10677,4 +10677,107 @@ INSERT INTO `item_mods` VALUES(28261, 384, 41); --  Haste +4%
 -- INSERT INTO `item_mods` VALUES(28261, 0, 1); -- Enhances "Repair" effect 1 ====> Needs Mod ID
 -- INSERT INTO `item_mods` VALUES(28261, 384, 31); -- Automaton: Haste+3% (This should be in the item_mods_pet_custom.sql) but Automaton not yet supported
 
+-- -------------------------------------------------------
+--   Adoulin Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27580, 2, 50); -- HP+50
+INSERT INTO `item_mods` VALUES(27580, 5, 50); -- MP+50
+INSERT INTO `item_mods` VALUES(27580, 25, 5); -- Accuracy+5
+INSERT INTO `item_mods` VALUES(27580, 23, 15); -- Attack+15
+INSERT INTO `item_mods` VALUES(27580, 26, 5); -- Ranged Accuracy+5
+INSERT INTO `item_mods` VALUES(27580, 24, 15); -- Ranged Attack+15
+INSERT INTO `item_mods` VALUES(27580, 30, 5); -- Magic Accuracy+5
+INSERT INTO `item_mods` VALUES(27580, 28, 7); -- "Magic Atk. Bonus"+7
 
+-- -------------------------------------------------------
+--   Weatherspoon Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27582, 30, 10); -- Magic Accuracy+10
+INSERT INTO `item_mods` VALUES(27582, 407, 5); -- "Fast Cast"+5%
+-- INSERT INTO `item_mods` VALUES(27582, 0, 3); -- "Quick Magic"+3% =====> No mod ID
+INSERT INTO `item_mods` VALUES(27582, 38, 10); -- Light elemental "Magic Atk. Bonus"+10
+
+-- -------------------------------------------------------
+--   Renaye Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27584, 119, 10); -- Singing skill +10
+INSERT INTO `item_mods` VALUES(27584, 122, 10); -- Blue magic skill +10
+-- INSERT INTO `item_mods` VALUES(27584, 0, 10); -- Geomancy skill +10 =====> No mod ID
+INSERT INTO `item_mods` VALUES(27584, 369, 1); -- "Refresh"+1
+
+-- -------------------------------------------------------
+--   Haverton Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27586, 26, 20); -- Ranged Accuracy+20
+INSERT INTO `item_mods` VALUES(27586, 118, 10); -- Ninjutsu skill +10
+INSERT INTO `item_mods` VALUES(27586, 423, 6); -- "Snapshot"+6 (Increases Snapshot whilst Velocity Shot is up.)
+INSERT INTO `item_mods` VALUES(27586, 259, 5); -- "Dual Wield"+5
+
+-- -------------------------------------------------------
+--   Vocane Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27588, 375, 5); -- Potency of "Cure" effect received +5%
+INSERT INTO `item_mods` VALUES(27588, 160, -7); -- Damage taken -7%
+-- INSERT INTO `item_mods` VALUES(27588, 0, 2); -- Knockback Reduction +2
+
+-- -------------------------------------------------------
+--   Shneddick Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27590, 169, 18); -- Movement speed +18%
+INSERT INTO `item_mods` VALUES(27590, 246, 15); -- "Resist Petrify"+15
+INSERT INTO `item_mods` VALUES(27590, 247, 15); -- "Resist Bind"+15
+INSERT INTO `item_mods` VALUES(27590, 249, 15); -- "Resist Gravity"+15
+
+-- -------------------------------------------------------
+--   Woltaris Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27581, 401, 1); -- "Sublimation"+1
+INSERT INTO `item_mods` VALUES(27581, 370, 1); -- "Regen"+1
+INSERT INTO `item_mods` VALUES(27581, 369, 1); -- "Refresh"+1
+
+-- -------------------------------------------------------
+--   Janniston Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27583, 5, 40); -- MP+40
+INSERT INTO `item_mods` VALUES(27583, 27, -7); -- Enmity-7
+INSERT INTO `item_mods` VALUES(27583, 374, 5); -- "Cure" potency II +5% **Used ===>     MOD_CURE_POTENCY = 0x176, // % cure potency | bonus from gear is capped at 50
+
+-- -------------------------------------------------------
+--   Gorney Ring
+-- -------------------------------------------------------
+-- INSERT INTO `item_mods` VALUES(27585, 0, 1); -- "Gilfinder"+1 =====> No mod ID
+INSERT INTO `item_mods` VALUES(27585, 303, 1); -- "Treasure Hunter"+1
+INSERT INTO `item_mods` VALUES(27585, 298, 2); -- "Steal"+2
+-- INSERT INTO `item_mods` VALUES(27585, 0, 1); -- "Mug"+1 =====> No mod ID
+
+-- -------------------------------------------------------
+--   Karieyh Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES(27587, 368, 5); -- "Regain"+50
+INSERT INTO `item_mods` VALUES(27587, 48, 5); -- Weapon Skill Accuracy+5
+INSERT INTO `item_mods` VALUES(27587, 355, 3); -- Weapon Skill Damage+3% =====> Used // Special Modifier+ MOD_ADDS_WEAPONSKILL
+
+-- -------------------------------------------------------
+--   Thurandaut Ring
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES(27589, 25, 20); -- Pet: Accuracy+20
+INSERT INTO `item_mods_pet` VALUES(27589, 26, 20); -- Pet: Ranged Accuracy+20
+INSERT INTO `item_mods_pet` VALUES(27589, 23, 20); -- Pet: Attack+20
+INSERT INTO `item_mods_pet` VALUES(27589, 24, 20); -- Pet: Ranged Attack+20
+INSERT INTO `item_mods_pet` VALUES(27589, 384, 31); -- Pet: Haste+3%
+INSERT INTO `item_mods_pet` VALUES(27589, 160, -3); -- Pet: Damage taken -3%
+
+-- -------------------------------------------------------
+--   Orvail Ring
+-- -------------------------------------------------------
+-- INSERT INTO `item_mods` VALUES(27591, 0, 5); -- Synthesis skill gain rate +5% =====> No mod ID
+-- INSERT INTO `item_mods` VALUES(27591, 0, 1); -- Decreases likelihood of synthesis material loss +1% =====> No mod ID
+INSERT INTO `item_mods` VALUES(27591, 144, 1); -- Increases rate of synthesis success by 1% Woodworking
+INSERT INTO `item_mods` VALUES(27591, 145, 1); -- Increases rate of synthesis success by 1% Smithing
+INSERT INTO `item_mods` VALUES(27591, 146, 1); -- Increases rate of synthesis success by 1% Goldsmithing
+INSERT INTO `item_mods` VALUES(27591, 147, 1); -- Increases rate of synthesis success by 1% Clothcraft
+INSERT INTO `item_mods` VALUES(27591, 148, 1); -- Increases rate of synthesis success by 1% Leathercraft
+INSERT INTO `item_mods` VALUES(27591, 149, 1); -- Increases rate of synthesis success by 1% Bonecraft
+INSERT INTO `item_mods` VALUES(27591, 150, 1); -- Increases rate of synthesis success by 1% Alchemy
+INSERT INTO `item_mods` VALUES(27591, 151, 1); -- Increases rate of synthesis success by 1% Cooking
+-- INSERT INTO `item_mods` VALUES(27591, 0, 1); -- Increases rate of high quality-item synthesis success by 1% =====> No mod ID
