@@ -10,8 +10,8 @@ cmdprops =
     parameters = "s"
 };
 
-function onTrigger(player, target, variable, value)
-    if (target == nil)
+function onTrigger(player, target)
+    if (target == nil) then
         player:setVar("dynaWaitxDay", 0);
         player:PrintToPlayer("Done.");
     else
