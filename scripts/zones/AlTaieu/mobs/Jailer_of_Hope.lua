@@ -1,12 +1,13 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Hope
+--  NM:  Jailer of Hope
 -----------------------------------
-require("scripts/globals/titles");
+
+-- require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
+-- require("scripts/globals/utils");
+-- require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -39,6 +40,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,100);
 end;
+
 -----------------------------------
 -- onMobDisEngage Action
 -----------------------------------
@@ -47,13 +49,14 @@ function onMobDisEngage(mob, target)
     mob:setLocalVar("RAGED", 0);
     mob:delStatusEffect(EFFECT_RAGE);
 end;
+
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
     local BattleTime = mob:getBattleTime();
-    local JoH_2hr_Used =  mob:getLocalVar("JoH_2hr");
+    local JoH_2hr_Used = mob:getLocalVar("JoH_2hr");
 
     if (mob:getHPP() <= 10) then
         if (JoH_2hr_Used == 3) then
@@ -75,16 +78,20 @@ function onMobFight(mob, target)
             mob:useMobAbility(432);
             mob:setLocalVar("JoH_2hr", 1);
         end
-    elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
+    end
+
+    if (BattleTime > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,15) ~= 5) or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
+    if (math.random(1,15) ~= 5 or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
         return 0,0,0;
     else
         local duration = 5;
@@ -92,6 +99,7 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_NONE,0,EFFECT_TERROR;
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

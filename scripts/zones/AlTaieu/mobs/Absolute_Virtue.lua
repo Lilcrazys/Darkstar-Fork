@@ -182,6 +182,7 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if (math.random(1,15) ~= 5 or target:hasStatusEffect(EFFECT_TERROR == true)) then
         return 0,0,0;
@@ -207,7 +208,6 @@ end;
 function onMobDeath(mob, killer)
     killer:addTitle(VIRTUOUS_SAINT);
     SetServerVariable("AV_Regen_Reduction", 0);
-
     DespawnMob(16912877);
     DespawnMob(16912878);
     DespawnMob(16912879);

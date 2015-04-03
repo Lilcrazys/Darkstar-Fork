@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Hope
+--  MOB: Qn'hpemde
+-- Jailor of Love Pet version
 -----------------------------------
 
 -----------------------------------
@@ -15,4 +16,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    local HPEMDES = GetServerVariable("JoL_Qn_hpemde_Killed");
+    SetServerVariable("JoL_Qn_hpemde_Killed", HPEMDES+1);
 end;

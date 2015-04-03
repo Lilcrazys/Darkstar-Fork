@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Hope
+--  MOB: Qn'xzomit
+-- Jailor of Justice Pet version
 -----------------------------------
 
 -----------------------------------

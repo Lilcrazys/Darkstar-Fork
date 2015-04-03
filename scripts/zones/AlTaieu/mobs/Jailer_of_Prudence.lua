@@ -1,12 +1,14 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Hope
+--  NM:  Jailer of Hope
 -----------------------------------
-require("scripts/globals/titles");
+
+-- require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
+-- Don't add "require" lines until actually using them.
+-- require("scripts/globals/magic");
+-- require("scripts/globals/utils");
+-- require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -70,7 +72,9 @@ function onMobFight(mob, target)
             mob:useMobAbility(437);
             mob:setLocalVar("JoP_2hr", 1);
         end
-    elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
+    end
+
+    if (BattleTime > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end

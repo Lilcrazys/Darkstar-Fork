@@ -1,10 +1,12 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Hope
+--  NM:  Jailer of Justice
 -----------------------------------
+
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -33,61 +35,49 @@ end;
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
+
 function onMobFight(mob, target)
-    if  (TIMER >= (TIMER + 30)) then  -- dont know what to do here.. need to get set a var for last pop time
+    -- local BattleTime = mob:getBattleTime();
+    -- local variable = things;
+    -- if (whatever) then
+        -- do stuff;
+    -- end
 
-
-        -- Make sure pets arent up
-        local PET1 = GetMobAction(16912840);
-        local PET2 = GetMobAction(16912841);
-        local PET3 = GetMobAction(16912842);
-        local PET4 = GetMobAction(16912843);
-        local PET5 = GetMobAction(16912844);
-        local PET6 = GetMobAction(16912845);
-        local TIMER = nil;
-
-        if (PET1 = ACTION and PET2 = ACTION and PET3 = ACTION and PET4 = ACTION and PET5 = ACTION and PET6 = ACTION) then
-            return;
-        end
-
-
-
-        local ChosenPet = nil;
-        local Popped = nil;
-        repeat
-
-            switch (ChosenPet): caseof {
-                [16912840] = function (x) if (PET1 = ACTION) then ChosenPet = 0; else Popped = "P1"; end end,
-                [16912841] = function (x) if (PET2 = ACTION) then ChosenPet = 0; else Popped = "P2"; end end,
-                [16912842] = function (x) if (PET3 = ACTION) then ChosenPet = 0; else Popped = "P3"; end end,
-                [16912843] = function (x) if (PET4 = ACTION) then ChosenPet = 0; else Popped = "P4"; end end,
-                [16912844] = function (x) if (PET5 = ACTION) then ChosenPet = 0; else Popped = "P5"; end end,
-                [16912845] = function (x) if (PET6 = ACTION) then ChosenPet = 0; else Popped = "P6"; end end,
-            }
-
-        until (GetMobAction(16912839) == ACTION_NONE) -- JoJ is dead
-
-        -- Spawn the pet..
-        local pet = SpawnMob(ChosenPet);
-        pet:updateEnmity(target);
-        pet:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
-
-        -- Update extra vars..
-        mob:setLocalVar(Popped, 1);
-        mob:setLocalVar(TIMER, 1);
-    end
-
-    -- Ensure all spawned pets are doing stuff..
-    for pets = 16912840, 16912845 do
-        if (GetMobAction(pets) == 16) then
-            -- Send pet after current target..
-            GetMobByID(pets):updateEnmity(target);
+    -- Anything else you need to do in onMobFight, do it above this line!
+    local lastXzomit = mob:getLocalVar("pop_xzomit");
+    if (os.time() - lastXzomit > 30) then
+        local xzomit1 = GetMobAction(mob:getID()+1);
+        local xzomit2 = GetMobAction(mob:getID()+2);
+        local xzomit3 = GetMobAction(mob:getID()+3);
+        local xzomit4 = GetMobAction(mob:getID()+4);
+        local xzomit5 = GetMobAction(mob:getID()+5);
+        local xzomit6 = GetMobAction(mob:getID()+6);
+        if (pActn1 == ACTION_NONE or pActn1 == ACTION_SPAWN) then
+            SpawnMob(xzomit1, 300):updateEnmity(target);
+            mob:setLocalVar("pop_xzomit", os.time());
+        elseif (pActn2 == ACTION_NONE or pActn2 == ACTION_SPAWN) then
+            SpawnMob(xzomit2, 300):updateEnmity(target);
+            mob:setLocalVar("pop_xzomit", os.time());
+        elseif (pActn3 == ACTION_NONE or pActn3 == ACTION_SPAWN) then
+            SpawnMob(xzomit3, 300):updateEnmity(target);
+            mob:setLocalVar("pop_xzomit", os.time());
+        elseif (pActn4 == ACTION_NONE or pActn4 == ACTION_SPAWN) then
+            SpawnMob(xzomit4, 300):updateEnmity(target);
+            mob:setLocalVar("pop_xzomit", os.time());
+        elseif (pActn5 == ACTION_NONE or pActn5 == ACTION_SPAWN) then
+            SpawnMob(xzomit5, 300):updateEnmity(target);
+            mob:setLocalVar("pop_xzomit", os.time());
+        elseif (pActn6 == ACTION_NONE or pActn6 == ACTION_SPAWN) then
+            SpawnMob(xzomit6, 300):updateEnmity(target);
+            mob:setLocalVar("pop_xzomit", os.time());
         end
     end
 end
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if (target:hasStatusEffect(EFFECT_POISON)) then
         target:delStatusEffect(EFFECT_POISON);
@@ -95,8 +85,10 @@ function onAdditionalEffect(mob,target,damage)
 
     duration = 10 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
     utils.clamp(duration,1,30);
+
     target:addStatusEffect(EFFECT_POISON, 50, 3, duration);
-    mob:resetEnmity(target);
+    -- mob:resetEnmity(target);
+
     return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 

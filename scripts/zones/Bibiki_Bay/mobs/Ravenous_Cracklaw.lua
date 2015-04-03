@@ -57,7 +57,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local BattleTime = mob:getBattleTime();
     local R_Cracklaw_2hr_Used =  mob:getLocalVar("Ravenous_Cracklaw_2hr");
 
     if (mob:getHPP() <= 10) then
@@ -83,7 +82,9 @@ function onMobFight(mob, target)
             mob:useMobAbility(439);
             mob:setLocalVar("Ravenous_Cracklaw_2hr", 1);
         end
-    elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
+    end
+
+    if (mob:getBattleTime() and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end
