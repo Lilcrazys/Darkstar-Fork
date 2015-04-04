@@ -52,23 +52,23 @@ function onMobFight(mob, target)
         local xzomit4 = GetMobAction(mob:getID()+4);
         local xzomit5 = GetMobAction(mob:getID()+5);
         local xzomit6 = GetMobAction(mob:getID()+6);
-        if (pActn1 == ACTION_NONE or pActn1 == ACTION_SPAWN) then
-            SpawnMob(xzomit1, 300):updateEnmity(target);
+        if (xzomit1 == ACTION_NONE or xzomit1 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+1, 300):updateEnmity(target);
             mob:setLocalVar("pop_xzomit", os.time());
-        elseif (pActn2 == ACTION_NONE or pActn2 == ACTION_SPAWN) then
-            SpawnMob(xzomit2, 300):updateEnmity(target);
+        elseif (xzomit2 == ACTION_NONE or xzomit2 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+2, 300):updateEnmity(target);
             mob:setLocalVar("pop_xzomit", os.time());
-        elseif (pActn3 == ACTION_NONE or pActn3 == ACTION_SPAWN) then
-            SpawnMob(xzomit3, 300):updateEnmity(target);
+        elseif (xzomit3 == ACTION_NONE or xzomit3 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+3, 300):updateEnmity(target);
             mob:setLocalVar("pop_xzomit", os.time());
-        elseif (pActn4 == ACTION_NONE or pActn4 == ACTION_SPAWN) then
-            SpawnMob(xzomit4, 300):updateEnmity(target);
+        elseif (xzomit4 == ACTION_NONE or xzomit4 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+4, 300):updateEnmity(target);
             mob:setLocalVar("pop_xzomit", os.time());
-        elseif (pActn5 == ACTION_NONE or pActn5 == ACTION_SPAWN) then
-            SpawnMob(xzomit5, 300):updateEnmity(target);
+        elseif (xzomit5 == ACTION_NONE or xzomit5 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+5, 300):updateEnmity(target);
             mob:setLocalVar("pop_xzomit", os.time());
-        elseif (pActn6 == ACTION_NONE or pActn6 == ACTION_SPAWN) then
-            SpawnMob(xzomit6, 300):updateEnmity(target);
+        elseif (xzomit6 == ACTION_NONE or xzomit6 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
             mob:setLocalVar("pop_xzomit", os.time());
         end
     end
