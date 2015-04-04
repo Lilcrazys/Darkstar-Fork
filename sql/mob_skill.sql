@@ -2962,6 +2962,8 @@ INSERT INTO `mob_skill` VALUES (1576,313,1313,'Barofield',4,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES (1578,313,1310,'Trembling',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1579,313,1311,'Serpentine_Tail',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1580,313,1312,'Nerve_Gas',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,313,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
+
 
 -- Sarameya (314)
 INSERT INTO `mob_skill` VALUES (1529,314,1223,'Lava_Spit',1,10.0,2000,1500,4,0,0,0);
@@ -2970,6 +2972,7 @@ INSERT INTO `mob_skill` VALUES (1531,314,1225,'Scorching_Lash',1,20.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (1532,314,1226,'Ululation',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1533,314,1227,'Magma_Hoplon',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1534,314,1228,'Gates_of_Hades',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (436,314,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Tyger (315)
 INSERT INTO `mob_skill` VALUES (1769,315,1369,'Dreadstorm',1,18.0,2000,1500,4,0,0,0);
@@ -2979,6 +2982,8 @@ INSERT INTO `mob_skill` VALUES (1771,315,1382,'Plague_Swipe',4,16.0,2000,1500,4,
 INSERT INTO `mob_skill` VALUES (1766,315,1367,'Tenebrous_Mist',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1767,315,1368,'Thunderstrike',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1768,315,1371,'Tourbillion',1,18.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (432,315,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
+
 
 -- Shinryu (475)
 -- Wings out
