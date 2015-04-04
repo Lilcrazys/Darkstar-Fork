@@ -4885,12 +4885,9 @@ INSERT INTO `mob_skill` VALUES (130,1002,823,'Awful_Eye',4,10.0,2000,1500,4,0,0,
 
 -- Sargas (1003)
 INSERT INTO `mob_skill` VALUES (432,1003,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
-INSERT INTO `mob_skill` VALUES (463,1003,94,'Critical_Bite',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (466,1003,98,'Venom_Storm',1,40.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (467,1003,99,'Earthbreaker_Custom',1,40.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (461,1003,92,'Venom_Breath',4,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (94,1003,94,'Mandible_Bite',0,7.0,2000,1500,4,0,0,2);
-INSERT INTO `mob_skill` VALUES (97,1003,97,'Death_Scissors',0,7.0,2000,1500,4,0,0,0);
+
 
 -- Nargun (1004)
 INSERT INTO `mob_skill` VALUES (432,1004,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
@@ -4985,12 +4982,9 @@ INSERT INTO `mob_skill` VALUES (331,1019,331,'Antiphase',1,15.0,2000,1500,4,0,0,
 
 -- Aqrabuamelu (1020)
 INSERT INTO `mob_skill` VALUES (432,1020,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
-INSERT INTO `mob_skill` VALUES (463,1020,94,'Critical_Bite',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (466,1020,98,'Venom_Storm',1,40.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (467,1020,99,'Earthbreaker_Custom',1,40.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (461,1020,92,'Venom_Breath',4,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (94,1020,94,'Mandible_Bite',0,7.0,2000,1500,4,0,0,2);
-INSERT INTO `mob_skill` VALUES (97,1020,97,'Death_Scissors',0,7.0,2000,1500,4,0,0,0);
+
 
 -- Sabotender Corrido (1021)
 INSERT INTO `mob_skill` VALUES (434,1021,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
