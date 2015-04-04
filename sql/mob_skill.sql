@@ -1834,6 +1834,7 @@ INSERT INTO `mob_skill` VALUES (1093,269,1000,'Mantle_Pierce',0,7.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (1094,269,1001,'Ink_Cloud',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1095,269,1002,'Molluscous_Mutation',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1096,269,1003,'Saline_Coat',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (475,269,18,'Mijin_Gakure', 1, 20.0, 2000, 0, 4, 2, 0, 0);
 
 -- Hpemde
 INSERT INTO `mob_skill` VALUES (1113,144,1027,'Ichor_stream',4,10.0,2000,1000,4,0,0,0);

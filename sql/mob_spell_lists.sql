@@ -1462,6 +1462,28 @@ INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 197, 1, 255); -- th
 INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 198, 1, 255); -- thundaga 5
 INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Hope', 404, 213, 1, 255); -- Burst 2
 
+-- Jailer_of_Love
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 356, 1, 255); -- Parlyga
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 362, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 274, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 153, 1, 255); -- Blizzard 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 177, 1, 255); -- Firega 4
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 182, 1, 255); -- Blizzaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 197, 1, 255); -- Thundaga 4
+
+
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 252, 1, 255); -- Spell Name?
@@ -1759,7 +1781,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Soaring_Kumakatok', 614, 359, 1, 255); --
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Kumakatok', 614, 174, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Kumakatok', 614, 286, 1, 255); -- Addle
 
-INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 277, 1, 255); -- Dread Spikes
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 503, 1, 255); -- Impact

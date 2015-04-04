@@ -17,6 +17,13 @@ function onMobSpawn(mob)
     SetServerVariable("JoL_Qn_hpemde_Killed",0) -- Must reset this every spawn
     -- All new code below this line please.
 
+    mob:setMod(MOD_REGEN, 250);
+    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_UFASTCAST, 65);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,100);
 
 end;
 
@@ -51,6 +58,85 @@ function onMobFight(mob, target)
     -- All new code below this line please.
 
 
+    local lastPop = mob:getLocalVar("pop_pets");
+    if (os.time() - lastPop > 150) then
+        local phuabo1 = GetMobAction(16912849);
+        local phuabo2 = GetMobAction(16912852);
+        local phuabo3 = GetMobAction(16912855);
+
+        local SPAWNS = mob:getLocalVar("SPAWNS");
+
+        if (SPAWNS == 0) then -- Spawns first 3 xzomit
+            SpawnMob(16912858, 300):updateEnmity(target);
+            SpawnMob(16912859, 300):updateEnmity(target);
+            SpawnMob(16912860, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 1);
+        elseif (SPAWNS == 1) then -- spawns first 3 hpemde
+            SpawnMob(16912867, 300):updateEnmity(target);
+            SpawnMob(16912868, 300):updateEnmity(target);
+            SpawnMob(16912869, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 2);
+        elseif (SPAWNS == 2) then -- spawns first 3 phuabo
+            SpawnMob(16912849, 300):updateEnmity(target);
+            SpawnMob(16912850, 300):updateEnmity(target);
+            SpawnMob(16912851, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 3);
+        elseif (SPAWNS == 3) then -- Spawns second 3 xzomit
+            SpawnMob(16912861, 300):updateEnmity(target);
+            SpawnMob(16912862, 300):updateEnmity(target);
+            SpawnMob(16912863, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 4);
+        elseif (SPAWNS == 4) then -- spawns second 3 hpemde
+            SpawnMob(16912870, 300):updateEnmity(target);
+            SpawnMob(16912871, 300):updateEnmity(target);
+            SpawnMob(16912872, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 5);
+        elseif (SPAWNS == 5) then -- spawns second 3 phuabo
+            SpawnMob(16912852, 300):updateEnmity(target);
+            SpawnMob(16912853, 300):updateEnmity(target);
+            SpawnMob(16912854, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 6);
+        elseif (SPAWNS == 6) then -- Spawns last 3 xzomit
+            SpawnMob(16912864, 300):updateEnmity(target);
+            SpawnMob(16912865, 300):updateEnmity(target);
+            SpawnMob(16912866, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 7);
+        elseif (SPAWNS == 7) then -- spawns last 3 hpemde
+            SpawnMob(16912873, 300):updateEnmity(target);
+            SpawnMob(16912874, 300):updateEnmity(target);
+            SpawnMob(16912875, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            mob:setLocalVar("SPAWNS", 8);
+
+            -- below it switches to ONLY popping phuabo 3 at a time
+        elseif (SPAWNS > 8) then
+            if (phuabo1 == ACTION_NONE or phuabo1 == ACTION_SPAWN)
+            SpawnMob(16912849, 300):updateEnmity(target);
+            SpawnMob(16912850, 300):updateEnmity(target);
+            SpawnMob(16912851, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+        elseif (SPAWNS > 8) then
+            if (phuabo2 == ACTION_NONE or phuabo2 == ACTION_SPAWN)
+            SpawnMob(16912852, 300):updateEnmity(target);
+            SpawnMob(16912853, 300):updateEnmity(target);
+            SpawnMob(16912854, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+        elseif (SPAWNS > 8) then
+            if (phuabo3 == ACTION_NONE or phuabo3 == ACTION_SPAWN)
+            SpawnMob(16912855, 300):updateEnmity(target);
+            SpawnMob(16912856, 300):updateEnmity(target);
+            SpawnMob(16912857, 300):updateEnmity(target);
+            mob:setLocalVar("pop_pets", os.time());
+            end
+        end
+    end
 end;
 
 -----------------------------------
