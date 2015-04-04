@@ -37,19 +37,13 @@ function onMobSpawn(mob)
 end;
 
 
------------------------------------
--- onMobEngaged Action
------------------------------------
-
-function onMobEngaged(mob, target)
-    mob:setLocalVar("BattleStart", os.time());
-end;
 
 -----------------------------------
 -- onMobDisEngage Action
 -----------------------------------
 
 function onMobDisEngage(mob, target)
+    mob:setLocalVar("RAGED", 0);
     mob:delStatusEffect(EFFECT_RAGE);
 end;
 
@@ -59,7 +53,6 @@ end;
 
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
     local Sara_2hr_Used = 0;
     if (mob:getLocalVar("Sara_2hr") ~= nil) then
         Sara_2hr_Used = mob:getLocalVar("Sara_2hr");
@@ -90,7 +83,9 @@ function onMobFight(mob, target)
             mob:useMobAbility(436);
             mob:setLocalVar("Sara_2hr", 1);
         end
-    elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
+    end
+
+    if (mob:getBattleTime() and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end
@@ -113,4 +108,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    mob:setLocalVar("RAGED", 0);
 end;
