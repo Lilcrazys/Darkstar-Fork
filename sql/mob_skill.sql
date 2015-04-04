@@ -3015,7 +3015,6 @@ INSERT INTO `mob_skill` VALUES (2413,475,1883,'Darkmatter',1,20.0,4000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (2415,475,1884,'Supernova',1,20.0,5000,3500,4,0,0,0); -- 33% and below
 
 -- Absoulute Virtue  (329)
-INSERT INTO `mob_skill` VALUES (1128,329,1019,'Disseverment',0,7.0,2000,1500,4,0,0,0); -- Should not have it.  Leaving in for variety,for now.
 INSERT INTO `mob_skill` VALUES (1127,329,1018,'Glacier_Splitter',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1126,329,1014,'Crystaline_Cocoon',0,6.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1125,329,1013,'Depuration',0,6.0,2000,1500,4,0,0,0);

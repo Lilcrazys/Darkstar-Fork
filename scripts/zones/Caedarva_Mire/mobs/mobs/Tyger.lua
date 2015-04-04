@@ -15,7 +15,7 @@ require("scripts/globals/utils");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 1);
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
 end;
 
 -----------------------------------
