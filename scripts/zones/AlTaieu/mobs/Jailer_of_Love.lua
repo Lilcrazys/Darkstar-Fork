@@ -54,17 +54,14 @@ function onMobFight(mob, target)
             mob:addMod(MOD_REGEN, -260)
         end
     end
-    -- Don't use those server vars to know how many have been popped, just how many have died.
-    -- All new code below this line please.
-
 
     local lastPop = mob:getLocalVar("pop_pets");
     if (os.time() - lastPop > 150) then
+        local SPAWNS = mob:getLocalVar("SPAWNS");
         local phuabo1 = GetMobAction(16912849);
         local phuabo2 = GetMobAction(16912852);
         local phuabo3 = GetMobAction(16912855);
 
-        local SPAWNS = mob:getLocalVar("SPAWNS");
 
         if (SPAWNS == 0) then -- Spawns first 3 xzomit
             SpawnMob(16912858, 300):updateEnmity(target);
@@ -114,26 +111,22 @@ function onMobFight(mob, target)
             SpawnMob(16912875, 300):updateEnmity(target);
             mob:setLocalVar("pop_pets", os.time());
             mob:setLocalVar("SPAWNS", 8);
-
-            -- below it switches to ONLY popping phuabo 3 at a time
-        elseif (SPAWNS > 8) then
-            if (phuabo1 == ACTION_NONE or phuabo1 == ACTION_SPAWN)
-            SpawnMob(16912849, 300):updateEnmity(target);
-            SpawnMob(16912850, 300):updateEnmity(target);
-            SpawnMob(16912851, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pets", os.time());
-        elseif (SPAWNS > 8) then
-            if (phuabo2 == ACTION_NONE or phuabo2 == ACTION_SPAWN)
-            SpawnMob(16912852, 300):updateEnmity(target);
-            SpawnMob(16912853, 300):updateEnmity(target);
-            SpawnMob(16912854, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pets", os.time());
-        elseif (SPAWNS > 8) then
-            if (phuabo3 == ACTION_NONE or phuabo3 == ACTION_SPAWN)
-            SpawnMob(16912855, 300):updateEnmity(target);
-            SpawnMob(16912856, 300):updateEnmity(target);
-            SpawnMob(16912857, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pets", os.time());
+        elseif (SPAWNS >= 8) then -- switch to ONLY popping phuabo (still up to 3 at a time)
+            if (phuabo1 == ACTION_NONE or phuabo1 == ACTION_SPAWN) then
+                SpawnMob(16912849, 300):updateEnmity(target);
+                SpawnMob(16912850, 300):updateEnmity(target);
+                SpawnMob(16912851, 300):updateEnmity(target);
+                mob:setLocalVar("pop_pets", os.time());
+            elseif (phuabo2 == ACTION_NONE or phuabo2 == ACTION_SPAWN) then
+                SpawnMob(16912852, 300):updateEnmity(target);
+                SpawnMob(16912853, 300):updateEnmity(target);
+                SpawnMob(16912854, 300):updateEnmity(target);
+                mob:setLocalVar("pop_pets", os.time());
+            elseif (phuabo3 == ACTION_NONE or phuabo3 == ACTION_SPAWN) then
+                SpawnMob(16912855, 300):updateEnmity(target);
+                SpawnMob(16912856, 300):updateEnmity(target);
+                SpawnMob(16912857, 300):updateEnmity(target);
+                mob:setLocalVar("pop_pets", os.time());
             end
         end
     end
