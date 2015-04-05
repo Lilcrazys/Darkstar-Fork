@@ -1732,11 +1732,15 @@ INSERT INTO `mob_skill` VALUES (1188,122,1062,'Vorpal_Blade',0,7.0,2000,1500,4,0
 INSERT INTO `mob_skill` VALUES (1189,122,1063,'Damnation_Dive',4,10.0,2000,1500,4,0,0,0); -- only used in bird form.  Logged on Eo'ghrah. theres a version that supposedly has knockback?
 INSERT INTO `mob_skill` VALUES (1190,122,1064,'Sickle_Slash',0,7.0,2000,1500,4,0,0,0); -- only used in spider form.
 
+
+
 INSERT INTO `mob_skill` VALUES (1187,123,1061,'Hexidiscs',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1185,123,1065,'Actinic_Burst',1,10.0,2000,1500,4,0,0,0);
 
 INSERT INTO `mob_skill` VALUES (1187,124,1061,'Hexidiscs',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1185,124,1065,'Actinic_Burst',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (438,124,432,'Invincible',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (1188,124,1062,'Vorpal_Blade',0,7.0,2000,1500,4,0,0,0); -- only used in human form
 
 -- Euvhi
 INSERT INTO `mob_skill` VALUES (1194,109,1067,'Viscid_Nectar',4,10.0,2000,1000,4,0,0,0);

@@ -8,23 +8,23 @@ package.loaded["scripts/zones/The_Garden_of_RuHmet/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/zones/The_Garden_of_RuHmet/TextIDs");
-
+require("scripts/globals/status");
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    local mobspawn = GetMobByID(16921015); 
-    local qm1 = GetNPCByID(16921027);
     -- Trade 12 Ghrah M Chips
-    --[[if (GetMobAction(16921015) == 0 and trade:hasItemQty(1872,12) and trade:getItemCount() == 12) then
+    if (GetMobAction(16921015) == ACTION_NONE) then
+        if (trade:hasItemQty(1872,12) and trade:getItemCount() == 12) then
+            SpawnMob(16921015, 300):updateEnmity(player);
+            SpawnMob(16921016, 300):updateEnmity(player);
+            SpawnMob(16921017, 300):updateEnmity(player);
             player:tradeComplete();
-            qm1:hideNPC(900); -- hides the ??? for 15 mins, in seconds.
-            mobspawn:setSpawn(player:getXPos(),player:getYPos(),player:getZPos()); -- Change MobSpawn to Players @pos.
-            SpawnMob(16921015,180):updateEnmity(player); -- Spawn Jailer of Fortitude
-    end]]
-end;               
+        end
+    end
+end;
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
