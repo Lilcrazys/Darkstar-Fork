@@ -1802,6 +1802,7 @@ INSERT INTO `mob_skill` VALUES (1124,441,1012,'Impact_Stream',1,10.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (1125,441,1013,'Depuration',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1126,441,1014,'Crystaline_Cocoon',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1127,441,1018,'Glacier_Splitter',0,7.0,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (439,441,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
 
 
 -- Aern polearm type sam drg
@@ -1811,6 +1812,7 @@ INSERT INTO `mob_skill` VALUES (1124,440,1012,'Impact_Stream',1,10.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (1125,440,1013,'Depuration',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1126,440,1014,'Crystaline_Cocoon',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1130,440,1021,'Medusa_Javelin',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (476,440,432,'Ix_Call_Wyvern',0,7.0,2000,0,1,2,0,0);
 
 
 -- Aern staff type smn whm
