@@ -1750,6 +1750,7 @@ INSERT INTO `mob_skill` VALUES (1192,109,1071,'Efflorescent_Foetor',4,10.0,2000,
 INSERT INTO `mob_skill` VALUES (1193,109,1072,'Stupor_Spores',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1195,109,1073,'Morning_Glory',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1197,109,1069,'Nutrient_Aborption',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (435,109,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- Zdei - T-Sight aggro @ 15  yalms.
 INSERT INTO `mob_skill` VALUES (1207,272,1074,'Reactor_Cool',0,7.0,2000,1500,1,0,0,0);
