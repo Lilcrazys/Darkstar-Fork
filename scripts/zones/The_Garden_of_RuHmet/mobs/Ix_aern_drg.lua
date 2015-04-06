@@ -4,59 +4,38 @@
 -----------------------------------
 require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
 require( "scripts/globals/status" );
+require("scripts/globals/magic");
+require("scripts/globals/utils");
+
+-----------------------------------
+-- onMobInitialize
+----------------------------------
+function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+end;
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 150);
+    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_HASTE_ABILITY, 25);
+    mob:setMod(MOD_DOUBLE_ATTACK, 25);
 
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_ATT,75);
 end;
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 function onMobFight( mob, target )
 
-	  --[[  local drga = mob:getLocalVar("drga");
-        local drgb = mob:getLocalVar("drgb");
-        local drgc = mob:getLocalVar("drgc");
-
-
-        if (drga == 1 and drgb == 1 and drgc == 1) then
-            return;
-        end
-
-        -- Pick a pet to spawn at random..
-        local ChosenPet = nil;
-        local newVar = nil;
-        repeat
-
-            local rand = math.random( 0, 2 );
-            ChosenPet = 16921023 + rand;
-
-            switch (ChosenPet): caseof {
-                [16921023] = function (x) if (drga == 1) then ChosenPet = 0; else newVar = "drga";  end end, -- drga
-                [16921024] = function (x) if (drgb == 1) then ChosenPet = 0; else newVar = "drgb"; end end, -- drgb
-                [16921025] = function (x) if (drgc == 1) then ChosenPet = 0; else newVar = "drgc"; end end, -- drgc
-            }
-
-        until (ChosenPet ~= 0 and ChosenPet ~= nil)
-
-        -- Spawn the pet..
-        local pet = SpawnMob( ChosenPet );
-        pet:updateEnmity( target );
-        pet:setPos( mob:getXPos(), mob:getYPos(), mob:getZPos() );
-
-        -- Update Ix'aern (drg) extra vars
-        mob:setLocalVar(newVar, 1);
-
-
-    -- Ensure all spawned pets are doing stuff..
-    for pets = 16921023, 16921025 do
-        if (GetMobAction( pets ) == 16) then
-            -- Send pet after current target..
-            GetMobByID( pets ):updateEnmity( target );
-        end
-    end]]--
 end
 
 
@@ -66,10 +45,10 @@ end
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	-- Despawn pets..
-	DespawnMob(16921023);
-	DespawnMob(16921024);
-	DespawnMob(16921025);
+    -- Despawn pets..
+    DespawnMob(16921023);
+    DespawnMob(16921024);
+    DespawnMob(16921025);
 end;
 
 -----------------------------------
@@ -77,9 +56,9 @@ end;
 -----------------------------------
 function onMobDespawn( mob )
     -- Despawn pets..
-	DespawnMob( 16921023 );
-	DespawnMob( 16921024 );
-	DespawnMob( 16921025 );
+    DespawnMob( 16921023 );
+    DespawnMob( 16921024 );
+    DespawnMob( 16921025 );
 
     -- Reset popped var..
     SetServerVariable("[PH]Ix_aern_drg",0);

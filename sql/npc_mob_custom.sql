@@ -311,7 +311,9 @@ REPLACE INTO `mob_spawn_points` VALUES (16912882,'AV_Wynav','Aern\'s Wynav',9033
 -- The Garden of Ru'Hmet (Zone 35)
 -- 16921599
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (16921023,'Ix_DRG_Wynav','Aern\'s Wynav',911,-350.158,-0.607,-379.099,66);
+REPLACE INTO `mob_spawn_points` VALUES (16921024,'Ix_DRG_Wynav','Aern\'s Wynav',911,-347.785,-0.379,-380.105,94);
+REPLACE INTO `mob_spawn_points` VALUES (16921025,'Ix_DRG_Wynav','Aern\'s Wynav',911,-349.207,-0.499,-380,79);
 
 -- ------------------------------------------------------------
 -- Empyreal Paradox (Zone 36)

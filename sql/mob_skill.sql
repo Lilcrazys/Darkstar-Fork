@@ -2175,6 +2175,8 @@ INSERT INTO `mob_skill` VALUES (646,193,136,'gust_breath',0,10.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES (647,193,137,'sand_breath',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (648,193,138,'lightning_breath',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (649,193,139,'hydro_breath',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (440,193,432,'Soul_Voice',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (435,193,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- --------------------------------------
 -- ACP specific mobs
