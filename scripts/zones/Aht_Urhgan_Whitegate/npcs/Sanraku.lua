@@ -17,7 +17,6 @@ require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-
 	--[[
 	if (trade:getItemCount() == 1) then
 		if (trade:hasItemQty(2477,1)) then -- Trade Soul Plate
@@ -50,7 +49,6 @@ function onTrade(player,npc,trade)
 		end
 	end
 	]]
-
 end;
 
 -----------------------------------
@@ -58,7 +56,6 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
 	-- if (player:getVar("ZeniStatus") == 0) then
 		-- player:startEvent(0x038c);
 	-- else
@@ -74,6 +71,7 @@ function onTrigger(player,npc)
 		if (player:hasKeyItem(CHARCOAL_GREY_SEAL) and player:hasKeyItem(DEEP_PURPLE_SEAL) and player:hasKeyItem(CHESTNUT_COLORED_SEAL)) then
 			param = param - 0x200; -- unlocks Tinnin.
 		end;
+
 		-- Sarameya Path
 		if (player:hasKeyItem(CERISE_SEAL)) then
 			param = param - 0xE000; -- unlocks Sarameya path tier 2 ZNMs.
@@ -84,6 +82,7 @@ function onTrigger(player,npc)
 		if (player:hasKeyItem(PURPLISH_GREY_SEAL) and player:hasKeyItem(GOLD_COLORED_SEAL) and player:hasKeyItem(COPPER_COLORED_SEAL)) then
 			param = param - 0x80000; -- unlocks Sarameya.
 		end;
+
 		-- Tyger Path
 		if (player:hasKeyItem(PINE_GREEN_SEAL)) then
 			param = param - 0x3800000; -- unlocks Tyger path tier 2 ZNMs.
@@ -101,7 +100,6 @@ function onTrigger(player,npc)
 
 		player:startEvent(0x038D,param);
 	-- end
-
 end;
 
 -----------------------------------

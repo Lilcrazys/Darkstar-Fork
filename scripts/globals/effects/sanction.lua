@@ -1,6 +1,6 @@
 -----------------------------------
 --
---
+-- EFFECT_SANCTION
 --
 -----------------------------------
 
@@ -9,18 +9,27 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
-	if (effect:getPower() == 1) then
-		target:addMod(MOD_REGEN,1); -- Todo: should be latent
-	elseif (effect:getPower() == 2) then
-		target:addMod(MOD_REFRESH,1); -- Todo: should be latent
-	elseif (effect:getPower() == 3) then
-		-- food duration not implemented.
-	end
+    local power = effect:getPower(); -- 1 = regen, 2 = refresh, 3 = food.
+    local subPower = effect:getSubPower(); -- subPower sets % required to trigger regen/refresh.
 
-	-- Begin Custom stuff
-	target:addMod(MOD_RERAISE_II,1);
-	target:addMod(MOD_EXP_BONUS,5);
-	-- End Custom Stuff
+    -- target:addLatent(LATENT_SANCTION_EXP, ?, MOD_EXP_BONUS, ?);
+    -- Possibly handle exp bonus in core instead
+
+    if (power == 1) then
+        -- target:addLatent(LATENT_SANCTION_REGEN, subPower, MOD_REGEN, 1);
+        target:addMod(MOD_REGEN,1); -- Todo: should be latent
+    elseif (power == 2) then
+        -- target:addLatent(LATENT_SANCTION_REGEN, subPower, MOD_REGEN, 1);
+        target:addMod(MOD_REFRESH,1); -- Todo: should be latent
+    elseif (power == 3) then
+        -- target:addMod(MOD_FOOD_DURATION), ???);
+        -- food duration not implemented.
+    end
+
+    -- Begin Custom stuff
+    target:addMod(MOD_RERAISE_II,1);
+    target:addMod(MOD_EXP_BONUS,5);
+    -- End Custom Stuff
 end;
 
 -----------------------------------
@@ -35,16 +44,24 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
-	if (effect:getPower() == 1) then
-		target:delMod(MOD_REGEN,1);
-	elseif (effect:getPower() == 2) then
-		target:delMod(MOD_REFRESH,1);
-	elseif (effect:getPower() == 3) then
-		-- food duration not implemented.
-	end
+    local power = effect:getPower(); -- 1 = regen, 2 = refresh, 3 = food.
+    local subPower = effect:getSubPower(); -- subPower sets % required to trigger regen/refresh.
 
-	-- Begin Custom stuff
-	target:delMod(MOD_RERAISE_II,1);
-	target:delMod(MOD_EXP_BONUS,5);
-	-- End Custom Stuff
+    -- target:delLatent(LATENT_SANCTION_EXP, ?, MOD_EXP_BONUS, ?);
+
+    if (power == 1) then
+        -- target:delLatent(LATENT_SANCTION_REGEN, subPower, MOD_REGEN, 1);
+        target:delMod(MOD_REGEN,1);
+    elseif (power == 2) then
+        -- target:delLatent(LATENT_SANCTION_REGEN, subPower, MOD_REGEN, 1);
+        target:delMod(MOD_REFRESH,1);
+    elseif (power == 3) then
+        -- target:delMod(MOD_FOOD_DURATION), ???);
+        -- food duration not implemented.
+    end
+
+    -- Begin Custom stuff
+    target:delMod(MOD_RERAISE_II,1);
+    target:delMod(MOD_EXP_BONUS,5);
+    -- End Custom Stuff
 end;

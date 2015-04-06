@@ -30,97 +30,63 @@ function getMedalRank(player)
 end;
 
 -- -------------------------------------------------------------------
--- get[nation}NotesItem()
+-- get[nation]NotesItem()
 -- Returns the item ID and cost of the Allied Notes indexed item
--- (the same value as that used by the vendor event.)
--- -------------------------------------------------------------------
-
+-- (the same value as that used by the vendor event)
 -- Format:
 -- ListName_AN_item[optionID] = itemID; -- ItemName
 -- ListName_AN_price[optionID] = cost; -- ItemName
-
-local SandOria_AN_item = {}
-
-SandOria_AN_item[2] = 15754; -- Sprinter's Shoes
-SandOria_AN_item[258] = 5428; -- Scroll of Instant Retrace
-SandOria_AN_item[514] = 14584; -- Iron Ram jack coat
-SandOria_AN_item[770] = 14587; -- Pilgrim Tunica
-SandOria_AN_item[1026] = 16172; -- Iron Ram Shield
-SandOria_AN_item[1282] = 15841; -- Recall Ring: Jugner
-SandOria_AN_item[1538] = 15842; -- Recall Ring: Pashow
-SandOria_AN_item[1794] = 15843; -- Recall Ring: Meriphataud
-SandOria_AN_item[2050] = 10116; -- Cipher: Valaineral
-
-local SandOria_AN_price = {}
-
-SandOria_AN_price[2] = 980; -- Sprinter's Shoes
-SandOria_AN_price[258] = 10; -- Scroll of Instant Retrace
-SandOria_AN_price[514] = 1500; -- Iron Ram jack coat
-SandOria_AN_price[770] = 1500; -- Pilgrim Tunica
-SandOria_AN_price[1026] = 4500;-- Iron Ram Shield
-SandOria_AN_price[1282] = 5000;-- Recall Ring: Jugner
-SandOria_AN_price[1538] = 5000;-- Recall Ring: Pashow
-SandOria_AN_price[1794] = 5000;-- Recall Ring: Meriphataud
-SandOria_AN_price[2050] = 2000;-- Cipher: Valaineral
+-- -------------------------------------------------------------------
 
 function getSandOriaNotesItem(i)
-    return SandOria_AN_item[i],SandOria_AN_price [i];
+    local SandOria_AN =
+    {
+        [2] = {id = 15754, price = 980}, -- Sprinter's Shoes
+        [258] = {id = 5428, price = 10}, -- Scroll of Instant Retrace
+        [514] = {id = 14584, price = 1500}, -- Iron Ram jack coat
+        [770] = {id = 14587, price = 1500}, -- Pilgrim Tunica
+        [1026] = {id = 16172, price = 4500}, -- Iron Ram Shield
+        [1282] = {id = 15841, price = 5000}, -- Recall Ring: Jugner
+        [1538] = {id = 15842, price = 5000}, -- Recall Ring: Pashow
+        [1794] = {id = 15843, price = 5000}, -- Recall Ring: Meriphataud
+        [2050] = {id = 10116, price = 2000} -- Cipher: Valaineral
+    }
+    local item = SandOria_AN[i];
+    return item.id, item.price;
 end;
-
-local Bastok_AN_item = {}
-
-Bastok_AN_item[2] = 15754; -- Sprinter's Shoes
-Bastok_AN_item[258] = 5428; -- Scroll of Instant Retrace
--- Bastok_AN_item[514] =
--- Bastok_AN_item[770] =
--- Bastok_AN_item[1026] =
-Bastok_AN_item[1282] = 15841; -- Recall Ring: Jugner
-Bastok_AN_item[1538] = 15842; -- Recall Ring: Pashow
-Bastok_AN_item[1794] = 15843; -- Recall Ring: Meriphataud
-Bastok_AN_item[2050] = 10116; -- Cipher: Valaineral
-
-local Bastok_AN_price = {}
-
-Bastok_AN_price[2] = 980; -- Sprinter's Shoes
-Bastok_AN_price[258] = 10; -- Scroll of Instant Retrace
--- Bastok_AN_price[514] =
--- Bastok_AN_price[770] =
--- Bastok_AN_price[1026] =
-Bastok_AN_price[1282] = 5000;-- Recall Ring: Jugner
-Bastok_AN_price[1538] = 5000;-- Recall Ring: Pashow
-Bastok_AN_price[1794] = 5000;-- Recall Ring: Meriphataud
-Bastok_AN_price[2050] = 2000;-- Cipher: Valaineral
 
 function getBastokNotesItem(i)
-    return Bastok_AN_item[i],Bastok_AN_price [i];
+    local Bastok_AN =
+    {
+        [2] = {id = 15754, price = 980}, -- Sprinter's Shoes
+        [258] = {id = 5428, price = 10}, -- Scroll of Instant Retrace
+        -- [514] = {id = ?, price = ?}, --
+        -- [770] = {id = ?, price = ?}, --
+        -- [1026] = {id = ?, price = ?}, --
+        [1282] = {id = 15841, price = 5000}, -- Recall Ring: Jugner
+        [1538] = {id = 15842, price = 5000}, -- Recall Ring: Pashow
+        [1794] = {id = 15843, price = 5000}, -- Recall Ring: Meriphataud
+        [2050] = {id = 10116, price = 2000} -- Cipher: Valaineral
+    }
+    local item = Bastok_AN[i];
+    return item.id, item.price;
 end;
 
-local Windurst_AN_item = {}
-
-Windurst_AN_item[2] = 15754; -- Sprinter's Shoes
-Windurst_AN_item[258] = 5428; -- Scroll of Instant Retrace
--- Windurst_AN_item[514] =
--- Windurst_AN_item[770] =
--- Windurst_AN_item[1026] =
-Windurst_AN_item[1282] = 15841; -- Recall Ring: Jugner
-Windurst_AN_item[1538] = 15842; -- Recall Ring: Pashow
-Windurst_AN_item[1794] = 15843; -- Recall Ring: Meriphataud
-Windurst_AN_item[2050] = 10116; -- Cipher: Valaineral
-
-local Windurst_AN_price = {}
-
-Windurst_AN_price[2] = 980; -- Sprinter's Shoes
-Windurst_AN_price[258] = 10; -- Scroll of Instant Retrace
--- Windurst_AN_price[514] =
--- Windurst_AN_price[770] =
--- Windurst_AN_price[1026] =
-Windurst_AN_price[1282] = 5000;-- Recall Ring: Jugner
-Windurst_AN_price[1538] = 5000;-- Recall Ring: Pashow
-Windurst_AN_price[1794] = 5000;-- Recall Ring: Meriphataud
-Windurst_AN_price[2050] = 2000;-- Cipher: Valaineral
-
 function getWindurstNotesItem(i)
-    return Windurst_AN_item[i],Windurst_AN_price [i];
+    local Windurst_AN =
+    {
+        [2] = {id = 15754, price = 980}, -- Sprinter's Shoes
+        [258] = {id = 5428, price = 10}, -- Scroll of Instant Retrace
+        -- [514] = {id = ?, price = ?}, --
+        -- [770] = {id = ?, price = ?}, --
+        -- [1026] = {id = ?, price = ?}, --
+        [1282] = {id = 15841, price = 5000}, -- Recall Ring: Jugner
+        [1538] = {id = 15842, price = 5000}, -- Recall Ring: Pashow
+        [1794] = {id = 15843, price = 5000}, -- Recall Ring: Meriphataud
+        [2050] = {id = 10116, price = 2000} -- Cipher: Valaineral
+    }
+    local item = Windurst_AN[i];
+    return item.id, item.price;
 end;
 
 -- -------------------------------------------------------------------
@@ -144,33 +110,31 @@ end;
 -- 1st number for hasMawActivated()
 -- 2nd number for player:addNationTeleport();
 
--- 0	1	Batallia Downs (S) (H-5) 
--- 1	2	Rolanberry Fields (S) (H-6) 
--- 2	4	Sauromugue Champaign (S) (K-9) 
--- 3	8	Jugner Forest (S) (H-11) 
--- 4	16	Pashhow Marshlands (S) (K-8) 
--- 5	32	Meriphataud Mountains (S) (K-6) 
--- 6	64	East Ronfaure (S) (H-5) 
--- 7	128	North Gustaberg (S) (K-7) 
--- 8	256	West Sarutabaruta (S) (H-9) 
+-- 0    1   Batallia Downs (S) (H-5)
+-- 1    2   Rolanberry Fields (S) (H-6)
+-- 2    4   Sauromugue Champaign (S) (K-9)
+-- 3    8   Jugner Forest (S) (H-11)
+-- 4    16  Pashhow Marshlands (S) (K-8)
+-- 5    32  Meriphataud Mountains (S) (K-6)
+-- 6    64  East Ronfaure (S) (H-5)
+-- 7    128 North Gustaberg (S) (K-7)
+-- 8    256 West Sarutabaruta (S) (H-9)
 
 function hasMawActivated(player,portal)
-	
-	local mawActivated = player:getNationTeleport(MAW);
-	local bit = {};
-	
-	for i = 8,0,-1 do
-		twop = 2^i
-		
-		if(mawActivated >= twop) then
-			bit[i]=true; mawActivated = mawActivated - twop;
-		else
-			bit[i]=false;
-		end
-	end;
-	
-	return bit[portal];
-	
+    local mawActivated = player:getNationTeleport(MAW);
+    local bit = {};
+
+    for i = 8,0,-1 do
+        twop = 2^i
+
+        if(mawActivated >= twop) then
+            bit[i]=true; mawActivated = mawActivated - twop;
+        else
+            bit[i]=false;
+        end
+    end;
+
+    return bit[portal];
 end;
 
 -- TODO:

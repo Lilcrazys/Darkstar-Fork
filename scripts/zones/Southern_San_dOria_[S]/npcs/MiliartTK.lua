@@ -38,7 +38,7 @@ function onTrigger(player,npc)
     if (medal_rank == 0) then
         player:startEvent(0x06F);
     else
-        player:PrintToPlayer("DEV NOTE: food duration and exp loss reduton enhancements are not yet implimented.");
+        player:PrintToPlayer("DEV NOTE: food duration and exp loss reducton enhancements are not yet implimented.");
         player:startEvent(0x06E, 0, notes, freelances, unknown, medalRank, bonusEffects, timeStamp, 0);
     end
 
@@ -87,20 +87,19 @@ function onEventFinish(player,csid,option)
         or option == 45057 or option == 49153 or option == 53249 or option == 57345 or option == 61441) then
             local cost = 0;
             local power = ( (option - 1) / 4096 );
-            local tick = 0;
             local duration = 10800+((15*medalRank)*60); -- 3hrs +15 min per medal (minimum 3hr 15 min with 1st medal)
-            local subPower = 45; -- Sets % trigger for regen/refresh. Static at minimum value for now.
+            local subPower = 35; -- Sets % trigger for regen/refresh. Static at minimum value (35%) for now.
 
             if (power == 1 or power == 2 or power == 4) then
             -- 1: Regen,  2: Refresh,  4: Meal Duration
                 cost = 50;
             elseif (power == 3 or power == 5 or power == 6 or power == 8 or power == 12) then
-            -- 3: Regen + Refresh,  5: Regen + Meal Duration,  6: Refresh + Meal Duration
+            -- 3: Regen + Refresh,  5: Regen + Meal Duration,  6: Refresh + Meal Duration,
             -- 8: Reduced EXP loss,  12: Meal Duration + Reduced EXP loss
                 cost = 100;
             elseif (power == 7 or power == 9 or power == 10 or power == 11 or power == 13 or power == 14) then
             -- 7: Regen + Refresh + Meal Duration,  9: Regen + Reduced EXP loss,
-            -- 10: Refresh + Reduced EXP loss,  11: Regen + Refresh + Reduced EXP loss
+            -- 10: Refresh + Reduced EXP loss,  11: Regen + Refresh + Reduced EXP loss,
             -- 13: Regen + Meal Duration + Reduced EXP loss,  14: Refresh + Meal Duration + Reduced EXP loss
                 cost = 150;
             elseif (power == 15) then
@@ -108,14 +107,10 @@ function onEventFinish(player,csid,option)
                 cost = 200;
             end
 
-            if (power ~= 4 and power ~= 8 and power ~= 12) then
-                tick = 3;
-            end
-
             player:delStatusEffect(EFFECT_SIGIL);
             player:delStatusEffect(EFFECT_SANCTION);
             player:delStatusEffect(EFFECT_SIGNET);
-            player:addStatusEffect(EFFECT_SIGIL, power, tick, duration, 0, subPower, 0);
+            player:addStatusEffect(EFFECT_SIGIL, power, 0, duration, 0, subPower, 0);
             player:messageSpecial(ALLIED_SIGIL);
 
             if (cost > 0) then

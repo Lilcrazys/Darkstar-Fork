@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Garlaige Citadel [S]
---  NPC:Randecque
+--  NPC: Randecque
 -- @pos 61 -6 137 164
--- Notes: Gives Red Letter required to start "Starts Steamed Rams"
+-- Notes: Gives Red Letter required to start "Steamed Rams"
 -----------------------------------
 package.loaded["scripts/zones/Garlaige_Citadel_[S]/TextIDs"] = nil;
 -----------------------------------
@@ -23,7 +23,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    if (player:getVar("Used_RED_RECOMMENDATION_LETTER") == 1) then
+    if (player:getCampaignAllegiance() > 0) then
         player:startEvent(0x0003);
     elseif (player:hasKeyItem(RED_RECOMMENDATION_LETTER) == true) then
         player:startEvent(0x0002);
