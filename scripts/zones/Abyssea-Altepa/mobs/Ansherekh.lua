@@ -17,8 +17,17 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_EVA,-150);
+    -- setMod
+    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_HASTE_ABILITY, 30);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_DOUBLE_ATTACK, 20);
+
+    -- addMod
+    mob:addMod(MOD_ACC,50);
+    mob:addMod(MOD_ATT,100);
+    mob:addMod(MOD_MDEF,60);
+    mob:addMod(MOD_DEF,100);
 
 end;
 

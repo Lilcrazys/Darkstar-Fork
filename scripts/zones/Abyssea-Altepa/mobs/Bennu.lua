@@ -11,6 +11,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -19,15 +20,16 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGAIN,33);
-
+    mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_REGEN, 50);
     -- addMod
-    mob:addMod(MOD_MATT,375);
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_EVA,-200);
-    mob:addMod(MOD_ATT,183);
-    mob:addMod(MOD_DOUBLE_ATTACK,25);
-    mob:addMod(MOD_AGI,83);
+    mob:setMod(MOD_MATT,75);
+    mob:setMod(MOD_MACC,900);
+    mob:addMod(MOD_ACC,50);
+    mob:addMod(MOD_ATT,125);
+    mob:addMod(MOD_MDEF,75);
+    mob:addMod(MOD_DEF,140);
+    mob:setMod(MOD_DOUBLE_ATTACK, 30);
 end;
 
 -----------------------------------
@@ -43,6 +45,48 @@ end;
 
 function onMobFight(mob,target)
 end
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob,target,damage)
+    -- Wiki says nothing about proc rate, going with 80% for now.
+    -- I remember it going off every hit when I fought him.
+    local chance = 90;
+    local LV_diff = target:getMainLvl() - mob:getMainLvl();
+
+    if (target:getMainLvl() > mob:getMainLvl()) then
+        chance = chance - 5 * LV_diff;
+        chance = utils.clamp(chance, 5, 95);
+    end
+
+    if (math.random(0,99) >= chance) then
+        return 0,0,0;
+    else
+        local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+
+        if (INT_diff > 20) then
+            INT_diff = 20 + (INT_diff - 20) / 2;
+        end
+
+        local dmg = INT_diff+LV_diff+damage/2;
+        local params = {};
+        params.bonusmab = 0;
+        params.includemab = false;
+        dmg = addBonusesAbility(mob, ELE_WIND, target, dmg, params);
+        dmg = dmg * applyResistanceAddEffect(mob,target,ELE_WIND,0);
+        dmg = adjustForTarget(target,dmg,ELE_WIND);
+
+        if (dmg < 0) then
+            dmg = 10
+        end
+
+        dmg = finalMagicNonSpellAdjustments(mob,target,ELE_WIND,dmg);
+
+        return SUBEFFECT_WIND_DAMAGE,163,dmg;
+    end
+
+end;
 
 -----------------------------------
 -- onMobDeath

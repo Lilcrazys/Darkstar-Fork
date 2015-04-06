@@ -4077,13 +4077,12 @@ INSERT INTO `mob_skill` VALUES (1530,553,1224,'Sulfurous_Breath',0,7.0,2000,1500
 INSERT INTO `mob_skill` VALUES (1531,553,1225,'Scorching_Lash',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1532,553,1226,'Ululation',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1533,553,1227,'Magma_Hoplon',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1534,553,1228,'Gates_of_Hades',1,20.0,2000,1500,4,0,0,0);
+
 
 -- Ansherekh (554)
 INSERT INTO `mob_skill` VALUES(14,554,14,'Roar',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(15,554,15,'Razor_Fang',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(17,554,17,'Claw_Cyclone',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(1951,554,0,'Disorienting_Waul',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(1084,554,17,'Crossthrash',4,10.0,2000,1500,4,0,0,0);
 
 -- Bennu (555)
