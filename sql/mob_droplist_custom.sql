@@ -1400,3 +1400,14 @@ INSERT INTO `mob_droplist` VALUES (4409,0,2656,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,1936,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,1946,040);
 -- ----------------------------- END Temp Temenos Fix ----------------------------
+
+
+
+-- The Jumping Crab (please do not add anything to this crab without consulting Teo)
+INSERT INTO `mob_droplist` VALUES (9665,0,3925,1000); -- Single Tanzenite Jewel 100%
+INSERT INTO `mob_droplist` VALUES (9665,0,3925,333); -- Second Tanzenite Jewel 33.3%
+INSERT INTO `mob_droplist` VALUES (9665,2,3925,33); -- Stealable Tanzenite Jewel 3.3% (good luck with that).
+-- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
+-- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
+-- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
+-- End of Jumping Crabs Droplist. Other items may be / may become available via script.
