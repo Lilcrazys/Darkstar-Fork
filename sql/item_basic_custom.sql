@@ -14,6 +14,41 @@
 -- INSERT INTO `item_basic` VALUES (itemid,subid,'name','sortname',stackSize,flags,aH,NoSale,BaseSell);
 -- New entries below this line, and sorted by itemID please.
 
+-- Unity NM coffers 6312~6332
+INSERT INTO `item_basic` VALUES (6312,0,'harolds_coffer','harolds_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6313,0,'berthas_coffer','berthas_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6314,0,'pitrivs_coffer','pitrivs_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6315,0,'baldurnos_coffer','baldurnos_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6316,0,'mabels_coffer','mabels_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6317,0,'imperators_coffer','imperators_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6318,0,'ninlils_coffer','ninlils_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6319,0,'abyssdivers_coffer','abyssdivers_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6320,0,'intuilas_coffer','intuilas_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6321,0,'arthros_coffer','arthros_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6322,0,'orcfeltraps_coffer','orcfeltraps_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6323,0,'jills_coffer','jills_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6324,0,'joyouss_coffer','joyouss_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6325,0,'strixs_coffer','strixs_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6326,0,'warblades_coffer','warblades_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6327,0,'arkes_coffer','arkes_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6328,0,'largantuas_coffer','largantuas_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6329,0,'beists_coffer','beists_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6330,0,'malatrixs_coffer','malatrixs_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6331,0,'velozs_coffer','velozs_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6332,0,'menders_coffer','menders_coffer',99,22080,0,1,0);
+-- Unity NM coffers 6350~6354
+INSERT INTO `item_basic` VALUES (6350,0,'saman_coffer','saman_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6351,0,'heiligtums_coffer','heiligtums_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6352,0,'doumas_coffer','doumas_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6353,0,'uropygids_coffer','uropygids_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6354,0,'vedrfolnirs_coffer','vedrfolnirs_coffer',99,22080,0,1,0);
+-- Unity NM coffers 6356~6359
+INSERT INTO `item_basic` VALUES (6356,0,'tiyanaks_coffer','tiyanaks_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6357,0,'immani_coffer','immani_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6358,0,'muuts_coffer','muuts_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6359,0,'cama_coffer','cama_coffer',99,22080,0,1,0);
+-- End Unity NM Coffers
+
 REPLACE INTO `item_basic` VALUES (17440,0,'kraken_club','kraken_club',1,34816,0,0,12850); -- K.club removed from AH listing.
 
 -- ------------------------------------------  Relic Reforge 109  ---------------------------------------------
