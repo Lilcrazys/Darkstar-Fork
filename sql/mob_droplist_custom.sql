@@ -1400,3 +1400,28 @@ INSERT INTO `mob_droplist` VALUES (4409,0,2656,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,1936,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,1946,040);
 -- ----------------------------- END Temp Temenos Fix ----------------------------
+
+-- Unity NM drops
+INSERT INTO `mob_droplist` VALUES (9601,0,6313,1000); -- Bertha's Coffer
+INSERT INTO `mob_droplist` VALUES (9602,0,6312,1000); -- Harold's Coffer
+INSERT INTO `mob_droplist` VALUES (9603,0,6314,1000); -- Pitriv's Coffer
+INSERT INTO `mob_droplist` VALUES (9604,0,6315,1000); -- Baldurno's Coffer
+INSERT INTO `mob_droplist` VALUES (9605,0,6316,1000); -- Mabel's Coffer
+INSERT INTO `mob_droplist` VALUES (9606,0,6318,1000); -- Ninlil's Coffer
+INSERT INTO `mob_droplist` VALUES (9607,0,6319,1000); -- Abyssdiver's Coffer
+INSERT INTO `mob_droplist` VALUES (9608,0,6357,1000); -- Immani. Coffer
+INSERT INTO `mob_droplist` VALUES (9609,0,6320,1000); -- Intuila's Coffer
+INSERT INTO `mob_droplist` VALUES (9611,0,6330,1000); -- Malatrix's Coffer
+INSERT INTO `mob_droplist` VALUES (9612,0,6322,1000); -- Orcfeltrap's Coffer
+INSERT INTO `mob_droplist` VALUES (9615,0,6350,1000); -- Saman. Coffer
+INSERT INTO `mob_droplist` VALUES (9616,0,6317,1000); -- Imperator's Coffer
+-- End Unity NM drops
+
+-- The Jumping Crab (please do not add anything to this crab without consulting Teo)
+INSERT INTO `mob_droplist` VALUES (9665,0,3925,1000); -- Single Tanzenite Jewel 100%
+INSERT INTO `mob_droplist` VALUES (9665,0,3925,333); -- Second Tanzenite Jewel 33.3%
+INSERT INTO `mob_droplist` VALUES (9665,2,3925,33); -- Stealable Tanzenite Jewel 3.3% (good luck with that).
+-- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
+-- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
+-- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
+-- End of Jumping Crabs Droplist. Other items may be / may become available via script.

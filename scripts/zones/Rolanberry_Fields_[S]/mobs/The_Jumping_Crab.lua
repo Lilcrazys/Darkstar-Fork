@@ -41,7 +41,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_ATT, 50);
     mob:addMod(MOD_ACC, 50);
-    mob:addMod(MOD_DEF, 50);
+    mob:addMod(MOD_DEF, 75);
     mob:addMod(MOD_STR, 50);
     mob:addMod(MOD_DEX, 25);
     mob:addMod(MOD_VIT, 50);
@@ -50,7 +50,8 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MND, 150);
     mob:addMod(MOD_MATT, -20);
     mob:addMod(MOD_MACC, 75);
-    mob:addMod(MOD_MEVA, 25);
+    mob:addMod(MOD_MEVA, 30);
+    mob:addMod(MOD_MDEF, 20);
     mob:addMod(MOD_RDEF, 25);
     mob:addMod(MOD_REVA, 25);
 
@@ -96,56 +97,56 @@ function onMobFight(mob, target)
     local J3 = mob:getLocalVar("J3");
 
     -- Fight timer and claim tracking...
-	if (target:getHPP() <= 5 and mob:getLocalVar("LaughingCrab") == 0) then
-        mob:setLocalVar("LaughingCrab", 1)
+    if (target:getHPP() <= 5 and mob:getLocalVar("LaughingCrab") == 0) then
+        mob:setLocalVar("LaughingCrab", 1);
         mob:SpoofChatParty("Seems to be laughing..You didn't even know giant crabs could laugh..", MESSAGE_ECHO);
     elseif (mob:getLocalVar("SuperDuperJump") == 1) then
-        mob:setLocalVar("SuperDuperJump", 2)
+        mob:setLocalVar("SuperDuperJump", 2);
         DespawnMob(mob:getID());
         mob:SpoofChatParty("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky.", MESSAGE_ECHO);
     elseif (BattleTime > 7200 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
-        mob:setLocalVar("SuperDuperJump", 1)
+        mob:setLocalVar("SuperDuperJump", 1);
         mob:useMobAbility(768); -- SuperDuperJump
     elseif (BattleTime > 3600 and mob:getLocalVar("isBoard") == 0 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
         -- target:PrintToPlayer(string.format("Claim count: %u ", GetServerVariable("JumpingCrabClaim")))
         if (GetServerVariable("JumpingCrabClaim") == 3) then -- Strike 3, yer out (Lost claim too many times and fought past 1hr mark)!
-            mob:setLocalVar("SuperDuperJump", 1)
+            mob:setLocalVar("SuperDuperJump", 1);
             mob:useMobAbility(768); -- SuperDuperJump
         else
             mob:SpoofChatParty("Is beginning to look disinterested in the battle.", MESSAGE_ECHO);
-            mob:setLocalVar("isBoard", 1)
+            mob:setLocalVar("isBoard", 1);
             mob:castSpell(260);
         end
 
     -- 2hr AI, uses DRG and RUN 2hrs (Real DRG 2hr, not Call Wyvern..And doesn't even need the Wyvern to use!)
     elseif (mob:getHPP() <= 9 and mob:getLocalVar("2hr") == 6) then
-        mob:setLocalVar("2hr", 7)
+        mob:setLocalVar("2hr", 7);
         mob:addMod(MOD_HUMANOID_KILLER, 1);
         mob:useMobAbility(1637); -- Do Spirit_Surge!
     elseif (mob:getHPP() <= 33) then
         if (mob:getLocalVar("2hr") == 5) then
-            mob:setLocalVar("2hr", 6)
+            mob:setLocalVar("2hr", 6);
             mob:useMobAbility(1637); -- Do Spirit_Surge!
         elseif (mob:getLocalVar("2hr") == 4) then
-            mob:setLocalVar("2hr", 5)
+            mob:setLocalVar("2hr", 5);
             mob:addMod(MOD_HUMANOID_KILLER, 1);
             mob:useMobAbility(3009); -- Do Elemental_Sforzo!
         end
     elseif (mob:getHPP() <= 50 and mob:getLocalVar("2hr") == 3) then
-        mob:setLocalVar("2hr", 4)
+        mob:setLocalVar("2hr", 4);
         mob:useMobAbility(3009); -- Do Elemental_Sforzo!
     elseif (mob:getHPP() <= 66 and mob:getLocalVar("2hr") == 2) then
-        mob:setLocalVar("2hr", 3)
+        mob:setLocalVar("2hr", 3);
         mob:addMod(MOD_HUMANOID_KILLER, 1);
         mob:useMobAbility(1637); -- Do Spirit_Surge!
     elseif (mob:getHPP() <= 75) then
         if (mob:getLocalVar("2hr") == 1) then
-            mob:setLocalVar("2hr", 2)
+            mob:setLocalVar("2hr", 2);
             mob:useMobAbility(1637); -- Do Spirit_Surge!
         elseif (mob:getLocalVar("2hr") == 0) then
-            mob:setLocalVar("2hr", 1)
+            mob:setLocalVar("2hr", 1);
             mob:addMod(MOD_HUMANOID_KILLER, 1);
             mob:useMobAbility(3009); -- Do Elemental_Sforzo!
         end
@@ -166,6 +167,23 @@ function onMobFight(mob, target)
         if (math.random(1,3) ~= 2) then
             mob:useMobAbility(462); -- Crab_Jump_1
         end
+
+    -- Reactions to stun and terror..
+    elseif (mob:getLocalVar("wasTerror") == 1) then
+        mob:useMobAbility(513); -- Crab_Flying_Punch (sucks to be you!)
+        mob:setLocalVar("wasTerror", 0);
+        mob:setLocalVar("wasStun", 0); -- Also clear stun var, if both were set.
+        mob:addTP(144); -- You really do not want to terror this crab, lulz.
+    elseif (mob:hasStatusEffect(EFFECT_TERROR)) then
+        mob:setLocalVar("wasTerror", 1);
+        mob:delStatusEffect(EFFECT_TERROR);
+    elseif (mob:getLocalVar("wasStun") == 1) then
+        mob:useMobAbility(44); -- Crab_Head_butt (stun you right back!)
+        mob:setLocalVar("wasStun", 0);
+        mob:addTP(88); -- Angry crab smash puny players who try and stunlock.
+    elseif (mob:hasStatusEffect(EFFECT_STUN)) then
+        mob:setLocalVar("wasStun", 1);
+        mob:delStatusEffect(EFFECT_STUN);
     end
 end;
 
@@ -178,7 +196,7 @@ function onSpellPrecast(mob, spell)
 
     -- These players are too slow, so Floodga2 their asses.
     if (spell:getID() == 215 and mob:getLocalVar("isBoard") == 1) then
-        mob:setLocalVar("isBoard", 2)
+        mob:setLocalVar("isBoard", 2);
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
         spell:setRadius(25);
@@ -221,23 +239,26 @@ end
 -----------------------------------
 
 function onMagicHit(caster, target, spell)
-    local RND = math.random(0,99);
     local mob = nil;
     if (target:isMob()) then
         mob = target;
+        -- This section is here and not below because mob shouldn't clone its own spell.
+        if (math.random(1,9)) then -- 1/9 chance of copying spell.
+            mob:castSpell(spell:getID());
+        elseif (math.random(1,5) == 3) then -- 1/5 chance of casting Flood 2.
+            mob:castSpell(260);
+        elseif (math.random(1,15) == 5) then -- 1/15 chance your tank takes a Head Butt instead.
+            mob:useMobAbility(44); -- Crab_Head_Butt
+        end
     elseif (caster:isMob()) then
-        nmob = caster;
+        mob = caster;
     end
-    -- 11% chance of countering magic with cast of its own
-    if (RND >= 48 and RND <= 50) then -- 3% chance of copying spell
-        mob:castSpell(spell:getID())
-    elseif (RND >= 44 and RND <= 54) then -- 8% chance of casting Flood 2
-        mob:castSpell(260)
-	elseif (RND <= 25 or RND >= 75) then -- Or maybe your tank takes a Head Butt instead
-        mob:useMobAbility(44); -- Crab_Head_Butt
-    end
-    -- Get 1 hit duration of enhanced Deluge Spikes every time a spell lands (goes back to normal after)
+
+    -- Get 1 hit duration of enhanced Deluge Spikes every time a spell lands (goes back to normal after).
     mob:setLocalVar("DelugeSpikes", 1);
+    mob:addTP(3); -- Bonus TP
+    -- These both include self cast spells.
+
     return 1;
 end;
 
@@ -247,7 +268,7 @@ end;
 
 function onCriticalHit(mob)
     -- Get 5 extra TP and 1 hit duration Enwater every time a critical lands
-    mob:addTP(5);
+    mob:addTP(5); -- Bonus TP
     mob:setLocalVar("Enwater", 1);
 end
 

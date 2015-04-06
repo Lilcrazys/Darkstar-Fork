@@ -28,6 +28,14 @@
 -- 16786431
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (16785724,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16785726,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (16785781,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (16785782,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16785783,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- Manaclipper (Zone 3)
@@ -39,6 +47,14 @@
 -- Bibiki Bay (Zone 4)
 -- 16794623
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (16793895,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16793896,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16793897,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (16793969,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (16793970,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16793971,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (16794622,'Ravenous_Cracklaw','Ravenous_Cracklaw',90105,-115,0,-575,100);
 
@@ -203,6 +219,14 @@ REPLACE INTO `npc_list` VALUES (16839100,'qm21','???',0,-166.000,-7.000,-83.000,
 -- 16876543
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (16875789,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16875791,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (16875883,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (16875884,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16875885,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- Misareaux Coast (Zone 25)
@@ -259,6 +283,7 @@ REPLACE INTO `npc_list` VALUES (16883850,'AF','Moogle',154,8,-9,-8,7,40,40,0,1,0
 -- Al'Taieu (Zone 33)
 -- 16913407
 -- ------------------------------------------------------------
+
 REPLACE INTO `mob_spawn_points` VALUES (16912840,'JoJ_Qn_xzomit','Qn\'xzomit',90331,-286.194,-0.5,-470.361,246);
 REPLACE INTO `mob_spawn_points` VALUES (16912841,'JoJ_Qn_xzomit','Qn\'xzomit',90331,-295.663,-0.06,-448.272,149);
 REPLACE INTO `mob_spawn_points` VALUES (16912842,'JoJ_Qn_xzomit','Qn\'xzomit',90331,-287.525,-0.5,-464.5,69);
@@ -300,6 +325,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16912879,'AV_Wynav','Aern\'s Wynav',9033
 REPLACE INTO `mob_spawn_points` VALUES (16912880,'AV_Wynav','Aern\'s Wynav',90330,463.115,-1.346,-571.896,181);
 REPLACE INTO `mob_spawn_points` VALUES (16912881,'AV_Wynav','Aern\'s Wynav',90330,463.214,-1.336,-573.022,202);
 REPLACE INTO `mob_spawn_points` VALUES (16912882,'AV_Wynav','Aern\'s Wynav',90330,463.557,-1.360,-574.178,193);
+
 
 -- ------------------------------------------------------------
 -- Grand Palace of Hu'Xzoi (Zone 34)
@@ -719,6 +745,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16974124,'Acrolith','Acrolith',1486,-47,
 REPLACE INTO `mob_spawn_points` VALUES (16974125,'Acrolith','Acrolith',1486,-67,-6,-34,191); -- Undead 3
 REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,-6,-67,225); -- Undead 3
 
+
 -- ------------------------------------------------------------
 -- The Grid - aka GM Test Area (Zone 49)
 -- 16977921 to 16978943
@@ -760,6 +787,7 @@ INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,
 
 -- REPLACE INTO `npc_list` VALUES (16982022,'1','Nyzul Gear',127,137.800,1.185,-34.262,7,40,40,0,12,100,0,7,0x0000C90300000000000000000000000000000000,32,'TOAU');
 -- REPLACE INTO `npc_list` VALUES (16982160,'2','Salvage Gear',127,137.800,1.185,-40.248,7,40,40,0,12,100,0,7,0x0000C90300000000000000000000000000000000,32,'TOAU');
+
 
 -- ------------------------------------------------------------
 -- Wajaom Woodlands (Zone 51)
@@ -1017,6 +1045,7 @@ INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance
 
 INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping Crab',96665,-724, -32,-362,64);
 
+
 -- ------------------------------------------------------------
 -- Beadeaux [S] (Zone 92)
 -- 17155071
@@ -1076,17 +1105,41 @@ INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping 
 -- 17191935
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17191471,'Hugemaw_Harold','Hugemaw Harold',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17191473,'Hugemaw_Harold','Hugemaw Harold',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17191538,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17191539,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17191540,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- La Theine Plateau (Zone 102)
 -- 17196031
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17195570,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17195572,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17195680,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17195681,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17195682,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- Valkurm Dunes (Zone 103)
 -- 17200127
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17199659,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17199660,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17199661,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17199755,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17199756,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17199757,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-3,155,252);
 
@@ -1095,6 +1148,14 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- Jugner Forest (Zone 104)
 -- 17204223
 -- ------------------------------------------------------------
+
+-- INSERT INTO `mob_spawn_points` VALUES (17203699,'Emperor_Arthro','Emperor Arthro',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203700,'Emperor_Arthro','Emperor Arthro',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203701,'Emperor_Arthro','Emperor Arthro',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17203892,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17203893,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17203894,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1114,11 +1175,27 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- 17216511
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17216145,'Bouncing_Bertha','Bouncing Bertha',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17216146,'Bouncing_Bertha','Bouncing Bertha',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bouncing_Bertha','Bouncing Bertha',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17216203,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17216204,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17216205,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- Konschtat Highlands (Zone 108)
 -- 17220607
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17220096,'Sleepy_Mabel','Sleepy Mabel',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17220098,'Sleepy_Mabel','Sleepy Mabel',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17220168,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17220169,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17220170,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1156,6 +1233,14 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- 17245183
 -- ------------------------------------------------------------
 
+-- INSERT INTO `mob_spawn_points` VALUES (17244582,'Cactrot_Veloz','Cactrot Veloz',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244583,'Cactrot_Veloz','Cactrot Veloz',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244584,'Cactrot_Veloz','Cactrot Veloz',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17244657,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17244658,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17244659,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- West Sarutabaruta (Zone 115)
@@ -1168,11 +1253,27 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- 17253375
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17252988,'Prickly_Pitriv','Prickly Pitriv',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17252990,'Prickly_Pitriv','Prickly Pitriv',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17253068,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17253069,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17253070,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 
 -- ------------------------------------------------------------
 -- Tahrongi Canyon (Zone 117)
 -- 17257471
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17256995,'Serpopard_Ninlil','Serpopard Ninlil',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17256996,'Serpopard_Ninlil','Serpopard Ninlil',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17256997,'Serpopard_Ninlil','Serpopard Ninlil',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17257078,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17257079,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17257080,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,118,222);
 
@@ -1181,6 +1282,14 @@ INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,11
 -- Buburimu Peninsula (Zone 118)
 -- 17261567
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17261050,'Abyssdiver','Abyssdiver',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17261052,'Abyssdiver','Abyssdiver',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17261202,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17261203,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17261204,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1212,6 +1321,20 @@ INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,11
 -- 17282047
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17281506,'Steamy Samantha','Steamy Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 1)
+INSERT INTO `mob_spawn_points` VALUES (17281507,'Steamy Samantha','Steamy Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 1)
+-- INSERT INTO `mob_spawn_points` VALUES (17281508,'Steamy Samantha','Steamy Samantha',0,0.000,0.001,0.000,0); -- Timed pop (phase 1)
+INSERT INTO `mob_spawn_points` VALUES (17281509,'Sultry Samantha','Sultry Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 2)
+INSERT INTO `mob_spawn_points` VALUES (17281510,'Sultry Samantha','Sultry Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 2)
+-- INSERT INTO `mob_spawn_points` VALUES (17281511,'Sultry Samantha','Sultry Samantha',0,0.000,0.001,0.000,0); -- Timed pop (phase 2)
+INSERT INTO `mob_spawn_points` VALUES (17281512,'Sybaritic_Samantha','Sybaritic Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 3)
+INSERT INTO `mob_spawn_points` VALUES (17281513,'Sybaritic_Samantha','Sybaritic Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 3)
+-- INSERT INTO `mob_spawn_points` VALUES (17281514,'Sybaritic_Samantha','Sybaritic Samantha',0,0.000,0.001,0.000,0); -- Timed pop (phase 3)
+
+INSERT INTO `npc_list` VALUES (17281657,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17281658,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17281659,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+
 INSERT INTO `mob_spawn_points` VALUES (17282046,'Darrcuiln','Darrcuiln',90091,446,21,140,151);
 -- INSERT INTO `npc_list` VALUES (17282047,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
@@ -1232,6 +1355,14 @@ INSERT INTO `mob_spawn_points` VALUES (17282046,'Darrcuiln','Darrcuiln',90091,44
 -- Qufim Island (Zone 126)
 -- 17294335
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17293663,'Jester_Malatrix','Jester Malatrix',0,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatrix',0,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17293665,'Jester_Malatrix','Jester Malatrix',0,0.000,0.001,0.000,0); -- Timed pop
+
+INSERT INTO `npc_list` VALUES (17293779,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `npc_list` VALUES (17293780,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17293781,'Ethereal_Junction','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1459,6 +1590,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17396141,'Odontotyrannus','Odontotyrannu
 
 INSERT INTO `mob_spawn_points` VALUES (17429502,'Colkhab','Colkhab',90095,53,1,-62,0);
 
+
 -- ------------------------------------------------------------
 -- Den of Rancor (Zone 160)
 -- 17433599
@@ -1675,7 +1807,6 @@ INSERT INTO `npc_list` VALUES (17526898,'Moogle4','Moogle',0,0.000,0.000,0.000,6
 INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,180.000,12.000,-251.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,null);
 
 
-
 -- ------------------------------------------------------------
 -- Lower Delkfutt's Tower (Zone 184)
 -- 17531903
@@ -1733,8 +1864,11 @@ INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,180.
 -- ------------------------------------------------------------
 -- Ordelle's Caves (Zone 193)
 -- 17568767
-INSERT INTO `mob_spawn_points` VALUES (17568765,'Stroper Chyme',9649,0,28,-75,159) -- Need additional 2 mob ID's  These will be NPC for now
-INSERT INTO `mob_spawn_points` VALUES (17568766,'Stroper Chyme',9649,-149,27,-54,246)
+-- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17568765,'Stroper Chyme','Stroper Chyme',9649,0,28,-75,159); -- Need additional 2 mob ID's  These will be NPC for now
+INSERT INTO `mob_spawn_points` VALUES (17568766,'Stroper Chyme','Stroper Chyme',9649,-149,27,-54,246);
+
 
 -- ------------------------------------------------------------
 -- Outer Horutoto Ruins (Zone 194)
@@ -2306,9 +2440,6 @@ REPLACE INTO `npc_list` VALUES (17813970,'qm22','???',0,411.329,-51.387,166.460,
 -- 17818623
 -- ------------------------------------------------------------
 
-INSERT INTO `npc_list` VALUES (17818110,'Cruor_Prospector','Cruor Prospector',193,-527,26,-780,7,40,40,0,0,0,0,515,0x01000404FC100221C930B9408950006000700000,0,'ABYSSEA');
-
-
 REPLACE INTO `npc_list` VALUES (17818081,'qm1','???',0,502.000,26.000,503.000,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Ironclad Sunderer
 REPLACE INTO `npc_list` VALUES (17818082,'qm2','???',0,379.878,-31.007,239.694,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Ningishzida
 REPLACE INTO `npc_list` VALUES (17818083,'qm3','???',0,-68.305,-6.750,657.159,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Teugghia
@@ -2331,6 +2462,9 @@ REPLACE INTO `npc_list` VALUES (17818099,'qm19','???',0,466.000,56.600,680.000,1
 REPLACE INTO `npc_list` VALUES (17818100,'qm20','???',0,310.000,-39.400,190.000,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17818101,'qm21','???',0,-583.052,-167.480,138.244,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17818102,'qm22','???',0,-162.311,-32.000,-220.781,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
+
+INSERT INTO `npc_list` VALUES (17818110,'Cruor_Prospector','Cruor Prospector',193,-527,26,-780,7,40,40,0,0,0,0,515,0x01000404FC100221C930B9408950006000700000,0,'ABYSSEA');
+
 
 -- ------------------------------------------------------------
 -- Abyssea - Empyreal Paradox (Zone 255)

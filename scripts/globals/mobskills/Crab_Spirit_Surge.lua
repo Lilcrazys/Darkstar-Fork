@@ -17,6 +17,8 @@ function onMobWeaponSkill(target, mob, skill)
     mob:setLocalVar("J1", mob:getBattleTime()+30);
     mob:setLocalVar("J2", mob:getBattleTime()+45);
     mob:setLocalVar("J3", mob:getBattleTime()+90);
+    mob:addHP(1000); -- Compensating mr Crabby for his current lack of Wyvern.
+    mob:addTP(40);   -- Compensating mr Crabby for his current lack of Wyvern.
     skill:setMsg(MobBuffMove(mob, typeEffect, 0, 0, 60, 0, 50));
     return typeEffect;
 end;
