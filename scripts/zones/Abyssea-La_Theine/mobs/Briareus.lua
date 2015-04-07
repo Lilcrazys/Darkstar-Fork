@@ -8,16 +8,12 @@ require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
 -----------------------------------
--- onMobInitialize
+-- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_MACC,300);
-    mob:addMod(MOD_MEVA,100);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
 end;
 
 -----------------------------------
@@ -25,6 +21,18 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_COUNTER, 20);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,50);
+    mob:setMod(MOD_DOUBLE_ATTACK, 10);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,30);
+    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------

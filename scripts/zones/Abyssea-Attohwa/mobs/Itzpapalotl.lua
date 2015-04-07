@@ -6,7 +6,7 @@ require("scripts/zones/Abyssea-Attohwa/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
-
+require("scripts/globals/magic");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -19,13 +19,15 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,33);
+    mob:setMod(MOD_REGAIN,10);
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_UFASTCAST, 45);
+    mob:setMod(MOD_REFRESH, 100);
+    mob:setMod(MOD_MATT,60);
+    mob:setMod(MOD_MACC,800);
 
-    -- addMod
-    mob:addMod(MOD_MATT,30);
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_DOUBLE_ATTACK,15);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------

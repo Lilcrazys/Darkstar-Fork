@@ -6,7 +6,7 @@ require("scripts/zones/Abyssea-Vunkerl/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
-
+require("scripts/globals/magic");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -20,11 +20,15 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:setMod(MOD_MATT,95);
-    mob:setMod(MOD_MACC,900);
+    mob:setMod(MOD_REGAIN,10);
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_UFASTCAST, 45);
+    mob:setMod(MOD_REFRESH, 100);
+    mob:setMod(MOD_MATT,80);
+    mob:setMod(MOD_MACC,700);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
