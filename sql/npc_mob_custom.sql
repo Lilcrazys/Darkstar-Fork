@@ -32,7 +32,7 @@ INSERT INTO `mob_spawn_points` VALUES (16785724,'Orcfeltrap','Orcfeltrap',0,0.00
 INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (16785726,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Timed pop
 
---INSERT INTO `npc_list` VALUES (16785781,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16785781,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (16785782,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (16785783,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
