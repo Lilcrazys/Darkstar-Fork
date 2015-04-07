@@ -3910,7 +3910,7 @@ INSERT INTO `mob_skill` VALUES(2131,531,50,'Fatal_Scream',1,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES(50,531,50,'Scream',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(1954,531,45,'Petal_Pirouette',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(44,531,44,'Head_Butt',0,7.0,1500,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (434,531,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+
 
 -- Amhuluk (532)
 INSERT INTO `mob_skill` VALUES(2171,532,1705,'Tail_Lash',0,10.0,2000,1000,4,0,0,0);
