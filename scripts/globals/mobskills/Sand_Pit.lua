@@ -17,9 +17,6 @@ function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_BIND;
     skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30));
 
-	if (mob:isPet() == false) then -- added to stop a crash
-	mob:untargetable(false);
-
 	if (mob:getID()== 16806242) then -- if the mobID == Feeler Antlion ID
 		local npcX	= mob:getXPos();
 		local npcY	= mob:getYPos();
@@ -48,6 +45,5 @@ function onMobWeaponSkill(target, mob, skill)
 			SpawnMob(spawnId,120):updateEnmity(target);
 		end;
 	end;
-	end -- added to stop a crash
     return typeEffect;
 end;

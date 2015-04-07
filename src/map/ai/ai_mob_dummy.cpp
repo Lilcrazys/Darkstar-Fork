@@ -804,6 +804,7 @@ void CAIMobDummy::ActionSpawn()
     if (m_Tick >= m_LastActionTime + m_PMob->m_RespawnTime)
     {
         m_NeutralTime = m_Tick;
+        m_PMob->m_neutral = true;
         m_LastActionTime = m_Tick + WELL512::GetRandomNumber(2000,10000);
         m_SpawnTime = m_Tick;
         m_firstSpell = true;
@@ -853,6 +854,9 @@ void CAIMobDummy::ActionSpawn()
         if (m_PMob->getMobMod(MOBMOD_SPECIAL_SKILL))
         {
             m_PSpecialSkill = battleutils::GetMobSkill(m_PMob->getMobMod(MOBMOD_SPECIAL_SKILL));
+            if(m_PSpecialSkill == nullptr){
+                ShowError("CAIMobDummy::ActionSpawn Special skill was set but not found! (%d)\n", m_PMob->getMobMod(MOBMOD_SPECIAL_SKILL));
+            }
         }
 
         // spawn somewhere around my point
@@ -2644,7 +2648,7 @@ void CAIMobDummy::WeatherChange(WEATHER weather, uint8 element)
 bool CAIMobDummy::CanAggroTarget(CBattleEntity* PTarget)
 {
     // don't aggro i'm neutral
-    if (m_PMob->m_neutral)
+    if (m_PMob->m_neutral || m_PMob->isDead())
     {
         return false;
     }
