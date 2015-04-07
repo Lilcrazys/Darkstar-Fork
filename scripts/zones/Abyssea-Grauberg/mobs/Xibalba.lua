@@ -11,6 +11,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -18,8 +19,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:addMod(MOD_MATT,25);
-    mob:addMod(MOD_MACC,500);
+    mob:setMod(MOD_MATT,75);
+    mob:setMod(MOD_MACC,800);
     mob:addMod(MOD_DEF,-100);
 end;
 

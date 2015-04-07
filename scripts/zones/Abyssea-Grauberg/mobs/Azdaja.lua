@@ -13,6 +13,7 @@ require("scripts/globals/magic");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -90,7 +91,19 @@ function onMobFight(mob,target)
         end
     end
 end;
-
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,10) ~= 5) or (target:hasStatusEffect(EFFECT_DOOM) == true)) then
+        return 0,0,0;
+    else
+        local duration = 10;
+        target:addStatusEffect(EFFECT_DOOM,1,0,duration);
+        mob:resetEnmity(target);
+        return SUBEFFECT_NONE,0,EFFECT_DOOM;
+    end
+end;
 -----------------------------------
 -- onMobDeath
 -----------------------------------
