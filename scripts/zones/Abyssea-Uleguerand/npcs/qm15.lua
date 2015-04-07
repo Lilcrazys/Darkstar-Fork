@@ -16,7 +16,7 @@ function onTrigger(player,npc)
         if (player:hasKeyItem(WARPED_IRON_GIANT_NAIL) and player:hasKeyItem(DENTED_CHARIOT_SHIELD)) then
             player:startEvent(1020, WARPED_IRON_GIANT_NAIL, DENTED_CHARIOT_SHIELD); -- Ask if player wants to use KIs
         else
-            player:startEvent(1021, WARPED_IRON_GIANT_NAIL, DENTED_CHARIOT_SHIELD); -- Do not ask, because player is missing at least 1.
+            player:startEvent(1025, WARPED_IRON_GIANT_NAIL, DENTED_CHARIOT_SHIELD); -- Do not ask, because player is missing at least 1.
         end
     end
 end;

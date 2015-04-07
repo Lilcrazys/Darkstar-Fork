@@ -171,29 +171,29 @@ function onEventFinish(player,csid,option)
         end
 
     -- Keyitems
-    elseif (option == 65539) then -- Map of Abyssea - Konschtat
-        if (player:hasKeyItem(MAP_OF_ABYSSEA_KONSCHTAT) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_KONSCHTAT);
-            player:addKeyItem(MAP_OF_ABYSSEA_KONSCHTAT);
-            player:delCurrency("cruor", 3500);
+    elseif (option == 65539) then -- MAP_OF_ABYSSEA_GRAUBERG
+        if (player:hasKeyItem(MAP_OF_ABYSSEA_GRAUBERG) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_GRAUBERG);
+            player:addKeyItem(MAP_OF_ABYSSEA_GRAUBERG);
+            player:delCurrency("cruor", 4500);
         end
-    elseif (option == 131075) then -- Ivory Abyssite of Sojourn
-        if (player:hasKeyItem(IVORY_ABYSSITE_OF_SOJOURN) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_SOJOURN);
-            player:addKeyItem(IVORY_ABYSSITE_OF_SOJOURN);
+    elseif (option == 131075) then -- IVORY_ABYSSITE_OF_MERIT
+        if (player:hasKeyItem(IVORY_ABYSSITE_OF_MERIT) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_MERIT);
+            player:addKeyItem(IVORY_ABYSSITE_OF_MERIT);
             player:delCurrency("cruor", 6000);
         end
-    elseif (option == 196611) then -- Ivory Abyssite of Confluence
-        if (player:hasKeyItem(IVORY_ABYSSITE_OF_CONFLUENCE) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_CONFLUENCE);
-            player:addKeyItem(IVORY_ABYSSITE_OF_CONFLUENCE);
-            player:delCurrency("cruor", 4800);
+    elseif (option == 196611) then -- IVORY_ABYSSITE_OF_FURTHERANCE
+        if (player:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_FURTHERANCE);
+            player:addKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE);
+            player:delCurrency("cruor", 7500);
         end
-    elseif (option == 262147) then -- Ivory Abyssite of Expertise
-        if (player:hasKeyItem(IVORY_ABYSSITE_OF_EXPERTISE) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_EXPERTISE);
-            player:addKeyItem(IVORY_ABYSSITE_OF_EXPERTISE);
-            player:delCurrency("cruor", 4800);
+    elseif (option == 262147) then -- IVORY_ABYSSITE_OF_CELERITY
+        if (player:hasKeyItem(IVORY_ABYSSITE_OF_CELERITY) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_CELERITY);
+            player:addKeyItem(IVORY_ABYSSITE_OF_CELERITY);
+            player:delCurrency("cruor", 9000);
         end
     elseif (option == 458755) then -- Clear Demilune Abyssite
         if (player:hasKeyItem(CLEAR_DEMILUNE_ABYSSITE) == false) then

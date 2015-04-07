@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -23,12 +24,13 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,30);
+    mob:setMod(MOD_REGEN,50);
 
     -- addMod
-    mob:addMod(MOD_MATT,100);
-    mob:addMod(MOD_MACC,200);
-    mob:addMod(MOD_EVA,-50);
-    mob:addMod(MOD_DEF,150);
+    mob:setMod(MOD_MATT,80);
+    mob:setMod(MOD_MACC,700);
+    mob:addMod(MOD_DEF,100);
+    mob:setMod(MOD_TRIPLE_ATTACK, 30)
 end;
 
 -----------------------------------
@@ -44,7 +46,20 @@ end;
 
 function onMobFight(mob,target)
 end;
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+function onAdditionalEffect(mob,target,damage)
+    if (target:hasStatusEffect(EFFECT_POISON)) then
+        target:delStatusEffect(EFFECT_POISON);
+    end
 
+    duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
+    utils.clamp(duration,1,30);
+    target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
+
+    return SUBEFFECT_POISON, 160, EFFECT_POISON;
+end;
 -----------------------------------
 -- onMobDeath
 -----------------------------------

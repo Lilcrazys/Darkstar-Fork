@@ -16,7 +16,7 @@ function onTrigger(player,npc)
         if (player:hasKeyItem(TORN_KHIMAIRA_WING)) then
             player:startEvent(1020, TORN_KHIMAIRA_WING); -- Ask if player wants to use KIs
         else
-            player:startEvent(1021, TORN_KHIMAIRA_WING); -- Do not ask, because player is missing at least 1.
+            player:startEvent(1025, TORN_KHIMAIRA_WING); -- Do not ask, because player is missing at least 1.
         end
     end
 end;

@@ -1143,6 +1143,7 @@ INSERT INTO `mob_skill` VALUES (411,505,411,'Power_Attack_Weapon',0,7.0,2000,150
 INSERT INTO `mob_skill` VALUES (2111,505,411,'Moribund_Hack',1,15.0,2000,1500,4,0,0,0);    -- Certain NM only
 INSERT INTO `mob_skill` VALUES (2322,505,410,'Colossal_Slam',1,15.0,2000,1500,4,0,0,0); -- Certain NM only
 INSERT INTO `mob_skill` VALUES (2320,505,411,'Mercurial_Strike',1,15.0,2000,1500,4,0,0,0); -- Certain NM only
+INSERT INTO `mob_skill` VALUES (474,505,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Shadow Lord
 INSERT INTO `mob_skill` VALUES (412,224,412,'Kick_Back',0,7.0,2000,1500,4,0,0,0);
@@ -3292,6 +3293,7 @@ INSERT INTO `mob_skill` VALUES (1935,504,1541,'Desiccation',0,10.0,2000,1000,4,0
 INSERT INTO `mob_skill` VALUES (1936,504,1542,'Doomvoid',1,30.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2348,504,1538,'Gorge',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2349,504,1542,'Disgorge',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (439,504,432,'Blood_Weapon', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 
 -- Caturae
@@ -3875,6 +3877,7 @@ INSERT INTO `mob_skill` VALUES (1941,527,1585,'Autumn_Breeze',0,7.0,2000,1500,1,
 INSERT INTO `mob_skill` VALUES (1942,527,1586,'Winter_Breeze',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1943,527,1587,'Cyclonic_Turmoil',1,15.0,2000,1500,4,0,0,5);
 INSERT INTO `mob_skill` VALUES (1944,527,1588,'Cyclonic_Torrent',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (433,527,432,'Benediction', 1, 20.0, 2000, 0, 1, 2, 0, 0);
 
 
 -- Mictlantecuhtli 528
@@ -3907,6 +3910,7 @@ INSERT INTO `mob_skill` VALUES(2131,531,50,'Fatal_Scream',1,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES(50,531,50,'Scream',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(1954,531,45,'Petal_Pirouette',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(44,531,44,'Head_Butt',0,7.0,1500,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (434,531,432,'Hundred_Fists', 0, 7.0, 2000, 0, 1, 2, 0, 0);
 
 -- Amhuluk (532)
 INSERT INTO `mob_skill` VALUES(2171,532,1705,'Tail_Lash',0,10.0,2000,1000,4,0,0,0);

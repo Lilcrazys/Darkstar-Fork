@@ -1497,6 +1497,17 @@ INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 202, 1, 255); -- Wa
 INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 192, 1, 255); -- Stonega 4
 INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 197, 1, 255); -- Thundaga 4
 
+-- Itzpapalotl
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 249, 1, 255); -- Blaze Spikes
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 148, 1, 255); -- Fire 4
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 149, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 176, 1, 255); -- Firega 3
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 177, 1, 255); -- Firega 4
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 496, 1, 255); -- Fireja
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 362, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 274, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 359, 1, 255); -- Silencega
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?
