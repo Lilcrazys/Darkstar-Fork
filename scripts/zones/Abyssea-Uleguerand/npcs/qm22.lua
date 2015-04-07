@@ -16,7 +16,7 @@ function onTrigger(player,npc)
         if (player:hasKeyItem(DECAYING_DIREMITE_FANG)) then
             player:startEvent(1020, DECAYING_DIREMITE_FANG); -- Ask if player wants to use KIs
         else
-            player:startEvent(1021, DECAYING_DIREMITE_FANG); -- Do not ask, because player is missing at least 1.
+            player:startEvent(1025, DECAYING_DIREMITE_FANG); -- Do not ask, because player is missing at least 1.
         end
     end
 end;

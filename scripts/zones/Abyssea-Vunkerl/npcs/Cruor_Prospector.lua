@@ -177,23 +177,23 @@ function onEventFinish(player,csid,option)
             player:addKeyItem(MAP_OF_ABYSSEA_VUNKERL);
             player:delCurrency("cruor", 3500);
         end
-    elseif (option == 131075) then -- Ivory Abyssite of Sojourn
-        if (player:hasKeyItem(IVORY_ABYSSITE_OF_SOJOURN) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_SOJOURN);
-            player:addKeyItem(IVORY_ABYSSITE_OF_SOJOURN);
-            player:delCurrency("cruor", 6000);
+    elseif (option == 131075) then -- IVORY_ABYSSITE_OF_AVARICE
+        if (player:hasKeyItem(IVORY_ABYSSITE_OF_AVARICE) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_AVARICE);
+            player:addKeyItem(IVORY_ABYSSITE_OF_AVARICE);
+            player:delCurrency("cruor", 8000);
         end
-    elseif (option == 196611) then -- Ivory Abyssite of Confluence
-        if (player:hasKeyItem(IVORY_ABYSSITE_OF_CONFLUENCE) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_CONFLUENCE);
-            player:addKeyItem(IVORY_ABYSSITE_OF_CONFLUENCE);
-            player:delCurrency("cruor", 4800);
+    elseif (option == 196611) then -- IVORY_ABYSSITE_OF_KISMET
+        if (player:hasKeyItem(IVORY_ABYSSITE_OF_KISMET) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_KISMET);
+            player:addKeyItem(IVORY_ABYSSITE_OF_KISMET);
+            player:delCurrency("cruor", 5000);
         end
-    elseif (option == 262147) then -- Ivory Abyssite of Expertise
-        if (player:hasKeyItem(IVORY_ABYSSITE_OF_EXPERTISE) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,IVORY_ABYSSITE_OF_EXPERTISE);
-            player:addKeyItem(IVORY_ABYSSITE_OF_EXPERTISE);
-            player:delCurrency("cruor", 4800);
+    elseif (option == 262147) then -- LUNAR_ABYSSITE2
+        if (player:hasKeyItem(LUNAR_ABYSSITE2) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,LUNAR_ABYSSITE2);
+            player:addKeyItem(LUNAR_ABYSSITE2);
+            player:delCurrency("cruor", 10000);
         end
     elseif (option == 458755) then -- Clear Demilune Abyssite
         if (player:hasKeyItem(CLEAR_DEMILUNE_ABYSSITE) == false) then
