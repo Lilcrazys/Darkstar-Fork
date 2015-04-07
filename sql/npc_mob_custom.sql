@@ -52,7 +52,7 @@ INSERT INTO `mob_spawn_points` VALUES (16793895,'Intuila','Intuila',0,0.000,0.00
 INSERT INTO `mob_spawn_points` VALUES (16793896,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (16793897,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Timed pop
 
---INSERT INTO `npc_list` VALUES (16793969,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16793969,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (16793970,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (16793971,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
@@ -223,7 +223,7 @@ INSERT INTO `mob_spawn_points` VALUES (16875789,'Immanibugard','Immanibugard',0,
 INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (16875791,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Timed pop
 
---INSERT INTO `npc_list` VALUES (16875883,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16875883,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (16875884,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (16875885,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
@@ -1137,7 +1137,7 @@ INSERT INTO `mob_spawn_points` VALUES (17199659,'Valkurm_Imperator','Valkurm Imp
 INSERT INTO `mob_spawn_points` VALUES (17199660,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (17199661,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Timed pop
 
---INSERT INTO `npc_list` VALUES (17199755,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17199755,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (17199756,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (17199757,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
