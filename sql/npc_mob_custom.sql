@@ -1123,8 +1123,8 @@ INSERT INTO `mob_spawn_points` VALUES (17195570,'Ironhorn_Baldurno','Ironhorn Ba
 INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (17195572,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Timed pop
 
-INSERT INTO `npc_list` VALUES (17195680,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
-INSERT INTO `npc_list` VALUES (17195681,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17195680,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17195681,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 -- INSERT INTO `npc_list` VALUES (17195682,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
