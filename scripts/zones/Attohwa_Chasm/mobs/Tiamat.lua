@@ -2,10 +2,10 @@
 -- Area: Attohwa Chasm
 -- NPC:  Tiamat
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/status");
-
+require("scripts/globals/magic");
+require("scripts/globals/utils");
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -13,31 +13,48 @@ require("scripts/globals/status");
 function onMobInitialize(mob)
     mob:addMod(MOD_DMGMAGIC, -50);
     mob:addMod(MOD_DMGRANGE, -50);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
 end;
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
 
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_UFASTCAST, 75);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,110);
+    mob:setMod(MOD_DOUBLE_ATTACK, 15);
+end;
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob,target)
-	
-	-- Gains a large attack boost when health is under 25% which cannot be Dispelled. 
-	if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
-		if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
-			mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
+
+    -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
+    if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
+        if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
+            mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-		end
-	end
+        end
+    end
     if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES) == false and mob:actionQueueEmpty() == true) then
         local changeTime = mob:getLocalVar("changeTime")
         local twohourTime = mob:getLocalVar("twohourTime")
         local changeHP = mob:getLocalVar("changeHP")
-        
+
         if (twohourTime == 0) then
             twohourTime = math.random(8, 14);
             mob:setLocalVar("twohourTime", twohourTime);
         end
-        
+
         if (mob:AnimationSub() == 2 and mob:getBattleTime()/15 > twohourTime) then
             mob:useMobAbility(432);
             mob:setLocalVar("twohourTime", math.random((mob:getBattleTime()/15)+4, (mob:getBattleTime()/15)+8));
@@ -63,7 +80,7 @@ function onMobFight(mob,target)
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
         end
-	end
+    end
 end;
 
 -----------------------------------
@@ -71,6 +88,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	killer:addTitle(TIAMAT_TROUNCER);
-    mob:setRespawnTime(math.random((75600),(86400)));	-- 21 to 24 hours
+    killer:addTitle(TIAMAT_TROUNCER);
+    mob:setRespawnTime(math.random((75600),(86400)));   -- 21 to 24 hours
 end;
