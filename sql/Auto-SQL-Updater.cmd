@@ -16,6 +16,8 @@ REM FOR %%X IN (synth_recipes.sql) DO mysql dspdb -h localhost -u root -pIr0nd00
 FOR %%X IN (synth_recipes.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 REM FOR %%X IN (zone_settings.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 FOR %%X IN (zone_settings.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+REM FOR %%X IN (treasure_spawn_points.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+FOR %%X IN (treasure_spawn_points.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 REM FOR %%X IN (triggers.sql) DO mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 FOR %%X IN (triggers.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
