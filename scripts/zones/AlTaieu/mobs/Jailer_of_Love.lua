@@ -24,7 +24,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_MATT,100);
-
+    mob:addMod(MOD_MDEF,100);
+    mob:addMod(MOD_DEF,130);
+    mob:addMod(MOD_ATT,100);
+    mob:addMod(MOD_ACC,100);
 end;
 
 -----------------------------------
@@ -32,6 +35,9 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
+    mob:hideName(false);
+    mob:untargetable(false);
+    mob:AnimationSub(2);
     -- Might need this later, not sure yet..
     -- mob:setLocalVar("XZOMITS_POPPED", GetServerVariable("JoL_Qn_xzomit_Killed"));
     -- mob:setLocalVar("HPEMDES_POPPED", GetServerVariable("JoL_Qn_hpemde_Killed"));

@@ -18,6 +18,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_MATT,100);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_ATT,75);
 
     mob:AnimationSub(0);
     mob:unsetAggroFlag(8);
