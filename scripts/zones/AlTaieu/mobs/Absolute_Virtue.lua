@@ -184,7 +184,7 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if (math.random(1,15) ~= 5 or target:hasStatusEffect(EFFECT_TERROR == true)) then
+    if (math.random(1,15) ~= 5 or target:hasStatusEffect(EFFECT_TERROR) == true) then
         return 0,0,0;
     else
         local duration = 5;
