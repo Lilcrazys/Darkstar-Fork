@@ -1499,8 +1499,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Jailer_of_Love', 405, 197, 1, 255); -- Th
 
 -- Itzpapalotl
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 249, 1, 255); -- Blaze Spikes
-INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 148, 1, 255); -- Fire 4
-INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 149, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 147, 1, 255); -- Fire 4
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 148, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 176, 1, 255); -- Firega 3
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 177, 1, 255); -- Firega 4
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 496, 1, 255); -- Fireja

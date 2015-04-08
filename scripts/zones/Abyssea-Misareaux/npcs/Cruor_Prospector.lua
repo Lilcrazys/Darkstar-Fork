@@ -193,7 +193,7 @@ function onEventFinish(player,csid,option)
         if (player:hasKeyItem(LUNAR_ABYSSITE2) == false) then
             player:messageSpecial(KEYITEM_OBTAINED,LUNAR_ABYSSITE2);
             player:addKeyItem(LUNAR_ABYSSITE2);
-            player:delCurrency("cruor", 10000);
+            player:delCurrency("cruor", 100000);
         end
     elseif (option == 458755) then -- Clear Demilune Abyssite
         if (player:hasKeyItem(CLEAR_DEMILUNE_ABYSSITE) == false) then

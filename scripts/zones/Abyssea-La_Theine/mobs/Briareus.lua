@@ -13,7 +13,6 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
 end;
 
 -----------------------------------
@@ -31,8 +30,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK, 10);
 
     -- addMod
-    mob:addMod(MOD_MDEF,30);
-    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_DEF,150);
 end;
 
 -----------------------------------

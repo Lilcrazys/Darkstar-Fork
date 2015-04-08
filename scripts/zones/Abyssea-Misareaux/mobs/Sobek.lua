@@ -20,7 +20,7 @@ function onMobInitialize(mob)
     mob:setMod(MOD_DOUBLE_ATTACK, 25);
     mob:setMod(MOD_REFRESH, 100);
 
-    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_DEF,140);
     mob:addMod(MOD_MDEF,50);
 end;
 
