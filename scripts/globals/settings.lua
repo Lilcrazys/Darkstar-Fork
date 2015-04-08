@@ -23,7 +23,7 @@ ENABLE_ACP     = 0;
 ENABLE_AMK     = 0;
 ENABLE_ASA     = 0;
 ENABLE_ABYSSEA = 1;
-ENABLE_SOA     = 1;
+ENABLE_SOA     = 0;
 
 -- Setting to lock content more accurately to the expansions you have defined above
 -- This generally results in a more accurate presentation of your selected expansions
@@ -46,7 +46,7 @@ UNLOCK_OUTPOST_WARPS = 2; -- Set to 1 to give starting characters all outpost wa
 
 SHOP_PRICE = 1.000; -- Multiplies prices in NPC shops.
 GIL_RATE   = 2.000; -- Multiplies gil earned from quests.  Won't always display in game.
-EXP_RATE   = 3.000; -- Multiplies exp earned from fov.
+EXP_RATE   = 1.500; -- Multiplies exp earned from fov.
 TABS_RATE  = 2.000; -- Multiplies tabs earned from fov.
 SAN_FAME   = 2.000; -- Multiplies fame earned from San d'Oria quests.
 BAS_FAME   = 2.000; -- Multiplies fame earned from Bastok quests.
@@ -54,15 +54,15 @@ WIN_FAME   = 2.000; -- Multiplies fame earned from Windurst quests.
 NORG_FAME  = 2.000; -- Multiplies fame earned from Norg and Tenshodo quests.
 JEUNO_FAME = 2.000; -- Multiplies fame earned from Jeuno quests.
 
-FISHING_GUILD_POINTS      = 5.000; -- Multiplies guild points earned from fishermans' guild trades.
-WOODWORKING_GUILD_POINTS  = 5.000; -- Multiplies guild points earned from carpenters' guild trades.
-SMITHING_GUILD_POINTS     = 5.000; -- Multiplies guild points earned from blacksmiths' guild trades.
-GOLDSMITHING_GUILD_POINTS = 5.000; -- Multiplies guild points earned from goldsmiths' guild trades.
-CLOTHCRAFT_GUILD_POINTS   = 5.000; -- Multiplies guild points earned from weavers' guild trades.
-LEATHERCRAFT_GUILD_POINTS = 5.000; -- Multiplies guild points earned from tanners' guild trades.
-BONECRAFT_GUILD_POINTS    = 5.000; -- Multiplies guild points earned from boneworkers' guild trades.
-ALCHEMY_GUILD_POINTS      = 5.000; -- Multiplies guild points earned from alchemists' guild trades.
-COOKING_GUILD_POINTS      = 5.000; -- Multiplies guild points earned from culinarians' guild trades.
+FISHING_GUILD_POINTS      = 2.500; -- Multiplies guild points earned from fishermans' guild trades.
+WOODWORKING_GUILD_POINTS  = 2.500; -- Multiplies guild points earned from carpenters' guild trades.
+SMITHING_GUILD_POINTS     = 2.500; -- Multiplies guild points earned from blacksmiths' guild trades.
+GOLDSMITHING_GUILD_POINTS = 2.500; -- Multiplies guild points earned from goldsmiths' guild trades.
+CLOTHCRAFT_GUILD_POINTS   = 2.500; -- Multiplies guild points earned from weavers' guild trades.
+LEATHERCRAFT_GUILD_POINTS = 2.500; -- Multiplies guild points earned from tanners' guild trades.
+BONECRAFT_GUILD_POINTS    = 2.500; -- Multiplies guild points earned from boneworkers' guild trades.
+ALCHEMY_GUILD_POINTS      = 2.500; -- Multiplies guild points earned from alchemists' guild trades.
+COOKING_GUILD_POINTS      = 2.500; -- Multiplies guild points earned from culinarians' guild trades.
 DISABLE_GUILD_CONTRACTS   = 1; -- Set to 1 to disable guild contracts, allowing players to accumulate guild points from all guilds at once.
 
 CURE_POWER  = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
