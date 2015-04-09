@@ -15,8 +15,6 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); -- Call Wyvern
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1); -- Allows multiple Call Wyvern
     mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
 end;
 
@@ -54,10 +52,6 @@ end;
 
 function onMobEngage(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
-    SpawnMob(mob:getID()+1, 300):updateEnmity(target);
-    SpawnMob(mob:getID()+2, 300):updateEnmity(target);
-    SpawnMob(mob:getID()+3, 300):updateEnmity(target);
-    SpawnMob(mob:getID()+4, 300):updateEnmity(target);
 end;
 -----------------------------------
 -- onMobDisEngage Action
@@ -82,60 +76,65 @@ function onMobFight(mob, target)
         mob:setLocalVar("RAGED", 1);
     end
 
-    if (RND == 1) then
-        AV2HR = 432;
-    elseif (RND == 2) then
-        AV2HR = 433;
-    elseif (RND == 3) then
-        AV2HR = 434;
-    elseif (RND == 4) then
-        AV2HR = 435;
-    elseif (RND == 5) then
-        AV2HR = 436;
-    elseif (RND == 6) then
-        AV2HR = 437;
-    elseif (RND == 7) then
-        AV2HR = 438;
-    elseif (RND == 8) then
-        AV2HR = 439;
-    elseif (RND == 9) then
-        AV2HR = 440;
-    elseif (RND == 10) then
-        AV2HR = 474;
-    elseif (RND == 11) then
-        AV2HR = 475;
-    elseif (RND == 12) then
-        AV2HR = 479;
-    end
+    if (mob:getBattleTime() - mob:getLocalVar("WynavTime") > 90) then
+        mob:useMobAbility(476); -- Customized Call Wyvern
+        mob:setLocalVar("WynavTime", mob:getBattleTime());
+    else
+        if (RND == 1) then
+            AV2HR = 432;
+        elseif (RND == 2) then
+            AV2HR = 433;
+        elseif (RND == 3) then
+            AV2HR = 434;
+        elseif (RND == 4) then
+            AV2HR = 435;
+        elseif (RND == 5) then
+            AV2HR = 436;
+        elseif (RND == 6) then
+            AV2HR = 437;
+        elseif (RND == 7) then
+            AV2HR = 438;
+        elseif (RND == 8) then
+            AV2HR = 439;
+        elseif (RND == 9) then
+            AV2HR = 440;
+        elseif (RND == 10) then
+            AV2HR = 474;
+        elseif (RND == 11) then
+            AV2HR = 475;
+        elseif (RND == 12) then
+            AV2HR = 479;
+        end
 
-    if (AV2HR ~= nil) then
-        if (mob:getHPP() <= 10 and DID2HR == 8) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 9);
-        elseif (mob:getHPP() <= 20 and DID2HR == 7) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 8);
-        elseif (mob:getHPP() <= 30 and DID2HR == 6) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 7);
-        elseif (mob:getHPP() <= 40 and DID2HR == 5) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 6);
-        elseif (mob:getHPP() <= 50 and DID2HR == 4) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 5);
-        elseif (mob:getHPP() <= 60 and DID2HR == 3) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 4);
-        elseif (mob:getHPP() <= 70 and DID2HR == 2) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 3);
-        elseif (mob:getHPP() <= 80 and DID2HR == 1) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 2);
-        elseif (mob:getHPP() <= 90 and DID2HR == 0) then
-            mob:useMobAbility(AV2HR);
-            mob:setLocalVar("DID2HR", 1);
+        if (AV2HR ~= nil) then
+            if (mob:getHPP() <= 10 and DID2HR == 8) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 9);
+            elseif (mob:getHPP() <= 20 and DID2HR == 7) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 8);
+            elseif (mob:getHPP() <= 30 and DID2HR == 6) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 7);
+            elseif (mob:getHPP() <= 40 and DID2HR == 5) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 6);
+            elseif (mob:getHPP() <= 50 and DID2HR == 4) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 5);
+            elseif (mob:getHPP() <= 60 and DID2HR == 3) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 4);
+            elseif (mob:getHPP() <= 70 and DID2HR == 2) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 3);
+            elseif (mob:getHPP() <= 80 and DID2HR == 1) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 2);
+            elseif (mob:getHPP() <= 90 and DID2HR == 0) then
+                mob:useMobAbility(AV2HR);
+                mob:setLocalVar("DID2HR", 1);
+            end
         end
     end
 end;
@@ -209,6 +208,10 @@ end;
 
 function onMobDespawn(mob)
     SetServerVariable("AV_Regen_Reduction", 0);
+    DespawnMob(16912877);
+    DespawnMob(16912878);
+    DespawnMob(16912879);
+    DespawnMob(16912880);
 end;
 
 -----------------------------------
