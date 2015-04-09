@@ -10,7 +10,7 @@
 
 -- REPLACE INTO `mob_pools` VALUES (poolid,'name',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag);
 -- New info below this line Sorted by Pool ID
-REPLACE INTO `mob_pools` VALUES (21,'Absolute_Virtue',3,0x0000620500000000000000000000000000000000,14,4,8,180,125,0,0,0,2,0,32,7,1167,0,0,403,1,0);
+REPLACE INTO `mob_pools` VALUES (21,'Absolute_Virtue',3,0x0000620500000000000000000000000000000000,14,4,8,180,125,0,0,0,2,0,32,0,15,0,0,403,1,0); -- replaced flag of "6" and "flags" of 1183 in attempt to track down the no-casting bug.
 REPLACE INTO `mob_pools` VALUES (26,'Abyssobugard',58,0x0000480500000000000000000000000000000000,1,1,3,240,100,0,2,0,0,0,0,0,0,0,0,0,1,0);
 REPLACE INTO `mob_pools` VALUES (29,'Ab_xzomit',269,0x0000110200000000000000000000000000000000,1,1,0,0,260,0,0,1,0,0,0,0,0,0,0,0,1,0);
 REPLACE INTO `mob_pools` VALUES (48,'Adasaurus',210,0x00003C0100000000000000000000000000000000,1,1,3,240,100,0,2,0,0,0,0,0,0,0,0,0,1,0);

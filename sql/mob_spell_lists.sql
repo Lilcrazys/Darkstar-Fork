@@ -1422,8 +1422,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 247, 1, 255); -- Aspir
 
--- list IDs 403 - 589 available for use! please use'em!
-
 -- Gotoh Zha the Redolent (BLM)
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 147, 1, 255); -- Fire 4
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 401, 152, 1, 255); -- Blizzard 4
@@ -1459,6 +1457,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 57, 1, 255)
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 59, 1, 255);  -- Silence
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 61, 1, 255);  -- Barblizzard
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_the_Redolent', 402, 112, 1, 255);  -- Flash
+
 -- Absolute Virtue
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 158, 1, 255); -- Aero 5
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 187, 1, 255); -- Aeroga 4
@@ -1508,6 +1507,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 362, 1, 255); -- Bindg
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 274, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 359, 1, 255); -- Silencega
+
+-- list IDs 407 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?
