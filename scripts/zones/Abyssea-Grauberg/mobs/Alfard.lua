@@ -12,6 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -21,8 +22,8 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
-    mob:setMod(MOD_REGEN, 150);
-    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_REGEN, 250);
+    mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_MATT,80);
     mob:setMod(MOD_MACC,800);
     mob:setMod(MOD_TRIPLE_ATTACK, 30);
@@ -67,6 +68,20 @@ function onCriticalHit(mob)
         mob:setLocalVar("headgrow", battletime + math.random(120, 240))
         mob:setLocalVar("headbreak", battletime + 300);
     end
+end;
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+function onAdditionalEffect(mob,target,damage)
+    if (target:hasStatusEffect(EFFECT_POISON)) then
+        target:delStatusEffect(EFFECT_POISON);
+    end
+
+    duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
+    utils.clamp(duration,1,30);
+    target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
+
+    return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 -----------------------------------
 -- onMobDeath
