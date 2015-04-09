@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Bibiki Bay 
+-- Area: Bibiki Bay
 -- NPC:  Tchakka
 -----------------------------------
 
@@ -54,32 +54,32 @@ end;
 
 function onMobFight(mob, target)
     local BattleStart = mob:getLocalVar("BattleStart");
-    local Ravenous_Cracklaw_2hr_Used = 0;
+    local Tchakka_2hr_Used = 0;
     if (mob:getLocalVar("Tchakka_2hr") ~= nil) then
         Tchakka_2hr_Used = mob:getLocalVar("Tchakka_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Tchakka_2hr_Used == 3) then
-            mob:useMobAbility(432); 
+            mob:useMobAbility(432);
             mob:setLocalVar("Tchakka_2hr", 4);
         elseif (Tchakka_2hr_Used == 4) then
-            mob:useMobAbility(434); 
+            mob:useMobAbility(434);
             mob:setLocalVar("Tchakka_2hr", 5);
         end
-    elseif (mob:getHPP() <= 25) then 
+    elseif (mob:getHPP() <= 25) then
         if (Tchakka_2hr_Used == 2) then
-            mob:useMobAbility(434); 
+            mob:useMobAbility(434);
             mob:setLocalVar("Tchakka_2hr", 3);
         end
-    elseif (mob:getHPP() <= 50) then 
+    elseif (mob:getHPP() <= 50) then
         if (Tchakka_2hr_Used == 1) then
-            mob:useMobAbility(432); 
+            mob:useMobAbility(432);
             mob:setLocalVar("Tchakka_2hr", 2);
         end
-    elseif (mob:getHPP() <= 75) then 
+    elseif (mob:getHPP() <= 75) then
         if (Tchakka_2hr_Used == 0) then
-            mob:useMobAbility(434); 
+            mob:useMobAbility(434);
             mob:setLocalVar("Tchakka_2hr", 1);
         end
     elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
@@ -93,5 +93,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-   -- mob:setRespawnTime(math.random((259200),(432000)));	-- 3 to 5 days
+   -- mob:setRespawnTime(math.random((259200),(432000)));   -- 3 to 5 days
 end;

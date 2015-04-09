@@ -46,7 +46,7 @@ function onMobFight(mob, target)
 
     -- Anything else you need to do in onMobFight, do it above this line!
     local lastXzomit = mob:getLocalVar("pop_xzomit");
-    if (os.time() - lastXzomit > 30) then
+    if (os.time() - lastXzomit > 60) then
         local xzomit1 = GetMobAction(mob:getID()+1);
         local xzomit2 = GetMobAction(mob:getID()+2);
         local xzomit3 = GetMobAction(mob:getID()+3);

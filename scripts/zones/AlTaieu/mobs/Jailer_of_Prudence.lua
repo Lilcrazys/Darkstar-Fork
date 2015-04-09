@@ -32,7 +32,7 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,100);
-    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_DEF,120);
     mob:addMod(MOD_ATT,100);
     mob:addMod(MOD_ACC,100);
 end;

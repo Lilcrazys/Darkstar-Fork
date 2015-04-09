@@ -43,9 +43,15 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 17;
+    local KI = 60
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_CALAMITY) == false) then
         killer:addKeyItem(ATMA_OF_CALAMITY);
         killer:messageSpecial(6385, ATMA_OF_CALAMITY);
+    end
+
+    if (math.random(0,99) < KI  and killer:hasKeyItem(STICKY_GNAT_WING) == false) then
+        killer:addKeyItem(STICKY_GNAT_WING);
+        killer:messageSpecial(6385, STICKY_GNAT_WING);
     end
 end;
 

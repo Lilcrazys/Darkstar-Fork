@@ -16,8 +16,8 @@ function onMobInitialize(mob)
     mob:setMod(MOD_REGAIN,33);
 
     -- addMod
-    mob:addMod(MOD_MATT,75);
-    mob:addMod(MOD_MACC,500);
+    mob:setMod(MOD_MATT,75);
+    mob:setMod(MOD_MACC,700);
 end;
 
 -----------------------------------
