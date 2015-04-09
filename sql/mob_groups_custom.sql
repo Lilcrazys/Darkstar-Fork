@@ -1263,7 +1263,7 @@ INSERT INTO `mob_groups` VALUES (90322,9122,171,10800,0,9322,80000,100000,110,11
 INSERT INTO `mob_groups` VALUES (90323,9123,65,10800,0,9323,80000,100000,110,112,0); -- Venomfang
 
 
-
+-- Pool IDs 90324 to 96600 currently unused
 
 -- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
 
@@ -1314,6 +1314,7 @@ INSERT INTO `mob_groups` VALUES (96616,9616,103,0,128,9616,0,0,119,119,0); -- Va
 -- INSERT INTO `mob_groups` VALUES (96645,9645,zoneid,0,128,dropid,HP,MP,128,128,0); -- Camahueto
 -- INSERT INTO `mob_groups` VALUES (96646,9646,zoneid,0,128,dropid,HP,MP,128,128,0); -- Vedrfolnir
 -- Unity NMs End
+
 -- Pool IDs 96647 to 96664 currently unused
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please

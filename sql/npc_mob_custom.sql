@@ -28,13 +28,13 @@
 -- 16786431
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16785724,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (16785726,'Orcfeltrap','Orcfeltrap',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (16785724,'Orcfeltrap','Orcfeltrap',96612,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',96612,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16785726,'Orcfeltrap','Orcfeltrap',96612,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (16785781,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (16785782,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (16785783,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16785781,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16785782,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16785783,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -48,15 +48,16 @@ INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',0,0.00
 -- 16794623
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16793895,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (16793896,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (16793897,'Intuila','Intuila',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (16793895,'Intuila','Intuila',96609,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16793896,'Intuila','Intuila',96609,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16793897,'Intuila','Intuila',96609,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (16793969,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (16793970,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (16793971,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16793969,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16793970,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16793971,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (16794622,'Ravenous_Cracklaw','Ravenous_Cracklaw',90105,-115,0,-575,100);
+-- INSERT INTO `npc_list` VALUES (16794623,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -219,13 +220,13 @@ REPLACE INTO `npc_list` VALUES (16839100,'qm21','???',0,-166.000,-7.000,-83.000,
 -- 16876543
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16875789,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (16875791,'Immanibugard','Immanibugard',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (16875789,'Immanibugard','Immanibugard',96608,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',96608,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16875791,'Immanibugard','Immanibugard',96608,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (16875883,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (16875884,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (16875885,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16875883,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16875884,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (16875885,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -337,9 +338,11 @@ REPLACE INTO `mob_spawn_points` VALUES (16912882,'AV_Wynav','Aern\'s Wynav',9033
 -- The Garden of Ru'Hmet (Zone 35)
 -- 16921599
 -- ------------------------------------------------------------
+
 REPLACE INTO `mob_spawn_points` VALUES (16921023,'Ix_DRG_Wynav','Aern\'s Wynav',911,-350.158,-0.607,-379.099,66);
 REPLACE INTO `mob_spawn_points` VALUES (16921024,'Ix_DRG_Wynav','Aern\'s Wynav',911,-347.785,-0.379,-380.105,94);
 REPLACE INTO `mob_spawn_points` VALUES (16921025,'Ix_DRG_Wynav','Aern\'s Wynav',911,-349.207,-0.499,-380,79);
+
 
 -- ------------------------------------------------------------
 -- Empyreal Paradox (Zone 36)
@@ -1044,7 +1047,8 @@ INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance
 -- 17150975
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping Crab',96665,-724, -32,-362,64);
+INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping Crab',96665,-724.000,-32.000,-362.000,64);
+-- INSERT INTO `npc_list` VALUES (17150971,'Loot_Box','Loot Box',192,-724.000,-32.000,-362.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1106,13 +1110,13 @@ INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping 
 -- 17191935
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17191471,'Hugemaw_Harold','Hugemaw Harold',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17191473,'Hugemaw_Harold','Hugemaw Harold',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17191471,'Hugemaw_Harold','Hugemaw Harold',96602,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold',96602,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17191473,'Hugemaw_Harold','Hugemaw Harold',96602,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17191538,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17191539,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17191540,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17191538,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17191539,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17191540,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1120,13 +1124,13 @@ INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold
 -- 17196031
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17195570,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17195572,'Ironhorn_Baldurno','Ironhorn Baldurno',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17195570,'Ironhorn_Baldurno','Ironhorn Baldurno',96604,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Baldurno',96604,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17195572,'Ironhorn_Baldurno','Ironhorn Baldurno',96604,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17195680,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17195681,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17195682,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17195681,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17195682,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17195683,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1134,15 +1138,16 @@ INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Ba
 -- 17200127
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17199659,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17199660,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17199661,'Valkurm_Imperator','Valkurm Imperator',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17199659,'Valkurm_Imperator','Valkurm Imperator',96616,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17199660,'Valkurm_Imperator','Valkurm Imperator',96616,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17199661,'Valkurm_Imperator','Valkurm Imperator',96616,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17199755,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17199756,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17199757,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17199755,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17199756,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17199757,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-3,155,252);
+-- INSERT INTO `npc_list` VALUES (17200127,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1150,13 +1155,13 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- 17204223
 -- ------------------------------------------------------------
 
--- INSERT INTO `mob_spawn_points` VALUES (17203699,'Emperor_Arthro','Emperor Arthro',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17203700,'Emperor_Arthro','Emperor Arthro',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17203701,'Emperor_Arthro','Emperor Arthro',0,0.000,0.001,0.000,0); -- Timed pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203699,'Emperor_Arthro','Emperor Arthro',96618,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203700,'Emperor_Arthro','Emperor Arthro',96618,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203701,'Emperor_Arthro','Emperor Arthro',96618,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17203892,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17203893,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17203894,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17203892,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17203893,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17203894,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1176,13 +1181,13 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- 17216511
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17216145,'Bouncing_Bertha','Bouncing Bertha',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17216146,'Bouncing_Bertha','Bouncing Bertha',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bouncing_Bertha','Bouncing Bertha',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17216145,'Bouncing_Bertha','Bouncing Bertha',96601,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17216146,'Bouncing_Bertha','Bouncing Bertha',96601,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bouncing_Bertha','Bouncing Bertha',96601,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17216203,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17216204,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17216205,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17216203,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17216204,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17216205,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1190,13 +1195,13 @@ INSERT INTO `mob_spawn_points` VALUES (17216146,'Bouncing_Bertha','Bouncing Bert
 -- 17220607
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17220096,'Sleepy_Mabel','Sleepy Mabel',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17220098,'Sleepy_Mabel','Sleepy Mabel',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17220096,'Sleepy_Mabel','Sleepy Mabel',96605,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',96605,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17220098,'Sleepy_Mabel','Sleepy Mabel',96605,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17220168,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17220169,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17220170,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17220169,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17220170,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17220171,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1234,13 +1239,13 @@ INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',0,
 -- 17245183
 -- ------------------------------------------------------------
 
--- INSERT INTO `mob_spawn_points` VALUES (17244582,'Cactrot_Veloz','Cactrot Veloz',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17244583,'Cactrot_Veloz','Cactrot Veloz',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17244584,'Cactrot_Veloz','Cactrot Veloz',0,0.000,0.001,0.000,0); -- Timed pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244582,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244583,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244584,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17244657,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17244658,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17244659,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17244657,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17244658,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17244659,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1254,13 +1259,13 @@ INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',0,
 -- 17253375
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17252988,'Prickly_Pitriv','Prickly Pitriv',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17252990,'Prickly_Pitriv','Prickly Pitriv',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17252988,'Prickly_Pitriv','Prickly Pitriv',96603,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv',96603,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17252990,'Prickly_Pitriv','Prickly Pitriv',96603,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17253068,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17253069,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17253070,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17253068,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17253069,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17253070,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1268,15 +1273,16 @@ INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv
 -- 17257471
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17256995,'Serpopard_Ninlil','Serpopard Ninlil',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17256996,'Serpopard_Ninlil','Serpopard Ninlil',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17256997,'Serpopard_Ninlil','Serpopard Ninlil',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17256995,'Serpopard_Ninlil','Serpopard Ninlil',96606,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17256996,'Serpopard_Ninlil','Serpopard Ninlil',96606,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17256997,'Serpopard_Ninlil','Serpopard Ninlil',96606,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17257078,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17257079,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17257080,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17257079,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17257080,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17257081,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,118,222);
+-- INSERT INTO `npc_list` VALUES (17257471,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1284,13 +1290,13 @@ INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,11
 -- 17261567
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17261050,'Abyssdiver','Abyssdiver',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17261052,'Abyssdiver','Abyssdiver',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17261050,'Abyssdiver','Abyssdiver',96607,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',96607,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17261052,'Abyssdiver','Abyssdiver',96607,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17261202,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17261203,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17261204,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17261202,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17261203,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17261204,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1322,19 +1328,19 @@ INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',0,0.00
 -- 17282047
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17281506,'Steamy Samantha','Steamy Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 1)
-INSERT INTO `mob_spawn_points` VALUES (17281507,'Steamy Samantha','Steamy Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 1)
--- INSERT INTO `mob_spawn_points` VALUES (17281508,'Steamy Samantha','Steamy Samantha',0,0.000,0.001,0.000,0); -- Timed pop (phase 1)
-INSERT INTO `mob_spawn_points` VALUES (17281509,'Sultry Samantha','Sultry Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 2)
-INSERT INTO `mob_spawn_points` VALUES (17281510,'Sultry Samantha','Sultry Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 2)
--- INSERT INTO `mob_spawn_points` VALUES (17281511,'Sultry Samantha','Sultry Samantha',0,0.000,0.001,0.000,0); -- Timed pop (phase 2)
-INSERT INTO `mob_spawn_points` VALUES (17281512,'Sybaritic_Samantha','Sybaritic Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 3)
-INSERT INTO `mob_spawn_points` VALUES (17281513,'Sybaritic_Samantha','Sybaritic Samantha',0,0.000,0.001,0.000,0); -- Force pop (phase 3)
--- INSERT INTO `mob_spawn_points` VALUES (17281514,'Sybaritic_Samantha','Sybaritic Samantha',0,0.000,0.001,0.000,0); -- Timed pop (phase 3)
+INSERT INTO `mob_spawn_points` VALUES (17281506,'Steamy Samantha','Steamy Samantha',96613,0.000,0.001,0.000,0); -- Force pop (phase 1)
+INSERT INTO `mob_spawn_points` VALUES (17281507,'Steamy Samantha','Steamy Samantha',96613,0.000,0.001,0.000,0); -- Force pop (phase 1)
+-- INSERT INTO `mob_spawn_points` VALUES (17281508,'Steamy Samantha','Steamy Samantha',96613,0.000,0.001,0.000,0); -- Timed pop (phase 1)
+INSERT INTO `mob_spawn_points` VALUES (17281509,'Sultry Samantha','Sultry Samantha',96614,0.000,0.001,0.000,0); -- Force pop (phase 2)
+INSERT INTO `mob_spawn_points` VALUES (17281510,'Sultry Samantha','Sultry Samantha',96614,0.000,0.001,0.000,0); -- Force pop (phase 2)
+-- INSERT INTO `mob_spawn_points` VALUES (17281511,'Sultry Samantha','Sultry Samantha',96614,0.000,0.001,0.000,0); -- Timed pop (phase 2)
+INSERT INTO `mob_spawn_points` VALUES (17281512,'Sybaritic_Samantha','Sybaritic Samantha',96615,0.000,0.001,0.000,0); -- Force pop (phase 3)
+INSERT INTO `mob_spawn_points` VALUES (17281513,'Sybaritic_Samantha','Sybaritic Samantha',96615,0.000,0.001,0.000,0); -- Force pop (phase 3)
+-- INSERT INTO `mob_spawn_points` VALUES (17281514,'Sybaritic_Samantha','Sybaritic Samantha',96615,0.000,0.001,0.000,0); -- Timed pop (phase 3)
 
--- INSERT INTO `npc_list` VALUES (17281657,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17281658,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17281659,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17281657,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17281658,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17281659,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 INSERT INTO `mob_spawn_points` VALUES (17282046,'Darrcuiln','Darrcuiln',90091,446,21,140,151);
 -- INSERT INTO `npc_list` VALUES (17282047,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
@@ -1357,13 +1363,13 @@ INSERT INTO `mob_spawn_points` VALUES (17282046,'Darrcuiln','Darrcuiln',90091,44
 -- 17294335
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17293663,'Jester_Malatrix','Jester Malatrix',0,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatrix',0,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17293665,'Jester_Malatrix','Jester Malatrix',0,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17293663,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17293665,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Timed pop
 
--- INSERT INTO `npc_list` VALUES (17293779,'Ethereal_Junction1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17293780,'Ethereal_Junction2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
--- INSERT INTO `npc_list` VALUES (17293781,'Ethereal_Junction3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17293779,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17293780,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+-- INSERT INTO `npc_list` VALUES (17293781,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -1422,8 +1428,8 @@ REPLACE INTO `npc_list` VALUES (17318490,'qm17','???',0,-3.760,17.702,148.421,1,
 REPLACE INTO `npc_list` VALUES (17318491,'qm18','???',0,410.155,24.885,40.928,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Hadhayosh
 REPLACE INTO `npc_list` VALUES (17318492,'qm19','???',0,-190.000,7.393,270.000,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17318493,'qm20','???',0,26.240,19.502,148.421,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Carabosse
-REPLACE INTO `npc_list` VALUES (17318494,'qm21','',0,449.255,24.485,40.828,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
-REPLACE INTO `npc_list` VALUES (17318495,'qm22','',0,79,15,198,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- La-Theine_Liege
+REPLACE INTO `npc_list` VALUES (17318494,'qm21','???',0,449.255,24.485,40.828,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
+REPLACE INTO `npc_list` VALUES (17318495,'qm22','???',0,79,15,198,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- La-Theine_Liege
 
 
 -- ------------------------------------------------------------
@@ -1590,6 +1596,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17396141,'Odontotyrannus','Odontotyrannu
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (17429502,'Colkhab','Colkhab',90095,53,1,-62,0);
+-- INSERT INTO `npc_list` VALUES (17429503,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
@@ -2427,7 +2434,7 @@ REPLACE INTO `npc_list` VALUES (17813959,'qm11','???',0,-155,-157,4,1,40,40,0,0,
 REPLACE INTO `npc_list` VALUES (17813960,'qm12','???',0,-332.731,-155.532,361.739,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17813961,'qm13','???',0,160.858,-115.806,472.094,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17813962,'qm14','???',0,422.329,-51.117,156.460,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
-REPLACE INTO `npc_list` VALUES (17813963,'qm15','???',0,-201,-175.000,155,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Pantokrator
+REPLACE INTO `npc_list` VALUES (17813963,'qm15','???',0,201,-175.000,155,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Pantokrator
 REPLACE INTO `npc_list` VALUES (17813964,'qm16','???',0,-332.731,-156.132,346.739,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17813965,'qm17','???',0,175.858,-113.406,472.094,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Isgebind
 REPLACE INTO `npc_list` VALUES (17813966,'qm18','???',0,433.329,-52.047,145.460,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
