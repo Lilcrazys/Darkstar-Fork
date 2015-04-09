@@ -48,7 +48,17 @@ function onMobSpawn(mob)
         mob:addMod(MOD_REGEN, -130)
     end
 end;
+-----------------------------------
+-- onMobEngage Action
+-----------------------------------
 
+function onMobEngage(mob, target)
+    mob:delStatusEffect(EFFECT_RAGE);
+    SpawnMob(mob:getID()+1, 300):updateEnmity(target);
+    SpawnMob(mob:getID()+2, 300):updateEnmity(target);
+    SpawnMob(mob:getID()+3, 300):updateEnmity(target);
+    SpawnMob(mob:getID()+4, 300):updateEnmity(target);
+end;
 -----------------------------------
 -- onMobDisEngage Action
 -----------------------------------
