@@ -1774,6 +1774,7 @@ INSERT INTO `mob_skill` VALUES (1210,272,1077,'Static_Filament',4,10.0,2000,1000
 INSERT INTO `mob_skill` VALUES (1211,272,1078,'Decayed_Filament',4,8.0,2000,1000,4,0,0,0); -- bar form only
 INSERT INTO `mob_skill` VALUES (1212,272,1079,'Reactor_Overheat',4,10.0,2000,1000,4,0,0,0); -- ring form only
 INSERT INTO `mob_skill` VALUES (1213,272,1080,'Reactor_Overload',1,8.0,2000,1000,4,0,0,0); -- ring form only
+INSERT INTO `mob_skill` VALUES (474,272,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 
 -- Yovra
 -- INSERT INTO `mob_skill` VALUES (1114,271,1022,'Vitriolic_Barrage',1,10.0,2000,1500,4,0,0,0);
