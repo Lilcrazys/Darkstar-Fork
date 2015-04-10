@@ -52,7 +52,7 @@ function onMobFight(mob)
     local changeTime = mob:getLocalVar("changeTime");
 
     if(mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > randomTime) then
-        mob:AnimationSub(math.random(2,3));
+        mob:AnimationSub(math.random(1,3));
         mob:setLocalVar("changeTime", mob:getBattleTime());
     elseif(mob:AnimationSub() == 1 and mob:getBattleTime() - changeTime > randomTime) then
         mob:AnimationSub(math.random(2,3));

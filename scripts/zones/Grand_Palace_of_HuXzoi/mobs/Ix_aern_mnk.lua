@@ -58,8 +58,8 @@ function onMobFight(mob, target)
             mob:setLocalVar("Ix_2hr", 2);
             mob:addMod(MOD_DEF,75);
             mob:addMod(MOD_ATT,75);
-            mob:setMod(MOD_REGEN, 75);
-            mob:setMod(MOD_REGAIN, 10);
+            mob:addMod(MOD_REGEN, 75);
+            mob:addMod(MOD_REGAIN, 10);
         end
     elseif (mob:getHPP() <= 50) then
         if (Ix_2hr_Used == 0) then
