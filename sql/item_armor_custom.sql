@@ -233,3 +233,19 @@ INSERT INTO `item_armor` VALUES ('28239', 'laksamanas_bottes', '99', '65536', '1
 INSERT INTO `item_armor` VALUES ('28240', 'foire_babouches', '99', '131072', '169', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28241', 'maxixi_toe_shoes', '99', '262144', '211', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('28243', 'academics_loafers', '99', '524288', '214', '0', '0', '256', '0');
+
+REPLACE INTO `item_armor` VALUES ('20636', 'izhiikoh', '99', '525376', '710', '0', '0', '3', '0');
+
+INSERT INTO `item_armor` VALUES ('20809', 'kumbhakarna', '99', '257', '713', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('21169', 'keraunos', '99', '1589788', '720', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20536', 'tinhaspa', '99', '262643', '134', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('21252', 'one-eyed', '99', '1056', '61', '0', '0', '4', '0');
+INSERT INTO `item_armor` VALUES ('20860', 'minos', '99', '2097281', '335', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20717', 'arendsi_fleuret', '99', '2439161', '250', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('21111', 'bolelabunga', '99', '1622044', '627', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20763', 'kbiroj', '99', '2097345', '65', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20904', 'cronus', '99', '128', '201', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('21040', 'shokudaikiri', '99', '2048', '151', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20954', 'eminent_lance', '99', '10240', '444', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20994', 'shigi', '99', '4096', '605', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('21229', 'cibitshavore', '99', '3265', '34', '0', '0', '4', '0');

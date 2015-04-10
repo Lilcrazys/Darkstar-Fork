@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: dspdb
 -- ------------------------------------------------------
--- Server version	5.5.25a
+-- Server version   5.5.25a
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -2868,22 +2868,22 @@ INSERT INTO `item_weapon` VALUES (19278,'fuchingiri',9,0,2,1,223,38,0);
 INSERT INTO `item_weapon` VALUES (19279,'musanto',9,0,2,1,222,37,0);
 INSERT INTO `item_weapon` VALUES (19280,'narigitsune',9,0,2,1,227,38,0);
 INSERT INTO `item_weapon` VALUES (19281,'midare_+1',9,0,2,1,222,21,0);
-INSERT INTO `item_weapon` VALUES (19282,'hochomasamune',9,0,0,1,222,45,0);
-INSERT INTO `item_weapon` VALUES (19283,'rusty_kunai',9,0,0,1,190,20,0);
-INSERT INTO `item_weapon` VALUES (19284,'hiwa',9,0,0,1,190,32,0);
-INSERT INTO `item_weapon` VALUES (19285,'kakko',9,0,0,1,227,40,0);
-INSERT INTO `item_weapon` VALUES (19286,'kakko_+1',9,0,0,1,222,41,0);
+INSERT INTO `item_weapon` VALUES (19282,'hochomasamune',9,0,2,1,222,45,0);
+INSERT INTO `item_weapon` VALUES (19283,'rusty_kunai',9,0,2,1,190,20,0);
+INSERT INTO `item_weapon` VALUES (19284,'hiwa',9,0,2,1,190,32,0);
+INSERT INTO `item_weapon` VALUES (19285,'kakko',9,0,2,1,227,40,0);
+INSERT INTO `item_weapon` VALUES (19286,'kakko_+1',9,0,2,1,222,41,0);
 INSERT INTO `item_weapon` VALUES (19287,'kamome',9,0,2,1,180,39,0);
-INSERT INTO `item_weapon` VALUES (19288,'sekirei',9,0,0,1,210,46,0);
-INSERT INTO `item_weapon` VALUES (19289,'toki',9,0,0,1,210,35,0);
-INSERT INTO `item_weapon` VALUES (19290,'aizenkunitoshi',9,0,0,1,227,43,0);
+INSERT INTO `item_weapon` VALUES (19288,'sekirei',9,0,2,1,210,46,0);
+INSERT INTO `item_weapon` VALUES (19289,'toki',9,0,2,1,210,35,0);
+INSERT INTO `item_weapon` VALUES (19290,'aizenkunitoshi',9,0,2,1,227,43,0);
 INSERT INTO `item_weapon` VALUES (19291,'oirandori',9,0,2,1,190,44,0);
 INSERT INTO `item_weapon` VALUES (19292,'kogara',9,0,2,1,190,40,0);
-INSERT INTO `item_weapon` VALUES (19293,'ichi-an',9,0,0,1,227,46,0);
-INSERT INTO `item_weapon` VALUES (19294,'ichi-an_+1',9,0,0,1,222,47,0);
-INSERT INTO `item_weapon` VALUES (19295,'mujin_tanto',9,0,0,1,222,49,0);
-INSERT INTO `item_weapon` VALUES (19296,'ban',9,0,0,1,160,37,0);
-INSERT INTO `item_weapon` VALUES (19297,'kakesu',9,0,0,1,227,53,0);
+INSERT INTO `item_weapon` VALUES (19293,'ichi-an',9,0,2,1,227,46,0);
+INSERT INTO `item_weapon` VALUES (19294,'ichi-an_+1',9,0,2,1,222,47,0);
+INSERT INTO `item_weapon` VALUES (19295,'mujin_tanto',9,0,2,1,222,49,0);
+INSERT INTO `item_weapon` VALUES (19296,'ban',9,0,2,1,160,37,0);
+INSERT INTO `item_weapon` VALUES (19297,'kakesu',9,0,2,1,227,53,0);
 INSERT INTO `item_weapon` VALUES (19298,'ikarigiri',9,0,2,1,222,58,0);
 INSERT INTO `item_weapon` VALUES (19299,'Aisa',9,0,2,1,227,53,0);
 INSERT INTO `item_weapon` VALUES (19300,'Aisa_+1',9,0,2,1,222,54,0);

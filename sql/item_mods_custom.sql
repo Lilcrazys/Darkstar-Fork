@@ -10781,3 +10781,117 @@ INSERT INTO `item_mods` VALUES(27591, 149, 1); -- Increases rate of synthesis su
 INSERT INTO `item_mods` VALUES(27591, 150, 1); -- Increases rate of synthesis success by 1% Alchemy
 INSERT INTO `item_mods` VALUES(27591, 151, 1); -- Increases rate of synthesis success by 1% Cooking
 -- INSERT INTO `item_mods` VALUES(27591, 0, 1); -- Increases rate of high quality-item synthesis success by 1% =====> No mod ID
+
+-- kumbhakarna
+INSERT INTO `item_mods` VALUES (20809, 84, 242); -- Axe Skill
+INSERT INTO `item_mods` VALUES (20809, 110, 242); -- Parry
+INSERT INTO `item_mods` VALUES (20809, 30, 188); -- Macc
+
+-- keraunos
+INSERT INTO `item_mods` VALUES (21169, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES (21169, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (21169, 28, 120); -- Matt
+-- INSERT INTO `item_mods` VALUES (21169, 0, 217); -- Magic dmg
+INSERT INTO `item_mods` VALUES (21169, 91, 242); -- Staff
+INSERT INTO `item_mods` VALUES (21169, 110, 242); -- Parry
+INSERT INTO `item_mods` VALUES (21169, 30, 228); -- Macc
+-- INSERT INTO `item_mods` VALUES (21169, 84, 20); -- Pet macc
+-- INSERT INTO `item_mods` VALUES (21169, 84, 100); -- Pet Matt
+
+-- tinhaspa
+INSERT INTO `item_mods` VALUES (20536, 8, 3); -- STR
+INSERT INTO `item_mods` VALUES (20536, 25, 5); -- ACC
+INSERT INTO `item_mods` VALUES (20536, 80, 242); -- H2H
+INSERT INTO `item_mods` VALUES (20536, 107, 242); -- Gaurd
+INSERT INTO `item_mods` VALUES (20536, 30, 188); -- Macc
+
+-- one-eyed
+INSERT INTO `item_mods` VALUES (21252, 26, 12); -- racc
+INSERT INTO `item_mods` VALUES (21252, 105, 102); -- Marksmanship
+
+-- minos
+INSERT INTO `item_mods` VALUES (20860, 23, 15); -- Att
+INSERT INTO `item_mods` VALUES (20860, 85, 242); -- GA
+INSERT INTO `item_mods` VALUES (20860, 110, 242); -- Parry
+INSERT INTO `item_mods` VALUES (20860, 30, 188); -- Macc
+INSERT INTO `item_mods` VALUES (20860, 27, -10); -- ENM
+INSERT INTO `item_mods` VALUES (20860, 288, 4); -- Dbl Att
+
+-- arendsi_fleuret
+INSERT INTO `item_mods` VALUES (20717, 25, 27); -- Acc
+INSERT INTO `item_mods` VALUES (20717, 30, 15); -- Macc
+INSERT INTO `item_mods` VALUES (20717, 28, 10); -- Mag Dmg
+INSERT INTO `item_mods` VALUES (20717, 68, 13); -- Eva
+INSERT INTO `item_mods` VALUES (20717, 82, 228); -- Sword
+INSERT INTO `item_mods` VALUES (20717, 110, 188); -- parry
+INSERT INTO `item_mods` VALUES (20717, 113, 10); -- ehance
+INSERT INTO `item_mods` VALUES (20717, 114, 10); -- enfeeb
+INSERT INTO `item_mods` VALUES (20717, 30, 188); -- Macc
+-- INSERT INTO `item_mods` VALUES (20717, 0, 30); -- Occult
+
+-- bolelabunga
+INSERT INTO `item_mods` VALUES (21111, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES (21111, 13, 6); -- MND
+INSERT INTO `item_mods` VALUES (21111, 28, 60); -- Matt
+INSERT INTO `item_mods` VALUES (21111, 90, 242); -- Club
+INSERT INTO `item_mods` VALUES (21111, 110, 242); -- parry
+INSERT INTO `item_mods` VALUES (21111, 30, 215); -- macc
+-- INSERT INTO `item_mods` VALUES (21111, 0, 10); -- regen pot
+INSERT INTO `item_mods` VALUES (21111, 369, 1); -- regen
+INSERT INTO `item_mods` VALUES (21111, 370, 1); -- refresh
+
+-- kbiroj
+INSERT INTO `item_mods` VALUES (20763, 23, 8); -- att
+INSERT INTO `item_mods` VALUES (20763, 83, 242); -- GS
+INSERT INTO `item_mods` VALUES (20763, 110, 242); -- pary
+INSERT INTO `item_mods` VALUES (20763, 30, 188); -- macc
+
+-- cronus
+INSERT INTO `item_mods` VALUES (20904, 23, 15); -- acc
+INSERT INTO `item_mods` VALUES (20904, 25, 15); -- att
+INSERT INTO `item_mods` VALUES (20904, 86, 242); -- scythe
+INSERT INTO `item_mods` VALUES (20904, 110, 242); -- parry
+INSERT INTO `item_mods` VALUES (20904, 30, 188); -- macc
+INSERT INTO `item_mods` VALUES (20904, 27, -10); -- enm
+INSERT INTO `item_mods` VALUES (20904, 433, 1); -- hp drain
+
+-- shokudaikiri
+INSERT INTO `item_mods` VALUES (21040, 8, 4); -- STR
+INSERT INTO `item_mods` VALUES (21040, 23, 4); -- Att
+INSERT INTO `item_mods` VALUES (21040, 89, 242); -- GKT
+INSERT INTO `item_mods` VALUES (21040, 110, 242); -- parry
+INSERT INTO `item_mods` VALUES (21040, 30, 188); -- macc
+
+-- eminent_lance
+INSERT INTO `item_mods` VALUES (20954, 87, 215); -- pole
+INSERT INTO `item_mods` VALUES (20954, 110, 215); -- parry
+INSERT INTO `item_mods` VALUES (20954, 30, 167); -- macc
+INSERT INTO `item_mods` VALUES (20954, 23, 10); -- att
+INSERT INTO `item_mods` VALUES (20954, 25, 15); -- acc
+
+-- shigi
+INSERT INTO `item_mods` VALUES (20994, 25, 27); -- acc
+INSERT INTO `item_mods` VALUES (20994, 68, 27); -- eva
+INSERT INTO `item_mods` VALUES (20994, 87, 228); -- katana
+INSERT INTO `item_mods` VALUES (20994, 110, 228); -- parry
+INSERT INTO `item_mods` VALUES (20994, 30, 215); -- macc
+INSERT INTO `item_mods` VALUES (20994, 27, -10); -- enm
+INSERT INTO `item_mods` VALUES (20994, 87, 10); -- ninjitsu
+INSERT INTO `item_mods` VALUES (20994, 87, 5); -- tool
+-- INSERT INTO `item_mods` VALUES (20994, 0, -3); -- recast
+
+-- cibitshavore
+INSERT INTO `item_mods` VALUES (21229, 11, 3); -- agi
+INSERT INTO `item_mods` VALUES (21229, 26, 6); -- racc
+INSERT INTO `item_mods` VALUES (21229, 106, 242); -- archery
+
+-- izhiikoh
+INSERT INTO `item_mods` VALUES (21229, 9, 15); -- dex
+INSERT INTO `item_mods` VALUES (21229, 25, 10); -- acc
+INSERT INTO `item_mods` VALUES (21229, 23, 8); -- att
+INSERT INTO `item_mods` VALUES (21229, 68, 22); -- eva
+INSERT INTO `item_mods` VALUES (21229, 81, 242); -- dagger
+INSERT INTO `item_mods` VALUES (21229, 110, 242); -- parry
+INSERT INTO `item_mods` VALUES (21229, 30, 188); -- macc
+INSERT INTO `item_mods` VALUES (21229, 302, 2); -- trip
+

@@ -14,7 +14,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DMGMAGIC, -50);
     mob:addMod(MOD_DMGRANGE, -50);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
 end;
 -----------------------------------
@@ -23,13 +22,13 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_MACC,925);
-    mob:setMod(MOD_MATT,110);
+    mob:setMod(MOD_MATT,130);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
 end;
 -----------------------------------
@@ -83,6 +82,38 @@ function onMobFight(mob,target)
     end
 end;
 
+function onMobFight(mob, target)
+
+    local Tia_2hr_Used = 0;
+    if (mob:getLocalVar("Tia_2hr") ~= nil) then
+        Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
+    end
+
+    if (mob:getHPP() <= 20) then
+        if (Tia_2hr_Used == 3) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 4);
+            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+            mob:addMod(MOD_DOUBLE_ATTACK, 15);
+            mob:addMod(MOD_REGAIN, 10);
+        end
+    elseif (mob:getHPP() <= 40) then
+        if (Tia_2hr_Used == 2) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 3);
+        end
+    elseif (mob:getHPP() <= 60) then
+        if (Tia_2hr_Used == 1) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 80) then
+        if (Tia_2hr_Used == 0) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 1);
+        end
+    end
+end;
 -----------------------------------
 -- onMobDeath
 -----------------------------------
