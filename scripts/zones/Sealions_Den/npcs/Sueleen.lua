@@ -11,12 +11,7 @@ require("scripts/zones/Sealions_Den/TextIDs");
 require("scripts/globals/keyitems");
 require("scripts/globals/teleports");
 
------------------------------------
--- onTrade Action
------------------------------------
 
-function onTrade(player,npc,trade)
-end;
 
 -----------------------------------
 -- onTrigger Action
