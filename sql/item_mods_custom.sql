@@ -10819,14 +10819,13 @@ INSERT INTO `item_mods` VALUES (20860, 288, 4); -- Dbl Att
 
 -- arendsi_fleuret
 INSERT INTO `item_mods` VALUES (20717, 25, 27); -- Acc
-INSERT INTO `item_mods` VALUES (20717, 30, 15); -- Macc
 INSERT INTO `item_mods` VALUES (20717, 28, 10); -- Mag Dmg
 INSERT INTO `item_mods` VALUES (20717, 68, 13); -- Eva
 INSERT INTO `item_mods` VALUES (20717, 82, 228); -- Sword
 INSERT INTO `item_mods` VALUES (20717, 110, 188); -- parry
 INSERT INTO `item_mods` VALUES (20717, 113, 10); -- ehance
 INSERT INTO `item_mods` VALUES (20717, 114, 10); -- enfeeb
-INSERT INTO `item_mods` VALUES (20717, 30, 188); -- Macc
+INSERT INTO `item_mods` VALUES (20717, 30, 203); -- Macc
 -- INSERT INTO `item_mods` VALUES (20717, 0, 30); -- Occult
 
 -- bolelabunga
