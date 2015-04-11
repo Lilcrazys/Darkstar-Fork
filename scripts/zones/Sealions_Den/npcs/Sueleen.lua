@@ -11,29 +11,10 @@ require("scripts/zones/Sealions_Den/TextIDs");
 require("scripts/globals/keyitems");
 require("scripts/globals/teleports");
 
-
-
------------------------------------
--- onTrigger Action
------------------------------------
-
-function onTrigger(player,npc)
-    --player:startEvent(0x000c);
-    if(player:getCurrentMission(COP) == FLAMES_IN_THE_DARKNESS and player:getVar("PromathiaStatus") == 1)then
-      player:startEvent(0x0010);
-    elseif(player:getCurrentMission(COP) == CALM_BEFORE_THE_STORM and player:hasKeyItem(LETTERS_FROM_ULMIA_AND_PRISHE)== true )then
-      player:startEvent(0x0011);
-    else
-      player:startEvent(0x0014);
-    end
-
-end;
-
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 function onTrade(player,npc,trade)
-
     local aug_1 = 0;
     local val_1 = 0;
     local aug_2 = 0;
@@ -65,13 +46,30 @@ function onTrade(player,npc,trade)
             aug_1 = 327; val_1 = 4; aug_2 = 29; val_2 = 13; aug_3 = 146; val_3 = 2;
         end
 
-        player:addItem(PRIZE, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
         player:messageSpecial(ITEM_OBTAINED, PRIZE);
         player:tradeComplete();
+        player:addItem(PRIZE, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
     else
         player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
     end
 end;
+
+-----------------------------------
+-- onTrigger Action
+-----------------------------------
+
+function onTrigger(player,npc)
+    --player:startEvent(0x000c);
+    if(player:getCurrentMission(COP) == FLAMES_IN_THE_DARKNESS and player:getVar("PromathiaStatus") == 1)then
+      player:startEvent(0x0010);
+    elseif(player:getCurrentMission(COP) == CALM_BEFORE_THE_STORM and player:hasKeyItem(LETTERS_FROM_ULMIA_AND_PRISHE)== true )then
+      player:startEvent(0x0011);
+    else
+      player:startEvent(0x0014);
+    end
+
+end;
+
 -----------------------------------
 -- onEventUpdate
 -----------------------------------
