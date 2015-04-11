@@ -10871,12 +10871,12 @@ INSERT INTO `item_mods` VALUES (20954, 25, 15); -- acc
 -- shigi
 INSERT INTO `item_mods` VALUES (20994, 25, 27); -- acc
 INSERT INTO `item_mods` VALUES (20994, 68, 27); -- eva
-INSERT INTO `item_mods` VALUES (20994, 87, 228); -- katana
+INSERT INTO `item_mods` VALUES (20994, 88, 228); -- katana
 INSERT INTO `item_mods` VALUES (20994, 110, 228); -- parry
 INSERT INTO `item_mods` VALUES (20994, 30, 215); -- macc
 INSERT INTO `item_mods` VALUES (20994, 27, -10); -- enm
-INSERT INTO `item_mods` VALUES (20994, 87, 10); -- ninjitsu
--- INSERT INTO `item_mods` VALUES (20994, 0, 5); -- tool
+INSERT INTO `item_mods` VALUES (20994, 118, 10); -- ninjitsu
+INSERT INTO `item_mods` VALUES (20994, 308, 5); -- tool
 -- INSERT INTO `item_mods` VALUES (20994, 0, -3); -- recast
 
 -- cibitshavore
