@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Grand Palace of Hu'Xzoi
--- MOB:  Jailer of Temperance
+--  NM:  Jailer of Temperance
 -- Animation Sub 0 Pot Form
 -- Animation Sub 1 Pot Form (reverse eye position)
 -- Animation Sub 2 Bar Form
@@ -14,9 +14,11 @@ require("scripts/globals/utils");
 -----------------------------------
 -- onMobInitialize
 ----------------------------------
+
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 end;
+
 -----------------------------------
 -- OnMobSpawn Action
 -- Set AnimationSub to 0, put it in pot form
@@ -42,86 +44,71 @@ end;
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
+
 function onMobEngage (mob)
     mob:AnimationSub(0)
 end;
+
 -----------------------------------
 -- onMobFight Action
 -- Randomly change forms
 -----------------------------------
 
 function onMobFight(mob)
-
+    local DID_2HR = mob:getLocalVar("JoT_2hr");
     local randomTime = math.random(15,45);
     local changeTime = mob:getLocalVar("changeTime");
     local RND = math.random(1,2);
 
-    if(mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > randomTime) then
+    if (mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > randomTime) then
         if (RND == 1) then
             mob:AnimationSub(2)
         else
             mob:AnimationSub(3)
         end
         mob:setLocalVar("changeTime", mob:getBattleTime());
-    elseif(mob:AnimationSub() == 2 and mob:getBattleTime() - changeTime > randomTime) then
+    elseif (mob:AnimationSub() == 2 and mob:getBattleTime() - changeTime > randomTime) then
         if (RND == 1) then
             mob:AnimationSub(0)
         else
             mob:AnimationSub(3)
         end
         mob:setLocalVar("changeTime", mob:getBattleTime());
-    if(mob:AnimationSub() == 3 and mob:getBattleTime() - changeTime > randomTime) then
+    if (mob:AnimationSub() == 3 and mob:getBattleTime() - changeTime > randomTime) then
         if (RND == 1) then
             mob:AnimationSub(0)
         else
             mob:AnimationSub(2)
         end
         mob:setLocalVar("changeTime", mob:getBattleTime());
+    elseif (mob:getHPP() <= 10 and DID_2HR == 2) then
+        mob:useMobAbility(474); -- SAM
+        mob:setLocalVar("JoT_2hr", 3);
+        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+    elseif (mob:getHPP() <= 30and DID_2HR == 1) then
+        mob:useMobAbility(474); -- SAM
+        mob:setLocalVar("JoT_2hr", 2);
+    elseif (mob:getHPP() <= 70 and DID_2HR == 0) then
+        mob:useMobAbility(474); -- SAM
+        mob:setLocalVar("JoT_2hr", 1);
     end
 
-    if(mob:AnimationSub() == 0 then -- Only Blunt
+    if (mob:AnimationSub() == 0) then -- Only Blunt
         mob:setMod(MOD_SLASHRES, 1000);
         mob:setMod(MOD_PIERCERES, 1000);
         mob:setMod(MOD_IMPACTRES, 0);
         mob:setMod(MOD_HTHRES, 0);
-    elseif(mob:AnimationSub() == 1 then -- Only Blunt
-        mob:setMod(MOD_SLASHRES, 1000);
-        mob:setMod(MOD_PIERCERES, 1000);
-        mob:setMod(MOD_IMPACTRES, 0);
-        mob:setMod(MOD_HTHRES, 0);
-    elseif(mob:AnimationSub() == 2 then -- Only Piercing
+    -- elseif (mob:AnimationSub() == 1) then -- Unused!
+    elseif (mob:AnimationSub() == 2) then -- Only Piercing
         mob:setMod(MOD_SLASHRES, 1000);
         mob:setMod(MOD_PIERCERES, 0);
         mob:setMod(MOD_IMPACTRES, 1000);
         mob:setMod(MOD_HTHRES, 1000);
-    elseif(mob:AnimationSub() == 3 then -- Only Slashing
+    elseif (mob:AnimationSub() == 3) then -- Only Slashing
         mob:setMod(MOD_SLASHRES, 0);
         mob:setMod(MOD_PIERCERES, 1000);
         mob:setMod(MOD_IMPACTRES, 1000);
         mob:setMod(MOD_HTHRES, 1000);
-    end
-
-    local Temp_2hr_Used = 0;
-    if (mob:getLocalVar("Temp_2hr") ~= nil) then
-        Temp_2hr_Used = mob:getLocalVar("Temp_2hr");
-    end
-
-    if (mob:getHPP() <= 10) then
-        if (Temp_2hr_Used == 2) then
-            mob:useMobAbility(474); -- SAM
-            mob:setLocalVar("Temp_2hr", 3);
-            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-        end
-    elseif (mob:getHPP() <= 30) then
-        if (Temp_2hr_Used == 1) then
-            mob:useMobAbility(474); -- SAM
-            mob:setLocalVar("Temp_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 70) then
-        if (Temp_2hr_Used == 0) then
-            mob:useMobAbility(474); -- SAM
-            mob:setLocalVar("Temp_2hr", 1);
-        end
     end
 end;
 
