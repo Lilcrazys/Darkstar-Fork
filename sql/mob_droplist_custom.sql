@@ -1425,3 +1425,53 @@ INSERT INTO `mob_droplist` VALUES (9665,2,3925,33); -- Stealable Tanzenite Jewel
 -- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
 -- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
 -- End of Jumping Crabs Droplist. Other items may be / may become available via script.
+
+-- AV Changed retail rates and added rings
+REPLACE INTO `mob_droplist` VALUES (4,0,1913,100);
+REPLACE INTO `mob_droplist` VALUES (4,0,1914,240);
+REPLACE INTO `mob_droplist` VALUES (4,0,1915,130);
+REPLACE INTO `mob_droplist` VALUES (4,0,1916,500);
+REPLACE INTO `mob_droplist` VALUES (4,0,1917,500);
+REPLACE INTO `mob_droplist` VALUES (4,0,1918,500);
+REPLACE INTO `mob_droplist` VALUES (4,0,1919,400);
+INSERT INTO `mob_droplist` VALUES (4,0,27580,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27582,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27584,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27586,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27588,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27590,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27581,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27583,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27585,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27587,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27589,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27591,70);
+
+-- Temp
+REPLACE INTO `mob_droplist` VALUES (1838,0,15513,100);
+INSERT INTO `mob_droplist` VALUES (1838,0,20809,200);
+INSERT INTO `mob_droplist` VALUES (1838,0,21169,200);
+-- faith
+REPLACE INTO `mob_droplist` VALUES (1832,0,15512,100);
+INSERT INTO `mob_droplist` VALUES (1832,0,20536,200);
+INSERT INTO `mob_droplist` VALUES (1832,0,21252,200);
+-- fort
+REPLACE INTO `mob_droplist` VALUES (1833,0,15511,100);
+INSERT INTO `mob_droplist` VALUES (1833,0,20860,200);
+INSERT INTO `mob_droplist` VALUES (1833,0,20717,200);
+-- prud
+REPLACE INTO `mob_droplist` VALUES (1837,0,15510,100);
+INSERT INTO `mob_droplist` VALUES (1837,0,21111,200);
+INSERT INTO `mob_droplist` VALUES (1837,0,20763,200);
+-- justice
+REPLACE INTO `mob_droplist` VALUES (1835,0,15508,100);
+INSERT INTO `mob_droplist` VALUES (1835,0,20904,200);
+INSERT INTO `mob_droplist` VALUES (1835,0,21040,200);
+-- love
+REPLACE INTO `mob_droplist` VALUES (1836,0,15514,100);
+INSERT INTO `mob_droplist` VALUES (1836,0,20954,200);
+INSERT INTO `mob_droplist` VALUES (1836,0,21229,200);
+-- hope
+REPLACE INTO `mob_droplist` VALUES (1833,0,15511,100);
+INSERT INTO `mob_droplist` VALUES (1833,0,20994,200);
+INSERT INTO `mob_droplist` VALUES (1833,0,21229,200);

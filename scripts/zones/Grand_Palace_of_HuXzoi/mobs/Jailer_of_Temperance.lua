@@ -39,8 +39,12 @@ function onMobSpawn(mob)
     mob:addMod(MOD_ATT,75);
 end;
 
-
-
+-----------------------------------
+-- onMobEngage Action
+-----------------------------------
+function onMobEngage (mob)
+    mob:AnimationSub(0)
+end;
 -----------------------------------
 -- onMobFight Action
 -- Randomly change forms
@@ -50,24 +54,28 @@ function onMobFight(mob)
 
     local randomTime = math.random(15,45);
     local changeTime = mob:getLocalVar("changeTime");
+    local RND = math.random(1,2);
 
     if(mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > randomTime) then
-        mob:AnimationSub(math.random(1,3));
-        mob:setLocalVar("changeTime", mob:getBattleTime());
-    elseif(mob:AnimationSub() == 1 and mob:getBattleTime() - changeTime > randomTime) then
-        mob:AnimationSub(math.random(2,3));
-        mob:setLocalVar("changeTime", mob:getBattleTime());
-    elseif(mob:AnimationSub() == 2 and mob:getBattleTime() - changeTime > randomTime) then
-        local aniChance = math.random(0,1);
-        if(aniChance == 0) then
-            mob:AnimationSub(0);
-            mob:setLocalVar("changeTime", mob:getBattleTime());
+        if (RND == 1) then
+            mob:AnimationSub(2)
         else
             mob:AnimationSub(3)
-            mob:setLocalVar("changeTime", mob:getBattleTime());
         end
-    elseif(mob:AnimationSub() == 3 and mob:getBattleTime() - changeTime > randomTime) then
-        mob:AnimationSub(math.random(0,2));
+        mob:setLocalVar("changeTime", mob:getBattleTime());
+    elseif(mob:AnimationSub() == 2 and mob:getBattleTime() - changeTime > randomTime) then
+        if (RND == 1) then
+            mob:AnimationSub(0)
+        else
+            mob:AnimationSub(3)
+        end
+        mob:setLocalVar("changeTime", mob:getBattleTime());
+    if(mob:AnimationSub() == 3 and mob:getBattleTime() - changeTime > randomTime) then
+        if (RND == 1) then
+            mob:AnimationSub(0)
+        else
+            mob:AnimationSub(2)
+        end
         mob:setLocalVar("changeTime", mob:getBattleTime());
     end
 
@@ -92,9 +100,6 @@ function onMobFight(mob)
         mob:setMod(MOD_IMPACTRES, 1000);
         mob:setMod(MOD_HTHRES, 1000);
     end
-end;
-
-function onMobFight(mob)
 
     local Temp_2hr_Used = 0;
     if (mob:getLocalVar("Temp_2hr") ~= nil) then
