@@ -1428,24 +1428,24 @@ INSERT INTO `mob_droplist` VALUES (9665,2,3925,33); -- Stealable Tanzenite Jewel
 
 -- AV Changed retail rates and added rings
 REPLACE INTO `mob_droplist` VALUES (4,0,1913,100);
-REPLACE INTO `mob_droplist` VALUES (4,0,1914,240);
+REPLACE INTO `mob_droplist` VALUES (4,0,1914,140);
 REPLACE INTO `mob_droplist` VALUES (4,0,1915,130);
-REPLACE INTO `mob_droplist` VALUES (4,0,1916,500);
-REPLACE INTO `mob_droplist` VALUES (4,0,1917,500);
-REPLACE INTO `mob_droplist` VALUES (4,0,1918,500);
-REPLACE INTO `mob_droplist` VALUES (4,0,1919,400);
+REPLACE INTO `mob_droplist` VALUES (4,0,1916,200);
+REPLACE INTO `mob_droplist` VALUES (4,0,1917,200);
+REPLACE INTO `mob_droplist` VALUES (4,0,1918,200);
+REPLACE INTO `mob_droplist` VALUES (4,0,1919,200);
 INSERT INTO `mob_droplist` VALUES (4,0,27580,70);
 INSERT INTO `mob_droplist` VALUES (4,0,27582,70);
 INSERT INTO `mob_droplist` VALUES (4,0,27584,70);
 INSERT INTO `mob_droplist` VALUES (4,0,27586,70);
 INSERT INTO `mob_droplist` VALUES (4,0,27588,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27590,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27581,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27583,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27585,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27587,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27589,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27591,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27590,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27581,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27583,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27585,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27587,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27589,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27591,50);
 
 -- Temp
 REPLACE INTO `mob_droplist` VALUES (1838,0,15513,100);

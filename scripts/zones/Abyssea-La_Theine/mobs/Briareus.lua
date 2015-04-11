@@ -31,7 +31,7 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,80);
-    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_DEF,100);
 end;
 
 -----------------------------------
@@ -45,7 +45,31 @@ end;
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)
+function onMobFight(mob, target)
+
+    local 2hr_Used =  mob:getLocalVar("2hr");
+
+    if (mob:getHPP() <= 10) then
+        if (2hr_Used == 3) then
+            mob:useMobAbility(474);
+            mob:setLocalVar("2hr", 4);
+        end
+    elseif (mob:getHPP() <= 25) then
+        if (2hr_Used == 2) then
+            mob:useMobAbility(474);
+            mob:setLocalVar("2hr", 3);
+        end
+    elseif (mob:getHPP() <= 50) then
+        if (2hr_Used == 1) then
+            mob:useMobAbility(474);
+            mob:setLocalVar("2hr", 2);
+        end
+    elseif (mob:getHPP() <= 75) then
+        if (2hr_Used == 0) then
+            mob:useMobAbility(474);
+            mob:setLocalVar("2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------

@@ -16,6 +16,7 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 end;
 
 -----------------------------------
@@ -27,7 +28,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 500);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 20);
     mob:setMod(MOD_MACC,925);

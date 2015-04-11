@@ -36,7 +36,35 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
+    local Tia_2hr_Used = 0;
+    if (mob:getLocalVar("Tia_2hr") ~= nil) then
+        Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
+    end
 
+    if (mob:getHPP() <= 20) then
+        if (Tia_2hr_Used == 3) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 4);
+            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+            mob:addMod(MOD_DOUBLE_ATTACK, 15);
+            mob:addMod(MOD_REGAIN, 10);
+        end
+    elseif (mob:getHPP() <= 40) then
+        if (Tia_2hr_Used == 2) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 3);
+        end
+    elseif (mob:getHPP() <= 60) then
+        if (Tia_2hr_Used == 1) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 80) then
+        if (Tia_2hr_Used == 0) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("Tia_2hr", 1);
+        end
+    end
     -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
     if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
         if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
@@ -78,39 +106,6 @@ function onMobFight(mob,target)
             mob:SetMobSkillAttack(true);
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
-        end
-    end
-end;
-
-function onMobFight(mob, target)
-
-    local Tia_2hr_Used = 0;
-    if (mob:getLocalVar("Tia_2hr") ~= nil) then
-        Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
-    end
-
-    if (mob:getHPP() <= 20) then
-        if (Tia_2hr_Used == 3) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 4);
-            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-            mob:addMod(MOD_DOUBLE_ATTACK, 15);
-            mob:addMod(MOD_REGAIN, 10);
-        end
-    elseif (mob:getHPP() <= 40) then
-        if (Tia_2hr_Used == 2) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 3);
-        end
-    elseif (mob:getHPP() <= 60) then
-        if (Tia_2hr_Used == 1) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 80) then
-        if (Tia_2hr_Used == 0) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 1);
         end
     end
 end;

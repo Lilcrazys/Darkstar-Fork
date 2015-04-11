@@ -28,8 +28,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
 
     -- addMod
-    mob:addMod(MOD_MDEF,20);
-    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_MDEF,30);
+    mob:addMod(MOD_DEF,130);
 
 end;
 

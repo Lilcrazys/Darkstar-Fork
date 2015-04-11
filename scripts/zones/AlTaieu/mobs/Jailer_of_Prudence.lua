@@ -15,7 +15,7 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 end;
 
 -----------------------------------
@@ -25,7 +25,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 200);
-    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_TRIPLE_ATTACK, 35);
 
