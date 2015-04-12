@@ -5045,6 +5045,46 @@ INSERT INTO `mob_skill` VALUES (120,1023,120,'Foul_Breath',4,15.0,2000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (123,1023,123,'Zmey_Chomp_Rush',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (124,1023,124,'Scythe_Tail',0,7.0,2000,1500,4,0,0,1);
 
+-- Pandemonium Warden (1025)
+INSERT INTO `mob_skill` VALUES (1801,1025,1401,'PW_Mortal_revolution',1,15.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (1802,1025,1400,'PW_Homing_missile',2,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1803,1025,1402,'PW_Discoid',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1804,1025,1403,'PW_Brainjack',0,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1541,1025,1147,'PW_Rushing_Slash',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1542,1025,1147,'PW_Decussate',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1543,1025,1156,'PW_Tyranic_Blare',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1482,1025,1156,'PW_Groundburst',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1557,1025,1334,'PW_Calcifying_Deluge',2,15,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1558,1025,1339,'PW_Gorgon_Dance',1,15,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1556,1025,1337,'PW_Pinning_Shot',2,15,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1553,1025,1335,'PW_Shadow_Thrust',0,10,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1546,1025,1351,'PW_Sledgehammer',4,12,2000,0,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1547,1025,1352,'PW_Head_Snatch',0,7,2000,0,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1548,1025,1353,'PW_Haymaker',4,12,2000,0,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1551,1025,1356,'PW_Pleiades_Ray',1,10,2000,0,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1529,1025,1223,'PW_Lava_Spit',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1531,1025,1225,'PW_Scorching_Lash',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1534,1025,1228,'PW_Acheron_Flame',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1534,1025,1228,'PW_Gates_of_Hades',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1572,1025,1308,'PW_Pyric_Blast',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1573,1025,1319,'PW_Polar_Bulwark',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1574,1025,1309,'PW_Polar_Blast',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1575,1025,1318,'PW_Pyric_Bulwark',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1579,1025,1311,'PW_Serpentine_Tail',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (11025,1025,1312,'PW_Nerve_Gas',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1769,1025,1369,'PW_Dreadstorm',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1770,1025,1381,'PW_Fossilizing_Breath',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1772,1025,1386,'PW_Fulmination',1,40.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1766,1025,1367,'PW_Tenebrous_Mist',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1767,1025,1368,'PW_Thunderstrike',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1768,1025,1371,'PW_Tourbillion',1,13.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1857,1025,1456,'PW_Hellsnap',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1858,1025,1460,'PW_Hellclap',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1860,1025,1462,'PW_Necrobane',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1861,1025,1461,'PW_Necropurge',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1862,1025,1458,'PW_Bilgestorm',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1863,1025,1459,'PW_Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
+
 -- The Jumping Crab
 INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback
 INSERT INTO `mob_skill` VALUES (186,6665,186,'Tegmine_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
