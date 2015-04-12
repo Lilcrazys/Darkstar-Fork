@@ -4112,7 +4112,7 @@ INSERT INTO `item_basic` VALUES (4463,0,'takitaro','takitaro',1,1536,51,0,714);
 INSERT INTO `item_basic` VALUES (4464,0,'pipira','pipira',12,1536,51,0,47);
 INSERT INTO `item_basic` VALUES (4465,0,'bowl_of_goblin_stew','goblin_stew',1,1536,55,0,532);
 INSERT INTO `item_basic` VALUES (4466,0,'spicy_cracker','spicy_cracker',99,1536,56,0,1);
-INSERT INTO `item_basic` VALUES (4467,0,'garlic_cracker','garlic_cracker',99,1536,56,0,407);
+INSERT INTO `item_basic` VALUES (4467,0,'garlic_cracker','garlic_cracker',99,1536,56,0,1);
 INSERT INTO `item_basic` VALUES (4468,0,'bunch_of_pamamas','pamamas',12,1536,59,0,20);
 INSERT INTO `item_basic` VALUES (4469,0,'giant_catfish','giant_catfish',1,1536,51,0,102);
 INSERT INTO `item_basic` VALUES (4470,0,'icefish','icefish',12,1536,51,0,156);
@@ -4500,6 +4500,7 @@ INSERT INTO `item_basic` VALUES (4900,292,'thunder_spirit_pact','thunder_spirit'
 INSERT INTO `item_basic` VALUES (4901,293,'water_spirit_pact','water_spirit',1,34432,30,0,43);
 INSERT INTO `item_basic` VALUES (4902,294,'light_spirit_pact','light_spirit',1,34432,30,0,43);
 INSERT INTO `item_basic` VALUES (4903,295,'dark_spirit_pact','dark_spirit',1,34432,30,0,43);
+INSERT INTO `item_basic` VALUES (4912,841,'scroll_of_distract','distract',1,1664,29,0,0);
 INSERT INTO `item_basic` VALUES (4916,828,'scroll_of_fira','fira',1,34432,29,0,43);
 INSERT INTO `item_basic` VALUES (4917,829,'scroll_of_fira_ii','fira_ii',1,34432,29,0,43);
 INSERT INTO `item_basic` VALUES (4918,830,'scroll_of_blizzara','blizzara',1,34432,29,0,43);
@@ -16097,7 +16098,6 @@ INSERT INTO `item_basic` VALUES (28406,0,'nuna_gorget','nuna_gorget',1,2080,0,1,
 INSERT INTO `item_basic` VALUES (28407,0,'nuna_gorget_+1','nuna_gorget_+1',1,2080,0,1,0);
 INSERT INTO `item_basic` VALUES (28440,0,'windbuffet_belt_+1','windbuffet_belt_+1',1,34816,99,0,0);
 INSERT INTO `item_basic` VALUES (28443,0,'yamabuki-no-obi','yamabuki-no-obi',1,63568,0,1,0);
-INSERT INTO `item_basic` VALUES (28449,0,'metalsinger_belt','metalsinger_belt',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28450,0,'chaac_belt','chaac_belt',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28455,0,'ovate_rope','ovate_rope',1,34816,23,0,100);
 INSERT INTO `item_basic` VALUES (28456,0,'kasiri_belt','kasiri_belt',1,34816,23,0,100);
@@ -16129,8 +16129,6 @@ INSERT INTO `item_basic` VALUES (28531,0,'milvus_ring','milvus_ring',1,34816,0,1
 INSERT INTO `item_basic` VALUES (28532,0,'candent_ring','candent_ring',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28540,0,'warp_ring','warp_ring',1,64576,0,1,0);
 INSERT INTO `item_basic` VALUES (28554,0,'acumen_ring','acumen_ring',1,60480,0,1,1918);
-INSERT INTO `item_basic` VALUES (28535,0,'supershear_earring','supershear_earring',1,63568,0,1,0);
-
 INSERT INTO `item_basic` VALUES (28571,0,'waterfall_ring','waterfall_ring',1,34816,25,0,100);
 INSERT INTO `item_basic` VALUES (28572,0,'jwalamukhi_ring','jwalamukhi_ring',1,34816,25,0,100);
 INSERT INTO `item_basic` VALUES (28573,0,'wuji_ring','wuji_ring',1,34816,25,0,100);

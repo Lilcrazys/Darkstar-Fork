@@ -268,6 +268,9 @@ REPLACE INTO `item_basic` VALUES (28240,0,'foire_babouches','foire_babouches',1,
 REPLACE INTO `item_basic` VALUES (28241,0,'maxixi_toe_shoes','maxixi_shoes',1,63552,0,1,0);
 REPLACE INTO `item_basic` VALUES (28243,0,'academics_loafers','academics_loafers',1,63552,0,1,0);
 
+INSERT INTO `item_basic` VALUES (28449,0,'metalsinger_belt','metalsinger_belt',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28535,0,'supershear_earring','supershear_earring',1,63568,0,1,0);
+
 INSERT INTO `item_basic` VALUES (20809,0,'kumbhakarna','kumbhakarna',1,63552,5,1,0);
 INSERT INTO `item_basic` VALUES (21169,0,'keraunos','keraunos',1,63552,12,1,0);
 INSERT INTO `item_basic` VALUES (20536,0,'tinhaspa','tinhaspa',1,63552,1,1,0);
@@ -281,4 +284,3 @@ INSERT INTO `item_basic` VALUES (21040,0,'shokudaikiri','shokudaikiri',1,63552,1
 INSERT INTO `item_basic` VALUES (20954,0,'eminent_lance','eminent_lance',1,63552,8,1,0);
 INSERT INTO `item_basic` VALUES (20994,0,'shigi','shigi',1,63552,9,1,0);
 INSERT INTO `item_basic` VALUES (21229,0,'cibitshavore','cibitshavore',1,63552,13,1,0);
-

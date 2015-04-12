@@ -1,18 +1,28 @@
 -----------------------------------
--- Area: The Garden of Ru'Hmet
--- MOB:  Qn_aern_whm
+-- Area: Grand Palace of HuXzoi
+-- NPC: Qn'aern (RDM)
+-- ID: 16916816
 -----------------------------------
 
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+
+-----------------------------------
+-- onMobInitialize Action
 -----------------------------------
 
+function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_MAIN_2HOUR,1);
+    mob:setMobMod(MOBMOD_2HOUR_MULTI,1);
+end;
+
+-----------------------------------
+-- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
     mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_MACC,925);
@@ -22,24 +32,23 @@ function onMobSpawn(mob)
     mob:addMod(MOD_ATT,75);
 end;
 
-function onMobEngage(mob)
-end;
 -----------------------------------
--- onMobRoam Action
--- Autochange Aggro and Form
+-- onMobEngaged
 -----------------------------------
 
-function onMobRoam(mob)
-
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
--- OnMobFight Action
--- Set ball form and secondary form
+-- onMobFight Action
 -----------------------------------
+
 function onMobFight(mob,target)
-
 end;
 
-function onMobDeath(mob)
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob, killer)
 end;
