@@ -49,8 +49,8 @@ CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_ME
     int32 buffSize = (strlen(buff) > 108) ? 108 : strlen(buff);
     this->type = 0x17;
     this->size = dsp_min((32 + (buffSize + 1) + ((4 - ((buffSize + 1) % 4)) % 4)) / 2, 128);
-    WBUFB(data, (0x04) - 4) = MessageType;
-    WBUFW(data, (0x06) - 4) = PChar->getZone();
-    memcpy(data + (0x08) - 4, name, size);
-    memcpy(data + (0x18) - 4, buff, buffSize);
+    WBUFB(data, (0x04) ) = MessageType;
+     WBUFW(data, (0x06) ) = PChar->getZone();
+    memcpy(data + (0x08) , name, size);
+    memcpy(data + (0x18) , buff, buffSize);
 }
