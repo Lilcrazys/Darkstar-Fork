@@ -1484,8 +1484,8 @@ function onTrade(player,npc,trade)
         player:tradeComplete();
     end
     if (trade:hasItemQty(3494,50) and trade:hasItemQty(15089,1) and trade:getItemCount() == 51) then                    --body
-        player:addItem(10682);
-        player:messageSpecial(ITEM_OBTAINED,10682);
+        player:addItem(10672);
+        player:messageSpecial(ITEM_OBTAINED,10672);
         player:tradeComplete();
     end
     if (trade:hasItemQty(3495,50) and trade:hasItemQty(15104,1) and trade:getItemCount() == 51) then                    --hands
@@ -1567,8 +1567,8 @@ function onTrade(player,npc,trade)
         player:tradeComplete();
     end
     if (trade:hasItemQty(3495,50) and trade:hasItemQty(15108,1) and trade:getItemCount() == 51) then                --hands
-        player:addItem(10698);
-        player:messageSpecial(ITEM_OBTAINED,10698);
+        player:addItem(10696);
+        player:messageSpecial(ITEM_OBTAINED,10696);
         player:tradeComplete();
     end
     if (trade:hasItemQty(3496,50) and trade:hasItemQty(15123,1) and trade:getItemCount() == 51) then                --legs
