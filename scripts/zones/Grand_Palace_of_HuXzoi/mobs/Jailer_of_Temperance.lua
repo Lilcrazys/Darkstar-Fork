@@ -74,7 +74,7 @@ function onMobFight(mob)
             mob:AnimationSub(3)
         end
         mob:setLocalVar("changeTime", mob:getBattleTime());
-    if (mob:AnimationSub() == 3 and mob:getBattleTime() - changeTime > randomTime) then
+    elseif (mob:AnimationSub() == 3 and mob:getBattleTime() - changeTime > randomTime) then
         if (RND == 1) then
             mob:AnimationSub(0)
         else
