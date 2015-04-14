@@ -192,6 +192,8 @@ function onMobDeath(mob,killer)
         -- killer:addSpell(SPELL_ID);
     -- end
 
-    mob:SpoofChatParty("This is the end. . .of nothing. . .Defeating me proves only that you harbor the seeds of evil within your trembling flesh. . .Someday. . .they shall come. . .into fruition. . .", MESSAGE_SAY)
+    mob:SpoofChatParty("This is the end. . .of nothing. . .", MESSAGE_SAY)
+    mob:SpoofChatParty("Defeating me proves only that you harbor the seeds of evil within your trembling flesh. . .", MESSAGE_SAY)
+    mob:SpoofChatParty("Someday. . .they shall come. . .into fruition. . .", MESSAGE_SAY)
     -- killer:addTitle(PANDEMONIUM_QUELLER); -- Not adding until after testing is done
 end;
