@@ -85,7 +85,7 @@ function onMobFight(mob)
         mob:useMobAbility(474); -- SAM
         mob:setLocalVar("JoT_2hr", 3);
         mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-    elseif (mob:getHPP() <= 30and DID_2HR == 1) then
+    elseif (mob:getHPP() <= 30 and DID_2HR == 1) then
         mob:useMobAbility(474); -- SAM
         mob:setLocalVar("JoT_2hr", 2);
     elseif (mob:getHPP() <= 70 and DID_2HR == 0) then
