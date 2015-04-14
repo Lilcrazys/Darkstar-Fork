@@ -297,7 +297,7 @@ INSERT INTO `item_basic` VALUES (26754,0,'heathens_burgeonet','heathens_burgeone
 INSERT INTO `item_basic` VALUES (26756,0,'nukumi_cabasset','nukumi_cabasset',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26758,0,'fili_calot','fili_calot',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26760,0,'amini_gapette','amini_gapette',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (12062,0,'kasuga_kabuto','kasuga_kabuto',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26762,0,'kasuga_kabuto','kasuga_kabuto',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26764,0,'hattori_zukin','hattori_zukin',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26766,0,'peltasts_mezail','peltasts_mezail',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26768,0,'beckoners_horn','beckoners_horn',1,63552,0,1,0);
