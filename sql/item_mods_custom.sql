@@ -11052,19 +11052,19 @@ INSERT INTO `item_mods` VALUES(27259, 384, 61); -- Haste
 INSERT INTO `item_mods` VALUES(27259, 73, 8); -- STP
 
 -- Kasuga Sune-Ate (27433)
-INSERT INTO `item_mods` VALUES(26920, 1, 53); -- DEF
-INSERT INTO `item_mods` VALUES(26920, 2, 7); -- HP
-INSERT INTO `item_mods` VALUES(26920, 8, 13); -- STR
-INSERT INTO `item_mods` VALUES(26920, 9, 12); -- DEX
-INSERT INTO `item_mods` VALUES(26920, 10, 10); -- VIT
-INSERT INTO `item_mods` VALUES(26920, 11, 16); -- AGI
-INSERT INTO `item_mods` VALUES(26920, 13, 3); -- MND
-INSERT INTO `item_mods` VALUES(26920, 14, 12); -- CHR
-INSERT INTO `item_mods` VALUES(26920, 25, 15); -- Acc
-INSERT INTO `item_mods` VALUES(26920, 23, 15); -- Att
-INSERT INTO `item_mods` VALUES(26920, 68, 25); -- Evasion
-INSERT INTO `item_mods` VALUES(26920, 31, 54); -- Magic Evasion
-INSERT INTO `item_mods` VALUES(26920, 29, 1); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES(26920, 306, 10); --  Zanshin
-INSERT INTO `item_mods` VALUES(26920, 384, 31); -- Haste
-INSERT INTO `item_mods` VALUES(26920, 73, 8); -- STP
+INSERT INTO `item_mods` VALUES(27433, 1, 53); -- DEF
+INSERT INTO `item_mods` VALUES(27433, 2, 7); -- HP
+INSERT INTO `item_mods` VALUES(27433, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES(27433, 9, 12); -- DEX
+INSERT INTO `item_mods` VALUES(27433, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES(27433, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES(27433, 13, 3); -- MND
+INSERT INTO `item_mods` VALUES(27433, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES(27433, 25, 15); -- Acc
+INSERT INTO `item_mods` VALUES(27433, 23, 15); -- Att
+INSERT INTO `item_mods` VALUES(27433, 68, 25); -- Evasion
+INSERT INTO `item_mods` VALUES(27433, 31, 54); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27433, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27433, 306, 10); --  Zanshin
+INSERT INTO `item_mods` VALUES(27433, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES(27433, 73, 8); -- STP
