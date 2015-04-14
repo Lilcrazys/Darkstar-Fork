@@ -21,6 +21,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- mob:changeSkin(1839);
     -- setMod
     mob:setMod(MOD_REGEN, 300);
     mob:setMod(MOD_REFRESH, 250);
@@ -41,6 +42,8 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
+    -- GetMobByID(petIDs[i]):changeSkin(1841);
+    -- SpawnMob(petIDs[i]):updateEnmity(target);
 end;
 
 -----------------------------------
@@ -54,106 +57,130 @@ function onMobFight(mob,target)
     local petIDs = {17056170,17056171,17056172,17056173,17056174,17056175,17056176,17056177};
     local petStatus = {GetMobAction(petIDs[1]),GetMobAction(petIDs[2]),GetMobAction(petIDs[3]),GetMobAction(petIDs[4]),GetMobAction(petIDs[5]),GetMobAction(petIDs[6]),GetMobAction(petIDs[7]),GetMobAction(petIDs[8])};
 
+
+
     if(mobHPP <= 15 and change == 13) then -- Final Form, pets take Dvger form as well
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1857);
         mob:setLocalVar("change", 14);
         for i = 1,8 do
             GetMobByID(petIDs[i]):changeSkin(15);
+            -- GetMobByID(petIDs[i]):changeSkin(1840);
             if petStatus[i] == 0 then -- Dead pet, get it up.
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 26 and change == 12) then -- Khim and Co.
         mob:changeSkin(14);
+        -- mob:changeSkin(1805);
         mob:useMobAbility(1770);
         mob:setLocalVar("change", 13);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(22);
+            -- GetMobByID(petIDs[i]):changeSkin(1746);
             if petStatus[i] == 0 then -- Dead pet, get it up.
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 28 and change == 11) then -- Normal Form
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1858);
         mob:setLocalVar("change", 12);
     elseif(mobHPP <= 38 and change == 10) then -- Hydra and Co.
         mob:changeSkin(13);
+        -- mob:changeSkin(1796);
         mob:useMobAbility(1574);
         mob:setLocalVar("change", 11);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(21);
+            -- GetMobByID(petIDs[i]):changeSkin(421);
             if petStatus[i] == 0 then
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 40 and change == 9) then -- Normal Form
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1860);
         mob:setLocalVar("change", 10);
     elseif(mobHPP <= 50 and change == 8) then -- Cerb and Co.
         mob:changeSkin(12);
+        -- mob:changeSkin(1793);
         mob:useMobAbility(1534);
         mob:setLocalVar("change", 9);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(20);
+            -- GetMobByID(petIDs[i]):changeSkin(281);
             if petStatus[i] == 0 then
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 52 and change == 7) then -- Normal Form
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1861);
         mob:setLocalVar("change", 8);
     elseif(mobHPP <= 62 and change == 6) then -- Troll and Co.
         mob:changeSkin(11);
+        -- mob:changeSkin(1867);
         mob:useMobAbility(1551);
         mob:setLocalVar("change", 7);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(19);
+            -- GetMobByID(petIDs[i]):changeSkin(1680);
             if petStatus[i] == 0 then
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 64 and change == 5) then -- Normal Form
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1862);
         mob:setLocalVar("change", 6);
     elseif(mobHPP <= 74 and change == 4) then -- Lamia and Co.
         mob:changeSkin(10);
+        -- mob:changeSkin(1865);
         mob:useMobAbility(1557);
         mob:setLocalVar("change", 5);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(18);
+            -- GetMobByID(petIDs[i]):changeSkin(1643);
             if petStatus[i] == 0 then
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 76 and change == 3) then -- Normal Form
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1863);
         mob:setLocalVar("change", 4);
     elseif(mobHPP <= 86 and change == 2) then -- Mamool and Co.
         mob:changeSkin(9);
+        -- mob:changeSkin(1863);
         mob:useMobAbility(1541);
         mob:setLocalVar("change", 3);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(17);
+            -- GetMobByID(petIDs[i]):changeSkin(1639);
             if petStatus[i] == 0 then
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
         end
     elseif(mobHPP <= 88 and change == 1) then -- Normal Form
         mob:changeSkin(15);
+        -- mob:changeSkin(1839);
         mob:useMobAbility(1857);
         mob:setLocalVar("change", 2);
     elseif(mobHPP <= 98 and change == 0) then -- Chariots
         mob:changeSkin(8);
+        -- mob:changeSkin(1825);
         mob:useMobAbility(1803);
         mob:setLocalVar("change", 1);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(16);
+            -- GetMobByID(petIDs[i]):changeSkin(1820);
             if petStatus[i] == 0 then
                SpawnMob(petIDs[i]):updateEnmity(target);
             end
