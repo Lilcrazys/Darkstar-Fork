@@ -47,27 +47,27 @@ end;
 
 function onMobFight(mob, target)
 
-    local 2hr_Used =  mob:getLocalVar("2hr");
+    local Bria_2hr_Used =  mob:getLocalVar("Bria_2hr");
 
     if (mob:getHPP() <= 10) then
-        if (2hr_Used == 3) then
+        if (Bria_2hr_Used == 3) then
             mob:useMobAbility(474);
-            mob:setLocalVar("2hr", 4);
+            mob:setLocalVar("Bria_2hr", 4);
         end
     elseif (mob:getHPP() <= 25) then
-        if (2hr_Used == 2) then
+        if (Bria_2hr_Used == 2) then
             mob:useMobAbility(474);
-            mob:setLocalVar("2hr", 3);
+            mob:setLocalVar("Bria_2hr", 3);
         end
     elseif (mob:getHPP() <= 50) then
-        if (2hr_Used == 1) then
+        if (Bria_2hr_Used == 1) then
             mob:useMobAbility(474);
-            mob:setLocalVar("2hr", 2);
+            mob:setLocalVar("Bria_2hr", 2);
         end
     elseif (mob:getHPP() <= 75) then
-        if (2hr_Used == 0) then
+        if (Bria_2hr_Used == 0) then
             mob:useMobAbility(474);
-            mob:setLocalVar("2hr", 1);
+            mob:setLocalVar("Bria_2hr", 1);
         end
     end
 end;
