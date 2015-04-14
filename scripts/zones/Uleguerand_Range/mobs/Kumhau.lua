@@ -20,14 +20,17 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_DOUBLE_ATTACK,15);
+    mob:setMod(MOD_MACC, 900);
+    mob:setMod(MOD_MATT, 100);
 
     -- addMod
     mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
-    mob:addMod(MOD_DEF,-80);
-    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_ATT,100);
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
@@ -57,18 +60,18 @@ function onMobFight(mob, target)
         Kumhau_2hr_Used = mob:getLocalVar("Kumhau_2hr");
     end
 
-    if (mob:getHPP() <= 10) then 
+    if (mob:getHPP() <= 10) then
         if (Kamhau_2hr_Used == 2) then
             mob:useMobAbility(438); -- Invincible
             mob:setLocalVar("Kumhau_2hr", 3);
         mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
-    elseif (mob:getHPP() <= 30) then 
+    elseif (mob:getHPP() <= 30) then
         if (Kamhau_2hr_Used == 1) then
             mob:useMobAbility(438); -- Invincible
             mob:setLocalVar("Kumhau_2hr", 2);
         end
-    elseif (mob:getHPP() <= 70) then 
+    elseif (mob:getHPP() <= 70) then
         if (Kamhau_2hr_Used == 0) then
             mob:useMobAbility(438); -- Invincible
             mob:setLocalVar("Kamhau_2hr", 1);

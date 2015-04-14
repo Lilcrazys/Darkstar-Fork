@@ -13,6 +13,7 @@ require("scripts/globals/status");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
 end;
 
 -----------------------------------
@@ -21,17 +22,17 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 30);
+    mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_UFASTCAST, 25);
-
-    -- addMod
-    mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
+    mob:setMod(MOD_UFASTCAST, 45);
+    mob:setMod(MOD_DOUBLE_ATTACK,10);
     mob:setMod(MOD_MACC,950);
     mob:setMod(MOD_MATT,150);
+    -- addMod
+    mob:addMod(MOD_ACC,150);
+    mob:addMod(MOD_ATT,100);
     mob:addMod(MOD_MDEF, 50);
-    mob:addMod(MOD_DEF, -50);
+    mob:addMod(MOD_DEF, 150);
 end;
 
 -----------------------------------
