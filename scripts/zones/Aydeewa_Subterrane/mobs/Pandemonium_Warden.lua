@@ -24,6 +24,7 @@ function onMobSpawn(mob)
     -- mob:changeSkin(1839);
     -- setMod
     mob:setMod(MOD_REGEN, 300);
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 20);
@@ -55,14 +56,13 @@ function onMobFight(mob,target)
     local change = 0;
     local petIDs = {17056170,17056171,17056172,17056173,17056174,17056175,17056176,17056177};
     local petStatus = {GetMobAction(petIDs[1]),GetMobAction(petIDs[2]),GetMobAction(petIDs[3]),GetMobAction(petIDs[4]),GetMobAction(petIDs[5]),GetMobAction(petIDs[6]),GetMobAction(petIDs[7]),GetMobAction(petIDs[8])};
-
+    local TP = 0;
 
 
     if(mobHPP <= 15 and change == 13) then -- Final Form, pets take Dvger form as well
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 14);
-        mob:useMobAbility(1857);
         for i = 1,8 do
             GetMobByID(petIDs[i]):changeSkin(15);
             -- GetMobByID(petIDs[i]):changeSkin(1840);
@@ -74,7 +74,6 @@ function onMobFight(mob,target)
         mob:changeSkin(14);
         -- mob:changeSkin(1805);
         mob:setLocalVar("change", 13);
-        mob:useMobAbility(1770);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(22);
             -- GetMobByID(petIDs[i]):changeSkin(1746);
@@ -86,12 +85,14 @@ function onMobFight(mob,target)
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 12);
-        mob:useMobAbility(1858);
+            if (TP <= 5) then
+            mob:useMobAbility(1858);
+            mob:setLocalVar("TP", 6)
+            end
     elseif(mobHPP <= 38 and change == 10) then -- Hydra and Co.
         mob:changeSkin(13);
         -- mob:changeSkin(1796);
         mob:setLocalVar("change", 11);
-        mob:useMobAbility(1574);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(21);
             -- GetMobByID(petIDs[i]):changeSkin(421);
@@ -103,12 +104,14 @@ function onMobFight(mob,target)
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 10);
-        mob:useMobAbility(1860);
+            if (TP <= 4) then
+            mob:useMobAbility(1860);
+            mob:setLocalVar("TP", 5)
+            end
     elseif(mobHPP <= 50 and change == 8) then -- Cerb and Co.
         mob:changeSkin(12);
         -- mob:changeSkin(1793);
         mob:setLocalVar("change", 9);
-        mob:useMobAbility(1534);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(20);
             -- GetMobByID(petIDs[i]):changeSkin(281);
@@ -120,12 +123,14 @@ function onMobFight(mob,target)
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 8);
-        mob:useMobAbility(1861);
+            if (TP <= 3) then
+            mob:useMobAbility(1861);
+            mob:setLocalVar("TP", 4)
+            end
     elseif(mobHPP <= 62 and change == 6) then -- Troll and Co.
         mob:changeSkin(11);
         -- mob:changeSkin(1867);
         mob:setLocalVar("change", 7);
-        mob:useMobAbility(1551);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(19);
             -- GetMobByID(petIDs[i]):changeSkin(1680);
@@ -137,12 +142,14 @@ function onMobFight(mob,target)
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 6);
-        mob:useMobAbility(1862);
+            if (TP <= 2) then
+            mob:useMobAbility(1862);
+            mob:setLocalVar("TP", 3)
+            end
     elseif(mobHPP <= 74 and change == 4) then -- Lamia and Co.
         mob:changeSkin(10);
         -- mob:changeSkin(1865);
         mob:setLocalVar("change", 5);
-        mob:useMobAbility(1557);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(18);
             -- GetMobByID(petIDs[i]):changeSkin(1643);
@@ -154,12 +161,14 @@ function onMobFight(mob,target)
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 4);
-        mob:useMobAbility(1863);
+            if (TP <= 1) then
+            mob:useMobAbility(1863);
+            mob:setLocalVar("TP", 2)
+            end
     elseif(mobHPP <= 86 and change == 2) then -- Mamool and Co.
         mob:changeSkin(9);
         -- mob:changeSkin(1863);
         mob:setLocalVar("change", 3);
-        mob:useMobAbility(1541);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(17);
             -- GetMobByID(petIDs[i]):changeSkin(1639);
@@ -171,12 +180,14 @@ function onMobFight(mob,target)
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
         mob:setLocalVar("change", 2);
-        mob:useMobAbility(1857);
+            if (TP <= 0) then
+            mob:useMobAbility(1857);
+            mob:setLocalVar("TP", 1)
+            end
     elseif(mobHPP <= 98 and change == 0) then -- Chariots
         mob:changeSkin(8);
         -- mob:changeSkin(1825);
         mob:setLocalVar("change", 1);
-        mob:useMobAbility(1803);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(16);
             -- GetMobByID(petIDs[i]):changeSkin(1820);
