@@ -25,7 +25,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 300);
     mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_REGAIN, 30);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 20);
     mob:setMod(MOD_MACC,925);
@@ -62,8 +61,8 @@ function onMobFight(mob,target)
     if(mobHPP <= 15 and change == 13) then -- Final Form, pets take Dvger form as well
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1857);
         mob:setLocalVar("change", 14);
+        mob:useMobAbility(1857);
         for i = 1,8 do
             GetMobByID(petIDs[i]):changeSkin(15);
             -- GetMobByID(petIDs[i]):changeSkin(1840);
@@ -74,8 +73,8 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 26 and change == 12) then -- Khim and Co.
         mob:changeSkin(14);
         -- mob:changeSkin(1805);
-        mob:useMobAbility(1770);
         mob:setLocalVar("change", 13);
+        mob:useMobAbility(1770);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(22);
             -- GetMobByID(petIDs[i]):changeSkin(1746);
@@ -86,13 +85,13 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 28 and change == 11) then -- Normal Form
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1858);
         mob:setLocalVar("change", 12);
+        mob:useMobAbility(1858);
     elseif(mobHPP <= 38 and change == 10) then -- Hydra and Co.
         mob:changeSkin(13);
         -- mob:changeSkin(1796);
-        mob:useMobAbility(1574);
         mob:setLocalVar("change", 11);
+        mob:useMobAbility(1574);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(21);
             -- GetMobByID(petIDs[i]):changeSkin(421);
@@ -103,13 +102,13 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 40 and change == 9) then -- Normal Form
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1860);
         mob:setLocalVar("change", 10);
+        mob:useMobAbility(1860);
     elseif(mobHPP <= 50 and change == 8) then -- Cerb and Co.
         mob:changeSkin(12);
         -- mob:changeSkin(1793);
-        mob:useMobAbility(1534);
         mob:setLocalVar("change", 9);
+        mob:useMobAbility(1534);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(20);
             -- GetMobByID(petIDs[i]):changeSkin(281);
@@ -120,13 +119,13 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 52 and change == 7) then -- Normal Form
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1861);
         mob:setLocalVar("change", 8);
+        mob:useMobAbility(1861);
     elseif(mobHPP <= 62 and change == 6) then -- Troll and Co.
         mob:changeSkin(11);
         -- mob:changeSkin(1867);
-        mob:useMobAbility(1551);
         mob:setLocalVar("change", 7);
+        mob:useMobAbility(1551);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(19);
             -- GetMobByID(petIDs[i]):changeSkin(1680);
@@ -137,13 +136,13 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 64 and change == 5) then -- Normal Form
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1862);
         mob:setLocalVar("change", 6);
+        mob:useMobAbility(1862);
     elseif(mobHPP <= 74 and change == 4) then -- Lamia and Co.
         mob:changeSkin(10);
         -- mob:changeSkin(1865);
-        mob:useMobAbility(1557);
         mob:setLocalVar("change", 5);
+        mob:useMobAbility(1557);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(18);
             -- GetMobByID(petIDs[i]):changeSkin(1643);
@@ -154,13 +153,13 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 76 and change == 3) then -- Normal Form
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1863);
         mob:setLocalVar("change", 4);
+        mob:useMobAbility(1863);
     elseif(mobHPP <= 86 and change == 2) then -- Mamool and Co.
         mob:changeSkin(9);
         -- mob:changeSkin(1863);
-        mob:useMobAbility(1541);
         mob:setLocalVar("change", 3);
+        mob:useMobAbility(1541);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(17);
             -- GetMobByID(petIDs[i]):changeSkin(1639);
@@ -171,13 +170,13 @@ function onMobFight(mob,target)
     elseif(mobHPP <= 88 and change == 1) then -- Normal Form
         mob:changeSkin(15);
         -- mob:changeSkin(1839);
-        mob:useMobAbility(1857);
         mob:setLocalVar("change", 2);
+        mob:useMobAbility(1857);
     elseif(mobHPP <= 98 and change == 0) then -- Chariots
         mob:changeSkin(8);
         -- mob:changeSkin(1825);
-        mob:useMobAbility(1803);
         mob:setLocalVar("change", 1);
+        mob:useMobAbility(1803);
         for i = 1, 8 do
             GetMobByID(petIDs[i]):changeSkin(16);
             -- GetMobByID(petIDs[i]):changeSkin(1820);
@@ -219,8 +218,8 @@ function onMobDeath(mob,killer)
         -- killer:addSpell(SPELL_ID);
     -- end
 
-    mob:SpoofChatParty("This is the end. . .of nothing. . .", MESSAGE_SAY)
-    mob:SpoofChatParty("Defeating me proves only that you harbor the seeds of evil within your trembling flesh. . .", MESSAGE_SAY)
-    mob:SpoofChatParty("Someday. . .they shall come. . .into fruition. . .", MESSAGE_SAY)
+    -- mob:SpoofChatParty("This is the end. . .of nothing. . .", MESSAGE_SAY)
+    -- mob:SpoofChatParty("Defeating me proves only that you harbor the seeds of evil within your trembling flesh. . .", MESSAGE_SAY)
+    -- mob:SpoofChatParty("Someday. . .they shall come. . .into fruition. . .", MESSAGE_SAY)
     -- killer:addTitle(PANDEMONIUM_QUELLER); -- Not adding until after testing is done
 end;
