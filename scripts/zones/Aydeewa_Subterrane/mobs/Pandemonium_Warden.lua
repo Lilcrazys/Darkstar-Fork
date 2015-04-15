@@ -53,10 +53,10 @@ end;
 function onMobFight(mob,target)
 
     local mobHPP = mob:getHPP();
-    local change = 0;
+    local change = mob:getLocalVar("change");
     local petIDs = {17056170,17056171,17056172,17056173,17056174,17056175,17056176,17056177};
     local petStatus = {GetMobAction(petIDs[1]),GetMobAction(petIDs[2]),GetMobAction(petIDs[3]),GetMobAction(petIDs[4]),GetMobAction(petIDs[5]),GetMobAction(petIDs[6]),GetMobAction(petIDs[7]),GetMobAction(petIDs[8])};
-    local TP = 0;
+    local TP = mob:getLocalVar("TP");
 
 
     if(mobHPP <= 15 and change == 13) then -- Final Form, pets take Dvger form as well
