@@ -24,7 +24,7 @@ function onMobSpawn(mob)
     --[[
     local QuestionMark = 16916819; -- The ??? that spawned this mob.
     local chance = GetNPCByID(QuestionMark):getLocalVar("[SEA]IxAern_DropRate"); -- Adjust drop rate for the items based on the organs traded to the ???.
-    if (math.random(0,1) > 0) then     
+    if (math.random(0,1) > 0) then
         SetDropRate(4398,1851,chance*10); -- Deed Of Placidity
         SetDropRate(4398,1901,0);
     else
@@ -36,7 +36,7 @@ function onMobSpawn(mob)
 
     -- setMod
     mob:setMod(MOD_REGEN, 150);
-    mob:setMod(MOD_REGAIN, 15);
+    mob:setMod(MOD_REGAIN, 25);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_COUNTER, 20);
     mob:setMod(MOD_MACC,925);
@@ -45,7 +45,7 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_DEF,150);
     mob:addMod(MOD_ATT,75);
 end;
 
@@ -73,7 +73,7 @@ function onMobFight(mob, target)
             mob:addMod(MOD_ATT, 200);
             mob:addMod(MOD_HASTE_ABILITY, 150);
             mob:useMobAbility(3155); -- Hundred Fists
-            
+
             -- Force minions to 2hour
             if (GetMobAction(mob:getID()+1) ~= 0) then
                 GetMobByID(mob:getID()+1):useMobAbility(3156); -- Chainspell

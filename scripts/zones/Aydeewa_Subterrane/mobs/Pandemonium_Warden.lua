@@ -24,7 +24,6 @@ function onMobSpawn(mob)
     -- mob:changeSkin(1839);
     -- setMod
     mob:setMod(MOD_REGEN, 300);
-    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 20);

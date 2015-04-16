@@ -33,7 +33,6 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 30);
-    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
     mob:setMod(MOD_UFASTCAST, 45);
