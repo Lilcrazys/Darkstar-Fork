@@ -16,7 +16,7 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     local mobSkin = mob:getSkinID();
 
-    if(mobSkin == 15) then
+    if(mobSkin == 1840) then
         return 0;
     else
         return 1;
@@ -26,7 +26,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_TERROR;
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60);
+    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 15);
 
     local dmgmod = 1;
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_THUNDER,dmgmod,TP_NO_EFFECT);

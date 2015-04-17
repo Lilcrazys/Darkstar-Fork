@@ -14,7 +14,7 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     local mobSkin = mob:getSkinID();
 
-    if(mobSkin == 14) then
+    if(mobSkin == 1805) then
         return 0;
     else
         return 1;
@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_PETRIFICATION;
     local power = 1;
 
-    local duration = 60;
+    local duration = 30;
 
     skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, power, 0, duration));
 

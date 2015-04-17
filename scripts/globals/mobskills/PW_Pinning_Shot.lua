@@ -17,7 +17,7 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     local mobSkin = mob:getSkinID();
 
-    if(mobSkin == 10) then
+    if(mobSkin == 1865) then
         return 0;
     else
         return 1;
@@ -34,7 +34,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     local typeEffect = EFFECT_BIND;
 
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 60);
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 30);
 
     target:delHP(dmg);
     return dmg;

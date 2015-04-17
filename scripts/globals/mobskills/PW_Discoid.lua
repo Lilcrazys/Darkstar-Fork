@@ -13,7 +13,7 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     local mobSkin = mob:getSkinID();
 
-    if(mobSkin == 8) then
+    if(mobSkin == 1825) then
         return 0;
     else
         return 1;
@@ -21,7 +21,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local needles = 1000 / skill:getTotalTargets();
+    local needles = 10000 / skill:getTotalTargets();
 
     local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
 

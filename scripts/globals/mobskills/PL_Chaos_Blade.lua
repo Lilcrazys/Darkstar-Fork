@@ -15,7 +15,7 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     local mobSkin = mob:getSkinID();
 
-    if(mobSkin == 21) then
+    if(mobSkin == 421) then
         return 0;
     else
         return 1;
@@ -33,7 +33,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     -- curse LAST so you don't die
     local typeEffect = EFFECT_CURSE_I;
-    MobStatusEffectMove(mob, target, typeEffect, 25, 0, 420);
+    MobStatusEffectMove(mob, target, typeEffect, 25, 0, 60);
 
     return dmg;
 end;
