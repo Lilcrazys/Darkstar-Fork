@@ -1906,8 +1906,8 @@ INSERT INTO `mob_skill` VALUES (1490,246,1235,'Quake_Stomp',0,7.0,2000,1500,1,0,
 
 -- Harlequin Frame
 INSERT INTO `mob_skill` VALUES (1687,363,1306,'Slap_Stick',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1811,363,1406,'Knockout',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2045,363,1488,'Magic_Mortar',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1811,363,1406,'Knockout',0,7.0,2000,1500,4,0,145,0);
+INSERT INTO `mob_skill` VALUES (2045,363,1488,'Magic_Mortar',0,10.0,2000,1500,4,0,225,0);
 INSERT INTO `mob_skill` VALUES (1689,363,1219,'Provoke',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1691,363,438,'Flashbulb',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1692,363,439,'Mana_Converter',0,7.0,2000,1500,1,0,0,0);
@@ -1929,9 +1929,9 @@ INSERT INTO `mob_skill` VALUES (2688,363,2116,'Manafont',0,7.0,2000,1500,1,0,0,0
 INSERT INTO `mob_skill` VALUES (1688,364,1307,'Shield_Bash',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1684,364,1304,'Chimera_Ripper',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1685,364,1305,'String_Clipper',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1809,364,1404,'Cannibal_Blade',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2043,364,1486,'Bone_Crusher',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2487,364,1509,'String_Shredder',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1809,364,1404,'Cannibal_Blade',0,15.0,2000,1500,4,0,150,0);
+INSERT INTO `mob_skill` VALUES (2043,364,1486,'Bone_Crusher',0,7.0,2000,1500,4,0,245,0);
+INSERT INTO `mob_skill` VALUES (2487,364,1509,'String_Shredder',0,7.0,2000,1500,4,0,324,0);
 INSERT INTO `mob_skill` VALUES (1689,364,1219,'Provoke',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1691,364,438,'Flashbulb',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1692,364,439,'Mana_Converter',0,7.0,2000,1500,1,0,0,0);
@@ -1951,9 +1951,9 @@ INSERT INTO `mob_skill` VALUES (2688,364,2116,'Manafont',0,7.0,2000,1500,1,0,0,0
 
 -- Sharpshot Frame
 INSERT INTO `mob_skill` VALUES (1686,365,1303,'Arcuballista',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1810,365,1405,'Daze',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2044,365,1487,'Armor_Piercer',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2488,365,1510,'Armor_Shatterer',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1810,365,1405,'Daze',0,15.0,2000,1500,4,0,150,0);
+INSERT INTO `mob_skill` VALUES (2044,365,1487,'Armor_Piercer',0,15.0,2000,1500,4,0,245,0);
+INSERT INTO `mob_skill` VALUES (2488,365,1510,'Armor_Shatterer',0,7.0,2000,1500,4,0,324,0); 
 INSERT INTO `mob_skill` VALUES (1689,365,1219,'Provoke',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1691,365,438,'Flashbulb',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1692,365,439,'Mana_Converter',0,7.0,2000,1500,1,0,0,0);
@@ -1974,8 +1974,8 @@ INSERT INTO `mob_skill` VALUES (2688,365,2116,'Manafont',0,7.0,2000,1500,1,0,0,0
 
 -- Stormwaker Frame
 INSERT INTO `mob_skill` VALUES (1687,366,1306,'Slap_Stick',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1811,366,1406,'Knockout',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2045,366,1488,'Magic_Mortar',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1811,366,1406,'Knockout',0,7.0,2000,1500,4,0,145,0);
+INSERT INTO `mob_skill` VALUES (2045,366,1488,'Magic_Mortar',0,10.0,2000,1500,4,0,225,0);
 INSERT INTO `mob_skill` VALUES (1689,366,1219,'Provoke',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1691,366,438,'Flashbulb',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1692,366,439,'Mana_Converter',0,7.0,2000,1500,1,0,0,0);
@@ -2280,7 +2280,6 @@ INSERT INTO `mob_skill` VALUES (715,481,675,'Warp_out',0,7,900,0,1,0,0,0);
 
 
 -- Kam'lanaut
--- TODO: Script these when mob additional effects work.
 INSERT INTO `mob_skill` VALUES (567,351,495,'Fire_Blade',0,7,2000,0,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (568,351,496,'Frost_Blade',0,7,2000,0,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (569,351,497,'Wind_Blade2',0,7,2000,0,1,0,0,0);
@@ -2399,6 +2398,7 @@ INSERT INTO `mob_skill` VALUES (1767,168,1368,'Thunderstrike',1,13.0,2000,1500,4
 -- King Vinegaroon
 INSERT INTO `mob_skill` VALUES (463,274,94,'Critical_Bite',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (466,274,98,'Venom_Storm',1,15.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (467,274,99,'Earthbreaker',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (467,274,99,'Earthbreaker_Custom',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (464,274,95,'Venom_Sting',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (97,274,97,'Death_Scissors',0,9.0,2000,1500,4,0,0,0);

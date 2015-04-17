@@ -1,9 +1,16 @@
 -----------------------------------------
--- Bluemagic: Occultation
--- Creates shadow images that each absorb
--- a single attack directed at you.
--- VIT+3  CHR-2
--- Lvl.: 88 MP Cost: 138 Blue Points: 3
+-- Spell: Occultation
+-- Creates shadow images that each absorb a single attack directed at you
+-- Spell cost: 138 MP
+-- Monster Type: Seethers
+-- Spell Type: Magical (Wind)
+-- Blue Magic Points: 3
+-- Stat Bonus: VIT+3 CHR-2 
+-- Level: 88
+-- Casting Time: 2 seconds
+-- Recast Time: 1 minute, 30 seconds
+-- 
+-- Combos: Evasion Bonus
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -11,18 +18,17 @@ require("scripts/globals/magic");
 require("scripts/globals/bluemagic");
 
 -----------------------------------------
--- onMagicCastingCheck
+-- OnMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
     return 0;
-end;
-
------------------------------------------
+end;-----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
+
     local skill = caster:getSkillLevel(BLUE_SKILL);
     local shadows = 2;
     local duration = 300;

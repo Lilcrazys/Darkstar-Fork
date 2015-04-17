@@ -1,8 +1,17 @@
 -----------------------------------------
--- Bluemagic: Battery Charge
+-- Spell: Battery Charge
 -- Gradually restores MP
--- MP +10  MND +1
--- Lvl.: 79 MP Cost: 50 Blue Points: 3
+-- Spell cost: 50 MP
+-- Monster Type: Arcana
+-- Spell Type: Magical (Light)
+-- Blue Magic Points: 3
+-- Stat Bonus: MP+10, MND+1
+-- Level: 79
+-- Casting Time: 5 seconds
+-- Recast Time: 75 seconds
+-- Spell Duration: 100 ticks, 300 Seconds (5 Minutes)
+-- 
+-- Combos: None
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -11,7 +20,7 @@ require("scripts/globals/magic");
 require("scripts/globals/bluemagic");
 
 -----------------------------------------
--- onMagicCastingCheck
+-- OnMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -21,6 +30,7 @@ end;
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
+
 function onSpellCast(caster,target,spell)
 
     if(target:hasStatusEffect(EFFECT_REFRESH)) then

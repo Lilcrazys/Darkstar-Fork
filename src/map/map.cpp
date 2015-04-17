@@ -1332,3 +1332,33 @@ int32 map_garbage_collect(uint32 tick, CTaskMgr::CTask* PTask)
     luautils::garbageCollect();
     return 0;
 }
+
+void log_init(int argc, char** argv)
+{
+    std::string logFile;
+#ifdef DEBUGLOGMAP
+#ifdef WIN32
+    logFile = "log\\map-server.log";
+#else
+    logFile = "log/map-server.log";
+#endif
+#endif
+    bool defaultname = true;
+    for (int i = 1; i < argc; i++)
+    {
+        if (strcmp(argv[i], "--ip") == 0 && defaultname)
+        {
+            logFile = argv[i + 1];
+        }
+        else if (strcmp(argv[i], "--port") == 0 && defaultname)
+        {
+            logFile.append(argv[i + 1]);
+        }
+        else if (strcmp(argv[i], "--log") == 0)
+        {
+            defaultname = false;
+            logFile = argv[i + 1];
+        }
+    }
+    InitializeLog(logFile);
+}
