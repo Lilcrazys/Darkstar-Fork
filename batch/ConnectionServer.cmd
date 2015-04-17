@@ -1,4 +1,5 @@
 @echo off
+cd ..
 :onCrash
 echo [%date% %time%] Restarting Lobby/Connection Server...
 DSConnect-server.exe

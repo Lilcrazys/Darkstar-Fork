@@ -1,4 +1,5 @@
 @ECHO OFF
+cd ..\sql
 ECHO Before using this you must first edit this file to use the database name,
 ECHO MySQL user and MySQL password to match what your server actually uses.
 ECHO Please try NOT to accidently commit that information to your repository.

@@ -1,4 +1,5 @@
 @echo off
+cd ..
 :onCrash
 echo [%date% %time%] Starting Search/AH Server...
 DSSearch-server.exe

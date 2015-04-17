@@ -1,4 +1,5 @@
 @echo off
+cd ..
 :onCrash
 echo [%date% %time%] Restarting Game/Map Server...
 DSGame-server.exe
