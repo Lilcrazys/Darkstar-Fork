@@ -14,29 +14,22 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
+    -- setMobMod
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
     -- mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); -- Enables Blood Weapon
     -- mob:setMobMod(MOBMOD_SUB_2HOUR, 1); -- Enables Mighty Strikes
 
-    -- Mods
-    mob:addMod(MOD_ACC, 25);
-    mob:addMod(MOD_DOUBLE_ATTACK, 5);
-    mob:addMod(MOD_MATT, 25);
-    mob:addMod(MOD_MACC, 80);
-    mob:addMod(MOD_INT, 10);
-
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
-end
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- Mods
+    -- setMod
     mob:setMod(MOD_REGEN, 20);
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 25);
@@ -44,6 +37,13 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 10);
     mob:setMod(MOD_TRIPLE_ATTACK, 1);
+
+    -- addMod
+    mob:addMod(MOD_ACC, 25);
+    mob:addMod(MOD_DOUBLE_ATTACK, 5);
+    mob:addMod(MOD_MATT, 25);
+    mob:addMod(MOD_MACC, 80);
+    mob:addMod(MOD_INT, 10);
 
     -- Vars
     mob:setLocalVar("MagicElement", math.random(1,6));
@@ -100,10 +100,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Mars_2hr_Used = 0;
-    if (mob:getLocalVar("Mars_2hr") ~= nil) then
-        Mars_2hr_Used = mob:getLocalVar("Mars_2hr");
-    end
+    local Mars_2hr_Used = mob:getLocalVar("Mars_2hr");
 
     if (mob:getHPP() <= 9) then -- Time for BW(3rd use) and MS(2nd use) together!
         if (Mars_2hr_Used == 3) then
@@ -221,7 +218,7 @@ function onMobDeath(mob,killer)
     end
     mob:SpoofChatParty("...I...Defeated...Content...At last...", MESSAGE_SAY)
     mob:SpoofChatParty("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO)
-    -- insert code to spawn lootbox here, move battlefield win stuff into lootbox?
+    -- insert code to spawn lootbox here, move battlefield win stuff into exit portal.
     -- mob:getBattlefield():win();
 end;
 
@@ -242,10 +239,7 @@ function onMagicHit(caster, target, spell)
     if (mob ~= nil) then
         local SPELL_ELEMENT = spell:getElement();
         local MARS_ELEMENT = mob:getLocalVar("MagicElement");
-        local Mars_2hr_Used = 0;
-        if (mob:getLocalVar("Mars_2hr") ~= nil) then
-            Mars_2hr_Used = mob:getLocalVar("Mars_2hr");
-        end
+        local Mars_2hr_Used = mob:getLocalVar("Mars_2hr");
 
         --[[
         local player = nil;
@@ -299,7 +293,8 @@ function onMagicHit(caster, target, spell)
             end
         end
     end
-    return spell;
+
+    return 1;
 end
 
 -----------------------------------
