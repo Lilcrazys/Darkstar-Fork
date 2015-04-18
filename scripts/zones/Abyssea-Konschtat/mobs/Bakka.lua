@@ -1,11 +1,8 @@
 -----------------------------------
---  Area: Abyssea - Konschtat (15)
---   Mob: Bakka
------------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+-- Area: Abyssea - Konschtat (15)
+--  NM:  Bakka
 -----------------------------------
 
-require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 
@@ -21,8 +18,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MATT,90);
-	mob:addMod(MOD_MACC,300);
+    mob:addMod(MOD_MATT,90);
+    mob:addMod(MOD_MACC,300);
 end;
 
 -----------------------------------
@@ -30,7 +27,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
@@ -38,7 +34,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-	TriggerHint(mob,target);
 end;
 
 -----------------------------------
@@ -46,35 +41,4 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-end;
-
-function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	-- local keyId = KEYITEM_ID_HERE;
-	if (killer:getVar("RED_PROC") == 1) then
-		-- if (killer:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
-			-- killer:addKeyItem(keyId);
-			-- killer:messageSpecial( KEYITEM_OBTAINED, keyId );
-		-- end
-	end
-
-	if (killer:getVar("BLUE_PROC") == 1) then
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);	--[[ Uncomment to use]]--
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-	end
-
-	if (killer:getVar("YELLOW_PROC") == 1) then
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);	--[[ Uncomment to use]]--
-		-- SetDropRate(dropID,itemID,newrate);
-		-- SetDropRate(dropID,itemID,newrate);
-	end
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
-    -- DoLights(killer,mob,action)
-	-- PyxisSpawn(mob,killer,npc);
-
 end;
