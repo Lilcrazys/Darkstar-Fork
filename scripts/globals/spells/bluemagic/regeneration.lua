@@ -36,7 +36,7 @@ function onSpellCast(caster,target,spell)
         target:delStatusEffect(EFFECT_REGEN);
     end
 
-    if(target:addStatusEffect(EFFECT_REGEN,10,3,90,0,0,0)) then
+    if(target:addStatusEffect(EFFECT_REGEN,25,3,90,0,0,0)) then
         spell:setMsg(230);
     else
         spell:setMsg(75); -- no effect
