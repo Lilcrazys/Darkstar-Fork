@@ -6,22 +6,44 @@
 require("scripts/globals/status");
 require("scripts/globals/titles");
 
-local offsets = {1, 3, 5, 2, 4, 6};
-
 -----------------------------------
 -- OnMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:addMod(MOD_REGEN, 30);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 200);
+    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_UFASTCAST, 75);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,130);
+    mob:setMod(MOD_DOUBLE_ATTACK, 15);
+end;
+
+-----------------------------------
+-- OnMobEngaged Action
+-----------------------------------
 
 function onMobEngaged(mob)
     mob:resetLocalVars();
 end
-
+-----------------------------------
+-- onMobFight Action
+-----------------------------------
 function onMobFight(mob, target)
-
+    local offsets = {1, 3, 5, 2, 4, 6};
     local spawnTime = mob:getLocalVar("spawnTime");
     local twohourTime = mob:getLocalVar("twohourTime");
 
@@ -29,16 +51,16 @@ function onMobFight(mob, target)
         twohourTime = math.random(4, 6);
         mob:setLocalVar("twohourTime", twohourTime);
     end
-    
+
     if (spawnTime == 0) then
         spawnTime = math.random(3, 5);
         mob:setLocalVar("spawnTime", spawnTime);
     end
-    
-    if (mob:getBattleTime()/15 > twohourTime) then
+
+    if (mob:getBattleTime()/10 > twohourTime) then
         mob:useMobAbility(454);
-        mob:setLocalVar("twohourTime", (mob:getBattleTime()/15)+math.random(4,6));
-    elseif (mob:getBattleTime()/15 > spawnTime) then
+        mob:setLocalVar("twohourTime", (mob:getBattleTime()/10)+math.random(4,6));
+    elseif (mob:getBattleTime()/10 > spawnTime) then
         for i, offset in ipairs(offsets) do
             if (GetMobAction(mob:getID()+offset) == ACTION_SPAWN or GetMobAction(mob:getID()+offset) == ACTION_NONE) then
                 local pet = SpawnMob(mob:getID()+offset, 60);
@@ -48,7 +70,7 @@ function onMobFight(mob, target)
                 break;
             end
         end
-        mob:setLocalVar("spawnTime", (mob:getBattleTime()/15)+4);
+        mob:setLocalVar("spawnTime", (mob:getBattleTime()/10)+4);
     end
 end
 
@@ -59,14 +81,27 @@ function onMobDisengage(mob, weather)
 end
 
 -----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_DOOM) == true)) then
+        return 0,0,0;
+    else
+        local duration = 10;
+        target:addStatusEffect(EFFECT_DOOM,1,0,duration);
+        mob:resetEnmity(target);
+        return SUBEFFECT_NONE,0,EFFECT_DOOM;
+    end
+end;
+-----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, killer)
     killer:addTitle(VRTRA_VANQUISHER);
-    
+
     -- Set Vrtra's spawnpoint and respawn time (3-5 days)
     UpdateNMSpawnPoint(mob:getID());
     mob:setRespawnTime(math.random((75600),(86400)));
-    
+
 end;
