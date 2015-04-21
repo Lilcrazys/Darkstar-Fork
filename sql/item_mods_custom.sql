@@ -5984,7 +5984,7 @@ INSERT INTO `item_mods` VALUES (28575, 27, -3); --
 -- Supershear
 INSERT INTO `item_mods` VALUES (28535, 25, 7); -- acc
 INSERT INTO `item_mods` VALUES (28535, 27, 5); -- enm
-INSERT INTO `item_mods` VALUES (28535, 2 30); -- hp
+INSERT INTO `item_mods` VALUES (28535, 2, 30); -- hp
 INSERT INTO `item_mods` VALUES (28535, 3, 30); -- mp
 INSERT INTO `item_mods` VALUES (28535, 10, 5); -- vit
 INSERT INTO `item_mods` VALUES (28535, 427, 25); -- reduces emn loss (TESTING)
@@ -11441,24 +11441,24 @@ INSERT INTO `item_mods` VALUES(26752, 170, 9); -- cast
 INSERT INTO `item_mods` VALUES(26752, 516, 5); -- converts 5% to MP
 
 -- Chevaliers Cuirass (26910)
-INSERT INTO `item_mods` VALUES(26752, 1, 109); -- DEF
-INSERT INTO `item_mods` VALUES(26752, 2, 96); -- HP
-INSERT INTO `item_mods` VALUES(26752, 3, 114); -- MP
-INSERT INTO `item_mods` VALUES(26752, 8, 18); -- STR
-INSERT INTO `item_mods` VALUES(26752, 9, 11); -- DEX
-INSERT INTO `item_mods` VALUES(26752, 10, 20); -- VIT
-INSERT INTO `item_mods` VALUES(26752, 11, 11); -- AGI
-INSERT INTO `item_mods` VALUES(26752, 12, 10); -- INT
-INSERT INTO `item_mods` VALUES(26752, 13, 10); -- MND
-INSERT INTO `item_mods` VALUES(26752, 14, 10); -- CHR
-INSERT INTO `item_mods` VALUES(26752, 25, 20); -- acc
-INSERT INTO `item_mods` VALUES(26752, 23, 20); -- atk
-INSERT INTO `item_mods` VALUES(26752, 68, 16); -- Evasion
-INSERT INTO `item_mods` VALUES(26752, 31, 47); -- Magic Evasion
-INSERT INTO `item_mods` VALUES(26752, 29, 2); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES(26752, 384, 31); -- Haste
-INSERT INTO `item_mods` VALUES(26752, 27, 10); -- enm
-INSERT INTO `item_mods` VALUES(26752, 480, 10); -- null dmg
+INSERT INTO `item_mods` VALUES(26910, 1, 109); -- DEF
+INSERT INTO `item_mods` VALUES(26910, 2, 96); -- HP
+INSERT INTO `item_mods` VALUES(26910, 3, 114); -- MP
+INSERT INTO `item_mods` VALUES(26910, 8, 18); -- STR
+INSERT INTO `item_mods` VALUES(26910, 9, 11); -- DEX
+INSERT INTO `item_mods` VALUES(26910, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES(26910, 11, 11); -- AGI
+INSERT INTO `item_mods` VALUES(26910, 12, 10); -- INT
+INSERT INTO `item_mods` VALUES(26910, 13, 10); -- MND
+INSERT INTO `item_mods` VALUES(26910, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES(26910, 25, 20); -- acc
+INSERT INTO `item_mods` VALUES(26910, 23, 20); -- atk
+INSERT INTO `item_mods` VALUES(26910, 68, 16); -- Evasion
+INSERT INTO `item_mods` VALUES(26910, 31, 47); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26910, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26910, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES(26910, 27, 10); -- enm
+INSERT INTO `item_mods` VALUES(26910, 480, 10); -- null dmg
 
 -- Chevaliers Gauntlets (27064)
 INSERT INTO `item_mods` VALUES(27064, 1, 77); -- DEF
@@ -11850,19 +11850,19 @@ INSERT INTO `item_mods` VALUES(27257, 73, 9); -- STP
 INSERT INTO `item_mods` VALUES(27257, 359, 5); -- rapid
 
 -- Amini Bottilions (27431)
-INSERT INTO `item_mods` VALUES(27072, 1, 51); -- DEF
-INSERT INTO `item_mods` VALUES(27072, 2, 5); -- HP
-INSERT INTO `item_mods` VALUES(27072, 8, 8); -- STR
-INSERT INTO `item_mods` VALUES(27072, 9, 14); -- DEX
-INSERT INTO `item_mods` VALUES(27072, 10, 5); -- VIT
-INSERT INTO `item_mods` VALUES(27072, 11, 29); -- AGI
-INSERT INTO `item_mods` VALUES(27072, 13, 7); -- MND
-INSERT INTO `item_mods` VALUES(27072, 14, 17); -- CHR
-INSERT INTO `item_mods` VALUES(27072, 68, 34); -- Evasion
-INSERT INTO `item_mods` VALUES(27072, 31, 51); -- Magic Evasion
-INSERT INTO `item_mods` VALUES(27072, 29, 2); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES(27072, 384, 41); -- Haste
-INSERT INTO `item_mods` VALUES(27072, 105, 18); -- marksmanship
+INSERT INTO `item_mods` VALUES(27431, 1, 51); -- DEF
+INSERT INTO `item_mods` VALUES(27431, 2, 5); -- HP
+INSERT INTO `item_mods` VALUES(27431, 8, 8); -- STR
+INSERT INTO `item_mods` VALUES(27431, 9, 14); -- DEX
+INSERT INTO `item_mods` VALUES(27431, 10, 5); -- VIT
+INSERT INTO `item_mods` VALUES(27431, 11, 29); -- AGI
+INSERT INTO `item_mods` VALUES(27431, 13, 7); -- MND
+INSERT INTO `item_mods` VALUES(27431, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES(27431, 68, 34); -- Evasion
+INSERT INTO `item_mods` VALUES(27431, 31, 51); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27431, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27431, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES(27431, 105, 18); -- marksmanship
 
 -- Kasuga Kabuto (26762)
 INSERT INTO `item_mods` VALUES(26762, 1, 83); -- DEF
