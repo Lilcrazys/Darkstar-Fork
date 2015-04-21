@@ -147,3 +147,13 @@ void CBaseEntity::SetLocalVar(const char* var, uint32 val)
 {
     m_localVars[var] = val;
 }
+
+void CBaseEntity::SetModelId(uint16 modelid)
+{
+    look.modelid = modelid;
+}
+
+uint16 CBaseEntity::GetModelId()
+{
+    return look.modelid;
+}

@@ -6357,7 +6357,19 @@ INSERT INTO `nm_spawn_points` VALUES (17584416,46,-219.000,-0.500,214.000);
 INSERT INTO `nm_spawn_points` VALUES (17584416,47,-206.000,-0.500,212.000);
 INSERT INTO `nm_spawn_points` VALUES (17584416,48,-206.000,-0.500,212.000);
 INSERT INTO `nm_spawn_points` VALUES (17584416,49,-194.000,-1.250,215.000);
-INSERT INTO `nm_spawn_points` VALUES (17318456,6951,-189.000,7.000,270.000);
+
+-- Sekhmet
+INSERT INTO `nm_spawn_points` VALUES (16805962,0,316.000,20.000,-141.000);
+INSERT INTO `nm_spawn_points` VALUES (16805962,1,307.000,20.000,-186.000);
+INSERT INTO `nm_spawn_points` VALUES (16805962,2,322.000,20.000,-199.000);
+INSERT INTO `nm_spawn_points` VALUES (16805962,3,359.000,20.000,-158.000);
+INSERT INTO `nm_spawn_points` VALUES (16805962,4,360.000,20.000,-202.000);
+
+
+INSERT INTO `nm_spawn_points` VALUES (17318456,6951,-189.000,7.000,270.000); -- What mob is this? Who added it?
+-- Not in darkstars version at all, and before I aded this note, would have errored because this table required multiple entries for each ID
+-- (LOL, how did you not notice that every mob had FIFTY lines, srsly?)
+
 /*!40000 ALTER TABLE `nm_spawn_points` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

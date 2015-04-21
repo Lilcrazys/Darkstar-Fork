@@ -44,6 +44,8 @@ CAIAutomatonDummy::CAIAutomatonDummy(CPetEntity* PPet)
 
     CAutomatonEntity* PAutomaton = (CAutomatonEntity*)PPet;
 
+    m_PPet = PAutomaton;
+
     uint32 m_magicRecast = 0;
     uint32 m_magicEnfeebleRecast = 0;
     uint32 m_magicElementalRecast = 0;
@@ -126,8 +128,9 @@ void CAIAutomatonDummy::ActionAttack()
     }
     else if (CheckTPMove())
     {
-        m_ActionType = ACTION_MOBABILITY_START;
-        ActionAbilityStart();
+        //TODO: check if automaton WS have activation times (don't think so)
+        m_ActionType = ACTION_MOBABILITY_FINISH;
+        ActionAbilityFinish();
         return;
     }
     else if (CheckRangedAttack())
@@ -281,11 +284,9 @@ bool CAIAutomatonDummy::CheckTPMove()
     //TODO: range checks
     if (m_PPet->health.tp > 1000)
     {
-        bool valid = false;
-
         std::vector<CMobSkill*> FamilySkills = battleutils::GetMobSkillsByFamily(m_PPet->m_Family);
 
-        std::vector<CMobSkill*> validSkills;
+        std::map<uint16, CMobSkill*> validSkills;
 
         //load the skills that the automaton has access to with it's skill
         SKILLTYPE skilltype = SKILL_AME;
@@ -297,24 +298,28 @@ bool CAIAutomatonDummy::CheckTPMove()
 
         for (auto PSkill : FamilySkills)
         {
-            if (m_PPet->PMaster && m_PPet->PMaster->GetSkill(skilltype) > PSkill->getParam())
+            if (m_PPet->PMaster && m_PPet->PMaster->GetSkill(skilltype) > PSkill->getParam() && PSkill->getParam() != -1)
             {
-                validSkills.push_back(PSkill);
+                validSkills.insert(std::make_pair(m_PPet->PMaster->GetSkill(skilltype), PSkill));
             }
         }
 
+        uint16 currentSkill = 0;
+        int8 currentManeuvers = -1;
         for (auto PSkill : validSkills)
         {
-            if (luautils::OnMobSkillCheck(m_PBattleSubTarget, m_PPet, PSkill) == 0)
+            int8 maneuvers = luautils::OnMobAutomatonSkillCheck(m_PBattleSubTarget, m_PPet, PSkill.second);
+            if ( maneuvers > -1 && (maneuvers > currentManeuvers || (maneuvers == currentManeuvers && PSkill.first > currentSkill)))
             {
-                SetCurrentMobSkill(PSkill);
-                valid = true;
-                break;
+                SetCurrentMobSkill(PSkill.second);
+                m_PBattleSubTarget = m_PBattleTarget;
+                currentManeuvers = maneuvers;
+                currentSkill = PSkill.first;
             }
         }
 
         // No WS was chosen (waiting on master's TP to skillchain probably)
-        if (!valid)
+        if (currentManeuvers == -1)
         {
             return false;
         }
@@ -322,10 +327,6 @@ bool CAIAutomatonDummy::CheckTPMove()
         m_PPathFind->LookAt(m_PBattleSubTarget->loc.p);
         m_skillTP = m_PPet->health.tp;
         m_PPet->health.tp = 0;
-
-        //TODO: check if automaton WS have activation times (don't think so)
-        m_ActionType = ACTION_MOBABILITY_FINISH;
-        ActionAbilityFinish();
 
         return true;
     }

@@ -179,6 +179,9 @@ public:
 
     virtual void    UpdateEntity() = 0;
 
+    void            SetModelId(uint16 modelId);     // Set new modelid
+    uint16          GetModelId();                   // Get the modelid
+
     CBaseEntity();						// конструктор
     virtual ~CBaseEntity();				// деструктор
 private:
