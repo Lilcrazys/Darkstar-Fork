@@ -5984,7 +5984,7 @@ INSERT INTO `item_mods` VALUES (28575, 27, -3); --
 -- Supershear
 INSERT INTO `item_mods` VALUES (28535, 25, 7); -- acc
 INSERT INTO `item_mods` VALUES (28535, 27, 5); -- enm
-INSERT INTO `item_mods` VALUES (28535, 2 30); -- hp
+INSERT INTO `item_mods` VALUES (28535, 2, 30); -- hp
 INSERT INTO `item_mods` VALUES (28535, 3, 30); -- mp
 INSERT INTO `item_mods` VALUES (28535, 10, 5); -- vit
 INSERT INTO `item_mods` VALUES (28535, 427, 25); -- reduces emn loss (TESTING)
