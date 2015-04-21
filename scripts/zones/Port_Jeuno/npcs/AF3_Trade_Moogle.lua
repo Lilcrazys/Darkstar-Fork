@@ -1717,7 +1717,7 @@ function onTrade(player,npc,trade)
         player:messageSpecial(ITEM_OBTAINED,10662);
         player:tradeComplete();
     end
-    if (trade:hasItemQty(3494,50) and trade:hasItemQty(16099,1) and trade:getItemCount() == 51) then                --body
+    if (trade:hasItemQty(3494,50) and trade:hasItemQty(15099,1) and trade:getItemCount() == 51) then                --body
         player:addItem(10682);
         player:messageSpecial(ITEM_OBTAINED,10682);
         player:tradeComplete();
