@@ -12,7 +12,7 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    local mobSkin = mob:getSkinID();
+    local mobSkin = mob:getModelID();
 
     if(mobSkin == 281) then
         return 0;
