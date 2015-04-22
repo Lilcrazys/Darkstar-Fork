@@ -80,11 +80,11 @@ function onMobFight(mob, target)
     end
 
     if (mob:getBattleTime() - mob:getLocalVar("WynavTime") > 90) then
-        -- If all 4 aren't up, pop whichever ones are missing. Timer resets even if none pop.
-        if ((WYNAV_1 ~= ACTION_NONE and WYNAV_1 ~= ACTION_SPAWN)
-        and (WYNAV_2 ~= ACTION_NONE and WYNAV_2 ~= ACTION_SPAWN)
-        and (WYNAV_3 ~= ACTION_NONE and WYNAV_3 ~= ACTION_SPAWN)
-        and (WYNAV_4 ~= ACTION_NONE and WYNAV_4 ~= ACTION_SPAWN)) then
+        -- If all 4 aren't up, don't pop any. Timer resets even if none pop.
+        if ((WYNAV_1 == ACTION_NONE or WYNAV_1 == ACTION_SPAWN)
+        and (WYNAV_2 == ACTION_NONE or WYNAV_2 == ACTION_SPAWN)
+        and (WYNAV_3 == ACTION_NONE or WYNAV_3 == ACTION_SPAWN)
+        and (WYNAV_4 == ACTION_NONE or WYNAV_4 == ACTION_SPAWN)) then
             SpawnMob(mob:getID()+1, 300):updateEnmity(target);
             SpawnMob(mob:getID()+2, 300):updateEnmity(target);
             SpawnMob(mob:getID()+3, 300):updateEnmity(target);
