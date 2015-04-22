@@ -138,7 +138,6 @@ function onMobFight(mob, target)
     end
 end;
 
-
 ------------------------------------
 -- onSpellPrecast
 ------------------------------------

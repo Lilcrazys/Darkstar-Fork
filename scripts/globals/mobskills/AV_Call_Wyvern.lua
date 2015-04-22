@@ -14,10 +14,10 @@ function onMobSkillCheck(target,mob,skill)
     local WYNAV_2 = GetMobAction(mob:getID()+2);
     local WYNAV_3 = GetMobAction(mob:getID()+3);
     local WYNAV_4 = GetMobAction(mob:getID()+4);
-    if ((WYNAV_1 ~= ACTION_NONE and WYNAV_1 ~= ACTION_SPAWN)
-    and (WYNAV_2 ~= ACTION_NONE and WYNAV_2 ~= ACTION_SPAWN)
-    and (WYNAV_3 ~= ACTION_NONE and WYNAV_3 ~= ACTION_SPAWN)
-    and (WYNAV_4 ~= ACTION_NONE and WYNAV_4 ~= ACTION_SPAWN)) then
+    if ((WYNAV_1 ~= ACTION_NONE or WYNAV_1 ~= ACTION_SPAWN)
+    and (WYNAV_2 ~= ACTION_NONE or WYNAV_2 ~= ACTION_SPAWN)
+    and (WYNAV_3 ~= ACTION_NONE or WYNAV_3 ~= ACTION_SPAWN)
+    and (WYNAV_4 ~= ACTION_NONE or WYNAV_4 ~= ACTION_SPAWN)) then
         return 1;
     else
         return 0;
