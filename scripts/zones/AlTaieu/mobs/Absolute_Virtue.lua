@@ -65,6 +65,10 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local WYNAV_1 = GetMobAction(mob:getID()+1);
+    local WYNAV_2 = GetMobAction(mob:getID()+2);
+    local WYNAV_3 = GetMobAction(mob:getID()+3);
+    local WYNAV_4 = GetMobAction(mob:getID()+4);
     local DID2HR = mob:getLocalVar("DID2HR");
     local RND = math.random(1,12);
     local AV2HR = nil;
@@ -76,7 +80,19 @@ function onMobFight(mob, target)
     end
 
     if (mob:getBattleTime() - mob:getLocalVar("WynavTime") > 90) then
-        mob:useMobAbility(476); -- Customized Call Wyvern
+        -- If all 4 aren't up, pop whichever ones are missing. Timer resets even if none pop.
+        if ((WYNAV_1 ~= ACTION_NONE and WYNAV_1 ~= ACTION_SPAWN)
+        and (WYNAV_2 ~= ACTION_NONE and WYNAV_2 ~= ACTION_SPAWN)
+        and (WYNAV_3 ~= ACTION_NONE and WYNAV_3 ~= ACTION_SPAWN)
+        and (WYNAV_4 ~= ACTION_NONE and WYNAV_4 ~= ACTION_SPAWN)) then
+            SpawnMob(mob:getID()+1, 300):updateEnmity(target);
+            SpawnMob(mob:getID()+2, 300):updateEnmity(target);
+            SpawnMob(mob:getID()+3, 300):updateEnmity(target);
+            SpawnMob(mob:getID()+4, 300):updateEnmity(target);
+            -- SpawnMob(mob:getID()+5, 300):updateEnmity(target);
+            -- SpawnMob(mob:getID()+6, 300):updateEnmity(target);
+            -- SpawnMob(mob:getID()+7, 300):updateEnmity(target);
+        end
         mob:setLocalVar("WynavTime", mob:getBattleTime());
     else
         if (RND == 1) then
