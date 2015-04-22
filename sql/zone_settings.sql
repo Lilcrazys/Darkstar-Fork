@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: dspdb
 -- ------------------------------------------------------
--- Server version	5.5.31-0ubuntu1
+-- Server version   5.5.31-0ubuntu1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -75,8 +75,8 @@ INSERT INTO `zone_settings` VALUES (25,2,'127.0.0.1',54230,'Misareaux_Coast',230
 INSERT INTO `zone_settings` VALUES (26,1,'127.0.0.1',54230,'Tavnazian_Safehold',245,245,245,245,0,0.00,104,0);
 INSERT INTO `zone_settings` VALUES (27,3,'127.0.0.1',54230,'Phomiuna_Aqueducts',0,0,115,218,40,0.00,145,0);
 INSERT INTO `zone_settings` VALUES (28,3,'127.0.0.1',54230,'Sacrarium',0,0,115,218,50,0.00,145,0);
-INSERT INTO `zone_settings` VALUES (29,3,'127.0.0.1',54230,'Riverne-Site_B01',0,115,218,50,0.00,153,0);
-INSERT INTO `zone_settings` VALUES (30,3,'127.0.0.1',54230,'Riverne-Site_A01',0,115,218,40,0.00,153,0);
+INSERT INTO `zone_settings` VALUES (29,3,'127.0.0.1',54230,'Riverne-Site_B01',0,0,115,218,50,0.00,153,0);
+INSERT INTO `zone_settings` VALUES (30,3,'127.0.0.1',54230,'Riverne-Site_A01',0,0,115,218,40,0.00,153,0);
 INSERT INTO `zone_settings` VALUES (31,4,'127.0.0.1',54230,'Monarch_Linn',0,0,220,220,0,0.00,145,0);
 INSERT INTO `zone_settings` VALUES (32,1,'127.0.0.1',54230,'Sealions_Den',245,245,220,220,0,0.00,145,0);
 INSERT INTO `zone_settings` VALUES (33,2,'127.0.0.1',54230,'AlTaieu',233,233,101,219,0,0.00,156,0);
