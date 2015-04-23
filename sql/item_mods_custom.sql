@@ -5985,7 +5985,7 @@ INSERT INTO `item_mods` VALUES (28575, 27, -3); --
 INSERT INTO `item_mods` VALUES (28535, 25, 7); -- acc
 INSERT INTO `item_mods` VALUES (28535, 27, 5); -- enm
 INSERT INTO `item_mods` VALUES (28535, 2, 30); -- hp
-INSERT INTO `item_mods` VALUES (28535, 3, 30); -- mp
+INSERT INTO `item_mods` VALUES (28535, 5, 30); -- mp
 INSERT INTO `item_mods` VALUES (28535, 10, 5); -- vit
 INSERT INTO `item_mods` VALUES (28535, 427, 25); -- reduces emn loss (TESTING)
 
@@ -11062,7 +11062,7 @@ INSERT INTO `item_mods` VALUES(27239, 73, 6); -- Store TP
 
 -- Bhikku Gaiters (27413)
 INSERT INTO `item_mods` VALUES(27413, 1, 49); -- DEF
-INSERT INTO `item_mods` VALUES(27413, 2, 6); -- HP
+INSERT INTO `item_mods` VALUES(27413, 5, 6); -- HP
 INSERT INTO `item_mods` VALUES(27413, 8, 13); -- STR
 INSERT INTO `item_mods` VALUES(27413, 9, 9); -- DEX
 INSERT INTO `item_mods` VALUES(27413, 10, 8); -- VIT
@@ -11079,7 +11079,7 @@ INSERT INTO `item_mods` VALUES(27413, 386, 50); -- Kick attacks dmg
 -- Ebers Cap (26744)
 INSERT INTO `item_mods` VALUES(26744, 1, 69); -- DEF
 INSERT INTO `item_mods` VALUES(26744, 2, 16); -- HP
-INSERT INTO `item_mods` VALUES(26744, 3, 81); -- MP
+INSERT INTO `item_mods` VALUES(26744, 5, 81); -- MP
 INSERT INTO `item_mods` VALUES(26744, 8, 9); -- STR
 INSERT INTO `item_mods` VALUES(26744, 9, 10); -- DEX
 INSERT INTO `item_mods` VALUES(26744, 10, 10); -- VIT
@@ -11096,7 +11096,7 @@ INSERT INTO `item_mods` VALUES(26744, 374, 13); -- Cure Pot
 -- Bbers Briault (26902)
 INSERT INTO `item_mods` VALUES(26902, 1, 87); -- DEF
 INSERT INTO `item_mods` VALUES(26902, 2, 69); -- HP
-INSERT INTO `item_mods` VALUES(26902, 3, 98); -- MP
+INSERT INTO `item_mods` VALUES(26902, 5, 98); -- MP
 INSERT INTO `item_mods` VALUES(26902, 8, 12); -- STR
 INSERT INTO `item_mods` VALUES(26902, 9, 12); -- DEX
 INSERT INTO `item_mods` VALUES(26902, 10, 12); -- VIT
@@ -11114,7 +11114,7 @@ INSERT INTO `item_mods` VALUES(26902, 369, 2); -- Refresh
 -- Ebers Mitts (27056)
 INSERT INTO `item_mods` VALUES(27056, 1, 60); -- DEF
 INSERT INTO `item_mods` VALUES(27056, 2, 34); -- HP
-INSERT INTO `item_mods` VALUES(27056, 3, 42); -- MP
+INSERT INTO `item_mods` VALUES(27056, 5, 42); -- MP
 INSERT INTO `item_mods` VALUES(27056, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES(27056, 9, 16); -- DEX
 INSERT INTO `item_mods` VALUES(27056, 10, 16); -- VIT
@@ -11131,7 +11131,7 @@ INSERT INTO `item_mods` VALUES(27056, 384, 31); -- Haste
 -- Ebers Pantaloons (27241)
 INSERT INTO `item_mods` VALUES(27241, 1, 75); -- DEF
 INSERT INTO `item_mods` VALUES(27241, 2, 19); -- HP
-INSERT INTO `item_mods` VALUES(27241, 3, 29); -- MP
+INSERT INTO `item_mods` VALUES(27241, 5, 29); -- MP
 INSERT INTO `item_mods` VALUES(27241, 8, 15); -- STR
 INSERT INTO `item_mods` VALUES(27241, 10, 8); -- VIT
 INSERT INTO `item_mods` VALUES(27241, 11, 11); -- AGI
@@ -11147,7 +11147,7 @@ INSERT INTO `item_mods` VALUES(27241, 384, 41); -- Haste
 -- Ebers Duckbills (27415)
 INSERT INTO `item_mods` VALUES(27415, 1, 46); -- DEF
 INSERT INTO `item_mods` VALUES(27415, 2, 45); -- HP
-INSERT INTO `item_mods` VALUES(27415, 3, 57); -- MP
+INSERT INTO `item_mods` VALUES(27415, 5, 57); -- MP
 INSERT INTO `item_mods` VALUES(27415, 8, 6); -- STR
 INSERT INTO `item_mods` VALUES(27415, 10, 7); -- VIT
 INSERT INTO `item_mods` VALUES(27415, 11, 21); -- AGI
@@ -11163,7 +11163,7 @@ INSERT INTO `item_mods` VALUES(27415, 384, 31); -- Haste
 -- Wicce Petasos (26746)
 INSERT INTO `item_mods` VALUES(26746, 1, 71); -- DEF
 INSERT INTO `item_mods` VALUES(26746, 2, 15); -- HP
-INSERT INTO `item_mods` VALUES(26746, 3, 46); -- MP
+INSERT INTO `item_mods` VALUES(26746, 5, 46); -- MP
 INSERT INTO `item_mods` VALUES(26746, 8, 8); -- STR
 INSERT INTO `item_mods` VALUES(26746, 9, 8); -- DEX
 INSERT INTO `item_mods` VALUES(26746, 10, 8); -- VIT
@@ -11181,7 +11181,7 @@ INSERT INTO `item_mods` VALUES(26746, 170, 7); -- Cast
 -- Wicce Coat (26904)
 INSERT INTO `item_mods` VALUES(26904, 1, 89); -- DEF
 INSERT INTO `item_mods` VALUES(26904, 2, 23); -- HP
-INSERT INTO `item_mods` VALUES(26904, 3, 101); -- MP
+INSERT INTO `item_mods` VALUES(26904, 5, 101); -- MP
 INSERT INTO `item_mods` VALUES(26904, 8, 12); -- STR
 INSERT INTO `item_mods` VALUES(26904, 9, 12); -- DEX
 INSERT INTO `item_mods` VALUES(26904, 10, 12); -- VIT
@@ -11200,7 +11200,7 @@ INSERT INTO `item_mods` VALUES(26904, 369, 2); -- Refresh
 -- Wicce Gloves (27058)
 INSERT INTO `item_mods` VALUES(27058, 1, 58); -- DEF
 INSERT INTO `item_mods` VALUES(27058, 2, 8); -- HP
-INSERT INTO `item_mods` VALUES(27058, 3, 17); -- MP
+INSERT INTO `item_mods` VALUES(27058, 5, 17); -- MP
 INSERT INTO `item_mods` VALUES(27058, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES(27058, 9, 16); -- DEX
 INSERT INTO `item_mods` VALUES(27058, 10, 14); -- VIT
@@ -11217,7 +11217,7 @@ INSERT INTO `item_mods` VALUES(27058, 384, 31); -- Haste
 -- Wicce Chausses (27243)
 INSERT INTO `item_mods` VALUES(27243, 1, 74); -- DEF
 INSERT INTO `item_mods` VALUES(27243, 2, 18); -- HP
-INSERT INTO `item_mods` VALUES(27243, 3, 91); -- MP
+INSERT INTO `item_mods` VALUES(27243, 5, 91); -- MP
 INSERT INTO `item_mods` VALUES(27243, 8, 13); -- STR
 INSERT INTO `item_mods` VALUES(27243, 10, 5); -- VIT
 INSERT INTO `item_mods` VALUES(27243, 11, 10); -- AGI
@@ -11234,7 +11234,7 @@ INSERT INTO `item_mods` VALUES(27243, 384, 41); -- Haste
 -- Wicce Sabots (27417)
 INSERT INTO `item_mods` VALUES(27417, 1, 47); -- DEF
 INSERT INTO `item_mods` VALUES(27417, 2, 4); -- HP
-INSERT INTO `item_mods` VALUES(27417, 3, 17); -- MP
+INSERT INTO `item_mods` VALUES(27417, 5, 17); -- MP
 INSERT INTO `item_mods` VALUES(27417, 8, 5); -- STR
 INSERT INTO `item_mods` VALUES(27417, 9, 5); -- STR
 INSERT INTO `item_mods` VALUES(27417, 10, 5); -- VIT
@@ -11252,7 +11252,7 @@ INSERT INTO `item_mods` VALUES(27417, 384, 31); -- Haste
 -- Lethargy Chapel (26748)
 INSERT INTO `item_mods` VALUES(26748, 1, 72); -- DEF
 INSERT INTO `item_mods` VALUES(26748, 2, 17); -- HP
-INSERT INTO `item_mods` VALUES(26748, 3, 69); -- MP
+INSERT INTO `item_mods` VALUES(26748, 5, 69); -- MP
 INSERT INTO `item_mods` VALUES(26748, 8, 9); -- STR
 INSERT INTO `item_mods` VALUES(26748, 9, 9); -- DEX
 INSERT INTO `item_mods` VALUES(26748, 10, 9); -- VIT
@@ -11271,7 +11271,7 @@ INSERT INTO `item_mods` VALUES(26748, 170, 7); -- cast
 -- Lethargy Sayon (26906)
 INSERT INTO `item_mods` VALUES(26906, 1, 91); -- DEF
 INSERT INTO `item_mods` VALUES(26906, 2, 27); -- HP
-INSERT INTO `item_mods` VALUES(26906, 3, 51); -- MP
+INSERT INTO `item_mods` VALUES(26906, 5, 51); -- MP
 INSERT INTO `item_mods` VALUES(26906, 8, 15); -- STR
 INSERT INTO `item_mods` VALUES(26906, 9, 12); -- DEX
 INSERT INTO `item_mods` VALUES(26906, 10, 12); -- VIT
@@ -11290,7 +11290,7 @@ INSERT INTO `item_mods` VALUES(26906, 369, 2); -- Refresh
 -- Lethargy Gantherots (27060)
 INSERT INTO `item_mods` VALUES(27060, 1, 61); -- DEF
 INSERT INTO `item_mods` VALUES(27060, 2, 11); -- HP
-INSERT INTO `item_mods` VALUES(27060, 3, 14); -- MP
+INSERT INTO `item_mods` VALUES(27060, 5, 14); -- MP
 INSERT INTO `item_mods` VALUES(27060, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES(27060, 9, 18); -- DEX
 INSERT INTO `item_mods` VALUES(27060, 10, 18); -- VIT
@@ -11308,7 +11308,7 @@ INSERT INTO `item_mods` VALUES(27060, 114, 17); -- enfeeb
 -- Lethargy Fuseau (27245)
 INSERT INTO `item_mods` VALUES(27245, 1, 76); -- DEF
 INSERT INTO `item_mods` VALUES(27245, 2, 21); -- HP
-INSERT INTO `item_mods` VALUES(27245, 3, 91); -- MP
+INSERT INTO `item_mods` VALUES(27245, 5, 91); -- MP
 INSERT INTO `item_mods` VALUES(27245, 8, 17); -- STR
 INSERT INTO `item_mods` VALUES(27245, 10, 6); -- VIT
 INSERT INTO `item_mods` VALUES(27245, 11, 12); -- AGI
@@ -11325,7 +11325,7 @@ INSERT INTO `item_mods` VALUES(27245, 384, 41); -- Haste
 -- Lethargy Houseaux (27419)
 INSERT INTO `item_mods` VALUES(27419, 1, 47); -- DEF
 INSERT INTO `item_mods` VALUES(27419, 2, 7); -- HP
-INSERT INTO `item_mods` VALUES(27419, 3, 14); -- MP
+INSERT INTO `item_mods` VALUES(27419, 5, 14); -- MP
 INSERT INTO `item_mods` VALUES(27419, 8, 8); -- STR
 INSERT INTO `item_mods` VALUES(27419, 9, 10); -- DEX
 INSERT INTO `item_mods` VALUES(27419, 10, 8); -- VIT
@@ -11424,7 +11424,7 @@ INSERT INTO `item_mods` VALUES(27421, 303, 2); -- TH
 -- Chevaliers Armet (26752)
 INSERT INTO `item_mods` VALUES(26752, 1, 85); -- DEF
 INSERT INTO `item_mods` VALUES(26752, 2, 81); -- HP
-INSERT INTO `item_mods` VALUES(26752, 3, 84); -- MP
+INSERT INTO `item_mods` VALUES(26752, 5, 84); -- MP
 INSERT INTO `item_mods` VALUES(26752, 8, 13); -- STR
 INSERT INTO `item_mods` VALUES(26752, 9, 9); -- DEX
 INSERT INTO `item_mods` VALUES(26752, 10, 24); -- VIT
@@ -11443,7 +11443,7 @@ INSERT INTO `item_mods` VALUES(26752, 516, 5); -- converts 5% to MP
 -- Chevaliers Cuirass (26910)
 INSERT INTO `item_mods` VALUES(26910, 1, 109); -- DEF
 INSERT INTO `item_mods` VALUES(26910, 2, 96); -- HP
-INSERT INTO `item_mods` VALUES(26910, 3, 114); -- MP
+INSERT INTO `item_mods` VALUES(26910, 5, 114); -- MP
 INSERT INTO `item_mods` VALUES(26910, 8, 18); -- STR
 INSERT INTO `item_mods` VALUES(26910, 9, 11); -- DEX
 INSERT INTO `item_mods` VALUES(26910, 10, 20); -- VIT
@@ -11463,7 +11463,7 @@ INSERT INTO `item_mods` VALUES(26910, 480, 10); -- null dmg
 -- Chevaliers Gauntlets (27064)
 INSERT INTO `item_mods` VALUES(27064, 1, 77); -- DEF
 INSERT INTO `item_mods` VALUES(27064, 2, 16); -- HP
-INSERT INTO `item_mods` VALUES(27064, 3, 12); -- MP
+INSERT INTO `item_mods` VALUES(27064, 5, 12); -- MP
 INSERT INTO `item_mods` VALUES(27064, 8, 13); -- STR
 INSERT INTO `item_mods` VALUES(27064, 9, 17); -- DEX
 INSERT INTO `item_mods` VALUES(27064, 10, 26); -- VIT
@@ -11478,7 +11478,7 @@ INSERT INTO `item_mods` VALUES(27064, 82, 18); -- sword skill
 -- Chevaliers Cuisses (27249)
 INSERT INTO `item_mods` VALUES(27249, 1, 97); -- DEF
 INSERT INTO `item_mods` VALUES(27249, 2, 77); -- HP
-INSERT INTO `item_mods` VALUES(27249, 3, 34); -- MP
+INSERT INTO `item_mods` VALUES(27249, 5, 34); -- MP
 INSERT INTO `item_mods` VALUES(27249, 8, 22); -- STR
 INSERT INTO `item_mods` VALUES(27249, 10, 14); -- VIT
 INSERT INTO `item_mods` VALUES(27249, 11, 9); -- AGI
@@ -11495,7 +11495,7 @@ INSERT INTO `item_mods` VALUES(27249, 427, 11); -- reduces emn loss
 -- Chevaliers Sabatons (27423)
 INSERT INTO `item_mods` VALUES(27423, 1, 67); -- DEF
 INSERT INTO `item_mods` VALUES(27423, 2, 10); -- HP
-INSERT INTO `item_mods` VALUES(27423, 3, 12); -- MP
+INSERT INTO `item_mods` VALUES(27423, 5, 12); -- MP
 INSERT INTO `item_mods` VALUES(27423, 8, 12); -- STR
 INSERT INTO `item_mods` VALUES(27423, 9, 8); -- DEX
 INSERT INTO `item_mods` VALUES(27423, 10, 12); -- VIT
@@ -11512,7 +11512,7 @@ INSERT INTO `item_mods` VALUES(27423, 27, 9); -- enm
 -- Heathens Burgonet (26754)
 INSERT INTO `item_mods` VALUES(26754, 1, 82); -- DEF
 INSERT INTO `item_mods` VALUES(26754, 2, 19); -- HP
-INSERT INTO `item_mods` VALUES(26754, 3, 24); -- MP
+INSERT INTO `item_mods` VALUES(26754, 5, 24); -- MP
 INSERT INTO `item_mods` VALUES(26754, 8, 23); -- STR
 INSERT INTO `item_mods` VALUES(26754, 9, 13); -- DEX
 INSERT INTO `item_mods` VALUES(26754, 10, 14); -- VIT
@@ -11530,7 +11530,7 @@ INSERT INTO `item_mods` VALUES(26754, 288, 3); -- Dbl Atk
 -- Heathens Cuirass (26912)
 INSERT INTO `item_mods` VALUES(26912, 1, 105); -- DEF
 INSERT INTO `item_mods` VALUES(26912, 2, 30); -- HP
-INSERT INTO `item_mods` VALUES(26912, 3, 49); -- MP
+INSERT INTO `item_mods` VALUES(26912, 5, 49); -- MP
 INSERT INTO `item_mods` VALUES(26912, 8, 20); -- STR
 INSERT INTO `item_mods` VALUES(26912, 9, 10); -- DEX
 INSERT INTO `item_mods` VALUES(26912, 10, 18); -- VIT
@@ -11549,7 +11549,7 @@ INSERT INTO `item_mods` VALUES(26912, 506, 10); -- dmg occ varies
 -- Heathens Gauntlets (27066)
 INSERT INTO `item_mods` VALUES(27066, 1, 74); -- DEF
 INSERT INTO `item_mods` VALUES(27066, 2, 14); -- HP
-INSERT INTO `item_mods` VALUES(27066, 3, 12); -- MP
+INSERT INTO `item_mods` VALUES(27066, 5, 12); -- MP
 INSERT INTO `item_mods` VALUES(27066, 8, 8); -- STR
 INSERT INTO `item_mods` VALUES(27066, 9, 17); -- DEX
 INSERT INTO `item_mods` VALUES(27066, 10, 21); -- VIT
@@ -11567,7 +11567,7 @@ INSERT INTO `item_mods` VALUES(27066, 83, 15); -- GS skill
 -- Heathens Flanchard (27251)
 INSERT INTO `item_mods` VALUES(27251, 1, 93); -- DEF
 INSERT INTO `item_mods` VALUES(27251, 2, 24); -- HP
-INSERT INTO `item_mods` VALUES(27251, 3, 34); -- MP
+INSERT INTO `item_mods` VALUES(27251, 5, 34); -- MP
 INSERT INTO `item_mods` VALUES(27251, 8, 29); -- STR
 INSERT INTO `item_mods` VALUES(27251, 10, 13); -- VIT
 INSERT INTO `item_mods` VALUES(27251, 12, 17); -- INT
@@ -11584,7 +11584,7 @@ INSERT INTO `item_mods` VALUES(27251, 116, 15); -- dark skill
 -- Heathens Sollerets (27425)
 INSERT INTO `item_mods` VALUES(27425, 1, 63); -- DEF
 INSERT INTO `item_mods` VALUES(27425, 2, 8); -- HP
-INSERT INTO `item_mods` VALUES(27425, 3, 12); -- MP
+INSERT INTO `item_mods` VALUES(27425, 5, 12); -- MP
 INSERT INTO `item_mods` VALUES(27425, 8, 15); -- STR
 INSERT INTO `item_mods` VALUES(27425, 9, 7); -- DEX
 INSERT INTO `item_mods` VALUES(27425, 10, 11); -- VIT
@@ -11683,7 +11683,7 @@ INSERT INTO `item_mods` VALUES(27427, 384, 30); -- Haste
 -- Fili Calot (26758)
 INSERT INTO `item_mods` VALUES(26758, 1, 69); -- DEF
 INSERT INTO `item_mods` VALUES(26758, 2, 17); -- HP
-INSERT INTO `item_mods` VALUES(26758, 3, 29); -- MP
+INSERT INTO `item_mods` VALUES(26758, 5, 29); -- MP
 INSERT INTO `item_mods` VALUES(26758, 8, 9); -- STR
 INSERT INTO `item_mods` VALUES(26758, 9, 11); -- DEX
 INSERT INTO `item_mods` VALUES(26758, 10, 8); -- VIT
@@ -11702,7 +11702,7 @@ INSERT INTO `item_mods` VALUES(26758, 170, 12); -- cast
 -- Fili Hongreline (26916)
 INSERT INTO `item_mods` VALUES(26916, 1, 90); -- DEF
 INSERT INTO `item_mods` VALUES(26916, 2, 25); -- HP
-INSERT INTO `item_mods` VALUES(26916, 3, 58); -- MP
+INSERT INTO `item_mods` VALUES(26916, 5, 58); -- MP
 INSERT INTO `item_mods` VALUES(26916, 8, 12); -- STR
 INSERT INTO `item_mods` VALUES(26916, 9, 14); -- DEX
 INSERT INTO `item_mods` VALUES(26916, 10, 13); -- VIT
@@ -11722,7 +11722,7 @@ INSERT INTO `item_mods` VALUES(26916, 454, 11); -- song duration
 -- Fili Manchettes (27070)
 INSERT INTO `item_mods` VALUES(27070, 1, 58); -- DEF
 INSERT INTO `item_mods` VALUES(27070, 2, 10); -- HP
-INSERT INTO `item_mods` VALUES(27070, 3, 14); -- MP
+INSERT INTO `item_mods` VALUES(27070, 5, 14); -- MP
 INSERT INTO `item_mods` VALUES(27070, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES(27070, 9, 17); -- DEX
 INSERT INTO `item_mods` VALUES(27070, 10, 17); -- VIT
@@ -11743,7 +11743,7 @@ INSERT INTO `item_mods` VALUES(27070, 443, 1); -- march
 -- Fili Rhingrave (27255)
 INSERT INTO `item_mods` VALUES(27255, 1, 77); -- DEF
 INSERT INTO `item_mods` VALUES(27255, 2, 20); -- HP
-INSERT INTO `item_mods` VALUES(27255, 3, 26); -- MP
+INSERT INTO `item_mods` VALUES(27255, 5, 26); -- MP
 INSERT INTO `item_mods` VALUES(27255, 8, 14); -- STR
 INSERT INTO `item_mods` VALUES(27255, 10, 6); -- VIT
 INSERT INTO `item_mods` VALUES(27255, 11, 12); -- AGI
@@ -11761,7 +11761,7 @@ INSERT INTO `item_mods` VALUES(27255, 442, 1); -- ballad
 -- Fili Cothurnes (27429)
 INSERT INTO `item_mods` VALUES(27429, 1, 46); -- DEF
 INSERT INTO `item_mods` VALUES(27429, 2, 6); -- HP
-INSERT INTO `item_mods` VALUES(27429, 3, 14); -- MP
+INSERT INTO `item_mods` VALUES(27429, 5, 14); -- MP
 INSERT INTO `item_mods` VALUES(27429, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES(27429, 10, 4); -- VIT
 INSERT INTO `item_mods` VALUES(27429, 11, 21); -- AGI
