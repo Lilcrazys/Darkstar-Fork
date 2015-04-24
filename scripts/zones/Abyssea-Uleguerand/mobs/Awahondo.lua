@@ -1,7 +1,8 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Awahondo
+-- Area: Abyssea - Uleguerand (253)
+--  NM:  Awahondo
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");

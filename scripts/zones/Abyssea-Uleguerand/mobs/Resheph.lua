@@ -1,6 +1,6 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Resheph
+-- Area: Abyssea - Uleguerand (253)
+--  NM:  Resheph
 -----------------------------------
 
 require("scripts/globals/abyssea");
@@ -20,13 +20,16 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
     mob:setMod(MOD_REGEN, 60);
+    mob:setMod(MOD_ZANSHIN, 25);
+    mob:setMod(MOD_COUNTER, 15);
+
+    -- addMod
     mob:addMod(MOD_MDEF, 50);
     mob:addMod(MOD_ATT, -50);
     mob:addMod(MOD_EVA, -100);
     mob:addMod(MOD_ACC, 100);
-    mob:setMod(MOD_ZANSHIN, 25);
-    mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
     mob:addMod(MOD_DMGMAGIC, -50);
     mob:addMod(MOD_DMGRANGE, -50);
@@ -44,13 +47,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    if (mob:getLocalVar("do2hr") == 1) then
+    local has2hr = mob:hasStatusEffect(EFFECT_MEIKYO_SHISUI);
+    local do2hr = mob:getLocalVar("do2hr");
+    local delay = mob:getLocalVar("delay");
+
+    if (mob:getTP() > 100 and do2hr == 0 and has2hr == false) then
+        mob:setLocalVar("do2hr", 1);
+    elseif (delay < 2 and do2hr == 1 and has2hr == false) then
+        mob:setLocalVar("delay", delay+1);
+    elseif (delay >= 2 and do2hr == 1 and has2hr == false) then
         mob:useMobAbility(474);
         mob:setLocalVar("do2hr", 0);
-    end
-
-    if (mob:getTP() > 100 and mob:hasStatusEffect(EFFECT_MEIKYO_SHISUI) == false) then
-        mob:setLocalVar("do2hr", 1);
+        mob:setLocalVar("delay", 0);
     end
 end;
 

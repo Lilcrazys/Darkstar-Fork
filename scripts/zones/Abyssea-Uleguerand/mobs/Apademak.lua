@@ -1,12 +1,13 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Apademak
+-- Area: Abyssea - Uleguerand (253)
+--  NM:  Apademak
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
-require("scripts/globals/magic");
+
 -----------------------------------
 -- OnMobInitialize
 -----------------------------------
@@ -22,14 +23,16 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_DOUBLE_ATTACK, 20);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 45);
     mob:setMod(MOD_REFRESH, 100);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_MACC,800);
+
+    -- addMod
     mob:addMod(MOD_DEF,130);
     mob:addMod(MOD_MDEF,50);
-    mob:setMod(MOD_DOUBLE_ATTACK, 20);
 end;
 
 -----------------------------------
@@ -57,4 +60,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_WAR_LION);
     end
 end;
-

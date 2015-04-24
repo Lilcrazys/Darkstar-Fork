@@ -1,7 +1,8 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Ironclad_Triturator
+-- Area: Abyssea - Uleguerand (253)
+--  NM:  Ironclad_Triturator
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
@@ -66,4 +67,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_CRUSHING_CUDGEL);
     end
 end;
-

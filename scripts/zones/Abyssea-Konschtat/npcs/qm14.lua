@@ -3,6 +3,7 @@
 -- NPC: ???
 -- Spawns: Eccentric Eve
 -----------------------------------
+
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -12,9 +13,11 @@ require("scripts/globals/keyitems");
 
 function onTrigger(player,npc)
     if (GetMobAction(16839007) == ACTION_NONE) then -- NM not already spawned from this
-        if (player:hasKeyItem(FRAGRANT_TREANT_PETAL) and player:hasKeyItem(FETID_RAFFLESIA_STALK)
-        and player:hasKeyItem(DECAYING_MORBOL_TOOTH) -- I broke it into 3 lines at the 'and' because it was so long.
-        and player:hasKeyItem(TURBID_SLIME_OIL) and player:hasKeyItem(VENOMOUS_PEISTE_CLAW)) then
+        if (player:hasKeyItem(FRAGRANT_TREANT_PETAL)
+        and player:hasKeyItem(FETID_RAFFLESIA_STALK)
+        and player:hasKeyItem(DECAYING_MORBOL_TOOTH)
+        and player:hasKeyItem(TURBID_SLIME_OIL)
+        and player:hasKeyItem(VENOMOUS_PEISTE_CLAW)) then
             player:startEvent(1020, FRAGRANT_TREANT_PETAL, FETID_RAFFLESIA_STALK, DECAYING_MORBOL_TOOTH, TURBID_SLIME_OIL, VENOMOUS_PEISTE_CLAW); -- Ask if player wants to use KIs
         else
             player:startEvent(1021, FRAGRANT_TREANT_PETAL, FETID_RAFFLESIA_STALK, DECAYING_MORBOL_TOOTH, TURBID_SLIME_OIL, VENOMOUS_PEISTE_CLAW); -- Do not ask, because player is missing at least 1.

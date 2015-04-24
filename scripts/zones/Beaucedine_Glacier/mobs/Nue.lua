@@ -1,5 +1,5 @@
 -----------------------------------
---  Area: Beaucedine Glacier (111)
+-- Area: Beaucedine Glacier (111)
 --  NM:	  Nue
 -----------------------------------
 

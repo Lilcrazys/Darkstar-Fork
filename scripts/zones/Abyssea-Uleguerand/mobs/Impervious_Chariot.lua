@@ -1,7 +1,8 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Impervious_Chariot
+-- Area: Abyssea - Uleguerand (253)
+--  NM:  Impervious_Chariot
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");

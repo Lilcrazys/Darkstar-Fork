@@ -1,13 +1,15 @@
 -----------------------------------
---  Area: Abyssea - Altepa (218)
---   Mob: Amarok
+-- Area: Abyssea - Altepa (218)
+--  NM:  Amarok
 -----------------------------------
+
 require("scripts/zones/Abyssea-Altepa/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -24,6 +26,7 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
     mob:setMod(MOD_REGEN, 50);
+
     -- addMod
     mob:setMod(MOD_MATT,75);
     mob:setMod(MOD_MACC,900);
@@ -47,6 +50,7 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
@@ -64,6 +68,7 @@ function onAdditionalEffect(mob,target,damage)
 
     return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
@@ -82,4 +87,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_LONE_WOLF);
     end
 end;
-

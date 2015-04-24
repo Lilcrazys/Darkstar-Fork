@@ -2,6 +2,7 @@
 --  Area: Abyssea - Uleguerand (253)
 --   Mob: Veri_Selen
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
@@ -46,4 +47,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, VERMILLION_ABYSSITE_OF_GUERDON);
     end
 end;
-

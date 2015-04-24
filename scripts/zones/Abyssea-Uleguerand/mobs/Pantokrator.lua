@@ -1,11 +1,13 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Pantokrator
+-- Area: Abyssea - Uleguerand (253)
+--  NM:  Pantokrator
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -155,4 +157,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_OMNIPOTENT);
     end
 end;
-

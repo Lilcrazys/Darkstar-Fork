@@ -2,6 +2,7 @@
 --  Area: Abyssea - Uleguerand (253)
 --   Mob: Yaguarogui
 -----------------------------------
+
 require("scripts/zones/Abyssea-Uleguerand/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
@@ -48,4 +49,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_SUN_EATER);
     end
 end;
-
