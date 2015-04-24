@@ -21,7 +21,6 @@
 ===========================================================================
 */
 
-#include"../message.h"
 #include "../../common/showmsg.h"
 #include "../../common/timer.h"
 #include "../../common/utils.h"
@@ -1739,13 +1738,13 @@ inline int32 CLuaBaseEntity::completeMission(lua_State *L)
         }
         else
         {
-        PChar->m_missionLog[LogID].current = LogID > 2 ? 0 : -1;
-        PChar->m_missionLog[LogID].complete[MissionID] = true;
-        PChar->pushPacket(new CQuestMissionLogPacket(PChar, LogID+11, 1));
-        PChar->pushPacket(new CQuestMissionLogPacket(PChar, LogID+11, 2));
+            PChar->m_missionLog[LogID].current = LogID > 2 ? 0 : -1;
+            PChar->m_missionLog[LogID].complete[MissionID] = true;
+            PChar->pushPacket(new CQuestMissionLogPacket(PChar, LogID+11, 1));
+            PChar->pushPacket(new CQuestMissionLogPacket(PChar, LogID+11, 2));
 
-        charutils::SaveMissionsList(PChar);
-    }
+            charutils::SaveMissionsList(PChar);
+        }
     }
     else
     {
@@ -6854,7 +6853,7 @@ inline int32 CLuaBaseEntity::bcnmEnter(lua_State *L){
 
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
     CZone* PZone = PChar->loc.zone == nullptr ? zoneutils::GetZone(PChar->loc.destination) : PChar->loc.zone;
-    
+
     DSP_DEBUG_BREAK_IF(PZone->m_BattlefieldHandler == nullptr);
 
     int ZoneID = PZone->GetID();
@@ -6981,14 +6980,14 @@ inline int32 CLuaBaseEntity::isBcnmsFull(lua_State *L){
 
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
     CZone* PZone = PChar->loc.zone == nullptr ? zoneutils::GetZone(PChar->loc.destination) : PChar->loc.zone;
-    
+
     DSP_DEBUG_BREAK_IF(PZone->m_BattlefieldHandler == nullptr);
 
     uint8 full = 1;
 
     if(PZone != nullptr && PZone->m_BattlefieldHandler != nullptr &&
         PZone->m_BattlefieldHandler->hasFreeBattlefield()){
-        
+
         full = 0;
     }
     lua_pushinteger( L,full);
@@ -7132,7 +7131,7 @@ inline int32 CLuaBaseEntity::addPlayerToSpecialBattlefield(lua_State *L)
 
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
     CZone* PZone = PChar->loc.zone == nullptr ? zoneutils::GetZone(PChar->loc.destination) : PChar->loc.zone;
-    
+
     DSP_DEBUG_BREAK_IF(PZone->m_BattlefieldHandler == nullptr);
 
     int bcnm = PZone->m_BattlefieldHandler->SpecialBattlefieldAddPlayer(lua_tointeger(L, 1), PChar);
@@ -9318,21 +9317,21 @@ inline int32 CLuaBaseEntity::getParty(lua_State* L)
     }
 
     lua_createtable(L, size, 0);
-        int i = 1;
+    int i = 1;
     ((CBattleEntity*)m_PBaseEntity)->ForParty([this, &L, &i](CBattleEntity* member)
-        {
-            lua_getglobal(L, CLuaBaseEntity::className);
-            lua_pushstring(L, "new");
-            lua_gettable(L, -2);
-            lua_insert(L, -2);
-            lua_pushlightuserdata(L, (void*)member);
-            lua_pcall(L, 2, 1, 0);
+    {
+        lua_getglobal(L, CLuaBaseEntity::className);
+        lua_pushstring(L, "new");
+        lua_gettable(L, -2);
+        lua_insert(L, -2);
+        lua_pushlightuserdata(L, (void*)member);
+        lua_pcall(L, 2, 1, 0);
 
-            lua_rawseti(L, -2, i++);
+        lua_rawseti(L, -2, i++);
     });
 
     return 1;
-        }
+}
 
 inline int32 CLuaBaseEntity::getAlliance(lua_State* L)
 {
@@ -9347,7 +9346,7 @@ inline int32 CLuaBaseEntity::getAlliance(lua_State* L)
         for (auto PParty : PChar->PParty->m_PAlliance->partyList)
         {
             size += PParty->MemberCount(m_PBaseEntity->getZone());
-    }
+        }
     }
     else if (PChar->PParty)
     {
@@ -9711,8 +9710,8 @@ inline int32 CLuaBaseEntity::setModelId(lua_State* L)
 inline int32 CLuaBaseEntity::getModelId(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
-    
-    lua_pushinteger(L, RBUFW(&m_PBaseEntity->look, 16));
+
+    lua_pushinteger(L, m_PBaseEntity->GetModelId());
 
     return 1;
 }
