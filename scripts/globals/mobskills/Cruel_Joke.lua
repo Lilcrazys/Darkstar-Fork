@@ -15,7 +15,7 @@ function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_CHARM_I;
 
     if (target:isPC()) then
-        target:costume(578);
+        target:addStatusEffect(EFFECT_COSTUME,578,0,60);
     end
 
     skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60));
