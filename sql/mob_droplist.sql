@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: dspdb
 -- ------------------------------------------------------
--- Server version	5.6.14-log
+-- Server version   5.6.14-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -2812,7 +2812,7 @@ INSERT INTO `mob_droplist` VALUES (464,0,19102,20);
 INSERT INTO `mob_droplist` VALUES (465,0,13402,340);
 INSERT INTO `mob_droplist` VALUES (465,0,13622,70);
 INSERT INTO `mob_droplist` VALUES (465,0,13978,350);
-INSERT INTO `mob_droplist` VALUES (466,0,2930,1620);
+INSERT INTO `mob_droplist` VALUES (466,0,2930,1000);
 INSERT INTO `mob_droplist` VALUES (466,0,2930,810);
 INSERT INTO `mob_droplist` VALUES (466,0,3227,150);
 INSERT INTO `mob_droplist` VALUES (466,0,3229,450);
@@ -10549,7 +10549,7 @@ INSERT INTO `mob_droplist` VALUES (1810,0,20963,76);
 INSERT INTO `mob_droplist` VALUES (1811,0,856,150);
 INSERT INTO `mob_droplist` VALUES (1811,2,4358,0);
 INSERT INTO `mob_droplist` VALUES (1811,0,4358,120);
-INSERT INTO `mob_droplist` VALUES (1812,0,2962,1370);
+INSERT INTO `mob_droplist` VALUES (1812,0,2962,1000);
 INSERT INTO `mob_droplist` VALUES (1812,0,2962,680);
 INSERT INTO `mob_droplist` VALUES (1812,0,3210,100);
 INSERT INTO `mob_droplist` VALUES (1812,0,3210,50);
@@ -19159,8 +19159,8 @@ INSERT INTO `mob_droplist` VALUES (3271,0,1452,150);
 INSERT INTO `mob_droplist` VALUES (3271,0,1452,150);
 INSERT INTO `mob_droplist` VALUES (3272,0,574,20);
 INSERT INTO `mob_droplist` VALUES (3272,0,953,90);
-INSERT INTO `mob_droplist` VALUES (3273,0,2964,1390);
-INSERT INTO `mob_droplist` VALUES (3273,0,2964,690);
+INSERT INTO `mob_droplist` VALUES (3273,0,2964,1000);
+INSERT INTO `mob_droplist` VALUES (3273,0,2964,190);
 INSERT INTO `mob_droplist` VALUES (3273,0,3214,100);
 INSERT INTO `mob_droplist` VALUES (3273,0,3217,100);
 INSERT INTO `mob_droplist` VALUES (3273,0,3222,1760);
@@ -21172,9 +21172,9 @@ INSERT INTO `mob_droplist` VALUES (3647,0,884,330);
 INSERT INTO `mob_droplist` VALUES (3647,4,884,0);
 INSERT INTO `mob_droplist` VALUES (3647,0,1725,50);
 INSERT INTO `mob_droplist` VALUES (3647,2,4358,0);
-INSERT INTO `mob_droplist` VALUES (3648,0,2963,1020);
+INSERT INTO `mob_droplist` VALUES (3648,0,2963,1000);
 INSERT INTO `mob_droplist` VALUES (3648,0,2963,510);
-INSERT INTO `mob_droplist` VALUES (3648,0,3211,1050);
+INSERT INTO `mob_droplist` VALUES (3648,0,3211,1000);
 INSERT INTO `mob_droplist` VALUES (3648,0,3211,520);
 -- INSERT INTO `mob_droplist` VALUES (3648,0,3211,350);
 INSERT INTO `mob_droplist` VALUES (3648,0,3212,480);
