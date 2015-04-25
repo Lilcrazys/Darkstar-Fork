@@ -25,7 +25,8 @@ function onZoneIn(player,prevZone)
 	local pos = player:getPos();
 
 	if (pos.x == 0 and pos.y == 0 and pos.z == 0) then
-		player:setPos(player:getInstance():getEntryPos());
+		player:setPos(180, 12, -251, 0);
+		-- player:setPos(player:getInstance():getEntryPos());
 	end
 
 	return cs;
@@ -62,8 +63,8 @@ end;
 -----------------------------------
 -- onInstanceFailure
 -----------------------------------
-
+--[[
 function onInstanceLoadFailed()
     return 61;
 end;
-
+]]
