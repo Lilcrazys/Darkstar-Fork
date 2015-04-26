@@ -21,6 +21,7 @@
 ===========================================================================
 */
 
+#include"../message.h"
 #include "../../common/showmsg.h"
 #include "../../common/timer.h"
 #include "../../common/utils.h"
