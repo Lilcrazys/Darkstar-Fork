@@ -2860,9 +2860,6 @@ INSERT INTO `item_mods` VALUES (15959, 1, 8); --
 INSERT INTO `item_mods` VALUES (15959, 288, 2); --
 INSERT INTO `item_mods` VALUES (15959, 384, 71); --
 
-INSERT INTO `item_mods` VALUES (16002, 374, 5);
-INSERT INTO `item_mods` VALUES (16002, 491, 5);
-
 INSERT INTO `item_mods` VALUES (16192, 1, 20); --
 INSERT INTO `item_mods` VALUES (16192, 10, 10); --
 INSERT INTO `item_mods` VALUES (16193, 1, 40); --
