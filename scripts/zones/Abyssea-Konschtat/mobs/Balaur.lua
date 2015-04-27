@@ -51,13 +51,13 @@ end
 
 function onMobDeath(mob,killer)
     local CHANCE = 40;
-    local SPELL_ID = 695;    
+  
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
         killer:addKeyItem(ATMA_OF_STORMBREATH);
         killer:messageSpecial(6385, ATMA_OF_STORMBREATH);
     end
 
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(695) == false) then
         killer:addSpell(SPELL_ID);
     end
 end;

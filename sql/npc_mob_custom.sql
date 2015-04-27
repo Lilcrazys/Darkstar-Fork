@@ -763,24 +763,44 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- 16977921 to 16978943
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16977921,'Lofty_Zilant','Lofty Zilant',90016,15,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gallu',90017,19,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977923,'Mired_Mantis','Mired Mantis',90019,9,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977924,'Soaring_Naraka','Soaring Naraka',90018,3,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977925,'Veiled_Ironclad','Veiled Ironclad',90015,25,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977926,'Hades_V1','Hades',90080,80,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977927,'Hades_V2','Hades',90081,90,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977928,'Paramount_Botulus','Paramount Botulus',90055,95,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,31,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,35,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977937,'Ashrakk','Ashrakk',90092,70,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977938,'Balamor','Balamor',90093,75,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977939,'Provenance_Watcher','Provenance_Watcher',90094,80,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977941,'Sharptusk_razz','Sharptusk_razz',90096,90,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977942,'Dhokmak','Dhokmak',90097,95,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977943,'Matamata','Matamata',90098,100,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977945,'Trembling_Tilfaire','Achuka',90100,110,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977921,'Lofty_Zilant','Lofty Zilant',90016,15,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gallu',90017,19,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977923,'Mired_Mantis','Mired Mantis',90019,9,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977924,'Soaring_Naraka','Soaring Naraka',90018,3,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977925,'Veiled_Ironclad','Veiled Ironclad',90015,25,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977926,'Hades_V1','Hades',90080,80,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977927,'Hades_V2','Hades',90081,90,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977928,'Paramount_Botulus','Paramount Botulus',90055,95,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,31,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,35,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977937,'Ashrakk','Ashrakk',90092,70,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977938,'Balamor','Balamor',90093,75,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977939,'Provenance_Watcher','Provenance_Watcher',90094,80,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977941,'Sharptusk_razz','Sharptusk_razz',90096,90,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977942,'Dhokmak','Dhokmak',90097,95,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977943,'Matamata','Matamata',90098,100,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977945,'Trembling_Tilfaire','Trembling_Tilfaire',90100,110,0,1,0);
+
+-- VoidWatch Ch. 1 Testing
+INSERT INTO `mob_spawn_points` VALUES (16977946,'Sallow_Seymour','Sallow_Seymour',90400,110,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977947,'Ushumgal','Ushumgal',90401,115,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977948,'Sarimanok','Sarimanok',90402,120,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977949,'Cottus','Cottus',90403,125,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977950,'Virvatuli','Virvatuli',90404,130,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977951,'Pancimanci','Pancimanci',90405,135,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977952,'Lorbulcrub','Lorbulcrub',90406,140,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977953,'Krabimanjaro','Krabimanjaro',90407,145,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977954,'Ogbunabali','Ogbunabali',90408,150,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977955,'Murk-Veined_Baneberry','Murk-Veined_Baneberry',90409,155,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977956,'Melancholic_Moira','Melancholic_Moira',90410,160,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977957,'Belphoebe','Belphoebe',90411,165,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977958,'Kholomodumo','Kholomodumo',90412,170,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977959,'Lord_Asag','Lord_Asag',90413,175,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977960,'Akupara','Akupara',90414,180,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977961,'Celaeno','Celaeno',90415,185,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977962,'Hahava','Hahava',90416,190,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977963,'Voidwrought','Voidwrought',90417,195,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.

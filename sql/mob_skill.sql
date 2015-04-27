@@ -1912,11 +1912,11 @@ INSERT INTO `mob_skill` VALUES (1691,363,438,'Flashbulb',0,7.0,2000,1500,4,0,-1,
 INSERT INTO `mob_skill` VALUES (1692,363,439,'Mana_Converter',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1765,363,438,'Eraser',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1812,363,439,'Economizer',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2489,363,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2489,363,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2491,363,439,'Disruptor',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2522,363,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2523,363,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2524,363,434,'Replicator',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2522,363,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2523,363,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2524,363,434,'Replicator',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2683,363,2111,'Mighty_Strikes',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2684,363,2112,'Invincible',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2685,363,2113,'Eagle_Eye_Shot',0,7.0,2000,1500,1,0,-1,0);
@@ -1936,11 +1936,11 @@ INSERT INTO `mob_skill` VALUES (1691,364,438,'Flashbulb',0,7.0,2000,1500,4,0,-1,
 INSERT INTO `mob_skill` VALUES (1692,364,439,'Mana_Converter',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1765,364,438,'Eraser',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1812,364,439,'Economizer',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2489,364,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2489,364,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2491,364,439,'Disruptor',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2522,364,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2523,364,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2524,364,434,'Replicator',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2522,364,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2523,364,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2524,364,434,'Replicator',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2683,364,2111,'Mighty_Strikes',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2684,364,2112,'Invincible',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2685,364,2113,'Eagle_Eye_Shot',0,7.0,2000,1500,1,0,-1,0);
@@ -1952,18 +1952,18 @@ INSERT INTO `mob_skill` VALUES (2688,364,2116,'Manafont',0,7.0,2000,1500,1,0,-1,
 INSERT INTO `mob_skill` VALUES (1686,365,1303,'Arcuballista',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1810,365,1405,'Daze',0,15.0,2000,1500,4,0,150,0);
 INSERT INTO `mob_skill` VALUES (2044,365,1487,'Armor_Piercer',0,15.0,2000,1500,4,0,245,0);
-INSERT INTO `mob_skill` VALUES (2488,365,1510,'Armor_Shatterer',0,7.0,2000,1500,4,0,324,0); 
+INSERT INTO `mob_skill` VALUES (2488,365,1510,'Armor_Shatterer',0,7.0,2000,1500,4,0,324,0);
 INSERT INTO `mob_skill` VALUES (1689,365,1219,'Provoke',0,7.0,2000,1500,4,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1691,365,438,'Flashbulb',0,7.0,2000,1500,4,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1692,365,439,'Mana_Converter',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1765,365,438,'Eraser',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1812,365,439,'Economizer',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2489,365,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2489,365,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2490,365,16,'Barrage_Turbine',0,25.0,2000,0,4,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2491,365,439,'Disruptor',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2522,365,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2523,365,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2524,365,434,'Replicator',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2522,365,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2523,365,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2524,365,434,'Replicator',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2683,365,2111,'Mighty_Strikes',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2684,365,2112,'Invincible',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2685,365,2113,'Eagle_Eye_Shot',0,7.0,2000,1500,1,0,-1,0);
@@ -1980,11 +1980,11 @@ INSERT INTO `mob_skill` VALUES (1691,366,438,'Flashbulb',0,7.0,2000,1500,4,0,-1,
 INSERT INTO `mob_skill` VALUES (1692,366,439,'Mana_Converter',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1765,366,438,'Eraser',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (1812,366,439,'Economizer',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2489,366,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2489,366,432,'Heat_Capacitor',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2491,366,439,'Disruptor',0,7.0,2000,1500,1,0,-1,0);
-INSERT INTO `mob_skill` VALUES (2522,366,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2523,366,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0); 
-INSERT INTO `mob_skill` VALUES (2524,366,434,'Replicator',0,7.0,2000,1500,1,0,-1,0); 
+INSERT INTO `mob_skill` VALUES (2522,366,432,'Reactive_Shield',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2523,366,435,'Shock_Absorber',0,7.0,2000,1500,1,0,-1,0);
+INSERT INTO `mob_skill` VALUES (2524,366,434,'Replicator',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2683,366,2111,'Mighty_Strikes',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2684,366,2112,'Invincible',0,7.0,2000,1500,1,0,-1,0);
 INSERT INTO `mob_skill` VALUES (2685,366,2113,'Eagle_Eye_Shot',0,7.0,2000,1500,1,0,-1,0);
@@ -5114,6 +5114,139 @@ INSERT INTO `mob_skill` VALUES (1860,1025,1462,'PW_Necrobane',1,15.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (1861,1025,1461,'PW_Necropurge',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1862,1025,1458,'PW_Bilgestorm',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1863,1025,1459,'PW_Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
+
+-- Sallow_Seymour (1100)
+INSERT INTO `mob_skill` VALUES (170,1100,170,'Sandspin',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (171,1100,171,'Tremors',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2389,1100,174,'Mud_Stream',1,12.0,2000,1500,4,0,0,0); -- need correct animation
+
+-- Ushumgal (1101)
+INSERT INTO `mob_skill` VALUES (1896,1101,1543,'Aqua_Fortis',1,15,2000,2000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1897,1101,1544,'Regurgitation',0,7.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1898,1101,1545,'Delta_Thrust',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1899,1101,1546,'Torpefying_Charge',1,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1900,1101,1547,'Grim_Glower',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1901,1101,1547,'Calcifiying_Mist',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2136,1101,1547,'Oppressive_Gaze',1,15.0,2000,1500,4,0,0,0);
+
+-- Sarimanok (1102)
+INSERT INTO `mob_skill` VALUES (1467,1102,1198,'Ill_Wind',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1466,1102,1197,'Zephyr_Mantle',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1465,1102,1196,'Obfuscate',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1464,1102,1195,'Wind_Shear',1,10.0,2000,1500,4,0,0,7);
+INSERT INTO `mob_skill` VALUES (1462,1102,1194,'Crosswind',4,10.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1468,1102,1199,'White_Wind',1,10.0,2000,1500,1,0,0,0);
+
+-- Cottus (1103)
+INSERT INTO `mob_skill` VALUES (2111,1103,411,'Moribund_Hack',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2322,1103,410,'Colossal_Slam',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2320,1103,411,'Mercurial_Strike',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (474,1103,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
+INSERT INTO `mob_skill` VALUES (1380,1103,402,'Trebuchet',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+
+-- Virvatuli (1104)
+INSERT INTO `mob_skill` VALUES (2255,1104,1463,'NM_Corpse_Breath',0,10.0,2000,1500,4,0,0,0);
+
+-- Pancimanci (1105)
+INSERT INTO `mob_skill` VALUES(2131,1105,50,'Fatal_Scream',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES(50,1105,50,'Scream',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1954,1105,45,'Petal_Pirouette',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,15.0,2000,1500,4,0,0,0);
+
+-- Lorbulcrub (1106)
+INSERT INTO `mob_skill` VALUES(2294,522,177,'Dissolve',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2258,522,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2296,522,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES(2295,522,176,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (175,290,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (177,290,176,'Digest',0,10.0,2000,1500,4,0,0,0);
+
+-- Krabimanjaro (1107)
+INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (186,1107,186,'Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (189,1107,189,'Scissor_Guard',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2257,1107,188,'Mega_Scissors',4,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2256,1107,186,'Venom_Shower',1,20.0,2000,1500,4,0,0,0); -- need correct animation
+
+-- Ogbunabali (1108)
+INSERT INTO `mob_skill` VALUES (19,1108,809,'Sand_Blast',1,8.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (20,1108,810,'Sand_Pit',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (21,1108,811,'Venom_Spray',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (23,1108,813,'Mandibular_Bite',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2261,1108,809,'Quake_Blast',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2260,1108,813,'Gravitic_Horn',4,10.0,2000,1500,4,0,0,0); -- need correct animation
+
+-- Murk-Veined_Baneberry (1109)
+INSERT INTO `mob_skill` VALUES (527,1109,455,'Words_of_Bane',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (529,1109,457,'Light_of_Penance',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (530,1109,458,'Lateral_Slash',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (531,1109,459,'Vertical_Slash',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab',0,3.4,2000,3500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (665,1109,504,'Everyones_Rancor',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2137,1109,455,'Ritual_Bind',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+
+-- Melancholic_Moira (1110)
+INSERT INTO `mob_skill` VALUES (63,1110,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (470,1110,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2318,1110,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1076,1110,63,'EE_Extremely_Bad_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2319,1110,63,'Tainting_Breath',4,15.0,2000,1500,4,0,0,0);
+
+-- Belphoebe (1111)
+INSERT INTO `mob_skill` VALUES (1939,1111,1583,'Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1940,1111,1584,'Summer_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1941,1111,1585,'Autumn_Breeze',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1942,1111,1586,'Winter_Breeze',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1943,1111,1587,'Cyclonic_Turmoil',1,15.0,2000,1500,4,0,0,5);
+INSERT INTO `mob_skill` VALUES (2262,1111,1582,'Norn_Arrows',0,15.0,2000,1500,4,0,0,0);
+
+-- Kholomodumo (1112)
+INSERT INTO `mob_skill` VALUES (2135,1112,373,'Amnesic_Blast',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (378,1112,378,'Meteor',2,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (372,1112,372,'Wild_Horn',4,10.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (373,1112,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (2134,1112,376,'Accursed_Armor',0,30.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (377,1112,377,'Howl',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2330,1112,378,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
+
+-- Lord_Asag (1113)
+INSERT INTO `mob_skill` VALUES (1850,1113,1449,'Bloodrake',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1852,1113,1451,'Nosferatus_kiss',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1854,1113,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1856,1113,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
+
+-- Akupara (1114)
+INSERT INTO `mob_skill` VALUES (548,1114,476,'Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (550,1114,478,'Tortoise_Stomp_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (552,1114,480,'Earth_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2329,1114,478,'Tetsudo_Tremor',0,7.0,2000,1500,4,0,0,0);
+
+-- Celaeno (1115)
+INSERT INTO `mob_skill` VALUES (2469,1115,1912,'Rending_talons',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2470,1115,1913,'Shrieking_gale',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2471,1115,1914,'Wings_of_woe',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2472,1115,1915,'Wings_of_agony',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2473,1115,1916,'Typhoean_rage',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2474,1115,1917,'Ravenous_wail',1,15.0,2000,1000,4,0,0,0);
+
+-- Hahava (1116)  -- all these need re-done with animation sub checks in all nakara
+INSERT INTO `mob_skill` VALUES (2465,472,1907,'Raksha_vengeance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2464,472,1906,'Raksha_illusion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2463,472,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2462,472,1904,'Raksha_stance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2461,472,1902,'Yaksha_bliss',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2460,472,1903,'Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2459,472,1901,'Yaksha_damnation',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2458,472,1900,'Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
+
+-- Voidwrought (1117)
+INSERT INTO `mob_skill` VALUES (2363,350,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2364,350,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2365,350,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2366,350,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2367,350,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2368,350,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2369,350,1823,'Eradicator',1,18.0,2000,1000,4,0,0,0);
 
 -- The Jumping Crab
 INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback

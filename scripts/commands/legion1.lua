@@ -7,7 +7,7 @@
 cmdprops =
 {
     permission = 1,
-    parameters = "iiii"
+    parameters = ""
 };
 function onTrigger(player)
    SpawnMob('17526785'); -- Lofty_Behemoth
