@@ -1253,6 +1253,14 @@ MOD_EGGHELM                   = 0x205 -- Egg Helm (Chocobo Digging)
 -- MOD_SPARE = 0x13A -- (modId = 314)
 -- MOD_SPARE = 0x13B -- (modId = 315)
 
+
+-- Start of LegionDS Custom MOD
+MOD_TERRORRES                 = 0xFFC -- Resist Terror (modId = 4092)
+MOD_DOOMRES                   = 0xFFD -- Resist Doom (modId = 4093)
+-- MOD_EFFECTIVE_LV              = 0xFFE -- Only highest mod value item applies: Treat players LV as this number instead of actual LV (modId = 4094)
+-- MOD_REQUIRED_LV               = 0xFFF -- Apply to item, not player: Increase the items LV requirement by this much (modId = 4095)
+-- End of LegionDS Custom MOD
+
 ------------------------------------
 -- Merit Definitions
 ------------------------------------
