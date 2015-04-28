@@ -5154,12 +5154,12 @@ INSERT INTO `mob_skill` VALUES(1954,1105,45,'Petal_Pirouette',1,15.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,15.0,2000,1500,4,0,0,0);
 
 -- Lorbulcrub (1106)
-INSERT INTO `mob_skill` VALUES(2294,522,177,'Dissolve',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(2258,522,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(2296,522,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES(2295,522,176,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES (175,290,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (177,290,176,'Digest',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2258,1106,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2296,1106,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES(2295,1106,176,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (175,1106,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (177,1106,176,'Digest',0,10.0,2000,1500,4,0,0,0);
 
 -- Krabimanjaro (1107)
 INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
@@ -5230,23 +5230,23 @@ INSERT INTO `mob_skill` VALUES (2473,1115,1916,'Typhoean_rage',1,15.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2474,1115,1917,'Ravenous_wail',1,15.0,2000,1000,4,0,0,0);
 
 -- Hahava (1116)  -- all these need re-done with animation sub checks in all nakara
-INSERT INTO `mob_skill` VALUES (2465,472,1907,'Raksha_vengeance',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2464,472,1906,'Raksha_illusion',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2463,472,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2462,472,1904,'Raksha_stance',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2461,472,1902,'Yaksha_bliss',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2460,472,1903,'Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2459,472,1901,'Yaksha_damnation',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2458,472,1900,'Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2465,1116,1907,'Raksha_vengeance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2464,1116,1906,'Raksha_illusion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2463,1116,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2462,1116,1904,'Raksha_stance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2461,1116,1902,'Yaksha_bliss',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2460,1116,1903,'Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2459,1116,1901,'Yaksha_damnation',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2458,1116,1900,'Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
 
 -- Voidwrought (1117)
-INSERT INTO `mob_skill` VALUES (2363,350,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2364,350,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2365,350,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2366,350,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2367,350,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2368,350,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2369,350,1823,'Eradicator',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2363,1117,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2364,1117,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2365,1117,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2366,1117,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2367,1117,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2368,1117,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2369,1117,1823,'Eradicator',1,18.0,2000,1000,4,0,0,0);
 
 -- The Jumping Crab
 INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback
