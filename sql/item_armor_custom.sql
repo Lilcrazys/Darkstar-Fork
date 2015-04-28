@@ -250,6 +250,10 @@ INSERT INTO `item_armor` VALUES ('20954', 'eminent_lance', '99', '10240', '444',
 INSERT INTO `item_armor` VALUES ('20994', 'shigi', '99', '4096', '605', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('21229', 'cibitshavore', '99', '3265', '34', '0', '0', '4', '0');
 
+INSERT INTO `item_armor` VALUES ('20857', 'svarga', '99', '1', '714', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('21038', 'senkuto', '99', '2048', '612', '0', '0', '1', '0');
+
+
 -- empy 109]
 INSERT INTO `item_armor` VALUES ('26740', 'boii_mask', '99', '1', '282', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26742', 'bhikku_crown', '99', '2', '283', '0', '0', '16', '0');

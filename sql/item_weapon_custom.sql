@@ -28,3 +28,5 @@ INSERT INTO `item_weapon` VALUES (20954,'eminent_lance',8,0,2,1,492,227,0);
 INSERT INTO `item_weapon` VALUES (20994,'shigi',9,0,2,1,190,98,0);
 INSERT INTO `item_weapon` VALUES (21229,'cibitshavore',25,0,1,1,600,261,0);
 
+INSERT INTO `item_weapon` VALUES (20857,'svarga',6,0,2,1,504,286,0);
+INSERT INTO `item_weapon` VALUES (21038,'senkuto',10,0,2,3,450,215,0);

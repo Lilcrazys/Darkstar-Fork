@@ -3057,6 +3057,12 @@ INSERT INTO `item_mods` VALUES (18524, 8, 10); --
 INSERT INTO `item_mods` VALUES (18525, 8, 15); --
 -- INSERT INTO `item_mods` VALUES (18525, ???, ?); -- Occasionally prevents "weakened" status Additional effect: Regen unknown
 
+-- Bustle Dirs
+INSERT INTO `item_mods` VALUES(11936, 1, 35); -- DEF
+INSERT INTO `item_mods` VALUES(11936, 2, -10); -- HP
+INSERT INTO `item_mods` VALUES(11936, 10, -3); -- VIT
+INSERT INTO `item_mods` VALUES(11936, 384, 72); -- Haste
+
 INSERT INTO `item_mods` VALUES (18534, 25, 5); -- Charmer's Merlin  "Fencer"+1 "Sic" and "Ready" ability delay -5 not added
 INSERT INTO `item_mods` VALUES (18535, 104, 5); --
 INSERT INTO `item_mods` VALUES (18535, 105, 5); --
@@ -4227,6 +4233,20 @@ INSERT INTO `item_mods` VALUES (20741, 25, 10); --
 INSERT INTO `item_mods` VALUES (20742, 82, 54);
 INSERT INTO `item_mods` VALUES (20742, 110, 54);
 INSERT INTO `item_mods` VALUES (20742, 30, 42);
+
+-- Svarga
+INSERT INTO `item_mods` VALUES (20857, 85, 242); -- GA
+INSERT INTO `item_mods` VALUES (20857, 110, 242); -- parry
+INSERT INTO `item_mods` VALUES (20857, 30, 188); -- macc
+INSERT INTO `item_mods` VALUES (20857, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20857, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20857, 507, 200); -- occ
+
+-- Senkuto
+INSERT INTO `item_mods` VALUES (21038, 89, 203); -- GKT
+INSERT INTO `item_mods` VALUES (21038, 110, 203); -- parry
+INSERT INTO `item_mods` VALUES (21038, 30, 167); -- macc
+INSERT INTO `item_mods` VALUES (21038, 345, 1000); -- tp bonus
 
 -- -------------------------------------------------------
 -- Ragnarok (99-3)
@@ -5984,7 +6004,7 @@ INSERT INTO `item_mods` VALUES (28535, 27, 5); -- enm
 INSERT INTO `item_mods` VALUES (28535, 2, 30); -- hp
 INSERT INTO `item_mods` VALUES (28535, 5, 30); -- mp
 INSERT INTO `item_mods` VALUES (28535, 10, 5); -- vit
-INSERT INTO `item_mods` VALUES (28535, 427, 25); -- reduces emn loss (TESTING)
+INSERT INTO `item_mods` VALUES (28535, 502, 50); -- reduces emn loss (TESTING)
 
 -- Kunaji Ring
 INSERT INTO `item_mods` VALUES (28577, 2, 40); --
@@ -12029,5 +12049,6 @@ INSERT INTO `item_mods` VALUES(27435, 68, 37); -- Evasion
 INSERT INTO `item_mods` VALUES(27435, 31, 51); -- Magic Evasion
 INSERT INTO `item_mods` VALUES(27435, 29, 2); --  Magic Def. Bonus
 INSERT INTO `item_mods` VALUES(27435, 384, 41); -- Haste
-INSERT INTO `item_mods` VALUES(27435, 486, 17); -- tactical
+INSERT INTO `item_mods` VALUES(27435, 486, 17); -- tactical parry
+
 

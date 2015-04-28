@@ -19,7 +19,7 @@ function onTrade(player,npc,trade)
     if (trade:hasItemQty(1853,1) == false or trade:hasItemQty(1854,1) == false or trade:hasItemQty(1785,1) == false) then
         player:startEvent(1010, 1853 ,1854 ,1785);
     elseif (GetMobAction(16912839) == ACTION_NONE) then
-        if (trade:hasItemQty(1853,1) and trade:hasItemQty(1854,1) and trade:hasItemQty(1785,1) and trade:getItemCount() == 3) then
+        if (trade:hasItemQty(1853,1) and trade:hasItemQty(1854,1) and trade:hasItemQty(1855,1) and trade:getItemCount() == 3) then
             SpawnMob(16912839, 300):updateEnmity(player);
             player:tradeComplete();
         end

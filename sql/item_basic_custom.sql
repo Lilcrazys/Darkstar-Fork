@@ -285,6 +285,10 @@ INSERT INTO `item_basic` VALUES (20954,0,'eminent_lance','eminent_lance',1,63552
 INSERT INTO `item_basic` VALUES (20994,0,'shigi','shigi',1,63552,9,1,0);
 INSERT INTO `item_basic` VALUES (21229,0,'cibitshavore','cibitshavore',1,63552,13,1,0);
 
+INSERT INTO `item_basic` VALUES (20857,0,'svarga','svarga',1,63552,6,1,0);
+INSERT INTO `item_basic` VALUES (21038,0,'senkuto','senkuto',1,63552,10,1,0);
+
+
 -- empy 109
 INSERT INTO `item_basic` VALUES (26740,0,'boii_mask','boii_mask',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26742,0,'bhikku_crown','bhikku_crown',1,63552,0,1,0);
