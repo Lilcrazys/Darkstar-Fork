@@ -5156,10 +5156,10 @@ INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,15.0,2000,1500,4,0,0,
 -- Lorbulcrub (1106)
 -- INSERT INTO `mob_skill` VALUES(2294,522,177,'Dissolve',4,10.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES(2258,522,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(2296,522,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES(2295,522,176,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES (175,290,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (177,290,176,'Digest',0,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES(2296,522,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
+-- INSERT INTO `mob_skill` VALUES(2295,522,176,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
+-- INSERT INTO `mob_skill` VALUES (175,290,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (177,290,176,'Digest',0,10.0,2000,1500,4,0,0,0);
 
 -- Krabimanjaro (1107)
 INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
