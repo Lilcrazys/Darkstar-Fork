@@ -12,7 +12,7 @@ cmdprops =
 
 function onTrigger(player, target)
 
-    if (player:getGMLevel() <= 1 and not(player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlag(0x02022000)))) then
+    if (player:getGMLevel() < 1 and not(player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlag(0x02022000)))) then
         return;
     end
 
