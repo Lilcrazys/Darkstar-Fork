@@ -410,6 +410,10 @@ function applyPlayerResistance(mob,effect,target,diff,bonus,element)
 			effectres = MOD_CHARMRES;
 		elseif(effect == EFFECT_AMNESIA) then
 			effectres = MOD_AMNESIARES;
+		elseif(effect == EFFECT_TERROR) then
+			effectres = MOD_TERRORRES;
+		elseif(effect == EFFECT_DOOM) then
+			effectres = MOD_DOOMRES;
 		end
 
 		if(effectres > 0) then
