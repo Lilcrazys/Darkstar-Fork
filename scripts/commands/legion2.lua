@@ -18,10 +18,10 @@ function onTrigger(player)
 
    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then  	
-	    SpawnMob('17526805'); -- Mired_Cerberus
-	    SpawnMob('17526806'); -- Mired_Khimaira
-	    SpawnMob('17526807'); -- Mired_Hydra
-	    player:setPos(130, 12, 220, 0, 183);
-	end    
+    if (gmlvl >= 1 or assistant == true) then
+        SpawnMob('17526805'); -- Mired_Cerberus
+        SpawnMob('17526806'); -- Mired_Khimaira
+        SpawnMob('17526807'); -- Mired_Hydra
+        player:setPos(130, 12, 220, 0, 183);
+    end
 end;

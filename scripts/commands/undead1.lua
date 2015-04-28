@@ -11,13 +11,13 @@ cmdprops =
 function onTrigger(player)
 
    local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
       assistant = true;
-   end
+    end
 
-   local gmlvl = player:getGMLevel();
+    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then   
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16974025'); --Lamia_Immolator
       SpawnMob('16974094'); --Lamia_No.4
       SpawnMob('16974026'); --Lamia_Jaegerr
@@ -55,5 +55,5 @@ function onTrigger(player)
       SpawnMob('16974058'); --Assault_Draugar
       SpawnMob('16974059'); --Assault_Draugar
       SpawnMob('16974060'); --Assault_Draugar
-   end    
+    end
 end;

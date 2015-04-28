@@ -11,14 +11,14 @@ cmdprops =
 };
 function onTrigger(player)
 
-   local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+    local assistant = false;
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
       assistant = true;
-   end
+    end
 
-   local gmlvl = player:getGMLevel();
+    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then    
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16973892'); --Fleetfingered_Mobel_Ja
       SpawnMob('16973893'); --Mamool_Ja_Ravager
       SpawnMob('16973894'); --Mamool_Ja_Ravager
@@ -55,5 +55,5 @@ function onTrigger(player)
       SpawnMob('16973927'); --Mamool_Ja_Hussar
       SpawnMob('16973928'); --Mamool_Ja_Hussar
       SpawnMob('16973929'); --Mamool_Ja_Hussar
-   end   
+    end
 end;

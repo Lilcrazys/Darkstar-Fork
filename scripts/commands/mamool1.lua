@@ -13,13 +13,13 @@ cmdprops =
 function onTrigger(player)
 
    local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
       assistant = true;
-   end
+    end
 
    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then    
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16973825'); --Mamool Ja Sapper
       SpawnMob('16973903'); --Thunderclap_Sareel_Ja
       SpawnMob('16973826'); --Mamool Ja Hosplitaler
@@ -58,5 +58,5 @@ function onTrigger(player)
       SpawnMob('16973859'); --Raid_Raptor
       SpawnMob('16973860'); --Raid_Raptor
       SpawnMob('16973861'); --Raid_Raptor
-   end   
+    end
 end;

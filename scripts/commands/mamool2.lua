@@ -12,13 +12,13 @@ cmdprops =
 function onTrigger(player)
 
    local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
-      assistant = true;
-   end
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+        assistant = true;
+    end
 
    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then    
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16973862'); --Attack_Ziz
       SpawnMob('16973920'); --Scalding_Fafool_Ja
       SpawnMob('16973863'); --Attack_Ziz
@@ -50,6 +50,6 @@ function onTrigger(player)
       SpawnMob('16973889'); --Dive-Puk
       SpawnMob('16973890'); --Dive-Puk
       SpawnMob('16973891'); --Dive-Puk
-   end   
+    end
 end;
 

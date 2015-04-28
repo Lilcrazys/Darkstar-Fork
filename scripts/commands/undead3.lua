@@ -18,7 +18,7 @@ function onTrigger(player)
 
    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16974095'); --Lamia_Freebooter
       SpawnMob('16974096'); --Lamia_Freebooter
       SpawnMob('16974097'); --Lamia_Freebooter
@@ -51,6 +51,6 @@ function onTrigger(player)
       SpawnMob('16974124'); --Acrolith
       SpawnMob('16974125'); --Acrolith
       SpawnMob('16974126'); --Acrolith
-   end   
+    end
 end;
 

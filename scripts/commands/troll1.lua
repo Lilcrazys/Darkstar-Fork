@@ -11,14 +11,14 @@ cmdprops =
 };
 function onTrigger(player)
 
-   local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+    local assistant = false;
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
       assistant = true;
-   end
+    end
 
    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then   
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16973930'); -- Troll_Paviser
       SpawnMob('16974002'); -- Gurlufur_The_Menacing
       SpawnMob('16973931'); -- Troll_Stormer
@@ -52,5 +52,5 @@ function onTrigger(player)
       SpawnMob('16973959'); -- War_Wamouracampa
       SpawnMob('16973960'); -- War_Wamouracampa
       SpawnMob('16973961'); -- War_Wamouracampa
-   end
+    end
 end;

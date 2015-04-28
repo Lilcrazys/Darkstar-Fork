@@ -18,10 +18,10 @@ function onTrigger(player)
 
     local gmlvl = player:getGMLevel();
       -- Char must be an actual GM, or an assistant.
-    if (gmlvl >= 1 or assistant == true) then 	
-	    SpawnMob('17526819'); -- Soaring_Corse
-	    SpawnMob('17526820'); -- Soaring_Dvergr
-	    SpawnMob('17526821'); -- Soaring_Vampyr
-	    player:setPos(140, 12, -132, 64, 183);
-	end    
+    if (gmlvl >= 1 or assistant == true) then
+        SpawnMob('17526819'); -- Soaring_Corse
+        SpawnMob('17526820'); -- Soaring_Dvergr
+        SpawnMob('17526821'); -- Soaring_Vampyr
+        player:setPos(140, 12, -132, 64, 183);
+    end
 end;

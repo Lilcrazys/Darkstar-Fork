@@ -12,13 +12,13 @@ cmdprops =
 function onTrigger(player)
 
    local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
-      assistant = true;
-   end
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+        assistant = true;
+    end
 
    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then   
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16973962'); --War_Wamouracampa
       SpawnMob('16973963'); --War_Wamouracampa
       SpawnMob('16973964'); --Incendiary_Bombs
@@ -58,6 +58,6 @@ function onTrigger(player)
       SpawnMob('16973998'); --Killing_Claw
       SpawnMob('16973999'); --Slaughterous_Scorpion
       SpawnMob('16974000'); --Slaughterous_Scorpion
-   end   
+    end
 end;
 

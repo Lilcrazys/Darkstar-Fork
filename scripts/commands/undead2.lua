@@ -7,18 +7,18 @@
 cmdprops =
 {
     permission = 0,
-    parameters = "iiii" 
+    parameters = "iiii"
 };
 function onTrigger(player)
 
-   local assistant = false;
-   if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
-      assistant = true;
-   end
+    local assistant = false;
+    if (player:getVar("AssistantGM") == 1 and (player:checkNameFlags(0x02002000) or player:checkNameFlags(0x02022000))) then
+        assistant = true;
+    end
 
-   local gmlvl = player:getGMLevel();
+    local gmlvl = player:getGMLevel();
    -- Char must be an actual GM, or an assistant.
-   if (gmlvl >= 1 or assistant == true) then
+    if (gmlvl >= 1 or assistant == true) then
       SpawnMob('16974061'); --Assault_Draugar
       SpawnMob('16974062'); --Assault_Draugar
       SpawnMob('16974063'); --Assault_Draugar
@@ -52,5 +52,5 @@ function onTrigger(player)
       SpawnMob('16974091'); --Bhoot_Invader
       SpawnMob('16974092'); --Bhoot_Invader
       SpawnMob('16974093'); --Bhoot_Invader
-   end    
+    end
 end;
