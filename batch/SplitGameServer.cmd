@@ -6,7 +6,7 @@ echo ------------------------
 if exist DSGame-Abyssea.exe del DSGame-Abyssea.exe
 if not exist DSGame-Abyssea.exe copy DSGame-server.exe /b DSGame-Abyssea.exe /b
 echo ------------------------
-if exist DSGame-DynaLimbus.exe.exe del DSGame-DynaLimbus.exe.exe
+if exist DSGame-DynaLimbus.exe.exe del DSGame-DynaLimbus.exe
 if not exist DSGame-DynaLimbus.exe.exe copy DSGame-server.exe /b DSGame-DynaLimbus.exe.exe /b
 echo ------------------------
 if exist DSGame-BCNM.exe del DSGame-BCNM.exe
