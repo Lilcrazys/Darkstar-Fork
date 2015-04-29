@@ -724,9 +724,9 @@ INSERT INTO `mob_family_system` VALUES (1111,'Belphoebe',18,'Unclassified',0,40,
 INSERT INTO `mob_family_system` VALUES (1112,'Kholomodumo',6,'Beast',1,40,110,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,6);
 INSERT INTO `mob_family_system` VALUES (1113,'Lord_Asag',19,'Undead',1,40,100,120,1,3,3,4,3,6,6,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
 INSERT INTO `mob_family_system` VALUES (1114,'Akupara',14,'Lizard',1,30,120,90,2,5,1,6,8,4,3,3,3,3,4,1,1,1,1,1,1.25,1,0.875,1.125,0.875,1,1,4);
-INSERT INTO `mob_family_system` VALUES (1115,'Celaeno',8,'Bird',1,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
+INSERT INTO `mob_family_system` VALUES (1115,'Celaeno',8,'Bird',3,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (1116,'Hahava',19,'Undead',1,40,70,140,6,3,6,3,8,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
-INSERT INTO `mob_family_system` VALUES (1117,'Voidwrought',3,'Arcana',1,40,130,130,2,3,3,3,3,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1.125,1,1,1,7);
+INSERT INTO `mob_family_system` VALUES (1117,'Voidwrought',3,'Arcana',5,40,130,130,2,3,3,3,3,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1.125,1,1,1,7);
 
 INSERT INTO `mob_family_system` VALUES (6665,'The_Jumping_Crab',2,'Aquan',0,40,108,120,4,3,1,5,3,3,4,3,2,3,3,1,1,1,1,1,1.25,1,1,1.25,0.875,1,1,6);
 INSERT INTO `mob_family_system` VALUES (6666,'SlenderMan',13,'Humanoid',1,48,110,80,3,2,3,1,1,4,5,4,4,2,2,0.9,0.8,0.66,0.66,1,0.75,0.75,0.5,0.75,1,1.85,0.1,8);
