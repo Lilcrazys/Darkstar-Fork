@@ -13,5 +13,5 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     skill:setMsg(MSG_SELF_HEAL);
-    return MobHealMove(mob, mob:getMaxHP() * 0.5);
+    return MobHealMove(mob, mob:getMaxHP() * 0.05);
 end;
