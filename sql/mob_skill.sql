@@ -5135,23 +5135,23 @@ INSERT INTO `mob_skill` VALUES (1466,1102,1197,'Zephyr_Mantle',0,7.0,2000,1500,1
 INSERT INTO `mob_skill` VALUES (1465,1102,1196,'Obfuscate',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1464,1102,1195,'Wind_Shear',1,10.0,2000,1500,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (1462,1102,1194,'Crosswind',4,10.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (1468,1102,1199,'White_Wind',1,10.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1468,1102,1199,'White_Wind',1,10.0,2000,1500,4,0,0,0);
 
 -- Cottus (1103)
-INSERT INTO `mob_skill` VALUES (2111,1103,411,'Moribund_Hack',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2322,1103,410,'Colossal_Slam',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2111,1103,411,'Moribund_Hack',1,15.0,3000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2322,1103,410,'Colossal_Slam',1,15.0,4000,1500,4,0,0,0); -- need correct animation
 INSERT INTO `mob_skill` VALUES (2320,1103,411,'Mercurial_Strike',1,15.0,2000,1500,4,0,0,0); -- need correct animation
 INSERT INTO `mob_skill` VALUES (474,1103,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (1380,1103,402,'Trebuchet',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (1380,1103,402,'Trebuchet',1,15.0,2000,1500,4,0,0,3); -- need correct animation
 
 -- Virvatuli (1104)
-INSERT INTO `mob_skill` VALUES (2255,1104,1463,'NM_Corpse_Breath',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2255,1104,1463,'NM_Corpse_Breath',1,10.0,2000,1500,4,0,0,0);
 
 -- Pancimanci (1105)
-INSERT INTO `mob_skill` VALUES(2131,1105,50,'Fatal_Scream',1,15.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES(50,1105,50,'Scream',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2131,1105,50,'Fatal_Scream',1,20.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES(50,1105,50,'Scream_VW',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(1954,1105,45,'Petal_Pirouette',1,15.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,20.0,2000,1500,4,0,0,0);
 
 -- Lorbulcrub (1106)
 INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',4,10.0,2000,1500,4,0,0,0);
