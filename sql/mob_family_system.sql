@@ -711,7 +711,7 @@ INSERT INTO `mob_family_system` VALUES (1025,'Pandemonium_Warden',9,'Demon',3,40
 
 INSERT INTO `mob_family_system` VALUES (1100,'Sallow_Seymour',1,'Amorph',0,0,70,200,4,3,6,4,3,4,4,3,3,3,3,1,1,1,1,1,1,1.25,0.875,1,1,1.25,0.875,4);
 INSERT INTO `mob_family_system` VALUES (1101,'Ushumgal',14,'Lizard',1,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1.125,1,1,1,1,1,1,6);
-INSERT INTO `mob_family_system` VALUES (1102,'Sarimanok',10,'Dragon',1,40,100,90,6,4,3,3,6,6,5,3,2,3,3,3,1.25,1,1,1,1.125,1,0,1,1,1,1,3);
+INSERT INTO `mob_family_system` VALUES (1102,'Sarimanok',10,'Dragon',1,40,100,90,6,4,3,3,6,6,5,3,2,2,3,3,1.25,1,1,1,1.125,1,0,1,1,1,1,3);
 INSERT INTO `mob_family_system` VALUES (1103,'Cottus',7,'Beastmen',2,40,125,100,1,2,1,1,5,4,1,3,3,3,3,1,1,1,1,1,0.875,1,1.125,0.5,1,1,1,2);
 INSERT INTO `mob_family_system` VALUES (1104,'Virvatuli',19,'Undead',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
 INSERT INTO `mob_family_system` VALUES (1105,'Pancimanci',17,'Plantoid',1,40,107,120,3,3,4,5,4,4,2,4,4,4,3,1,1.25,1,1,1.25,1.25,1.25,1,1.25,1,0.875,1.25,4);
