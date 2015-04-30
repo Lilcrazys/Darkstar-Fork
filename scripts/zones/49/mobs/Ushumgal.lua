@@ -25,7 +25,7 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN, 10);    
-    mob:setMod(MOD_MACC,900);
+    mob:setMod(MOD_MACC,950);
     mob:setMod(MOD_MATT,115);
     mob:setMod(MOD_DOUBLE_ATTACK, 25);
 
@@ -33,7 +33,8 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,125);
-    mob:addMod(MOD_ATT,100);        
+    mob:addMod(MOD_ATT,100);  
+    mob:addMod(MOD_ACC,100);           
 end;
 -----------------------------------
 -- onMobEngage Action

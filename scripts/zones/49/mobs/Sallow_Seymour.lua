@@ -15,7 +15,7 @@ require("scripts/globals/utils");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 end;
 
 -----------------------------------
@@ -34,7 +34,8 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,25);
     mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,180);        
+    mob:addMod(MOD_ATT,200);    
+    mob:addMod(MOD_ACC,180);           
 end;
 -----------------------------------
 -- onMobEngage Action

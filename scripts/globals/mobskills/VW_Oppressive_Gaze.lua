@@ -21,6 +21,6 @@ function onMobWeaponSkill(target, mob, skill)
 	local duration = 30;
 
 	skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, power, 0, duration));
-    MobStatusEffectMove(mob, target, EFFECT_POISON, 300, 100, 60);		
+    MobStatusEffectMove(mob, target, EFFECT_POISON, 100, 3, 60);		
 	return typeEffect;
 end;
