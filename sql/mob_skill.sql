@@ -5116,9 +5116,9 @@ INSERT INTO `mob_skill` VALUES (1862,1025,1458,'PW_Bilgestorm',1,15.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (1863,1025,1459,'PW_Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
 
 -- Sallow_Seymour (1100)
-INSERT INTO `mob_skill` VALUES (170,1100,170,'Sandspin',1,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (171,1100,171,'Tremors',1,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2389,1100,174,'Mud_Stream',1,12.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (170,1100,170,'SS_Sandspin',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (171,1100,171,'SS_Tremors',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2389,1100,171,'Mud_Stream',1,12.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Ushumgal (1101)
 INSERT INTO `mob_skill` VALUES (1896,1101,1543,'Aqua_Fortis',1,15,2000,2000,4,0,0,3);
