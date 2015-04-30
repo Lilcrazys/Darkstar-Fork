@@ -17,7 +17,7 @@ require("scripts/zones/Tavnazian_Safehold/TextIDs");
     -------------------------------AF 109 Trials----------------------------------------------------
 function onTrade(player,npc,trade)
 
-    local Zilart_clear = player:hasCompletedMission(ZILART,AWAKENING);
+    local Zilart_clear = player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS);
     local Chains_clear = player:hasCompletedMission(COP,DAWN);
 
     if (Zilart_clear == false or Chains_clear == false) then
