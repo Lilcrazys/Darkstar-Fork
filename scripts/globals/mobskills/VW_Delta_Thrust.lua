@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 	local typeEffect = EFFECT_PLAGUE;
 
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 3, 60);
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 300, 3, 90);
 
 	return dmg;
 end;
