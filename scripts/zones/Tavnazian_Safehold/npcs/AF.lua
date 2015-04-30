@@ -17,13 +17,13 @@ require("scripts/zones/Tavnazian_Safehold/TextIDs");
     -------------------------------AF 109 Trials----------------------------------------------------
 function onTrade(player,npc,trade)
 
-    local Zilart_clear = player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS);
-    local Chains_clear = player:hasCompletedMission(COP,DAWN);
+    -- local Zilart_clear = player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS);
+    -- local Chains_clear = player:hasCompletedMission(COP,DAWN);
 
-    if (Zilart_clear == false or Chains_clear == false) then
-        player:PrintToPlayer( "Not so fast... CoP and ZM Clears are required before beginning these trials!" );
-        return
-    end
+    -- if (Zilart_clear == false or Chains_clear == false) then
+        -- player:PrintToPlayer( "Not so fast... CoP and ZM Clears are required before beginning these trials!" );
+        -- return
+    -- end
 
            ------------------WAR-------------------------------------
     if  (trade:hasItemQty(2812,20) and trade:hasItemQty(15225,1) and trade:getItemCount() == 21) then        --head 2812
