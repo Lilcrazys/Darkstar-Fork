@@ -33,8 +33,8 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,25);
-    mob:addMod(MOD_DEF,75);
-    mob:addMod(MOD_ATT,50);        
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_ATT,180);        
 end;
 -----------------------------------
 -- onMobEngage Action

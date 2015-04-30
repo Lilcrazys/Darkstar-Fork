@@ -5121,9 +5121,9 @@ INSERT INTO `mob_skill` VALUES (171,1100,171,'SS_Tremors',1,12.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES (2389,1100,171,'Mud_Stream',1,12.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Ushumgal (1101)
-INSERT INTO `mob_skill` VALUES (1896,1101,1543,'Aqua_Fortis',1,15,2000,2000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (1897,1101,1544,'Regurgitation',0,7.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (1898,1101,1545,'Delta_Thrust',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1896,1101,1543,'VW_Aqua_Fortis',1,15,2000,2000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1897,1101,1544,'VW_Regurgitation',0,7.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1898,1101,1545,'VW_Delta_Thrust',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1899,1101,1546,'Torpefying_Charge',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1900,1101,1547,'Grim_Glower',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1901,1101,1547,'Calcifiying_Mist',1,15.0,2000,1500,4,0,0,0);

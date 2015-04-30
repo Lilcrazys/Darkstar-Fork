@@ -29,7 +29,7 @@ function onMobWeaponSkill(target, mob, skill)
 	target:delHP(dmg);
 
 	local typeEffect = EFFECT_PETRIFICATION;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 120);
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 0, 120);
 
 	return dmg;
 end;
