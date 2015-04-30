@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:  Ushumgal 
+-- NPC:  Krabimanjaro
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -14,7 +14,6 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -24,16 +23,17 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);    
+    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_UFASTCAST, 25);
     mob:setMod(MOD_MACC,900);
-    mob:setMod(MOD_MATT,115);
-    mob:setMod(MOD_DOUBLE_ATTACK, 25);
-
+    mob:setMod(MOD_MATT,125);
+    mob:setMod(MOD_TRIPLE_ATTACK,10);    
+    
 
     -- addMod
     mob:addMod(MOD_MDEF,25);
-    mob:addMod(MOD_DEF,75);
-    mob:addMod(MOD_ATT,50);        
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,75);        
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -47,19 +47,22 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-end;
+    local Boost_Used = mob:getLocalVar("Boost");
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
-function onAdditionalEffect(mob,target,damage)
-    if (math.random(1,15) ~= 10 or target:hasStatusEffect(EFFECT_SLOW) == true) then
-        return 0,0,0;
-    else
-        local duration = 15;
-        target:addStatusEffect(EFFECT_SLOW,10,0,duration);
-        return SUBEFFECT_NONE,0,EFFECT_SLOW;
+    if (mob:getHPP() <= 25) then
+        if (Boost_Used == 1) then
+            mob:setMod(MOD_TRIPLE_ATTACK,30); 
+            mob:setMod(MOD_UFASTCAST, 75);
+            mob:setMod(MOD_REGAIN, 30);              
+            mob:setLocalVar("Boost", 2);
+        end
+    elseif (mob:getHPP() <= 50) then
+        if (Boost_Used == 0) then
+            mob:setMod(MOD_TRIPLE_ATTACK,20);  
+            mob:setMod(MOD_UFASTCAST, 50);
+            mob:setMod(MOD_REGAIN, 10);  
+            mob:setLocalVar("Boost", 1);
+        end
     end
 end;
 

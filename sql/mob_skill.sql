@@ -5154,10 +5154,8 @@ INSERT INTO `mob_skill` VALUES(1954,1105,45,'Petal_Pirouette',1,15.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,20.0,2000,1500,4,0,0,0);
 
 -- Lorbulcrub (1106)
-INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(2258,1106,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(2296,1106,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES(2295,1106,176,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0); -- need correct animation
 INSERT INTO `mob_skill` VALUES (175,1106,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (177,1106,176,'Digest',0,10.0,2000,1500,4,0,0,0);
 
@@ -5165,7 +5163,7 @@ INSERT INTO `mob_skill` VALUES (177,1106,176,'Digest',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (186,1107,186,'Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (189,1107,189,'Scissor_Guard',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2257,1107,188,'Mega_Scissors',4,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2257,1107,188,'Mega_Scissors',1,10.0,2000,1500,4,0,0,3); -- need correct animation
 INSERT INTO `mob_skill` VALUES (2256,1107,186,'Venom_Shower',1,20.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Ogbunabali (1108)
@@ -5173,15 +5171,15 @@ INSERT INTO `mob_skill` VALUES (19,1108,809,'Sand_Blast',1,8.0,2000,1500,4,0,0,0
 INSERT INTO `mob_skill` VALUES (20,1108,810,'Sand_Pit',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (21,1108,811,'Venom_Spray',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (23,1108,813,'Mandibular_Bite',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2261,1108,809,'Quake_Blast',1,15.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES (2260,1108,813,'Gravitic_Horn',4,10.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2261,1108,809,'Quake_Blast',1,20.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2260,1108,813,'Gravitic_Horn',1,20.0,3000,1500,4,0,0,3); -- need correct animation
 
 -- Murk-Veined_Baneberry (1109)
 INSERT INTO `mob_skill` VALUES (527,1109,455,'Words_of_Bane',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (529,1109,457,'Light_of_Penance',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (530,1109,458,'Lateral_Slash',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (531,1109,459,'Vertical_Slash',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab',0,3.4,2000,3500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab',0,3.4,3000,3500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (665,1109,504,'Everyones_Rancor',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2137,1109,455,'Ritual_Bind',1,15.0,2000,1500,4,0,0,0); -- need correct animation
 

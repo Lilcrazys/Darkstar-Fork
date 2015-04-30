@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:  Ushumgal 
+-- NPC:  Ogbunabali
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -24,16 +24,17 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);    
+    mob:setMod(MOD_REGAIN, 20);    
     mob:setMod(MOD_MACC,900);
-    mob:setMod(MOD_MATT,115);
-    mob:setMod(MOD_DOUBLE_ATTACK, 25);
+    mob:setMod(MOD_MATT,125);
+    mob:setMod(MOD_DOUBLE_ATTACK,15); 
+    mob:setMod(MOD_HASTE_ABILITY, 25);    
 
-
+    
     -- addMod
-    mob:addMod(MOD_MDEF,25);
-    mob:addMod(MOD_DEF,75);
-    mob:addMod(MOD_ATT,50);        
+    mob:addMod(MOD_MDEF,15);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,75);        
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -54,15 +55,14 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if (math.random(1,15) ~= 10 or target:hasStatusEffect(EFFECT_SLOW) == true) then
+    if (math.random(1,15) ~= 5 or target:hasStatusEffect(EFFECT_PETRIFICATION) == true) then
         return 0,0,0;
     else
         local duration = 15;
-        target:addStatusEffect(EFFECT_SLOW,10,0,duration);
-        return SUBEFFECT_NONE,0,EFFECT_SLOW;
+        target:addStatusEffect(EFFECT_PETRIFICATION,10,0,duration);
+        return SUBEFFECT_PETRIFY,0,EFFECT_PETRIFICATION;
     end
 end;
-
 -----------------------------------
 -- onMobDeath
 -----------------------------------
