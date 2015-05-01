@@ -64,7 +64,7 @@ function onMobFight(mob, target)
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
         end
     end
-    if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES) == false and mob:actionQueueEmpty() == true) then
+    if (mob:hasStatusEffect(EFFECT_INVINCIBLE) == false and mob:actionQueueEmpty() == true) then
         local changeTime = mob:getLocalVar("changeTime")
         local twohourTime = mob:getLocalVar("twohourTime")
         local changeHP = mob:getLocalVar("changeHP")
