@@ -16,7 +16,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local numhits = 1;
     local accmod = 10;
-    local dmgmod = 8;
+    local dmgmod = 6;
 
     local info = MobRangedMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
 
