@@ -5138,11 +5138,11 @@ INSERT INTO `mob_skill` VALUES (1462,1102,1194,'VW_Crosswind',4,10.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (1468,1102,1199,'VW_White_Wind',1,10.0,2000,1500,4,0,0,3);
 
 -- Cottus (1103)
-INSERT INTO `mob_skill` VALUES (2111,1103,411,'Moribund_Hack',1,15.0,3000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2322,1103,410,'Colossal_Slam',1,15.0,4000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES (2320,1103,411,'Mercurial_Strike',1,15.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2111,1103,411,'VW_Moribund_Hack',1,15.0,3000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2322,1103,410,'VW_Colossal_Slam',1,15.0,4000,1500,4,0,0,7); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2320,1103,411,'VW_Mercurial_Strike',1,15.0,2000,1500,4,0,0,0); -- need correct animation
 INSERT INTO `mob_skill` VALUES (474,1103,432,'Meikyo_Shisui', 0, 7.0, 2000, 0, 1, 2, 0, 0);
-INSERT INTO `mob_skill` VALUES (1380,1103,402,'Trebuchet',1,15.0,2000,1500,4,0,0,3); -- need correct animation
+INSERT INTO `mob_skill` VALUES (1380,1103,402,'VW_Trebuchet',1,15.0,2000,1500,4,0,0,3); -- need correct animation
 
 -- Virvatuli (1104)
 INSERT INTO `mob_skill` VALUES (2255,1104,1463,'NM_Corpse_Breath',1,10.0,2000,1500,4,0,0,0);
