@@ -1,8 +1,7 @@
 ---------------------------------------------
---  Earth Pounder
+--  Moribund Hack 
 --
---  Description: Deals Earth damage to enemies within area of effect. Additional effect: Dexterity Down
---  Type: Magical
+--  Deals critical damage within area of effect. Additional effect: Paralysis.
 --  Utsusemi/Blink absorb: Wipes shadows
 --  Range: 15' radial
 --  Notes:
@@ -18,13 +17,17 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_STUN;
-	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 8);
 
-	local dmgmod = 7;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*6,ELE_EARTH,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_EARTH,MOBPARAM_WIPE_SHADOWS);
-
+	local numhits = 3;
+	local accmod = 10;
+	local dmgmod = 3;
+	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_WIPE_SHADOWS,info.hitslanded);
 	target:delHP(dmg);
+
+	local typeEffect = EFFECT_PARALYSIS;
+
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 0, 90);
+
 	return dmg;
 end;

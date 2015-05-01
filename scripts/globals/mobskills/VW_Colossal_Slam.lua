@@ -1,10 +1,9 @@
 ---------------------------------------------
---  Earth Pounder
---
---  Description: Deals Earth damage to enemies within area of effect. Additional effect: Dexterity Down
---  Type: Magical
+--  Colossal Slam
+--  Delivers an explosive area attack. Additional effect: Zombie
+--  Type: Physical 
 --  Utsusemi/Blink absorb: Wipes shadows
---  Range: 15' radial
+--  Range: 10' radial
 --  Notes:
 ---------------------------------------------
 require("/scripts/globals/settings");
@@ -18,12 +17,17 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_AMNESIA;
-	MobStatusEffectMove(mob, target, typeEffect, 10, 3, 120);
 
-	local dmgmod = 7;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_EARTH,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_EARTH,MOBPARAM_WIPE_SHADOWS);
+	local numhits = 3;
+	local accmod = 10;
+	local dmgmod = 3;
+	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_WIPE_SHADOWS,info.hitslanded);
 	target:delHP(dmg);
+
+	local typeEffect = EFFECT_AMNESIA;
+
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 0, 90);
+
 	return dmg;
 end;
