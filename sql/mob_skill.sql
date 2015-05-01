@@ -5148,10 +5148,10 @@ INSERT INTO `mob_skill` VALUES (1380,1103,402,'VW_Trebuchet',1,15.0,2000,1500,4,
 INSERT INTO `mob_skill` VALUES (2255,1104,1463,'NM_Corpse_Breath',1,10.0,2000,1500,4,0,0,0);
 
 -- Pancimanci (1105)
-INSERT INTO `mob_skill` VALUES(2131,1105,50,'Fatal_Scream',1,20.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES(2131,1105,50,'VW_Fatal_Scream',1,20.0,2000,1500,4,0,0,0); -- need correct animation
 INSERT INTO `mob_skill` VALUES(50,1105,50,'Scream_VW',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(1954,1105,45,'Petal_Pirouette',1,15.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES(45,1105,45,'Dream_Flower',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(45,1105,45,'VW_Dream_Flower',1,20.0,2000,1500,4,0,0,0);
 
 -- Lorbulcrub (1106)
 INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',1,15.0,2000,1500,4,0,0,0);
