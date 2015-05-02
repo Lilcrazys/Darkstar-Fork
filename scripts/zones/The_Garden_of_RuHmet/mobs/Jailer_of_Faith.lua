@@ -64,6 +64,7 @@ function onMobFight(mob)
 		mob:setLocalVar("changeTime", mob:getBattleTime());
 	end
 ]]
+end;
 
 -----------------------------------
 -- onMobDeath

@@ -4,7 +4,7 @@ ECHO Before using this you must first edit this file to use the database name,
 ECHO MySQL user and MySQL password to match what your server actually uses.
 ECHO Please try NOT to accidently commit that information to your repository.
 ECHO ---------------------------------
-ECHO Do not add tables to batch unless 100% certain no character/account data will be harmed!
+ECHO Do not add tables to batch unless certain no character/account data will be harmed!
 ECHO ------------------------------------------------------------------
 PAUSE
 ECHO Renaming custom tables to prevent early execution...

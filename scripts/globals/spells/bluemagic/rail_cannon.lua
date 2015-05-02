@@ -10,7 +10,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-     local params = {};
+    local params = {};
 
     params.multiplier = 6.0;
     params.tMultiplier = 2.0;
