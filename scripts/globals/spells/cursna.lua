@@ -48,7 +48,7 @@ function onSpellCast(caster,target,spell)
 		target:delStatusEffect(EFFECT_BANE);
 		final = EFFECT_BANE;
 		spell:setMsg(83);
-	elseif(target:hasStatusEffect(EFFECT_DOOM) and math.random() <= (0.25+bonus)) then
+	elseif(target:hasStatusEffect(EFFECT_DOOM) and math.random() <= (0.45+bonus)) then
 		-- remove doom
 		final = EFFECT_DOOM;
 		target:delStatusEffect(EFFECT_DOOM);

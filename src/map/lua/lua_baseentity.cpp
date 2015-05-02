@@ -195,7 +195,7 @@ inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
             PItem->setSignature(EncodedString);
             ((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
             ((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
-            uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem);
+            uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem, 1);
 
             // auto-equip it //
             /* if (invSlotID != ERROR_SLOTID)
