@@ -21,7 +21,7 @@ function onSpellCast(caster,target,spell)
     
     params.multiplier = 5.0;
     params.tMultiplier = 1.0;
-    params.duppercap = 69;
+    params.duppercap = 100;
     params.str_wsc = 0.2;
     params.dex_wsc = 0.2;
     params.vit_wsc = 0.0;

@@ -29,7 +29,7 @@ function onSpellCast(caster,target,spell)
     params.tp300 = 4.0;
     params.azuretp = 1.25;
     params.tMultiplier = 2.0;
-    params.duppercap = 69;
+    params.duppercap = 100;
     params.str_wsc = 0.25;
     params.dex_wsc = 0.0;
     params.vit_wsc = 0.0;
