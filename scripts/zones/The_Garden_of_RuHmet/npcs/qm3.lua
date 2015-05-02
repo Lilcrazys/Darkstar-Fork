@@ -8,6 +8,7 @@ package.loaded["scripts/zones/The_Garden_of_RuHmet/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/zones/The_Garden_of_RuHmet/TextIDs");
+require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
 require("scripts/globals/status");
 
 -----------------------------------
@@ -15,8 +16,6 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    local mobspawn = GetMobByID(16921021);
-    local qm3 = GetNPCByID(16921029);
      --Trade 1 High-Quality Euvhi Organ
     if(GetMobAction(16921021) == 0 and trade:hasItemQty(1899,1) and trade:getItemCount() == 1) then
         player:tradeComplete();
