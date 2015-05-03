@@ -5155,19 +5155,18 @@ INSERT INTO `mob_skill` VALUES(45,1105,45,'VW_Dream_Flower',1,20.0,2000,1500,4,0
 
 -- Lorbulcrub (1106)
 INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES(2258,1106,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (175,1106,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (177,1106,176,'Digest',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (177,1106,176,'Digest',4,10.0,2000,1500,4,0,0,0);
 
 -- Krabimanjaro (1107)
 INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (186,1107,186,'Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (186,1107,186,'VW_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (189,1107,189,'Scissor_Guard',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2257,1107,188,'Mega_Scissors',1,10.0,2000,1500,4,0,0,3); -- need correct animation
-INSERT INTO `mob_skill` VALUES (2256,1107,186,'Venom_Shower',1,20.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2257,1107,188,'VW_Mega_Scissors',1,10.0,2000,1500,4,0,0,3); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2256,1107,186,'VW_Venom_Shower',1,20.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Ogbunabali (1108)
-INSERT INTO `mob_skill` VALUES (19,1108,809,'Sand_Blast',1,8.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (19,1108,809,'Sand_Blast',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (20,1108,810,'Sand_Pit',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (21,1108,811,'Venom_Spray',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (23,1108,813,'Mandibular_Bite',0,7.0,2000,1500,4,0,0,0);
