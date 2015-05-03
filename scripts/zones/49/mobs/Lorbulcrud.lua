@@ -14,7 +14,7 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
 end;
 
 -----------------------------------
@@ -23,7 +23,6 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN, 20);    
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
@@ -31,7 +30,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DOUBLE_ATTACK,15);    
     mob:setMod(MOD_UDMGPHYS,50);      
-    mob:setMod(MOD_DEF,1100);    
+    mob:setMod(MOD_DEF,1000);    
     mob:setMod(MOD_ACC,1400);
 
     -- addMod
