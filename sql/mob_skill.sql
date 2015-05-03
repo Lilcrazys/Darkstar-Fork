@@ -5154,9 +5154,9 @@ INSERT INTO `mob_skill` VALUES(1954,1105,45,'Petal_Pirouette',1,15.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES(45,1105,45,'VW_Dream_Flower',1,20.0,2000,1500,4,0,0,0);
 
 -- Lorbulcrub (1106)
-INSERT INTO `mob_skill` VALUES(2294,1106,177,'Dissolve',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (175,1106,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (177,1106,176,'Digest',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(2294,1106,177,'VW_Dissolve',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (175,1106,175,'VW_Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (177,1106,176,'VW_Digest',4,10.0,2000,1500,4,0,0,0);
 
 -- Krabimanjaro (1107)
 INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);

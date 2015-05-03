@@ -30,12 +30,13 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,900);
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DOUBLE_ATTACK,15);    
-    mob:setMod(MOD_UDMGPHYS,-50);       
+    mob:setMod(MOD_UDMGPHYS,-50);      
+    mob:setMod(MOD_DEF,1000);    
+    mob:setMod(MOD_ACC,1200);
+
 
     -- addMod
-    mob:addMod(MOD_MDEF,15);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,75);        
+    mob:addMod(MOD_ATT,175);        
 end;
 -----------------------------------
 -- onMobEngage Action
