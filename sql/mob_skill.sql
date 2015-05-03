@@ -5166,12 +5166,11 @@ INSERT INTO `mob_skill` VALUES (2257,1107,188,'VW_Mega_Scissors',1,10.0,2000,150
 INSERT INTO `mob_skill` VALUES (2256,1107,186,'VW_Venom_Shower',1,20.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Ogbunabali (1108)
-INSERT INTO `mob_skill` VALUES (19,1108,809,'Sand_Blast',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (20,1108,810,'Sand_Pit',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (21,1108,811,'Venom_Spray',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (23,1108,813,'Mandibular_Bite',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2261,1108,809,'Quake_Blast',1,20.0,2000,1500,4,0,0,0); -- need correct animation
-INSERT INTO `mob_skill` VALUES (2260,1108,813,'Gravitic_Horn',1,20.0,3000,1500,4,0,0,3); -- need correct animation
+INSERT INTO `mob_skill` VALUES (19,1108,809,'VW_Sand_Blast',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (21,1108,811,'VW_Venom_Spray',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (23,1108,813,'VW_Mandibular_Bite',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2261,1108,809,'VW_Quake_Blast',1,20.0,2000,1500,4,0,0,0); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2260,1108,813,'VW_Gravitic_Horn',1,20.0,3000,1500,4,0,0,3); -- need correct animation
 
 -- Murk-Veined_Baneberry (1109)
 INSERT INTO `mob_skill` VALUES (527,1109,455,'Words_of_Bane',0,7.0,2000,1500,4,0,0,0);

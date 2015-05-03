@@ -55,7 +55,7 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if (math.random(1,15) ~= 5 or target:hasStatusEffect(EFFECT_PETRIFICATION) == true) then
+    if (math.random(1,15) ~= 7 or target:hasStatusEffect(EFFECT_PETRIFICATION) == true) then
         return 0,0,0;
     else
         local duration = 15;
