@@ -789,7 +789,7 @@ INSERT INTO `mob_spawn_points` VALUES (16977948,'Sarimanok','Sarimanok',90402,10
 INSERT INTO `mob_spawn_points` VALUES (16977949,'Cottus','Cottus',90403,15,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977950,'Virvatuli','Virvatuli',90404,20,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977951,'Pancimanci','Pancimanci',90405,25,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977952,'Lorbulcrub','Lorbulcrub',90406,35,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977952,'Lorbulcrud','Lorbulcrud',90406,35,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977953,'Krabimanjaro','Krabimanjaro',90407,40,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977954,'Ogbunabali','Ogbunabali',90408,45,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977955,'Murk-Veined_Baneberry','Murk-Veined_Baneberry',90409,50,0,1,0);
