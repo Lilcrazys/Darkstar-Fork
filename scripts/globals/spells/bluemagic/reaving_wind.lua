@@ -13,13 +13,11 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local duration = 60;
 
-    local tp = 15;
     if(target:getTP() == 0) then
         spell:setMsg(75); 
     else
-        target:delTP(tp);
+        target:addTP(-100);
         spell:setMsg(431);
     end
     return tp;
