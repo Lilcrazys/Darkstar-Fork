@@ -3326,9 +3326,9 @@ INSERT INTO `mob_skill` VALUES (2177,6,1711,'Calamitous_wind',1,15.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2174,6,1708,'Warped_wail',1,15.0,2000,1000,4,0,0,0); -- Certain NM only
 
 -- Iron Giants
-INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,350,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,350,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2360,350,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,350,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2364,350,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2365,350,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
@@ -3956,9 +3956,9 @@ INSERT INTO `mob_skill` VALUES(89,535,89,'Poison_Breath',4,12.0,2000,1500,4,0,0,
 INSERT INTO `mob_skill` VALUES(88,535,88,'Sticky_Thread',4,12.0,2000,1500,4,0,0,0);
 
 -- Ironclad Executioner (536)
-INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,536,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,536,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2360,536,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,536,1817,'Turbine_Cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2364,536,1818,'Seismic_Impact',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2365,536,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
@@ -4018,9 +4018,9 @@ INSERT INTO `mob_skill` VALUES (1699,542,1349,'Exuviation',0,7.0,2000,1000,1,0,0
 INSERT INTO `mob_skill` VALUES (1700,542,1350,'Fire_Break',0,7.0,2000,1000,4,0,0,0);
 
 -- Ironclad Cleaver (543)
-INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,543,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,543,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2360,543,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,543,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2364,543,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2365,543,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
@@ -4791,9 +4791,9 @@ INSERT INTO `mob_skill` VALUES (432,945,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,
 INSERT INTO `mob_skill` VALUES (435,945,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- Veiled_Ironclad (946)
-INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,946,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,946,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2360,946,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,946,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2364,946,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2365,946,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
@@ -4859,9 +4859,9 @@ INSERT INTO `mob_skill` VALUES (474,958,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0
 INSERT INTO `mob_skill` VALUES (435,958,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- Paramount_Ironclad (959)
-INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,959,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,959,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2360,959,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,959,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2364,959,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2365,959,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
