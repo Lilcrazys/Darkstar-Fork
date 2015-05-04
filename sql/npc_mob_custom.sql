@@ -764,7 +764,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- ------------------------------------------------------------
 
 -- INSERT INTO `mob_spawn_points` VALUES (16977921,'Lofty_Zilant','Lofty Zilant',90016,15,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gallu',90017,19,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gallu',90017,19,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977923,'Mired_Mantis','Mired Mantis',90019,9,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977924,'Soaring_Naraka','Soaring Naraka',90018,3,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977925,'Veiled_Ironclad','Veiled Ironclad',90015,25,0,1,0);

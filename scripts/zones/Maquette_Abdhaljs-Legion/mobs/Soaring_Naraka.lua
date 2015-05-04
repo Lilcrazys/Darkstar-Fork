@@ -29,10 +29,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 35);
-    mob:setMod(MOD_COUNTER, 20);
+    mob:setMod(MOD_QUAD_ATTACK, 25);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,105);
+
 
     -- addMod
-    mob:addMod(MOD_MACC,425);
     mob:addMod(MOD_MDEF,45);
     mob:addMod(MOD_DEF,75);
 end;
