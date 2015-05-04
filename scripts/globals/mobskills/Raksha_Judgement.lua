@@ -1,11 +1,7 @@
 ---------------------------------------------
---  Stifling Tantra
---
---  Description: Spins around dealing damage to targets in an area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: 2-4 shadows
---  Range: 10' radial
---  Notes:
+--  Raksha Jugdment
+--  Naraka
+
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -17,12 +13,14 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 1;
-	local accmod = 10;
-	local dmgmod = 2;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
+	local dmgmod = 1.5;
+
+	MobStatusEffectMove(mob, target, EFFECT_BLINDNESS, 10, 0, 90);
+	MobStatusEffectMove(mob, target, EFFECT_SILENCE, 10, 0, 90);
+	MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 10, 0, 90);	
+
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_DARK,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 	target:delHP(dmg);
-    MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 1, 0, 60);
 	return dmg;
 end;

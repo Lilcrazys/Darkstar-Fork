@@ -1,11 +1,7 @@
 ---------------------------------------------
---  Stifling Tantra
---
---  Description: Spins around dealing damage to targets in an area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: 2-4 shadows
---  Range: 10' radial
---  Notes:
+--  Gallu
+--  Bolt of Perdition
+
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -17,12 +13,13 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 1;
-	local accmod = 1;
-	local dmgmod = 5;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
-	target:delHP(dmg);
-    MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 1, 0, 60);
-	return dmg;
+
+    MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 20, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_MUTE, 20, 0, 90);
+
+    local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_ICE, 1100);
+
+    local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_ICE,MOBPARAM_IGNORE_SHADOWS);
+    target:delHP(dmg);
+    return dmg;
 end;

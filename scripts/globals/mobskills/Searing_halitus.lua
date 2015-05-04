@@ -1,13 +1,7 @@
 ---------------------------------------------
---  Gates of Hades
---
---  Description: Deals severe Fire damage to enemies within an area of effect. Additional effect: Burn
---  Type:  Magical
---
---
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: 20' radial
---  Notes: Only used when a cerberus's health is 25% or lower (may not be the case for Orthrus). The burn effect takes off upwards of 20 HP per tick.
+--  Searing Halitus
+--  Gallu
+
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -20,10 +14,8 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_BURN;
-	local power = ((resist * 10) - 5) * math.random(1,2) + 19; -- makes dot damage between 20 - 28, based off resistance and random variable.
 
-
-	MobStatusEffectMove(mob, target, typeEffect, power, 3, 60);
+	MobStatusEffectMove(mob, target, typeEffect, 100, 3, 60);
 
 	local dmgmod = 1.5;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*6,ELE_FIRE,dmgmod,TP_NO_EFFECT);

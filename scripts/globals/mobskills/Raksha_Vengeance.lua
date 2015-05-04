@@ -13,16 +13,20 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+    if (mob:getHPP() <= 50) then
+        return 0;
+    else 
+        return 1;    
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 10;
-    local dmgmod = 1;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
-    target:delHP(dmg);
-    MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 1, 0, 60);
-    return dmg;
+	local dmgmod = 3;
+
+	MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 10, 0, 60);
+	MobStatusEffectMove(mob, target, EFFECT_MUTE, 10, 0, 60);
+
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_DARK,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
+	target:delHP(dmg);
+	return dmg;
 end;

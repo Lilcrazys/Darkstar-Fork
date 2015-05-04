@@ -13,20 +13,13 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    if (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
-        return 1;
-    elseif (mob:AnimationSub() == 1) then
-        return 1;
-	elseif(target:isBehind(mob, 48) == true) then
-        return 1;
-    end
 	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_WEAKNESS;
 
-	MobStatusEffectMove(mob, target, typeEffect, 40, 0, 120);
+	MobStatusEffectMove(mob, target, typeEffect, 40, 0, 60);
 
 	local dmgmod = 1;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_ICE,dmgmod,TP_NO_EFFECT);

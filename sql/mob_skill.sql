@@ -4805,13 +4805,16 @@ INSERT INTO `mob_skill` VALUES (2371,946,1825,'Area_Bombardment',1,12.0,2000,100
 INSERT INTO `mob_skill` VALUES (434,946,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (432,946,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
 
--- Paramount Gallu
-INSERT INTO `mob_skill` VALUES (2528,954,1956,'Diluvial_wakes',4,10.0,2000,1000,4,0,0,0);
+-- Paramount Gallu -- 1955 radial, 1954 frontal cone, 1953 trip
+INSERT INTO `mob_skill` VALUES (2525,954,1953,'Gallu_Triple',4,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2526,954,1954,'Gallu_Frontal',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2527,954,1955,'Gallu_Radial',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2528,954,1956,'Diluvial_wakes',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2529,954,1957,'Kurugi_collapse',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2530,954,1958,'Searing_halitus',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2531,954,1959,'Divesting_gale',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2532,954,1960,'Bolt_of_perdition',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2532,954,1960,'Bolt_of_perdition',1,15.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2533,954,1961,'Crippling_rime',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2534,954,1962,'Oblivions_mantle',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (439,954,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (435,954,432,'Manafont',0,7.0,2000,0,1,2,0,0);
