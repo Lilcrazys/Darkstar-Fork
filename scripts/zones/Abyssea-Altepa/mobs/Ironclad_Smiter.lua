@@ -20,6 +20,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
