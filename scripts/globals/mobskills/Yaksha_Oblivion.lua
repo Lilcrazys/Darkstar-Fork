@@ -1,5 +1,5 @@
 ---------------------------------------------
---  Yaksha Oblivion 
+--  Yaksha Oblivion
 --  Naraka
 ---------------------------------------------
 require("scripts/globals/settings");
@@ -9,12 +9,12 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     if (mob:getLocalVar("stance") == 0) then
-        if (mob:getHPP() <= 50) then 
+        if (mob:getHPP() <= 50) then
             return 0;
-        end    
+        end
     else
         return 1;
-    end 
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)

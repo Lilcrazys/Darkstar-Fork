@@ -16,15 +16,13 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	local typeEffect = EFFECT_PETRIFICATION;
-	local duration = 45;
+    local typeEffect = EFFECT_PETRIFICATION;
+    skill:setMsg(MobGazeMove(mob, target, typeEffect, 30, 0, 45));
 
-	skill:setMsg(MobGazeMove(mob, target, typeEffect, 30, 0, duration));
-
-	return typeEffect
+    return typeEffect;
 end;

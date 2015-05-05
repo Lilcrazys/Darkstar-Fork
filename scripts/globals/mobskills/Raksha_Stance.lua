@@ -9,11 +9,11 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance") == 1) then 
+    if (mob:getLocalVar("stance") == 1) then
         return 1;
     else
-	    return 0;
-    end 
+        return 0;
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)

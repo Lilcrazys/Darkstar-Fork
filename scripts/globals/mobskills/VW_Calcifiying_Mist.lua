@@ -20,16 +20,16 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	local numhits = 1;
-	local accmod = 10;
-	local dmgmod = 3;
+    local numhits = 1;
+    local accmod = 10;
+    local dmgmod = 3;
 
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_3_SHADOW);
-	target:delHP(dmg);
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_3_SHADOW);
+    target:delHP(dmg);
 
-	local typeEffect = EFFECT_PETRIFICATION;
+    local typeEffect = EFFECT_PETRIFICATION;
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 0, 60);
 
-	return dmg;
+    return dmg;
 end;

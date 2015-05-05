@@ -1,5 +1,5 @@
 ---------------------------------------------------
--- Yaksha Damnation 
+-- Yaksha Damnation
 -- Naraka
 
 ---------------------------------------------------
@@ -11,11 +11,11 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance") == 0) then 
+    if (mob:getLocalVar("stance") == 0) then
         return 0;
     else
-	    return 1;
-    end 
+        return 1;
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)

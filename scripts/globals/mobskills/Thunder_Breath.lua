@@ -6,15 +6,12 @@
 --
 --
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    if(target:isInDynamis()) then
-        return 0;
-    end
-    return 1;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
