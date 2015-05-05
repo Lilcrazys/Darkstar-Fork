@@ -17,7 +17,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 2;
+    local dmgmod = 3;
 
     MobStatusEffectMove(mob, target, EFFECT_BLINDNESS, 10, 0, 90);
     MobStatusEffectMove(mob, target, EFFECT_SILENCE, 10, 0, 90);
