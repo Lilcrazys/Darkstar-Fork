@@ -15,13 +15,13 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 20, 0, 90);
-    MobStatusEffectMove(mob, target, EFFECT_DEX_DOWN, 20, 0, 90);
-    MobStatusEffectMove(mob, target, EFFECT_VIT_DOWN, 20, 0, 90);
-    MobStatusEffectMove(mob, target, EFFECT_AGI_DOWN, 20, 0, 90);
-    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 20, 0, 90);
-    MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 20, 0, 90);
-    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 20, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 120, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_DEX_DOWN, 120, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_VIT_DOWN, 120, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_AGI_DOWN, 120, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 120, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 120, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 120, 0, 60);
 
     local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_ICE, 1100);
 
