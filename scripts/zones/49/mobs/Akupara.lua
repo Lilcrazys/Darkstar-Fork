@@ -25,17 +25,17 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 30);    
+    mob:setMod(MOD_REGAIN, 30);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,950);
     mob:setMod(MOD_MATT,125);
-     
+
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,175);        
+    mob:addMod(MOD_ATT,175);
 end;
 -----------------------------------
 -- onMobEngage Action

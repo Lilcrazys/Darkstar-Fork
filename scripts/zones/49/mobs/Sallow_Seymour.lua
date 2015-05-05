@@ -25,7 +25,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);    
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,900);
@@ -34,8 +34,8 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,25);
     mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,200);    
-    mob:addMod(MOD_ACC,180);           
+    mob:addMod(MOD_ATT,200);
+    mob:addMod(MOD_ACC,180);
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -57,7 +57,7 @@ end;
 
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
-    mob:useMobAbility(2389); -- Mud_Stream 
+    mob:useMobAbility(2389); -- Mud_Stream
     mob:addTP(100);
 end;
 

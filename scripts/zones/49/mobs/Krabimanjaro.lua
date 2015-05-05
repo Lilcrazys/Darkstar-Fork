@@ -28,12 +28,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 35);
     mob:setMod(MOD_MACC,900);
     mob:setMod(MOD_MATT,125);
-    mob:setMod(MOD_TRIPLE_ATTACK,15);    
-    
+    mob:setMod(MOD_TRIPLE_ATTACK,15);
+
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,125);        
+    mob:addMod(MOD_ATT,125);
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -51,16 +51,16 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 25) then
         if (Boost_Used == 1) then
-            mob:setMod(MOD_TRIPLE_ATTACK,30); 
+            mob:setMod(MOD_TRIPLE_ATTACK,30);
             mob:setMod(MOD_UFASTCAST, 75);
-            mob:setMod(MOD_REGAIN, 30);              
+            mob:setMod(MOD_REGAIN, 30);
             mob:setLocalVar("Boost", 2);
         end
     elseif (mob:getHPP() <= 50) then
         if (Boost_Used == 0) then
-            mob:setMod(MOD_TRIPLE_ATTACK,20);  
+            mob:setMod(MOD_TRIPLE_ATTACK,20);
             mob:setMod(MOD_UFASTCAST, 50);
-            mob:setMod(MOD_REGAIN, 10);  
+            mob:setMod(MOD_REGAIN, 10);
             mob:setLocalVar("Boost", 1);
         end
     end

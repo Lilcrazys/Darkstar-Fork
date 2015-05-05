@@ -24,17 +24,17 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);    
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_MACC,950);
     mob:setMod(MOD_MATT,100);
-     
+
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,150); 
-    mob:addMod(MOD_EVASION,150);        
+    mob:addMod(MOD_ATT,150);
+    mob:addMod(MOD_EVASION,150);
 
 end;
 -----------------------------------
@@ -53,7 +53,7 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 25) then
         if (Boost_Used == 1) then
-            mob:setMod(MOD_MATT,130); 
+            mob:setMod(MOD_MATT,130);
             mob:setMod(MOD_UFASTCAST, 75);
             mob:setLocalVar("Boost", 2);
         end
