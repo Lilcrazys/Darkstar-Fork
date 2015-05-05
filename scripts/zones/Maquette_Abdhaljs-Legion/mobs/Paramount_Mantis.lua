@@ -14,9 +14,7 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
-end
+end;
 
 -----------------------------------
 -- onMobSpawn Action
@@ -29,6 +27,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 15);
     mob:setMod(MOD_COUNTER, 20);
+    mob:setMod(MOD_ACC,1325);
+
 
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 10);
