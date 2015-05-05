@@ -17,7 +17,7 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 1);
+    mob:setMobMod(MOBMOD_DRAW_IN, 1); 
 end;
 
 -----------------------------------
@@ -26,9 +26,10 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 70);
-    mob:setMod(MOD_REFRESH, 30);
-    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_REGEN, 150);
+    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_REFRESH, 300);
+    mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     
@@ -36,6 +37,10 @@ function onMobSpawn(mob)
     -- addMod
     mob:setMod(MOD_MACC,925);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:addMod(MOD_PETRIFYRES,100);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_STUNRES,50);
+    mob:addMod(MOD_SLOWRES,50);            
     
 end;
 
