@@ -53,6 +53,8 @@ end;
 
 function onMobFight(mob, target)
     local Soaring_Naraka_2hr_Used = 0;
+    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha  
+    
     if (mob:getLocalVar("Soaring_Naraka_2hr_Used") ~= nil) then
         Soaring_Naraka_2hr_Used = mob:getLocalVar("Soaring_Naraka_2hr_Used");
     end

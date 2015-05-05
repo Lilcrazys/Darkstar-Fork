@@ -4661,8 +4661,8 @@ INSERT INTO `mob_skill` VALUES (437,925,432,'Perfect_Dodge',0,7.0,2000,0,1,2,0,0
 INSERT INTO `mob_skill` VALUES (432,925,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
 
 -- Mired Mantis
-INSERT INTO `mob_skill` VALUES (2595,926,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,1);
-INSERT INTO `mob_skill` VALUES (2596,926,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2595,926,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2596,926,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2597,926,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2598,926,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2600,926,1924,'Dead_Prophet ',4,10.0,2000,1000,4,0,0,0);
@@ -4840,13 +4840,12 @@ INSERT INTO `mob_skill` VALUES (436,956,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (433,956,432,'Benediction',1,20.0,2000,0,1,2,0,0);
 
 -- Paramount Mantis (957)
-INSERT INTO `mob_skill` VALUES (2595,957,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,1);
-INSERT INTO `mob_skill` VALUES (2596,957,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2595,957,1923,'Slicing_Sickle',4,12.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2596,957,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2597,957,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2598,957,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2600,957,1924,'Dead_Prophet ',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2600,957,1924,'Dead_Prophet ',4,10.0,6000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (434,957,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
-INSERT INTO `mob_skill` VALUES (475,957,18,'Mijin_Gakure',1,20.0,2000,0,4,2,0,0);
 
 -- Paramount Naraka (958)
 INSERT INTO `mob_skill` VALUES (2465,958,1907,'Raksha_Vengeance',1,18.0,2000,1000,4,0,0,0);

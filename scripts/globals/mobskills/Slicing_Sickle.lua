@@ -1,16 +1,11 @@
 ---------------------------------------------
---  Tera Slash
---
---  Description: Deals high damage to players within a fan-shaped area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Unknown cone
---  Notes:
+--  Slicing Sickle
+--  Mantid
 ---------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
@@ -19,15 +14,14 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	
-	local numhits = 2;
-	local accmod = 2;
+	local numhits = 1;
+	local accmod = 10;
 	local dmgmod = 5;
+
+	MobStatusEffectMove(mob, target, EFFECT_DEFENSE_DOWN, 150, 0, 60);
 	
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_IGNORE_SHADOWS);
-	
+	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,2,3,4);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
 	target:delHP(dmg);
 	return dmg;
-	
 end;

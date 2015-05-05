@@ -1,16 +1,11 @@
 ---------------------------------------------
---  Acid Breath
---
---  Description: Deals Water damage to enemies in a fan-shaped area of effect. Additional effect: STR Down
---  Type: Breath
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Unknown cone
---  Notes:
+--  Macerating Bile
+--  Mantid
 ---------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
@@ -19,16 +14,20 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_BIO;
-	local power = 30;
-	local tick = 10;
-	local duration = power * tick;
 
-	MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
+	MobStatusEffectMove(mob, target, EFFECT_BIO, 100, 3, 90);
 
-    local dmgmod = MobBreathMove(mob, target, 0.1, 1, ELE_WATER, 800);
+    MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 110, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_DEX_DOWN, 110, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_VIT_DOWN, 110, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_AGI_DOWN, 110, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 110, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 110, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 110, 0, 60);
 
-	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
+	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_WATER, 900);
+
+	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
 	target:delHP(dmg);
 	return dmg;
 end;
