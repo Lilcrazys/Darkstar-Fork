@@ -4,7 +4,7 @@ DSproject
 Список известных зон
 List of known zones
 
-    0 -  00 - Residential Area (Dummy)
+    0 -  00 - Unused Technical Demonstration Area
     1 -  01 - Phanauet Channel
     2 -  02 - Carpenters' Landing
     3 -  03 - Manaclipper
@@ -214,7 +214,7 @@ List of known zones
   207 -  CF - Cloister of Flames
   208 -  D0 - Quicksand Caves
   209 -  D1 - Cloister of Tremors
-  210 -  D2 - 
+  210 -  D2 - Debug Room ("GM home" officially - zone will not load on DarkStar)
   211 -  D3 - Cloister of Tides
   212 -  D4 - Gustav Tunnel
   213 -  D5 - Labyrinth of Onzozo
@@ -285,8 +285,8 @@ List of known zones
   278 - 116 - 
   279 - 117 - 
   280 - 118 - Mog Garden
-  281 - 119 - 
-  282 - 11A - 
+  281 - 119 - Leafallia
+  282 - 11A - Mount Kamihr
   283 - 11B - Silver Knife
   284 - 11C - Celennia Memorial Library (formerly Wexworth Library)
   285 - 11D - Feretory
