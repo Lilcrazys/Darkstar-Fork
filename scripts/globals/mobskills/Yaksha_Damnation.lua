@@ -4,14 +4,14 @@
 
 ---------------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance")) = 0 then 
+    if (mob:getLocalVar("stance") == 0) then 
         return 0;
     else
 	    return 1;

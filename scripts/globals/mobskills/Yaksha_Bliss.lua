@@ -1,17 +1,16 @@
 ---------------------------------------------------
--- Whirl Claws
--- Deals damage in an area of effect.
--- 100% TP: ??? / 200% TP: ??? / 300% TP: ???
+-- Taksha Bliss
+-- Naraka
 ---------------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance")) = 0 then 
+    if (mob:getLocalVar("stance") == 0) then 
         return 0;
     else
         return 1;

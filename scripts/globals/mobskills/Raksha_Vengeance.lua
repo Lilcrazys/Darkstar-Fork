@@ -1,19 +1,14 @@
 ---------------------------------------------
---  Stifling Tantra
---
---  Description: Spins around dealing damage to targets in an area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: 2-4 shadows
---  Range: 10' radial
---  Notes:
----------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+--  Raksha Vengence
+--  Naraka
 
 ---------------------------------------------
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
+---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance")) = 1 and
+    if (mob:getLocalVar("stance") == 1) then 
         if (mob:getHPP() <= 50) then 
         return 0;
     else

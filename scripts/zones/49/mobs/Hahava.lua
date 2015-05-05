@@ -49,15 +49,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha 
-
-    if (stance == 0) then 
-        mob:setMod(MOD_DMGPHYS,-50);
-        mob:setMod(MOD_DMGMAGIC,0);
-    elseif (stance == 1) then 
-        mob:setMod(MOD_DMGPHYS,0);
-        mob:setMod(MOD_DMGMAGIC,-50);
-    end            
+    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha  
 end;
 
 -----------------------------------

@@ -2,13 +2,13 @@
 --  Yaksha Oblivion 
 --  Naraka
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance")) = 0 and
+    if (mob:getLocalVar("stance") == 0) then
         if (mob:getHPP() <= 50) then 
         return 0;
     else
