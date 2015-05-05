@@ -14,7 +14,6 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 
@@ -72,20 +71,6 @@ function onMobFight(mob, target)
             mob:useMobAbility(434); -- HF
             mob:setLocalVar("Paramount_Ironclad_2hr_Used", 1);
         end
-    end
-end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
-        return 0,0,0;
-    else
-        local duration = 5;
-        target:addStatusEffect(EFFECT_STUN,1,0,duration);
-        mob:resetEnmity(target);
-        return SUBEFFECT_NONE,0,EFFECT_STUN;
     end
 end;
 

@@ -2881,7 +2881,7 @@ INSERT INTO `item_mods` VALUES (16199, 416, 25); -- Custom
 INSERT INTO `item_mods` VALUES (16199, 109, 106); -- Shield skill   Custom
 
 INSERT INTO `item_mods` VALUES (16200, 109, 106);
-
+INSERT INTO `item_mods` VALUES (16200, 1, 40);
 INSERT INTO `item_mods` VALUES (16203, 1, 7); --
 INSERT INTO `item_mods` VALUES (16203, 5, 10); --
 INSERT INTO `item_mods` VALUES (16203, 12, 7); --
