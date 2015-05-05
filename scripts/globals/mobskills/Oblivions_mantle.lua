@@ -17,7 +17,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 
     MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 20, 0, 60);
-    MobStatusEffectMove(mob, target, EFFECT_DOOM, 10, 1, 10);
+    MobStatusEffectMove(mob, target, EFFECT_DOOM, 10, 3, 10);
 
 	local dmgmod = 2.5;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_DARK,dmgmod,TP_NO_EFFECT);
