@@ -11,6 +11,8 @@ cmdprops =
 };
 
 function onTrigger(player)
+    player:PrintToPlayer("STOP THAT. Yes YOU there, typing @boom. Stop.");
+    --[[
     -- Begin Wrath of the Gods Animation
     player:injectActionPacket( 5, 271 );
     player:injectActionPacket( 5, 202 );
@@ -20,4 +22,5 @@ function onTrigger(player)
     -- End Wrath of the Gods Animation
     player:setHP(0); -- DIE!
     player:delExp(500); -- Kiss some exp goodbye moron!
+    ]]
 end;
