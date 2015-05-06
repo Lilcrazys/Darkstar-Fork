@@ -22,9 +22,9 @@ function onMobWeaponSkill(target, mob, skill)
         -- else you die
         damage = currentHP;
     end
-    
+
     local dmg = MobFinalAdjustments(damage,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_IGNORE_SHADOWS);
-    
+
     -- MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_ENCUMBRANCE_II, 10, 0, 30);
 
     target:delHP(dmg);

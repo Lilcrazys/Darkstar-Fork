@@ -336,7 +336,9 @@ REPLACE INTO `mob_spawn_points` VALUES (16912882,'AV_Wynav','Aern\'s Wynav',9033
 REPLACE INTO `npc_list` VALUES (16916819,'qm1','???',128,0.000,0.000,0.000,7,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'COP');
 
 REPLACE INTO `npc_list` VALUES (16916908,'qm4','???',4,112,0,453,1,40,40,0,0,0,0,3,0x0000320000000000000000000000000000000000,0,'COP');
-
+REPLACE INTO `mob_spawn_points` VALUES (16916815,'Ix_aern_mnk','Ix\'aern',900,112.783,-0.5,453.875,193);
+REPLACE INTO `mob_spawn_points` VALUES (16916816,'Qn_aern_rdm','Qn\'aern',906,112.772,-0.5,453.880,193);
+REPLACE INTO `mob_spawn_points` VALUES (16916817,'Qn_aern_whm','Qn\'aern',907,112.791,-0.5,453.885,193);
 
 -- ------------------------------------------------------------
 -- The Garden of Ru'Hmet (Zone 35)

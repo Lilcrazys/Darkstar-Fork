@@ -3814,9 +3814,9 @@ INSERT INTO `mob_skill` VALUES (19, 357, 809, 'Sand_Blast', 1, 8.0, 2000, 1000, 
 INSERT INTO `mob_skill` VALUES (23, 357, 813, 'Mandibular_Bite', 0, 7.0, 2000, 1500, 4, 0, 0, 0);
 
 -- Ix'Aern (MNK) and his minions
-INSERT INTO `mob_skill` VALUES (3155,3,434,'Ix_aern_mnk',0,7.0,2000,0,1,2,0,0);
-INSERT INTO `mob_skill` VALUES (3156,3,436,'Qn_aern_rdm',0,7.0,2000,0,1,2,0,0);
-INSERT INTO `mob_skill` VALUES (3157,3,433,'Qn_aern_whm',1,20.0,2000,0,1,2,0,0);
+-- INSERT INTO `mob_skill` VALUES (3155,3,434,'Ix_aern_mnk',0,7.0,2000,0,1,2,0,0); -- WTF is this???
+-- INSERT INTO `mob_skill` VALUES (3156,3,436,'Qn_aern_rdm',0,7.0,2000,0,1,2,0,0); -- ??
+-- INSERT INTO `mob_skill` VALUES (3157,3,433,'Qn_aern_whm',1,20.0,2000,0,1,2,0,0); -- ??
 
 -- Sekhmet
 INSERT INTO `mob_skill` VALUES (3158,494,396,'Blaster',0,7.0,2000,1500,4,0,0,0);
@@ -3964,7 +3964,6 @@ INSERT INTO `mob_skill` VALUES (2364,536,1818,'Seismic_Impact',1,18.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2365,536,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2366,536,1820,'Arm_Cannon',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2367,536,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
--- Needs stun/amnesia added effect
 
 -- Lord Varney (537)
 INSERT INTO `mob_skill` VALUES (1850,537,1449,'Bloodrake',0,7.0,2000,1000,4,0,0,0);
@@ -4003,11 +4002,6 @@ INSERT INTO `mob_skill` VALUES(2261,540,809,'Quake_Blast',1,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES(183,541,183,'Petro_Gaze',4,10.0,2000,3500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(184,541,184,'Catharsis',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES(181,541,181,'Death_Ray',0,7.0,2000,1500,4,0,0,0);
-
--- Blazing Eruca add to omni's
--- Incinerate
--- Cocoon
--- Sticky Thread
 
 -- Itzpapaloti (542)
 INSERT INTO `mob_skill` VALUES (1695,542,1345,'Magma_Fan',4,10.0,2000,1000,4,0,0,0);
@@ -5258,9 +5252,9 @@ INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2
 INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,1117,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2364,1117,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2365,1117,1819,'Incinerator',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2365,1117,1819,'Incinerator',1,12.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2366,1117,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2367,1117,1821,'Ballistic_kick',4,12.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2367,1117,1821,'Ballistic_kick',1,12.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2368,1117,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2369,1117,1823,'Eradicator',1,18.0,2000,1000,4,0,0,0);
 
