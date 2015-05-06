@@ -1,9 +1,6 @@
 ---------------------------------------------------
---  Incinerator 
---  Description: 
---  Type: Magical
---  additional effect : Burn
-
+--  Eradicator 
+--  Iron Giants 
 ---------------------------------------------------
 
 require("scripts/globals/settings");
@@ -18,11 +15,12 @@ end;
 
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_BURN;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 50, 3, 60);
+	
+	local typeEffect = EFFECT_WEAKNESS;
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 10, 0, 30);
     local dmgmod = 2;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_FIRE,dmgmod,TP_MAB_BONUS,1);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_LIGHT,dmgmod,TP_MAB_BONUS,1);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_LIGHT,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
     return dmg;
 end

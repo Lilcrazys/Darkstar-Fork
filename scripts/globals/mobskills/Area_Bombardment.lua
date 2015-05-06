@@ -1,13 +1,11 @@
 ---------------------------------------------
---  Firespit
---
---  Description: Deals fire damage to an enemy.
---  Type: Magical (Fire)
+--  Area Bombardment
+--  Iron Giants
 ---------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
@@ -16,11 +14,13 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local dmgmod = 1;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_FIRE,dmgmod,TP_NO_EFFECT);
+	local dmgmod = 2;
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_FIRE,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
 	local dis1 = target:dispelStatusEffect();
     local dis2 = target:dispelStatusEffect();
+    
+    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_BLINDNESS, 10, 0, 60);
 
 
     if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then

@@ -1,10 +1,6 @@
 ---------------------------------------------
---  Benthic Typhoon
---
---  Description: Delivers an area attack that lowers target's defense and magic defense. Damage varies with TP.
---  Type: Physical (Piercing)
---
---
+--  Balistic Kick
+--  Iron Giant
 ---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
@@ -17,15 +13,22 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local numhits = 1;
-    local accmod = 1;
-    local dmgmod = 2.3;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,info.hitslanded);
+    local currentHP = target:getHP();
+    local damage = 0;
+
+    if(currentHP / target:getMaxHP() > 0.2) then
+        damage = currentHP * .85;
+    else
+        -- else you die
+        damage = currentHP;
+    end
+    
+    local dmg = MobFinalAdjustments(damage,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_IGNORE_SHADOWS);
+    
+    -- MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_ENCUMBRANCE_II, 10, 0, 30);
+
     target:delHP(dmg);
-
-    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_MAGIC_DEF_DOWN, 30, 0, 60);
-    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_DEFENSE_DOWN, 30, 0, 60);
-
+    mob:resetEnmity(target);
     return dmg;
 end;
+

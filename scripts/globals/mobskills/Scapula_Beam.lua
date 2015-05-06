@@ -1,11 +1,6 @@
 ---------------------------------------------
---  Thundris Shriek
---
---  Description: Deals heavy lightning damage to targets in area of effect. Additional effect: Terror
---  Type: Magical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: Unknown
---  Notes: Players will begin to be intimidated by the dvergr after this attack.
+--  Scapula Beam
+--  Iron Giant
 ---------------------------------------------
 
 require("scripts/globals/settings");
@@ -18,13 +13,18 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_WEAKNESS;
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
+    MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 80, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_DEX_DOWN, 80, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_VIT_DOWN, 80, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_AGI_DOWN, 80, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 80, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 80, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 80, 0, 60);
 
-    local dmgmod = 1;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_LIGHT,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
+    local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_LIGHT, 1100);
+
+    local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_LIGHT,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
     return dmg;
 end;
