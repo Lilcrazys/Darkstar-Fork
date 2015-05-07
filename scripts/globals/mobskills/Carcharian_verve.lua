@@ -12,10 +12,12 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local typeEffect = EFFECT_DEFENSE_BOOST;
+	local typeEffect = EFFECT_MAGIC_DEF_BOOST;	
+	local typeEffect = EFFECT_ATTACK_BOOST;	
 
-   mob:addStatusEffectEx(EFFECT_DEFENSE_BOOST,75,0,90);
-   mob:addStatusEffectEx(EFFECT_MAGIC_DEF_BOOST,75,0,90);
-   mob:addStatusEffectEx(EFFECT_ATTACK_BOOST,75,0,90);    
-   skill:setMsg(MSG_BUFF)
-   return effect;
+	MobStatusEffectMove(mob, target, typeEffect, 10, 3, 90);
+ 
+    skill:setMsg(MSG_BUFF)
+    return typeEffect;
 end;
