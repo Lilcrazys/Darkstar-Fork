@@ -1,15 +1,11 @@
 ---------------------------------------------
---  Earth Pounder
---
---  Description: Deals Earth damage to enemies within area of effect. Additional effect: Dexterity Down
---  Type: Magical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: 15' radial
---  Notes:
+--  Pelagic Cleaver
+--  Rockfins
+
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
@@ -18,13 +14,12 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_STUN;
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 8);
+	local numhits = 1;
+	local accmod = 10;
+	local dmgmod = 2;
+	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_IGNORE_SHADOWS,info.hitslanded);
 
-    local dmgmod = 1;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*6,ELE_EARTH,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_EARTH,MOBPARAM_WIPE_SHADOWS);
-
-    target:delHP(dmg);
-    return dmg;
-end;
+	target:delHP(dmg);
+	return dmg;
+end

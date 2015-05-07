@@ -4867,11 +4867,16 @@ INSERT INTO `mob_skill` VALUES (432,959,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,
 INSERT INTO `mob_skill` VALUES (434,959,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
 
 -- Tchakka
+-- 2193,2194,2195 special melee
+INSERT INTO `mob_skill` VALUES (2525,984,2193,'Tchakka_Single',0,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2526,984,2194,'Tchakka_AoE',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2527,984,2195,'Tchakka_Spin',1,10.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2755,984,2196,'Protolithic_Puncture',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2756,984,2197,'Aquatic_Lance',0,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2757,984,2198,'Pelagic_Cleaver',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2759,984,2200,'Tidal_Guillotine',0,18.0,2000,6000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2760,984,2201,'Marine_Mayhem',1,28.0,2000,6000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2758,984,2199,'Carcharian_verve',1,18.0,2000,1000,1,0,0,0);
 
 -- Bismark
 INSERT INTO `mob_skill` VALUES (2620,987,2012,'Thar_She_Blows',1,18.0,2000,5000,4,0,0,0);
