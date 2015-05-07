@@ -4868,9 +4868,9 @@ INSERT INTO `mob_skill` VALUES (434,959,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0
 
 -- Tchakka
 -- 2193,2194,2195 special melee
-INSERT INTO `mob_skill` VALUES (2525,984,2194,'Tchakka_Single',0,10.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2526,984,2193,'Tchakka_AoE',1,10.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2527,984,2195,'Tchakka_Spin',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2752,984,2194,'Tchakka_Single',0,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2753,984,2193,'Tchakka_AoE',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2754,984,2195,'Tchakka_Spin',1,10.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2755,984,2196,'Protolithic_Puncture',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2756,984,2197,'Aquatic_Lance',0,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2757,984,2198,'Pelagic_Cleaver',1,18.0,2000,1000,4,0,0,0);
