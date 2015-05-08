@@ -1,14 +1,10 @@
 ---------------------------------------------
---  Sweet Breath
---
---  Description: Deals water damage to enemies within a fan-shaped area originating from the caster. Additional effect: Poison.
---  Type: Magical Water (Element)
---
---
+-- Sandworms
+-- Aeolin Void
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -16,13 +12,13 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_SLEEP_I;
+    local numhits = 2;
+    local dmgmod = 3;
+    MobStatusEffectMove(mob, target, EFFECT_SILENCE, 10, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_BIND, 10, 0, 30);
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
-
-    local dmgmod = MobBreathMove(mob, target, 0.125, 3, ELE_WATER, 500);
-
-    local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3.5,ELE_EARTH,dmgmod,TP_MAB_BONUS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
     return dmg;
 end;

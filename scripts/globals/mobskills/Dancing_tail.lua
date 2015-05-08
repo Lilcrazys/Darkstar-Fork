@@ -1,29 +1,20 @@
 ---------------------------------------------------
--- Spike Flail
--- Deals extreme damage in a threefold attack to targets behind the user.
+-- Zilant
+-- Dancing Tail 
 ---------------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES)) then
-        return 1;
-    elseif (mob:hasStatusEffect(EFFECT_SUPER_BUFF)) then
-        return 1;
-    elseif (mob:hasStatusEffect(EFFECT_INVINCIBLE)) then
-        return 1;
-    elseif (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
-        return 1;
-	elseif(target:isBehind(mob, 48) == false) then
+	if(target:isBehind(mob, 48) == false) then
 		return 1;
-    elseif (mob:AnimationSub() == 1) then
-        return 1;
-	end
-	return 0;
+    else
+	    return 0;
+	end    
 end;
 
 function onMobWeaponSkill(target, mob, skill)

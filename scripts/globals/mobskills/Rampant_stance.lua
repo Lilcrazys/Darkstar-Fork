@@ -1,15 +1,10 @@
 ---------------------------------------------
---  Tortoise Stomp
---
---  Description: Single target Defense Down effect.
---  Type: Physical
---  Utsusemi/Blink absorb:&nbsp;??
---  Range: Varying Area of Effect
---  Notes:
+-- Rampant Stance
+-- Moneceros
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
@@ -24,7 +19,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
 
     local typeEffect = EFFECT_STUN;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 0, 60);
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 30, 0, 10);
 
 	target:delHP(dmg);
 	return dmg;

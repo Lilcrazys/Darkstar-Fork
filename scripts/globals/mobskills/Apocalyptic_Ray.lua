@@ -1,16 +1,11 @@
 ---------------------------------------------
---  Apocalyptic Ray
---
---  Description: Deals damage in a threefold attack to targets in a fan-shaped area of effect. Additional effect: Doom
---  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown cone
---  Notes: Used only by certain Lamia NMs (e.g. Lamia No.3). If they lost their staff, they'll use Hysteric Barrage instead.
+-- Apocalyptic Ray
+-- Buhkis
 ---------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
@@ -23,13 +18,9 @@ function onMobWeaponSkill(target, mob, skill)
 
     skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 3, 10));
 
-
-    local numhits = 1;
-    local accmod = 1;
-    local dmgmod = 1;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
+    local dmg = 1
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3.5,ELE_DARK,dmgmod,TP_MAB_BONUS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
-
     return dmg;
 end;

@@ -1,35 +1,22 @@
----------------------------------------------
---  Terra Wing
---
---  Description: Deals damage in a threefold attack to targets in a fan-shaped area of effect. Additional effect: Doom
---  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown cone
---  Notes: Used only by certain Lamia NMs (e.g. Lamia No.3). If they lost their staff, they'll use Hysteric Barrage instead.
----------------------------------------------
+---------------------------------------------------
+-- Disgorge
+-- Sandworm 
+---------------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
----------------------------------------------
+---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_PETRIFICATION;
-
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 30));
-
-
-	local numhits = 3;
-	local accmod = 1;
-	local dmgmod = 1;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
-	target:delHP(dmg);
-
-	return dmg;
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * math.random(4,6),ELE_EARTH,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
+    target:delHP(dmg);
+    return dmg;
 end;

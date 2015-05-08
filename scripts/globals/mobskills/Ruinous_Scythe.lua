@@ -1,15 +1,9 @@
 ---------------------------------------------
 --  Ruinous Scythe
---
---  Description: Deals darkness damage to enemies within a very wide area of effect. Additional effect: Sleep
---  Type: Magical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: 30' radial.
-
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
@@ -17,25 +11,17 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local currentHP = target:getHP();
-    -- remove all by 1%
-    local damage = 0;
-    -- if have more hp then 30%, then reduce to 1%
-    if(currentHP / target:getMaxHP() > 0.2) then
-        damage = currentHP * .99;
-    else
-        -- else you die
-        damage = currentHP * .99;
-    end
-    local dmgmod = 1;
-    --local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_DARK,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(damage,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_IGNORE_SHADOWS);
-    local typeEffect = EFFECT_MAX_HP_DOWN;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 5, 3, 120);
+    local dmgmod = 2;
+    MobStatusEffectMove(mob, target, EFFECT_STUN, 75, 0, 10);
+    MobStatusEffectMove(mob, target, EFFECT_MAX_HP_DOWN, 75, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_MAX_MP_DOWN, 75, 0, 90);    
+
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_DARK,dmgmod,TP_MAB_BONUS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
-    mob:resetEnmity(target);
     return dmg;
 end;
+
 
 
 

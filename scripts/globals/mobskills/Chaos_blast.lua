@@ -1,15 +1,10 @@
 ---------------------------------------------
---  Tebbad Wing
---
---  Description: Deals darkness damage to enemies within a very wide area of effect. Additional effect: Sleep
---  Type: Magical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: 30' radial.
---  Notes: Used only by Vrtra and Azdaja
+-- Chaos Blast 
+-- Zilant
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
@@ -17,20 +12,15 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local currentHP = target:getHP();
-	local damage = 0;
+    local dmgmod = 2;
+    MobStatusEffectMove(mob, target, EFFECT_MAX_TP_DOWN, 75, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_MAX_HP_DOWN, 75, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_MAX_MP_DOWN, 75, 0, 90);    
 
-	if(currentHP / target:getMaxHP() > 0.4) then
-		damage = currentHP * .50;
-	else
-		damage = currentHP * .50;
-	end
-	local dmgmod = 1;
-	local dmg = MobFinalAdjustments(damage,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,MOBPARAM_IGNORE_SHADOWS);
-
-	target:delHP(dmg);
-	mob:resetEnmity(target);
-	return dmg;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_DARK,dmgmod,TP_MAB_BONUS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
+    target:delHP(dmg);
+    return dmg;
 end;
 
 
