@@ -1,17 +1,10 @@
 ---------------------------------------------
---  Gates of Hades
---
---  Description: Deals severe Fire damage to enemies within an area of effect. Additional effect: Burn
---  Type:  Magical
---
---
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: 20' radial
---  Notes: Only used when a cerberus's health is 25% or lower (may not be the case for Orthrus). The burn effect takes off upwards of 20 HP per tick.
+-- Pyroclastic Surge
+-- Gabbrath
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
@@ -19,12 +12,12 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_TERROR;
+    local typeEffect = EFFECT_ADDLE;
 
     MobStatusEffectMove(mob, target, typeEffect, 1, 3, 30);
 
-    local dmgmod = 1;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*6,ELE_FIRE,dmgmod,TP_NO_EFFECT);
+    local dmgmod = 1.5;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_FIRE,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_WIPE_SHADOWS);
     target:delHP(dmg);
     return dmg;

@@ -12,8 +12,8 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 1.5;
-    local POW = 0.74
+    local dmgmod = 2;
+    local POW = 1;
     -- target:PrintToPlayer(string.format("ATT %u ", mob:getStat(MOD_ATT)));
     -- target:PrintToPlayer(string.format("DEF %u ", target:getStat(MOD_DEF)));
     if (mob:getStat(MOD_ATT) > target:getStat(MOD_DEF)) then

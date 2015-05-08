@@ -804,6 +804,7 @@ INSERT INTO `mob_spawn_points` VALUES (16977961,'Celaeno','Celaeno',90415,80,0,1
 INSERT INTO `mob_spawn_points` VALUES (16977962,'Hahava','Hahava',90416,85,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977963,'Voidwrought','Voidwrought',90417,90,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977923,'Tchakka','Tchakka',94000,22,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977924,'Achuka','Achuka',94003,24,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.

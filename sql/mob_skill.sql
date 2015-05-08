@@ -3676,6 +3676,9 @@ INSERT INTO `mob_skill` VALUES (474,456,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0
 
 -- Achuka
 -- special melee 2142 2143 2144
+INSERT INTO `mob_skill` VALUES (2761,954,2142,'Achuka_Bite',4,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2762,954,2143,'Achuka_Charge',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2763,954,2144,'Achuka_Spin',1,10.0,2000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2764,461,2145,'Blistering_Roar',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2765,461,2146,'Searing_Serration',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2766,461,2147,'Volcanic_Stasis',1,18.0,2000,1000,4,0,0,0);

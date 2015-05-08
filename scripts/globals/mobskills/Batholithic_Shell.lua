@@ -1,15 +1,11 @@
 ---------------------------------------------
---  Howl
---
---  Description: Grants the effect of Warcry to user and any linked allies.
---  Type: Enhancing
---  Utsusemi/Blink absorb: N/A
---  Range: Self and nearby mobs of same family and/or force up to 20'.
+-- Batholithic Shell
+-- Gabbrath
 -----------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 
@@ -24,6 +20,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_HASTE;
 	local typeEffect = EFFECT_STONESKIN;
 	local typeEffect = EFFECT_BERSERK;
+	local typeEffect = EFFECT_MAGIC_ATK_BOOST;
 	
     skill:setMsg(MobBuffMove(mob, typeEffect, power, 0, duration));
 
