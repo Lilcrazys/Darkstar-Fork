@@ -52,8 +52,9 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-    printf("CSID: %u",csid);
-    printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    -- player:PrintToPlayer(string.format("Update: %u", option));
 end;
 
 -----------------------------------
@@ -61,12 +62,19 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-    printf("CSID: %u",csid);
-    printf("RESULT: %u",option);
-    if (option >= 65537 and option ~= 1073741824) then
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    -- player:PrintToPlayer(string.format("Option: %u",option));
+    if (option == 3 or option == 268435461
+    or option == 134217733 or option == 67108869 or option == 33554437
+    or option == 16777221 or option == 8388613 or option == 4194309
+    or option == 2097157 or option == 1048581) then
+        player:PrintToPlayer("Previous set and recent history options do not work yet.");
+    elseif (option >= 65537 and option ~= 1073741824) then
         if (player:getVar("ACTIVE_ATMA_COUNT") < countLunars(player)) then
             -- player:PrintToPlayer(string.format("Lunars: %i ", countLunars(player)));
             local pwr = (option -1)/65536;
+            -- player:PrintToPlayer(string.format("ATMA ID: %d",pwr));
             applyATMA(player, pwr)
         else
             player:PrintToPlayer("ERROR! How did you get here?");
