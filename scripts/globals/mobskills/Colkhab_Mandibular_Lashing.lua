@@ -8,9 +8,9 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_WEAKNESS;
+    local typeEffect = EFFECT_STUN;
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
+    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 10);
 	local numhits = 2;
 	local accmod = 1;
 	local dmgmod = 1;

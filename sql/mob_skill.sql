@@ -3671,12 +3671,12 @@ INSERT INTO `mob_skill` VALUES (438,457,432,'Invincible',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (2743,456,2133,'Colkhab_Bite',0,10.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2744,456,2134,'Colkhab_Slash',1,10.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2745,456,2135,'Colkhab_Stinger',1,10.0,2000,0,4,16,0,4);
-INSERT INTO `mob_skill` VALUES (2746,456,2136,'Colkhab_Mandibular_Lashing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2746,456,2136,'Colkhab_Mandibular_Lashing',0,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2747,456,2137,'Colkhab_Vespine_Hurricane',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2748,456,2138,'Colkhab_Stinger_volley',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2748,456,2138,'Colkhab_Stinger_volley',4,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2749,456,2139,'Colkhab_Droning_Whirlwind',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2750,456,2140,'Colkhab_Incisive_Denouement',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2751,456,2141,'Colkhab_Incisive_Apotheosis',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2750,456,2140,'Colkhab_Incisive_Denouement',0,18.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2751,456,2141,'Colkhab_Incisive_Apotheosis',4,18.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (432,456,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (474,456,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 

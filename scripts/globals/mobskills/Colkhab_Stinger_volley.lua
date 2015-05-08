@@ -20,9 +20,9 @@ function onMobWeaponSkill(target, mob, skill)
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_WIPE_SHADOWS,info.hitslanded);
 
-    local typeEffect = EFFECT_POISON;
-    local power = 100;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, power, 50, 120);
+    local typeEffect = EFFECT_PARALYSIS;
+    local power = 30;
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, power, 0, 90);
 
     target:delHP(dmg);
     return dmg;
