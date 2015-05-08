@@ -1,11 +1,6 @@
 ---------------------------------------------
---  Grim Reaper
---
---  Description: Deals damage in a threefold attack to targets in a fan-shaped area of effect. Additional effect: Doom
---  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown cone
---  Notes: Used only by certain Lamia NMs (e.g. Lamia No.3). If they lost their staff, they'll use Hysteric Barrage instead.
+-- Shinryu
+-- Supernova
 ---------------------------------------------
 
 require("scripts/globals/settings");
@@ -15,21 +10,22 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+    if (mob:getHPP() <= 33) then
+        return 0;
+    else 
+        return 1;
+    end    
 end;
 
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_DOOM;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 1, 10));
+    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 10));
 
-
-    local numhits = 3;
-    local accmod = 1;
-    local dmgmod = 1.2;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
+    local dmgmod = 1.25;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 5,ELE_DARK,dmgmod,TP_MAB_BONUS,5);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_WIPE_SHADOWS);
     target:delHP(dmg);
-
+    mob:resetEnmity(target);
     return dmg;
 end;

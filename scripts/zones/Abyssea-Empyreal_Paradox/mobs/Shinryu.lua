@@ -32,16 +32,14 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 30);
-    mob:setMod(MOD_COUNTER, 15);
-    mob:addMod(MOD_DOUBLE_ATTACK, 10)
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_STUNRES, 100);    
     mob:setMod(MOD_UFASTCAST, 45);
     mob:setMod(MOD_MACC, 950);
     mob:setMod(MOD_MATT, 120);
-
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    
     -- addMod
-    mob:addMod(MOD_MDEF, -50);
-    mob:addMod(MOD_ATT, -100);
 end;
 
 -----------------------------------
@@ -49,7 +47,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    -- WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
@@ -57,7 +54,22 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local Wings = mob:getLocalVar("Wings");
     local Shinryu_2hr_Used = 0;
+
+    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
+        local anichange = math.random(0,1);
+        if (anichnage == 0) then
+            mob:AnimationSub(0);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        else
+            mob:AnimationSub(1);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        end
+    end                      
+
+
+
     if (mob:getLocalVar("Shinryu_2hr") ~= nil) then
         Shinryu_2hr_Used = mob:getLocalVar("Shinryu_2hr");
     end
@@ -70,9 +82,6 @@ function onMobFight(mob, target)
             mob:setMod(MOD_REGAIN,40);
             mob:setMod(MOD_TRIPLE_ATTACK, 25);
             mob:setMod(MOD_UFASTCAST, 95);
-            mob:addMod(MOD_MDEF, -350);
-            mob:addMod(MOD_DEF, -350);
-            mob:addMod(MOD_ATT, 250);
         end
     elseif (mob:getHPP() <= 30) then
         if (Shinryu_2hr_Used == 1) then

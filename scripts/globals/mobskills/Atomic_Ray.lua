@@ -1,35 +1,26 @@
 ---------------------------------------------------
--- Spike Flail
--- Deals extreme damage in a threefold attack to targets behind the user.
+-- Shinryu
+-- Atmoic Ray
 ---------------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-   -- if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES)) then
-   --     return 1;
-  --  elseif (mob:hasStatusEffect(EFFECT_SUPER_BUFF)) then
-  --      return 1;
-  --  elseif (mob:hasStatusEffect(EFFECT_INVINCIBLE)) then
-  --      return 1;
-  --  elseif (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
-  --      return 1;
-    --if(target:isBehind(mob, 48) == false) then
-    --  return 1;
-   -- elseif (mob:AnimationSub() == 1) then
-    --    return 1;
-    --end
-    return 0;
+    if (mob:getHPP() <= 66) then
+        return 0;
+    else 
+        return 1;
+    end    
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = .75;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*10,ELE_FIRE,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_WIPE_SHADOWS);
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_DARK,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_WIPE_SHADOWS);
     target:delHP(dmg);
     mob:resetEnmity(target);
     return dmg;

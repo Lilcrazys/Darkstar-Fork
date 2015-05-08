@@ -74,6 +74,7 @@ function onMobFight(mob, target)
     local DID2HR = mob:getLocalVar("DID2HR");
     local RND = math.random(1,12);
     local AV2HR = nil;
+    local WynavTime = mob:getLocalVar("WynavTime")
 
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         -- In retail, this is where it'd just depop instead..Except we'd be tracking it from JoL's pop time instead of BattleTime.
