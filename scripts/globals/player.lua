@@ -73,6 +73,28 @@ function onGameIn(player, firstlogin, zoning)
         player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
     end
 
+    if (player:hasKeyItem(LEUJAOAM_ASSAULT_ORDERS))then
+        player:delKeyItem(LEUJAOAM_ASSAULT_ORDERS);
+    end
+    if (player:hasKeyItem(MAMOOL_JA_ASSAULT_ORDERS))then
+        player:delKeyItem(MAMOOL_JA_ASSAULT_ORDERS);
+    end
+    if (player:hasKeyItem(LEBROS_ASSAULT_ORDERS))then
+        player:delKeyItem(LEBROS_ASSAULT_ORDERS);
+    end
+    if (player:hasKeyItem(PERIQIA_ASSAULT_ORDERS))then
+        player:delKeyItem(PERIQIA_ASSAULT_ORDERS);
+    end
+    if (player:hasKeyItem(ILRUSI_ASSAULT_ORDERS ))then
+        player:delKeyItem(ILRUSI_ASSAULT_ORDERS);
+    end
+    if (player:hasKeyItem(NYZUL_ISLE_ASSAULT_ORDERS))then
+        player:delKeyItem(NYZUL_ISLE_ASSAULT_ORDERS);
+    end
+    if (player:hasKeyItem(IMPERIAL_ARMY_ID_TAG)) then
+        player:delKeyItem(IMPERIAL_ARMY_ID_TAG);
+    end
+
     ----- End of custom and workaround stuffs -----
 end;
 
