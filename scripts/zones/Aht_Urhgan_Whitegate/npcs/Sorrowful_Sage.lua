@@ -73,6 +73,7 @@ function onEventFinish(player,csid,option)
 	-- printf("RESULT: %u",option);
     if (csid == 278) then
         local selectiontype = bit.band(option, 0xF);
+        --[[ ASSAULT ARE BROKEN
         if (selectiontype == 1) then
             -- taken assault mission
             player:addAssault(bit.rshift(option,4));
@@ -80,5 +81,6 @@ function onEventFinish(player,csid,option)
             player:addKeyItem(NYZUL_ISLE_ASSAULT_ORDERS);
             player:messageSpecial(KEYITEM_OBTAINED,NYZUL_ISLE_ASSAULT_ORDERS);
         end
+        ]]
     end
 end;

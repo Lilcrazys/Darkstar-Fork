@@ -59,12 +59,14 @@ function onEventFinish(player,csid,option)
 	-- printf("RESULT: %u",option);
     if (csid == 277) then
         local selectiontype = bit.band(option, 0xF);
+        --[[ ASSAULT ARE BROKEN
         if (selectiontype == 1) then
             -- taken assault mission
             player:addAssault(bit.rshift(option,4));
             player:delKeyItem(IMPERIAL_ARMY_ID_TAG);
             player:addKeyItem(ILRUSI_ASSAULT_ORDERS);
             player:messageSpecial(KEYITEM_OBTAINED,ILRUSI_ASSAULT_ORDERS);
+        ]]
         elseif (selectiontype == 2) then
             -- purchased an item
             local item = bit.rshift(option,14);

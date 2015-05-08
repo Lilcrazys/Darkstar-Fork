@@ -20,9 +20,7 @@ function onTrade(player,npc,trade)
 	if (player:getVar("TOAUM4") == 1)then
 		if((trade:getGil() == 1000 and trade:getItemCount() == 1) or(trade:hasItemQty(2184,1) and trade:getItemCount() == 1))then
 			player:startEvent(0x0bce,0,0,0,0,0,0,0,0,0);
-		return cs;
-	end
-
+		end
 	elseif(player:getQuestStatus(AHT_URHGAN,RAT_RACE) == QUEST_ACCEPTED and player:getVar("ratraceCS") == 2) then
 		if(trade:hasItemQty(2184,1) and trade:getItemCount() == 1) then
 			player:startEvent(0x0352);

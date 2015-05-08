@@ -89,6 +89,9 @@ function onEventFinish(player,csid,option)
 
 	if(csid == 0x010D)then
 		player:setVar("TOAUM3",1);
+	elseif (csid == 0x010C) then
+        player:PrintToPlayer("Disabled due to bugs.");
+    --[[ ASSAULT ARE BROKEN
 	elseif(csid == 0x010C and option == 1 	and player:hasKeyItem(IMPERIAL_ARMY_ID_TAG)==false and currenttagnummber > 0)then
 		player:addKeyItem(IMPERIAL_ARMY_ID_TAG);
 		player:messageSpecial(KEYITEM_OBTAINED,IMPERIAL_ARMY_ID_TAG);
@@ -110,6 +113,7 @@ function onEventFinish(player,csid,option)
         player:addKeyItem(IMPERIAL_ARMY_ID_TAG);
         player:messageSpecial(KEYITEM_OBTAINED,IMPERIAL_ARMY_ID_TAG);
         player:delAssault(CurrentAssault);
+    ]]
 	end
 	
 end;
