@@ -66,8 +66,7 @@ function onEventFinish(player,csid,option)
             player:delKeyItem(IMPERIAL_ARMY_ID_TAG);
             player:addKeyItem(LEBROS_ASSAULT_ORDERS);
             player:messageSpecial(KEYITEM_OBTAINED,LEBROS_ASSAULT_ORDERS);
-        ]]
-        elseif (selectiontype == 2) then
+        else]] if (selectiontype == 2) then
             -- purchased an item
             local item = bit.rshift(option,14);
             local itemID = 0;
