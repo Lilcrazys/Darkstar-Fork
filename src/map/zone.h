@@ -252,11 +252,11 @@ enum ZONEID : uint16
     ZONE_CLOISTER_OF_FLAMES           = 207,
     ZONE_QUICKSAND_CAVES              = 208,
     ZONE_CLOISTER_OF_TREMORS          = 209,
-    ZONE_210                          = 210,
+    ZONE_210                          = 210, // "GM Home" in retail.
     ZONE_CLOISTER_OF_TIDES            = 211,
     ZONE_GUSTAV_TUNNEL                = 212,
     ZONE_LABYRINTH_OF_ONZOZO          = 213,
-	// ZONE_RESIDENTIAL_AREA             = 214, // Alt. ID of Residential Zone?
+    // ZONE_RESIDENTIAL_AREA             = 214, // Alt. ID of Residential Zone?
     ZONE_214                          = 214, // Alt. ID of Residential Zone?
     ZONE_ABYSSEA_ATTOHWA              = 215,
     ZONE_ABYSSEA_MISAREAUX            = 216,
