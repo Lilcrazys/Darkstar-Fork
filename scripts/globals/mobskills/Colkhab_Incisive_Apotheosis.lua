@@ -34,4 +34,4 @@ function onMobWeaponSkill(target, mob, skill)
 
         target:delHP(dmg);
     return dmg;
-end
+end;

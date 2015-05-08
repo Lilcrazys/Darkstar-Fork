@@ -3655,9 +3655,9 @@ INSERT INTO `mob_skill` VALUES (434,452,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0
 
 -- Kumhau
 -- melee special 2258 2259 2260
-INSERT INTO `mob_skill` VALUES (2878,457,2258,'Kumhau_Left',4,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2878,457,2258,'Kumhau_Left',1,10.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2879,457,2259,'Kumhau_Right',1,10.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2880,457,2260,'Kumhau_Bite',1,10.0,2000,0,4,16,0,4);
+INSERT INTO `mob_skill` VALUES (2880,457,2260,'Kumhau_Bite',0,10.0,2000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2881,457,2261,'Polar_Roar',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2882,457,2262,'Brain_Freeze',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2883,457,2263,'Biting_Abrogation',1,18.0,2000,1000,4,0,0,0);
@@ -3668,6 +3668,9 @@ INSERT INTO `mob_skill` VALUES (438,457,432,'Invincible',0,7.0,2000,0,1,2,0,0);
 
 -- Colkhab
 -- melee special 2133 / 2134 / 2135(aoe melee attack)
+INSERT INTO `mob_skill` VALUES (2743,456,2133,'Colkhab_Bite',0,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2744,456,2134,'Colkhab_Slash',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2745,456,2135,'Colkhab_Stinger',1,10.0,2000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2746,456,2136,'Colkhab_Mandibular_Lashing',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2747,456,2137,'Colkhab_Vespine_Hurricane',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2748,456,2138,'Colkhab_Stinger_volley',1,18.0,2000,1000,4,0,0,0);
@@ -3679,7 +3682,7 @@ INSERT INTO `mob_skill` VALUES (474,456,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0
 
 -- Achuka
 -- special melee 2142 2143 2144
-INSERT INTO `mob_skill` VALUES (2761,461,2142,'Achuka_Bite',4,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2761,461,2142,'Achuka_Bite',0,10.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2762,461,2143,'Achuka_Charge',1,10.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2763,461,2144,'Achuka_Spin',1,10.0,2000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2764,461,2145,'Blistering_Roar',1,18.0,2000,1000,4,0,0,0);
@@ -3693,9 +3696,9 @@ INSERT INTO `mob_skill` VALUES (432,461,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,
 
 -- Hurkan
 -- special melee 2214 2215 2216
-INSERT INTO `mob_skill` VALUES (2813,460,2214,'Achuka_Bite',4,10.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2814,460,2215,'Achuka_Charge',1,10.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2815,460,2216,'Achuka_Spin',1,10.0,2000,0,4,16,0,4);
+INSERT INTO `mob_skill` VALUES (2813,460,2214,'Hurkan_AoE',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2814,460,2215,'Hurkan_Dive',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2815,460,2216,'Hurkan_Single',0,10.0,2000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2817,460,2218,'Crashing_Thunder',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2818,460,2218,'Reverberating_Cry',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2819,460,2219,'Brownout',1,18.0,2000,1000,4,0,0,0);
