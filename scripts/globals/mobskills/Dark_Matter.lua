@@ -9,9 +9,11 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     if (mob:getHPP() <= 66) then
-        return 0;
-    else 
-        return 1;
+        if (mob:AnimationSub() == 1) then 
+            return 0;
+        else 
+            return 1;
+        end    
     end    
 end;
 
