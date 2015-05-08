@@ -3655,6 +3655,9 @@ INSERT INTO `mob_skill` VALUES (434,452,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0
 
 -- Kumhau
 -- melee special 2258 2259 2260
+INSERT INTO `mob_skill` VALUES (2878,457,2258,'Achuka_Bite',4,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2879,457,2259,'Achuka_Charge',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2880,457,2260,'Achuka_Spin',1,10.0,2000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2881,457,2261,'Polar_Roar',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2882,457,2262,'Brain_Freeze',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2883,457,2263,'Biting_Abrogation',1,18.0,2000,1000,4,0,0,0);

@@ -1,15 +1,10 @@
 ---------------------------------------------
---  Freeze Rush
---
---  Description: Makes an icy charge at a single target.
---  Type: Magical
---  Utsusemi/Blink absorb: 1 shadow
---  Range: Melee
---  Notes:
+-- Brain Freeze
+-- Kumhau
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
@@ -17,8 +12,11 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 2;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_ICE,dmgmod,TP_NO_EFFECT);
+	local typeEffect = EFFECT_AMNESIA;
+
+    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 0, 60));
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_ICE,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_1_SHADOW);
     target:delHP(dmg);
     return dmg;

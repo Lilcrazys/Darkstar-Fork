@@ -19,17 +19,32 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_AMNESIA;
-
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 30));
-
-
-    local numhits = 1;
-    local accmod = 1;
     local dmgmod = 2;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_WIPE_SHADOWS,info.hitslanded);
-    target:delHP(dmg);
+    local dis1 = target:dispelStatusEffect();
+    local dis2 = target:dispelStatusEffect();
 
+
+    if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+        return 2;
+    elseif(dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
+        -- dispeled only one
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+        return 1;
+    else
+        skill:setMsg(MSG_NO_EFFECT); -- no effect
+    end
+
+    MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 78, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_DEX_DOWN, 78, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_VIT_DOWN, 78, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_AGI_DOWN, 78, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 78, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 78, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 78, 0, 60);
+
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_ICE,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_1_SHADOW);
+    target:delHP(dmg);
     return dmg;
 end;

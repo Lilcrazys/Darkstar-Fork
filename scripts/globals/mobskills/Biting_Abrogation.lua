@@ -1,15 +1,11 @@
 ---------------------------------------------------
---  Deathgnash
---
---  Description:  Reduces target's HP to 5% of its maximum value, ignores Utsusemi  ,Bind (30 sec)
---  Type: Magical
---
-
+-- Biting Abrogation
+-- Kunhau
 ---------------------------------------------------
 
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------------
 
@@ -18,20 +14,24 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local dmgmod = 2;
+    local dis1 = target:dispelStatusEffect();
+    local dis2 = target:dispelStatusEffect();
 
-    local targetcurrentHP = target:getHP();
-    local targetmaxHP = target:getMaxHP();
-    local hpset=targetmaxHP*0.50;
-    local typeEffect = EFFECT_BIND;
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
-
-    if(targetcurrentHP > hpset)then
-        dmg= targetcurrentHP - hpset;
+    if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+        return 2;
+    elseif(dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
+        -- dispeled only one
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+        return 1;
     else
-        dmg=0;
+        skill:setMsg(MSG_NO_EFFECT); -- no effect
     end
 
-        target:delHP(dmg);
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_ICE,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_1_SHADOW);
+    target:delHP(dmg);
     return dmg;
-end
+end;
