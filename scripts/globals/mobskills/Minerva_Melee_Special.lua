@@ -28,7 +28,7 @@ function onMobWeaponSkill(target, mob, skill)
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*POW,ELE_NONE,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_NONE,MOBPARAM_IGNORE_SHADOWS);
 
-    if (math.random(1,10) == 5) then -- 1 in chance of 1 second stun just to interup spells.
+    if (math.random(1,10) == 5) then -- 1 in 10 chance of 1 second stun just to interrupt spells.
         target:addStatusEffect(EFFECT_STUN, 0, 0, 1);
     end
 
