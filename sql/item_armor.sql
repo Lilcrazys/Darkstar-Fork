@@ -7982,7 +7982,7 @@ INSERT INTO `item_armor` VALUES ('18297', 'hotspur_lance', '75', '8192', '210', 
 INSERT INTO `item_armor` VALUES ('18298', 'dynamis_lance', '75', '8192', '210', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18299', 'gae_assail', '75', '8192', '210', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18300', 'gungnir', '75', '8192', '217', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('18301', 'gungnir', '80', '8192', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('18301', 'gungnir', '80', '8192', '217', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18302', 'relic_scythe', '75', '128', '322', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18303', 'memento_scythe', '75', '128', '322', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18304', 'dynamis_scythe', '75', '128', '322', '0', '0', '1', '0');
@@ -8309,7 +8309,7 @@ INSERT INTO `item_armor` VALUES ('18639', 'excalibur', '85', '80', '320', '0', '
 INSERT INTO `item_armor` VALUES ('18640', 'ragnarok', '85', '193', '319', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18641', 'guttler', '85', '256', '0', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18642', 'bravura', '85', '1', '139', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('18643', 'gungnir', '85', '8192', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('18643', 'gungnir', '85', '8192', '217', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18644', 'apocalypse', '85', '128', '338', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18645', 'kikoku', '85', '4096', '344', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18646', 'amanomurakumo', '85', '2048', '340', '0', '0', '1', '0');
@@ -8323,7 +8323,7 @@ INSERT INTO `item_armor` VALUES ('18653', 'excalibur', '90', '80', '0', '0', '0'
 INSERT INTO `item_armor` VALUES ('18654', 'ragnarok', '90', '193', '319', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18655', 'guttler', '90', '256', '0', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18656', 'bravura', '90', '1', '139', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('18657', 'gungnir', '90', '8192', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('18657', 'gungnir', '90', '8192', '217', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18658', 'apocalypse', '90', '128', '338', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18659', 'kikoku', '90', '4096', '0', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18660', 'amanomurakumo', '90', '2048', '0', '0', '0', '1', '0');
@@ -8337,7 +8337,7 @@ INSERT INTO `item_armor` VALUES ('18667', 'excalibur', '95', '80', '320', '0', '
 INSERT INTO `item_armor` VALUES ('18668', 'ragnarok', '95', '193', '319', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18669', 'guttler', '95', '256', '0', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18670', 'bravura', '95', '1', '548', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('18671', 'gungnir', '95', '8192', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('18671', 'gungnir', '95', '8192', '217', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18672', 'apocalypse', '95', '128', '338', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18673', 'kikoku', '95', '4096', '344', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('18674', 'amanomurakumo', '95', '2048', '340', '0', '0', '1', '0');
@@ -9394,7 +9394,7 @@ INSERT INTO `item_armor` VALUES ('19748', 'excalibur', '99', '80', '320', '0', '
 INSERT INTO `item_armor` VALUES ('19749', 'ragnarok', '99', '193', '319', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('19750', 'guttler', '99', '256', '0', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('19751', 'bravura', '99', '1', '548', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('19752', 'gungnir', '99', '8192', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('19752', 'gungnir', '99', '8192', '217', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('19753', 'apocalypse', '99', '128', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('19754', 'kikoku', '99', '4096', '344', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('19755', 'amanomurakumo', '99', '2048', '340', '0', '0', '1', '0');
