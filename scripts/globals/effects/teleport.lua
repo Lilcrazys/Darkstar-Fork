@@ -83,7 +83,7 @@ function onEffectLose(target,effect)
         toexitpromholla(target);
     elseif (Teleport == TELEPORT_EXITPROMDEM) then
         toexitpromdem(target);
-    elseif (Teleport = TELEPORT_LUFAISE) then
+    elseif (Teleport == TELEPORT_LUFAISE) then
         tolufaise(target);
     end
 end;
