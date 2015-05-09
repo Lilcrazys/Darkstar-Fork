@@ -30,7 +30,7 @@
 #include "entities/battleentity.h"
 
 
-#define MAX_WEAPONSKILL_ID	241
+#define MAX_WEAPONSKILL_ID	283
 
 class CWeaponSkill
  {
