@@ -93,6 +93,6 @@ end;
 function onMobDeath(mob, killer)
     local CHANCE = 20;
     if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(745) == false) then
-        killer:addSpell(SPELL_ID);
+        killer:addSpell(745);
     end
 end;
