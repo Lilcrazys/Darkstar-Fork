@@ -600,7 +600,7 @@ function onTrade(player,npc,trade)
         player:messageSpecial(ITEM_OBTAINED,11065);
         player:tradeComplete();
     end
-    if (trade:hasItemQty(3217,9) and trade:hasItemQty(11185,1) and trade:getItemCount() == 9) then  --body
+    if (trade:hasItemQty(3217,9) and trade:hasItemQty(11185,1) and trade:getItemCount() == 10) then  --body
         player:addItem(11085);
         player:messageSpecial(ITEM_OBTAINED,11085);
         player:tradeComplete();
@@ -652,7 +652,7 @@ function onTrade(player,npc,trade)
         player:messageSpecial(ITEM_OBTAINED,11068);
         player:tradeComplete();
     end
-    if (trade:hasItemQty(3216,9) and trade:hasItemQty(11188,1) and trade:getItemCount() == 9) then                  --body
+    if (trade:hasItemQty(3216,9) and trade:hasItemQty(11188,1) and trade:getItemCount() == 10) then                  --body
         player:addItem(11088);
         player:messageSpecial(ITEM_OBTAINED,11088);
         player:tradeComplete();
