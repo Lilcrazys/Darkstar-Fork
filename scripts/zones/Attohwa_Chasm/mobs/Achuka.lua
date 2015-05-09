@@ -23,7 +23,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_MACC, 900);
     mob:setMod(MOD_MATT, 100);
-    mob:setMod(MOD_DEF, 1000);    
+    mob:setMod(MOD_DEF, 900);    
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 
     -- addMod
