@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Sealion's Den
--- NPC:  Sueleen
+--  NPC: Sueleen
 -- @pos 612 132 774 32
 -----------------------------------
 package.loaded["scripts/zones/Sealions_Den/TextIDs"] = nil;
@@ -21,6 +21,7 @@ function onTrade(player,npc,trade)
     local val_2 = 0;
     local aug_3 = 0;
     local val_3 = 0;
+    local PRIZE = 0;
 
     if (player:getFreeSlotsCount() >= 1) then
         if (trade:hasItemQty(15513,1) and trade:getItemCount() == 1)then -- Temperance -- WS DMG 5%, Charm +5, Dbl Att +4
@@ -46,9 +47,11 @@ function onTrade(player,npc,trade)
             aug_1 = 327; val_1 = 4; aug_2 = 29; val_2 = 13; aug_3 = 146; val_3 = 2;
         end
 
-        player:messageSpecial(ITEM_OBTAINED, PRIZE);
-        player:tradeComplete();
-        player:addItem(PRIZE, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
+        if (PRIZE > 0)
+            player:messageSpecial(ITEM_OBTAINED, PRIZE);
+            player:tradeComplete();
+            player:addItem(PRIZE, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
+        end
     else
         player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
     end
@@ -59,15 +62,14 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    --player:startEvent(0x000c);
+    -- player:startEvent(0x000c);
     if(player:getCurrentMission(COP) == FLAMES_IN_THE_DARKNESS and player:getVar("PromathiaStatus") == 1)then
-      player:startEvent(0x0010);
+        player:startEvent(0x0010);
     elseif(player:getCurrentMission(COP) == CALM_BEFORE_THE_STORM and player:hasKeyItem(LETTERS_FROM_ULMIA_AND_PRISHE)== true )then
-      player:startEvent(0x0011);
+        player:startEvent(0x0011);
     else
-      player:startEvent(0x0014);
+        player:startEvent(0x0014);
     end
-
 end;
 
 -----------------------------------
@@ -75,8 +77,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("onUpdate CSID: %u",csid);
---printf("onUpdate RESULT: %u",option);
+    -- printf("onUpdate CSID: %u",csid);
+    -- printf("onUpdate RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -84,20 +86,18 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("onFinish CSID: %u",csid);
---printf("onFinish RESULT: %u",option);
-
+    -- printf("onFinish CSID: %u",csid);
+    -- printf("onFinish RESULT: %u",option);
     if(csid == 0x000c and option == 1) then
         toPalaceEntrance(player);
     elseif(csid == 0x0010)then
-      player:setVar("PromathiaStatus",2);
+        player:setVar("PromathiaStatus",2);
     elseif(csid == 0x0011)then
-          player:completeMission(COP,CALM_BEFORE_THE_STORM);
-          player:addMission(COP,THE_WARRIOR_S_PATH);
-          player:setVar("PromathiaStatus",0);
-          player:setVar("COP_Dalham_KILL",0);
-          player:setVar("COP_Boggelmann_KILL",0);
-          player:setVar("Cryptonberry_Executor_KILL",0);
+        player:completeMission(COP,CALM_BEFORE_THE_STORM);
+        player:addMission(COP,THE_WARRIOR_S_PATH);
+        player:setVar("PromathiaStatus",0);
+        player:setVar("COP_Dalham_KILL",0);
+        player:setVar("COP_Boggelmann_KILL",0);
+        player:setVar("Cryptonberry_Executor_KILL",0);
     end
-
 end;
