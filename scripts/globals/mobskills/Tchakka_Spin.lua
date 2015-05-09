@@ -8,13 +8,13 @@ require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+	return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_SILENCE;
 
-	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 20);
+	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 10);
 
 	local dmgmod = 1;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*2.5,ELE_WATER,dmgmod,TP_NO_EFFECT);
