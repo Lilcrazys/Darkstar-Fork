@@ -47,7 +47,7 @@ function onTrade(player,npc,trade)
             aug_1 = 327; val_1 = 4; aug_2 = 29; val_2 = 13; aug_3 = 146; val_3 = 2;
         end
 
-        if (PRIZE > 0)
+        if (PRIZE > 0) then
             player:messageSpecial(ITEM_OBTAINED, PRIZE);
             player:tradeComplete();
             player:addItem(PRIZE, 1, aug_1, val_1, aug_2, val_2, aug_3, val_3);
