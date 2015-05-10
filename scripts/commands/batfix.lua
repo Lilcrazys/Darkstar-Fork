@@ -34,7 +34,8 @@ function onTrigger(player, fix, target)
 	if (fix == "fixtrialkills") then
 		require("scripts/globals/custom_trials");
 		doCustomTrial(0, targ, true, false)
-		player:PrintToPlayer("If the target player had their trial item equipped, their kill counts and completion status should now be accurate");
+		player:PrintToPlayer("If the target player had their trial item equipped, ");
+		player:PrintToPlayer("their kill counts and completion status should now be accurate");
 	elseif (fix == "finishtrial") then
 		targ:setVar("TRIAL_COMPLETE", 1);
 		player:PrintToPlayer("The target players custom trial NPCs should now see the trial requirements have been met.");
