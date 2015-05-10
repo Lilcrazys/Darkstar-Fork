@@ -32,7 +32,7 @@ function onTrigger(player, fix, target)
 	end
 
 	if (fix == "fixtrialkills") then
-		require("scripts/globals/custom_trial");
+		require("scripts/globals/custom_trials");
 		doCustomTrial(0, target, true, false)
 		player:PrintToPlayer("If the target player had their trial item equipped, their kill counts and completion status should now be accurate");
 	elseif (fix == "finishtrial") then
