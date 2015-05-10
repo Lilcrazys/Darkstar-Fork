@@ -19,7 +19,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `weapon_skills`;
 CREATE TABLE IF NOT EXISTS `weapon_skills` (
-  `weaponskillid` tinyint(3) unsigned NOT NULL,
+  `weaponskillid` smallint(4) unsigned NOT NULL,
   `name` text NOT NULL,
   `jobs` binary(22) NOT NULL,
   `type` tinyint(2) unsigned NOT NULL DEFAULT '0',
