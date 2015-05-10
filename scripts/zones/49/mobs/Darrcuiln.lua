@@ -1,9 +1,7 @@
 -----------------------------------
--- Area: Bibiki Bay
--- NPC:  Tchakka
+-- Area: Yuhtunga Jungle
+-- NPC:  Darrcuiln
 -----------------------------------
-
-require("scripts/globals/titles");
 require("scripts/globals/status");
 
 -----------------------------------
@@ -12,21 +10,20 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 end;
 
 -----------------------------------
--- OnMobSpawn
+-- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_MACC, 900);
     mob:setMod(MOD_MATT, 100);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_ACC,1250);
-
 end;
 
 -----------------------------------
@@ -51,48 +48,38 @@ end;
 
 
 function onMobFight(mob, target)
-    local BattleStart = mob:getLocalVar("BattleStart");
-    local Tchakka_2hr_Used = 0;
-    if (mob:getLocalVar("Tchakka_2hr") ~= nil) then
-        Tchakka_2hr_Used = mob:getLocalVar("Tchakka_2hr");
+    local BattleTime = mob:getBattleTime();
+    local Darrcuiln_2hr_Used = 0;
+    if (mob:getLocalVar("Darrcuiln_2hr") ~= nil) then
+        Darrcuiln_2hr_Used = mob:getLocalVar("Darrcuiln_2hr");
     end
 
     if (mob:getHPP() <= 10) then
-        if (Tchakka_2hr_Used == 3) then
-            mob:useMobAbility(432);
-            mob:setLocalVar("Tchakka_2hr", 4);
-        elseif (Tchakka_2hr_Used == 4) then
-            mob:useMobAbility(434);
-            mob:setLocalVar("Tchakka_2hr", 5);
+        if (Darrcuiln_2hr_Used == 2) then
+            mob:useMobAbility(437); -- PD
+            mob:setLocalVar("Darrcuiln_2hr", 3);
+        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
-    elseif (mob:getHPP() <= 25) then
-        if (Tchakka_2hr_Used == 2) then
-            mob:useMobAbility(434);
-            mob:setLocalVar("Tchakka_2hr", 3);
+    elseif (mob:getHPP() <= 30) then
+        if (Darrcuiln_2hr_Used == 1) then
+            mob:useMobAbility(437); -- PD
+            mob:setLocalVar("Darrcuiln_2hr", 2);
         end
-    elseif (mob:getHPP() <= 50) then
-        if (Tchakka_2hr_Used == 1) then
-            mob:useMobAbility(432);
-            mob:setLocalVar("Tchakka_2hr", 2);
+    elseif (mob:getHPP() <= 70) then
+        if (Darrcuiln_2hr_Used == 0) then
+            mob:useMobAbility(437); -- PD
+            mob:setLocalVar("Darrcuiln_2hr", 1);
         end
-    elseif (mob:getHPP() <= 75) then
-        if (Tchakka_2hr_Used == 0) then
-            mob:useMobAbility(434);
-            mob:setLocalVar("Tchakka_2hr", 1);
-        end
-    elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
+    elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end
 end;
 
 -----------------------------------
--- onMobDeath
+-- onMobDeath Action
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    local CHANCE = 20;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(745) == false) then
-        killer:addSpell(745);
-    end
+function onMobDeath(mob,killer)
+
 end;
