@@ -15,9 +15,10 @@ require("scripts/globals/titles");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 1); 
+    mob:setMobMod(MOBMOD_DRAW_IN, 1);
 end;
 
 -----------------------------------
@@ -26,22 +27,16 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 150);
-    mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_REFRESH, 300);
-    mob:setMod(MOD_HASTE_ABILITY, 10);
-    mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
-    
+    mob:setMod(MOD_REGEN, 70);
+    mob:setMod(MOD_REFRESH, 30);
+    mob:setMod(MOD_UFASTCAST, 75);
 
     -- addMod
-    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MACC,1925);
+    mob:setMod(MOD_ACC,1925);  
+    mob:setMod(MOD_DARK_AFFINITY,20);       
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    mob:addMod(MOD_PARALYZERES,100);
-    mob:addMod(MOD_MDEF,30);
-    mob:addMod(MOD_STUNRES,50);
-    mob:addMod(MOD_SLOWRES,50);            
-    
+
 end;
 
 -----------------------------------
@@ -88,6 +83,19 @@ function onMobFight(mob, target)
     end
 end;
 
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,15) ~= 5) or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
+        return 0,0,0;
+    else
+        local duration = 5;
+        target:addStatusEffect(EFFECT_TERROR,1,0,duration);
+        mob:resetEnmity(target);
+        return SUBEFFECT_NONE,0,EFFECT_TERROR;
+    end
+end;
 
 -----------------------------------
 -- onMagicHit

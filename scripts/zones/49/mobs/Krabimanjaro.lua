@@ -26,7 +26,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 35);
-    mob:setMod(MOD_MACC,900);
+    mob:setMod(MOD_MACC,1900);
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_TRIPLE_ATTACK,15);
 
