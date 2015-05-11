@@ -12,8 +12,8 @@ echo ------------------------
 if exist DSGame-BCNM.exe del DSGame-BCNM.exe
 if not exist DSGame-BCNM.exe copy DSGame-server.exe /b DSGame-BCNM.exe /b
 echo ------------------------
-if exist DSGame-z49.exe del DSGame-z49.exe
-if not exist DSGame-z49.exe copy DSGame-server.exe /b DSGame-z49.exe /b
+if exist DSGame-GM.exe del DSGame-GM.exe
+if not exist DSGame-GM.exe copy DSGame-server.exe /b DSGame-GM.exe /b
 echo ------------------------
 if exist DSGame-Abyssea.pdb del DSGame-Abyssea.pdb
 if not exist DSGame-Abyssea.pdb copy DSGame-server.pdb /b DSGame-Abyssea.pdb /b
@@ -24,8 +24,8 @@ echo ------------------------
 if exist DSGame-BCNM.pdb del DSGame-BCNM.exe
 if not exist DSGame-BCNM.pdb copy DSGame-server.exe /b DSGame-BCNM.pdb /b
 echo ------------------------
-if exist DSGame-z49.pdb del DSGame-z49.pdb
-if not exist DSGame-z49.pdb copy DSGame-server.pdb /b DSGame-z49.pdb /b
+if exist DSGame-GM.pdb del DSGame-GM.pdb
+if not exist DSGame-GM.pdb copy DSGame-server.pdb /b DSGame-GM.pdb /b
 echo ------------------------
 echo Done.
 PAUSE
