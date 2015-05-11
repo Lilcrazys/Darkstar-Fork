@@ -3707,8 +3707,8 @@ INSERT INTO `mob_skill` VALUES (432,461,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,
 
 -- Hurkan
 -- special melee 2214 2215 2216
-INSERT INTO `mob_skill` VALUES (2813,460,2214,'Hurkan_AoE',1,10.0,3000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2814,460,2215,'Hurkan_Dive',0,10.0,3000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2816,460,2214,'Hurkan_AoE',0,10.0,3000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2814,460,2215,'Hurkan_Dive',1,10.0,3000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2815,460,2216,'Hurkan_Single',0,10.0,3000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2817,460,2218,'Crashing_Thunder',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2818,460,2218,'Reverberating_Cry',1,18.0,2000,1000,4,0,0,0);

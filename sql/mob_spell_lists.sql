@@ -1711,8 +1711,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 168, 1, 255); -- Thunder 5
 INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 197, 1, 255); -- Thundaga 4
 INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 198, 1, 255); -- Thundaga 5
 INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 229, 1, 255); -- Poisonga 5
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 286, 1, 255); -- addle
-INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 316, 1, 255); -- enthunder 2
 INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 356, 1, 255); -- paralyga
 INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 357, 1, 255); -- slowga
 INSERT INTO `mob_spell_lists` VALUES ('Hurkan', 591, 359, 1, 255); -- silencega
