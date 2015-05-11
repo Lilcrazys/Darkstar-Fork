@@ -252,7 +252,7 @@ enum ZONEID : uint16
     ZONE_CLOISTER_OF_FLAMES           = 207,
     ZONE_QUICKSAND_CAVES              = 208,
     ZONE_CLOISTER_OF_TREMORS          = 209,
-    ZONE_210                          = 210, // "GM Home" in retail.
+    ZONE_GM_HOME                      = 210, // Name comes from leaked official documentation
     ZONE_CLOISTER_OF_TIDES            = 211,
     ZONE_GUSTAV_TUNNEL                = 212,
     ZONE_LABYRINTH_OF_ONZOZO          = 213,
