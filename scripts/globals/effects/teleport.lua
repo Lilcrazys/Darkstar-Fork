@@ -78,12 +78,12 @@ function onEffectLose(target,effect)
     elseif (Teleport == TELEPORT_TO_LEADER) then
         toLeader(target);
     elseif (Teleport == TELEPORT_EXITPROMMEA) then
-        toexitprommea(target);
+        toExitPromMea(target);
     elseif (Teleport == TELEPORT_EXITPROMHOLLA) then
-        toexitpromholla(target);
+        toExitPromHolla(target);
     elseif (Teleport == TELEPORT_EXITPROMDEM) then
-        toexitpromdem(target);
+        toExitPromDem(target);
     elseif (Teleport == TELEPORT_LUFAISE) then
-        tolufaise(target);
+        toLufaise(target);
     end
 end;
