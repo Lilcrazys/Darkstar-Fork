@@ -36,7 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_STUNRES, 100);    
     mob:setMod(MOD_UFASTCAST, 65);
-    mob:setMod(MOD_MACC, 950);
+    mob:setMod(MOD_MACC, 1950);
     mob:setMod(MOD_MATT, 120);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     
@@ -104,11 +104,11 @@ end;
 function onMobDeath(mob,killer)
     local CHANCE = 30;
     local LUNAR = 40;
+    killer:addTitle(WYRM_GOD_DEFIER);
 
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_APOCALYPSE) == false) then
         killer:addKeyItem(ATMA_OF_THE_APOCALYPSE);
         killer:messageSpecial(6385, ATMA_OF_THE_APOCALYPSE);
-        killer:addTitle(WYRM_GOD_DEFIER);
     end
 
     if (math.random(0,99) < LUNAR  and killer:hasKeyItem(LUNAR_ABYSSITE3) == false) then

@@ -26,7 +26,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 30);
     mob:setMod(MOD_REFRESH, 100);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC, 950);
+    mob:setMod(MOD_MACC, 1950);
 
     -- addMod
     mob:setMod(MOD_DOUBLE_ATTACK, 100)
@@ -68,6 +68,8 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 15;
+    killer:addTitle(AMPHITRITE_SHUCKER);
+    
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SEA_DAUGHTER) == false) then
         killer:addKeyItem(ATMA_OF_THE_SEA_DAUGHTER);
         killer:messageSpecial(6385, ATMA_OF_THE_SEA_DAUGHTER);

@@ -12051,4 +12051,45 @@ INSERT INTO `item_mods` VALUES(27435, 29, 2); --  Magic Def. Bonus
 INSERT INTO `item_mods` VALUES(27435, 384, 41); -- Haste
 INSERT INTO `item_mods` VALUES(27435, 486, 17); -- tactical parry
 
+-- DRG
+-- peltasts_mezail (26766)
+-- peltasts_plackart (26924)
+-- peltasts_vambraces (27078)
+-- peltasts_cuissots (27263)
+-- peltasts_schynbalds (27437)
+
+-- SMN
+-- beckoners_horn (26768)
+-- beckoners_doublet (26926)
+-- beckoners_bracers (27080)
+-- beckoners_spats (27265)
+-- beckoners_pigaches (27439)
+
+-- BLU
+-- hashishin_kavuk (26770)
+-- hashishin_mintan (26928)
+-- hashishin_bazuband (27082)
+-- hashishin_tayt (27267)
+-- hashishin_basmak (27441)
+
+-- COR 
+-- chasseurs_tricorne (26772)
+-- chasseurs_frac (26930)
+-- chasseurs_gants (27084)
+-- chasseurs_culottes (27269)
+-- chasseurs_bottes (27443)
+
+-- DNC 
+-- maculele_tiara (26776)
+-- maculele_casaque (26934)
+-- maculele_bangles (27088)
+-- maculele_tights (27273)
+-- maculele_toeshoes (27447)
+
+-- SCH
+-- arbatel_bonnet (26778)
+-- arbatel_gown (26936)
+-- arbatel_bracers (27090)
+-- arbatel_pants (27275)
+-- arbatel_loafers (27449)
 

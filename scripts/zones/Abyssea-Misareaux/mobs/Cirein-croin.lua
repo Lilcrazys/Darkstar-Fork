@@ -24,7 +24,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_MATT,80);
-    mob:setMod(MOD_MACC,700);
+    mob:setMod(MOD_MACC,1700);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_MDEF,50);
@@ -50,6 +50,8 @@ end;
 function onMobDeath(mob,killer)
     local KI_CHANCE = 20;
     local ATMA_CHANCE = 15;
+    killer:addTitle(CIREINCROIN_HARPOONER);
+    
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT) == false) then
         killer:addKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT);

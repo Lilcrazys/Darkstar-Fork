@@ -25,7 +25,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_COUNTER, 20);
-    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MACC,1925);
     mob:setMod(MOD_MATT,50);
     mob:setMod(MOD_DOUBLE_ATTACK, 10);
 
@@ -79,6 +79,8 @@ end;
 function onMobDeath(mob,killer)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
+    killer:addTitle(BRIAREUS_FELLER);
+    
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
         killer:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);

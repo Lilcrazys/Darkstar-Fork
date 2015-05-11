@@ -28,7 +28,7 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:setMod(MOD_MATT,100);
-    mob:setMod(MOD_MACC,700);
+    mob:setMod(MOD_MACC,1700);
     mob:addMod(MOD_ACC,100);
     mob:addMod(MOD_DEF,130);
     mob:setMod(MOD_TRIPLE_ATTACK, 30)
@@ -68,6 +68,7 @@ end;
 function onMobDeath(mob,killer)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
+    killer:addTitle(KUKULKAN_DEFANGER);
 
     if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(VENOMOUS_PEISTE_CLAW) == false) then
         killer:addKeyItem(VENOMOUS_PEISTE_CLAW);

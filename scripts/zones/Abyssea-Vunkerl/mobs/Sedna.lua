@@ -27,7 +27,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 45);
     mob:setMod(MOD_REFRESH, 100);
     mob:setMod(MOD_MATT,80);
-    mob:setMod(MOD_MACC,700);
+    mob:setMod(MOD_MACC,1700);
     mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_MDEF,50);
 end;
@@ -52,6 +52,8 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 15;
+    killer:addTitle(SEDNA_TUSKBREAKER);
+    
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_TUSKED_TERROR) == false) then
         killer:addKeyItem(ATMA_OF_THE_TUSKED_TERROR);
         killer:messageSpecial(6385, ATMA_OF_THE_TUSKED_TERROR);
