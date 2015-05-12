@@ -1,23 +1,22 @@
 -----------------------------------
--- Area: Somewhere out there
--- NPC: Legion +1
---
+-- Area: Rolanberry Fields (110)
+--  NPC: Legion Moogle
+-- Type: Legion +1 Helper
 -----------------------------------
--- package.loaded["scripts/zones/Abyssea-Empyreal_Paradox/TextIDs"] = nil;
+package.loaded["scripts/zones/Rolanberry_Fields/TextIDs"] = nil;
 -----------------------------------
--- require("scripts/globals/settings");
--- require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
+
+require("scripts/zones/Rolanberry_Fields/TextIDs");
+
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
-    -------------------------------Legion Gear +1----------------------------------------------------
 function onTrade(player,npc,trade)
     local PRIZE = 0;
-
+    -------------------------------Legion Gear +1----------------------------------------------------
     if (player:getCurrency("legion_point") >= 3500) then
-
-----------------------------Karieyh-------------------------------------
+        ----------------------------Karieyh-------------------------------------
         if (trade:hasItemQty(3925, 10) and trade:hasItemQty(27785,1) and trade:getItemCount() == 6) then          --head
             PRIZE = 27752
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27925,1) and trade:getItemCount() == 6) then     -- body
@@ -28,7 +27,7 @@ function onTrade(player,npc,trade)
             PRIZE = 28182
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(28345,1) and trade:getItemCount() == 6) then      --feet
             PRIZE = 28320
-    -------------------------Thurandaunts-------------------------------------
+        -------------------------Thurandaunts-------------------------------------
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27784,1) and trade:getItemCount() == 6) then      --head
             PRIZE = 27753
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27924,1) and trade:getItemCount() == 6) then      --body
@@ -39,7 +38,7 @@ function onTrade(player,npc,trade)
             PRIZE = 28183
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(28344,1) and trade:getItemCount() == 6) then      --feet
             PRIZE = 28321
-    ----------------------------Orvail------------------------------------
+        ----------------------------Orvail------------------------------------
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27782,1) and trade:getItemCount() == 6) then      --head
             PRIZE = 27754
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27922,1) and trade:getItemCount() == 6) then       --body
@@ -72,5 +71,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you upgrade your Legion Armor", player:getName() )), MESSAGE_SAY, npc:getID() );
+    local MSG1 = string.format("Hello %s! I'm here to help you upgrade your Legion Armor.", player:getName());
+    local MSG2 = "This service will cost 3,500 Legion points and 5 Tanzanite Jewels, Kupo!";
+    player:SpoofChatPlayer(MSG1, MESSAGE_SAY, npc:getID());
+    player:SpoofChatPlayer(MSG2, MESSAGE_SAY, npc:getID());
 end;
