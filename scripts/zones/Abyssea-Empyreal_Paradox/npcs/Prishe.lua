@@ -268,10 +268,10 @@ function onTrade(player,npc,trade)
                 player:messageSpecial(ITEM_OBTAINED, PRIZE);
                 player:tradeComplete();
                 player:addItem(PRIZE, 1);
+            else
+                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
             end
-        else
-            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
-        end
+		end	
     else
         player:PrintToPlayer( "Not so fast... All 10 Titles and All 3 Lunars are required!" );
     end
