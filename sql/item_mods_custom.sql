@@ -5016,19 +5016,19 @@ INSERT INTO `item_mods` VALUES (27765, 1, 1); --
 
 
 -- Shneddick Chapeau
-INSERT INTO `item_mods` VALUES (27752, 1, 63); -- def
-INSERT INTO `item_mods` VALUES (27752, 2, 11); -- hp
-INSERT INTO `item_mods` VALUES (27752, 5, 18); -- mp
-INSERT INTO `item_mods` VALUES (27752, 8, 15); -- str
-INSERT INTO `item_mods` VALUES (27752, 9, 17); -- dex
-INSERT INTO `item_mods` VALUES (27752, 10, 15); -- vit
-INSERT INTO `item_mods` VALUES (27752, 11, 17); -- agi
-INSERT INTO `item_mods` VALUES (27752, 12, 15); -- int
-INSERT INTO `item_mods` VALUES (27752, 13, 15); -- mnd
-INSERT INTO `item_mods` VALUES (27752, 14, 15); -- chr
-INSERT INTO `item_mods` VALUES (27752, 68, 18); -- eva
-INSERT INTO `item_mods` VALUES (27752, 31, 31); -- Meva
-INSERT INTO `item_mods` VALUES (27752, 384, 71); -- gear haste
+INSERT INTO `item_mods` VALUES (27762, 1, 63); -- def
+INSERT INTO `item_mods` VALUES (27762, 2, 11); -- hp
+INSERT INTO `item_mods` VALUES (27762, 5, 18); -- mp
+INSERT INTO `item_mods` VALUES (27762, 8, 15); -- str
+INSERT INTO `item_mods` VALUES (27762, 9, 17); -- dex
+INSERT INTO `item_mods` VALUES (27762, 10, 15); -- vit
+INSERT INTO `item_mods` VALUES (27762, 11, 17); -- agi
+INSERT INTO `item_mods` VALUES (27762, 12, 15); -- int
+INSERT INTO `item_mods` VALUES (27762, 13, 15); -- mnd
+INSERT INTO `item_mods` VALUES (27762, 14, 15); -- chr
+INSERT INTO `item_mods` VALUES (27762, 68, 18); -- eva
+INSERT INTO `item_mods` VALUES (27762, 31, 31); -- Meva
+INSERT INTO `item_mods` VALUES (27762, 384, 71); -- gear haste
 
 -- Gorney Morion
 INSERT INTO `item_mods` VALUES (27761, 1, 71); -- def
