@@ -15,7 +15,7 @@
 function onTrade(player,npc,trade)
     local PRIZE = 0;
 
-    if (player:getCurrency("legion_point") >= 2000) then
+    if (player:getCurrency("legion_point") >= 3000) then
 
 ----------------------------Karieyh-------------------------------------
         if (trade:hasItemQty(3925, 5) and trade:hasItemQty(27785,1) and trade:getItemCount() == 6) then          --head
@@ -54,7 +54,7 @@ function onTrade(player,npc,trade)
 
         if (PRIZE > 0) then
             if (player:getFreeSlotsCount() >= 1) then
-                player:delCurrency("legion_point", 2000);
+                player:delCurrency("legion_point", 3000);
                 player:messageSpecial(ITEM_OBTAINED, PRIZE);
                 player:tradeComplete();
                 player:addItem(PRIZE, 1);

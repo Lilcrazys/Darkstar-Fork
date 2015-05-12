@@ -12072,14 +12072,14 @@ INSERT INTO `item_mods` VALUES(27435, 486, 17); -- tactical parry
 -- hashishin_tayt (27267)
 -- hashishin_basmak (27441)
 
--- COR 
+-- COR
 -- chasseurs_tricorne (26772)
 -- chasseurs_frac (26930)
 -- chasseurs_gants (27084)
 -- chasseurs_culottes (27269)
 -- chasseurs_bottes (27443)
 
--- DNC 
+-- DNC
 -- maculele_tiara (26776)
 -- maculele_casaque (26934)
 -- maculele_bangles (27088)
@@ -12093,3 +12093,214 @@ INSERT INTO `item_mods` VALUES(27435, 486, 17); -- tactical parry
 -- arbatel_pants (27275)
 -- arbatel_loafers (27449)
 
+--  Legion Gear +1
+
+-- Karieyh Set
+-- head (27752)
+INSERT INTO `item_mods` VALUES (27752, 1, 82); --
+INSERT INTO `item_mods` VALUES (27752, 5, 19); --
+INSERT INTO `item_mods` VALUES (27752, 8, 19); --
+INSERT INTO `item_mods` VALUES (27752, 9, 22); --
+INSERT INTO `item_mods` VALUES (27752, 10, 20); --
+INSERT INTO `item_mods` VALUES (27752, 11, 15); --
+INSERT INTO `item_mods` VALUES (27752, 12, 11); --
+INSERT INTO `item_mods` VALUES (27752, 13, 11); --
+INSERT INTO `item_mods` VALUES (27752, 14, 11); --
+INSERT INTO `item_mods` VALUES (27752, 25, 11); --
+INSERT INTO `item_mods` VALUES (27752, 31, 21); --
+INSERT INTO `item_mods` VALUES (27752, 384, 71); --
+
+-- body (27863)
+INSERT INTO `item_mods` VALUES (27863, 1, 104); --
+INSERT INTO `item_mods` VALUES (27863, 5, 30); --
+INSERT INTO `item_mods` VALUES (27863, 8, 29); --
+INSERT INTO `item_mods` VALUES (27863, 9, 20); --
+INSERT INTO `item_mods` VALUES (27863, 10, 19); --
+INSERT INTO `item_mods` VALUES (27863, 11, 18); --
+INSERT INTO `item_mods` VALUES (27863, 12, 12); --
+INSERT INTO `item_mods` VALUES (27863, 13, 12); --
+INSERT INTO `item_mods` VALUES (27863, 14, 12); --
+INSERT INTO `item_mods` VALUES (27863, 23, 26); --
+INSERT INTO `item_mods` VALUES (27863, 31, 32); --
+INSERT INTO `item_mods` VALUES (27863, 288, 2); --
+INSERT INTO `item_mods` VALUES (27863, 384, 30); --
+
+-- hand (28042)
+INSERT INTO `item_mods` VALUES (28042, 1, 74); --
+INSERT INTO `item_mods` VALUES (28042, 8, 6); --
+INSERT INTO `item_mods` VALUES (28042, 9, 19); --
+INSERT INTO `item_mods` VALUES (28042, 10, 21); --
+INSERT INTO `item_mods` VALUES (28042, 12, 5); --
+INSERT INTO `item_mods` VALUES (28042, 13, 16); --
+INSERT INTO `item_mods` VALUES (28042, 14, 12); --
+INSERT INTO `item_mods` VALUES (28042, 25, 11); --
+INSERT INTO `item_mods` VALUES (28042, 31, 18); --
+INSERT INTO `item_mods` VALUES (28042, 384, 40); --
+
+-- legs (28182)
+INSERT INTO `item_mods` VALUES (28182, 1, 91); --
+INSERT INTO `item_mods` VALUES (28182, 5, 65); --
+INSERT INTO `item_mods` VALUES (28182, 8, 20); --
+INSERT INTO `item_mods` VALUES (28182, 10, 20); --
+INSERT INTO `item_mods` VALUES (28182, 11, 10); --
+INSERT INTO `item_mods` VALUES (28182, 12, 16); --
+INSERT INTO `item_mods` VALUES (28182, 13, 8); --
+INSERT INTO `item_mods` VALUES (28182, 14, 6); --
+INSERT INTO `item_mods` VALUES (28182, 23, 21); --
+INSERT INTO `item_mods` VALUES (28182, 31, 43); --
+INSERT INTO `item_mods` VALUES (28182, 384, 50); --
+
+-- feet (28320)
+INSERT INTO `item_mods` VALUES (28320, 1, 61); --
+INSERT INTO `item_mods` VALUES (28320, 8, 12); --
+INSERT INTO `item_mods` VALUES (28320, 9, 15); --
+INSERT INTO `item_mods` VALUES (28320, 10, 13); --
+INSERT INTO `item_mods` VALUES (28320, 11, 18); --
+INSERT INTO `item_mods` VALUES (28320, 13, 5); --
+INSERT INTO `item_mods` VALUES (28320, 14, 17); --
+INSERT INTO `item_mods` VALUES (28320, 23, 11); --
+INSERT INTO `item_mods` VALUES (28320, 25, 11); --
+INSERT INTO `item_mods` VALUES (28320, 31, 43); --
+INSERT INTO `item_mods` VALUES (28320, 73, 5); --
+INSERT INTO `item_mods` VALUES (28320, 384, 30); --
+
+-- Thurandaut Set
+-- head (27753)
+INSERT INTO `item_mods` VALUES (27753, 1, 74); --
+INSERT INTO `item_mods` VALUES (27753, 5, 19); --
+INSERT INTO `item_mods` VALUES (27753, 8, 13); --
+INSERT INTO `item_mods` VALUES (27753, 9, 16); --
+INSERT INTO `item_mods` VALUES (27753, 10, 9); --
+INSERT INTO `item_mods` VALUES (27753, 11, 12); --
+INSERT INTO `item_mods` VALUES (27753, 12, 9); --
+INSERT INTO `item_mods` VALUES (27753, 13, 9); --
+INSERT INTO `item_mods` VALUES (27753, 14, 10); --
+INSERT INTO `item_mods` VALUES (27753, 25, 11); --
+INSERT INTO `item_mods` VALUES (27753, 31, 36); --
+INSERT INTO `item_mods` VALUES (27753, 259, 5); --
+
+-- body (27896)
+INSERT INTO `item_mods` VALUES (27896, 1, 95); --
+INSERT INTO `item_mods` VALUES (27896, 5, 36); --
+INSERT INTO `item_mods` VALUES (27896, 8, 19); --
+INSERT INTO `item_mods` VALUES (27896, 9, 18); --
+INSERT INTO `item_mods` VALUES (27896, 10, 15); --
+INSERT INTO `item_mods` VALUES (27896, 11, 19); --
+INSERT INTO `item_mods` VALUES (27896, 12, 14); --
+INSERT INTO `item_mods` VALUES (27896, 13, 14); --
+INSERT INTO `item_mods` VALUES (27896, 14, 14); --
+INSERT INTO `item_mods` VALUES (27896, 23, 16); --
+INSERT INTO `item_mods` VALUES (27896, 31, 43); --
+INSERT INTO `item_mods` VALUES (27896, 384, 61); --
+
+-- hand (28043)
+INSERT INTO `item_mods` VALUES (28043, 1, 65); --
+INSERT INTO `item_mods` VALUES (28043, 8, 7); --
+INSERT INTO `item_mods` VALUES (28043, 9, 25); --
+INSERT INTO `item_mods` VALUES (28043, 10, 20); --
+INSERT INTO `item_mods` VALUES (28043, 11, 16); --
+INSERT INTO `item_mods` VALUES (28043, 12, 8); --
+INSERT INTO `item_mods` VALUES (28043, 13, 19); --
+INSERT INTO `item_mods` VALUES (28043, 14, 11); --
+INSERT INTO `item_mods` VALUES (28043, 25, 11); --
+INSERT INTO `item_mods` VALUES (28043, 68, 11); --
+INSERT INTO `item_mods` VALUES (28043, 384, 40); --
+
+-- legs (28183)
+INSERT INTO `item_mods` VALUES (28183, 1, 82); --
+INSERT INTO `item_mods` VALUES (28183, 8, 18); --
+INSERT INTO `item_mods` VALUES (28183, 10, 10); --
+INSERT INTO `item_mods` VALUES (28183, 11, 20); --
+INSERT INTO `item_mods` VALUES (28183, 12, 19); --
+INSERT INTO `item_mods` VALUES (28183, 13, 11); --
+INSERT INTO `item_mods` VALUES (28183, 14, 7); --
+INSERT INTO `item_mods` VALUES (28183, 26, 18); --
+INSERT INTO `item_mods` VALUES (28183, 31, 47); --
+INSERT INTO `item_mods` VALUES (28183, 27, -5); --
+
+-- feet (28321)
+INSERT INTO `item_mods` VALUES (28321, 1, 53); --
+INSERT INTO `item_mods` VALUES (28321, 8, 8); --
+INSERT INTO `item_mods` VALUES (28321, 9, 15); --
+INSERT INTO `item_mods` VALUES (28321, 10, 16); --
+INSERT INTO `item_mods` VALUES (28321, 14, 19); --
+INSERT INTO `item_mods` VALUES (28321, 31, 47); --
+INSERT INTO `item_mods` VALUES (28321, 11, 23); --
+INSERT INTO `item_mods` VALUES (28321, 13, 16); --
+INSERT INTO `item_mods` VALUES (28321, 161, -3); --
+INSERT INTO `item_mods` VALUES (28321, 384, 40); --
+
+-- Orvail Set
+-- head (27754)
+INSERT INTO `item_mods` VALUES (27754, 1, 70);
+INSERT INTO `item_mods` VALUES (27754, 5, 26);
+INSERT INTO `item_mods` VALUES (27754, 8, 13);
+INSERT INTO `item_mods` VALUES (27754, 9, 13);
+INSERT INTO `item_mods` VALUES (27754, 10, 13);
+INSERT INTO `item_mods` VALUES (27754, 11, 13);
+INSERT INTO `item_mods` VALUES (27754, 12, 17);
+INSERT INTO `item_mods` VALUES (27754, 13, 17);
+INSERT INTO `item_mods` VALUES (27754, 14, 17);
+INSERT INTO `item_mods` VALUES (27754, 30, 9);
+INSERT INTO `item_mods` VALUES (27754, 31, 51);
+INSERT INTO `item_mods` VALUES (27754, 71, 4);
+
+-- body (27897)
+INSERT INTO `item_mods` VALUES (27897, 1, 91);
+INSERT INTO `item_mods` VALUES (27897, 5, 49);
+INSERT INTO `item_mods` VALUES (27897, 8, 16);
+INSERT INTO `item_mods` VALUES (27897, 9, 16);
+INSERT INTO `item_mods` VALUES (27897, 10, 16);
+INSERT INTO `item_mods` VALUES (27897, 11, 16);
+INSERT INTO `item_mods` VALUES (27897, 12, 20);
+INSERT INTO `item_mods` VALUES (27897, 13, 20);
+INSERT INTO `item_mods` VALUES (27897, 14, 20);
+INSERT INTO `item_mods` VALUES (27897, 31, 54);
+INSERT INTO `item_mods` VALUES (27897, 27, -5);
+INSERT INTO `item_mods` VALUES (27897, 369, 3);
+
+-- hand (28044)
+INSERT INTO `item_mods` VALUES (28044, 1, 61);
+INSERT INTO `item_mods` VALUES (28044, 2, 10);
+INSERT INTO `item_mods` VALUES (28044, 5, 12);
+INSERT INTO `item_mods` VALUES (28044, 8, 4);
+INSERT INTO `item_mods` VALUES (28044, 9, 17);
+INSERT INTO `item_mods` VALUES (28044, 10, 16);
+INSERT INTO `item_mods` VALUES (28044, 11, 16);
+INSERT INTO `item_mods` VALUES (28044, 12, 12);
+INSERT INTO `item_mods` VALUES (28044, 13, 22);
+INSERT INTO `item_mods` VALUES (28044, 14, 17);
+INSERT INTO `item_mods` VALUES (28044, 30, 6);
+INSERT INTO `item_mods` VALUES (28044, 28, 6);
+INSERT INTO `item_mods` VALUES (28044, 68, 10);
+INSERT INTO `item_mods` VALUES (28044, 29, 1);
+INSERT INTO `item_mods` VALUES (28044, 31, 25);
+INSERT INTO `item_mods` VALUES (28044, 384, 30);
+
+-- legs (28184)
+INSERT INTO `item_mods` VALUES (28184, 1, 78);
+INSERT INTO `item_mods` VALUES (28184, 5, 24);
+INSERT INTO `item_mods` VALUES (28184, 8, 16);
+INSERT INTO `item_mods` VALUES (28184, 10, 18);
+INSERT INTO `item_mods` VALUES (28184, 11, 11);
+INSERT INTO `item_mods` VALUES (28184, 12, 21);
+INSERT INTO `item_mods` VALUES (28184, 13, 15);
+INSERT INTO `item_mods` VALUES (28184, 14, 12);
+INSERT INTO `item_mods` VALUES (28184, 31, 73);
+INSERT INTO `item_mods` VALUES (28184, 30, 7);
+INSERT INTO `item_mods` VALUES (28184, 170, 5);
+
+-- feet (28322)
+INSERT INTO `item_mods` VALUES (28322, 1, 48);
+INSERT INTO `item_mods` VALUES (28322, 5, 12);
+INSERT INTO `item_mods` VALUES (28322, 8, 6);
+INSERT INTO `item_mods` VALUES (28322, 9, 7);
+INSERT INTO `item_mods` VALUES (28322, 10, 6);
+INSERT INTO `item_mods` VALUES (28322, 11, 21);
+INSERT INTO `item_mods` VALUES (28322, 12, 11);
+INSERT INTO `item_mods` VALUES (28322, 13, 18);
+INSERT INTO `item_mods` VALUES (28322, 14, 21);
+INSERT INTO `item_mods` VALUES (28322, 30, 10);
+INSERT INTO `item_mods` VALUES (28322, 31, 73);
+INSERT INTO `item_mods` VALUES (28322, 27, -5);
+INSERT INTO `item_mods` VALUES (28322, 384, 30);

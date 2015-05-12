@@ -355,3 +355,21 @@ INSERT INTO `item_armor` VALUES ('27443', 'chasseurs_bottes', '99', '65536', '29
 INSERT INTO `item_armor` VALUES ('27445', 'karagoz_scarpe', '99', '131072', '299', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('27447', 'maculele_toeshoes', '99', '262144', '305', '0', '0', '256', '0');
 INSERT INTO `item_armor` VALUES ('27449', 'arbatel_loafers', '99', '524288', '306', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27752', 'karieyh_morion_+1', '99', '10689', '342', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27863', 'karieyh_haubert_+1', '99', '10689', '342', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('28042', 'karieyh_moufles_+1', '99', '10689', '342', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28182', 'karieyh_brayette_+1', '99', '10689', '342', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28320', 'karieyh_sollerets_+1', '99', '10689', '342', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27753', 'thurandaut_chapeau_+1', '99', '2593826', '343', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27896', 'thurandaut_tabard_+1', '99', '2593826', '343', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('28043', 'thurandaut_gloves_+1', '99', '2593826', '343', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28183', 'thurandaut_tights_+1', '99', '2593826', '343', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28321', 'thurandaut_boots_+1', '99', '2593826', '343', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27754', 'orvail_corona_+1', '99', '3850780', '344', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27897', 'orvail_robe_+1', '99', '3850780', '344', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('28044', 'orvail_cuffs_+1', '99', '3850780', '344', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28184', 'orvail_pants_+1', '99', '3850780', '344', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28322', 'orvail_souliers_+1', '99', '3850780', '344', '0', '0', '256', '0');
