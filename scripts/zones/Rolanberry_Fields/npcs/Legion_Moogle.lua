@@ -15,7 +15,7 @@ require("scripts/zones/Rolanberry_Fields/TextIDs");
 function onTrade(player,npc,trade)
     local PRIZE = 0;
     -------------------------------Legion Gear +1----------------------------------------------------
-    if (player:getCurrency("legion_point") >= 3500) then
+    if (player:getCurrency("legion_point") >= 2500) then
         ----------------------------Karieyh-------------------------------------
         if (trade:hasItemQty(3925, 10) and trade:hasItemQty(27785,1) and trade:getItemCount() == 6) then          --head
             PRIZE = 27752
@@ -53,7 +53,7 @@ function onTrade(player,npc,trade)
 
         if (PRIZE > 0) then
             if (player:getFreeSlotsCount() >= 1) then
-                player:delCurrency("legion_point", 3500);
+                player:delCurrency("legion_point", 2500);
                 player:messageSpecial(ITEM_OBTAINED, PRIZE);
                 player:tradeComplete();
                 player:addItem(PRIZE, 1);
@@ -72,7 +72,7 @@ end;
 
 function onTrigger(player,npc)
     local MSG1 = string.format("Hello %s! I'm here to help you upgrade your Legion Armor.", player:getName());
-    local MSG2 = "This service will cost 3,500 Legion points and 5 Tanzanite Jewels, Kupo!";
+    local MSG2 = "This service will cost 2,500 Legion points and 10 Tanzanite Jewels, Kupo!";
     player:SpoofChatPlayer(MSG1, MESSAGE_SAY, npc:getID());
     player:SpoofChatPlayer(MSG2, MESSAGE_SAY, npc:getID());
 end;
