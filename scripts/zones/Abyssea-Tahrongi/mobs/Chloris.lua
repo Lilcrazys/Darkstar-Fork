@@ -26,8 +26,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_COUNTER, 30);
-    mob:setMod(MOD_MACC,725);
-    mob:setMod(MOD_MATT,50);
+    mob:setMod(MOD_MACC,1725);
+    mob:setMod(MOD_MATT,110);
     mob:addMod(MOD_ACC,100);
     mob:addMod(MOD_ATT,100);
     mob:setMod(MOD_DOUBLE_ATTACK, 10);

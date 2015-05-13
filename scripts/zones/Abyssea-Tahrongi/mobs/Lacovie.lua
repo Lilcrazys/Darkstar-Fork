@@ -19,10 +19,10 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:addMod(MOD_MATT,110);
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_REGEN,90);
-    mob:addMod(MOD_REGAIN,20);
+    mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_MACC,1800);
+    mob:setMod(MOD_MATT,110);
 end;
 
 -----------------------------------

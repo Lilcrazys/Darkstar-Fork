@@ -17,6 +17,8 @@ require("scripts/globals/keyitems");
 function onMobInitialize(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
+    mob:setMod(MOD_MATT,90);
+    mob:setMod(MOD_MACC,1900);    
 
     -- addMod
     mob:addMod(MOD_EVA,-75);
