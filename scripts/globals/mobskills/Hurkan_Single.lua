@@ -23,7 +23,7 @@ function onMobWeaponSkill(target, mob, skill)
     POW = utils.clamp(POW, 0.74, 7.7);
     -- target:PrintToPlayer(string.format("Post-clamp POW %u ", POW));
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*POW,ELE_NONE,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_NONE);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_NONE,MOBPARAM_1_SHADOW);
 
     target:addTP(-1);
     mob:addTP(1);
