@@ -18,7 +18,7 @@ require("scripts/zones/Tavnazian_Safehold/TextIDs");
 function onTrade(player,npc,trade)
 
     local Zilart_clear = player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS);
-    local Chains_clear = player:hasCompletedMission(COP,WHEN_ANGELS_FALL);
+    local Chains_clear = player:hasCompletedMission(COP,GARDEN_OF_ANTIQUITY);
 
     if (Zilart_clear == false or Chains_clear == false) then
        player:PrintToPlayer( "Not so fast... CoP and ZM Clears are required before beginning these trials!" );

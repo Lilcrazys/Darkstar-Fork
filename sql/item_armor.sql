@@ -8230,7 +8230,7 @@ INSERT INTO `item_armor` VALUES ('18554', 'darklinn_scythe', '90', '128', '0', '
 INSERT INTO `item_armor` VALUES ('18555', 'sectum_sickle', '87', '393', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18556', 'sectum_sickle_+1', '87', '393', '393', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18557', 'sortilege_scythe', '94', '128', '196', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('18558', 'wroth_scythe', '99', '128', '0', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('18558', 'wroth_scythe', '99', '128', '596', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18559', 'void_scythe', '99', '128', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18560', 'nirastamo', '99', '128', '0', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('18561', 'yhatdhara', '97', '385', '0', '0', '0', '1', '0');
