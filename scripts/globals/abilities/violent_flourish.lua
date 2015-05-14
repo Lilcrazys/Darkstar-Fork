@@ -81,12 +81,12 @@ function onUseAbility(player,target,ability)
         local bonus = 50 - target:getMod(MOD_STUNRES) + player:getMod(MOD_VFLOURISH_MACC);
         local spell = getSpell(252);
         -- local resist = applyResistance(player,spell,target,0,player:getSkillLevel(player:getWeaponSkillType(SLOT_MAIN)),bonus);
-        if (hitrate > 10) then -- Temp till getSkillLevel() crash is fixed.
-        --if (resist > 0.25) then
+        -- Temp till getSkillLevel() crash is fixed.
+        -- if (resist > 0.25) then
             target:addStatusEffect(EFFECT_STUN, 1, 0, 2);
-        else
-            ability:setMsg(110);
-        end
+        -- else
+            -- ability:setMsg(110);
+        -- end
 
         dmg = utils.stoneskin(target, dmg);
 

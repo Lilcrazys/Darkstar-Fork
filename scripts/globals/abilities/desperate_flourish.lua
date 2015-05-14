@@ -61,13 +61,13 @@ function onUseAbility(player,target,ability)
         local bonus = 50 - target:getMod(MOD_STUNRES);
         local spell = getSpell(216);
         -- local resist = applyResistance(player,spell,target,0,player:getSkillLevel(player:getWeaponSkillType(SLOT_MAIN)),bonus)
-        if (hitrate > 10) then -- Temp till getSkillLevel() crash is fixed.
+        -- Temp till getSkillLevel() crash is fixed.
         -- if (resist > 0.25) then
             target:delStatusEffectSilent(EFFECT_WEIGHT);
-            target:addStatusEffect(EFFECT_WEIGHT, 50, 0, 60 * resist);
-        else
-            ability:setMsg(110);
-        end
+            target:addStatusEffect(EFFECT_WEIGHT, 50, 0, 60); -- * resist);
+        -- else
+            -- ability:setMsg(110);
+        -- end
 
         ability:setMsg(127);
         return EFFECT_WEIGHT, getFlourishAnimation(player:getWeaponSkillType(SLOT_MAIN)), 2;
