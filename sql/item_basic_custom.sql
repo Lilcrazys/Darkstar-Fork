@@ -287,7 +287,16 @@ INSERT INTO `item_basic` VALUES (21229,0,'cibitshavore','cibitshavore',1,63552,1
 
 INSERT INTO `item_basic` VALUES (20857,0,'svarga','svarga',1,63552,6,1,0);
 INSERT INTO `item_basic` VALUES (21038,0,'senkuto','senkuto',1,63552,10,1,0);
-
+INSERT INTO `item_basic` VALUES (21173,0,'kaladanda','kaladanda',1,63552,12,1,0);
+INSERT INTO `item_basic` VALUES (20530,0,'ohrmazd','ohrmazd',1,63552,1,1,0);
+INSERT INTO `item_basic` VALUES (20721,0,'mimesis','mimesis',1,63552,3,1,0);
+INSERT INTO `item_basic` VALUES (20718,0,'claidheamh_soluis','claidheamh_soluis',1,63552,3,1,0);
+INSERT INTO `item_basic` VALUES (20759,0,'macbain','macbain',1,63552,13,1,0);
+INSERT INTO `item_basic` VALUES (20758,0,'mekosuchus_blade','mekosuchus_blade',1,63552,13,1,0);
+INSERT INTO `item_basic` VALUES (20901,0,'inanna','inanna',1,63552,7,1,0);
+INSERT INTO `item_basic` VALUES (20946,0,'olyndicus','olyndicus',1,63552,8,1,0);
+INSERT INTO `item_basic` VALUES (20989,0,'izuna','izuna',1,63552,9,1,0);
+INSERT INTO `item_basic` VALUES (20616,0,'ipetam','ipetam',1,63552,13,1,0);
 
 -- empy 109
 INSERT INTO `item_basic` VALUES (26740,0,'boii_mask','boii_mask',1,63552,0,1,0);

@@ -252,7 +252,16 @@ INSERT INTO `item_armor` VALUES ('21229', 'cibitshavore', '99', '3265', '34', '0
 
 INSERT INTO `item_armor` VALUES ('20857', 'svarga', '99', '1', '714', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21038', 'senkuto', '99', '2048', '612', '0', '0', '1', '0');
-
+INSERT INTO `item_armor` VALUES ('20616', 'ipetam', '99', '525376', '710', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('21173', 'kaladanda', '99', '1589788', '604', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20530', 'ohrmazd', '99', '262643', '134', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20721', 'mimesis', '99', '2439161', '725', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20718', 'claidheamh_soluis', '99', '2439161', '711', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20759', 'macbain', '99', '2097345', '712', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20758', 'mekosuchus_blade', '99', '2097345', '626', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20901', 'inanna', '99', '128', '715', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20946', 'olyndicus', '99', '10240', '716', '0', '0', '1', '0');
+INSERT INTO `item_armor` VALUES ('20989', 'izuna', '99', '4096', '717', '0', '0', '3', '0');
 
 -- empy 109]
 INSERT INTO `item_armor` VALUES ('26740', 'boii_mask', '99', '1', '282', '0', '0', '16', '0');
