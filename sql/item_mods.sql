@@ -27,10 +27,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `item_mods`;
 CREATE TABLE IF NOT EXISTS `item_mods` (
-  `itemId` smallint(5) unsigned NOT NULL,
-  `modId` smallint(5) unsigned NOT NULL,
-  `value` smallint(5) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`itemId`, `modId`)
+`itemId` smallint(5) unsigned NOT NULL,
+`modId` smallint(5) unsigned NOT NULL,
+`value` smallint(5) NOT NULL DEFAULT '0',
+PRIMARY KEY (`itemId`, `modId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=13 PACK_KEYS=1;
 
 --
@@ -153,7 +153,12 @@ INSERT INTO `item_mods` VALUES (10280, 27, 9); -- Enmity+9
 INSERT INTO `item_mods` VALUES (10280, 384, -20); --  "Slow"+2%
 
 INSERT INTO `item_mods` VALUES (10281, 369, 2);
-INSERT INTO `item_mods` VALUES (10282, 369, 1);
+
+-- Krabat Jacket
+INSERT INTO `item_mods` VALUES (10282, 1, 45);
+INSERT INTO `item_mods` VALUES (10282, 28, 16);
+INSERT INTO `item_mods` VALUES (10282, 369, 2);
+
 
 -- -------------------------------------------------------
 -- Vara Brigandine
@@ -3560,7 +3565,7 @@ INSERT INTO `item_mods` VALUES (11810, 114, 10);
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (11811, 1, 7); -- DEF:7
 
-	-- -------------------------------------------------------
+-- -------------------------------------------------------
 -- Charity Cap
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (11812, 1, 1); -- DEF:1
@@ -8779,7 +8784,7 @@ INSERT INTO `item_mods` VALUES (13810, 1, 2); -- DEF+2
 INSERT INTO `item_mods` VALUES (13810, 511, 5); -- Chocobo riding time +5 min
 
 -- -------------------------------------------------------
--- Rider's Jack Coat 
+-- Rider's Jack Coat
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (13811, 1, 12); -- DEF+12
 INSERT INTO `item_mods` VALUES (13811, 511, 5); -- Chocobo riding time +5 min
@@ -10005,7 +10010,7 @@ INSERT INTO `item_mods` VALUES (14173, 1, 1); -- DEF+1
 INSERT INTO `item_mods` VALUES (14173, 511, 5); -- Chocobo riding time +5 min
 
 -- -------------------------------------------------------
--- Rider's Jack Coat 
+-- Rider's Jack Coat
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (14174, 1, 3); -- DEF+3
 INSERT INTO `item_mods` VALUES (14174, 511, 5); -- Chocobo riding time +5 min
