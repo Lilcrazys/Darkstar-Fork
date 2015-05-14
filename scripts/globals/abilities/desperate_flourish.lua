@@ -38,8 +38,8 @@ function onAbilityCheck(player,target,ability)
         elseif (player:hasStatusEffect(EFFECT_FINISHING_MOVE_5)) then
             player:delStatusEffectSilent(EFFECT_FINISHING_MOVE_5);
             player:addStatusEffect(EFFECT_FINISHING_MOVE_4,1,0,7200);
-            return 0,0;        
-        else    
+            return 0,0;
+        else
             return MSGBASIC_NO_FINISHINGMOVES,0;
         end
     end
@@ -50,26 +50,25 @@ end;
 -----------------------------------
 
 function onUseAbility(player,target,ability)
-    
     local isSneakValid = player:hasStatusEffect(EFFECT_SNEAK_ATTACK);
-    if(isSneakValid and not player:isBehind(target))then
+    if (isSneakValid and not player:isBehind(target)) then
         isSneakValid = false;
     end
 
     local hitrate = getHitRate(player,target,true);
-    
+
     if (math.random() <= hitrate or isSneakValid) then
-        
         local bonus = 50 - target:getMod(MOD_STUNRES);
         local spell = getSpell(216);
-        local resist = applyResistance(player,spell,target,0,player:getSkillLevel(player:getWeaponSkillType(SLOT_MAIN)),bonus)
-        
-        if resist > 0.25 then
+        -- local resist = applyResistance(player,spell,target,0,player:getSkillLevel(player:getWeaponSkillType(SLOT_MAIN)),bonus)
+        if (hitrate > 20) then -- Temp till getSkillLevel() crash is fixed.
+        -- if (resist > 0.25) then
             target:delStatusEffectSilent(EFFECT_WEIGHT);
             target:addStatusEffect(EFFECT_WEIGHT, 50, 0, 60 * resist);
         else
             ability:setMsg(110);
         end
+
         ability:setMsg(127);
         return EFFECT_WEIGHT, getFlourishAnimation(player:getWeaponSkillType(SLOT_MAIN)), 2;
     else
