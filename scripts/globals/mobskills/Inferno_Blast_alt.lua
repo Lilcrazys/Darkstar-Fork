@@ -26,5 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
     skill:setMsg(1);
+    target:addTP(-1);
+    mob:addTP(1);
     return dmg;
 end;
