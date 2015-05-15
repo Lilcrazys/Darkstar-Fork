@@ -27,12 +27,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
-    mob:setMod(MOD_UFASTCAST, 75);
-    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_MACC,1925);
     mob:setMod(MOD_MATT,130);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:addMod(MOD_ATT,50);
-    mob:addMod(MOD_DEF,100);
+    mob:setMod(MOD_FIRE_AFFINITY,30);
+    mob:setMod(MOD_SLEEPRES,100);
+    mob:setMod(MOD_SILENCERES,100);
+    mob:setMod(MOD_STUNRES,50);
+    mob:setMod(MOD_PARALYZE,30);
 end;
 -----------------------------------
 -- onMobFight Action
@@ -41,31 +44,31 @@ end;
 function onMobFight(mob,target)
     local Tia_2hr_Used = 0;
     if (mob:getLocalVar("Tia_2hr") ~= nil) then
-        Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
+           Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
     end
 
     if (mob:getHPP() <= 20) then
         if (Tia_2hr_Used == 3) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 4);
-            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-            mob:addMod(MOD_DOUBLE_ATTACK, 15);
-            mob:addMod(MOD_REGAIN, 10);
+             mob:useMobAbility(432); -- MS
+             mob:setLocalVar("Tia_2hr", 4);
+             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+             mob:addMod(MOD_DOUBLE_ATTACK, 15);
+             mob:addMod(MOD_REGAIN, 10);
         end
     elseif (mob:getHPP() <= 40) then
         if (Tia_2hr_Used == 2) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 3);
+             mob:useMobAbility(432); -- MS
+             mob:setLocalVar("Tia_2hr", 3);
         end
     elseif (mob:getHPP() <= 60) then
         if (Tia_2hr_Used == 1) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 2);
+             mob:useMobAbility(432); -- MS
+             mob:setLocalVar("Tia_2hr", 2);
         end
     elseif (mob:getHPP() <= 80) then
         if (Tia_2hr_Used == 0) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Tia_2hr", 1);
+             mob:useMobAbility(432); -- MS
+             mob:setLocalVar("Tia_2hr", 1);
         end
     end
     -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
@@ -120,7 +123,7 @@ end;
 function onAdditionalEffect(mob,target,damage)
     -- Wiki says nothing about proc rate, going with 80% for now.
     -- I remember it going off every hit when I fought him.
-    local chance = 90;
+    local chance = 35;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
     if (target:getMainLvl() > mob:getMainLvl()) then
@@ -131,27 +134,27 @@ function onAdditionalEffect(mob,target,damage)
     if (math.random(0,99) >= chance) then
         return 0,0,0;
     else
-        local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
 
-        if (INT_diff > 20) then
+         if (INT_diff > 20) then
             INT_diff = 20 + (INT_diff - 20) / 2;
-        end
+         end
 
-        local dmg = INT_diff+LV_diff+damage/2;
-        local params = {};
-        params.bonusmab = 0;
-        params.includemab = false;
-        dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
-        dmg = dmg * applyResistanceAddEffect(mob,target,ELE_FIRE,0);
-        dmg = adjustForTarget(target,dmg,ELE_FIRE);
+         local dmg = INT_diff+LV_diff+damage/2;
+         local params = {};
+         params.bonusmab = 0;
+         params.includemab = false;
+         dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
+         dmg = dmg * applyResistanceAddEffect(mob,target,ELE_FIRE,0);
+         dmg = adjustForTarget(target,dmg,ELE_FIRE);
 
-        if (dmg < 0) then
+         if (dmg < 0) then
             dmg = 10
-        end
+         end
 
-        dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
+         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
 
-        return SUBEFFECT_FIRE_DAMAGE,163,dmg;
+         return SUBEFFECT_FIRE_DAMAGE,163,dmg;
     end
 
 end;
