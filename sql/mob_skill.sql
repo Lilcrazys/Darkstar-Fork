@@ -5316,7 +5316,7 @@ INSERT INTO `mob_skill` VALUES (1022,1200,652,'Inferno_Blast_alt',0,18.0,2000,0,
 INSERT INTO `mob_skill` VALUES (1023,1200,653,'Tebbad_Wing',1,30.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1024,1200,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1025,1200,655,'Fiery_Breath',4,18.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (1026,1200,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1026,1200,656,'Touchdown',1,18.0,2000,0,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1027,1200,657,'Inferno_Blast',1,23.0,2000,2000,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1028,1200,658,'Tebbad_Wing_Air',1,30.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1029,1200,659,'Absolute_Terror',0,18.0,2000,1500,4,8,0,0);
