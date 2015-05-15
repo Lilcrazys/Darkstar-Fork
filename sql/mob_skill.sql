@@ -5289,6 +5289,40 @@ INSERT INTO `mob_skill` VALUES (2367,1117,1821,'Ballistic_kick',1,12.0,2000,1000
 INSERT INTO `mob_skill` VALUES (2368,1117,1822,'Scapula_beam',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2369,1117,1823,'Eradicator',1,18.0,2000,1000,4,0,0,0);
 
+-- Vrtra
+INSERT INTO `mob_skill` VALUES (1053,1201,653,'Cyclone_Wing',1,30.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1054,1201,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1055,1201,968,'Sable_Breath',4,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1059,1201,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1060,1201,660,'Horrid_Roar_3',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (454,1201,438,'Charm',0,18.0,2000,0,4,0,0,0);
+
+-- Jormungand
+INSERT INTO `mob_skill` VALUES (1031,1202,963,'Sleet_Blast_alt',0,23.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1032,1202,963,'Sleet_Blast_alt',0,18.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (1033,1202,653,'Gregale_Wing',1,30.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1034,1202,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1035,1202,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1036,1202,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1037,1202,964,'Sleet_Blast',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1038,1202,653,'Gregale_Wing_Air',1,30.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1039,1202,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1040,1202,660,'Horrid_Roar_3',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (439,1202,432,'Blood_Weapon',0,18.0,2000,0,1,0,30,0);
+
+-- Tiamat
+-- INSERT INTO `mob_skill` VALUES (1021,1200,651,'Inferno_Blast_alt',0,23.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1022,1200,652,'Inferno_Blast_alt',0,18.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (1023,1200,653,'Tebbad_Wing',1,30.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1024,1200,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1025,1200,655,'Fiery_Breath',4,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1026,1200,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1027,1200,657,'Inferno_Blast',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1028,1200,658,'Tebbad_Wing_Air',1,30.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1029,1200,659,'Absolute_Terror',0,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1030,1200,660,'Horrid_Roar_3',0,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (432,1200,432,'Mighty_Strikes',0,18.0,2000,0,1,0,30,0);
+
 -- The Jumping Crab
 INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback
 INSERT INTO `mob_skill` VALUES (186,6665,186,'Tegmine_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
