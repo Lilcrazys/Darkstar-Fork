@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_FIRE_AFFINITY,10);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_STUNRES,50);
+    mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZE,30);
 end;
 
@@ -48,8 +48,8 @@ function onMobFight(mob,target)
     local Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
-        local anichange = math.random(0,10);
-         if (anichnage > 5) then
+        local animation = mob:animationSub();
+         if (animation == 1) then
              mob:AnimationSub(0); -- ground
              mob:removeStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
              mob:SetMobSkillAttack(false);
