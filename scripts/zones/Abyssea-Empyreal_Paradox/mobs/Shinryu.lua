@@ -34,12 +34,12 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_STUNRES, 100);    
+    mob:setMod(MOD_STUNRES, 100);
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 1950);
     mob:setMod(MOD_MATT, 120);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    
+
     -- addMod
 end;
 
@@ -59,15 +59,14 @@ function onMobFight(mob, target)
     local Shinryu_2hr_Used = 0;
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
-        local anichange = math.random(0,1);
-        if (anichnage == 0) then
-            mob:AnimationSub(0);
-            mob:setLocalVar("Wings", mob:getBattleTime());
-        else
-            mob:AnimationSub(1);
-            mob:setLocalVar("Wings", mob:getBattleTime());
-        end
-    end                      
+        if (mob:AnimationSub() == 1) then
+             mob:AnimationSub(0);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         elseif (mob:AnimationSub() == 0) then
+             mob:AnimationSub(1);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         end
+    end
 
 
 

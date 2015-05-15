@@ -11,8 +11,8 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_DMGMAGIC, 50);
+    mob:addMod(MOD_DMGRANGE, 50);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
-    mob:setMod(MOD_PARALYZE,30);
+    mob:setMod(MOD_PARALYZERES,30);
 end;
 
 -----------------------------------
