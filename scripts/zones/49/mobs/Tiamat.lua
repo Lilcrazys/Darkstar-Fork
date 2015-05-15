@@ -50,7 +50,7 @@ function onMobFight(mob,target)
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
         if (mob:AnimationSub() == 1) then
              mob:AnimationSub(0); -- ground
-             mob:removeStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+             mob:delStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
              mob:SetMobSkillAttack(false);
              mob:useMobAbility(1026);
              mob:setLocalVar("Wings", mob:getBattleTime());
