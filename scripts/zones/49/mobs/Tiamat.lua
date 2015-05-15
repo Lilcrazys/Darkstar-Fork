@@ -28,14 +28,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1925);
+    mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_FIRE_AFFINITY,10);
+    mob:setMod(MOD_FIRE_AFFINITY,5);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
+    mob:addMod(MOD_DEF,-100);
 end;
 
 -----------------------------------
