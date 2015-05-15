@@ -53,6 +53,7 @@ function onMobFight(mob,target)
              mob:AnimationSub(0); -- ground
              mob:removeStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
              mob:SetMobSkillAttack(false);
+             mob:useMobAbility(1026);
              mob:setLocalVar("Wings", mob:getBattleTime());
          else
              mob:AnimationSub(1); -- fly
@@ -69,7 +70,7 @@ function onMobFight(mob,target)
               mob:addStatusEffect(EFFECT_HASTE,200,0,200);
               mob:addMod(MOD_DOUBLE_ATTACK, 15);
               mob:addMod(MOD_REGAIN, 10);
-              mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
+              mob:addStatusEffect(EFFECT_ATTACK_BOOST,125,0,0);
               mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
          end
     elseif (mob:getHPP() <= 40) then
