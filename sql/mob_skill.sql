@@ -5311,7 +5311,7 @@ INSERT INTO `mob_skill` VALUES (1040,1202,660,'Horrid_Roar_3',0,18.0,4000,1500,4
 INSERT INTO `mob_skill` VALUES (439,1202,432,'Blood_Weapon',0,18.0,2000,0,1,0,30,0);
 
 -- Tiamat
--- INSERT INTO `mob_skill` VALUES (1021,1200,651,'Inferno_Blast_alt',0,23.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1021,1200,651,'Inferno_Blast_alt2',1,23.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1022,1200,652,'Inferno_Blast_alt',0,18.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1023,1200,653,'Tebbad_Wing',1,30.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1024,1200,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
