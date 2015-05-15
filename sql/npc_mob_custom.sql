@@ -804,9 +804,9 @@ INSERT INTO `mob_spawn_points` VALUES (16977961,'Celaeno','Celaeno',90415,80,0,1
 INSERT INTO `mob_spawn_points` VALUES (16977962,'Hahava','Hahava',90416,85,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977963,'Voidwrought','Voidwrought',90417,90,0,1,0);
 
-INSERT INTO `mob_spawn_points` VALUES (16977942,'Vrtra','Vrtra',90501,100,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977943,'Jormungand','Jormungand',90500,110,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977944,'Tiamat','Tiamat',90502,120,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977942,'Vrtra','Vrtra',90501,-10,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977943,'Jormungand','Jormungand',90500,-20,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977944,'Tiamat','Tiamat',90502,-30,0,1,0);
 
 
 
