@@ -804,6 +804,12 @@ INSERT INTO `mob_spawn_points` VALUES (16977961,'Celaeno','Celaeno',90415,80,0,1
 INSERT INTO `mob_spawn_points` VALUES (16977962,'Hahava','Hahava',90416,85,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977963,'Voidwrought','Voidwrought',90417,90,0,1,0);
 
+INSERT INTO `mob_spawn_points` VALUES (16977963,'Vrtra','Vrtra',90201,100,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977964,'Jormungand','Jormungand',90200,110,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977965,'Tiamat','Tiamat',90202,120,0,1,0);
+
+
+
 
 -- Super experimental, will not spawn without script or GM command.
 -- INSERT INTO `mob_spawn_points` VALUES (16978938,'Zombaru','Zombaru',96665,-24,0,0,0);
