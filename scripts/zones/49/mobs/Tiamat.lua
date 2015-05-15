@@ -43,77 +43,50 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    local Tia_2hr_Used = 0;
-    if (mob:getLocalVar("Tia_2hr") ~= nil) then
-           Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
+
+    local Wings = mob:getLocalVar("Wings");
+    local Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
+
+    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
+        local anichange = math.random(0,1);
+         if (anichnage == 0) then
+             mob:AnimationSub(0); -- ground
+             mob:removeStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+             mob:SetMobSkillAttack(false);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         else
+             mob:AnimationSub(1); -- fly
+             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+             mob:SetMobSkillAttack(true);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         end
     end
 
     if (mob:getHPP() <= 20) then
-        if (Tia_2hr_Used == 3) then
-             mob:useMobAbility(432); -- MS
-             mob:setLocalVar("Tia_2hr", 4);
-             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-             mob:addMod(MOD_DOUBLE_ATTACK, 15);
-             mob:addMod(MOD_REGAIN, 10);
-        end
+         if (Tia_2hr_Used == 3) then
+              mob:useMobAbility(432); -- MS
+              mob:setLocalVar("Tia_2hr", 4);
+              mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+              mob:addMod(MOD_DOUBLE_ATTACK, 15);
+              mob:addMod(MOD_REGAIN, 10);
+              mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
+              mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
+         end
     elseif (mob:getHPP() <= 40) then
-        if (Tia_2hr_Used == 2) then
-             mob:useMobAbility(432); -- MS
-             mob:setLocalVar("Tia_2hr", 3);
-        end
+         if (Tia_2hr_Used == 2) then
+              mob:useMobAbility(432); -- MS
+              mob:setLocalVar("Tia_2hr", 3);
+         end
     elseif (mob:getHPP() <= 60) then
-        if (Tia_2hr_Used == 1) then
-             mob:useMobAbility(432); -- MS
-             mob:setLocalVar("Tia_2hr", 2);
-        end
+         if (Tia_2hr_Used == 1) then
+              mob:useMobAbility(432); -- MS
+              mob:setLocalVar("Tia_2hr", 2);
+         end
     elseif (mob:getHPP() <= 80) then
-        if (Tia_2hr_Used == 0) then
-             mob:useMobAbility(432); -- MS
-             mob:setLocalVar("Tia_2hr", 1);
-        end
-    end
-    -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
-    if(mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
-        if(mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
-            mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
-            mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-        end
-    end
-    if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES) == false and mob:actionQueueEmpty() == true) then
-        local changeTime = mob:getLocalVar("changeTime")
-        local twohourTime = mob:getLocalVar("twohourTime")
-        local changeHP = mob:getLocalVar("changeHP")
-
-        if (twohourTime == 0) then
-            twohourTime = math.random(8, 14);
-            mob:setLocalVar("twohourTime", twohourTime);
-        end
-
-        if (mob:AnimationSub() == 2 and mob:getBattleTime()/15 > twohourTime) then
-            mob:useMobAbility(432);
-            mob:setLocalVar("twohourTime", math.random((mob:getBattleTime()/15)+4, (mob:getBattleTime()/15)+8));
-        elseif(mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > 60) then
-            mob:AnimationSub(1);
-            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
-            --and record the time and HP this phase was started
-            mob:setLocalVar("changeTime", mob:getBattleTime());
-            mob:setLocalVar("changeHP", mob:getHP()/1000);
-        -- subanimation 1 is flight, so check if she should land
-        elseif(mob:AnimationSub() == 1 and (mob:getHP()/1000 <= changeHP - 10 or
-                mob:getBattleTime() - changeTime > 120)) then
-            mob:useMobAbility(1026);
-            mob:setLocalVar("changeTime", mob:getBattleTime());
-            mob:setLocalVar("changeHP", mob:getHP()/1000);
-        -- subanimation 2 is grounded mode, so check if she should take off
-        elseif(mob:AnimationSub() == 2 and (mob:getHP()/1000 <= changeHP - 10 or
-                mob:getBattleTime() - changeTime > 120)) then
-            mob:AnimationSub(1);
-            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
-            mob:setLocalVar("changeTime", mob:getBattleTime());
-            mob:setLocalVar("changeHP", mob:getHP()/1000);
-        end
+         if (Tia_2hr_Used == 0) then
+              mob:useMobAbility(432); -- MS
+              mob:setLocalVar("Tia_2hr", 1);
+         end
     end
 end;
 -----------------------------------
