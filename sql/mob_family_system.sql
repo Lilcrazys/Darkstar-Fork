@@ -23,39 +23,39 @@ DROP TABLE IF EXISTS `mob_family_system`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mob_family_system` (
-  `familyid` smallint(4) unsigned NOT NULL,
-  `family` tinytext,
-  `systemid` tinyint(2) unsigned NOT NULL DEFAULT '0',
-  `system` tinytext,
-  `mobsize` tinyint(2) unsigned NOT NULL DEFAULT '0',
-  `speed` tinyint(3) unsigned NOT NULL DEFAULT '40',
-  `HP` tinyint(3) unsigned NOT NULL DEFAULT '100',
-  `MP` tinyint(3) unsigned NOT NULL DEFAULT '100',
-  `STR` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `DEX` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `VIT` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `AGI` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `INT` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `MND` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `CHR` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `ATT` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `DEF` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `ACC` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `EVA` smallint(4) unsigned NOT NULL DEFAULT '3',
-  `Slash` float NOT NULL DEFAULT '1',
-  `Pierce` float NOT NULL DEFAULT '1',
-  `H2H` float NOT NULL DEFAULT '1',
-  `Impact` float NOT NULL DEFAULT '1',
-  `Fire` float NOT NULL DEFAULT '1',
-  `Ice` float NOT NULL DEFAULT '1',
-  `Wind` float NOT NULL DEFAULT '1',
-  `Earth` float NOT NULL DEFAULT '1',
-  `Lightning` float NOT NULL DEFAULT '1',
-  `Water` float NOT NULL DEFAULT '1',
-  `Light` float NOT NULL DEFAULT '1',
-  `Dark` float NOT NULL DEFAULT '1',
-  `Element` float NOT NULL DEFAULT '0',
-  PRIMARY KEY (`familyid`)
+`familyid` smallint(4) unsigned NOT NULL,
+`family` tinytext,
+`systemid` tinyint(2) unsigned NOT NULL DEFAULT '0',
+`system` tinytext,
+`mobsize` tinyint(2) unsigned NOT NULL DEFAULT '0',
+`speed` tinyint(3) unsigned NOT NULL DEFAULT '40',
+`HP` tinyint(3) unsigned NOT NULL DEFAULT '100',
+`MP` tinyint(3) unsigned NOT NULL DEFAULT '100',
+`STR` smallint(4) unsigned NOT NULL DEFAULT '3',
+`DEX` smallint(4) unsigned NOT NULL DEFAULT '3',
+`VIT` smallint(4) unsigned NOT NULL DEFAULT '3',
+`AGI` smallint(4) unsigned NOT NULL DEFAULT '3',
+`INT` smallint(4) unsigned NOT NULL DEFAULT '3',
+`MND` smallint(4) unsigned NOT NULL DEFAULT '3',
+`CHR` smallint(4) unsigned NOT NULL DEFAULT '3',
+`ATT` smallint(4) unsigned NOT NULL DEFAULT '3',
+`DEF` smallint(4) unsigned NOT NULL DEFAULT '3',
+`ACC` smallint(4) unsigned NOT NULL DEFAULT '3',
+`EVA` smallint(4) unsigned NOT NULL DEFAULT '3',
+`Slash` float NOT NULL DEFAULT '1',
+`Pierce` float NOT NULL DEFAULT '1',
+`H2H` float NOT NULL DEFAULT '1',
+`Impact` float NOT NULL DEFAULT '1',
+`Fire` float NOT NULL DEFAULT '1',
+`Ice` float NOT NULL DEFAULT '1',
+`Wind` float NOT NULL DEFAULT '1',
+`Earth` float NOT NULL DEFAULT '1',
+`Lightning` float NOT NULL DEFAULT '1',
+`Water` float NOT NULL DEFAULT '1',
+`Light` float NOT NULL DEFAULT '1',
+`Dark` float NOT NULL DEFAULT '1',
+`Element` float NOT NULL DEFAULT '0',
+PRIMARY KEY (`familyid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=128;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -728,6 +728,10 @@ INSERT INTO `mob_family_system` VALUES (1114,'Akupara',14,'Lizard',1,30,120,90,2
 INSERT INTO `mob_family_system` VALUES (1115,'Celaeno',8,'Bird',3,60,130,120,1,3,4,3,4,4,5,3,3,3,2,0.75,1.25,1,0.75,1,1.25,0.5,1,1,1,1,1,7);
 INSERT INTO `mob_family_system` VALUES (1116,'Hahava',19,'Undead',1,40,70,140,6,3,6,3,8,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
 INSERT INTO `mob_family_system` VALUES (1117,'Voidwrought',3,'Arcana',5,40,130,130,2,3,3,3,3,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1.125,1,1,1,7);
+
+INSERT INTO `mob_family_system` VALUES (1200,'Tiamat',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0,8);
+INSERT INTO `mob_family_system` VALUES (1201,'Vrtra',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1.25,1,1,1,1,1,1,1,5);
+INSERT INTO `mob_family_system` VALUES (1202,'Jormungand',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,0.5,0.5,1,1,1,1,1.25,1.25,1);
 
 INSERT INTO `mob_family_system` VALUES (6665,'The_Jumping_Crab',2,'Aquan',0,40,108,120,4,3,1,5,3,3,4,3,2,3,3,1,1,1,1,1,1.25,1,1,1.25,0.875,1,1,6);
 INSERT INTO `mob_family_system` VALUES (6666,'SlenderMan',13,'Humanoid',1,48,110,80,3,2,3,1,1,4,5,4,4,2,2,0.9,0.8,0.66,0.66,1,0.75,0.75,0.5,0.75,1,1.85,0.1,8);
