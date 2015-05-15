@@ -27,19 +27,19 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `mob_skill`;
 CREATE TABLE IF NOT EXISTS `mob_skill` (
-  `mob_skill_id` smallint(4) unsigned NOT NULL,
-  `family_id` smallint(3) unsigned NOT NULL,
-  `mob_anim_id` smallint(4) unsigned NOT NULL,
-  `mob_skill_name` char(25) CHARACTER SET latin1 NOT NULL,
-  `mob_skill_aoe` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `mob_skill_distance` float(3,1) NOT NULL DEFAULT '6.0',
-  `mob_anim_time` smallint(4) unsigned NOT NULL DEFAULT '2000',
-  `mob_prepare_time` smallint(4) unsigned NOT NULL DEFAULT '1000',
-  `mob_valid_targets` smallint(4) unsigned NOT NULL DEFAULT '4',
-  `mob_skill_flag` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `mob_skill_param` smallint(5) NOT NULL DEFAULT '0',
-  `knockback` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`mob_skill_id`,`family_id`,`mob_skill_flag`)
+`mob_skill_id` smallint(4) unsigned NOT NULL,
+`family_id` smallint(3) unsigned NOT NULL,
+`mob_anim_id` smallint(4) unsigned NOT NULL,
+`mob_skill_name` char(25) CHARACTER SET latin1 NOT NULL,
+`mob_skill_aoe` tinyint(1) unsigned NOT NULL DEFAULT '0',
+`mob_skill_distance` float(3,1) NOT NULL DEFAULT '6.0',
+`mob_anim_time` smallint(4) unsigned NOT NULL DEFAULT '2000',
+`mob_prepare_time` smallint(4) unsigned NOT NULL DEFAULT '1000',
+`mob_valid_targets` smallint(4) unsigned NOT NULL DEFAULT '4',
+`mob_skill_flag` tinyint(1) unsigned NOT NULL DEFAULT '0',
+`mob_skill_param` smallint(5) NOT NULL DEFAULT '0',
+`knockback` tinyint(1) NOT NULL DEFAULT '0',
+PRIMARY KEY (`mob_skill_id`,`family_id`,`mob_skill_flag`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -367,7 +367,7 @@ INSERT INTO `mob_skill` VALUES (240,57,849,'Rabid_Dance',0,7.0,2000,1500,1,0,0,0
 INSERT INTO `mob_skill` VALUES (241,57,850,'Lowing',1,15.0,2000,2500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1108,?,?,'Mighty_Snort',4,?,2000,1500,4,0,0,0); -- Certain NM's only
 -- INSERT INTO `mob_skill` VALUES (?,?,?,'Cattlepult',0,?,2000,1500,4,0,0,0); -- Special Event Only.
- -- INSERT INTO `mob_skill` VALUES (1219,?,?,'Bull_Rush',0,7.0,2000,1500,4,0,0,0); -- Special Event Only.
+-- INSERT INTO `mob_skill` VALUES (1219,?,?,'Bull_Rush',0,7.0,2000,1500,4,0,0,0); -- Special Event Only.
 
 -- Diremite
 INSERT INTO `mob_skill` VALUES (106,81,830,'Double_Claw',0,7.0,2000,1500,4,0,0,0);
@@ -3357,7 +3357,7 @@ INSERT INTO `mob_skill` VALUES (2596,340,1926,'Raptorial_Claw',1,15.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2597,340,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2598,340,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2599,340,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2600,340,1924,'Dead_Prophet ',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2600,340,1924,'Dead_Prophet ',4,10.0,8000,1000,4,0,0,0);
 
 -- INSERT INTO `mob_skill` VALUES (2630,?,1925,'Exorender',4,12.0,2000,1000,4,0,0,0); -- Only used by Tsui Goab
 
@@ -3767,7 +3767,7 @@ INSERT INTO `mob_skill` VALUES (2907,491,2338,'Arduous_decision',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2908,491,2339,'12_blades_of_remorse',1,18.0,2000,1000,4,0,0,0);
 
 -- Darrcuiln model 0x0000660a not cs one 0x0000b00a
--- special melee 2320 horn  2321 claw  2322 howl 
+-- special melee 2320 horn  2321 claw  2322 howl
 INSERT INTO `mob_skill` VALUES (2909,489,2320,'Darrcuiln_Charge',0,10.0,3000,0,4,16,0,4);
 INSERT INTO `mob_skill` VALUES (2910,489,2321,'Darrcuiln_Claw',1,10.0,3000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2911,489,2322,'Darrcuiln_Howl',1,10.0,3000,0,4,16,0,0);
@@ -4685,7 +4685,7 @@ INSERT INTO `mob_skill` VALUES (2495,926,1923,'Slicing_Sickle',4,12.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2496,926,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2497,926,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2498,926,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2500,926,1924,'Death_Prophet ',1,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2500,926,1924,'Death_Prophet ',1,10.0,8000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (432,926,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (434,926,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
 
@@ -4864,7 +4864,7 @@ INSERT INTO `mob_skill` VALUES (2495,957,1923,'Slicing_Sickle',4,12.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2496,957,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2497,957,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2498,957,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2500,957,1924,'Death_Prophet ',1,10.0,6000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2500,957,1924,'Death_Prophet ',1,10.0,8000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (434,957,432,'Hundred_Fists',0,7.0,2000,0,1,2,0,0);
 
 -- Paramount Naraka (958)

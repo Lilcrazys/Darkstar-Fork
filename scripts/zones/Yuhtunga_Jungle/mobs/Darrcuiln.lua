@@ -25,6 +25,7 @@ function onMobSpawn(mob)
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_ACC,1500);
     mob:addMod(MOD_WIND_AFFINITY,20);    
+    mob:addMod(MOD_DEF, 100);
 end;
 
 -----------------------------------
