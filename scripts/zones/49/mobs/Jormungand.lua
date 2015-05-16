@@ -32,7 +32,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_ICE_AFFINITY,5);
+    mob:setMod(MOD_ICE_AFFINITY,3);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
