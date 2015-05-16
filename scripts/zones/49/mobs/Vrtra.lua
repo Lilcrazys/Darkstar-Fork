@@ -31,12 +31,13 @@ function onMobSpawn(mob)
     mob:setMod(MOD_ACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_DARK_AFFINITY,250);
+    mob:setMod(MOD_DARK_AFFINITY,50);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_DEF,-100);
+    mob:setMod(MOD_DARK,600);
 end;
 
 -----------------------------------
