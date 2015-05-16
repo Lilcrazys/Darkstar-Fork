@@ -1700,13 +1700,13 @@ INSERT INTO `mob_spell_lists` VALUES ('Voidwrought', 419, 503, 1, 255); -- impac
 
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 360, 1, 255); -- dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 356, 1, 255); -- paralyga
-INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 503, 1, 255); -- Impact
+-- INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 503, 1, 255); -- Impact
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 274, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 359, 1, 255); -- silencega
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 246, 1, 255); -- Drain 2
 INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 229, 1, 255); -- Poisionga 5
-INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 234, 1, 255); -- Bio 5
+-- INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 234, 1, 255); -- Bio 5
 
 -- list IDs 407 - 589 available for use! please use'em!
 
