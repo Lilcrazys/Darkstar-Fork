@@ -14,7 +14,7 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DMGMAGIC, 50);
     mob:addMod(MOD_DMGRANGE, 50);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
+    mob:setMobMod(MOBMOD_DRAW_IN, 1);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 -----------------------------------
@@ -96,7 +96,7 @@ end;
 function onAdditionalEffect(mob,target,damage)
     -- Wiki says nothing about proc rate, going with 80% for now.
     -- I remember it going off every hit when I fought him.
-    local chance = 35;
+    local chance = 45;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
     if (target:getMainLvl() > mob:getMainLvl()) then
@@ -113,7 +113,7 @@ function onAdditionalEffect(mob,target,damage)
             INT_diff = 20 + (INT_diff - 20) / 2;
          end
 
-         local dmg = INT_diff+LV_diff+damage/2;
+         local dmg = INT_diff+LV_diff+damage/3;
          local params = {};
          params.bonusmab = 0;
          params.includemab = false;
@@ -130,6 +130,16 @@ function onAdditionalEffect(mob,target,damage)
          return SUBEFFECT_FIRE_DAMAGE,163,dmg;
     end
 
+end;
+
+-----------------------------------
+-- onMobDrawIn
+-----------------------------------
+
+function onMobDrawIn(mob, target)
+    target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
+    mob:useMobAbility(1023);
+    mob:addTP(100);
 end;
 
 -----------------------------------

@@ -5,7 +5,8 @@
 
 require("scripts/globals/status");
 require("scripts/globals/titles");
-
+require("scripts/globals/magic");
+require("scripts/globals/utils");
 -----------------------------------
 -- OnMobInitialize Action
 -----------------------------------
@@ -13,6 +14,7 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
+    mob:addMod(MOD_DMGRANGE, 50);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
@@ -21,80 +23,92 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
     mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
-    mob:setMod(MOD_UFASTCAST, 75);
-    mob:setMod(MOD_MACC,925);
-    mob:setMod(MOD_MATT,130);
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_MACC,2500);
+    mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:addMod(MOD_ATT,50);
-    mob:addMod(MOD_DEF,100);
+    mob:setMod(MOD_DARK_AFFINITY,5);
+    mob:setMod(MOD_SLEEPRES,100);
+    mob:setMod(MOD_SILENCERES,100);
+    mob:setMod(MOD_STUNRES,25);
+    mob:setMod(MOD_PARALYZERES,30);
+    mob:addMod(MOD_DEF,-100);
 end;
 
 -----------------------------------
--- OnMobEngaged Action
------------------------------------
-
-function onMobEngaged(mob)
-    mob:resetLocalVars();
-end
------------------------------------
 -- onMobFight Action
 -----------------------------------
-function onMobFight(mob, target)
-    local offsets = {1, 3, 5, 2, 4, 6};
-    local spawnTime = mob:getLocalVar("spawnTime");
-    local twohourTime = mob:getLocalVar("twohourTime");
 
-    if (twohourTime == 0) then
-        twohourTime = math.random(4, 6);
-        mob:setLocalVar("twohourTime", twohourTime);
-    end
+function onMobFight(mob,target)
 
-    if (spawnTime == 0) then
-        spawnTime = math.random(3, 5);
-        mob:setLocalVar("spawnTime", spawnTime);
-    end
+    local vrtra_2hr_Used = mob:getLocalVar("vrtra_2hr");
 
-    if (mob:getBattleTime()/10 > twohourTime) then
-        mob:useMobAbility(454);
-        mob:setLocalVar("twohourTime", (mob:getBattleTime()/10)+math.random(4,6));
-    elseif (mob:getBattleTime()/10 > spawnTime) then
-        for i, offset in ipairs(offsets) do
-            if (GetMobAction(mob:getID()+offset) == ACTION_SPAWN or GetMobAction(mob:getID()+offset) == ACTION_NONE) then
-                local pet = SpawnMob(mob:getID()+offset, 60);
-                local pos = mob:getPos();
-                pet:setPos(pos.x, pos.y, pos.z);
-                pet:updateEnmity(target)
-                break;
-            end
+    if (mob:getHPP() <= 20) then
+        if (vrtra_2hr_Used == 3) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("vrtra_2hr", 4);
+            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+            mob:addMod(MOD_DOUBLE_ATTACK, 15);
+            mob:addMod(MOD_REGAIN, 10);
         end
-        mob:setLocalVar("spawnTime", (mob:getBattleTime()/10)+4);
+    elseif (mob:getHPP() <= 40) then
+        if (vrtra_2hr_Used == 2) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("vrtra_2hr", 3);
+        end
+    elseif (mob:getHPP() <= 60) then
+        if (vrtra_2hr_Used == 1) then
+            mob:useMobAbility(439); -- BW
+            mob:setLocalVar("vrtra_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 80) then
+        if (vrtra_2hr_Used == 0) then
+            mob:useMobAbility(432); -- MS
+            mob:setLocalVar("vrtra_2hr", 1);
+        end
     end
-end
+end;
+-----------------------------------
+-- onSpellPrecast
+-----------------------------------
 
-function onMobDisengage(mob, weather)
-    for i, offset in ipairs(offsets) do
-        DespawnMob(mob:getID()+offset);
+function onSpellPrecast(mob, spell)
+    if (spell:getID() == 246  then       -- set drain 2 to AoE
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(25);
     end
-end
+end;
 
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_DOOM) == true)) then
+    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_CURSE_II) == true)) then
         return 0,0,0;
     else
         local duration = 10;
-        target:addStatusEffect(EFFECT_DOOM,1,0,duration);
+        target:addStatusEffect(EFFECT_CURSE_II,40,0,duration);
         mob:resetEnmity(target);
-        return SUBEFFECT_NONE,0,EFFECT_DOOM;
+        return SUBEFFECT_CURSE,0,EFFECT_CURSE_II;
     end
 end;
+
+-----------------------------------
+-- onMobDrawIn
+-----------------------------------
+
+function onMobDrawIn(mob, target)
+    target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
+    mob:useMobAbility(1053);
+    mob:addTP(100);
+end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

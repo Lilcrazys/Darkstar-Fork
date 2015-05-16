@@ -24,16 +24,16 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local dmgmod = MobBreathMove(mob, target, 0.2, 1.25, ELE_DARK, 1400);
-    
+    local dmgmod = MobBreathMove(mob, target, 0.2, 1.25, ELE_DARK, 1200);
+
     local angle = mob:getAngle(target);
-        
+
     angle = mob:getRotPos() - angle;
-            
+
     dmgmod = dmgmod * ((128-math.abs(angle))/128);
-        
+
     utils.clamp(dmgmod, 50, 1600);
-    
+
 	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 	target:delHP(dmg);
 	return dmg;

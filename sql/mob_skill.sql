@@ -5295,7 +5295,8 @@ INSERT INTO `mob_skill` VALUES (1054,1201,654,'Spike_Flail',1,23.0,2000,2000,4,8
 INSERT INTO `mob_skill` VALUES (1055,1201,968,'Sable_Breath',4,18.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1059,1201,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1060,1201,660,'Horrid_Roar_3',1,18.0,4000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (454,1201,438,'Charm',0,18.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (439,1201,432,'Blood_Weapon',0,18.0,2000,0,1,0,30,0);
+INSERT INTO `mob_skill` VALUES (432,1201,432,'Mighty_Strikes',0,18.0,2000,0,1,0,30,0);
 
 -- Jormungand
 INSERT INTO `mob_skill` VALUES (1031,1202,963,'Sleet_Blast_alt2',0,23.0,2000,0,4,16,0,0);
