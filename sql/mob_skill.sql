@@ -5298,12 +5298,12 @@ INSERT INTO `mob_skill` VALUES (1060,1201,660,'Horrid_Roar_3',0,18.0,4000,1500,4
 INSERT INTO `mob_skill` VALUES (454,1201,438,'Charm',0,18.0,2000,0,4,0,0,0);
 
 -- Jormungand
-INSERT INTO `mob_skill` VALUES (1031,1202,963,'Sleet_Blast_alt',0,23.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1031,1202,963,'Sleet_Blast_alt2',1,23.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1032,1202,963,'Sleet_Blast_alt',0,18.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1033,1202,653,'Gregale_Wing',1,30.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (1034,1202,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1034,1202,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,3);
 INSERT INTO `mob_skill` VALUES (1035,1202,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (1036,1202,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1036,1202,656,'Touchdown',1,18.0,2000,0,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1037,1202,964,'Sleet_Blast',1,23.0,2000,2000,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1038,1202,653,'Gregale_Wing_Air',1,30.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1039,1202,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
@@ -5314,7 +5314,7 @@ INSERT INTO `mob_skill` VALUES (439,1202,432,'Blood_Weapon',0,18.0,2000,0,1,0,30
 INSERT INTO `mob_skill` VALUES (1021,1200,651,'Inferno_Blast_alt2',1,23.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1022,1200,652,'Inferno_Blast_alt',0,18.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1023,1200,653,'Tebbad_Wing',1,30.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (1024,1200,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1024,1200,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,3);
 INSERT INTO `mob_skill` VALUES (1025,1200,655,'Fiery_Breath',4,18.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1026,1200,656,'Touchdown',1,18.0,2000,0,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1027,1200,657,'Inferno_Blast',1,23.0,2000,2000,4,8,0,0);
