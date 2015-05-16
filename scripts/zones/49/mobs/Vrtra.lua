@@ -77,7 +77,7 @@ end;
 -----------------------------------
 
 function onSpellPrecast(mob, spell)
-    if (spell:getID() == 246  then       -- set drain 2 to AoE
+    if (spell:getID() == 246)  then       -- set drain 2 to AoE
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
         spell:setRadius(25);
