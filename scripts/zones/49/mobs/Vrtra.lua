@@ -12,7 +12,6 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:addMod(MOD_DMGRANGE, 50);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
@@ -23,27 +22,28 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMod(MOD_REGEN, 200);
+    mob:setMod(MOD_REGEN, 300);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
+    mob:setMod(MOD_ACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_DARK_AFFINITY,5);
+    mob:setMod(MOD_DARK_AFFINITY,25);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
-    mob:addMod(MOD_DEF,-100);
+    mob:setMod(MOD_DEF,-100);
 end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob,target)
+function onMobFight(mob,target)  -- not adding pet spawn block until he is in normal zone
 
     local vrtra_2hr_Used = mob:getLocalVar("vrtra_2hr");
 
