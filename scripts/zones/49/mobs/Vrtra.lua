@@ -14,6 +14,7 @@ require("scripts/globals/utils");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:addMod(MOD_DMGRANGE, 50);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
@@ -31,13 +32,13 @@ function onMobSpawn(mob)
     mob:setMod(MOD_ACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_DARK_AFFINITY,50);
+    mob:setMod(MOD_DARK_AFFINITY,500);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_DEF,-100);
-    mob:setMod(MOD_DARK,600);
+    mob:setMod(MOD_DARK,700);
 end;
 
 -----------------------------------
