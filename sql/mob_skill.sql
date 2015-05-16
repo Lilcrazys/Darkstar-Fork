@@ -5298,8 +5298,8 @@ INSERT INTO `mob_skill` VALUES (1060,1201,660,'Horrid_Roar_3',1,18.0,4000,1500,4
 INSERT INTO `mob_skill` VALUES (454,1201,438,'Charm',0,18.0,2000,0,4,0,0,0);
 
 -- Jormungand
-INSERT INTO `mob_skill` VALUES (1031,1202,963,'Sleet_Blast_alt2',1,23.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (1032,1202,963,'Sleet_Blast_alt',0,18.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (1031,1202,963,'Sleet_Blast_alt2',0,23.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (1032,1202,963,'Sleet_Blast_alt',1,18.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (1033,1202,653,'Gregale_Wing',1,30.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1034,1202,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,3);
 INSERT INTO `mob_skill` VALUES (1035,1202,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
