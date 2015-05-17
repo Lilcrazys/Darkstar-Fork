@@ -12,10 +12,9 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_DMGMAGIC, 50);
+    mob:addMod(MOD_DMGRANGE, 50);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
@@ -25,16 +24,20 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
-    mob:setMod(MOD_UFASTCAST, 75);
-    mob:setMod(MOD_MACC,925);
-    mob:setMod(MOD_MATT,110);
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_MACC,2500);
+    mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:addMod(MOD_ATT,50);
-    mob:addMod(MOD_DEF,100);
+    mob:setMod(MOD_ICE_AFFINITY,3);
+    mob:setMod(MOD_SLEEPRES,100);
+    mob:setMod(MOD_SILENCERES,100);
+    mob:setMod(MOD_STUNRES,25);
+    mob:setMod(MOD_PARALYZERES,30);
+    mob:addMod(MOD_DEF,-100);
 end;
 
 -----------------------------------
@@ -43,9 +46,21 @@ end;
 
 function onMobFight(mob,target)
 
-    local Jorm_2hr_Used = 0;
-    if (mob:getLocalVar("Jorm_2hr") ~= nil) then
-        Jorm_2hr_Used = mob:getLocalVar("Jorm_2hr");
+    local Jorm_2hr_Used = mob:getLocalVar("Jorm_2hr");
+    local Wings = mob:getLocalVar("Wings");
+
+    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
+        if (mob:AnimationSub() == 1) then
+             mob:AnimationSub(0); -- ground
+             mob:SetMobSkillAttack(false);
+             mob:useMobAbility(1026);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         elseif (mob:AnimationSub() == 0) then
+             mob:AnimationSub(1); -- fly
+             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+             mob:SetMobSkillAttack(true);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         end
     end
 
     if (mob:getHPP() <= 20) then
@@ -72,39 +87,6 @@ function onMobFight(mob,target)
             mob:setLocalVar("Jorm_2hr", 1);
         end
     end
-
-    if (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON) == false and mob:actionQueueEmpty() == true) then
-        local changeTime = mob:getLocalVar("changeTime");
-        local twohourTime = mob:getLocalVar("twohourTime");
-
-        if (twohourTime == 0) then
-            twohourTime = math.random(8, 14);
-            mob:setLocalVar("twohourTime", twohourTime);
-        end
-
-        if (mob:AnimationSub() == 2 and mob:getBattleTime()/15 > twohourTime) then
-            mob:useMobAbility(439);
-            mob:setLocalVar("twohourTime", (mob:getBattleTime()/15)+20);
-        elseif(mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > 60) then
-            mob:AnimationSub(1);
-            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
-            --and record the time this phase was started
-            mob:setLocalVar("changeTime", mob:getBattleTime());
-        -- subanimation 1 is flight, so check if he should land
-        elseif(mob:AnimationSub() == 1 and
-                mob:getBattleTime() - changeTime > 30) then
-            mob:useMobAbility(1036);
-            mob:setLocalVar("changeTime", mob:getBattleTime());
-        -- subanimation 2 is grounded mode, so check if he should take off
-        elseif(mob:AnimationSub() == 2 and
-                mob:getBattleTime() - changeTime > 60) then
-            mob:AnimationSub(1);
-            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
-            mob:setLocalVar("changeTime", mob:getBattleTime());
-        end
-    end
 end;
 
 -----------------------------------
@@ -114,7 +96,7 @@ end;
 function onAdditionalEffect(mob,target,damage)
     -- Wiki says nothing about proc rate, going with 80% for now.
     -- I remember it going off every hit when I fought him.
-    local chance = 90;
+    local chance = 40;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
     if (target:getMainLvl() > mob:getMainLvl()) then
@@ -131,7 +113,7 @@ function onAdditionalEffect(mob,target,damage)
             INT_diff = 20 + (INT_diff - 20) / 2;
         end
 
-        local dmg = INT_diff+LV_diff+damage/2;
+        local dmg = INT_diff+LV_diff+damage/3;
         local params = {};
         params.bonusmab = 0;
         params.includemab = false;
@@ -148,6 +130,16 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_ICE_DAMAGE,163,dmg;
     end
 
+end;
+
+-----------------------------------
+-- onMobDrawIn
+-----------------------------------
+
+function onMobDrawIn(mob, target)
+    target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
+    mob:useMobAbility(1033);
+    mob:addTP(100);
 end;
 
 -----------------------------------
