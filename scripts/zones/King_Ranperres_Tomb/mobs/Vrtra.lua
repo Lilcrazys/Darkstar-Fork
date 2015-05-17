@@ -42,12 +42,25 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
+-- onMobEngage Action
+-----------------------------------
+
+function onMobEngage(mob, target)
+    mob:delStatusEffect(EFFECT_RAGE);
+end;
+
+-----------------------------------
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob,target)  -- not adding pet spawn block until he is in normal zone
+function onMobFight(mob,target)
 
     local vrtra_2hr_Used = mob:getLocalVar("vrtra_2hr");
+
+    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
+        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        mob:setLocalVar("RAGED", 1);
+    end
 
     if (mob:getHPP() <= 20) then
         if (vrtra_2hr_Used == 3) then
@@ -82,6 +95,7 @@ function onMobFight(mob,target)  -- not adding pet spawn block until he is in no
         local pet4 = GetMobAction(mob:getID()+4);
         local pet5 = GetMobAction(mob:getID()+5);
         local pet6 = GetMobAction(mob:getID()+6);
+
         if (pet1 == ACTION_NONE or pet1 == ACTION_SPAWN) then
             SpawnMob(mob:getID()+1, 300):updateEnmity(target);
             mob:setLocalVar("pop_pet", os.time());
@@ -111,7 +125,7 @@ function onSpellPrecast(mob, spell)
     if (spell:getID() == 246)  then       -- set drain 2 to AoE
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
-        spell:setRadius(25);
+        spell:setRadius(30);
     end
 end;
 

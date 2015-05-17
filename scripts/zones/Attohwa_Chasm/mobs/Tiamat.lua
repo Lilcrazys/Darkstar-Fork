@@ -40,6 +40,14 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
+-- onMobEngage Action
+-----------------------------------
+
+function onMobEngage(mob, target)
+    mob:delStatusEffect(EFFECT_RAGE);
+end;
+
+-----------------------------------
 -- onMobFight Action
 -----------------------------------
 
@@ -47,6 +55,11 @@ function onMobFight(mob,target)
 
     local Wings = mob:getLocalVar("Wings");
     local Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
+
+    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
+        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        mob:setLocalVar("RAGED", 1);
+    end
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
         if (mob:AnimationSub() == 1) then
@@ -98,7 +111,9 @@ function onSpellPrecast(mob, spell)
     if (spell:getID() == 218) then
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
-        spell:setRadius(25);
+        spell:setRadius(30);
+        spell:setAnimation(280);
+        spell:setMPCost(1);
     end
 end;
 
