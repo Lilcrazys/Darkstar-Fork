@@ -89,6 +89,19 @@ function onMobFight(mob,target)
          end
     end
 end;
+
+-----------------------------------
+-- onSpellPrecast
+-----------------------------------
+
+function onSpellPrecast(mob, spell)
+    if (spell:getID() == 218) then
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(25);
+    end
+end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------

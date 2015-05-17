@@ -1535,6 +1535,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 362, 1, 255); -- Bindg
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 274, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 218, 1, 255); -- Meteor
+
 
 -- Sallow_Seymour
 INSERT INTO `mob_spell_lists` VALUES ('Sallow_Seymour', 407, 357, 1, 255); -- slowga
