@@ -18,10 +18,8 @@ require("scripts/globals/status");
 function onTrade(player,npc,trade)
      --Trade 1 High-Quality Euvhi Organ
     if(GetMobAction(16921021) == 0 and trade:hasItemQty(1899,1) and trade:getItemCount() == 1) then
-        player:tradeComplete();
-        qm3:hideNPC(390); -- Hides ???.
-        mobspawn:setSpawn(player:getXPos(),player:getYPos(),player:getZPos()); -- Change MobSpawn to Players @pos.
         SpawnMob(16921021,900):updateEnmity(player); -- Spawn Jailer of Faith
+        player:tradeComplete();
     end
 
 end;
