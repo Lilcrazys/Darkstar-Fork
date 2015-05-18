@@ -53,7 +53,7 @@ end;
 
 function onMobFight(mob,target)
 
-    local bahamut_2hr_Used = mob:getLocalVar("bahamut_2hr");
+    local bahamut_2hr = mob:getLocalVar("bahamut_2hr");
 
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
