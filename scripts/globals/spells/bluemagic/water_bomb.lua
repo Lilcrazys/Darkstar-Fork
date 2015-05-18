@@ -1,6 +1,6 @@
 ---------------------------------------------
 --  Water Bomb
---------------------------------------------- 
+---------------------------------------------
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
@@ -25,7 +25,7 @@ function onSpellCast(caster,target,spell)
     params.int_wsc = 0.3;
     params.mnd_wsc = 0.1;
     params.chr_wsc = 0.0;
-    
+
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
@@ -34,13 +34,13 @@ function onSpellCast(caster,target,spell)
 	end
 
 	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
-	
-	if(damage > 0 and resist < 0.3) then
+
+	if(damage > 0 and resist < 0.4) then
 	local typeEffect = EFFECT_SILENCE;
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,25,0,getBlueEffectDuration(caster,resist,typeEffect));
 	end
-	
+
     return damage;
 
 end;
