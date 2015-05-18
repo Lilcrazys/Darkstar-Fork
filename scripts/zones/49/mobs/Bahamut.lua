@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: Attohwa Chasm
--- NPC:  bahamutmat
+-- Area: inSomeZone
+-- NPC:  bahamut
 -----------------------------------
 require("scripts/globals/titles");
 require("scripts/globals/status");
@@ -11,8 +11,8 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInibahamutlize(mob)
-    mob:addMod(MOD_DMGMAGIC, 50);
-    mob:addMod(MOD_DMGRANGE, 50);
+    mob:addMod(MOD_DMGMAGIC, 40);
+    mob:addMod(MOD_DMGRANGE, 40);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
@@ -31,7 +31,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_ACC,2500);
-    mob:setMod(MOD_MATT,120);
+    mob:setMod(MOD_MATT,115);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
     mob:setMod(MOD_FIRE_AFFINITY,5);
     mob:setMod(MOD_WIND_AFFINITY,5);
@@ -68,11 +68,11 @@ function onMobFight(mob,target)
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 9);
 	elseif (mob:getHPP() <= 20 and bahamut_2hr == 7) then
-		mob:useMobAbility(1296); -- Gigaflare
+		mob:useMobAbility(1297); -- Gigaflare
 		mob:useMobAbility(436); -- Chainspell
 		mob:setLocalVar("bahamut_2hr", 8);
 	elseif (mob:getHPP() <= 30 and bahamut_2hr == 6) then
-		mob:useMobAbility(1296); -- Gigaflare
+		mob:useMobAbility(1297); -- Gigaflare
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 7);
 	elseif (mob:getHPP() <= 40 and bahamut_2hr == 5) then
@@ -84,19 +84,19 @@ function onMobFight(mob,target)
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 5);
 	elseif (mob:getHPP() <= 60 and bahamut_2hr == 3) then
-		mob:useMobAbility(1295); -- Megaflare
+		mob:useMobAbility(1296); -- Megaflare
 		mob:useMobAbility(436); -- Chainspell
 		mob:setLocalVar("bahamut_2hr", 4);
 	elseif (mob:getHPP() <= 70 and bahamut_2hr == 2) then
-		mob:useMobAbility(1295); -- Megaflare
+		mob:useMobAbility(1296); -- Megaflare
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 3);
 	elseif (mob:getHPP() <= 80 and bahamut_2hr == 1) then
-		mob:useMobAbility(1295); -- Megaflare
+		mob:useMobAbility(1296); -- Megaflare
 		mob:useMobAbility(436); -- Chainspell
 		mob:setLocalVar("bahamut_2hr", 2);
 	elseif (mob:getHPP() <= 90 and bahamut_2hr == 0) then
-		mob:useMobAbility(1295); -- Megaflare
+		mob:useMobAbility(1296); -- Megaflare
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 1);
 	end
