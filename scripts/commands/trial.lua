@@ -14,6 +14,11 @@ cmdprops =
 };
 
 function onTrigger(player)
+-- Begin temp
+	require("scripts/globals/custom_trials");
+	doCustomTrial(0, player, true, false)
+-- End temp
+
     local TRIAL = player:getVar("CustomTrial");
     if (TRIAL == 0 or TRIAL == nil) then
         player:PrintToPlayer("The 'CustomTrial' variable is missing!");
