@@ -67,7 +67,7 @@ function onTrigger(player,target)
             player:PrintToPlayer(string.format("Medusa_KILLS %u", targ:getVar("Medusa_KILLS")));
             player:PrintToPlayer(string.format("Hydra_KILLS %u", targ:getVar("Hydra_KILLS")));
         else
-            player:PrintToPlayer("Target has a CustomTriakl variable set, but it is one not handled by this command.");
+            player:PrintToPlayer("Target has a CustomTrial variable set, but it is one not handled by this command.");
         end
     end
 end;
