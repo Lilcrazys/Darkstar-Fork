@@ -24,15 +24,18 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 300);
+    -- mob:setMod(MOD_REGEN, 300);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
+    mob:setMod(MOD_ACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
     mob:setMod(MOD_FIRE_AFFINITY,5);
+    mob:setMod(MOD_WIND_AFFINITY,5);
+    mob:setMod(MOD_EARTH_AFFINITY,5);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
@@ -55,7 +58,7 @@ function onMobFight(mob,target)
 
     local bahamut_2hr = mob:getLocalVar("bahamut_2hr");
 
-    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
+    if (mob:getBattleTime() > 5400 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end

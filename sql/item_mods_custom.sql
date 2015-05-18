@@ -12146,10 +12146,94 @@ INSERT INTO `item_mods` VALUES(27435, 486, 17); -- tactical parry
 
 -- DRG
 -- peltasts_mezail (26766)
+INSERT INTO `item_mods` VALUES(26766, 1, 83); -- DEF
+INSERT INTO `item_mods` VALUES(26766, 2, 20); -- HP
+INSERT INTO `item_mods` VALUES(26766, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES(26766, 9, 11); -- DEX
+INSERT INTO `item_mods` VALUES(26766, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES(26766, 11, 9); -- AGI
+INSERT INTO `item_mods` VALUES(26766, 12, 7); -- INT
+INSERT INTO `item_mods` VALUES(26766, 13, 7); -- MND
+INSERT INTO `item_mods` VALUES(26766, 14, 7); -- CHR
+INSERT INTO `item_mods` VALUES(26766, 23, 23); -- ATK
+INSERT INTO `item_mods` VALUES(26766, 68, 16); -- Evasion
+INSERT INTO `item_mods` VALUES(26766, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26766, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26766, 87, 7); --  Polearm Skill
+INSERT INTO `item_mods` VALUES(26766, 384, 60); -- Haste 6%
+-- INSERT INTO `item_mods` VALUES(26766, 000, 22); -- Wyvern: Absorbs Dmg Taken 12%
+
 -- peltasts_plackart (26924)
+INSERT INTO `item_mods` VALUES(26924, 1, 105); -- DEF
+INSERT INTO `item_mods` VALUES(26924, 2, 31); -- HP
+INSERT INTO `item_mods` VALUES(26924, 8, 21); -- STR
+INSERT INTO `item_mods` VALUES(26924, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES(26924, 10, 17); -- VIT
+INSERT INTO `item_mods` VALUES(26924, 11, 12); -- AGI
+INSERT INTO `item_mods` VALUES(26924, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES(26924, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES(26924, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES(26924, 25, 14); -- ACC
+INSERT INTO `item_mods` VALUES(26924, 23, 14); -- ATK
+INSERT INTO `item_mods` VALUES(26924, 68, 20); -- Evasion
+INSERT INTO `item_mods` VALUES(26924, 31, 40); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26924, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26924, 73, 11); --  Store TP
+INSERT INTO `item_mods` VALUES(26924, 384, 30); -- Haste 3%
+-- INSERT INTO `item_mods` VALUES(26924, 000, 22); -- Wyvern: Grants food effect
+
 -- peltasts_vambraces (27078)
+INSERT INTO `item_mods` VALUES(27078, 1, 75); -- DEF
+INSERT INTO `item_mods` VALUES(27078, 2, 12); -- HP
+INSERT INTO `item_mods` VALUES(27078, 8, 9); -- STR
+INSERT INTO `item_mods` VALUES(27078, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES(27078, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES(27078, 11, 4); -- AGI
+INSERT INTO `item_mods` VALUES(27078, 12, 4); -- INT
+INSERT INTO `item_mods` VALUES(27078, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES(27078, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES(27078, 25, 13); -- ACC
+INSERT INTO `item_mods` VALUES(27078, 68, 11); -- Evasion
+INSERT INTO `item_mods` VALUES(27078, 31, 21); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27078, 288, 40); --  Double Attack
+-- INSERT INTO `item_mods` VALUES(27078, 000, 100); --  Spirit Link
+INSERT INTO `item_mods` VALUES(27078, 384, 30); -- Haste 3%
+-- INSERT INTO `item_mods` VALUES(27078, 000, 22); -- Enhances Spirit Link Effect
+
 -- peltasts_cuissots (27263)
+INSERT INTO `item_mods` VALUES(27263, 1, 91); -- DEF
+INSERT INTO `item_mods` VALUES(27263, 2, 23); -- HP
+INSERT INTO `item_mods` VALUES(27263, 8, 27); -- STR
+INSERT INTO `item_mods` VALUES(27263, 10, 19); -- VIT
+INSERT INTO `item_mods` VALUES(27263, 11, 9); -- AGI
+INSERT INTO `item_mods` VALUES(27263, 12, 14); -- INT
+INSERT INTO `item_mods` VALUES(27263, 13, 8); -- MND
+INSERT INTO `item_mods` VALUES(27263, 14, 6); -- CHR
+INSERT INTO `item_mods` VALUES(27263, 23, 18); -- ATK
+INSERT INTO `item_mods` VALUES(27263, 68, 11); -- Evasion
+INSERT INTO `item_mods` VALUES(27263, 31, 54); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27263, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27263, 384, 50); -- Haste 5%
+INSERT INTO `item_mods` VALUES(27263, 421, 100); --  Critical Hit Dmg
+-- INSERT INTO `item_mods` VALUES(27263, 000, 100); --  Spirit Link
+-- INSERT INTO `item_mods` VALUES(27263, 000, 22); -- Spirit Jump
+
 -- peltasts_schynbalds (27437)
+INSERT INTO `item_mods` VALUES(27437, 1, 60); -- DEF
+INSERT INTO `item_mods` VALUES(27437, 2, 7); -- HP
+INSERT INTO `item_mods` VALUES(27437, 8, 10); -- STR
+INSERT INTO `item_mods` VALUES(27437, 9, 12); -- DEX
+INSERT INTO `item_mods` VALUES(27437, 10, 14); -- VIT
+INSERT INTO `item_mods` VALUES(27437, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES(27437, 13, 3); -- MND
+INSERT INTO `item_mods` VALUES(27437, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES(27437, 25, 14); -- ACC
+INSERT INTO `item_mods` VALUES(27437, 23, 14); -- ATK
+INSERT INTO `item_mods` VALUES(27437, 68, 25); -- Evasion
+INSERT INTO `item_mods` VALUES(27437, 31, 54); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27437, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27437, 384, 50); -- Haste 5%
+-- INSERT INTO `item_mods` VALUES(27437, 000, 22); -- Spirit Jump: TP Bonus +60
 
 -- SMN
 -- beckoners_horn (26768)
@@ -12345,10 +12429,99 @@ INSERT INTO `item_mods` VALUES(27443, 411, 22); --  quickdraw
 
 -- SCH
 -- arbatel_bonnet (26778)
+INSERT INTO `item_mods` VALUES(26778, 1, 66); -- DEF
+INSERT INTO `item_mods` VALUES(26778, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES(26778, 5, 46); -- MP
+INSERT INTO `item_mods` VALUES(26778, 8, 10); -- STR
+INSERT INTO `item_mods` VALUES(26778, 9, 10); -- DEX
+INSERT INTO `item_mods` VALUES(26778, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES(26778, 11, 2); -- AGI
+INSERT INTO `item_mods` VALUES(26778, 12, 20); -- INT
+INSERT INTO `item_mods` VALUES(26778, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES(26778, 14, 13); -- CHR
+INSERT INTO `item_mods` VALUES(26778, 68, 15); -- Evasion
+INSERT INTO `item_mods` VALUES(26778, 31, 58); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26778, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26778, 113, 12); --  Enhancing Magic Skill
+INSERT INTO `item_mods` VALUES(26778, 384, 50); -- Haste
+-- INSERT INTO `item_mods` VALUES(26778, 000, 12); -- Rapture +12
+-- INSERT INTO `item_mods` VALUES(26778, 000, 12); -- Ebullience +12
+INSERT INTO `item_mods` VALUES(26778, 370, 10); -- Regen
+
 -- arbatel_gown (26936)
+INSERT INTO `item_mods` VALUES(26936, 1, 90); -- DEF
+INSERT INTO `item_mods` VALUES(26936, 2, 23); -- HP
+INSERT INTO `item_mods` VALUES(26936, 5, 56); -- MP
+INSERT INTO `item_mods` VALUES(26936, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES(26936, 9, 12); -- DEX
+INSERT INTO `item_mods` VALUES(26936, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES(26936, 11, 12); -- AGI
+INSERT INTO `item_mods` VALUES(26936, 12, 26); -- INT
+INSERT INTO `item_mods` VALUES(26936, 13, 21); -- MND
+INSERT INTO `item_mods` VALUES(26936, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES(26936, 30, 15); -- Magic ACC
+INSERT INTO `item_mods` VALUES(26936, 68, 17); -- Evasion
+INSERT INTO `item_mods` VALUES(26936, 31, 62); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26936, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26936, 369, 2); --  Refresh
+INSERT INTO `item_mods` VALUES(26936, 384, 20); -- Haste
+-- INSERT INTO `item_mods` VALUES(26936, 000, 22); -- Addendum: White Enmity -22
+-- INSERT INTO `item_mods` VALUES(26936, 000, 22); -- Addendum: Black Enmity -22
+
 -- arbatel_bracers (27090)
+INSERT INTO `item_mods` VALUES(27090, 1, 58); -- DEF
+INSERT INTO `item_mods` VALUES(27090, 2, 8); -- HP
+INSERT INTO `item_mods` VALUES(27090, 5, 37); -- MP
+INSERT INTO `item_mods` VALUES(27090, 8, 4); -- STR
+INSERT INTO `item_mods` VALUES(27090, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES(27090, 10, 14); -- VIT
+INSERT INTO `item_mods` VALUES(27090, 11, 3); -- AGI
+INSERT INTO `item_mods` VALUES(27090, 12, 16); -- INT
+INSERT INTO `item_mods` VALUES(27090, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES(27090, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES(27090, 68, 8); -- Evasion
+INSERT INTO `item_mods` VALUES(27090, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27090, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27090, 27, -6); -- Enmity
+INSERT INTO `item_mods` VALUES(27090, 384, 30); -- Haste
+-- INSERT INTO `item_mods` VALUES(27090, 000, 500); --  Perpetuance +50%
+-- INSERT INTO `item_mods` VALUES(27090, 000, 100); -- Immanence +10%
+
 -- arbatel_pants (27275)
+INSERT INTO `item_mods` VALUES(27275, 1, 76); -- DEF
+INSERT INTO `item_mods` VALUES(27275, 2, 18); -- HP
+INSERT INTO `item_mods` VALUES(27275, 5, 36); -- MP
+INSERT INTO `item_mods` VALUES(27275, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES(27275, 10, 5); -- VIT
+INSERT INTO `item_mods` VALUES(27275, 11, 10); -- AGI
+INSERT INTO `item_mods` VALUES(27275, 12, 24); -- INT
+INSERT INTO `item_mods` VALUES(27275, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES(27275, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES(27275, 68, 11); -- Evasion
+INSERT INTO `item_mods` VALUES(27275, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27275, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27275, 114, 10); --  Enfeebling Magic Skill
+INSERT INTO `item_mods` VALUES(27275, 384, 40); -- Haste
+-- INSERT INTO `item_mods` VALUES(27275, 000, 22); -- Grimoire: Magic Accuracy+21
+-- INSERT INTO `item_mods` VALUES(27275, 000, 22); -- “Penury” and “Parsimony”+3
+
 -- arbatel_loafers (27449)
+INSERT INTO `item_mods` VALUES(27449, 1, 47); -- DEF
+INSERT INTO `item_mods` VALUES(27449, 2, 4); -- HP
+INSERT INTO `item_mods` VALUES(27449, 5, 67); -- MP
+INSERT INTO `item_mods` VALUES(27449, 8, 5); -- STR
+INSERT INTO `item_mods` VALUES(27449, 10, 5); -- VIT
+INSERT INTO `item_mods` VALUES(27449, 9, 5); -- DEX
+INSERT INTO `item_mods` VALUES(27449, 11, 18); -- AGI
+INSERT INTO `item_mods` VALUES(27449, 12, 15); -- INT
+INSERT INTO `item_mods` VALUES(27449, 13, 11); -- MND
+INSERT INTO `item_mods` VALUES(27449, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES(27449, 68, 28); -- Evasion
+INSERT INTO `item_mods` VALUES(27449, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27449, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27449, 115, 13); --  Elemental Magic Skill
+INSERT INTO `item_mods` VALUES(27449, 384, 30); -- Haste
+-- INSERT INTO `item_mods` VALUES(27449, 000, 10); -- Kilmaform
 
 --  Legion Gear +1
 

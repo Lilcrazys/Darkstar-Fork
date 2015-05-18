@@ -1712,8 +1712,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Vrtra', 420, 229, 1, 255); -- Poisionga 5
 
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 47, 1, 255); -- Protect 5
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 52, 1, 255); -- Shell 5
-INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 42, 1, 255); -- Banishga 5
-INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 22, 1, 255); -- Holy 2
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 503, 1, 255); -- Impact
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 360, 1, 255); -- Dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 357, 1, 255); -- Slowga
@@ -1723,7 +1721,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 148, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 178, 1, 255); -- Firega 5
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 496, 1, 255); -- Fireja
--- INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 367, 1, 255); -- Death
 
 -- list IDs 407 - 589 available for use! please use'em!
 
