@@ -40,6 +40,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
+    mob:setMod(MOD_HUMANOID_KILLER, 5);
 end;
 
 -----------------------------------
@@ -77,26 +78,26 @@ function onMobFight(mob,target)
 		mob:setLocalVar("bahamut_2hr", 7);
 	elseif (mob:getHPP() <= 40 and bahamut_2hr == 5) then
 		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(436); -- Chainspell
+		mob:useMobAbility(3009); -- Elemental_Sforzo
 		mob:setLocalVar("bahamut_2hr", 6);
 	elseif (mob:getHPP() <= 50 and bahamut_2hr == 4) then
 		mob:useMobAbility(1296); -- Gigaflare
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 5);
 	elseif (mob:getHPP() <= 60 and bahamut_2hr == 3) then
-		mob:useMobAbility(1296); -- Megaflare
+		mob:useMobAbility(1296); -- Gigaflare
 		mob:useMobAbility(436); -- Chainspell
 		mob:setLocalVar("bahamut_2hr", 4);
 	elseif (mob:getHPP() <= 70 and bahamut_2hr == 2) then
-		mob:useMobAbility(1296); -- Megaflare
+		mob:useMobAbility(1296); -- Gigaflare
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 3);
 	elseif (mob:getHPP() <= 80 and bahamut_2hr == 1) then
-		mob:useMobAbility(1296); -- Megaflare
-		mob:useMobAbility(436); -- Chainspell
+		mob:useMobAbility(1296); -- Gigaflare
+		mob:useMobAbility(436); -- Elemental_Sforzo
 		mob:setLocalVar("bahamut_2hr", 2);
 	elseif (mob:getHPP() <= 90 and bahamut_2hr == 0) then
-		mob:useMobAbility(1296); -- Megaflare
+		mob:useMobAbility(1296); -- Gigaflare
 		mob:useMobAbility(438); -- Invinceible
 		mob:setLocalVar("bahamut_2hr", 1);
 	end
@@ -113,8 +114,7 @@ function onSpellPrecast(mob, spell)
         spell:setRadius(30);
         spell:setAnimation(280);
         spell:setMPCost(1);
-    end
-    if (spell:getID() == 496) then -- AoE Impact
+    elseif (spell:getID() == 496) then -- AoE Impact
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
         spell:setRadius(30);

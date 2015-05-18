@@ -37,8 +37,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_DEF,-100);
+    mob:setMod(MOD_DEF,-50);
     mob:setMod(MOD_DARK,700);
+    mob:setMod(MOD_HUMANOID_KILLER, 5);
 end;
 
 -----------------------------------

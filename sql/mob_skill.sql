@@ -5338,6 +5338,7 @@ INSERT INTO `mob_skill` VALUES (1296,1203,1137,'Gigaflare',1,20.0,2000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (1297,1203,1138,'Teraflare',1,30.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (436,1203,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (438,1203,438,'Invincible',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (3009,1203,432,'Elemental_Sforzo',0,7.0,2000,0,1,2,0,0);
 
 
 -- The Jumping Crab

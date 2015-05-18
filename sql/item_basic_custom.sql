@@ -399,3 +399,21 @@ INSERT INTO `item_basic` VALUES (27443,0,'chasseurs_bottes','chasseurs_bottes',1
 INSERT INTO `item_basic` VALUES (27445,0,'karagoz_scarpe','karagoz_scarpe',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27447,0,'maculele_toeshoes','maculele_toeshoes',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27449,0,'arbatel_loafers','arbatel_loafers',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (27724,0,'qaaxo_mask','qaaxo_mask',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27870,0,'qaaxo_harness','qaaxo_harness',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28016,0,'qaaxo_mitaines','qaaxo_mitaines',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28158,0,'qaaxo_tights','qaaxo_tights',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28295,0,'qaaxo_leggings','qaaxo_leggings',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (27723,0,'xaddi_headgear','xaddi_headgear',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27869,0,'xaddi_mail','xaddi_mail',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28015,0,'xaddi_gauntlets','xaddi_gauntlets',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28157,0,'xaddi_cuisses','xaddi_cuisses',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28294,0,'xaddi_boots','xaddi_boots',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (27725,0,'artsieq_hat','artsieq_hat',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27871,0,'artsieq_jubbah','artsieq_jubbah',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28017,0,'artsieq_cuffs','artsieq_cuffs',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28159,0,'artsieq_hose','artsieq_hose',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28296,0,'artsieq_boots','artsieq_boots',1,63552,0,1,0);

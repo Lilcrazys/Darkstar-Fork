@@ -382,3 +382,21 @@ INSERT INTO `item_armor` VALUES ('27897', 'orvail_robe_+1', '99', '3850780', '34
 INSERT INTO `item_armor` VALUES ('28044', 'orvail_cuffs_+1', '99', '3850780', '344', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28184', 'orvail_pants_+1', '99', '3850780', '344', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28322', 'orvail_souliers_+1', '99', '3850780', '344', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27724', 'qaaxo_mask', '99', '2593826', '363', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27870', 'qaaxo_harness', '99', '2593826', '363', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('28016', 'qaaxo_mitaines', '99', '2593826', '363', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28158', 'qaaxo_tights', '99', '2593826', '363', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28295', 'qaaxo_leggings', '99', '2593826', '363', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27723', 'xaddi_headgear', '99', '10689', '365', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27869', 'xaddi_mail', '99', '10689', '365', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('28015', 'xaddi_gauntlets', '99', '10689', '365', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28157', 'xaddi_cuisses', '99', '10689', '365', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28294', 'xaddi_boots', '99', '10689', '365', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27725', 'artsieq_hat', '99', '3850780', '364', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27871', 'artsieq_jubbah', '99', '3850780', '364', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('28017', 'artsieq_cuffs', '99', '3850780', '364', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('28159', 'artsieq_hose', '99', '3850780', '364', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28296', 'artsieq_boots', '99', '3850780', '364', '0', '0', '256', '0');
