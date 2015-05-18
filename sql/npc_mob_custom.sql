@@ -807,7 +807,7 @@ INSERT INTO `mob_spawn_points` VALUES (16977963,'Voidwrought','Voidwrought',9041
 -- INSERT INTO `mob_spawn_points` VALUES (16977942,'Vrtra','Vrtra',90501,-10,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977943,'Jormungand','Jormungand',90500,-20,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977944,'Tiamat','Tiamat',90502,-30,0,1,0);
-
+INSERT INTO `mob_spawn_points` VALUES (16977945,'Bahamut','Bahamut',90503,-30,0,1,0);
 
 
 
