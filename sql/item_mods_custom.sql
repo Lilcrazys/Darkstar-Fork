@@ -12422,10 +12422,91 @@ INSERT INTO `item_mods` VALUES(27443, 411, 22); --  quickdraw
 
 -- DNC
 -- maculele_tiara (26776)
+INSERT INTO `item_mods` VALUES(26776, 1, 72); -- DEF
+INSERT INTO `item_mods` VALUES(26776, 2, 19); -- HP
+INSERT INTO `item_mods` VALUES(26776, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES(26776, 9, 20); -- DEX
+INSERT INTO `item_mods` VALUES(26776, 10, 11); -- VIT
+INSERT INTO `item_mods` VALUES(26776, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES(26776, 12, 10); -- INT
+INSERT INTO `item_mods` VALUES(26776, 13, 10); -- MND
+INSERT INTO `item_mods` VALUES(26776, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES(26776, 25, 13); -- ACC
+INSERT INTO `item_mods` VALUES(26776, 23, 13); -- ATK
+INSERT INTO `item_mods` VALUES(26776, 68, 23); -- Evasion
+INSERT INTO `item_mods` VALUES(26776, 31, 40); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26776, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26776, 73, 7); --  Store TP
+INSERT INTO `item_mods` VALUES(26776, 384, 70); -- Haste
+-- INSERT INTO `item_mods` VALUES(26776, 000, 220); -- Climactic Flourish: Critical hits +1 Critical hit damage +22%
+
 -- maculele_casaque (26934)
+INSERT INTO `item_mods` VALUES(26943, 1, 95); -- DEF
+INSERT INTO `item_mods` VALUES(26943, 2, 30); -- HP
+INSERT INTO `item_mods` VALUES(26943, 8, 16); -- STR
+INSERT INTO `item_mods` VALUES(26943, 9, 26); -- DEX
+INSERT INTO `item_mods` VALUES(26943, 10, 15); -- VIT
+INSERT INTO `item_mods` VALUES(26943, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES(26943, 12, 13); -- INT
+INSERT INTO `item_mods` VALUES(26943, 13, 13); -- MND
+INSERT INTO `item_mods` VALUES(26943, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES(26943, 68, 25); -- Evasion
+INSERT INTO `item_mods` VALUES(26943, 31, 47); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26943, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26943, 289, 11); -- Subtle Blow
+INSERT INTO `item_mods` VALUES(26943, 259, 10); -- Dual Wield
+INSERT INTO `item_mods` VALUES(26943, 384, 40); -- Haste
+-- INSERT INTO `item_mods` VALUES(26943, 000, 550); -- Striking Flourish: “Double Attack” critical hit rate +55%
+
 -- maculele_bangles (27088)
+INSERT INTO `item_mods` VALUES(27088, 1, 64); -- DEF
+INSERT INTO `item_mods` VALUES(27088, 2, 12); -- HP
+INSERT INTO `item_mods` VALUES(27088, 8, 9); -- STR
+INSERT INTO `item_mods` VALUES(27088, 9, 25); -- DEX
+INSERT INTO `item_mods` VALUES(27088, 10, 19); -- VIT
+INSERT INTO `item_mods` VALUES(27088, 11, 10); -- AGI
+INSERT INTO `item_mods` VALUES(27088, 12, 9); -- INT
+INSERT INTO `item_mods` VALUES(27088, 13, 20); -- MND
+INSERT INTO `item_mods` VALUES(27088, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES(27088, 25, 16); -- ACC
+INSERT INTO `item_mods` VALUES(27088, 68, 16); -- Evasion
+INSERT INTO `item_mods` VALUES(27088, 31, 29); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27088, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27088, 384, 40); -- Haste
+INSERT INTO `item_mods` VALUES(27088, 174, 10); -- Skillchain Bonus
+-- INSERT INTO `item_mods` VALUES(27088, 000, 10); -- Reverse Flourish
+
 -- maculele_tights (27273)
+INSERT INTO `item_mods` VALUES(27273, 1, 81); -- DEF
+INSERT INTO `item_mods` VALUES(27273, 2, 23); -- HP
+INSERT INTO `item_mods` VALUES(27273, 8, 18); -- STR
+INSERT INTO `item_mods` VALUES(27273, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES(27273, 11, 12); -- AGI
+INSERT INTO `item_mods` VALUES(27273, 12, 9); -- INT
+INSERT INTO `item_mods` VALUES(27273, 13, 11); -- MND
+INSERT INTO `item_mods` VALUES(27273, 14, 7); -- CHR
+INSERT INTO `item_mods` VALUES(27273, 68, 37); -- Evasion
+INSERT INTO `item_mods` VALUES(27273, 31, 51); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27273, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27273, 81, 7); --  Dagger Skill
+INSERT INTO `item_mods` VALUES(27273, 384, 60); -- Haste
+-- INSERT INTO `item_mods` VALUES(27273, 000, 17); -- Tactical Parry
+
 -- maculele_toeshoes (27447)
+INSERT INTO `item_mods` VALUES(27447, 1, 50); -- DEF
+INSERT INTO `item_mods` VALUES(27447, 2, 7); -- HP
+INSERT INTO `item_mods` VALUES(27447, 8, 8); -- STR
+INSERT INTO `item_mods` VALUES(27447, 9, 18); -- DEX
+INSERT INTO `item_mods` VALUES(27447, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES(27447, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES(27447, 13, 8); -- MND
+INSERT INTO `item_mods` VALUES(27447, 14, 22); -- CHR
+INSERT INTO `item_mods` VALUES(27447, 68, 37); -- Evasion
+INSERT INTO `item_mods` VALUES(27447, 31, 51); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27447, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27447, 73, 9); --  Store TP
+INSERT INTO `item_mods` VALUES(27447, 384, 40); -- Haste
+-- INSERT INTO `item_mods` VALUES(27447, 000, 3); -- Feather Step +3
 
 -- SCH
 -- arbatel_bonnet (26778)
