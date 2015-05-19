@@ -43,4 +43,6 @@ REPLACE INTO `item_usable` VALUES (4143,'pro-ether_+3',1,13,33,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4144,'hi-elixir',1,20,34,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4145,'elixir',1,20,34,9,0,0,0,0);
 
+INSERT INTO `item_usable` VALUES (4985,'scroll_of_horde_lullaby_ii',1,1,15,5,0,0,0,0);
+
 INSERT INTO `item_usable` VALUES (5086,'scroll_of_regen_v',1,1,11,5,0,0,0,0);
