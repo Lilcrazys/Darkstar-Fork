@@ -13,12 +13,12 @@ require("scripts/zones/Aydeewa_Subterrane/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-
-    if(trade:hasItemQty(2602,1) and trade:getItemCount() == 1) then -- Trade Spoilt Blood
-        player:tradeComplete();
-        SpawnMob(17056186,180):updateEnmity(player);
-    end
-
+	
+	if(trade:hasItemQty(2602,1) and trade:getItemCount() == 1) then -- Trade Spoilt Blood
+		player:tradeComplete();
+		SpawnMob(17056186,180):updateClaim(player);
+	end
+	
 end;
 
 -----------------------------------

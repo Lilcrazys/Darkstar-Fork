@@ -16,12 +16,24 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onTrade(player,npc,trade)
+	--[[
+	 --Trade 1 High-Quality Euvhi Organ
+	if(GetMobAction(Jailer_of_Faith) == 0 and trade:hasItemQty(1899,1) and trade:getItemCount() == 1) then
+		player:tradeComplete();
+		-- Hide the ???
+		GetNPCByID(Jailer_of_Faith_QM):hideNPC(900);
+		-- Change MobSpawn to Players @pos.
+		GetMobByID(Jailer_of_Faith):setSpawn(player:getXPos(),player:getYPos(),player:getZPos());
+		-- Spawn Jailer of Faith
+		SpawnMob(Jailer_of_Faith,900):updateClaim(player); 
+	end
+	]]
+
      --Trade 1 High-Quality Euvhi Organ
     if(GetMobAction(16921021) == 0 and trade:hasItemQty(1899,1) and trade:getItemCount() == 1) then
         SpawnMob(16921021,900):updateEnmity(player); -- Spawn Jailer of Faith
         player:tradeComplete();
     end
-
 end;
 
 -----------------------------------
@@ -39,7 +51,7 @@ end;
 function onEventUpdate(player,csid,option)
 --printf("onUpdate CSID: %u",csid);
 --printf("onUpdate RESULT: %u",option);
-    end;
+end;
 
 -----------------------------------
 -- onEventFinish Action
@@ -48,4 +60,4 @@ function onEventUpdate(player,csid,option)
 function onEventFinish(player,csid,option)
 --printf("onFinish CSID: %u",csid);
 --printf("onFinish RESULT: %u",option);
-    end;
+end;

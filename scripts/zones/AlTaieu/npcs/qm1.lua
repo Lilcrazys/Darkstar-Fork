@@ -16,11 +16,16 @@ require("scripts/globals/status");
 
 function onTrade(player,npc,trade)
     -- Trade the First Virtue, Deed of Placidity and HQ Phuabo Organ
+    --[[if(GetMobAction(16912838) == 0 and trade:hasItemQty(1850,1) and trade:hasItemQty(1851,1) and trade:hasItemQty(1852,1) and trade:getItemCount() == 3) then
+        player:tradeComplete();
+        SpawnMob(16912838,900):updateClaim(player); -- Spawn Jailer of Hope
+    end]]
+    
     if (trade:hasItemQty(1850,1) == false or trade:hasItemQty(1851,1) == false or trade:hasItemQty(1852,1) == false) then
         player:startEvent(1010, 1850 ,1851 ,1852);
     elseif (GetMobAction(16912838) == ACTION_NONE) then
         if (trade:hasItemQty(1850,1) and trade:hasItemQty(1851,1) and trade:hasItemQty(1852,1) and trade:getItemCount() == 3) then
-            SpawnMob(16912838, 300):updateEnmity(player);
+            SpawnMob(16912838, 300):updateClaim(player);
             player:tradeComplete();
         end
     end

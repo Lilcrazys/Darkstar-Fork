@@ -16,11 +16,17 @@ require("scripts/globals/status");
 
 function onTrade(player,npc,trade)
     -- Trade the Second Virtue, Deed of Moderation, and HQ Xzomit Organ
+    --[[if(GetMobAction(16912839) == 0 and trade:hasItemQty(1853,1) and trade:hasItemQty(1854,1) and trade:hasItemQty(1785,1) and
+    trade:getItemCount() == 3) then
+        player:tradeComplete();
+        SpawnMob(16912839,900):updateClaim(player); -- Spawn Jailer of Justice
+    end]]
+
     if (trade:hasItemQty(1853,1) == false or trade:hasItemQty(1854,1) == false or trade:hasItemQty(1785,1) == false) then
         player:startEvent(1010, 1853 ,1854 ,1785);
     elseif (GetMobAction(16912839) == ACTION_NONE) then
         if (trade:hasItemQty(1853,1) and trade:hasItemQty(1854,1) and trade:hasItemQty(1855,1) and trade:getItemCount() == 3) then
-            SpawnMob(16912839, 300):updateEnmity(player);
+            SpawnMob(16912839, 300):updateClaim(player);
             player:tradeComplete();
         end
     end
@@ -31,7 +37,6 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
 end;
 
 -----------------------------------
@@ -41,7 +46,7 @@ end;
 function onEventUpdate(player,csid,option)
 --printf("onUpdate CSID: %u",csid);
 --printf("onUpdate RESULT: %u",option);
-    end;
+end;
 
 -----------------------------------
 -- onEventFinish Action
@@ -50,4 +55,4 @@ function onEventUpdate(player,csid,option)
 function onEventFinish(player,csid,option)
 --printf("onFinish CSID: %u",csid);
 --printf("onFinish RESULT: %u",option);
-    end;
+end;
