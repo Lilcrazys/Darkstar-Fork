@@ -53,6 +53,7 @@ end
 
 function onMobDeath(mob,killer)
     local CHANCE = 40;
+    local SPELL_ID = 695;
   
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
         killer:addKeyItem(ATMA_OF_STORMBREATH);
