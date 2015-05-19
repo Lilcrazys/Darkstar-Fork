@@ -39,6 +39,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_PARALYZERES,30);
     mob:addMod(MOD_DEF,-50);
     mob:setMod(MOD_HUMANOID_KILLER, 5);
+    mob:setMod(MOD_TERRORRES, 100);
+    mob:setMod(MOD_ICE_ABSORB, 100);
 end;
 
 -----------------------------------

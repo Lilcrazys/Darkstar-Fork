@@ -41,6 +41,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_HUMANOID_KILLER, 5);
+    mob:setMod(MOD_TERRORRES, 100);
 end;
 
 -----------------------------------
@@ -133,8 +134,7 @@ function onAdditionalEffect(mob,target,damage)
     else
         local duration = 10;
         target:addStatusEffect(EFFECT_CURSE_II,40,0,duration);
-        mob:resetEnmity(target);
-        return SUBEFFECT_CURSE,0,EFFECT_CURSE_II;
+        return SUBEFFECT_CURSE,163,EFFECT_CURSE_II;
     end
 end;
 
