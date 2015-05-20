@@ -4589,14 +4589,19 @@ INSERT INTO `mob_skill` VALUES (436,901,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (435,901,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- Lofty_Wyrm (905)
-INSERT INTO `mob_skill` VALUES(1033,905,653,'Gregale_Wing',1,30.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES(1034,905,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
-INSERT INTO `mob_skill` VALUES(1035,905,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES(1036,905,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
-INSERT INTO `mob_skill` VALUES(1037,905,964,'Sleet_Blast',1,23.0,2000,2000,4,8,0,0);
-INSERT INTO `mob_skill` VALUES(1039,905,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (438,905,432,'Invincible',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (432,905,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
+INSERT INTO `mob_skill` VALUES (1031,905,963,'Sleet_Blast_alt',0,23.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1032,905,963,'Sleet_Blast_alt',0,18.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (1033,905,653,'Gregale_Wing',1,30.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1034,905,654,'Spike_Flail',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1035,905,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1036,905,656,'Touchdown',1,6.0,2000,0,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1037,905,964,'Sleet_Blast',1,23.0,2000,2000,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1038,905,653,'Gregale_Wing_Air',1,30.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1039,905,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (1040,905,660,'Horrid_Roar_3',0,18.0,4000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (439,905,432,'Blood_Weapon',0,18.0,2000,0,1,0,30,0);
 
 -- Lofty_Behemoth 902
 INSERT INTO `mob_skill` VALUES (373,902,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
