@@ -422,6 +422,7 @@ function onTrade(player,npc,trade)
 			player:SpoofChatPlayer( "calls forth the Magian Moogle.", MESSAGE_EMOTION, npc:getID() );
 			GetNPCByID(npc:getID()+134):setStatus(STATUS_NORMAL);
 			player:injectActionPacket(6, 617);
+			player:tradeComplete();
 
 		-- Trial cancellation...
 		elseif (trade:hasItemQty(2184,1) and trade:getItemCount() == 1) then

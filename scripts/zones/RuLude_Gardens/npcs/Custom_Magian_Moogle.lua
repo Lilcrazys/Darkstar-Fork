@@ -463,8 +463,6 @@ end;
 -----------------------------------
 
 function RelicComplete1(player,npc,trade)
-	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Megalobugard_KILLS",0);
@@ -473,21 +471,21 @@ function RelicComplete1(player,npc,trade)
 	player:setVar("Dune_Widow_KILLS",0);
 	player:setVar("Seww_the_Squidlimbed_KILLS",0);
 	player:setVar("Mischievous_Micholas_KILLS",0);
+	player:injectActionPacket(6, 206);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function RelicComplete2(player,npc,trade)
-	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Fafnir_KILLS",0);
 	player:setVar("Adamantoise_KILLS",0);
 	player:setVar("Behemoth_KILLS",0);
+	player:injectActionPacket(6, 206);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function RelicComplete3(player,npc,trade)
-	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Juggler_Hecatomb_KILLS",0);
@@ -495,19 +493,19 @@ function RelicComplete3(player,npc,trade)
 	player:setVar("King_Behemoth_KILLS",0);
 	player:setVar("Aspidochelone_KILLS",0);
 	player:setVar("Ash_Dragon_KILLS",0);
+	player:injectActionPacket(6, 206);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function RelicComplete4(player,npc,trade)
-	player:injectActionPacket(6, 206);
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
+	player:injectActionPacket(6, 206);
 	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:SpoofChatPlayer( "Mog: All trials complete for this Item!", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function MythicComplete1(player,npc,trade)
-	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Zareehkl_the_Jubilant_KILLS",0);
@@ -516,22 +514,22 @@ function MythicComplete1(player,npc,trade)
 	player:setVar("Brass_Borer_KILLS",0);
 	player:setVar("Dextrose_KILLS",0);
 	player:setVar("Iriri_Samariri_KILLS",0);
+	player:injectActionPacket(6, 206);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function MythicComplete2(player,npc,trade)
-	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Armed_Gears_KILLS",0);
 	player:setVar("Nosferatu_KILLS",0);
 	player:setVar("Achamoth_KILLS",0);
 	player:setVar("Experimental_Lamia_KILLS",0);
+	player:injectActionPacket(6, 206);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function MythicComplete3(player,npc,trade)
-	player:injectActionPacket(6, 206);
-	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
 	player:setVar("Cerberus_KILLS",0);
@@ -540,12 +538,14 @@ function MythicComplete3(player,npc,trade)
 	player:setVar("Gulool_Ja_Ja_KILLS",0);
 	player:setVar("Gurfurlur_the_Menacing_KILLS",0);
 	player:setVar("Hydra_KILLS",0);
+	player:injectActionPacket(6, 206);
+	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 end;
 
 function MythicComplete4(player,npc,trade)
-	player:injectActionPacket(6, 206);
 	player:setVar("CustomTrial",0);
 	player:setVar("TRIAL_COMPLETE",0);
+	player:injectActionPacket(6, 206);
 	player:SpoofChatPlayer( "Mog: Congratulations you have completed your trial, here is your prize.", MESSAGE_SYS_SAY, npc:getID() );
 	player:SpoofChatPlayer( "Mog: All trials complete for this Item!", MESSAGE_SYS_SAY, npc:getID() );
 end;
