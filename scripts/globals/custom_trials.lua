@@ -19,6 +19,10 @@ local Mythic3 = {19718, 19716, 19719, 19710, 19726, 19720, 19711, 19721, 19713, 
 
 -- function doCustomTrial(mob, killer, isKillShot, killType)
 function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
+	local mobID = 0;
+	if (mob ~= 0 and mob ~= nil) then
+		mobID = mob:getID();
+	end
 	---------------------------------------------------
 	-- Custom Trials
 	---------------------------------------------------
@@ -66,22 +70,22 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 
 	if (utils.inTable(Relic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
-		if (SewwTheSquidLimbedKillCount < 4 and mob:getID() == 17498301) then
+		if (SewwTheSquidLimbedKillCount < 4 and mobID == 17498301) then
 			killer:setVar("Seww_the_Squidlimbed_KILLS", SewwTheSquidLimbedKillCount + 1);
 		end
-		if (MischievousCount < 4 and mob:getID() == 17281149) then
+		if (MischievousCount < 4 and mobID == 17281149) then
 			killer:setVar("Mischievous_Micholas_KILLS", MischievousCount + 1);
 		end
-		if (KeeperKillCount < 4 and mob:getID() == 17272978) then
+		if (KeeperKillCount < 4 and mobID == 17272978) then
 			killer:setVar("Keeper_of_Halidom_KILLS", KeeperKillCount + 1);
 		end
-		if (MegalobugardKillCount < 4 and mob:getID() == 16875741) then
+		if (MegalobugardKillCount < 4 and mobID == 16875741) then
 			killer:setVar("Megalobugard_KILLS", MegalobugardKillCount + 1);
 		end
-		if (DuneWidowKillCount < 3 and mob:getID() == 17244396) then
+		if (DuneWidowKillCount < 3 and mobID == 17244396) then
 			killer:setVar("Dune_Widow_KILLS", DuneWidowKillCount + 1);
 		end
-		if (IntuloKillCount < 4 and mob:getID() == 16793742) then
+		if (IntuloKillCount < 4 and mobID == 16793742) then
 			killer:setVar("Intulo_KILLS", IntuloKillCount + 1);
 		end
 
@@ -119,13 +123,13 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 
 	if (utils.inTable(Relic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
-		if (AdamantoiseKillCount < 7 and mob:getID() == 17301537) then
+		if (AdamantoiseKillCount < 7 and mobID == 17301537) then
 			killer:setVar("Adamantoise_KILLS", AdamantoiseKillCount + 1);
 		end
-		if (BehemothKillCount < 7 and mob:getID() == 17297440) then
+		if (BehemothKillCount < 7 and mobID == 17297440) then
 			killer:setVar("Behemoth_KILLS", BehemothKillCount + 1);
 		end
-		if (FafnirKillCount < 7 and mob:getID() == 17408018) then
+		if (FafnirKillCount < 7 and mobID == 17408018) then
 			killer:setVar("Fafnir_KILLS", FafnirKillCount + 1);
 		end
 
@@ -165,19 +169,19 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	end
 
 	if (utils.inTable(Relic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
-		if (JugglerKillCount < 4 and mob:getID() == 17580248) then
+		if (JugglerKillCount < 4 and mobID == 17580248) then
 			killer:setVar("Juggler_Hecatomb_KILLS", JugglerKillCount + 1);
 		end
-		if (NidhoggKillCount < 4 and mob:getID() == 17408019) then
+		if (NidhoggKillCount < 4 and mobID == 17408019) then
 			killer:setVar("Nidhogg_KILLS", NidhoggKillCount + 1);
 		end
-		if (KingBehemothKillCount < 4 and mob:getID() == 17297441) then
+		if (KingBehemothKillCount < 4 and mobID == 17297441) then
 			killer:setVar("King_Behemoth_KILLS", KingBehemothKillCount + 1);
 		end
-		if (AspidocheloneKillCount < 3 and mob:getID() == 17301538) then
+		if (AspidocheloneKillCount < 3 and mobID == 17301538) then
 			killer:setVar("Aspidochelone_KILLS", AspidocheloneKillCount + 1);
 		end
-		if (AshDragonKillCount < 4 and mob:getID() == 17617147) then
+		if (AshDragonKillCount < 4 and mobID == 17617147) then
 			killer:setVar("Ash_Dragon_KILLS", AshDragonKillCount + 1);
 		end
 		------------------
@@ -223,22 +227,22 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 
 	if (utils.inTable(Mythic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
-		if (ZareehklKillCount < 5 and mob:getID() == 16998873) then
+		if (ZareehklKillCount < 5 and mobID == 16998873) then
 			killer:setVar("Zareehkl_the_Jubilant_KILLS", ZareehklKillCount + 1);
 		end
-		if (BrassBorerKillCount < 5 and mob:getID() == 17027471) then
+		if (BrassBorerKillCount < 5 and mobID == 17027471) then
 			killer:setVar("Brass_Borer_KILLS", BrassBorerKillCount + 1);
 		end
-		if (IririKillCount < 5 and mob:getID() == 17043888) then
+		if (IririKillCount < 5 and mobID == 17043888) then
 			killer:setVar("Iriri_Samariri_KILLS", IririKillCount + 1);
 		end
-		if (VelionisKillCount < 5 and mob:getID() == 16998872) then
+		if (VelionisKillCount < 5 and mobID == 16998872) then
 			killer:setVar("Velionis_KILLS", VelionisKillCount + 1);
 		end
-		if (DextroseKillCount < 5 and mob:getID() == 17031598) then
+		if (DextroseKillCount < 5 and mobID == 17031598) then
 			killer:setVar("Dextrose_KILLS", DextroseKillCount + 1);
 		end
-		if (IrizKillCount < 5 and mob:getID() == 16986429) then
+		if (IrizKillCount < 5 and mobID == 16986429) then
 			killer:setVar("Iriz_Irma_KILLS", IrizKillCount + 1);
 		end
 
@@ -279,16 +283,16 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 
 	if (utils.inTable(Mythic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
-		if (ExperimentalLamiaKillCount < 4 and mob:getID() == 17101205) then
+		if (ExperimentalLamiaKillCount < 4 and mobID == 17101205) then
 			killer:setVar("Experimental_Lamia_KILLS", ExperimentalLamiaKillCount + 1);
 		end
-		if (NosferatuKillCount < 4 and mob:getID() == 17056157) then
+		if (NosferatuKillCount < 4 and mobID == 17056157) then
 			killer:setVar("Nosferatu_KILLS", NosferatuKillCount + 1);
 		end
-		if (GearsKillCount < 4 and mob:getID() == 17072178) then
+		if (GearsKillCount < 4 and mobID == 17072178) then
 			killer:setVar("Armed_Gears_KILLS", GearsKillCount + 1);
 		end
-		if (AchamothKillCount < 4 and mob:getID() == 17031600) then
+		if (AchamothKillCount < 4 and mobID == 17031600) then
 			killer:setVar("Achamoth_KILLS", AchamothKillCount + 1);
 		end
 
@@ -336,22 +340,22 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 
 	if (utils.inTable(Mythic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
-		if (GurfurlurKillCount < 3 and mob:getID() == 17031592) then
+		if (GurfurlurKillCount < 3 and mobID == 17031592) then
 			killer:setVar("Gurfurlur_the_Menacing_KILLS", GurfurlurKillCount + 1);
 		end
-		if (GuloolKillCount < 3 and mob:getID() == 16973900) then
+		if (GuloolKillCount < 3 and mobID == 16973900) then
 			killer:setVar("Gulool_Ja_Ja_KILLS", GuloolKillCount + 1);
 		end
-		if (CerberusKillCount < 3 and mob:getID() == 17027458) then
+		if (CerberusKillCount < 3 and mobID == 17027458) then
 			killer:setVar("Cerberus_KILLS", CerberusKillCount + 1);
 		end
-		if (KhimaraKillCount < 3 and mob:getID() == 17101201) then
+		if (KhimaraKillCount < 3 and mobID == 17101201) then
 			killer:setVar("Khimara_KILLS", KhimaraKillCount + 1);
 		end
-		if (MedusaKillCount < 3 and mob:getID() == 16998862) then
+		if (MedusaKillCount < 3 and mobID == 16998862) then
 			killer:setVar("Medusa_KILLS", MedusaKillCount + 1);
 		end
-		if (HydraKillCount < 3 and mob:getID() == 16986355) then
+		if (HydraKillCount < 3 and mobID == 16986355) then
 			killer:setVar("Hydra_KILLS", HydraKillCount + 1);
 		end
 
