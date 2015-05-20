@@ -53,9 +53,12 @@ function onMobFight(mob,target)
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
         if (mob:AnimationSub() == 1) then
-             mob:AnimationSub(0); -- ground
-             mob:SetMobSkillAttack(false);
              mob:useMobAbility(1026);
+             mob:setLocalVar("Wings", mob:getBattleTime());
+         elseif (mob:AnimationSub() == 2) then
+             mob:AnimationSub(1); -- fly
+             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+             mob:SetMobSkillAttack(true);
              mob:setLocalVar("Wings", mob:getBattleTime());
          elseif (mob:AnimationSub() == 0) then
              mob:AnimationSub(1); -- fly

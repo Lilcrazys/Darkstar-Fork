@@ -13,7 +13,7 @@ require("scripts/globals/utils");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
-    mob:addMod(MOD_DMGRANGE, 50);
+    mob:addMod(MOD_DMGRANGE, -50);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
@@ -89,7 +89,7 @@ function onMobFight(mob,target)
     end
 
     local lastpet = mob:getLocalVar("pop_pet");
-    if (os.time() - lastpet > 60) then
+    if (os.time() - lastpet > 30) then
         local pet1 = GetMobAction(mob:getID()+1);
         local pet2 = GetMobAction(mob:getID()+2);
         local pet3 = GetMobAction(mob:getID()+3);

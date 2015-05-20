@@ -11,8 +11,8 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInibahamutlize(mob)
-    mob:addMod(MOD_DMGMAGIC, 40);
-    mob:addMod(MOD_DMGRANGE, 40);
+    mob:addMod(MOD_DMGMAGIC, -128);
+    mob:addMod(MOD_DMGRANGE, -60);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());

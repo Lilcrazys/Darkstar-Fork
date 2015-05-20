@@ -58,7 +58,7 @@ function onAdditionalEffect(mob,target,damage)
         local duration = 10;
         target:addStatusEffect(EFFECT_AMNESIA,1,0,duration);
         mob:resetEnmity(target);
-        return SUBEFFECT_NONE,0,EFFECT_AMNESIA;
+        return SUBEFFECT_NONE,163,EFFECT_AMNESIA;
     end
 end;
 -----------------------------------

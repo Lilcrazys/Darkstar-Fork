@@ -10,7 +10,7 @@ require("/scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+	return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
@@ -18,8 +18,8 @@ function onMobWeaponSkill(target, mob, skill)
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_NONE,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_NONE,MOBPARAM_WIPE_SHADOWS);
 	target:delHP(dmg);
-    mob:delStatusEffect(EFFECT_ALL_MISS);
-    mob:SetMobSkillAttack(false);
-    mob:AnimationSub(2);
+         mob:delStatusEffect(EFFECT_ALL_MISS);
+         mob:SetMobSkillAttack(false);
+         mob:AnimationSub(2);
 	return dmg;
 end;
