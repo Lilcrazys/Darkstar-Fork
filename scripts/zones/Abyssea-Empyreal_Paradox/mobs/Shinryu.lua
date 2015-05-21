@@ -17,7 +17,6 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 require("scripts/globals/status");
 
 -----------------------------------
------------------------------------
 -- onMobInitialize
 -----------------------------------
 
