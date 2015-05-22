@@ -21,7 +21,7 @@ function onUseWeaponSkill(player, target, wsID)
 
 	local params = {};
 	params.numHits = 2;
-	params.ftp100 = 1.375; params.ftp200 = 2.1875; params.ftp300 = 2.6875;
+	params.ftp100 = 2.375; params.ftp200 = 3.1875; params.ftp300 = 4.6875;
 	params.str_wsc = 0.85 + (player:getMerit(MERIT_TACHI_SHOHA) / 100); params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.0; params.mnd_wsc = 0.0; params.chr_wsc = 0.0;
 	params.crit100 = 0.0; params.crit200 = 0.0; params.crit300 = 0.0;
 	params.canCrit = false;
