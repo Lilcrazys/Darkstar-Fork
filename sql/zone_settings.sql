@@ -332,6 +332,14 @@ INSERT INTO `zone_settings` VALUES (282,0,'127.0.0.1',54230,'Mount_Kamihr',0,0,0
 INSERT INTO `zone_settings` VALUES (283,0,'127.0.0.1',54230,'Silver_Knife',0,0,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (284,1,'127.0.0.1',54230,'Celennia_Memorial_Library',63,63,0,0,0,0.00,0,0);
 INSERT INTO `zone_settings` VALUES (285,1,'127.0.0.1',54230,'Feretory',0,0,0,0,0,0.00,1056,0);
+INSERT INTO `zone_settings` VALUES (286,0,'127.0.0.1',54130,'286',0,0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (287,0,'127.0.0.1',54130,'287',0,0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (288,0,'127.0.0.1',54130,'Escha-ZiTah',80,80,80,80,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (289,0,'127.0.0.1',54130,'289',0,0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (290,0,'127.0.0.1',54130,'290',0,0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (291,0,'127.0.0.1',54130,'291',0,0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54130,'292',0,0,0,0,0,0.00,0,0);
+INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54130,'293',0,0,0,0,0,0.00,0,0);
 
 -- Temp workaround for Legion battles because instancing there isn't ready, so its BCNM for now
 REPLACE INTO `zone_settings` VALUES (183,4,'127.0.0.1',54530,'Maquette_Abdhaljs-Legion',143,143,143,143,0,0.00,145,0);
