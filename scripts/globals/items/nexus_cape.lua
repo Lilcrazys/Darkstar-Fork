@@ -12,6 +12,8 @@ require("scripts/globals/teleports");
 -----------------------------------------
 
 function onItemCheck(target)
+    return 56;
+--[[
     local leader = target:getPartyLeader();
     local leaderZone = GetPlayerByName(target:getPartyLeader()):getZoneID();
     local validZoneList =
@@ -42,6 +44,7 @@ function onItemCheck(target)
     end
 
     return 56; -- Leader wasn't in a valid zone, fail.
+]]
 end;
 
 -----------------------------------------
