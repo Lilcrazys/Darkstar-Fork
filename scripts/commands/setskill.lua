@@ -133,7 +133,9 @@ function onTrigger(player, skill, skillLV, target)
             elseif (skillLV >= 88 and skillLV < 98) then
                 targ:setSkillRank(skillID,9);   -- Veteran 88-98
             elseif (skillLV >= 98 and skillLV < 101) then
-                targ:setSkillRank(skillID,10);  -- Expert 98-100
+                -- targ:setSkillRank(skillID,10);  -- Expert 98-100
+                -- Temp Veteran rank till we implement additional cap increase miniquests
+                targ:setSkillRank(skillID,9);
             elseif (skillLV > 100) then
                 -- Future editing will be needed here.
                 targ:setSkillRank(skillID,10);

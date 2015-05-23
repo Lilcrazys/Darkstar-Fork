@@ -8,12 +8,13 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onEffectGain(target,effect)
+--[[
 	local timer = target:getVar("Abysseatime");
 	local settick = timer;
 
 	effect:getTick(timer-1);
 	effect:setTick(1);
-
+]]
 end;
 
 -----------------------------------
@@ -21,6 +22,7 @@ end;
 -----------------------------------
 
 function onEffectTick(target,effect)
+--[[
 	local TextIDs = "scripts/zones/" .. target:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
 	require(TextIDs);
@@ -62,6 +64,7 @@ function onEffectTick(target,effect)
 			target:messageSpecial(EXITING_NOW);
 		end
 	end
+]]
 end;
 
 -----------------------------------
@@ -69,10 +72,11 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
+--[[
 	local TextIDs = "scripts/zones/" .. target:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
 	require(TextIDs);
---[[----------------------------
+----------------------------
 	ABYSSEA_KONSCHTAT  = 15;
 	ABYSSEA_TAHRONGI   = 45;
 	ABYSSEA_LA_THEINE  = 132;
@@ -82,7 +86,7 @@ function onEffectLose(target,effect)
 	ABYSSEA_ALTEPA	   = 218;
 	ABYSSEA_ULEGUERAND = 253;
 	ABYSSEA_GRAUBERG   = 254;
-----------------------------]]--
+----------------------------
 	local Zone = target:getZone();
 	target:delStatusEffect(EFFECT_ATMA);
 
@@ -107,4 +111,5 @@ function onEffectLose(target,effect)
 			target:setPos(0,0,0,0,0);
 		end
 	end
+]]
 end;
