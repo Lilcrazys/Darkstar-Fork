@@ -252,7 +252,7 @@ INSERT INTO `item_armor` VALUES ('21229', 'cibitshavore', '99', '3265', '34', '0
 
 INSERT INTO `item_armor` VALUES ('20857', 'svarga', '99', '1', '714', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('21038', 'senkuto', '99', '2048', '612', '0', '0', '1', '0');
-INSERT INTO `item_armor` VALUES ('20616', 'ipetam', '99', '525376', '710', '0', '0', '3', '0');
+INSERT INTO `item_armor` VALUES ('20616', 'ipetam', '99', '262704', '710', '0', '0', '3', '0');
 INSERT INTO `item_armor` VALUES ('21173', 'kaladanda', '99', '1589788', '604', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20530', 'ohrmazd', '99', '262643', '134', '0', '0', '1', '0');
 INSERT INTO `item_armor` VALUES ('20721', 'mimesis', '99', '32768', '725', '0', '0', '3', '0');
