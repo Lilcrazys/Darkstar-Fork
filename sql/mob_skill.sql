@@ -5338,9 +5338,9 @@ INSERT INTO `mob_skill` VALUES (1290,1203,1140,'Prodigious_spike',0,15.0,2000,15
 INSERT INTO `mob_skill` VALUES (1291,1203,1141,'Impulsion',1,15.0,2000,1500,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (1292,1203,1143,'Absolute_terror',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1293,1203,1142,'Horrible_roar',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1295,1203,1136,'Megaflare',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1296,1203,1137,'Gigaflare',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1297,1203,1138,'Teraflare',1,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1295,1203,1136,'Megaflare',1,19.5,2000,2500,4,0,0,0.25);
+INSERT INTO `mob_skill` VALUES (1296,1203,1137,'Gigaflare',1,20.5,2000,3300,4,0,0,0.25);
+INSERT INTO `mob_skill` VALUES (1297,1203,1138,'Teraflare',1,30.0,2000,5400,4,0,0,0.4);
 INSERT INTO `mob_skill` VALUES (436,1203,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (438,1203,438,'Invincible',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (3009,1203,432,'Elemental_Sforzo',0,7.0,2000,0,1,2,0,0);
@@ -5384,7 +5384,7 @@ INSERT INTO `mob_skill` VALUES (569,7600,497,'Wind_Blade2',0,7,2000,0,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (570,7600,498,'Earth_Blade',0,7,2000,0,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (571,7600,499,'Lightning_Blade',0,7,2000,0,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (572,7600,500,'Water_Blade',0,7,2000,0,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (573,7600,501,'Mars_Great_Wheel',1,7.0,1200,900,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (573,7600,501,'Mars_Great_Wheel',1,7.0,1200,900,4,0,0,11);
 INSERT INTO `mob_skill` VALUES (432,7600,2111,'Mighty_Strikes',0,7.0,2000,0,1,2,75,0);
 INSERT INTO `mob_skill` VALUES (439,7600,432,'Blood_Weapon',0,7.0,2000,0,1,2,75,0);
 

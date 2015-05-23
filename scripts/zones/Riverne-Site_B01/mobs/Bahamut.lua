@@ -38,10 +38,13 @@ function onMobSpawn(mob)
     mob:setMod(MOD_EARTH_AFFINITY,5);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_HUMANOID_KILLER, 5);
-    mob:setMod(MOD_TERRORRES, 100);
+    mob:setMod(MOD_TERRORRES, 200);
+
+    -- addMod
+    mob:addMod(MOD_STUNRES,33);
+    mob:addMod(MOD_THUNDERRES,33);
 end;
 
 -----------------------------------
@@ -67,7 +70,7 @@ function onMobFight(mob,target)
 
 	if (mob:getHPP() <= 10 and bahamut_2hr == 8) then
 		mob:useMobAbility(1297); -- Teraflare
-		mob:useMobAbility(438); -- Invinceible
+		mob:useMobAbility(438); -- Invincible
 		mob:setLocalVar("bahamut_2hr", 9);
 	elseif (mob:getHPP() <= 20 and bahamut_2hr == 7) then
 		mob:useMobAbility(1297); -- Gigaflare
@@ -75,7 +78,7 @@ function onMobFight(mob,target)
 		mob:setLocalVar("bahamut_2hr", 8);
 	elseif (mob:getHPP() <= 30 and bahamut_2hr == 6) then
 		mob:useMobAbility(1297); -- Gigaflare
-		mob:useMobAbility(438); -- Invinceible
+		mob:useMobAbility(438); -- Invincible
 		mob:setLocalVar("bahamut_2hr", 7);
 	elseif (mob:getHPP() <= 40 and bahamut_2hr == 5) then
 		mob:useMobAbility(1296); -- Gigaflare
@@ -83,7 +86,7 @@ function onMobFight(mob,target)
 		mob:setLocalVar("bahamut_2hr", 6);
 	elseif (mob:getHPP() <= 50 and bahamut_2hr == 4) then
 		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(438); -- Invinceible
+		mob:useMobAbility(438); -- Invincible
 		mob:setLocalVar("bahamut_2hr", 5);
 	elseif (mob:getHPP() <= 60 and bahamut_2hr == 3) then
 		mob:useMobAbility(1296); -- Gigaflare
@@ -91,7 +94,7 @@ function onMobFight(mob,target)
 		mob:setLocalVar("bahamut_2hr", 4);
 	elseif (mob:getHPP() <= 70 and bahamut_2hr == 2) then
 		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(438); -- Invinceible
+		mob:useMobAbility(438); -- Invincible
 		mob:setLocalVar("bahamut_2hr", 3);
 	elseif (mob:getHPP() <= 80 and bahamut_2hr == 1) then
 		mob:useMobAbility(1296); -- Gigaflare
@@ -99,7 +102,7 @@ function onMobFight(mob,target)
 		mob:setLocalVar("bahamut_2hr", 2);
 	elseif (mob:getHPP() <= 90 and bahamut_2hr == 0) then
 		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(438); -- Invinceible
+		mob:useMobAbility(438); -- Invincible
 		mob:setLocalVar("bahamut_2hr", 1);
 	end
 end;
