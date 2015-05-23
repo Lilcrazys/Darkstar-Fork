@@ -9,12 +9,10 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     if (mob:getHPP() <= 66) then
-        if (mob:AnimationSub() == 1) then 
             return 0;
-        else 
+        else
             return 1;
-        end    
-    end    
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)
