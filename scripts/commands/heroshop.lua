@@ -3,7 +3,12 @@
 -- auth: TeoTwawki
 -- desc: like @shop, but for accomplished adventurers only
 --------------------------------------------------------------
-
+require("scripts/globals/atma");
+require("scripts/globals/settings");
+require("scripts/globals/missions");
+require("scripts/globals/titles");
+require("scripts/zones/Abyssea-Empyreal_Paradox/npcs/Prishe");
+--------------------------------------------------------------
 cmdprops =
 {
 	permission = 4,
@@ -26,7 +31,6 @@ function onTrigger(player,page)
 		return
 	end
 
-	require("scripts/globals/missions");
 	local Sandy_clear = player:hasCompletedMission(SANDORIA,THE_HEIR_TO_THE_LIGHT);
 	local Basty_clear = player:hasCompletedMission(BASTOK,WHERE_TWO_PATHS_CONVERGE);
 	local Windy_clear = player:hasCompletedMission(WINDURST,MOON_READING);
@@ -34,7 +38,7 @@ function onTrigger(player,page)
 	local Chains_clear = player:hasCompletedMission(COP,DAWN);
 	local AhtUrgan_clear = player:hasCompletedMission(TOAU,THE_EMPRESS_CROWNED);
 	local Goddess_clear = player:hasCompletedMission(WOTG,A_TOKEN_OF_TROTH);
-	local Abyssea_clear = player:hasCompletedQuest(ABYSSEA,THE_WYRM_GOD);
+	local Abyssea_clear = (countLunars(player) == 3 and title == 10);
 	local Dyna_clearA = player:hasKeyItem(HYDRA_CORPS_BATTLE_STANDARD);
 	local Dyna_clearB = player:hasKeyItem(DYNAMIS_TAVNAZIA_SLIVER);
 	local Legion_clear = player:hasTitle(LEGENDARY_LEGIONNAIRE);
@@ -50,7 +54,7 @@ function onTrigger(player,page)
 		if (Sandy_clear == true and Basty_clear == true and Windy_clear == true) then
 			local stock_1 =
 			{
-				-- ItemID,    Price,    -- Item Name
+				15793,    1000000,    -- Anniversary Ring
 				-- ItemID,    Price,    -- Item Name
 				-- ItemID,    Price,    -- Item Name
 			};
@@ -74,9 +78,9 @@ function onTrigger(player,page)
 		if (Chains_clear == true) then
 			local stock_3 =
 			{
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
+				15545,    5000000,    -- Tamas Ring
+				15543,    5000000,    -- Rajas Ring
+				15544,    5000000,    -- Sattva Ring
 				-- ItemID,    Price,    -- Item Name
 				-- ItemID,    Price,    -- Item Name
 			};
@@ -110,18 +114,22 @@ function onTrigger(player,page)
 		end
 
 	elseif (page == 6) then -- Unlocked by completing all of Abyssea.
-		-- if (player:getVar(MyVariableName) == 1) then
+		if (Abyssea_clear == true) then
 			local stock_6 =
 			{
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
+				11362,    5000000,    -- Twilight Mail
+				11363,    5000000,    -- Twilight Cloak
+				15959,    1000000,    -- Twilight Belt
+				18551,    1000000,    -- Twilight Scythe
+				11625,    1000000,    -- Twilight Torque
+				11798,    3000000,    -- Twilight Helm
+				19132,    1000000,    -- Twilight Knife
+				16259,    1000000,    -- Twilight Cape
+				5877,    50000,    -- Terror Screen
+				5879,    50000,    -- Doom Screen
 			};
 			showShop(player, STATIC, stock_6);
-		-- end
+		end
 
 	elseif (page == 7) then -- Unlocked by clearing every Dynamis zone.
 		-- if (player:getVar(MyVariableName) == 1) then
@@ -137,7 +145,7 @@ function onTrigger(player,page)
 		-- end
 
 	elseif (page == 8) then -- Unlocked by clearing every Legion battle.
-		-- if (player:getVar(MyVariableName) == 1) then
+		if (Legion_clear == true) then
 			local stock_8 =
 			{
 				-- ItemID,    Price,    -- Item Name
@@ -147,7 +155,7 @@ function onTrigger(player,page)
 				-- ItemID,    Price,    -- Item Name
 			};
 			showShop(player, STATIC, stock_8);
-		-- end
+		end
 
 	else
 		player:PrintToPlayer( string.format( "Page %i not found.", page ) );
