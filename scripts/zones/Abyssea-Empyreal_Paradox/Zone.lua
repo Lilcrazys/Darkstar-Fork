@@ -1,6 +1,6 @@
 -----------------------------------
 --
--- Zone: Abyssea - Empyreal Paradox (256)
+-- Zone: Abyssea - Empyreal Paradox (255)
 --
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Empyreal_Paradox/TextIDs"] = nil;
