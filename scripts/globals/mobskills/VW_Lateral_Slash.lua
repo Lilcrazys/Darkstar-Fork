@@ -1,33 +1,33 @@
 ---------------------------------------------
---  Vertical Slash
+--  Lateral Slash
 --
---  Description: Vertically slashes a single target. Additional effect: Accuracy Down
+--  Description: Laterally slashes a single target. Additional effect: Defense Down
 --  Type: Physical
 --  Utsusemi/Blink absorb: 1 shadow
 --  Range: Melee
---  Notes:
+--  Notes: Reduces defense by 75%.  Can be removed with Monk Job Ability Counterstance.
 ---------------------------------------------
 
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
 require("/scripts/globals/monstertpmoves");
 
-------------------------------------
+---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
 	local numhits = 1;
-	local accmod = 2;
-	local dmgmod = 2.6;
+	local accmod = 20;
+	local dmgmod = 3;
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
 
-	local typeEffect = EFFECT_ACCURACY_DOWN;
-
-         MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 25, 0, 120);
+	local typeEffect = EFFECT_DEFENSE_DOWN;
+         MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 125, 0, 60);
 
 	target:delHP(dmg);
 	return dmg;

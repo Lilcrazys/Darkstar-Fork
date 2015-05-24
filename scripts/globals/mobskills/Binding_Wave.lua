@@ -16,7 +16,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_BIND;
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30));
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 10, 0, 30));
 
     return typeEffect;
 end;

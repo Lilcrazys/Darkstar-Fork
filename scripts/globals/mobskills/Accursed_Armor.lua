@@ -1,10 +1,10 @@
 ---------------------------------------------
---  Words of Bane
+--  Accursed  Armor
 --
---  Description: Curses a single target.
---  Type: Enfeebling
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Single Target
+--  Description: Covers the user in curse spikes.
+--  Type: Enhancing
+--  Utsusemi/Blink absorb: N/A
+--  Range: Self
 --  Notes:
 ---------------------------------------------
 
@@ -19,9 +19,11 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_CURSE_I;
+	local power = 75;
+	local duration = 90;
+	local typeEffect = EFFECT_CURSE_SPIKES;
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 50, 0, 360));
+    skill:setMsg(MobBuffMove(mob, typeEffect, power, 0, duration));
 
 	return typeEffect;
 end;

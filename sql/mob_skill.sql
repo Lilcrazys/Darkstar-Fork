@@ -5220,28 +5220,28 @@ INSERT INTO `mob_skill` VALUES (2261,1108,809,'VW_Quake_Blast',1,20.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (2260,1108,813,'VW_Gravitic_Horn',1,20.0,3000,1500,4,0,0,3); -- need correct animation
 
 -- Murk-Veined_Baneberry (1109)
-INSERT INTO `mob_skill` VALUES (527,1109,455,'Words_of_Bane',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (529,1109,457,'Light_of_Penance',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (530,1109,458,'Lateral_Slash',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (531,1109,459,'Vertical_Slash',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab',0,3.4,3000,3500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (665,1109,504,'Everyones_Rancor',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (527,1109,455,'Words_of_Bane',1,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (529,1109,457,'Light_of_Penance',1,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (530,1109,458,'VW_Lateral_Slash',0,7.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (531,1109,459,'VW_Vertical_Slash',0,7.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab',0,3.4,3000,3500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (665,1109,504,'VW_Everyones_Rancor',1,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2137,1109,455,'Ritual_Bind',1,15.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Melancholic_Moira (1110)
 INSERT INTO `mob_skill` VALUES (63,1110,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (470,1110,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2318,1110,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1076,1110,63,'EE_Extremely_Bad_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1076,1110,63,'EE_Extremely_Bad_Breath',4,15.0,6000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2319,1110,63,'Tainting_Breath',4,15.0,2000,1500,4,0,0,0);
 
 -- Belphoebe (1111)
-INSERT INTO `mob_skill` VALUES (1939,1111,1583,'Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1940,1111,1584,'Summer_Breeze',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1941,1111,1585,'Autumn_Breeze',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1942,1111,1586,'Winter_Breeze',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1943,1111,1587,'Cyclonic_Turmoil',1,15.0,2000,1500,4,0,0,5);
-INSERT INTO `mob_skill` VALUES (2262,1111,1582,'Norn_Arrows',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1939,1111,1583,'VW_Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1940,1111,1584,'VW_Summer_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1941,1111,1585,'VW_Autumn_Breeze',1,15.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1942,1111,1586,'VW_Winter_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1943,1111,1587,'VW_Cyclonic_Turmoil',1,15.0,2000,1500,4,0,0,5);
+INSERT INTO `mob_skill` VALUES (2262,1111,1582,'VW_Norn_Arrows',1,20.0,2000,1500,4,0,0,3);
 
 -- Kholomodumo (1112)
 INSERT INTO `mob_skill` VALUES (2135,1112,373,'Amnesic_Blast',0,10.0,2000,1500,4,0,0,0);

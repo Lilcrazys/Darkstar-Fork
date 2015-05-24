@@ -732,7 +732,7 @@ EFFECT_DYNAMIS                  = 800
 EFFECT_MEDITATE                 = 801 -- Dummy effect for SAM Meditate JA
 EFFECT_ATMA_2                   = 802 -- Dummy for 2nd ATMA effect
 EFFECT_ATMA_3                   = 803 -- Dummy for 3rd ATMA effect
--- EFFECT_PLACEHOLDER              = 804 -- Description
+EFFECT_CURSE_SPIKES              = 804 -- curse spikes
 -- 804-1013
 ------------------------------------------------
 -- Start of LegionXI custom section

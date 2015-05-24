@@ -28,7 +28,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1900);
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DOUBLE_ATTACK,15);
-    mob:setMod(MOD_HASTE_ABILITY, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 35);
 
 
     -- addMod
@@ -58,9 +58,8 @@ function onAdditionalEffect(mob,target,damage)
     if (math.random(1,15) ~= 7 or target:hasStatusEffect(EFFECT_PETRIFICATION) == true) then
         return 0,0,0;
     else
-        local duration = 15;
-        target:addStatusEffect(EFFECT_PETRIFICATION,10,0,duration);
-        return SUBEFFECT_PETRIFY,0,EFFECT_PETRIFICATION;
+        target:addStatusEffect(EFFECT_PETRIFICATION,10,0,15);
+        return SUBEFFECT_PETRIFY,163,EFFECT_PETRIFICATION;
     end
 end;
 -----------------------------------
