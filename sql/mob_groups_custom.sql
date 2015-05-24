@@ -37,7 +37,7 @@ REPLACE INTO `mob_groups` VALUES (899,1242,34,1056,0,884,0,0,101,102,0); -- Eo Z
 REPLACE INTO `mob_groups` VALUES (901,2113,34,0,128,0,0,0,100,100,0); -- Ix Ghrah
 REPLACE INTO `mob_groups` VALUES (914,300,35,1056,0,216,0,0,101,105,0); -- Aw Ghrah
 REPLACE INTO `mob_groups` VALUES (915,301,35,1056,0,0,0,0,99,103,0); -- Aw zdei
-REPLACE INTO `mob_groups` VALUES (918,2114,35,0,128,0,0,35000,101,105,0); -- Ix zdei
+REPLACE INTO `mob_groups` VALUES (918,2114,35,0,128,0,0,35000,85,87,0); -- Ix zdei
 
 -- Om ' Aern
 -- nin
