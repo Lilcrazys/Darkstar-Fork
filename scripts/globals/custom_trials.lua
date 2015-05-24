@@ -1,5 +1,4 @@
 -----------------------------------
---
 -- Functions for LegionXI custom trials content
 -- Author: Teo & Omni LegionFFXI
 -----------------------------------

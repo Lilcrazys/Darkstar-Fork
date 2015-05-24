@@ -33,7 +33,7 @@ function onZoneIn( player, prevZone)
 
     local UnbridledPassionCS = player:getVar("unbridledPassion");
 
-    if(prevZone == 135) then -- warp player to a correct position after dynamis
+    if (prevZone == 135) then -- warp player to a correct position after dynamis
         player:setPos(569.312,-0.098,-270.158,90);
     end
 
@@ -41,12 +41,12 @@ function onZoneIn( player, prevZone)
         player:setPos( -136.287, -23.268, 137.302, 91);
     end
 
-    if (player:hasKeyItem( VIAL_OF_SHROUDED_SAND) == false and player:getRank() >= 6 and player:getMainLvl() >= 65 and player:getVar( "Dynamis_Status") == 0) then
+    if (player:hasKeyItem(VIAL_OF_SHROUDED_SAND) == false and player:getRank() >= 6 and player:getMainLvl() >= 65 and player:getVar("Dynamis_Status") == 0) then
         player:setVar( "Dynamis_Status", 1);
         cs = 0x000D;
     elseif (triggerLightCutscene(player)) then -- Quest: I Can Hear A Rainbow
         cs = 0x0009;
-    elseif(UnbridledPassionCS == 3) then
+    elseif (UnbridledPassionCS == 3) then
         cs = 0x0004;
     end
 

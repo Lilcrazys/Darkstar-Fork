@@ -126,6 +126,12 @@ end;
 -----------------------------------
 
 function onTrade(player,npc,trade)
+	if (player:getFreeSlotsCount() < 1) then
+		player:PrintToPlayer("Not enough free space! This message is here to prevent item loss.");
+		return;
+	end
+
+
    local itemid = hasRelic(trade,2);
    local eventParams = {}; -- item1, item2, item3, num_items, currencytype, currencyamount, finalvar
    local currentRelic = player:getVar("RELIC_IN_PROGRESS"); -- Stores which item has been taken from the player
@@ -202,7 +208,22 @@ function onTrade(player,npc,trade)
          elseif (eventParams[7] == 3) then
             player:setVar("RELIC_DUE_AT",os.time() + RELIC_3RD_UPGRADE_WAIT_TIME);
          end
+
+		-- Begin currency theft workarounds...
+		if (count == 1) then
+			if (trade:hasItemQty(1451,1)) then
+				player:addItem(1451,1); -- R. Stripeshell
+			elseif (trade:hasItemQty(1454,1)) then
+				player:addItem(1454,1); -- R. Goldpiece
+				player:PrintToPlayer("ONE!");
+			elseif (trade:hasItemQty(1457,1)) then
+				player:addItem(1457,1); -- 10,000 Byne Bill
+			end
+		end
+		-- End currency theft workarounds...
+
          player:tradeComplete();
+
          player:startEvent(13, currentRelic, eventParams[5], eventParams[6], 0, 0, 0, 0, eventParams[8]);
       end
    end
