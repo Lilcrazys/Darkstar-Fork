@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 300);
     mob:addMod(MOD_DMGRANGE, -50);
     mob:addMod(MOD_DMGMAGIC, -128);
-    mob:setMod(MOD_REGAIN, 30);
+    mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
@@ -44,6 +44,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 125);
+    mob:addMod(MOD_MDEF, 25);
     mob:setMod(MOD_HUMANOID_KILLER, 7);
     mob:setMod(MOD_TERRORRES, 100);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
@@ -86,7 +87,6 @@ function onMobFight(mob, target)
             mob:setLocalVar("Shinryu_2hr", 3);
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
             mob:setMod(MOD_REGAIN,40);
-            mob:setMod(MOD_TRIPLE_ATTACK, 25);
             mob:setMod(MOD_UFASTCAST, 95);
         end
     elseif (mob:getHPP() <= 30) then

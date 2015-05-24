@@ -3575,7 +3575,7 @@ INSERT INTO `item_weapon` VALUES (20564,'twashtar',2,0,1,1,176,89,0);
 INSERT INTO `item_weapon` VALUES (20618,'Sandung',2,0,1,1,200,102,0);
 INSERT INTO `item_weapon` VALUES (20634,'leisilonu_+1',2,0,1,1,183,75,0);
 INSERT INTO `item_weapon` VALUES (20635,'forefront_dagger',2,0,1,1,183,53,0);
-INSERT INTO `item_weapon` VALUES (20636,'izhiikoh',2,0,0,1,200,108,0);
+INSERT INTO `item_weapon` VALUES (20636,'izhiikoh',2,0,1,1,200,108,0);
 INSERT INTO `item_weapon` VALUES (20637,'aphotic_kukri',0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (20638,'coalition_dirk',2,0,1,1,211,47,0);
 INSERT INTO `item_weapon` VALUES (20639,'oxidant_baselard',0,0,0,1,0,0,0);

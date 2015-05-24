@@ -200,6 +200,7 @@ INSERT INTO `mob_droplist` VALUES (4539,0,3225,274); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4539,0,3223,370); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4539,0,3224,234); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4539,0,3222,434); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4539,0,2950,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4540,0,11641,320); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4541,0,11640,420); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4542,0,28576,225); -- COMMENT ME
@@ -1197,7 +1198,7 @@ INSERT INTO `mob_droplist` VALUES (9254,0,2212,132); -- Gunpowder swathe 13.2%
 INSERT INTO `mob_droplist` VALUES (9254,0,2165,14); -- Qutrub gorget 1.4%
 
 -- ------------------ Cannered Noz ------------------------------
-INSERT INTO `mob_droplist` VALUES (9255,0,2947,113); -- Exorcised skull 11.3%
+INSERT INTO `mob_droplist` VALUES (9255,0,2947,430); -- Exorcised skull 11.3%
 INSERT INTO `mob_droplist` VALUES (9255,0,11607,14); -- Artemis' Medal 1.4%
 INSERT INTO `mob_droplist` VALUES (9255,0,786,1); -- Ruby 0.1%
 INSERT INTO `mob_droplist` VALUES (9255,0,804,5); -- Spinel 0.5%
@@ -1478,7 +1479,7 @@ INSERT INTO `mob_droplist` VALUES (1835,0,20904,200);
 INSERT INTO `mob_droplist` VALUES (1835,0,21040,200);
 -- love
 INSERT INTO `mob_droplist` VALUES (1836,0,20954,200);
-INSERT INTO `mob_droplist` VALUES (1836,0,21229,200);
+INSERT INTO `mob_droplist` VALUES (1836,0,20636,200);
 -- hope
 INSERT INTO `mob_droplist` VALUES (1834,0,20994,200);
 INSERT INTO `mob_droplist` VALUES (1834,0,21229,200);

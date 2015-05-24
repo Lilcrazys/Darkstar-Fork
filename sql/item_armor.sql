@@ -9859,7 +9859,7 @@ INSERT INTO `item_armor` VALUES ('21340', 'halakaala', '99', '4194303', '28', '0
 INSERT INTO `item_armor` VALUES ('21341', 'oreiads_tathlum', '99', '1589788', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21342', 'erlenes_notebook', '99', '4194303', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21364', 'elders_grip_+1', '99', '4194303', '0', '0', '0', '2', '0');
-INSERT INTO `item_armor` VALUES ('21389', 'honed_tathlum', '99', '5179460', '0', '0', '0', '8', '0');
+INSERT INTO `item_armor` VALUES ('21389', 'honed_tathlum', '99', '1541154', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21421', 'immolation_grip', '99', '4194303', '0', '0', '0', '2', '0');
 INSERT INTO `item_armor` VALUES ('21429', 'mephitis_grip', '99', '8388606', '0', '0', '0', '2', '0');
 INSERT INTO `item_armor` VALUES ('21455', 'alternator', '99', '262144', '0', '0', '0', '4', '0');

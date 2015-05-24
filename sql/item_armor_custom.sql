@@ -16,6 +16,7 @@
 
 INSERT INTO `item_armor` VALUES ('21382', 'dosis_tathlum', '99', '4194303', '0', '0', '0', '8', '0');
 INSERT INTO `item_armor` VALUES ('21424', 'zuuxowu_grip', '99', '4194303', '0', '0', '0', '2', '0');
+INSERT INTO `item_armor` VALUES ('21428', 'tzacab_grip', '99', '4194303', '0', '0', '0', '2', '0');
 
 -- --------------------------------------  Relic Reforge 109  -----------------------------
 INSERT INTO `item_armor` VALUES ('26624', 'agoge_mask', '99', '1', '65', '0', '0', '16', '0');
