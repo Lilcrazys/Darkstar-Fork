@@ -32,7 +32,9 @@ function onMobWeaponSkill(target, mob, skill)
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     end
     mob:setMod(MOD_DMGPHYS,0);
-    mob:setMod(MOD_DMGMAGIC,-50);
+    mob:setMod(MOD_DMGMAGIC,-128);
+    mob:addMod(MOD_MATT,30);
+    mob:addMod(MOD_ATT,-150);
     mob:setLocalVar("stance", 1);
     return 0;
 end;

@@ -5209,7 +5209,7 @@ INSERT INTO `mob_skill` VALUES (177,1106,176,'VW_Digest',4,10.0,2000,1500,4,0,0,
 INSERT INTO `mob_skill` VALUES (187,1107,187,'Bubble_Curtain',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (186,1107,186,'VW_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (189,1107,189,'Scissor_Guard',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2257,1107,188,'VW_Mega_Scissors',1,10.0,2000,1500,4,0,0,3); -- need correct animation
+INSERT INTO `mob_skill` VALUES (2257,1107,188,'VW_Mega_Scissors',1,10.0,2000,1500,4,0,0,2); -- need correct animation
 INSERT INTO `mob_skill` VALUES (2256,1107,186,'VW_Venom_Shower',1,20.0,2000,1500,4,0,0,0); -- need correct animation
 
 -- Ogbunabali (1108)
@@ -5244,25 +5244,25 @@ INSERT INTO `mob_skill` VALUES (1943,1111,1587,'VW_Cyclonic_Turmoil',1,15.0,2000
 INSERT INTO `mob_skill` VALUES (2262,1111,1582,'VW_Norn_Arrows',1,20.0,2000,1500,4,0,0,3);
 
 -- Kholomodumo (1112)
-INSERT INTO `mob_skill` VALUES (2135,1112,373,'Amnesic_Blast',0,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2135,1112,373,'VW_Amnesic_Blast',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (378,1112,378,'Meteor',2,30.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (372,1112,372,'Wild_Horn',4,10.0,2000,1500,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (373,1112,373,'Thunderbolt',1,40.0,2000,1500,4,8,0,0);
+INSERT INTO `mob_skill` VALUES (372,1112,372,'VW_Wild_Horn',4,10.0,2000,1500,4,8,0,3);
+INSERT INTO `mob_skill` VALUES (373,1112,373,'VW_Thunderbolt',1,40.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (2134,1112,376,'Accursed_Armor',0,30.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (377,1112,377,'Howl',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2330,1112,378,'Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2330,1112,378,'VW_Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
 
 -- Lord_Asag (1113)
-INSERT INTO `mob_skill` VALUES (1850,1113,1449,'Bloodrake',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1850,1113,1449,'VW_Bloodrake',0,7.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (1852,1113,1451,'Nosferatus_kiss',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1854,1113,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1854,1113,1454,'VW_Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1856,1113,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
 
 -- Akupara (1114)
 INSERT INTO `mob_skill` VALUES (548,1114,476,'Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (550,1114,478,'Tortoise_Stomp_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (550,1114,478,'VW_Tortoise_Stomp',0,7.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (552,1114,480,'Earth_Breath',4,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2329,1114,478,'Tetsudo_Tremor',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2329,1114,478,'VW_Tetsudo_Tremor',0,7.0,2000,1500,4,0,0,3);
 
 -- Celaeno (1115)
 INSERT INTO `mob_skill` VALUES (2469,1115,1912,'Rending_talons',0,7.0,2000,1000,4,0,0,0);
@@ -5284,10 +5284,10 @@ INSERT INTO `mob_skill` VALUES (2458,1116,1900,'Yaksha_stance',1,18.0,2000,1000,
 
 -- Voidwrought (1117)
 INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',0,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',1,12.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2363,1117,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2364,1117,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2363,1117,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2364,1117,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2365,1117,1819,'Incinerator',1,12.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2366,1117,1820,'Arm_canon',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2367,1117,1821,'Ballistic_kick',1,12.0,2000,1000,4,0,0,3);

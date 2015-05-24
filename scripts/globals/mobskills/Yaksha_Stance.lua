@@ -33,6 +33,8 @@ function onMobWeaponSkill(target, mob, skill)
     end
     mob:setMod(MOD_DMGPHYS,-50);
     mob:setMod(MOD_DMGMAGIC,0);
+    mob:addMod(MOD_MATT,-30);
+    mob:addMod(MOD_ATT,150);
     mob:setLocalVar("stance", 0);
     return 0;
 end;
