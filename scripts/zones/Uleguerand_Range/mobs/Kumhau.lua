@@ -82,4 +82,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
 end;
