@@ -97,4 +97,5 @@ local CHANCE = 20;
 if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(745) == false) then
 killer:addSpell(745);
 end
+mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
 end;
