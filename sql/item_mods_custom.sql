@@ -12731,7 +12731,6 @@ INSERT INTO `item_mods` VALUES (28183, 26, 18); --
 INSERT INTO `item_mods` VALUES (28183, 31, 47); --
 INSERT INTO `item_mods` VALUES (28183, 108, 47); --
 INSERT INTO `item_mods` VALUES (28183, 68, 33); --
-INSERT INTO `item_mods` VALUES (28183, 31, 47); --
 INSERT INTO `item_mods` VALUES (28183, 27, -5); --
 
 -- feet (28321)
