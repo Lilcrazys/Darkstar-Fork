@@ -5265,6 +5265,8 @@ INSERT INTO `mob_skill` VALUES (552,1114,480,'Earth_Breath',4,15.0,2000,1500,4,0
 INSERT INTO `mob_skill` VALUES (2329,1114,478,'VW_Tetsudo_Tremor',0,7.0,2000,1500,4,0,0,3);
 
 -- Celaeno (1115)
+INSERT INTO `mob_skill` VALUES (1849,1115,1861,'Celaeno_Melee',0,9.5,2000,0,4,16,0,2);
+INSERT INTO `mob_skill` VALUES (1850,1115,1915,'Celaeno_Melee_AoE',1,9.5,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2469,1115,1912,'Rending_talons',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2470,1115,1913,'Shrieking_gale',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2471,1115,1914,'Wings_of_woe',1,15.0,2000,1000,4,0,0,0);

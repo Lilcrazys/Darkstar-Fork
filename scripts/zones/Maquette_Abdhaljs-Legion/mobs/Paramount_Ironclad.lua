@@ -33,10 +33,10 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 15);
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
 
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    
+
 end;
 
 -----------------------------------
@@ -51,29 +51,8 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob, target)
-    local Paramount_Ironclad_2hr_Used = 0;
-    if (mob:getLocalVar("Paramount_Ironclad_2hr_Used") ~= nil) then
-        Paramount_Ironclad_2hr_Used = mob:getLocalVar("Paramount_Ironclad_2hr_Used");
-    end
-
-    if (mob:getHPP() <= 10) then
-        if (Paramount_Ironclad_2hr_Used == 2) then
-            mob:useMobAbility(434); -- HF
-            mob:setLocalVar("Paramount_Ironclad_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 30) then
-        if (Paramount_Ironclad_2hr_Used == 1) then
-            mob:useMobAbility(434); -- HF
-            mob:setLocalVar("Paramount_Ironclad_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 70) then
-        if (Paramount_Ironclad_2hr_Used == 0) then
-            mob:useMobAbility(434); -- HF
-            mob:setLocalVar("Paramount_Ironclad_2hr_Used", 1);
-        end
-    end
-end;
+-- function onMobFight(mob, target)
+-- end;
 
 -----------------------------------
 -- onMagicHit

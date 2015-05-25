@@ -33,9 +33,7 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_DEF,-100);
-
+    mob:setMod(MOD_MATT,120);
 end;
 
 -----------------------------------
@@ -51,8 +49,8 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha  
-    
+    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
+
     local Paramount_Naraka_2hr_Used = 0;
     if (mob:getLocalVar("Paramount_Naraka_2hr_Used") ~= nil) then
         Paramount_Naraka_2hr_Used = mob:getLocalVar("Paramount_Naraka_2hr_Used");
