@@ -12719,25 +12719,32 @@ INSERT INTO `item_mods` VALUES (28043, 384, 40); --
 
 -- legs (28183)
 INSERT INTO `item_mods` VALUES (28183, 1, 82); --
+INSERT INTO `item_mods` VALUES (28183, 2, 22); --
 INSERT INTO `item_mods` VALUES (28183, 8, 18); --
 INSERT INTO `item_mods` VALUES (28183, 10, 10); --
 INSERT INTO `item_mods` VALUES (28183, 11, 20); --
 INSERT INTO `item_mods` VALUES (28183, 12, 19); --
 INSERT INTO `item_mods` VALUES (28183, 13, 11); --
 INSERT INTO `item_mods` VALUES (28183, 14, 7); --
+INSERT INTO `item_mods` VALUES (28183, 29, 2); --
 INSERT INTO `item_mods` VALUES (28183, 26, 18); --
+INSERT INTO `item_mods` VALUES (28183, 31, 47); --
+INSERT INTO `item_mods` VALUES (28183, 68, 33); --
 INSERT INTO `item_mods` VALUES (28183, 31, 47); --
 INSERT INTO `item_mods` VALUES (28183, 27, -5); --
 
 -- feet (28321)
 INSERT INTO `item_mods` VALUES (28321, 1, 53); --
+INSERT INTO `item_mods` VALUES (28321, 2, 6); --
 INSERT INTO `item_mods` VALUES (28321, 8, 8); --
 INSERT INTO `item_mods` VALUES (28321, 9, 15); --
 INSERT INTO `item_mods` VALUES (28321, 10, 16); --
 INSERT INTO `item_mods` VALUES (28321, 14, 19); --
 INSERT INTO `item_mods` VALUES (28321, 31, 47); --
 INSERT INTO `item_mods` VALUES (28321, 11, 23); --
+INSERT INTO `item_mods` VALUES (28321, 29, 2); --
 INSERT INTO `item_mods` VALUES (28321, 13, 16); --
+INSERT INTO `item_mods` VALUES (28321, 68, 33); --
 INSERT INTO `item_mods` VALUES (28321, 161, -3); --
 INSERT INTO `item_mods` VALUES (28321, 384, 40); --
 
