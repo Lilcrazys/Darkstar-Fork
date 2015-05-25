@@ -22,6 +22,9 @@ end;
 function onMobFight(mob, target)
 	if (target:hasStatusEffect(EFFECT_FOOD) == true and mob:hasStatusEffect(EFFECT_FOOD) == false) then
 		local FOOD_ID = target:getStatusEffect(EFFECT_FOOD):getSubType();
+		if (FOOD_ID == 4331 or FOOD_ID == 4564) then
+			FOOD_ID = 5166;
+		end
 		mob:SpoofChatParty("eats the same food you did!", MESSAGE_EMOTION);
 		mob:addStatusEffect(EFFECT_FOOD,0,0,600,FOOD_ID);
 		mob:SpoofChatParty("Maat gains the effect of OH-SNAP!", MESSAGE_ECHO);
