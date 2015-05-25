@@ -14,6 +14,7 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 end;
 
@@ -51,6 +52,24 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+end;
+
+-----------------------------------
+-- onSpikesDamage
+-----------------------------------
+
+function onSpikesDamage(mob,target,damage)
+    if (mob:hasStatusEffect(EFFECT_CURSE_SPIKES)
+    and !(mob:hasStatusEffect(EFFECT_DAMAGE_SPIKES))
+    and !(mob:hasStatusEffect(EFFECT_BLAZE_SPIKES))) then
+        -- Not implemented -> target:addStatusEffectEx(EFFECT_CURSE_II, EFFECT_CURSE, 25, 0 , 30);
+        target:addStatusEffect(EFFECT_CURSE, 25, 0 , 30);
+        return SUBEFFECT_CURSE_SPIKES, 166, EFFECT_CURSE;
+    elseif (mob:hasStatusEffect(EFFECT_DAMAGE_SPIKES) or mob:hasStatusEffect(EFFECT_BLAZE_SPIKES)) then
+        return SUBEFFECT_BLAZE_SPIKES, 44, damage;
+    else
+        return 0, 0, 0;
+    end
 end;
 
 -----------------------------------
