@@ -2379,14 +2379,14 @@ REPLACE INTO `npc_list` VALUES (17662579,'qm24','???',0,-199.150,-32.002,145.019
 -- Abyssea - Vunkerl (Zone 217)
 -- 17667071
 -- ------------------------------------------------------------
-
+INSERT INTO `mob_spawn_points` VALUES (17667070,'Armillaria ','Armillaria ',90223,-396.886,-31.991,196.054,128);
 REPLACE INTO `mob_spawn_points` VALUES (17666499,'Bukhis','Bukhis',10320,-202,-40,-280,255);
 REPLACE INTO `mob_spawn_points` VALUES (17666500,'Sedna','Sedna',10368,402,-31,405,127);
 REPLACE INTO `mob_spawn_points` VALUES (17666503,'Bukhis','Bukhis',10320,0,0,0,0);
 REPLACE INTO `mob_spawn_points` VALUES (17666504,'Sedna','Sedna',10368,403,-31,390,123);
 REPLACE INTO `mob_spawn_points` VALUES (17666507,'Bukhis','Bukhis',10320,0,0,0,0);
 REPLACE INTO `mob_spawn_points` VALUES (17666508,'Sedna','Sedna',10368,403,-31,375,128);
-REPLACE INTO `mob_spawn_points` VALUES (17666495,'Chhir Batti','Chhir Batti',90248,-367,-31,301,240);
+REPLACE INTO `mob_spawn_points` VALUES (17666495,'Chhir_Batti','Chhir Batti',90248,-367,-31,301,240);
 REPLACE INTO `mob_spawn_points` VALUES (17666491,'Kadraeth_the_Hatespawn','Kadraeth the Hatespawn',90216,-475,-40,-280,57);
 
 REPLACE INTO `npc_list` VALUES (17666576,'qm1','???',0,-367,-31,301,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- chhir batti
