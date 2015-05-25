@@ -645,6 +645,7 @@ INSERT INTO `status_effects` VALUES (802,'atma',256,0,0,0,0,0,0); -- 2nd ATMA ef
 INSERT INTO `status_effects` VALUES (803,'atma',256,0,0,0,0,0,0); -- 3rd ATMA effect
 
 -- LegionXI custom effects
+INSERT INTO `status_effects` VALUES (1016,'curse_spikes',33,34,0,0,0,0,8);
 INSERT INTO `status_effects` VALUES (1016,'custom_enspell',33,94,51,0,0,0,0);
 INSERT INTO `status_effects` VALUES (1017,'wind_spikes',33,34,0,0,0,0,4);
 INSERT INTO `status_effects` VALUES (1018,'stone_spikes',33,34,0,0,0,0,2);

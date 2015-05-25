@@ -736,7 +736,7 @@ EFFECT_ATMA_3                   = 803 -- Dummy for 3rd ATMA effect
 ------------------------------------------------
 -- Start of LegionXI custom section
 -- EFFECT_PLACEHOLDER              = 1014 -- Description
--- EFFECT_PLACEHOLDER              = 1015 -- Description
+EFFECT_CURSE_SPIKES             = 1015 -- Curse Spikes
 EFFECT_CUSTOM_ENSPELL           = 1016 -- Used by mobs with dispellable custom Enspells
 EFFECT_WIND_SPIKES              = 1017
 EFFECT_STONE_SPIKES             = 1018

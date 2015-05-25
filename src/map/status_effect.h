@@ -690,7 +690,7 @@ enum EFFECT
 //==========================================================//
     // Start of LegionXI custom section
     // EFFECT_PLACEHOLDER              = 1014, // Description
-    // EFFECT_PLACEHOLDER              = 1015, // Description
+    EFFECT_CURSE_SPIKES             = 1015, // Curse Spikes
     EFFECT_CUSTOM_ENSPELL           = 1016, // Description
     EFFECT_WIND_SPIKES              = 1017,
     EFFECT_STONE_SPIKES             = 1018,

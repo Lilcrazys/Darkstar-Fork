@@ -54,25 +54,6 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onSpikesDamage
------------------------------------
-
-function onSpikesDamage(mob,target,damage)
-    if (mob:getLocalVar("CurseSpikes") == 1) then
-        if (mob:getLocalVar("SpikesDuration") < mob:getBattleTime()) then
-            mob:setLocalVar("CurseSpikes", 0);
-            mob:setLocalVar("SpikesDuration", 0);
-        else
-            target:addStatusEffect(EFFECT_CURSE, 25, 0, 60);
-            -- Not implemented yet -> target:addStatusEffectEx(EFFECT_CURSE_II, EFFECT_CURSE, 25, 0, 60);
-            return SUBEFFECT_CURSE_SPIKES, 166, EFFECT_CURSE;
-        end
-    else
-        return 0, 0, 0;
-    end
-end;
-
------------------------------------
 -- onMobDeath
 -----------------------------------
 
