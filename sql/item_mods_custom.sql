@@ -4090,6 +4090,7 @@ INSERT INTO `item_mods` VALUES (20556, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20556, 355, 26);
 INSERT INTO `item_mods` VALUES (20556, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20556, 507, 300); -- Occ. 3x dmg
+INSERT INTO `item_mods` VALUES (20556, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20558, 81, 242); --
@@ -4168,6 +4169,7 @@ INSERT INTO `item_mods` VALUES (20646, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20646, 355, 43);
 INSERT INTO `item_mods` VALUES (20646, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20646, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (20646, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20648, 30, 258); --
@@ -4352,6 +4354,7 @@ INSERT INTO `item_mods` VALUES (20745, 165, 13);
 INSERT INTO `item_mods` VALUES (20745, 355, 57);
 INSERT INTO `item_mods` VALUES (20745, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20745, 507, 250); -- Occ. 2.5x dmg
+
 -- -------------------------------------------------------
 -- Ragnarok (99-4)
 -- -------------------------------------------------------
@@ -4393,6 +4396,7 @@ INSERT INTO `item_mods` VALUES (20791, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20791, 355, 73);
 INSERT INTO `item_mods` VALUES (20791, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20791, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (20791, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20775, 23, 18); --
@@ -4471,6 +4475,7 @@ INSERT INTO `item_mods` VALUES (20836, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20836, 355, 89);
 INSERT INTO `item_mods` VALUES (20836, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20836, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (20836, 431, 1); -- Add. Effect
 
 INSERT INTO `item_mods` VALUES (20837, 85, 242); --
 INSERT INTO `item_mods` VALUES (20837, 110, 242); --
@@ -4536,6 +4541,7 @@ INSERT INTO `item_mods` VALUES (20881, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20881, 355, 105);
 INSERT INTO `item_mods` VALUES (20881, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20881, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (20881, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20882, 30, 250); --
@@ -4593,6 +4599,7 @@ INSERT INTO `item_mods` VALUES (20926, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20926, 355, 121);
 INSERT INTO `item_mods` VALUES (20926, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20926, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (20926, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20928, 87, 242); --
@@ -4647,6 +4654,7 @@ INSERT INTO `item_mods` VALUES (20971, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20971, 355, 137);
 INSERT INTO `item_mods` VALUES (20971, 507, 300); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20971, 506, 160); -- Occ. 3x dmg
+INSERT INTO `item_mods` VALUES (20971, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20973, 30, 245); --
@@ -4689,6 +4697,7 @@ INSERT INTO `item_mods` VALUES (21016, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (21016, 355, 153);
 INSERT INTO `item_mods` VALUES (21016, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (21016, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (21016, 431, 1); -- Add. Effect
 
 INSERT INTO `item_mods` VALUES (21017, 89, 242); --
 INSERT INTO `item_mods` VALUES (21017, 110, 242); --
