@@ -5259,9 +5259,9 @@ INSERT INTO `mob_skill` VALUES (1854,1113,1454,'VW_Wings_of_Gehenna',1,20.0,2000
 INSERT INTO `mob_skill` VALUES (1856,1113,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
 
 -- Akupara (1114)
-INSERT INTO `mob_skill` VALUES (548,1114,476,'Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (548,1114,476,'VW_Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (550,1114,478,'VW_Tortoise_Stomp',0,7.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (552,1114,480,'Earth_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (552,1114,480,'VW_Earth_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2329,1114,478,'VW_Tetsudo_Tremor',0,7.0,2000,1500,4,0,0,3);
 
 -- Celaeno (1115)
