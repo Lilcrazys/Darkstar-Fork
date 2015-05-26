@@ -12,7 +12,7 @@ echo ------------------------
 echo Creating new EXE's...
 if not exist DSGame-GM.exe copy DSGame-server.exe /b DSGame-GM.exe /bexe /b
 if not exist DSGame-BCNM.exe copy DSGame-server.exe /b DSGame-BCNM.exe /b
-if not exist DSGame-DynaLimbus.exe copy DSGame-server.exe /b DSGame-DynaLimbus.
+if not exist DSGame-DynaLimbus.exe copy DSGame-server.exe /b DSGame-DynaLimbus.exe
 if not exist DSGame-Abyssea.exe copy DSGame-server.exe /b DSGame-Abyssea.exe /b
 echo ------------------------
 echo Done.
