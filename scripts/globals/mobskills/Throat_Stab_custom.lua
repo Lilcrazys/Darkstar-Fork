@@ -45,7 +45,7 @@ function onMobWeaponSkill(target, mob, skill)
     mob:resetEnmity(target);
 
     if (mob:getLocalVar("TripleStab") < 3) then
-        mob:useAbility(532);
+        mob:useMobAbility(532);
     end
 
     return dmg;
