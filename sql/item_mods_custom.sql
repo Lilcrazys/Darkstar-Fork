@@ -490,7 +490,7 @@ INSERT INTO `item_mods` VALUES (10664, 1, 23); --
 INSERT INTO `item_mods` VALUES (10664, 5, 42); --
 INSERT INTO `item_mods` VALUES (10664, 357, 5); --
 INSERT INTO `item_mods` VALUES (10664, 312, 4); --
-INSERT INTO `item_mods` VALUES (10664, 349, 3); --
+INSERT INTO `item_mods` VALUES (10664, 371, 3); -- Avatar Perpetuation Reduction 371 or 349
 INSERT INTO `item_mods` VALUES (10665, 1, 31); --
 INSERT INTO `item_mods` VALUES (10665, 2, 21); --
 INSERT INTO `item_mods` VALUES (10665, 8, 5); --
@@ -595,7 +595,7 @@ INSERT INTO `item_mods` VALUES (10683, 384, 30); --
 INSERT INTO `item_mods` VALUES (10684, 1, 49); --
 INSERT INTO `item_mods` VALUES (10684, 5, 28); --
 INSERT INTO `item_mods` VALUES (10684, 357, 6); --
-INSERT INTO `item_mods` VALUES (10684, 349, 3); --
+INSERT INTO `item_mods` VALUES (10684, 371, 3); -- Avatar Perpetuation Reduction 371 or 349
 INSERT INTO `item_mods` VALUES (10685, 1, 59); --
 INSERT INTO `item_mods` VALUES (10685, 5, 28); --
 INSERT INTO `item_mods` VALUES (10685, 8, 5); --
