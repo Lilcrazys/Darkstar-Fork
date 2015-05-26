@@ -14,15 +14,15 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	result = 0;
-	mTP = target:getMaxTP();
-	cTP = target:getTP();
+	local result = 0;
+	local mTP = target:getMaxTP();
+	local cTP = target:getTP();
 	if (mTP == cTP) then
 		result = 56; -- Does not let player use item if their TP is full
 	end
 	if (target:hasStatusEffect(EFFECT_MEDICINE)) then
 		result = 111;
-	end	
+	end
 	return result;
 end;
 
@@ -32,5 +32,5 @@ end;
 
 function onItemUse(target)
 	target:addStatusEffect(EFFECT_MEDICINE,0,0,180);
-	target:addTP((cTP * .5);
+	target:addTP(target:getTP() * .5);
 end;
