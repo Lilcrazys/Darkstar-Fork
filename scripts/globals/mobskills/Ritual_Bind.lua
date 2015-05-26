@@ -18,7 +18,6 @@ function onMobWeaponSkill(target, mob, skill)
     MobStatusEffectMove(mob, target, typeEffect1, 15, 0, 30);
     skill:setMsg(MobStatusEffectMove(mob, target, typeEffect2, 10, 0, 30));
     mob:setLocalVar("TripleStab", 1);
-    mob:useMobAbility(532);
 
     return typeEffect2;
 end;

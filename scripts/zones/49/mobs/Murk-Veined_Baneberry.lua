@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:  Murk-Veined_Baneberry
+--  NM:  Murk-Veined_Baneberry
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -50,8 +50,26 @@ end;
 
 function onMobFight(mob, target)
     local Boost_Used = mob:getLocalVar("Boost");
+    local STABBINGS = mob:getLocalVar("TripleStab");
+    local DELAY = mob:getLocalVar("DELAY");
 
-    if (mob:getHPP() <= 25) then
+    if (STABBINGS > 0) then
+        if (DELAY >= 2) then
+            if (STABBINGS >= 3) then
+                mob:setLocalVar("TripleStab", 0);
+            else
+                -- Suddenly move mob very close to player
+                mob:setPos(target:getXPos()+math.random(-0.2, 0.2), target:getYPos(), target:getZPos()+math.random(-0.2, 0.2), 0);
+                -- We should actually use a teleport skill prior to this,
+                -- but being lazy with setPos for now.
+                mob:useMobAbility(532);
+                mob:setLocalVar("TripleStab", STABBINGS +1);
+            end
+            mob:setLocalVar("DELAY", 0);
+        else
+            mob:setLocalVar("DELAY", DELAY+1);
+        end
+    elseif (mob:getHPP() <= 25) then
         if (Boost_Used == 1) then
             mob:setMod(MOD_MATT,130);
             mob:setMod(MOD_UFASTCAST, 75);

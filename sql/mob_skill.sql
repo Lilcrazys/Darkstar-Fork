@@ -5224,7 +5224,7 @@ INSERT INTO `mob_skill` VALUES (527,1109,455,'Words_of_Bane',1,7.0,2000,1500,4,0
 INSERT INTO `mob_skill` VALUES (529,1109,457,'Light_of_Penance',1,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (530,1109,458,'VW_Lateral_Slash',0,7.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (531,1109,459,'VW_Vertical_Slash',0,7.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab_Custom',0,3.4,3000,3500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (532,1109,460,'Throat_Stab',0,3.4,3000,3500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (665,1109,504,'VW_Everyones_Rancor',1,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2137,1109,455,'Ritual_Bind',1,15.0,2000,1500,4,0,0,0); -- need correct animation
 
