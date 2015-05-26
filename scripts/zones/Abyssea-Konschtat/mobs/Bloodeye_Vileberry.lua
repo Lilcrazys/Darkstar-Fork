@@ -29,7 +29,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
@@ -37,8 +36,7 @@ end;
 -----------------------------------
 
 
-function onMobFight(mob,target)
-    TriggerHint(mob,target);
+function onMobFight(mob,target)]
 end;
 
 -----------------------------------
@@ -52,4 +50,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_CLOAK_AND_DAGGER);
     end
 end;
-

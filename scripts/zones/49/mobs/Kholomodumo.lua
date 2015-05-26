@@ -8,7 +8,6 @@ require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -33,7 +32,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,15);
     mob:setMod(MOD_STUNRES, 75);
     mob:setMod(MOD_PARALYZERES, 100);
-
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
