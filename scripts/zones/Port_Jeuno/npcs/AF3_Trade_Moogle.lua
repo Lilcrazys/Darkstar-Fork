@@ -1129,7 +1129,7 @@ function onTrade(player,npc,trade)
         player:tradeComplete();
     end
 --------------------------------Daurdabla-------------------------------------
-    if (trade:hasItemQty(18574,1) and trade:hasItemQty(2964,50) and trade:getItemCount() == 51) then -- 85-95
+    if (trade:hasItemQty(18574,1) and trade:hasItemQty(2929,50) and trade:getItemCount() == 51) then -- 85-95
         player:addItem(18576, 1);
         player:messageSpecial(ITEM_OBTAINED,18576);
         player:tradeComplete();

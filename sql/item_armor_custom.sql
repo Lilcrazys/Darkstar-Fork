@@ -406,3 +406,9 @@ INSERT INTO `item_armor` VALUES ('27871', 'artsieq_jubbah', '99', '3850780', '36
 INSERT INTO `item_armor` VALUES ('28017', 'artsieq_cuffs', '99', '3850780', '364', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28159', 'artsieq_hose', '99', '3850780', '364', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28296', 'artsieq_boots', '99', '3850780', '364', '0', '0', '256', '0');
+
+INSERT INTO `item_armor` VALUES ('27888', 'kyujutsugi', '99', '3072', '180', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('27862', 'savas_jawshan', '99', '2497', '203', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('27710', 'sahip_helm', '99', '10689', '206', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('28151', 'sifahir_slacks', '99', '4', '176', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('27868', 'ischemia_chasuble', '99', '1622556', '143', '0', '0', '32', '0');

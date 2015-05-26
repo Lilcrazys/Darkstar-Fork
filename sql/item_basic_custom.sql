@@ -421,3 +421,9 @@ INSERT INTO `item_basic` VALUES (27871,0,'artsieq_jubbah','artsieq_jubbah',1,635
 INSERT INTO `item_basic` VALUES (28017,0,'artsieq_cuffs','artsieq_cuffs',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28159,0,'artsieq_hose','artsieq_hose',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28296,0,'artsieq_boots','artsieq_boots',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (27888,0,'kyujutsugi','kyujutsugi',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27862,0,'savas_jawshan','savas_jawshan',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27710,0,'sahip_helm','sahip_helm',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28151,0,'sifahir_slacks','sifahir_slacks',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27868,0,'ischemia_chasuble','ischemia_chasuble',1,63552,0,1,0);
