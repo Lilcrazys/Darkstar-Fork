@@ -20,6 +20,18 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
+    local spellParams = {}; -- Guesstimated
+    spellParams.hasMultipleTargetReduction = false;
+    spellParams.resistBonus = 1.0;
+    spellParams.V0 = 960;
+    spellParams.V50 = 1120;
+    spellParams.V100 = 1233;
+    spellParams.V200 = 1666;
+    spellParams.M0 = 4;
+    spellParams.M50 = 3.75;
+    spellParams.M100 = 3.5;
+    spellParams.M200 = 3;
+
     local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
     local resist = applyResistance(caster,spell,target,dINT,37,0);
     local STR_Loss = ((target:getStat(MOD_STR) / 100) * 20); -- Should be 20%
@@ -60,7 +72,8 @@ function onSpellCast(caster,target,spell)
         target:addStatusEffect(EFFECT_CHR_DOWN,CHR_Loss,0,duration);
     end
 
-    local dmg = doElementalNuke(939,2.335,caster,spell,target,false,1.0);
+    -- local dmg = doElementalNuke(939,2.335,caster,spell,target,false,1.0);
+    local dmg = doElementalNuke(caster, spell, target, spellParams);
 
     return dmg;
 end;
