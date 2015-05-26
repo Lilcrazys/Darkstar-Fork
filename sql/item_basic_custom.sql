@@ -298,6 +298,10 @@ INSERT INTO `item_basic` VALUES (20946,0,'olyndicus','olyndicus',1,63552,8,1,0);
 INSERT INTO `item_basic` VALUES (20989,0,'izuna','izuna',1,63552,9,1,0);
 INSERT INTO `item_basic` VALUES (20616,0,'ipetam','ipetam',1,63552,13,1,0);
 
+-- Excalipoor / Excalipoor II
+INSERT INTO `item_basic` VALUES (20713,0,'excalipoor','excalipoor',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (20714,0,'excalipoor_ii','excalipoor_ii',1,63552,0,1,0);
+
 -- empy 109
 INSERT INTO `item_basic` VALUES (26740,0,'boii_mask','boii_mask',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26742,0,'bhikku_crown','bhikku_crown',1,63552,0,1,0);

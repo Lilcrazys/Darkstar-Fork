@@ -14,6 +14,10 @@
 -- INSERT INTO `item_weapon` VALUES (itemId,'name',skill,subskill,dmgType,hit,delay,dmg,unlock_points);
 -- New entries below this line, and sorted by itemID please.
 
+-- Excalipoor / Excalipoor II
+INSERT INTO `item_weapon` VALUES (20713,'excalipoor',3,0,2,1,240,1,0);
+INSERT INTO `item_weapon` VALUES (20714,'excalipoor_ii',3,0,2,1,233,2,0);
+
 INSERT INTO `item_weapon` VALUES (20809,'kumbhakarna',5,0,2,1,322,169,0); -- axe
 INSERT INTO `item_weapon` VALUES (21169,'keraunos',12,0,3,1,435,228,0); -- staff
 INSERT INTO `item_weapon` VALUES (20536,'tinhaspa',1,0,4,1,526,121,0); -- h2h
