@@ -3594,10 +3594,6 @@ INSERT INTO `item_mods` VALUES (19266, 13, 4); --
 
 INSERT INTO `item_mods` VALUES (19282, 9, 10); --
 INSERT INTO `item_mods` VALUES (19282, 170, 10); --
-INSERT INTO `item_mods` VALUES (19285, 8, 3); --
-INSERT INTO `item_mods` VALUES (19285, 11, 3); --
-INSERT INTO `item_mods` VALUES (19286, 8, 4); --
-INSERT INTO `item_mods` VALUES (19286, 11, 4); --
 INSERT INTO `item_mods` VALUES (19287, 25, 8); --
 INSERT INTO `item_mods` VALUES (19287, 23, 8); --
 INSERT INTO `item_mods` VALUES (19287, 421, 10); --
