@@ -24,19 +24,17 @@ function onTrigger(player, option)
         else
             -- Loading saved ATMA
             require("scripts/globals/atma");
-            local ATMA1 = player:getVar("PREV_ATMA_1");
-            local ATMA2 = player:getVar("PREV_ATMA_2");
-            local ATMA3 = player:getVar("PREV_ATMA_3");
-            if (ATMA1 == 0 and ATMA1 == 0 and ATMA1 == 0) then
+
+            if (player:getVar("PREV_ATMA_1") == 0) then
                 player:PrintToPlayer("Saved ATMA set not found. You must first record a set to use.");
             else
-                if (ATMA1 > 0) then
+                if (player:getVar("PREV_ATMA_1") > 0) then
                     applyATMA(player, player:getVar("PREV_ATMA_1"))
                 end
-                if (ATMA2 > 0) then
+                if (player:getVar("PREV_ATMA_2") > 0) then
                     applyATMA(player, player:getVar("PREV_ATMA_2"))
                 end
-                if (ATMA3 > 0) then
+                if (player:getVar("PREV_ATMA_3") > 0) then
                     applyATMA(player, player:getVar("PREV_ATMA_3"))
                 end
             end
