@@ -5284,9 +5284,9 @@ INSERT INTO `mob_skill` VALUES (2459,1116,1901,'Yaksha_damnation',1,18.0,2000,10
 INSERT INTO `mob_skill` VALUES (2458,1116,1900,'Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
 
 -- Voidwrought (1117)
-INSERT INTO `mob_skill` VALUES (2361,1117,1815,'Ironclad_Meele_Stomp',0,12.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1117,1816,'Ironclad_Meele_Lateral',1,12.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2360,1117,1814,'Ironclad_Meele_Vertical',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,1117,1815,'VW_Ironclad_Stomp',0,12.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,1117,1816,'VW_Ironclad_Lateral',1,12.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2360,1117,1814,'VW_Ironclad_Vertical',0,12.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2363,1117,1817,'Turbine_cyclone',1,18.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (2364,1117,1818,'Seismic_impact',1,18.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2365,1117,1819,'Incinerator',1,12.0,2000,1000,4,0,0,0);
