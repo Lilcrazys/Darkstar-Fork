@@ -1085,8 +1085,8 @@ INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance
 -- 17150975
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping Crab',96665,-724.000,-32.000,-362.000,64);
--- INSERT INTO `npc_list` VALUES (17150971,'Loot_Box','Loot Box',192,-724.000,-32.000,-362.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
+INSERT INTO `mob_spawn_points` VALUES (17150970,'The_Jumping_Crab','The Jumping Crab',96665,0.000,1.000,0.000,64);
+INSERT INTO `npc_list` VALUES (17150971,'Crab_Loot_Box','Crab Loot Box',192,0.000,1.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 
 -- ------------------------------------------------------------
