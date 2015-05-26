@@ -16,7 +16,7 @@ function onTrigger(player, target, amount)
 	if (gmlvl >= 0) then -- Regular non GM players
 		player:PrintToPlayer("Commands available to all players:");
 		player:PrintToPlayer("@where  @revision  @trial");
-		player:PrintToPlayer("@shop  @ah  @grats");
+		player:PrintToPlayer("@shop  @ah  @atma  @grats");
 		player:PrintToPlayer("@tele  @homepoint  @return");
 		player:PrintToPlayer("@regen  @setmusic  @costume");
 	end
