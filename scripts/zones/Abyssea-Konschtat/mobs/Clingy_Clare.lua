@@ -28,16 +28,13 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-
 function onMobFight(mob,target)
-    TriggerHint(mob,target);
 end;
 
 -----------------------------------

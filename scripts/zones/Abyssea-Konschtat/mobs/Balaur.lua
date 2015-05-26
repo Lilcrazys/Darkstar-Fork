@@ -36,7 +36,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    WeaknessTriggerSet(mob,target,ws,spell);
 end;
 
 -----------------------------------
@@ -44,7 +43,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    TriggerHint(mob,target);
 end
 
 -----------------------------------
@@ -52,15 +50,15 @@ end
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    local CHANCE = 40;
-    local SPELL_ID = 695;
+    local KI_CHANCE = 40;
+    local SPELL_CHANCE = 40;
   
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
+    if (math.random(0,99) < KI_CHANCE and killer:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
         killer:addKeyItem(ATMA_OF_STORMBREATH);
         killer:messageSpecial(6385, ATMA_OF_STORMBREATH);
     end
 
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(695) == false) then
-        killer:addSpell(SPELL_ID);
+    if (math.random(0,99) < SPELL_CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(695) == false) then
+        killer:addSpell(695);
     end
 end;
