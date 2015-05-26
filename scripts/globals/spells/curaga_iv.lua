@@ -32,10 +32,10 @@ function onSpellCast(caster,target,spell)
 	local final = getCureFinal(caster,spell,getBaseCureOld(power,divisor,constant),minCure,false);
 
 	final = final + (final * (target:getMod(MOD_CURE_POTENCY_RCVD)/100));
-	
+
 	--Applying server mods....
 	final = final * CURE_POWER;
-	
+
 	local diff = (target:getMaxHP() - target:getHP());
 	if(final > diff) then
 		final = diff;
@@ -44,8 +44,11 @@ function onSpellCast(caster,target,spell)
 
 	target:wakeUp();
 	caster:updateEnmityFromCure(target,final);
-	
+
 	spell:setMsg(367);
-	
+	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242) then
+		caster:addMp(final*0.05);
+	end
+
 	return final;
 end;

@@ -73,48 +73,50 @@ function onSpellCast(caster,target,spell)
 	else
 		basecure = getBaseCure(power,divisor,constant,basepower);
 	end
-	
+
 	--Apply Afflatus Misery Bonus to Final Result
 	if(caster:hasStatusEffect(EFFECT_AFFLATUS_MISERY)) then
 		local misery = caster:getMod(MOD_AFFLATUS_MISERY);
-			
+
 		--THIS IS LARELY SEMI-EDUCATED GUESSWORK. THERE IS NOT A
 		--LOT OF CONCRETE INFO OUT THERE ON CURA THAT I COULD FIND
-			
+
 		--If the target max affluent misery bonus
 		--according to tests I found seems to cap out at most
 		--people about 125 misery. With that in mind, if you
 		--were hitting the Cure I cap of 65hp, then each misery
 		--point would boost your Cura by about 1hp, capping at ~175hp
 		--So with lack of available formula documentation, I'll go with that.
-			
+
 		--printf("BEFORE AFFLATUS MISERY BONUS: %d", basecure);
-			
+
 		basecure = basecure + misery;
-			
+
 		if(basecure > 175) then
 			basecure = 175;
 		end
-		
+
 		--printf("AFTER AFFLATUS MISERY BONUS: %d", basecure);
-		
+
 		--Afflatus Misery Mod Gets Used Up
 		caster:setMod(MOD_AFFLATUS_MISERY, 0);
 	end
-	
+
 	final = getCureFinal(caster,spell,basecure,minCure,false);
 	final = final + (final * (target:getMod(MOD_CURE_POTENCY_RCVD)/100));
 
 	--Applying server mods....
 	final = final * CURE_POWER;
-	
+
 	target:addHP(final);
 
 	target:wakeUp();
-	
+
 	--Enmity for Cura is fixed, so its CE/VE is set in the SQL and not calculated with updateEnmityFromCure
-	
+
 	spell:setMsg(367);
-	
+	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242) then
+		caster:addMp(final*0.05);
+	end
 	return final;
 end;

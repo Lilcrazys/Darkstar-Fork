@@ -128,6 +128,9 @@ function onSpellCast(caster,target,spell)
             target:addHP(final);
 		end
 	end
+	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242) then
+		caster:addMp(final*0.05);
+	end
 
 	return final;
 end;
