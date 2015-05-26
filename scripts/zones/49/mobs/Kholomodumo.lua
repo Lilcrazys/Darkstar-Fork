@@ -60,8 +60,8 @@ end;
 
 function onSpikesDamage(mob,target,damage)
     if (mob:hasStatusEffect(EFFECT_CURSE_SPIKES)
-    and !(mob:hasStatusEffect(EFFECT_DAMAGE_SPIKES))
-    and !(mob:hasStatusEffect(EFFECT_BLAZE_SPIKES))) then
+    and (mob:hasStatusEffect(EFFECT_DAMAGE_SPIKES))
+    and (mob:hasStatusEffect(EFFECT_BLAZE_SPIKES))) then
         -- Not implemented -> target:addStatusEffectEx(EFFECT_CURSE_II, EFFECT_CURSE, 25, 0 , 30);
         target:addStatusEffect(EFFECT_CURSE, 25, 0 , 30);
         return SUBEFFECT_CURSE_SPIKES, 166, EFFECT_CURSE;

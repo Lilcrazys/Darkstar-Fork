@@ -1646,8 +1646,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Belphoebe', 414, 286, 1, 255); -- Addle
 
 -- Lord_Asag
 INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 496, 1, 255); -- Fireja
-INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 148, 1, 255); -- Fire 4
-INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 149, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 148, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 177, 1, 255); -- Firega 4
 INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 178, 1, 255); -- Firega 5
 INSERT INTO `mob_spell_lists` VALUES ('Lord_Asag', 415, 286, 1, 255); -- addle

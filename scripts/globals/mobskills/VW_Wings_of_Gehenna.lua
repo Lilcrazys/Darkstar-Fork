@@ -22,7 +22,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     local typeEffect = EFFECT_STUN;
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 4);
+    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 7);
 
     local dmgmod = 2.5;
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_WIND,dmgmod,TP_NO_EFFECT);
