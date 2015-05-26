@@ -16,7 +16,7 @@ end;
 
 function onPetAbility(target, pet, skill)
 	local numhits = 3;
-	local accmod = 1;
+	local accmod = 10;
 	local dmgmod = 10;
 	local dmgmodsubsequent = 1;
 
