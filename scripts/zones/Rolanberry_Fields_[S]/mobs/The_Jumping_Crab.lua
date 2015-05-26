@@ -19,7 +19,7 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 1); -- 1=Single target Draw In, 2=Alliance Draw in
     mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID()); -- Give additional effect on melee
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Give Auto spikes
-    mob:addStatusEffect(EFFECT_DELUGE_SPIKES, 9, 0, 0); -- Needed for auto spikes to fire off
+    mob:addStatusEffect(EFFECT_DELUGE_SPIKES, 20, 0, 0); -- Needed for auto spikes to fire off
     mob:getStatusEffect(EFFECT_DELUGE_SPIKES):setFlag(32); -- Can't dispel spikes
 end;
 
@@ -39,30 +39,33 @@ function onMobSpawn(mob)
     mob:setMod(MOD_CURE_POTENCY_RCVD, 21);
 
     -- addMod
-    mob:addMod(MOD_ATT, 50);
-    mob:addMod(MOD_ACC, 50);
-    mob:addMod(MOD_DEF, 75);
+    mob:addMod(MOD_ATT, 80);
+    mob:addMod(MOD_ACC, 60);
+    mob:addMod(MOD_DEF, 125);
     mob:addMod(MOD_STR, 50);
     mob:addMod(MOD_DEX, 25);
-    mob:addMod(MOD_VIT, 50);
+    mob:addMod(MOD_VIT, 60);
     mob:addMod(MOD_AGI, 75);
-    mob:addMod(MOD_INT, 100);
-    mob:addMod(MOD_MND, 150);
-    mob:addMod(MOD_MATT, -20);
+    mob:addMod(MOD_INT, 104);
+    mob:addMod(MOD_MND, 158);
+    mob:addMod(MOD_MATT, -10);
     mob:addMod(MOD_MACC, 75);
     mob:addMod(MOD_MEVA, 30);
-    mob:addMod(MOD_MDEF, 20);
+    mob:addMod(MOD_MDEF, 25);
     mob:addMod(MOD_RDEF, 25);
     mob:addMod(MOD_REVA, 25);
 
     -- Checking if Crab should be at the alt pos according to serverVar..
     -- This is done because otherwise server restarts would force it back to same pos.
-    if (GetServerVariable("JumpingCrabPos") == 1) then
+    if (GetServerVariable("JumpingCrabPos") == 0) then
+        mob:setSpawn(-724, -32, -362); -- West side of Zone
+        mob:setPos(-724, -32, -362); -- West side of Zone
+    elseif (GetServerVariable("JumpingCrabPos") == 1) then
         mob:setSpawn(275, -32, -270); -- East side of Zone
         mob:setPos(275, -32, -270); -- East side of Zone
     else
-        mob:setSpawn(-724, -32, -362); -- West side of Zone
-        mob:setPos(-724, -32, -362); -- West side of Zone
+        mob:setSpawn(120, -15, -698); -- South side of Zone
+        mob:setPos(120, -15, -698); -- South side of Zone
     end
 end;
 
@@ -168,7 +171,10 @@ function onMobFight(mob, target)
             mob:useMobAbility(462); -- Crab_Jump_1
         end
 
-    -- Reactions to stun and terror..
+    -- Reactions to Merit ws, stun, and terror..
+    elseif (mob:getLocalVar("wasMeritWS") == 1) then
+        mob:useMobAbility(513); -- Crab_Flying_Punch (sucks to be you!)
+        mob:setLocalVar("wasMeritWS", 0);
     elseif (mob:getLocalVar("wasTerror") == 1) then
         mob:useMobAbility(513); -- Crab_Flying_Punch (sucks to be you!)
         mob:setLocalVar("wasTerror", 0);
@@ -263,6 +269,64 @@ function onMagicHit(caster, target, spell)
 end;
 
 -----------------------------------
+-- onWeaponskillHit
+-----------------------------------
+--[[
+function onWeaponskillHit(mob, attacker, weaponskill)
+    local QUEST_WS_TABLE = {9, 25, 42, 56, 72, 88, 104, 120, 136, 152, 169, 184, 199, 215}
+    local MERIT_WS_TABLE = {15, 60, 77, 93, 109, 125, 141, 157, 174, 191, 221, 224, 226, 203}
+    local TP = 0;
+
+    if (attacker:isPC()) then
+        if (utils.inTable(QUEST_WS_TABLE, weaponskill)) then
+            if (math.random(0,99) > 24) then
+                -- Reset jump timers
+                mob:setLocalVar("J1", 0);
+                mob:setLocalVar("J2", 0);
+                mob:setLocalVar("J3", 0);
+            else
+                TP = mob:getTP() *0.1; -- 10% Bonus TP
+                mob:addTP(TP);
+            end
+        elseif (utils.inTable(MERIT_WS_TABLE, weaponskill)) then
+            if (math.random(0,99) > 19) then
+                mob:setLocalVar("wasMeritWS", 1);
+            elseif (math.random(0,99) > 32) then
+                -- Reset jump timers
+                mob:setLocalVar("J1", 0);
+                mob:setLocalVar("J2", 0);
+                mob:setLocalVar("J3", 0);
+            end
+        else
+            if (math.random(0,99) > 32) then
+                TP = mob:getTP() *0.25; -- 25% Bonus TP
+                mob:addTP(TP);
+            end
+        end
+    elseif (attacker:isPet()) then
+        if (math.random(0,99) > 24) then
+            TP = mob:getTP() *0.33; -- 25% Bonus TP
+            mob:addTP(TP);
+        end
+    end
+
+    if (math.random(0,99) > 19) then
+        mob:setLocalVar("Enwater", 1);
+    elseif (math.random(0,99) > 24) then
+        -- Reset jump timers
+        mob:setLocalVar("J1", 0);
+        mob:setLocalVar("J2", 0);
+        mob:setLocalVar("J3", 0);
+    end
+
+    if (target:getHPP() < 5 and mob:getMod(MOD_HUMANOID_KILLER) < 9) then
+        mob:addMod(MOD_HUMANOID_KILLER, 1);
+    end
+
+    return 1;
+end;
+]]
+-----------------------------------
 -- onCriticalHit
 -----------------------------------
 
@@ -305,7 +369,7 @@ function onSpikesDamage(mob, target, damage)
     if (mob:getLocalVar("DelugeSpikes") == 1) then -- use custom dmg
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
         local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
-        local dmg = 20 + ((INT_diff + MND_diff) * 0.5);
+        local dmg = damage + ((INT_diff + MND_diff) * 0.5);
         dmg = addBonusesAbility(mob, ELE_WATER, target, dmg, params);
         dmg = dmg * applyResistanceAddEffect(mob, target, ELE_WATER, 0);
         dmg = adjustForTarget(target, dmg, ELE_WATER);
@@ -343,12 +407,21 @@ function onMobDespawn(mob)
     end
     SetServerVariable("JumpingCrabClaim",0);
     mob:setRespawnTime(repop);
-    if (GetServerVariable("JumpingCrabPos") == 1) then
+    if (GetServerVariable("JumpingCrabPos") == 2) then
+        -- Move from South to West
         SetServerVariable("JumpingCrabPos", 0);
         mob:setSpawn(-724, -32, -362); -- West side of Zone
-    else
+        mob:setPos(-724, -32, -362); -- West side of Zone
+    elseif (GetServerVariable("JumpingCrabPos") == 0) then
+        -- Move from West to East
         SetServerVariable("JumpingCrabPos", 1);
         mob:setSpawn(275, -32, -270); -- East side of Zone
+        mob:setPos(275, -32, -270); -- East side of Zone
+    else
+        -- Move from East to South
+        SetServerVariable("JumpingCrabPos", 2);
+        mob:setSpawn(120, -15, -698); -- South side of Zone
+        mob:setPos(120, -15, -698); -- South side of Zone
     end
 end;
 
@@ -358,13 +431,27 @@ end;
 
 function onMobDeath(mob, killer)
     local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
+    local npc = GetNPCByID(mob:getID()+1);
+    npc:setPos( mob:getXPos(), mob:getYPos(), mob:getZPos(), mob:getRotPos());
+    npc:showNPC(30); -- Spawns "Crab Loot Box" for 30 seconds.
+
     SetServerVariable("JumpingCrabClaim",0);
     mob:setRespawnTime(repop);
-    if (GetServerVariable("JumpingCrabPos") == 1) then
+
+    if (GetServerVariable("JumpingCrabPos") == 2) then
+        -- Move from South to West
         SetServerVariable("JumpingCrabPos", 0);
         mob:setSpawn(-724, -32, -362); -- West side of Zone
-    else
+        mob:setPos(-724, -32, -362); -- West side of Zone
+    elseif (GetServerVariable("JumpingCrabPos") == 0) then
+        -- Move from West to East
         SetServerVariable("JumpingCrabPos", 1);
         mob:setSpawn(275, -32, -270); -- East side of Zone
+        mob:setPos(275, -32, -270); -- East side of Zone
+    else
+        -- Move from East to South
+        SetServerVariable("JumpingCrabPos", 2);
+        mob:setSpawn(120, -15, -698); -- South side of Zone
+        mob:setPos(120, -15, -698); -- South side of Zone
     end
 end;

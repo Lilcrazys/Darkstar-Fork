@@ -1391,7 +1391,7 @@ INSERT INTO `mob_groups` VALUES (96616,9616,103,0,128,9616,0,0,119,119,0); -- Va
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please
 
-INSERT INTO `mob_groups` VALUES (96665,9665,91,3600,0,9665,154000,75000,128,128,0); -- The Jumping Crab
+INSERT INTO `mob_groups` VALUES (96665,9665,91,3600,0,9665,154000,75000,131,131,0); -- The Jumping Crab
 
 
 -- Super experimental z49 mobs, will not spawn without script or GM command.
