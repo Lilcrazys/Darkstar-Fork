@@ -271,7 +271,7 @@ end;
 -----------------------------------
 -- onWeaponskillHit
 -----------------------------------
---[[
+
 function onWeaponskillHit(mob, attacker, weaponskill)
     local QUEST_WS_TABLE = {9, 25, 42, 56, 72, 88, 104, 120, 136, 152, 169, 184, 199, 215}
     local MERIT_WS_TABLE = {15, 60, 77, 93, 109, 125, 141, 157, 174, 191, 221, 224, 226, 203}
@@ -325,7 +325,7 @@ function onWeaponskillHit(mob, attacker, weaponskill)
 
     return 1;
 end;
-]]
+
 -----------------------------------
 -- onCriticalHit
 -----------------------------------
