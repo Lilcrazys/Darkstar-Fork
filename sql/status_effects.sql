@@ -652,7 +652,7 @@ INSERT INTO `status_effects` VALUES (1018,'stone_spikes',33,34,0,0,0,0,2);
 INSERT INTO `status_effects` VALUES (1019,'dark_spikes',33,34,0,0,0,0,8);
 INSERT INTO `status_effects` VALUES (1020,'sjcap_boost',768,0,0,0,0,0,0);
 INSERT INTO `status_effects` VALUES (1021,'rage',544,0,0,0,0,0,0);
-INSERT INTO `status_effects` VALUES (1022,'legion',768,0,0,0,0,0,0);
+INSERT INTO `status_effects` VALUES (1022,'legion',1049120,0,0,0,0,0,0);
 
 /*!40000 ALTER TABLE `status_effects` ENABLE KEYS */;
 UNLOCK TABLES;

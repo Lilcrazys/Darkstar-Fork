@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
--- func: regen
+-- func: @regen
 -- auth:
--- desc: .toggles regen
+-- desc: activates Legion custom Buff
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
@@ -14,13 +14,9 @@ cmdprops =
 function onTrigger(player)
 	if (player:getMainLvl() <= 75) then
 		-- Clear any existing...
-		player:delStatusEffect(EFFECT_REGEN);
-		player:delStatusEffect(EFFECT_REFRESH);
-		player:delStatusEffect(EFFECT_REGAIN);
+		player:delStatusEffect(EFFECT_LEGION);
 		-- And replace with fresh status...
-		player:addStatusEffect(EFFECT_REGEN,10,0,0);
-		player:addStatusEffect(EFFECT_REFRESH,6,0,0);
-		player:addStatusEffect(EFFECT_REGAIN,5,1,0);
+		player:addStatusEffectEx(EFFECT_LEGION,EFFECT_IONIS,0,0);
 	else
 		player:PrintToPlayer("Sorry your level is too high for this command right now!, only level 75 and lower are permitted.");
 	end

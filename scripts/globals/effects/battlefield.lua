@@ -9,6 +9,7 @@
 -----------------------------------
 
 function onEffectGain(target,effect)
+	target:delStatusEffect(EFFECT_LEGION);
 end;
 
 -----------------------------------
@@ -23,6 +24,7 @@ end;
 -----------------------------------
 
 function onEffectLose(target,effect)
+	target:delStatusEffect(EFFECT_LEGION);
 end;
 
 -----------------------------------

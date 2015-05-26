@@ -10,6 +10,7 @@
 
 function onEffectGain(target,effect)
 	target:levelRestriction(effect:getPower());
+	target:delStatusEffect(EFFECT_LEGION);
 end;
 
 -----------------------------------
@@ -25,4 +26,5 @@ end;
 
 function onEffectLose(target,effect)
 	target:levelRestriction(0);
+	target:delStatusEffect(EFFECT_LEGION);
 end;

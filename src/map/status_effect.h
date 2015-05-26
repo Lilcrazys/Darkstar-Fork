@@ -697,7 +697,7 @@ enum EFFECT
     EFFECT_DARK_SPIKES              = 1019,
     EFFECT_SJCAP_BOOST              = 1020,
     EFFECT_RAGE                     = 1021, // NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
-    EFFECT_LEGION                   = 1022,
+    EFFECT_LEGION                   = 1022, // @regen
     // End of LegionXI Custom Section
 //==========================================================//
     // EFFECT_PLACEHOLDER             = 1023 // The client dat file seems to have only this many "slots", results of exceeding that are untested.
