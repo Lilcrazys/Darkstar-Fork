@@ -302,7 +302,7 @@ INSERT INTO `zone_settings` VALUES (251,1,'127.0.0.1',54230,'Hall_of_the_Gods',2
 INSERT INTO `zone_settings` VALUES (252,1,'127.0.0.1',54230,'Norg',209,209,209,209,0,0.00,1128,0);
 INSERT INTO `zone_settings` VALUES (253,2,'127.0.0.1',54330,'Abyssea-Uleguerand',51,51,52,52,0,0.00,1176,0);
 INSERT INTO `zone_settings` VALUES (254,2,'127.0.0.1',54330,'Abyssea-Grauberg',51,51,52,52,0,0.00,1176,0);
-INSERT INTO `zone_settings` VALUES (255,2,'127.0.0.1',54330,'Abyssea-Empyreal_Paradox',51,51,52,52,0,0.00,128,0);
+INSERT INTO `zone_settings` VALUES (255,2,'127.0.0.1',54530,'Abyssea-Empyreal_Paradox',51,51,52,52,0,0.00,128,0);
 INSERT INTO `zone_settings` VALUES (256,1,'127.0.0.1',54230,'Western_Adoulin',59,59,59,59,0,0.00,1096,0);
 INSERT INTO `zone_settings` VALUES (257,1,'127.0.0.1',54230,'Eastern_Adoulin',63,63,63,63,0,0.00,1096,0);
 INSERT INTO `zone_settings` VALUES (258,3,'127.0.0.1',54230,'Rala_Waterways',61,61,57,57,0,0.00,0,0);
