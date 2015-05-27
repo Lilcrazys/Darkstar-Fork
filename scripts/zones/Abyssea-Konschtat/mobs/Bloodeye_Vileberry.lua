@@ -35,8 +35,7 @@ end;
 -- onMobFight
 -----------------------------------
 
-
-function onMobFight(mob,target)]
+function onMobFight(mob,target)
 end;
 
 -----------------------------------
@@ -45,7 +44,7 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 45;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_CLOAK_AND_DAGGER) == false) then
+    if (math.random(0,99) < CHANCE and killer:hasKeyItem(ATMA_OF_CLOAK_AND_DAGGER) == false) then
         killer:addKeyItem(ATMA_OF_CLOAK_AND_DAGGER);
         killer:messageSpecial(6385, ATMA_OF_CLOAK_AND_DAGGER);
     end
