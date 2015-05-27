@@ -10956,11 +10956,11 @@ INSERT INTO `item_mods` VALUES (20809, 30, 188); -- Macc
 -- keraunos
 INSERT INTO `item_mods` VALUES (21169, 12, 12); -- INT
 INSERT INTO `item_mods` VALUES (21169, 13, 12); -- MND
--- INSERT INTO `item_mods` VALUES (21169, 28, 120); -- Matt
--- INSERT INTO `item_mods` VALUES (21169, 0, 217); -- Magic dmg
+INSERT INTO `item_mods` VALUES (21169, 28, 120); -- Matt
+INSERT INTO `item_mods` VALUES (21169, 0, 217); -- Magic dmg
 INSERT INTO `item_mods` VALUES (21169, 91, 242); -- Staff
 INSERT INTO `item_mods` VALUES (21169, 110, 242); -- Parry
--- INSERT INTO `item_mods` VALUES (21169, 30, 228); -- Macc
+INSERT INTO `item_mods` VALUES (21169, 30, 228); -- Macc
 
 
 -- tinhaspa
