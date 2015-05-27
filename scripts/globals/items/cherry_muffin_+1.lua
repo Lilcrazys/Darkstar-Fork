@@ -54,8 +54,8 @@ function onEffectGain(target,effect)
 	pet:addMod(MOD_CHR, 20);
 	pet:addMod(MOD_MATT, 20);
 	pet:addMod(MOD_MACC, 120);
-	pet:addMod(MOD_ATTP, 20);
-	pet:addMod(MOD_ACCP, 20);
+	pet:addMod(MOD_ATT, 200);
+	pet:addMod(MOD_ACC, 200);
 end;
 
 -----------------------------------------
@@ -82,6 +82,6 @@ function onEffectGain(target,effect)
 	pet:delMod(MOD_CHR, 20);
 	pet:delMod(MOD_MATT, 20);
 	pet:delMod(MOD_MACC, 120);
-	pet:delMod(MOD_ATTP, 20);
-	pet:delMod(MOD_ACCP, 20);
+	pet:delMod(MOD_ATT, 200);
+	pet:delMod(MOD_ACC, 200);
 end;
