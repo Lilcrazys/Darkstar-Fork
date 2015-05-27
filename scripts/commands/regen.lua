@@ -16,7 +16,7 @@ function onTrigger(player)
 		-- Clear any existing...
 		player:delStatusEffect(EFFECT_LEGION);
 		-- And replace with fresh status...
-		player:addStatusEffectEx(EFFECT_LEGION,EFFECT_IONIS,0,0,0);
+		player:addStatusEffectEx(EFFECT_LEGION,EFFECT_REGEN,0,0,0);
 	else
 		player:PrintToPlayer("Sorry your level is too high for this command right now!, only level 75 and lower are permitted.");
 	end
