@@ -246,7 +246,7 @@ INSERT INTO `weapon_skills` VALUES (220,'wildfire',x'000000000000000000000200000
 INSERT INTO `weapon_skills` VALUES (221,'last_stand',x'00000000000000000000020000000000020000000000',26,357,0,241,16,1,11,5,0,0);
 
 
-INSERT INTO `weapon_skills` VALUES (227,'knights_of_rotund',x'00000000000000000000000000000000000000000000',3,300,0,12,5,1,13,11,0,0);
+INSERT INTO `weapon_skills` VALUES (227,'knights_of_rotund',x'00000000000000000000000000000000000000000000',3,300,0,52,5,1,13,11,0,0); -- Job mask stays zeros! WS is provided by modifier on the item only!
 
 -- Begin Legion Custom Section
 -- Teo's work in progress section, don't mess with it yet.
