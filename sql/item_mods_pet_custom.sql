@@ -333,7 +333,6 @@ INSERT INTO `item_mods` VALUES (26828, 165, 8); -- Avatar: Critical hit rate +8%
 
 --   Glyphic Bracers (Hands)
 INSERT INTO `item_mods` VALUES (27004, 25, 20); -- Avatar: Accuracy+20
-INSERT INTO `item_mods` VALUES (27004, 384, 21); -- Haste+2%
 
 --   Glyphic Spats (Legs)
 INSERT INTO `item_mods` VALUES (27180, 30, 10); -- Avatar: Magic Accuracy+10
