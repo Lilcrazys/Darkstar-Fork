@@ -20,10 +20,14 @@ end;
 
 function onTrigger(player,npc)
     local item = 20713;
-    if (player:hasItem(20713)) then
-        item = 17748;
+    if (player:getLocalVar("alreadyGotLoot") == 0) then
+        if (player:hasItem(20713)) then
+            item = 17748;
+        end
+        player:startEvent(3000, item);
+    else
+        player:messageBasic(155);
     end
-    player:startEvent(3000, item);
 end;
 
 -----------------------------------
@@ -51,6 +55,9 @@ function onEventFinish(player,csid,option)
                 item = 17748;
             end
             player:addItem(item, 1);
+            -- One goody per Box Per Person!
+            player:setLocalVar("alreadyGotLoot", 1);
+            --  Technically that can zone this var off, but box isn't up that long.
             player:SpoofChatPlayer("Found a legendary sword!..Or so you thought..", MESSAGE_EMOTION, nil)
             player:messageSpecial(ITEM_OBTAINED, item);
         end

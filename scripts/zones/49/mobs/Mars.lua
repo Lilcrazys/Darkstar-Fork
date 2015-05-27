@@ -196,43 +196,16 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onMobDeath
------------------------------------
-
-function onMobDeath(mob,killer)
-    if (killer:getParty() ~= nil) then
-        local targets = killer:getParty(); -- local targets = mob:getEnmityList();
-        for hey, dude in pairs(targets) do
-            if (dude:isPC()) then
-                dude:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-                dude:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-                dude:ChangeMusic(2, 195); -- SoloBattle Music
-                dude:ChangeMusic(3, 195); -- Party Battle Music
-            end
-        end
-    elseif (killer:isPC()) then
-        killer:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-        killer:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-        killer:ChangeMusic(2, 195); -- SoloBattle Music
-        killer:ChangeMusic(3, 195); -- Party Battle Music
-    end
-    mob:SpoofChatParty("...I...Defeated...Content...At last...", MESSAGE_SAY)
-    mob:SpoofChatParty("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO)
-    -- insert code to spawn lootbox here, move battlefield win stuff into exit portal.
-    -- mob:getBattlefield():win();
-end;
-
------------------------------------
 -- onMagicHit
 -----------------------------------
 
 function onMagicHit(caster, target, spell)
-    -- When mob casts on self it is caster AND target! Care must be taken to NOT do
-    -- things like try to print message at a mob or exec mob things on the player!
     local mob = nil;
-    if (caster:isMob()) then
+    if (caster:getID() == target:getID()) then
+        -- This is a self cast spell
         mob = caster;
-    elseif (target:isMob()) then
+    else
+        -- This is not a self cast spell.
         mob = target;
     end
 
@@ -295,8 +268,22 @@ function onMagicHit(caster, target, spell)
     end
 
     return 1;
-end
+end;
 
+-----------------------------------
+-- onWeaponskillHit
+-----------------------------------
+
+function onWeaponskillHit(mob, attacker, weaponskill)
+    if (math.random(1,15) == 8) then
+        -- 1 in 8 chance of reaction
+        mob:useMobAbility(573); -- Great Wheel
+    -- elseif (math.random(1,15) == 8) then
+       -- Add weakness hint maybe?
+    end
+
+    return 1;
+end;
 -----------------------------------
 -- onSpikesDamage
 -----------------------------------
@@ -360,4 +347,31 @@ function onSpikesDamage(mob,target,damage)
             return 0, 0, 0;
         end
     end
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob,killer)
+    if (killer:getParty() ~= nil) then
+        local targets = killer:getParty(); -- local targets = mob:getEnmityList();
+        for hey, dude in pairs(targets) do
+            if (dude:isPC()) then
+                dude:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+                dude:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+                dude:ChangeMusic(2, 195); -- SoloBattle Music
+                dude:ChangeMusic(3, 195); -- Party Battle Music
+            end
+        end
+    elseif (killer:isPC()) then
+        killer:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+        killer:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+        killer:ChangeMusic(2, 195); -- SoloBattle Music
+        killer:ChangeMusic(3, 195); -- Party Battle Music
+    end
+    mob:SpoofChatParty("...I...Defeated...Content...At last...", MESSAGE_SAY)
+    mob:SpoofChatParty("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO)
+    -- insert code to spawn lootbox here, move battlefield win stuff into exit portal.
+    -- mob:getBattlefield():win();
 end;

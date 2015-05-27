@@ -246,18 +246,23 @@ end
 
 function onMagicHit(caster, target, spell)
     local mob = nil;
-    if (target:isMob()) then
-        mob = target;
-        -- This section is here and not below because mob shouldn't clone its own spell.
-        if (math.random(1,9)) then -- 1/9 chance of copying spell.
-            mob:castSpell(spell:getID());
-        elseif (math.random(1,5) == 3) then -- 1/5 chance of casting Flood 2.
-            mob:castSpell(260);
-        elseif (math.random(1,15) == 5) then -- 1/15 chance your tank takes a Head Butt instead.
-            mob:useMobAbility(44); -- Crab_Head_Butt
-        end
-    elseif (caster:isMob()) then
+    if (caster:getID() == target:getID()) then
+        -- This is a self cast spell
         mob = caster;
+    else
+        -- This is not a self cast spell.
+        mob = target;
+    end
+
+    if (math.random(1,9) == 5 and (caster:getID() ~= target:getID())) then
+        -- 1/9 chance of copying spell, if not self cast.
+        mob:castSpell(spell:getID());
+    elseif (math.random(1,5) == 3) then
+        -- 1/5 chance of casting Flood 2.
+        mob:castSpell(260);
+    elseif (math.random(1,15) == 5) then
+        -- 1/15 chance your tank takes a Crab_Head_Butt instead.
+        mob:useMobAbility(44); 
     end
 
     -- Get 1 hit duration of enhanced Deluge Spikes every time a spell lands (goes back to normal after).
@@ -319,7 +324,7 @@ function onWeaponskillHit(mob, attacker, weaponskill)
         mob:setLocalVar("J3", 0);
     end
 
-    if (target:getHPP() < 5 and mob:getMod(MOD_HUMANOID_KILLER) < 9) then
+    if (mob:getHPP() < 5 and mob:getMod(MOD_HUMANOID_KILLER) < 9) then
         mob:addMod(MOD_HUMANOID_KILLER, 1);
     end
 
@@ -432,7 +437,7 @@ end;
 function onMobDeath(mob, killer)
     local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
     local npc = GetNPCByID(mob:getID()+1);
-    npc:setPos( mob:getXPos(), mob:getYPos(), mob:getZPos(), mob:getRotPos());
+    npc:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos(), mob:getRotPos());
     npc:showNPC(30); -- Spawns "Crab Loot Box" for 30 seconds.
 
     SetServerVariable("JumpingCrabClaim",0);
