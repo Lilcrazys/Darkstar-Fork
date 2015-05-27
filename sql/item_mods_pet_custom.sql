@@ -342,5 +342,5 @@ INSERT INTO `item_mods` VALUES (27356, 0, 7); -- Avatar: Magic critical hit rate
 INSERT INTO `item_mods` VALUES (27356, 23, 25); -- Avatar: Attack+25
 
 -- keraunos
-INSERT INTO `item_mods` VALUES (21169, 30, 20); -- Pet macc
+INSERT INTO `item_mods` VALUES (21169, 30, 228); -- Pet macc
 INSERT INTO `item_mods` VALUES (21169, 28, 100); -- Pet Matt
