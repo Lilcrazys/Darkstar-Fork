@@ -8258,7 +8258,7 @@ INSERT INTO `item_mods` VALUES (27180, 65, 12); --  Evasion+12
 INSERT INTO `item_mods` VALUES (27180, 31, 73); -- Magic Evasion+73
 INSERT INTO `item_mods` VALUES (27180, 29, 3); --  Magic Def. Bonus+3 (used magic defence ?)
 INSERT INTO `item_mods` VALUES (27180, 384, 41); --  Haste +4%
--- INSERT INTO `item_mods` VALUES (27180, 0, -5); --  Shortens magic recast time for spirits "Blood Pact" ability delay -5
+INSERT INTO `item_mods` VALUES (27180, 357, -5); --  Shortens magic recast time for spirits "Blood Pact" ability delay -5
 -- INSERT INTO `item_mods` VALUES (27180, 30, 10); -- Avatar: Magic Accuracy+10 ====> needs to be entered in item_mods_pet_custom.sql but not yet supported
 -- INSERT INTO `item_mods` VALUES (27180, 0, 0); -- Augmented with Adds "Increases Sp. 'Blood Pact accuracy",      Increases Sp. Blood Pact Accuracy by 5 Magic Accuracy per merit level.
 
@@ -10961,8 +10961,7 @@ INSERT INTO `item_mods` VALUES (21169, 28, 120); -- Matt
 INSERT INTO `item_mods` VALUES (21169, 91, 242); -- Staff
 INSERT INTO `item_mods` VALUES (21169, 110, 242); -- Parry
 INSERT INTO `item_mods` VALUES (21169, 30, 228); -- Macc
--- INSERT INTO `item_mods` VALUES (21169, 84, 20); -- Pet macc
--- INSERT INTO `item_mods` VALUES (21169, 84, 100); -- Pet Matt
+
 
 -- tinhaspa
 INSERT INTO `item_mods` VALUES (20536, 8, 3); -- STR
