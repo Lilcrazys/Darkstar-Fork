@@ -2744,13 +2744,13 @@ INSERT INTO `mob_skill` VALUES (1887,389,152,'Perfect_defense',1,18.0,2000,1000,
 
 -- pet - Cait Sith
 -- -373 from polutils
-INSERT INTO `mob_skill` VALUES (2192,396,9,'regal_scratch',1,18.0,505,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2193,396,10,'mewing_lullaby',1,18.0,506,3000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2194,396,11,'eerie_eye',1,18.0,507,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2196,396,12,'level_?_holy',1,18.0,508,3000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (664,396,13,'raise_ii',1,18.0,509,3000,1,0,0,0);
--- INSERT INTO `mob_skill` VALUES (665,396,14,'Reraise II',1,18.0,510,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2195,396,15,'altanas_favor',1,18.0,511,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2192,1204,9,'regal_scratch',1,18.0,505,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2193,1204,10,'mewing_lullaby',1,18.0,506,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2194,1204,11,'eerie_eye',1,18.0,507,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2196,1204,12,'level_?_holy',1,18.0,508,3000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (664,1204,13,'raise_ii',1,18.0,509,3000,1,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (665,1204,14,'Reraise II',1,18.0,510,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2195,1204,15,'altanas_favor',1,18.0,511,3000,4,0,0,0);
 
 
 -- Soulflayers
