@@ -11,8 +11,8 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
-mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 end;
 
 -----------------------------------
@@ -20,14 +20,14 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
--- setMod
-mob:setMod(MOD_REGEN, 50);
-mob:setMod(MOD_MACC, 2500);
-mob:setMod(MOD_MATT, 110);
-mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-mob:setMod(MOD_ACC,1500);
-mob:setMod(MOD_WATER_AFFINITY,20);
-mob:addMod(MOD_DEF, 100);
+    -- setMod
+    mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_MACC, 2500);
+    mob:setMod(MOD_MATT, 110);
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:setMod(MOD_ACC,1500);
+    mob:setMod(MOD_WATER_AFFINITY,20);
+    mob:addMod(MOD_DEF, 100);
 
 end;
 
@@ -36,7 +36,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-mob:setLocalVar("BattleStart", os.time());
+    mob:setLocalVar("BattleStart", os.time());
 end;
 
 -----------------------------------
@@ -44,7 +44,7 @@ end;
 -----------------------------------
 
 function onMobDisEngage(mob, target)
-mob:delStatusEffect(EFFECT_RAGE);
+    mob:delStatusEffect(EFFECT_RAGE);
 end;
 
 -----------------------------------
@@ -53,39 +53,12 @@ end;
 
 
 function onMobFight(mob, target)
-local BattleStart = mob:getLocalVar("BattleStart");
-local Tchakka_2hr_Used = 0;
-if (mob:getLocalVar("Tchakka_2hr") ~= nil) then
-Tchakka_2hr_Used = mob:getLocalVar("Tchakka_2hr");
-end
+    local BattleStart = mob:getLocalVar("BattleStart");
 
-if (mob:getHPP() <= 10) then
-if (Tchakka_2hr_Used == 3) then
-mob:useMobAbility(432);
-mob:setLocalVar("Tchakka_2hr", 4);
-elseif (Tchakka_2hr_Used == 4) then
-mob:useMobAbility(434);
-mob:setLocalVar("Tchakka_2hr", 5);
-end
-elseif (mob:getHPP() <= 25) then
-if (Tchakka_2hr_Used == 2) then
-mob:useMobAbility(434);
-mob:setLocalVar("Tchakka_2hr", 3);
-end
-elseif (mob:getHPP() <= 50) then
-if (Tchakka_2hr_Used == 1) then
-mob:useMobAbility(432);
-mob:setLocalVar("Tchakka_2hr", 2);
-end
-elseif (mob:getHPP() <= 75) then
-if (Tchakka_2hr_Used == 0) then
-mob:useMobAbility(434);
-mob:setLocalVar("Tchakka_2hr", 1);
-end
-elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
-mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
-mob:setLocalVar("RAGED", 1);
-end
+    if (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
+        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        mob:setLocalVar("RAGED", 1);
+    end
 end;
 
 -----------------------------------
@@ -93,9 +66,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-local CHANCE = 20;
-if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(745) == false) then
-killer:addSpell(745);
-end
-mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+    local CHANCE = 20;
+    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(745) == false) then
+         killer:addSpell(745);
+    end
+    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
 end;

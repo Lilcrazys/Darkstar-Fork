@@ -118,5 +118,5 @@ end;
 
 function onMobDeath(mob, killer)
     mob:setLocalVar("RAGED", 0);
-   mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
 end;
