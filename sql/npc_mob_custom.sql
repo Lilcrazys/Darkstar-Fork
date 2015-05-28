@@ -768,7 +768,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- ------------------------------------------------------------
 
 -- INSERT INTO `mob_spawn_points` VALUES (16977921,'Lofty_Zilant','Lofty Zilant',90016,15,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gallu',90017,19,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gallu',90017,19,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977923,'Mired_Mantis','Mired Mantis',90019,9,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977924,'Soaring_Naraka','Soaring Naraka',90018,3,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977925,'Veiled_Ironclad','Veiled Ironclad',90015,25,0,1,0);
@@ -776,8 +776,8 @@ INSERT INTO `mob_spawn_points` VALUES (16977922,'Paramount_Gallu','Paramount Gal
 -- INSERT INTO `mob_spawn_points` VALUES (16977927,'Hades_V2','Hades',90081,90,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977928,'Paramount_Botulus','Paramount Botulus',90055,95,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,31,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,35,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,95,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,100,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977937,'Ashrakk','Ashrakk',90092,70,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977938,'Balamor','Balamor',90093,75,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977939,'Provenance_Watcher','Provenance_Watcher',90094,80,0,1,0);
@@ -1001,10 +1001,7 @@ INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,
 INSERT INTO `mob_spawn_points` VALUES (17097270,'Odin','Odin',2766,379,-215,66,62);
 
 INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426,-215,20,104);
-INSERT INTO `mob_spawn_points` VALUES (17097720,'Bismark','Bismark',2770,366,-215,47,95);
-INSERT INTO `mob_spawn_points` VALUES (17097724,'Ashrakk','Ashrakk',2774,446,-216,-8,153);
--- INSERT INTO `mob_spawn_points` VALUES (17097725,'Balamor','Balamor',2775,406,-215,85,88);
-INSERT INTO `mob_spawn_points` VALUES (17097726,'Provenance_Watcher','Provenance_Watcher',2776,426,-215,85,88);
+
 -- INSERT INTO `npc_list` VALUES (17097727,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,null);
 
 

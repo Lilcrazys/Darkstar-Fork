@@ -3259,7 +3259,7 @@ INSERT INTO `mob_skill` VALUES (2302,982,1441,'Yggr',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2303,982,1442,'Gagnrath',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2304,982,1445,'Sangetall',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2305,982,1443,'Geirrothr',1,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1870,982,1447,'Zantetsuken',1,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1870,982,1447,'Zantetsuken',1,10.0,10000,1000,4,0,0,0);
 
 -- Alexander
 INSERT INTO `mob_skill` VALUES (1885,983,1465,'Radiant_Sacrament',1,18.0,2000,1000,4,0,0,0);
