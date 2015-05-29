@@ -13307,22 +13307,6 @@ INSERT INTO `item_mods` VALUES(28351, 60, 15); -- Element Light
 INSERT INTO `item_mods` VALUES(28351, 25, 5); -- ACC
 INSERT INTO `item_mods` VALUES(28351, 29, 5); -- MDT
 
--- Bokwus Boots (28340)
-INSERT INTO `item_mods` VALUES(28340, 1, 46); -- DEF
-INSERT INTO `item_mods` VALUES(28340, 2, 7); -- HP
-INSERT INTO `item_mods` VALUES(28340, 5, 12); -- MP
-INSERT INTO `item_mods` VALUES(28340, 9, 1); -- DEX
-INSERT INTO `item_mods` VALUES(28340, 11, 12); -- AGI
-INSERT INTO `item_mods` VALUES(28340, 12, 2); -- INT
-INSERT INTO `item_mods` VALUES(28340, 13, 3); -- MND
-INSERT INTO `item_mods` VALUES(28340, 14, 13); -- CHR
-INSERT INTO `item_mods` VALUES(28340, 121, 10); -- Wind Instrument Skill
-INSERT INTO `item_mods` VALUES(28340, 30, 7); -- MACC
-INSERT INTO `item_mods` VALUES(28340, 68, 28); -- EVA
-INSERT INTO `item_mods` VALUES(28340, 29, 3); -- Magic Def Bonus
-INSERT INTO `item_mods` VALUES(28340, 384, 30); -- Haste %
-INSERT INTO `item_mods` VALUES(28340, 31, 76); -- MEVA
--- INSERT INTO `item_mods` VALUES(28340, 000, 60); -- Song Cast Time %
 
 -- Thorfin Shield +1 (27634)
 INSERT INTO `item_mods` VALUES(27634, 1, 14); -- DEF
@@ -13335,20 +13319,6 @@ INSERT INTO `item_mods` VALUES(21419, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES(21419, 25, 3); -- ACC
 -- INSERT INTO `item_mods` VALUES(21419, 25, 5); -- Unity Ranking: Atk 10-15
 
--- Manibozho Boots (28339)
-INSERT INTO `item_mods` VALUES(28339, 1, 51); -- DEF
-INSERT INTO `item_mods` VALUES(28339, 2, 7); -- HP
-INSERT INTO `item_mods` VALUES(28339, 5, 45); -- MP
-INSERT INTO `item_mods` VALUES(28339, 9, 8); -- DEX
-INSERT INTO `item_mods` VALUES(28339, 11, 17); -- AGI
-INSERT INTO `item_mods` VALUES(28339, 23, 12); -- ATK
-INSERT INTO `item_mods` VALUES(28339, 14, 13); -- CHR
-INSERT INTO `item_mods` VALUES(28339, 30, 7); -- MACC
-INSERT INTO `item_mods` VALUES(28339, 68, 36); -- EVA
-INSERT INTO `item_mods` VALUES(28339, 29, 2); -- Magic Def Bonus
-INSERT INTO `item_mods` VALUES(28339, 384, 40); -- Haste %
-INSERT INTO `item_mods` VALUES(28339, 31, 49); -- MEVA
-INSERT INTO `item_mods` VALUES(28339, 288, 2); -- Double Attack %
 
 -- Gaudryi Necklace (28366)
 INSERT INTO `item_mods` VALUES(28366, 26, 10); -- RACC
