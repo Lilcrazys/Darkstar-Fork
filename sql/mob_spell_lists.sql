@@ -1733,6 +1733,18 @@ INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 31, 1, 255); -- Banish 4
 -- INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 32, 1, 255); -- Banish 5
 INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 356, 1, 255); -- Paralyga
 
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 182, 1, 255); -- blizzga 4
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 183, 1, 255); -- blizzga 5
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 497, 1, 255); -- blizzija
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 366, 1, 255); -- graviga
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 362, 1, 255); -- bindga
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 357, 1, 255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 273, 1, 255); -- sleepga
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 365, 1, 255); -- breakga
+INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 360, 1, 255); -- dispelga
+
+
 -- list IDs 407 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
