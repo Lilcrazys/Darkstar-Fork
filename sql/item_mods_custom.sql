@@ -13299,7 +13299,7 @@ INSERT INTO `item_mods` VALUES(27868, 369, 2); -- Refresh
 
 -- ------------------------------------------------------------------
 -- Voidwatch Drops Teir 1
--- ------------------------------------------------------------------ 
+-- ------------------------------------------------------------------
 
 -- Cloud Hairpin +1 (28351)
 INSERT INTO `item_mods` VALUES(28351, 57, 15); -- Element Air
@@ -13394,7 +13394,7 @@ INSERT INTO `item_mods` VALUES(21425, 171, 5); -- Two-Handed Weapon Delay %
 
 -- Zanhi Ring (28565)
 INSERT INTO `item_mods` VALUES(28565, 54, 20); -- Fire
--- INSERT INTO `item_mods` VALUES(28565, 000, 50); -- Occasionally absorbs water elemental damage	
+-- INSERT INTO `item_mods` VALUES(28565, 000, 50); -- Occasionally absorbs water elemental damage
 
 -- Manibozho Gloves (28058)
 INSERT INTO `item_mods` VALUES(28058, 1, 63); -- DEF
@@ -13412,6 +13412,10 @@ INSERT INTO `item_mods` VALUES(28058, 384, 40); -- Haste %
 INSERT INTO `item_mods` VALUES(28058, 365, 1); -- Snapshot Effect
 INSERT INTO `item_mods` VALUES(28058, 305, 1); -- Recycle Effect
 
+-- Fracas Grenade (19766)
+INSERT INTO `item_mods` VALUES(21420, 8, 5); -- INT
+INSERT INTO `item_mods` VALUES(21420, 54, -50); -- FireRes
+
 -- Benthos Grip (21420)
 INSERT INTO `item_mods` VALUES(21420, 12, 3); -- INT
 INSERT INTO `item_mods` VALUES(21420, 5, 20); -- MP
@@ -13423,7 +13427,7 @@ INSERT INTO `item_mods` VALUES(21420, 30, 5); -- MACC
 INSERT INTO `item_mods` VALUES(21374, 27, 2); -- Enmity
 INSERT INTO `item_mods` VALUES(21374, 302, 1); -- Triple Attack %
 
--- Domesticator's Earring (28505) 
+-- Domesticator's Earring (28505)
 INSERT INTO `item_mods` VALUES(28505, 68, 3); -- Eva
 INSERT INTO `item_mods` VALUES(28505, 27, -5); -- Enmity
 -- INSERT INTO `item_mods` VALUES(28505, 000, -5); -- Item has Pet Enmity +5 and Pet Double Atk +3%
