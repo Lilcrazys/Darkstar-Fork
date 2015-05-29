@@ -1,17 +1,13 @@
 ---------------------------------------------
---  1000 Needles
---
---  Description: Shoots multiple needles at enemies within range.
---  Type: Magical (Light)
---
---
+--  Geirrothr
+--  Odin
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
 require("/scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+	return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)

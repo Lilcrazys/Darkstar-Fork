@@ -18,10 +18,8 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_DOOM;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 10));
-
+    MobStatusEffectMove(mob, target, EFFECT_DOOM, 10, 3, 10);
     local dmgmod = 1.25;
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg() * 5,ELE_DARK,dmgmod,TP_MAB_BONUS,5);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_WIPE_SHADOWS);

@@ -1,11 +1,6 @@
 ---------------------------------------------
---  Terra Wing
---
---  Description: Deals damage in a threefold attack to targets in a fan-shaped area of effect. Additional effect: Doom
---  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown cone
---  Notes: Used only by certain Lamia NMs (e.g. Lamia No.3). If they lost their staff, they'll use Hysteric Barrage instead.
+--  Garnath
+--  Oddin
 ---------------------------------------------
 
 require("/scripts/globals/settings");
@@ -21,7 +16,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_TERROR;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 30));
+         skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 15));
 
 
 	local numhits = 3;
