@@ -65,6 +65,9 @@ function onInitialize(zone)
     local manuals = {17257075,17257076,17257077};
 
     SetFieldManual(manuals);
+	
+	-- HURKAN
+	SetRespawnTime(17257470, 900, 10800);
 end;
 
 -----------------------------------

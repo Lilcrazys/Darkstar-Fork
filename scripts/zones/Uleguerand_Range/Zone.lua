@@ -18,6 +18,9 @@ function onInitialize(zone)
 
     -- Jormungand
     SetRespawnTime(16797969, 900, 10800);
+	
+	-- Kumhau
+	SetRespawnTime(16798718, 900, 10800);
 
 end;
 
