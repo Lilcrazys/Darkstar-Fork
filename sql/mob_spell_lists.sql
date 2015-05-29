@@ -1721,6 +1721,18 @@ INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 148, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 178, 1, 255); -- Firega 5
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 496, 1, 255); -- Fireja
 
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 47, 1, 255); -- Protect 5
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 52, 1, 255); -- Shell 5
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 22, 1, 255); -- Holy II
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 35, 1, 255); -- Diaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 41, 1, 255); -- Banihshga 3
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 42, 1, 255); -- Banihshga 4
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 31, 1, 255); -- Banish 4
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 32, 1, 255); -- Banish 5
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 356, 1, 255); -- Paralyga
+
 -- list IDs 407 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?

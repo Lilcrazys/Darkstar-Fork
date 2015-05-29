@@ -3262,13 +3262,13 @@ INSERT INTO `mob_skill` VALUES (2305,982,1443,'Geirrothr',1,10.0,2000,1000,4,0,0
 INSERT INTO `mob_skill` VALUES (1870,982,1447,'Zantetsuken',1,10.0,10000,1000,4,0,0,0);
 
 -- Alexander
-INSERT INTO `mob_skill` VALUES (1885,983,1465,'Radiant_Sacrament',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1885,983,1465,'Radiant_Sacrament',1,18.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (1886,983,1471,'Mega_Holy',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1887,983,1467,'Perfect_Defense',1,18.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1888,983,1470,'Divine_Spear',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1889,983,1466,'Gospel_Of_The_Lost',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1890,983,1469,'Void_Of Repentance',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1891,983,1468,'Divine_Jugement',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1888,983,1470,'Divine_Spear',1,18.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1889,983,1466,'Gospel_Of_The_Lost',1,18.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1890,983,1469,'Void_Of_Repentance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1891,983,1468,'Divine_Jugement',1,30.0,4000,1000,4,0,0,1);
 
 -- Monoceros
 INSERT INTO `mob_skill` VALUES (2078,39,1640,'Wrath_of_zeus',4,10.0,2000,1000,4,0,0,0);
