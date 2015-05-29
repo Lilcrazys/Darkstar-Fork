@@ -891,7 +891,7 @@ INSERT INTO `item_mods` VALUES (10738, 8, 7); --
 INSERT INTO `item_mods` VALUES (10738, 10, 7); --
 INSERT INTO `item_mods` VALUES (10739, 1, 18); --
 INSERT INTO `item_mods` VALUES (10739, 2, 17); --
-INSERT INTO `item_mods` VALUES (10739, 455, 6); --
+-- INSERT INTO `item_mods` VALUES (10739, 455, 6); -- Bad Mod 455 does not exist for Song Cast Time Down
 INSERT INTO `item_mods` VALUES (10739, 120, 5); --
 INSERT INTO `item_mods` VALUES (10739, 27, -5); --
 INSERT INTO `item_mods` VALUES (10740, 1, 21); --
@@ -13296,3 +13296,134 @@ INSERT INTO `item_mods` VALUES(27868, 20, 25); -- ACC
 INSERT INTO `item_mods` VALUES(27868, 30, 15); -- MACC
 INSERT INTO `item_mods` VALUES(27868, 114, 18); -- Enfeeb
 INSERT INTO `item_mods` VALUES(27868, 369, 2); -- Refresh
+
+-- ------------------------------------------------------------------
+-- Voidwatch Drops Teir 1
+-- ------------------------------------------------------------------ 
+
+-- Cloud Hairpin +1 (28351)
+INSERT INTO `item_mods` VALUES(28351, 57, 15); -- Element Air
+INSERT INTO `item_mods` VALUES(28351, 60, 15); -- Element Light
+INSERT INTO `item_mods` VALUES(28351, 25, 5); -- ACC
+INSERT INTO `item_mods` VALUES(28351, 29, 5); -- MDT
+
+-- Bokwus Boots (28340)
+INSERT INTO `item_mods` VALUES(28340, 1, 46); -- DEF
+INSERT INTO `item_mods` VALUES(28340, 2, 7); -- HP
+INSERT INTO `item_mods` VALUES(28340, 5, 12); -- MP
+INSERT INTO `item_mods` VALUES(28340, 9, 1); -- DEX
+INSERT INTO `item_mods` VALUES(28340, 11, 12); -- AGI
+INSERT INTO `item_mods` VALUES(28340, 12, 2); -- INT
+INSERT INTO `item_mods` VALUES(28340, 13, 3); -- MND
+INSERT INTO `item_mods` VALUES(28340, 14, 13); -- CHR
+INSERT INTO `item_mods` VALUES(28340, 121, 10); -- Wind Instrument Skill
+INSERT INTO `item_mods` VALUES(28340, 30, 7); -- MACC
+INSERT INTO `item_mods` VALUES(28340, 68, 28); -- EVA
+INSERT INTO `item_mods` VALUES(28340, 29, 3); -- Magic Def Bonus
+INSERT INTO `item_mods` VALUES(28340, 384, 30); -- Haste %
+INSERT INTO `item_mods` VALUES(28340, 31, 76); -- MEVA
+-- INSERT INTO `item_mods` VALUES(28340, 000, 60); -- Song Cast Time %
+
+-- Thorfin Shield +1 (27634)
+INSERT INTO `item_mods` VALUES(27634, 1, 14); -- DEF
+INSERT INTO `item_mods` VALUES(27634, 8, 3); -- STR
+INSERT INTO `item_mods` VALUES(27634, 23, 19); -- ATK
+INSERT INTO `item_mods` VALUES(27634, 288, 1); -- Double Attack %
+
+-- Rigorous Grip +1 (21419)
+INSERT INTO `item_mods` VALUES(21419, 8, 4); -- STR
+INSERT INTO `item_mods` VALUES(21419, 25, 3); -- ACC
+-- INSERT INTO `item_mods` VALUES(21419, 25, 5); -- Unity Ranking: Atk 10-15
+
+-- Manibozho Boots (28339)
+INSERT INTO `item_mods` VALUES(28339, 1, 51); -- DEF
+INSERT INTO `item_mods` VALUES(28339, 2, 7); -- HP
+INSERT INTO `item_mods` VALUES(28339, 5, 45); -- MP
+INSERT INTO `item_mods` VALUES(28339, 9, 8); -- DEX
+INSERT INTO `item_mods` VALUES(28339, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES(28339, 23, 12); -- ATK
+INSERT INTO `item_mods` VALUES(28339, 14, 13); -- CHR
+INSERT INTO `item_mods` VALUES(28339, 30, 7); -- MACC
+INSERT INTO `item_mods` VALUES(28339, 68, 36); -- EVA
+INSERT INTO `item_mods` VALUES(28339, 29, 2); -- Magic Def Bonus
+INSERT INTO `item_mods` VALUES(28339, 384, 40); -- Haste %
+INSERT INTO `item_mods` VALUES(28339, 31, 49); -- MEVA
+INSERT INTO `item_mods` VALUES(28339, 288, 2); -- Double Attack %
+
+-- Gaudryi Necklace (28366)
+INSERT INTO `item_mods` VALUES(28366, 26, 10); -- RACC
+INSERT INTO `item_mods` VALUES(28366, 24, 5); -- RATK
+INSERT INTO `item_mods` VALUES(28366, 73, 4); -- Store TP
+
+-- Vengeful Ring (27592)
+INSERT INTO `item_mods` VALUES(27592, 2, 20); -- HP
+INSERT INTO `item_mods` VALUES(27592, 5, 20); -- MP
+INSERT INTO `item_mods` VALUES(27592, 68, 9); -- EVA
+INSERT INTO `item_mods` VALUES(27592, 31, 9); -- MEVA
+INSERT INTO `item_mods` VALUES(27592, 27, 3); -- Enmity
+
+-- Damani Horn +1 (21403)
+INSERT INTO `item_mods` VALUES(21403, 5, 25); -- MP
+INSERT INTO `item_mods` VALUES(21403, 121, 4); -- Wind Instrument Skill
+INSERT INTO `item_mods` VALUES(21403, 440, 3); -- Lullaby
+
+-- Andoaa Earring (28506)
+INSERT INTO `item_mods` VALUES(28506, 5, 30); -- MP
+INSERT INTO `item_mods` VALUES(28506, 113, 5); -- Enhancing Magic Skill
+INSERT INTO `item_mods` VALUES(28506, 117, 5); -- Summoning Magic Skill
+
+-- Bokwus Gloves (28059)
+INSERT INTO `item_mods` VALUES(28059, 1, 59); -- DEF
+INSERT INTO `item_mods` VALUES(28059, 2, 12); -- HP
+INSERT INTO `item_mods` VALUES(28059, 5, 50); -- MP
+INSERT INTO `item_mods` VALUES(28059, 8, 1); -- STR
+INSERT INTO `item_mods` VALUES(28059, 9, 10); -- DEX
+INSERT INTO `item_mods` VALUES(28059, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES(28059, 12, 10); -- INT
+INSERT INTO `item_mods` VALUES(28059, 13, 13); -- MND
+INSERT INTO `item_mods` VALUES(28059, 14, 4); -- CHR
+INSERT INTO `item_mods` VALUES(28059, 68, 11); -- EVA
+INSERT INTO `item_mods` VALUES(28059, 29, 1); -- Magic Def Bonus
+INSERT INTO `item_mods` VALUES(28059, 31, 26); -- MEVA
+INSERT INTO `item_mods` VALUES(28059, 374, 13); -- Cure Potency %
+INSERT INTO `item_mods` VALUES(28059, 27, -3); -- Enmity Down
+INSERT INTO `item_mods` VALUES(28059, 384, 30); -- Haste %
+
+-- Lentus Grip (21425)
+INSERT INTO `item_mods` VALUES(21425, 171, 5); -- Two-Handed Weapon Delay %
+
+-- Zanhi Ring (28565)
+INSERT INTO `item_mods` VALUES(28565, 54, 20); -- Fire
+-- INSERT INTO `item_mods` VALUES(28565, 000, 50); -- Occasionally absorbs water elemental damage	
+
+-- Manibozho Gloves (28058)
+INSERT INTO `item_mods` VALUES(28058, 1, 63); -- DEF
+INSERT INTO `item_mods` VALUES(28058, 2, 13); -- HP
+INSERT INTO `item_mods` VALUES(28058, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES(28058, 10, 14); -- VIT
+INSERT INTO `item_mods` VALUES(28058, 12, 1); -- INT
+INSERT INTO `item_mods` VALUES(28058, 13, 13); -- MND
+INSERT INTO `item_mods` VALUES(28058, 14, 5); -- CHR
+INSERT INTO `item_mods` VALUES(28058, 24, 15); -- RATK
+INSERT INTO `item_mods` VALUES(28058, 29, 2); -- Magic Def Bonus
+INSERT INTO `item_mods` VALUES(28058, 31, 26); -- MEVA
+INSERT INTO `item_mods` VALUES(28058, 27, -7); -- Enmity Down
+INSERT INTO `item_mods` VALUES(28058, 384, 40); -- Haste %
+INSERT INTO `item_mods` VALUES(28058, 365, 1); -- Snapshot Effect
+INSERT INTO `item_mods` VALUES(28058, 305, 1); -- Recycle Effect
+
+-- Benthos Grip (21420)
+INSERT INTO `item_mods` VALUES(21420, 12, 3); -- INT
+INSERT INTO `item_mods` VALUES(21420, 5, 20); -- MP
+INSERT INTO `item_mods` VALUES(21420, 13, 3); -- MND
+INSERT INTO `item_mods` VALUES(21420, 14, 3); -- CHR
+INSERT INTO `item_mods` VALUES(21420, 30, 5); -- MACC
+
+-- Peapua (21374)
+INSERT INTO `item_mods` VALUES(21374, 27, 2); -- Enmity
+INSERT INTO `item_mods` VALUES(21374, 302, 1); -- Triple Attack %
+
+-- Domesticator's Earring (28505) 
+INSERT INTO `item_mods` VALUES(28505, 68, 3); -- Eva
+INSERT INTO `item_mods` VALUES(28505, 27, -5); -- Enmity
+-- INSERT INTO `item_mods` VALUES(28505, 000, -5); -- Item has Pet Enmity +5 and Pet Double Atk +3%
