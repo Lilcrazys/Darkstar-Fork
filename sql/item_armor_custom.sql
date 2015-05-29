@@ -412,3 +412,5 @@ INSERT INTO `item_armor` VALUES ('27862', 'savas_jawshan', '99', '2497', '203', 
 INSERT INTO `item_armor` VALUES ('27710', 'sahip_helm', '99', '10689', '206', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('28151', 'sifahir_slacks', '99', '4', '176', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('27868', 'ischemia_chasuble', '99', '1622556', '143', '0', '0', '32', '0');
+
+INSERT INTO `item_armor` VALUES ('26944', 'tartarus_platemail', '99', '10689', '384', '0', '0', '32', '0');

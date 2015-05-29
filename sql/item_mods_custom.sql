@@ -13401,3 +13401,23 @@ INSERT INTO `item_mods` VALUES(21374, 302, 1); -- Triple Attack %
 INSERT INTO `item_mods` VALUES(28505, 68, 3); -- Eva
 INSERT INTO `item_mods` VALUES(28505, 27, -5); -- Enmity
 -- INSERT INTO `item_mods` VALUES(28505, 000, -5); -- Item has Pet Enmity +5 and Pet Double Atk +3%
+
+-- tartarus_platemail (26944)
+INSERT INTO `item_mods` VALUES(26944, 1, 158); -- DEF
+INSERT INTO `item_mods` VALUES(26944, 2, 63); -- HP
+INSERT INTO `item_mods` VALUES(26944, 5, 35); -- MP
+INSERT INTO `item_mods` VALUES(26944, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES(26944, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES(26944, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES(26944, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES(26944, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES(26944, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES(26944, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES(26944, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES(26944, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26944, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26944, 384, 30); -- Haste
+INSERT INTO `item_mods` VALUES(26944, 20, 40); -- ACC
+INSERT INTO `item_mods` VALUES(26944, 480, 5); -- Absorb damage taken
+INSERT INTO `item_mods` VALUES(26944, 160, -10); -- damage taken
+-- INSERT INTO `item_mods` VALUES(26944, 0, 2); -- reserver for script flag later

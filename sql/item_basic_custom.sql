@@ -427,3 +427,5 @@ INSERT INTO `item_basic` VALUES (27862,0,'savas_jawshan','savas_jawshan',1,63552
 INSERT INTO `item_basic` VALUES (27710,0,'sahip_helm','sahip_helm',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28151,0,'sifahir_slacks','sifahir_slacks',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27868,0,'ischemia_chasuble','ischemia_chasuble',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (26944,0,'tartarus_platemail','tartarus_platemail',1,63552,0,1,0);
