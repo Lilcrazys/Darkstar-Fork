@@ -775,9 +775,9 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- INSERT INTO `mob_spawn_points` VALUES (16977926,'Hades_V1','Hades',90080,80,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977927,'Hades_V2','Hades',90081,90,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977928,'Paramount_Botulus','Paramount Botulus',90055,95,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,31,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,100,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,95,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,100,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,100,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977937,'Ashrakk','Ashrakk',90092,70,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977938,'Balamor','Balamor',90093,75,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977939,'Provenance_Watcher','Provenance_Watcher',90094,80,0,1,0);
