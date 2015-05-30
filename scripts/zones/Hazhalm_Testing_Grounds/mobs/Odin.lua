@@ -89,4 +89,8 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    if (killer:getMainJob() == JOB_SMN and killer:hasSpell(305) == false) then
+        killer:addSpell(305);
+    end
+    killer:addCurrency("legion_point", 500);
 end;

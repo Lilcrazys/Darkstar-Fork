@@ -118,6 +118,8 @@ INSERT INTO `mob_droplist` VALUES (3632,0,12096,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3632,0,19403,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3648,0,2963,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3648,0,19399,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (4372,0,270,500); -- odin statue
+INSERT INTO `mob_droplist` VALUES (4372,0,271,500); -- alex statue
 INSERT INTO `mob_droplist` VALUES (4071,0,12107,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4516,0,19302,330); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,12103,340); -- COMMENT ME
@@ -436,6 +438,25 @@ INSERT INTO `mob_droplist` VALUES (9059,0,27763,100);
 INSERT INTO `mob_droplist` VALUES (9059,0,27762,100);
 INSERT INTO `mob_droplist` VALUES (9059,0,27761,100);
 -- ------ End Legion
+
+-- Odin (9082)
+INSERT INTO `mob_droplist` VALUES (9082,0,3925,1000); -- tanz
+INSERT INTO `mob_droplist` VALUES (9082,0,3925,600); -- tanz
+INSERT INTO `mob_droplist` VALUES (9082,0,3925,200); -- tanz
+INSERT INTO `mob_droplist` VALUES (9082,0,3924,200); -- scholar
+INSERT INTO `mob_droplist` VALUES (9082,0,4023,1000); -- snow
+INSERT INTO `mob_droplist` VALUES (9082,0,4023,1000); -- snow
+INSERT INTO `mob_droplist` VALUES (9082,0,4023,1000); -- snow
+
+
+-- Alex (9083)
+INSERT INTO `mob_droplist` VALUES (9083,0,3925,1000); -- tanz
+INSERT INTO `mob_droplist` VALUES (9083,0,3925,600); -- tanz
+INSERT INTO `mob_droplist` VALUES (9083,0,3925,200); -- tanz
+INSERT INTO `mob_droplist` VALUES (9083,0,3924,200); -- scholar
+INSERT INTO `mob_droplist` VALUES (9083,0,4023,1000); -- snow
+INSERT INTO `mob_droplist` VALUES (9083,0,4023,1000); -- snow
+INSERT INTO `mob_droplist` VALUES (9083,0,4023,1000); -- snow
 
 
 -- New 7 HNM
