@@ -118,7 +118,6 @@ INSERT INTO `mob_droplist` VALUES (3632,0,12096,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3632,0,19403,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3648,0,2963,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3648,0,19399,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4372,0,270,500); -- odin statue
 INSERT INTO `mob_droplist` VALUES (4372,0,271,500); -- alex statue
 INSERT INTO `mob_droplist` VALUES (4071,0,12107,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4516,0,19302,330); -- COMMENT ME
@@ -457,7 +456,7 @@ INSERT INTO `mob_droplist` VALUES (9083,0,3924,200); -- scholar
 INSERT INTO `mob_droplist` VALUES (9083,0,4023,1000); -- snow
 INSERT INTO `mob_droplist` VALUES (9083,0,4023,1000); -- snow
 INSERT INTO `mob_droplist` VALUES (9083,0,4023,1000); -- snow
-
+INSERT INTO `mob_droplist` VALUES (9083,0,270,1000); -- odin statue
 
 -- New 7 HNM
 -- tchakka
