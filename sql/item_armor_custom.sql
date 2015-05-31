@@ -423,7 +423,6 @@ INSERT INTO `item_armor` VALUES ('27881', 'outrider_mail', '99', '6593', '5', '0
 INSERT INTO `item_armor` VALUES ('27893', 'haruspex_coat', '99', '4179646', '375', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27882', 'espial_gambison', '99', '3662710', '23', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27889', 'aetosaur_jerkin', '99', '2097152', '391', '0', '0', '32', '0');
-INSERT INTO `item_armor` VALUES ('27919', 'bokwus_robe', '99', '1589788', '351', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('26715', 'adorned_helm_+1', '99', '2106341', '55', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26787', 'alhazen_hat_+1', '99', '4194303', '19', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26710', 'imperial_wing_hairpin_+1', '99', '4194303', '0', '0', '0', '16', '0');

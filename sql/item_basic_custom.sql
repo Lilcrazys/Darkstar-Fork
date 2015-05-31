@@ -439,7 +439,6 @@ INSERT INTO `item_basic` VALUES (27918,0,'manibozho_jerkin','manibozho_jerkin',1
 INSERT INTO `item_basic` VALUES (27893,0,'haruspex_coat','haruspex_coat',1,2048,0,1,0);
 INSERT INTO `item_basic` VALUES (27882,0,'espial_gambison','espial_gambison',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27889,0,'aetosaur_jerkin','aetosaur_jerkin',1,2048,0,1,0);
-INSERT INTO `item_basic` VALUES (27919,0,'bokwus_robe','bokwus_robe',1,18432,0,1,0);
 INSERT INTO `item_basic` VALUES (26715,0,'adorned_helm_+1','adorned_helm_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26787,0,'alhazen_hat_+1','alhazen_hat_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (26710,0,'imperial_wing_hairpin_+1','imperial_wing_hairpin_+1',1,63552,0,1,0);

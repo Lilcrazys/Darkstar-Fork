@@ -13714,23 +13714,23 @@ INSERT INTO `item_mods` VALUES(26732, 384, 100); -- Haste
 
  -- agony_jerkin_+1
 
-INSERT INTO `item_mods` VALUES(27918, 1, 136);
-INSERT INTO `item_mods` VALUES(27918, 2, 59); -- HP
-INSERT INTO `item_mods` VALUES(27918, 5, 44); -- MP
-INSERT INTO `item_mods` VALUES(27918, 8, 24); -- STR
-INSERT INTO `item_mods` VALUES(27918, 9, 35); -- DEX
-INSERT INTO `item_mods` VALUES(27918, 10, 24); -- VIT
-INSERT INTO `item_mods` VALUES(27918, 11, 28); -- AGI
-INSERT INTO `item_mods` VALUES(27918, 12, 23); -- INT
-INSERT INTO `item_mods` VALUES(27918, 13, 23); -- MND
-INSERT INTO `item_mods` VALUES(27918, 14, 23); -- CHR
-INSERT INTO `item_mods` VALUES(27918, 23, 24); -- Att
-INSERT INTO `item_mods` VALUES(27918, 25, 17); -- ACC
-INSERT INTO `item_mods` VALUES(27918, 29, 6); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES(27918, 31, 64); -- Magic Evasion
-INSERT INTO `item_mods` VALUES(27918, 68, 49); -- Evasion
-INSERT INTO `item_mods` VALUES(27918, 384, 40); -- Haste
-INSERT INTO `item_mods` VALUES(27918, 227, 6); -- Lizard Killer
+INSERT INTO `item_mods` VALUES(26943, 1, 136);
+INSERT INTO `item_mods` VALUES(26943, 2, 59); -- HP
+INSERT INTO `item_mods` VALUES(26943, 5, 44); -- MP
+INSERT INTO `item_mods` VALUES(26943, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES(26943, 9, 35); -- DEX
+INSERT INTO `item_mods` VALUES(26943, 10, 24); -- VIT
+INSERT INTO `item_mods` VALUES(26943, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES(26943, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES(26943, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES(26943, 14, 23); -- CHR
+INSERT INTO `item_mods` VALUES(26943, 23, 24); -- Att
+INSERT INTO `item_mods` VALUES(26943, 25, 17); -- ACC
+INSERT INTO `item_mods` VALUES(26943, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26943, 31, 64); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26943, 68, 49); -- Evasion
+INSERT INTO `item_mods` VALUES(26943, 384, 40); -- Haste
+INSERT INTO `item_mods` VALUES(26943, 227, 6); -- Lizard Killer
 
 
  -- emet_harness_+1
