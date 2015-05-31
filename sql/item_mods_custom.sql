@@ -13675,23 +13675,23 @@ INSERT INTO `item_mods` VALUES(27918, 68, 70); -- Evasion
 
  -- hike_khat_+1
 
-INSERT INTO `item_mods` VALUES(27918, 1, 96);
-INSERT INTO `item_mods` VALUES(27918, 2, 36); -- HP
-INSERT INTO `item_mods` VALUES(27918, 5, 32); -- MP
-INSERT INTO `item_mods` VALUES(27918, 8, 14); -- STR
-INSERT INTO `item_mods` VALUES(27918, 9, 14); -- DEX
-INSERT INTO `item_mods` VALUES(27918, 10, 14); -- VIT
-INSERT INTO `item_mods` VALUES(27918, 11, 14); -- AGI
-INSERT INTO `item_mods` VALUES(27918, 12, 19); -- INT
-INSERT INTO `item_mods` VALUES(27918, 13, 19); -- MND
-INSERT INTO `item_mods` VALUES(27918, 14, 19); -- CHR
-INSERT INTO `item_mods` VALUES(27918, 23, 17); -- Att
-INSERT INTO `item_mods` VALUES(27918, 25, 17); -- ACC
-INSERT INTO `item_mods` VALUES(27918, 29, 5); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES(27918, 31, 75); -- Magic Evasion
-INSERT INTO `item_mods` VALUES(27918, 68, 36); -- Evasion
-INSERT INTO `item_mods` VALUES(27918, 384, 60); -- Haste
-INSERT INTO `item_mods` VALUES(27918, 160, -3); -- -PDT
+INSERT INTO `item_mods` VALUES(26785, 1, 96);
+INSERT INTO `item_mods` VALUES(26785, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES(26785, 5, 32); -- MP
+INSERT INTO `item_mods` VALUES(26785, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES(26785, 9, 14); -- DEX
+INSERT INTO `item_mods` VALUES(26785, 10, 14); -- VIT
+INSERT INTO `item_mods` VALUES(26785, 11, 14); -- AGI
+INSERT INTO `item_mods` VALUES(26785, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES(26785, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES(26785, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES(26785, 23, 17); -- Att
+INSERT INTO `item_mods` VALUES(26785, 25, 17); -- ACC
+INSERT INTO `item_mods` VALUES(26785, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26785, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26785, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES(26785, 384, 60); -- Haste
+INSERT INTO `item_mods` VALUES(26785, 160, -3); -- -PDT
 
 
  -- stinger_helm_+1

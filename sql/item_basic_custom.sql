@@ -435,7 +435,7 @@ INSERT INTO `item_basic` VALUES (27884,0,'temachtiani_shirt','temachtiani_shirt'
 INSERT INTO `item_basic` VALUES (27891,0,'shabti_cuirass','shabti_cuirass',1,2048,0,1,0);
 REPLACE INTO `item_basic` VALUES (27920,0,'pak_corselet','pak_corselet',1,2048,0,1,0);
 INSERT INTO `item_basic` VALUES (27881,0,'outrider_mail','outrider_mail',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27918,0,'manibozho_jerkin','manibozho_jerkin',1,18432,0,1,0);
+REPLACE INTO `item_basic` VALUES (27918,0,'manibozho_jerkin','manibozho_jerkin',1,18432,0,1,0);
 INSERT INTO `item_basic` VALUES (27893,0,'haruspex_coat','haruspex_coat',1,2048,0,1,0);
 INSERT INTO `item_basic` VALUES (27882,0,'espial_gambison','espial_gambison',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27889,0,'aetosaur_jerkin','aetosaur_jerkin',1,2048,0,1,0);
