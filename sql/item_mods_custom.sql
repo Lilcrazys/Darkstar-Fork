@@ -12490,22 +12490,22 @@ INSERT INTO `item_mods` VALUES(26776, 384, 70); -- Haste
 -- INSERT INTO `item_mods` VALUES(26776, 000, 220); -- Climactic Flourish: Critical hits +1 Critical hit damage +22%
 
 -- maculele_casaque (26934)
-INSERT INTO `item_mods` VALUES(26943, 1, 95); -- DEF
-INSERT INTO `item_mods` VALUES(26943, 2, 30); -- HP
-INSERT INTO `item_mods` VALUES(26943, 8, 16); -- STR
-INSERT INTO `item_mods` VALUES(26943, 9, 26); -- DEX
-INSERT INTO `item_mods` VALUES(26943, 10, 15); -- VIT
-INSERT INTO `item_mods` VALUES(26943, 11, 17); -- AGI
-INSERT INTO `item_mods` VALUES(26943, 12, 13); -- INT
-INSERT INTO `item_mods` VALUES(26943, 13, 13); -- MND
-INSERT INTO `item_mods` VALUES(26943, 14, 19); -- CHR
-INSERT INTO `item_mods` VALUES(26943, 68, 25); -- Evasion
-INSERT INTO `item_mods` VALUES(26943, 31, 47); -- Magic Evasion
-INSERT INTO `item_mods` VALUES(26943, 29, 3); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES(26943, 289, 11); -- Subtle Blow
-INSERT INTO `item_mods` VALUES(26943, 259, 10); -- Dual Wield
-INSERT INTO `item_mods` VALUES(26943, 384, 40); -- Haste
--- INSERT INTO `item_mods` VALUES(26943, 000, 550); -- Striking Flourish: “Double Attack” critical hit rate +55%
+INSERT INTO `item_mods` VALUES(26934, 1, 95); -- DEF
+INSERT INTO `item_mods` VALUES(26934, 2, 30); -- HP
+INSERT INTO `item_mods` VALUES(26934, 8, 16); -- STR
+INSERT INTO `item_mods` VALUES(26934, 9, 26); -- DEX
+INSERT INTO `item_mods` VALUES(26934, 10, 15); -- VIT
+INSERT INTO `item_mods` VALUES(26934, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES(26934, 12, 13); -- INT
+INSERT INTO `item_mods` VALUES(26934, 13, 13); -- MND
+INSERT INTO `item_mods` VALUES(26934, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES(26934, 68, 25); -- Evasion
+INSERT INTO `item_mods` VALUES(26934, 31, 47); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(26934, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(26934, 289, 11); -- Subtle Blow
+INSERT INTO `item_mods` VALUES(26934, 259, 10); -- Dual Wield
+INSERT INTO `item_mods` VALUES(26934, 384, 40); -- Haste
+-- INSERT INTO `item_mods` VALUES(26934, 000, 550); -- Striking Flourish: “Double Attack” critical hit rate +55%
 
 -- maculele_bangles (27088)
 INSERT INTO `item_mods` VALUES(27088, 1, 64); -- DEF
