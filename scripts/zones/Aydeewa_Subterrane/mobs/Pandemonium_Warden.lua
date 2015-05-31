@@ -199,7 +199,7 @@ end;
 function onMobDeath(mob,killer)
     local CHANCE = 20;
     if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(742) == false) then
-        killer:addSpell(SPELL_ID);
+        killer:addSpell(742);
     end
 
     -- mob:SpoofChatParty("This is the end..of nothing..Defeating me proves only that you too, harbor", MESSAGE_SAY)
