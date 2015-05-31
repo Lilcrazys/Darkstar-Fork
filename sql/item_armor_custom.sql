@@ -422,13 +422,13 @@ REPLACE INTO `item_armor` VALUES ('27920', 'pak_corselet', '99', '192', '303', '
 INSERT INTO `item_armor` VALUES ('27881', 'outrider_mail', '99', '6593', '5', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27893', 'haruspex_coat', '99', '4179646', '375', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27882', 'espial_gambison', '99', '3662710', '23', '0', '0', '32', '0');
-INSERT INTO `item_armor` VALUES ('27882', 'aetosaur_jerkin', '99', '2097152', '391', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('27889', 'aetosaur_jerkin', '99', '2097152', '391', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('27919', 'bokwus_robe', '99', '1589788', '351', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('26715', 'adorned_helm_+1', '99', '2106341', '55', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26787', 'alhazen_hat_+1', '99', '4194303', '19', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26710', 'imperial_wing_hairpin_+1', '99', '4194303', '0', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26785', 'hike_khat_+1', '99', '1720860', '301', '0', '0', '16', '0');
-INSERT INTO `item_armor` VALUES ('26715', 'stinger_helm_+1', '99', '10368', '114', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('26732', 'stinger_helm_+1', '99', '10368', '114', '0', '0', '16', '0');
 INSERT INTO `item_armor` VALUES ('26943', 'agony_jerkin_+1', '99', '2473969', '94', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('26871', 'emet_harness_+1', '99', '2472947', '34', '0', '0', '32', '0');
 INSERT INTO `item_armor` VALUES ('26873', 'hime_domaru_+1', '99', '2048', '114', '0', '0', '32', '0');
