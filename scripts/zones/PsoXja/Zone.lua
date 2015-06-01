@@ -23,7 +23,7 @@ function onInitialize(zone)
 	zone:registerRegion(5, -302.493,42,-179.995, -297.386,48,-176.078); -- Uncapped area 2 (G-9 Tower)
 	zone:registerRegion(6, 299.847,42, 257.716, 303.824,48,262.391); -- Uncapped area 3 (I-7 Tower)
 
-	-- Begin workarounds for easily broken elevators
+	--[[ Begin workarounds for easily broken elevators
 	zone:registerRegion(7, -20, 9, 20, 0, 0, 0); -- Elevator to/from Diablos
 	zone:registerRegion(8, -340, 10, 340, 0, 0, 0); -- Elevator to/from Promy 
 	zone:registerRegion(9, -300, 10, 340, 0, 0, 0); -- Elevator to/from ?
@@ -31,7 +31,7 @@ function onInitialize(zone)
 	zone:registerRegion(11, -340, 10, -220, 0, 0, 0); -- Elevator to/from Avatar Gate (B)
 	zone:registerRegion(12, 260, 10, 300, 0, 0, 0); -- Elevator to/from Avatar Gate (C)
 	zone:registerRegion(13, 140, 10, -340, 0, 0, 0); -- Elevator to/from Avatar Gate (D)
-	-- End workarounds for easily broken elevators
+	]]-- End workarounds for easily broken elevators
 
     UpdateTreasureSpawnPoint(16814557);
 end;
@@ -90,6 +90,8 @@ function onRegionEnter(player,region)
 		player:startEvent(0x0018);
 	elseif(region:GetRegionID() == 6) then
 		player:startEvent(0x0019);
+
+	--[[
 	elseif (region:GetRegionID() == 7) then -- Diablos Elevator
 		if (player:getYPos() < 1) then
 			-- player:PrintToPlayer("Going down!");
@@ -160,6 +162,7 @@ function onRegionEnter(player,region)
 		else
 			player:PrintToPlayer("ERROR! Report Avatar Gate (D) elevator bug please!");
 		end
+	]]
 	end
 end;
 
