@@ -211,11 +211,11 @@ function onTrade(player,npc,trade)
 			player:SpoofChatPlayer( "Laevateinn [75-85]", MESSAGE_ECHO, npc:getID() );
 			textMythic2(player,npc,trade);
 			player:setVar("CustomTrial", 18994);
-		elseif (trade:hasItemQty(19803,1) and trade:getItemCount() == 1) then
+		elseif (trade:hasItemQty(19083,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
 			player:SpoofChatPlayer( "Laevateinn [85-95]", MESSAGE_ECHO, npc:getID() );
 			textMythic3(player,npc,trade);
-			player:setVar("CustomTrial", 19803);
+			player:setVar("CustomTrial", 19083);
 		elseif (trade:hasItemQty(19713,1) and trade:getItemCount() == 1) then
 			textMythic1(player,npc,trade);
 			player:SpoofChatPlayer( "Laevateinn [95-99]", MESSAGE_ECHO, npc:getID() );
