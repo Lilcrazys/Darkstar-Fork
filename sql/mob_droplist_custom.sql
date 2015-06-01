@@ -447,7 +447,9 @@ INSERT INTO `mob_droplist` VALUES (9082,0,3924,200); -- scholar
 INSERT INTO `mob_droplist` VALUES (9082,0,4023,1000); -- snow
 INSERT INTO `mob_droplist` VALUES (9082,0,4023,1000); -- snow
 INSERT INTO `mob_droplist` VALUES (9082,0,4023,1000); -- snow
-
+INSERT INTO `mob_droplist` VALUES (9082,0,28605,150); -- samanisi_cape
+INSERT INTO `mob_droplist` VALUES (9082,0,27722,50); -- ighwa_cap
+INSERT INTO `mob_droplist` VALUES (9082,0,28156,50); -- ighwa_trousers
 
 -- Alex (9083)
 INSERT INTO `mob_droplist` VALUES (9083,0,3925,1000); -- tanz
