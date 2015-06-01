@@ -456,5 +456,5 @@ INSERT INTO `item_basic` VALUES (27996,0,'shigure_tekko_+1','shigure_tekko_+1',1
 INSERT INTO `item_basic` VALUES (28135,0,'assiduity_pants_+1','assiduity_pants_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28137,0,'augury_cuisses_+1','augury_cuisses_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28605,0,'samanisi_cape','samanisi_cape',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27722,0,'ighwa_cap','ighwa_cap',1,63552,0,1,0);
+REPLACE INTO `item_basic` VALUES (27722,0,'ighwa_cap','ighwa_cap',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28156,0,'ighwa_trousers','ighwa_trousers',1,63552,0,1,0);
