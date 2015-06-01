@@ -344,3 +344,7 @@ INSERT INTO `item_mods_pet` VALUES (27356, 23, 25); -- Avatar: Attack+25
 -- keraunos
 INSERT INTO `item_mods_pet` VALUES (21169, 30, 228); -- Pet macc
 INSERT INTO `item_mods_pet` VALUES (21169, 28, 100); -- Pet Matt
+
+ -- samanisi_cape (28605)
+INSERT INTO `item_mods_pet` VALUES(28605, 25, 7); -- Avatar Acc
+INSERT INTO `item_mods_pet` VALUES(28605, 30, 7); -- Avatar Macc

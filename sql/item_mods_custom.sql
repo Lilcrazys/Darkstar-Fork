@@ -13930,3 +13930,51 @@ INSERT INTO `item_mods` VALUES(28137, 31, 80); -- Magic Evasion
 INSERT INTO `item_mods` VALUES(28137, 68, 37); -- Evasion
 INSERT INTO `item_mods` VALUES(28137, 384, 40); -- Haste
 INSERT INTO `item_mods` VALUES(28137, 296, 7); -- Conserve Mp
+
+ -- samanisi_cape (28605)
+
+INSERT INTO `item_mods` VALUES(28605, 1, 10);
+INSERT INTO `item_mods` VALUES(28605, 357, -3); -- BP Delay
+
+
+
+ -- ighwa_cap (27722)
+
+INSERT INTO `item_mods` VALUES(27722, 1, 113);
+INSERT INTO `item_mods` VALUES(27722, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES(27722, 5, 23); -- MP
+INSERT INTO `item_mods` VALUES(27722, 8, 25); -- STR
+INSERT INTO `item_mods` VALUES(27722, 9, 22); -- DEX
+INSERT INTO `item_mods` VALUES(27722, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES(27722, 11, 22); -- AGI
+INSERT INTO `item_mods` VALUES(27722, 12, 20); -- INT
+INSERT INTO `item_mods` VALUES(27722, 13, 20); -- MND
+INSERT INTO `item_mods` VALUES(27722, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES(27722, 23, 18); -- Att
+INSERT INTO `item_mods` VALUES(27722, 25, 18); -- Acc
+INSERT INTO `item_mods` VALUES(27722, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(27722, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(27722, 68, 33); -- Evasion
+INSERT INTO `item_mods` VALUES(27722, 384, 70); -- Haste
+INSERT INTO `item_mods` VALUES(27722, 161, -4); -- Phys Dmg Taken
+INSERT INTO `item_mods` VALUES(27722, 499, 5); -- Ice spikes
+INSERT INTO `item_mods` VALUES(27722, 500, 20); -- Spike dmg
+INSERT INTO `item_mods` VALUES(27722, 501, 35); -- Spike duration
+
+ -- ighwa_trousers (28156)
+
+INSERT INTO `item_mods` VALUES(28156, 1, 111);
+INSERT INTO `item_mods` VALUES(28156, 2, 47); -- HP
+INSERT INTO `item_mods` VALUES(28156, 8, 34); -- STR
+INSERT INTO `item_mods` VALUES(28156, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES(28156, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES(28156, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES(28156, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES(28156, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES(28156, 25, 15); -- Acc
+INSERT INTO `item_mods` VALUES(28156, 289, 7); -- Subtle Blow
+INSERT INTO `item_mods` VALUES(28156, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES(28156, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES(28156, 68, 53); -- Evasion
+INSERT INTO `item_mods` VALUES(28156, 384, 60); -- Haste
+INSERT INTO `item_mods` VALUES(28156, 166, -3); -- Enemy crit rate

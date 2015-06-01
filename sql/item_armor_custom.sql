@@ -439,3 +439,6 @@ INSERT INTO `item_armor` VALUES ('27051', 'kachimusha_kote_+1', '99', '6146', '9
 INSERT INTO `item_armor` VALUES ('27996', 'shigure_tekko_+1', '99', '6146', '9', '0', '0', '64', '0');
 INSERT INTO `item_armor` VALUES ('28135', 'assiduity_pants_+1', '99', '1720844', '114', '0', '0', '128', '0');
 INSERT INTO `item_armor` VALUES ('28137', 'augury_cuisses_+1', '99', '2141585', '114', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('28605', 'samanisi_cape', '99', '16384', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('27722', 'ighwa_cap', '99', '8641', '333', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('28156', 'ighwa_trousers', '99', '2593826', '333', '0', '0', '128', '0');
