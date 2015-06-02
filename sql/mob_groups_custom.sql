@@ -9,7 +9,6 @@
 -- ---------------------------------------------------------------------------
 -- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
 
-
 REPLACE INTO `mob_groups` VALUES (99,2083,4,14400,0,1788,20000,20000,105,107,0); -- Intulo
 
 REPLACE INTO `mob_groups` VALUES (125,500,5,14400,0,370,50000,0,115,117,0); -- Bonnacon
@@ -39,9 +38,12 @@ REPLACE INTO `mob_groups` VALUES (914,300,35,1056,0,216,0,0,101,105,0); -- Aw Gh
 REPLACE INTO `mob_groups` VALUES (915,301,35,1056,0,0,0,0,99,103,0); -- Aw zdei
 REPLACE INTO `mob_groups` VALUES (918,2114,35,0,128,0,0,35000,85,87,0); -- Ix zdei
 
--- Om ' Aern
 -- nin
 -- INSERT INTO `mob_groups` VALUES (874,2975,33,1056,0,2535,0,0,75,78,0);
+
+REPLACE INTO `mob_groups` VALUES (6495,1643,119,330,0,1243,80000,10000,16,20,0,0); -- ?
+
+-- Om ' Aern
 -- pld
 REPLACE INTO `mob_groups` VALUES (14100,5325,33,1056,0,2535,0,5000,75,78,0);
 -- rng
@@ -71,7 +73,6 @@ REPLACE INTO `mob_groups` VALUES (14112,5337,33,1056,0,2535,0,5000,75,78,0);
 -- brd
 REPLACE INTO `mob_groups` VALUES (14113,5338,33,1056,0,2535,0,0,75,78,0);
 
-
 INSERT INTO `mob_groups` VALUES (90330,9330,33,0,128,0,40000,40000,100,100,0); -- AV Wyverns
 INSERT INTO `mob_groups` VALUES (90331,3271,33,0,128,0,10000,10000,100,100,0); -- JoJ Xzomits
 INSERT INTO `mob_groups` VALUES (90332,3270,33,0,128,0,10000,10000,100,100,0); -- JoL Hpemde
@@ -83,7 +84,6 @@ REPLACE INTO `mob_groups` VALUES (902,2136,34,900,0,1838,110000,100000,110,110,0
 REPLACE INTO `mob_groups` VALUES (906,3269,34,0,128,0,50000,50000,100,100,0); -- Qn_aern_rdm
 REPLACE INTO `mob_groups` VALUES (907,4651,34,0,128,0,50000,50000,100,100,0); -- Qn_aern_whm
 
-
 INSERT INTO `mob_groups` VALUES (90335,9335,35,0,128,0,100000,100000,90,90,0); -- Ix DRG Wynav
 
 REPLACE INTO `mob_groups` VALUES (920,2131,35,0,128,1833,100000,100000,120,120,0); -- Jailer of Fortitude
@@ -92,7 +92,6 @@ REPLACE INTO `mob_groups` VALUES (922,4659,35,0,128,0,50000,50000,100,100,0); --
 REPLACE INTO `mob_groups` VALUES (919,2130,35,0,128,1832,100000,100000,120,120,0); -- Jailer of Faith
 REPLACE INTO `mob_groups` VALUES (916,4660,35,0,128,4397,100000,100000,110,110,0); -- Ix Aern DRK
 REPLACE INTO `mob_groups` VALUES (917,2112,35,0,128,4396,100000,100000,110,110,0); -- Ix Aern DRG
-
 
 -- Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (412,29,15,60,0,10,5300,0,95,97,0); -- Ab xzomit
@@ -210,7 +209,6 @@ REPLACE INTO `mob_groups` VALUES (12983,4541,45,60,0,0,10000,10000,104,106,0);
 
 
 -- Custom Besieged
-
 REPLACE INTO `mob_groups` VALUES (1486,39,48,0,128,0,17000,17000,107,112,0);
 REPLACE INTO `mob_groups` VALUES (1487,52,48,0,128,0,17000,17000,112,112,0);
 REPLACE INTO `mob_groups` VALUES (1488,2127,48,0,128,0,17000,17000,107,112,0);

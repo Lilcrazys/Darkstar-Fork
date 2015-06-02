@@ -20,6 +20,7 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
+    --[[
     local spellParams = {}; -- Guesstimated
     spellParams.hasMultipleTargetReduction = false;
     spellParams.resistBonus = 1.0;
@@ -31,7 +32,7 @@ function onSpellCast(caster,target,spell)
     spellParams.M50 = 3.75;
     spellParams.M100 = 3.5;
     spellParams.M200 = 3;
-
+    ]]
     local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
     local resist = applyResistance(caster,spell,target,dINT,37,0);
     local STR_Loss = ((target:getStat(MOD_STR) / 100) * 20); -- Should be 20%
@@ -72,8 +73,21 @@ function onSpellCast(caster,target,spell)
         target:addStatusEffect(EFFECT_CHR_DOWN,CHR_Loss,0,duration);
     end
 
-    -- local dmg = doElementalNuke(939,2.335,caster,spell,target,false,1.0);
-    local dmg = doElementalNuke(caster, spell, target, spellParams);
+    --diverting use of doElementalNuke till spellParams is implemented for this spell
+
+    --local dmg = doElementalNuke(939,2.335,caster,spell,target,false,1.0);
+    --calculate raw damage
+    local dmg = calculateMagicDamage(939,2.335,caster,spell,target,ELEMENTAL_MAGIC_SKILL,MOD_INT,false);
+    --get resist multiplier (1x if no resist)
+    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT)-target:getStat(MOD_INT),ELEMENTAL_MAGIC_SKILL,1.0);
+    --get the resisted damage
+    dmg = dmg*resist;
+    --add on bonuses (staff/day/weather/jas/mab/etc all go in this function)
+    dmg = addBonuses(caster,spell,target,dmg);
+    --add in target adjustment
+    dmg = adjustForTarget(target,dmg,spell:getElement());
+    --add in final adjustments
+    dmg = finalMagicAdjustments(caster,target,spell,dmg);
 
     return dmg;
 end;
