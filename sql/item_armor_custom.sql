@@ -442,3 +442,41 @@ INSERT INTO `item_armor` VALUES ('28137', 'augury_cuisses_+1', '99', '2141585', 
 INSERT INTO `item_armor` VALUES ('28605', 'samanisi_cape', '99', '16384', '0', '0', '0', '32768', '0');
 REPLACE INTO `item_armor` VALUES ('27722', 'ighwa_cap', '99', '8641', '333', '0', '0', '16', '0');
 REPLACE INTO `item_armor` VALUES ('28156', 'ighwa_trousers', '99', '2593826', '333', '0', '0', '128', '0');
+
+INSERT INTO `item_armor` VALUES ('27231', 'zoar_subligar_+1', '99', '2473969', '203', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('27410', 'hippomenes_socks_+1', '99', '3851870', '23', '0', '0', '256', '0');
+INSERT INTO `item_armor` VALUES ('27408', 'hygieia_clogs_+1', '99', '4', '20', '0', '0', '256', '0');
+INSERT INTO `item_armor` VALUES ('28276', 'jute_boots_+1', '99', '1056', '11', '0', '0', '256', '0');
+INSERT INTO `item_armor` VALUES ('28274', 'regal_pumps_+1', '99', '1720332', '131', '0', '0', '256', '0');
+INSERT INTO `item_armor` VALUES ('27223', 'feast_hose', '99', '2462754', '23', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('27222', 'limbo_trousers', '99', '2371507', '206', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('26874', 'supay_weskit', '99', '8', '137', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('27221', 'avatara_slops', '99', '16384', '115', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('27044', 'crushers_gauntlets', '99', '10689', '22', '0', '0', '64', '0');
+
+INSERT INTO `item_armor` VALUES ('26721', 'rabid_visor', '99', '2141649', '336', '0', '0', '16', '0');
+INSERT INTO `item_armor` VALUES ('27220', 'miasmic_pants', '99', '3840780', '329', '0', '0', '128', '0');
+INSERT INTO `item_armor` VALUES ('27096', 'counts_cuffs', '99', '137218', '345', '0', '0', '64', '0');
+INSERT INTO `item_armor` VALUES ('26945', 'counts_garb', '99', '3840780', '345', '0', '0', '32', '0');
+INSERT INTO `item_armor` VALUES ('26970', 'befouled_crown', '99', '1589404', '322', '0', '0', '16', '0');
+
+INSERT INTO `item_armor` VALUES ('28366', 'gaudryi_necklace', '99', '4194303', '0', '0', '0', '512', '0');
+INSERT INTO `item_armor` VALUES ('28539', 'globidonta_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27595', 'argocham_mantle', '99', '4194303', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('28442', 'olseni_belt', '99', '4194303', '0', '0', '0', '1024', '0');
+INSERT INTO `item_armor` VALUES ('28496', 'zennaroi_earring', '99', '4194303', '0', '0', '0', '6144', '0');
+INSERT INTO `item_armor` VALUES ('21374', 'paeapua', '99', '2385', '0', '0', '0', '8', '0');
+INSERT INTO `item_armor` VALUES ('28603', 'kumbira_cape', '99', '1753628', '0', '0', '0', '32768', '0');
+INSERT INTO `item_armor` VALUES ('28506', 'andoaa_earring', '99', '4194303', '0', '0', '0', '6144', '0');
+INSERT INTO `item_armor` VALUES ('28380', 'iqabi_necklace', '99', '4194303', '0', '0', '0', '512', '0');
+INSERT INTO `item_armor` VALUES ('28604', 'mubvum_mantle', '99', '2473971', '0', '0', '0', '32768', '0');
+
+
+INSERT INTO `item_armor` VALUES ('21345', 'focal_orb', '99', '2473968', '0', '0', '0', '8', '0');
+INSERT INTO `item_armor` VALUES ('27506', 'defiant_collar', '99', '2473966', '0', '0', '0', '512', '0');
+INSERT INTO `item_armor` VALUES ('27592', 'vengeful_ring', '99', '4194303', '0', '0', '0', '24576', '0');
+INSERT INTO `item_armor` VALUES ('27507', 'deviant_necklace', '99', '4194303', '0', '0', '0', '512', '0');
+INSERT INTO `item_armor` VALUES ('28483', 'cryptic_earring', '99', '4194303', '0', '0', '0', '6144', '0');
+INSERT INTO `item_armor` VALUES ('28479', 'enervating_earring', '99', '4194303', '0', '0', '0', '6144', '0');
+INSERT INTO `item_armor` VALUES ('28478', 'etiolation_earring', '99', '4194303', '0', '0', '0', '6144', '0');
+INSERT INTO `item_armor` VALUES ('28418', 'incarnation_sash', '99', '153204', '0', '0', '0', '1024', '0');

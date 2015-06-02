@@ -458,3 +458,43 @@ INSERT INTO `item_basic` VALUES (28137,0,'augury_cuisses_+1','augury_cuisses_+1'
 INSERT INTO `item_basic` VALUES (28605,0,'samanisi_cape','samanisi_cape',1,63552,0,1,0);
 REPLACE INTO `item_basic` VALUES (27722,0,'ighwa_cap','ighwa_cap',1,63552,0,1,0);
 REPLACE INTO `item_basic` VALUES (28156,0,'ighwa_trousers','ighwa_trousers',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (27231,0,'zoar_subligar_+1','zoar_subligar_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27410,0,'hippomenes_socks_+1','hippomenes_socks_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27408,0,'hygieia_clogs_+1','hygieia_clogs_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28276,0,'jute_boots_+1','jute_boots_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28274,0,'regal_pumps_+1','regal_pumps_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27223,0,'feast_hose','feast_hose',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27222,0,'limbo_trousers','limbo_trousers',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26874,0,'supay_weskit','supay_weskit',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27221,0,'avatara_slops','avatara_slops',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27044,0,'crushers_gauntlets','crushers_gauntlets',1,63552,0,1,0);
+
+
+
+INSERT INTO `item_basic` VALUES (26721,0,'rabid_visor','rabid_visor',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27220,0,'miasmic_pants','miasmic_pants',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27096,0,'counts_cuffs','counts_cuffs',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26945,0,'counts_garb','counts_garb',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26790,0,'befouled_crown','befouled_crown',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (28366,0,'gaudryi_necklace','gaudryi_necklace',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28539,0,'globidonta_ring','globidonta_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27595,0,'argocham_mantle','argocham_mantle',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28442,0,'olseni_belt','olseni_belt',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28496,0,'zennaroi_earring','zennaroi_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21374,0,'paeapua','paeapua',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28603,0,'kumbira_cape','kumbira_cape',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28506,0,'andoaa_earring','andoaa_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28380,0,'iqabi_necklace','iqabi_necklace',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28604,0,'mubvum_mantle','mubvum_mantle',1,63552,0,1,0);
+
+
+INSERT INTO `item_basic` VALUES (21345,0,'focal_orb','focal_orb',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27506,0,'defiant_collar','defiant_collar',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27592,0,'vengeful_ring','vengeful_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27507,0,'deviant_necklace','deviant_necklace',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28483,0,'cryptic_earring','cryptic_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28479,0,'enervating_earring','enervating_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28478,0,'etiolation_earring','etiolation_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28418,0,'incarnation_sash','incarnation_sash',1,63552,0,1,0);

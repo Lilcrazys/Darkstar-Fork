@@ -348,3 +348,15 @@ INSERT INTO `item_mods_pet` VALUES (21169, 28, 100); -- Pet Matt
  -- samanisi_cape (28605)
 INSERT INTO `item_mods_pet` VALUES(28605, 25, 7); -- Avatar Acc
 INSERT INTO `item_mods_pet` VALUES(28605, 30, 7); -- Avatar Macc
+
+ -- argocham_mantle (27595)
+INSERT INTO `item_mods_pet` VALUES(27595, 23, 12); -- Pet: Att
+INSERT INTO `item_mods_pet` VALUES(27595, 28, 12); -- Pet: Mab
+INSERT INTO `item_mods_pet` VALUES(27595, 24, 12); -- Pet: Ratt
+
+
+  -- incarnation_sash (28418)
+INSERT INTO `item_mods_pet` VALUES(28418, 25, 15); -- Pet: Acc
+INSERT INTO `item_mods_pet` VALUES(28418, 26, 15); -- Pet: Racc
+INSERT INTO `item_mods_pet` VALUES(28418, 30, 15); -- Pet: Macc
+INSERT INTO `item_mods_pet` VALUES(28418, 288, 4); -- Pet: Double Att
