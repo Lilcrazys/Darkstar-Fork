@@ -14268,12 +14268,6 @@ INSERT INTO `item_mods` VALUES(26970, 113, 16); -- Enhancing skill
 INSERT INTO `item_mods` VALUES(26970, 114, 16); -- Enfeeb skill
 INSERT INTO `item_mods` VALUES(26970, 369, 1); -- Refresh
 
- -- gaudryi_necklace (28366)
-
-INSERT INTO `item_mods` VALUES(28366, 26, 10); -- Racc
-INSERT INTO `item_mods` VALUES(28366, 24, 5); -- Ratt
-INSERT INTO `item_mods` VALUES(28366, 73, 4); -- StoreTP
-
  -- globidonta_ring (28539)
 
 INSERT INTO `item_mods` VALUES(28539, 5, 20); -- MP
