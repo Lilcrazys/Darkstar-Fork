@@ -34,6 +34,7 @@ CREATE TABLE `mob_groups` (
   `minLevel` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `maxLevel` tinyint(2) unsigned NOT NULL DEFAULT '0',
   `allegiance` tinyint(2) unsigned NOT NULL DEFAULT '0',
+  `roam_distance` float(7,3) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`groupid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=22;
 /*!40101 SET character_set_client = @saved_cs_client */;

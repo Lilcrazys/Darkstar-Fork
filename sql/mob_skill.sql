@@ -2057,14 +2057,14 @@ INSERT INTO `mob_skill` VALUES (2132,252,1451,'Dirty_breath',4,15.0,2000,1000,4,
 
 INSERT INTO `mob_skill` VALUES (2278,252,1450,'Minax_glare',4,15.0,2000,1000,4,0,0,0); -- Lord Ruthven,Soaring Strigoi and Shadowbreath only.
 
--- Dvergar (and pandemonium warden dvergr form)
-INSERT INTO `mob_skill` VALUES (1857,316,1456,'Hellsnap',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1858,316,1460,'Hellclap',4,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1859,316,1457,'Cackle',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1860,316,1462,'Necrobane',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1861,316,1461,'Necropurge',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1862,316,1458,'Bilgestorm',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1863,316,1459,'Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
+-- Dvergar
+INSERT INTO `mob_skill` VALUES (1857,90,1456,'Hellsnap',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1858,90,1460,'Hellclap',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1859,90,1457,'Cackle',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1860,90,1462,'Necrobane',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1861,90,1461,'Necropurge',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1862,90,1458,'Bilgestorm',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1863,90,1459,'Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
 
 -- Pandemonium Lamps (91)
 INSERT INTO `mob_skill` VALUES (1789,91,1373,'PL_Rail_Cannon',1,15.0,2000,1500,4,0,0,0);
