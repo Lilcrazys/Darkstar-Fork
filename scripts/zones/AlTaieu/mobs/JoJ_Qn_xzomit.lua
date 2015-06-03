@@ -3,6 +3,7 @@
 --  MOB: Qn'xzomit
 -- Jailor of Justice Pet version
 -----------------------------------
+
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");

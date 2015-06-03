@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Absolute Virtue
+--  HNM: Absolute Virtue
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -34,10 +34,21 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK, 10);
     mob:setMod(MOD_TRIPLE_ATTACK, 15);
     mob:setMod(MOD_STUNRES, 75);
-    mob:setMod(MOD_PARALYZERES, 100);    
+    mob:setMod(MOD_PARALYZERES, 100);
 
     -- addMod
     mob:addMod(MOD_MDEF,100);
+--[[[
+    local JoL = GetMobByID(16912848);
+    -- Special check for regen modification by JoL pets killed
+    if (JoL:getLocalVar("JoL_Qn_xzomit_Killed") == 9) then
+        mob:addMod(MOD_REGEN, -130)
+    end
+    if (JoL:getLocalVar("JoL_Qn_hpemde_Killed") == 9) then
+        mob:addMod(MOD_REGEN, -130)
+    end
+end;
+]]
 
     -- Special check for regen modification by JoL pets killed
     if (GetServerVariable("JoL_Qn_xzomit_Killed") == 9) then
@@ -47,6 +58,7 @@ function onMobSpawn(mob)
         mob:addMod(MOD_REGEN, -130)
     end
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -54,6 +66,7 @@ end;
 function onMobEngage(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
+
 -----------------------------------
 -- onMobDisEngage Action
 -----------------------------------

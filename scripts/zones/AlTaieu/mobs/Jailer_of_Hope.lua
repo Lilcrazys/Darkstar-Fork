@@ -3,7 +3,6 @@
 --  NM:  Jailer of Hope
 -----------------------------------
 
--- require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 -- require("scripts/globals/utils");
@@ -16,6 +15,9 @@ require("scripts/globals/magic");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+--[[
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+]]
 end;
 
 -----------------------------------

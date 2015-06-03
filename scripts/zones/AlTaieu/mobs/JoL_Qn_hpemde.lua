@@ -4,6 +4,7 @@
 -- Jailor of Love Pet version
 -----------------------------------
 
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
@@ -25,6 +26,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+--[[
+    local JoL = GetMobByID(16912848);
+    local HPEMDES = JoL:getLocalVar("JoL_Qn_hpemde_Killed");
+    JoL:setLocalVar("JoL_Qn_hpemde_Killed", HPEMDES+1);
+]]
     local HPEMDES = GetServerVariable("JoL_Qn_hpemde_Killed");
     SetServerVariable("JoL_Qn_hpemde_Killed", HPEMDES+1);
 end;

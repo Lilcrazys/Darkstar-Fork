@@ -3,7 +3,6 @@
 --  NM:  Jailer of Prudence
 -----------------------------------
 
--- require("scripts/globals/titles");
 require("scripts/globals/status");
 -- Don't add "require" lines until actually using them.
 -- require("scripts/globals/magic");
@@ -16,6 +15,9 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+--[[
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+]]
 end;
 
 -----------------------------------
@@ -29,13 +31,13 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_TRIPLE_ATTACK, 35);
 
-
     -- addMod
     mob:addMod(MOD_MDEF,100);
     mob:addMod(MOD_DEF,120);
     mob:addMod(MOD_ATT,120);
     mob:addMod(MOD_ACC,150);
 end;
+
 -----------------------------------
 -- onMobDisEngage Action
 -----------------------------------
@@ -44,6 +46,7 @@ function onMobDisEngage(mob, target)
     mob:setLocalVar("RAGED", 0);
     mob:delStatusEffect(EFFECT_RAGE);
 end;
+
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
@@ -79,6 +82,7 @@ function onMobFight(mob, target)
         mob:setLocalVar("RAGED", 1);
     end
 end;
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------

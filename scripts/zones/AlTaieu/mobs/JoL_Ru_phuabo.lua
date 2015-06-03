@@ -1,7 +1,9 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  Jailer of Hope
+--  MOB: Qn'phuabo
+-- Jailor of Love Pet version
 -----------------------------------
+
 
 -----------------------------------
 -- onMobSpawn Action
