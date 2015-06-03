@@ -21,7 +21,7 @@ end;
 
 function onMobSpawn(mob)
     --[[
-    if (math.random(0,1) > 0) then     
+    if (math.random(0,1) > 0) then
         SetDropRate(4396,1870,1000); -- Deed Of Sensib.
         SetDropRate(4396,1903,0);
     else
@@ -47,9 +47,9 @@ end;
 -----------------------------------
 
 function onMobFight( mob, target )
-    --[[
+
     -- Spawn the pets if they are despawned
-    -- TODO: summon animations?    
+    -- TODO: summon animations?
     if (GetMobAction(wynavA) == 0) then
         GetMobByID(wynavA):setSpawn(mob:getXPos()+math.random(1,5), mob:getYPos(), mob:getZPos()+math.random(1,5));
         SpawnMob(wynavA, 300):updateEnmity(target);
@@ -68,7 +68,7 @@ function onMobFight( mob, target )
             GetMobByID(pets):updateEnmity(target);
         end
     end
-]]
+
 end
 
 -----------------------------------
@@ -80,14 +80,14 @@ function onMobDeath(mob, killer)
 	DespawnMob(wynavA);
 	DespawnMob(wynavB);
 	DespawnMob(wynavC);
-    --[[
+
     local IxAernDRG_PH = GetServerVariable("[SEA]IxAernDRG_PH"); -- Should be be the ID of the mob that spawns the actual PH
 
     -- Pick the Ix'Aern (DRG) PH if the server doesn't have one, set it.
     if (GetMobAction(realAwAern_PH) == 0 and GetMobAction(IxAernDRG) == 0 and GetServerVariable("[SEA]IxAernDRG_PH") == 0) then  -- This should be cleared when the mob is killed.
         IxAernDRG_PH = AwAernGroups[math.random(1, #AwAernGroups)] + math.random(0, 2); -- The 4th mobid in each group is a pet. F that son
         SetServerVariable("[SEA]IxAernDRG_PH", IxAernDRG_PH);
-    ]]
+    end
 end;
 
 -----------------------------------
@@ -98,7 +98,7 @@ function onMobDespawn( mob )
 	DespawnMob(wynavA);
 	DespawnMob(wynavB);
 	DespawnMob(wynavC);
-    --[[
+
     local IxAernDRG_PH = GetServerVariable("[SEA]IxAernDRG_PH"); -- Should be be the ID of the mob that spawns the actual PH
 
     -- Pick the Ix'Aern (DRG) PH if the server doesn't have one, set it.
@@ -107,7 +107,7 @@ function onMobDespawn( mob )
         IxAernDRG_PH = AwAernGroups[math.random(1, #AwAernGroups)] + math.random(0, 2); -- The 4th mobid in each group is a pet. F that son
         SetServerVariable("[SEA]IxAernDRG_PH", IxAernDRG_PH);
     end
-    ]]
+
 
     -- Reset popped var..
     SetServerVariable("[PH]Ix_aern_drg",0);

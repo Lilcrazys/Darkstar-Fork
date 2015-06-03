@@ -1445,6 +1445,7 @@ INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatr
 -- 17318911
 -- ------------------------------------------------------------
 
+REPLACE INTO `mob_spawn_points` VALUES (17318443,'Poroggo_DomJuan','Poroggo Dom Juan',6990,406,26,-544,231);
 REPLACE INTO `mob_spawn_points` VALUES (17318456,'Briareus','Briareus',6951,-180,7,260,165);
 REPLACE INTO `npc_list` VALUES (17318474,'qm1','???',0,696.896,40.844,283.068,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Dozing Dorian
 REPLACE INTO `npc_list` VALUES (17318475,'qm2','???',0,279.338,23.999,-81.762,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); -- Trudging Thomas
@@ -2330,7 +2331,7 @@ REPLACE INTO `npc_list` VALUES (17658373,'qm22','???',0,-396.937,-3.000,259.001,
 REPLACE INTO `npc_list` VALUES (17658374,'qm23','???',0,340.193,20.005,220.340,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 REPLACE INTO `npc_list` VALUES (17658375,'qm24','???',0,439.940,21.020,-179.227,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 
-REPLACE INTO `mob_spawn_points` VALUES (17658263,'Pallid_Percy','Pallid Percy',10216,280,20,174,200);
+REPLACE INTO `mob_spawn_points` VALUES (17658263,'Pallid_Percy','Pallid Percy',10216,281,20,174,200);
 
 
 -- ------------------------------------------------------------
