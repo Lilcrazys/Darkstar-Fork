@@ -4035,9 +4035,6 @@ REPLACE INTO `item_mods` VALUES (19958, 420, 35); -- Barrage accuracy
 -- Spharai (99-3)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20480, 23, 40);
-INSERT INTO `item_mods` VALUES (20480, 80, 242); -- h2h skill
-INSERT INTO `item_mods` VALUES (20480, 107, 242); -- guard skill
-INSERT INTO `item_mods` VALUES (20480, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20480, 291, 13);
 INSERT INTO `item_mods` VALUES (20480, 355, 10);
 INSERT INTO `item_mods` VALUES (20480, 506, 160); -- 16% chance of extra dmg.
@@ -4046,71 +4043,42 @@ INSERT INTO `item_mods` VALUES (20480, 507, 300); -- Occ. 3x dmg
 -- Spharai (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20481, 23, 40);
-INSERT INTO `item_mods` VALUES (20481, 80, 242); -- h2h skill
-INSERT INTO `item_mods` VALUES (20481, 107, 242); -- guard skill
-INSERT INTO `item_mods` VALUES (20481, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20481, 291, 13);
 INSERT INTO `item_mods` VALUES (20481, 355, 10);
 INSERT INTO `item_mods` VALUES (20481, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20481, 507, 300); -- Occ. 3x dmg
 
-INSERT INTO `item_mods` VALUES (20482, 80, 242); --
-INSERT INTO `item_mods` VALUES (20482, 110, 242); --
-INSERT INTO `item_mods` VALUES (20482, 30, 215); --
+
 INSERT INTO `item_mods` VALUES (20482, 302, 15); --
-INSERT INTO `item_mods` VALUES (20483, 80, 242); --
-INSERT INTO `item_mods` VALUES (20483, 110, 242); --
-INSERT INTO `item_mods` VALUES (20483, 30, 215); --
 INSERT INTO `item_mods` VALUES (20483, 302, 15); --
 
-INSERT INTO `item_mods` VALUES (20485, 80, 242); --
-INSERT INTO `item_mods` VALUES (20485, 107, 242); --
-INSERT INTO `item_mods` VALUES (20485, 30, 215); --
+
 INSERT INTO `item_mods` VALUES (20485, 173, 20); --
 INSERT INTO `item_mods` VALUES (20485, 302, 15); --
 INSERT INTO `item_mods` VALUES (20486, 8, 20); --
-INSERT INTO `item_mods` VALUES (20486, 80, 242); --
-INSERT INTO `item_mods` VALUES (20486, 107, 242); --
-INSERT INTO `item_mods` VALUES (20486, 30, 215); --
 INSERT INTO `item_mods` VALUES (20486, 165, 25); --
 INSERT INTO `item_mods` VALUES (20486, 421, 50); --
 INSERT INTO `item_mods` VALUES (20487, 8, 20); --
-INSERT INTO `item_mods` VALUES (20487, 80, 242); --
-INSERT INTO `item_mods` VALUES (20487, 107, 242); --
-INSERT INTO `item_mods` VALUES (20487, 30, 215); --
 INSERT INTO `item_mods` VALUES (20487, 165, 25); --
 INSERT INTO `item_mods` VALUES (20487, 421, 50); --
 
-INSERT INTO `item_mods` VALUES (20546, 80, 162); --
-INSERT INTO `item_mods` VALUES (20546, 107, 162); --
-INSERT INTO `item_mods` VALUES (20546, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Cesti
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20547, 25, 15); -- Accuracy +15
 INSERT INTO `item_mods` VALUES (20547, 68, 4); -- Evasion +4
-INSERT INTO `item_mods` VALUES (20547, 80, 63); -- Hand-to-Hand skill +63
-INSERT INTO `item_mods` VALUES (20547, 107, 63); -- Guarding skill +63
 -- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (20548, 23, 26); --
 INSERT INTO `item_mods` VALUES (20548, 68, 27); --
-INSERT INTO `item_mods` VALUES (20548, 80, 242); --
-INSERT INTO `item_mods` VALUES (20548, 107, 242); --
-INSERT INTO `item_mods` VALUES (20548, 30, 188); --
 INSERT INTO `item_mods` VALUES (20548, 161, -3); --
-INSERT INTO `item_mods` VALUES (20553, 80, 54); --
-INSERT INTO `item_mods` VALUES (20553, 107, 54); --
-INSERT INTO `item_mods` VALUES (20553, 30, 42); --
+
 
 -- -------------------------------------------------------
 -- Mandau (99-3)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20555, 23, 40);
-INSERT INTO `item_mods` VALUES (20555, 81, 242); -- dagger skill
-INSERT INTO `item_mods` VALUES (20555, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20555, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20555, 355, 26);
 INSERT INTO `item_mods` VALUES (20555, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20555, 507, 300); -- Occ. 3x dmg
@@ -4118,128 +4086,67 @@ INSERT INTO `item_mods` VALUES (20555, 507, 300); -- Occ. 3x dmg
 -- Mandau (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20556, 23, 40);
-INSERT INTO `item_mods` VALUES (20556, 81, 242); -- dagger skill
-INSERT INTO `item_mods` VALUES (20556, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20556, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20556, 355, 26);
 INSERT INTO `item_mods` VALUES (20556, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20556, 507, 300); -- Occ. 3x dmg
 INSERT INTO `item_mods` VALUES (20556, 431, 1); -- Add. Effect
 
 
-INSERT INTO `item_mods` VALUES (20558, 81, 242); --
-INSERT INTO `item_mods` VALUES (20558, 110, 242); --
-INSERT INTO `item_mods` VALUES (20558, 30, 215); --
 INSERT INTO `item_mods` VALUES (20558, 403, 30); --
 INSERT INTO `item_mods` VALUES (20558, 494, 2); --
 INSERT INTO `item_mods` VALUES (20558, 203, 15); --
-INSERT INTO `item_mods` VALUES (20559, 81, 242); --
-INSERT INTO `item_mods` VALUES (20559, 110, 242); --
-INSERT INTO `item_mods` VALUES (20559, 30, 215); --
 INSERT INTO `item_mods` VALUES (20559, 302, 15); --
-INSERT INTO `item_mods` VALUES (20560, 81, 242); --
-INSERT INTO `item_mods` VALUES (20560, 110, 242); --
-INSERT INTO `item_mods` VALUES (20560, 30, 215); --
 INSERT INTO `item_mods` VALUES (20560, 302, 15); --
-INSERT INTO `item_mods` VALUES (20561, 30, 250); --
-INSERT INTO `item_mods` VALUES (20561, 81, 242); --
-INSERT INTO `item_mods` VALUES (20561, 110, 242); --
 INSERT INTO `item_mods` VALUES (20561, 454, 40); --
-INSERT INTO `item_mods` VALUES (20562, 30, 250); --
-INSERT INTO `item_mods` VALUES (20562, 81, 242); --
-INSERT INTO `item_mods` VALUES (20562, 110, 242); --
 INSERT INTO `item_mods` VALUES (20562, 454, 30); --
 INSERT INTO `item_mods` VALUES (20563, 9, 20); --
-INSERT INTO `item_mods` VALUES (20563, 81, 242); --
-INSERT INTO `item_mods` VALUES (20563, 110, 242); --
-INSERT INTO `item_mods` VALUES (20563, 30, 215); --
 INSERT INTO `item_mods` VALUES (20563, 165, 25); --
 INSERT INTO `item_mods` VALUES (20563, 421, 50); --
 INSERT INTO `item_mods` VALUES (20564, 9, 20); --
-INSERT INTO `item_mods` VALUES (20564, 81, 242); --
-INSERT INTO `item_mods` VALUES (20564, 110, 242); --
-INSERT INTO `item_mods` VALUES (20564, 30, 215); --
 INSERT INTO `item_mods` VALUES (20564, 165, 25); --
 INSERT INTO `item_mods` VALUES (20564, 421, 50); --
 
 
 INSERT INTO `item_mods` VALUES (20618, 11, 10); --
 INSERT INTO `item_mods` VALUES (20618, 68, 22); --
-INSERT INTO `item_mods` VALUES (20618, 81, 242); --
-INSERT INTO `item_mods` VALUES (20618, 110, 242); --
-INSERT INTO `item_mods` VALUES (20618, 30, 188); --
 INSERT INTO `item_mods` VALUES (20618, 27, -10); --
 INSERT INTO `item_mods` VALUES (20618, 303, 1); --
 INSERT INTO `item_mods` VALUES (20618, 345, 50); -- Weapon skill damage +5   unknown added TP bonus +50
 
 INSERT INTO `item_mods` VALUES (20634, 68, 15); --
-INSERT INTO `item_mods` VALUES (20634, 81, 162); --
-INSERT INTO `item_mods` VALUES (20634, 110, 162); --
-INSERT INTO `item_mods` VALUES (20634, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Dagger
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20635, 25, 15); -- Accuracy+15
 INSERT INTO `item_mods` VALUES (20635, 68, 8); -- Evasion+8
-INSERT INTO `item_mods` VALUES (20635, 81, 63); -- Dagger skill +63
-INSERT INTO `item_mods` VALUES (20635, 110, 63); -- Parrying skill +63
--- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (20638, 25, 10); --
 INSERT INTO `item_mods` VALUES (20641, 68, 15); --
-INSERT INTO `item_mods` VALUES (20641, 81, 54); --
-INSERT INTO `item_mods` VALUES (20641, 110, 54); --
-INSERT INTO `item_mods` VALUES (20641, 30, 42); --
-
 
 -- -------------------------------------------------------
 -- Excalibur (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20646, 23, 40);
-INSERT INTO `item_mods` VALUES (20646, 82, 242); -- sword skill
-INSERT INTO `item_mods` VALUES (20646, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20646, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20646, 355, 43);
 INSERT INTO `item_mods` VALUES (20646, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20646, 507, 250); -- Occ. 2.5x dmg
 INSERT INTO `item_mods` VALUES (20646, 431, 1); -- Add. Effect
 
 
-INSERT INTO `item_mods` VALUES (20648, 30, 258); --
-INSERT INTO `item_mods` VALUES (20648, 82, 242); --
-INSERT INTO `item_mods` VALUES (20648, 110, 242); --
 INSERT INTO `item_mods` VALUES (20648, 302, 15); --
-INSERT INTO `item_mods` VALUES (20649, 82, 242); --
-INSERT INTO `item_mods` VALUES (20649, 110, 242); --
-INSERT INTO `item_mods` VALUES (20649, 30, 215); --
 INSERT INTO `item_mods` VALUES (20649, 27, 18); --
 INSERT INTO `item_mods` VALUES (20649, 161, -18); --
 INSERT INTO `item_mods` VALUES (20649, 302, 15); --
-INSERT INTO `item_mods` VALUES (20650, 82, 242); --
-INSERT INTO `item_mods` VALUES (20650, 110, 242); --
-INSERT INTO `item_mods` VALUES (20650, 30, 215); --
 INSERT INTO `item_mods` VALUES (20650, 27, 18); --
 INSERT INTO `item_mods` VALUES (20650, 161, -18); --
 INSERT INTO `item_mods` VALUES (20650, 302, 15); --
-INSERT INTO `item_mods` VALUES (20651, 30, 253); --
-INSERT INTO `item_mods` VALUES (20651, 82, 242); --
-INSERT INTO `item_mods` VALUES (20651, 110, 242); --
 INSERT INTO `item_mods` VALUES (20651, 302, 15); --
-INSERT INTO `item_mods` VALUES (20652, 30, 253); --
-INSERT INTO `item_mods` VALUES (20652, 82, 242); --
-INSERT INTO `item_mods` VALUES (20652, 110, 242); --
 INSERT INTO `item_mods` VALUES (20652, 302, 15); --
 INSERT INTO `item_mods` VALUES (20653, 9, 20); --
-INSERT INTO `item_mods` VALUES (20653, 82, 242); --
-INSERT INTO `item_mods` VALUES (20653, 110, 242); --
-INSERT INTO `item_mods` VALUES (20653, 30, 215); --
 INSERT INTO `item_mods` VALUES (20653, 165, 25); --
 INSERT INTO `item_mods` VALUES (20653, 421, 50); --
 INSERT INTO `item_mods` VALUES (20654, 9, 20); --
-INSERT INTO `item_mods` VALUES (20654, 82, 242); --
-INSERT INTO `item_mods` VALUES (20654, 110, 242); --
-INSERT INTO `item_mods` VALUES (20654, 30, 215); --
 INSERT INTO `item_mods` VALUES (20654, 165, 25); --
 INSERT INTO `item_mods` VALUES (20654, 421, 50); --
 
@@ -4248,108 +4155,65 @@ INSERT INTO `item_mods` VALUES (20654, 421, 50); --
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
 
-
-INSERT INTO `item_mods` VALUES (20736, 82, 162); --
-INSERT INTO `item_mods` VALUES (20736, 110, 162); --
-INSERT INTO `item_mods` VALUES (20736, 30, 126); --
-
 -- -------------------------------------------------------
 -- Forefront Blade
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20737, 25, 11); -- Accuracy+11
 INSERT INTO `item_mods` VALUES (20737, 23, 7); -- Attack+7
-INSERT INTO `item_mods` VALUES (20737, 82, 63); -- Sword skill +63
-INSERT INTO `item_mods` VALUES (20737, 110, 63); -- Parrying skill +63
--- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (20738, 8, 13); --
 INSERT INTO `item_mods` VALUES (20738, 25, 10); --
 INSERT INTO `item_mods` VALUES (20738, 23, 10); --
-INSERT INTO `item_mods` VALUES (20738, 82, 242); --
-INSERT INTO `item_mods` VALUES (20738, 110, 242); --
-INSERT INTO `item_mods` VALUES (20738, 30, 188); --
 INSERT INTO `item_mods` VALUES (20738, 288, 3); --
 INSERT INTO `item_mods` VALUES (20741, 25, 10); --
 
--- Iztaasu
-INSERT INTO `item_mods` VALUES (20742, 82, 54);
-INSERT INTO `item_mods` VALUES (20742, 110, 54);
-INSERT INTO `item_mods` VALUES (20742, 30, 42);
-
 -- ohrmazd
-INSERT INTO `item_mods` VALUES (20530, 80, 242); -- skill
-INSERT INTO `item_mods` VALUES (20530, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20530, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20530, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20530, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20530, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20530, 507, 200); -- occ
 
 -- kaladanda
 INSERT INTO `item_mods` VALUES (21173, 12, 12); -- INT
 INSERT INTO `item_mods` VALUES (21173, 13, 12); -- MND
 INSERT INTO `item_mods` VALUES (21173, 28, 120); -- Matt
-INSERT INTO `item_mods` VALUES (21173, 91, 242); -- Staff
-INSERT INTO `item_mods` VALUES (21173, 110, 242); -- Parry
-INSERT INTO `item_mods` VALUES (21173, 30, 228); -- Macc
 INSERT INTO `item_mods` VALUES (21173, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (21173, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (21173, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (21173, 507, 200); -- occ
 
 -- izuna
-INSERT INTO `item_mods` VALUES (20989, 88, 242); -- skill
 INSERT INTO `item_mods` VALUES (20989, 68, 22); -- eva
-INSERT INTO `item_mods` VALUES (20989, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20989, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20989, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20989, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20989, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20989, 507, 200); -- occ
 
 -- olyndicus
-INSERT INTO `item_mods` VALUES (20946, 87, 242); -- skill
-INSERT INTO `item_mods` VALUES (20946, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20946, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20946, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20946, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20946, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20946, 507, 200); -- occ
 
 -- inanna
-INSERT INTO `item_mods` VALUES (20901, 86, 242); -- skill
-INSERT INTO `item_mods` VALUES (20901, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20901, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20901, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20901, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20901, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
 
 -- mekosuchus_blade
-INSERT INTO `item_mods` VALUES (20758, 83, 242); -- skill
-INSERT INTO `item_mods` VALUES (20758, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20758, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20758, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20758, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20758, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20758, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20758, 8, 13); -- occ
 INSERT INTO `item_mods` VALUES (20758, 23, 30); -- occ
 
 -- macbain
-INSERT INTO `item_mods` VALUES (20759, 83, 242); -- skill
-INSERT INTO `item_mods` VALUES (20759, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20759, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20759, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20759, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20759, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20759, 507, 200); -- occ
 
 -- claidheamh_soluis
-INSERT INTO `item_mods` VALUES (20718, 82, 242); -- skill
-INSERT INTO `item_mods` VALUES (20718, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20718, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20718, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20718, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20718, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20718, 507, 200); -- occ
 
 -- mimesis
-INSERT INTO `item_mods` VALUES (20721, 82, 242); -- sword
-INSERT INTO `item_mods` VALUES (20721, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20721, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20721, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20721, 506, 300); -- occ
 INSERT INTO `item_mods` VALUES (20721, 507, 200); -- occ
@@ -4362,34 +4226,22 @@ INSERT INTO `item_mods` VALUES (20721, 13, 10); -- mnd
 INSERT INTO `item_mods` VALUES (20721, 14, 10); -- chr
 INSERT INTO `item_mods` VALUES (20721, 2, 50); -- hp
 -- ipetam
-INSERT INTO `item_mods` VALUES (20616, 81, 242); -- dagger
-INSERT INTO `item_mods` VALUES (20616, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20616, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20616, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20616, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20616, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20616, 507, 200); -- occ
 
 -- Svarga
-INSERT INTO `item_mods` VALUES (20857, 85, 242); -- GA
-INSERT INTO `item_mods` VALUES (20857, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20857, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20857, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20857, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20857, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20857, 507, 200); -- occ
 
 -- Senkuto
-INSERT INTO `item_mods` VALUES (21038, 89, 203); -- GKT
-INSERT INTO `item_mods` VALUES (21038, 110, 203); -- parry
-INSERT INTO `item_mods` VALUES (21038, 30, 167); -- macc
 INSERT INTO `item_mods` VALUES (21038, 345, 1000); -- tp bonus
 
 -- -------------------------------------------------------
 -- Ragnarok (99-3)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20745, 25, 40);
-INSERT INTO `item_mods` VALUES (20745, 83, 242); -- GS skill
-INSERT INTO `item_mods` VALUES (20745, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20745, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20745, 165, 13);
 INSERT INTO `item_mods` VALUES (20745, 355, 57);
 INSERT INTO `item_mods` VALUES (20745, 506, 160); -- 16% chance of extra dmg.
@@ -4399,9 +4251,6 @@ INSERT INTO `item_mods` VALUES (20745, 507, 250); -- Occ. 2.5x dmg
 -- Ragnarok (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20746, 25, 40);
-INSERT INTO `item_mods` VALUES (20746, 83, 242); -- GS skill
-INSERT INTO `item_mods` VALUES (20746, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20746, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20746, 165, 13);
 INSERT INTO `item_mods` VALUES (20746, 355, 57);
 INSERT INTO `item_mods` VALUES (20746, 506, 160); -- 16% chance of extra dmg.
@@ -4409,30 +4258,17 @@ INSERT INTO `item_mods` VALUES (20746, 507, 250); -- Occ. 2.5x dmg
 
 
 INSERT INTO `item_mods` VALUES (20747, 10, 20); --
-INSERT INTO `item_mods` VALUES (20747, 83, 242); --
-INSERT INTO `item_mods` VALUES (20747, 110, 242); --
-INSERT INTO `item_mods` VALUES (20747, 30, 215); --
 INSERT INTO `item_mods` VALUES (20747, 165, 25); --
 INSERT INTO `item_mods` VALUES (20747, 421, 50); --
 INSERT INTO `item_mods` VALUES (20748, 10, 20); --
-INSERT INTO `item_mods` VALUES (20748, 83, 242); --
-INSERT INTO `item_mods` VALUES (20748, 110, 242); --
-INSERT INTO `item_mods` VALUES (20748, 30, 215); --
 INSERT INTO `item_mods` VALUES (20748, 165, 25); --
 INSERT INTO `item_mods` VALUES (20748, 421, 50); --
 
--- Ukudyoni
-INSERT INTO `item_mods` VALUES (20762, 83, 242); -- GS skill
-INSERT INTO `item_mods` VALUES (20762, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20762, 30, 188); -- Macc
 
 -- -------------------------------------------------------
 -- Guttler (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20791, 23, 40);
-INSERT INTO `item_mods` VALUES (20791, 84, 242); -- axe skill
-INSERT INTO `item_mods` VALUES (20791, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20791, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20791, 355, 73);
 INSERT INTO `item_mods` VALUES (20791, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20791, 507, 250); -- Occ. 2.5x dmg
@@ -4440,134 +4276,71 @@ INSERT INTO `item_mods` VALUES (20791, 431, 1); -- Add. Effect
 
 
 INSERT INTO `item_mods` VALUES (20775, 23, 18); --
-INSERT INTO `item_mods` VALUES (20775, 83, 153); --
-INSERT INTO `item_mods` VALUES (20775, 110, 153); --
-INSERT INTO `item_mods` VALUES (20775, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Claymore
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20777, 25, 15); -- Accuracy +15
-INSERT INTO `item_mods` VALUES (20777, 83, 67); -- Great Sword skill +67
-INSERT INTO `item_mods` VALUES (20777, 110, 67); -- Parrying skill +67
--- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (20782, 25, 10); --
 -- Uruz Blade
 INSERT INTO `item_mods` VALUES (20783, 23, 8); --
 INSERT INTO `item_mods` VALUES (20783, 29, 4); --
 
-INSERT INTO `item_mods` VALUES (20787, 83, 54); --
-INSERT INTO `item_mods` VALUES (20787, 110, 54); --
-INSERT INTO `item_mods` VALUES (20787, 30, 42); --
-
-INSERT INTO `item_mods` VALUES (20793, 84, 242); --
-INSERT INTO `item_mods` VALUES (20793, 110, 242); --
-INSERT INTO `item_mods` VALUES (20793, 30, 215); --
 INSERT INTO `item_mods` VALUES (20793, 302, 15); --
 INSERT INTO `item_mods` VALUES (20794, 8, 13); --
 INSERT INTO `item_mods` VALUES (20794, 13, 13); --
-INSERT INTO `item_mods` VALUES (20794, 84, 242); --
-INSERT INTO `item_mods` VALUES (20794, 110, 242); --
-INSERT INTO `item_mods` VALUES (20794, 30, 215); --
 INSERT INTO `item_mods` VALUES (20794, 165, 25); --
 INSERT INTO `item_mods` VALUES (20794, 421, 50); --
 INSERT INTO `item_mods` VALUES (20795, 8, 13); --
 INSERT INTO `item_mods` VALUES (20795, 13, 13); --
-INSERT INTO `item_mods` VALUES (20795, 84, 242); --
-INSERT INTO `item_mods` VALUES (20795, 110, 242); --
-INSERT INTO `item_mods` VALUES (20795, 30, 214); --
 INSERT INTO `item_mods` VALUES (20795, 165, 25); --
 INSERT INTO `item_mods` VALUES (20795, 421, 50); --
-
-INSERT INTO `item_mods` VALUES (20824, 84, 162); --
-INSERT INTO `item_mods` VALUES (20824, 110, 162); --
-INSERT INTO `item_mods` VALUES (20824, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Axe
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20825, 25, 15); -- Accuracy+15
-INSERT INTO `item_mods` VALUES (20825, 84, 67); -- Axe skill +67
-INSERT INTO `item_mods` VALUES (20825, 110, 67); -- Parrying skill +67
--- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (20827, 25, 13); --
 INSERT INTO `item_mods` VALUES (20827, 23, 13); --
-INSERT INTO `item_mods` VALUES (20827, 84, 242); --
-INSERT INTO `item_mods` VALUES (20827, 110, 242); --
-INSERT INTO `item_mods` VALUES (20827, 30, 188); --
 -- INSERT INTO `item_mods` VALUES (20827, ???, ?); -- Pet: Accuracy+28 Attack+28  not added
 
 INSERT INTO `item_mods` VALUES (20830, 25, 10); --
-INSERT INTO `item_mods` VALUES (20833, 84, 54); --
-INSERT INTO `item_mods` VALUES (20833, 110, 54); --
-INSERT INTO `item_mods` VALUES (20833, 30, 42); --
-
 
 -- -------------------------------------------------------
 -- Bravura (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20836, 25, 40);
-INSERT INTO `item_mods` VALUES (20836, 85, 242); -- GA skill
-INSERT INTO `item_mods` VALUES (20836, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20836, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20836, 355, 89);
 INSERT INTO `item_mods` VALUES (20836, 506, 160); -- 16% chance of extra dmg.
-INSERT INTO `item_mods` VALUES (20836, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (20836, 507, 300); -- Occ. 2x dmg
 INSERT INTO `item_mods` VALUES (20836, 431, 1); -- Add. Effect
 
-INSERT INTO `item_mods` VALUES (20837, 85, 242); --
-INSERT INTO `item_mods` VALUES (20837, 110, 242); --
-INSERT INTO `item_mods` VALUES (20837, 30, 215); --
+
 INSERT INTO `item_mods` VALUES (20837, 302, 15); --
-INSERT INTO `item_mods` VALUES (20838, 85, 242); --
-INSERT INTO `item_mods` VALUES (20838, 110, 242); --
-INSERT INTO `item_mods` VALUES (20838, 30, 215); --
 INSERT INTO `item_mods` VALUES (20838, 302, 15); --
 INSERT INTO `item_mods` VALUES (20839, 8, 20); --
-INSERT INTO `item_mods` VALUES (20839, 85, 242); --
-INSERT INTO `item_mods` VALUES (20839, 110, 242); --
-INSERT INTO `item_mods` VALUES (20839, 30, 215); --
 INSERT INTO `item_mods` VALUES (20839, 165, 25); --
 INSERT INTO `item_mods` VALUES (20839, 421, 50); --
 INSERT INTO `item_mods` VALUES (20840, 8, 20); --
-INSERT INTO `item_mods` VALUES (20840, 85, 242); --
-INSERT INTO `item_mods` VALUES (20840, 110, 242); --
-INSERT INTO `item_mods` VALUES (20840, 30, 215); --
 INSERT INTO `item_mods` VALUES (20840, 165, 25); --
 INSERT INTO `item_mods` VALUES (20840, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20861, 8, 12); --
 INSERT INTO `item_mods` VALUES (20861, 10, 12); --
-INSERT INTO `item_mods` VALUES (20861, 85, 242); --
-INSERT INTO `item_mods` VALUES (20861, 110, 242); --
-INSERT INTO `item_mods` VALUES (20861, 30, 188); --
 INSERT INTO `item_mods` VALUES (20861, 414, 20); -- Retaliation
 INSERT INTO `item_mods` VALUES (20861, 161, -5); --
-INSERT INTO `item_mods` VALUES (20870, 85, 162); --
-INSERT INTO `item_mods` VALUES (20870, 110, 162); --
-INSERT INTO `item_mods` VALUES (20870, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Labrys
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20871, 25, 15);  -- Accuracy +15
-INSERT INTO `item_mods` VALUES (20871, 85, 67);  -- Great Axe skill +67
-INSERT INTO `item_mods` VALUES (20871, 110, 67); -- Parrying skill +67
--- "Magic Accuracy skill" Not implemented yet
-
-INSERT INTO `item_mods` VALUES (20877, 85, 54); --
-INSERT INTO `item_mods` VALUES (20877, 110, 54); --
-INSERT INTO `item_mods` VALUES (20877, 30, 42); --
 
 -- -------------------------------------------------------
 -- Apocalypse (99-3)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20880, 25, 40);
-INSERT INTO `item_mods` VALUES (20880, 86, 242); -- scythe skill
-INSERT INTO `item_mods` VALUES (20880, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20880, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20880, 355, 105);
 INSERT INTO `item_mods` VALUES (20880, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20880, 507, 200); -- Occ. 2x dmg
@@ -4575,143 +4348,76 @@ INSERT INTO `item_mods` VALUES (20880, 507, 200); -- Occ. 2x dmg
 -- Apocalypse (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20881, 25, 40);
-INSERT INTO `item_mods` VALUES (20881, 86, 242); -- scythe skill
-INSERT INTO `item_mods` VALUES (20881, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20881, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20881, 355, 105);
 INSERT INTO `item_mods` VALUES (20881, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20881, 507, 200); -- Occ. 2x dmg
 INSERT INTO `item_mods` VALUES (20881, 431, 1); -- Add. Effect
 
 
-INSERT INTO `item_mods` VALUES (20882, 30, 250); --
-INSERT INTO `item_mods` VALUES (20882, 86, 242); --
-INSERT INTO `item_mods` VALUES (20882, 110, 242); --
 INSERT INTO `item_mods` VALUES (20882, 302, 15); --
-INSERT INTO `item_mods` VALUES (20883, 30, 250); --
-INSERT INTO `item_mods` VALUES (20883, 86, 242); --
-INSERT INTO `item_mods` VALUES (20883, 110, 242); --
 INSERT INTO `item_mods` VALUES (20883, 302, 15); --
 INSERT INTO `item_mods` VALUES (20884, 8, 13); --
 INSERT INTO `item_mods` VALUES (20884, 13, 13); --
-INSERT INTO `item_mods` VALUES (20884, 86, 242); --
-INSERT INTO `item_mods` VALUES (20884, 110, 242); --
-INSERT INTO `item_mods` VALUES (20884, 30, 215); --
 INSERT INTO `item_mods` VALUES (20884, 165, 25); --
 INSERT INTO `item_mods` VALUES (20884, 421, 50); --
 INSERT INTO `item_mods` VALUES (20885, 8, 13); --
 INSERT INTO `item_mods` VALUES (20885, 13, 13); --
-INSERT INTO `item_mods` VALUES (20885, 86, 242); --
-INSERT INTO `item_mods` VALUES (20885, 110, 242); --
-INSERT INTO `item_mods` VALUES (20885, 30, 215); --
 INSERT INTO `item_mods` VALUES (20885, 165, 25); --
 INSERT INTO `item_mods` VALUES (20885, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20905, 25, 10); --
-INSERT INTO `item_mods` VALUES (20905, 86, 242); --
-INSERT INTO `item_mods` VALUES (20905, 110, 242); --
-INSERT INTO `item_mods` VALUES (20905, 30, 188); --
 INSERT INTO `item_mods` VALUES (20905, 288, 3); --
 -- INSERT INTO `item_mods` VALUES (20905, ???, ?); -- Additional effect: Stun  unknown
-INSERT INTO `item_mods` VALUES (20915, 86, 162); --
-INSERT INTO `item_mods` VALUES (20915, 110, 162); --
-INSERT INTO `item_mods` VALUES (20915, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Scythe
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20916, 25, 15); -- Accuracy +15
-INSERT INTO `item_mods` VALUES (20916, 86, 67); -- Scythe skill +67
-INSERT INTO `item_mods` VALUES (20916, 110, 67); -- Parrying skill +67
--- "Magic Accuracy skill" Not implemented yet
-
-INSERT INTO `item_mods` VALUES (20924, 86, 54); --
-INSERT INTO `item_mods` VALUES (20924, 110, 54); --
-INSERT INTO `item_mods` VALUES (20924, 30, 42); --
 
 -- -------------------------------------------------------
 -- Gungnir (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20926, 25, 40);
-INSERT INTO `item_mods` VALUES (20926, 87, 242); -- polearm skill
-INSERT INTO `item_mods` VALUES (20926, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20926, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20926, 355, 121);
 INSERT INTO `item_mods` VALUES (20926, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20926, 507, 250); -- Occ. 2.5x dmg
 INSERT INTO `item_mods` VALUES (20926, 431, 1); -- Add. Effect
 
-
-INSERT INTO `item_mods` VALUES (20928, 87, 242); --
-INSERT INTO `item_mods` VALUES (20928, 110, 242); --
-INSERT INTO `item_mods` VALUES (20928, 30, 215); --
 INSERT INTO `item_mods` VALUES (20928, 362, 150); --
 INSERT INTO `item_mods` VALUES (20928, 302, 15); --
 INSERT INTO `item_mods` VALUES (20929, 10, 20); --
-INSERT INTO `item_mods` VALUES (20929, 87, 242); --
-INSERT INTO `item_mods` VALUES (20929, 110, 242); --
-INSERT INTO `item_mods` VALUES (20929, 30, 215); --
 INSERT INTO `item_mods` VALUES (20929, 165, 25); --
 INSERT INTO `item_mods` VALUES (20929, 421, 50); --
 INSERT INTO `item_mods` VALUES (20930, 10, 20); --
-INSERT INTO `item_mods` VALUES (20930, 87, 242); --
-INSERT INTO `item_mods` VALUES (20930, 110, 242); --
-INSERT INTO `item_mods` VALUES (20930, 30, 215); --
 INSERT INTO `item_mods` VALUES (20930, 165, 25); --
 INSERT INTO `item_mods` VALUES (20930, 421, 50); --
-
-INSERT INTO `item_mods` VALUES (20961, 87, 162); --
-INSERT INTO `item_mods` VALUES (20961, 110, 162); --
-INSERT INTO `item_mods` VALUES (20961, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Lance
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20962, 25, 15); -- Accuracy +15
-INSERT INTO `item_mods` VALUES (20962, 87, 67); -- Polearm skill +67
-INSERT INTO `item_mods` VALUES (20962, 110, 67); -- Parrying skill +67
--- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (20963, 8, 13); --
 INSERT INTO `item_mods` VALUES (20963, 25, 20); --
 INSERT INTO `item_mods` VALUES (20963, 23, 10); --
-INSERT INTO `item_mods` VALUES (20963, 87, 242); --
-INSERT INTO `item_mods` VALUES (20963, 110, 242); --
-INSERT INTO `item_mods` VALUES (20963, 30, 188); --
 INSERT INTO `item_mods` VALUES (20963, 165, 2); --
 INSERT INTO `item_mods` VALUES (20966, 25, 10); --
-INSERT INTO `item_mods` VALUES (20967, 87, 54); --
-INSERT INTO `item_mods` VALUES (20967, 110, 54); --
-INSERT INTO `item_mods` VALUES (20967, 30, 42); --
 
 -- -------------------------------------------------------
 -- Kikoku (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (20971, 23, 40);
-INSERT INTO `item_mods` VALUES (20971, 88, 242); -- katana skill
-INSERT INTO `item_mods` VALUES (20971, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (20971, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (20971, 355, 137);
 INSERT INTO `item_mods` VALUES (20971, 507, 300); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20971, 506, 160); -- Occ. 3x dmg
 INSERT INTO `item_mods` VALUES (20971, 431, 1); -- Add. Effect
 
-
-INSERT INTO `item_mods` VALUES (20973, 30, 245); --
-INSERT INTO `item_mods` VALUES (20973, 88, 242); --
-INSERT INTO `item_mods` VALUES (20973, 110, 242); --
 INSERT INTO `item_mods` VALUES (20973, 27, 30); --
 INSERT INTO `item_mods` VALUES (20973, 302, 15); --
 INSERT INTO `item_mods` VALUES (20974, 11, 20); --
-INSERT INTO `item_mods` VALUES (20974, 88, 242); --
-INSERT INTO `item_mods` VALUES (20974, 110, 242); --
-INSERT INTO `item_mods` VALUES (20974, 30, 215); --
 INSERT INTO `item_mods` VALUES (20974, 165, 25); --
 INSERT INTO `item_mods` VALUES (20974, 421, 50); --
 INSERT INTO `item_mods` VALUES (20975, 11, 20); --
-INSERT INTO `item_mods` VALUES (20975, 88, 242); --
-INSERT INTO `item_mods` VALUES (20975, 110, 242); --
-INSERT INTO `item_mods` VALUES (20975, 30, 215); --
 INSERT INTO `item_mods` VALUES (20975, 165, 25); --
 INSERT INTO `item_mods` VALUES (20975, 421, 50); --
 
@@ -4719,111 +4425,59 @@ INSERT INTO `item_mods` VALUES (20997, 9, 12); --
 INSERT INTO `item_mods` VALUES (20997, 11, 12); --
 INSERT INTO `item_mods` VALUES (20997, 25, 15); --
 INSERT INTO `item_mods` VALUES (20997, 68, 22); --
-INSERT INTO `item_mods` VALUES (20997, 88, 242); --
-INSERT INTO `item_mods` VALUES (20997, 110, 242); --
-INSERT INTO `item_mods` VALUES (20997, 30, 188); --
 INSERT INTO `item_mods` VALUES (21004, 68, 15); --
-INSERT INTO `item_mods` VALUES (21004, 88, 162); --
-INSERT INTO `item_mods` VALUES (21004, 110, 162); --
-INSERT INTO `item_mods` VALUES (21004, 30, 126); --
 
 -- -------------------------------------------------------
 -- Amanomurakumo (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21016, 25, 40);
-INSERT INTO `item_mods` VALUES (21016, 89, 242); -- GK skill
-INSERT INTO `item_mods` VALUES (21016, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (21016, 30, 215); -- Macc
 INSERT INTO `item_mods` VALUES (21016, 355, 153);
 INSERT INTO `item_mods` VALUES (21016, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (21016, 507, 250); -- Occ. 2.5x dmg
 INSERT INTO `item_mods` VALUES (21016, 431, 1); -- Add. Effect
 
-INSERT INTO `item_mods` VALUES (21017, 89, 242); --
-INSERT INTO `item_mods` VALUES (21017, 110, 242); --
-INSERT INTO `item_mods` VALUES (21017, 30, 215); --
 INSERT INTO `item_mods` VALUES (21017, 302, 15); --
-INSERT INTO `item_mods` VALUES (21018, 89, 242); --
-INSERT INTO `item_mods` VALUES (21018, 110, 242); --
-INSERT INTO `item_mods` VALUES (21018, 30, 215); --
 INSERT INTO `item_mods` VALUES (21018, 302, 15); --
 INSERT INTO `item_mods` VALUES (21019, 8, 20); --
-INSERT INTO `item_mods` VALUES (21019, 89, 242); --
-INSERT INTO `item_mods` VALUES (21019, 110, 242); --
-INSERT INTO `item_mods` VALUES (21019, 30, 215); --
 INSERT INTO `item_mods` VALUES (21019, 165, 25); --
 INSERT INTO `item_mods` VALUES (21019, 421, 50); --
 INSERT INTO `item_mods` VALUES (21020, 8, 20); --
-INSERT INTO `item_mods` VALUES (21020, 89, 242); --
-INSERT INTO `item_mods` VALUES (21020, 110, 242); --
-INSERT INTO `item_mods` VALUES (21020, 30, 215); --
 INSERT INTO `item_mods` VALUES (21020, 165, 25); --
 INSERT INTO `item_mods` VALUES (21020, 421, 50); --
 
-INSERT INTO `item_mods` VALUES (21051, 89, 162); --
-INSERT INTO `item_mods` VALUES (21051, 110, 162); --
-INSERT INTO `item_mods` VALUES (21051, 30, 126); --
 INSERT INTO `item_mods` VALUES (21052, 25, 15); --
 INSERT INTO `item_mods` VALUES (21052, 23, 10); --
-INSERT INTO `item_mods` VALUES (21052, 89, 242); --
-INSERT INTO `item_mods` VALUES (21052, 110, 242); --
-INSERT INTO `item_mods` VALUES (21052, 30, 188); --
 INSERT INTO `item_mods` VALUES (21052, 73, 25); -- Should be Save TP +250   added Store TP +25
-INSERT INTO `item_mods` VALUES (21058, 89, 54); --
-INSERT INTO `item_mods` VALUES (21058, 110, 54); --
-INSERT INTO `item_mods` VALUES (21058, 30, 42); --
-
 
 -- -------------------------------------------------------
 -- Mjollnir (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21061, 23, 40);
 -- INSERT INTO `item_mods` VALUES (21061, ???, 155); -- Magic dmg +   unknown
-INSERT INTO `item_mods` VALUES (21061, 90, 242); -- club skill
-INSERT INTO `item_mods` VALUES (21061, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (21061, 30, 228); -- Macc
 INSERT INTO `item_mods` VALUES (21061, 355, 170);
 INSERT INTO `item_mods` VALUES (21061, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (21061, 507, 300); -- Occ. 3x dmg
 
 
-INSERT INTO `item_mods` VALUES (21062, 30, 253); --
 INSERT INTO `item_mods` VALUES (21062, 28, 65); --
-INSERT INTO `item_mods` VALUES (21062, 90, 242); --
-INSERT INTO `item_mods` VALUES (21062, 110, 242); --
 INSERT INTO `item_mods` VALUES (21062, 302, 15); --
-INSERT INTO `item_mods` VALUES (21063, 30, 253); --
 INSERT INTO `item_mods` VALUES (21063, 28, 65); --
-INSERT INTO `item_mods` VALUES (21063, 90, 242); --
-INSERT INTO `item_mods` VALUES (21063, 110, 242); --
 INSERT INTO `item_mods` VALUES (21063, 302, 15); --
 INSERT INTO `item_mods` VALUES (21064, 2, 90); --
 INSERT INTO `item_mods` VALUES (21064, 5, 90); --
 INSERT INTO `item_mods` VALUES (21064, 28, 75); --
-INSERT INTO `item_mods` VALUES (21064, 90, 242); --
-INSERT INTO `item_mods` VALUES (21064, 110, 242); --
-INSERT INTO `item_mods` VALUES (21064, 30, 228); --
 INSERT INTO `item_mods` VALUES (21065, 2, 90); --
 INSERT INTO `item_mods` VALUES (21065, 5, 90); --
 INSERT INTO `item_mods` VALUES (21065, 28, 75); --
-INSERT INTO `item_mods` VALUES (21065, 90, 242); --
-INSERT INTO `item_mods` VALUES (21065, 110, 242); --
-INSERT INTO `item_mods` VALUES (21065, 30, 228); --
 
 INSERT INTO `item_mods` VALUES (21125, 12, 5); --
 INSERT INTO `item_mods` VALUES (21125, 13, 5); --
 INSERT INTO `item_mods` VALUES (21125, 28, 111); -- Should be 12 see below
 -- INSERT INTO `item_mods` VALUES (21125, ???, 99); -- Magic Damage + unknown
-INSERT INTO `item_mods` VALUES (21125, 90, 188); --
-INSERT INTO `item_mods` VALUES (21125, 110, 188); --
-INSERT INTO `item_mods` VALUES (21125, 30, 167); --
 INSERT INTO `item_mods` VALUES (21125, 374, 22); --
 INSERT INTO `item_mods` VALUES (21126, 12, 5); --
 INSERT INTO `item_mods` VALUES (21126, 13, 5); --
 INSERT INTO `item_mods` VALUES (21126, 25, 18); --
-INSERT INTO `item_mods` VALUES (21126, 90, 153); --
-INSERT INTO `item_mods` VALUES (21126, 110, 153); --
-INSERT INTO `item_mods` VALUES (21126, 30, 126); --
 
 -- -------------------------------------------------------
 -- Forefront Wand
@@ -4832,92 +4486,53 @@ INSERT INTO `item_mods` VALUES (21127, 12, 3); -- INT +3
 INSERT INTO `item_mods` VALUES (21127, 13, 3); -- MND +3
 INSERT INTO `item_mods` VALUES (21127, 25, 15); -- Accuracy +15
 INSERT INTO `item_mods` VALUES (21127, 28, 5); -- "Magic Atk. Bonus" +5
-INSERT INTO `item_mods` VALUES (21127, 90, 67); -- Club skill +67
-INSERT INTO `item_mods` VALUES (21127, 110, 67); -- Parrying skill +67
 -- "Magic Damage" Not implemented yet
--- "Magic Accuracy skill" Not implemented yet
 
 INSERT INTO `item_mods` VALUES (21132, 12, 3); --
 INSERT INTO `item_mods` VALUES (21132, 13, 3); --
 INSERT INTO `item_mods` VALUES (21132, 25, 6); --
-INSERT INTO `item_mods` VALUES (21132, 90, 51); --
-INSERT INTO `item_mods` VALUES (21132, 110, 51); --
-INSERT INTO `item_mods` VALUES (21132, 30, 42); --
-
 
 -- -------------------------------------------------------
 -- Claustrum (99-4)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21136, 25, 40);
 -- INSERT INTO `item_mods` VALUES (21136, ???, 248); -- Magic dmg +  unknown
-INSERT INTO `item_mods` VALUES (21136, 91, 242); -- staff skill
-INSERT INTO `item_mods` VALUES (21136, 110, 242); -- parry skill
-INSERT INTO `item_mods` VALUES (21136, 30, 255); -- Macc
 INSERT INTO `item_mods` VALUES (21136, 355, 185);
 INSERT INTO `item_mods` VALUES (21136, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (21136, 507, 250); -- Occ. 2.5x dmg
 
 
 INSERT INTO `item_mods` VALUES (21138, 25, 30); --
-INSERT INTO `item_mods` VALUES (21138, 30, 285); --
 INSERT INTO `item_mods` VALUES (21138, 28, 165); -- modded  magic dmg+ unknown
-INSERT INTO `item_mods` VALUES (21138, 91, 242); --
-INSERT INTO `item_mods` VALUES (21128, 110, 242); --
 INSERT INTO `item_mods` VALUES (21128, 302, 15); --
 INSERT INTO `item_mods` VALUES (21139, 25, 30); --
-INSERT INTO `item_mods` VALUES (21139, 30, 265); --
 INSERT INTO `item_mods` VALUES (21139, 28, 165); -- Should be 60   magic dmg +  unknown
-INSERT INTO `item_mods` VALUES (21139, 91, 242); --
-INSERT INTO `item_mods` VALUES (21139, 110, 242); --
-INSERT INTO `item_mods` VALUES (21139, 302, 15); --
 INSERT INTO `item_mods` VALUES (21140, 25, 30); --
-INSERT INTO `item_mods` VALUES (21140, 30, 265); --
 INSERT INTO `item_mods` VALUES (21140, 28, 185); -- Should be 60   magic dmg +  unknown
 INSERT INTO `item_mods` VALUES (21140, 91, 24); --
-INSERT INTO `item_mods` VALUES (21140, 110, 242); --
 INSERT INTO `item_mods` VALUES (21140, 302, 15); --
 
 INSERT INTO `item_mods` VALUES (21142, 25, 30); --
 INSERT INTO `item_mods` VALUES (21142, 28, 80); --
-INSERT INTO `item_mods` VALUES (21142, 91, 242); --
-INSERT INTO `item_mods` VALUES (21142, 110, 242); --
-INSERT INTO `item_mods` VALUES (21142, 30, 215); --
 INSERT INTO `item_mods` VALUES (21142, 346, 8); --
 INSERT INTO `item_mods` VALUES (21142, 314, 100); --
 INSERT INTO `item_mods` VALUES (21142, 302, 15); --
 INSERT INTO `item_mods` VALUES (21143, 5, 150); --
 INSERT INTO `item_mods` VALUES (21143, 38, 100); --
-INSERT INTO `item_mods` VALUES (21143, 91, 242); --
-INSERT INTO `item_mods` VALUES (21143, 110, 242); --
-INSERT INTO `item_mods` VALUES (21143, 30, 255); --
 INSERT INTO `item_mods` VALUES (21144, 5, 150); --
 INSERT INTO `item_mods` VALUES (21144, 28, 100); --
-INSERT INTO `item_mods` VALUES (21144, 91, 242); --
-INSERT INTO `item_mods` VALUES (21144, 110, 242); --
-INSERT INTO `item_mods` VALUES (21144, 30, 255); --
-
-
 
 INSERT INTO `item_mods` VALUES (21176, 12, 12); --
 INSERT INTO `item_mods` VALUES (21176, 13, 12); --
 INSERT INTO `item_mods` VALUES (21176, 28, 120); -- Should be 18 see below
 -- INSERT INTO `item_mods` VALUES (21176, ???, 207); -- Magic Damage unknown
 -- INSERT INTO `item_mods` VALUES (21176, ???, 15); --  Ice Elemental "Magic Atk. Bonus"+15  unknown
-INSERT INTO `item_mods` VALUES (21176, 91, 242); --
-INSERT INTO `item_mods` VALUES (21176, 110, 242); --
-INSERT INTO `item_mods` VALUES (21176, 30, 228); --
 -- INSERT INTO `item_mods` VALUES (21176, ???, -3); -- Elemental magic recast delay -3%  unknown
 INSERT INTO `item_mods` VALUES (21194, 12, 10); --
 INSERT INTO `item_mods` VALUES (21194, 13, 10); --
 INSERT INTO `item_mods` VALUES (21194, 28, 95); -- Should be 19 see below
 -- INSERT INTO `item_mods` VALUES (21194, ???, 151); -- Magic Damage +
-INSERT INTO `item_mods` VALUES (21194, 91, 162); --
-INSERT INTO `item_mods` VALUES (21194, 110, 162); --
-INSERT INTO `item_mods` VALUES (21194, 30, 153); --
 INSERT INTO `item_mods` VALUES (21195, 5, 79); --
-INSERT INTO `item_mods` VALUES (21195, 91, 162); --
-INSERT INTO `item_mods` VALUES (21195, 110, 162); --
-INSERT INTO `item_mods` VALUES (21195, 30, 126); --
 -- INSERT INTO `item_mods` VALUES (21195, ???, 60); -- Avatar: "Magic Atk. Bonus"+60
 
 -- -------------------------------------------------------
@@ -4926,31 +4541,18 @@ INSERT INTO `item_mods` VALUES (21195, 30, 126); --
 INSERT INTO `item_mods` VALUES (21196, 12, 6); -- INT +6
 INSERT INTO `item_mods` VALUES (21196, 13, 6); -- MND +6
 INSERT INTO `item_mods` VALUES (21196, 28, 9); -- "Magic Atk. Bonus" +9
-INSERT INTO `item_mods` VALUES (21196, 91, 67); -- Staff skill +67
-INSERT INTO `item_mods` VALUES (21196, 110, 67); -- Parrying skill +67
 -- "Magic Damage" Not implemented yet
--- "Magic Accuracy skill" Not implemented yet
-
 -- -------------------------------------------------------
 -- Forefront Scepter
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21197, 5, 69); -- Max MP +69
-INSERT INTO `item_mods` VALUES (21197, 91, 67); -- Staff skill +67
-INSERT INTO `item_mods` VALUES (21197, 110, 67); -- Parrying skill +67
--- "Magic Accuracy skill" Not implemented yet
 -- "Avatar: Increases Magic Accuracy" Not implemented yet (will be latent)
 
 INSERT INTO `item_mods` VALUES (21208, 12, 6); --
 INSERT INTO `item_mods` VALUES (21208, 13, 6); --
 INSERT INTO `item_mods` VALUES (21208, 28, 73); -- Should be 40   see below
 -- INSERT INTO `item_mods` VALUES (21208, ???, 65); -- Magic Damage + 65  unknown
-INSERT INTO `item_mods` VALUES (21208, 91, 54); --
-INSERT INTO `item_mods` VALUES (21208, 110, 54); --
-INSERT INTO `item_mods` VALUES (21208, 30, 51); --
 INSERT INTO `item_mods` VALUES (21209, 5, 67); --
-INSERT INTO `item_mods` VALUES (21209, 91, 54); --
-INSERT INTO `item_mods` VALUES (21209, 110, 54); --
-INSERT INTO `item_mods` VALUES (21209, 30, 42); --
 -- INSERT INTO `item_mods` VALUES (21209, ???, 25); --  Avatar: "Magic Atk. Bonus"+25
 
 
@@ -4959,35 +4561,28 @@ INSERT INTO `item_mods` VALUES (21209, 30, 42); --
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21211, 24, 30);
 INSERT INTO `item_mods` VALUES (21211, 26, 40);
-INSERT INTO `item_mods` VALUES (21211, 104, 242); -- archery skill
 INSERT INTO `item_mods` VALUES (21211, 355, 200);
 INSERT INTO `item_mods` VALUES (21211, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (21211, 507, 300); -- Occ. 3x dmg
 
 
 INSERT INTO `item_mods` VALUES (21212, 9, 20); --
-INSERT INTO `item_mods` VALUES (21212, 104, 242); --
 INSERT INTO `item_mods` VALUES (21212, 165, 25); --
 INSERT INTO `item_mods` VALUES (21212, 421, 50); --
 INSERT INTO `item_mods` VALUES (21213, 9, 20); --
-INSERT INTO `item_mods` VALUES (21213, 104, 242); --
 INSERT INTO `item_mods` VALUES (21213, 165, 25); --
 INSERT INTO `item_mods` VALUES (21213, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (21228, 26, 30); --
-INSERT INTO `item_mods` VALUES (21228, 104, 242); --
 -- INSERT INTO `item_mods` VALUES (21228, ???, 5); -- Snapshot +5  not added
 INSERT INTO `item_mods` VALUES (21228, 227, 5); --
 INSERT INTO `item_mods` VALUES (21228, 4, 80); --
-INSERT INTO `item_mods` VALUES (21236, 104, 162); --
 
 -- -------------------------------------------------------
 -- Forefront Bow
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21237, 26, 15); -- Ranged Accuracy +15
-INSERT INTO `item_mods` VALUES (21237, 104, 67); -- Archery skill +67
 
-INSERT INTO `item_mods` VALUES (21247, 105, 242); --
 INSERT INTO `item_mods` VALUES (21247, 365, 20); --
 INSERT INTO `item_mods` VALUES (21247, 420, 40); --
 
@@ -4995,11 +4590,9 @@ INSERT INTO `item_mods` VALUES (21247, 420, 40); --
 -- Forefront Bowgun
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21255, 26, 15); -- Ranged Accuracy +15
-INSERT INTO `item_mods` VALUES (21255, 105 , 67); -- Marksmanship skill +67
 
 INSERT INTO `item_mods` VALUES (21256, 26, 15); --
 INSERT INTO `item_mods` VALUES (21256, 24, 5); --
-INSERT INTO `item_mods` VALUES (21256, 105, 242); --
 INSERT INTO `item_mods` VALUES (21256, 27, -3); --
 INSERT INTO `item_mods` VALUES (21256, 289, 10); --
 
@@ -5008,30 +4601,23 @@ INSERT INTO `item_mods` VALUES (21256, 289, 10); --
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21261, 24, 30);
 INSERT INTO `item_mods` VALUES (21261, 26, 40);
-INSERT INTO `item_mods` VALUES (21261, 105, 242); -- marksmanship skill
 INSERT INTO `item_mods` VALUES (21261, 355, 216);
 INSERT INTO `item_mods` VALUES (21261, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (21261, 507, 300); -- Occ. 3x dmg
 
 
-INSERT INTO `item_mods` VALUES (21263, 105, 242); --
 INSERT INTO `item_mods` VALUES (21263, 411, 35); --
 INSERT INTO `item_mods` VALUES (21264, 11, 20); --
-INSERT INTO `item_mods` VALUES (21264, 105, 242); --
 INSERT INTO `item_mods` VALUES (21265, 11, 20); --
-INSERT INTO `item_mods` VALUES (21265, 105, 242); --
 INSERT INTO `item_mods` VALUES (21265, 165, 25); --
 INSERT INTO `item_mods` VALUES (21265, 421, 50); --
 
-INSERT INTO `item_mods` VALUES (21286, 105, 162); --
 
 -- -------------------------------------------------------
 -- Forefront Gun
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (21287, 26, 15); -- Ranged Accuracy +15
-INSERT INTO `item_mods` VALUES (21287, 105 , 67); -- Marksmanship skill +67
 
-INSERT INTO `item_mods` VALUES (21294, 105, 54); --
 
 INSERT INTO `item_mods` VALUES (21342, 28, 3); --
 INSERT INTO `item_mods` VALUES (21342, 27, -2); --
@@ -6142,7 +5728,7 @@ INSERT INTO `item_mods` VALUES (28575, 27, -3); --
 
 -- Supershear
 INSERT INTO `item_mods` VALUES (28535, 25, 7); -- acc
-INSERT INTO `item_mods` VALUES (28535, 27, 5); -- enm
+INSERT INTO `item_mods` VALUES (28535, 27, 50); -- enm
 INSERT INTO `item_mods` VALUES (28535, 2, 30); -- hp
 INSERT INTO `item_mods` VALUES (28535, 5, 30); -- mp
 INSERT INTO `item_mods` VALUES (28535, 10, 5); -- vit
@@ -6213,9 +5799,6 @@ INSERT INTO `item_mods` VALUES (28757, 27, -3); --
 
 -- Hurlbat
 INSERT INTO `item_mods` VALUES (20818, 11, 8); -- AGI
-INSERT INTO `item_mods` VALUES (20818, 84, 108); -- AXE
-INSERT INTO `item_mods` VALUES (20818, 110, 108); -- PARRY
-INSERT INTO `item_mods` VALUES (20818, 30, 84); -- MACC
 INSERT INTO `item_mods` VALUES (20818, 26, 15); -- RACC
 INSERT INTO `item_mods` VALUES (20818, 24, 5); -- RATT
 INSERT INTO `item_mods` VALUES (20818, 27, -4); -- EMN
@@ -6223,9 +5806,6 @@ INSERT INTO `item_mods` VALUES (20818, 27, -4); -- EMN
 -- Antican Axe
 INSERT INTO `item_mods` VALUES (20819, 8, 10); -- STR
 INSERT INTO `item_mods` VALUES (20819, 11, -5); -- AGI
-INSERT INTO `item_mods` VALUES (20819, 84, 108); -- AXE
-INSERT INTO `item_mods` VALUES (20819, 110, 108); -- PARRY
-INSERT INTO `item_mods` VALUES (20819, 30, 84); -- MACC
 INSERT INTO `item_mods` VALUES (20819, 23, 20); -- ATT
 INSERT INTO `item_mods` VALUES (20819, 24, 15); -- RATT
 
@@ -6323,9 +5903,6 @@ INSERT INTO `item_mods` VALUES (27349, 359, 6); -- RAPID SHOT
 -- castigation
 INSERT INTO `item_mods` VALUES (20864, 2, 35); -- HP
 INSERT INTO `item_mods` VALUES (20864, 10, 15); -- VIT
-INSERT INTO `item_mods` VALUES (20864, 85, 242); -- GA
-INSERT INTO `item_mods` VALUES (20864, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20864, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20864, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20864, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (20864, 288, 3); -- DA
@@ -6335,9 +5912,6 @@ INSERT INTO `item_mods` VALUES (20864, 28, 10); -- MATT
 
 -- tunglmyrkvi
 INSERT INTO `item_mods` VALUES (20765, 2, 50); -- HP
-INSERT INTO `item_mods` VALUES (20765, 83, 242); -- GS
-INSERT INTO `item_mods` VALUES (20765, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20765, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20765, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20765, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (20765, 288, 3); -- DA
@@ -6349,9 +5923,6 @@ INSERT INTO `item_mods` VALUES (20765, 28, 20); -- MATT
 INSERT INTO `item_mods` VALUES (21181, 5, 50); -- HP
 INSERT INTO `item_mods` VALUES (21181, 12, 20); -- INT
 INSERT INTO `item_mods` VALUES (21181, 13, 12); -- MND
-INSERT INTO `item_mods` VALUES (21181, 91, 242); -- STAFF
-INSERT INTO `item_mods` VALUES (21181, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (21181, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (21181, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (21181, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (21181, 288, 3); -- DA
@@ -6363,9 +5934,6 @@ INSERT INTO `item_mods` VALUES (21181, 296, 5); -- Conserve MP
 -- jushimatsu
 INSERT INTO `item_mods` VALUES (20990, 9, 12); -- DEX
 INSERT INTO `item_mods` VALUES (20990, 11, 10); -- AGI
-INSERT INTO `item_mods` VALUES (20990, 88, 242); -- KATANA
-INSERT INTO `item_mods` VALUES (20990, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20990, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20990, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20990, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (20990, 288, 3); -- DA
@@ -6376,9 +5944,6 @@ INSERT INTO `item_mods` VALUES (20990, 160, -3); -- DMG
 
 -- anahera_blade
 INSERT INTO `item_mods` VALUES (21049, 73, 12); -- STORE TP
-INSERT INTO `item_mods` VALUES (21049, 89, 242); -- GKT
-INSERT INTO `item_mods` VALUES (21049, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (21049, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (21049, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (21049, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (21049, 288, 3); -- DA
@@ -6388,9 +5953,6 @@ INSERT INTO `item_mods` VALUES (21049, 28, 10); -- MATT
 
 -- anahera_tabar
 INSERT INTO `item_mods` VALUES (20822, 27, -6); -- ENM
-INSERT INTO `item_mods` VALUES (20822, 84, 242); -- AXE
-INSERT INTO `item_mods` VALUES (20822, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20822, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20822, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20822, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (20822, 288, 3); -- DA
@@ -6401,9 +5963,6 @@ INSERT INTO `item_mods` VALUES (20822, 28, 10); -- MATT
 -- anahera_scythe
 INSERT INTO `item_mods` VALUES (20913, 8, 10); -- STR
 INSERT INTO `item_mods` VALUES (20913, 12, 15); -- INT
-INSERT INTO `item_mods` VALUES (20913, 86, 242); -- SCYTHE
-INSERT INTO `item_mods` VALUES (20913, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20913, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20913, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20913, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (20913, 288, 3); -- DA
@@ -6414,9 +5973,6 @@ INSERT INTO `item_mods` VALUES (20913, 28, 35); -- MATT
 -- anahera_saber
 INSERT INTO `item_mods` VALUES (20733, 8, 10); -- STR
 INSERT INTO `item_mods` VALUES (20733, 11, 10); -- AGI
-INSERT INTO `item_mods` VALUES (20733, 82, 242); -- SWORD
-INSERT INTO `item_mods` VALUES (20733, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20733, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20733, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20733, 369, 3); -- REFRESH
 INSERT INTO `item_mods` VALUES (20733, 288, 5); -- DA
@@ -6427,9 +5983,6 @@ INSERT INTO `item_mods` VALUES (20733, 28, 30); -- MATT
 -- anahera_sword
 INSERT INTO `item_mods` VALUES (20734, 5, 20); -- MP
 INSERT INTO `item_mods` VALUES (20734, 13, 15); -- MND
-INSERT INTO `item_mods` VALUES (20734, 82, 242); -- SWORD
-INSERT INTO `item_mods` VALUES (20734, 109, 15); -- SHIELD
-INSERT INTO `item_mods` VALUES (20734, 110, 242); -- PARRY
 INSERT INTO `item_mods` VALUES (20734, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20734, 370, 3); -- REGEN
 INSERT INTO `item_mods` VALUES (20734, 369, 3); -- REFRESH
@@ -6441,7 +5994,6 @@ INSERT INTO `item_mods` VALUES (20734, 28, 10); -- MATT
 -- hanqaku-no-yumi
 INSERT INTO `item_mods` VALUES (21227, 26, 15); -- RACC
 INSERT INTO `item_mods` VALUES (21227, 24, 25); -- RATT
-INSERT INTO `item_mods` VALUES (21227, 104, 242); -- Archery Skill
 INSERT INTO `item_mods` VALUES (21227, 359, 1); -- True Shot
 INSERT INTO `item_mods` VALUES (21227, 345, 1000); -- TP Bonus
 
@@ -6465,9 +6017,6 @@ INSERT INTO `item_mods` VALUES (21305, 24, 10); -- RATT
 INSERT INTO `item_mods` VALUES (20858, 8, 7); -- STR
 INSERT INTO `item_mods` VALUES (20858, 9, 7); -- VIT
 INSERT INTO `item_mods` VALUES (20858, 25, 20); -- ACC
-INSERT INTO `item_mods` VALUES (20858, 85, 242); -- GA
-INSERT INTO `item_mods` VALUES (20858, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20858, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20858, 73, 5); -- STP
 INSERT INTO `item_mods` VALUES (20858, 431, 1); -- Additional effect
 
@@ -6475,13 +6024,9 @@ INSERT INTO `item_mods` VALUES (20858, 431, 1); -- Additional effect
 INSERT INTO `item_mods` VALUES (20991, 25, 15); -- ACC
 INSERT INTO `item_mods` VALUES (20991, 28, 15); -- MDMG
 INSERT INTO `item_mods` VALUES (20991, 68, 37); -- EVA
-INSERT INTO `item_mods` VALUES (20991, 88, 242); -- Katana
-INSERT INTO `item_mods` VALUES (20991, 110, 242); -- PARRY
-INSERT INTO `item_mods` VALUES (20991, 30, 188); -- MACC
 INSERT INTO `item_mods` VALUES (20991, 170, 5); -- Fast Cast
 
 -- Vanir Gun
-INSERT INTO `item_mods` VALUES (21284, 105, 242); -- MARK
 INSERT INTO `item_mods` VALUES (21284, 24, 20); -- RATT
 INSERT INTO `item_mods` VALUES (21284, 28, 10); -- MATT
 
@@ -10948,37 +10493,21 @@ INSERT INTO `item_mods` VALUES(27591, 150, 1); -- Increases rate of synthesis su
 INSERT INTO `item_mods` VALUES(27591, 151, 1); -- Increases rate of synthesis success by 1% Cooking
 -- INSERT INTO `item_mods` VALUES(27591, 0, 1); -- Increases rate of high quality-item synthesis success by 1% =====> No mod ID
 
--- kumbhakarna
-INSERT INTO `item_mods` VALUES (20809, 84, 242); -- Axe Skill
-INSERT INTO `item_mods` VALUES (20809, 110, 242); -- Parry
-INSERT INTO `item_mods` VALUES (20809, 30, 188); -- Macc
-
 -- keraunos
 INSERT INTO `item_mods` VALUES (21169, 12, 12); -- INT
 INSERT INTO `item_mods` VALUES (21169, 13, 12); -- MND
 INSERT INTO `item_mods` VALUES (21169, 28, 120); -- Matt
 INSERT INTO `item_mods` VALUES (21169, 0, 217); -- Magic dmg
-INSERT INTO `item_mods` VALUES (21169, 91, 242); -- Staff
-INSERT INTO `item_mods` VALUES (21169, 110, 242); -- Parry
-INSERT INTO `item_mods` VALUES (21169, 30, 228); -- Macc
-
 
 -- tinhaspa
 INSERT INTO `item_mods` VALUES (20536, 8, 3); -- STR
 INSERT INTO `item_mods` VALUES (20536, 25, 5); -- ACC
-INSERT INTO `item_mods` VALUES (20536, 80, 242); -- H2H
-INSERT INTO `item_mods` VALUES (20536, 107, 242); -- Gaurd
-INSERT INTO `item_mods` VALUES (20536, 30, 188); -- Macc
 
 -- one-eyed
 INSERT INTO `item_mods` VALUES (21252, 26, 12); -- racc
-INSERT INTO `item_mods` VALUES (21252, 105, 102); -- Marksmanship
 
 -- minos
 INSERT INTO `item_mods` VALUES (20860, 23, 15); -- Att
-INSERT INTO `item_mods` VALUES (20860, 85, 242); -- GA
-INSERT INTO `item_mods` VALUES (20860, 110, 242); -- Parry
-INSERT INTO `item_mods` VALUES (20860, 30, 188); -- Macc
 INSERT INTO `item_mods` VALUES (20860, 27, -10); -- ENM
 INSERT INTO `item_mods` VALUES (20860, 288, 4); -- Dbl Att
 
@@ -10986,60 +10515,40 @@ INSERT INTO `item_mods` VALUES (20860, 288, 4); -- Dbl Att
 INSERT INTO `item_mods` VALUES (20717, 25, 27); -- Acc
 INSERT INTO `item_mods` VALUES (20717, 28, 10); -- Mag Dmg
 INSERT INTO `item_mods` VALUES (20717, 68, 13); -- Eva
-INSERT INTO `item_mods` VALUES (20717, 82, 228); -- Sword
-INSERT INTO `item_mods` VALUES (20717, 110, 188); -- parry
 INSERT INTO `item_mods` VALUES (20717, 113, 10); -- ehance
 INSERT INTO `item_mods` VALUES (20717, 114, 10); -- enfeeb
-INSERT INTO `item_mods` VALUES (20717, 30, 203); -- Macc
 -- INSERT INTO `item_mods` VALUES (20717, 0, 30); -- Occult
 
 -- bolelabunga
 INSERT INTO `item_mods` VALUES (21111, 12, 6); -- INT
 INSERT INTO `item_mods` VALUES (21111, 13, 6); -- MND
 INSERT INTO `item_mods` VALUES (21111, 28, 60); -- Matt
-INSERT INTO `item_mods` VALUES (21111, 90, 242); -- Club
-INSERT INTO `item_mods` VALUES (21111, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (21111, 30, 215); -- macc
 -- INSERT INTO `item_mods` VALUES (21111, 0, 10); -- regen pot
 INSERT INTO `item_mods` VALUES (21111, 369, 1); -- regen
 INSERT INTO `item_mods` VALUES (21111, 370, 1); -- refresh
 
 -- kbiroj
 INSERT INTO `item_mods` VALUES (20763, 23, 8); -- att
-INSERT INTO `item_mods` VALUES (20763, 83, 242); -- GS
-INSERT INTO `item_mods` VALUES (20763, 110, 242); -- pary
-INSERT INTO `item_mods` VALUES (20763, 30, 188); -- macc
+
 
 -- cronus
 INSERT INTO `item_mods` VALUES (20904, 23, 15); -- acc
 INSERT INTO `item_mods` VALUES (20904, 25, 15); -- att
-INSERT INTO `item_mods` VALUES (20904, 86, 242); -- scythe
-INSERT INTO `item_mods` VALUES (20904, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (20904, 30, 188); -- macc
 INSERT INTO `item_mods` VALUES (20904, 27, -10); -- enm
 INSERT INTO `item_mods` VALUES (20904, 433, 1); -- hp drain
 
 -- shokudaikiri
 INSERT INTO `item_mods` VALUES (21040, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES (21040, 23, 4); -- Att
-INSERT INTO `item_mods` VALUES (21040, 89, 242); -- GKT
-INSERT INTO `item_mods` VALUES (21040, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (21040, 30, 188); -- macc
 
 -- eminent_lance
-INSERT INTO `item_mods` VALUES (20954, 87, 215); -- pole
-INSERT INTO `item_mods` VALUES (20954, 110, 215); -- parry
-INSERT INTO `item_mods` VALUES (20954, 30, 167); -- macc
 INSERT INTO `item_mods` VALUES (20954, 23, 10); -- att
 INSERT INTO `item_mods` VALUES (20954, 25, 15); -- acc
 
 -- shigi
 INSERT INTO `item_mods` VALUES (20994, 25, 27); -- acc
 INSERT INTO `item_mods` VALUES (20994, 68, 27); -- eva
-INSERT INTO `item_mods` VALUES (20994, 88, 228); -- katana
-INSERT INTO `item_mods` VALUES (20994, 110, 228); -- parry
-INSERT INTO `item_mods` VALUES (20994, 30, 215); -- macc
-INSERT INTO `item_mods` VALUES (20994, 27, -10); -- enm
+INSERT INTO `item_mods` VALUES (20994, 27, 10); -- enm
 INSERT INTO `item_mods` VALUES (20994, 118, 10); -- ninjitsu
 INSERT INTO `item_mods` VALUES (20994, 308, 5); -- tool
 -- INSERT INTO `item_mods` VALUES (20994, 0, -3); -- recast
@@ -11047,17 +10556,13 @@ INSERT INTO `item_mods` VALUES (20994, 308, 5); -- tool
 -- cibitshavore
 INSERT INTO `item_mods` VALUES (21229, 11, 3); -- agi
 INSERT INTO `item_mods` VALUES (21229, 26, 6); -- racc
-INSERT INTO `item_mods` VALUES (21229, 106, 242); -- archery
 
 -- izhiikoh
-INSERT INTO `item_mods` VALUES (21229, 9, 15); -- dex
-INSERT INTO `item_mods` VALUES (21229, 25, 10); -- acc
-INSERT INTO `item_mods` VALUES (21229, 23, 8); -- att
-INSERT INTO `item_mods` VALUES (21229, 68, 22); -- eva
-INSERT INTO `item_mods` VALUES (21229, 81, 242); -- dagger
-INSERT INTO `item_mods` VALUES (21229, 110, 242); -- parry
-INSERT INTO `item_mods` VALUES (21229, 30, 188); -- macc
-INSERT INTO `item_mods` VALUES (21229, 302, 2); -- trip
+INSERT INTO `item_mods` VALUES (20636, 9, 15); -- dex
+INSERT INTO `item_mods` VALUES (20636, 25, 10); -- acc
+INSERT INTO `item_mods` VALUES (20636, 23, 8); -- att
+INSERT INTO `item_mods` VALUES (20636, 68, 22); -- eva
+INSERT INTO `item_mods` VALUES (20636, 302, 2); -- trip
 
 -- Empy 109 begins
 
