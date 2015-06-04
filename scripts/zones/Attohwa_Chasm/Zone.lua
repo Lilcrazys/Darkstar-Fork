@@ -49,8 +49,9 @@ function onInitialize(zone)
 
     -- Tiamat
     SetRespawnTime(16806227, 900, 10800);
-	-- Achuka
-	SetRespawnTime(16806910, 900, 10800);
+
+    -- Achuka
+    SetRespawnTime(16806910, 900, 10800);
 end;
 
 -----------------------------------

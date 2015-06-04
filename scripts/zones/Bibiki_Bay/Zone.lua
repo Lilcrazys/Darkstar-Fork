@@ -67,9 +67,9 @@ function onInitialize(zone)
     zone:registerRegion(2,-410,-7,-385,-383,5,-354);
     zone:registerRegion(3,487,-6,708,491,-1,717);
     zone:registerRegion(4,-394,-7,-396,-391,-1,-385);
-	
-	-- Ravenous_Cracklaw
-	SetRespawnTimer(16794622, 900, 10800);
+
+    -- Ravenous_Cracklaw
+    SetRespawnTime(16794622, 900, 10800);
 end;
 
 -----------------------------------

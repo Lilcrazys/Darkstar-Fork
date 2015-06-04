@@ -71,8 +71,8 @@ function onInitialize(zone)
 
     SetRegionalConquestOverseers(zone:getRegionID())
 
-	-- Tchakka
-	SetRespawnTime(17200126, 900, 10800);
+    -- Tchakka
+    SetRespawnTime(17200126, 900, 10800);
 end;
 
 -----------------------------------

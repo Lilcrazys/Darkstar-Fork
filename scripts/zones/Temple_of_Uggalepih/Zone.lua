@@ -20,9 +20,9 @@ function onInitialize(zone)
     SetGroundsTome(tomes);
 
     UpdateTreasureSpawnPoint(17428982);
-	
-	-- Colkhab
-	SetRespawnTimer(17429502, 900, 10800);
+
+    -- Colkhab
+    SetRespawnTime(17429502, 900, 10800);
 end;
 
 -----------------------------------
