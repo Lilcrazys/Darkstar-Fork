@@ -14,7 +14,7 @@ require("scripts/globals/utils");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
-    mob:setMobMod(MOBMOD_DRAW_IN, 1); -- Alliance Draw In
+    mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
 end;
 
 -----------------------------------
@@ -23,16 +23,17 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGEN, 150);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_ACC,2500);
-
+    mob:setMod(MOD_TERRORRES,100);
+    mob:setMod(MOD_STUNRES,100);
     -- addMod
     mob:addMod(MOD_MDEF,100);
-    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_DEF,175);
     mob:addMod(MOD_ATT,300);
 end;
 -----------------------------------
