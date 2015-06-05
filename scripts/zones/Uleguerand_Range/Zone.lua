@@ -20,7 +20,7 @@ function onInitialize(zone)
     SetRespawnTime(16797969, 900, 10800);
 
     -- Kumhau
-    SetRespawnTime(16798718, 900, 10800);
+    GetMobByID(16798718):setRespawnTime(math.random((900),(10800)));
 
 end;
 

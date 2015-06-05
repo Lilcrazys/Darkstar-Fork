@@ -69,7 +69,7 @@ function onInitialize(zone)
     zone:registerRegion(4,-394,-7,-396,-391,-1,-385);
 
     -- Ravenous_Cracklaw
-    SetRespawnTime(16794622, 900, 10800);
+    GetMobByID(16794622):setRespawnTime(math.random((900),(10800)));
 end;
 
 -----------------------------------
