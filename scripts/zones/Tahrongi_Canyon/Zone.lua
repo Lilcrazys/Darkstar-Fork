@@ -67,7 +67,7 @@ function onInitialize(zone)
     SetFieldManual(manuals);
 
     -- HURKAN
-    SetRespawnTime(17257470, 900, 10800);
+    GetMobByID(17257470):setRespawnTime(math.random((900),(10800)));
 end;
 
 -----------------------------------

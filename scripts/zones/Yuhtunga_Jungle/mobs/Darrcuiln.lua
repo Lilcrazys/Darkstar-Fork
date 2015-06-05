@@ -24,7 +24,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT, 120);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_ACC,1500);
-    mob:addMod(MOD_WIND_AFFINITY,20);    
+    mob:addMod(MOD_WIND_AFFINITY,20);
     mob:addMod(MOD_DEF, 100);
 end;
 
@@ -83,5 +83,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
 end;

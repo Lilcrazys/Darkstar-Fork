@@ -51,7 +51,7 @@ function onInitialize(zone)
     SetRespawnTime(16806227, 900, 10800);
 
     -- Achuka
-    SetRespawnTime(16806910, 900, 10800);
+    GetMobByID(16806910):setRespawnTime(math.random((900),(10800)));
 end;
 
 -----------------------------------
