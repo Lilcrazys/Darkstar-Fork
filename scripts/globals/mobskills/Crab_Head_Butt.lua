@@ -19,6 +19,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
 
     MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_STUN, 1, 0, 5);
+    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_AMNESIA, 1, 0, 10);
     MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_WEIGHT, 50, 0, 150);
     MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_SLOW, 20, 0, 60);
 

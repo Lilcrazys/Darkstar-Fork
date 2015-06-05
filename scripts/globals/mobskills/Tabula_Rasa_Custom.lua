@@ -1,6 +1,6 @@
 ---------------------------------------------
 --
--- Tabula Rasa (Minerva's custom version)
+-- Tabula Rasa (custom version for non retail NMs)
 --
 -- Grants a power bonus to regen and helix spells
 -- Grants AoE effect to non AoE spells
@@ -18,6 +18,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local regenbonus = 3 * math.floor((mob:getMainLvl() - 10) / 10);
     local helixbonus = math.floor(mob:getMainLvl() / 4);
+
     if (mob:getMainJob() ~= JOB_SCH) then
         regenbonus = regenbonus*0.5;
         helixbonus = helixbonus*0.5;
