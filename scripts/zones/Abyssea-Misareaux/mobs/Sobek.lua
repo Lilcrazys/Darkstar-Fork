@@ -15,8 +15,8 @@ function onMobInitialize(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_MACC,1800);
-    mob:setMod(MOD_MATT,110);
+    mob:setMod(MOD_MACC,1500);
+    mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK, 25);
     mob:setMod(MOD_REFRESH, 100);
 
