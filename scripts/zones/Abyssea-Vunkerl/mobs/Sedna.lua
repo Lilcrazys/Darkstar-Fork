@@ -52,11 +52,16 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 15;
+    local SPELL_CHANCE = 40;
+
     killer:addTitle(SEDNA_TUSKBREAKER);
-    
+
     if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_TUSKED_TERROR) == false) then
         killer:addKeyItem(ATMA_OF_THE_TUSKED_TERROR);
         killer:messageSpecial(6385, ATMA_OF_THE_TUSKED_TERROR);
+    end
+    if (math.random(0,99) < SPELL_CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(654) == false) then
+        killer:addSpell(654);
     end
 end;
 

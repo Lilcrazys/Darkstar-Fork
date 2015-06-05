@@ -3440,6 +3440,7 @@ INSERT INTO `mob_skill` VALUES (2182,502,1700,'Frozen_Mist',1,18.0,2000,1000,4,0
 INSERT INTO `mob_skill` VALUES (2183,502,1701,'Hydro_Wave',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2184,502,1702,'Ice_Guillotine',1,18.0,2000,1000,4,0,0,0); -- Scylla Only
 INSERT INTO `mob_skill` VALUES (2185,502,1703,'Aqua_Cannon',1,18.0,2000,1000,4,0,0,0); -- Exclusive to Scylla? Replaces Aqua Blast
+INSERT INTO `mob_skill` VALUES (2180,502,1698,'Sub-zero_Smash',1,18.0,2000,1000,4,0,0,0);
 
 -- Gargouilles
 INSERT INTO `mob_skill` VALUES (2165,117,1682,'Dark_orb',1,15.0,2000,1000,4,0,0,0); -- Flying only.
