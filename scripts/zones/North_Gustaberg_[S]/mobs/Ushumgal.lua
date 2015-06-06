@@ -73,9 +73,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("INDIGO_STRATUM_ABYSSITE")) then -- Ushumgal Kill
-		if  (player:getMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE"), 2) == false) then
-			player:setMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE"),"INDIGO_STRATUM_ABYSSITE",2,true);
-		end
-	end
+if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE")) then -- Ushumgal Kill
+    if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE"), 2) == false) then
+	   killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE"),"INDIGO_STRATUM_ABYSSITE",2,true);
+    end
+end
 end;

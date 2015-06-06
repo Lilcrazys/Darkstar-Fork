@@ -62,9 +62,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("CRIMSON_STRATUM_ABYSSITE")) then -- Cottus Kill
-		if  (player:getMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE"), 2) == false) then
-			player:setMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE"),"CRIMSON_STRATUM_ABYSSITE",2,true);
-		end
-	end
+if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE")) then -- Cottus Kill
+    if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE"), 2) == false) then
+	    killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE"),"CRIMSON_STRATUM_ABYSSITE",2,true);
+    end
+end
 end;

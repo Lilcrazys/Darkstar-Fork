@@ -59,9 +59,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("JADE_STRATUM_ABYSSITE")) then -- Virvatuli Kill
-		if  (player:getMaskBit(player:getVar("JADE_STRATUM_ABYSSITE"), 1) == false) then
-			player:setMaskBit(player:getVar("JADE_STRATUM_ABYSSITE"),"JADE_STRATUM_ABYSSITE",1,true);
-		end
-	end
+if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE")) then -- Virvatuli Kill
+    if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"), 1) == false) then
+	   killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"),"JADE_STRATUM_ABYSSITE",1,true);
+    end
+end
 end;

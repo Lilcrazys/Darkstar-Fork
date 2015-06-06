@@ -61,10 +61,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("INDIGO_STRATUM_ABYSSITE_II")) then -- Lorbulcrud Kill
-		if  (player:getMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE_II"), 1) == false) then
-			player:setMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE_II"),"INDIGO_STRATUM_ABYSSITE_II",1,true);
-		end
-	end
-    killer:addCurrency("bayld", 50);
+if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_II")) then -- Lorbulcrud Kill
+    if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_II"), 1) == false) then
+	   killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_II"),"INDIGO_STRATUM_ABYSSITE_II",1,true);
+    end
+end
+killer:addCurrency("bayld", 50);
 end;

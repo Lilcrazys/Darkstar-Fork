@@ -63,9 +63,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("JADE_STRATUM_ABYSSITE")) then -- Pancimanci Kill
-		if  (player:getMaskBit(player:getVar("JADE_STRATUM_ABYSSITE"), 2) == false) then
-			player:setMaskBit(player:getVar("JADE_STRATUM_ABYSSITE"),"JADE_STRATUM_ABYSSITE",2,true);
-		end
-	end
+if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE")) then -- Pancimanci Kill
+    if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"), 2) == false) then
+	   killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"),"JADE_STRATUM_ABYSSITE",2,true);
+    end
+end
 end;

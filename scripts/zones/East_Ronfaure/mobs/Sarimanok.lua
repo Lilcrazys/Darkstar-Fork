@@ -76,9 +76,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("CRIMSON_STRATUM_ABYSSITE")) then -- Sarimanok Kill
-		if  (player:getMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE"), 1) == false) then
-			player:setMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE"),"CRIMSON_STRATUM_ABYSSITE",1,true);
-		end
-	end
+if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE")) then -- Sarimanok Kill
+    if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE"), 1) == false) then
+	    killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE"),"CRIMSON_STRATUM_ABYSSITE",1,true);
+    end
+end
 end;

@@ -78,10 +78,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_II")) then -- Krabimanjaro Kill
-		if  (player:getMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE_II"), 1) == false) then
-			player:setMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE_II"),"CRIMSON_STRATUM_ABYSSITE_II",1,true);
-		end
-	end
-    killer:addCurrency("bayld", 50);
+if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_II")) then -- Krabimanjaro Kill
+    if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_II"), 1) == false) then
+	    killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_II"),"CRIMSON_STRATUM_ABYSSITE_II",1,true);
+    end
+end
+killer:addCurrency("bayld", 50);
 end;

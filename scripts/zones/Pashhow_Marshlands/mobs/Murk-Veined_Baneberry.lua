@@ -94,10 +94,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("INDIGO_STRATUM_ABYSSITE_III")) then -- Baneberry Kill
-		if  (player:getMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE_III"), 1) == false) then
-			player:setMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE_III"),"INDIGO_STRATUM_ABYSSITE_III",1,true);
-		end
-	end
-    killer:addCurrency("bayld", 75);
+if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_III")) then -- Baneberry Kill
+    if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_III"), 1) == false) then
+	   killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_III"),"INDIGO_STRATUM_ABYSSITE_III",1,true);
+    end
+end
+killer:addCurrency("bayld", 75);
 end;

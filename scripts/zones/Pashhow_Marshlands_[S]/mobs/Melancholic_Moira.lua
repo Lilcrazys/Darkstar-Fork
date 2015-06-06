@@ -73,10 +73,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("INDIGO_STRATUM_ABYSSITE_III")) then -- Melancholic Kill
-		if  (player:getMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE_III"), 2) == false) then
-			player:setMaskBit(player:getVar("INDIGO_STRATUM_ABYSSITE_III"),"INDIGO_STRATUM_ABYSSITE_III",2,true);
-		end
-	end
-    killer:addCurrency("bayld", 75);
+if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_III")) then -- Melancholic Kill
+    if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_III"), 2) == false) then
+	    killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_III"),"INDIGO_STRATUM_ABYSSITE_III",2,true);
+    end
+end
+killer:addCurrency("bayld", 75);
 end;

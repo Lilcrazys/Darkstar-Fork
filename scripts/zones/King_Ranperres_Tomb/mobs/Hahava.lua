@@ -63,10 +63,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_IV")) then -- Havana Kill
-		if  (player:getMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE_IV"), 1) == false) then
-			player:setMaskBit(player:getVar("CRIMSON_STRATUM_ABYSSITE_IV"),"CRIMSON_STRATUM_ABYSSITE_IV",1,true);
-		end
-	end
-    killer:addCurrency("bayld", 125);
+if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_IV")) then -- Havana Kill
+    if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_IV"), 1) == false) then
+	   killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_IV"),"CRIMSON_STRATUM_ABYSSITE_IV",1,true);
+    end
+end
+killer:addCurrency("bayld", 125);
 end;

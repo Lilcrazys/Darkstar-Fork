@@ -73,10 +73,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("JADE_STRATUM_ABYSSITE_II")) then -- Ogbunabali Kill
-		if  (player:getMaskBit(player:getVar("JADE_STRATUM_ABYSSITE_II"), 1) == false) then
-			player:setMaskBit(player:getVar("JADE_STRATUM_ABYSSITE_II"),"JADE_STRATUM_ABYSSITE_II",1,true);
-		end
-	end
-    killer:addCurrency("bayld", 50);
+if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE_II")) then -- Ogbunabali Kill
+    if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_II"), 1) == false) then
+	   killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_II"),"JADE_STRATUM_ABYSSITE_II",1,true);
+    end
+end
+killer:addCurrency("bayld", 50);
 end;

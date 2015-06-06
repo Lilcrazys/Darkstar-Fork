@@ -62,10 +62,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	if (player:hasKeyItem("JADE_STRATUM_ABYSSITE_III")) then -- Akupara Kill
-		if  (player:getMaskBit(player:getVar("JADE_STRATUM_ABYSSITE_III"), 2) == false) then
-			player:setMaskBit(player:getVar("JADE_STRATUM_ABYSSITE_III"),"JADE_STRATUM_ABYSSITE_III",2,true);
-		end
-	end
-    killer:addCurrency("bayld", 75);
+if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE_III")) then -- Akupara Kill
+    if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_III"), 2) == false) then
+	    killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_III"),"JADE_STRATUM_ABYSSITE_III",2,true);
+    end
+end
+killer:addCurrency("bayld", 75);
 end;
