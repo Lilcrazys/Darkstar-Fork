@@ -3121,6 +3121,7 @@ INSERT INTO `item_mods` VALUES (18638, 23, 30);
 INSERT INTO `item_mods` VALUES (18638, 355, 26);
 INSERT INTO `item_mods` VALUES (18638, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18638, 507, 300); -- Occ. 3x dmg
+INSERT INTO `item_mods` VALUES (18638, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Excalibur (85)
@@ -3129,6 +3130,7 @@ INSERT INTO `item_mods` VALUES (18639, 23, 30);
 INSERT INTO `item_mods` VALUES (18639, 355, 43);
 INSERT INTO `item_mods` VALUES (18639, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18639, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18639, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Ragnarok (85)
@@ -3146,6 +3148,7 @@ INSERT INTO `item_mods` VALUES (18641, 23, 30);
 INSERT INTO `item_mods` VALUES (18641, 355, 73);
 INSERT INTO `item_mods` VALUES (18641, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18641, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18641, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Bravura (85)
@@ -3154,6 +3157,7 @@ INSERT INTO `item_mods` VALUES (18642, 25, 30);
 INSERT INTO `item_mods` VALUES (18642, 355, 89);
 INSERT INTO `item_mods` VALUES (18642, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18642, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (18642, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Gungnir (85)
@@ -3162,6 +3166,7 @@ INSERT INTO `item_mods` VALUES (18643, 25, 30);
 INSERT INTO `item_mods` VALUES (18643, 355, 121);
 INSERT INTO `item_mods` VALUES (18643, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18643, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18643, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Apocalypse (85)
@@ -3170,6 +3175,7 @@ INSERT INTO `item_mods` VALUES (18644, 25, 30);
 INSERT INTO `item_mods` VALUES (18644, 355, 105);
 INSERT INTO `item_mods` VALUES (18644, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18644, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (18644, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Kikoku (85)
@@ -3186,7 +3192,7 @@ INSERT INTO `item_mods` VALUES (18646, 25, 30);
 INSERT INTO `item_mods` VALUES (18646, 355, 153);
 INSERT INTO `item_mods` VALUES (18646, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18646, 507, 250); -- Occ. 2.5x dmg
-
+INSERT INTO `item_mods` VALUES (18646, 431, 1); -- Add. Effect
 -- -------------------------------------------------------
 -- Mjollnir (85)
 -- -------------------------------------------------------
@@ -3237,7 +3243,7 @@ INSERT INTO `item_mods` VALUES (18666, 23, 35);
 INSERT INTO `item_mods` VALUES (18666, 355, 26);
 INSERT INTO `item_mods` VALUES (18666, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18666, 507, 300); -- Occ. 3x dmg
-
+INSERT INTO `item_mods` VALUES (18666, 431, 1); -- Add. Effect
 -- -------------------------------------------------------
 -- Excalibur (95)
 -- -------------------------------------------------------
@@ -3245,6 +3251,7 @@ INSERT INTO `item_mods` VALUES (18667, 23, 35);
 INSERT INTO `item_mods` VALUES (18667, 355, 43);
 INSERT INTO `item_mods` VALUES (18667, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18667, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18667, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Ragnarok (95)
@@ -3262,6 +3269,7 @@ INSERT INTO `item_mods` VALUES (18669, 23, 35);
 INSERT INTO `item_mods` VALUES (18669, 355, 73);
 INSERT INTO `item_mods` VALUES (18669, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18669, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18669, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Bravura (95)
@@ -3270,6 +3278,7 @@ INSERT INTO `item_mods` VALUES (18670, 25, 35);
 INSERT INTO `item_mods` VALUES (18670, 355, 89);
 INSERT INTO `item_mods` VALUES (18670, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18670, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (18670, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Gungnir (95)
@@ -3278,6 +3287,7 @@ INSERT INTO `item_mods` VALUES (18671, 25, 35);
 INSERT INTO `item_mods` VALUES (18671, 355, 121);
 INSERT INTO `item_mods` VALUES (18671, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18671, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18671, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Apocalypse (95)
@@ -3286,6 +3296,7 @@ INSERT INTO `item_mods` VALUES (18672, 25, 35);
 INSERT INTO `item_mods` VALUES (18672, 355, 105);
 INSERT INTO `item_mods` VALUES (18672, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18672, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (18672, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Kikoku (95)
@@ -3302,6 +3313,7 @@ INSERT INTO `item_mods` VALUES (18674, 25, 35);
 INSERT INTO `item_mods` VALUES (18674, 355, 153);
 INSERT INTO `item_mods` VALUES (18674, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (18674, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (18674, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Mjollnir (95)
@@ -3810,6 +3822,7 @@ INSERT INTO `item_mods` VALUES (19747, 23, 40);
 INSERT INTO `item_mods` VALUES (19747, 355, 26);
 INSERT INTO `item_mods` VALUES (19747, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19747, 507, 300); -- Occ. 3x dmg
+INSERT INTO `item_mods` VALUES (19747, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Excalibur (99-1)
@@ -3818,6 +3831,7 @@ INSERT INTO `item_mods` VALUES (19748, 23, 40);
 INSERT INTO `item_mods` VALUES (19748, 355, 43);
 INSERT INTO `item_mods` VALUES (19748, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19748, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (19748, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Ragnarok (99-1)
@@ -3835,6 +3849,7 @@ INSERT INTO `item_mods` VALUES (19750, 23, 40);
 INSERT INTO `item_mods` VALUES (19750, 355, 73);
 INSERT INTO `item_mods` VALUES (19750, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19750, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (19750, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Bravura (99-1)
@@ -3843,6 +3858,7 @@ INSERT INTO `item_mods` VALUES (19751, 25, 40);
 INSERT INTO `item_mods` VALUES (19751, 355, 89);
 INSERT INTO `item_mods` VALUES (19751, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19751, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (19751, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Gungnir (99-1)
@@ -3851,6 +3867,7 @@ INSERT INTO `item_mods` VALUES (19752, 25, 40);
 INSERT INTO `item_mods` VALUES (19752, 355, 121);
 INSERT INTO `item_mods` VALUES (19752, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19752, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (19752, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Apocalypse (99-1)
@@ -3859,6 +3876,7 @@ INSERT INTO `item_mods` VALUES (19753, 25, 40);
 INSERT INTO `item_mods` VALUES (19753, 355, 105);
 INSERT INTO `item_mods` VALUES (19753, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19753, 507, 200); -- Occ. 2x dmg
+INSERT INTO `item_mods` VALUES (19753, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Kikoku (99-1)
@@ -3875,6 +3893,7 @@ INSERT INTO `item_mods` VALUES (19755, 25, 40);
 INSERT INTO `item_mods` VALUES (19755, 355, 153);
 INSERT INTO `item_mods` VALUES (19755, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (19755, 507, 250); -- Occ. 2.5x dmg
+INSERT INTO `item_mods` VALUES (19755, 431, 1); -- Add. Effect
 
 -- -------------------------------------------------------
 -- Mjollnir (99-1)
@@ -4082,6 +4101,7 @@ INSERT INTO `item_mods` VALUES (20555, 23, 40);
 INSERT INTO `item_mods` VALUES (20555, 355, 26);
 INSERT INTO `item_mods` VALUES (20555, 506, 160); -- 16% chance of extra dmg.
 INSERT INTO `item_mods` VALUES (20555, 507, 300); -- Occ. 3x dmg
+INSERT INTO `item_mods` VALUES (20555, 431, 1); -- Add. Effect
 -- -------------------------------------------------------
 -- Mandau (99-4)
 -- -------------------------------------------------------
