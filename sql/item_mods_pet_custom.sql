@@ -360,3 +360,11 @@ INSERT INTO `item_mods_pet` VALUES(28418, 25, 15); -- Pet: Acc
 INSERT INTO `item_mods_pet` VALUES(28418, 26, 15); -- Pet: Racc
 INSERT INTO `item_mods_pet` VALUES(28418, 30, 15); -- Pet: Macc
 INSERT INTO `item_mods_pet` VALUES(28418, 288, 4); -- Pet: Double Att
+
+  -- pastoralists_mantle (28652)
+INSERT INTO `item_mods_pet` VALUES(28625, 23, 20); -- Pet: Att
+
+
+ -- updraft_mantle (28630)
+INSERT INTO `item_mods_pet` VALUES(28630, 2, 1000); -- Wyvern: HP
+INSERT INTO `item_mods_pet` VALUES(28630, 32, 20); -- Wyvern: Att

@@ -13862,3 +13862,153 @@ INSERT INTO `item_mods` VALUES(28478, 5, 50); -- MP
 INSERT INTO `item_mods` VALUES(28478, 170, 1); -- Fast Cast
 INSERT INTO `item_mods` VALUES(28478, 160, -3); -- Mdmg Taken
 INSERT INTO `item_mods` VALUES(28478, 244, 15); -- Res Silence
+
+ -- maulers_mantle (28617)
+
+INSERT INTO `item_mods` VALUES(28617, 1, 17); -- Def
+INSERT INTO `item_mods` VALUES(28617, 8, 5); -- STR
+INSERT INTO `item_mods` VALUES(28617, 25, 15); -- Acc
+INSERT INTO `item_mods` VALUES(28617, 23, 15); -- Att
+INSERT INTO `item_mods` VALUES(28617, 288, 3); -- Double Attack
+
+ -- anchorets_mantle (28618)
+
+INSERT INTO `item_mods` VALUES(28618, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28618, 2, 80); -- HP
+INSERT INTO `item_mods` VALUES(28618, 10, 5); -- VIT
+INSERT INTO `item_mods` VALUES(28618, 25, 20); -- Acc
+INSERT INTO `item_mods` VALUES(28618, 23, 15); -- Att
+
+
+ -- mending_cape (28619)
+
+INSERT INTO `item_mods` VALUES(28619, 1, 13); -- Def
+INSERT INTO `item_mods` VALUES(28619, 27, -6); -- Enmity
+
+ -- bane_cape (28620)
+
+INSERT INTO `item_mods` VALUES(28620, 1, 17); -- Def
+INSERT INTO `item_mods` VALUES(28620, 5, 90); -- MP
+INSERT INTO `item_mods` VALUES(28620, 30, 10); -- Macc
+INSERT INTO `item_mods` VALUES(28620, 28, 10); -- Matt
+INSERT INTO `item_mods` VALUES(28620, 27, -2); -- Enmity
+
+ -- ghostfyre_cape (28621)
+
+INSERT INTO `item_mods` VALUES(28621, 1, 13); -- Def
+INSERT INTO `item_mods` VALUES(28621, 396, 6); -- Cure Pot
+INSERT INTO `item_mods` VALUES(28621, 28, 6); -- Matt
+
+ -- canny_cape (28622)
+
+INSERT INTO `item_mods` VALUES(28622, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28622, 12, 6); -- STR
+INSERT INTO `item_mods` VALUES(28622, 25, 10); -- Acc
+INSERT INTO `item_mods` VALUES(28622, 68, 15); -- Eva
+INSERT INTO `item_mods` VALUES(28622, 302, 2); -- Trip Att
+
+ -- weard_mantle (28623)
+
+INSERT INTO `item_mods` VALUES(28623, 1, 20); -- Def
+INSERT INTO `item_mods` VALUES(28623, 2, 40); -- HP
+INSERT INTO `item_mods` VALUES(28623, 5, 40); -- MP
+INSERT INTO `item_mods` VALUES(28623, 25, 15); -- Att
+INSERT INTO `item_mods` VALUES(28623, 160, -3); -- PDT
+
+ -- niht_mantle (28624)
+
+INSERT INTO `item_mods` VALUES(28624, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28624, 8, 5); -- STR
+INSERT INTO `item_mods` VALUES(28624, 23, 35); -- Att
+
+ -- conveyance_cape (28631)
+
+INSERT INTO `item_mods` VALUES(28631, 1, 13); -- Def
+INSERT INTO `item_mods` VALUES(28631, 5, 100); -- MP
+INSERT INTO `item_mods` VALUES(28631, 117, 8); -- SMN Skill
+
+ -- cornflower_cape (28632)
+
+INSERT INTO `item_mods` VALUES(28632, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28632, 8, 5); -- STR
+INSERT INTO `item_mods` VALUES(28632, 13, 5); -- INT
+INSERT INTO `item_mods` VALUES(28632, 14, 5); -- MND
+INSERT INTO `item_mods` VALUES(28632, 30, 15); -- Macc
+INSERT INTO `item_mods` VALUES(28632, 28, 15); -- Matt
+INSERT INTO `item_mods` VALUES(28632, 122, 5); -- Blu Mag Skill
+
+ -- pastoralists_mantle (28625)
+
+INSERT INTO `item_mods` VALUES(28625, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28625, 14, 10); -- MND
+INSERT INTO `item_mods` VALUES(28625, 25, 10); -- Acc
+INSERT INTO `item_mods` VALUES(28625, 23, 20); -- Att
+
+
+
+ -- yokaze_mantle (28629)
+
+INSERT INTO `item_mods` VALUES(28629, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28629, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES(28629, 25, 15); -- Acc
+INSERT INTO `item_mods` VALUES(28629, 23, 15); -- Att
+INSERT INTO `item_mods` VALUES(28629, 26, 15); -- Racc
+INSERT INTO `item_mods` VALUES(28629, 30, 15); -- Macc
+INSERT INTO `item_mods` VALUES(28629, 108, 15); -- Eva
+INSERT INTO `item_mods` VALUES(28629, 288, 2); -- Double Att
+
+ -- rhapsodes_cape (28626)
+
+INSERT INTO `item_mods` VALUES(28626, 1, 13); -- Def
+INSERT INTO `item_mods` VALUES(28626, 5, 50); -- MP
+INSERT INTO `item_mods` VALUES(28626, 30, 13); -- Macc
+INSERT INTO `item_mods` VALUES(28626, 29, 5); -- Mdef
+INSERT INTO `item_mods` VALUES(28626, 121, 8); -- Wind skill
+
+ -- takaha_mantle (28628)
+
+INSERT INTO `item_mods` VALUES(28628, 1, 17); -- Def
+INSERT INTO `item_mods` VALUES(28628, 25, 15); -- Acc
+INSERT INTO `item_mods` VALUES(28628, 23, 15); -- Att
+INSERT INTO `item_mods` VALUES(28628, 73, 10); -- StoreTP
+
+ -- toetapper_mantle (28635)
+
+INSERT INTO `item_mods` VALUES(28635, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28635, 25, 20); -- Acc
+INSERT INTO `item_mods` VALUES(28635, 68, 10); -- Eva
+INSERT INTO `item_mods` VALUES(28635, 289, 10); -- Subtle Blow
+INSERT INTO `item_mods` VALUES(28635, 491, 5); -- Waltz pot
+
+ -- updraft_mantle (28630)
+
+INSERT INTO `item_mods` VALUES(28630, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28630, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES(28630, 25, 20); -- Acc
+INSERT INTO `item_mods` VALUES(28630, 23, 20); -- Att
+
+
+ -- gunslingers_cape (28633)
+
+INSERT INTO `item_mods` VALUES(28633, 1, 16); -- Def
+INSERT INTO `item_mods` VALUES(28633, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES(28633, 26, 20); -- Racc
+INSERT INTO `item_mods` VALUES(28633, 305, 10); -- Recycle
+INSERT INTO `item_mods` VALUES(28633, 30, 10); -- Macc
+INSERT INTO `item_mods` VALUES(28633, 28, 10); -- Matt
+
+ -- lutian_cape (28627)
+
+INSERT INTO `item_mods` VALUES(28627, 1, 13); -- Def
+INSERT INTO `item_mods` VALUES(28627, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES(28627, 26, 15); -- Racc
+INSERT INTO `item_mods` VALUES(28627, 24, 15); -- Ratt
+INSERT INTO `item_mods` VALUES(28627, 27, -5); -- Enmity
+
+
+ -- bookworms_cape (28636)
+
+INSERT INTO `item_mods` VALUES(28636, 1, 13); -- Def
+INSERT INTO `item_mods` VALUES(28636, 28, 10); -- Matt
+INSERT INTO `item_mods` VALUES(28636, 115, 8); -- Elem Skill
+INSERT INTO `item_mods` VALUES(28636, 116, 8); -- Dark Skill
