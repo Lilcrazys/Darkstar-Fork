@@ -786,25 +786,10 @@ INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,95
 -- INSERT INTO `mob_spawn_points` VALUES (16977943,'Matamata','Matamata',90098,100,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977945,'Trembling_Tilfaire','Trembling_Tilfaire',90100,110,0,1,0);
 
--- VoidWatch Ch. 1 Testing
-INSERT INTO `mob_spawn_points` VALUES (16977946,'Sallow_Seymour','Sallow_Seymour',90400,0,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977947,'Ushumgal','Ushumgal',90401,5,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977948,'Sarimanok','Sarimanok',90402,10,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977949,'Cottus','Cottus',90403,15,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977950,'Virvatuli','Virvatuli',90404,20,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977951,'Pancimanci','Pancimanci',90405,25,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977952,'Lorbulcrud','Lorbulcrud',90406,35,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977953,'Krabimanjaro','Krabimanjaro',90407,40,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977954,'Ogbunabali','Ogbunabali',90408,45,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977955,'Murk-Veined_Baneberry','Murk-Veined_Baneberry',90409,50,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977956,'Melancholic_Moira','Melancholic_Moira',90410,55,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977957,'Belphoebe','Belphoebe',90411,60,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977958,'Kholomodumo','Kholomodumo',90412,65,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977959,'Lord_Asag','Lord_Asag',90413,70,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977960,'Akupara','Akupara',90414,75,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977961,'Celaeno','Celaeno',90415,80,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977962,'Hahava','Hahava',90416,85,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977963,'Voidwrought','Voidwrought',90417,90,0,1,0);
+-- VoidWatch Ch. 2 Testing Coming Soon!
+
+INSERT INTO `mob_spawn_points` VALUES (16977953,'Krabimanjaro','Krabimanjaro',99999,40,0,1,0);
+
 
 -- INSERT INTO `mob_spawn_points` VALUES (16977942,'Vrtra','Vrtra',90501,-10,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977943,'Jormungand','Jormungand',90500,-20,0,1,0);

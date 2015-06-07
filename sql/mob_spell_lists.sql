@@ -1744,6 +1744,17 @@ INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 273, 1, 255); -- sleepga
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 365, 1, 255); -- breakga
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 360, 1, 255); -- dispelga
 
+-- Krabimanjaro Test for Teo
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 687, 1, 255); -- BLU testing spells
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 688, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 689, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 690, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 691, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 692, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 626, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 632, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 631, 1, 255);
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 999, 641, 1, 255);
 
 -- list IDs 407 - 589 available for use! please use'em!
 

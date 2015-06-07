@@ -553,6 +553,7 @@ INSERT INTO `mob_pools` VALUES (9817,'Voidwrought',1117,0x0000580800000000000000
 
 INSERT INTO `mob_pools` VALUES (9820,'Pet_Cait_Sith',1204,0x0000580800000000000000000000000000000000,4,1,12,320,100,0,0,0,0,0,32,0,0,0,0,0,1,0);
 
+INSERT INTO `mob_pools` VALUES (9999,'Krabimanjaro',1107,0x0000660100000000000000000000000000000000,16,4,6,240,100,0,0,0,2,23,0,7,143,0,0,999,1,0);
 
 -- ---------------------------------------------------------------------------
 -- Super experimental z49 mobs, will not spawn without script or GM command.
