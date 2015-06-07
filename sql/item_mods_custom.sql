@@ -12195,20 +12195,20 @@ INSERT INTO `item_mods` VALUES (27752, 25, 11); --
 INSERT INTO `item_mods` VALUES (27752, 31, 21); --
 INSERT INTO `item_mods` VALUES (27752, 384, 71); --
 
--- body (27863)
-INSERT INTO `item_mods` VALUES (27863, 1, 104); --
-INSERT INTO `item_mods` VALUES (27863, 5, 30); --
-INSERT INTO `item_mods` VALUES (27863, 8, 29); --
-INSERT INTO `item_mods` VALUES (27863, 9, 20); --
-INSERT INTO `item_mods` VALUES (27863, 10, 19); --
-INSERT INTO `item_mods` VALUES (27863, 11, 18); --
-INSERT INTO `item_mods` VALUES (27863, 12, 12); --
-INSERT INTO `item_mods` VALUES (27863, 13, 12); --
-INSERT INTO `item_mods` VALUES (27863, 14, 12); --
-INSERT INTO `item_mods` VALUES (27863, 23, 26); --
-INSERT INTO `item_mods` VALUES (27863, 31, 32); --
-INSERT INTO `item_mods` VALUES (27863, 288, 2); --
-INSERT INTO `item_mods` VALUES (27863, 384, 30); --
+-- body (27895)
+INSERT INTO `item_mods` VALUES (27895, 1, 104); --
+INSERT INTO `item_mods` VALUES (27895, 5, 30); --
+INSERT INTO `item_mods` VALUES (27895, 8, 29); --
+INSERT INTO `item_mods` VALUES (27895, 9, 20); --
+INSERT INTO `item_mods` VALUES (27895, 10, 19); --
+INSERT INTO `item_mods` VALUES (27895, 11, 18); --
+INSERT INTO `item_mods` VALUES (27895, 12, 12); --
+INSERT INTO `item_mods` VALUES (27895, 13, 12); --
+INSERT INTO `item_mods` VALUES (27895, 14, 12); --
+INSERT INTO `item_mods` VALUES (27895, 23, 26); --
+INSERT INTO `item_mods` VALUES (27895, 31, 32); --
+INSERT INTO `item_mods` VALUES (27895, 288, 2); --
+INSERT INTO `item_mods` VALUES (27895, 384, 30); --
 
 -- hand (28042)
 INSERT INTO `item_mods` VALUES (28042, 1, 74); --
