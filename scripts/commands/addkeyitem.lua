@@ -3,7 +3,6 @@
 -- desc: Adds a key item to the player.
 ---------------------------------------------------------------------------------------------------
 
-require("scripts/globals/keyitems");
 
 cmdprops =
 {
@@ -12,6 +11,8 @@ cmdprops =
 };
 
 function onTrigger(player, keyId, target)
+    require("scripts/globals/keyitems");
+
     if (keyId == nil or tonumber(keyId) == nil or tonumber(keyId) == 0 or keyId == 0) then
         player:PrintToPlayer( "You must enter a valid KeyItem ID." );
         player:PrintToPlayer( "@addkeyitem <ID> <player>" );

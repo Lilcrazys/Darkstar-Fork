@@ -1374,7 +1374,7 @@ INSERT INTO `mob_groups` VALUES (96616,9616,103,0,128,9616,0,0,119,119,0,0); -- 
 -- INSERT INTO `mob_groups` VALUES (96646,9646,zoneid,0,128,dropid,HP,MP,128,128,0,0); -- Vedrfolnir
 -- Unity NMs End
 
--- Pool IDs 96647 to 96664 currently unused
+-- Group IDs 96647 to 96664 currently unused
 -- ---------------------------------------------------------------------------
 -- Add nothing below this line please
 

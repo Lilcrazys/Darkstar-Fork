@@ -3080,6 +3080,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17043466,'Venomfang','Venomfang',90323,3
 -- ------------------------------------------------------------------------
 -- VoidWatch Chapter 1
 -- Need correct pos added once i get the details.  Just moving to the correct zones atm
+-- ALSO NEEDS MOVED TO CORRECY PLACE IN THIS FILE. AHEM. Same for the abyssea and Aptant NMs above.
 REPLACE INTO `mob_spawn_points` VALUES (17211882,'Sallow_Seymour','Sallow Seymour',90400,798,-0.5,440,147);
 INSERT INTO `mob_spawn_points` VALUES (17138408,'Ushumgal','Ushumgal',90401,289.896,-62.945,369.265,32);
 REPLACE INTO `mob_spawn_points` VALUES (17191335,'Sarimanok','Sarimanok',90402,289.896,-62.945,369.265,32);

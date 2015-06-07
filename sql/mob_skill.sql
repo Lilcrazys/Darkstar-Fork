@@ -5428,6 +5428,7 @@ INSERT INTO `mob_skill` VALUES (768,6665,706,'SuperDuperJump',0,7,900,0,1,0,0,0)
 INSERT INTO `mob_skill` VALUES (808,6665,442,'Crab_Jump_3',0,9.5,2000,0,4,0,0,0); -- W/Spirit Surge: Hate Reset
 INSERT INTO `mob_skill` VALUES (1181,6665,767,'Crab_Jump_4',1,8.0,2000,1000,4,0,0,0); -- AoE dmg (only triggered with Draw In)
 INSERT INTO `mob_skill` VALUES (1637,6665,432,'Crab_Spirit_Surge',0,7.0,2000,0,1,2,0,0); -- It's a bird! It's a plane! No its super crab!
+INSERT INTO `mob_skill` VALUES (1703,6665,1361,'Water_Bomb',1,16.0,2000,1500,4,0,0,0); -- AoE Silence
 INSERT INTO `mob_skill` VALUES (2257,6665,188,'Mega_Scissors',4,10.0,2000,1500,4,0,0,0); -- Bigger than Big Scissors o.o;
 INSERT INTO `mob_skill` VALUES (3009,6665,432,'Elemental_Sforzo',0,7.0,2000,0,1,2,0,0); -- RUN 2hr (Magic Immunity)
 

@@ -10,6 +10,11 @@ cmdprops =
 };
 
 function onTrigger(player, skill, skillLV, target)
+    if (skill == nill) then
+        player:PrintToPlayer("@setskill <skill name or ID> <skill level> <target>")
+        return;
+    end
+
     local skillList =
     {
         ["h2h"]          = 1,
@@ -75,30 +80,25 @@ function onTrigger(player, skill, skillLV, target)
     local skillID = skillList[string.lower(skill)];
     local targ = nil;
 
-    if (skill == nil) then
-        player:PrintToPlayer("Must specify a valid skill.")
-        return;
-    else
-        if (skillID == nil) then
-            skillID = tonumber(skill,10);
-        end
+    if (skillID == nil) then
+        skillID = tonumber(skill,10);
+    end
 
-        if (skillID ~= nil) then
-            if (skillID == 0 or (skillID > 12 and skillID < 25)
-            or skillID == 46 or skillID == 47 or skillID > 57) then
-                player:PrintToPlayer("Must specify a valid skill.")
-                return;
-            end
-        else
+    if (skillID ~= nil) then
+        if (skillID == 0 or (skillID > 12 and skillID < 25)
+        or skillID == 46 or skillID == 47 or skillID > 57) then
             player:PrintToPlayer("Must specify a valid skill.")
             return;
         end
+    else
+        player:PrintToPlayer("Must specify a valid skill.")
+        return;
     end
 
     if (target == nil) then
         targ = player;
     else
-        targ = GetPlayerByName(target)
+        targ = GetPlayerByName(target);
         if (targ == nil) then
             player:PrintToPlayer(string.format("Player named '%s' not found!", target));
             return;
@@ -129,7 +129,11 @@ function onTrigger(player, skill, skillLV, target)
             elseif (skillLV >= 68 and skillLV < 78) then
                 targ:setSkillRank(skillID,7);   -- Artisan" 68-78
             elseif (skillLV >= 78 and skillLV < 88) then
-                targ:setSkillRank(skillID,8);   -- Adept 78-88
+                if (skillID == 57) then
+                    targ:setSkillRank(skillID,7); -- Synergy currently caps at 80 on retail.
+                else
+                    targ:setSkillRank(skillID,8); -- Adept 78-88
+                end
             elseif (skillLV >= 88 and skillLV < 98) then
                 targ:setSkillRank(skillID,9);   -- Veteran 88-98
             elseif (skillLV >= 98 and skillLV < 101) then

@@ -209,28 +209,28 @@ function onSpellPrecast(mob, spell)
         spell:setAnimation(909);
 
     -- Randomly make Spells 25 yalm AoE
-    elseif (spell:getID() == 112) then
+    elseif (spell:getID() == 112) then -- Flash
         if (RND < 25) then
             spell:setAoE(SPELLAOE_RADIAL);
             spell:setFlag(SPELLFLAG_HIT_ALL);
             spell:setRadius(25);
             spell:setAnimation(1343);
         end
-    elseif (spell:getID() == 215) then
+    elseif (spell:getID() == 215) then -- Flood 2
         if (RND < 20) then
             spell:setAoE(SPELLAOE_RADIAL);
             spell:setFlag(SPELLFLAG_HIT_ALL);
             spell:setRadius(25);
             spell:setAnimation(909);
         end
-    elseif (spell:getID() == 260) then
+    elseif (spell:getID() == 260) then -- Dispel
         if (RND < 33) then
             spell:setAoE(SPELLAOE_RADIAL);
             spell:setFlag(SPELLFLAG_HIT_ALL);
             spell:setRadius(25);
             spell:setAnimation(492);
         end
-    elseif (spell:getID() == 275) then
+    elseif (spell:getID() == 275) then -- Absorb-TP
         if (RND < 40) then
             spell:setAoE(SPELLAOE_RADIAL);
             spell:setFlag(SPELLFLAG_HIT_ALL);
