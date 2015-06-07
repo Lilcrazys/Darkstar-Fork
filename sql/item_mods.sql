@@ -20630,6 +20630,12 @@ INSERT INTO `item_mods` VALUES (19720, 365, 5); -- Snap shot (Ranged delay decre
 INSERT INTO `item_mods` VALUES (19720, 420, 30); -- Barrage accuracy
 
 -- -------------------------------------------------------
+-- Memoria Satchet
+-- -------------------------------------------------------
+INSERT INTO `item_mods` VALUES (19775, 30, 2); -- MACC
+INSERT INTO `item_mods` VALUES (19775, 28, 2); -- MATK
+
+-- -------------------------------------------------------
 -- Gastraphetes (99)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (19829, 365, 5); -- Snap shot (Ranged delay decrease)
