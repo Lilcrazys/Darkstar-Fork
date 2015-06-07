@@ -3075,3 +3075,26 @@ REPLACE INTO `mob_spawn_points` VALUES (17584416,'Aqrabuamelu','Aqrabuamelu',903
 INSERT INTO `mob_spawn_points` VALUES (17244350,'Sabotender_Corrido','Sabotender_Corrido',90321,44,8,-386,191);
 REPLACE INTO `mob_spawn_points` VALUES (17477675,'Abatwa','Abatwa',90322,52.2,-1.02,261.861,97);
 REPLACE INTO `mob_spawn_points` VALUES (17043466,'Venomfang','Venomfang',90323,310,-2,-214,57);
+
+
+-- ------------------------------------------------------------------------
+-- VoidWatch Chapter 1
+-- Need correct pos added once i get the details.  Just moving to the correct zones atm
+REPLACE INTO `mob_spawn_points` VALUES (17211882,'Sallow_Seymour','Sallow Seymour',90400,798,-0.5,440,147);
+INSERT INTO `mob_spawn_points` VALUES (17138408,'Ushumgal','Ushumgal',90401,289.896,-62.945,369.265,32);
+REPLACE INTO `mob_spawn_points` VALUES (17191335,'Sarimanok','Sarimanok',90402,289.896,-62.945,369.265,32);
+REPLACE INTO `mob_spawn_points` VALUES (17109718,'Cottus','Cottus',90403,312,-60,489,163);
+REPLACE INTO `mob_spawn_points` VALUES (17248625,'Virvatuli','Virvatuli',90404,120,3.5,-440,44);
+REPLACE INTO `mob_spawn_points` VALUES (17167113,'Pancimanci','Pancimanci',90405,120,-3.5,-440,183);
+REPLACE INTO `mob_spawn_points` VALUES (17580343,'Lorbulcrub','Lorbulcrud',90406,-115,-60.452,-100,178);
+REPLACE INTO `mob_spawn_points` VALUES (17568142,'Krabimanjaro','Krabimanjaro',90407,-204.6,32,1.54,78);
+REPLACE INTO `mob_spawn_points` VALUES (17588707,'Obgunabali','Ogbunabali',90408,134,19.5,-89,0);
+REPLACE INTO `mob_spawn_points` VALUES (17224185,'Murk-veined_Baneberry','Murk-veined Baneberry',90409,-420,23.812,-230,240);
+REPLACE INTO `mob_spawn_points` VALUES (17146510,'Melancholic_Moira','Melancholic Moira',90410,-427.24,24.059,-226.477,217);
+REPLACE INTO `mob_spawn_points` VALUES (17203697,'Belphoebe','Belphoebe',90411,263.84,-0.447,539.103,233);
+REPLACE INTO `mob_spawn_points` VALUES (17113826,'Kholomodumo','Kholomodumo',90412,76.136,-2.075,115.319,93);
+REPLACE INTO `mob_spawn_points` VALUES (17265130,'Lord_Asag','Lord Asag',90413,199.044,-0.423,-514.473,0);
+REPLACE INTO `mob_spawn_points` VALUES (17175251,'Akupara','Akupara',90414,-282,15.5,602,16);
+INSERT INTO `mob_spawn_points` VALUES (17559871,'Celano','Celano',90415,-116.704,8.5,61.963,118);
+REPLACE INTO `mob_spawn_points` VALUES (17555901,'Hahava','Hahava',90416,-116.704,8.5,61.963,118);
+REPLACE INTO `mob_spawn_points` VALUES (17572219,'Voidwrought','Voidwrought',90417,0,0,0,0);
