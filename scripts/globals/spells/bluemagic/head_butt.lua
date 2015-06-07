@@ -49,13 +49,15 @@ function onSpellCast(caster,target,spell)
         params.int_wsc = 0.2;
         params.mnd_wsc = 0.0;
         params.chr_wsc = 0.0;
-    damage = BluePhysicalSpell(caster, target, spell, params);
+    local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-    
-    if(target:hasStatusEffect(EFFECT_STUN)) then
-        spell:setMsg(75); -- no effect
-    else    
-        target:addStatusEffect(EFFECT_STUN,0,0,math.random(1,5));
+
+    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+
+    if(damage > 0 and resist < 0.9) then
+        local typeEffect = EFFECT_STUN;
+        target:delStatusEffect(typeEffect);
+        target:addStatusEffect(typeEffect,4,0,getBlueEffectDuration(caster,resist,typeEffect));
     end
 
     return damage;
