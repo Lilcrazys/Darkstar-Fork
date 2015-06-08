@@ -1744,17 +1744,17 @@ INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 273, 1, 255); -- sleepga
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 365, 1, 255); -- breakga
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 360, 1, 255); -- dispelga
 
--- Krabimanjaro Test for Teo
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 687, 1, 255); -- BLU testing spells
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 688, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 689, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 690, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 691, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 692, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 626, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 632, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 631, 1, 255);
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 641, 1, 255);
+-- Krabimanjaro Test for Teo (BLU testing spells)
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 643, 1, 255); -- Cannonball
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 646, 1, 255); -- Magic Hammer
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 647, 1, 255); -- zephyr mantle
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 654, 1, 255); -- sub-zero smash
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 687, 1, 255); -- water bomb
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 690, 1, 255); -- white wind
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 696, 1, 255); -- orcish counterstance
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 700, 1, 255); -- natures meditation
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 702, 1, 255); -- rending deluge
+INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 712, 1, 255); -- rail cannon
 
 -- list IDs 407 - 589 available for use! please use'em!
 
@@ -1864,7 +1864,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Hades_v2', 600, 360, 1, 255); -- Dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Hades_v2', 600, 503, 1, 255); -- Impact
 
 -- -----------------------------------
--- Customized Legion Mobs Mobs
+-- Customized Legion Hall Mobs
 -- -----------------------------------
 
 INSERT INTO `mob_spell_lists` VALUES ('Lofty_Zilant', 601, 496, 1, 255); -- Fireja
