@@ -73,11 +73,13 @@ STATUS_SHUTDOWN			= 20;
     SUBEFFECT_STUN              = 16;
     SUBEFFECT_CURSE             = 17;
     SUBEFFECT_DEFENSE_DOWN      = 18;  -- 1-01001      37
+    SUBEFFECT_EVASION_DOWN      = 18;  -- ID needs verification
+    SUBEFFECT_ATTACK_DOWN       = 18;  -- ID needs verification
     SUBEFFECT_DEATH             = 19;
     SUBEFFECT_SHIELD            = 20;
     SUBEFFECT_HP_DRAIN          = 21;  -- 1-10101      43
     SUBEFFECT_MP_DRAIN          = 22;  -- This is correct animation
-    SUBEFFECT_TP_DRAIN          = 22;  -- Not sure this is correct
+    SUBEFFECT_TP_DRAIN          = 22;  -- Not sure this is correct, might be 21
 	SUBEFFECT_HASTE             = 23;
 
 -- SPIKES
@@ -1250,11 +1252,13 @@ MOD_ABSORB_DMG_TO_MP          = 0x204 -- Unlike PLD gear mod, works on all damag
 
 MOD_EGGHELM                   = 0x205 -- Egg Helm (Chocobo Digging)
 
+MOD_SHIELDBLOCKRATE           = 0x206 -- Affects shield block rate, percent based (modID = 518))
+
 -- MOD_SPARE = 0x138 -- (modId = 312)
 -- MOD_SPARE = 0x139 -- (modId = 313)
 -- MOD_SPARE = 0x13A -- (modId = 314)
 -- MOD_SPARE = 0x13B -- (modId = 315)
--- MOD_SPARE = 0x206 -- (modId = 518)
+-- MOD_SPARE = 0x207 -- (modId = 519)
 
 
 -- Start of LegionDS Custom MOD
