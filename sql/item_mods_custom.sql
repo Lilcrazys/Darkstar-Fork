@@ -13956,12 +13956,12 @@ INSERT INTO `item_mods` VALUES (28636, 28, 10); -- Matt
 INSERT INTO `item_mods` VALUES (28636, 115, 8); -- Elem Skill
 INSERT INTO `item_mods` VALUES (28636, 116, 8); -- Dark Skill
 
- --pavor_gauntlets (11922)
+-- pavor_gauntlets (11922)
 INSERT INTO `item_mods` VALUES (11922, 1, 8); -- Def
 INSERT INTO `item_mods` VALUES (11922, 5, 33); -- MP
 INSERT INTO `item_mods` VALUES (11922, 116, 10); -- Dark Skill
 
- --magma_gauntlets (11921)
+-- magma_gauntlets (11921)
 INSERT INTO `item_mods` VALUES (11921, 1, 34); -- Def
 INSERT INTO `item_mods` VALUES (11921, 40, 10); -- Fire
 INSERT INTO `item_mods` VALUES (11921, 161, -4); -- PDT
@@ -13969,7 +13969,7 @@ INSERT INTO `item_mods` VALUES (11921, 499, 5); -- Spikes Type
 INSERT INTO `item_mods` VALUES (11921, 500, 20); -- Spikes DMG
 INSERT INTO `item_mods` VALUES (11921, 501, 15); -- Spikes Chance
 
- -- affronter_cuisses (11963)
+-- affronter_cuisses (11963)
 INSERT INTO `item_mods` VALUES (11963, 1, 55); -- Def
 INSERT INTO `item_mods` VALUES (11963, 5, 40); -- MP
 INSERT INTO `item_mods` VALUES (11963, 12, 5); -- Int
