@@ -97,7 +97,7 @@ function onMobFight(mob,target)
         mob:setModelId(1840);
         mob:setLocalVar("change", 12);
         mob:setLocalVar("petsModelId", 1841);
-        mob:setLocalVar("mob:setLocalVar("change", 12);
+        mob:setLocalVar("change", 12);
         if (TP <= 5) then
             mob:useMobAbility(1858);
             mob:setLocalVar("TP", 6)
