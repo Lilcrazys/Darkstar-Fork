@@ -4490,7 +4490,7 @@ INSERT INTO `item_mods` VALUES (21065, 28, 75); --
 
 INSERT INTO `item_mods` VALUES (21125, 12, 5); --
 INSERT INTO `item_mods` VALUES (21125, 13, 5); --
-INSERT INTO `item_mods` VALUES (21125, 28, 111); -- Should be 12 see below
+INSERT INTO `item_mods` VALUES (21125, 28, 70); -- Should be 12 see below
 -- INSERT INTO `item_mods` VALUES (21125, ???, 99); -- Magic Damage + unknown
 INSERT INTO `item_mods` VALUES (21125, 374, 22); --
 INSERT INTO `item_mods` VALUES (21126, 12, 5); --
