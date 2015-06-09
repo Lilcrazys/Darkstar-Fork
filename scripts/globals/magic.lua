@@ -608,9 +608,24 @@ function applyResistanceEffect(player,spell,target,diff,skill,bonus,effect)
 		end
 
 		if(effectres > 0) then
-			local resrate = 1+(target:getMod(effectres)/20);
+			local resrate = 1+(target:getMod(effectres)/10);
 			if(resrate > 1.5) then
 				resrate = 1.5;
+			end
+
+			-- Custom overides for mobs.
+			if (target:isMob()) then
+				if (effectres == MOD_TERRORRES) then
+					resrate = target:getMod(effectres);
+					if (resrate > 3.0) then
+						resrate = 3.0;
+					end
+				elseif (effectres == MOD_STUNRES) then
+					resrate = target:getMod(effectres);
+					if (resrate > 2.5) then
+						resrate = 2.5;
+					end
+				end
 			end
 
 			-- printf("Resist percentage: %f", resrate);

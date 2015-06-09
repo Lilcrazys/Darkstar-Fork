@@ -27,7 +27,7 @@ function onTrigger(player)
         player:addStatusEffect(EFFECT_REGAIN,150,1,0);
         player:addStatusEffect(EFFECT_REFRESH,99,0,0);
         player:addStatusEffect(EFFECT_REGEN,99,0,0);
-        player:addStatusEffectEx(EFFECT_SJCAP_BOOST,EFFECT_TRANSCENDENCY,0,0,0)
+        player:addStatusEffectEx(EFFECT_SJCAP_BOOST,EFFECT_TRANSCENDENCY,1,0,0)
 
         -- Add bonus mods to the player..
         player:addMod(MOD_RACC,2500);

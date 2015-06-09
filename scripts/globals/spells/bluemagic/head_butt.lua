@@ -30,7 +30,8 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
-
+    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
+    local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,0,EFFECT_STUN)
     local params = {};
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
         params.tpmod = TPMOD_DAMAGE;
@@ -52,11 +53,16 @@ function onSpellCast(caster,target,spell)
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    if(target:hasStatusEffect(EFFECT_STUN)) then
+    if (target:hasStatusEffect(EFFECT_STUN)) then
+        -- caster:PrintToPlayer(string.format("was already stun. resLv: %f", resist));
         spell:setMsg(75); -- no effect
-    else
-        target:addStatusEffect(EFFECT_STUN,0,0,math.random(1,3));
+    elseif (resist > 0.25) then
+        caster:PrintToPlayer(string.format("landed stun. resLv: %f", resist));
+        target:addStatusEffect(EFFECT_STUN,0,0,math.random(1,4));
+    -- else
+        -- caster:PrintToPlayer(string.format("did not land. resLv: %f", resist));
     end
+    -- caster:PrintToPlayer(string.format("mob res from mod: %i",target:getMod(MOD_STUNRES)));
 
     return damage;
 end;
