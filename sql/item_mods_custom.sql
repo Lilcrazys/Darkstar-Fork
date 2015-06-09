@@ -13764,7 +13764,7 @@ INSERT INTO `item_mods` VALUES (26970, 369, 1); -- Refresh
 
 -- globidonta_ring (28539)
 INSERT INTO `item_mods` VALUES (28539, 5, 20); -- MP
-INSERT INTO `item_mods` VALUES (28539, 14, 6); -- MND
+INSERT INTO `item_mods` VALUES (28539, 13, 6); -- MND
 INSERT INTO `item_mods` VALUES (28539, 111, 5); -- Divine Skill
 INSERT INTO `item_mods` VALUES (28539, 114, 5); -- Enfeebling Skill
 INSERT INTO `item_mods` VALUES (28539, 117, 5); -- Summoning Skill
@@ -13887,15 +13887,15 @@ INSERT INTO `item_mods` VALUES (28631, 117, 8); -- SMN Skill
 -- cornflower_cape (28632)
 INSERT INTO `item_mods` VALUES (28632, 1, 16); -- Def
 INSERT INTO `item_mods` VALUES (28632, 8, 5); -- STR
-INSERT INTO `item_mods` VALUES (28632, 13, 5); -- INT
-INSERT INTO `item_mods` VALUES (28632, 14, 5); -- MND
+INSERT INTO `item_mods` VALUES (28632, 12, 5); -- INT
+INSERT INTO `item_mods` VALUES (28632, 13, 5); -- MND
 INSERT INTO `item_mods` VALUES (28632, 30, 15); -- Macc
 INSERT INTO `item_mods` VALUES (28632, 28, 15); -- Matt
 INSERT INTO `item_mods` VALUES (28632, 122, 5); -- Blu Mag Skill
 
 -- pastoralists_mantle (28625)
 INSERT INTO `item_mods` VALUES (28625, 1, 16); -- Def
-INSERT INTO `item_mods` VALUES (28625, 14, 10); -- MND
+INSERT INTO `item_mods` VALUES (28625, 13, 10); -- MND
 INSERT INTO `item_mods` VALUES (28625, 25, 10); -- Acc
 INSERT INTO `item_mods` VALUES (28625, 23, 20); -- Att
 
@@ -13955,3 +13955,25 @@ INSERT INTO `item_mods` VALUES (28636, 1, 13); -- Def
 INSERT INTO `item_mods` VALUES (28636, 28, 10); -- Matt
 INSERT INTO `item_mods` VALUES (28636, 115, 8); -- Elem Skill
 INSERT INTO `item_mods` VALUES (28636, 116, 8); -- Dark Skill
+
+ --pavor_gauntlets (11922)
+INSERT INTO `item_mods` VALUES (11922, 1, 8); -- Def
+INSERT INTO `item_mods` VALUES (11922, 5, 33); -- MP
+INSERT INTO `item_mods` VALUES (11922, 116, 10); -- Dark Skill
+
+ --magma_gauntlets (11921)
+INSERT INTO `item_mods` VALUES (11921, 1, 34); -- Def
+INSERT INTO `item_mods` VALUES (11921, 40, 10); -- Fire
+INSERT INTO `item_mods` VALUES (11921, 161, -4); -- PDT
+INSERT INTO `item_mods` VALUES (11921, 499, 5); -- Spikes Type
+INSERT INTO `item_mods` VALUES (11921, 500, 20); -- Spikes DMG
+INSERT INTO `item_mods` VALUES (11921, 501, 15); -- Spikes Chance
+
+ -- affronter_cuisses (11963)
+INSERT INTO `item_mods` VALUES (11963, 1, 55); -- Def
+INSERT INTO `item_mods` VALUES (11963, 5, 40); -- MP
+INSERT INTO `item_mods` VALUES (11963, 12, 5); -- Int
+INSERT INTO `item_mods` VALUES (11963, 13, 5); -- Mnd
+INSERT INTO `item_mods` VALUES (11963, 14, 5); -- Chr
+INSERT INTO `item_mods` VALUES (11963, 29, 6); -- Mdef
+INSERT INTO `item_mods` VALUES (11963, 27, 6); -- Enmity
