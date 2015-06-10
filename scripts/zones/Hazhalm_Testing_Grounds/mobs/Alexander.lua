@@ -23,14 +23,14 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 150);
+    mob:setMod(MOD_REGEN, 250);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 45);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,350);
     mob:setMod(MOD_ACC,2500);
-    mob:setMod(MOD_TERRORRES,200);
-    mob:setMod(MOD_STUNRES,100);
+    mob:setMod(MOD_TERRORRES,500);
+    mob:setMod(MOD_STUNRES,2000);
 
     -- addMod
     mob:addMod(MOD_MDEF,100);
