@@ -30,18 +30,18 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
-
     local duration = 5;
     local dINT = caster:getStat(MOD_MND) - target:getStat(MOD_MND);
-    local resist = applyResistance(caster,spell,target,dINT,BLUE_SKILL);
+    -- local resist = applyResistance(caster,spell,target,dINT,BLUE_SKILL);
+    local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,0,EFFECT_TERROR)
     
-    if(resist > 0.0625) then
+    if (resist > 0.0625) then
         -- resisted!
         spell:setMsg(85);
         return 0;
     end
 
-    if(target:hasStatusEffect(EFFECT_TERROR) == true) then
+    if (target:hasStatusEffect(EFFECT_TERROR) == true) then
         -- no effect
         spell:setMsg(75);
     else
