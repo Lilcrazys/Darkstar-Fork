@@ -42,7 +42,7 @@ function onTrigger(player,page)
             5163,   60000,      -- Plate of Sole Sushi +1
             5765,   60000,      -- Red Curry Bun +1
             5764,   60000,      -- Black Curry Bun +1
-            5718,   20000,      -- Cream Puff
+            5718,   60000,      -- Cream Puff
         };
         showShop(player, STATIC, stock_2);
 
