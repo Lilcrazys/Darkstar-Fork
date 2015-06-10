@@ -18,9 +18,11 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    -- local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
+    local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,1.0,EFFECT_TERROR)
 
-    if(resist < 0.3) then
+    if (resist < 0.3) then
         local typeEffect = EFFECT_TERROR;
         target:delStatusEffect(typeEffect);
         target:addStatusEffect(typeEffect,25,0,10);
