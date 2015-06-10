@@ -20,7 +20,7 @@ function onTrigger(player,target)
 		if (targ:hasStatusEffect(EFFECT_SJCAP_BOOST)) then
 			player:delStatusEffect(EFFECT_SJCAP_BOOST);
 		else
-			player:addStatusEffectEx(EFFECT_SJCAP_BOOST,EFFECT_TRANSCENDENCY,0,0,0)
+			player:addStatusEffectEx(EFFECT_SJCAP_BOOST,EFFECT_TRANSCENDENCY,1,0,0)
 		end
 	else
 		player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
