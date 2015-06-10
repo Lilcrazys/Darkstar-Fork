@@ -56,7 +56,7 @@ function onSpellCast(caster,target,spell)
     if (target:hasStatusEffect(EFFECT_STUN)) then
         -- caster:PrintToPlayer(string.format("was already stun. resLv: %f", resist));
         spell:setMsg(75); -- no effect
-    elseif (resist > 0.25) then
+    elseif (resist > 0.25) then -- This line may need adjusting for retail accuracy.
         -- caster:PrintToPlayer(string.format("landed stun. resLv: %f", resist));
         target:addStatusEffect(EFFECT_STUN,0,0,math.random(1,4));
     -- else
