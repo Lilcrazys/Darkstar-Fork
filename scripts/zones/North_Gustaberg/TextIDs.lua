@@ -27,3 +27,7 @@ CONQUEST_BASE = 0;
 --chocobo digging
 DIG_THROW_AWAY = 7222; -- You dig up$, but your inventory is full. You regretfully throw the # away.
 FIND_NOTHING = 7224; -- You dig and you dig, but find nothing.
+
+-- Voidwatch (NOTE: this is not a retail implementation!) These will need recheck/correction every time there is a client update.
+   CRUOR_TOTAL = 7153; -- Obtained <Numeric Parameter 0> cruor. (Total: <Numeric Parameter 1>)<Prompt>
+OBTAINED_BAYLD = 7172; -- You have obtained <Numeric Parameter 0> bayld!<Prompt>
