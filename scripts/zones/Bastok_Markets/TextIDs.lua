@@ -65,3 +65,24 @@ CONQUEST_BASE = 6560; -- Tallying conquest results...
 
 -- Porter Moogle
 RETRIEVE_DIALOG_ID = 12812; -- You retrieve a <item> from the porter moogle's care.
+
+
+-- Voidwatch (NOTE: this is not a retail implementation!) These will need recheck/correction every time there is a client update.
+I_AM_A_VOIDWATCH_OFFICER = 13611; -- I am a Voidwatch officer dispatched here by the
+           I_BESEECH_YOU = 13612; -- I beseech you, friend. Lend your aid to our cause, lest our fair Vana'diel be engulfed in fire and brimstone.
+ COMMEND_YOUR_ENTHUSIASM = 13614; -- While I commend your enthusiasm, only those who possess
+     PROOF_OF_ONES_VALOR = 13615; -- is considered proof of one's valor and prowess, and is awarded only to those who have distinguished themselves in the three nations.
+                ENLISTED = 13616; -- Enlisted in [San d'Oria/Bastok/Windurst]'s armed forces, you say?
+    MILITARY_AFFILIATION = 13617; -- I'm sorry, but only those with military affiliation may participate in Voidwatch Ops.
+ENTHUSIASM_IS_HEARTENING = 13618; -- While your enthusiasm is heartening, the Voidwatch requires men and women of tested steel.
+             AT_LEAST_75 = 13619; -- You must be at least level
+        STRATUM_ABYSSITE = 13622; -- Stratum abyssite is needed to do battle with a Voidwalker at one of the many planar rifts that have manifested across the land.
+   EACH_STONE_IS_ATTUNED = 13623; -- You can't simply use one wherever you like, mind you, for each stone is attuned only to rifts found in a certain region, or “jurisdiction.”
+     VOIDWATCH_OPERATION = 13624; -- Undertaking a Voidwatch operation in a specific jurisdiction requires that you obtain the corresponding stone from the presiding Voidwatch officer.
+THESE_STONES_ARE_CAPABLE = 13625; -- While these stones are capable of rendering Voidwalkers visible to their bearers, their powers can only be tapped when used in conjunction with
+             OPERATIONS1 = 13626; -- Operations are presently underway at [East Ronfaure/East Ronfaure/Ordelle's Caves/the Jugner Forest/the Jugner Forest/King Ranperre's Tomb/West Ronfaure/La Theine Plateau/Vunkerl Inlet]. While planar rifts have been reported in other areas, we've yet to discover how to engage Voidwalkers there.
+             OPERATIONS2 = 13627; -- Operations are presently underway at [North Gustaberg/North Gustaberg/the Gusgen Mines/the Pashhow Marshlands/the Pashhow Marshlands/Dangruf Wadi/South Gustaberg/the Konschtat Highlands/Grauberg]. While planar rifts have been reported in other areas, we've yet to discover how to engage Voidwalkers there.
+             OPERATIONS3 = 13628; -- Operations are presently underway at [West Sarutabaruta/West Sarutabaruta/the Maze of Shakhrami/the Meriphataud Mountains/the Meriphataud Mountains/the Outer Horutoto Ruins/East Sarutabaruta/Tahrongi Canyon/Fort Karugo-Narugo]. While planar rifts have been reported in other areas, we've yet to discover how to engage Voidwalkers there.
+                REQUEST1 = 13631; -- At this time, we request your participation in the operation at [East Ronfaure/East Ronfaure/Ordelle's Caves/the Jugner Forest/the Jugner Forest/King Ranperre's Tomb/West Ronfaure/La Theine Plateau/Vunkerl Inlet].
+                REQUEST2 = 13632; -- At this time, we request your participation in the operation at [North Gustaberg/North Gustaberg/the Gusgen Mines/the Pashhow Marshlands/the Pashhow Marshlands/Dangruf Wadi/South Gustaberg/the Konschtat Highlands/Grauberg].
+                REQUEST3 = 13633; -- At this time, we request your participation in the operation at [West Sarutabaruta/West Sarutabaruta/the Maze of Shakhrami/the Meriphataud Mountains/the Meriphataud Mountains/the Outer Horutoto Ruins/East Sarutabaruta/Tahrongi Canyon/Fort Karugo-Narugo].
