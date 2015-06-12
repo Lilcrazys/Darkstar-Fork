@@ -271,16 +271,16 @@ INSERT INTO `mob_skill` VALUES (88,79,88,'Sticky_Thread',4,12.0,2000,1500,4,0,0,
 -- Crawlers (Eruca)
 INSERT INTO `mob_skill` VALUES (90,107,90,'Cocoon',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (88,107,88,'Sticky_Thread',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (386,107,386,'Incinerate',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1535,107,386,'Incinerate',4,10.0,2000,1500,4,0,0,0);
 
 -- Crawlers (Eruca)(NM)
 INSERT INTO `mob_skill` VALUES (90,501,90,'Cocoon',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (88,501,88,'Sticky_Thread',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (386,501,386,'Incinerate',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1535,501,386,'Incinerate',4,10.0,2000,1500,4,0,0,0);
 
 INSERT INTO `mob_skill` VALUES (90,108,90,'Cocoon',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (88,108,88,'Sticky_Thread',4,10.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (?,108,?,'Incinerate',4,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1535,108,386,'Incinerate',4,10.0,2000,1500,4,0,0,0);
 
 -- Scorpion
 INSERT INTO `mob_skill` VALUES (94,217,94,'Mandible_Bite',0,7.0,2000,1500,4,0,0,2);
