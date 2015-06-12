@@ -70,4 +70,5 @@ if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE_IV")) then -- Voidwrought Kill
     end
 end
 killer:addCurrency("bayld", 125);
+killer:addExp(10000);
 end;

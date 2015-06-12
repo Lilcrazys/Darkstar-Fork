@@ -69,4 +69,5 @@ if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_IV")) then -- Havana Kill
     end
 end
 killer:addCurrency("bayld", 125);
+killer:addExp(10000);
 end;

@@ -65,6 +65,11 @@ if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_II")) then -- Lorbulcrud Kill
     if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_II"), 1) == false) then
 	   killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_II"),"INDIGO_STRATUM_ABYSSITE_II",1,true);
     end
+    if (killer:isMaskFull("INDIGO_STRATUM_ABYSSITE_II",1) == true) then
+             killer:addKeyItem("INDIGO_STRATUM_ABYSSITE_III");
+             killer:delKeyItem("INDIGO_STRATUM_ABYSSITE_II");
+    end
 end
 killer:addCurrency("bayld", 50);
+killer:addExp(10000);
 end;
