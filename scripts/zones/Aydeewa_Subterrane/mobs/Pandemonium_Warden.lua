@@ -6,15 +6,12 @@
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 end;
 
 -----------------------------------
@@ -23,20 +20,7 @@ end;
 
 function onMobSpawn(mob)
     -- Make sure model is reset back to start
-    mob:setModelId(1840);
-
-    -- setMod
-    mob:setMod(MOD_REGEN, 300);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 75);
-    mob:setMod(MOD_COUNTER, 20);
-    mob:setMod(MOD_MACC,925);
-    mob:setMod(MOD_MATT,150);
-    mob:setMod(MOD_DOUBLE_ATTACK, 20);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,150);
+    mob:setModelId(1839);
 
     -- Two hours to forced depop
     mob:setLocalVar("PWardenDespawnTime", os.time(t) + 7200);
@@ -47,7 +31,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    -- pop Pets
+    -- pop pets
     for i = 17056170, 17056177, 1 do
         SpawnMob(i,180):updateEnmity(target);
         GetMobByID(i):setModelId(1841);
@@ -60,12 +44,12 @@ end;
 
 function onMobFight(mob,target)
     local depopTime = mob:getLocalVar("PWardenDespawnTime");
-    local petsModelId = mob:getLocalVar("petsModelId");
     local mobHPP = mob:getHPP();
     local change = mob:getLocalVar("change");
     local petIDs = {17056170,17056171,17056172,17056173,17056174,17056175,17056176,17056177};
     local petStatus = {GetMobAction(petIDs[1]),GetMobAction(petIDs[2]),GetMobAction(petIDs[3]),GetMobAction(petIDs[4]),GetMobAction(petIDs[5]),GetMobAction(petIDs[6]),GetMobAction(petIDs[7]),GetMobAction(petIDs[8])};
     local TP = mob:getLocalVar("TP");
+    
 
     ------------------------ Notes  ------------------------
     -- I can't help but think this could be better executed with a single set of logic checks and a table of HP and skin values.
@@ -82,22 +66,30 @@ function onMobFight(mob,target)
     if (mobHPP <= 15 and change == 13) then -- Final Form, pets take Dvger form as well
         mob:setModelId(1839);
         mob:setLocalVar("change", 14);
-        mob:setLocalVar("petsModelId", 1839);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1840);
         end
     elseif (mobHPP <= 26 and change == 12) then -- Khim and Co.
         mob:setModelId(1805);
         mob:setLocalVar("change", 13);
-        mob:setLocalVar("petsModelId", 1746);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
-        end
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1746);
+        end;
     elseif (mobHPP <= 28 and change == 11) then -- Normal Form
-        mob:setModelId(1840);
+        mob:setModelId(1839);
         mob:setLocalVar("change", 12);
-        mob:setLocalVar("petsModelId", 1841);
-        mob:setLocalVar("change", 12);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1841);
+        end
         if (TP <= 5) then
             mob:useMobAbility(1858);
             mob:setLocalVar("TP", 6)
@@ -105,14 +97,21 @@ function onMobFight(mob,target)
     elseif (mobHPP <= 38 and change == 10) then -- Hydra and Co.
         mob:setModelId(1796);
         mob:setLocalVar("change", 11);
-        mob:setLocalVar("petsModelId", 421);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(421);
         end
     elseif (mobHPP <= 40 and change == 9) then -- Normal Form
-        mob:setModelId(1840);
-        mob:setLocalVar("petsModelId", 1841);
+        mob:setModelId(1839);
         mob:setLocalVar("change", 10);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1841);
+        end
         if (TP <= 4) then
             mob:useMobAbility(1860);
             mob:setLocalVar("TP", 5)
@@ -120,14 +119,21 @@ function onMobFight(mob,target)
     elseif (mobHPP <= 50 and change == 8) then -- Cerb and Co.
         mob:setModelId(1793);
         mob:setLocalVar("change", 9);
-        mob:setLocalVar("petsModelId", 281);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
-        end
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(281);
+        end;
     elseif (mobHPP <= 52 and change == 7) then -- Normal Form
-        mob:setModelId(1840);
-        mob:setLocalVar("petsModelId", 1841);
+        mob:setModelId(1839);
         mob:setLocalVar("change", 8);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1841);
+        end
         if (TP <= 3) then
             mob:useMobAbility(1861);
             mob:setLocalVar("TP", 4)
@@ -135,14 +141,21 @@ function onMobFight(mob,target)
     elseif (mobHPP <= 62 and change == 6) then -- Troll and Co.
         mob:setModelId(1867);
         mob:setLocalVar("change", 7);
-        mob:setLocalVar("petsModelId", 1680);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1680);
         end
     elseif (mobHPP <= 64 and change == 5) then -- Normal Form
-        mob:setModelId(1840);
-        mob:setLocalVar("petsModelId", 1841);
+        mob:setModelId(1839);
         mob:setLocalVar("change", 6);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1841);
+        end
         if (TP <= 2) then
             mob:useMobAbility(1862);
             mob:setLocalVar("TP", 3)
@@ -150,14 +163,21 @@ function onMobFight(mob,target)
     elseif (mobHPP <= 74 and change == 4) then -- Lamia and Co.
         mob:setModelId(1865);
         mob:setLocalVar("change", 5);
-        mob:setLocalVar("petsModelId", 1643);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1643);
         end
     elseif (mobHPP <= 76 and change == 3) then -- Normal Form
-        mob:setModelId(1840);
-        mob:setLocalVar("petsModelId", 1841);
+        mob:setModelId(1839);
         mob:setLocalVar("change", 4);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1841);
+        end
         if (TP <= 1) then
             mob:useMobAbility(1863);
             mob:setLocalVar("TP", 2)
@@ -165,14 +185,21 @@ function onMobFight(mob,target)
     elseif (mobHPP <= 86 and change == 2) then -- Mamool and Co.
         mob:setModelId(1863);
         mob:setLocalVar("change", 3);
-        mob:setLocalVar("petsModelId", 1639);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1639);
         end
     elseif (mobHPP <= 88 and change == 1) then -- Normal Form
-        mob:setModelId(1840);
-        mob:setLocalVar("petsModelId", 1841);
+        mob:setModelId(1839);
         mob:setLocalVar("change", 2);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1841);
+        end
         if (TP <= 0) then
             mob:useMobAbility(1857);
             mob:setLocalVar("TP", 1)
@@ -180,9 +207,11 @@ function onMobFight(mob,target)
     elseif (mobHPP <= 98 and change == 0) then -- Chariots
         mob:setModelId(1825);
         mob:setLocalVar("change", 1);
-        mob:setLocalVar("petsModelId", 1820);
-        if (petStatus[i] == 0) then
-            SpawnMob(petIDs[i]):updateEnmity(target);
+        for i = 1, 8 do
+            if petStatus[i] == 0 then
+                SpawnMob(petIDs[i]):updateEnmity(target);
+            end
+            GetMobByID(petIDs[i]):setModelId(1820);
         end
     end
 
@@ -196,12 +225,21 @@ function onMobFight(mob,target)
         end
     end
 
-    -- Sets pets model
-    for i = 1, 8 do
-        if (petsModelId ~= 0 and GetMobByID(petIDs[i]):getModelId() ~= petsModelId) then
-            GetMobByID(petIDs[i]):setModelId(petsModelId);
-        end
-    end
+    -- Repops pets sets model and sets them agro..
+	-- This is TeoTwawki's loop for respawning pets, I left it here in case
+	-- someone ever wants it
+    -- if (mob:getLocalVar("repopPets") == 1) then
+        -- for i = 1, 8 do
+            -- if petStatus[i] == 0 then					
+                -- SpawnMob(petIDs[i]):updateEnmity(target);
+            -- end
+
+            -- if (GetMobByID(petIDs[i]):getModelId() ~= mob:getLocalVar("petsModelId")) then
+                -- GetMobByID(petIDs[i]):setModelId(petsModelId);
+            -- end
+        -- end
+        -- mob:setLocalVar("repopPets", 0);
+    -- end
 
 
     ------------------------ Despawn timer ------------------------
@@ -276,12 +314,4 @@ end;
 function onMobDeath(mob,killer)
     -- TODO: Death speech.
     killer:addTitle(PANDEMONIUM_QUELLER);
-
-    local CHANCE = 20;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(742) == false) then
-        killer:addSpell(742);
-    end
-
-    -- mob:SpoofChatParty("This is the end..of nothing..Defeating me proves only that you too, harbor", MESSAGE_SAY)
-    -- mob:SpoofChatParty("seeds of evil within your trembling flesh..Someday..they shall come..into fruition..", MESSAGE_SAY)
 end;
