@@ -89,4 +89,5 @@ if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_IV")) then -- Celano Kill
     end
 end
 killer:addCurrency("bayld", 125);
+killer:addExp(10000);
 end;

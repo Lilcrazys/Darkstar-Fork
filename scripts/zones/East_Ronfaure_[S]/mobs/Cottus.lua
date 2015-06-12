@@ -66,5 +66,10 @@ if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE")) then -- Cottus Kill
     if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE"), 2) == false) then
 	    killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE"),"CRIMSON_STRATUM_ABYSSITE",2,true);
     end
+    if (killer:isMaskFull("CRIMSON_STRATUM_ABYSSITE",2) == true) then
+             killer:addKeyItem("CRIMSON_STRATUM_ABYSSITE_II");
+             killer:delKeyItem("CRIMSON_STRATUM_ABYSSITE");
+    end
 end
+killer:addExp(10000);
 end;
