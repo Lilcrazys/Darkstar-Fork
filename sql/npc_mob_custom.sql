@@ -3068,20 +3068,20 @@ REPLACE INTO `mob_spawn_points` VALUES (17043466,'Venomfang','Venomfang',90323,3
 -- ALSO NEEDS MOVED TO CORRECY PLACE IN THIS FILE. AHEM. Same for the abyssea and Aptant NMs above.
 REPLACE INTO `mob_spawn_points` VALUES (17211882,'Sallow_Seymour','Sallow Seymour',90400,798,0,439,147);
 INSERT INTO `mob_spawn_points` VALUES (17138408,'Ushumgal','Ushumgal',90401,798,0,439,32);
-REPLACE INTO `mob_spawn_points` VALUES (17191335,'Sarimanok','Sarimanok',90402,287,-60,367,32);
+REPLACE INTO `mob_spawn_points` VALUES (17191335,'Sarimanok','Sarimanok',90402,288,-61,368,32);
 REPLACE INTO `mob_spawn_points` VALUES (17109718,'Cottus','Cottus',90403,287,-60,367,163);
 REPLACE INTO `mob_spawn_points` VALUES (17248625,'Virvatuli','Virvatuli',90404,120,4,-440,44);
 REPLACE INTO `mob_spawn_points` VALUES (17167113,'Pancimanci','Pancimanci',90405,120,-3.5,-440,183);
-REPLACE INTO `mob_spawn_points` VALUES (17580343,'Lorbulcrub','Lorbulcrud',90406,-115,-60.452,-100,178);
-REPLACE INTO `mob_spawn_points` VALUES (17568142,'Krabimanjaro','Krabimanjaro',90407,-111,0,229,78);
-REPLACE INTO `mob_spawn_points` VALUES (17588707,'Obgunabali','Ogbunabali',90408,-285,0,-113,0);
-REPLACE INTO `mob_spawn_points` VALUES (17224185,'Murk-veined_Baneberry','Murk-veined Baneberry',90409,551,23.812,491,240);
-REPLACE INTO `mob_spawn_points` VALUES (17146510,'Melancholic_Moira','Melancholic Moira',90410,551,24.059,491,217);
-REPLACE INTO `mob_spawn_points` VALUES (17203697,'Belphoebe','Belphoebe',90411,78,0,117,233);
+REPLACE INTO `mob_spawn_points` VALUES (17580343,'Lorbulcrub','Lorbulcrud',90406,-115,-60,-100,178);
+REPLACE INTO `mob_spawn_points` VALUES (17568142,'Krabimanjaro','Krabimanjaro',90407,-112,0,230,78);
+REPLACE INTO `mob_spawn_points` VALUES (17588707,'Obgunabali','Ogbunabali',90408,-285,0,-114,0);
+REPLACE INTO `mob_spawn_points` VALUES (17224185,'Murk-veined_Baneberry','Murk-veined Baneberry',90409,551,24.5,492,240);
+REPLACE INTO `mob_spawn_points` VALUES (17146510,'Melancholic_Moira','Melancholic Moira',90410,552,24.5,492,217);
+REPLACE INTO `mob_spawn_points` VALUES (17203697,'Belphoebe','Belphoebe',90411,78,0,118,233);
 REPLACE INTO `mob_spawn_points` VALUES (17113826,'Kholomodumo','Kholomodumo',90412,77,0,118,93);
-REPLACE INTO `mob_spawn_points` VALUES (17265130,'Lord_Asag','Lord Asag',90413,-281,16,601,0);
-REPLACE INTO `mob_spawn_points` VALUES (17175251,'Akupara','Akupara',90414,-281,16,602,16);
+REPLACE INTO `mob_spawn_points` VALUES (17265130,'Lord_Asag','Lord Asag',90413,-282,16,602,0);
+REPLACE INTO `mob_spawn_points` VALUES (17175251,'Akupara','Akupara',90414,-282,16,602,16);
 INSERT INTO `mob_spawn_points` VALUES (17559871,'Celano','Celano',90415,-253,4,505,118);
-REPLACE INTO `mob_spawn_points` VALUES (17555901,'Hahava','Hahava',90416,-114,9,59,118);
-REPLACE INTO `mob_spawn_points` VALUES (17572219,'Voidwrought','Voidwrought',90417,-380,0,739,0);
-REPLACE INTO `npc_list` VALUES (17559925,'Planar_Rift','Planar Rift',0,-253.000,4.033,505.000,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA'); -- dangruf celano spawn
+REPLACE INTO `mob_spawn_points` VALUES (17555901,'Hahava','Hahava',90416,-115,9,60,118);
+REPLACE INTO `mob_spawn_points` VALUES (17572219,'Voidwrought','Voidwrought',90417,-380,0,740,0);
+REPLACE INTO `npc_list` VALUES (17559925,'Planar_Rift','Planar Rift',0,-253,4,505,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA'); -- dangruf celano spawn
