@@ -20,7 +20,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    local STRATUM = player:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_IV");
+    local STRATUM = player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
 
     if (STRATUM == true) and npc:getXPos(-115) and npc:getYPos(9) and npc:getZPos(60)  then
         -- NOTE: I'm only requiring 1 person (the popper) to have the voidstone+abyssite, per pop.
@@ -57,7 +57,7 @@ function onEventFinish(player,csid,option)
     -- NOTE: I'm only requiring 1 person (the popper) to have the voidstone, per pop.
     -- I know this isn't what retail does. Retail also lets them gain more than 1 per day too.
     if (cs == 6000 and option == 1) then
-        if (player:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_IV")) then
+        if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
             player:delCurrency("voidstones", 1);
             SpawnMob(17555901, 300):updateClaim(player);
         end
