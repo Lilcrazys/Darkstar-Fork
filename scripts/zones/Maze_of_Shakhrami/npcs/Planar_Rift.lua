@@ -57,7 +57,7 @@ function onEventFinish(player,csid,option)
     -- NOTE: I'm only requiring 1 person (the popper) to have the voidstone, per pop.
     -- I know this isn't what retail does. Retail also lets them gain more than 1 per day too.
     if (cs == 6000 and option == 1) then
-        if (palyer:hasKeyItem("JADE_STRATUM_ABYSSITE_II")) then
+        if (player:hasKeyItem("JADE_STRATUM_ABYSSITE_II")) then
             player:delCurrency("voidstones", 1);
             SpawnMob(17588707, 300):updateClaim(player);
         end
