@@ -61,7 +61,7 @@ function onTrigger(player,npc)
             -- player:SpoofChatPlayer("I am a Voidwatch officer dispatched here by the Grand Duchy of Jeuno.", MESSAGE_SYS_SAY, nil);
             -- player:SpoofChatPlayer("My duty is to recruit able-bodied soldiers to assist in repelling the Voidwalker threat.", MESSAGE_SYS_SAY, nil);
             player:setVar("VW_STATUS", 1);
-        elseif (CRIMSON0 == false) then
+        elseif (CRIMSON == false) then
             if (player:hasKeyItem(ADVENTURERS_CERTIFICATE) == false) then
                 player:showText(npc, COMMEND_YOUR_ENTHUSIASM, ADVENTURERS_CERTIFICATE)
                 player:showText(npc, PROOF_OF_ONES_VALOR, ADVENTURERS_CERTIFICATE)
@@ -75,8 +75,8 @@ function onTrigger(player,npc)
                 player:showText(npc, EACH_STONE_IS_ATTUNED);
                 player:showText(npc, VOIDWATCH_OPERATION);
                 player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
-                player:addKeyItem(INDIGO_STRATUM_ABYSSITE);
-                player:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE);
+                player:addKeyItem(CRIMSON_STRATUM_ABYSSITE);
+                player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE);
                 if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                     player:addCurrency("voidstones", 1);
                     player:setVar("VOIDSTONE_TIMER", os.time()+1728000); -- 20 hours till next voidstone. Slightly less than 1 day, so that player can do VW once a day at aprox same time of day.
