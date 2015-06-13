@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Bastok Markets
+-- Area: Windhurst Waters
 --  NPC: Voidwatch Officer
 -----------------------------------
 package.loaded["scripts/zones/Bastok_Markets/TextIDs"] = nil;
