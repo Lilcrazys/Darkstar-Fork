@@ -32,7 +32,7 @@ function onTrigger(player,npc)
         local VW_BASTOK_ABYSSITE = {INDIGO_STRATUM_ABYSSITE,INDIGO_STRATUM_ABYSSITE_II,INDIGO_STRATUM_ABYSSITE_III,INDIGO_STRATUM_ABYSSITE_IV}
         local VW_WINDURST_ABYSSITE = {JADE_STRATUM_ABYSSITE,JADE_STRATUM_ABYSSITE_II,JADE_STRATUM_ABYSSITE_III,JADE_STRATUM_ABYSSITE_IV}
         local STATUS = player:getVar("VW_STATUS");
-        local VW_OP_BASTOK = player:getVar("VW_OP_BASTOK");
+        -- local VW_OP_BASTOK = player:getVar("VW_OP_BASTOK");
         local CRIMSON = false;
         local INDIGO = false;
         local JADE = false;
@@ -105,13 +105,19 @@ function onTrigger(player,npc)
             player:startEvent(21);
         ]]
         else
-            if (VW_OP_BASTOK < 9) then
+            if (player:hasKeyItem(INDIGO_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
+                player:addKeyItem(INDIGO_STRATUM_ABYSSITE);
+                player:delKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
+                player:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE);
+            --[[
+            elseif (VW_OP_BASTOK < 9) then
                 -- 0:North Gustaberg 1:North Gustaberg 2:the Gusgen Mines
                 -- 3:the Pashhow Marshlands 4:the Pashhow Marshlands 5:Dangruf Wadi
                 -- 6:South Gustaberg 7:the Konschtat Highlands 8:Grauberg
                 -- After 8, cycle back to zero - DO NOT PROCEED TO 9!
                 player:messageSpecial(OPERATIONS2, VW_OP_BASTOK);
                 player:messageSpecial(REQUEST2, VW_OP_BASTOK);
+            ]]
             end
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                 player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
