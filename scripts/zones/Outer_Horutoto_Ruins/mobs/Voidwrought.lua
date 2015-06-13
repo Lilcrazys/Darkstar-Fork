@@ -64,11 +64,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE_IV")) then -- Voidwrought Kill
-    if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_IV"), 1) == false) then
-	   killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_IV"),"JADE_STRATUM_ABYSSITE_IV",1,true);
+    if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE_IV")) then -- Voidwrought Kill
+        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_IV"), 1) == false) then
+	       killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_IV"),"JADE_STRATUM_ABYSSITE_IV",1,true);
+        end
     end
-end
-killer:addCurrency("bayld", 125);
-killer:addExp(10000);
+    killer:addCurrency("bayld", 125);
+    killer:addExp(10000);
 end;

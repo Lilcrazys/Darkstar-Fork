@@ -83,11 +83,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_IV")) then -- Celano Kill
-    if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_IV"), 1) == false) then
-	   killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_IV"),"INDIGO_STRATUM_ABYSSITE_IV",1,true);
+    if (killer:hasKeyItem("INDIGO_STRATUM_ABYSSITE_IV")) then -- Celano Kill
+        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_IV"), 1) == false) then
+	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_IV"),"INDIGO_STRATUM_ABYSSITE_IV",1,true);
+        end
     end
-end
-killer:addCurrency("bayld", 125);
-killer:addExp(10000);
+    killer:addCurrency("bayld", 125);
+    killer:addExp(10000);
 end;

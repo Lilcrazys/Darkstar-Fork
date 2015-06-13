@@ -78,15 +78,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_III")) then -- Belephoebe Kill
-    if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_III"), 1) == false) then
-	    killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_III"),"CRIMSON_STRATUM_ABYSSITE_III",1,true);
+    if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_III")) then -- Belephoebe Kill
+        if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_III"), 1) == false) then
+	        killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_III"),"CRIMSON_STRATUM_ABYSSITE_III",1,true);
+        end
+        if (killer:isMaskFull("CRIMSON_STRATUM_ABYSSITE_III",2) == true) then
+                 killer:addKeyItem("CRIMSON_STRATUM_ABYSSITE_IV");
+                 killer:delKeyItem("CRIMSON_STRATUM_ABYSSITE_III");
+        end
     end
-    if (killer:isMaskFull("CRIMSON_STRATUM_ABYSSITE_III",2) == true) then
-             killer:addKeyItem("CRIMSON_STRATUM_ABYSSITE_IV");
-             killer:delKeyItem("CRIMSON_STRATUM_ABYSSITE_III");
-    end
-end
-killer:addCurrency("bayld", 75);
-killer:addExp(10000);
+    killer:addCurrency("bayld", 75);
+    killer:addExp(10000);
 end;
