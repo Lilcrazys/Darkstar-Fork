@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: Windhurst Waters
+-- Area: Windurst Waters
 --  NPC: Voidwatch Officer
 -----------------------------------
 package.loaded["scripts/zones/Bastok_Markets/TextIDs"] = nil;
@@ -115,8 +115,8 @@ function onTrigger(player,npc)
                 -- 3:the Pashhow Marshlands 4:the Pashhow Marshlands 5:Dangruf Wadi
                 -- 6:South Gustaberg 7:the Konschtat Highlands 8:Grauberg
                 -- After 8, cycle back to zero - DO NOT PROCEED TO 9!
-                player:messageSpecial(OPERATIONS2, VW_OP_WINDURST);
-                player:messageSpecial(REQUEST2, VW_OP_WINDURST);
+                player:messageSpecial(OPERATIONS3, VW_OP_WINDURST);
+                player:messageSpecial(REQUEST3, VW_OP_WINDURST);
             ]]
             end
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
