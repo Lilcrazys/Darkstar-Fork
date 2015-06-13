@@ -105,10 +105,10 @@ function onTrigger(player,npc)
             player:startEvent(985);
         ]]
         else
-            if (player:hasKeyItem(INDIGO_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
-                player:addKeyItem(INDIGO_STRATUM_ABYSSITE);
-                player:delKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
-                player:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE);
+            if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
+                player:addKeyItem(CRIMSON_STRATUM_ABYSSITE);
+                player:delKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
+                player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE);
             --[[
             elseif (VW_OP_SANDORIA < 9) then
                 -- 0:East Ronfaure 1:East Ronfaure 2:Ordelle's Caves

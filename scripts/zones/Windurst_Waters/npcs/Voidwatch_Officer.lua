@@ -32,7 +32,7 @@ function onTrigger(player,npc)
         local VW_BASTOK_ABYSSITE = {INDIGO_STRATUM_ABYSSITE,INDIGO_STRATUM_ABYSSITE_II,INDIGO_STRATUM_ABYSSITE_III,INDIGO_STRATUM_ABYSSITE_IV}
         local VW_WINDURST_ABYSSITE = {JADE_STRATUM_ABYSSITE,JADE_STRATUM_ABYSSITE_II,JADE_STRATUM_ABYSSITE_III,JADE_STRATUM_ABYSSITE_IV}
         local STATUS = player:getVar("VW_STATUS");
-        local VW_OP_BASTOK = player:getVar("VW_OP_BASTOK");
+        -- local VW_OP_WINDURST = player:getVar("VW_OP_WINDURST");
         local CRIMSON = false;
         local INDIGO = false;
         local JADE = false;
@@ -87,31 +87,37 @@ function onTrigger(player,npc)
                 -- The same var my be used again during future Voidwatch quests, so its important not to leave it dangling at "1".
             end
         elseif (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_ACCEPTED) then
-            player:startEvent(11);
+            player:startEvent(1035);
         --[[ future use
         elseif
-            player:startEvent(12);
+            player:startEvent(1036);
         elseif
-            player:startEvent(13);
+            player:startEvent(1037);
         elseif
-            player:startEvent(16);
+            player:startEvent(1039);
         elseif
-            player:startEvent(17);
+            player:startEvent(1040);
         elseif
-            player:startEvent(18);
+            player:startEvent(1041);
         elseif
-            player:startEvent(19);
+            player:startEvent(1042);
         elseif
-            player:startEvent(21);
+            player:startEvent(1043);
         ]]
         else
-            if (VW_OP_BASTOK < 9) then
+            if (player:hasKeyItem(JADE_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
+                player:addKeyItem(JADE_STRATUM_ABYSSITE);
+                player:delKeyItem(JADE_STRATUM_ABYSSITE_IV);
+                player:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE);
+            --[[
+            elseif (VW_OP_WINDURST < 9) then
                 -- 0:North Gustaberg 1:North Gustaberg 2:the Gusgen Mines
                 -- 3:the Pashhow Marshlands 4:the Pashhow Marshlands 5:Dangruf Wadi
                 -- 6:South Gustaberg 7:the Konschtat Highlands 8:Grauberg
                 -- After 8, cycle back to zero - DO NOT PROCEED TO 9!
-                player:messageSpecial(OPERATIONS2, VW_OP_BASTOK);
-                player:messageSpecial(REQUEST2, VW_OP_BASTOK);
+                player:messageSpecial(OPERATIONS2, VW_OP_WINDURST);
+                player:messageSpecial(REQUEST2, VW_OP_WINDURST);
+            ]]
             end
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                 player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
@@ -134,7 +140,7 @@ function onTrigger(player,npc)
         CERT = 1;
     end
 
-    player:startEvent(9,OPT,0,CERT,0,0,0,0,0);
+    player:startEvent(1024,OPT,0,CERT,0,0,0,0,0);
 ]]
 end;
 
@@ -154,25 +160,25 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    if (csid == 11) then
+    if (csid == 1035) then
         player:addKeyItem(VOIDWATCH_ALARUM);
         player:completeQuest(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID);
         player:addQuest(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     --[[ future use
-    elseif (csid == 12) then
+    elseif (csid == 1036) then
         player:addKeyItem(VOIDWATCH_ALARUM);
-    elseif (csid == 13) then
+    elseif (csid == 1037) then
         player:addKeyItem(VOIDWATCH_ALARUM);
-    elseif (csid == 16) then
+    elseif (csid == 1039) then
         player:addKeyItem(VOIDWATCH_ALARUM);
-    elseif (csid == 17) then
+    elseif (csid == 1040) then
         player:addKeyItem(VOIDWATCH_ALARUM);
-    elseif (csid == 18) then
+    elseif (csid == 1041) then
         player:addKeyItem(VOIDWATCH_ALARUM);
-    elseif (csid == 19) then
+    elseif (csid == 1042) then
         player:addKeyItem(VOIDWATCH_ALARUM);
-    elseif (csid == 21) then
+    elseif (csid == 1043) then
         player:addKeyItem(VOIDWATCH_ALARUM);
     ]]
     end
