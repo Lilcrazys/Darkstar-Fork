@@ -25,7 +25,7 @@ function onTrigger(player,npc)
     local mobNotUp = false
     local correctNPC = false
 
-    if (GetMobAction(GetMobByID(mobID)) == ACTION_NONE or GetMobAction(GetMobByID(mobID)) == ACTION_SPAWN) then
+    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
         mobNotUp = true;
     end
 
