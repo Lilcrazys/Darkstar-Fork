@@ -81,13 +81,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (killer:hasKeyItem("CRIMSON_STRATUM_ABYSSITE_III")) then -- Kholomodumo Kill
+    if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_III)) then -- Kholomodumo Kill
         if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_III"), 2) == false) then
 	       killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_III"),"CRIMSON_STRATUM_ABYSSITE_III",2,true);
         end
         if (killer:isMaskFull("CRIMSON_STRATUM_ABYSSITE_III",2) == true) then
-                 killer:addKeyItem("CRIMSON_STRATUM_ABYSSITE_IV");
-                 killer:delKeyItem("CRIMSON_STRATUM_ABYSSITE_III");
+                 killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
+                 killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
         end
     end
     killer:addCurrency("bayld", 75);

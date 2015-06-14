@@ -63,13 +63,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (killer:hasKeyItem("JADE_STRATUM_ABYSSITE")) then -- Pancimanci Kill
+    if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Pancimanci Kill
         if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"), 2) == false) then
 	       killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"),"JADE_STRATUM_ABYSSITE",2,true);
         end
         if (killer:isMaskFull("JADE_STRATUM_ABYSSITE",2) == true) then
-                 killer:addKeyItem("JADE_STRATUM_ABYSSITE_II");
-                 killer:delKeyItem("JADE_STRATUM_ABYSSITE");
+                 killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);
+                 killer:delKeyItem(JADE_STRATUM_ABYSSITE);
         end
     end
     killer:addExp(10000);
