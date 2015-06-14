@@ -16,7 +16,7 @@ function onTrade(player,npc,trade)
     local ODIN_ACTION = GetMobAction(17097270);
     local ALEX_ACTION = GetMobAction(17097717);
     if (trade:hasItemQty(270,1) and trade:getItemCount() == 1) then
-        if (ODIN_ACT == ACTION_NONE or ODIN_ACT == ACTION_NONE) then
+        if (ODIN_ACT == ACTION_NONE or ODIN_ACT == ACTION_SPAWN) then
             SpawnMob(17097270, 300):updateClaim(player);
             player:tradeComplete();
         end
