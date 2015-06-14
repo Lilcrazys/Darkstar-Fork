@@ -22,8 +22,9 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
-	homepointMenu( player, 0x21fc, 45);
+	player:PrintToPlayer("SoA is closed - you should not be here.");
+	--homepointMenu( player, 0x21fc, 45);
+	player:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
 end; 
 
 -----------------------------------
