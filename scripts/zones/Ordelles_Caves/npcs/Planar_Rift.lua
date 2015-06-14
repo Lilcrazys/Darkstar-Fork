@@ -21,8 +21,19 @@ end;
 
 function onTrigger(player,npc)
     local STRATUM = player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
+    local mobID = 17568142;
+    local mobNotUp = false
+    local correctNPC = false
 
-    if (STRATUM == true) and npc:getXPos(-112) and npc:getYPos(0) and npc:getZPos(230)  then
+    if (GetMobAction(GetMobByID(mobID)) == ACTION_NONE or GetMobAction(GetMobByID(mobID)) == ACTION_SPAWN) then
+        mobNotUp = true;
+    end
+
+    if (npc:getXPos(-112) and npc:getYPos(0) and npc:getZPos(230)) then
+        correctNPC = true;
+    end
+
+    if (STRATUM == true and mobNotUp == true and correctNPC == true) then
         -- NOTE: I'm only requiring 1 person (the popper) to have the voidstone+abyssite, per pop.
         -- I know this isn't what retail does. Retail also lets them gain more than 1 per day too.
         -- In the mobs onMobDeath script, we can easily make the popper 100% upgrade rate and everyone else less, if desired.
@@ -57,9 +68,7 @@ function onEventFinish(player,csid,option)
     -- NOTE: I'm only requiring 1 person (the popper) to have the voidstone, per pop.
     -- I know this isn't what retail does. Retail also lets them gain more than 1 per day too.
     if (csid == 6000 and option == 1) then
-        if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_II)) then
-            player:delCurrency("voidstones", 1);
-            SpawnMob(17568142, 300):updateClaim(player);
-        end
+        player:delCurrency("voidstones", 1);
+        SpawnMob(17568142, 300):updateClaim(player);
     end
 end;
