@@ -531,6 +531,8 @@ INSERT INTO `mob_droplist` VALUES (9105,0,10297,250);
 INSERT INTO `mob_droplist` VALUES (9106,0,3925,10);
 INSERT INTO `mob_droplist` VALUES (9106,0,4023,30);
 
+
+INSERT INTO `mob_droplist` VALUES (2489,0,3090,261); -- Shephroid Plate
 -- ------------------ Alkonost ------------------------------
 INSERT INTO `mob_droplist` VALUES (9200,0,11563,181); -- Mesmeric Cape
 INSERT INTO `mob_droplist` VALUES (9200,0,1311,18); -- Oxblood
