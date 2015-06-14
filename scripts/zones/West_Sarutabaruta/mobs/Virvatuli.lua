@@ -60,10 +60,10 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Virvatuli Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"), 1) == false) then
-	       killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE"),"JADE_STRATUM_ABYSSITE",1,true);
+        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM"), 1) == false) then
+	       killer:setMaskBit(killer:getVar("JADE_STRATUM"),"JADE_STRATUM",1,true);
         end
-        if (killer:isMaskFull("JADE_STRATUM_ABYSSITE",2) == true) then
+        if (killer:isMaskFull(killer:getVar("JADE_STRATUM"),2) == true) then
                  killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);
                  killer:delKeyItem(JADE_STRATUM_ABYSSITE);
         end

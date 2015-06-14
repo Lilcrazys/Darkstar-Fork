@@ -74,10 +74,10 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_III)) then -- Melancholic Kill
-        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_III"), 2) == false) then
-	        killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE_III"),"INDIGO_STRATUM_ABYSSITE_III",2,true);
+        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 2) == false) then
+	        killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",2,true);
         end
-        if (killer:isMaskFull("INDIGO_STRATUM_ABYSSITE_III",2) == true) then
+        if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
                  killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
                  killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
         end

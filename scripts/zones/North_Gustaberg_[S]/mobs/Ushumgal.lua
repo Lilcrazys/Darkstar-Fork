@@ -74,10 +74,10 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Ushumgal Kill
-        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE"), 2) == false) then
-	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM_ABYSSITE"),"INDIGO_STRATUM_ABYSSITE",2,true);
+        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM"), 2) == false) then
+	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",2,true);
         end
-        if (killer:isMaskFull("INDIGO_STRATUM_ABYSSITE",2) == true) then
+        if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM"),2) == true) then
                  killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
                  killer:delKeyItem(INDIGO_STRATUM_ABYSSITE);
         end

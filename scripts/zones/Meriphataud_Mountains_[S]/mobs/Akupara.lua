@@ -63,10 +63,10 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Akupara Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_III"), 2) == false) then
-	        killer:setMaskBit(killer:getVar("JADE_STRATUM_ABYSSITE_III"),"JADE_STRATUM_ABYSSITE_III",2,true);
+        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 2) == false) then
+	        killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",2,true);
         end
-        if (killer:isMaskFull("JADE_STRATUM_ABYSSITE_III",2) == true) then
+        if (killer:isMaskFull(killer:getVar("JADE_STRATUM_III"),2) == true) then
                  killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
                  killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
         end

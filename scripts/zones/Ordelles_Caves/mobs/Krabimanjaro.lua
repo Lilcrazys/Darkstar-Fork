@@ -79,10 +79,10 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_II)) then -- Krabimanjaro Kill
-        if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_II"), 1) == false) then
-	        killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_ABYSSITE_II"),"CRIMSON_STRATUM_ABYSSITE_II",1,true);
+        if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_II"), 1) == false) then
+	        killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_II"),"CRIMSON_STRATUM_II",1,true);
         end
-        if (killer:isMaskFull("CRIMSON_STRATUM_ABYSSITE_II",1) == true) then
+        if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM_II"),1) == true) then
                  killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
                  killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
         end
