@@ -1400,9 +1400,9 @@ function onTrade(player,npc,trade)
 
 -------------------------------Relic----------------------------------------------------
 ----------------------------THF-------------------------------------
-    if (trade:hasItemQty(3493,50) and trade:hasItemQty(15086,1) and trade:getItemCount() == 51) then        --head
-        player:addItem(10664);
-        player:messageSpecial(ITEM_OBTAINED,10664);
+    if (trade:hasItemQty(3493,50) and trade:hasItemQty(15077,1) and trade:getItemCount() == 51) then        --head
+        player:addItem(10655);
+        player:messageSpecial(ITEM_OBTAINED,10655);
         player:tradeComplete();
     end
     if (trade:hasItemQty(3494,50) and trade:hasItemQty(15092,1) and trade:getItemCount() == 51) then    -- body
