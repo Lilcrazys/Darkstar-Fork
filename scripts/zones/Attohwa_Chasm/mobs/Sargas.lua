@@ -17,6 +17,7 @@ function onMobInitialize(mob)
     mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 end;
+
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
@@ -40,10 +41,9 @@ function onAdditionalEffect(mob,target,damage)
         return 0,0,0;
     else
         local duration = math.random(5,15);
-        target:addStatusEffect(EFFECT_STUN,5,3,duration);
+        target:addStatusEffect(EFFECT_STUN,5,0,duration);
         return SUBEFFECT_STUN,0,EFFECT_STUN;
     end
-
 end;
 
 -----------------------------------
@@ -72,7 +72,6 @@ function onSpikesDamage(mob,target,damage)
     dmg = finalMagicNonSpellAdjustments(mob,target,ELE_THUNDER,dmg);
 
     return SUBEFFECT_SHOCK_SPIKES,64,dmg;
-
 end;
 
 -----------------------------------
