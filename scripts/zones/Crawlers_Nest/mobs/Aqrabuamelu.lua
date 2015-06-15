@@ -48,7 +48,7 @@ function onSpikesDamage(mob,target,damage)
     dmg = dmg * applyResistanceAddEffect(mob,target,ELE_ICE,0);
     dmg = adjustForTarget(target,dmg,ELE_ICE);
 
-    if (dmg < 0) then
+    if (dmg < 10) then
         dmg = 10
     end
 

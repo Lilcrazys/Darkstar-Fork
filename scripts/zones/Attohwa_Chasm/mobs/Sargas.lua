@@ -35,6 +35,7 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     -- Guestimating 2 in 3 chance to stun on melee.
     if ((math.random(1,100) >= 66) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
@@ -65,7 +66,7 @@ function onSpikesDamage(mob,target,damage)
     dmg = dmg * applyResistanceAddEffect(mob,target,ELE_THUNDER,0);
     dmg = adjustForTarget(target,dmg,ELE_THUNDER);
 
-    if (dmg < 0) then
+    if (dmg < 10) then
         dmg = 10
     end
 
