@@ -216,7 +216,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 		if (GurfurlurKillCount < 3 and mobID == 17031592) then
 			killer:setVar("Gurfurlur_the_Menacing_KILLS", GurfurlurKillCount + 1);
 		end
-		if (GuloolKillCount < 3 and mobID == 16973900) then
+		if (GuloolKillCount < 3 and mobID == 17043875) then
 			killer:setVar("Gulool_Ja_Ja_KILLS", GuloolKillCount + 1);
 		end
 		if (CerberusKillCount < 3 and mobID == 17027458) then
