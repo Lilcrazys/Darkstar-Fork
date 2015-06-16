@@ -27,10 +27,10 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `item_mods`;
 CREATE TABLE IF NOT EXISTS `item_mods` (
-`itemId` smallint(5) unsigned NOT NULL,
-`modId` smallint(5) unsigned NOT NULL,
-`value` smallint(5) NOT NULL DEFAULT '0',
-PRIMARY KEY (`itemId`, `modId`)
+  `itemId` smallint(5) unsigned NOT NULL,
+  `modId` smallint(5) unsigned NOT NULL,
+  `value` smallint(5) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`itemId`, `modId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=13 PACK_KEYS=1;
 
 --
@@ -18379,6 +18379,7 @@ INSERT INTO `item_mods` VALUES (17464, 8, 3);
 INSERT INTO `item_mods` VALUES (17464, 13, 3);
 INSERT INTO `item_mods` VALUES (17465, 12, 1);
 INSERT INTO `item_mods` VALUES (17465, 13, 1);
+INSERT INTO `item_mods` VALUES (17466, 313, 1);
 INSERT INTO `item_mods` VALUES (17466, 374, 1);
 INSERT INTO `item_mods` VALUES (17467, 345, 1000);
 INSERT INTO `item_mods` VALUES (17468, 13, 2);
