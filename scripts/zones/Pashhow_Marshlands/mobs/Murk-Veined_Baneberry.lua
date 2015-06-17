@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -95,12 +96,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_III)) then -- Baneberry Kill
-        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 1) == false) then
+        if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 1) == false) then
 	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",1,true);
         end
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
-                 killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
-                 killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+           killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
+           killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
         end
     end
     killer:addCurrency("bayld", 75);

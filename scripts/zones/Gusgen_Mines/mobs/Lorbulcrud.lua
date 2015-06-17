@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -62,12 +63,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_II)) then -- Lorbulcrud Kill
-        if  (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_II"), 1) == false) then
+        if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_II"), 1) == false) then
 	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM_II"),"INDIGO_STRATUM_II",1,true);
         end
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_II"),1) == true) then
-                 killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_III);
-                 killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_II);
+           killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+           killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_II);
         end
     end
     killer:addCurrency("bayld", 50);

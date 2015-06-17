@@ -7,7 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -65,7 +65,7 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_IV)) then -- Voidwrought Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_IV"), 1) == false) then
+        if (killer:getMaskBit(killer:getVar("JADE_STRATUM_IV"), 1) == false) then
 	       killer:setMaskBit(killer:getVar("JADE_STRATUM_IV"),"JADE_STRATUM_IV",1,true);
         end
     end

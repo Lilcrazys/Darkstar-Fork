@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -37,7 +38,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_ATT,350);
-   mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -64,12 +65,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Pancimanci Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM"), 2) == false) then
+        if (killer:getMaskBit(killer:getVar("JADE_STRATUM"), 2) == false) then
 	       killer:setMaskBit(killer:getVar("JADE_STRATUM"),"JADE_STRATUM",2,true);
         end
         if (killer:isMaskFull(killer:getVar("JADE_STRATUM"),2) == true) then
-                 killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);
-                 killer:delKeyItem(JADE_STRATUM_ABYSSITE);
+           killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(JADE_STRATUM_ABYSSITE);
         end
     end
     killer:addExp(10000);

@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -63,12 +64,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE)) then -- Cottus Kill
-        if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM"), 2) == false) then
+        if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM"), 2) == false) then
 	        killer:setMaskBit(killer:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",2,true);
         end
         if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM"),2) == true) then
-                 killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
-                 killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
+           killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
         end
     end
     killer:addExp(10000);

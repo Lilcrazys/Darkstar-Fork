@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -66,12 +67,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Lord Asag Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 1) == false) then
-                killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",1,true);
+        if (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 1) == false) then
+           killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",1,true);
         end
         if (killer:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
-                 killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
-                 killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
+            killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
+            killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
         end
     end
     killer:addCurrency("bayld", 75);

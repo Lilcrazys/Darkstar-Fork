@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -64,7 +65,7 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then -- Havana Kill
-        if  (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_IV"), 1) == false) then
+        if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_IV"), 1) == false) then
 	       killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_IV"),"CRIMSON_STRATUM_IV",1,true);
         end
     end

@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -60,12 +61,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Virvatuli Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM"), 1) == false) then
+        if (killer:getMaskBit(killer:getVar("JADE_STRATUM"), 1) == false) then
 	       killer:setMaskBit(killer:getVar("JADE_STRATUM"),"JADE_STRATUM",1,true);
         end
         if (killer:isMaskFull(killer:getVar("JADE_STRATUM"),2) == true) then
-                 killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);
-                 killer:delKeyItem(JADE_STRATUM_ABYSSITE);
+           killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(JADE_STRATUM_ABYSSITE);
         end
     end
     killer:addExp(10000);

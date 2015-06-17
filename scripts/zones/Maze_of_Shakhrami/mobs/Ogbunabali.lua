@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/keyitems");
 
 
 -----------------------------------
@@ -74,12 +75,12 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_II)) then -- Ogbunabali Kill
-        if  (killer:getMaskBit(killer:getVar("JADE_STRATUM_II"), 1) == false) then
+        if (killer:getMaskBit(killer:getVar("JADE_STRATUM_II"), 1) == false) then
 	       killer:setMaskBit(killer:getVar("JADE_STRATUM_II"),"JADE_STRATUM_II",1,true);
         end
         if (killer:isMaskFull(killer:getVar("JADE_STRATUM_II"),1) == true) then
-                 killer:addKeyItem(JADE_STRATUM_ABYSSITE_III);
-                 killer:delKeyItem(JADE_STRATUM_ABYSSITE_II);
+           killer:addKeyItem(JADE_STRATUM_ABYSSITE_III);
+           killer:delKeyItem(JADE_STRATUM_ABYSSITE_II);
         end
     end
     killer:addCurrency("bayld", 50);
