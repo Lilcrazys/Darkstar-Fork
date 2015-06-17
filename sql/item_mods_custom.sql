@@ -14132,3 +14132,29 @@ INSERT INTO `item_mods` VALUES (28293, 68, 55); -- Evasion
 INSERT INTO `item_mods` VALUES (28293, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (28293, 28, 20); -- Mab
 INSERT INTO `item_mods` VALUES (28293, 296, 5); -- ConserveMP
+
+
+-- hecates_earring (11698)
+INSERT INTO `item_mods` VALUES (11698, 28, 6); -- Matt
+
+
+
+-- psychist_shield (10801)
+INSERT INTO `item_mods` VALUES (10801, 1, 17); -- Def
+INSERT INTO `item_mods` VALUES (10801, 5, 50); -- MP
+INSERT INTO `item_mods` VALUES (10801, 13, 4); -- Mnd
+
+
+INSERT INTO `item_mods` VALUES (10753, 1, 20);
+
+
+
+INSERT INTO `item_mods` VALUES (11038, 23, 7); -- Mnd
+
+
+INSERT INTO `item_mods` VALUES (19270, 5, 5); -- MP
+INSERT INTO `item_mods` VALUES (19270, 13, 2); -- Mnd
+
+
+INSERT INTO `item_mods` VALUES (19767, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES (19767, 25, 4); -- Acc

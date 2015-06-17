@@ -374,3 +374,5 @@ INSERT INTO `item_mods_pet` VALUES (28418, 288, 4); -- Pet: Double Att
 INSERT INTO `item_mods_pet` VALUES (28630, 2, 1000); -- Wyvern: HP
 INSERT INTO `item_mods_pet` VALUES (28630, 32, 20); -- Wyvern: Att
 
+INSERT INTO `item_mods_pet` VALUES (11038, 161, -2); -- Wyvern: PDT
+
