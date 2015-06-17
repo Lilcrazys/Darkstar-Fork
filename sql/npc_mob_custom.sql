@@ -775,8 +775,8 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- INSERT INTO `mob_spawn_points` VALUES (16977926,'Hades_V1','Hades',90080,80,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977927,'Hades_V2','Hades',90081,90,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977928,'Paramount_Botulus','Paramount Botulus',90055,95,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,100,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,95,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977929,'Odin','Odin',90082,100,0,1,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,95,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977933,'Bismark','Bismark',90087,50,100,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977937,'Ashrakk','Ashrakk',90092,70,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977938,'Balamor','Balamor',90093,75,0,1,0);
@@ -788,14 +788,33 @@ INSERT INTO `mob_spawn_points` VALUES (16977930,'Alexander','Alexander',90083,95
 
 -- VoidWatch Ch. 2 Testing Coming Soon!
 
-INSERT INTO `mob_spawn_points` VALUES (16977953,'Krabimanjaro','Krabimanjaro',99999,40,0,1,0);
-
-
--- INSERT INTO `mob_spawn_points` VALUES (16977942,'Vrtra','Vrtra',90501,-10,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977943,'Jormungand','Jormungand',90500,-20,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977944,'Tiamat','Tiamat',90502,-30,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977945,'Bahamut','Bahamut',90503,-30,0,1,0);
-
+INSERT INTO `mob_spawn_points` VALUES (16977922,'Goji','Goji',90420,0,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977923,'Gugalanna','Gugalanna',90421,5,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977924,'Yatagarasu','Yatagarasu',90422,10,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977925,'Agathos','Agathos',90423,15,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977926,'Cherufe','Cherufe',90424,20,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977927,'Taweret','Taweret',90425,25,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977928,'Roly_Poly','Roly Poly',90426,30,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977929,'Laidly_Laurence','Laidly Laurence',90427,35,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977930,'Mellonia','Mellonia',90428,40,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977931,'Kalos_Eunomia','Kalos Eunomia',90429,45,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977932,'Nympha_Eunomia','Nympha Eunomia',90430,50,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977933,'Gasha','Gasha',90431,55,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977934,'Giltine','Giltine',90432,60,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977935,'Kaggen','Kaggen',90433,65,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977936,'Akvan','Akvan',90434,70,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977937,'Pil','Pil',90435,75,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977938,'Lancing_Lamorak','Lancing Lamorak',90436,80,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977939,'Bhishani','Bhishani',90437,85,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977940,'RwNwPrtMHrw','RwNwPrtMHrw',90438,90,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977941,'Stachysaurus','Stachysaurus',90439,95,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977942,'GwynnApnudd','GwynnApnudd',90440,100,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977943,'Smierc','Smierc',90441,105,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977944,'Gaunab','Gaunab',90442,110,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977945,'Ocythoe','Ocythoe',90443,115,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977946,'Kalasutrax','Kalasutrax',90444,120,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977947,'Ig-Alima','Ig-Alima',90445,125,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977948,'Botulus_Rex','Botulus Rex',90446,130,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.
