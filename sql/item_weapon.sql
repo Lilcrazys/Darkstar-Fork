@@ -1958,7 +1958,7 @@ INSERT INTO `item_weapon` VALUES (18332,'relic_gun',26,1,0,0,0,1,1,759,1,0);
 INSERT INTO `item_weapon` VALUES (18333,'marksman_gun',26,1,0,0,0,1,1,360,1,0);
 INSERT INTO `item_weapon` VALUES (18334,'dynamis_gun',26,1,0,0,0,1,1,360,39,0);
 INSERT INTO `item_weapon` VALUES (18335,'ferdinand',26,1,0,0,0,1,1,360,47,0);
-INSERT INTO `item_weapon` VALUES (18336,'annihilator',26,2,0,0,0,6,1,342,47,0);
+INSERT INTO `item_weapon` VALUES (18336,'annihilator',26,1,0,0,0,6,1,342,47,0);
 INSERT INTO `item_weapon` VALUES (18337,'annihilator',26,1,0,0,0,6,1,582,59,0);
 INSERT INTO `item_weapon` VALUES (18338,'relic_horn',42,0,0,0,0,0,1,0,0,0);
 INSERT INTO `item_weapon` VALUES (18339,'pyrrhic_horn',42,0,0,0,0,0,1,0,0,0);
