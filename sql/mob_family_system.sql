@@ -736,7 +736,7 @@ INSERT INTO `mob_family_system` VALUES (1121,'Agathos',8,'Bird',4,40,100,120,3,3
 INSERT INTO `mob_family_system` VALUES (1122,'Cherufe',14,'Lizard',1,40,140,90,2,5,1,6,6,3,3,3,3,3,3,1,1,1,1,1,1.125,1.125,1,1,1,1,1,4);
 INSERT INTO `mob_family_system` VALUES (1123,'Taweret',14,'Lizard',1,40,115,110,1,2,2,3,4,4,3,3,3,3,3,1,1,1,1,1,1.125,1,1,1,1,1,1,1);
 INSERT INTO `mob_family_system` VALUES (1124,'Roly_Poly',1,'Amorph',0,40,70,140,6,3,6,3,1,5,4,3,3,3,3,0.875,1,0.75,0.75,1.25,1.25,1.25,1.125,1.125,1.125,1.125,1.125,6);
-INSERT INTO `mob_family_system` VALUES (1125,'Laidly_Laurence',1,'Amorph',2,40,155,180,2,3,4,3,8,8,5,3,3,3,3,1,1,1,1,0.5,0.5,1.125,0.25,0.25,0.5,1,0.5,4);
+INSERT INTO `mob_family_system` VALUES (1125,'Laidly_Laurence',1,'Amorph',0,40,155,180,2,3,4,3,8,8,5,3,3,3,3,1,1,1,1,0.5,0.5,1.125,0.25,0.25,0.5,1,0.5,4);
 INSERT INTO `mob_family_system` VALUES (1126,'Mellonia',20,'Vermin',0,40,90,120,4,1,4,2,3,6,6,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
 INSERT INTO `mob_family_system` VALUES (1127,'Kalos_Eunomia',20,'Vermin',1,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,0.5,1.125,1,1,1,1,1,1,1);
 INSERT INTO `mob_family_system` VALUES (1128,'Nympha_Eunomia',20,'Vermin',0,45,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,0.875,1.125,1,1,1,1,1,1,1);
