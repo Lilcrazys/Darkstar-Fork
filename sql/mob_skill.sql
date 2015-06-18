@@ -5454,7 +5454,6 @@ INSERT INTO `mob_skill` VALUES (1539,1129,229,'Malediction',1,20.0,2000,1500,4,0
 -- INSERT INTO `mob_skill` VALUES (????,1129,223,'Crepuscle_Blade',1,20.0,2000,1500,4,0,0,3);
 
 -- Giltine (1130)
-INSERT INTO `mob_skill` VALUES (274,1130,900,'Memento_Mori',0,15.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (275,1130,901,'Silence_Seal',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (276,1130,902,'Envoutement',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1073,1130,903,'Gala_Macabre',1,20.0,2000,2000,4,0,0,0);
