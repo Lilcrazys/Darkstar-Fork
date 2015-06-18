@@ -99,7 +99,7 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 0) == false) then
 	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",0,true);
         end
-        if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),1) == true) then
+        if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
            killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
         end

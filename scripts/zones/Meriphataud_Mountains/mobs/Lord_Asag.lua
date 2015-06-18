@@ -70,7 +70,7 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 0) == false) then
            killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",0,true);
         end
-        if (killer:isMaskFull(kill:getVar("JADE_STRATUM_III"),1) == true) then
+        if (killer:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
             killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
             killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
         end
