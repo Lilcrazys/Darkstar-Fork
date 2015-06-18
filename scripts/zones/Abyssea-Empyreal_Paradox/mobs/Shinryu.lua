@@ -39,14 +39,14 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_STUNRES,100);
+    mob:setMod(MOD_STUNRES,10000);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 125);
     mob:addMod(MOD_MDEF, 25);
     mob:setMod(MOD_HUMANOID_KILLER, 7);
-    mob:setMod(MOD_TERRORRES, 100);
+    mob:setMod(MOD_TERRORRES, 10000);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
