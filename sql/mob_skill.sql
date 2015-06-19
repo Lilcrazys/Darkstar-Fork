@@ -5367,7 +5367,6 @@ INSERT INTO `mob_skill` VALUES (2166,1118,1678,'VW_Dark_mist',1,20.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2167,1118,1680,'VW_Triumphant_roar',0,7.0,2000,1000,1,0,0,0); -- Standing Only.
 INSERT INTO `mob_skill` VALUES (2168,1118,1681,'VW_Terror_eye',4,20.0,2000,1000,4,0,0,0); -- Standing Only.
 INSERT INTO `mob_skill` VALUES (2169,1118,1679,'VW_Bloody_claw',0,15.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2170,1118,1683,'Shadow_burst',1,20.0,2000,1000,4,0,0,0); -- script
 
 -- Gugalanna (1119)
 INSERT INTO `mob_skill` VALUES(2384,1119,852,'VW_Ruinous_Scythe',1,20.0,2000,1500,4,0,0,1);
@@ -5376,7 +5375,7 @@ INSERT INTO `mob_skill` VALUES(1104,1119,855,'VW_Apocalyptic_Ray',4,20.0,2000,15
 INSERT INTO `mob_skill` VALUES(2133,1119,851,'VW_Lethal_Triclip',1,15.0,2000,1500,4,0,0,3);
 
 -- Yatagarasu (1120)
-INSERT INTO `mob_skill` VALUES(666,1120,143,'Blind_Vortex',0,7.0,2000,1500,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES(666,1120,143,'VW_Blind_Vortex',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(667,1120,144,'VW_Giga_Scream',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(668,1120,145,'VW_Dread_Dive',1,15.0,2000,1500,4,0,0,2);
 INSERT INTO `mob_skill` VALUES(145,1120,145,'VW_Gliding_Spike',1,7.0,2000,1500,4,0,0,3);
@@ -5404,18 +5403,15 @@ INSERT INTO `mob_skill` VALUES(2387,1123,820,'VW_Tyrant_Tusk',4,15.0,2000,1500,4
 
 -- Roly_Poly (1124)
 INSERT INTO `mob_skill` VALUES (1565,1124,1283,'VW_Amplification',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1566,1124,1284,'Boiling_Point',4,16.0,2000,1500,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (1566,1124,1284,'VW_Boiling_Point',4,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1570,1124,1288,'VW_Synergism',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1567,1124,1285,'Xenoglossia',0,15.0,2000,1500,1,0,0,0); -- script
-INSERT INTO `mob_skill` VALUES (1569,1124,1287,'Amorphic_scythe',4,15.0,2000,1500,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (1569,1124,1287,'VW_Amorphic_scythe',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1568,1124,1286,'VW_Amorphic_spikes',4,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2515,1124,1288,'Gush_o_Goo',1,20.0,2000,1500,4,0,0,3); -- script
+INSERT INTO `mob_skill` VALUES (2515,1124,1287,'Gush_o_Goo',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2521,1124,432,'Benediction',1,20.0,2000,0,1,2,0,0);
 
 -- Laidly_Laurence (1125)
 INSERT INTO `mob_skill` VALUES (1934,1125,1540,'VW_Extreme_Purgation',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1935,1125,1541,'Desiccation',0,10.0,2000,1000,4,0,0,0); -- script
-INSERT INTO `mob_skill` VALUES (1936,1125,1542,'Doomvoid',1,20.0,2000,1000,4,0,0,0); -- script
 INSERT INTO `mob_skill` VALUES (2348,1125,1538,'VW_Gorge',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2349,1125,1542,'VW_Disgorge',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (432,1125,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0,0);
@@ -5423,10 +5419,10 @@ INSERT INTO `mob_skill` VALUES (432,1125,432,'Mighty_Strikes',0,7.0,2000,0,1,2,0
 -- Mellonia (1126)
 INSERT INTO `mob_skill` VALUES (1902,1126,1567,'VW_Insipid_Nip',0,15.0,2000,1500,4,0,0,2);
 INSERT INTO `mob_skill` VALUES (1903,1126,1568,'VW_Pandemic_Nip',0,15.0,2000,1500,4,0,0,2);
-INSERT INTO `mob_skill` VALUES (1904,1126,1569,'Bombilation',1,15.0,2000,1500,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (1904,1126,1569,'Bombilation',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1905,1126,1570,'VW_Cimicine_Discharge',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1906,1126,1571,'Emetic_Discharge',1,15.0,2000,1000,4,0,0,0); -- script
-INSERT INTO `mob_skill` VALUES (2514,1126,1569,'Booming_Bombilation',1,20.0,2000,1500,4,0,0,4); -- script
+INSERT INTO `mob_skill` VALUES (1906,1126,1571,'VW_Emetic_Discharge',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2514,1126,1569,'Booming_Bombilation',1,20.0,2000,1500,4,0,0,4);
 
 -- Kalos_Eunomia (1127)
 INSERT INTO `mob_skill` VALUES (1695,1127,1345,'VW_Magma_Fan',4,15.0,2000,1000,4,0,0,0);
@@ -5451,12 +5447,11 @@ INSERT INTO `mob_skill` VALUES (228,1129,228,'VW_Black_Cloud',1,15.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (229,1129,229,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (900,1129,229,'VW_Marrow Drain',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1539,1129,229,'VW_Malediction',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2511,1129,223,'Crepuscle_Blade',1,20.0,2000,1500,4,0,0,3); -- script
+INSERT INTO `mob_skill` VALUES (2511,1129,223,'Crepuscle_Blade',1,20.0,2000,1500,4,0,0,3);
 
 -- Giltine (1130)
 INSERT INTO `mob_skill` VALUES (275,1130,901,'VW_Silence_Seal',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (276,1130,902,'VW_Envoutement',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1073,1130,903,'Gala_Macabre',1,20.0,2000,2000,4,0,0,0); -- script
 INSERT INTO `mob_skill` VALUES (274,1130,1070,'VW_Final_Retribution',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2382,1130,1070,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
 
@@ -5467,28 +5462,28 @@ INSERT INTO `mob_skill` VALUES (2496,1131,1926,'VW_Raptorial_Claw',1,15.0,2000,1
 INSERT INTO `mob_skill` VALUES (2497,1131,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2498,1131,1928,'VW_Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2500,1131,1924,'Death_Prophet',1,10.0,8000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2599,1131,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (2599,1131,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
 
 -- Akvan (1132)
 INSERT INTO `mob_skill` VALUES (292,1132,292,'VW_Blindeye',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (293,1132,293,'VW_Eyes_On_Me',0,15.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (295,1132,295,'VW_Mind_Break',4,25.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (301,1132,301,'VW_Level_5_Petrify',1,20.0,2000,1500,4,0,0,0); -- make petro gaze special
-INSERT INTO `mob_skill` VALUES (2512,1132,292,'Deathly_Glare',0,20.0,2000,1500,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (301,1132,301,'VW_Level_5_Petrify',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2512,1132,292,'Deathly_Glare',0,20.0,2000,1500,4,0,0,0);
 
 -- Pil (1133)
 INSERT INTO `mob_skill` VALUES (2316,1133,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2436,1133,1812,'VW_Royal_decree',1,18.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2519,1133,1791,'Tabbiyaa_Gambit',1,30.0,2000,1000,4,0,0,0); -- script
-INSERT INTO `mob_skill` VALUES (2520,1133,1811,'Shah_Mat',1,30.0,2000,1000,4,0,0,0); -- script
-INSERT INTO `mob_skill` VALUES (2518,1133,1812,'Flank_Opening',1,30.0,2000,1000,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (2519,1133,1791,'Tabbiyaa_Gambit',1,30.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1133,1811,'Shah_Mat',1,30.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2518,1133,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
 
 -- Lancing_Lamorak (1134)
 INSERT INTO `mob_skill` VALUES (82,1134,82,'VW_Power_Attack_Beetle',4,30.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (83,1134,83,'VW_Hi-Freq_Field',4,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (84,1134,84,'VW_Rhino_Attack',0,7.0,2000,1500,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (85,1134,85,'VW_Rhino_Guard',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2567,1134,84,'Rhinowrecker',1,20.0,2000,1500,4,0,0,7); -- script
+INSERT INTO `mob_skill` VALUES (2567,1134,84,'Rhinowrecker',1,20.0,2000,1500,4,0,0,7);
 
 -- Bhishani (1135)
 INSERT INTO `mob_skill` VALUES (1939,1135,1583,'VW_Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
@@ -5497,7 +5492,7 @@ INSERT INTO `mob_skill` VALUES (1941,1135,1585,'VW_Autumn_Breeze',1,15.0,2000,15
 INSERT INTO `mob_skill` VALUES (1942,1135,1586,'VW_Winter_Breeze',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1943,1135,1587,'VW_Cyclonic_Turmoil',1,25.0,2000,1500,4,0,0,5);
 INSERT INTO `mob_skill` VALUES (2262,1135,1582,'VW_Norn_Arrows',1,20.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2566,1135,1587,'Eldritch_Wind',1,30.0,2000,1500,4,0,0,3); -- script
+INSERT INTO `mob_skill` VALUES (2566,1135,1587,'Eldritch_Wind',1,30.0,2000,1500,4,0,0,3);
 
 -- RwNwPrtMHrw (1136)
 -- INSERT INTO `mob_skill` VALUES (2570,1136,????,'Exponential_Burst',1,20.0,8000,1000,4,0,0,7); -- script
@@ -5508,11 +5503,11 @@ INSERT INTO `mob_skill` VALUES (1844,1137,1436,'VW_Clobber',4,26.0,2000,1000,4,0
 INSERT INTO `mob_skill` VALUES (1845,1137,1434,'VW_Demoralizing_Roar',1,16.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1846,1137,1435,'Boiling_Blood',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1847,1137,1439,'VW_Granite_Skin',0,7.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1848,1137,1436,'Crippling_Slam',4,30.0,2000,1000,4,0,0,7); -- script
+INSERT INTO `mob_skill` VALUES (1848,1137,1436,'Crippling_Slam',4,30.0,2000,1000,4,0,0,7);
 
 -- GwynnApnudd (1138)
 INSERT INTO `mob_skill` VALUES (2255,1138,1463,'VW_Corpse_Breath',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2569,1138,1463,'Louring_Skies',1,30.0,2000,1500,4,0,0,0); -- script
+INSERT INTO `mob_skill` VALUES (2569,1138,1463,'Louring_Skies',1,30.0,2000,1500,4,0,0,0);
 
 -- Smierc (1139)
 INSERT INTO `mob_skill` VALUES (222,1139,222,'VW_Hell_Slash',0,15.0,2000,1500,4,0,0,7);
@@ -5521,7 +5516,7 @@ INSERT INTO `mob_skill` VALUES (228,1139,228,'VW_Black_Cloud',1,15.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (229,1139,229,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (900,1139,229,'VW_Marrow Drain',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1539,1139,229,'VW_Malediction',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2568,1139,223,'Cloudscourge',1,30.0,2000,1500,4,0,0,7); -- script
+INSERT INTO `mob_skill` VALUES (2568,1139,223,'Cloudscourge',1,30.0,2000,1500,4,0,0,7);
 
 -- Gaunab (1140)
 -- needs aoe melee
@@ -5530,8 +5525,8 @@ INSERT INTO `mob_skill` VALUES (2496,1140,1926,'VW_Raptorial_Claw',1,15.0,2000,1
 INSERT INTO `mob_skill` VALUES (2497,1140,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2498,1140,1928,'VW_Macerating_Bile',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2500,1140,1924,'Death_Prophet',1,15.0,8000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2599,1140,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0); -- script
-INSERT INTO `mob_skill` VALUES (2553,1140,1926,'Immolating_Claw',1,25.0,2000,1000,4,0,0,3); -- script
+INSERT INTO `mob_skill` VALUES (2599,1140,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2553,1140,1926,'Immolating_Claw',1,25.0,2000,1000,4,0,0,3);
 
 -- Ocythoe (1141)
 INSERT INTO `mob_skill` VALUES (2469,1141,1912,'VW_Rending_talons',0,15.0,2000,1000,4,0,0,3);
@@ -5547,7 +5542,7 @@ INSERT INTO `mob_skill` VALUES (2465,1142,1907,'VW_Raksha_Vengeance',1,20.0,2000
 INSERT INTO `mob_skill` VALUES (2464,1142,1906,'VW_Raksha_Illusion',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2463,1142,1905,'VW_Raksha_Judgment',1,20.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2462,1142,1904,'VW_Raksha_Stance',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2554,1142,1901,'Yamas_Jugement',1,25.0,2000,1000,4,0,0,5); -- script
+INSERT INTO `mob_skill` VALUES (2554,1142,1901,'Yamas_Jugement',1,25.0,2000,1000,4,0,0,5);
 
 -- Ig-Alima (1143)
 INSERT INTO `mob_skill` VALUES (2525,1143,1953,'VW_Gallu_Triple',4,10.0,2000,0,4,16,0,3);

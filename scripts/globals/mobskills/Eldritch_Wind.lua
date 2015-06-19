@@ -1,11 +1,9 @@
 ---------------------------------------------
---  Dread Wind
---
---  Description: A hot wind deals Fire damage to enemies within a very wide area of effect. Additional effect: Plague
+--  Eldritch_Wind
+--  AoE damage, full dispel, Addle, and Plague
 --  Type: Magical
 --  Utsusemi/Blink absorb: Wipes shadows
 --  Range: 30' radial.
---  Notes: Used only by Tiamat, Smok and Ildebrann
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -17,12 +15,20 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_TERROR;
+    local dispel =  target:dispelAllStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
 
-    MobStatusEffectMove(mob, target, typeEffect, 10, 0, 20);
+    if(dispel == 0) then
+        -- no effect
+        skill:setMsg(MSG_NO_EFFECT); -- no effect
+    else
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+    end
 
-    local dmgmod = 1;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_FIRE,dmgmod,TP_NO_EFFECT);
+	MobStatusEffectMove(mob, target, EFFECT_ADDLE, 60, 3, 90);
+	MobStatusEffectMove(mob, target, EFFECT_PLAGUE, 30, 0, 90);
+
+    local dmgmod = 4;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_FIRE,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_WIPE_SHADOWS);
     target:delHP(dmg);
     return dmg;
