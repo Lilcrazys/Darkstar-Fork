@@ -3,10 +3,10 @@
 -- NPC:  Kholomodumo
 -----------------------------------
 
-require("scripts/globals/titles");
+-- require("scripts/globals/titles"); THIS ISN'T USED YET, THEREFORE SHOULD NOT BE HERE YET.
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
+-- require("scripts/globals/utils"); THIS ISN'T USED YET, THEREFORE SHOULD NOT BE HERE YET.
 require("scripts/globals/keyitems");
 
 -----------------------------------
@@ -14,7 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
+    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID());
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 end;
 
@@ -64,12 +64,12 @@ end;
 -----------------------------------
 
 function onSpikesDamage(mob,target,damage)
-    if (mob:hasStatusEffect(EFFECT_CURSE_SPIKES)
-    and (mob:hasStatusEffect(EFFECT_DAMAGE_SPIKES))
-    and (mob:hasStatusEffect(EFFECT_BLAZE_SPIKES))) then
-        -- Not implemented -> target:addStatusEffectEx(EFFECT_CURSE_II, EFFECT_CURSE, 25, 0 , 30);
-        target:addStatusEffect(EFFECT_CURSE, 25, 0 , 30);
-        return SUBEFFECT_CURSE_SPIKES, 166, EFFECT_CURSE;
+    if (mob:hasStatusEffect(EFFECT_CURSE_SPIKES)) then
+        -- EFFECT_CURSE_II is not implemented (prevents cure/healing)
+        -- target:addStatusEffect(EFFECT_CURSE_II, 25, 0, 30);
+        target:addStatusEffect(EFFECT_CURSE_I, 25, 0, 30);
+        return SUBEFFECT_CURSE_SPIKES, 0, 0; -- Zero'd because effing message doesn't work for any status effect spikes.
+        -- return SUBEFFECT_CURSE_SPIKES, 166, EFFECT_CURSE_II);
     elseif (mob:hasStatusEffect(EFFECT_DAMAGE_SPIKES) or mob:hasStatusEffect(EFFECT_BLAZE_SPIKES)) then
         return SUBEFFECT_BLAZE_SPIKES, 44, damage;
     else
@@ -82,15 +82,16 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 75);
+    killer:addExp(10000);
+
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_III)) then -- Kholomodumo Kill
         if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_III"), 1) == false) then
-	       killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
+           killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
         end
         if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM_III"),2) == true) then
            killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
            killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
         end
-    end
-    killer:addCurrency("bayld", 75);
-    killer:addExp(10000);
+    end;
 end;
