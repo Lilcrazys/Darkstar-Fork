@@ -39,7 +39,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_STUNRES,10000);
+    mob:setMod(MOD_STUNRES,1000);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 2500);
@@ -93,12 +93,34 @@ function onMobFight(mob, target)
         if (Shinryu_2hr_Used == 1) then
             mob:useMobAbility(432); -- MS
             mob:setLocalVar("Shinryu_2hr", 2);
+            mob:setMod(MOD_REGAIN,40);
         end
     elseif (mob:getHPP() <= 70) then
         if (Shinryu_2hr_Used == 0) then
             mob:useMobAbility(432); -- MS
             mob:setLocalVar("Shinryu_2hr", 1);
         end
+    end
+end;
+
+------------------------------------
+-- onSpellPrecast
+------------------------------------
+
+function onSpellPrecast(mob, spell)
+    if (spell:getID() == 218) then -- Meteor
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
+        spell:setAnimation(280); -- AoE Meteor Animation
+        spell:setMPCost(1);
+    end
+    if (spell:getID() == 219) then -- Meteor
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
+        spell:setAnimation(280); -- AoE Meteor Animation
+        spell:setMPCost(1);
     end
 end;
 

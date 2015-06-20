@@ -14,12 +14,12 @@ function onMobSkillCheck(target,mob,skill)
         return 1;
     else
         return 0;
-    end    
+    end
 end;
 
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 1.5;
+    local dmgmod = 2.5;
     local POW = 1;
     -- target:PrintToPlayer(string.format("ATT %u ", mob:getStat(MOD_ATT)));
     -- target:PrintToPlayer(string.format("DEF %u ", target:getStat(MOD_DEF)));
