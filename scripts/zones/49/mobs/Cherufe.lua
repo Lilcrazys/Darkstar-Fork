@@ -28,11 +28,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
-
     -- addMod
     mob:addMod(MOD_MDEF,80);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,250);
+
+    -- vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -72,10 +73,13 @@ function onAdditionalEffect(mob,target,damage)
         end
     end
 
-    if (effect ~= EFFECT_NONE and effect ~= nil) then
+    if (effect ~= EFFECT_NONE) then
+        --[[
+        if (target:isPC()) then
+            target:PrintToPlayer(string.format("effect ID: %i", effect));
+        end
+        ]]
         return SUBEFFECT_DARKNESS_DAMAGE, 168, EFFECT;
-    elseif (effect == nil) then
-        target:PrintToPlayer("Loki we has a probleeeeem!!!");
     else
         return 0, 0, 0;
     end
