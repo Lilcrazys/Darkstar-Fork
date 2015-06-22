@@ -15,6 +15,6 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_ATTACK_DOWN;
-    skill:setMsg(MobBuffMove(mob, typeEffect, 1, 0, 180));
+    skill:setMsg(MobBuffMove(mob, typeEffect, 50, 0, 180));
     return typeEffect;
 end;
