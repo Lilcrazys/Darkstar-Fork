@@ -60,18 +60,24 @@ function onAdditionalEffect(mob,target,damage)
 
     local EFFECT = EFFECT_NONE;
 
-    if (math.random(1,10) ~= 6) then
-        effect = target:dispelStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
+    if (math.random(0,99) < 60) then
+        if (target:hasStatsuEffect(EFFECT_FOOD)) then
+            target:delStatusEffect(EFFECT_FOOD);
+            effect = EFFECT_FOOD;
+        elseif (target:hasStatsuEffect(EFFECT_FIELD_SUPPORT_FOOD)) then
+            target:delStatusEffect(EFFECT_FIELD_SUPPORT_FOOD);
+            effect = EFFECT_FOOD;
+        else
+            effect = target:dispelStatusEffect();
+        end
     end
 
-    if (effect == EFFECT_NONE) then
-        return 0, 0, 0;
-    else
-        -- return SUBEFFECT_LIGHT_DAMAGE, 168, EFFECT;
+    if (effect ~= EFFECT_NONE) then
         return SUBEFFECT_DARKNESS_DAMAGE, 168, EFFECT;
+    else
+        return 0, 0, 0;
     end
 end;
-
 -----------------------------------
 -- onMobDeath
 -----------------------------------
