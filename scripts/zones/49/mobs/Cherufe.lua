@@ -62,15 +62,7 @@ function onAdditionalEffect(mob,target,damage)
     local EFFECT = EFFECT_NONE;
 
     if (math.random(0,99) < 60) then
-        if (target:hasStatusEffect(EFFECT_FOOD)) then
-            target:delStatusEffect(EFFECT_FOOD);
-            effect = EFFECT_FOOD;
-        elseif (target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD)) then
-            target:delStatusEffect(EFFECT_FIELD_SUPPORT_FOOD);
-            effect = EFFECT_FOOD;
-        else
-            effect = target:dispelStatusEffect();
-        end
+        effect = target:dispelStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
     end
 
     if (effect ~= EFFECT_NONE) then
