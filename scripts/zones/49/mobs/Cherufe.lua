@@ -62,13 +62,13 @@ function onAdditionalEffect(mob,target,damage)
     local EFFECT = EFFECT_NONE;
 
     if (math.random(0,99) < 60) then
-        effect = target:dispelStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
+        EFFECT = target:dispelStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
     end
 
-    if (effect ~= EFFECT_NONE) then
+    if (EFFECT ~= EFFECT_NONE) then
         --[[
         if (target:isPC()) then
-            target:PrintToPlayer(string.format("effect ID: %i", effect));
+            target:PrintToPlayer(string.format("Effect ID: %i", EFFECT));
         end
         ]]
         return SUBEFFECT_DARKNESS_DAMAGE, 168, EFFECT;
