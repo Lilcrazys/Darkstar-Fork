@@ -47,7 +47,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > depopTime) then
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
         DespawnMob(mob:getID());
     end
 end;
@@ -61,10 +61,10 @@ function onAdditionalEffect(mob,target,damage)
     local EFFECT = EFFECT_NONE;
 
     if (math.random(0,99) < 60) then
-        if (target:hasStatsuEffect(EFFECT_FOOD)) then
+        if (target:hasStatusEffect(EFFECT_FOOD)) then
             target:delStatusEffect(EFFECT_FOOD);
             effect = EFFECT_FOOD;
-        elseif (target:hasStatsuEffect(EFFECT_FIELD_SUPPORT_FOOD)) then
+        elseif (target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD)) then
             target:delStatusEffect(EFFECT_FIELD_SUPPORT_FOOD);
             effect = EFFECT_FOOD;
         else
@@ -72,8 +72,10 @@ function onAdditionalEffect(mob,target,damage)
         end
     end
 
-    if (effect ~= EFFECT_NONE) then
+    if (effect ~= EFFECT_NONE and effect ~= nil) then
         return SUBEFFECT_DARKNESS_DAMAGE, 168, EFFECT;
+    elseif (effect == nil) then
+        target:PrintToPlayer("Loki we has a probleeeeem!!!");
     else
         return 0, 0, 0;
     end
