@@ -816,6 +816,9 @@ INSERT INTO `mob_spawn_points` VALUES (16977946,'Kalasutrax','Kalasutrax',90444,
 INSERT INTO `mob_spawn_points` VALUES (16977947,'Ig-Alima','Ig-Alima',90445,125,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977948,'Botulus_Rex','Botulus Rex',90446,130,0,1,0);
 
+INSERT INTO `mob_spawn_points` VALUES (16977949,'Gasha2','Gasha',90447,55,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977950,'Gasha3','Gasha',90448,55,0,1,0);
+
 
 -- Super experimental, will not spawn without script or GM command.
 -- INSERT INTO `mob_spawn_points` VALUES (16978938,'Zombaru','Zombaru',96665,-24,0,0,0);

@@ -3,10 +3,12 @@
 -- NPC:
 -----------------------------------
 
+require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
+
 
 -----------------------------------
 -- onMobInitialize Action
@@ -59,6 +61,4 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    -- SpawnMob(mob:getID()+1) -- Spawns Next Form
-    SpawnMob(16977949);
 end;

@@ -60,5 +60,5 @@ end;
 
 function onMobDeath(mob, killer)
     -- SpawnMob(mob:getID()+1) -- Spawns Next Form
-    SpawnMob(16977949);
+    SpawnMob(16977950);
 end;
