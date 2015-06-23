@@ -2374,7 +2374,6 @@ INSERT INTO `item_mods` VALUES (11897, 30, 5); --
 
 INSERT INTO `item_mods` VALUES (11927, 163, -128); -- MDT -50%
 INSERT INTO `item_mods` VALUES (11927, 1, 40); -- Defense
-INSERT INTO `item_mods` VALUES (11927, 385, 250); -- Shield Bash VI
 
 INSERT INTO `item_mods` VALUES (11948, 1, 55); -- Stanch Cuisses Physical damage taken: "Ice Spikes" effect not added
 INSERT INTO `item_mods` VALUES (11948, 10, 5); --
