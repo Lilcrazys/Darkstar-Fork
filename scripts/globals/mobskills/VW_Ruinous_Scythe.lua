@@ -11,7 +11,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 4;
+    local dmgmod = 3.5;
     MobStatusEffectMove(mob, target, EFFECT_STUN, 75, 0, 10);
     MobStatusEffectMove(mob, target, EFFECT_MAX_HP_DOWN, 75, 0, 90);
     MobStatusEffectMove(mob, target, EFFECT_MAX_MP_DOWN, 75, 0, 90);
