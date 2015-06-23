@@ -5404,11 +5404,11 @@ INSERT INTO `mob_skill` VALUES (129,1123,822,'VW_Bone_Crunch',0,15.0,2000,2000,4
 
 -- Roly_Poly (1124)
 INSERT INTO `mob_skill` VALUES (1565,1124,1283,'VW_Amplification',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1566,1124,1284,'VW_Boiling_Point',4,16.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1570,1124,1288,'VW_Synergism',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1566,1124,1283,'VW_Boiling_Point',4,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1570,1124,1285,'VW_Synergism',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1569,1124,1287,'VW_Amorphic_scythe',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1568,1124,1286,'VW_Amorphic_spikes',4,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2515,1124,1287,'Gush_o_Goo',1,20.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2515,1124,1284,'Gush_o_Goo',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2521,1124,432,'Benediction',1,20.0,2000,0,1,2,0,0);
 
 -- Laidly_Laurence (1125)
