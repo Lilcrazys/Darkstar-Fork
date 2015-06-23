@@ -2372,6 +2372,10 @@ INSERT INTO `item_mods` VALUES (11897, 1, 16); -- Schutzen Mittens  "Quick Draw"
 INSERT INTO `item_mods` VALUES (11897, 11, 8); --
 INSERT INTO `item_mods` VALUES (11897, 30, 5); --
 
+INSERT INTO `item_mods` VALUES (11927, 163, -128); -- MDT -50%
+INSERT INTO `item_mods` VALUES (11927, 1, 40); -- Defense
+INSERT INTO `item_mods` VALUES (11927, 385, 250); -- Shield Bash VI
+
 INSERT INTO `item_mods` VALUES (11948, 1, 55); -- Stanch Cuisses Physical damage taken: "Ice Spikes" effect not added
 INSERT INTO `item_mods` VALUES (11948, 10, 5); --
 INSERT INTO `item_mods` VALUES (11948, 68, -5); --
@@ -2873,14 +2877,18 @@ INSERT INTO `item_mods` VALUES (11926, 1, 40); --
 INSERT INTO `item_mods` VALUES (11926, 10, 25); --
 INSERT INTO `item_mods` VALUES (11926, 426, 35);
 INSERT INTO `item_mods` VALUES (11926, 416, 15); -- Custom
+INSERT INTO `item_mods` VALUES (16196, 163, -80); -- MDT -35%
+INSERT INTO `item_mods` VALUES (16196, 1, 40); -- Defense
+INSERT INTO `item_mods` VALUES (16198, 163, -96); -- MDT -45%
+INSERT INTO `item_mods` VALUES (16198, 1, 40); -- Defense
 INSERT INTO `item_mods` VALUES (16199, 1, 40); --
 INSERT INTO `item_mods` VALUES (16199, 10, 25); --
 INSERT INTO `item_mods` VALUES (16199, 426, 35);
 INSERT INTO `item_mods` VALUES (16199, 416, 25); -- Custom
 INSERT INTO `item_mods` VALUES (16199, 109, 106); -- Shield skill   Custom
 
-INSERT INTO `item_mods` VALUES (16200, 109, 106);
-INSERT INTO `item_mods` VALUES (16200, 1, 40);
+INSERT INTO `item_mods` VALUES (16200, 163, -128); -- MDT -50%
+INSERT INTO `item_mods` VALUES (16200, 1, 40); -- Defense
 INSERT INTO `item_mods` VALUES (16203, 1, 7); --
 INSERT INTO `item_mods` VALUES (16203, 5, 10); --
 INSERT INTO `item_mods` VALUES (16203, 12, 7); --
