@@ -135,7 +135,7 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_CURSE_I) == true)) then
+    if ((math.random(1,10) > 3) or (target:hasStatusEffect(EFFECT_CURSE_I) == true)) then
         return 0,0,0;
     else
         local duration = 10;
