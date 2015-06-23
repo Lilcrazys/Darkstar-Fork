@@ -19,7 +19,5 @@ function onMobWeaponSkill(target, mob, skill)
     MobStatusEffectMove(mob, target, EFFECT_DEFENSE_DOWN, 50, 0, 120);
     MobStatusEffectMove(mob, target, EFFECT_MAGIC_DEF_DOWN, 50, 0, 120);
 
-    skill:setMsg(MSG_ENFEEB_IS);
-
 	return typeEffect;
 end;

@@ -24,7 +24,6 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
@@ -34,7 +33,6 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,20);
-    mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,250);
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
@@ -50,8 +48,19 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local Roly_2hr_Used = 0;
+
+    if (mob:getLocalVar("Roly_2hr") ~= nil) then
+        Roly_2hr_Used = mob:getLocalVar("Roly_2hr");
+    end
     if (os.time(t) > mob:getLocalVar("depopTime")) then
         DespawnMob(mob:getID());
+    end
+    if (mob:getHPP() <= 40) then
+        if (Roly_2hr_Used == 0) then
+            mob:useMobAbility(432); -- Benediction
+            mob:setLocalVar("Roly_2hr", 1);
+        end
     end
 end;
 
