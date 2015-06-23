@@ -15,8 +15,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local needles = math.random(1800,15000) / skill:getTotalTargets();
 
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg(),ELE_DARK,dmgmod,TP_MAB_BONUS,1);
-    local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
+    local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
 
     if(target:isUndead() == false) then
         target:delHP(dmg);
