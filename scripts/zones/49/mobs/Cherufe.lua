@@ -28,11 +28,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
-
     -- addMod
     mob:addMod(MOD_MDEF,80);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,250);
+
+    -- vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -61,21 +62,16 @@ function onAdditionalEffect(mob,target,damage)
     local EFFECT = EFFECT_NONE;
 
     if (math.random(0,99) < 60) then
-        if (target:hasStatusEffect(EFFECT_FOOD)) then
-            target:delStatusEffect(EFFECT_FOOD);
-            effect = EFFECT_FOOD;
-        elseif (target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD)) then
-            target:delStatusEffect(EFFECT_FIELD_SUPPORT_FOOD);
-            effect = EFFECT_FOOD;
-        else
-            effect = target:dispelStatusEffect();
-        end
+        EFFECT = target:dispelStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
     end
 
-    if (effect ~= EFFECT_NONE and effect ~= nil) then
+    if (EFFECT ~= EFFECT_NONE) then
+        --[[
+        if (target:isPC()) then
+            target:PrintToPlayer(string.format("Effect ID: %i", EFFECT));
+        end
+        ]]
         return SUBEFFECT_DARKNESS_DAMAGE, 168, EFFECT;
-    elseif (effect == nil) then
-        target:PrintToPlayer("Loki we has a probleeeeem!!!");
     else
         return 0, 0, 0;
     end
