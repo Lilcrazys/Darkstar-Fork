@@ -5424,6 +5424,7 @@ INSERT INTO `mob_skill` VALUES (1904,1126,1569,'Bombilation',1,25.0,2000,1500,4,
 INSERT INTO `mob_skill` VALUES (1905,1126,1570,'VW_Cimicine_Discharge',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1906,1126,1571,'VW_Emetic_Discharge',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2514,1126,1569,'Booming_Bombilation',1,20.0,2000,1500,4,0,0,4);
+INSERT INTO `mob_skill` VALUES (436,1126,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Kalos_Eunomia (1127)
 INSERT INTO `mob_skill` VALUES (1695,1127,1345,'VW_Magma_Fan',4,15.0,2000,1000,4,0,0,0);

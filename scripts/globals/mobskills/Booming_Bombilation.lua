@@ -8,9 +8,9 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 2;
+	local numhits = 1;
 	local accmod = 10;
-	local dmgmod = 3;
+	local dmgmod = math.random(3,6);
 
     MobStatusEffectMove(mob, target, EFFECT_DEFENSE_DOWN, 50, 0, 120);
     MobStatusEffectMove(mob, target, EFFECT_MAGIC_DEF_DOWN, 50, 0, 120);

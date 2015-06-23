@@ -14,20 +14,16 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local dis1 = target:dispelStatusEffect();
-    local dis2 = target:dispelStatusEffect();
+    local dispel =  target:dispelAllStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
 
-
-    if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
-        skill:setMsg(MSG_DISAPPEAR_NUM);
-        return 2;
-    elseif(dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
-        -- dispeled only one
-        skill:setMsg(MSG_DISAPPEAR_NUM);
-        return 1;
-    else
+    if(dispel == 0) then
+        -- no effect
         skill:setMsg(MSG_NO_EFFECT); -- no effect
+    else
+        skill:setMsg(MSG_DISAPPEAR_NUM);
     end
 
-    return 0;
-end;
+    mob:lowerEnmity(target, 70);
+
+    return dispel;
+end

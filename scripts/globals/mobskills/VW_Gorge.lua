@@ -1,6 +1,5 @@
 ---------------------------------------------------
--- Nosferatus Kiss
--- Steals an enemy's HP. Ineffective against undead.
+-- Gorge
 ---------------------------------------------------
 
 require("/scripts/globals/settings");
@@ -14,9 +13,10 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local dmgmod = 3;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg(),ELE_DARK,dmgmod,TP_MAB_BONUS,1);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
+    local needles = math.random(1800,15000) / skill:getTotalTargets();
+
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg(),ELE_DARK,dmgmod,TP_MAB_BONUS,1);
+    local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
     if(target:isUndead() == false) then
         target:delHP(dmg);
@@ -25,5 +25,5 @@ function onMobWeaponSkill(target, mob, skill)
     else
         skill:setMsg(MSG_NO_EFFECT);
     end
-	return dmg;
+    return dmg;
 end;

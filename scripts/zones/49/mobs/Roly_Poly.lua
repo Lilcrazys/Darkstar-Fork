@@ -15,7 +15,6 @@ require("scripts/globals/keyitems");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 end;
 
 -----------------------------------
@@ -50,9 +49,6 @@ end;
 function onMobFight(mob, target)
     local Roly_2hr_Used = 0;
 
-    if (mob:getLocalVar("Roly_2hr") ~= nil) then
-        Roly_2hr_Used = mob:getLocalVar("Roly_2hr");
-    end
     if (os.time(t) > mob:getLocalVar("depopTime")) then
         DespawnMob(mob:getID());
     end
