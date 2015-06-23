@@ -1,11 +1,5 @@
 ---------------------------------------------
 --  Calamitous Wind
---
---  Description: Spins around dealing damage to targets in an area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: 2-4 shadows
---  Range: 10' radial
---  Notes:
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -17,12 +11,25 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 1;
-	local accmod = 1;
-	local dmgmod = 2;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
+
+    local dis1 = target:dispelStatusEffect();
+    local dis2 = target:dispelStatusEffect();
+
+
+    if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+        return 2;
+    elseif(dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
+        -- dispeled only one
+        skill:setMsg(MSG_DISAPPEAR_NUM);
+        return 1;
+    else
+        skill:setMsg(MSG_NO_EFFECT); -- no effect
+    end
+
+	local dmgmod = 4.5;
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_WIND,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WIND,MOBPARAM_WIPE_SHADOWS);
 	target:delHP(dmg);
-	local typeEffect = EFFECT_DISPEL;	
 	return dmg;
 end;

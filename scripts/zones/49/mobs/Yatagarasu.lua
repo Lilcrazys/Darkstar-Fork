@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC: Yatagarasu
+-- NPC: yatagarasu
 -----------------------------------
 
 require("scripts/globals/status");
