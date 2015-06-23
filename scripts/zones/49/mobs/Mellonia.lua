@@ -56,7 +56,7 @@ function onMobFight(mob, target)
     end
     if (mob:getHPP() <= 40) then
         if (Gnat_2hr_Used == 0) then
-            mob:useMobAbility(432); -- Chainspell
+            mob:useMobAbility(436); -- Chainspell
             mob:setLocalVar("Gnat_2hr", 1);
         end
     end

@@ -55,11 +55,9 @@ function onAdditionalEffect(mob,target,damage)
     if ((math.random(1,10) ~= 5) or (target:hasStatusEffect(EFFECT_AMNESIA) == true)) then
         return 0,0,0;
     else
-        local duration = 10;
-        target:addStatusEffect(EFFECT_AMNESIA,1,0,duration);
-        mob:resetEnmity(target);
-        return SUBEFFECT_NONE,163,EFFECT_AMNESIA;
+        target:addStatusEffect(EFFECT_AMNESIA,1,0,10);
     end
+    return SUBEFFECT_NONE,163,EFFECT_AMNESIA;
 end;
 -----------------------------------
 -- onMobDeath

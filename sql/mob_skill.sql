@@ -5447,9 +5447,8 @@ INSERT INTO `mob_skill` VALUES (222,1129,222,'VW_Hell_Slash',0,15.0,2000,1500,4,
 INSERT INTO `mob_skill` VALUES (223,1129,223,'VW_Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (228,1129,228,'VW_Black_Cloud',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (229,1129,229,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (900,1129,229,'VW_Marrow Drain',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1539,1129,229,'VW_Malediction',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2511,1129,223,'Crepuscle_Blade',1,20.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (474,1129,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 
 -- Giltine (1130)
 INSERT INTO `mob_skill` VALUES (275,1130,901,'VW_Silence_Seal',1,25.0,2000,1500,4,0,0,0);

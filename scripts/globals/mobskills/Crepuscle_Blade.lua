@@ -17,10 +17,10 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local numhits = 3;
     local accmod = 10;
-    local dmgmod = 1;
+    local dmgmod = 2;
 
 	MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 50, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_BIO, 10, 100, 60);
+	MobStatusEffectMove(mob, target, EFFECT_BIO, 100, 3, 60);
 
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,1.5,2);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
