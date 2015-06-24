@@ -5443,11 +5443,10 @@ INSERT INTO `mob_skill` VALUES (1563,1128,1294,'VW_Heat_barrier',0,7.0,2000,1000
 INSERT INTO `mob_skill` VALUES (1564,1128,1295,'VW_Vitriolic_shower',4,10.0,2000,1000,4,0,0,0);
 
 -- Gasha (1129)
-INSERT INTO `mob_skill` VALUES (222,1129,222,'VW_Hell_Slash',0,15.0,2000,1500,4,0,0,7);
+INSERT INTO `mob_skill` VALUES (222,1129,1910,'VW_Hell_Slash',0,15.0,2000,1500,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (223,1129,223,'VW_Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (228,1129,228,'VW_Black_Cloud',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (229,1129,229,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2511,1129,223,'Crepuscle_Blade',1,20.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (229,1129,1911,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2511,1129,1905,'Crepuscle_Blade',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (474,1129,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 
 -- Giltine (1130)

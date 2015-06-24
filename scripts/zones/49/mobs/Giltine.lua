@@ -1,14 +1,12 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:
+-- NPC: Gilitine
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-
 
 -----------------------------------
 -- onMobInitialize Action
@@ -16,6 +14,9 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
+    mob:addStatusEffect(EFFECT_SHOCK_SPIKES,50,0,0);
+    mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
 end;
 
 -----------------------------------
@@ -24,20 +25,19 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 200);
+    mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1950);
+    mob:setMod(MOD_MACC,2200);
     mob:setMod(MOD_MATT,125);
-    mob:setMod(MOD_QUAD_ATTACK,25);
 
 
     -- addMod
     mob:addMod(MOD_MDEF,80);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,250);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -51,9 +51,37 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+        DespawnMob(mob:getID());
+    end
+end;
+
+-----------------------------------
+-- onSpikesDamage
+-----------------------------------
+
+function onSpikesDamage(mob,target,damage)
+    local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+
+    if (INT_diff > 20) then
+        INT_diff = 20 + (INT_diff - 20) / 2;
+    end
+
+    local dmg = INT_diff+damage/2;
+    local params = {};
+    params.bonusmab = 0;
+    params.includemab = false;
+    dmg = addBonusesAbility(mob, ELE_THUNDER, target, dmg, params);
+    dmg = dmg * applyResistanceAddEffect(mob,target,ELE_THUNDER,0);
+    dmg = adjustForTarget(target,dmg,ELE_THUNDER);
+
+    if (dmg < 10) then
+        dmg = 10
+    end
+
+    dmg = finalMagicNonSpellAdjustments(mob,target,ELE_THUNDER,dmg);
+
+    return SUBEFFECT_SHOCK_SPIKES,64,dmg;
 end;
 
 -----------------------------------
