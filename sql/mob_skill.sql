@@ -5456,11 +5456,13 @@ INSERT INTO `mob_skill` VALUES (274,1130,1987,'VW_Final_Retribution',1,20.0,2000
 INSERT INTO `mob_skill` VALUES (2382,1130,1992,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
 
 -- Kaggen (1131)
--- needs aoe melee
-INSERT INTO `mob_skill` VALUES (2495,1131,1923,'VW_Slicing_Sickle',4,12.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2360,1131,1923,'Mantis_Melee',0,7.0,2000,1000,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,1131,1926,'Mantis_Melee2',0,7.0,2000,1000,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,1131,1924,'Mantis_Melee_Jump',0,15.0,2000,1000,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2495,1131,1923,'VW_Slicing_Sickle',4,20.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2496,1131,1926,'VW_Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2497,1131,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2498,1131,1928,'VW_Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2497,1131,1927,'VW_Phlegm_Expulsion',1,20.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2498,1131,1928,'VW_Macerating_Bile',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2500,1131,1924,'Death_Prophet',1,10.0,8000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2599,1131,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
 
