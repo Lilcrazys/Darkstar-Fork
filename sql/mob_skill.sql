@@ -4986,16 +4986,6 @@ INSERT INTO `mob_skill` VALUES (2614,987,2006,'Caudal_Capacitor',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2613,987,2005,'Deep_Sea_Dirge',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2612,987,2004,'Echolocation',1,18.0,2000,1000,4,0,0,0);
 
--- Smierc
--- INSERT INTO `mob_skill` VALUES (222,986,222,'Hell_Slash',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (223,986,223,'Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (228,986,228,'Black_Cloud',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (229,986,229,'Blood_Saber',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (900,986,229,'Marrow Drain',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1539,986,229,'Malediction',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2568,986,223,'Cloudscourge',1,20.0,2000,1500,4,0,0,0);
-
-
 -- Ravenous Craklaw (990)
 INSERT INTO `mob_skill` VALUES (2701,990,2180,'Cracklaw_Impenetrable_carapace',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2702,990,2181,'Cracklaw_Rending_Deluge',1,18.0,2000,1000,4,0,0,0);
