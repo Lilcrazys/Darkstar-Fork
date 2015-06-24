@@ -5456,8 +5456,8 @@ INSERT INTO `mob_skill` VALUES (274,1130,1987,'VW_Final_Retribution',1,20.0,2000
 INSERT INTO `mob_skill` VALUES (2382,1130,1992,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
 
 -- Kaggen (1131)
-INSERT INTO `mob_skill` VALUES (2360,1131,1923,'Mantis_Melee',0,7.0,2000,1000,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2361,1131,1926,'Mantis_Melee2',0,7.0,2000,1000,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2360,1131,1922,'Mantis_Melee',0,7.0,2000,1000,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,1131,1923,'Mantis_Melee2',0,7.0,2000,1000,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2362,1131,1924,'Mantis_Melee_Jump',0,15.0,2000,1000,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2495,1131,1923,'VW_Slicing_Sickle',4,20.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2496,1131,1926,'VW_Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
