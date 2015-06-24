@@ -14,7 +14,6 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-    mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
 end;
 
 -----------------------------------
@@ -69,6 +68,7 @@ end;
 function onSpellPrecast(mob, spell)
     local power = math.random(50,150);
     mob:addStatusEffect(EFFECT_SHOCK_SPIKES,power,0,30);
+    mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
 end;
 
 -----------------------------------
