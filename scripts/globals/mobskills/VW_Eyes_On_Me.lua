@@ -16,7 +16,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local dmgmod = mob:getWeaponDmg() * 4;
+	local dmgmod = mob:getWeaponDmg() * 8;
 
 	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_SPECIAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 

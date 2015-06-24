@@ -5466,8 +5466,8 @@ INSERT INTO `mob_skill` VALUES (299,1132,299,'Magic_Barrier',0,7.0,2000,1500,1,0
 -- Pil (1133)
 INSERT INTO `mob_skill` VALUES (2316,1133,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2436,1133,1812,'VW_Royal_decree',1,18.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2519,1133,1791,'Tabbiyaa_Gambit',1,30.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2520,1133,1811,'Shah_Mat',1,30.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2519,1133,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1133,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1133,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
 
 -- Lancing_Lamorak (1134)
