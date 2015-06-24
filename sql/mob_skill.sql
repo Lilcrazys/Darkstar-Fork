@@ -5487,7 +5487,7 @@ INSERT INTO `mob_skill` VALUES (2262,1135,1582,'VW_Norn_Arrows',1,20.0,2000,1500
 INSERT INTO `mob_skill` VALUES (2566,1135,1587,'Eldritch_Wind',1,30.0,2000,1500,4,0,0,3);
 
 -- RwNwPrtMHrw (1136)
--- INSERT INTO `mob_skill` VALUES (2570,1136,????,'Exponential_Burst',1,20.0,8000,1000,4,0,0,7); -- script
+INSERT INTO `mob_skill` VALUES (2570,1136,1657,'Exponential_Burst',1,20.0,8000,1000,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (436,1136,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Stachysaurus (1137)
