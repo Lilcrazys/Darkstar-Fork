@@ -1,11 +1,5 @@
 ---------------------------------------------
---  Fiery Breath
---
---  Description: Deals Fire damage to enemies within a fan-shaped area.
---  Type: Breath
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Unknown cone
---  Notes: Used only by Tiamat, Smok and Ildebrann
+--  Fire Break
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -14,29 +8,16 @@ require("/scripts/globals/utils");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES)) then
-        return 1;
-	elseif(target:isBehind(mob, 48) == true) then
-		return 1;
-    elseif (mob:AnimationSub() ~= 0) then
-        return 1;
-	end
 	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+	local dmgmod = 4;
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_FIRE,dmgmod,TP_MAB_BONUS,1);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
+    target:delMP(dmg);
+	mob:addMP(dmg);
 
-    local dmgmod = MobBreathMove(mob, target, 0.2, 1.25, ELE_FIRE, 1400);
-    
-    local angle = mob:getAngle(target);
-        
-    angle = mob:getRotPos() - angle;
-            
-    dmgmod = dmgmod * ((128-math.abs(angle))/128);
-        
-    utils.clamp(dmgmod, 50, 1600);
-    
-	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
-	target:delHP(dmg);
+    target:delHP(dmg);
 	return dmg;
 end;

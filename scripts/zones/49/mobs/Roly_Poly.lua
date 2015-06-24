@@ -48,11 +48,12 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Roly_2hr_Used = 0;
+    local Roly_2hr_Used = mob:getLocalVar("Roly_2hr");
 
     if (os.time(t) > mob:getLocalVar("depopTime")) then
         DespawnMob(mob:getID());
     end
+
     if (mob:getHPP() <= 40) then
         if (Roly_2hr_Used == 0) then
             mob:useMobAbility(432); -- Benediction

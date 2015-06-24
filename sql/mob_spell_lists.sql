@@ -1535,7 +1535,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 362, 1, 255); -- Bindg
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 274, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 359, 1, 255); -- Silencega
-INSERT INTO `mob_spell_lists` VALUES ('Itzpapalotl', 406, 218, 1, 255); -- Meteor
 
 
 -- Sallow_Seymour
@@ -1728,10 +1727,12 @@ INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 360, 1, 255); -- Dispelg
 INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 35, 1, 255); -- Diaga 3
 INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 41, 1, 255); -- Banihshga 3
--- INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 42, 1, 255); -- Banihshga 4
 INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 31, 1, 255); -- Banish 4
--- INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 32, 1, 255); -- Banish 5
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 32, 1, 255); -- Banish 5
 INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 356, 1, 255); -- Paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 286, 1, 255); -- addle
+INSERT INTO `mob_spell_lists` VALUES ('Alexander', 422, 6, 1, 255); -- Cure VI
+
 
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 182, 1, 255); -- blizzga 4
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 183, 1, 255); -- blizzga 5
@@ -1744,17 +1745,19 @@ INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 273, 1, 255); -- sleepga
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 365, 1, 255); -- breakga
 INSERT INTO `mob_spell_lists` VALUES ('Odin', 423, 360, 1, 255); -- dispelga
 
--- Krabimanjaro Test for Teo (BLU testing spells)
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 643, 1, 255); -- Cannonball
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 646, 1, 255); -- Magic Hammer
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 647, 1, 255); -- zephyr mantle
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 654, 1, 255); -- sub-zero smash
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 687, 1, 255); -- water bomb
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 690, 1, 255); -- white wind
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 696, 1, 255); -- orcish counterstance
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 700, 1, 255); -- natures meditation
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 702, 1, 255); -- rending deluge
-INSERT INTO `mob_spell_lists` VALUES ('Krabimanjaro', 589, 712, 1, 255); -- rail cannon
+-- Giltine
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 198, 1, 255); -- Thundaga 5
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 500, 1, 255); -- thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 366, 1, 255); -- graviga
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 362, 1, 255); -- bindga
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 357, 1, 255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 273, 1, 255); -- sleepga
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 360, 1, 255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 367, 1, 255); -- Death
+INSERT INTO `mob_spell_lists` VALUES ('Giltine', 424, 503, 1, 255); -- Impact
 
 -- list IDs 407 - 589 available for use! please use'em!
 

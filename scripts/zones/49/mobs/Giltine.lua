@@ -51,8 +51,16 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local Boost_Used = mob:getLocalVar("Boost");
+
     if (os.time(t) > mob:getLocalVar("depopTime")) then
         DespawnMob(mob:getID());
+    end
+    if (mob:getHPP() <= 40) then
+        if (Boost_Used == 0) then
+            mob:setMod(MOD_REGAIN, 40);
+            mob:setLocalVar("Boost", 1);
+        end
     end
 end;
 

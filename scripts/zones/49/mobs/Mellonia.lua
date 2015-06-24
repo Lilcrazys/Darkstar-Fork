@@ -49,7 +49,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Gnat_2hr_Used = 0;
+    local Gnat_2hr_Used = mob:getLocalVar("Gnat_2hr")
 
     if (os.time(t) > mob:getLocalVar("depopTime")) then
         DespawnMob(mob:getID());

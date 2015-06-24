@@ -19,7 +19,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local power = 50;
+	local power = 150;
 	local duration = 180;
 	local typeEffect = EFFECT_BLAZE_SPIKES;
 
