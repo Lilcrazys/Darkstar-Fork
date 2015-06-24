@@ -5452,8 +5452,8 @@ INSERT INTO `mob_skill` VALUES (474,1129,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,
 -- Giltine (1130)
 INSERT INTO `mob_skill` VALUES (275,1130,901,'VW_Silence_Seal',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (276,1130,902,'VW_Envoutement',0,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (274,1130,1070,'VW_Final_Retribution',1,20.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2382,1130,1070,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (274,1130,1987,'VW_Final_Retribution',1,20.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2382,1130,1992,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
 
 -- Kaggen (1131)
 -- needs aoe melee
