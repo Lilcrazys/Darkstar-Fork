@@ -5459,9 +5459,9 @@ INSERT INTO `mob_skill` VALUES (2599,1131,1929,'Preying_Posture',0,7.0,2000,1000
 -- Akvan (1132)
 INSERT INTO `mob_skill` VALUES (292,1132,292,'VW_Blindeye',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (293,1132,293,'VW_Eyes_On_Me',0,15.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (295,1132,295,'VW_Mind_Break',4,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (301,1132,301,'VW_Level_5_Petrify',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2512,1132,292,'Deathly_Glare',0,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2512,1132,292,'Deathly_Glare',0,20.0,6000,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (299,1132,299,'Magic_Barrier',0,7.0,2000,1500,1,0,0,0);
 
 -- Pil (1133)
 INSERT INTO `mob_skill` VALUES (2316,1133,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);

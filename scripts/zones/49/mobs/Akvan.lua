@@ -1,14 +1,12 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:
+-- NPC: Akvan
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-
 
 -----------------------------------
 -- onMobInitialize Action
@@ -16,6 +14,7 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -27,10 +26,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_UFASTCAST, 35);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
-    mob:setMod(MOD_QUAD_ATTACK,25);
 
 
     -- addMod
@@ -54,6 +52,19 @@ function onMobFight(mob, target)
     -- if (os.time(t) > depopTime) then
         -- DespawnMob(mob:getID());
     -- end
+end;
+
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,10) > 4) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
+        return 0,0,0;
+    else
+        target:addStatusEffect(EFFECT_STUN,1,0,5);
+    end
+    return SUBEFFECT_STUN,163,EFFECT_STUN;
 end;
 
 -----------------------------------

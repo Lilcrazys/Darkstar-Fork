@@ -60,6 +60,20 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
+-- onSpellPrecast
+-----------------------------------
+
+function onSpellPrecast(mob, spell)
+    if (spell:getID() == 252) then
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
+        spell:setAnimation(252);
+        spell:setMPCost(1);
+    end
+end;
+
+-----------------------------------
 -- onMobDeath
 -----------------------------------
 
