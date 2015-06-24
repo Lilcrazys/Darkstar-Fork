@@ -1828,6 +1828,34 @@ INSERT INTO `mob_spell_lists` VALUES ('Kaggen', 427, 158, 1, 255); -- Aero 5
 INSERT INTO `mob_spell_lists` VALUES ('Kaggen', 427, 499, 1, 255); -- Aeroja
 INSERT INTO `mob_spell_lists` VALUES ('Kaggen', 427, 228, 1, 255); -- Posinga 4
 
+-- RwNwPrtMHrw
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 219, 1, 255); -- Comet
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 356, 1, 255); -- Parlyga
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 362, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 274, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 153, 1, 255); -- Blizzard 5
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 177, 1, 255); -- Firega 4
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 182, 1, 255); -- Blizzaga 4
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 215, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 496, 1, 255); -- Firaja
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 497, 1, 255); -- Blizzaja
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 498, 1, 255); -- Stoneja
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 499, 1, 255); -- Aeroja
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 500, 1, 255); -- Thundaja
+INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 501, 1, 255); -- Waterja
+
 -- list IDs 407 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?

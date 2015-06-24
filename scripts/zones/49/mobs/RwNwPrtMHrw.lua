@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_DRAW_IN, 1);
 end;
 
 -----------------------------------
@@ -25,9 +26,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_UFASTCAST, 45);
     mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,125);
+    mob:setMod(MOD_MATT,115);
 
 
     -- addMod
@@ -48,9 +49,17 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
+    local Book_2hr_Used = mob:getLocalVar("Book_2hr");
+
+    -- if (os.time(t) > mob:getLocalVar("depopTime")) then
+       -- DespawnMob(mob:getID());
     -- end
+    if (mob:getHPP() <= 40) then
+        if (Book_2hr_Used == 0) then
+            mob:useMobAbility(436); -- RDM
+            mob:setLocalVar("Book_2hr", 1);
+        end
+    end
 end;
 
 -----------------------------------
