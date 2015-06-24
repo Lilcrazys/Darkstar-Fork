@@ -1856,6 +1856,25 @@ INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 499, 1, 255); -- Aeroj
 INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 500, 1, 255); -- Thundaja
 INSERT INTO `mob_spell_lists` VALUES ('RwNwPrtMHrw', 428, 501, 1, 255); -- Waterja
 
+-- Smierc
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 496, 1, 255); -- Firaja
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 497, 1, 255); -- Blizzaja
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 498, 1, 255); -- Stoneja
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 499, 1, 255); -- Aeroja
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 500, 1, 255); -- Thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 501, 1, 255); -- Waterja
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 367, 1, 255); -- death
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 356, 1, 255); -- Parlyga
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 362, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 274, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 219, 1, 255); -- Comet
+INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 503, 1, 255); -- Impact
+
 -- list IDs 407 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?

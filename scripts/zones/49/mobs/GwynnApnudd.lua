@@ -1,21 +1,19 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:
+-- NPC: GwynnApnudd
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 end;
 
 -----------------------------------
@@ -24,13 +22,13 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 200);
+    mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_UFASTCAST, 60);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
-    mob:setMod(MOD_QUAD_ATTACK,25);
+    mob:setMod(MOD_REGEN, 100);
 
 
     -- addMod
