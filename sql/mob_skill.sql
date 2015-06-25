@@ -5503,13 +5503,10 @@ INSERT INTO `mob_skill` VALUES (2255,1138,1463,'VW_Corpse_Breath',1,15.0,2000,15
 INSERT INTO `mob_skill` VALUES (2569,1138,1463,'Louring_Skies',1,30.0,2000,1500,4,0,0,0);
 
 -- Smierc (1139)
-INSERT INTO `mob_skill` VALUES (222,1139,222,'VW_Hell_Slash',0,15.0,2000,1500,4,0,0,7);
+INSERT INTO `mob_skill` VALUES (222,1139,1910,'VW_Hell_Slash',0,15.0,2000,1500,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (223,1139,223,'VW_Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (228,1139,228,'VW_Black_Cloud',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (229,1139,229,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (900,1139,229,'VW_Marrow Drain',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1539,1139,229,'VW_Malediction',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2568,1139,223,'Cloudscourge',1,30.0,2000,1500,4,0,0,7);
+INSERT INTO `mob_skill` VALUES (229,1139,1911,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2568,1139,1465,'Cloudscourge',1,30.0,2000,1500,4,0,0,7);
 
 -- Gaunab (1140)
 -- needs aoe melee
