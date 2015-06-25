@@ -7,8 +7,13 @@ require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    if (mob:getLocalVar("stance") == 1) then
+        return 0;
+    else
+        return 1;
+    end
 end;
+
 
 function onMobWeaponSkill(target, mob, skill)
 	local numhits = 1;
