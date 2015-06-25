@@ -5550,10 +5550,10 @@ INSERT INTO `mob_skill` VALUES (2534,1143,1962,'VW_Oblivions_mantle',1,25.0,2000
 INSERT INTO `mob_skill` VALUES (439,1143,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
 
 -- Botulus_Rex (1144)
-INSERT INTO `mob_skill` VALUES (2525,1144,1953,'Botulus_Melee_Front',0,10.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2526,1144,1954,'Botulus_Melee_Left',1,10.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2527,1144,1955,'Botulus_Melee_Right',1,10.0,2000,0,4,16,0,3);
-INSERT INTO `mob_skill` VALUES (2528,1144,1956,'Botulus_Melee_Back',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2525,1144,1964,'Botulus_Melee_Front',0,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2526,1144,1965,'Botulus_Melee_Left',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2527,1144,1966,'Botulus_Melee_Right',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2528,1144,1967,'Botulus_Melee_Back',1,10.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2542,1144,1968,'VW_Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2543,1144,1973,'VW_Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2544,1144,1972,'VW_Chymous_Reek',1,20.0,2000,1500,4,0,0,0);
