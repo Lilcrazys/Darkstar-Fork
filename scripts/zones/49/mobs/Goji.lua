@@ -61,7 +61,7 @@ function onMobFight(mob, target)
            mob:setLocalVar("Wings", mob:getBattleTime());
         elseif (mob:AnimationSub() == 0) then
            mob:AnimationSub(1); -- fly
-           mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+           mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 180);
            mob:setLocalVar("Wings", mob:getBattleTime());
         end
     end
