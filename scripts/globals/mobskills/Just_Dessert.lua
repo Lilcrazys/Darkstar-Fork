@@ -1,10 +1,5 @@
 ---------------------------------------------
---  Bad Breath
---
---  Description: Deals earth damage that inflicts multiple status ailments on enemies within a fan-shaped area originating from the caster.
---  Type: Magical (Earth)
---
---
+-- Just Desert
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -15,15 +10,11 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-
-	MobStatusEffectMove(mob, target, EFFECT_DROWN, (mob:getMainLvl()/10), 3, 60);
-	MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 1, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 15, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_WEIGHT, 50, 0, 60);
-
-	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_EARTH, 900);
-
-	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
-	target:delHP(dmg);
-	return dmg;
+    MobStatusEffectMove(mob, target, EFFECT_DROWN, 100, 3, 120);
+    MobStatusEffectMove(mob, target, EFFECT_STUN, 30, 0, 10);
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_DARK,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_WIPE_SHADOWS);
+    target:delHP(dmg);
+    return dmg;
 end;

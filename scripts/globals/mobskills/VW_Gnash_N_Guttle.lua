@@ -1,10 +1,5 @@
 ---------------------------------------------------
---  Deathgnash
---
---  Description:  Reduces target's HP to 5% of its maximum value, ignores Utsusemi  ,Bind (30 sec)
---  Type: Magical
---  
-
+-- gnash'n guttle
 ---------------------------------------------------
 
 require("/scripts/globals/settings");
@@ -14,30 +9,16 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	local NM = mob:getID();
-	local HP = mob:getHPP();
-	
-	if (NM == 17662476 or NM == 17662481 or NM == 17662486) and (HP < 50) then
-		return 0;
-	end
-	return 1;
+	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+	local typeEffect = EFFECT_MAX_HP_DOWN;
 
-    local targetcurrentHP = target:getHP();
-    local targetmaxHP = target:getMaxHP(); 
-    local hpset=targetmaxHP*0.05;
-   	local typeEffect = EFFECT_BIND;
-		
-	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
-	
-	if(targetcurrentHP > hpset)then     
-		dmg= targetcurrentHP - hpset;
-	else
-		dmg=0;
-	end
-	  
-		target:delHP(dmg);
-	return dmg;
+    MobStatusEffectMove(mob, target, typeEffect, 75, 0, 60);
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_ICE,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_WIPE_SHADOWS);
+    target:delHP(dmg);
+    return dmg;
 end

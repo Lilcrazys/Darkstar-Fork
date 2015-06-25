@@ -1,10 +1,5 @@
 ---------------------------------------------
---  Bad Breath
---
---  Description: Deals earth damage that inflicts multiple status ailments on enemies within a fan-shaped area originating from the caster.
---  Type: Magical (Earth)
---
---
+-- Sloughy Sputum
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -16,14 +11,15 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	MobStatusEffectMove(mob, target, EFFECT_DROWN, (mob:getMainLvl()/10), 3, 60);
-	MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 1, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 15, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_WEIGHT, 50, 0, 60);
+	local numhits = 1;
+	local accmod = 10;
+	local dmgmod = 4;
 
-	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_EARTH, 1200);
+	MobStatusEffectMove(mob, target, EFFECT_DROWN, 75, 3, 180);
+	MobStatusEffectMove(mob, target, EFFECT_WEIGHT, 75, 0, 60);
 
-	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
-	target:delHP(dmg);
+	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_3_SHADOW,info.hitslanded);
+
 	return dmg;
 end;
