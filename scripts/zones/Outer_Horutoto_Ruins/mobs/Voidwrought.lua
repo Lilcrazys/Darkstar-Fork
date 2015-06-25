@@ -65,8 +65,8 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_IV)) then -- Voidwrought Kill
-        if (killer:getMaskBit(killer:getVar("JADE_STRATUM_IV"), 0) == false) then
-	       killer:setMaskBit(killer:getVar("JADE_STRATUM_IV"),"JADE_STRATUM_IV",0,true);
+        if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 0) == false) then
+	       killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
         end
     end
     killer:addCurrency("bayld", 125);

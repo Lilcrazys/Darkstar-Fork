@@ -79,8 +79,8 @@ end;
 
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then -- Havana Kill
-        if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_IV"), 0) == false) then
-	       killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_IV"),"CRIMSON_STRATUM_IV",0,true);
+        if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 2) == false) then
+	       killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
         end
     end
     killer:addCurrency("bayld", 125);
