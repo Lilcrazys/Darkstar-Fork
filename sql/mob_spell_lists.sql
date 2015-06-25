@@ -1875,7 +1875,40 @@ INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 503, 1, 255); -- Impact
 
--- list IDs 407 - 589 available for use! please use'em!
+-- Botulus_Rex
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 496, 1, 255); -- Firaja
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 497, 1, 255); -- Blizzaja
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 498, 1, 255); -- Stoneja
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 499, 1, 255); -- Aeroja
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 500, 1, 255); -- Thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 501, 1, 255); -- Waterja
+INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 218, 1, 255); -- Meteor
+
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 198, 1, 255); -- Thundaga 5
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 229, 1, 255); -- Poisonga 5
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 356, 1, 255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 357, 1, 255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 360, 1, 255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 211, 1, 255); -- Burst 2
+
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 498, 1, 255); -- Stoneja
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 211, 1, 255); -- Quake 2
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 365, 1, 255); -- Breakga
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 501, 1, 255); -- Waterja
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 367, 1, 255); -- death
+
+
+-- list IDs 433 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?

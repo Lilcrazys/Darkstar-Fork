@@ -1,14 +1,11 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:
+-- NPC: Ig-Alima
 -----------------------------------
-
-require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-
 
 -----------------------------------
 -- onMobInitialize Action
@@ -30,7 +27,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
-    mob:setMod(MOD_QUAD_ATTACK,25);
+    mob:SetMobSkillAttack(true);
 
 
     -- addMod
