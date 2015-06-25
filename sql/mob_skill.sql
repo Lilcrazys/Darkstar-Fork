@@ -4911,13 +4911,13 @@ INSERT INTO `mob_skill` VALUES (439,954,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0)
 INSERT INTO `mob_skill` VALUES (435,954,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
 -- Paramount Botulus (955)
-INSERT INTO `mob_skill` VALUES (2542,955,1283,'Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2543,955,1284,'Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2544,955,1286,'Chymous_Reek',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2545,955,1288,'Rancid_Reflux',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2546,955,1289,'Crowning_Flatus',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2547,955,1285,'Slimy_Proposal',1,20.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2548,955,1287,'Just_Desserts',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2542,955,1968,'Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2543,955,1973,'Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2544,955,1972,'Chymous_Reek',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2545,955,1969,'Rancid_Reflux',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2546,955,1971,'Crowning_Flatus',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2547,955,1974,'Slimy_Proposal',1,20.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2548,955,1970,'Just_Desserts',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (436,955,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (435,955,432,'Manafont',0,7.0,2000,0,1,2,0,0);
 
@@ -5509,7 +5509,9 @@ INSERT INTO `mob_skill` VALUES (229,1139,1911,'VW_Blood_Saber',1,25.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (2568,1139,1465,'Cloudscourge',1,30.0,2000,1500,4,0,0,7);
 
 -- Gaunab (1140)
--- needs aoe melee
+INSERT INTO `mob_skill` VALUES (2360,1140,1922,'Mantis_Melee',0,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2361,1140,1923,'Mantis_Melee2',0,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,1140,1924,'Mantis_Melee_Jump',0,15.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2495,1140,1923,'VW_Slicing_Sickle',4,18.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2496,1140,1926,'VW_Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2497,1140,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
@@ -5548,13 +5550,17 @@ INSERT INTO `mob_skill` VALUES (2534,1143,1962,'VW_Oblivions_mantle',1,25.0,2000
 INSERT INTO `mob_skill` VALUES (439,1143,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
 
 -- Botulus_Rex (1144)
-INSERT INTO `mob_skill` VALUES (2542,1144,1283,'VW_Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2543,1144,1284,'VW_Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2544,1144,1286,'VW_Chymous_Reek',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2545,1144,1288,'VW_Rancid_Reflux',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2546,1144,1289,'VW_Crowning_Flatus',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2547,1144,1285,'VW_Slimy_Proposal',1,20.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2548,1144,1287,'VW_Just_Desserts',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2525,1144,1953,'Botulus_Melee_Front',0,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2526,1144,1954,'Botulus_Melee_Left',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2527,1144,1955,'Botulus_Melee_Right',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2528,1144,1956,'Botulus_Melee_Back',1,10.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2542,1144,1968,'VW_Gnash_N_Guttle',4,20.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2543,1144,1973,'VW_Sloughy_Sputum',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2544,1144,1972,'VW_Chymous_Reek',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2545,1144,1969,'VW_Rancid_Reflux',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2546,1144,1971,'VW_Crowning_Flatus',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2547,1144,1974,'VW_Slimy_Proposal',1,20.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2548,1144,1970,'VW_Just_Desserts',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (436,1144,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Vrtra
