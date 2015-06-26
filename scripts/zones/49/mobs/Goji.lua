@@ -72,7 +72,4 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 50);
-    killer:addCurrency("spark_of_eminence", 50);
-    killer:addCurrency("mweya_plasm", 50);
 end;
