@@ -417,7 +417,7 @@ function doLimitBreakReward(player, Reward, tradeFlag)
 				aug_1 = 326; val_1 = 3; aug_2 = 134; val_2 = 2; -- Weapon Skill Acc.+4, Mag.Def.Bns.+3
 			end
 		elseif (Reward == 4) then
-			if (mJob == BRD or mJob == RNG or mJob == COR) then
+			if (mJob == 10 or mJob == 11 or mJob == 17) then -- 10=BRD 11=RNG 17=COR
 				PRIZE = 16246; -- Augmented Viator Cape (RNG and COR only, back slot) for clearing G4
 			else
 				PRIZE = 19219; -- Augmented Iwatsubute (everybody else, ammo slot) for clearing G4
