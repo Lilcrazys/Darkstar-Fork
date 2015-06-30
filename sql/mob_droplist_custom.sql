@@ -678,23 +678,23 @@ INSERT INTO `mob_droplist` VALUES (9213,0,5844,50); -- Champion's Gambir-temp it
 INSERT INTO `mob_droplist` VALUES (9213,0,5845,50); -- Fanatic's Tonic-temp item
 
 -- ------------------ Gnawtooth Gary ------------------------------
-INSERT INTO `mob_droplist` VALUES (9214,0,0,65); -- Clarus Stone
-INSERT INTO `mob_droplist` VALUES (9214,0,0,21); -- Goetia Seal: Feet BLM
-INSERT INTO `mob_droplist` VALUES (9214,0,0,22); -- Goetia Seal: Feet BLM
-INSERT INTO `mob_droplist` VALUES (9214,0,0,222); -- Goetia Seal: Feet BLM
-INSERT INTO `mob_droplist` VALUES (9214,0,0,122); -- Goetia Seal: Feet BLM
-INSERT INTO `mob_droplist` VALUES (9214,0,0,62); -- Caller's Seal: Feet SMN
-INSERT INTO `mob_droplist` VALUES (9214,0,0,63); -- Caller's Seal: Feet SMN
-INSERT INTO `mob_droplist` VALUES (9214,0,0,64); -- Caller's Seal: Feet SMN
-INSERT INTO `mob_droplist` VALUES (9214,0,0,65); -- Caller's Seal: Feet SMN
-INSERT INTO `mob_droplist` VALUES (9214,0,0,63); -- Cirque Seal: Feet PUP
-INSERT INTO `mob_droplist` VALUES (9214,0,0,64); -- Cirque Seal: Feet PUP
-INSERT INTO `mob_droplist` VALUES (9214,0,0,65); -- Cirque Seal: Feet PUP
-INSERT INTO `mob_droplist` VALUES (9214,0,0,66); -- Cirque Seal: Feet PUP
-INSERT INTO `mob_droplist` VALUES (9214,0,0,70); -- Aoidos' Seal: Feet BRD
-INSERT INTO `mob_droplist` VALUES (9214,0,0,71); -- Aoidos' Seal: Feet BRD
-INSERT INTO `mob_droplist` VALUES (9214,0,0,73); -- Aoidos' Seal: Feet BRD
-INSERT INTO `mob_droplist` VALUES (9214,0,0,72); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,19259,223); -- Clarus Stone
+INSERT INTO `mob_droplist` VALUES (9214,0,3193,356); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,3193,356); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,3193,356); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,3193,356); -- Goetia Seal: Feet BLM
+INSERT INTO `mob_droplist` VALUES (9214,0,3204,303); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,3204,303); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,3204,303); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,3204,303); -- Caller's Seal: Feet SMN
+INSERT INTO `mob_droplist` VALUES (9214,0,3207,363); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,3207,363); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,3207,363); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,3207,363); -- Cirque Seal: Feet PUP
+INSERT INTO `mob_droplist` VALUES (9214,0,3199,204); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,3199,204); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,3199,204); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9214,0,3199,204); -- Aoidos' Seal: Feet BRD
 
 -- ------------------ Iku-Turso ------------------------------
 INSERT INTO `mob_droplist` VALUES (9215,0,19057,112); -- Caecus Grip
