@@ -1,25 +1,29 @@
 ---------------------------------------------
---  Vitriolic Barrage
+--  Vitrolic Barrage
 --
---  Description: Shoots multiple needles at enemies within range.
---  Type: Magical (Light)
---
---
+--  Description: Bombards nearby targets with acid, dealing fixed Water damage. Additional effect: Poison 
+--  Type: ??? (Water)
+--  Utsusemi/Blink absorb: Wipes shadows
+--  Range: AoE 10'
+--  Notes: Poison is 20/tic
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
     local needles = 1000 / skill:getTotalTargets();
+    local typeEffect = EFFECT_POISON;
 
-	local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
+    MobStatusEffectMove(mob, target, typeEffect, 20, 3, 60);
 
-	target:delHP(dmg);
-	local typeEffect = EFFECT_POISON;
-	return dmg;
+    local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_WATER,MOBPARAM_WIPE_SHADOWS);
+
+    target:delHP(dmg);
+
+    return dmg;
 end;

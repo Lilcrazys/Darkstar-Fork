@@ -1,38 +1,35 @@
----------------------------------------------
---  Dispelling Wind
+---------------------------------------------------
+--  Mind Purge
 --
---  Description: Dispels two effects from targets in an area of effect.
+--  Description: Dispels all buffs from a single target, including food.
 --  Type: Enfeebling
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: 10' radial
---  Notes:
----------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+--  Utsusemi/Blink absorb: Dispels shadows
+--  Range: Single target
+--  Notes: 
+---------------------------------------------------
 
----------------------------------------------
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
+
+---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local dis1 = target:dispelStatusEffect();
-    local dis2 = target:dispelStatusEffect();
+    local dispel =  target:dispelAllStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
+    local msg; -- to be set later
 
-
-    if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
-        skill:setMsg(MSG_DISAPPEAR_NUM);
-        return 2;
-    elseif(dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
-        -- dispeled only one
-        skill:setMsg(MSG_DISAPPEAR_NUM);
-        return 1;
+    if(dispel == 0) then
+        msg = MSG_NO_EFFECT; -- no effect
     else
-        skill:setMsg(MSG_NO_EFFECT); -- no effect
+        msg = MSG_DISAPPEAR_NUM;
     end
+	
+    skill:setMsg(msg);
 
-    return 0;
-end;
+    return dispel;
+end

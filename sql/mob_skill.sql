@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Serveur: localhost
--- Généré le : Ven 03 Février 2012    22:54
+-- GÃ©nÃ©rÃ© le : Ven 03 FÃ©vrier 2012    22:54
 -- Version du serveur: 6.0.0
 -- Version de PHP: 5.2.9-2
 
@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `dspdb`
+-- Base de donnÃ©es: `dspdb`
 --
 
 -- --------------------------------------------------------
@@ -524,7 +524,7 @@ INSERT INTO `mob_skill` VALUES (139,47,139,'Jet_Stream',0,7.0,2000,1500,4,0,0,0)
 INSERT INTO `mob_skill` VALUES (666,125,143,'Blind_Vortex',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (667,125,144,'Giga_Scream',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (668,125,145,'Dread_Dive',0,7.0,2000,1500,4,0,0,2);
-INSERT INTO `mob_skill` VALUES (669,125,146,'Feather_Barrier',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (146,125,146,'Feather_Barrier',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (670,125,147,'Stormwind',1,15.0,6000,1500,4,0,0,0); -- Animation times may very.
 
 -- INSERT INTO `mob_skill` VALUES (143,?,143,'Scratch',0,7.0,2000,1500,4,0,0,0); -- Used in place of Blind Vortex by certain NM.
@@ -1787,13 +1787,13 @@ INSERT INTO `mob_skill` VALUES (1213,272,1080,'Reactor_Overload',1,8.0,2000,1000
 INSERT INTO `mob_skill` VALUES (474,272,432,'Meikyo_Shisui',0,7.0,2000,0,1,2,0,0);
 
 -- Yovra
--- INSERT INTO `mob_skill` VALUES (1114,271,1022,'Vitriolic_Barrage',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1114,271,1022,'Vitriolic_Barrage',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1115,271,1023,'Primal_Drill',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1116,271,1024,'Concussive_Oscillation',1,15.0,2000,1500,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (1117,271,1025,'Ion_Shower',1,15.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1118,271,1026,'Torrential_Torment',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1119,271,1027,'Asthenic_Fog',1,15.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (1120,271,1028,'Luminous_Drape',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1120,271,1028,'Luminous_Drape',1,10.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1121,271,1029,'Fluorescence',0,7.0,2000,1500,1,0,0,0);
 
 -- Aern H2H fam 3 nin mnk
@@ -2820,8 +2820,8 @@ INSERT INTO `mob_skill` VALUES (2195,1204,15,'altanas_favor',1,18.0,511,3000,4,0
 
 -- Soulflayers
 INSERT INTO `mob_skill` VALUES (1707,233,1327,'Mind_Blast',4,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1708,233,1328,'Immortal_Mind',0,7.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1709,233,1329,'Immortal_Shield',0,7.0,2000,1000,1,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1708,233,1328,'Immortal_Mind',0,7.0,2000,1000,1,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1709,233,1329,'Immortal_Shield',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1710,233,1330,'Mind_Purge',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1711,233,1331,'Tribulation',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1712,233,1332,'Immortal_Anathema',1,15.0,2000,1000,4,0,0,0);

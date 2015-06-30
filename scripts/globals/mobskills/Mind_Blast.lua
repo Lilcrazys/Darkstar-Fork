@@ -1,33 +1,29 @@
 ---------------------------------------------
---  Thunderbolt
+--  Mind Blast
 --
---  Description: Deals thunder damage to enemies within a fan-shaped area originating from the caster.
---  Type: Magical (Thunder)
---
---
+--  Description: Deals lightning damage to an enemy. Additional effect: "Paralysis"
+--  Type: Magical (lightning)
+--  Utsusemi/Blink absorb: Wipes shadows
+--  Range: Cone
+--  Notes: 
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    -- not used in Uleguerand_Range
-    if(mob:getZone() == 5) then
-        return 1;
-    end
     return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local typeEffect = EFFECT_PARALYSIS;
 
-    local typeEffect = EFFECT_STUN;
+    MobStatusEffectMove(mob, target, typeEffect, 20, 0, 180);
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 7);
-
-    local dmgmod = MobBreathMove(mob, target, 0.333, 0.625, ELE_THUNDER, 1100);
-
-    local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_THUNDEr,MOBPARAM_IGNORE_SHADOWS);
-
+    local dmgmod = 1;
+    local accmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*6,ELE_THUNDER,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_THUNDER,MOBPARAM_WIPE_SHADOWS);
     target:delHP(dmg);
     return dmg;
 end;

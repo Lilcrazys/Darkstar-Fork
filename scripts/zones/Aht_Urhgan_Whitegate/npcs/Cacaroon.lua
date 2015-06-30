@@ -17,16 +17,16 @@ require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 
 function onTrade(player,npc,trade)
 
-	if (player:getVar("TOAUM4") == 1)then
-		if((trade:getGil() == 1000 and trade:getItemCount() == 1) or(trade:hasItemQty(2184,1) and trade:getItemCount() == 1))then
-			player:startEvent(0x0bce,0,0,0,0,0,0,0,0,0);
-		end
-	elseif(player:getQuestStatus(AHT_URHGAN,RAT_RACE) == QUEST_ACCEPTED and player:getVar("ratraceCS") == 2) then
-		if(trade:hasItemQty(2184,1) and trade:getItemCount() == 1) then
+    if(player:getQuestStatus(AHT_URHGAN,RAT_RACE) == QUEST_ACCEPTED and player:getVar("ratraceCS") == 2) then
+        if(trade:hasItemQty(2184,1) and trade:getItemCount() == 1) then
 			player:startEvent(0x0352);
-		end
 	end
-end;
+    elseif (player:getVar("TOAUM4") == 1)then
+        if((trade:getGil() == 1000 and trade:getItemCount() == 1) or(trade:hasItemQty(2184,1) and trade:getItemCount() == 1))then
+            player:startEvent(0x0bce,0,0,0,0,0,0,0,0,0);
+        end
+    end
+end; 
 
 -----------------------------------
 -- onTrigger Action
@@ -34,20 +34,18 @@ end;
 
 function onTrigger(player,npc)
 	-- printf("Prog = %u",player:getVar("ratraceCS"));
-	if(player:getCurrentMission(TOAU) == KNIGHT_OF_GOLD and player:getVar("TOAUM4") == 0)then
-		player:startEvent(0x0Bdb,0,0,0,0,0,0,0,0,0);
-return cs;
-
-	elseif (player:getVar("TOAUM4") == 1)then
-		player:startEvent(0x0Bdc,0,0,0,0,0,0,0,0,0);
-	elseif(player:getVar("ratraceCS") == 2) then
-		player:startEvent(0x0355);
-	elseif(player:getVar("ratraceCS") >= 3) then 
-		player:startEvent(0x0356);
-	else
-		player:startEvent(0x00f8);
-	end
-end;
+    if(player:getVar("ratraceCS") == 2) then 
+       player:startEvent(0x0355);
+    elseif(player:getVar("ratraceCS") >= 3) then 
+       player:startEvent(0x0356);
+    elseif(player:getCurrentMission(TOAU) == KNIGHT_OF_GOLD and player:getVar("TOAUM4") == 0)then
+        player:startEvent(0x0bdb,0,0,0,0,0,0,0,0,0);
+    elseif (player:getVar("TOAUM4") == 1)then
+        player:startEvent(0x0bdc,0,0,0,0,0,0,0,0,0);
+    else
+	player:startEvent(0x00f8);
+    end
+end; 
 
 -----------------------------------
 -- onEventUpdate
@@ -65,14 +63,15 @@ end;
 function onEventFinish(player,csid,option)
 --printf("CSID: %u",csid);
 --printf("RESULT: %u",option);
-	if(csid == 0x0352) then
-		player:tradeComplete();
-		player:setVar("ratraceCS",3);
-	elseif(csid == 0x0bdb and option == 1) then
-		player:setVar("TOAUM4",1);
-	elseif(csid == 0x0bce)then
-		player:setVar("TOAUM4",2);
-	end
+    if(csid == 0x0bdb and option == 1) then
+        player:setVar("TOAUM4",1);
+    elseif(csid == 0x0bce)then
+        player:tradeComplete();
+        player:setVar("TOAUM4",2);
+    elseif(csid == 0x0352) then			
+        player:tradeComplete();
+        player:setVar("ratraceCS",3);
+    end
 end;
 
 
