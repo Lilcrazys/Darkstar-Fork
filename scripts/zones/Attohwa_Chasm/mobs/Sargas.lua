@@ -72,7 +72,7 @@ function onSpikesDamage(mob,target,damage)
 
     dmg = finalMagicNonSpellAdjustments(mob,target,ELE_THUNDER,dmg);
 
-    return SUBEFFECT_SHOCK_SPIKES,64,dmg;
+    return SUBEFFECT_SHOCK_SPIKES,44,dmg;
 end;
 
 -----------------------------------
