@@ -15,3 +15,5 @@
 -- New entries below this line, and sorted by itemID please.
 
 REPLACE INTO `item_armor` VALUES (18852,'octave_club',99,0,32767,110,0,0,3,0);
+
+REPLACE INTO `item_armor` VALUES (28641,'vespid_mantle',99,0,2473971,0,0,0,32768,0);
