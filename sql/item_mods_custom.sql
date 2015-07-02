@@ -11846,7 +11846,8 @@ INSERT INTO `item_mods` VALUES (26928, 25, 14); -- ACC
 INSERT INTO `item_mods` VALUES (26928, 68, 19); -- Evasion
 INSERT INTO `item_mods` VALUES (26928, 31, 58); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26928, 29, 3); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES (26928, 170, 13); --  Fastcast
+-- INSERT INTO `item_mods` VALUES (26928, 170, 13); --  Blue Magic Spellcast Time -13%
+INSERT INTO `item_mods` VALUES (26928, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (26928, 369, 2); -- REFRESH
 
 -- hashishin_bazuband (27082)
