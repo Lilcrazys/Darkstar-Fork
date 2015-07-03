@@ -69,7 +69,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	
+	player:addTitle(DYNAMISXARCABARD_INTERLOPER);
+	if (player:hasKeyItem(HYDRA_CORPS_BATTLE_STANDARD) == false)then
+		player:setVar("DynaXarcabard_Win",1);
+		player:addKeyItem(HYDRA_CORPS_BATTLE_STANDARD);
+		player:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_BATTLE_STANDARD);
+	end
+
 	killer:addTitle(LIFTER_OF_SHADOWS);
 	
 	local npc = GetNPCByID(17330778); -- Spawn ???
