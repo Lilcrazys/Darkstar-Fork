@@ -17,6 +17,11 @@ function onTrade(player,npc,trade)
     local DMRepeat = player:getQuestStatus(OUTLANDS,DIVINE_MIGHT_REPEAT);
     local Hour = VanadielHour();
 
+    -- Custom tweak for effing Qu_Hau_Spring so ppl stop bitching about divine might being "broken" when it isn't
+    if (Hour >= 0 and Hour <= 2 and (player:getQuestStatus(OUTLANDS,DIVINE_MIGHT) == QUEST_ACCEPTED or DMRepeat == QUEST_ACCEPTED) and player:getWeather() <= 3) then
+        player:setWeather(0);
+    end
+
     if (player:getWeather() == 0 and Hour >= 0 and Hour <= 2) then
         if ((player:getQuestStatus(OUTLANDS,DIVINE_MIGHT) == QUEST_ACCEPTED or DMRepeat == QUEST_ACCEPTED) and
             trade:hasItemQty(1408,1) and trade:hasItemQty(917,1) and trade:getItemCount() == 2) then
