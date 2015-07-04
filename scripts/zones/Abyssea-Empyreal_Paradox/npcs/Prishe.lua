@@ -169,7 +169,7 @@ function onTrade(player,npc,trade)
             PRIZE = 26918
         elseif (trade:hasItemQty(2965, 30) and trade:hasItemQty(11114,1) and trade:getItemCount() == 31) then              --hands
             PRIZE = 27072
-        elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11134,1) and trade:getItemCount() == 31) then              --legs
+        elseif (trade:hasItemQty(2962, 30) and trade:hasItemQty(11134,1) and trade:getItemCount() == 31) then              --legs
             PRIZE = 27257
         elseif (trade:hasItemQty(2930, 30) and trade:hasItemQty(11154,1) and trade:getItemCount() == 31) then              --feet
             PRIZE = 27341
