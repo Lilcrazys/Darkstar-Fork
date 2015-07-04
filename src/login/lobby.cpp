@@ -321,7 +321,7 @@ int32 lobbydata_parse(int32 fd)
             }
 
             // disallow change of pos while 'zoning'
-            fmtQuery = "UPDATE chars SET zoning = 2 WHERE charid = %u";
+            fmtQuery = "UPDATE char_stats SET zoning = 2 WHERE charid = %u";
             Sql_Query(SqlHandle, fmtQuery, charid);
 
             unsigned char Hash[16];
