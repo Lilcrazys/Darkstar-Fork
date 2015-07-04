@@ -10531,7 +10531,7 @@ INSERT INTO `item_armor` VALUES (28345,'karieyh_sollerets',99,100,10689,342,0,0,
 INSERT INTO `item_armor` VALUES (28354,'voltsurge_torge',99,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28366,'gaudryi_necklace',99,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28380,'iqabi_necklace',99,0,4194303,0,0,0,512,0);
-INSERT INTO `item_armor` VALUES (28381,'imbodla_necklace',99,0,1589788,0,0,0,512,0);
+INSERT INTO `item_armor` VALUES (28381,'imbodla_necklace',99,0,1622556,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28388,'tlamiztli_collar',99,0,4194303,0,0,0,6144,0);
 INSERT INTO `item_armor` VALUES (28389,'agitators_collar',99,0,6593,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28390,'fiend_torque',50,0,4194303,0,0,0,512,0);
