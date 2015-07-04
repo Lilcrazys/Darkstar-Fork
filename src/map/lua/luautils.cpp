@@ -970,8 +970,8 @@ int32 GetMobAction(lua_State* L)
 *                                                                       *
 ************************************************************************/
 
-	int32 isValidLS(lua_State* L)
-	{
+int32 isValidLS(lua_State* L)
+{
 	const int8* linkshellName = lua_tostring(L, 1);
 	const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
 	int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
@@ -984,8 +984,9 @@ int32 GetMobAction(lua_State* L)
 	{
 		lua_pushboolean(L, false);
 	}
-		return 1;
-	}
+
+	return 1;
+}
 
 /************************************************************************
 *                                                                       *

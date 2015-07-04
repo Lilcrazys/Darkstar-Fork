@@ -66,9 +66,6 @@ function onSpikesDamage(mob,target,damage)
     dmg = dmg * applyResistanceAddEffect(mob,target,ELE_THUNDER,0);
     dmg = adjustForTarget(target,dmg,ELE_THUNDER);
 
-    if (dmg < 10) then
-        dmg = 10
-    end
 
     dmg = finalMagicNonSpellAdjustments(mob,target,ELE_THUNDER,dmg);
 
