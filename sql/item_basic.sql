@@ -16052,7 +16052,6 @@ INSERT INTO `item_basic` VALUES (27681,0,'maxixi_tiara','maxixi_tiara',1,63552,0
 INSERT INTO `item_basic` VALUES (27682,0,'maxixi_tiara','maxixi_tiara',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (27683,0,'academics_mortarboard','academics_mboard',1,63552,0,1,0);
 
-INSERT INTO `item_basic` VALUES (27696,0,'hachiya_hatsuburi_+1','hachiya_hatsuburi_+1',1,63552,0,1,0);
 
 INSERT INTO `item_basic` VALUES (27710,0,'sahip_helm','sahip_helm',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27720,0,'umbani_cap','umbani_cap',1,63568,0,1,0);
@@ -16148,7 +16147,6 @@ INSERT INTO `item_basic` VALUES (27824,0,'foire_tobe','foire_tobe',1,63552,0,1,0
 INSERT INTO `item_basic` VALUES (27825,0,'maxixi_casaque','maxixi_casaque',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27826,0,'maxixi_casaque','maxixi_casaque',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (27827,0,'academics_gown','academics_gown',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27840,0,'hachiya_chainmail_+1','hachiya_chainmail_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27856,0,'mekosuchinae_harness','mekosuchinae_harness',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27862,0,'savas_jawshan','savas_jawshan',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27868,0,'ischemia_chasuble','ischemia_chasuble',1,63552,0,1,0);
@@ -16236,7 +16234,6 @@ INSERT INTO `item_basic` VALUES (27961,0,'maxixi_bangles','maxixi_bangles',1,635
 INSERT INTO `item_basic` VALUES (27962,0,'maxixi_bangles','maxixi_bangles',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (27963,0,'academics_bracers','academics_bracers',1,63552,0,1,0);
 
-INSERT INTO `item_basic` VALUES (27976,0,'hachiya_tekko_+1','hachiya_tekko_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27994,0,'macabre_gauntlets_+1','macabre_gauntlets_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27996,0,'shigure_tekko_+1','shigure_tekko_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28009,0,'onimusha_no_kote','onimusha_no_kote',1,63568,0,1,0);
@@ -16318,11 +16315,7 @@ INSERT INTO `item_basic` VALUES (28107,0,'foire_churidars','foire_churidars',1,6
 INSERT INTO `item_basic` VALUES (28108,0,'maxixi_tights','maxixi_tights',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28109,0,'maxixi_tights','maxixi_tights',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28110,0,'academics_pants','academics_pants',1,63552,0,1,0);
-
-INSERT INTO `item_basic` VALUES (28123,0,'hachiya_hakama_+1','hachiya_hakama_+1',1,63552,0,1,0);
-
 INSERT INTO `item_basic` VALUES (28135,0,'assiduity_pants_+1','assiduity_pants_+1',1,63552,0,1,0);
-
 INSERT INTO `item_basic` VALUES (28137,0,'augury_cuisses_+1','augury_cuisses_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28151,0,'sifahir_slacks','sifahir_slacks',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28155,0,'scufflers_cosciales','scufflers_cosciales',1,63568,0,1,0);
@@ -16401,7 +16394,6 @@ INSERT INTO `item_basic` VALUES (28241,0,'maxixi_toe_shoes','maxixi_shoes',1,635
 INSERT INTO `item_basic` VALUES (28242,0,'maxixi_toeshoes','maxixi_toeshoes',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (28243,0,'academics_loafers','academics_loafers',1,63552,0,1,0);
 
-INSERT INTO `item_basic` VALUES (28256,0,'hachiya_kyahan_+1','hachiya_kyahan_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28274,0,'regal_pumps_+1','regal_pumps_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28276,0,'jute_boots_+1','jute_boots_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28287,0,'durgai_leggings','durgai_leggings',1,63568,0,1,0);

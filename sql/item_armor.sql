@@ -10229,7 +10229,6 @@ INSERT INTO `item_armor` VALUES (27679,'laksamanas_tricorne',99,109,65536,167,0,
 INSERT INTO `item_armor` VALUES (27680,'foire_taj',99,109,131072,169,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27681,'maxixi_tiara',99,109,262144,211,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27683,'academics_mortarboard',99,109,524288,214,0,0,16,0);
-INSERT INTO `item_armor` VALUES (27696,'hachiya_hatsuburi_+1',99,119,4096,88,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27710,'sahip_helm',99,119,10689,206,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27720,'umbani_cap',99,119,2593825,330,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27722,'ighwa_cap',99,119,8641,333,0,0,16,0);
@@ -10298,7 +10297,6 @@ INSERT INTO `item_armor` VALUES (27823,'laksamanas_frac',99,109,65536,167,0,0,32
 INSERT INTO `item_armor` VALUES (27824,'foire_tobe',99,109,131072,169,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27825,'maxixi_casaque',99,109,262144,211,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27827,'academics_gown',99,109,524288,214,0,0,32,0);
-INSERT INTO `item_armor` VALUES (27840,'hachiya_chainmail_+1',99,119,4096,88,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27856,'mekosuchinae_harness',99,119,2462754,375,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27862,'savas_jawshan',99,119,2497,203,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27868,'ischemia_chasuble',99,0,1622556,143,0,0,32,0);
@@ -10368,7 +10366,6 @@ INSERT INTO `item_armor` VALUES (27959,'laksamanas_gants',99,109,65536,167,0,0,6
 INSERT INTO `item_armor` VALUES (27960,'foire_dastanas',99,109,131072,169,0,0,64,0);
 INSERT INTO `item_armor` VALUES (27961,'maxixi_bangles',99,109,262144,211,0,0,64,0);
 INSERT INTO `item_armor` VALUES (27963,'academics_bracers',99,109,524288,214,0,0,64,0);
-INSERT INTO `item_armor` VALUES (27976,'hachiya_tekko_+1',99,119,4096,88,0,0,64,0);
 INSERT INTO `item_armor` VALUES (27994,'macabre_gauntlets_+1',99,119,6593,114,0,0,64,0);
 INSERT INTO `item_armor` VALUES (27996,'shigure_tekko_+1',99,119,6146,9,0,0,64,0);
 INSERT INTO `item_armor` VALUES (28009,'onimusha_no_kote',99,119,6146,9,0,0,64,0);
@@ -10435,7 +10432,6 @@ INSERT INTO `item_armor` VALUES (28106,'laksamanas_culottes',99,109,65536,167,0,
 INSERT INTO `item_armor` VALUES (28107,'foire_churidars',99,109,131072,169,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28108,'maxixi_tights',99,109,262144,211,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28110,'academics_pants',99,109,524288,214,0,0,128,0);
-INSERT INTO `item_armor` VALUES (28123,'hachiya_hakama_+1',99,119,4096,88,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28135,'assiduity_pants_+1',99,119,1720844,114,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28137,'augury_cuisses_+1',99,119,2141585,114,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28151,'sifahir_slacks',99,119,4,176,0,0,128,0);
@@ -10501,7 +10497,6 @@ INSERT INTO `item_armor` VALUES (28239,'laksamanas_bottes',99,109,65536,167,0,0,
 INSERT INTO `item_armor` VALUES (28240,'foire_babouches',99,109,131072,169,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28241,'maxixi_toe_shoes',99,109,262144,211,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28243,'academics_loafers',99,109,524288,214,0,0,256,0);
-INSERT INTO `item_armor` VALUES (28256,'hachiya_kyahan_+1',99,119,4096,88,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28287,'durgai_leggings',99,119,2494754,110,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28293,'umbani_boots',99,119,1589788,330,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28294,'xaddi_boots',99,119,10689,365,0,0,256,0);
