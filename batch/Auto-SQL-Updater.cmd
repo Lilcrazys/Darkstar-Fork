@@ -7,8 +7,6 @@ ECHO ---------------------------------
 ECHO Do not add tables to batch unless certain no character/account data will be harmed!
 ECHO ------------------------------------------------------------------
 PAUSE
-ECHO Renaming custom tables to prevent early execution...
-ren *_custom.sql *_custom.txt
 ECHO ---------------------------------
 ECHO Importing misc non character data tables...
 FOR %%X IN (augments.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
@@ -51,9 +49,9 @@ FOR %%X IN (mob*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -
 ECHO ---------------------------------
 FOR %%X IN (npc*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
-ECHO Un-renaming custom tables to allow execution...
-ren *_custom.txt *_custom.sql
+cd ..\sql\custom
 FOR %%X IN (*_custom.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+cd ..\..\sql
 ECHO ---------------------------------
 ECHO Resetting triggers.
 FOR %%X IN (triggers.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
