@@ -4,8 +4,8 @@
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
     if (mob:getLocalVar("stance") == 1) then
         return 0;
@@ -16,15 +16,15 @@ end;
 
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 1;
-	local accmod = 10;
-	local dmgmod = 4;
+    local numhits = 1;
+    local accmod = 10;
+    local dmgmod = 4;
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
 
-	MobStatusEffectMove(mob, target, EFFECT_DOOM, 5, 3, 5);
+    MobStatusEffectMove(mob, target, EFFECT_DOOM, 5, 3, 5);
 
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
-	target:delHP(dmg);
+    target:delHP(dmg);
 
-	return dmg;
+    return dmg;
 end;
