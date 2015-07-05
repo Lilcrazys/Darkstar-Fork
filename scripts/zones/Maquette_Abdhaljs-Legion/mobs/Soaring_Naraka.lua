@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Soaring_Naraka
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -9,6 +8,7 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -33,7 +33,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);  
 
-
     -- addMod
     mob:addMod(MOD_MDEF,45);
     mob:addMod(MOD_DEF,75);
@@ -52,28 +51,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Soaring_Naraka_2hr_Used = 0;
-    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha  
+    local SN_2hr = mob:getLocalVar("Soaring_Naraka_2hr_Used");
+    -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha  
     
-    if (mob:getLocalVar("Soaring_Naraka_2hr_Used") ~= nil) then
-        Soaring_Naraka_2hr_Used = mob:getLocalVar("Soaring_Naraka_2hr_Used");
-    end
-
-    if (mob:getHPP() <= 10) then
-        if (Soaring_Naraka_2hr_Used == 2) then
-            mob:useMobAbility(474); -- MK
-            mob:setLocalVar("Soaring_Naraka_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 30) then
-        if (Soaring_Naraka_2hr_Used == 1) then
-            mob:useMobAbility(435); -- MF
-            mob:setLocalVar("Soaring_Naraka_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 70) then
-        if (Soaring_Naraka_2hr_Used == 0) then
-            mob:useMobAbility(474); -- MK
-            mob:setLocalVar("Soaring_Naraka_2hr_Used", 1);
-        end
+    if (mob:getHPP() <= 10 and SN_2hr == 2) then
+        mob:useMobAbility(474); -- Meikyo Shisui
+        mob:setLocalVar("Soaring_Naraka_2hr_Used", 3);
+    elseif (mob:getHPP() <= 30 and SN_2hr == 1) then
+        mob:useMobAbility(435); -- Manafont
+        mob:setLocalVar("Soaring_Naraka_2hr_Used", 2);
+    elseif (mob:getHPP() <= 70 and SN_2hr == 0) then
+        mob:useMobAbility(474); -- Meikyo Shisui
+        mob:setLocalVar("Soaring_Naraka_2hr_Used", 1);
     end
 end;
 
