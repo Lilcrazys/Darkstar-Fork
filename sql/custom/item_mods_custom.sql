@@ -185,28 +185,6 @@ INSERT INTO `item_mods` VALUES (10514, 30, 11); -- Should be 10  added to compen
 INSERT INTO `item_mods` VALUES (10514, 170, 3); -- Amount unsure
 INSERT INTO `item_mods` VALUES (10514, 27, -3); --
 
-INSERT INTO `item_mods` VALUES (10523, 1, 31);
-INSERT INTO `item_mods` VALUES (10523, 8, 9);
-INSERT INTO `item_mods` VALUES (10523, 10, 9);
-INSERT INTO `item_mods` VALUES (10523, 12, 9);
-INSERT INTO `item_mods` VALUES (10523, 13, 9);
-INSERT INTO `item_mods` VALUES (10523, 23, 15);
-INSERT INTO `item_mods` VALUES (10523, 288, 2);
-
-INSERT INTO `item_mods` VALUES (10528, 1, 28);
-INSERT INTO `item_mods` VALUES (10528, 9, 8);
-INSERT INTO `item_mods` VALUES (10528, 10, 8);
-INSERT INTO `item_mods` VALUES (10528, 11, 8);
-INSERT INTO `item_mods` VALUES (10528, 25, 9);
-INSERT INTO `item_mods` VALUES (10528, 170, 40);
-INSERT INTO `item_mods` VALUES (10528, 384, 30);
-
-INSERT INTO `item_mods` VALUES (10533, 1, 24);
-INSERT INTO `item_mods` VALUES (10533, 6, 3);
-INSERT INTO `item_mods` VALUES (10533, 28, 13);
-INSERT INTO `item_mods` VALUES (10533, 71, 4);
-INSERT INTO `item_mods` VALUES (10533, 312, 8);
-
 INSERT INTO `item_mods` VALUES (10539, 1, 38); --
 INSERT INTO `item_mods` VALUES (10539, 2, 40); --
 INSERT INTO `item_mods` VALUES (10539, 5, 40); --
