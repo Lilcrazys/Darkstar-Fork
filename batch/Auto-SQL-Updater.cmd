@@ -49,9 +49,9 @@ FOR %%X IN (mob*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -
 ECHO ---------------------------------
 FOR %%X IN (npc*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
-cd ..\sql\custom
+cd custom
 FOR %%X IN (*_custom.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-cd ..\..\sql
+cd ..
 ECHO ---------------------------------
 ECHO Resetting triggers.
 FOR %%X IN (triggers.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X

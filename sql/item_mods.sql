@@ -153,12 +153,7 @@ INSERT INTO `item_mods` VALUES (10280, 27, 9); -- Enmity+9
 INSERT INTO `item_mods` VALUES (10280, 384, -20); --  "Slow"+2%
 
 INSERT INTO `item_mods` VALUES (10281, 369, 2);
-
--- Krabat Jacket
-INSERT INTO `item_mods` VALUES (10282, 1, 45);
-INSERT INTO `item_mods` VALUES (10282, 28, 16);
-INSERT INTO `item_mods` VALUES (10282, 369, 2);
-
+INSERT INTO `item_mods` VALUES (10282, 369, 1);
 
 -- -------------------------------------------------------
 -- Vara Brigandine
@@ -19757,7 +19752,7 @@ INSERT INTO `item_mods` VALUES (18264, 23, 20);
 INSERT INTO `item_mods` VALUES (18264, 291, 5);
 INSERT INTO `item_mods` VALUES (18264, 355, 10);
 INSERT INTO `item_mods` VALUES (18264, 506, 160); -- 16% chance of extra dmg.
-INSERT INTO `item_mods` VALUES (18264, 507, 300); -- Occ. 3x dmg / was 2.5 wiki says 3x
+INSERT INTO `item_mods` VALUES (18264, 507, 250); -- Occ. 2.5x dmg
 
 INSERT INTO `item_mods` VALUES (18269, 356, 26);
 
@@ -20754,12 +20749,6 @@ INSERT INTO `item_mods` VALUES (19622, 420, 25); -- Barrage accuracy
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (19720, 365, 5); -- Snap shot (Ranged delay decrease)
 INSERT INTO `item_mods` VALUES (19720, 420, 30); -- Barrage accuracy
-
--- -------------------------------------------------------
--- Memoria Satchet
--- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (19775, 30, 2); -- MACC
-INSERT INTO `item_mods` VALUES (19775, 28, 2); -- MATK
 
 -- -------------------------------------------------------
 -- Gastraphetes (99)
