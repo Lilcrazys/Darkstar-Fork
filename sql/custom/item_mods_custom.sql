@@ -12923,9 +12923,7 @@ INSERT INTO `item_mods` VALUES (26944, 480, 5); -- Absorb damage taken
 INSERT INTO `item_mods` VALUES (26944, 160, -10); -- damage taken
 -- INSERT INTO `item_mods` VALUES (26944, 0, 2); -- reserver for script flag later
 
-
 -- Gavialis_helm
-
 INSERT INTO `item_mods` VALUES (26702, 1, 110);
 INSERT INTO `item_mods` VALUES (26702, 2, 115); -- HP
 INSERT INTO `item_mods` VALUES (26702, 5, 23); -- MP
@@ -12943,10 +12941,7 @@ INSERT INTO `item_mods` VALUES (26702, 31, 53); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26702, 68, 44); -- Evasion
 INSERT INTO `item_mods` VALUES (26702, 384, 80); -- Haste
 
-
 -- mekosuchinae_harness
-
-
 INSERT INTO `item_mods` VALUES (27856, 1, 133);
 INSERT INTO `item_mods` VALUES (27856, 2, 59); -- HP
 INSERT INTO `item_mods` VALUES (27856, 5, 44); -- MP
@@ -12966,9 +12961,7 @@ INSERT INTO `item_mods` VALUES (27856, 68, 49); -- Evasion
 INSERT INTO `item_mods` VALUES (27856, 384, 40); -- Haste
 INSERT INTO `item_mods` VALUES (27856, 369, 2); -- Refresh
 
-
 -- temachtiani_shirt
-
 INSERT INTO `item_mods` VALUES (27884, 1, 65);
 INSERT INTO `item_mods` VALUES (27884, 2, 14); -- HP
 INSERT INTO `item_mods` VALUES (27884, 5, 45); -- MP
@@ -12984,9 +12977,7 @@ INSERT INTO `item_mods` VALUES (27884, 31, 44); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27884, 68, 10); -- Evasion
 INSERT INTO `item_mods` VALUES (27884, 384, 20); -- Haste
 
-
 -- shabti_cuirass
-
 INSERT INTO `item_mods` VALUES (27891, 1, 123);
 INSERT INTO `item_mods` VALUES (27891, 2, 102); -- HP
 INSERT INTO `item_mods` VALUES (27891, 5, 87); -- MP
@@ -13003,10 +12994,7 @@ INSERT INTO `item_mods` VALUES (27891, 68, 30); -- Evasion
 INSERT INTO `item_mods` VALUES (27891, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (27891, 27, 5); -- Enmity
 
-
-
 -- pak_corselet
-
 INSERT INTO `item_mods` VALUES (27920, 1, 68);
 INSERT INTO `item_mods` VALUES (27920, 5, 30); -- MP
 INSERT INTO `item_mods` VALUES (27920, 8, 16); -- STR
@@ -13022,9 +13010,7 @@ INSERT INTO `item_mods` VALUES (27920, 288, 3); --  Double Att
 INSERT INTO `item_mods` VALUES (27920, 31, 25); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27920, 384, 30); -- Haste
 
-
 -- outrider_mail
-
 INSERT INTO `item_mods` VALUES (27881, 1, 133);
 INSERT INTO `item_mods` VALUES (27881, 2, 55); -- HP
 INSERT INTO `item_mods` VALUES (27881, 5, 42); -- MP
@@ -13041,9 +13027,7 @@ INSERT INTO `item_mods` VALUES (27881, 31, 50); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27881, 68, 37); -- Evasion
 INSERT INTO `item_mods` VALUES (27881, 384, 30); -- Haste
 
-
 -- manibozho_jerkin
-
 INSERT INTO `item_mods` VALUES (27918, 1, 93);
 INSERT INTO `item_mods` VALUES (27918, 2, 31); -- HP
 INSERT INTO `item_mods` VALUES (27918, 5, 37); -- MP
@@ -13061,9 +13045,7 @@ INSERT INTO `item_mods` VALUES (27918, 31, 45); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27918, 68, 25); -- Evasion
 INSERT INTO `item_mods` VALUES (27918, 384, 40); -- Haste
 
-
 -- haruspex_coat
-
 INSERT INTO `item_mods` VALUES (27893, 1, 107);
 INSERT INTO `item_mods` VALUES (27893, 2, 40); -- HP
 INSERT INTO `item_mods` VALUES (27893, 5, 54); -- MP
@@ -13081,9 +13063,7 @@ INSERT INTO `item_mods` VALUES (27893, 68, 30); -- Evasion
 INSERT INTO `item_mods` VALUES (27893, 384, 20); -- Haste
 INSERT INTO `item_mods` VALUES (27893, 27, -5); -- Enmity
 
-
 -- espial_gambison
-
 INSERT INTO `item_mods` VALUES (27882, 1, 122);
 INSERT INTO `item_mods` VALUES (27882, 2, 53); -- HP
 INSERT INTO `item_mods` VALUES (27882, 5, 28); -- MP
@@ -13101,9 +13081,7 @@ INSERT INTO `item_mods` VALUES (27882, 68, 49); -- Evasion
 INSERT INTO `item_mods` VALUES (27882, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (27882, 165, 10); -- Crit Rate
 
-
 -- aetosaur_jerkin
-
 INSERT INTO `item_mods` VALUES (27889, 1, 112);
 INSERT INTO `item_mods` VALUES (27889, 2, 73); -- HP
 INSERT INTO `item_mods` VALUES (27889, 5, 70); -- MP
@@ -13121,9 +13099,7 @@ INSERT INTO `item_mods` VALUES (27889, 31, 54); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27889, 68, 36); -- Evasion
 INSERT INTO `item_mods` VALUES (27889, 384, 40); -- Haste
 
-
 -- bokwus_robe
-
 INSERT INTO `item_mods` VALUES (27919, 1, 89);
 INSERT INTO `item_mods` VALUES (27919, 2, 28); -- HP
 INSERT INTO `item_mods` VALUES (27919, 5, 50); -- MP
@@ -13141,9 +13117,7 @@ INSERT INTO `item_mods` VALUES (27919, 31, 57); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27919, 68, 21); -- Evasion
 INSERT INTO `item_mods` VALUES (27919, 369, 2); -- Refresh
 
-
 -- adorned_helm_+1
-
 INSERT INTO `item_mods` VALUES (26715, 1, 112);
 INSERT INTO `item_mods` VALUES (26715, 2, 38); -- HP
 INSERT INTO `item_mods` VALUES (26715, 8, 23); -- STR
@@ -13159,24 +13133,18 @@ INSERT INTO `item_mods` VALUES (26715, 68, 36); -- Evasion
 INSERT INTO `item_mods` VALUES (26715, 384, 110); -- Haste
 INSERT INTO `item_mods` VALUES (26715, 27, -8); -- Enmity
 
-
 -- alhazen_hat_+1
-
 INSERT INTO `item_mods` VALUES (26787, 26, 45); -- Racc
 INSERT INTO `item_mods` VALUES (26787, 25, 45); -- ACC
 INSERT INTO `item_mods` VALUES (26787, 31, 45); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26787, 68, 45); -- Evasion
 
-
 -- imperial_wing_hairpin_+1
-
 INSERT INTO `item_mods` VALUES (26710, 9, 27); -- DEX
 INSERT INTO `item_mods` VALUES (26710, 11, 27); -- AGI
 INSERT INTO `item_mods` VALUES (26710, 68, 70); -- Evasion
 
-
 -- hike_khat_+1
-
 INSERT INTO `item_mods` VALUES (26785, 1, 96);
 INSERT INTO `item_mods` VALUES (26785, 2, 36); -- HP
 INSERT INTO `item_mods` VALUES (26785, 5, 32); -- MP
@@ -13195,9 +13163,7 @@ INSERT INTO `item_mods` VALUES (26785, 68, 36); -- Evasion
 INSERT INTO `item_mods` VALUES (26785, 384, 60); -- Haste
 INSERT INTO `item_mods` VALUES (26785, 160, -3); -- -PDT
 
-
 -- stinger_helm_+1
-
 INSERT INTO `item_mods` VALUES (26732, 1, 111);
 INSERT INTO `item_mods` VALUES (26732, 2, 38); -- HP
 INSERT INTO `item_mods` VALUES (26732, 8, 25); -- STR
@@ -13213,9 +13179,7 @@ INSERT INTO `item_mods` VALUES (26732, 31, 53); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26732, 68, 36); -- Evasion
 INSERT INTO `item_mods` VALUES (26732, 384, 100); -- Haste
 
-
 -- agony_jerkin_+1
-
 INSERT INTO `item_mods` VALUES (26943, 1, 136);
 INSERT INTO `item_mods` VALUES (26943, 2, 59); -- HP
 INSERT INTO `item_mods` VALUES (26943, 5, 44); -- MP
@@ -13234,9 +13198,7 @@ INSERT INTO `item_mods` VALUES (26943, 68, 49); -- Evasion
 INSERT INTO `item_mods` VALUES (26943, 384, 40); -- Haste
 INSERT INTO `item_mods` VALUES (26943, 227, 6); -- Lizard Killer
 
-
 -- emet_harness_+1
-
 INSERT INTO `item_mods` VALUES (26871, 1, 131);
 INSERT INTO `item_mods` VALUES (26871, 2, 61); -- HP
 INSERT INTO `item_mods` VALUES (26871, 8, 25); -- STR
@@ -13253,9 +13215,7 @@ INSERT INTO `item_mods` VALUES (26871, 384, 40); -- Haste
 INSERT INTO `item_mods` VALUES (26871, 27, 10); -- Enmity
 INSERT INTO `item_mods` VALUES (26871, 160, -6); -- -PDT
 
-
 -- hime_domaru_+1
-
 INSERT INTO `item_mods` VALUES (26873, 1, 141);
 INSERT INTO `item_mods` VALUES (26873, 2, 63); -- HP
 INSERT INTO `item_mods` VALUES (26873, 5, 35); -- MP
@@ -13272,7 +13232,6 @@ INSERT INTO `item_mods` VALUES (26873, 29, 4); --  Magic Def. Bonus
 INSERT INTO `item_mods` VALUES (26873, 31, 48); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26873, 68, 41); -- Evasion
 INSERT INTO `item_mods` VALUES (26873, 384, 30); -- Haste
-
 
 -- lugra_cloak_+1
 INSERT INTO `item_mods` VALUES (26897, 1, 226);
@@ -13295,7 +13254,6 @@ INSERT INTO `item_mods` VALUES (26897, 370, 3); -- Regen
 INSERT INTO `item_mods` VALUES (26897, 369, 3); -- Refresh
 INSERT INTO `item_mods` VALUES (26897, 160, -3); -- DMG Taken
 
-
 -- rosette_jaseran_+1
 INSERT INTO `item_mods` VALUES (26869, 1, 125);
 INSERT INTO `item_mods` VALUES (26869, 2, 139); -- HP
@@ -13313,7 +13271,6 @@ INSERT INTO `item_mods` VALUES (26869, 29, 6); --  Magic Def. Bonus
 INSERT INTO `item_mods` VALUES (26869, 31, 80); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26869, 68, 41); -- Evasion
 INSERT INTO `item_mods` VALUES (26869, 384, 30); -- Haste
-
 
 -- shomonjijoe_+1
 INSERT INTO `item_mods` VALUES (26888, 1, 127);
@@ -13333,7 +13290,6 @@ INSERT INTO `item_mods` VALUES (26888, 31, 80); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (26888, 68, 41); -- Evasion
 INSERT INTO `item_mods` VALUES (26888, 384, 30); -- Haste
 
-
 -- macabre_gauntlets_+1
 INSERT INTO `item_mods` VALUES (27994, 1, 102);
 INSERT INTO `item_mods` VALUES (27994, 2, 29); -- HP
@@ -13352,7 +13308,6 @@ INSERT INTO `item_mods` VALUES (27994, 384, 40); -- Haste
 INSERT INTO `item_mods` VALUES (27994, 27, 7); -- Enmity
 INSERT INTO `item_mods` VALUES (27994, 160, -4); -- DMG Taken
 INSERT INTO `item_mods` VALUES (27994, 374, 11); -- Cure Pot
-
 
 -- kachimusha_kote_+1
 INSERT INTO `item_mods` VALUES (27051, 1, 85);
@@ -13426,7 +13381,6 @@ INSERT INTO `item_mods` VALUES (28137, 296, 7); -- Conserve Mp
 -- samanisi_cape (28605)
 INSERT INTO `item_mods` VALUES (28605, 1, 10);
 INSERT INTO `item_mods` VALUES (28605, 357, -3); -- BP Delay
-
 
 -- ighwa_cap (27722)
 INSERT INTO `item_mods` VALUES (27722, 1, 113);
@@ -13610,7 +13564,6 @@ INSERT INTO `item_mods` VALUES (26874, 68, 41); -- Evasion
 INSERT INTO `item_mods` VALUES (26874, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (26874, 296, 5); -- Conserve Mp
 INSERT INTO `item_mods` VALUES (26874, 369, 2); -- Refresh
-
 
 -- avatara_slops (27221)
 INSERT INTO `item_mods` VALUES (27221, 1, 108);
@@ -14141,28 +14094,19 @@ INSERT INTO `item_mods` VALUES (28293, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (28293, 28, 20); -- Mab
 INSERT INTO `item_mods` VALUES (28293, 296, 5); -- ConserveMP
 
-
 -- hecates_earring (11698)
 INSERT INTO `item_mods` VALUES (11698, 28, 6); -- Matt
-
-
 
 -- psychist_shield (10801)
 INSERT INTO `item_mods` VALUES (10801, 1, 17); -- Def
 INSERT INTO `item_mods` VALUES (10801, 5, 50); -- MP
 INSERT INTO `item_mods` VALUES (10801, 13, 4); -- Mnd
 
-
 INSERT INTO `item_mods` VALUES (10753, 1, 20);
-
-
-
 INSERT INTO `item_mods` VALUES (11038, 23, 7); -- Mnd
-
 
 INSERT INTO `item_mods` VALUES (19270, 5, 5); -- MP
 INSERT INTO `item_mods` VALUES (19270, 13, 2); -- Mnd
-
 
 INSERT INTO `item_mods` VALUES (19767, 10, 10); -- VIT
 INSERT INTO `item_mods` VALUES (19767, 25, 4); -- Acc
