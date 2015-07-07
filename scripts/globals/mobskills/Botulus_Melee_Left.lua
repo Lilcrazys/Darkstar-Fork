@@ -7,14 +7,14 @@ require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+	return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
 	local numhits = 1;
 	local accmod = 10;
-	local dmgmod = 1;
+	local dmgmod = .75;
 
 	MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 10, 0, 10);
 

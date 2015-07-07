@@ -7,9 +7,9 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     if(target:isBehind(mob) == false) then
-	    return 1;
+	    return 0;
     else
-        return 0;
+        return 1;
     end
 end;
 
@@ -17,7 +17,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 	local numhits = 1;
 	local accmod = 10;
-	local dmgmod = 2;
+	local dmgmod = 1.5;
 
 	MobStatusEffectMove(mob, target, EFFECT_STUN, 10, 0, 5);
 
