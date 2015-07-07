@@ -13931,22 +13931,22 @@ INSERT INTO `item_mods` VALUES (27412, 384, 61); -- Haste
 INSERT INTO `item_mods` VALUES (27412, 421, 11); -- Crit dmg
 INSERT INTO `item_mods` VALUES (27412, 414, 25); -- Retaliation
 
--- Bhikku Crown_+1 (26742)
-INSERT INTO `item_mods` VALUES (26742, 1, 97); -- DEF
-INSERT INTO `item_mods` VALUES (26742, 2, 36); -- HP
-INSERT INTO `item_mods` VALUES (26742, 8, 24); -- STR
-INSERT INTO `item_mods` VALUES (26742, 9, 17); -- DEX
-INSERT INTO `item_mods` VALUES (26742, 10, 22); -- VIT
-INSERT INTO `item_mods` VALUES (26742, 11, 19); -- AGI
-INSERT INTO `item_mods` VALUES (26742, 12, 14); -- INT
-INSERT INTO `item_mods` VALUES (26742, 13, 18); -- MND
-INSERT INTO `item_mods` VALUES (26742, 14, 14); -- CHR
-INSERT INTO `item_mods` VALUES (26742, 289, 12); -- subtle blow
-INSERT INTO `item_mods` VALUES (26742, 23, 25); -- Attack
-INSERT INTO `item_mods` VALUES (26742, 68, 41); -- Evasion
-INSERT INTO `item_mods` VALUES (26742, 31, 48); -- Magic Evasion
-INSERT INTO `item_mods` VALUES (26742, 29, 4); --  Magic Def. Bonus+2
-INSERT INTO `item_mods` VALUES (26742, 384, 91); -- Haste
+-- Bhikku Crown_+1 (26743)
+INSERT INTO `item_mods` VALUES (26743, 1, 97); -- DEF
+INSERT INTO `item_mods` VALUES (26743, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES (26743, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (26743, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26743, 10, 22); -- VIT
+INSERT INTO `item_mods` VALUES (26743, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26743, 12, 14); -- INT
+INSERT INTO `item_mods` VALUES (26743, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES (26743, 14, 14); -- CHR
+INSERT INTO `item_mods` VALUES (26743, 289, 12); -- subtle blow
+INSERT INTO `item_mods` VALUES (26743, 23, 25); -- Attack
+INSERT INTO `item_mods` VALUES (26743, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (26743, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26743, 29, 4); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26743, 384, 91); -- Haste
 
 -- Bhikku Cyclas_+1 (26901)
 INSERT INTO `item_mods` VALUES (26901, 1, 125); -- DEF
