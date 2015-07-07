@@ -13840,3 +13840,1576 @@ INSERT INTO `item_mods` VALUES (19270, 13, 2); -- Mnd
 
 INSERT INTO `item_mods` VALUES (19767, 10, 10); -- VIT
 INSERT INTO `item_mods` VALUES (19767, 25, 4); -- Acc
+
+-- Empy 119 begins
+
+-- Boii Mask_+1 (26741)
+INSERT INTO `item_mods` VALUES (26741, 1, 114); -- DEF
+INSERT INTO `item_mods` VALUES (26741, 2, 43); -- HP
+INSERT INTO `item_mods` VALUES (26741, 8, 33); -- STR
+INSERT INTO `item_mods` VALUES (26741, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26741, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (26741, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (26741, 12, 11); -- INT
+INSERT INTO `item_mods` VALUES (26741, 13, 11); -- MND
+INSERT INTO `item_mods` VALUES (26741, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (26741, 25, 24); -- Acc
+INSERT INTO `item_mods` VALUES (26741, 23, 24); -- Attack
+INSERT INTO `item_mods` VALUES (26741, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26741, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26741, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26741, 384, 72); -- Haste
+INSERT INTO `item_mods` VALUES (26741, 165, 4); -- Crit
+INSERT INTO `item_mods` VALUES (26741, 288, 5); -- Dbl Atk
+
+
+-- Boii Lorica_+1 (26899)
+INSERT INTO `item_mods` VALUES (26899, 1, 144); -- DEF
+INSERT INTO `item_mods` VALUES (26899, 2, 66); -- HP
+INSERT INTO `item_mods` VALUES (26899, 8, 28); -- STR
+INSERT INTO `item_mods` VALUES (26899, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES (26899, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (26899, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26899, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26899, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES (26899, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26899, 25, 28); -- Acc
+INSERT INTO `item_mods` VALUES (26899, 23, 28); -- Attack
+INSERT INTO `item_mods` VALUES (26899, 68, 44); -- Evasion
+INSERT INTO `item_mods` VALUES (26899, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26899, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26899, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (26899, 85, 11); -- GA
+INSERT INTO `item_mods` VALUES (26899, 73, 9); -- STP
+
+-- Boii Mufflers_+1 (27053)
+INSERT INTO `item_mods` VALUES (27053, 1, 100); -- DEF
+INSERT INTO `item_mods` VALUES (27053, 2, 27); -- HP
+INSERT INTO `item_mods` VALUES (27053, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27053, 9, 36); -- DEX
+INSERT INTO `item_mods` VALUES (27053, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (27053, 11, 7); -- AGI
+INSERT INTO `item_mods` VALUES (27053, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES (27053, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27053, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27053, 25, 20); -- Acc
+INSERT INTO `item_mods` VALUES (27053, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27053, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27053, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (27053, 84, 21); -- Axe
+
+-- Boii Cuisses_+1 (27238)
+INSERT INTO `item_mods` VALUES (27238, 1, 125); -- DEF
+INSERT INTO `item_mods` VALUES (27238, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27238, 8, 38); -- STR
+INSERT INTO `item_mods` VALUES (27238, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES (27238, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (27238, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES (27238, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27238, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES (27238, 23, 23); -- Atk
+INSERT INTO `item_mods` VALUES (27238, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27238, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27238, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27238, 384, 81); -- Haste
+INSERT INTO `item_mods` VALUES (27238, 288, 6); -- dbl atk
+
+-- Boii Calligae_+1 (27412)
+INSERT INTO `item_mods` VALUES (27412, 1, 82); -- DEF
+INSERT INTO `item_mods` VALUES (27412, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27412, 8, 16); -- STR
+INSERT INTO `item_mods` VALUES (27412, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27412, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (27412, 9, 19); -- INT
+INSERT INTO `item_mods` VALUES (27412, 13, 5); -- MND
+INSERT INTO `item_mods` VALUES (27412, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (27412, 25, 27); -- Acc
+INSERT INTO `item_mods` VALUES (27412, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (27412, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27412, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27412, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (27412, 421, 11); -- Crit dmg
+INSERT INTO `item_mods` VALUES (27412, 414, 25); -- Retaliation
+
+-- Bhikku Crown_+1 (26742)
+INSERT INTO `item_mods` VALUES (26742, 1, 97); -- DEF
+INSERT INTO `item_mods` VALUES (26742, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES (26742, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (26742, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26742, 10, 22); -- VIT
+INSERT INTO `item_mods` VALUES (26742, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26742, 12, 14); -- INT
+INSERT INTO `item_mods` VALUES (26742, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES (26742, 14, 14); -- CHR
+INSERT INTO `item_mods` VALUES (26742, 289, 12); -- subtle blow
+INSERT INTO `item_mods` VALUES (26742, 23, 25); -- Attack
+INSERT INTO `item_mods` VALUES (26742, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (26742, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26742, 29, 4); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26742, 384, 91); -- Haste
+
+-- Bhikku Cyclas_+1 (26901)
+INSERT INTO `item_mods` VALUES (26901, 1, 125); -- DEF
+INSERT INTO `item_mods` VALUES (26901, 2, 59); -- HP
+INSERT INTO `item_mods` VALUES (26901, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES (26901, 9, 25); -- DEX
+INSERT INTO `item_mods` VALUES (26901, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES (26901, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (26901, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26901, 13, 24); -- MND
+INSERT INTO `item_mods` VALUES (26901, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26901, 25, 23); -- acc
+INSERT INTO `item_mods` VALUES (26901, 23, 23); -- Attack
+INSERT INTO `item_mods` VALUES (26901, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (26901, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26901, 29, 4); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26901, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (26901, 173, 6); -- Martial arts
+
+-- Bhikku Gloves_+1 (27055)
+INSERT INTO `item_mods` VALUES (27055, 1, 83); -- DEF
+INSERT INTO `item_mods` VALUES (27055, 2, 25); -- HP
+INSERT INTO `item_mods` VALUES (27055, 8, 11); -- STR
+INSERT INTO `item_mods` VALUES (27055, 9, 34); -- DEX
+INSERT INTO `item_mods` VALUES (27055, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (27055, 11, 6); -- AGI
+INSERT INTO `item_mods` VALUES (27055, 12, 7); -- INT
+INSERT INTO `item_mods` VALUES (27055, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES (27055, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES (27055, 25, 13); -- acc
+INSERT INTO `item_mods` VALUES (27055, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27055, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27055, 80, 11); --  h2h
+INSERT INTO `item_mods` VALUES (27055, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27055, 107, 35); -- gaurd
+
+-- Bhikku Hose_+1 (27240)
+INSERT INTO `item_mods` VALUES (27240, 1, 110); -- DEF
+INSERT INTO `item_mods` VALUES (27240, 2, 47); -- HP
+INSERT INTO `item_mods` VALUES (27240, 8, 35); -- STR
+INSERT INTO `item_mods` VALUES (27240, 10, 14); -- VIT
+INSERT INTO `item_mods` VALUES (27240, 11, 21); -- AGI
+INSERT INTO `item_mods` VALUES (27240, 12, 26); -- INT
+INSERT INTO `item_mods` VALUES (27240, 13, 20); -- MND
+INSERT INTO `item_mods` VALUES (27240, 14, 7); -- CHR
+INSERT INTO `item_mods` VALUES (27240, 25, 23); -- acc
+INSERT INTO `item_mods` VALUES (27240, 23, 23); -- Attack
+INSERT INTO `item_mods` VALUES (27240, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (27240, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27240, 29, 4); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (27240, 384, 71); -- Haste
+INSERT INTO `item_mods` VALUES (27240, 292, 20); -- Kick attacks
+INSERT INTO `item_mods` VALUES (27240, 73, 8); -- Store TP
+
+-- Bhikku Gaiters_+1 (27414)
+INSERT INTO `item_mods` VALUES (27414, 1, 68); -- DEF
+INSERT INTO `item_mods` VALUES (27414, 5, 13); -- HP
+INSERT INTO `item_mods` VALUES (27414, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (27414, 9, 15); -- DEX
+INSERT INTO `item_mods` VALUES (27414, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27414, 11, 34); -- AGI
+INSERT INTO `item_mods` VALUES (27414, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27414, 14, 25); -- CHR
+INSERT INTO `item_mods` VALUES (27414, 25, 24); -- acc
+INSERT INTO `item_mods` VALUES (27414, 68, 72); -- Evasion
+INSERT INTO `item_mods` VALUES (27414, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27414, 29, 3); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (27414, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (27414, 386, 55); -- Kick attacks dmg
+
+-- Ebers Cap_+1 (26744)
+INSERT INTO `item_mods` VALUES (26744, 1, 94); -- DEF
+INSERT INTO `item_mods` VALUES (26744, 2, 34); -- HP
+INSERT INTO `item_mods` VALUES (26744, 5, 88); -- MP
+INSERT INTO `item_mods` VALUES (26744, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES (26744, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES (26744, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (26744, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES (26744, 12, 21); -- INT
+INSERT INTO `item_mods` VALUES (26744, 13, 29); -- MND
+INSERT INTO `item_mods` VALUES (26744, 14, 21); -- CHR
+INSERT INTO `item_mods` VALUES (26744, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26744, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26744, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26744, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (26744, 374, 16); -- Cure Pot
+
+-- Bbers Briault_+1 (26903)
+INSERT INTO `item_mods` VALUES (26903, 1, 125); -- DEF
+INSERT INTO `item_mods` VALUES (26903, 2, 107); -- HP
+INSERT INTO `item_mods` VALUES (26903, 5, 119); -- MP
+INSERT INTO `item_mods` VALUES (26903, 8, 20); -- STR
+INSERT INTO `item_mods` VALUES (26903, 9, 20); -- DEX
+INSERT INTO `item_mods` VALUES (26903, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES (26903, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (26903, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES (26903, 13, 33); -- MND
+INSERT INTO `item_mods` VALUES (26903, 14, 29); -- CHR
+INSERT INTO `item_mods` VALUES (26903, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (26903, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26903, 29, 7); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26903, 112, 24); -- Healing skill
+INSERT INTO `item_mods` VALUES (26903, 384, 30); -- Haste
+INSERT INTO `item_mods` VALUES (26903, 369, 2); -- Refresh
+
+-- Ebers Mitts_+1 (27057)
+INSERT INTO `item_mods` VALUES (27057, 1, 84); -- DEF
+INSERT INTO `item_mods` VALUES (27057, 2, 45); -- HP
+INSERT INTO `item_mods` VALUES (27057, 5, 45); -- MP
+INSERT INTO `item_mods` VALUES (27057, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (27057, 9, 25); -- DEX
+INSERT INTO `item_mods` VALUES (27057, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES (27057, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (27057, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (27057, 13, 35); -- MND
+INSERT INTO `item_mods` VALUES (27057, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27057, 68, 22); -- Evasion
+INSERT INTO `item_mods` VALUES (27057, 31, 37); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27057, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27057, 27, -10); -- ENM
+INSERT INTO `item_mods` VALUES (27057, 384, 31); -- Haste
+
+-- Ebers Pantaloons_+1 (27242)
+INSERT INTO `item_mods` VALUES (27242, 1, 106); -- DEF
+INSERT INTO `item_mods` VALUES (27242, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES (27242, 5, 35); -- MP
+INSERT INTO `item_mods` VALUES (27242, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (27242, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (27242, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES (27242, 12, 32); -- INT
+INSERT INTO `item_mods` VALUES (27242, 13, 33); -- MND
+INSERT INTO `item_mods` VALUES (27242, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27242, 68, 27); -- Evasion
+INSERT INTO `item_mods` VALUES (27242, 31, 107); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27242, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27242, 170, 13); -- cast
+INSERT INTO `item_mods` VALUES (27242, 384, 51); -- Haste
+
+-- Ebers Duckbills_+1 (27416)
+INSERT INTO `item_mods` VALUES (27416, 1, 66); -- DEF
+INSERT INTO `item_mods` VALUES (27416, 2, 51); -- HP
+INSERT INTO `item_mods` VALUES (27416, 5, 60); -- MP
+INSERT INTO `item_mods` VALUES (27416, 8, 10); -- STR
+INSERT INTO `item_mods` VALUES (27416, 9, 11); -- DEX
+INSERT INTO `item_mods` VALUES (27416, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES (27416, 11, 33); -- AGI
+INSERT INTO `item_mods` VALUES (27416, 12, 17); -- INT
+INSERT INTO `item_mods` VALUES (27416, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27416, 14, 34); -- CHR
+INSERT INTO `item_mods` VALUES (27416, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (27416, 31, 107); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27416, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27416, 113, 25); -- enhancing skill
+INSERT INTO `item_mods` VALUES (27416, 384, 31); -- Haste
+
+-- Wicce Petasos_+1 (26747)
+INSERT INTO `item_mods` VALUES (26747, 1, 94); -- DEF
+INSERT INTO `item_mods` VALUES (26747, 2, 31); -- HP
+INSERT INTO `item_mods` VALUES (26747, 5, 56); -- MP
+INSERT INTO `item_mods` VALUES (26747, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (26747, 9, 12); -- DEX
+INSERT INTO `item_mods` VALUES (26747, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (26747, 12, 29); -- INT
+INSERT INTO `item_mods` VALUES (26747, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (26747, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (26747, 68, 33); -- Evasion
+INSERT INTO `item_mods` VALUES (26747, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26747, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26747, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (26747, 27, -8); -- emn
+INSERT INTO `item_mods` VALUES (26747, 115, 25); -- ele skill
+INSERT INTO `item_mods` VALUES (26747, 170, 7); -- Cast
+
+-- Wicce Coat_+1 (26905)
+INSERT INTO `item_mods` VALUES (26905, 1, 124); -- DEF
+INSERT INTO `item_mods` VALUES (26905, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (26905, 5, 112); -- MP
+INSERT INTO `item_mods` VALUES (26905, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (26905, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (26905, 10, 19); -- VIT
+INSERT INTO `item_mods` VALUES (26905, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26905, 12, 35); -- INT
+INSERT INTO `item_mods` VALUES (26905, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES (26905, 14, 28); -- CHR
+INSERT INTO `item_mods` VALUES (26905, 30, 24); -- Macc
+INSERT INTO `item_mods` VALUES (26905, 28, 24); -- Matt
+INSERT INTO `item_mods` VALUES (26905, 68, 38); -- Evasion
+INSERT INTO `item_mods` VALUES (26905, 31, 91); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26905, 29, 7); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26905, 384, 30); -- Haste
+INSERT INTO `item_mods` VALUES (26905, 369, 2); -- Refresh
+
+-- Wicce Gloves_+1 (27059)
+INSERT INTO `item_mods` VALUES (27059, 1, 80); -- DEF
+INSERT INTO `item_mods` VALUES (27059, 2, 18); -- HP
+INSERT INTO `item_mods` VALUES (27059, 5, 20); -- MP
+INSERT INTO `item_mods` VALUES (27059, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (27059, 9, 25); -- DEX
+INSERT INTO `item_mods` VALUES (27059, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (27059, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (27059, 12, 27); -- INT
+INSERT INTO `item_mods` VALUES (27059, 13, 32); -- MND
+INSERT INTO `item_mods` VALUES (27059, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27059, 28, 36); -- Matt
+INSERT INTO `item_mods` VALUES (27059, 68, 19); -- Evasion
+INSERT INTO `item_mods` VALUES (27059, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27059, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27059, 384, 31); -- Haste
+
+-- Wicce Chausses_+1 (27244)
+INSERT INTO `item_mods` VALUES (27244, 1, 104); -- DEF
+INSERT INTO `item_mods` VALUES (27244, 2, 38); -- HP
+INSERT INTO `item_mods` VALUES (27244, 5, 99); -- MP
+INSERT INTO `item_mods` VALUES (27244, 8, 21); -- STR
+INSERT INTO `item_mods` VALUES (27244, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES (27244, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES (27244, 12, 38); -- INT
+INSERT INTO `item_mods` VALUES (27244, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27244, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27244, 30, 24); -- Macc
+INSERT INTO `item_mods` VALUES (27244, 28, 24); -- Matt
+INSERT INTO `item_mods` VALUES (27244, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27244, 31, 118); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27244, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27244, 384, 51); -- Haste
+
+-- Wicce Sabots_+1 (27418)
+INSERT INTO `item_mods` VALUES (27418, 1, 65); -- DEF
+INSERT INTO `item_mods` VALUES (27418, 2, 9); -- HP
+INSERT INTO `item_mods` VALUES (27418, 5, 20); -- MP
+INSERT INTO `item_mods` VALUES (27418, 8, 8); -- STR
+INSERT INTO `item_mods` VALUES (27418, 9, 8); -- STR
+INSERT INTO `item_mods` VALUES (27418, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES (27418, 11, 29); -- AGI
+INSERT INTO `item_mods` VALUES (27418, 12, 26); -- INT
+INSERT INTO `item_mods` VALUES (27418, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27418, 14, 32); -- CHR
+INSERT INTO `item_mods` VALUES (27418, 68, 60); -- Evasion
+INSERT INTO `item_mods` VALUES (27418, 31, 118); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27418, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27418, 116, 25); -- dark skill
+INSERT INTO `item_mods` VALUES (27418, 27, -14); -- enm
+INSERT INTO `item_mods` VALUES (27418, 384, 41); -- Haste
+
+-- Lethargy Chapel_+1 (26749)
+INSERT INTO `item_mods` VALUES (26749, 1, 96); -- DEF
+INSERT INTO `item_mods` VALUES (26749, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES (26749, 5, 75); -- MP
+INSERT INTO `item_mods` VALUES (26749, 8, 15); -- STR
+INSERT INTO `item_mods` VALUES (26749, 9, 15); -- DEX
+INSERT INTO `item_mods` VALUES (26749, 10, 15); -- VIT
+INSERT INTO `item_mods` VALUES (26749, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (26749, 12, 28); -- INT
+INSERT INTO `item_mods` VALUES (26749, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES (26749, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (26749, 30, 25); -- Macc
+INSERT INTO `item_mods` VALUES (26749, 28, 25); -- Matt
+INSERT INTO `item_mods` VALUES (26749, 68, 38); -- Evasion
+INSERT INTO `item_mods` VALUES (26749, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26749, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26749, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (26749, 170, 7); -- cast
+
+-- Lethargy Sayon_+1 (26907)
+INSERT INTO `item_mods` VALUES (26907, 1, 127); -- DEF
+INSERT INTO `item_mods` VALUES (26907, 2, 57); -- HP
+INSERT INTO `item_mods` VALUES (26907, 5, 61); -- MP
+INSERT INTO `item_mods` VALUES (26907, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (26907, 9, 20); -- DEX
+INSERT INTO `item_mods` VALUES (26907, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES (26907, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (26907, 12, 37); -- INT
+INSERT INTO `item_mods` VALUES (26907, 13, 35); -- MND
+INSERT INTO `item_mods` VALUES (26907, 14, 25); -- CHR
+INSERT INTO `item_mods` VALUES (26907, 30, 27); -- Macc
+INSERT INTO `item_mods` VALUES (26907, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (26907, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26907, 29, 7); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26907, 384, 30); -- Haste
+INSERT INTO `item_mods` VALUES (26907, 114, 14); -- enfeeb
+INSERT INTO `item_mods` VALUES (26907, 369, 2); -- Refresh
+
+-- Lethargy Gantherots_+1 (27061)
+INSERT INTO `item_mods` VALUES (27061, 1, 85); -- DEF
+INSERT INTO `item_mods` VALUES (27061, 2, 25); -- HP
+INSERT INTO `item_mods` VALUES (27061, 5, 17); -- MP
+INSERT INTO `item_mods` VALUES (27061, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (27061, 9, 29); -- DEX
+INSERT INTO `item_mods` VALUES (27061, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES (27061, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (27061, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (27061, 13, 39); -- MND
+INSERT INTO `item_mods` VALUES (27061, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (27061, 30, 24); -- Macc
+INSERT INTO `item_mods` VALUES (27061, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27061, 31, 37); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27061, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27061, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (27061, 114, 19); -- enfeeb
+
+-- Lethargy Fuseau_+1 (27246)
+INSERT INTO `item_mods` VALUES (27246, 1, 107); -- DEF
+INSERT INTO `item_mods` VALUES (27246, 2, 45); -- HP
+INSERT INTO `item_mods` VALUES (27246, 5, 97); -- MP
+INSERT INTO `item_mods` VALUES (27246, 8, 28); -- STR
+INSERT INTO `item_mods` VALUES (27246, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES (27246, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (27246, 12, 38); -- INT
+INSERT INTO `item_mods` VALUES (27246, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES (27246, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (27246, 30, 22); -- Macc
+INSERT INTO `item_mods` VALUES (27246, 28, 22); -- Matt
+INSERT INTO `item_mods` VALUES (27246, 68, 27); -- Evasion
+INSERT INTO `item_mods` VALUES (27246, 31, 112); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27246, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27246, 384, 51); -- Haste
+
+-- Lethargy Houseaux_+1 (27420)
+INSERT INTO `item_mods` VALUES (27420, 1, 68); -- DEF
+INSERT INTO `item_mods` VALUES (27420, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27420, 5, 17); -- MP
+INSERT INTO `item_mods` VALUES (27420, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27420, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES (27420, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (27420, 11, 33); -- AGI
+INSERT INTO `item_mods` VALUES (27420, 12, 16); -- INT
+INSERT INTO `item_mods` VALUES (27420, 13, 22); -- MND
+INSERT INTO `item_mods` VALUES (27420, 14, 33); -- CHR
+INSERT INTO `item_mods` VALUES (27420, 68, 60); -- Evasion
+INSERT INTO `item_mods` VALUES (27420, 31, 107); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27420, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27420, 113, 25); -- enhance skill
+INSERT INTO `item_mods` VALUES (27420, 27, -9); -- enm
+INSERT INTO `item_mods` VALUES (27420, 384, 31); -- Haste
+
+-- Skulkers Bonnet_+1 (26751)
+INSERT INTO `item_mods` VALUES (26751, 1, 100); -- DEF
+INSERT INTO `item_mods` VALUES (26751, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES (26751, 8, 20); -- STR
+INSERT INTO `item_mods` VALUES (26751, 9, 33); -- DEX
+INSERT INTO `item_mods` VALUES (26751, 10, 19); -- VIT
+INSERT INTO `item_mods` VALUES (26751, 11, 23); -- AGI
+INSERT INTO `item_mods` VALUES (26751, 12, 18); -- INT
+INSERT INTO `item_mods` VALUES (26751, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES (26751, 14, 18); -- CHR
+INSERT INTO `item_mods` VALUES (26751, 25, 32); -- acc
+INSERT INTO `item_mods` VALUES (26751, 68, 49); -- Evasion
+INSERT INTO `item_mods` VALUES (26751, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26751, 29, 3); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26751, 384, 81); -- Haste
+INSERT INTO `item_mods` VALUES (26751, 302, 4); -- Trip
+
+-- Skulkers Vest_+1 (26909)
+INSERT INTO `item_mods` VALUES (26909, 1, 131); -- DEF
+INSERT INTO `item_mods` VALUES (26909, 2, 63); -- HP
+INSERT INTO `item_mods` VALUES (26909, 8, 25); -- STR
+INSERT INTO `item_mods` VALUES (26909, 9, 41); -- DEX
+INSERT INTO `item_mods` VALUES (26909, 10, 24); -- VIT
+INSERT INTO `item_mods` VALUES (26909, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES (26909, 12, 21); -- INT
+INSERT INTO `item_mods` VALUES (26909, 13, 21); -- MND
+INSERT INTO `item_mods` VALUES (26909, 14, 21); -- CHR
+INSERT INTO `item_mods` VALUES (26909, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (26909, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26909, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26909, 81, 28); -- dagger skill
+INSERT INTO `item_mods` VALUES (26909, 384, 61); -- Haste
+
+-- Skulkers Armlets_+1 (27063)
+INSERT INTO `item_mods` VALUES (27063, 1, 91); -- DEF
+INSERT INTO `item_mods` VALUES (27063, 2, 27); -- HP
+INSERT INTO `item_mods` VALUES (27063, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES (27063, 9, 40); -- DEX
+INSERT INTO `item_mods` VALUES (27063, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES (27063, 11, 7); -- AGI
+INSERT INTO `item_mods` VALUES (27063, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES (27063, 13, 30); -- MND
+INSERT INTO `item_mods` VALUES (27063, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27063, 25, 22); -- Acc
+INSERT INTO `item_mods` VALUES (27063, 23, 25); -- Att
+INSERT INTO `item_mods` VALUES (27063, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (27063, 31, 43); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27063, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27063, 384, 51); -- Haste
+
+-- Skulkers Culottes_+1 (27248)
+INSERT INTO `item_mods` VALUES (27248, 1, 112); -- DEF
+INSERT INTO `item_mods` VALUES (27248, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27248, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES (27248, 9, 7); -- DEX
+INSERT INTO `item_mods` VALUES (27248, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27248, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (27248, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES (27248, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27248, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (27248, 68, 47); -- Evasion
+INSERT INTO `item_mods` VALUES (27248, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27248, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27248, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (27248, 165, 5); -- Crit
+
+-- Skulkers Poulaines_+1 (27422)
+INSERT INTO `item_mods` VALUES (27422, 1, 73); -- DEF
+INSERT INTO `item_mods` VALUES (27422, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27422, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27422, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES (27422, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (27422, 11, 44); -- AGI
+INSERT INTO `item_mods` VALUES (27422, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27422, 14, 30); -- CHR
+INSERT INTO `item_mods` VALUES (27422, 68, 107); -- Evasion
+INSERT INTO `item_mods` VALUES (27422, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27422, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27422, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (27422, 303, 3); -- TH
+
+-- Chevaliers Armet_+1 (26753)
+INSERT INTO `item_mods` VALUES (26753, 1, 118); -- DEF
+INSERT INTO `item_mods` VALUES (26753, 2, 125); -- HP
+INSERT INTO `item_mods` VALUES (26753, 5, 109); -- MP
+INSERT INTO `item_mods` VALUES (26753, 8, 21); -- STR
+INSERT INTO `item_mods` VALUES (26753, 9, 15); -- DEX
+INSERT INTO `item_mods` VALUES (26753, 10, 38); -- VIT
+INSERT INTO `item_mods` VALUES (26753, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (26753, 12, 8); -- INT
+INSERT INTO `item_mods` VALUES (26753, 13, 8); -- MND
+INSERT INTO `item_mods` VALUES (26753, 14, 8); -- CHR
+INSERT INTO `item_mods` VALUES (26753, 68, 30); -- Evasion
+INSERT INTO `item_mods` VALUES (26753, 31, 53); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26753, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26753, 384, 71); -- Haste
+INSERT INTO `item_mods` VALUES (26753, 109, 11); -- Shield
+INSERT INTO `item_mods` VALUES (26753, 170, 7); -- cast
+INSERT INTO `item_mods` VALUES (26753, 516, 6); -- converts 5% to MP
+
+-- Chevaliers Cuirass_+1 (26911)
+INSERT INTO `item_mods` VALUES (26911, 1, 150); -- DEF
+INSERT INTO `item_mods` VALUES (26911, 2, 131); -- HP
+INSERT INTO `item_mods` VALUES (26911, 5, 114); -- MP
+INSERT INTO `item_mods` VALUES (26911, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES (26911, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26911, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (26911, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES (26911, 12, 16); -- INT
+INSERT INTO `item_mods` VALUES (26911, 13, 16); -- MND
+INSERT INTO `item_mods` VALUES (26911, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (26911, 25, 24); -- acc
+INSERT INTO `item_mods` VALUES (26911, 23, 24); -- atk
+INSERT INTO `item_mods` VALUES (26911, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26911, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26911, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26911, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (26911, 27, 12); -- enm
+INSERT INTO `item_mods` VALUES (26911, 480, 12); -- null dmg
+
+-- Chevaliers Gauntlets_+1 (27065)
+INSERT INTO `item_mods` VALUES (27065, 1, 106); -- DEF
+INSERT INTO `item_mods` VALUES (27065, 2, 34); -- HP
+INSERT INTO `item_mods` VALUES (27065, 5, 14); -- MP
+INSERT INTO `item_mods` VALUES (27065, 8, 17); -- STR
+INSERT INTO `item_mods` VALUES (27065, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (27065, 10, 39); -- VIT
+INSERT INTO `item_mods` VALUES (27065, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES (27065, 13, 21); -- MND
+INSERT INTO `item_mods` VALUES (27065, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27065, 68, 19); -- Evasion
+INSERT INTO `item_mods` VALUES (27065, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27065, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27065, 82, 28); -- sword skill
+
+-- Chevaliers Cuisses_+1 (27250)
+INSERT INTO `item_mods` VALUES (27250, 1, 130); -- DEF
+INSERT INTO `item_mods` VALUES (27250, 2, 107); -- HP
+INSERT INTO `item_mods` VALUES (27250, 5, 41); -- MP
+INSERT INTO `item_mods` VALUES (27250, 8, 35); -- STR
+INSERT INTO `item_mods` VALUES (27250, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (27250, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (27250, 12, 26); -- INT
+INSERT INTO `item_mods` VALUES (27250, 13, 10); -- MND
+INSERT INTO `item_mods` VALUES (27250, 14, 7); -- CHR
+INSERT INTO `item_mods` VALUES (27250, 68, 19); -- Evasion
+INSERT INTO `item_mods` VALUES (27250, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27250, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27250, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27250, 161, -6); -- phys dmg
+INSERT INTO `item_mods` VALUES (27250, 427, 12); -- reduces emn loss
+
+-- Chevaliers Sabatons_+1 (27424)
+INSERT INTO `item_mods` VALUES (27424, 1, 91); -- DEF
+INSERT INTO `item_mods` VALUES (27424, 2, 22); -- HP
+INSERT INTO `item_mods` VALUES (27424, 5, 14); -- MP
+INSERT INTO `item_mods` VALUES (27424, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (27424, 9, 12); -- DEX
+INSERT INTO `item_mods` VALUES (27424, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES (27424, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES (27424, 13, 7); -- MND
+INSERT INTO `item_mods` VALUES (27424, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (27424, 25, 26); -- acc
+INSERT INTO `item_mods` VALUES (27424, 68, 44); -- Evasion
+INSERT INTO `item_mods` VALUES (27424, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27424, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27424, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27424, 27, 11); -- enm
+
+-- Heathens Burgonet_+1 (26755)
+INSERT INTO `item_mods` VALUES (26755, 1, 115); -- DEF
+INSERT INTO `item_mods` VALUES (26755, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES (26755, 5, 29); -- MP
+INSERT INTO `item_mods` VALUES (26755, 8, 32); -- STR
+INSERT INTO `item_mods` VALUES (26755, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES (26755, 10, 21); -- VIT
+INSERT INTO `item_mods` VALUES (26755, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES (26755, 12, 18); -- INT
+INSERT INTO `item_mods` VALUES (26755, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES (26755, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (26755, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26755, 31, 37); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26755, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26755, 384, 71); -- Haste
+INSERT INTO `item_mods` VALUES (26755, 86, 28); -- Scythe skill
+INSERT INTO `item_mods` VALUES (26755, 288, 4); -- Dbl Atk
+
+-- Heathens Cuirass_+1 (26913)
+INSERT INTO `item_mods` VALUES (26913, 1, 147); -- DEF
+INSERT INTO `item_mods` VALUES (26913, 2, 63); -- HP
+INSERT INTO `item_mods` VALUES (26913, 5, 59); -- MP
+INSERT INTO `item_mods` VALUES (26913, 8, 32); -- STR
+INSERT INTO `item_mods` VALUES (26913, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES (26913, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES (26913, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26913, 12, 20); -- INT
+INSERT INTO `item_mods` VALUES (26913, 13, 20); -- MND
+INSERT INTO `item_mods` VALUES (26913, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (26913, 23, 44); -- Att
+INSERT INTO `item_mods` VALUES (26913, 68, 44); -- Evasion
+INSERT INTO `item_mods` VALUES (26913, 31, 53); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26913, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26913, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (26913, 165, 5); -- crit
+INSERT INTO `item_mods` VALUES (26913, 506, 12); -- dmg occ varies
+
+-- Heathens Gauntlets_+1 (27067)
+INSERT INTO `item_mods` VALUES (27067, 1, 103); -- DEF
+INSERT INTO `item_mods` VALUES (27067, 2, 29); -- HP
+INSERT INTO `item_mods` VALUES (27067, 5, 14); -- MP
+INSERT INTO `item_mods` VALUES (27067, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27067, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (27067, 10, 33); -- VIT
+INSERT INTO `item_mods` VALUES (27067, 12, 10); -- INT
+INSERT INTO `item_mods` VALUES (27067, 13, 26); -- MND
+INSERT INTO `item_mods` VALUES (27067, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (27067, 23, 18); -- Att
+INSERT INTO `item_mods` VALUES (27067, 25, 18); -- Acc
+INSERT INTO `item_mods` VALUES (27067, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27067, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27067, 29, 1); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27067, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (27067, 83, 18); -- GS skill
+
+-- Heathens Flanchard_+1 (27252)
+INSERT INTO `item_mods` VALUES (27252, 1, 129); -- DEF
+INSERT INTO `item_mods` VALUES (27252, 2, 52); -- HP
+INSERT INTO `item_mods` VALUES (27252, 5, 41); -- MP
+INSERT INTO `item_mods` VALUES (27252, 8, 43); -- STR
+INSERT INTO `item_mods` VALUES (27252, 10, 21); -- VIT
+INSERT INTO `item_mods` VALUES (27252, 12, 26); -- INT
+INSERT INTO `item_mods` VALUES (27252, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES (27252, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (27252, 23, 27); -- Att
+INSERT INTO `item_mods` VALUES (27252, 25, 27); -- Acc
+INSERT INTO `item_mods` VALUES (27252, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27252, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27252, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27252, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27252, 116, 20); -- dark skill
+
+-- Heathens Sollerets_+1 (27426)
+INSERT INTO `item_mods` VALUES (27426, 1, 87); -- DEF
+INSERT INTO `item_mods` VALUES (27426, 2, 18); -- HP
+INSERT INTO `item_mods` VALUES (27426, 5, 14); -- MP
+INSERT INTO `item_mods` VALUES (27426, 8, 22); -- STR
+INSERT INTO `item_mods` VALUES (27426, 9, 11); -- DEX
+INSERT INTO `item_mods` VALUES (27426, 10, 17); -- VIT
+INSERT INTO `item_mods` VALUES (27426, 11, 29); -- AGI
+INSERT INTO `item_mods` VALUES (27426, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES (27426, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES (27426, 14, 28); -- CHR
+INSERT INTO `item_mods` VALUES (27426, 28, 20); -- MAtt
+INSERT INTO `item_mods` VALUES (27426, 30, 20); -- MAcc
+INSERT INTO `item_mods` VALUES (27426, 68, 52); -- Evasion
+INSERT INTO `item_mods` VALUES (27426, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27426, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27426, 384, 31); -- Haste
+
+-- Nakumi Cabasset_+1 (26757)
+INSERT INTO `item_mods` VALUES (26757, 1, 102); -- DEF
+INSERT INTO `item_mods` VALUES (26757, 2, 43); -- HP
+INSERT INTO `item_mods` VALUES (26757, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (26757, 9, 25); -- DEX
+INSERT INTO `item_mods` VALUES (26757, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (26757, 11, 18); -- AGI
+INSERT INTO `item_mods` VALUES (26757, 12, 14); -- INT
+INSERT INTO `item_mods` VALUES (26757, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES (26757, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26757, 25, 26); -- acc
+INSERT INTO `item_mods` VALUES (26757, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26757, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26757, 29, 2); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26757, 384, 81); -- Haste
+
+-- Nakumi Gausape_+1 (26915)
+INSERT INTO `item_mods` VALUES (26915, 1, 133); -- DEF
+INSERT INTO `item_mods` VALUES (26915, 2, 66); -- HP
+INSERT INTO `item_mods` VALUES (26915, 8, 28); -- STR
+INSERT INTO `item_mods` VALUES (26915, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES (26915, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (26915, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26915, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26915, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES (26915, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26915, 25, 25); -- acc
+INSERT INTO `item_mods` VALUES (26915, 23, 25); -- att
+INSERT INTO `item_mods` VALUES (26915, 68, 69); -- Evasion
+INSERT INTO `item_mods` VALUES (26915, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26915, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26915, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (26915, 84, 11); -- Axe
+
+-- Nakumi Manoplas_+1 (27069)
+INSERT INTO `item_mods` VALUES (27069, 1, 92); -- DEF
+INSERT INTO `item_mods` VALUES (27069, 2, 27); -- HP
+INSERT INTO `item_mods` VALUES (27069, 8, 15); -- STR
+INSERT INTO `item_mods` VALUES (27069, 9, 32); -- DEX
+INSERT INTO `item_mods` VALUES (27069, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (27069, 11, 7); -- AGI
+INSERT INTO `item_mods` VALUES (27069, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES (27069, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27069, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27069, 23, 25); -- att
+INSERT INTO `item_mods` VALUES (27069, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27069, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27069, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (27069, 165, 4); -- Crit
+
+-- Nakumi Quijotes_+1 (27254)
+INSERT INTO `item_mods` VALUES (27254, 1, 113); -- DEF
+INSERT INTO `item_mods` VALUES (27254, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27254, 8, 38); -- STR
+INSERT INTO `item_mods` VALUES (27254, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES (27254, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (27254, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES (27254, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27254, 14, 15); -- CHR
+INSERT INTO `item_mods` VALUES (27254, 25, 25); -- acc
+INSERT INTO `item_mods` VALUES (27254, 23, 25); -- att
+INSERT INTO `item_mods` VALUES (27254, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27254, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27254, 384, 82); -- Haste
+
+-- Nakumi Ocreae_+1 (27428)
+INSERT INTO `item_mods` VALUES (27428, 1, 71); -- DEF
+INSERT INTO `item_mods` VALUES (27428, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27428, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (27428, 9, 22); -- DEX
+INSERT INTO `item_mods` VALUES (27428, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27428, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (27428, 13, 5); -- MND
+INSERT INTO `item_mods` VALUES (27428, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (27428, 25, 27); -- acc
+INSERT INTO `item_mods` VALUES (27428, 288, 4); --  dbl att
+INSERT INTO `item_mods` VALUES (27428, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (27428, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27428, 384, 30); -- Haste
+
+-- Fili Calot_+1 (26759)
+INSERT INTO `item_mods` VALUES (26759, 1, 95); -- DEF
+INSERT INTO `item_mods` VALUES (26759, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES (26759, 5, 35); -- MP
+INSERT INTO `item_mods` VALUES (26759, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES (26759, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26759, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (26759, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (26759, 12, 20); -- INT
+INSERT INTO `item_mods` VALUES (26759, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES (26759, 14, 32); -- CHR
+INSERT INTO `item_mods` VALUES (26759, 68, 38); -- Evasion
+INSERT INTO `item_mods` VALUES (26759, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26759, 29, 6); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26759, 384, 6); -- Haste
+INSERT INTO `item_mods` VALUES (26759, 27, -9); -- emn
+INSERT INTO `item_mods` VALUES (26759, 438, 1); -- Madrigal
+INSERT INTO `item_mods` VALUES (26759, 170, 14); -- cast
+
+-- Fili Hongreline_+1 (26917)
+INSERT INTO `item_mods` VALUES (26917, 1, 125); -- DEF
+INSERT INTO `item_mods` VALUES (26917, 2, 54); -- HP
+INSERT INTO `item_mods` VALUES (26917, 5, 70); -- MP
+INSERT INTO `item_mods` VALUES (26917, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (26917, 9, 23); -- DEX
+INSERT INTO `item_mods` VALUES (26917, 10, 21); -- VIT
+INSERT INTO `item_mods` VALUES (26917, 11, 21); -- AGI
+INSERT INTO `item_mods` VALUES (26917, 12, 29); -- INT
+INSERT INTO `item_mods` VALUES (26917, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES (26917, 14, 37); -- CHR
+INSERT INTO `item_mods` VALUES (26917, 68, 44); -- Evasion
+INSERT INTO `item_mods` VALUES (26917, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26917, 29, 7); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (26917, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (26917, 119, 14); -- singing
+INSERT INTO `item_mods` VALUES (26917, 121, 14); -- wind
+INSERT INTO `item_mods` VALUES (26917, 434, 1); -- minuet
+INSERT INTO `item_mods` VALUES (26917, 454, 12); -- song duration
+
+-- Fili Manchettes_+1 (27071)
+INSERT INTO `item_mods` VALUES (27071, 1, 84); -- DEF
+INSERT INTO `item_mods` VALUES (27071, 2, 22); -- HP
+INSERT INTO `item_mods` VALUES (27071, 5, 17); -- MP
+INSERT INTO `item_mods` VALUES (27071, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (27071, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (27071, 10, 26); -- VIT
+INSERT INTO `item_mods` VALUES (27071, 11, 7); -- AGI
+INSERT INTO `item_mods` VALUES (27071, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (27071, 13, 32); -- MND
+INSERT INTO `item_mods` VALUES (27071, 14, 29); -- CHR
+INSERT INTO `item_mods` VALUES (27071, 30, 30); -- Macc
+INSERT INTO `item_mods` VALUES (27071, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27071, 31, 43); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27071, 29, 3); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (27071, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (27071, 119, 12); -- singing
+INSERT INTO `item_mods` VALUES (27071, 120, 12); -- string
+INSERT INTO `item_mods` VALUES (27071, 121, 12); -- wind
+INSERT INTO `item_mods` VALUES (27071, 443, 1); -- march
+
+-- Fili Rhingrave_+1 (27256)
+INSERT INTO `item_mods` VALUES (27256, 1, 107); -- DEF
+INSERT INTO `item_mods` VALUES (27256, 2, 43); -- HP
+INSERT INTO `item_mods` VALUES (27256, 5, 32); -- MP
+INSERT INTO `item_mods` VALUES (27256, 8, 23); -- STR
+INSERT INTO `item_mods` VALUES (27256, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES (27256, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (27256, 12, 34); -- INT
+INSERT INTO `item_mods` VALUES (27256, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27256, 14, 23); -- CHR
+INSERT INTO `item_mods` VALUES (27256, 30, 27); -- Macc
+INSERT INTO `item_mods` VALUES (27256, 68, 38); -- Evasion
+INSERT INTO `item_mods` VALUES (27256, 31, 107); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27256, 29, 6); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (27256, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27256, 119, 18); -- singing
+INSERT INTO `item_mods` VALUES (27256, 442, 1); -- ballad
+
+-- Fili Cothurnes_+1 (27430)
+INSERT INTO `item_mods` VALUES (27430, 1, 66); -- DEF
+INSERT INTO `item_mods` VALUES (27430, 2, 13); -- HP
+INSERT INTO `item_mods` VALUES (27430, 5, 17); -- MP
+INSERT INTO `item_mods` VALUES (27430, 8, 7); -- STR
+INSERT INTO `item_mods` VALUES (27430, 9, 11); -- STR
+INSERT INTO `item_mods` VALUES (27430, 10, 7); -- VIT
+INSERT INTO `item_mods` VALUES (27430, 11, 33); -- AGI
+INSERT INTO `item_mods` VALUES (27430, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (27430, 13, 20); -- MND
+INSERT INTO `item_mods` VALUES (27430, 14, 41); -- CHR
+INSERT INTO `item_mods` VALUES (27430, 68, 63); -- Evasion
+INSERT INTO `item_mods` VALUES (27430, 31, 107); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27430, 29, 6); --  Magic Def. Bonus+2
+INSERT INTO `item_mods` VALUES (27430, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (27430, 370, 2); -- regen
+INSERT INTO `item_mods` VALUES (27430, 451, 1); -- scherzo
+INSERT INTO `item_mods` VALUES (27430, 169, 18); -- speed
+
+-- Amini Gepette_+1 (26761)
+INSERT INTO `item_mods` VALUES (26761, 1, 98); -- DEF
+INSERT INTO `item_mods` VALUES (26761, 2, 34); -- HP
+INSERT INTO `item_mods` VALUES (26761, 8, 16); -- STR
+INSERT INTO `item_mods` VALUES (26761, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26761, 10, 11); -- VIT
+INSERT INTO `item_mods` VALUES (26761, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (26761, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES (26761, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (26761, 14, 12); -- CHR
+INSERT INTO `item_mods` VALUES (26761, 26, 26); -- RACC
+INSERT INTO `item_mods` VALUES (26761, 24, 26); -- Ratt
+INSERT INTO `item_mods` VALUES (26761, 68, 47); -- Evasion
+INSERT INTO `item_mods` VALUES (26761, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26761, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26761, 384, 82); -- Haste
+INSERT INTO `item_mods` VALUES (26761, 365, 7); -- Snapshot
+INSERT INTO `item_mods` VALUES (26761, 289, 12); -- Subtle Blow
+
+-- Amini Caban_+1 (26919)
+INSERT INTO `item_mods` VALUES (26919, 1, 130); -- DEF
+INSERT INTO `item_mods` VALUES (26919, 2, 57); -- HP
+INSERT INTO `item_mods` VALUES (26919, 8, 30); -- STR
+INSERT INTO `item_mods` VALUES (26919, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (26919, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (26919, 11, 39); -- AGI
+INSERT INTO `item_mods` VALUES (26919, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26919, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES (26919, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26919, 26, 27); -- RACC
+INSERT INTO `item_mods` VALUES (26919, 68, 52); -- Evasion
+INSERT INTO `item_mods` VALUES (26919, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26919, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26919, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (26919, 27, -11); -- enm
+INSERT INTO `item_mods` VALUES (26919, 424, 7); -- Velocity
+
+-- Amini Glovelettes_+1 (27073)
+INSERT INTO `item_mods` VALUES (27073, 1, 88); -- DEF
+INSERT INTO `item_mods` VALUES (27073, 2, 22); -- HP
+INSERT INTO `item_mods` VALUES (27073, 8, 16); -- STR
+INSERT INTO `item_mods` VALUES (27073, 9, 34); -- DEX
+INSERT INTO `item_mods` VALUES (27073, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (27073, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (27073, 12, 8); -- INT
+INSERT INTO `item_mods` VALUES (27073, 13, 29); -- MND
+INSERT INTO `item_mods` VALUES (27073, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27073, 68, 27); -- Evasion
+INSERT INTO `item_mods` VALUES (27073, 31, 43); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27073, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27073, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27073, 27, 28); -- Archery skill
+INSERT INTO `item_mods` VALUES (27073, 73, 9); -- STP
+
+-- Amini Brague_+1 (27258)
+INSERT INTO `item_mods` VALUES (27258, 1, 111); -- DEF
+INSERT INTO `item_mods` VALUES (27258, 2, 45); -- HP
+INSERT INTO `item_mods` VALUES (27258, 8, 30); -- STR
+INSERT INTO `item_mods` VALUES (27258, 10, 15); -- VIT
+INSERT INTO `item_mods` VALUES (27258, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES (27258, 12, 28); -- INT
+INSERT INTO `item_mods` VALUES (27258, 13, 16); -- MND
+INSERT INTO `item_mods` VALUES (27258, 14, 8); -- CHR
+INSERT INTO `item_mods` VALUES (27258, 24, 23); -- Ratt
+INSERT INTO `item_mods` VALUES (27258, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (27258, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27258, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27258, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (27258, 165, 4); -- Crit
+INSERT INTO `item_mods` VALUES (27258, 73, 10); -- STP
+INSERT INTO `item_mods` VALUES (27258, 359, 10); -- rapid
+
+-- Amini Bottilions_+1 (27432)
+INSERT INTO `item_mods` VALUES (27432, 1, 70); -- DEF
+INSERT INTO `item_mods` VALUES (27432, 2, 11); -- HP
+INSERT INTO `item_mods` VALUES (27432, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES (27432, 9, 23); -- DEX
+INSERT INTO `item_mods` VALUES (27432, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES (27432, 11, 44); -- AGI
+INSERT INTO `item_mods` VALUES (27432, 13, 11); -- MND
+INSERT INTO `item_mods` VALUES (27432, 14, 28); -- CHR
+INSERT INTO `item_mods` VALUES (27432, 68, 74); -- Evasion
+INSERT INTO `item_mods` VALUES (27432, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27432, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27432, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (27432, 105, 28); -- marksmanship
+
+-- Kasuga Kabuto_+1 (26763)
+INSERT INTO `item_mods` VALUES (26763, 1, 114); -- DEF
+INSERT INTO `item_mods` VALUES (26763, 2, 43); -- HP
+INSERT INTO `item_mods` VALUES (26763, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (26763, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES (26763, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (26763, 11, 18); -- AGI
+INSERT INTO `item_mods` VALUES (26763, 12, 14); -- INT
+INSERT INTO `item_mods` VALUES (26763, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES (26763, 14, 14); -- CHR
+INSERT INTO `item_mods` VALUES (26763, 291, 14); -- counter
+INSERT INTO `item_mods` VALUES (26763, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26763, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26763, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26763, 384, 71); -- Haste
+INSERT INTO `item_mods` VALUES (26763, 73, 10); -- STP
+
+-- Kasuga Domaru_+1 (26921)
+INSERT INTO `item_mods` VALUES (26921, 1, 146); -- DEF
+INSERT INTO `item_mods` VALUES (26921, 2, 66); -- HP
+INSERT INTO `item_mods` VALUES (26921, 8, 28); -- STR
+INSERT INTO `item_mods` VALUES (26921, 9, 24); -- DEX
+INSERT INTO `item_mods` VALUES (26921, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (26921, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26921, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26921, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES (26921, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26921, 25, 22); -- Acc
+INSERT INTO `item_mods` VALUES (26921, 23, 22); -- Att
+INSERT INTO `item_mods` VALUES (26921, 68, 44); -- Evasion
+INSERT INTO `item_mods` VALUES (26921, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26921, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26921, 306, 12); --  Zanshin
+INSERT INTO `item_mods` VALUES (26921, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (26921, 73, 12); -- STP
+
+-- Kasuga Kote_+1 (27075)
+INSERT INTO `item_mods` VALUES (27075, 1, 104); -- DEF
+INSERT INTO `item_mods` VALUES (27075, 2, 27); -- HP
+INSERT INTO `item_mods` VALUES (27075, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES (27075, 9, 32); -- DEX
+INSERT INTO `item_mods` VALUES (27075, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (27075, 11, 11); -- AGI
+INSERT INTO `item_mods` VALUES (27075, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES (27075, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27075, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27075, 25, 23); -- Acc
+INSERT INTO `item_mods` VALUES (27075, 26, 21); -- R Acc
+INSERT INTO `item_mods` VALUES (27075, 24, 21); -- R Att
+INSERT INTO `item_mods` VALUES (27075, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27075, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27075, 384, 41); -- Haste
+
+-- Kasuga Haidate_+1 (27260)
+INSERT INTO `item_mods` VALUES (27260, 1, 126); -- DEF
+INSERT INTO `item_mods` VALUES (27260, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27260, 8, 41); -- STR
+INSERT INTO `item_mods` VALUES (27260, 9, 9); -- DEX
+INSERT INTO `item_mods` VALUES (27260, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES (27260, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (27260, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES (27260, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27260, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES (27260, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27260, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27260, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27260, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (27260, 73, 9); -- STP
+
+-- Kasuga Sune-Ate_+1 (27434)
+INSERT INTO `item_mods` VALUES (27434, 1, 86); -- DEF
+INSERT INTO `item_mods` VALUES (27434, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27434, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (27434, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (27434, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27434, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (27434, 13, 5); -- MND
+INSERT INTO `item_mods` VALUES (27434, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (27434, 25, 21); -- Acc
+INSERT INTO `item_mods` VALUES (27434, 23, 21); -- Att
+INSERT INTO `item_mods` VALUES (27434, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (27434, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27434, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27434, 306, 11); --  Zanshin
+INSERT INTO `item_mods` VALUES (27434, 384, 31); -- Haste
+INSERT INTO `item_mods` VALUES (27434, 73, 8); -- STP
+
+-- Hattori Zukin_+1 (26765)
+INSERT INTO `item_mods` VALUES (26765, 1, 101); -- DEF
+INSERT INTO `item_mods` VALUES (26765, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES (26765, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (26765, 9, 31); -- DEX
+INSERT INTO `item_mods` VALUES (26765, 10, 18); -- VIT
+INSERT INTO `item_mods` VALUES (26765, 11, 22); -- AGI
+INSERT INTO `item_mods` VALUES (26765, 12, 17); -- INT
+INSERT INTO `item_mods` VALUES (26765, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (26765, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (26765, 68, 49); -- Evasion
+INSERT INTO `item_mods` VALUES (26765, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26765, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26765, 259, 7); --  Dual Wield
+INSERT INTO `item_mods` VALUES (26765, 384, 102); -- Haste
+INSERT INTO `item_mods` VALUES (26765, 288, 9); -- Dbl Atk
+
+-- Hattori Ninji_+1 (26923)
+INSERT INTO `item_mods` VALUES (26923, 1, 133); -- DEF
+INSERT INTO `item_mods` VALUES (26923, 2, 63); -- HP
+INSERT INTO `item_mods` VALUES (26923, 8, 30); -- STR
+INSERT INTO `item_mods` VALUES (26923, 9, 37); -- DEX
+INSERT INTO `item_mods` VALUES (26923, 10, 24); -- VIT
+INSERT INTO `item_mods` VALUES (26923, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES (26923, 12, 21); -- INT
+INSERT INTO `item_mods` VALUES (26923, 13, 21); -- MND
+INSERT INTO `item_mods` VALUES (26923, 14, 21); -- CHR
+INSERT INTO `item_mods` VALUES (26923, 23 ,24); -- Att
+INSERT INTO `item_mods` VALUES (26923, 25, 24); -- Acc
+INSERT INTO `item_mods` VALUES (26923, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (26923, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26923, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26923, 259, 10); --  Dual Wield
+INSERT INTO `item_mods` VALUES (26923, 384, 41); -- Haste
+INSERT INTO `item_mods` VALUES (26923, 165, 6); -- Crit
+
+-- Hattori Tekko_+1 (27077)
+INSERT INTO `item_mods` VALUES (27077, 1, 91); -- DEF
+INSERT INTO `item_mods` VALUES (27077, 2, 63); -- HP
+INSERT INTO `item_mods` VALUES (27077, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27077, 9, 45); -- DEX
+INSERT INTO `item_mods` VALUES (27077, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES (27077, 11, 14); -- AGI
+INSERT INTO `item_mods` VALUES (27077, 12, 12); -- INT
+INSERT INTO `item_mods` VALUES (27077, 13, 30); -- MND
+INSERT INTO `item_mods` VALUES (27077, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27077, 25, 23); -- Acc
+INSERT INTO `item_mods` VALUES (27077, 68, 59); -- Evasion
+INSERT INTO `item_mods` VALUES (27077, 31, 43); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27077, 384, 51); -- Haste
+
+-- Hattori Hakama_+1 (27265)
+INSERT INTO `item_mods` VALUES (27265, 1, 113); -- DEF
+INSERT INTO `item_mods` VALUES (27265, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27265, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES (27265, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27265, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (27265, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES (27265, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27265, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (27265, 25, 20); -- Acc
+INSERT INTO `item_mods` VALUES (27265, 68, 47); -- Evasion
+INSERT INTO `item_mods` VALUES (27265, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27265, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27265, 88, 23); --  katana
+INSERT INTO `item_mods` VALUES (27265, 384, 82); -- Haste
+INSERT INTO `item_mods` VALUES (27265, 291, 14); -- Counter
+
+-- Hattori Kyahan_+1 (27436)
+INSERT INTO `item_mods` VALUES (27436, 1, 73); -- DEF
+INSERT INTO `item_mods` VALUES (27436, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27436, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES (27436, 9, 26); -- DEX
+INSERT INTO `item_mods` VALUES (27436, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (27436, 11, 39); -- AGI
+INSERT INTO `item_mods` VALUES (27436, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27436, 14, 30); -- CHR
+INSERT INTO `item_mods` VALUES (27436, 68, 80); -- Evasion
+INSERT INTO `item_mods` VALUES (27436, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27436, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27436, 384, 51); -- Haste
+INSERT INTO `item_mods` VALUES (27436, 486, 20); -- tactical parry
+
+-- DRG
+-- peltasts_mezail_+1 (26767)
+INSERT INTO `item_mods` VALUES (26767, 1, 110); -- DEF
+INSERT INTO `item_mods` VALUES (26767, 2, 43); -- HP
+INSERT INTO `item_mods` VALUES (26767, 8, 21); -- STR
+INSERT INTO `item_mods` VALUES (26767, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (26767, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES (26767, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (26767, 12, 11); -- INT
+INSERT INTO `item_mods` VALUES (26767, 13, 11); -- MND
+INSERT INTO `item_mods` VALUES (26767, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (26767, 23, 28); -- ATK
+INSERT INTO `item_mods` VALUES (26767, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26767, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26767, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26767, 87, 17); --  Polearm Skill
+INSERT INTO `item_mods` VALUES (26767, 384, 70); -- Haste 6%
+
+-- peltasts_plackart_+1 (26925)
+INSERT INTO `item_mods` VALUES (26925, 1, 140); -- DEF
+INSERT INTO `item_mods` VALUES (26925, 2, 66); -- HP
+INSERT INTO `item_mods` VALUES (26925, 8, 32); -- STR
+INSERT INTO `item_mods` VALUES (26925, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (26925, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (26925, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26925, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26925, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES (26925, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26925, 25, 28); -- ACC
+INSERT INTO `item_mods` VALUES (26925, 23, 28); -- ATK
+INSERT INTO `item_mods` VALUES (26925, 68, 44); -- Evasion
+INSERT INTO `item_mods` VALUES (26925, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26925, 29, 4); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26925, 73, 12); --  Store TP
+INSERT INTO `item_mods` VALUES (26925, 384, 30); -- Haste 3%
+
+-- peltasts_vambraces_+1 (27079)
+INSERT INTO `item_mods` VALUES (27079, 1, 98); -- DEF
+INSERT INTO `item_mods` VALUES (27079, 2, 27); -- HP
+INSERT INTO `item_mods` VALUES (27079, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27079, 9, 36); -- DEX
+INSERT INTO `item_mods` VALUES (27079, 10, 32); -- VIT
+INSERT INTO `item_mods` VALUES (27079, 11, 7); -- AGI
+INSERT INTO `item_mods` VALUES (27079, 12, 6); -- INT
+INSERT INTO `item_mods` VALUES (27079, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (27079, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27079, 25, 23); -- ACC
+INSERT INTO `item_mods` VALUES (27079, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27079, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27079, 288, 5); --  Double Attack
+INSERT INTO `item_mods` VALUES (27079, 384, 40); -- Haste 3%
+
+-- peltasts_cuissots_+1 (27264)
+INSERT INTO `item_mods` VALUES (27264, 1, 121); -- DEF
+INSERT INTO `item_mods` VALUES (27264, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27264, 8, 41); -- STR
+INSERT INTO `item_mods` VALUES (27264, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (27264, 11, 15); -- AGI
+INSERT INTO `item_mods` VALUES (27264, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES (27264, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27264, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES (27264, 23, 28); -- ATK
+INSERT INTO `item_mods` VALUES (27264, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27264, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27264, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27264, 384, 50); -- Haste 5%
+INSERT INTO `item_mods` VALUES (27264, 421, 11); --  Critical Hit Dmg
+
+-- peltasts_schynbalds_+1 (27438)
+INSERT INTO `item_mods` VALUES (27438, 1, 78); -- DEF
+INSERT INTO `item_mods` VALUES (27438, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27438, 8, 16); -- STR
+INSERT INTO `item_mods` VALUES (27438, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (27438, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES (27438, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (27438, 13, 5); -- MND
+INSERT INTO `item_mods` VALUES (27438, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (27438, 25, 24); -- ACC
+INSERT INTO `item_mods` VALUES (27438, 23, 24); -- ATK
+INSERT INTO `item_mods` VALUES (27438, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (27438, 31, 80); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27438, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27438, 384, 60); -- Haste 5%
+
+-- SMN
+-- beckoners_horn_+1 (26769)
+-- beckoners_doublet_+1 (26927)
+-- beckoners_bracers_+1 (27081)
+-- beckoners_spats_+1 (27266)
+-- beckoners_pigaches_+1 (27440)
+
+-- BLU
+-- hashishin_kavuk_+1 (26771)
+INSERT INTO `item_mods` VALUES (26771, 1, 102); -- DEF
+INSERT INTO `item_mods` VALUES (26771, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES (26771, 5, 35); -- MP
+INSERT INTO `item_mods` VALUES (26771, 8, 18); -- STR
+INSERT INTO `item_mods` VALUES (26771, 9, 18); -- DEX
+INSERT INTO `item_mods` VALUES (26771, 10, 18); -- VIT
+INSERT INTO `item_mods` VALUES (26771, 11, 18); -- AGI
+INSERT INTO `item_mods` VALUES (26771, 12, 23); -- INT
+INSERT INTO `item_mods` VALUES (26771, 13, 23); -- MND
+INSERT INTO `item_mods` VALUES (26771, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (26771, 25, 20); -- ACC
+INSERT INTO `item_mods` VALUES (26771, 68, 38); -- Evasion
+INSERT INTO `item_mods` VALUES (26771, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26771, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26771, 82, 20); --  Sword Skill
+INSERT INTO `item_mods` VALUES (26771, 384, 81); -- Haste
+
+-- hashishin_mintan_+1 (26929)
+INSERT INTO `item_mods` VALUES (26929, 1, 134); -- DEF
+INSERT INTO `item_mods` VALUES (26929, 2, 57); -- HP
+INSERT INTO `item_mods` VALUES (26929, 5, 61); -- MP
+INSERT INTO `item_mods` VALUES (26929, 8, 24); -- STR
+INSERT INTO `item_mods` VALUES (26929, 9, 20); -- DEX
+INSERT INTO `item_mods` VALUES (26929, 10, 20); -- VIT
+INSERT INTO `item_mods` VALUES (26929, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (26929, 12, 32); -- INT
+INSERT INTO `item_mods` VALUES (26929, 13, 30); -- MND
+INSERT INTO `item_mods` VALUES (26929, 14, 25); -- CHR
+INSERT INTO `item_mods` VALUES (26929, 25, 24); -- ACC
+INSERT INTO `item_mods` VALUES (26929, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (26929, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26929, 29, 7); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26929, 384, 40); -- Haste
+INSERT INTO `item_mods` VALUES (26929, 369, 2); -- REFRESH
+
+-- hashishin_bazuband_+1 (27083)
+INSERT INTO `item_mods` VALUES (27083, 1, 90); -- DEF
+INSERT INTO `item_mods` VALUES (27083, 2, 25); -- HP
+INSERT INTO `item_mods` VALUES (27083, 5, 17); -- MP
+INSERT INTO `item_mods` VALUES (27083, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (27083, 9, 29); -- DEX
+INSERT INTO `item_mods` VALUES (27083, 10, 29); -- VIT
+INSERT INTO `item_mods` VALUES (27083, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (27083, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (27083, 13, 40); -- MND
+INSERT INTO `item_mods` VALUES (27083, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (27083, 28, 24); -- MATT
+INSERT INTO `item_mods` VALUES (27083, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27083, 31, 37); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27083, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27083, 27, -4); --  Enmity
+INSERT INTO `item_mods` VALUES (27083, 384, 30); -- Haste
+
+-- hashishin_tayt_+1 (27268)
+INSERT INTO `item_mods` VALUES (27268, 1, 113); -- DEF
+INSERT INTO `item_mods` VALUES (27268, 2, 45); -- HP
+INSERT INTO `item_mods` VALUES (27268, 5, 32); -- MP
+INSERT INTO `item_mods` VALUES (27268, 8, 32); -- STR
+INSERT INTO `item_mods` VALUES (27268, 9, 10); -- DEX
+INSERT INTO `item_mods` VALUES (27268, 10, 10); -- VIT
+INSERT INTO `item_mods` VALUES (27268, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (27268, 12, 34); -- INT
+INSERT INTO `item_mods` VALUES (27268, 13, 28); -- MND
+INSERT INTO `item_mods` VALUES (27268, 14, 20); -- CHR
+INSERT INTO `item_mods` VALUES (27268, 68, 27); -- Evasion
+INSERT INTO `item_mods` VALUES (27268, 31, 112); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27268, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27268, 122, 23); --  BLU
+INSERT INTO `item_mods` VALUES (27268, 384, 50); -- Haste
+
+-- hashishin_basmak_+1 (27442)
+INSERT INTO `item_mods` VALUES (27442, 1, 73); -- DEF
+INSERT INTO `item_mods` VALUES (27442, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27442, 5, 17); -- MP
+INSERT INTO `item_mods` VALUES (27442, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27442, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES (27442, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (27442, 11, 33); -- AGI
+INSERT INTO `item_mods` VALUES (27442, 12, 29); -- INT
+INSERT INTO `item_mods` VALUES (27442, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27442, 14, 33); -- CHR
+INSERT INTO `item_mods` VALUES (27442, 28, 27); -- MATT
+INSERT INTO `item_mods` VALUES (27442, 68, 60); -- Evasion
+INSERT INTO `item_mods` VALUES (27442, 31, 107); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27442, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27442, 27, -8); --  Enmity
+INSERT INTO `item_mods` VALUES (27442, 384, 30); -- Haste
+
+
+-- COR
+-- chasseurs_tricorne_+1 (26773)
+INSERT INTO `item_mods` VALUES (26773, 1, 100); -- DEF
+INSERT INTO `item_mods` VALUES (26773, 2, 34); -- HP
+INSERT INTO `item_mods` VALUES (26773, 8, 18); -- STR
+INSERT INTO `item_mods` VALUES (26773, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (26773, 10, 13); -- VIT
+INSERT INTO `item_mods` VALUES (26773, 11, 35); -- AGI
+INSERT INTO `item_mods` VALUES (26773, 12, 14); -- INT
+INSERT INTO `item_mods` VALUES (26773, 13, 14); -- MND
+INSERT INTO `item_mods` VALUES (26773, 14, 14); -- CHR
+INSERT INTO `item_mods` VALUES (26773, 26, 32); -- RACC
+INSERT INTO `item_mods` VALUES (26773, 68, 47); -- Evasion
+INSERT INTO `item_mods` VALUES (26773, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26773, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26773, 359, 14); --  rapid shot
+INSERT INTO `item_mods` VALUES (26773, 384, 82); -- Haste
+
+-- chasseurs_frac_+1 (26931)
+INSERT INTO `item_mods` VALUES (26931, 1, 131); -- DEF
+INSERT INTO `item_mods` VALUES (26931, 2, 57); -- HP
+INSERT INTO `item_mods` VALUES (26931, 5, 59); -- MP
+INSERT INTO `item_mods` VALUES (26931, 8, 25); -- STR
+INSERT INTO `item_mods` VALUES (26931, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (26931, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (26931, 11, 34); -- AGI
+INSERT INTO `item_mods` VALUES (26931, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (26931, 13, 19); -- MND
+INSERT INTO `item_mods` VALUES (26931, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26931, 26, 22); -- RACC
+INSERT INTO `item_mods` VALUES (26931, 24, 22); -- RATT
+INSERT INTO `item_mods` VALUES (26931, 68, 52); -- Evasion
+INSERT INTO `item_mods` VALUES (26931, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26931, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26931, 422, 12); --  triple shot
+
+-- chasseurs_gants_+1 (27085)
+INSERT INTO `item_mods` VALUES (27085, 1, 90); -- DEF
+INSERT INTO `item_mods` VALUES (27085, 2, 22); -- HP
+INSERT INTO `item_mods` VALUES (27085, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27085, 9, 34); -- DEX
+INSERT INTO `item_mods` VALUES (27085, 10, 28); -- VIT
+INSERT INTO `item_mods` VALUES (27085, 11, 11); -- AGI
+INSERT INTO `item_mods` VALUES (27085, 12, 8); -- INT
+INSERT INTO `item_mods` VALUES (27085, 13, 29); -- MND
+INSERT INTO `item_mods` VALUES (27085, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (27085, 26, 23); -- RACC
+INSERT INTO `item_mods` VALUES (27085, 68, 27); -- Evasion
+INSERT INTO `item_mods` VALUES (27085, 31, 43); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27085, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27085, 384, 52); --  haste
+INSERT INTO `item_mods` VALUES (27085, 165, 6); --  crit
+
+-- chasseurs_culottes_+1 (27270)
+INSERT INTO `item_mods` VALUES (27270, 1, 113); -- DEF
+INSERT INTO `item_mods` VALUES (27270, 2, 45); -- HP
+INSERT INTO `item_mods` VALUES (27270, 5, 38); -- MP
+INSERT INTO `item_mods` VALUES (27270, 8, 32); -- STR
+INSERT INTO `item_mods` VALUES (27270, 9, 10); -- DEX
+INSERT INTO `item_mods` VALUES (27270, 10, 17); -- VIT
+INSERT INTO `item_mods` VALUES (27270, 11, 30); -- AGI
+INSERT INTO `item_mods` VALUES (27270, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES (27270, 13, 18); -- MND
+INSERT INTO `item_mods` VALUES (27270, 14, 10); -- CHR
+INSERT INTO `item_mods` VALUES (27270, 68, 41); -- Evasion
+INSERT INTO `item_mods` VALUES (27270, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27270, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27270, 384, 61); --  haste
+INSERT INTO `item_mods` VALUES (27270, 365, 7); --  snapshot
+INSERT INTO `item_mods` VALUES (27270, 73, 10); --  stp
+
+-- chasseurs_bottes_+1 (27444)
+INSERT INTO `item_mods` VALUES (27444, 1, 69); -- DEF
+INSERT INTO `item_mods` VALUES (27444, 2, 11); -- HP
+INSERT INTO `item_mods` VALUES (27444, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES (27444, 9, 23); -- DEX
+INSERT INTO `item_mods` VALUES (27444, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES (27444, 11, 44); -- AGI
+INSERT INTO `item_mods` VALUES (27444, 13, 11); -- MND
+INSERT INTO `item_mods` VALUES (27444, 14, 28); -- CHR
+INSERT INTO `item_mods` VALUES (27444, 68, 74); -- Evasion
+INSERT INTO `item_mods` VALUES (27444, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27444, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27444, 384, 41); --  haste
+INSERT INTO `item_mods` VALUES (27444, 411, 25); --  quickdraw
+
+-- DNC
+-- maculele_tiara_+1 (26777)
+INSERT INTO `item_mods` VALUES (26777, 1, 101); -- DEF
+INSERT INTO `item_mods` VALUES (26777, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES (26777, 8, 18); -- STR
+INSERT INTO `item_mods` VALUES (26777, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (26777, 10, 17); -- VIT
+INSERT INTO `item_mods` VALUES (26777, 11, 26); -- AGI
+INSERT INTO `item_mods` VALUES (26777, 12, 16); -- INT
+INSERT INTO `item_mods` VALUES (26777, 13, 16); -- MND
+INSERT INTO `item_mods` VALUES (26777, 14, 16); -- CHR
+INSERT INTO `item_mods` VALUES (26777, 25, 23); -- ACC
+INSERT INTO `item_mods` VALUES (26777, 23, 23); -- ATK
+INSERT INTO `item_mods` VALUES (26777, 68, 49); -- Evasion
+INSERT INTO `item_mods` VALUES (26777, 31, 59); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26777, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26777, 73, 8); --  Store TP
+INSERT INTO `item_mods` VALUES (26777, 384, 80); -- Haste
+
+-- maculele_casaque_+1 (26935)
+INSERT INTO `item_mods` VALUES (26935, 1, 134); -- DEF
+INSERT INTO `item_mods` VALUES (26935, 2, 63); -- HP
+INSERT INTO `item_mods` VALUES (26935, 8, 25); -- STR
+INSERT INTO `item_mods` VALUES (26935, 9, 38); -- DEX
+INSERT INTO `item_mods` VALUES (26935, 10, 24); -- VIT
+INSERT INTO `item_mods` VALUES (26935, 11, 28); -- AGI
+INSERT INTO `item_mods` VALUES (26935, 12, 21); -- INT
+INSERT INTO `item_mods` VALUES (26935, 13, 21); -- MND
+INSERT INTO `item_mods` VALUES (26935, 14, 27); -- CHR
+INSERT INTO `item_mods` VALUES (26935, 68, 55); -- Evasion
+INSERT INTO `item_mods` VALUES (26935, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26935, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26935, 289, 12); -- Subtle Blow
+INSERT INTO `item_mods` VALUES (26935, 259, 11); -- Dual Wield
+INSERT INTO `item_mods` VALUES (26935, 384, 40); -- Haste
+
+-- maculele_bangles_+1 (27089)
+INSERT INTO `item_mods` VALUES (27089, 1, 91); -- DEF
+INSERT INTO `item_mods` VALUES (27089, 2, 27); -- HP
+INSERT INTO `item_mods` VALUES (27089, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES (27089, 9, 39); -- DEX
+INSERT INTO `item_mods` VALUES (27089, 10, 30); -- VIT
+INSERT INTO `item_mods` VALUES (27089, 11, 13); -- AGI
+INSERT INTO `item_mods` VALUES (27089, 12, 13); -- INT
+INSERT INTO `item_mods` VALUES (27089, 13, 31); -- MND
+INSERT INTO `item_mods` VALUES (27089, 14, 18); -- CHR
+INSERT INTO `item_mods` VALUES (27089, 25, 26); -- ACC
+INSERT INTO `item_mods` VALUES (27089, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (27089, 31, 43); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27089, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27089, 384, 50); -- Haste
+INSERT INTO `item_mods` VALUES (27089, 174, 11); -- Skillchain Bonus
+
+-- maculele_tights_+1 (27274)
+INSERT INTO `item_mods` VALUES (27274, 1, 114); -- DEF
+INSERT INTO `item_mods` VALUES (27274, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (27274, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES (27274, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (27274, 11, 20); -- AGI
+INSERT INTO `item_mods` VALUES (27274, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES (27274, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27274, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (27274, 68, 73); -- Evasion
+INSERT INTO `item_mods` VALUES (27274, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27274, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27274, 81, 28); --  Dagger Skill
+INSERT INTO `item_mods` VALUES (27274, 384, 60); -- Haste
+INSERT INTO `item_mods` VALUES (27274, 486, 20); -- Tactical Parry
+
+-- maculele_toeshoes_+1 (27448)
+INSERT INTO `item_mods` VALUES (27448, 1, 72); -- DEF
+INSERT INTO `item_mods` VALUES (27448, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (27448, 8, 12); -- STR
+INSERT INTO `item_mods` VALUES (27448, 9, 27); -- DEX
+INSERT INTO `item_mods` VALUES (27448, 10, 12); -- VIT
+INSERT INTO `item_mods` VALUES (27448, 11, 39); -- AGI
+INSERT INTO `item_mods` VALUES (27448, 13, 12); -- MND
+INSERT INTO `item_mods` VALUES (27448, 14, 33); -- CHR
+INSERT INTO `item_mods` VALUES (27448, 68, 80); -- Evasion
+INSERT INTO `item_mods` VALUES (27448, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27448, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27448, 73, 10); --  Store TP
+INSERT INTO `item_mods` VALUES (27448, 384, 50); -- Haste
+
+-- SCH
+-- arbatel_bonnet_+1 (26779)
+INSERT INTO `item_mods` VALUES (26779, 1, 93); -- DEF
+INSERT INTO `item_mods` VALUES (26779, 2, 31); -- HP
+INSERT INTO `item_mods` VALUES (26779, 5, 56); -- MP
+INSERT INTO `item_mods` VALUES (26779, 8, 14); -- STR
+INSERT INTO `item_mods` VALUES (26779, 9, 14); -- DEX
+INSERT INTO `item_mods` VALUES (26779, 10, 14); -- VIT
+INSERT INTO `item_mods` VALUES (26779, 11, 3); -- AGI
+INSERT INTO `item_mods` VALUES (26779, 12, 28); -- INT
+INSERT INTO `item_mods` VALUES (26779, 13, 24); -- MND
+INSERT INTO `item_mods` VALUES (26779, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (26779, 68, 33); -- Evasion
+INSERT INTO `item_mods` VALUES (26779, 31, 86); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26779, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26779, 113, 14); --  Enhancing Magic Skill
+INSERT INTO `item_mods` VALUES (26779, 384, 60); -- Haste
+
+-- arbatel_gown_+1 (26937)
+INSERT INTO `item_mods` VALUES (26937, 1, 122); -- DEF
+INSERT INTO `item_mods` VALUES (26937, 2, 50); -- HP
+INSERT INTO `item_mods` VALUES (26937, 5, 67); -- MP
+INSERT INTO `item_mods` VALUES (26937, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (26937, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (26937, 10, 19); -- VIT
+INSERT INTO `item_mods` VALUES (26937, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26937, 12, 39); -- INT
+INSERT INTO `item_mods` VALUES (26937, 13, 32); -- MND
+INSERT INTO `item_mods` VALUES (26937, 14, 28); -- CHR
+INSERT INTO `item_mods` VALUES (26937, 30, 25); -- Magic ACC
+INSERT INTO `item_mods` VALUES (26937, 28, 25); -- Matt
+INSERT INTO `item_mods` VALUES (26937, 68, 38); -- Evasion
+INSERT INTO `item_mods` VALUES (26937, 31, 91); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26937, 29, 7); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26937, 369, 2); --  Refresh
+INSERT INTO `item_mods` VALUES (26937, 384, 30); -- Haste
+
+-- arbatel_bracers_+1 (27091)
+INSERT INTO `item_mods` VALUES (27091, 1, 82); -- DEF
+INSERT INTO `item_mods` VALUES (27091, 2, 18); -- HP
+INSERT INTO `item_mods` VALUES (27091, 5, 40); -- MP
+INSERT INTO `item_mods` VALUES (27091, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (27091, 9, 25); -- DEX
+INSERT INTO `item_mods` VALUES (27091, 10, 23); -- VIT
+INSERT INTO `item_mods` VALUES (27091, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (27091, 12, 25); -- INT
+INSERT INTO `item_mods` VALUES (27091, 13, 36); -- MND
+INSERT INTO `item_mods` VALUES (27091, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27091, 68, 19); -- Evasion
+INSERT INTO `item_mods` VALUES (27091, 31, 48); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27091, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27091, 27, -8); -- Enmity
+INSERT INTO `item_mods` VALUES (27091, 384, 30); -- Haste
+
+-- arbatel_pants_+1 (27276)
+INSERT INTO `item_mods` VALUES (27276, 1, 104); -- DEF
+INSERT INTO `item_mods` VALUES (27276, 2, 38); -- HP
+INSERT INTO `item_mods` VALUES (27276, 5, 44); -- MP
+INSERT INTO `item_mods` VALUES (27276, 8, 21); -- STR
+INSERT INTO `item_mods` VALUES (27276, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES (27276, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES (27276, 12, 38); -- INT
+INSERT INTO `item_mods` VALUES (27276, 13, 27); -- MND
+INSERT INTO `item_mods` VALUES (27276, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27276, 68, 24); -- Evasion
+INSERT INTO `item_mods` VALUES (27276, 31, 118); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27276, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27276, 114, 18); --  Enfeebling Magic Skill
+INSERT INTO `item_mods` VALUES (27276, 384, 50); -- Haste
+
+-- arbatel_loafers_+1 (27450)
+INSERT INTO `item_mods` VALUES (27450, 1, 65); -- DEF
+INSERT INTO `item_mods` VALUES (27450, 2, 9); -- HP
+INSERT INTO `item_mods` VALUES (27450, 5, 70); -- MP
+INSERT INTO `item_mods` VALUES (27450, 8, 8); -- STR
+INSERT INTO `item_mods` VALUES (27450, 10, 8); -- VIT
+INSERT INTO `item_mods` VALUES (27450, 9, 8); -- DEX
+INSERT INTO `item_mods` VALUES (27450, 11, 29); -- AGI
+INSERT INTO `item_mods` VALUES (27450, 12, 24); -- INT
+INSERT INTO `item_mods` VALUES (27450, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27450, 14, 32); -- CHR
+INSERT INTO `item_mods` VALUES (27450, 68, 60); -- Evasion
+INSERT INTO `item_mods` VALUES (27450, 31, 118); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27450, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27450, 115, 23); --  Elemental Magic Skill
+INSERT INTO `item_mods` VALUES (27450, 384, 30); -- Haste
