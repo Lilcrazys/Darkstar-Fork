@@ -14017,22 +14017,22 @@ INSERT INTO `item_mods` VALUES (27414, 29, 3); --  Magic Def. Bonus+2
 INSERT INTO `item_mods` VALUES (27414, 384, 41); -- Haste
 INSERT INTO `item_mods` VALUES (27414, 386, 55); -- Kick attacks dmg
 
--- Ebers Cap_+1 (26744)
-INSERT INTO `item_mods` VALUES (26744, 1, 94); -- DEF
-INSERT INTO `item_mods` VALUES (26744, 2, 34); -- HP
-INSERT INTO `item_mods` VALUES (26744, 5, 88); -- MP
-INSERT INTO `item_mods` VALUES (26744, 8, 13); -- STR
-INSERT INTO `item_mods` VALUES (26744, 9, 16); -- DEX
-INSERT INTO `item_mods` VALUES (26744, 10, 16); -- VIT
-INSERT INTO `item_mods` VALUES (26744, 11, 16); -- AGI
-INSERT INTO `item_mods` VALUES (26744, 12, 21); -- INT
-INSERT INTO `item_mods` VALUES (26744, 13, 29); -- MND
-INSERT INTO `item_mods` VALUES (26744, 14, 21); -- CHR
-INSERT INTO `item_mods` VALUES (26744, 68, 36); -- Evasion
-INSERT INTO `item_mods` VALUES (26744, 31, 75); -- Magic Evasion
-INSERT INTO `item_mods` VALUES (26744, 29, 6); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES (26744, 384, 61); -- Haste
-INSERT INTO `item_mods` VALUES (26744, 374, 16); -- Cure Pot
+-- Ebers Cap_+1 (26745)
+INSERT INTO `item_mods` VALUES (26745, 1, 94); -- DEF
+INSERT INTO `item_mods` VALUES (26745, 2, 34); -- HP
+INSERT INTO `item_mods` VALUES (26745, 5, 88); -- MP
+INSERT INTO `item_mods` VALUES (26745, 8, 13); -- STR
+INSERT INTO `item_mods` VALUES (26745, 9, 16); -- DEX
+INSERT INTO `item_mods` VALUES (26745, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (26745, 11, 16); -- AGI
+INSERT INTO `item_mods` VALUES (26745, 12, 21); -- INT
+INSERT INTO `item_mods` VALUES (26745, 13, 29); -- MND
+INSERT INTO `item_mods` VALUES (26745, 14, 21); -- CHR
+INSERT INTO `item_mods` VALUES (26745, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26745, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26745, 29, 6); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26745, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (26745, 374, 16); -- Cure Pot
 
 -- Bbers Briault_+1 (26903)
 INSERT INTO `item_mods` VALUES (26903, 1, 125); -- DEF
