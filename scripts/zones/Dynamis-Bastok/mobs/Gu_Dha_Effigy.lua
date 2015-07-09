@@ -26,10 +26,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	if (player:hasKeyItem(HYDRA_CORPS_EYEGLASS) == false) then
-		player:setVar("DynaBastok_Win",1);
-		player:addKeyItem(HYDRA_CORPS_EYEGLASS);
-		player:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
+	if (killer:hasKeyItem(HYDRA_CORPS_EYEGLASS) == false) then
+		killer:setVar("DynaBastok_Win",1);
+		killer:addKeyItem(HYDRA_CORPS_EYEGLASS);
+		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
 	end
 
 	if(mob:isInBattlefieldList() == false) then

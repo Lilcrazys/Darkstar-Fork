@@ -33,10 +33,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	if (player:hasKeyItem(HYDRA_CORPS_COMMAND_SCEPTER) == false)then
-		player:setVar("DynaSandoria_Win",1);
-		player:addKeyItem(HYDRA_CORPS_COMMAND_SCEPTER);
-		player:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_COMMAND_SCEPTER);
+	if (killer:hasKeyItem(HYDRA_CORPS_COMMAND_SCEPTER) == false)then
+		killer:setVar("DynaSandoria_Win",1);
+		killer:addKeyItem(HYDRA_CORPS_COMMAND_SCEPTER);
+		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_COMMAND_SCEPTER);
 	end
 
 	if(alreadyReceived(killer,8) == false) then

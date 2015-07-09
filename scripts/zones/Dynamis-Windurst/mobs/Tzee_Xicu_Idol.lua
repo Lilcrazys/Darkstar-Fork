@@ -33,10 +33,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-	if (player:hasKeyItem(HYDRA_CORPS_LANTERN) == false)then
-		player:setVar("DynaWindurst_Win",1);
-		player:addKeyItem(HYDRA_CORPS_LANTERN);
-		player:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_LANTERN);
+	if (killer:hasKeyItem(HYDRA_CORPS_LANTERN) == false)then
+		killer:setVar("DynaWindurst_Win",1);
+		killer:addKeyItem(HYDRA_CORPS_LANTERN);
+		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_LANTERN);
 	end
 
 	if(alreadyReceived(killer,8) == false) then
