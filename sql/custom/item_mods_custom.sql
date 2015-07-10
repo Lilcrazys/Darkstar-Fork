@@ -18183,22 +18183,22 @@ INSERT INTO `item_mods` VALUES (28121, 384, 61); --  Haste +6%
 -- -------------------------------------------------------
 --   Orion Socks(Feet)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (28253, 1, 69); --  DEF:51
-INSERT INTO `item_mods` VALUES (28253, 2, 13); -- HP+6
-INSERT INTO `item_mods` VALUES (28253, 8, 12); --  STR+8
-INSERT INTO `item_mods` VALUES (28253, 9, 24); --  DEX+15
-INSERT INTO `item_mods` VALUES (28253, 10, 10); --  VIT+6
-INSERT INTO `item_mods` VALUES (28253, 11, 39); -- AGI+25
-INSERT INTO `item_mods` VALUES (28253, 13, 12); -- MND+8
-INSERT INTO `item_mods` VALUES (28253, 14, 30); --  CHR+19
-INSERT INTO `item_mods` VALUES (28253, 67, 16); --  Ranged Accuracy+13
-INSERT INTO `item_mods` VALUES (28253, 66, 16); --  Ranged Attack+13
-INSERT INTO `item_mods` VALUES (28253, 65, 72); --  Evasion+33
-INSERT INTO `item_mods` VALUES (28253, 31, 69); -- Magic Evasion+47
-INSERT INTO `item_mods` VALUES (28253, 29, 5); --  Magic Def. Bonus+2 (used magic defence ?)
-INSERT INTO `item_mods` VALUES (28253, 27, -4); -- Enmity-4
-INSERT INTO `item_mods` VALUES (28253, 384, 41); --  Haste +4%
-INSERT INTO `item_mods` VALUES (28253, 169, 12); -- Movement speed +12%
+INSERT INTO `item_mods` VALUES (28254, 1, 69); --  DEF:51
+INSERT INTO `item_mods` VALUES (28254, 2, 13); -- HP+6
+INSERT INTO `item_mods` VALUES (28254, 8, 12); --  STR+8
+INSERT INTO `item_mods` VALUES (28254, 9, 24); --  DEX+15
+INSERT INTO `item_mods` VALUES (28254, 10, 10); --  VIT+6
+INSERT INTO `item_mods` VALUES (28254, 11, 39); -- AGI+25
+INSERT INTO `item_mods` VALUES (28254, 13, 12); -- MND+8
+INSERT INTO `item_mods` VALUES (28254, 14, 30); --  CHR+19
+INSERT INTO `item_mods` VALUES (28254, 67, 16); --  Ranged Accuracy+13
+INSERT INTO `item_mods` VALUES (28254, 66, 16); --  Ranged Attack+13
+INSERT INTO `item_mods` VALUES (28254, 65, 72); --  Evasion+33
+INSERT INTO `item_mods` VALUES (28254, 31, 69); -- Magic Evasion+47
+INSERT INTO `item_mods` VALUES (28254, 29, 5); --  Magic Def. Bonus+2 (used magic defence ?)
+INSERT INTO `item_mods` VALUES (28254, 27, -4); -- Enmity-4
+INSERT INTO `item_mods` VALUES (28254, 384, 41); --  Haste +4%
+INSERT INTO `item_mods` VALUES (28254, 169, 12); -- Movement speed +12%
 
 -- -------------------------------------------------------
 --   Wakido Kabuto (Head)
