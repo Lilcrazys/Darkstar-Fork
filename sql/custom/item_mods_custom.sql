@@ -17199,19 +17199,19 @@ INSERT INTO `item_mods` VALUES (28244, 288, 3); --  "Double Attack"+3%
 -- -------------------------------------------------------
 --   Anchorite's Crown (Head)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (27695, 1, 100); -- DEF:72
-INSERT INTO `item_mods` VALUES (27695, 2, 36); -- HP+17
-INSERT INTO `item_mods` VALUES (27695, 8, 23); -- STR+17
-INSERT INTO `item_mods` VALUES (27695, 9, 20); -- DEX+14
-INSERT INTO `item_mods` VALUES (27695, 10, 22); -- VIT+16
-INSERT INTO `item_mods` VALUES (27695, 11, 22); -- AGI+16
-INSERT INTO `item_mods` VALUES (27695, 12, 21); -- INT+15
-INSERT INTO `item_mods` VALUES (27695, 13, 24); -- MND+18
-INSERT INTO `item_mods` VALUES (27695, 14, 21); -- CHR+15
-INSERT INTO `item_mods` VALUES (27695, 65, 38); -- Evasion+17
-INSERT INTO `item_mods` VALUES (27695, 31, 43); -- Magic Evasion+29
-INSERT INTO `item_mods` VALUES (27695, 29, 4); -- Magic Def. Bonus+2 (used magic defence ?)
-INSERT INTO `item_mods` VALUES (27695, 384, 82); -- Haste +7%
+INSERT INTO `item_mods` VALUES (27685, 1, 100); -- DEF:72
+INSERT INTO `item_mods` VALUES (27685, 2, 36); -- HP+17
+INSERT INTO `item_mods` VALUES (27685, 8, 23); -- STR+17
+INSERT INTO `item_mods` VALUES (27685, 9, 20); -- DEX+14
+INSERT INTO `item_mods` VALUES (27685, 10, 22); -- VIT+16
+INSERT INTO `item_mods` VALUES (27685, 11, 22); -- AGI+16
+INSERT INTO `item_mods` VALUES (27685, 12, 21); -- INT+15
+INSERT INTO `item_mods` VALUES (27685, 13, 24); -- MND+18
+INSERT INTO `item_mods` VALUES (27685, 14, 21); -- CHR+15
+INSERT INTO `item_mods` VALUES (27685, 65, 38); -- Evasion+17
+INSERT INTO `item_mods` VALUES (27685, 31, 43); -- Magic Evasion+29
+INSERT INTO `item_mods` VALUES (27685, 29, 4); -- Magic Def. Bonus+2 (used magic defence ?)
+INSERT INTO `item_mods` VALUES (27685, 384, 82); -- Haste +7%
 
 -- -------------------------------------------------------
 --   Anchorite's Cyclas (Body)
