@@ -17595,22 +17595,22 @@ REPLACE INTO `item_mods` VALUES (28247, 384, 41); -- Haste +4%
 --   Pillager's Bonnet (Head)
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (27689, 1, 101); --  DEF:72
-INSERT INTO `item_mods` VALUES (27668, 2, 36); -- HP+17
-INSERT INTO `item_mods` VALUES (27668, 5, 23); -- MP+19
-INSERT INTO `item_mods` VALUES (27668, 8, 20); --  STR+14
-INSERT INTO `item_mods` VALUES (27668, 9, 27); -- DEX+20
-INSERT INTO `item_mods` VALUES (27668, 10, 20); --  VIT+14
-INSERT INTO `item_mods` VALUES (27668, 11, 27); -- AGI+20
-INSERT INTO `item_mods` VALUES (27668, 12, 20); --  INT+14
-INSERT INTO `item_mods` VALUES (27668, 13, 20); -- MND+14
-INSERT INTO `item_mods` VALUES (27668, 14, 21); --  CHR+15
-INSERT INTO `item_mods` VALUES (27668, 25, 13); -- Accuracy +13
-INSERT INTO `item_mods` VALUES (27668, 26, 13); -- Ranged Accuracy +13
-INSERT INTO `item_mods` VALUES (27668, 65, 54); --  Evasion+25
-INSERT INTO `item_mods` VALUES (27668, 31, 53); --  Magic Evasion+36
-INSERT INTO `item_mods` VALUES (27668, 29, 2); -- Magic Def. Bonus+1
-INSERT INTO `item_mods` VALUES (27668, 384, 82); -- Haste+7%
-INSERT INTO `item_mods` VALUES (27668, 421, 4); -- Increases critical hit damage, Critical hit damage +3%
+INSERT INTO `item_mods` VALUES (27689, 2, 36); -- HP+17
+INSERT INTO `item_mods` VALUES (27689, 5, 23); -- MP+19
+INSERT INTO `item_mods` VALUES (27689, 8, 20); --  STR+14
+INSERT INTO `item_mods` VALUES (27689, 9, 27); -- DEX+20
+INSERT INTO `item_mods` VALUES (27689, 10, 20); --  VIT+14
+INSERT INTO `item_mods` VALUES (27689, 11, 27); -- AGI+20
+INSERT INTO `item_mods` VALUES (27689, 12, 20); --  INT+14
+INSERT INTO `item_mods` VALUES (27689, 13, 20); -- MND+14
+INSERT INTO `item_mods` VALUES (27689, 14, 21); --  CHR+15
+INSERT INTO `item_mods` VALUES (27689, 25, 13); -- Accuracy +13
+INSERT INTO `item_mods` VALUES (27689, 26, 13); -- Ranged Accuracy +13
+INSERT INTO `item_mods` VALUES (27689, 65, 54); --  Evasion+25
+INSERT INTO `item_mods` VALUES (27689, 31, 53); --  Magic Evasion+36
+INSERT INTO `item_mods` VALUES (27689, 29, 2); -- Magic Def. Bonus+1
+INSERT INTO `item_mods` VALUES (27689, 384, 82); -- Haste+7%
+INSERT INTO `item_mods` VALUES (27689, 421, 4); -- Increases critical hit damage, Critical hit damage +3%
 
 -- -------------------------------------------------------
 --   Pillager's Vest (Body)
