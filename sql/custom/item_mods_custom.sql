@@ -17873,7 +17873,7 @@ INSERT INTO `item_mods` VALUES (28118, 116, 17); -- Parrying skill +17
 -- -------------------------------------------------------
 INSERT INTO `item_mods` VALUES (28251, 1, 86); -- DEF:62
 INSERT INTO `item_mods` VALUES (28251, 2, 38); -- HP+28
-INSERT INTO `item_mods` VALUES (28251, 2, 20); -- MP+20
+INSERT INTO `item_mods` VALUES (28251, 5, 20); -- MP+20
 INSERT INTO `item_mods` VALUES (28251, 8, 16); -- STR+10
 INSERT INTO `item_mods` VALUES (28251, 9, 12); -- DEX+8
 INSERT INTO `item_mods` VALUES (28251, 10, 17); -- VIT+11
