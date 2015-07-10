@@ -17,41 +17,9 @@ require("scripts/globals/titles");
 
     -------------------------------Empy 119 Trials----------------------------------------------------
 function onTrade(player,npc,trade)
-    local title = 0;
     local PRIZE = 0;
 
-    if (player:hasTitle(BRIAREUS_FELLER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(KUKULKAN_DEFANGER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(GLAVOID_STAMPEDER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(ITZPAPALOTL_DECLAWER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(CIREINCROIN_HARPOONER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(SEDNA_TUSKBREAKER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(BENNU_DEPLUMER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(RESHEPH_ERADICATOR)) then
-        title = title+1;
-    end
-    if (player:hasTitle(AMPHITRITE_SHUCKER)) then
-        title = title+1;
-    end
-    if (player:hasTitle(WYRM_GOD_DEFIER)) then
-        title = title+1;
-    end
-
-    if (countLunars(player) == 3 and title == 10) then
+    if (player:getCurrency("bayld") >= 5000) then
 
     ---------------------------------------Empy 119----------------------------------------------------------
     ----------------------------THF-------------------------------------
@@ -687,6 +655,7 @@ function onTrade(player,npc,trade)
 
         if (PRIZE > 0) then
             if (player:getFreeSlotsCount() >= 1) then
+                player:delCurrency("bayld", 5000);
                 player:messageSpecial(ITEM_OBTAINED, PRIZE);
                 player:tradeComplete();
                 player:addItem(PRIZE, 1);
@@ -695,7 +664,7 @@ function onTrade(player,npc,trade)
             end
         end
     else
-        player:PrintToPlayer( "Not so fast... All 10 Titles and All 3 Lunars are required!" );
+        player:PrintToPlayer( "You do not have enough bayld points for the upgrade!" );
     end
 end;
 
