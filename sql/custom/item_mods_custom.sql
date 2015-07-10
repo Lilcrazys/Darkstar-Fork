@@ -18103,102 +18103,102 @@ INSERT INTO `item_mods` VALUES (28253, 454, 11); -- Increases song effect durati
 -- -------------------------------------------------------
 --   Orion Beret(Head)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (27695, 1, 99); --  DEF:72
-INSERT INTO `item_mods` VALUES (27695, 2, 36); -- HP+17
-INSERT INTO `item_mods` VALUES (27695, 8, 23); --  STR+17
-INSERT INTO `item_mods` VALUES (27695, 9, 24); -- DEX+17
-INSERT INTO `item_mods` VALUES (27695, 10, 17); --  VIT+13
-INSERT INTO `item_mods` VALUES (27695, 11, 29); -- AGI+21
-INSERT INTO `item_mods` VALUES (27695, 12, 20); --  INT+14
-INSERT INTO `item_mods` VALUES (27695, 13, 20); -- MND+14
-INSERT INTO `item_mods` VALUES (27695, 14, 21); --  CHR+15
-INSERT INTO `item_mods` VALUES (27695, 66, 14); --  Ranged Attack+14
-INSERT INTO `item_mods` VALUES (27695, 65, 44); --  Evasion+20
-INSERT INTO `item_mods` VALUES (27695, 31, 53); --  Magic Evasion+36
-INSERT INTO `item_mods` VALUES (27695, 29, 2); -- Magic Def. Bonus+1
-INSERT INTO `item_mods` VALUES (27695, 27, -5); -- Enmity-5
-INSERT INTO `item_mods` VALUES (27695, 384, 82); -- Haste+7%
-INSERT INTO `item_mods` VALUES (27695, 359, 14); -- "Rapid Shot"+7 (No value, set to half of the +1)
+INSERT INTO `item_mods` VALUES (27694, 1, 99); --  DEF:72
+INSERT INTO `item_mods` VALUES (27694, 2, 36); -- HP+17
+INSERT INTO `item_mods` VALUES (27694, 8, 23); --  STR+17
+INSERT INTO `item_mods` VALUES (27694, 9, 24); -- DEX+17
+INSERT INTO `item_mods` VALUES (27694, 10, 17); --  VIT+13
+INSERT INTO `item_mods` VALUES (27694, 11, 29); -- AGI+21
+INSERT INTO `item_mods` VALUES (27694, 12, 20); --  INT+14
+INSERT INTO `item_mods` VALUES (27694, 13, 20); -- MND+14
+INSERT INTO `item_mods` VALUES (27694, 14, 21); --  CHR+15
+INSERT INTO `item_mods` VALUES (27694, 66, 14); --  Ranged Attack+14
+INSERT INTO `item_mods` VALUES (27694, 65, 44); --  Evasion+20
+INSERT INTO `item_mods` VALUES (27694, 31, 53); --  Magic Evasion+36
+INSERT INTO `item_mods` VALUES (27694, 29, 2); -- Magic Def. Bonus+1
+INSERT INTO `item_mods` VALUES (27694, 27, -5); -- Enmity-5
+INSERT INTO `item_mods` VALUES (27694, 384, 82); -- Haste+7%
+INSERT INTO `item_mods` VALUES (27694, 359, 14); -- "Rapid Shot"+7 (No value, set to half of the +1)
 
 -- -------------------------------------------------------
 --   Orion Jerkin(Body)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (27839, 1, 129); --  DEF:93
-INSERT INTO `item_mods` VALUES (27839, 2, 59); -- HP+28
-INSERT INTO `item_mods` VALUES (27839, 5, 44); -- MP+36
-INSERT INTO `item_mods` VALUES (27839, 8, 24); --  STR+15
-INSERT INTO `item_mods` VALUES (27839, 9, 29); -- DEX+18
-INSERT INTO `item_mods` VALUES (27839, 10, 21); --  VIT+13
-INSERT INTO `item_mods` VALUES (27839, 11, 30); -- AGI+19
-INSERT INTO `item_mods` VALUES (27839, 12, 23); --  INT+14
-INSERT INTO `item_mods` VALUES (27839, 13, 23); -- MND+14
-INSERT INTO `item_mods` VALUES (27839, 14, 23); --  CHR+14
-INSERT INTO `item_mods` VALUES (27839, 67, 21); --  Ranged Accuracy+18
-INSERT INTO `item_mods` VALUES (27839, 66, 21); --  Ranged Attack+18
-INSERT INTO `item_mods` VALUES (27839, 30, 10); --  Magic Accuracy+10
-INSERT INTO `item_mods` VALUES (27839, 28, 10); --  "Magic Atk. Bonus"+10
-INSERT INTO `item_mods` VALUES (27839, 65, 49); --  Evasion+23
-INSERT INTO `item_mods` VALUES (27839, 31, 64); -- Magic Evasion+43
-INSERT INTO `item_mods` VALUES (27839, 29, 6); --  Magic Def. Bonus+3 (used magic defence ?)
-INSERT INTO `item_mods` VALUES (27839, 27, -6); -- Enmity-5
-INSERT INTO `item_mods` VALUES (27839, 384, 41); -- Haste +4%
+INSERT INTO `item_mods` VALUES (27838, 1, 129); --  DEF:93
+INSERT INTO `item_mods` VALUES (27838, 2, 59); -- HP+28
+INSERT INTO `item_mods` VALUES (27838, 5, 44); -- MP+36
+INSERT INTO `item_mods` VALUES (27838, 8, 24); --  STR+15
+INSERT INTO `item_mods` VALUES (27838, 9, 29); -- DEX+18
+INSERT INTO `item_mods` VALUES (27838, 10, 21); --  VIT+13
+INSERT INTO `item_mods` VALUES (27838, 11, 30); -- AGI+19
+INSERT INTO `item_mods` VALUES (27838, 12, 23); --  INT+14
+INSERT INTO `item_mods` VALUES (27838, 13, 23); -- MND+14
+INSERT INTO `item_mods` VALUES (27838, 14, 23); --  CHR+14
+INSERT INTO `item_mods` VALUES (27838, 67, 21); --  Ranged Accuracy+18
+INSERT INTO `item_mods` VALUES (27838, 66, 21); --  Ranged Attack+18
+INSERT INTO `item_mods` VALUES (27838, 30, 10); --  Magic Accuracy+10
+INSERT INTO `item_mods` VALUES (27838, 28, 10); --  "Magic Atk. Bonus"+10
+INSERT INTO `item_mods` VALUES (27838, 65, 49); --  Evasion+23
+INSERT INTO `item_mods` VALUES (27838, 31, 64); -- Magic Evasion+43
+INSERT INTO `item_mods` VALUES (27838, 29, 6); --  Magic Def. Bonus+3 (used magic defence ?)
+INSERT INTO `item_mods` VALUES (27838, 27, -6); -- Enmity-5
+INSERT INTO `item_mods` VALUES (27838, 384, 41); -- Haste +4%
 
 -- -------------------------------------------------------
 --   Orion Bracers(Hands)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (27975, 1, 87); --  DEF:63
-INSERT INTO `item_mods` VALUES (27975, 2, 25); -- HP+11
-INSERT INTO `item_mods` VALUES (27975, 8, 11); --  STR+7
-INSERT INTO `item_mods` VALUES (27975, 9, 35); -- DEX+22
-INSERT INTO `item_mods` VALUES (27975, 10, 29); -- VIT+18
-INSERT INTO `item_mods` VALUES (27975, 12, 12); --  INT+8
-INSERT INTO `item_mods` VALUES (27975, 13, 30); -- MND+19
-INSERT INTO `item_mods` VALUES (27975, 14, 17); --  CHR+11
-INSERT INTO `item_mods` VALUES (27975, 65, 24); --  Evasion+11
-INSERT INTO `item_mods` VALUES (27975, 31, 37); -- Magic Evasion+25
-INSERT INTO `item_mods` VALUES (27975, 29, 2); --  Magic Def. Bonus+1
-INSERT INTO `item_mods` VALUES (27975, 27, -4); -- Enmity-4
-INSERT INTO `item_mods` VALUES (27975, 384, 51); --  Haste +4%
-INSERT INTO `item_mods` VALUES (27975, 425, 12); -- Enhances "Shadowbind" effect (No value, halved the +1 version)
+INSERT INTO `item_mods` VALUES (27974, 1, 87); --  DEF:63
+INSERT INTO `item_mods` VALUES (27974, 2, 25); -- HP+11
+INSERT INTO `item_mods` VALUES (27974, 8, 11); --  STR+7
+INSERT INTO `item_mods` VALUES (27974, 9, 35); -- DEX+22
+INSERT INTO `item_mods` VALUES (27974, 10, 29); -- VIT+18
+INSERT INTO `item_mods` VALUES (27974, 12, 12); --  INT+8
+INSERT INTO `item_mods` VALUES (27974, 13, 30); -- MND+19
+INSERT INTO `item_mods` VALUES (27974, 14, 17); --  CHR+11
+INSERT INTO `item_mods` VALUES (27974, 65, 24); --  Evasion+11
+INSERT INTO `item_mods` VALUES (27974, 31, 37); -- Magic Evasion+25
+INSERT INTO `item_mods` VALUES (27974, 29, 2); --  Magic Def. Bonus+1
+INSERT INTO `item_mods` VALUES (27974, 27, -4); -- Enmity-4
+INSERT INTO `item_mods` VALUES (27974, 384, 51); --  Haste +4%
+INSERT INTO `item_mods` VALUES (27974, 425, 12); -- Enhances "Shadowbind" effect (No value, halved the +1 version)
 
 -- -------------------------------------------------------
 --   Orion Braccae(Legs)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (28122, 1, 111); --  DEF:80
-INSERT INTO `item_mods` VALUES (28122, 2, 47); -- HP+22
-INSERT INTO `item_mods` VALUES (28122, 5, 23); -- MP+19
-INSERT INTO `item_mods` VALUES (28122, 8, 29); --  STR+18
-INSERT INTO `item_mods` VALUES (28122, 10, 14); --  VIT+8
-INSERT INTO `item_mods` VALUES (28122, 11, 29); -- AGI+18
-INSERT INTO `item_mods` VALUES (28122, 12, 30); --  INT+19
-INSERT INTO `item_mods` VALUES (28122, 13, 21); -- MND+15
-INSERT INTO `item_mods` VALUES (28122, 14, 21); --  CHR+7
-INSERT INTO `item_mods` VALUES (28122, 67, 15); --  Ranged Accuracy+15
-INSERT INTO `item_mods` VALUES (28122, 65, 38); --  Evasion+17
-INSERT INTO `item_mods` VALUES (28122, 31, 69); -- Magic Evasion+47
-INSERT INTO `item_mods` VALUES (28122, 29, 5); --  Magic Def. Bonus+2 (used magic defence ?)
-INSERT INTO `item_mods` VALUES (28122, 27, -5); -- Enmity-4
-INSERT INTO `item_mods` VALUES (28122, 384, 61); --  Haste +6%
+INSERT INTO `item_mods` VALUES (28121, 1, 111); --  DEF:80
+INSERT INTO `item_mods` VALUES (28121, 2, 47); -- HP+22
+INSERT INTO `item_mods` VALUES (28121, 5, 23); -- MP+19
+INSERT INTO `item_mods` VALUES (28121, 8, 29); --  STR+18
+INSERT INTO `item_mods` VALUES (28121, 10, 14); --  VIT+8
+INSERT INTO `item_mods` VALUES (28121, 11, 29); -- AGI+18
+INSERT INTO `item_mods` VALUES (28121, 12, 30); --  INT+19
+INSERT INTO `item_mods` VALUES (28121, 13, 21); -- MND+15
+INSERT INTO `item_mods` VALUES (28121, 14, 21); --  CHR+7
+INSERT INTO `item_mods` VALUES (28121, 67, 15); --  Ranged Accuracy+15
+INSERT INTO `item_mods` VALUES (28121, 65, 38); --  Evasion+17
+INSERT INTO `item_mods` VALUES (28121, 31, 69); -- Magic Evasion+47
+INSERT INTO `item_mods` VALUES (28121, 29, 5); --  Magic Def. Bonus+2 (used magic defence ?)
+INSERT INTO `item_mods` VALUES (28121, 27, -5); -- Enmity-4
+INSERT INTO `item_mods` VALUES (28121, 384, 61); --  Haste +6%
 
 -- -------------------------------------------------------
 --   Orion Socks(Feet)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (28254, 1, 69); --  DEF:51
-INSERT INTO `item_mods` VALUES (28254, 2, 13); -- HP+6
-INSERT INTO `item_mods` VALUES (28254, 8, 12); --  STR+8
-INSERT INTO `item_mods` VALUES (28254, 9, 24); --  DEX+15
-INSERT INTO `item_mods` VALUES (28254, 10, 10); --  VIT+6
-INSERT INTO `item_mods` VALUES (28254, 11, 39); -- AGI+25
-INSERT INTO `item_mods` VALUES (28254, 13, 12); -- MND+8
-INSERT INTO `item_mods` VALUES (28254, 14, 30); --  CHR+19
-INSERT INTO `item_mods` VALUES (28254, 67, 16); --  Ranged Accuracy+13
-INSERT INTO `item_mods` VALUES (28254, 66, 16); --  Ranged Attack+13
-INSERT INTO `item_mods` VALUES (28254, 65, 72); --  Evasion+33
-INSERT INTO `item_mods` VALUES (28254, 31, 69); -- Magic Evasion+47
-INSERT INTO `item_mods` VALUES (28254, 29, 5); --  Magic Def. Bonus+2 (used magic defence ?)
-INSERT INTO `item_mods` VALUES (28254, 27, -4); -- Enmity-4
-INSERT INTO `item_mods` VALUES (28254, 384, 41); --  Haste +4%
-INSERT INTO `item_mods` VALUES (28254, 169, 12); -- Movement speed +12%
+INSERT INTO `item_mods` VALUES (28253, 1, 69); --  DEF:51
+INSERT INTO `item_mods` VALUES (28253, 2, 13); -- HP+6
+INSERT INTO `item_mods` VALUES (28253, 8, 12); --  STR+8
+INSERT INTO `item_mods` VALUES (28253, 9, 24); --  DEX+15
+INSERT INTO `item_mods` VALUES (28253, 10, 10); --  VIT+6
+INSERT INTO `item_mods` VALUES (28253, 11, 39); -- AGI+25
+INSERT INTO `item_mods` VALUES (28253, 13, 12); -- MND+8
+INSERT INTO `item_mods` VALUES (28253, 14, 30); --  CHR+19
+INSERT INTO `item_mods` VALUES (28253, 67, 16); --  Ranged Accuracy+13
+INSERT INTO `item_mods` VALUES (28253, 66, 16); --  Ranged Attack+13
+INSERT INTO `item_mods` VALUES (28253, 65, 72); --  Evasion+33
+INSERT INTO `item_mods` VALUES (28253, 31, 69); -- Magic Evasion+47
+INSERT INTO `item_mods` VALUES (28253, 29, 5); --  Magic Def. Bonus+2 (used magic defence ?)
+INSERT INTO `item_mods` VALUES (28253, 27, -4); -- Enmity-4
+INSERT INTO `item_mods` VALUES (28253, 384, 41); --  Haste +4%
+INSERT INTO `item_mods` VALUES (28253, 169, 12); -- Movement speed +12%
 
 -- -------------------------------------------------------
 --   Wakido Kabuto (Head)
