@@ -17695,22 +17695,22 @@ INSERT INTO `item_mods` VALUES (28249, 169, 12); --  Movement speed +12%
 -- -------------------------------------------------------
 --   Reverence Coronet (Head)
 -- -------------------------------------------------------
-INSERT INTO `item_mods` VALUES (27689, 1, 119); --  DEF:86
-INSERT INTO `item_mods` VALUES (27689, 2, 41); -- HP+19
-INSERT INTO `item_mods` VALUES (27689, 5, 23); -- MP+19
-INSERT INTO `item_mods` VALUES (27689, 8, 25); --  STR+17
-INSERT INTO `item_mods` VALUES (27689, 9, 19); -- DEX+13
-INSERT INTO `item_mods` VALUES (27689, 10, 28); --  VIT+20
-INSERT INTO `item_mods` VALUES (27689, 11, 19); -- AGI+13
-INSERT INTO `item_mods` VALUES (27689, 12, 17); --  INT+13
-INSERT INTO `item_mods` VALUES (27689, 13, 20); -- MND+16
-INSERT INTO `item_mods` VALUES (27689, 14, 17); --  CHR+8
-INSERT INTO `item_mods` VALUES (27689, 65, 33); --  Evasion+15
-INSERT INTO `item_mods` VALUES (27689, 31, 32); --  Magic Evasion+21
-INSERT INTO `item_mods` VALUES (27689, 29, 2); -- Magic Def. Bonus+1
-INSERT INTO `item_mods` VALUES (27689, 384, 71); -- Haste+6%
-INSERT INTO `item_mods` VALUES (27689, 27, 5); -- Enmity+5
-INSERT INTO `item_mods` VALUES (27689, 161, -5); -- Physical damage taken -5%
+INSERT INTO `item_mods` VALUES (27690, 1, 119); --  DEF:86
+INSERT INTO `item_mods` VALUES (27690, 2, 41); -- HP+19
+INSERT INTO `item_mods` VALUES (27690, 5, 23); -- MP+19
+INSERT INTO `item_mods` VALUES (27690, 8, 25); --  STR+17
+INSERT INTO `item_mods` VALUES (27690, 9, 19); -- DEX+13
+INSERT INTO `item_mods` VALUES (27690, 10, 28); --  VIT+20
+INSERT INTO `item_mods` VALUES (27690, 11, 19); -- AGI+13
+INSERT INTO `item_mods` VALUES (27690, 12, 17); --  INT+13
+INSERT INTO `item_mods` VALUES (27690, 13, 20); -- MND+16
+INSERT INTO `item_mods` VALUES (27690, 14, 17); --  CHR+8
+INSERT INTO `item_mods` VALUES (27690, 65, 33); --  Evasion+15
+INSERT INTO `item_mods` VALUES (27690, 31, 32); --  Magic Evasion+21
+INSERT INTO `item_mods` VALUES (27690, 29, 2); -- Magic Def. Bonus+1
+INSERT INTO `item_mods` VALUES (27690, 384, 71); -- Haste+6%
+INSERT INTO `item_mods` VALUES (27690, 27, 5); -- Enmity+5
+INSERT INTO `item_mods` VALUES (27690, 161, -5); -- Physical damage taken -5%
 
 -- -------------------------------------------------------
 --   Reverence Surcoat (Body)
