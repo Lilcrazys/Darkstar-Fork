@@ -81,6 +81,7 @@ function onMobDeath(mob, killer)
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM"),2) == true) then
            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
            killer:delKeyItem(INDIGO_STRATUM_ABYSSITE);
+           killer:setVar("INDIGO_STRATUM", 0);
         end
     end
     killer:addExp(10000);

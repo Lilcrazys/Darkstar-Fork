@@ -82,6 +82,9 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 2) == false) then
 	       killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
         end
+        if (killer:isMaskFull(killer:getVar("VW_3_NATIONS"),3) == true) then
+           killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
+        end
     end
     killer:addCurrency("bayld", 125);
     killer:addExp(10000);

@@ -92,6 +92,7 @@ function onMobDeath(mob, killer)
         if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM_III"),2) == true) then
            killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
            killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
+           killer:setVar("CRIMSON_STRATUM_III", 0);
         end
     end;
 end;

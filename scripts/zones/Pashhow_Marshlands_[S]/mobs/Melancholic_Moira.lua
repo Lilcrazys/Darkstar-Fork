@@ -81,6 +81,7 @@ function onMobDeath(mob, killer)
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
            killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+           killer:setVar("INDIGO_STRATUM_III", 0);
         end
     end
     killer:addCurrency("bayld", 75);

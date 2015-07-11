@@ -73,6 +73,7 @@ function onMobDeath(mob, killer)
         if (killer:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
             killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
             killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
+            killer:setVar("JADE_STRATUM_III", 0);
         end
     end
     killer:addCurrency("bayld", 75);
