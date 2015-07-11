@@ -5580,7 +5580,7 @@ INSERT INTO `mob_skill` VALUES (1034,1202,654,'Spike_Flail',1,23.0,2000,2000,4,8
 INSERT INTO `mob_skill` VALUES (1035,1202,962,'Glacial_Breath',4,18.0,2000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1036,1202,656,'Touchdown',1,18.0,2000,0,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1037,1202,964,'Sleet_Blast',1,23.0,2000,2000,4,8,0,0);
-INSERT INTO `mob_skill` VALUES (1038,1202,653,'Gregale_Wing_Air',1,30.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1038,1202,653,'Gregale_Wing_Air',1,30.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1039,1202,659,'Absolute_Terror',0,18.0,4000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (1040,1202,660,'Horrid_Roar_3',1,18.0,4000,1500,4,8,0,0);
 INSERT INTO `mob_skill` VALUES (439,1202,432,'Blood_Weapon',0,18.0,2000,0,1,0,30,0);

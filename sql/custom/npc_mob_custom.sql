@@ -3107,3 +3107,62 @@ INSERT INTO `mob_spawn_points` VALUES (17559871,'Celano','Celano',90415,-253,4,5
 REPLACE INTO `mob_spawn_points` VALUES (17555901,'Hahava','Hahava',90416,-115,9,60,118);
 REPLACE INTO `mob_spawn_points` VALUES (17572219,'Voidwrought','Voidwrought',90417,-380,0,740,0);
 REPLACE INTO `npc_list` VALUES (17559925,'Planar_Rift','Planar Rift',0,-253,4,505,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA'); -- dangruf celano spawn
+
+-- Voidwatch chapter 2
+-- batallia downs
+REPLACE INTO `mob_spawn_points` VALUES (17207723,'Cherufe','Cherufe',90424,80,8,-280,63);
+-- batallia downs [s]
+REPLACE INTO `mob_spawn_points` VALUES (17122049,'Taweret','Taweret',90425,79.544,8,-280.895,70);
+-- rolanberry
+REPLACE INTO `mob_spawn_points` VALUES (17228262,'Yatagarasu','Yatagarasu',90422,-360,8,279,149);
+-- rolanberry [s]
+REPLACE INTO `mob_spawn_points` VALUES (17150669,'Agathos','Agathos',90423,-359.6,8,279,197);
+-- Sauromugue
+REPLACE INTO `mob_spawn_points` VALUES (17269127,'Goji','Goji',90420,-245,7.425,245,103);
+-- Sauromugue [s]
+REPLACE INTO `mob_spawn_points` VALUES (17179265,'Gugalanna','Gugalanna',90421,-245,7.849,245,191);
+-- Necropolis
+REPLACE INTO `mob_spawn_points` VALUES (17576275,'Gasha','Gasha',90431,-2,1,43,108);
+REPLACE INTO `mob_spawn_points` VALUES (17576276,'Gasha2','Gasha',90447,-2,1,43,0);
+REPLACE INTO `mob_spawn_points` VALUES (17576277,'Gasha3','Gasha',90448,-2,1,43,242);
+-- Necropolis [s]
+REPLACE INTO `mob_spawn_points` VALUES (17494610,'Giltine','Giltine',90432,-2,1,43,0);
+-- Crawlers
+REPLACE INTO `npc_list` VALUES (17584494,'Planar_Rift','Planar Rift',0,55,-0.445,260,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,'2','ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17584428,'Mellonia','Mellonia',90428,55,-0.445,260,110);
+-- Crawlers [s]
+REPLACE INTO `npc_list` VALUES (17478158,'Planar_Rift','Planar Rift',0,55,-0.445,260,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,'2','ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17478057,'Nympha_Eunomia','Nympha Eunomia',90430,55,-0.445,260,138);
+REPLACE INTO `mob_spawn_points` VALUES (17478058,'Kalos_Eunomia','Kalos Eunomia',90429,55,-0.445,260,34);
+-- Garlaige
+REPLACE INTO `mob_spawn_points` VALUES (17596732,'Roly_Poly','Roly-Poly',90426,-260,-0.079,-20,61);
+-- Garlaige [s]
+REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Lauren','Laidly Laurence',90427,-260,-0.579,-20,9);
+-- Quifim Island
+REPLACE INTO `mob_spawn_points` VALUES (17293648,'Kaggen','Kaggen',90433,150,-20.5,150,0);
+-- Lower Delkfutt
+REPLACE INTO `mob_spawn_points` VALUES (17531126,'Akvan','Akvan',90434,421,16.399,-20,82);
+-- Behemoth's Dom
+REPLACE INTO `mob_spawn_points` VALUES (17297452,'Pil','Pil',90435,-210,-20.835,70,0);
+-- West Ronfaure
+REPLACE INTO `mob_spawn_points` VALUES (17187289,'Lancing_Lamorak','Lancing Lamorak',90436,-360,-50.5,270,33);
+-- South Gustaberg
+REPLACE INTO `mob_spawn_points` VALUES (17215956,'Bishani','Bhishani',90437,605,-0.471,-519.283,112);
+-- East Sarubaruta
+REPLACE INTO `mob_spawn_points` VALUES (17252816,'RwNwPrtMHrw','Rw Nw Prt M Hrw',90438,-120,-5,-415,166);
+-- La Theine Plateau
+REPLACE INTO `mob_spawn_points` VALUES (17195494,'Stachysaurus','Stachysaurus',90439,640.149,32,1,213);
+-- Konschat highlands
+REPLACE INTO `mob_spawn_points` VALUES (17220021,'GwynnapNudd','Gwynn ap Nudd',90440,-125,72,720,107);
+-- Tahrongi Canyon
+REPLACE INTO `mob_spawn_points` VALUES (17256921,'Smierc','Smierc',90441,205,15.746,-680,127);
+-- Vunk [s]
+REPLACE INTO `mob_spawn_points` VALUES (17117893,'Gaunab','Gaunab',90442,-277,-40.5,-726,181);
+-- Grauberg [s]
+REPLACE INTO `mob_spawn_points` VALUES (17142449,'Ocythoe','Ocythoe',90443,-510,32.1,-795,250);
+-- Fort K [s]
+REPLACE INTO `mob_spawn_points` VALUES (17171004,'Kalasutrax','Kalasutrax',90444,-650,-26,-425,0);
+-- Valkurm
+REPLACE INTO `mob_spawn_points` VALUES (17199612,'Ig-Alima','Ig-Alima',90445,720,-8.078,195,0);
+-- Bubu
+REPLACE INTO `mob_spawn_points` VALUES (17261049,'Botulus_rex','Botulus Rex',90446,80,0.049,-195,0);
