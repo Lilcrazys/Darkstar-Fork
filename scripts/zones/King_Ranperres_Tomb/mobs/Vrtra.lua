@@ -25,7 +25,6 @@ end;
 function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
@@ -89,7 +88,7 @@ function onMobFight(mob,target)
     end
 
     local lastpet = mob:getLocalVar("pop_pet");
-    if (os.time() - lastpet > 30) then
+    if (os.time() - lastpet > 90) then
         local pet1 = GetMobAction(mob:getID()+1);
         local pet2 = GetMobAction(mob:getID()+2);
         local pet3 = GetMobAction(mob:getID()+3);
