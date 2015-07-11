@@ -4206,6 +4206,9 @@ INSERT INTO `item_mods` VALUES (20748, 10, 20); --
 INSERT INTO `item_mods` VALUES (20748, 165, 25); --
 INSERT INTO `item_mods` VALUES (20748, 421, 50); --
 
+INSERT INTO `item_mods` VALUES (20762, 36, 25); --
+INSERT INTO `item_mods` VALUES (20762, 369, 1); --
+INSERT INTO `item_mods` VALUES (20762, 165, 7); --
 
 -- -------------------------------------------------------
 -- Guttler (99-4)
