@@ -9874,7 +9874,7 @@ INSERT INTO `item_armor` VALUES (21206,'hemolele_staff',99,100,1590047,0,0,0,1,0
 INSERT INTO `item_armor` VALUES (21207,'hemolele_staff_+1',99,101,1590047,0,0,0,1,0);
 INSERT INTO `item_armor` VALUES (21208,'lehbrailg',99,105,1589788,438,0,0,1,0);
 INSERT INTO `item_armor` VALUES (21209,'uffrat',99,105,16384,442,0,0,1,0);
-INSERT INTO `item_armor` VALUES (21211,'yoichinoyumi',99,119,3072,556,0,0,4,0);
+INSERT INTO `item_armor` VALUES (21211,'yoichinoyumi',99,119,3072,86,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21212,'gandiva',99,119,1024,98,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21213,'gandiva',99,119,1024,98,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21220,'paloma+1',99,119,1024,33,0,0,4,0);
