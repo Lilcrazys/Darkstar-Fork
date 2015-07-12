@@ -27,7 +27,7 @@ function onMobWeaponSkill(target, mob, skill)
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     end
 
-	local dmgmod = 4.5;
+	local dmgmod = 2.5;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_WIND,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WIND,MOBPARAM_WIPE_SHADOWS);
 	target:delHP(dmg);
