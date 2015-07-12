@@ -10,7 +10,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 	local numhits = 1;
 	local accmod = 10;
-	local dmgmod = math.random(3,6);
+	local dmgmod = math.random(2,5);
 
     MobStatusEffectMove(mob, target, EFFECT_DEFENSE_DOWN, 50, 0, 120);
     MobStatusEffectMove(mob, target, EFFECT_MAGIC_DEF_DOWN, 50, 0, 120);
