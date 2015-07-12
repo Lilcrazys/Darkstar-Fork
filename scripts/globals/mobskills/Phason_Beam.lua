@@ -1,11 +1,6 @@
 ---------------------------------------------
---  Thundris Shriek
---
---  Description: Deals heavy lightning damage to targets in area of effect. Additional effect: Terror
---  Type: Magical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: Unknown
---  Notes: Players will begin to be intimidated by the dvergr after this attack.
+-- Phasm Beam
+-- Mantid
 ---------------------------------------------
 
 require("/scripts/globals/settings");
@@ -23,7 +18,7 @@ function onMobWeaponSkill(target, mob, skill)
 	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60);
 
 	local dmgmod = 1;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_EARTH,dmgmod,TP_NO_EFFECT);
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_EARTH,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_EARTH,MOBPARAM_WIPE_SHADOWS);
 	target:delHP(dmg);
 	return dmg;

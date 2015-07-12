@@ -3421,7 +3421,7 @@ INSERT INTO `mob_skill` VALUES (2595,340,1923,'Slicing_Sickle',4,12.0,2000,1000,
 INSERT INTO `mob_skill` VALUES (2596,340,1926,'Raptorial_Claw',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2597,340,1927,'Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2598,340,1928,'Macerating_Bile',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2599,340,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2499,340,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2600,340,1924,'Dead_Prophet ',4,10.0,8000,1000,4,0,0,0);
 
 -- INSERT INTO `mob_skill` VALUES (2630,?,1925,'Exorender',4,12.0,2000,1000,4,0,0,0); -- Only used by Tsui Goab
@@ -5454,7 +5454,7 @@ INSERT INTO `mob_skill` VALUES (2496,1131,1926,'VW_Raptorial_Claw',1,15.0,2000,1
 INSERT INTO `mob_skill` VALUES (2497,1131,1927,'VW_Phlegm_Expulsion',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2498,1131,1928,'VW_Macerating_Bile',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2500,1131,1924,'Death_Prophet',1,10.0,8000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2599,1131,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2499,1131,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
 
 -- Akvan (1132)
 INSERT INTO `mob_skill` VALUES (292,1132,292,'VW_Blindeye',0,15.0,2000,1500,4,0,0,0);
@@ -5517,7 +5517,7 @@ INSERT INTO `mob_skill` VALUES (2496,1140,1926,'VW_Raptorial_Claw',1,15.0,2000,1
 INSERT INTO `mob_skill` VALUES (2497,1140,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2498,1140,1928,'VW_Macerating_Bile',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2500,1140,1924,'Death_Prophet',1,15.0,8000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2599,1140,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2499,1140,1929,'Preying_Posture',0,7.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2553,1140,1926,'Immolating_Claw',1,25.0,2000,1000,4,0,0,3);
 
 -- Ocythoe (1141)
