@@ -304,7 +304,7 @@ enum SUBEFFECT
     SUBEFFECT_WIND_SPIKES       = 7,  // Present in client but currently unused.
     SUBEFFECT_STONE_SPIKES      = 8,  // Present in client but currently unused.
     SUBEFFECT_DELUGE_SPIKES     = 9,  // Present in client but currently unused.
-    SUBEFFECT_DARK_SPIKES       = 10,
+    SUBEFFECT_DEATH_SPIKES      = 10,
     SUBEFFECT_COUNTER = 63, // Also used by Retaliation
 
     // SKILLCHAINS

@@ -77,7 +77,7 @@ enum SPIKES
     SPIKE_WIND = 7,
     SPIKE_STONE = 8,
     SPIKE_DELUGE = 9,
-    SPIKE_DARK            = 10,
+    SPIKE_DEATH = 10,
     RETALIATION = 63
 };
 
