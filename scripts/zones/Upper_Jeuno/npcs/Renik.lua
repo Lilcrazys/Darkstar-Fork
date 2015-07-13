@@ -651,6 +651,61 @@ function onTrade(player,npc,trade)
             PRIZE = 27191
         elseif (trade:hasItemQty(4064, 5) and trade:hasItemQty(27366,1) and trade:getItemCount() == 6) then           --feet
             PRIZE = 27367
+    ----------------------------Yorium-------------------------------------
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12420,1) and trade:getItemCount() == 6) then         --head
+            PRIZE = 26733
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12548,1) and trade:getItemCount() == 6) then         --body
+            PRIZE = 26891
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12676,1) and trade:getItemCount() == 6) then          --hands
+            PRIZE = 27045
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12804,1) and trade:getItemCount() == 6) then          --legs
+            PRIZE = 27232
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12932,1) and trade:getItemCount() == 6) then          --feet
+            PRIZE = 27402
+    ----------------------------Acro-------------------------------------
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12431,1) and trade:getItemCount() == 6) then          --head
+            PRIZE = 26734
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12559,1) and trade:getItemCount() == 6) then         --body
+            PRIZE = 26892
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12687,1) and trade:getItemCount() == 6) then          --hands
+            PRIZE = 27046
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(27188,1) and trade:getItemCount() == 6) then          --legs
+            PRIZE = 27233
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12943,1) and trade:getItemCount() == 6) then          --feet
+            PRIZE = 27403
+    ----------------------------Taeon-------------------------------------
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12467,1) and trade:getItemCount() == 6) then          --head
+            PRIZE = 26735
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12595,1) and trade:getItemCount() == 6) then         --body
+            PRIZE = 26893
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12723,1) and trade:getItemCount() == 6) then          --hands
+            PRIZE = 27047
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12851,1) and trade:getItemCount() == 6) then          --legs
+            PRIZE = 27234
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(12979,1) and trade:getItemCount() == 6) then           --feet
+            PRIZE = 27404
+    ----------------------------Telchine-------------------------------------
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(15207,1) and trade:getItemCount() == 6) then          --head
+            PRIZE = 26736
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(14446,1) and trade:getItemCount() == 6) then         --body
+            PRIZE = 26894
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(14053,1) and trade:getItemCount() == 6) then          --hands
+            PRIZE = 27048
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(15404,1) and trade:getItemCount() == 6) then          --legs
+            PRIZE = 27235
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(15343,1) and trade:getItemCount() == 6) then          --feet
+            PRIZE = 27405
+    ----------------------------Helios-------------------------------------
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(13929,1) and trade:getItemCount() == 6) then          --head
+            PRIZE = 26737
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(14380,1) and trade:getItemCount() == 6) then         --body
+            PRIZE = 26895
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(14078,1) and trade:getItemCount() == 6) then          --hands
+            PRIZE = 27049
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(14301,1) and trade:getItemCount() == 6) then          --legs
+            PRIZE = 27236
+        elseif (trade:hasItemQty(4049, 5) and trade:hasItemQty(14182,1) and trade:getItemCount() == 6) then           --feet
+            PRIZE = 27406
         end
 
         if (PRIZE > 0) then
