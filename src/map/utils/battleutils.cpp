@@ -570,7 +570,7 @@ namespace battleutils
                 {
                     damage += (float)damageTaken*0.3;
                 }
-            break;
+                break;
             default:
                 break;
         }
@@ -683,6 +683,20 @@ namespace battleutils
                         // only works on shield blocks
                         Action->spikesEffect = (SUBEFFECT)0;
                         return false;
+                    }
+                    break;
+
+                case SPIKE_DEATH:
+                    if (PAttacker->objtype == TYPE_MOB && ((CMobEntity*)PAttacker)->m_Type & MOBTYPE_NOTORIOUS)
+                    {
+                        // Doesn't work on NM
+                        Action->spikesEffect = (SUBEFFECT)0;
+                        return false;
+                    }
+                    else if (WELL512::GetRandomNumber(100) <= 3)
+                    {
+                        Action->addEffectMessage = 164; // KO message.
+                        PAttacker->addHP(-PAttacker->health.hp);
                     }
                     break;
             }
@@ -840,6 +854,15 @@ namespace battleutils
             }
 
             return true;
+        }
+        else if (!(((CMobEntity*)PAttacker)->m_Type & MOBTYPE_NOTORIOUS) && (WELL512::GetRandomNumber(100) <= (chance*0.1) + lvlDiff))
+        {
+            if (spikesType == SUBEFFECT_DEATH_SPIKES)
+            {
+                Action->spikesMessage = 164; // KO message.
+                Action->spikesParam = 0;
+                PAttacker->addHP(-PAttacker->health.hp);
+            }
         }
 
         return false;
