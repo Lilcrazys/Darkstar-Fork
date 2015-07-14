@@ -14,7 +14,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 	local numhits = 1;
 	local accmod = 10;
-	local dmgmod = 4;
+	local dmgmod = 3;
 
 	MobStatusEffectMove(mob, target, EFFECT_CHOKE, 75, 3, 180);
 	MobStatusEffectMove(mob, target, EFFECT_STUN, 10, 0, 5);
