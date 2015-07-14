@@ -43,7 +43,7 @@ function onSpellCast(caster,target,spell)
 	caster:updateEnmityFromCure(target,final);
 
 	spell:setMsg(367);
-	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242) then
+	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242 or 11126) then
 		caster:addMp(final*0.05);
 	end
 

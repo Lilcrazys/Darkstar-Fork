@@ -115,7 +115,7 @@ function onSpellCast(caster,target,spell)
 	--Enmity for Cura is fixed, so its CE/VE is set in the SQL and not calculated with updateEnmityFromCure
 
 	spell:setMsg(367);
-	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242) then
+	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242 or 11126) then
 		caster:addMp(final*0.05);
 	end
 	return final;
