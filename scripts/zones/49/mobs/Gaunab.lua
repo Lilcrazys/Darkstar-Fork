@@ -34,7 +34,7 @@ function onMobSpawn(mob)
 
 
     -- addMod
-    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,150);
     mob:SetMobSkillAttack(true);

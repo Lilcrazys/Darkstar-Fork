@@ -32,7 +32,7 @@ function onMobSpawn(mob)
 
 
     -- addMod
-    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_MDEF,40);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,250);
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
