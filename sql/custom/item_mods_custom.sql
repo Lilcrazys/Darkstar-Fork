@@ -12654,7 +12654,8 @@ INSERT INTO `item_mods` VALUES (26944, 384, 30); -- Haste
 INSERT INTO `item_mods` VALUES (26944, 25, 40); -- ACC
 INSERT INTO `item_mods` VALUES (26944, 480, 5); -- Absorb damage taken
 INSERT INTO `item_mods` VALUES (26944, 160, -10); -- damage taken
--- INSERT INTO `item_mods` VALUES (26944, 0, 2); -- reserver for script flag later
+INSERT INTO `item_mods` VALUES (26944, 499, 10); -- testing death spikes
+INSERT INTO `item_mods` VALUES (26944, 501, 90); -- testing death spikes
 
 -- Gavialis_helm
 INSERT INTO `item_mods` VALUES (26702, 1, 110);
@@ -13133,7 +13134,7 @@ INSERT INTO `item_mods` VALUES (27722, 31, 32); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27722, 68, 33); -- Evasion
 INSERT INTO `item_mods` VALUES (27722, 384, 70); -- Haste
 INSERT INTO `item_mods` VALUES (27722, 161, -4); -- Phys Dmg Taken
-INSERT INTO `item_mods` VALUES (27722, 499, 5); -- Ice spikes
+INSERT INTO `item_mods` VALUES (27722, 499, 2); -- Ice spikes
 INSERT INTO `item_mods` VALUES (27722, 500, 20); -- Spike dmg
 INSERT INTO `item_mods` VALUES (27722, 501, 35); -- Spike duration
 
