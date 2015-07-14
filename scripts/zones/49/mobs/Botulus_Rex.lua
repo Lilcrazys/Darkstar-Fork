@@ -83,4 +83,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 1000);
+
 end;

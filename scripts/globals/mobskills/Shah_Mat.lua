@@ -17,7 +17,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    skill:setMsg(MobGazeMove(mob, target, EFFECT_DOOM, 30, 3, 10));
+    skill:setMsg(MobGazeMove(mob, target, EFFECT_DOOM, 10, 3, 10));
     skill:setMsg(MobGazeMove(mob, target, EFFECT_TERROR, 10, 0, 10));
     return typeEffect;
 end;

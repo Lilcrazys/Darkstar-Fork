@@ -15,7 +15,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 3;
+    local numhits = 2;
     local accmod = 10;
     local dmgmod = 1;
 

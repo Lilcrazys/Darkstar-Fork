@@ -24,7 +24,7 @@ function onMobWeaponSkill(target, mob, skill)
     skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 30));
 
 
-	local numhits = 3;
+	local numhits = 2;
 	local accmod = 10;
 	local dmgmod = 1;
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);

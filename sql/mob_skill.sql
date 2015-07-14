@@ -5505,7 +5505,7 @@ INSERT INTO `mob_skill` VALUES (2569,1138,1463,'Louring_Skies',1,30.0,2000,1500,
 -- Smierc (1139)
 INSERT INTO `mob_skill` VALUES (222,1139,1910,'VW_Hell_Slash',0,15.0,2000,1500,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (223,1139,223,'VW_Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (229,1139,1911,'VW_Blood_Saber',1,25.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (229,1139,1911,'VW_Blood_Saber',0,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2568,1139,1465,'Cloudscourge',1,30.0,2000,1500,4,0,0,7);
 
 -- Gaunab (1140)
