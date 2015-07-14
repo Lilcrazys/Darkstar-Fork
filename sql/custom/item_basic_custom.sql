@@ -21,7 +21,6 @@ INSERT INTO `item_basic` VALUES (4065,0,'rems_tale_chapter_2','rems_tale_ch_2',1
 INSERT INTO `item_basic` VALUES (4066,0,'rems_tale_chapter_3','rems_tale_ch_3',12,28736,0,1,0);
 INSERT INTO `item_basic` VALUES (4067,0,'rems_tale_chapter_4','rems_tale_ch_4',12,28736,0,1,0);
 INSERT INTO `item_basic` VALUES (4068,0,'rems_tale_chapter_5','rems_tale_ch_5',12,28736,0,1,0);
-INSERT INTO `item_basic` VALUES (4049,0,'rusted_coin','rusted_coin',12,29760,0,1,0);
 
 INSERT INTO `item_basic` VALUES (20540,0,'eminent_baghnakhs','eminent_baghnakhs',1,63552,1,1,0);
 INSERT INTO `item_basic` VALUES (20624,0,'eminent_dagger','eminent_dagger',1,63552,2,1,0);
