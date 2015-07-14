@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 end;
 
 -----------------------------------
@@ -23,11 +23,11 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 200);
-    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,105);
+    mob:setMod(MOD_MATT,90);
 
 
     -- addMod
@@ -50,30 +50,30 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Book_2hr_Used = mob:getLocalVar("Book_2hr");
+    local Botulus_Used = mob:getLocalVar("Botulus");
 
     -- if (os.time(t) > mob:getLocalVar("depopTime")) then
        -- DespawnMob(mob:getID());
     -- end
     if (mob:getHPP() <= 80) then
-        if (Book_2hr_Used == 0) then
+        if (Botulus_Used == 0) then
             mob:useMobAbility(436); -- RDM
-            mob:setLocalVar("Book_2hr", 1);
+            mob:setLocalVar("Botulus", 1);
         end
     elseif (mob:getHPP() <= 60) then
-        if (Book_2hr_Used == 1) then
+        if (Botulus_Used == 1) then
             mob:useMobAbility(436); -- RDM
-            mob:setLocalVar("Book_2hr", 2);
+            mob:setLocalVar("Botulus", 2);
         end
     elseif (mob:getHPP() <= 40) then
-        if (Book_2hr_Used == 2) then
+        if (Botulus_Used == 2) then
             mob:useMobAbility(436); -- RDM
-            mob:setLocalVar("Book_2hr", 3);
+            mob:setLocalVar("Botulus", 3);
         end
     elseif (mob:getHPP() <= 20) then
-        if (Book_2hr_Used == 3) then
+        if (Botulus_Used == 3) then
             mob:useMobAbility(436); -- RDM
-            mob:setLocalVar("Book_2hr", 4);
+            mob:setLocalVar("Botulus", 4);
         end
     end
 end;

@@ -16,7 +16,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 3;
+    local dmgmod = 2;
 
     MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 10, 0, 90);
     MobStatusEffectMove(mob, target, EFFECT_CURSE_II, 50, 0, 90);

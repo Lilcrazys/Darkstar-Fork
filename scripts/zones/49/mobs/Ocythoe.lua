@@ -23,17 +23,17 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 200);
-    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,105);
+    mob:setMod(MOD_MATT,85);
 
 
     -- addMod
-    mob:addMod(MOD_MDEF,80);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,250);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,80);
+    mob:addMod(MOD_ATT,100);
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -51,6 +51,27 @@ function onMobFight(mob, target)
     -- if (os.time(t) > depopTime) then
         -- DespawnMob(mob:getID());
     -- end
+    local Ocythoe = 0;
+    if (mob:getLocalVar("Ocythoe") ~= nil) then
+        Ocythoe_Used = mob:getLocalVar("Ocythoe");
+    end
+
+    if (mob:getHPP() <= 15) then
+        if (Ocythoe_Used == 2) then
+            mob:useMobAbility(436); -- CS
+            mob:setLocalVar("Ocythoe", 3);
+        end
+    elseif (mob:getHPP() <= 40) then
+        if (Ocythoe_Used == 1) then
+            mob:useMobAbility(436); -- CS
+            mob:setLocalVar("Ocythoe", 2);
+        end
+    elseif (mob:getHPP() <= 60) then
+        if (Ocythoe_Used == 0) then
+            mob:useMobAbility(436); -- CS
+            mob:setLocalVar("Ocythoe", 1);
+        end
+    end
 end;
 
 -----------------------------------
