@@ -172,9 +172,9 @@ function onEventFinish(player,csid,option)
 
     -- Keyitems
     elseif (option == 65539) then -- Map of Abyssea - Tahrongi
-        if (player:hasKeyItem(MAP_OF_ABYSSEA_Tahrongi) == false) then
-            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_Tahrongi);
-            player:addKeyItem(MAP_OF_ABYSSEA_Tahrongi);
+        if (player:hasKeyItem(MAP_OF_ABYSSEA_TAHRONGI) == false) then
+            player:messageSpecial(KEYITEM_OBTAINED,MAP_OF_ABYSSEA_TAHRONGI);
+            player:addKeyItem(MAP_OF_ABYSSEA_TAHRONGI);
             player:delCurrency("cruor", 3500);
         end
     elseif (option == 131075) then -- Ivory Abyssite of Sojourn
