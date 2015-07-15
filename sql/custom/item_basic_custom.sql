@@ -101,3 +101,20 @@ INSERT INTO `item_basic` VALUES (26895,0,'helios_jacket','helios_jacket',1,63552
 INSERT INTO `item_basic` VALUES (27049,0,'helios_gloves','helios_gloves',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27236,0,'helios_spats','helios_spats',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27406,0,'helios_boots','helios_boots',1,63552,0,1,0);
+
+INSERT INTO `item_basic` VALUES (27711,0,'gorney_morion_+1','gorney_morion_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (27863,0,'gorney_haubert_+1','gorney_haubert_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28010,0,'gorney_moufles_+1','gorney_moufles_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28152,0,'goney_brayettes_+1','goney_brayettes_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28289,0,'gorney_sollerets_+1','gorney_sollerets_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (27712,0,'shneddick_chapeau_+1','shneddick_chapeau_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (27864,0,'shneddick_tabard_+1','shneddick_tabard_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28011,0,'shneddick_gloves_+1','shneddick_gloves_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28153,0,'shneddick_tights_+1','shneddick_tights_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28290,0,'shneddick_boots_+1','shneddick_boots_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (27713,0,'weatherspoon_corona_+1','weather_corona_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (27865,0,'weatherspoon_robe_+1','weatherspoon_robe_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28012,0,'weatherspoon_cuffs_+1','weather_cuffs_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28154,0,'weatherspoon_pants_+1','weatherspoon_pants_+1',1,63568,0,1,0);
+INSERT INTO `item_basic` VALUES (28291,0,'weatherspoon_souilers_+1','weather_souilers_+1',1,63568,0,1,0);
+REPLACE INTO `item_basic` VALUES (28188,0,'gorney_brayettes','gorney_brayettes',1,63568,0,1,0);

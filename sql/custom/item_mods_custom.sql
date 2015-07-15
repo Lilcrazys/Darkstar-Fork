@@ -18884,3 +18884,241 @@ INSERT INTO `item_mods` VALUES (28264, 384, 31); --  Haste +3%
 INSERT INTO `item_mods` VALUES (28264, 489, -8); --  Grimoire: Reduces spellcasting time -8%
 
 -- PAY NO ATTENTION TO THE COMMENTED STAT VALUES THEY REFLECT 109 AND WILL BE DUMPED SHORTLY
+
+-- Shneddick Chapeau_+1
+INSERT INTO `item_mods` VALUES (27712, 1, 96); -- def
+INSERT INTO `item_mods` VALUES (27712, 2, 32); -- hp
+INSERT INTO `item_mods` VALUES (27712, 5, 22); -- mp
+INSERT INTO `item_mods` VALUES (27712, 8, 21); -- str
+INSERT INTO `item_mods` VALUES (27712, 9, 25); -- dex
+INSERT INTO `item_mods` VALUES (27712, 10, 21); -- vit
+INSERT INTO `item_mods` VALUES (27712, 11, 25); -- agi
+INSERT INTO `item_mods` VALUES (27712, 12, 21); -- int
+INSERT INTO `item_mods` VALUES (27712, 13, 21); -- mnd
+INSERT INTO `item_mods` VALUES (27712, 14, 22); -- chr
+INSERT INTO `item_mods` VALUES (27712, 68, 46); -- eva
+INSERT INTO `item_mods` VALUES (27712, 31, 50); -- Meva
+INSERT INTO `item_mods` VALUES (27712, 384, 81); -- gear haste
+
+-- Gorney Morion_+1
+INSERT INTO `item_mods` VALUES (27711, 1, 107); -- def
+INSERT INTO `item_mods` VALUES (27711, 2, 36); -- hp
+INSERT INTO `item_mods` VALUES (27711, 5, 22); -- mp
+INSERT INTO `item_mods` VALUES (27711, 8, 28); -- str
+INSERT INTO `item_mods` VALUES (27711, 9, 22); -- dex
+INSERT INTO `item_mods` VALUES (27711, 10, 28); -- vit
+INSERT INTO `item_mods` VALUES (27711, 11, 22); -- agi
+INSERT INTO `item_mods` VALUES (27711, 12, 12); -- int
+INSERT INTO `item_mods` VALUES (27711, 13, 12); -- mnd
+INSERT INTO `item_mods` VALUES (27711, 14, 12); -- chr
+INSERT INTO `item_mods` VALUES (27711, 68, 29); -- eva
+INSERT INTO `item_mods` VALUES (27711, 31, 30); -- Meva
+INSERT INTO `item_mods` VALUES (27711, 384, 71); -- gear haste
+
+-- Weatherspoon Corona_+1
+INSERT INTO `item_mods` VALUES (27713, 1, 90); -- def
+INSERT INTO `item_mods` VALUES (27713, 2, 42); -- hp
+INSERT INTO `item_mods` VALUES (27713, 5, 41); -- mp
+INSERT INTO `item_mods` VALUES (27713, 8, 6); -- str
+INSERT INTO `item_mods` VALUES (27713, 9, 6); -- dex
+INSERT INTO `item_mods` VALUES (27713, 10, 6); -- vit
+INSERT INTO `item_mods` VALUES (27713, 11, 6); -- agi
+INSERT INTO `item_mods` VALUES (27713, 12, 25); -- int
+INSERT INTO `item_mods` VALUES (27713, 13, 25); -- mnd
+INSERT INTO `item_mods` VALUES (27713, 14, 25); -- chr
+INSERT INTO `item_mods` VALUES (27713, 30, 11); -- Macc
+INSERT INTO `item_mods` VALUES (27713, 68, 32); -- eva
+INSERT INTO `item_mods` VALUES (27713, 31, 70); -- Meva
+INSERT INTO `item_mods` VALUES (27713, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES (27713, 384, 61); -- gear haste
+
+-- Gorney Haubert_+1
+INSERT INTO `item_mods` VALUES (27863, 1, 135); -- def
+INSERT INTO `item_mods` VALUES (27863, 2, 57); -- hp
+INSERT INTO `item_mods` VALUES (27863, 5, 34); -- mp
+INSERT INTO `item_mods` VALUES (27863, 8, 32); -- str
+INSERT INTO `item_mods` VALUES (27863, 9, 23); -- dex
+INSERT INTO `item_mods` VALUES (27863, 10, 32); -- vit
+INSERT INTO `item_mods` VALUES (27863, 11, 23); -- agi
+INSERT INTO `item_mods` VALUES (27863, 12, 23); -- int
+INSERT INTO `item_mods` VALUES (27863, 13, 23); -- mnd
+INSERT INTO `item_mods` VALUES (27863, 14, 23); -- chr
+INSERT INTO `item_mods` VALUES (27863, 25, 17); -- acc
+INSERT INTO `item_mods` VALUES (27863, 68, 37); -- eva
+INSERT INTO `item_mods` VALUES (27863, 31, 45); -- Meva
+INSERT INTO `item_mods` VALUES (27863, 29, 3); -- MDB
+INSERT INTO `item_mods` VALUES (27863, 288, 2); -- double atk
+INSERT INTO `item_mods` VALUES (27863, 384, 30); -- gear haste
+
+-- Shneddick Tabard_+1
+INSERT INTO `item_mods` VALUES (27864, 1, 124); -- def
+INSERT INTO `item_mods` VALUES (27864, 2, 53); -- hp
+INSERT INTO `item_mods` VALUES (27864, 5, 42); -- mp
+INSERT INTO `item_mods` VALUES (27864, 8, 27); -- str
+INSERT INTO `item_mods` VALUES (27864, 9, 32); -- dex
+INSERT INTO `item_mods` VALUES (27864, 10, 27); -- vit
+INSERT INTO `item_mods` VALUES (27864, 11, 31); -- agi
+INSERT INTO `item_mods` VALUES (27864, 12, 26); -- int
+INSERT INTO `item_mods` VALUES (27864, 13, 26); -- mnd
+INSERT INTO `item_mods` VALUES (27864, 14, 26); -- chr
+INSERT INTO `item_mods` VALUES (27864, 25, 17); -- acc
+INSERT INTO `item_mods` VALUES (27864, 68, 44); -- eva
+INSERT INTO `item_mods` VALUES (27864, 31, 60); -- Meva
+INSERT INTO `item_mods` VALUES (27864, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES (27864, 384, 61); -- gear haste
+
+-- Weatherspoon Robe_+1
+INSERT INTO `item_mods` VALUES (27865, 1, 118); -- def
+INSERT INTO `item_mods` VALUES (27865, 2, 48); -- hp
+INSERT INTO `item_mods` VALUES (27865, 5, 57); -- mp
+INSERT INTO `item_mods` VALUES (27865, 8, 25); -- str
+INSERT INTO `item_mods` VALUES (27865, 9, 25); -- dex
+INSERT INTO `item_mods` VALUES (27865, 10, 25); -- vit
+INSERT INTO `item_mods` VALUES (27865, 11, 25); -- agi
+INSERT INTO `item_mods` VALUES (27865, 12, 32); -- int
+INSERT INTO `item_mods` VALUES (27865, 13, 32); -- mnd
+INSERT INTO `item_mods` VALUES (27865, 14, 32); -- chr
+INSERT INTO `item_mods` VALUES (27865, 28, 15); -- MAB
+INSERT INTO `item_mods` VALUES (27865, 68, 37); -- eva
+INSERT INTO `item_mods` VALUES (27865, 31, 75); -- Meva
+INSERT INTO `item_mods` VALUES (27865, 29, 6); -- MDB
+INSERT INTO `item_mods` VALUES (27865, 384, 30); -- gear haste
+
+-- Gorney Moufles_+1
+INSERT INTO `item_mods` VALUES (28010, 1, 96); -- def
+INSERT INTO `item_mods` VALUES (28010, 2, 42); -- hp
+INSERT INTO `item_mods` VALUES (28010, 8, 9); -- str
+INSERT INTO `item_mods` VALUES (28010, 9, 27); -- dex
+INSERT INTO `item_mods` VALUES (28010, 10, 31); -- vit
+INSERT INTO `item_mods` VALUES (28010, 12, 8); -- int
+INSERT INTO `item_mods` VALUES (28010, 13, 24); -- mnd
+INSERT INTO `item_mods` VALUES (28010, 14, 18); -- chr
+INSERT INTO `item_mods` VALUES (28010, 23, 12); -- atk
+INSERT INTO `item_mods` VALUES (28010, 68, 25); -- eva
+INSERT INTO `item_mods` VALUES (28010, 31, 25); -- Meva
+INSERT INTO `item_mods` VALUES (28010, 384, 40); -- gear haste
+
+-- Shneddick Gloves_+1
+INSERT INTO `item_mods` VALUES (28011, 1, 84); -- def
+INSERT INTO `item_mods` VALUES (28011, 2, 45); -- hp
+INSERT INTO `item_mods` VALUES (28011, 8, 10); -- str
+INSERT INTO `item_mods` VALUES (28011, 9, 33); -- dex
+INSERT INTO `item_mods` VALUES (28011, 10, 30); -- vit
+INSERT INTO `item_mods` VALUES (28011, 11, 4); -- agi
+INSERT INTO `item_mods` VALUES (28011, 12, 12); -- int
+INSERT INTO `item_mods` VALUES (28011, 13, 28); -- mnd
+INSERT INTO `item_mods` VALUES (28011, 14, 16); -- chr
+INSERT INTO `item_mods` VALUES (28011, 26, 12); -- Racc
+INSERT INTO `item_mods` VALUES (28011, 68, 22); -- eva
+INSERT INTO `item_mods` VALUES (28011, 31, 35); -- Meva
+INSERT INTO `item_mods` VALUES (28011, 384, 50); -- gear haste
+
+-- Weatherspoon Cuffs_+1
+INSERT INTO `item_mods` VALUES (28012, 1, 79); -- def
+INSERT INTO `item_mods` VALUES (28012, 2, 35); -- hp
+INSERT INTO `item_mods` VALUES (28012, 5, 29); -- mp
+INSERT INTO `item_mods` VALUES (28012, 8, 6); -- str
+INSERT INTO `item_mods` VALUES (28012, 9, 26); -- dex
+INSERT INTO `item_mods` VALUES (28012, 10, 24); -- vit
+INSERT INTO `item_mods` VALUES (28012, 11, 4); -- agi
+INSERT INTO `item_mods` VALUES (28012, 12, 18); -- int
+INSERT INTO `item_mods` VALUES (28012, 13, 31); -- mnd
+INSERT INTO `item_mods` VALUES (28012, 14, 18); -- chr
+INSERT INTO `item_mods` VALUES (28012, 68, 19); -- eva
+INSERT INTO `item_mods` VALUES (28012, 31, 35); -- Meva
+INSERT INTO `item_mods` VALUES (28012, 29, 2); -- MDB
+INSERT INTO `item_mods` VALUES (28012, 374, 9); -- cure potency +%
+INSERT INTO `item_mods` VALUES (28012, 384, 30); -- gear haste
+
+-- Gorney Brayettes_+1
+INSERT INTO `item_mods` VALUES (28152, 1, 118); -- def
+INSERT INTO `item_mods` VALUES (28152, 2, 60); -- hp
+INSERT INTO `item_mods` VALUES (28152, 8, 33); -- str
+INSERT INTO `item_mods` VALUES (28152, 10, 20); -- vit
+INSERT INTO `item_mods` VALUES (28152, 11, 15); -- agi
+INSERT INTO `item_mods` VALUES (28152, 12, 24); -- int
+INSERT INTO `item_mods` VALUES (28152, 13, 12); -- mnd
+INSERT INTO `item_mods` VALUES (28152, 14, 9); -- chr
+INSERT INTO `item_mods` VALUES (28152, 68, 31); -- eva
+INSERT INTO `item_mods` VALUES (28152, 31, 60); -- Meva
+INSERT INTO `item_mods` VALUES (28152, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES (28152, 384, 50); -- gear haste
+
+-- Shneddick Tights_+1
+INSERT INTO `item_mods` VALUES (28153, 1, 107); -- def
+INSERT INTO `item_mods` VALUES (28153, 2, 42); -- hp
+INSERT INTO `item_mods` VALUES (28153, 8, 27); -- str
+INSERT INTO `item_mods` VALUES (28153, 10, 15); -- vit
+INSERT INTO `item_mods` VALUES (28153, 11, 19); -- agi
+INSERT INTO `item_mods` VALUES (28153, 12, 28); -- int
+INSERT INTO `item_mods` VALUES (28153, 13, 16); -- mnd
+INSERT INTO `item_mods` VALUES (28153, 14, 10); -- chr
+INSERT INTO `item_mods` VALUES (28153, 28, 17); -- MAB
+INSERT INTO `item_mods` VALUES (28153, 68, 34); -- eva
+INSERT INTO `item_mods` VALUES (28153, 31, 65); -- Meva
+INSERT INTO `item_mods` VALUES (28153, 29, 4); -- MDB
+
+-- Weatherspoon Pants_+1
+INSERT INTO `item_mods` VALUES (28154, 1, 101); -- def
+INSERT INTO `item_mods` VALUES (28154, 2, 48); -- hp
+INSERT INTO `item_mods` VALUES (28154, 5, 38); -- mp
+INSERT INTO `item_mods` VALUES (28154, 8, 24); -- str
+INSERT INTO `item_mods` VALUES (28154, 10, 12); -- vit
+INSERT INTO `item_mods` VALUES (28154, 11, 16); -- agi
+INSERT INTO `item_mods` VALUES (28154, 12, 32); -- int
+INSERT INTO `item_mods` VALUES (28154, 13, 22); -- mnd
+INSERT INTO `item_mods` VALUES (28154, 14, 18); -- chr
+INSERT INTO `item_mods` VALUES (28154, 68, 24); -- eva
+INSERT INTO `item_mods` VALUES (28154, 31, 100); -- Meva
+INSERT INTO `item_mods` VALUES (28154, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES (28154, 27, -5); -- enmity
+INSERT INTO `item_mods` VALUES (28154, 384, 50); -- gear haste
+
+-- Gorney Sollerets_+1
+INSERT INTO `item_mods` VALUES (28289, 1, 79); -- def
+INSERT INTO `item_mods` VALUES (28289, 2, 38); -- hp
+INSERT INTO `item_mods` VALUES (28289, 8, 19); -- str
+INSERT INTO `item_mods` VALUES (28289, 9, 16); -- dex
+INSERT INTO `item_mods` VALUES (28289, 10, 16); -- vit
+INSERT INTO `item_mods` VALUES (28289, 11, 27); -- agi
+INSERT INTO `item_mods` VALUES (28289, 13, 9); -- mnd
+INSERT INTO `item_mods` VALUES (28289, 14, 25); -- chr
+INSERT INTO `item_mods` VALUES (28289, 25, 14); -- acc
+INSERT INTO `item_mods` VALUES (28289, 23, 14); -- atk
+INSERT INTO `item_mods` VALUES (28289, 68, 44); -- eva
+INSERT INTO `item_mods` VALUES (28289, 31, 60); -- Meva
+INSERT INTO `item_mods` VALUES (28289, 161, -3); -- phy dmg taken
+INSERT INTO `item_mods` VALUES (28289, 384, 30); -- gear haste
+
+-- Shneddick Boots_+1
+INSERT INTO `item_mods` VALUES (28290, 1, 67); -- def
+INSERT INTO `item_mods` VALUES (28290, 2, 33); -- hp
+INSERT INTO `item_mods` VALUES (28290, 8, 12); -- str
+INSERT INTO `item_mods` VALUES (28290, 9, 22); -- dex
+INSERT INTO `item_mods` VALUES (28290, 10, 12); -- vit
+INSERT INTO `item_mods` VALUES (28290, 11, 34); -- agi
+INSERT INTO `item_mods` VALUES (28290, 13, 12); -- mnd
+INSERT INTO `item_mods` VALUES (28290, 14, 28); -- chr
+INSERT INTO `item_mods` VALUES (28290, 30, 17); -- Macc
+INSERT INTO `item_mods` VALUES (28290, 68, 64); -- eva
+INSERT INTO `item_mods` VALUES (28290, 31, 65); -- Meva
+INSERT INTO `item_mods` VALUES (28290, 29, 4); -- MDB
+INSERT INTO `item_mods` VALUES (28290, 384, 40); -- gear haste
+
+-- Weatherspoon Souliers_+1
+INSERT INTO `item_mods` VALUES (28291, 1, 62); -- def
+INSERT INTO `item_mods` VALUES (28291, 2, 28); -- hp
+INSERT INTO `item_mods` VALUES (28291, 5, 30); -- mp
+INSERT INTO `item_mods` VALUES (28291, 8, 9); -- str
+INSERT INTO `item_mods` VALUES (28291, 9, 10); -- dex
+INSERT INTO `item_mods` VALUES (28291, 10, 9); -- vit
+INSERT INTO `item_mods` VALUES (28291, 11, 31); -- agi
+INSERT INTO `item_mods` VALUES (28291, 12, 16); -- int
+INSERT INTO `item_mods` VALUES (28291, 13, 18); -- mnd
+INSERT INTO `item_mods` VALUES (28291, 14, 32); -- chr
+INSERT INTO `item_mods` VALUES (28291, 28, 12); -- MAB
+INSERT INTO `item_mods` VALUES (28291, 68, 49); -- eva
+INSERT INTO `item_mods` VALUES (28291, 31, 100); -- Meva
+INSERT INTO `item_mods` VALUES (28291, 29, 5); -- MDB
+INSERT INTO `item_mods` VALUES (28291, 384, 30); -- gear haste
+
