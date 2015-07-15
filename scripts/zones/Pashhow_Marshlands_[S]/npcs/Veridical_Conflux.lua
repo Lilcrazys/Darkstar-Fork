@@ -48,7 +48,6 @@ function onEventFinish(player,csid,option)
     if (csid == 7) then
         player:addQuest(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID); -- Should actually be at end of cs 8...
         player:setVar("VW_3_NATIONS", 0); -- Should actually be at end of cs 8...
-        player:addKeyItem(WHITE_STRATUM_ABYSSITE);
         player:startEvent(8);
     elseif (csid == 8) then
         -- This damned thing won't exec any code here, so temp moved to end of cs 7
