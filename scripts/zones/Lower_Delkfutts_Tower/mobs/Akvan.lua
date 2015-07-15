@@ -72,7 +72,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 350);
+    killer:addCurrency("bayld", 450);
     killer:addExp(10000);
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Akvan Kill

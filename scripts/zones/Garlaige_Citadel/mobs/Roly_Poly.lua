@@ -108,7 +108,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 150);
+    killer:addCurrency("bayld", 200);
     killer:addExp(10000);
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Roly-Poly Kill
