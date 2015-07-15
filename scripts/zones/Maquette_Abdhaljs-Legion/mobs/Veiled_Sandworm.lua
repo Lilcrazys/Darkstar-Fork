@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Veiled_Sandworm
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -16,6 +15,12 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_DEF,125);
 end;
 
 -----------------------------------
@@ -28,12 +33,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-
-    -- addMod
-    mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_DEF,125); 
 end;
 
 -----------------------------------
@@ -59,7 +58,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(439); -- BW
             mob:setLocalVar("Veiled_Sandworm_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------

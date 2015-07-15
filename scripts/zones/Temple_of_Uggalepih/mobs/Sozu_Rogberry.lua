@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Temple of Uggalepih
--- NPC:  Sozu Rogberry
+--  NM:  Sozu Rogberry
 -----------------------------------
 
 require("scripts/globals/status");
@@ -11,6 +11,11 @@ require("scripts/globals/titles");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_ACC,100);
+    mob:addMod(MOD_ATT,150);
+    mob:addMod(MOD_EVA,-150);
+    mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -20,12 +25,6 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_ACC,100);
-    mob:addMod(MOD_ATT,150);
-    mob:addMod(MOD_EVA,-150);
-    mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;
 
 -----------------------------------

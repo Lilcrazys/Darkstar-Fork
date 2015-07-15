@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Lofty_Behemoth
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -25,8 +24,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_REGEN,25);
-
-    -- addMod
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);  
 end;

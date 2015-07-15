@@ -21,22 +21,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Give Auto spikes
     mob:addStatusEffect(EFFECT_DELUGE_SPIKES, 20, 0, 0); -- Needed for auto spikes to fire off
     mob:getStatusEffect(EFFECT_DELUGE_SPIKES):setFlag(32); -- Can't dispel spikes
-end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
-
-function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGEN, 25);
-    mob:setMod(MOD_REGAIN, 5);
-    mob:setMod(MOD_COUNTER, 4);
-    mob:setMod(MOD_HUMANOID_KILLER, 3);
-    mob:setMod(MOD_WATER_ABSORB, 100);
-    mob:setMod(MOD_UFASTCAST, 65);
-    mob:setMod(MOD_CURE_POTENCY, 21);
-    mob:setMod(MOD_CURE_POTENCY_RCVD, 21);
 
     -- addMod
     mob:addMod(MOD_ATT, 80);
@@ -54,6 +38,22 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF, 25);
     mob:addMod(MOD_RDEF, 25);
     mob:addMod(MOD_REVA, 25);
+end;
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 25);
+    mob:setMod(MOD_REGAIN, 5);
+    mob:setMod(MOD_COUNTER, 4);
+    mob:setMod(MOD_HUMANOID_KILLER, 3);
+    mob:setMod(MOD_WATER_ABSORB, 100);
+    mob:setMod(MOD_UFASTCAST, 65);
+    mob:setMod(MOD_CURE_POTENCY, 21);
+    mob:setMod(MOD_CURE_POTENCY_RCVD, 21);
 
     -- Checking if Crab should be at the alt pos according to serverVar..
     -- This is done because otherwise server restarts would force it back to same pos.

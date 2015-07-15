@@ -39,6 +39,12 @@ function onTrigger(player,npc)
 		end
 	elseif(player:hasKeyItem(ARCHDUCAL_AUDIENCE_PERMIT)) then
 		player:messageSpecial(SOVEREIGN_WITHOUT_AN_APPOINTMENT);
+	elseif (player:hasKeyItem(VOIDWATCH_ALARUM) and player:getQuestStatus(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED) then
+		if (player:getRank() > 5) then
+			player:startEvent(10188,0,0,0,0,0,0,0,1);
+		else -- The diff is which NPC you see in CS..Rank 6 starts Zilart, so shouldn't see the Duke.
+			player:startEvent(10188);
+		end
 	else
 		player:startEvent(0x008a); -- you don't have a permit
 	end
@@ -83,6 +89,14 @@ function onEventFinish(player,csid,option)
 		player:setVar("MissionStatus",6); -- all that's left is to go back to the embassy
 	elseif(csid == 0x2742) then
 	    player:setVar("PromathiaStatus",2);
+	elseif (csid == 10188) then;
+		player:completeQuest(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY);
+		player:addQuest(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT);
+		player:delKeyItem(VOIDWATCH_ALARUM);
+		player:addKeyItem(WHITE_STRATUM_ABYSSITE);
+		player:addKeyItem(VOIDWATCHERS_EMBLEM_JEUNO)
+		player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE);
+		player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCHERS_EMBLEM_JEUNO);
 	end
 	
 end;

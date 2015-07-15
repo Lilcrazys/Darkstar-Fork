@@ -1,10 +1,22 @@
 -----------------------------------
 -- Area: Wajaom Woodlands
--- MOB:  Gotoh_Zha_the_Redolent
+--  MOB: Gotoh_Zha_the_Redolent
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/titles");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_ATT, 100);
+    mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MATT, -140); -- Without this, max magic dmg is way to high with default stats for his job/lv
+    mob:addMod(MOD_MACC, 150); -- Without this, average magic dmg is way to low with default stats for his job/lv
+end;
 
 -----------------------------------
 -- onMobSpawn Action
@@ -16,17 +28,11 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 70);
     mob:setMod(MOBMOD_MAGIC_COOL, 25);
 
-    -- addMod
-    mob:addMod(MOD_ATT, 100);
-    mob:addMod(MOD_DEF, 100);
-    mob:addMod(MOD_MATT, -140); -- Without this, max magic dmg is way to high with default stats for his job/lv
-    mob:addMod(MOD_MACC, 150); -- Without this, average magic dmg is way to low with default stats for his job/lv
-
     -- Vars
     mob:setLocalVar("RANDHPP_1", math.random(66,95))
     mob:setLocalVar("RANDHPP_2", math.random(25,50))
 
-    -- Reset animation and spell list because DSP does not do this automatcially...It should (-_-); but does not.
+    -- Reset animation and spell list because DSP does not do this automatically...It should (-_-); but does not.
     mob:AnimationSub(0);
     mob:setSpellList(401);
 end;

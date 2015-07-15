@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Mount Z
--- NPC:  Sarameya
+--  ZNM: Sarameya
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +14,15 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_ACC,150);
+    mob:addMod(MOD_DOUBLE_ATTACK,10)
+    mob:setMod(MOD_MACC,950);
+    mob:setMod(MOD_MATT,80);
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_DEF, 50);
+    mob:addMod(MOD_ATT, 50);
 end;
 
 -----------------------------------
@@ -25,15 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_UFASTCAST, 45);
-
-    -- addMod
-    mob:addMod(MOD_ACC,150);
-    mob:addMod(MOD_DOUBLE_ATTACK,10)
-    mob:setMod(MOD_MACC,950);
-    mob:setMod(MOD_MATT,80);
-    mob:addMod(MOD_MDEF, 50);
-    mob:addMod(MOD_DEF, 50);
-    mob:addMod(MOD_ATT, 50);
 end;
 
 
@@ -103,6 +103,7 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_POISON, 160, EFFECT_POISON;
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

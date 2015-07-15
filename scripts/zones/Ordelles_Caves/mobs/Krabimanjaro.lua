@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Krabimanjaro
+-- Area: ?
+--  VNM: Krabimanjaro
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -16,6 +16,11 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_ATT,125);
 end;
 
 -----------------------------------
@@ -31,11 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_TRIPLE_ATTACK,15);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,50);
-    mob:addMod(MOD_ATT,125);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

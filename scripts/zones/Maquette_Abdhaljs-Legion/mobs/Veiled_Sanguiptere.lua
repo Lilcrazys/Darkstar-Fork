@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
--- Veiled_Sanguiptere 
-
+-- Veiled_Sanguiptere
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,8 +13,13 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); 
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1); 
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_DEF,125);
 end;
 
 -----------------------------------
@@ -30,11 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_COUNTER, 15);
-
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);    
-    mob:addMod(MOD_DEF,125); 
 end;
 
 -----------------------------------
@@ -55,23 +54,23 @@ function onMobFight(mob, target)
         Veiled_Sanguiptere_2hr = mob:getLocalVar("Veiled_Sanguiptere_2hr");
     end
 
-    if (mob:getHPP() <= 15) then 
+    if (mob:getHPP() <= 15) then
         if (Veiled_Sanguiptere_2hr == 1) then
             mob:useMobAbility(436); -- CS
             mob:setLocalVar("Veiled_Sanguiptere_2hr", 2);
         end
-    elseif (mob:getHPP() <= 60) then 
+    elseif (mob:getHPP() <= 60) then
         if (Veiled_Sanguiptere_2hr == 0) then
             mob:useMobAbility(434); -- HF
             mob:setLocalVar("Veiled_Sanguiptere_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
--- function onAdditionalEffect(mob,target,damage) 
+-- function onAdditionalEffect(mob,target,damage)
 -- end;
 
 -----------------------------------

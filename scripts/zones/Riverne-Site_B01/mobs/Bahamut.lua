@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: inSomeZone
--- NPC:  bahamut
+--  NM:  Bahamut
 -----------------------------------
 require("scripts/globals/titles");
 require("scripts/globals/status");
@@ -11,12 +11,16 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInibahamutlize(mob)
-    mob:addMod(MOD_DMGMAGIC, -128);
-    mob:addMod(MOD_DMGRANGE, -60);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
+
+    -- addMod
+    mob:addMod(MOD_DMGMAGIC, -128);
+    mob:addMod(MOD_DMGRANGE, -60);
+    mob:addMod(MOD_STUNRES,33);
+    mob:addMod(MOD_THUNDERRES,33);
 end;
 -----------------------------------
 -- onMobSpawn Action
@@ -41,10 +45,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_HUMANOID_KILLER, 5);
     mob:setMod(MOD_TERRORRES, 200);
-
-    -- addMod
-    mob:addMod(MOD_STUNRES,33);
-    mob:addMod(MOD_THUNDERRES,33);
 end;
 
 -----------------------------------

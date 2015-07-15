@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:  Pancimanci
+--  VNM: Pancimanci
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,13 +9,16 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_ATT,350);
 end;
 
 -----------------------------------
@@ -35,9 +38,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DEF,1400);
     mob:setMod(MOD_ACC,1400);
 
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,350);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

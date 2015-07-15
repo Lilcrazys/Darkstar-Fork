@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Mired_Mantis
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -9,6 +8,7 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -16,6 +16,9 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+    
+    -- addMod
+    mob:addMod(MOD_DEF,75);
 end;
 
 -----------------------------------
@@ -29,13 +32,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_COUNTER, 20);
     mob:setMod(MOD_ACC,1325);
-    
-
-    -- addMod
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);  
     mob:addMod(MOD_MDEF,55);
-    mob:addMod(MOD_DEF,75);
 end;
 
 -----------------------------------

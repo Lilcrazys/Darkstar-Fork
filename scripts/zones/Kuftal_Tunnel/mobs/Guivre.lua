@@ -1,10 +1,24 @@
 ----------------------------------
 -- Area: Kuftal Tunnel
---   NM: Guivre
+--  NM:  Guivre
 -----------------------------------
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
+
+-----------------------------------
+-- onMobInitialize
+-----------------------------------
+
+function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_STR,7);
+    mob:addMod(MOD_DEX,7);
+    mob:addMod(MOD_ATT,112);
+    mob:addMod(MOD_ACC,200);
+    mob:addMod(MOD_EVA,132);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
+end;
 
 -----------------------------------
 -- onMobSpawn
@@ -13,14 +27,6 @@ require("scripts/globals/status");
 function onMobSpawn(mob)
     -- setMod
 	mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_STR,7);
-    mob:addMod(MOD_DEX,7);
-    mob:addMod(MOD_ATT,112);
-    mob:addMod(MOD_ACC,200);
-    mob:addMod(MOD_EVA,132);
-    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -33,12 +39,9 @@ end;
 -----------------------------------
 -- onMobFight
 -----------------------------------
+
 function onMobFight(mob,target)
 end
-
------------------------------------
--- onMobDeath
------------------------------------
 
 local path = {
 106.836830, 0.753614, -3.944333,
@@ -422,6 +425,10 @@ function onMobRoam(mob)
 		mob:pathThrough(pathfind.first(path));
 	end
 end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
 
 function onMobDeath(mob,killer)
 	killer:addTitle(SKULLCRUSHER);

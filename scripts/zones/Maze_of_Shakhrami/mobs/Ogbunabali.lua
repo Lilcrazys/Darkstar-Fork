@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Ogbunabali
+-- Area: ?
+--  VNM: Ogbunabali
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,13 +9,17 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_ATT,175);
 end;
 
 -----------------------------------
@@ -31,11 +35,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,15);
     mob:setMod(MOD_HASTE_ABILITY, 35);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,175);
+    -- VNM
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

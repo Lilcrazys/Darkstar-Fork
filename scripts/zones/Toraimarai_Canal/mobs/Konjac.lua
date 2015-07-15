@@ -1,6 +1,6 @@
 -----------------------------------
 -- Zone: Tormaimarai Canal
--- Mob: Konjac
+--  NM:  Konjac
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +14,9 @@ require("scripts/globals/utils");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 30)
 end;
 
 -----------------------------------
@@ -24,10 +27,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 30)
-
 end;
 
 -----------------------------------
@@ -48,7 +47,6 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    -- wiki just says "low proc rate". No actual data to go on - going with 15% for now.
     local chance = 15;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
@@ -75,7 +73,7 @@ function onAdditionalEffect(mob,target,damage)
         drain = adjustForTarget(target,drain,ELE_DARK);
 
         if (drain < 0) then
-            drain = 10
+            drain = 0;
         end
 
         drain = finalMagicNonSpellAdjustments(target,mob,ELE_DARK,drain);
@@ -89,4 +87,3 @@ end;
 
 function onMobDeath(mob,killer)
 end;
-

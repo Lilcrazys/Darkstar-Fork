@@ -1,11 +1,22 @@
 -----------------------------------
 -- Area: Wajaom Woodlands
--- NPC:  Iriz_Ima
-
-
+-- ZNM:  Iriz_Ima
 -----------------------------------
+
 require("scripts/globals/status");
 require("scripts/globals/titles");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_ATT,90);
+    mob:addMod(MOD_DEF,75);
+    mob:addMod(MOD_MACC,500);
+end;
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
@@ -13,12 +24,11 @@ require("scripts/globals/titles");
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_ATT,90);
-    mob:addMod(MOD_DEF,75);
-    mob:addMod(MOD_MACC,500);
 end;
+
+-----------------------------------
+-- onMobFight Action
+-----------------------------------
 
 function onMobFight(mob, target)
 end;
@@ -28,5 +38,5 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)	
+function onMobDeath(mob, killer)
 end;

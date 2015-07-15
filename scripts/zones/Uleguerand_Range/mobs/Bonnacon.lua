@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area:Uleguerland Range
--- NPC:  Bonnacon
+--  NM:  Bonnacon
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -11,7 +11,8 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
-
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -21,9 +22,6 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------

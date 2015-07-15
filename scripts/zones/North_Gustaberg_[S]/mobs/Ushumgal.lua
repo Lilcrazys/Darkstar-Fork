@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:  Ushumgal
+--  VNM: Ushumgal
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,13 +9,16 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_ACC,200);
 end;
 
 -----------------------------------
@@ -30,10 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_DOUBLE_ATTACK, 25);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ACC,200);
+    -- VNM
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -76,7 +76,7 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Ushumgal Kill
         if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM"), 1) == false) then
-	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",1,true);
+           killer:setMaskBit(killer:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",1,true);
         end
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM"),2) == true) then
            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);

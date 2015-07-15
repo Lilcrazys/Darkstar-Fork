@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Lofty_Zilant
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -16,6 +15,9 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DEF,75);
 end;
 
 -----------------------------------
@@ -26,11 +28,8 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
     mob:setMod(MOD_REGEN,35);
-
-    -- addMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_DEF,75);
+    mob:setMod(MOD_MATT,120);
 end;
 
 -----------------------------------

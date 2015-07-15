@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC:  Virvatuli
+--  VNM: Virvatuli
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,12 +9,14 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_MDEF,75);
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -31,9 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DEF,1000);
 
-    -- addMod
-    mob:addMod(MOD_MDEF,75);
-    mob:addMod(MOD_ATT,250);
+    -- vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -62,7 +62,7 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Virvatuli Kill
         if (killer:getMaskBit(killer:getVar("JADE_STRATUM"), 0) == false) then
-	       killer:setMaskBit(killer:getVar("JADE_STRATUM"),"JADE_STRATUM",0,true);
+           killer:setMaskBit(killer:getVar("JADE_STRATUM"),"JADE_STRATUM",0,true);
         end
         if (killer:isMaskFull(killer:getVar("JADE_STRATUM"),2) == true) then
            killer:addKeyItem(JADE_STRATUM_ABYSSITE_II);

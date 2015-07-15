@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Veiled_Gigaworm
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -16,6 +15,11 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DEF,95);
+    mob:addMod(MOD_MDEF,55);
+    mob:addMod(MOD_DOUBLE_ATTACK, 15);
 end;
 
 -----------------------------------
@@ -31,11 +35,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 25);
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);  
-
-    -- addMod
-    mob:addMod(MOD_DEF,95);
-    mob:addMod(MOD_MDEF,55);
-    mob:addMod(MOD_DOUBLE_ATTACK, 15);
 end;
 
 -----------------------------------

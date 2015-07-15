@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Paramount_Botulus
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -29,8 +28,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 25);
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 55);
-
-    -- addMod
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,125);  
 end;

@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Paramount_Harpeia
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -16,6 +15,10 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);  
 end;
 
 -----------------------------------
@@ -28,10 +31,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 30);
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 25);
-
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
 end;
 
 -----------------------------------

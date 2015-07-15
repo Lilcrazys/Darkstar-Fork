@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Soaring_Kumakatok
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -16,6 +15,12 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);  
+    mob:addMod(MOD_DEF,145);
+    mob:addMod(MOD_MDEF,50); 
 end;
 
 -----------------------------------
@@ -29,12 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 65);
-
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_DEF,145);
-    mob:addMod(MOD_MDEF,50); 
 end;
 
 -----------------------------------
