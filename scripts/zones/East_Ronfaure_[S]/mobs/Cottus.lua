@@ -9,7 +9,6 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -24,8 +23,8 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 200);
-    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_REGEN,200);
+    mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_MACC,1900);
     mob:setMod(MOD_MATT,115);
     mob:setMod(MOD_DEF,1000);

@@ -31,7 +31,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_ATT,150);
 
     -- vars
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -45,9 +45,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > mob:getLocalVar("depopTime")) then
-       -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+       DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -63,11 +63,6 @@ function onAdditionalEffect(mob,target,damage)
     end
 
     if (EFFECT ~= EFFECT_NONE) then
-        --[[
-        if (target:isPC()) then
-            target:PrintToPlayer(string.format("Effect ID: %i", EFFECT));
-        end
-        ]]
         return SUBEFFECT_DARKNESS_DAMAGE, 168, EFFECT;
     else
         return 0, 0, 0;
@@ -78,4 +73,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 100);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Cherufe Kill
+        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM"), 4) == false) then
+           killer:setMaskBit(killer:getVar("WHITE_STRATUM"),"WHITE_STRATUM",4,true);
+        end
+        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM"),6) == true) then
+           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE);
+           killer:setVar("WHITE_STRATUM", 0);
+        end
+    end;
 end;

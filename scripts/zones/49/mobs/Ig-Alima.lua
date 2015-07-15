@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,40);
     mob:addMod(MOD_DEF,60);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -48,9 +48,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+        DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -58,4 +58,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 600);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ig-Alima Kill
+        if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 3) == false) then
+	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",3,true);
+        end
+        if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        end
+    end
 end;

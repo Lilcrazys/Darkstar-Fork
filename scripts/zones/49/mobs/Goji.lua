@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,20);
     mob:addMod(MOD_DEF,80);
     mob:addMod(MOD_ATT,250);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -48,9 +48,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > mob:getLocalVar("depopTime")) then
-       -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+       DespawnMob(mob:getID());
+    end
 
     local Wings = mob:getLocalVar("Wings");
 
@@ -71,4 +71,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 100);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Goji Kill
+        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM"), 0) == false) then
+           killer:setMaskBit(killer:getVar("WHITE_STRATUM"),"WHITE_STRATUM",0,true);
+        end
+        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM"),6) == true) then
+           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE);
+           killer:setVar("WHITE_STRATUM", 0);
+        end
+    end;
 end;

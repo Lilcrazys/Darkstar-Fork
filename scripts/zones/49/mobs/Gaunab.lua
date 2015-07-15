@@ -38,7 +38,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_DEF,200);
     mob:addMod(MOD_ATT,150);
     mob:SetMobSkillAttack(true);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -52,9 +52,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+        DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -63,7 +63,9 @@ end;
 
 function onSpikesDamage(mob,target,damage)
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
-
+    if (target:isPC()) then
+        target:PrintToPlayer(Test!);
+    end
     if (INT_diff > 20) then
         INT_diff = 20 + (INT_diff - 20) / 2;
     end
@@ -90,4 +92,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 600);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Gaunab Kill
+        if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 0) == false) then
+	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",0,true);
+        end
+        if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        end
+    end
 end;

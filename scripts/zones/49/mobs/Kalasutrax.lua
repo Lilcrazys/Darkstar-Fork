@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,40);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -51,9 +51,9 @@ function onMobFight(mob, target)
     local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
     local depopTime = mob:getLocalVar("depopTime");
 
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+        DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -61,4 +61,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 600);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Kalasutrax Kill
+        if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 2) == false) then
+	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",2,true);
+        end
+        if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        end
+    end
 end;

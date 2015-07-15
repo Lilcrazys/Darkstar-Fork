@@ -33,7 +33,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,60);
     mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -47,9 +47,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+        DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -57,4 +57,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 400);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_V)) then -- Stachysaurus Kill
+        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_V"), 0) == false) then
+           killer:setMaskBit(killer:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",0,true);
+        end
+        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_V"),3) == true) then
+           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
+           killer:setVar("WHITE_STRATUM_V", 0);
+        end
+    end;
 end;

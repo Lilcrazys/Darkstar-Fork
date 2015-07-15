@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,60);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -49,9 +49,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+        DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -107,4 +107,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 350);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Pil Kill
+        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_III"), 2) == false) then
+           killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",2,true);
+        end
+        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
+           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
+           killer:setVar("WHITE_STRATUM_III", 0);
+        end
+    end;
 end;

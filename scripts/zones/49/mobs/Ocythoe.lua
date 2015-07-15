@@ -33,7 +33,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,40);
     mob:addMod(MOD_ATT,100);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -47,9 +47,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-        -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+        DespawnMob(mob:getID());
+    end
     local Ocythoe = 0;
     if (mob:getLocalVar("Ocythoe") ~= nil) then
         Ocythoe_Used = mob:getLocalVar("Ocythoe");
@@ -88,4 +88,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 600);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ocythoe Kill
+        if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 1) == false) then
+	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
+        end
+        if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        end
+    end
 end;

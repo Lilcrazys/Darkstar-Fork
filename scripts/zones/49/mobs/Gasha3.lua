@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,60);
     mob:addMod(MOD_DEF,150);
     mob:addMod(MOD_ATT,350);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -50,9 +50,9 @@ end;
 function onMobFight(mob, target)
     local Gasha_2hr_Used = mob:getLocalVar("Gasha_2hr");
 
-    -- if (os.time(t) > mob:getLocalVar("depopTime")) then
-       -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+       DespawnMob(mob:getID());
+    end
     if (mob:getHPP() <= 40) then
         if (Gasha_2hr_Used == 0) then
             mob:useMobAbility(474); -- SAM
@@ -79,4 +79,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 150);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Gasha Kill
+        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_II"), 4) == false) then
+           killer:setMaskBit(killer:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",4,true);
+        end
+        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
+           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
+           killer:setVar("WHITE_STRATUM_II", 0);
+        end
+    end;
 end;
