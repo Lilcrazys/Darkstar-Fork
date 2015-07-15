@@ -1,10 +1,23 @@
 -----------------------------------
 -- Area: Mamook
--- NPC:  Gulool Ja Ja
+--  NM:  Gulool Ja Ja
 -----------------------------------
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
+
+-----------------------------------
+-- onMobInitialize
+-----------------------------------
+
+function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_MATT,75);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_ACC,250);
+    mob:addMod(MOD_ATT,50);
+    mob:addMod(MOD_DEF,50);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
@@ -13,13 +26,6 @@ require("scripts/globals/status");
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_MATT,75);
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_ACC,250);
-    mob:addMod(MOD_ATT,50);
-    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------

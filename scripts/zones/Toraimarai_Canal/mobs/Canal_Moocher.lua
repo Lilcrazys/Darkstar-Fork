@@ -1,6 +1,6 @@
 -----------------------------------
 -- Zone: Toraimarai Canal
--- Mob: Canal Moocher
+--  NM:  Canal Moocher
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +14,9 @@ require("scripts/globals/utils");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 20)
 end;
 
 -----------------------------------
@@ -25,9 +28,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_COUNTER, 35);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 20)
 end;
 
 -----------------------------------
@@ -62,4 +62,3 @@ end;
 
 function onMobDeath(mob,killer)
 end;
-

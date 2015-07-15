@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Paramount_Mantis
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +13,11 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 10);
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);  
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
@@ -28,13 +32,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 15);
     mob:setMod(MOD_COUNTER, 20);
     mob:setMod(MOD_ACC,1325);
-
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 10);
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------

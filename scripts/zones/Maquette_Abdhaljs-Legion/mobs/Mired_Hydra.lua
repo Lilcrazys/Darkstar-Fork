@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Mired_Hydra
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -15,6 +14,11 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_DEF,95);
 end;
 
 -----------------------------------
@@ -25,11 +29,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_REGEN,25);
-
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_DEF,95);
 end;
 
 -----------------------------------

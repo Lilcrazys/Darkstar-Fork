@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Veiled_Alicorn
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -22,6 +21,15 @@ function onMobInitialize(mob)
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 20);
+    mob:addMod(MOD_TRIPLE_ATTACK, 15);
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_ACC,225);
+    mob:addMod(MOD_MDEF,55);
+    mob:addMod(MOD_DEF,95);
 end;
 
 -----------------------------------
@@ -33,15 +41,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,30);
     mob:setMod(MOD_REGEN,35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 20);
-    mob:addMod(MOD_TRIPLE_ATTACK, 15);
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_ACC,225);
-    mob:addMod(MOD_MDEF,55);
-    mob:addMod(MOD_DEF,95); 
 end;
 
 -----------------------------------
@@ -69,7 +68,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(432); -- MS
             mob:setLocalVar("Veiled_Alicorn_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -109,5 +108,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 30); 
+    killer:addCurrency("legion_point", 30);
 end;

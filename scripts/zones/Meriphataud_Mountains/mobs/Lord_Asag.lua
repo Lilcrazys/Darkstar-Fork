@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Lord_Asag
+-- Area: ?
+--  VNM: Lord_Asag
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,13 +9,18 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,100);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,200);
+    mob:addMod(MOD_EVASION,150);
 end;
 
 -----------------------------------
@@ -33,13 +38,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,15);
     mob:setMod(MOD_STUNRES, 75);
 
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,100);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,200);
-    mob:addMod(MOD_EVASION,150);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

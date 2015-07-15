@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Veiled_Ironclad
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -9,6 +8,7 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -16,6 +16,14 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_ATT,105);
+    mob:addMod(MOD_MDEF,55);
+    mob:addMod(MOD_DEF,125);
+    mob:addMod(MOD_DOUBLE_ATTACK, 15);
 end;
 
 -----------------------------------
@@ -29,16 +37,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_COUNTER, 25);
 
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_ATT,105);
-    mob:addMod(MOD_MDEF,55);
-    mob:addMod(MOD_DEF,125);
-    mob:addMod(MOD_DOUBLE_ATTACK, 15);
-
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    
 end;
 
 -----------------------------------

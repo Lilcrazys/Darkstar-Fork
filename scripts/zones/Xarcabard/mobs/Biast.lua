@@ -1,19 +1,24 @@
------------------------------------	
--- Area: Xarcabard	
--- NM:  Biast
+-----------------------------------
+-- Area: Xarcabard
+--  NM:  Biast
 -- ID: 17235988
------------------------------------	
-require("scripts/globals/status");
-require("scripts/globals/titles");
 -----------------------------------
 
+require("scripts/globals/status");
+require("scripts/globals/titles");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 	mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_STR,27);
+    mob:addMod(MOD_DEX,5);
+    mob:addMod(MOD_ACC,100);
+    mob:addMod(MOD_MACC,400);
 end;
 
 -----------------------------------
@@ -23,33 +28,27 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_STR,27);
-    mob:addMod(MOD_DEX,5);
-    mob:addMod(MOD_ACC,100);
-    mob:addMod(MOD_MACC,400);
 end;
 
------------------------------------	
--- onMobDeath	
------------------------------------	
-	
-function onMobDeath(mob,killer)	
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob,killer)
     killer:addTitle(BLACK_DEATH);
 
     -- Set Biast's ToD
-    SetServerVariable("[POP]Biast", os.time(t) + 75600); -- 21 hour 
+    SetServerVariable("[POP]Biast", os.time(t) + 75600); -- 21 hour
 	DeterMob(17235987, false);
 	GetMobByID(17235987):setRespawnTime(GetMobRespawnTime(17235987));
-  
+
 end;
 
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
 function onAdditionalEffect(mob,target,damage)
-	
+
 	if ((math.random(1,15) ~= 5) or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
 		return 0,0,0;
 	else
@@ -58,5 +57,5 @@ function onAdditionalEffect(mob,target,damage)
 		mob:resetEnmity(target);
 		return SUBEFFECT_NONE,0,EFFECT_TERROR;
 	end
-    
+
 end;

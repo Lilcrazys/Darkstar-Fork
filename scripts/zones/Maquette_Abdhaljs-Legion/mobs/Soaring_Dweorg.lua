@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Soaring_Dweorg
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -15,6 +14,12 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_MDEF,75);
+    mob:addMod(MOD_DEF,115);
 end;
 
 -----------------------------------
@@ -28,12 +33,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 45);
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 25);
-
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_MDEF,75);
-    mob:addMod(MOD_DEF,115); 
 end;
 
 -----------------------------------
@@ -64,7 +63,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(435); -- MF
             mob:setLocalVar("Soaring_Dweorg_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -93,5 +92,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 25); 
+    killer:addCurrency("legion_point", 25);
 end;

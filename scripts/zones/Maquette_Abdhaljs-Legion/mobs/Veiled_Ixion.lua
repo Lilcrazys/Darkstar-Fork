@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Veiled_Ixion
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -21,6 +20,14 @@ function onMobInitialize(mob)
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 10);
+    mob:addMod(MOD_TRIPLE_ATTACK, 15);
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
+    mob:addMod(MOD_ATT,105);
+    mob:addMod(MOD_DEF,95);
 end;
 
 -----------------------------------
@@ -31,14 +38,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,35);
     mob:setMod(MOD_REGEN,35);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 10);
-    mob:addMod(MOD_TRIPLE_ATTACK, 15);
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_ATT,105);
-    mob:addMod(MOD_DEF,95); 
 end;
 
 -----------------------------------
@@ -64,7 +63,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(437); -- PD
             mob:setLocalVar("Veiled_Ixion_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------

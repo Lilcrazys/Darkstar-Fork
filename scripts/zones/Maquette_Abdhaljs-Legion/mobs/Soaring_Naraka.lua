@@ -16,6 +16,10 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,45);
+    mob:addMod(MOD_DEF,75);
 end;
 
 -----------------------------------
@@ -32,10 +36,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_QUAD_ATTACK, 25);
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);  
-
-    -- addMod
-    mob:addMod(MOD_MDEF,45);
-    mob:addMod(MOD_DEF,75);
 end;
 
 -----------------------------------

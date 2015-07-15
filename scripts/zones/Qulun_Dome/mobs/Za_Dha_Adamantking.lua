@@ -1,10 +1,23 @@
 -----------------------------------
 -- Area: Qulun Dome
--- NM:   Za Dha Adamantking
+--  NM:  Za Dha Adamantking
 -----------------------------------
 
 require("scripts/globals/titles");
 require("scripts/zones/Qulun_Dome/TextIDs");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_MATT,75);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_ACC,250);
+    mob:addMod(MOD_ATT,50);
+    mob:addMod(MOD_DEF,50);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
@@ -13,13 +26,6 @@ require("scripts/zones/Qulun_Dome/TextIDs");
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_MATT,75);
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_ACC,250);
-    mob:addMod(MOD_ATT,50);
-    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------

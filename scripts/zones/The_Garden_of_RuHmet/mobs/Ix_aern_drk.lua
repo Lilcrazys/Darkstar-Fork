@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: The Garden of Ru'Hmet
--- NPC:  Ix'aern (drk)
+--  NM:  Ix'aern (drk)
 -----------------------------------
 
 require("scripts/globals/status");
@@ -12,6 +12,11 @@ require("scripts/globals/utils");
 ----------------------------------
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------
@@ -28,11 +33,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------

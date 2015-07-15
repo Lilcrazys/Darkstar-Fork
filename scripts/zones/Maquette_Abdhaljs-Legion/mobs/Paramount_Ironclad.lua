@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Paramount_Ironclad
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -17,6 +16,10 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
 
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 15);
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);
 end;
 
 -----------------------------------
@@ -30,13 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_COUNTER, 15);
 
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);
-
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-
 end;
 
 -----------------------------------

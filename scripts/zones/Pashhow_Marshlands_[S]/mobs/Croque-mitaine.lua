@@ -1,6 +1,6 @@
 -----------------------------------
 -- Zone: Pashhow Marshlands (S)
--- Mob: Croque-mitaine
+--  NM:  Croque-mitaine
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +14,10 @@ require("scripts/globals/utils");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_TRIPLE_ATTACK, 15)
+    mob:addMod(MOD_ATT, 100);
 end;
 -----------------------------------
 -- onMobSpawn
@@ -23,11 +27,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 10);
-
-
-    -- addMod
-    mob:addMod(MOD_TRIPLE_ATTACK, 15)
-    mob:addMod(MOD_ATT, 100);
 end;
 -----------------------------------
 -- onAdditionalEffect Action
@@ -50,4 +49,3 @@ end;
 
 function onMobDeath(mob,killer)
 end;
-

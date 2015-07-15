@@ -15,6 +15,10 @@ function onMobInitialize(mob)
     mob:addStatusEffect(EFFECT_SHOCK_SPIKES,55,0,0);
     mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 30)
+    mob:addMod(MOD_ATT, 100);
 end;
 -----------------------------------
 -- onMobSpawn
@@ -24,10 +28,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 30)
-    mob:addMod(MOD_ATT, 100);
 end;
 
 -----------------------------------

@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Lofty_Harpeia
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -9,6 +8,7 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -16,6 +16,12 @@ require("scripts/globals/titles");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:setMod(MOD_MACC,1425);
+    mob:setMod(MOD_MATT,120);  
+    mob:addMod(MOD_ACC,125);
+    mob:addMod(MOD_ATT,125);
 end;
 
 -----------------------------------
@@ -28,12 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN,35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 15);
-
-    -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
-    mob:addMod(MOD_ACC,125);
-    mob:addMod(MOD_ATT,125);
 end;
 
 -----------------------------------

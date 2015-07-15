@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Lorbulcrud
+-- Area: ?
+--  VNM: Lorbulcrud
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -15,6 +15,11 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -29,12 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,80);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,250);
 
     -- other
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
@@ -66,7 +65,7 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_IV)) then -- Voidwrought Kill
         if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 0) == false) then
-	       killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
+            killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
         end
     end
     killer:addCurrency("bayld", 125);

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Zone: Mamook
--- Mob: Venomfang
+--  NM:  Venomfang
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,7 +14,11 @@ require("scripts/globals/utils");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 45)
 end;
+
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
@@ -23,15 +27,12 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 10);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 45)
-
-
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if (target:hasStatusEffect(EFFECT_POISON)) then
         target:delStatusEffect(EFFECT_POISON);
@@ -44,11 +45,9 @@ function onAdditionalEffect(mob,target,damage)
     return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 
-
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob,killer)
 end;
-

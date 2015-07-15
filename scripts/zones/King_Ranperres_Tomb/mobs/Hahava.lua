@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Lorbulcrud
+-- Area: ?
+--  VNM: Lorbulcrud
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -16,6 +16,11 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -32,11 +37,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_QUAD_ATTACK,25);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,80);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,250);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -80,7 +81,7 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then -- Havana Kill
         if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 2) == false) then
-	       killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
+           killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
         end
     end
     killer:addCurrency("bayld", 125);

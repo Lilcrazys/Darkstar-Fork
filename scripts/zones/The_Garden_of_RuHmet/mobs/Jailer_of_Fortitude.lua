@@ -13,6 +13,10 @@ require("scripts/globals/magic");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------
@@ -42,10 +46,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------
