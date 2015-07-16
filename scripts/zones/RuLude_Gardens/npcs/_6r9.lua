@@ -89,7 +89,7 @@ function onEventFinish(player,csid,option)
 		player:setVar("MissionStatus",6); -- all that's left is to go back to the embassy
 	elseif(csid == 0x2742) then
 	    player:setVar("PromathiaStatus",2);
-	elseif (csid == 10188) then;
+	elseif (csid == 10188) then
 		player:completeQuest(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY);
 		player:addQuest(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT);
 		player:delKeyItem(VOIDWATCH_ALARUM);
