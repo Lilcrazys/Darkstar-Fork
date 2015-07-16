@@ -19170,7 +19170,7 @@ INSERT INTO `item_mods` VALUES (27045, 68, 22); -- Evasion
 INSERT INTO `item_mods` VALUES (27045, 31, 36); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27045, 29, 1); --  Magic Def. Bonus
 INSERT INTO `item_mods` VALUES (27045, 384, 41); -- Haste
-INSERT INTO `item_mods` VALUES (27045, 29, 4); -- enm
+INSERT INTO `item_mods` VALUES (27045, 27, 4); -- enm
 INSERT INTO `item_mods` VALUES (27045, 161, -2); -- phys
 
 -- yorium_cuisses
