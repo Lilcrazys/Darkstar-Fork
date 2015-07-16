@@ -19370,21 +19370,21 @@ INSERT INTO `item_mods` VALUES (27404, 259, 7); -- DW
 INSERT INTO `item_mods` VALUES (27404, 296, 6); -- conserve mp
 
 -- telchine_cap
-INSERT INTO `item_mods` VALUES (26735, 1, 119); -- DEF
-INSERT INTO `item_mods` VALUES (26735, 2, 36); -- HP
-INSERT INTO `item_mods` VALUES (26735, 5, 32); -- MP
-INSERT INTO `item_mods` VALUES (26735, 8, 19); -- STR
-INSERT INTO `item_mods` VALUES (26735, 9, 19); -- DEX
-INSERT INTO `item_mods` VALUES (26735, 10, 19); -- VIT
-INSERT INTO `item_mods` VALUES (26735, 11, 19); -- AGI
-INSERT INTO `item_mods` VALUES (26735, 12, 24); -- INT
-INSERT INTO `item_mods` VALUES (26735, 13, 22); -- MND
-INSERT INTO `item_mods` VALUES (26735, 14, 24); -- CHR
-INSERT INTO `item_mods` VALUES (26735, 68, 36); -- Evasion
-INSERT INTO `item_mods` VALUES (26735, 31, 75); -- Magic Evasion
-INSERT INTO `item_mods` VALUES (26735, 29, 5); --  Magic Def. Bonus
-INSERT INTO `item_mods` VALUES (26735, 384, 61); -- Haste
-INSERT INTO `item_mods` VALUES (26735, 296, 4); -- conserve mp
+INSERT INTO `item_mods` VALUES (26736, 1, 119); -- DEF
+INSERT INTO `item_mods` VALUES (26736, 2, 36); -- HP
+INSERT INTO `item_mods` VALUES (26736, 5, 32); -- MP
+INSERT INTO `item_mods` VALUES (26736, 8, 19); -- STR
+INSERT INTO `item_mods` VALUES (26736, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (26736, 10, 19); -- VIT
+INSERT INTO `item_mods` VALUES (26736, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (26736, 12, 24); -- INT
+INSERT INTO `item_mods` VALUES (26736, 13, 22); -- MND
+INSERT INTO `item_mods` VALUES (26736, 14, 24); -- CHR
+INSERT INTO `item_mods` VALUES (26736, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (26736, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (26736, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (26736, 384, 61); -- Haste
+INSERT INTO `item_mods` VALUES (26736, 296, 4); -- conserve mp
 
 -- telchine_chausable
 INSERT INTO `item_mods` VALUES (26894, 1, 125); -- DEF
