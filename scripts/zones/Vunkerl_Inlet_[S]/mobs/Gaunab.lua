@@ -63,9 +63,11 @@ end;
 
 function onSpikesDamage(mob,target,damage)
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+
     if (target:isPC()) then
-        target:PrintToPlayer(Test!);
+        target:PrintToPlayer("Test!");
     end
+
     if (INT_diff > 20) then
         INT_diff = 20 + (INT_diff - 20) / 2;
     end
