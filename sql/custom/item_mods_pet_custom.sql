@@ -376,3 +376,4 @@ INSERT INTO `item_mods_pet` VALUES (28630, 32, 20); -- Wyvern: Att
 
 INSERT INTO `item_mods_pet` VALUES (11038, 161, -2); -- Wyvern: PDT
 
+INSERT INTO `item_mods_pet` VALUES (21183, 28, 114); --  Avatar Magic Attack Bonus +114
