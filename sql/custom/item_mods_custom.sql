@@ -19201,7 +19201,7 @@ INSERT INTO `item_mods` VALUES (27402, 68, 49); -- Evasion
 INSERT INTO `item_mods` VALUES (27402, 31, 64); -- Magic Evasion
 INSERT INTO `item_mods` VALUES (27402, 29, 2); --  Magic Def. Bonus
 INSERT INTO `item_mods` VALUES (27402, 384, 31); -- Haste
-INSERT INTO `item_mods` VALUES (27402, 29, 5); -- enm
+INSERT INTO `item_mods` VALUES (27402, 27, 5); -- enm
 
 -- acro_helm
 INSERT INTO `item_mods` VALUES (26734, 1, 101); -- DEF
