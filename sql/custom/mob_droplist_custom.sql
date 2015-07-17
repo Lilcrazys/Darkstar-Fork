@@ -1602,3 +1602,194 @@ INSERT INTO `mob_droplist` VALUES (9617,0,28197,50);
 INSERT INTO `mob_droplist` VALUES (9617,0,27563,100);
 INSERT INTO `mob_droplist` VALUES (9617,0,28441,100);
 INSERT INTO `mob_droplist` VALUES (9617,0,28293,40);
+
+-- Voidwatch Chapter 2
+
+INSERT INTO `mob_droplist` VALUES (9620,0,28309,700); -- Temachtiani boots
+INSERT INTO `mob_droplist` VALUES (9620,0,28032,700); -- Temachtiani gloves
+INSERT INTO `mob_droplist` VALUES (9620,0,28306,120); -- Outrider_Greaves
+INSERT INTO `mob_droplist` VALUES (9620,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9620,0,21119,180); -- Eminent Wand
+INSERT INTO `mob_droplist` VALUES (9620,0,28499,400); -- Influx_Earring
+
+INSERT INTO `mob_droplist` VALUES (9621,0,10488,640); -- Kudzu_Aketon
+INSERT INTO `mob_droplist` VALUES (9621,0,28032,700); -- Temachtiani_Gloves
+INSERT INTO `mob_droplist` VALUES (9621,0,28171,700); -- Temachtiani_Pants
+INSERT INTO `mob_droplist` VALUES (9621,0,28306,120); -- Outrider_Greaves
+INSERT INTO `mob_droplist` VALUES (9621,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9621,0,28656,110); -- Eminent_Shield
+INSERT INTO `mob_droplist` VALUES (9621,0,28499,400); -- Influx_Earring
+
+INSERT INTO `mob_droplist` VALUES (9622,0,10468,600); -- Kumarbi's Akar
+INSERT INTO `mob_droplist` VALUES (9622,0,28171,700); -- Temachtiani_Pants
+INSERT INTO `mob_droplist` VALUES (9622,0,27743,700); -- Temachtiani_Headband
+INSERT INTO `mob_droplist` VALUES (9622,0,28307,120); -- Espial_Socks
+INSERT INTO `mob_droplist` VALUES (9622,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9622,0,21281,220); -- Eminent_Gun
+INSERT INTO `mob_droplist` VALUES (9622,0,28500,400); -- Upsurge Earring
+
+INSERT INTO `mob_droplist` VALUES (9623,0,10486,600); -- Porthos_Byrnie
+INSERT INTO `mob_droplist` VALUES (9623,0,27884,700); -- Temachtiani_Shirt
+INSERT INTO `mob_droplist` VALUES (9623,0,27743,700); -- Temachtiani_Headband
+INSERT INTO `mob_droplist` VALUES (9623,0,28307,120); -- Espial_Socks
+INSERT INTO `mob_droplist` VALUES (9623,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9623,0,21231,220); -- Eminent_Bow
+INSERT INTO `mob_droplist` VALUES (9623,0,28500,400); -- Upsurge Earring
+
+INSERT INTO `mob_droplist` VALUES (9624,0,10284,600); -- Grandoynes_Mail
+INSERT INTO `mob_droplist` VALUES (9624,0,27884,700); -- Temachtiani_Shirt
+INSERT INTO `mob_droplist` VALUES (9624,0,28309,700); -- Temachtiani boots
+INSERT INTO `mob_droplist` VALUES (9624,0,28303,120); -- Wayfarer_Clogs
+INSERT INTO `mob_droplist` VALUES (9624,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9624,0,21183,220); -- Eminent_Pole
+INSERT INTO `mob_droplist` VALUES (9624,0,28501,400); -- Allegro_Earring
+
+INSERT INTO `mob_droplist` VALUES (9625,0,28309,700); -- Temachtiani boots
+INSERT INTO `mob_droplist` VALUES (9625,0,27884,700); -- Temachtiani_Shirt
+INSERT INTO `mob_droplist` VALUES (9625,0,28303,120); -- Wayfarer_Clogs
+INSERT INTO `mob_droplist` VALUES (9625,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9625,0,20954,220); -- Eminent_Lance
+INSERT INTO `mob_droplist` VALUES (9625,0,28501,400); -- Allegro_Earring
+
+INSERT INTO `mob_droplist` VALUES (9626,0,28168,120); -- Outrider_Hose
+INSERT INTO `mob_droplist` VALUES (9626,0,28547,400); -- Merirosvo_Ring
+INSERT INTO `mob_droplist` VALUES (9626,0,20998,100); -- Kaitsuburi
+INSERT INTO `mob_droplist` VALUES (9626,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9626,0,26787,180); -- Alhazen_Hat
+INSERT INTO `mob_droplist` VALUES (9626,0,20766,220); -- Eminent_Sword
+INSERT INTO `mob_droplist` VALUES (9626,0,28549,400); -- Enlivened_Ring
+
+INSERT INTO `mob_droplist` VALUES (9627,0,28168,120); -- Outrider_Hose
+INSERT INTO `mob_droplist` VALUES (9627,0,28547,400); -- Merirosvo_Ring
+INSERT INTO `mob_droplist` VALUES (9627,0,20998,100); -- Kaitsuburi
+INSERT INTO `mob_droplist` VALUES (9627,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9627,0,26787,180); -- Alhazen_Hat
+INSERT INTO `mob_droplist` VALUES (9627,0,20766,220); -- Eminent_Sword
+INSERT INTO `mob_droplist` VALUES (9627,0,28549,400); -- Enlivened_Ring
+
+INSERT INTO `mob_droplist` VALUES (9628,0,28169,120); -- Espial_Hose
+INSERT INTO `mob_droplist` VALUES (9628,0,28504,400); -- Spellbreaker_Earring
+INSERT INTO `mob_droplist` VALUES (9628,0,21044,100); -- Ichimonji_Yofusa
+INSERT INTO `mob_droplist` VALUES (9628,0,28366,300); -- Gaudryi_Necklace
+INSERT INTO `mob_droplist` VALUES (9628,0,20624,220); -- Eminent_Dagger
+INSERT INTO `mob_droplist` VALUES (9628,0,28550,400); -- Vehemance_Ring
+INSERT INTO `mob_droplist` VALUES (9628,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9629,0,28169,120); -- Espial_Hose
+INSERT INTO `mob_droplist` VALUES (9629,0,28504,400); -- Spellbreaker_Earring
+INSERT INTO `mob_droplist` VALUES (9629,0,21044,100); -- Ichimonji_Yofusa
+INSERT INTO `mob_droplist` VALUES (9629,0,28366,300); -- Gaudryi_Necklace
+INSERT INTO `mob_droplist` VALUES (9629,0,20624,220); -- Eminent_Dagger
+INSERT INTO `mob_droplist` VALUES (9629,0,28550,400); -- Vehemance_Ring
+INSERT INTO `mob_droplist` VALUES (9629,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9630,0,28170,120); -- Wayfarer_Slops
+INSERT INTO `mob_droplist` VALUES (9630,0,28502,400); -- Impregnable_Earring
+INSERT INTO `mob_droplist` VALUES (9630,0,20726,220); -- Eminent_Scimitar
+INSERT INTO `mob_droplist` VALUES (9630,0,21405,220); -- Eminent_Flute
+INSERT INTO `mob_droplist` VALUES (9630,0,28551,400); -- Longshot_Ring
+INSERT INTO `mob_droplist` VALUES (9630,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9631,0,28170,120); -- Wayfarer_Slops
+INSERT INTO `mob_droplist` VALUES (9631,0,28502,400); -- Impregnable_Earring
+INSERT INTO `mob_droplist` VALUES (9631,0,20726,220); -- Eminent_Scimitar
+INSERT INTO `mob_droplist` VALUES (9631,0,21405,220); -- Eminent_Flute
+INSERT INTO `mob_droplist` VALUES (9631,0,28551,400); -- Longshot_Ring
+INSERT INTO `mob_droplist` VALUES (9631,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9632,0,27881,120); -- Outrider_Mail
+INSERT INTO `mob_droplist` VALUES (9632,0,27410,220); -- Hippomenes_Socks
+INSERT INTO `mob_droplist` VALUES (9632,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9632,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9632,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9632,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9633,0,27882,120); -- Espial_Gambison
+INSERT INTO `mob_droplist` VALUES (9633,0,28274,220); -- Regal_Pumps_
+INSERT INTO `mob_droplist` VALUES (9633,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9633,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9633,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9633,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9634,0,27883,120); -- Wayfarer_Robe
+INSERT INTO `mob_droplist` VALUES (9634,0,26702,220); -- Gavialis_Helm
+INSERT INTO `mob_droplist` VALUES (9634,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9634,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9634,0,4064,1000); -- Rem's_Tale_Chapter_1
+INSERT INTO `mob_droplist` VALUES (9634,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9635,0,28539,400); -- Globidonta_Ring
+INSERT INTO `mob_droplist` VALUES (9635,0,20817,220); -- Eminent_Axe
+INSERT INTO `mob_droplist` VALUES (9635,0,28552,300); -- Fistmele_Ring
+INSERT INTO `mob_droplist` VALUES (9635,0,28029,120); -- Outrider_Mittens
+INSERT INTO `mob_droplist` VALUES (9635,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9636,0,28442,400); -- Olseni_Belt
+INSERT INTO `mob_droplist` VALUES (9636,0,20540,220); -- Eminent_Baghnakhs
+INSERT INTO `mob_droplist` VALUES (9636,0,28553,300); -- Perception_Ring
+INSERT INTO `mob_droplist` VALUES (9636,0,28030,120); -- Espial_Bracers
+INSERT INTO `mob_droplist` VALUES (9636,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9637,0,28403,400); -- Inquisitors_Bead_Necklace
+INSERT INTO `mob_droplist` VALUES (9637,0,21182,220); -- Eminent_Staff
+INSERT INTO `mob_droplist` VALUES (9637,0,28554,300); -- Acumen_Ring
+INSERT INTO `mob_droplist` VALUES (9637,0,28031,120); -- Wayfarer_Cuffs
+INSERT INTO `mob_droplist` VALUES (9637,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9638,0,27506,400); -- Defiant_Collar
+INSERT INTO `mob_droplist` VALUES (9638,0,28462,220); -- Hurch'lan_Sash
+INSERT INTO `mob_droplist` VALUES (9638,0,20865,300); -- Eminent_Voulge
+INSERT INTO `mob_droplist` VALUES (9638,0,27740,120); -- Outrider_Mask
+INSERT INTO `mob_droplist` VALUES (9638,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9639,0,28496,400); -- Zennaroi_Earring
+INSERT INTO `mob_droplist` VALUES (9639,0,27893,220); -- Haruspex_Coat
+INSERT INTO `mob_droplist` VALUES (9639,0,21119,300); -- Eminent_Wand
+INSERT INTO `mob_droplist` VALUES (9639,0,27741,120); -- Espial_Cap
+INSERT INTO `mob_droplist` VALUES (9639,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9640,0,21345,400); -- Focal_Orb
+INSERT INTO `mob_droplist` VALUES (9640,0,27592,220); -- Vengeful_Ring
+INSERT INTO `mob_droplist` VALUES (9640,0,20908,300); -- Eminent_Sickle
+INSERT INTO `mob_droplist` VALUES (9640,0,27742,120); -- Wayfarer_Circlet
+INSERT INTO `mob_droplist` VALUES (9640,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9641,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9641,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9641,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9641,0,27230,200); -- Zoar_Subligar
+INSERT INTO `mob_droplist` VALUES (9641,0,27222,120); -- Limbo_Trousers
+INSERT INTO `mob_droplist` VALUES (9641,0,20610,220); -- Rhadamanthus
+INSERT INTO `mob_droplist` VALUES (9641,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9642,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9642,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9642,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9642,0,27996,200); -- Shigure_Tekko
+INSERT INTO `mob_droplist` VALUES (9642,0,26869,120); -- Rosette_Jaseran
+INSERT INTO `mob_droplist` VALUES (9642,0,20614,220); -- Pukulatmuj_
+INSERT INTO `mob_droplist` VALUES (9642,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9643,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9643,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9643,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9643,0,28275,200); -- Jute_Boots
+INSERT INTO `mob_droplist` VALUES (9643,0,27223,120); -- Feast_Hose
+INSERT INTO `mob_droplist` VALUES (9643,0,21479,220); -- Tsoabichi_Crossbow
+INSERT INTO `mob_droplist` VALUES (9643,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9644,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9644,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9644,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9644,0,26943,200); -- Agony_Jerkin
+INSERT INTO `mob_droplist` VALUES (9644,0,26710,120); -- Imperial_Wing_Hairpin
+INSERT INTO `mob_droplist` VALUES (9644,0,20528,220); -- Fists_of_Fury_
+INSERT INTO `mob_droplist` VALUES (9644,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9645,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9645,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9645,0,4065,1000); -- Rem's_Tale_Chapter 2
+INSERT INTO `mob_droplist` VALUES (9645,0,26874,200); -- Supay_Weskit
+INSERT INTO `mob_droplist` VALUES (9645,0,28135,120); -- Assiduity_Pants
+INSERT INTO `mob_droplist` VALUES (9645,0,21112,220); -- Gabaxorea
+INSERT INTO `mob_droplist` VALUES (9645,0,4049,1000); -- Rusted_Coin
