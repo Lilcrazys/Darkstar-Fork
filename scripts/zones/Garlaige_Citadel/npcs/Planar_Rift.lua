@@ -29,7 +29,7 @@ function onTrigger(player,npc)
         mobNotUp = true;
     end
 
-    if (npc:getXPos(-260) and npc:getYPos(-0.079) and npc:getZPos(-20)) then
+    if (npc:getXPos(-259) and npc:getYPos(0) and npc:getZPos(379)) then
         correctNPC = true;
     end
 
