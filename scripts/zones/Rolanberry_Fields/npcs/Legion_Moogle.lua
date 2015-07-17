@@ -121,7 +121,7 @@ end;
 
 function onTrigger(player,npc)
     local MSG1 = string.format("Hello %s! I'm here to help you upgrade your Legion Armor.", player:getName());
-    local MSG2 = "This service will cost 2,500~5,000 Legion points and 10~25 Tanzanite Jewels, Kupo!";
+    local MSG2 = "This service will cost Legion points and Tanzanite Jewels, Kupo!";
     player:SpoofChatPlayer(MSG1, MESSAGE_SAY, npc:getID());
     player:SpoofChatPlayer(MSG2, MESSAGE_SAY, npc:getID());
 end;
