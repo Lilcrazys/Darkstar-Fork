@@ -3364,7 +3364,7 @@ INSERT INTO `item_mods` VALUES (18999, 288, 15); --
 
 INSERT INTO `item_mods` VALUES (18998, 288, 15); --
 
-INSERT INTO `item_mods` VALUES (19000, 454, 20); --
+INSERT INTO `item_mods` VALUES (19000, 454, 40); --
 
 REPLACE INTO `item_mods` VALUES (19001, 420, 10); -- Barrage accuracy
 
@@ -3406,7 +3406,7 @@ INSERT INTO `item_mods` VALUES (19087, 30, 25); --
 INSERT INTO `item_mods` VALUES (19087, 288, 20); --
 INSERT INTO `item_mods` VALUES (19088, 288, 20); --
 INSERT INTO `item_mods` VALUES (19089, 30, 15); --
-INSERT INTO `item_mods` VALUES (19089, 454, 22); --
+INSERT INTO `item_mods` VALUES (19089, 454, 50); --
 REPLACE INTO `item_mods` VALUES (19090, 420, 20); -- Barrage accuracy
 INSERT INTO `item_mods` VALUES (19091, 288, 20); --
 INSERT INTO `item_mods` VALUES (19092, 30, 20); --
@@ -3932,7 +3932,7 @@ INSERT INTO `item_mods` VALUES (19826, 302, 10); --
 INSERT INTO `item_mods` VALUES (19827, 288, 30); --
 INSERT INTO `item_mods` VALUES (19827, 302, 10); --
 INSERT INTO `item_mods` VALUES (19828, 30, 25); --
-INSERT INTO `item_mods` VALUES (19828, 454, 25); --
+INSERT INTO `item_mods` VALUES (19828, 454, 70); --
 REPLACE INTO `item_mods` VALUES (19829, 420, 35); -- Barrage accuracy
 INSERT INTO `item_mods` VALUES (19830, 288, 30); --
 INSERT INTO `item_mods` VALUES (19830, 302, 10); --
@@ -4039,8 +4039,8 @@ INSERT INTO `item_mods` VALUES (20558, 494, 2); --
 INSERT INTO `item_mods` VALUES (20558, 203, 15); --
 INSERT INTO `item_mods` VALUES (20559, 302, 15); --
 INSERT INTO `item_mods` VALUES (20560, 302, 15); --
-INSERT INTO `item_mods` VALUES (20561, 454, 40); --
-INSERT INTO `item_mods` VALUES (20562, 454, 30); --
+INSERT INTO `item_mods` VALUES (20561, 454, 70); --
+INSERT INTO `item_mods` VALUES (20562, 454, 90); --
 INSERT INTO `item_mods` VALUES (20563, 9, 20); --
 INSERT INTO `item_mods` VALUES (20563, 165, 25); --
 INSERT INTO `item_mods` VALUES (20563, 421, 50); --
