@@ -123,3 +123,14 @@ REPLACE INTO `item_basic` VALUES (10503,0,'brego_gloves','brego_gloves',1,34816,
 INSERT INTO `item_basic` VALUES (21371,0,'ginsen','ginsen',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28428,0,'sailfi_belt_+1','sailfi_belt_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (21419,0,'rigorous+_grip_+1','rigorous+_grip_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21358,0,'plumose_sachet','plumose_sachet',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28507,0,'gwati_earring','gwati_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28379,0,'mizukage-no-kubikazari','mizukage-no-kubikazari',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27594,0,'annealed_mantle','annealed_mantle',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28493,0,'neritic_earring','neritic_earring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21373,0,'sihirik','sihirik',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27505,0,'warders_charm_+1','warders_charm_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28538,0,'lebeche_ring','lebeche_ring',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21376,0,'inlamvuyeso','inlamvuyeso',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (27563,0,'metamorph_ring_+1','metamorph_ring_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28441,0,'ponente_sash','ponente_sash',1,63552,0,1,0);

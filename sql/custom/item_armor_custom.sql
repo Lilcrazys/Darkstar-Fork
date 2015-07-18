@@ -121,3 +121,15 @@ INSERT INTO `item_armor` VALUES (28291,'weatherspoon_souliers_+1',99,117,3719708
 INSERT INTO `item_armor` VALUES (21371,'ginsen',99,0,2473971,0,0,0,8,0);
 INSERT INTO `item_armor` VALUES (28428,'sailfi_belt_+1',99,0,2473969,0,0,0,1024,0);
 INSERT INTO `item_armor` VALUES (21419,'rigorous+_grip_+1',99,0,4194303,0,0,0,2,0);
+
+INSERT INTO `item_armor` VALUES (21358,'plumose_sachet',99,0,4194303,0,0,0,8,0);
+INSERT INTO `item_armor` VALUES (28507,'gwati_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28379,'mizukage-no-kubikazari',99,0,1589788,0,0,0,512,0);
+INSERT INTO `item_armor` VALUES (27594,'annealed_mantle',99,0,2473971,0,0,0,32768,0);
+INSERT INTO `item_armor` VALUES (28493,'neritic_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (21373,'sihirik',99,0,30639,0,0,0,8,0);
+INSERT INTO `item_armor` VALUES (27505,'warders_charm_+1',99,0,4194303,0,0,0,512,0);
+INSERT INTO `item_armor` VALUES (28538,'lebeche_ring',99,0,4194303,0,0,0,24576,0);
+INSERT INTO `item_armor` VALUES (21376,'inlamvuyeso',99,0,2589730,0,0,0,8,0);
+INSERT INTO `item_armor` VALUES (27563,'metamorph_ring_+1',99,0,4194303,0,0,0,24576,0);
+INSERT INTO `item_armor` VALUES (28441,'ponente_sash',99,0,66560,0,0,0,1024,0);

@@ -12570,11 +12570,6 @@ INSERT INTO `item_mods` VALUES (21371, 384, 94); -- Haste
 INSERT INTO `item_mods` VALUES (21371, 302, 2); -- Trip
 INSERT INTO `item_mods` VALUES (21371, 23, 15); -- Atk
 
--- Rigorous Grip +1
-INSERT INTO `item_mods` VALUES (21419, 25, 3); -- ACC
-INSERT INTO `item_mods` VALUES (21419, 23, 15); -- ATK
-INSERT INTO `item_mods` VALUES (21419, 8, 4); -- STR
-
 -- Vengeful Ring (27592)
 INSERT INTO `item_mods` VALUES (27592, 2, 20); -- HP
 INSERT INTO `item_mods` VALUES (27592, 5, 20); -- MP
@@ -19937,3 +19932,131 @@ INSERT INTO `item_mods` VALUES (28502, 10, 2); --  Vitality +2
 -- Spellbreaker Earring
 INSERT INTO `item_mods` VALUES (28504, 13, 2); --  Mind +2
 INSERT INTO `item_mods` VALUES (28504, 29, 2); --  Magic Defense Bonus +2
+
+-- plumose_sachet (21358)
+INSERT INTO `item_mods` VALUES (21358, 2, 15); -- HP
+INSERT INTO `item_mods` VALUES (21358, 30, 5); -- MACC
+INSERT INTO `item_mods` VALUES (21358, 29, -2); -- ENM
+
+-- gwati_earringn (28507)
+INSERT INTO `item_mods` VALUES (28507, 5, 10); -- MP
+INSERT INTO `item_mods` VALUES (28507, 30, 8); -- MACC
+INSERT INTO `item_mods` VALUES (28507, 296, 1); -- Conserve MP
+
+-- mizukage-no-kubikazari (28379)
+INSERT INTO `item_mods` VALUES (28379, 11, 4); -- INT
+INSERT INTO `item_mods` VALUES (28379, 12, 4); -- MND
+INSERT INTO `item_mods` VALUES (28379, 28, 8); -- MATT
+
+-- annealed_mantle (27594)
+INSERT INTO `item_mods` VALUES (27594, 8, 5); -- STR
+INSERT INTO `item_mods` VALUES (27594, 288, 4); -- dbl atk
+INSERT INTO `item_mods` VALUES (27594, 23, 20); -- ATK
+
+-- neritic_earring (28493)
+INSERT INTO `item_mods` VALUES (28493, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (28493, 24, 4); -- RATT
+INSERT INTO `item_mods` VALUES (28493, 73, 4); -- STP
+
+-- sihirik (21373)
+INSERT INTO `item_mods` VALUES (21373, 5, 15); -- MP
+INSERT INTO `item_mods` VALUES (21373, 153, -2); -- MDT
+
+-- wanderers_charm_ (27505)
+INSERT INTO `item_mods` VALUES (27505, 54, 20); -- FIRE
+INSERT INTO `item_mods` VALUES (27505, 55, 20); -- ICE
+INSERT INTO `item_mods` VALUES (27505, 56, 20); -- WIND
+INSERT INTO `item_mods` VALUES (27505, 57, 20); -- EARTH
+INSERT INTO `item_mods` VALUES (27505, 58, 20); -- THUNDER
+INSERT INTO `item_mods` VALUES (27505, 59, 20); -- WATER
+
+-- lebeche_ring (28538)
+INSERT INTO `item_mods` VALUES (27563, 5, 40); -- MP
+INSERT INTO `item_mods` VALUES (27563, 29, -5); -- ENM
+INSERT INTO `item_mods` VALUES (27563, 374, 3); -- cure pot
+INSERT INTO `item_mods` VALUES (27563, 170, 2); -- fast cast
+
+-- inlamvuyeso (21376)
+INSERT INTO `item_mods` VALUES (21376, 1, 10); -- DEF
+INSERT INTO `item_mods` VALUES (21376, 25, 10); -- ACC
+
+-- metamorph_ring (27563)
+INSERT INTO `item_mods` VALUES (27563, 11, 6); -- INT
+INSERT INTO `item_mods` VALUES (27563, 12, 6); -- MND
+INSERT INTO `item_mods` VALUES (27563, 13, 6); -- CHR
+INSERT INTO `item_mods` VALUES (27563, 7, 60); -- Convert HP to MP
+INSERT INTO `item_mods` VALUES (27563, 30, 15); -- MACC
+
+-- ponente_sash (28441)
+INSERT INTO `item_mods` VALUES (28441, 29, 4); -- STR
+INSERT INTO `item_mods` VALUES (28441, 11, 9); -- AGI
+INSERT INTO `item_mods` VALUES (28441, 24, 15); -- RATT
+INSERT INTO `item_mods` VALUES (28441, 359, 3); -- Rapid shot
+
+-- yaoyoltl gloves 28056
+INSERT INTO `item_mods` VALUES (28056, 1, 84); -- DEF
+INSERT INTO `item_mods` VALUES (28056, 2, 22); -- HP
+INSERT INTO `item_mods` VALUES (28056, 5, 14); -- MP
+INSERT INTO `item_mods` VALUES (28056, 8, 6); -- STR
+INSERT INTO `item_mods` VALUES (28056, 9, 28); -- DEX
+INSERT INTO `item_mods` VALUES (28056, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES (28056, 11, 5); -- AGI
+INSERT INTO `item_mods` VALUES (28056, 12, 19); -- INT
+INSERT INTO `item_mods` VALUES (28056, 13, 33); -- MND
+INSERT INTO `item_mods` VALUES (28056, 14, 19); -- CHR
+INSERT INTO `item_mods` VALUES (28056, 68, 22); -- Evasion
+INSERT INTO `item_mods` VALUES (28056, 31, 37); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (28056, 29, 3); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (28056, 28, 15); -- matt
+INSERT INTO `item_mods` VALUES (28056, 30, 15); -- macc
+
+-- nahtirah hat (27775)
+INSERT INTO `item_mods` VALUES (27775, 1, 96); -- DEF
+INSERT INTO `item_mods` VALUES (27775, 2, 70); -- HP
+INSERT INTO `item_mods` VALUES (27775, 5, 70); -- MP
+INSERT INTO `item_mods` VALUES (27775, 8, 17); -- STR
+INSERT INTO `item_mods` VALUES (27775, 9, 17); -- DEX
+INSERT INTO `item_mods` VALUES (27775, 10, 17); -- VIT
+INSERT INTO `item_mods` VALUES (27775, 11, 17); -- AGI
+INSERT INTO `item_mods` VALUES (27775, 12, 25); -- INT
+INSERT INTO `item_mods` VALUES (27775, 13, 25); -- MND
+INSERT INTO `item_mods` VALUES (27775, 14, 25); -- CHR
+INSERT INTO `item_mods` VALUES (27775, 68, 36); -- Evasion
+INSERT INTO `item_mods` VALUES (27775, 31, 75); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27775, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27775, 170, 5); -- fast cast
+INSERT INTO `item_mods` VALUES (27775, 384, 52); -- haste
+
+-- yaoyoltl helm (27773)
+INSERT INTO `item_mods` VALUES (27773, 1, 114); -- DEF
+INSERT INTO `item_mods` VALUES (27773, 2, 41); -- HP
+INSERT INTO `item_mods` VALUES (27773, 5, 23); -- MP
+INSERT INTO `item_mods` VALUES (27773, 8, 25); -- STR
+INSERT INTO `item_mods` VALUES (27773, 9, 19); -- DEX
+INSERT INTO `item_mods` VALUES (27773, 10, 25); -- VIT
+INSERT INTO `item_mods` VALUES (27773, 11, 19); -- AGI
+INSERT INTO `item_mods` VALUES (27773, 12, 17); -- INT
+INSERT INTO `item_mods` VALUES (27773, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (27773, 14, 17); -- CHR
+INSERT INTO `item_mods` VALUES (27773, 68, 33); -- Evasion
+INSERT INTO `item_mods` VALUES (27773, 31, 32); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (27773, 29, 2); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (27773, 25, 25); -- acc
+INSERT INTO `item_mods` VALUES (27773, 23, 25); -- atk
+INSERT INTO `item_mods` VALUES (27773, 73, 4); -- stp
+INSERT INTO `item_mods` VALUES (27773, 384, 72); -- haste
+
+-- nahtirah trousers (28197)
+INSERT INTO `item_mods` VALUES (28197, 1, 114); -- DEF
+INSERT INTO `item_mods` VALUES (28197, 2, 47); -- HP
+INSERT INTO `item_mods` VALUES (28197, 8, 29); -- STR
+INSERT INTO `item_mods` VALUES (28197, 10, 16); -- VIT
+INSERT INTO `item_mods` VALUES (28197, 11, 25); -- AGI
+INSERT INTO `item_mods` VALUES (28197, 12, 30); -- INT
+INSERT INTO `item_mods` VALUES (28197, 13, 17); -- MND
+INSERT INTO `item_mods` VALUES (28197, 14, 11); -- CHR
+INSERT INTO `item_mods` VALUES (28197, 68, 33); -- Evasion
+INSERT INTO `item_mods` VALUES (28197, 31, 69); -- Magic Evasion
+INSERT INTO `item_mods` VALUES (28197, 29, 5); --  Magic Def. Bonus
+INSERT INTO `item_mods` VALUES (28197, 24, 30); -- RATT
+INSERT INTO `item_mods` VALUES (28197, 384, 72); -- haste
