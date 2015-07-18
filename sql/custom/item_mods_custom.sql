@@ -12568,7 +12568,7 @@ INSERT INTO `item_mods` VALUES (21371, 73, 3); -- Store TP
 -- Sailfi Belt +1
 INSERT INTO `item_mods` VALUES (21371, 384, 94); -- Haste
 INSERT INTO `item_mods` VALUES (21371, 302, 2); -- Trip
-INSERT INTO `item_mods` VALUES (21371, 23, 15); -- Atk
+-- INSERT INTO `item_mods` VALUES (21371, 23, 15); -- Atk
 
 -- Vengeful Ring (27592)
 INSERT INTO `item_mods` VALUES (27592, 2, 20); -- HP
