@@ -117,3 +117,7 @@ INSERT INTO `item_armor` VALUES (27865,'weatherspoon_robe_+1',99,117,3719708,356
 INSERT INTO `item_armor` VALUES (28012,'weatherspoon_cuffs_+1',99,117,3719708,356,0,0,64,0);
 INSERT INTO `item_armor` VALUES (28154,'weatherspoon_pants_+1',99,117,3719708,356,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28291,'weatherspoon_souliers_+1',99,117,3719708,356,0,0,256,0);
+
+INSERT INTO `item_armor` VALUES (21371,'ginsen',99,0,2473971,0,0,0,8,0);
+INSERT INTO `item_armor` VALUES (28428,'sailfi_belt_+1',99,0,2473969,0,0,0,1024,0);
+INSERT INTO `item_armor` VALUES (21419,'rigorous+_grip_+1',99,0,4194303,0,0,0,2,0);

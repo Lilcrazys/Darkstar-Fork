@@ -24,8 +24,8 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 150);
-    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_REGEN, 75);
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 25);
     mob:setMod(MOD_MACC,1950);
@@ -35,9 +35,8 @@ function onMobSpawn(mob)
 
 
     -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,50);
-    mob:addMod(MOD_ATT,175);
+    mob:addMod(MOD_MDEF,20);
+    mob:addMod(MOD_ATT,75);
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

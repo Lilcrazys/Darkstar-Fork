@@ -12552,13 +12552,28 @@ INSERT INTO `item_mods` VALUES (27634, 288, 1); -- Double Attack %
 -- Rigorous Grip +1 (21419)
 INSERT INTO `item_mods` VALUES (21419, 8, 4); -- STR
 INSERT INTO `item_mods` VALUES (21419, 25, 3); -- ACC
--- INSERT INTO `item_mods` VALUES (21419, 25, 5); -- Unity Ranking: Atk 10-15
+INSERT INTO `item_mods` VALUES (21419, 23, 15); -- Unity Ranking: Atk 10-15
 
 
 -- Gaudryi Necklace (28366)
 INSERT INTO `item_mods` VALUES (28366, 26, 10); -- RACC
 INSERT INTO `item_mods` VALUES (28366, 24, 5); -- RATK
 INSERT INTO `item_mods` VALUES (28366, 73, 4); -- Store TP
+
+-- Ginsen
+INSERT INTO `item_mods` VALUES (21371, 25, 5); -- ACC
+INSERT INTO `item_mods` VALUES (21371, 23, 10); -- ATK
+INSERT INTO `item_mods` VALUES (21371, 73, 3); -- Store TP
+
+-- Sailfi Belt +1
+INSERT INTO `item_mods` VALUES (21371, 384, 94); -- Haste
+INSERT INTO `item_mods` VALUES (21371, 302, 2); -- Trip
+INSERT INTO `item_mods` VALUES (21371, 23, 15); -- Atk
+
+-- Rigorous Grip +1
+INSERT INTO `item_mods` VALUES (21419, 25, 3); -- ACC
+INSERT INTO `item_mods` VALUES (21419, 23, 15); -- ATK
+INSERT INTO `item_mods` VALUES (21419, 8, 4); -- STR
 
 -- Vengeful Ring (27592)
 INSERT INTO `item_mods` VALUES (27592, 2, 20); -- HP

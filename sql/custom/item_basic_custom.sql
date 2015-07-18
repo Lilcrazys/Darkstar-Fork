@@ -119,3 +119,7 @@ INSERT INTO `item_basic` VALUES (28154,0,'weatherspoon_pants_+1','weatherspoon_p
 INSERT INTO `item_basic` VALUES (28291,0,'weatherspoon_souilers_+1','weather_souilers_+1',1,63568,0,1,0);
 REPLACE INTO `item_basic` VALUES (28188,0,'gorney_brayettes','gorney_brayettes',1,63568,0,1,0);
 REPLACE INTO `item_basic` VALUES (10503,0,'brego_gloves','brego_gloves',1,34816,19,0,0);
+
+INSERT INTO `item_basic` VALUES (21371,0,'ginsen','ginsen',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28428,0,'sailfi_belt_+1','sailfi_belt_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21419,0,'rigorous+_grip_+1','rigorous+_grip_+1',1,63552,0,1,0);
