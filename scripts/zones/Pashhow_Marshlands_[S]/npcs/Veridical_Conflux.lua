@@ -23,7 +23,7 @@ function onTrigger(player,npc)
     if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
         -- For stage IV Crimson, Indigo, and Jade, we set 1 bit each
         -- for VW_3_NATIONS instead of for a var named for the KIs.
-        if (player:isMaskFull(player:getVar("VW_3_NATIONS"),2) == true) then
+        if (player:isMaskFull(player:getVar("VW_3_NATIONS"),3) == true) then
             player:startEvent(7);
         end
     end
