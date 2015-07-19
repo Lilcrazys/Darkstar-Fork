@@ -20,11 +20,11 @@ require("scripts/globals/weaponskills");
 function onUseWeaponSkill(player, target, wsID)
 
 	local params = {};
-	params.numHits = 4;
-	params.ftp100 = 1.08; params.ftp200 = 1.08; params.ftp300 = 1.08;
+	params.numHits = 5;
+	params.ftp100 = 1.08; params.ftp200 = 1.58; params.ftp300 = 2.08;
 	params.str_wsc = 0.85 + (player:getMerit(MERIT_RUINATOR) / 100); params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.0; params.mnd_wsc = 0.0; params.chr_wsc = 0.0;
-	params.crit100 = 0.0; params.crit200 = 0.0; params.crit300 = 0.0;
-	params.canCrit = false;
+	params.crit100 = 1.0; params.crit200 = 2.0; params.crit300 = 3.0;
+	params.canCrit = true;
 	params.acc100 = 0.8; params.acc200= 0.9; params.acc300= 1.0;
 	params.atkmulti = 1.1;
 
