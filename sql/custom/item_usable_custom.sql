@@ -42,9 +42,9 @@ REPLACE INTO `item_usable` VALUES (4142,'pro-ether_+2',1,13,33,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4143,'pro-ether_+3',1,13,33,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4144,'hi-elixir',1,20,34,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4145,'elixir',1,20,34,9,0,0,0,0);
-REPLACE INTO `item_usable` VALUES (4174,'vile_elixir',1,1,34,0,0,0,300,0);
-REPLACE INTO `item_usable` VALUES (4175,'vile_elixir_+1',1,1,34,0,0,0,300,0);
 
+REPLACE INTO `item_usable` VALUES (4174,'vile_elixir',1,1,34,1,0,0,90,0); -- That 90 second timer might not function as expected, DSp seems to expect that field to be for "charged" items
+REPLACE INTO `item_usable` VALUES (4175,'vile_elixir_+1',1,1,34,1,0,0,90,0);
 
 INSERT INTO `item_usable` VALUES (4985,'scroll_of_horde_lullaby_ii',1,1,15,5,0,0,0,0);
 INSERT INTO `item_usable` VALUES (5055,'scroll_of_ice_carol_ii',1,1,15,5,0,0,0,0);
