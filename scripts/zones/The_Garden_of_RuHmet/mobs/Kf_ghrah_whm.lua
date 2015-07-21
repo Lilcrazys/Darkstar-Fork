@@ -6,6 +6,7 @@
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+
 -----------------------------------
 -- OnMobSpawn Action
 -- Set core Skin and mob elemental bonus

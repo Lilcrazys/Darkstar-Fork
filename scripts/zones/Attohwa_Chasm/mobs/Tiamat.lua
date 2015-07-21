@@ -62,7 +62,7 @@ function onMobFight(mob,target)
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
-    end
+        end;
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
         if (mob:AnimationSub() == 1) then
@@ -78,8 +78,6 @@ function onMobFight(mob,target)
              mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
              mob:SetMobSkillAttack(true);
              mob:setLocalVar("Wings", mob:getBattleTime());
-         end
-    end
 
     if (mob:getHPP() <= 20) then
          if (Tia_2hr_Used == 3) then
@@ -107,6 +105,8 @@ function onMobFight(mob,target)
               mob:setLocalVar("Tia_2hr", 1);
          end
     end
+end;
+    end;
 end;
 
 -----------------------------------

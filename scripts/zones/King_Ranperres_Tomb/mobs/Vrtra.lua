@@ -7,6 +7,7 @@ require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+
 -----------------------------------
 -- OnMobInitialize Action
 -----------------------------------
