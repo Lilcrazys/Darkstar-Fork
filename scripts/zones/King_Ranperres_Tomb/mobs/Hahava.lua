@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: ?
---  VNM: Lorbulcrud
+-- VWNM: Lorbulcrud
+-- @pos ? ? ? ?
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,12 +10,12 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
     -- addMod
@@ -38,7 +39,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_QUAD_ATTACK,25);
 
     -- Vars
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTimer", os.time());
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -53,10 +54,11 @@ end;
 
 function onMobFight(mob, target)
     local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
-    local depopTime = mob:getLocalVar("depopTime");
 
-    if (os.time(t) > depopTime) then
+    if (os.time() - mob:getLocalVar("depopTimer") > 1800) then
+        -- despawn in 30 min
         DespawnMob(mob:getID());
+        break;
     end
 end;
 
@@ -79,9 +81,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then -- Havana Kill
-        if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 2) == false) then
-           killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
+    if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
+        if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
+            if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 2) == false) then
+               killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
+            end
         end
     end
     killer:addCurrency("bayld", 125);

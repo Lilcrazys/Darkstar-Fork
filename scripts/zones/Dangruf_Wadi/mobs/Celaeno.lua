@@ -1,6 +1,7 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Lorbulcrud
+-- Area: ?
+-- VWNM: Lorbulcrud
+-- @pos ? ? ? ?
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,13 +10,21 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,80);
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_ATT,250);
+
+    -- other
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -31,13 +40,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,80);
-    mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,250);
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- Vars
+    mob:setLocalVar("depopTimer", os.time());
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -52,10 +56,11 @@ end;
 
 function onMobFight(mob, target)
     local Paramount_Harpeia_2hr_Used = 0;
-    local depopTime = mob:getLocalVar("depopTime");
 
-    if (os.time(t) > depopTime) then
+    if (os.time() - mob:getLocalVar("depopTimer") > 1800) then
+        -- despawn in 30 min
         DespawnMob(mob:getID());
+        break;
     end
 
     if (mob:getLocalVar("Paramount_Harpeia_2hr_Used") ~= nil) then
@@ -84,9 +89,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_IV)) then -- Celano Kill
-        if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 1) == false) then
-	       killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",1,true);
+    if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
+        if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
+            if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 1) == false) then
+               killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",1,true);
+            end
         end
     end
     killer:addCurrency("bayld", 125);

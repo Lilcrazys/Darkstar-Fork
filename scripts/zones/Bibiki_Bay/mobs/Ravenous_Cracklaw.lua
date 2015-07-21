@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Bibiki Bay
--- NPC:  Ravenous Cracklaw
+--  NM:  Ravenous Cracklaw
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -13,7 +13,7 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- MobMods
+    -- setMobMod
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
@@ -22,6 +22,16 @@ function onMobInitialize(mob)
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0);
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32);
+
+    -- addMod
+    mob:addMod(MOD_ACC,100);
+
+    -- setMod
+    mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_UFASTCAST, 70);
+    mob:setMod(MOD_DOUBLE_ATTACK,20);
+    mob:setMod(MOD_MACC, 1900);
+    mob:setMod(MOD_MATT, 110);
 end;
 
 -----------------------------------
@@ -29,15 +39,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-
-    mob:setMod(MOD_REGEN, 50);
-    mob:setMod(MOD_UFASTCAST, 70);
-    mob:setMod(MOD_DOUBLE_ATTACK,20);
-    mob:setMod(MOD_MACC, 1900);
-    mob:setMod(MOD_MATT, 110);
-    -- addMod
-    mob:addMod(MOD_ACC,100);
 end;
 
 -----------------------------------
@@ -81,7 +82,7 @@ function onMobFight(mob, target)
         end
     end
 
-    if (mob:getBattleTime() and mob:getLocalVar("RAGED") == 0) then
+    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end
