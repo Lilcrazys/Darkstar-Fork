@@ -41,11 +41,11 @@ INSERT INTO `item_armor` VALUES (28550,'vehemence_ring',99,0,4194303,0,0,0,24576
 INSERT INTO `item_armor` VALUES (28551,'longshot_ring',99,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_armor` VALUES (28552,'fistmele_ring',99,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_armor` VALUES (28553,'perception_ring',99,0,4194303,0,0,0,24576,0);
-INSERT INTO `item_armor` VALUES (28499,'influx_earring',99,0,4194303,0,0,0,24576,0);
-INSERT INTO `item_armor` VALUES (28500,'upsurge_earring',99,0,4194303,0,0,0,24576,0);
-INSERT INTO `item_armor` VALUES (28501,'allegro_earring',99,0,4194303,0,0,0,24576,0);
-INSERT INTO `item_armor` VALUES (28502,'impregnable_earring',99,0,4194303,0,0,0,24576,0);
-INSERT INTO `item_armor` VALUES (28504,'spellbreaker_earring',99,0,4194303,0,0,0,24576,0);
+INSERT INTO `item_armor` VALUES (28499,'influx_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28500,'upsurge_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28501,'allegro_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28502,'impregnable_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28504,'spellbreaker_earring',99,0,4194303,0,0,0,6144,0);
 
 
 INSERT INTO `item_armor` VALUES (27740,'outrider_mask',99,117,6593,5,0,0,16,0);
@@ -133,3 +133,11 @@ INSERT INTO `item_armor` VALUES (28538,'lebeche_ring',99,0,4194303,0,0,0,24576,0
 INSERT INTO `item_armor` VALUES (21376,'inlamvuyeso',99,0,2589730,0,0,0,8,0);
 INSERT INTO `item_armor` VALUES (27563,'metamorph_ring_+1',99,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_armor` VALUES (28441,'ponente_sash',99,0,66560,0,0,0,1024,0);
+
+REPLACE INTO `item_armor` VALUES (28339,'manibozho_boots',99,110,2593826,350,0,0,256,0);
+REPLACE INTO `item_armor` VALUES (28199,'manibozho_brais',99,110,2593826,350,0,0,128,0);
+REPLACE INTO `item_armor` VALUES (28058,'manibozho_gloves',99,110,2593826,350,0,0,64,0);
+REPLACE INTO `item_armor` VALUES (27918,'manibozho_jerkin',99,110,2593826,350,0,0,32,0);
+REPLACE INTO `item_armor` VALUES (27777,'manibozho_beret',99,110,2593826,350,0,0,16,0);
+
+REPLACE INTO `item_armor` VALUES (27410,'hippomenes_socks_+1',99,119,3851870,350,0,0,256,0);
