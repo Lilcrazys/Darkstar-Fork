@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: ?
---  VNM: Lorbulcrud
+-- VWNM: Lorbulcrud
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -15,6 +15,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 

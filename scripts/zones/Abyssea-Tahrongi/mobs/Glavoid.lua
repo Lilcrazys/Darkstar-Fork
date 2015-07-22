@@ -1,12 +1,14 @@
 -----------------------------------
---  Area: Abyssea - Tahrongi (45)
---   Mob: Caoineag
+-- Area: Abyssea - Tahrongi (45)
+--   NM: Glavoid
 -----------------------------------
+
 require("scripts/zones/Abyssea-Tahrongi/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/magic");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------

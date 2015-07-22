@@ -1,6 +1,6 @@
 -----------------------------------
--- Zone:
--- Mob:
+-- Zone: Eastern Altepa Desert
+--  NM:  Sabotender Corrido
 -----------------------------------
 
 require("scripts/globals/status");
@@ -12,8 +12,12 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 20)
 end;
 
 -----------------------------------
@@ -25,10 +29,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_COUNTER, 35);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 20)
-
 end;
 
 -----------------------------------
@@ -36,8 +36,6 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    -- Wiki says nothing about proc rate, going with 80% for now.
-    -- I remember it going off every hit when I fought him.
     local chance = 90;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
@@ -80,4 +78,3 @@ end;
 
 function onMobDeath(mob,killer)
 end;
-

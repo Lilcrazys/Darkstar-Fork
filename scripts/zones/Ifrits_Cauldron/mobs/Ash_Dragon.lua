@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Ifrit's Cauldron
--- NPC:  Ash Dragon
+--  NM:  Ash Dragon
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -11,6 +11,11 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_STR,7);
+    mob:addMod(MOD_DEX,5);
+    mob:addMod(MOD_ACC,200);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -20,12 +25,6 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_STR,7);
-    mob:addMod(MOD_DEX,5);
-    mob:addMod(MOD_ACC,200);
-    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------

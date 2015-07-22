@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
---  VNM: Pancimanci
+-- Area: ?
+-- VWNM: Pancimanci
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 
     -- addMod

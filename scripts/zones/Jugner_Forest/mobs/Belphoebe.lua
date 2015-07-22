@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Belphoebe
+-- Area: ?
+-- VWNM: Belphoebe
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -15,7 +15,13 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_ATT,175);
 end;
 
 -----------------------------------
@@ -32,11 +38,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_STUNRES, 50);
 
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,20);
-    mob:addMod(MOD_ATT,75);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

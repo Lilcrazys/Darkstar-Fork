@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Grand Palace of HuXzoi
--- NPC:  Ix_aern_mnk
--- ID: 16916815
+--  NM:  Ix_aern_mnk
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +13,11 @@ require("scripts/globals/utils");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------
@@ -21,6 +25,15 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 150);
+    mob:setMod(MOD_REGAIN, 25);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_COUNTER, 20);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,100);
+    mob:setMod(MOD_DOUBLE_ATTACK, 15);
+
     --[[
     local QuestionMark = 16916819; -- The ??? that spawned this mob.
     local chance = GetNPCByID(QuestionMark):getLocalVar("[SEA]IxAern_DropRate"); -- Adjust drop rate for the items based on the organs traded to the ???.
@@ -33,20 +46,6 @@ function onMobSpawn(mob)
     end
     GetNPCByID(QuestionMark):setLocalVar("[SEA]IxAern_DropRate", 0); -- Clears the var from the ???.
     ]]
-
-    -- setMod
-    mob:setMod(MOD_REGEN, 150);
-    mob:setMod(MOD_REGAIN, 25);
-    mob:setMod(MOD_HASTE_ABILITY, 20);
-    mob:setMod(MOD_COUNTER, 20);
-    mob:setMod(MOD_MACC,925);
-    mob:setMod(MOD_MATT,100);
-    mob:setMod(MOD_DOUBLE_ATTACK, 15);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------

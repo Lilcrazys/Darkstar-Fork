@@ -1,6 +1,6 @@
 -----------------------------------
 -- Zone: Cape Teriggan
--- Mob: Zmey Gorynych
+--  NM:  Zmey Gorynych
 -----------------------------------
 
 require("scripts/globals/status");
@@ -12,7 +12,11 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_TRIPLE_ATTACK, 50)
 end;
 
 -----------------------------------
@@ -22,9 +26,6 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
-
-    -- addMod
-    mob:addMod(MOD_TRIPLE_ATTACK, 50)
 end;
 
 -----------------------------------
@@ -47,4 +48,3 @@ end;
 
 function onMobDeath(mob,killer)
 end;
-

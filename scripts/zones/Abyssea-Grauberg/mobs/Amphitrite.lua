@@ -1,18 +1,27 @@
 -----------------------------------
---  Area: Abyssea - Grauberg (254)
---   Mob: Amphitrite
+-- Area: Abyssea - Grauberg (254)
+--  NM:  Amphitrite
 -----------------------------------
+
 require("scripts/zones/Abyssea-Grauberg/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/magic");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:setMod(MOD_DOUBLE_ATTACK, 100)
+    mob:setMod(MOD_MATT, 100);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_MDEF,100);
 end;
 
 -----------------------------------
@@ -20,19 +29,12 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-
     -- setMod
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN, 30);
     mob:setMod(MOD_REFRESH, 100);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC, 1950);
-
-    -- addMod
-    mob:setMod(MOD_DOUBLE_ATTACK, 100)
-    mob:setMod(MOD_MATT, 100);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_MDEF,100);
 end;
 
 -----------------------------------
@@ -48,9 +50,11 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if (target:hasStatusEffect(EFFECT_POISON)) then
         target:delStatusEffect(EFFECT_POISON);
@@ -62,6 +66,7 @@ function onAdditionalEffect(mob,target,damage)
 
     return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
@@ -75,4 +80,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_SEA_DAUGHTER);
     end
 end;
-

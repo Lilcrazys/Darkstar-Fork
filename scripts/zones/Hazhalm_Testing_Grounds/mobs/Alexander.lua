@@ -1,5 +1,6 @@
 -----------------------------------
--- NPC:  Alexander
+-- Area: ?
+--  NM:  Alexander
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -7,14 +8,19 @@ require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_DRAW_IN, 1); -- Alliance Draw In
+
+    -- addMod
+    mob:addMod(MOD_MDEF,100);
+    mob:addMod(MOD_DEF,200);
+    mob:addMod(MOD_ATT,350);
 end;
 
 -----------------------------------
@@ -31,11 +37,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_ACC,2500);
     mob:setMod(MOD_TERRORRES,500);
     mob:setMod(MOD_STUNRES,2000);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,100);
-    mob:addMod(MOD_DEF,200);
-    mob:addMod(MOD_ATT,350);
 end;
 -----------------------------------
 -- onMobEngage Action

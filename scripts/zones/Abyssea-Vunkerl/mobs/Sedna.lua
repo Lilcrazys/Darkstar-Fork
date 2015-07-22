@@ -1,6 +1,6 @@
 -----------------------------------
---  Area: Abyssea - Vunkerl (217)
---   Mob: Sedna
+-- Area: Abyssea - Vunkerl (217)
+--  NM:  Sedna
 -----------------------------------
 
 require("scripts/zones/Abyssea-Vunkerl/textIDs");
@@ -8,6 +8,7 @@ require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/magic");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -64,4 +65,3 @@ function onMobDeath(mob,killer)
         killer:addSpell(654);
     end
 end;
-

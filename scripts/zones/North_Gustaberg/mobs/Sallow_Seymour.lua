@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
---  VNM: Sallow_Seymour
+-- Area: ?
+-- VWNM: Sallow_Seymour
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 

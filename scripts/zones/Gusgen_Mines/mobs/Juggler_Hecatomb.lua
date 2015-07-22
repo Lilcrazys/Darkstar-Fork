@@ -1,9 +1,23 @@
 -----------------------------------
 -- Area: Gusgen Mines
--- NM:   Juggler_Hecatomb
+--  NM:  Juggler_Hecatomb
 -----------------------------------
 
 require("scripts/globals/titles");
+
+-----------------------------------
+-- onMobInitialize
+-----------------------------------
+
+function onMobInitialize(mob,target)
+    -- addMod
+    mob:addMod(MOD_STR,5);
+    mob:addMod(MOD_DEX,7);
+    mob:addMod(MOD_ATT,100);
+    mob:addMod(MOD_ACC,200);
+    mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
@@ -12,14 +26,6 @@ require("scripts/globals/titles");
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_STR,5);
-    mob:addMod(MOD_DEX,7);
-    mob:addMod(MOD_ATT,100);
-    mob:addMod(MOD_ACC,200);
-    mob:addMod(MOD_MACC,400);
-    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------

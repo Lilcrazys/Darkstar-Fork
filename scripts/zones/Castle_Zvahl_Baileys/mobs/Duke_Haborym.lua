@@ -1,17 +1,27 @@
 -----------------------------------
---  Area: Castle Zvahl Baileys (161)
---    NM: Duke_Haborym
+-- Area: Castle Zvahl Baileys (161)
+--  NM:  Duke_Haborym
 -----------------------------------
 
 require("scripts/globals/status");
 require("scripts/globals/titles");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
     mob:setMobMod(MOBMOD_SOUND_RANGE,30);
+
+    -- addMod
+    mob:addMod(MOD_STR,7);
+    mob:addMod(MOD_DEX,5);
+    mob:addMod(MOD_ATT,200);
+    mob:addMod(MOD_ACC,100);
+    mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;
 
 -----------------------------------
@@ -21,14 +31,6 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_STR,7);
-    mob:addMod(MOD_DEX,5);
-    mob:addMod(MOD_ATT,200);
-    mob:addMod(MOD_ACC,100);
-    mob:addMod(MOD_MACC,400);
-    mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;
 
 -----------------------------------

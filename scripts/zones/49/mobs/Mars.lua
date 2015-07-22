@@ -22,6 +22,13 @@ function onMobInitialize(mob)
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
+
+    -- addMod
+    mob:addMod(MOD_ACC, 25);
+    mob:addMod(MOD_DOUBLE_ATTACK, 5);
+    mob:addMod(MOD_MATT, 25);
+    mob:addMod(MOD_MACC, 80);
+    mob:addMod(MOD_INT, 10);
 end;
 
 -----------------------------------
@@ -37,13 +44,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 10);
     mob:setMod(MOD_TRIPLE_ATTACK, 1);
-
-    -- addMod
-    mob:addMod(MOD_ACC, 25);
-    mob:addMod(MOD_DOUBLE_ATTACK, 5);
-    mob:addMod(MOD_MATT, 25);
-    mob:addMod(MOD_MACC, 80);
-    mob:addMod(MOD_INT, 10);
 
     -- Vars
     mob:setLocalVar("MagicElement", math.random(1,6));

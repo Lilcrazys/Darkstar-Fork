@@ -11,10 +11,16 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
+
+    -- Effects
     mob:addStatusEffect(EFFECT_ICE_SPIKES,45,0,0);
     mob:getStatusEffect(EFFECT_ICE_SPIKES):setFlag(32);
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 30)
 end;
 -----------------------------------
 -- onMobSpawn
@@ -24,9 +30,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 30)
 end;
 
 -----------------------------------

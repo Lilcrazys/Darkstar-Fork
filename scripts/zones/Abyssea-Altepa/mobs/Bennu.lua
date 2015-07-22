@@ -1,17 +1,28 @@
 -----------------------------------
---  Area: Abyssea - Altepa (218)
---   Mob: Bennu
+-- Area: Abyssea - Altepa (218)
+--  NM:  Bennu
 -----------------------------------
+
 require("scripts/zones/Abyssea-Altepa/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobmod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:setMod(MOD_MATT,95);
+    mob:setMod(MOD_MACC,1900);
+    mob:addMod(MOD_ACC,50);
+    mob:addMod(MOD_ATT,125);
+    mob:addMod(MOD_MDEF,75);
+    mob:addMod(MOD_DEF,130);
 end;
 
 -----------------------------------
@@ -22,13 +33,6 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
     mob:setMod(MOD_REGEN, 50);
-    -- addMod
-    mob:setMod(MOD_MATT,95);
-    mob:setMod(MOD_MACC,1900);
-    mob:addMod(MOD_ACC,50);
-    mob:addMod(MOD_ATT,125);
-    mob:addMod(MOD_MDEF,75);
-    mob:addMod(MOD_DEF,130);
     mob:setMod(MOD_DOUBLE_ATTACK, 30);
 end;
 
@@ -45,6 +49,7 @@ end;
 
 function onMobFight(mob,target)
 end
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
@@ -101,4 +106,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, ATMA_OF_THE_ASCENDING_ONE);
     end
 end;
-

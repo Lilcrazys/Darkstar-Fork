@@ -10,15 +10,6 @@ require("scripts/globals/status");
 function onMobInitialize(mob)
 	mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
 	mob:setMobMod(MOBMOD_SOUND_RANGE,30);
-end;
-
------------------------------------
--- onMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
-    -- setMod
-	mob:setMod(MOD_REGAIN,33);
 
     -- addMod
 	mob:addMod(MOD_STR,77);
@@ -33,6 +24,15 @@ function onMobSpawn(mob)
 	mob:addMod(MOD_CRIT_DMG_INCREASE,15);
 	mob:addMod(MOD_CRITHITRATE,22);
 	mob:addMod(MOD_DOUBLE_ATTACK,35);
+end;
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+	mob:setMod(MOD_REGAIN,33);
 end;
 
 -----------------------------------

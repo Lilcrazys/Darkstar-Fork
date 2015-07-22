@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: ?
---  VNM: Lord_Asag
+-- VWNM: Lord_Asag
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 
     -- addMod

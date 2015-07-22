@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: ?
---  VNM: Ogbunabali
+-- VWNM: Ogbunabali
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 
     -- addMod
@@ -35,7 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,15);
     mob:setMod(MOD_HASTE_ABILITY, 35);
 
-    -- VNM
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

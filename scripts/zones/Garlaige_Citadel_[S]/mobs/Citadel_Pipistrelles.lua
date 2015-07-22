@@ -1,6 +1,6 @@
 -----------------------------------
 -- Zone: Garlaige Citadel (S)
--- Mob: Citadel Pipistrelles
+--  NM:  Citadel Pipistrelles
 -----------------------------------
 
 require("scripts/globals/status");
@@ -12,7 +12,11 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_TRIPLE_ATTACK, 100)
 end;
 
 -----------------------------------
@@ -24,9 +28,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_MACC, 950);
-
-    -- addMod
-    mob:addMod(MOD_TRIPLE_ATTACK, 100)
 end;
 
 -----------------------------------
@@ -49,4 +50,3 @@ end;
 
 function onMobDeath(mob,killer)
 end;
-

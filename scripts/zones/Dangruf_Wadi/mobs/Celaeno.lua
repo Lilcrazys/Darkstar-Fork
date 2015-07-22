@@ -23,7 +23,7 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DEF,150);
     mob:addMod(MOD_ATT,250);
 
-    -- other
+    -- Other
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
@@ -43,6 +43,7 @@ function onMobSpawn(mob)
     -- Vars
     mob:setLocalVar("depopTimer", os.time());
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -84,6 +85,7 @@ function onMobFight(mob, target)
         end
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

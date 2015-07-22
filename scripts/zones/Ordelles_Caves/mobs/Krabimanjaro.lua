@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: ?
---  VNM: Krabimanjaro
+-- VWNM: Krabimanjaro
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -15,6 +15,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
     -- addMod

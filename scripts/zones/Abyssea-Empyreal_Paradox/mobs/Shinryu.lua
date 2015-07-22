@@ -1,12 +1,12 @@
 -----------------------------------
---  Area: Abyssea - Empyreal Paradox (255)
---   Mob: Shinryu
------------------------------------
+-- Area: Abyssea - Empyreal Paradox (255)
+--  NM:  Shinryu
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Empyreal_Paradox/TextIDs"] = nil;
 package.loaded["scripts/globals/bcnm"] = nil;
 -- package.loaded["scripts/globals/abyssea"] = nil;
 -------------------------------------
+
 require("scripts/globals/bcnm");
 require("scripts/globals/titles");
 require("scripts/globals/quests");
@@ -21,20 +21,13 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
-end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 300);
-    mob:addMod(MOD_DMGRANGE, -50);
-    mob:addMod(MOD_DMGMAGIC, -128);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_SLEEPRES,100);
@@ -44,10 +37,23 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 125);
-    mob:addMod(MOD_MDEF, 25);
     mob:setMod(MOD_HUMANOID_KILLER, 7);
     mob:setMod(MOD_TERRORRES, 10000);
+
+    -- addMod
+    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_DMGMAGIC, -128);
+    mob:addMod(MOD_MDEF, 25);
+
+    -- Other
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+end;
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
@@ -143,5 +149,3 @@ function onMobDeath(mob,killer)
         killer:messageSpecial(6385, LUNAR_ABYSSITE3);
     end
 end;
-
-

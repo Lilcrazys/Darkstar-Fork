@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: ?
---  VNM: Melancholic_Moira
+-- VWNM: Melancholic_Moira
 -----------------------------------
 
 require("scripts/globals/titles");

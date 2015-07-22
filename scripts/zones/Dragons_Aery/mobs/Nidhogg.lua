@@ -12,6 +12,21 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
+
+    -- addMod
+    mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_DOUBLE_ATTACK,15);
+end;
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,20);
 end;
 
 function onMobFight(mob, target)
@@ -26,20 +41,6 @@ function onMobFight(mob, target)
         --(since I have no inclination to spend millions on a PI to cap one name you never see)
         mob:setLocalVar("twohourTime",battletime + math.random(60,120));
     end
-end;
-
------------------------------------
--- onMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,20);
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
-
-    -- addMod
-    mob:addMod(MOD_MACC,400);
-    mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
 -----------------------------------

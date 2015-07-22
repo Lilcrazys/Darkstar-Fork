@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Lorbulcrud
+-- Area: ?
+-- VWNM: Lorbulcrud
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -9,13 +9,16 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
-
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
+
+    -- addMod
+    mob:addMod(MOD_ATT,175);
 end;
 
 -----------------------------------
@@ -34,8 +37,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DEF,1000);
     mob:setMod(MOD_ACC,1400);
 
-    -- addMod
-    mob:addMod(MOD_ATT,175);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -62,10 +64,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 50);
+    killer:addExp(10000);
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_II)) then -- Lorbulcrud Kill
        killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_III);
        killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_II);
     end
-    killer:addCurrency("bayld", 50);
-    killer:addExp(10000);
 end;

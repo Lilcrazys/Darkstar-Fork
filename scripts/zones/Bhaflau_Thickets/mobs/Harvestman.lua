@@ -1,23 +1,26 @@
 -----------------------------------
 -- Area: Bhaflau Thickets
--- MOB:  Harvestman
+--  NM:  Harvestman
 -- @pos 398.130 -10.675 179.169 52
 -----------------------------------
 
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
------------------------------------
-
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 15)
+    mob:addMod(MOD_MATT, 100);
 end;
+
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
@@ -28,11 +31,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC, 950);
-
-    -- addMod
-    mob:addMod(MOD_DOUBLE_ATTACK, 15)
-    mob:addMod(MOD_MATT, 100);
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
@@ -48,15 +48,9 @@ function onAdditionalEffect(mob,target,damage)
     return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 
-
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob,killer)
-
-    -- Set Ahtu's spawnpoint and respawn time (21-24 hours)
-    -- UpdateNMSpawnPoint(mob:getID());
-    -- mob:setRespawnTime(math.random((75600),(86400)));
-
 end;

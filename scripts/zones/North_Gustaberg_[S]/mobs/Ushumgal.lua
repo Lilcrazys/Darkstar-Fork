@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
---  VNM: Ushumgal
+-- Area: ?
+-- VWNM: Ushumgal
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 
     -- addMod
@@ -33,7 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_DOUBLE_ATTACK, 25);
 
-    -- VNM
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
