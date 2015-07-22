@@ -472,12 +472,12 @@ INSERT INTO `abilities` VALUES ('614', 'chaotic_strike', '15', '70', '4', '60', 
 INSERT INTO `abilities` VALUES ('615', 'thunderstorm', '15', '75', '4', '60', '173', '0', '0', '182', '18.0', '0', '1', '60', '2952', '1','TOAU');
 INSERT INTO `abilities` VALUES ('616', 'judgment_bolt', '15', '1', '4', '60', '173', '0', '0', '0', '18.0', '0', '1', '60', '0', '2',null); -- ROTZ
 INSERT INTO `abilities` VALUES ('617', 'shock_squall', '15', '92', '4', '60', '174', '0', '0', '0', '18.0', '1', '1', '60', '0', '0',null);
-INSERT INTO `abilities` VALUES ('640', 'camisado', '15', '1', '4', '60', '173', '0', '0', '0', '18.0', '0', '1', '60', '0', '0',null);
-INSERT INTO `abilities` VALUES ('641', 'somnolence', '15', '20', '4', '60', '174', '0', '0', '0', '18.0', '0', '1', '60', '0', '0',null);
-INSERT INTO `abilities` VALUES ('642', 'nightmare', '15', '29', '4', '60', '174', '0', '0', '0', '4.0', '1', '1', '60', '0', '0',null);
-INSERT INTO `abilities` VALUES ('643', 'ultimate_terror', '15', '37', '4', '60', '174', '0', '0', '0', '18.0', '1', '1', '60', '0', '0',null);
-INSERT INTO `abilities` VALUES ('644', 'noctoshield', '15', '49', '1', '60', '174', '0', '0', '0', '18.0', '1', '1', '60', '0', '0',null);
-INSERT INTO `abilities` VALUES ('645', 'dream_shroud', '15', '56', '1', '60', '174', '0', '0', '0', '18.0', '1', '1', '60', '0', '0',null);
+INSERT INTO `abilities` VALUES ('640', 'camisado', '15', '1', '4', '60', '173', '0', '0', '20', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
+INSERT INTO `abilities` VALUES ('641', 'somnolence', '15', '20', '4', '60', '174', '0', '0', '30', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
+INSERT INTO `abilities` VALUES ('642', 'nightmare', '15', '29', '4', '60', '174', '0', '0', '42', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
+INSERT INTO `abilities` VALUES ('643', 'ultimate_terror', '15', '37', '4', '60', '174', '0', '0', '27', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
+INSERT INTO `abilities` VALUES ('644', 'noctoshield', '15', '49', '1', '60', '174', '0', '0', '92', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
+INSERT INTO `abilities` VALUES ('645', 'dream_shroud', '15', '56', '1', '60', '174', '0', '0', '121', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
 INSERT INTO `abilities` VALUES ('646', 'nether_blast', '15', '65', '4', '60', '173', '0', '0', '109', '18.0', '0', '1', '60', '0', '0',null); -- ROTZ
 INSERT INTO `abilities` VALUES ('647', 'cacodemonia', '15', '1', '4', '60', '173', '0', '0', '0', '18.0', '0', '1', '60', '0', '0',null);
 INSERT INTO `abilities` VALUES ('648', 'ruinous_omen', '15', '1', '4', '60', '173', '0', '0', '0', '18.0', '1', '1', '60', '0', '2',null);

@@ -2793,13 +2793,13 @@ INSERT INTO `mob_skill` VALUES (658,379,7,'holy_mist',1,10.0,503,3000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (659,379,8,'soothing_ruby',1,10.0,504,3000,4,0,0,0);
 
 -- Pet - Diabolos
-INSERT INTO `mob_skill` VALUES (1647,380,141,'Camisado',0,7,2000,3000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (1648,380,142,'Somnolence',0,25,2000,3000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1649,380,143,'Noctoshield',1,7,2000,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1650,380,144,'Ultimate_Terror',1,7,2000,3000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1651,380,145,'Dream_Shroud',1,7,2000,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1652,380,146,'Nightmare',1,30,646,3000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (354,380,148,'nether_blast',0,10.0,646,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1647,380,141,'Camisado',0,10.0,640,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1648,380,142,'Somnolence',0,10.0,641,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1649,380,143,'Noctoshield',1,10.0,644,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1650,380,144,'Ultimate_Terror',1,10.0,643,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1651,380,145,'Dream_Shroud',1,10.0,645,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1652,380,146,'nightmare',1,10.0,642,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1654,380,148,'Nether_Blast',0,10.0,646,3000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1655,380,149,'Ruinous_Omen',1,30,2000,3000,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1655,380,324,'Pavor_Nocturnus',0,30,2000,3000,4,0,0,0);
 
@@ -2811,13 +2811,13 @@ INSERT INTO `mob_skill` VALUES (1887,389,152,'Perfect_defense',1,18.0,2000,1000,
 
 -- pet - Cait Sith
 -- -373 from polutils
-INSERT INTO `mob_skill` VALUES (2192,1204,9,'regal_scratch',1,18.0,505,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2193,1204,10,'mewing_lullaby',1,18.0,506,3000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2194,1204,11,'eerie_eye',1,18.0,507,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2196,1204,12,'level_?_holy',1,18.0,508,3000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (664,1204,13,'raise_ii',1,18.0,509,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2192,1204,9,'Regal_scratch',1,18.0,505,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2193,1204,10,'Mewing_lullaby',1,18.0,506,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2194,1204,11,'Eerie_eye',1,18.0,507,3000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2196,1204,12,'Level_?_Holy',1,18.0,508,3000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (664,1204,13,'Raise_II',1,18.0,509,3000,1,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (665,1204,14,'Reraise II',1,18.0,510,3000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (2195,1204,15,'altanas_favor',1,18.0,511,3000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2195,1204,15,'Altanas_Favor',1,18.0,511,3000,4,0,0,0);
 
 
 -- Soulflayers

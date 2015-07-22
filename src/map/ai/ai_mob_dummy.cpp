@@ -228,7 +228,7 @@ void CAIMobDummy::ActionRoaming()
             {
                 // I spawned a pet
             }
-            else if (CanCastSpells() && WELL512::GetRandomNumber(10) < 3 && m_PMob->SpellContainer->HasBuffSpells())
+            else if (CanCastSpells() && dsprand::GetRandomNumber(10) < 3 && m_PMob->SpellContainer->HasBuffSpells())
             {
                 // cast buff
                 CastSpell(m_PMob->SpellContainer->GetBuffSpell());
@@ -427,7 +427,7 @@ void CAIMobDummy::ActionDropItems()
                         uint8 bonus = (m_PMob->m_THLvl > 2 ? (m_PMob->m_THLvl - 2)*10 : 0);
                         while (tries < maxTries)
                         {
-                            if (WELL512::GetRandomNumber(1000) < DropList->at(i).DropRate * map_config.drop_rate_multiplier + bonus)
+                            if (dsprand::GetRandomNumber(1000) < DropList->at(i).DropRate * map_config.drop_rate_multiplier + bonus)
                             {
                                 PChar->PTreasurePool->AddItem(DropList->at(i).ItemID, m_PMob);
                                 break;
@@ -458,7 +458,7 @@ void CAIMobDummy::ActionDropItems()
                     if (((PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SIGNET) && conquest::GetInfluenceGraphics(PChar->loc.zone->GetRegionID()) < 64) ||
                        (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SANCTION) && PChar->loc.zone->GetRegionID() >= 28 && PChar->loc.zone->GetRegionID() <= 32) ||
                        (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) && PChar->loc.zone->GetRegionID() >= 33 && PChar->loc.zone->GetRegionID() <= 40)) &&
-                        m_PMob->m_Element > 0 && WELL512::GetRandomNumber(100) < 20) // Need to move to CRYSTAL_CHANCE constant
+                        m_PMob->m_Element > 0 && dsprand::GetRandomNumber(100) < 20) // Need to move to CRYSTAL_CHANCE constant
                     {
                         PChar->PTreasurePool->AddItem(4095 + m_PMob->m_Element, m_PMob);
                     }
@@ -467,7 +467,7 @@ void CAIMobDummy::ActionDropItems()
                     uint8 day = (uint8)CVanaTime::getInstance()->getWeekday();
 
                     // Avatarite. Both wiki say mobs lv 80+
-                    if (m_PMob->GetMLevel() >= 80 && WELL512::GetRandomNumber(100) < 80)
+                    if (m_PMob->GetMLevel() >= 80 && dsprand::GetRandomNumber(100) < 80)
                     {
                         if (weather >=4 && weather <=19)
                         {
@@ -475,56 +475,56 @@ void CAIMobDummy::ActionDropItems()
                             {
                                 case 4: // Fire
                                 case 5: // Double Fire
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3520, m_PMob); // Ifritite
                                     else
                                         PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
                                     break;
                                 case 6: // Water
                                 case 7: // Double Water
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3525, m_PMob); // Leviatite
                                     else
                                         PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
                                     break;
                                 case 8: // Earth
                                 case 9: // Double Earth
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3523, m_PMob); // Titanite
                                     else
                                         PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
                                     break;
                                 case 10: // Wind
                                 case 11: // Double Wind
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3522, m_PMob); // Garudite
                                     else
                                         PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
                                     break;
                                 case 12: // Ice
                                 case 13: // Double Ice
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3521, m_PMob); // Shivite
                                     else
                                         PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
                                     break;
                                 case 14: // Thunder
                                 case 15: // Double Thunder
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3524, m_PMob); // Ramuite
                                     else
                                         PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
                                     break;
                                 case 16: // Light
                                 case 17: // Double Light
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3526, m_PMob); // Carbite
                                     else
                                         PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
                                     break;
                                 case 18: // Dark
                                 case 19: // Double Dark
-                                    if (WELL512::GetRandomNumber(100) < 55)
+                                    if (dsprand::GetRandomNumber(100) < 55)
                                         PChar->PTreasurePool->AddItem(3527, m_PMob); // Fenrite
                                     else
                                         PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
@@ -533,54 +533,54 @@ void CAIMobDummy::ActionDropItems()
                                     break;
                             }
                         }
-                        else if (WELL512::GetRandomNumber(100) < 20)
+                        else if (dsprand::GetRandomNumber(100) < 20)
                         {
                             switch (day)
                             {
                                 case 0: // Fire
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3520, m_PMob); // Ifritite
                                     else
                                         PChar->PTreasurePool->AddItem(3297, m_PMob); // Flame Geode
                                     break;
                                 case 1: // Earth
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3523, m_PMob); // Titanite
                                     else
                                         PChar->PTreasurePool->AddItem(3300, m_PMob); // Soil Geode
                                     break;
                                 case 2: // Water
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3525, m_PMob); // Leviatite
                                     else
                                         PChar->PTreasurePool->AddItem(3302, m_PMob); // Aqua Geode
                                     break;
                                 case 3: // Wind
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3522, m_PMob); // Garudite
                                     else
                                         PChar->PTreasurePool->AddItem(3299, m_PMob); // Breeze Geode
                                     break;
                                 case 4: // Ice
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3521, m_PMob); // Shivite
                                     else
                                         PChar->PTreasurePool->AddItem(3298, m_PMob); // Snow Geode
                                     break;
                                 case 5: // Thunder
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3524, m_PMob); // Ramuite
                                     else
                                         PChar->PTreasurePool->AddItem(3301, m_PMob); // Thunder Geode
                                     break;
                                 case 6: // Light
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3526, m_PMob); // Carbite
                                     else
                                         PChar->PTreasurePool->AddItem(3303, m_PMob); // Light Geode
                                     break;
                                 case 7: // Dark
-                                    if (WELL512::GetRandomNumber(100) < 45)
+                                    if (dsprand::GetRandomNumber(100) < 45)
                                         PChar->PTreasurePool->AddItem(3527, m_PMob); // Fenrite
                                     else
                                         PChar->PTreasurePool->AddItem(3304, m_PMob); // Shadow Geode
@@ -589,7 +589,7 @@ void CAIMobDummy::ActionDropItems()
                         }
                     }
                     // Geodes. Wiki's have conflicting info on mob lv required. One says 50 the other 75. I think 50 is correct.
-                    else if (m_PMob->GetMLevel() >= 50 && WELL512::GetRandomNumber(100) < 85)
+                    else if (m_PMob->GetMLevel() >= 50 && dsprand::GetRandomNumber(100) < 85)
                     {
                         if (weather >=4 && weather <=19)
                         {
@@ -631,7 +631,7 @@ void CAIMobDummy::ActionDropItems()
                                     break;
                             }
                         }
-                        else if (WELL512::GetRandomNumber(100) < 20)
+                        else if (dsprand::GetRandomNumber(100) < 20)
                         {
                             switch (day)
                             {
@@ -663,12 +663,12 @@ void CAIMobDummy::ActionDropItems()
                         }
                     }
 
-                    if (WELL512::GetRandomNumber(100) < 20 && PChar->PTreasurePool->CanAddSeal() && !m_PMob->getMobMod(MOBMOD_NO_DROPS))
+                    if (dsprand::GetRandomNumber(100) < 20 && PChar->PTreasurePool->CanAddSeal() && !m_PMob->getMobMod(MOBMOD_NO_DROPS))
                     {
                         //RULES: Only 1 kind may drop per mob
                         if (m_PMob->GetMLevel() >= 75 && luautils::IsExpansionEnabled("ABYSSEA")) //all 4 types
                         {
-                            switch (WELL512::GetRandomNumber(4))
+                            switch (dsprand::GetRandomNumber(4))
                             {
                             case 0:
                                 PChar->PTreasurePool->AddItem(1126, m_PMob);
@@ -686,7 +686,7 @@ void CAIMobDummy::ActionDropItems()
                         }
                         else if (m_PMob->GetMLevel() >= 70 && luautils::IsExpansionEnabled("ABYSSEA")) //b.seal & k.seal & k.crest
                         {
-                            switch (WELL512::GetRandomNumber(3))
+                            switch (dsprand::GetRandomNumber(3))
                             {
                             case 0:
                                 PChar->PTreasurePool->AddItem(1126, m_PMob);
@@ -701,7 +701,7 @@ void CAIMobDummy::ActionDropItems()
                         }
                         else if (m_PMob->GetMLevel() >= 50) //b.seal & k.seal only
                         {
-                            if (WELL512::GetRandomNumber(2) == 0)
+                            if (dsprand::GetRandomNumber(2) == 0)
                             {
                                 PChar->PTreasurePool->AddItem(1126, m_PMob);
                             }
@@ -766,7 +766,7 @@ void CAIMobDummy::ActionFadeOut()
         if (m_PMob->PMaster != nullptr && m_PMob->PMaster->objtype == TYPE_MOB)
         {
             CAIMobDummy* PBattleAI = (CAIMobDummy*)m_PMob->PMaster->PBattleAI;
-            PBattleAI->m_LastSpecialTime = m_Tick - WELL512::GetRandomNumber(10000);
+            PBattleAI->m_LastSpecialTime = m_Tick - dsprand::GetRandomNumber(10000);
         }
 
         m_LastActionTime = m_Tick;
@@ -804,7 +804,7 @@ void CAIMobDummy::ActionSpawn()
     {
         m_NeutralTime = m_Tick;
         m_PMob->m_neutral = true;
-        m_LastActionTime = m_Tick + WELL512::GetRandomNumber(2000,10000);
+        m_LastActionTime = m_Tick + dsprand::GetRandomNumber(2000,10000);
         m_SpawnTime = m_Tick;
         m_firstSpell = true;
         m_ActionType = ACTION_ROAMING;
@@ -831,7 +831,7 @@ void CAIMobDummy::ActionSpawn()
         // Generate a random level between min and max level
         if (m_PMob->m_maxLevel != m_PMob->m_minLevel)
         {
-            level += WELL512::GetRandomNumber(0,m_PMob->m_maxLevel - m_PMob->m_minLevel);
+            level += dsprand::GetRandomNumber(0,m_PMob->m_maxLevel - m_PMob->m_minLevel);
         }
 
         m_PMob->SetMLevel(level);
@@ -843,7 +843,7 @@ void CAIMobDummy::ActionSpawn()
 
         if (m_PMob->getMobMod(MOBMOD_MUG_GIL) == 0)
         {
-            uint32 purse = m_PMob->GetRandomGil() / ((WELL512::GetRandomNumber(4,7)));
+            uint32 purse = m_PMob->GetRandomGil() / ((dsprand::GetRandomNumber(4,7)));
             if(purse == 0)
                 purse = m_PMob->GetRandomGil();
             m_PMob->setMobMod(MOBMOD_MUG_GIL, purse);
@@ -1451,7 +1451,7 @@ void CAIMobDummy::ActionMagicCasting()
 void CAIMobDummy::ActionMagicFinish()
 {
     m_LastActionTime = m_Tick;
-    m_LastMagicTime = m_Tick - WELL512::GetRandomNumber(m_PMob->getBigMobMod(MOBMOD_MAGIC_COOL) / 2);
+    m_LastMagicTime = m_Tick - dsprand::GetRandomNumber(m_PMob->getBigMobMod(MOBMOD_MAGIC_COOL) / 2);
     m_DeaggroTime = m_Tick;
 
     m_PMagicState->FinishSpell();
@@ -1620,7 +1620,7 @@ void CAIMobDummy::ActionAttack()
         FinishAttack();
         return;
     }
-    else if (m_Tick >= m_LastSpecialTime && WELL512::GetRandomNumber(100) < m_PMob->TPUseChance())
+    else if (m_Tick >= m_LastSpecialTime && dsprand::GetRandomNumber(100) < m_PMob->TPUseChance())
     {
         m_ActionType = ACTION_MOBABILITY_START;
         ActionAbilityStart();
@@ -1676,7 +1676,7 @@ void CAIMobDummy::ActionAttack()
             if (m_CanStandback && currentDistance > m_PMob->m_ModelSize)
             {
                 uint16 halfStandback = (float)m_PMob->getBigMobMod(MOBMOD_STANDBACK_TIME)/3;
-                m_LastStandbackTime = m_Tick + m_PMob->getBigMobMod(MOBMOD_STANDBACK_TIME) - WELL512::GetRandomNumber(halfStandback);
+                m_LastStandbackTime = m_Tick + m_PMob->getBigMobMod(MOBMOD_STANDBACK_TIME) - dsprand::GetRandomNumber(halfStandback);
                 m_CanStandback = false;
             }
 
@@ -1852,7 +1852,7 @@ void CAIMobDummy::ActionAttack()
                         Action.messageID = 32;
                         isDodge = true;
                     }
-                    else if ((WELL512::GetRandomNumber(100) < battleutils::GetHitRate(m_PMob, m_PBattleTarget)) &&
+                    else if ((dsprand::GetRandomNumber(100) < battleutils::GetHitRate(m_PMob, m_PBattleTarget)) &&
                         !m_PBattleTarget->StatusEffectContainer->HasStatusEffect(EFFECT_ALL_MISS))
                     {
                         if (attackutils::IsParried(m_PMob, m_PBattleTarget))
@@ -1893,7 +1893,7 @@ void CAIMobDummy::ActionAttack()
                                         naturalh2hDMG = (float)(m_PBattleTarget->GetSkill(SKILL_H2H) * 0.11f) + 3;
                                     }
 
-                                    isCritical = (WELL512::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob, false));
+                                    isCritical = (dsprand::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob, false));
                                     float DamageRatio = battleutils::GetDamageRatio(m_PBattleTarget, m_PMob, isCritical, 0);
                                     damage = (int32)((m_PBattleTarget->GetMainWeaponDmg() + naturalh2hDMG + battleutils::GetFSTR(m_PBattleTarget, m_PMob, SLOT_MAIN)) * DamageRatio);
                                     Action.spikesParam = battleutils::TakePhysicalDamage(m_PBattleTarget, m_PMob, damage, false, SLOT_MAIN, 1, nullptr, true, false, true);
@@ -1936,11 +1936,11 @@ void CAIMobDummy::ActionAttack()
                                 seiganChance = dsp_cap(seiganChance, 0, 100);
                                 seiganChance /= 4;
                             }
-                            if ((WELL512::GetRandomNumber(100) < (m_PBattleTarget->getMod(MOD_COUNTER) + meritCounter) || WELL512::GetRandomNumber(100) < seiganChance) &&
-                                isFaceing(m_PBattleTarget->loc.p, m_PMob->loc.p, 40) && WELL512::GetRandomNumber(100) < battleutils::GetHitRate(m_PBattleTarget, m_PMob))
+                            if ((dsprand::GetRandomNumber(100) < (m_PBattleTarget->getMod(MOD_COUNTER) + meritCounter) || dsprand::GetRandomNumber(100) < seiganChance) &&
+                                isFaceing(m_PBattleTarget->loc.p, m_PMob->loc.p, 40) && dsprand::GetRandomNumber(100) < battleutils::GetHitRate(m_PBattleTarget, m_PMob))
                             {
                                 isCountered = true;
-                                isCritical = (WELL512::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob,false));
+                                isCritical = (dsprand::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob,false));
                             }
                             else if (m_PBattleTarget->StatusEffectContainer->HasStatusEffect(EFFECT_PERFECT_COUNTER))
                             { //Perfect Counter only counters hits that normal counter misses, always critical, can counter 1-3 times before wearing
@@ -1950,7 +1950,7 @@ void CAIMobDummy::ActionAttack()
                             }
                             else
                             {
-                                isCritical = ( WELL512::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PMob, m_PBattleTarget,false) );
+                                isCritical = ( dsprand::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PMob, m_PBattleTarget,false) );
 
                                 if (m_PMob->StatusEffectContainer->HasStatusEffect(EFFECT_MIGHTY_STRIKES,0))
                                 {
@@ -2044,7 +2044,7 @@ void CAIMobDummy::ActionAttack()
                                         naturalh2hDMG = (float)(m_PBattleTarget->GetSkill(SKILL_H2H) * 0.11f) + 3;
                                     }
 
-                                    isCritical = (WELL512::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob, false));
+                                    isCritical = (dsprand::GetRandomNumber(100) < battleutils::GetCritHitRate(m_PBattleTarget, m_PMob, false));
                                     float DamageRatio = battleutils::GetDamageRatio(m_PBattleTarget, m_PMob, isCritical, 0);
                                     damage = (int32)((m_PBattleTarget->GetMainWeaponDmg() + naturalh2hDMG + battleutils::GetFSTR(m_PBattleTarget, m_PMob, SLOT_MAIN)) * DamageRatio);
                                     Action.spikesParam = battleutils::TakePhysicalDamage(m_PBattleTarget, m_PMob, damage, false, SLOT_MAIN, 1, nullptr, true, false, true);
@@ -2099,7 +2099,7 @@ void CAIMobDummy::ActionAttack()
             m_DeaggroTime = m_Tick;
         }
     }
-    else if (m_Tick >= m_LastSpecialTime && WELL512::GetRandomNumber(100) < m_PMob->TPUseChance())
+    else if (m_Tick >= m_LastSpecialTime && dsprand::GetRandomNumber(100) < m_PMob->TPUseChance())
     {
         // not in range to attack my target
         // so try an other tp move
@@ -2342,7 +2342,7 @@ bool CAIMobDummy::TryCastSpell()
     {
 
         m_firstSpell = false;
-        m_LastMagicTime = m_Tick - m_PMob->getBigMobMod(MOBMOD_MAGIC_COOL) + WELL512::GetRandomNumber(3000,8000);
+        m_LastMagicTime = m_Tick - m_PMob->getBigMobMod(MOBMOD_MAGIC_COOL) + dsprand::GetRandomNumber(3000,8000);
         return false;
     }
 
@@ -2408,10 +2408,10 @@ void CAIMobDummy::ActionSpecialSkill()
 
     uint32 halfSpecial = (float)m_PMob->getBigMobMod(MOBMOD_SPECIAL_COOL)/2;
 
-    m_LastSpecialTime = m_Tick - WELL512::GetRandomNumber(halfSpecial);
+    m_LastSpecialTime = m_Tick - dsprand::GetRandomNumber(halfSpecial);
 
     // don't use magic right after
-    m_LastMagicTime = m_Tick + m_PMob->getBigMobMod(MOBMOD_MAGIC_COOL) + WELL512::GetRandomNumber(5000) + 4000;
+    m_LastMagicTime = m_Tick + m_PMob->getBigMobMod(MOBMOD_MAGIC_COOL) + dsprand::GetRandomNumber(5000) + 4000;
 
     m_PBattleSubTarget->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_DETECTABLE);
     apAction_t Action;
@@ -2471,12 +2471,12 @@ void CAIMobDummy::CastSpell(uint16 spellId, CBattleEntity* PTarget)
                 if ((m_PSpell->getValidTarget() & TARGET_PLAYER_PARTY))
                 {
                     // chance to target my master
-                    if (m_PMob->PMaster != nullptr && WELL512::GetRandomNumber(2) == 0)
+                    if (m_PMob->PMaster != nullptr && dsprand::GetRandomNumber(2) == 0)
                     {
                         // target my master
                         m_PBattleSubTarget = m_PMob->PMaster;
                     }
-                    else if (WELL512::GetRandomNumber(2) == 0)
+                    else if (dsprand::GetRandomNumber(2) == 0)
                     {
                         // chance to target party
                         m_PTargetFind->reset();
@@ -2485,7 +2485,7 @@ void CAIMobDummy::CastSpell(uint16 spellId, CBattleEntity* PTarget)
                         if (!m_PTargetFind->m_targets.empty())
                         {
                             // randomly select a target
-                            m_PBattleSubTarget = m_PTargetFind->m_targets[WELL512::GetRandomNumber(m_PTargetFind->m_targets.size())];
+                            m_PBattleSubTarget = m_PTargetFind->m_targets[dsprand::GetRandomNumber(m_PTargetFind->m_targets.size())];
 
                             // only target if are on same action
                             if(m_PBattleSubTarget->PBattleAI->GetCurrentAction() != GetCurrentAction())
@@ -2582,7 +2582,7 @@ void CAIMobDummy::FollowPath()
         // if I just finished reset my last action time
         if (!m_PPathFind->IsFollowingPath())
         {
-            m_LastActionTime = m_Tick - WELL512::GetRandomNumber(m_PMob->getBigMobMod(MOBMOD_ROAM_COOL)) + 10000;
+            m_LastActionTime = m_Tick - dsprand::GetRandomNumber(m_PMob->getBigMobMod(MOBMOD_ROAM_COOL)) + 10000;
 
             // i'm a worm pop back up
             if (m_PMob->m_roamFlags & ROAMFLAG_WORM)
@@ -2630,7 +2630,7 @@ void CAIMobDummy::SetupEngage()
     // drg shouldn't use jump right away
     if (m_PMob->GetMJob() == JOB_DRG && m_PMob->getBigMobMod(MOBMOD_SPECIAL_COOL) != 0)
     {
-        m_LastSpecialTime = m_Tick - WELL512::GetRandomNumber(m_PMob->getBigMobMod(MOBMOD_SPECIAL_COOL)) + 5000;
+        m_LastSpecialTime = m_Tick - dsprand::GetRandomNumber(m_PMob->getBigMobMod(MOBMOD_SPECIAL_COOL)) + 5000;
     }
 
     if (m_PMob->m_roamFlags & ROAMFLAG_WORM)
