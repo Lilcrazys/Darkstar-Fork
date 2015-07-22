@@ -1907,6 +1907,63 @@ INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 501, 1, 255); -- Waterj
 INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 173, 1, 255); -- Water 5
 INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 367, 1, 255); -- death
 
+-- Cath_Palug 433
+INSERT INTO `mob_spell_lists` VALUES ('Cath_Palug', 433, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Cath_Palug', 433, 219, 1, 255); -- Comet
+
+-- Aello_Handmaiden 434
+INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 157, 1, 255); -- Aero 4
+INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 186, 1, 255); -- Aeroga 3
+INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 129, 1, 255); -- shellra 5
+INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 134, 1, 255); -- protectra 5
+
+-- Xuan_Wu 435
+INSERT INTO `mob_spell_lists` VALUES ('Xuan_Wu', 435, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Xuan_Wu', 435, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Xuan_Wu', 435, 501, 1, 255); -- Waterja
+INSERT INTO `mob_spell_lists` VALUES ('Xuan_Wu', 435, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Xuan_Wu', 435, 213, 1, 255); -- flood_ii
+INSERT INTO `mob_spell_lists` VALUES ('Xuan_Wu', 435, 229, 1, 255); -- Poisionga 5
+
+-- Zhu_Que 436
+INSERT INTO `mob_spell_lists` VALUES ('Zhu_Que', 436, 147, 1, 255); -- fire  4
+INSERT INTO `mob_spell_lists` VALUES ('Zhu_Que', 436, 496, 1, 255); -- fireja
+INSERT INTO `mob_spell_lists` VALUES ('Zhu_Que', 436, 177, 1, 255); -- Firega 4
+INSERT INTO `mob_spell_lists` VALUES ('Zhu_Que', 436, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Zhu_Que', 436, 197, 1, 255); -- flare_ii
+
+-- Qing_Long 437
+INSERT INTO `mob_spell_lists` VALUES ('Qing_Long', 437, 207, 1, 255); -- tornado_ii
+INSERT INTO `mob_spell_lists` VALUES ('Qing_Long', 437, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Qing_Long', 437, 157, 1, 255); -- Aero 4
+INSERT INTO `mob_spell_lists` VALUES ('Qing_Long', 437, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Qing_Long', 437, 499, 1, 255); -- Aeroja
+INSERT INTO `mob_spell_lists` VALUES ('Qing_Long', 437, 359, 1, 255); -- silencega
+
+-- Bai_Hu 438
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 112, 1, 255); -- Flash
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 22, 1, 255); -- Holy II
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 35, 1, 255); -- Diaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 41, 1, 255); -- Banihshga 3
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 31, 1, 255); -- Banish 4
+INSERT INTO `mob_spell_lists` VALUES ('Bai_Hu', 438, 32, 1, 255); -- Banish 5
+-- Uptala 439
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 229, 1, 255); -- Poisonga 5
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 286, 1, 255); -- addle
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 500, 1, 255); -- thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 356, 1, 255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 357, 1, 255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 360, 1, 255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 157, 1, 255); -- Aero 4
+INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 158, 1, 255); -- Aero 5
 
 -- list IDs 433 - 589 available for use! please use'em!
 
