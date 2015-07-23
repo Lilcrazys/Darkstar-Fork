@@ -693,7 +693,7 @@ namespace battleutils
                         Action->spikesEffect = (SUBEFFECT)0;
                         return false;
                     }
-                    else if (WELL512::GetRandomNumber(100) <= 3)
+                    else if (dsprand::GetRandomNumber(100) <= 3)
                     {
                         Action->addEffectMessage = 164; // KO message.
                         PAttacker->addHP(-PAttacker->health.hp);
@@ -855,7 +855,7 @@ namespace battleutils
 
             return true;
         }
-        else if (!(((CMobEntity*)PAttacker)->m_Type & MOBTYPE_NOTORIOUS) && (WELL512::GetRandomNumber(100) <= (chance*0.1) + lvlDiff))
+        else if (!(((CMobEntity*)PAttacker)->m_Type & MOBTYPE_NOTORIOUS) && (dsprand::GetRandomNumber(100) <= (chance*0.1) + lvlDiff))
         {
             if (spikesType == SUBEFFECT_DEATH_SPIKES)
             {
