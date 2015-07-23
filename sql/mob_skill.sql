@@ -5757,10 +5757,10 @@ INSERT INTO `mob_skill` VALUES (223,1179,223,'VW_Horror_Cloud',1,7.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (229,1179,1911,'VW_Blood_Saber',0,25.0,2000,1500,4,0,0,0);
 
 -- Uptala (1180)
-INSERT INTO `mob_skill` VALUES (2461,1180,1902,'VW_Yaksha_bliss',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2460,1180,1903,'VW_Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2459,1180,1901,'VW_Yaksha_damnation',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2458,1180,1900,'VW_Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2461,1180,1902,'Uptala_Yaksha_bliss',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2460,1180,1903,'Uptala_Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2459,1180,1901,'Uptala_Yaksha_damnation',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2458,1180,1900,'Uptala_Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2501,1180,1903,'Sakra_storm',1,18.0,2000,1000,4,0,0,3);
 
 -- Vrtra
