@@ -61,7 +61,6 @@ function onMobFight(mob, target)
     if (os.time() - mob:getLocalVar("depopTimer") > 1800) then
         -- despawn in 30 min
         DespawnMob(mob:getID());
-        break;
     end
 
     if (mob:getLocalVar("Paramount_Harpeia_2hr_Used") ~= nil) then

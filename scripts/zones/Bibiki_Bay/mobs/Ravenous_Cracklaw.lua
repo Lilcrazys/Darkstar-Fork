@@ -25,10 +25,6 @@ function onMobInitialize(mob)
 
     -- addMod
     mob:addMod(MOD_ACC,100);
-end;
-
-    -- addMod
-    mob:addMod(MOD_ACC,100);
 
     -- setMod
     mob:setMod(MOD_REGEN, 50);
