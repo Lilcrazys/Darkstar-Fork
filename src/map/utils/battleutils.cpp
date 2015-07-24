@@ -662,7 +662,7 @@ namespace battleutils
                     break;
 
                 case SPIKE_REPRISAL:
-                    if (Action->reaction == REACTION_BLOCK || PDefender->objtype != TYPE_MOB) // Don't trigger this on mobs!
+                    if (Action->reaction == REACTION_BLOCK && PDefender->objtype != TYPE_MOB) // Don't trigger this on mobs!
                     {
                         PAttacker->addHP(-Action->spikesParam);
 
@@ -855,7 +855,7 @@ namespace battleutils
 
             return true;
         }
-        else if (!(((CMobEntity*)PAttacker)->m_Type & MOBTYPE_NOTORIOUS) && (dsprand::GetRandomNumber(100) <= (chance*0.1) + lvlDiff))
+        else if ((dsprand::GetRandomNumber(100) <= (chance + lvlDiff)) && (!(((CMobEntity*)PAttacker)->m_Type & MOBTYPE_NOTORIOUS)))
         {
             if (spikesType == SUBEFFECT_DEATH_SPIKES)
             {
