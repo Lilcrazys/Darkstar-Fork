@@ -5648,19 +5648,28 @@ INSERT INTO `mob_skill` VALUES (2257,1161,188,'VW_Mega_Scissors',1,10.0,2000,150
 INSERT INTO `mob_skill` VALUES (2256,1161,186,'VW_Venom_Shower',1,20.0,2000,1500,4,0,0,0);
 
 -- Pekapeka (1162)
-INSERT INTO `mob_skill` VALUES (195,1162,195,'Splash_Breath',4,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (197,1162,197,'Water_Wall',0,7.0,2000,1500,1,0,0,0); -- 100% Defense Boost. 1 minute duration
-INSERT INTO `mob_skill` VALUES (194,1162,194,'Aqua_Ball',2,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (385,1162,973,'Recoil_Dive',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (202,1162,202,'Ink_Jet',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (203,1162,203,'Hard_Membrane',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (204,1162,204,'Cross_Attack',0,7.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (205,1162,205,'Regeneration',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (206,1162,206,'Maelstrom',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (207,1162,207,'Whirlwind',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (200,1162,200,'Tentacle',0,7.0,2000,1500,4,0,0,0);
 
 -- Moki (1163)
-INSERT INTO `mob_skill` VALUES (202,1163,202,'Ink_Jet',4,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (203,1163,203,'Hard_Membrane',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (204,1163,204,'Cross_Attack',0,7.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (205,1163,205,'Regeneration',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (206,1163,206,'Maelstrom',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (207,1163,207,'Whirlwind',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (200,1163,200,'Tentacle',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (195,1163,195,'Splash_Breath',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (197,1163,197,'Water_Wall',0,7.0,2000,1500,1,0,0,0); -- 100% Defense Boost. 1 minute duration
+INSERT INTO `mob_skill` VALUES (194,1163,194,'Aqua_Ball',2,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (385,1163,973,'Recoil_Dive',4,10.0,2000,1500,4,0,0,0);
+
+-- Pekapeka (1162)
+INSERT INTO `mob_skill` VALUES (202,1162,202,'Ink_Jet',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (203,1162,203,'Hard_Membrane',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (204,1162,204,'Cross_Attack',0,7.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (205,1162,205,'Regeneration',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (206,1162,206,'Maelstrom',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (207,1162,207,'Whirlwind',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (200,1162,200,'Tentacle',0,7.0,2000,1500,4,0,0,0);
 
 -- Cath_Palug (1164)
 INSERT INTO `mob_skill` VALUES (396,1164,396,'VW_Blaster',0,12.0,2000,1500,4,0,0,0);
