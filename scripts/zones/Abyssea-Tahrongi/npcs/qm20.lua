@@ -40,7 +40,7 @@ function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
     if (csid == 1020 and option == 1) then
-        SpawnMob(16961947, 300):updateEnmity(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+        SpawnMob(16961947, 300):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
         player:delKeyItem(FAT_LINED_COCKATRICE_SKIN);
         player:delKeyItem(SODDEN_SANDWORM_HUSK);
         player:delKeyItem(LUXURIANT_MANTICORE_MANE);

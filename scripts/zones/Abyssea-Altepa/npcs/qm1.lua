@@ -15,7 +15,7 @@ function onTrade(player,npc,trade)
         player:startEvent(1010, 3236 ,3230); -- Inform payer what items they need.
     elseif (GetMobAction(17670565) == ACTION_NONE) then -- mob not already spawned from this
         if (trade:hasItemQty(3236,1) and trade:hasItemQty(3230,1) and trade:getItemCount() == 2) then -- Player has all the required items.
-            SpawnMob(17670565, 300):updateEnmity(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+            SpawnMob(17670565, 300):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
             player:tradeComplete();
         end
     end
