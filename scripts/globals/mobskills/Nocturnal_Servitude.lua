@@ -1,6 +1,6 @@
 ---------------------------------------------
 -- Nocturnal Servitude
--- 
+--
 -- Description: Inflicts charm on all targets in an area of effect.
 ---------------------------------------------
 require("scripts/globals/settings");
@@ -13,14 +13,19 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_CHARM_I;
+	local typeEffect = EFFECT_CHARM_I;
+	local power = 0;
 
-    if (target:isPC()) then
-        target:addStatusEffect(EFFECT_COSTUME,257,0,60);
+    if (not target:isPC()) then
+        skill:setMsg(MSG_MISS);
+        return typeEffect;
     end
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 60));
-    mob:resetEnmity(target);
+    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 150)
+    if (msg == MSG_ENFEEB_IS) then
+        mob:charm(target);
+    end
+    skill:setMsg(msg);
 
     return typeEffect;
 end;

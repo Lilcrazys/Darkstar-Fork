@@ -202,10 +202,11 @@ INSERT INTO `mob_skill` VALUES (63,503,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES (470,503,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2318,503,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1076,503,63,'EE_Extremely_Bad_Breath',4,15.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
+INSERT INTO `mob_skill` VALUES (2319,503,63,'Tainting_Breath',4,15.0,2000,1500,4,0,0,0);
 
 
 -- Cirrate Christelle
--- INSERT INTO `mob_skill` VALUES (1351,?,63,'Fragrant Breath',4,30.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1351,?,63,'Fragrant_Breath',4,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1349,?,63,'Miasmic_Breath',4,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1353,?,63,'Putrid_Breath',4,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1355,?,?,'Vampiric_Lash',4,7.0,2000,1500,4,0,0,0);
@@ -3057,6 +3058,7 @@ INSERT INTO `mob_skill` VALUES (1440,506,1167,'Seismic_Tail',1,18.0,2000,1500,4,
 INSERT INTO `mob_skill` VALUES (1437,506,1164,'Gnash',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1442,506,1166,'Leeching_Current',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1721,506,1164,'Deathgnash',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2383,506,1166,'Mayhem_Lantern',1,18.0,2000,1000,4,0,0,0);
 
 
 -- Tinnin (313)
@@ -5445,6 +5447,7 @@ INSERT INTO `mob_skill` VALUES (275,1130,901,'VW_Silence_Seal',1,25.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (276,1130,902,'VW_Envoutement',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (274,1130,1987,'VW_Final_Retribution',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2382,1130,1992,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1073,1130,903,'Gala_Macabre',1,10.0,2000,2000,4,0,0,0);
 
 -- Kaggen (1131)
 INSERT INTO `mob_skill` VALUES (2360,1131,1922,'Mantis_Melee',0,7.0,2000,0,4,16,0,0);
@@ -5470,6 +5473,7 @@ INSERT INTO `mob_skill` VALUES (2436,1133,1812,'VW_Royal_decree',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2519,1133,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1133,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1133,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2444,1133,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
 
 -- Lancing_Lamorak (1134)
 INSERT INTO `mob_skill` VALUES (82,1134,82,'VW_Power_Attack_Beetle',4,30.0,2000,1500,4,0,0,3);
@@ -5623,7 +5627,7 @@ INSERT INTO `mob_skill` VALUES (66,1157,66,'1000_Needles',1,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES (1965,1158,97,'Hell_Scissors',0,7.0,2000,3500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (465,1158,97,'Stasis',0,9.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (466,1158,98,'Venom_Storm',1,40.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (467,1158,99,'Earthbreaker_Custom',1,20.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (467,1158,99,'Earthbreaker',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (98,1158,98,'VW_Wild_Rage',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (99,1158,99,'VW_Earth_Pounder',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2503,1158,99,'Telsonic_Tempest',1,40.0,2000,1500,4,0,0,0); -- spawns pets
@@ -5674,7 +5678,7 @@ INSERT INTO `mob_skill` VALUES (227,1165,291,'VW_Charged_Whisker',1,12.5,2000,15
 
 -- Modron (1166)
 INSERT INTO `mob_skill` VALUES (72,1166,72,'VW_Drill_Branch',0,7.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (73,1166,73,'VW_Pinecone_Bomb',0,23.5,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (73,1166,73,'VW_Pinecone_Bomb',1,23.5,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (75,1166,75,'VW_Leafstorm',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (76,1166,76,'Entangle',0,7.0,2000,1500,4,0,0,0);
 
@@ -5726,7 +5730,7 @@ INSERT INTO `mob_skill` VALUES (147,1174,147,'VW_Stormwind',1,15.0,2000,1500,4,0
 -- Qing_Long (1175)
 INSERT INTO `mob_skill` VALUES (558,1175,486,'Deadly_Drive_Custom',0,10.0,2000,1500,4,0,0,7);
 INSERT INTO `mob_skill` VALUES (559,1175,487,'Wind_Wall',0,12.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (560,1175,488,'Fang_Rush_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (560,1175,488,'Fang_Rush',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (561,1175,489,'VW_Dread_Shriek',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (562,1175,490,'Tail_Crush',0,7.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (565,1175,493,'Radiant_Breath',4,15.0,2000,1500,4,0,0,0);

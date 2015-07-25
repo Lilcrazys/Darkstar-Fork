@@ -12,10 +12,21 @@ function onMobSkillCheck(target,mob,skill)
 	return 0;
 end;
 
+
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_CHARM_I;
+	local power = 0;
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 0, 0, 90));
+    if (not target:isPC()) then
+        skill:setMsg(MSG_MISS);
+        return typeEffect;
+    end
 
-	return typeEffect;
+    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 150)
+    if (msg == MSG_ENFEEB_IS) then
+        mob:charm(target);
+    end
+    skill:setMsg(msg);
+
+    return typeEffect;
 end;
