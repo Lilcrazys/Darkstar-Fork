@@ -1252,6 +1252,9 @@ INSERT INTO `item_mods` VALUES (11866, 288, 3); --
 INSERT INTO `item_mods` VALUES (11866, 384, 20); --
 INSERT INTO `item_mods` VALUES (11866, 8, 13); --
 INSERT INTO `item_mods` VALUES (11866, 9, 13); --
+INSERT INTO `item_mods` VALUES (11867, 1, 51); -- def
+INSERT INTO `item_mods` VALUES (11867, 13, 17); -- mnd
+INSERT INTO `item_mods` VALUES (11867, 394, -15); -- WHM spellcasting
 INSERT INTO `item_mods` VALUES (11872, 23, 12); --
 INSERT INTO `item_mods` VALUES (11872, 25, 12); --
 INSERT INTO `item_mods` VALUES (11872, 289, -15); --
