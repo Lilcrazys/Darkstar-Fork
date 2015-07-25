@@ -15,7 +15,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_CHARM_I;
 
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 10, 0, 90));
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 0, 0, 90));
 
 	return typeEffect;
 end;
