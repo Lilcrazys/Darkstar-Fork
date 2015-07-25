@@ -18,15 +18,19 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 1;
-    local dmgmod = 2.3;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
-    local typeEffect = EFFECT_CHARM;
+	local typeEffect = EFFECT_CHARM_I;
+	local power = 0;
 
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 0, 0, 60);
-    target:delHP(dmg);
+    if (not target:isPC()) then
+        skill:setMsg(MSG_MISS);
+        return typeEffect;
+    end
 
-    return dmg;
+    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 150)
+    if (msg == MSG_ENFEEB_IS) then
+        mob:charm(target);
+    end
+    skill:setMsg(msg);
+
+    return typeEffect;
 end;

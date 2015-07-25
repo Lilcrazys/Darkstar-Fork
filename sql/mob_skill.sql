@@ -202,10 +202,11 @@ INSERT INTO `mob_skill` VALUES (63,503,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skill` VALUES (470,503,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2318,503,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1076,503,63,'EE_Extremely_Bad_Breath',4,15.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
+INSERT INTO `mob_skill` VALUES (2319,503,63,'Tainting_Breath',4,15.0,2000,1500,4,0,0,0);
 
 
 -- Cirrate Christelle
--- INSERT INTO `mob_skill` VALUES (1351,?,63,'Fragrant Breath',4,30.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (1351,?,63,'Fragrant_Breath',4,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1349,?,63,'Miasmic_Breath',4,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1353,?,63,'Putrid_Breath',4,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1355,?,?,'Vampiric_Lash',4,7.0,2000,1500,4,0,0,0);
@@ -5446,6 +5447,7 @@ INSERT INTO `mob_skill` VALUES (275,1130,901,'VW_Silence_Seal',1,25.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (276,1130,902,'VW_Envoutement',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (274,1130,1987,'VW_Final_Retribution',1,20.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2382,1130,1992,'VW_Hadal_Summons',1,25.0,2000,1500,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (1073,1130,903,'Gala_Macabre',1,10.0,2000,2000,4,0,0,0);
 
 -- Kaggen (1131)
 INSERT INTO `mob_skill` VALUES (2360,1131,1922,'Mantis_Melee',0,7.0,2000,0,4,16,0,0);
@@ -5471,6 +5473,7 @@ INSERT INTO `mob_skill` VALUES (2436,1133,1812,'VW_Royal_decree',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2519,1133,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1133,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1133,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2444,1133,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
 
 -- Lancing_Lamorak (1134)
 INSERT INTO `mob_skill` VALUES (82,1134,82,'VW_Power_Attack_Beetle',4,30.0,2000,1500,4,0,0,3);

@@ -12,12 +12,19 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_CHARM_I;
-	local dmgmod = 3;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*2.5,ELE_WATER,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_WIPE_SHADOWS);
+	local power = 0;
 
-	MobStatusEffectMove(mob, target, typeEffect, 0, 0, 90);
-	target:delHP(dmg);
+    if (not target:isPC()) then
+        skill:setMsg(MSG_MISS);
+        return typeEffect;
+    end
 
-	return dmg;
+    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 150)
+    if (msg == MSG_ENFEEB_IS) then
+        mob:charm(target);
+    end
+    skill:setMsg(msg);
+
+    return typeEffect;
 end;
+
