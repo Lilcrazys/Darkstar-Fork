@@ -3170,3 +3170,86 @@ REPLACE INTO `mob_spawn_points` VALUES (17171004,'Kalasutrax','Kalasutrax',90444
 REPLACE INTO `mob_spawn_points` VALUES (17199612,'Ig-Alima','Ig-Alima',90445,720,-8.078,195,0);
 -- Bubu
 REPLACE INTO `mob_spawn_points` VALUES (17261049,'Botulus_rex','Botulus Rex',90446,80,0.049,-195,0);
+-- Yuhtunga Jungle: Holy Moly
+REPLACE INTO `npc_list` VALUES (17281663,'Planar_Rift','Planar Rift',0,-242,0,405,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17281497,'Holy_Moly','Holy Moly',90450,-242,0,405,254);
+INSERT INTO `mob_spawn_points` VALUES (17281498,'Moly','Moly',90451,-243,0,405,254);
+INSERT INTO `mob_spawn_points` VALUES (17281499,'Moly','Moly',90451,-244,0,405,254);
+INSERT INTO `mob_spawn_points` VALUES (17281500,'Moly','Moly',90451,-245,0,405,254);
+INSERT INTO `mob_spawn_points` VALUES (17281501,'Moly','Moly',90451,-245,0,405,254);
+
+-- Temple of Uggalepih: Neith
+REPLACE INTO `npc_list` VALUES (17429018,'Planar_Rift','Planar Rift',0,180.100,0.001,-65,1,40,40,0,5,100,0,3,0x00006f0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17428818,'Neith','Neith',90452,180,0,293.694,254);
+INSERT INTO `mob_spawn_points` VALUES (17428819,'Neiths_Bobbin','Neith\'s Bobbin',90453,181,0,-65,254);
+INSERT INTO `mob_spawn_points` VALUES (17428820,'Neiths_Bobbin','Neith\'s Bobbin',90453,182,0,-65,254);
+INSERT INTO `mob_spawn_points` VALUES (17428821,'Neiths_Bobbin','Neith\'s Bobbin',90453,183,0,-65,254);
+INSERT INTO `mob_spawn_points` VALUES (17428822,'Neiths_Bobbin','Neith\'s Bobbin',90453,184,0,-65,254);
+INSERT INTO `mob_spawn_points` VALUES (17428823,'Neiths_Bobbin','Neith\'s Bobbin',90453,185,0,-65,254);
+INSERT INTO `mob_spawn_points` VALUES (17428824,'Neiths_Bobbin','Neith\'s Bobbin',90453,186,0,-65,254);
+
+-- Ifrit's Cauldron: Ildebrann
+REPLACE INTO `npc_list` VALUES (17617259,'Planar_Rift','Planar Rift',0,8.217,3.526,293.694,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17617172,'Ildebrann','Ildebrann',90454,8.217,3.526,293.694,254);
+REPLACE INTO `mob_spawn_points` VALUES (17617173,'Hraun_Dragon','Hraun Dragon',90455,8.217,3.526,293.694,254);
+REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',90455,9.217,3.526,293.694,254);
+
+-- Western Altepa Desert: Sabotender Campeador
+REPLACE INTO `npc_list` VALUES (17289804,'Planar_Rift','Planar Rift',0,554,0.699,260,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17289658,'Sabotender_Campeador','Sabotender Campeador',90456,554,0,260,254);
+INSERT INTO `mob_spawn_points` VALUES (17289659,'Sabotender_Mercenario','Sabotender Mercenario',90457,555,0,260,254);
+INSERT INTO `mob_spawn_points` VALUES (17289660,'Sabotender_Mercenario','Sabotender Mercenario',90457,556,0,260,254);
+INSERT INTO `mob_spawn_points` VALUES (17289661,'Sabotender_Mercenario','Sabotender Mercenario',90457,557,0,260,254);
+INSERT INTO `mob_spawn_points` VALUES (17289662,'Sabotender_Mercenario','Sabotender Mercenario',90457,558,0,260,254);
+
+-- Quicksand Caves: Malleator Maurok
+REPLACE INTO `npc_list` VALUES (17629760,'Planar_Rift','Planar Rift',0,-85,0.001,-40,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17629646,'Malleator_Maurok','Malleator Maurok',90458,-85,0,-40,254);
+INSERT INTO `mob_spawn_points` VALUES (17629647,'Peon_Pounder','Peon Pounder',90459,-84,0,-40,254);
+INSERT INTO `mob_spawn_points` VALUES (17629648,'Peon_Pounder','Peon Pounder',90459,-86,0,-40,254);
+
+-- Kuftal Tunnel: Tangaroa
+REPLACE INTO `npc_list` VALUES (17490317,'Planar_Rift','Planar Rift',0,130,0,5,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17490244,'Tangaroa','Tangaroa',90460,127.792,-0.52,5,215);
+REPLACE INTO `mob_spawn_points` VALUES (17490245,'Koura','Koura',90461,129.292,-0.017,6,59);
+REPLACE INTO `mob_spawn_points` VALUES (17490246,'PekaPeka','Pekapeka',90462,127.949,0.10,7,40);
+REPLACE INTO `mob_spawn_points` VALUES (17490247,'Moki','Moki',90463,128.642,-0.003,8,54);
+
+-- The Sanctuary of Zi'Tah: Cath Palug
+REPLACE INTO `npc_list` VALUES (17273426,'Planar_Rift','Planar Rift',0,-90,0.6,-312,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17273318,'Cath_palug','Cath Palug',90464,-89.08,-0.211,-312.308,45);
+REPLACE INTO `mob_spawn_points` VALUES (17273319,'Grwan','Grwnan',90465,-90.164,-0.518,-313.011,251);
+REPLACE INTO `mob_spawn_points` VALUES (17273320,'Grwan','Grwnan',90465,-90.599,-0.508,-311.7,251);
+
+-- The Boyahda Tree: Modron
+REPLACE INTO `npc_list` VALUES (17404397,'Planar_Rift','Planar Rift',0,318,9,-26,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17404339,'Modron','Modron',90466,318,9,-26,254);
+INSERT INTO `mob_spawn_points` VALUES (17404340,'Modrons_Druid','Modron\'s Druid',90467,319,9,-26,254);
+INSERT INTO `mob_spawn_points` VALUES (17404341,'Modrons_Druid','Modron\'s Druid',90467,317,9,-26,254);
+
+-- Ro'Maeve: Mimic King
+REPLACE INTO `npc_list` VALUES (17277245,'Planar_Rift','Planar Rift',0,114,-8,47,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17277138,'Mimic_King','Mimic King',90470,114,-8,47,254);
+INSERT INTO `mob_spawn_points` VALUES (17277139,'Mimic_Jester','Mimic Jester',90469,113,-8,47,254);
+INSERT INTO `mob_spawn_points` VALUES (17277140,'Mimic_Mage','Mimic Mage',90468,115,-8,47,254);
+
+-- Ru'Aun Gardens: Aello
+REPLACE INTO `npc_list` VALUES (17310109,'Planar_Rift','Planar Rift',0,77,-40.2,-460,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17309993,'Aello','Aello',90471,77,-40.7,-460.042,196);
+REPLACE INTO `mob_spawn_points` VALUES (17309994,'Aellos_Handmaiden','Aello\'s Handmaiden',90472,75.755,-40.7,-462.634,106);
+REPLACE INTO `mob_spawn_points` VALUES (17309995,'Aellos_Handmaiden','Aello\'s Handmaiden',90472,75.716,-40.7,-463.924,127);
+REPLACE INTO `mob_spawn_points` VALUES (17309996,'Aellos_Handmaiden','Aello\'s Handmaiden',90472,76.129,-40.7,-463.25,117);
+
+-- The Shrine of Ru'Avitau: Qilin
+REPLACE INTO `npc_list` VALUES (17506817,'Planar_Rift','Planar Rift',0,68,-15.424,68,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17506681,'Qilin','Qilin',90477,69.649,-15.924,69.738,56);
+REPLACE INTO `mob_spawn_points` VALUES (17506682,'BaiHu','Bai Hu',90476,67.72,-15.924,68.997,205);
+REPLACE INTO `mob_spawn_points` VALUES (17506683,'QingLong','Qing Long',90475,70.563,-15.924,68.785,64);
+REPLACE INTO `mob_spawn_points` VALUES (17506684,'ZhuQue','Zhu Que',90474,70.364,-15.924,65.639,37);
+REPLACE INTO `mob_spawn_points` VALUES (17506685,'XuanWu','Xuan Wu',90473,67.539,-15.924,67.72,31);
+
+-- Ve'Lugannon Palace: Uptala
+REPLACE INTO `npc_list` VALUES (17502696,'Planar_Rift','Planar Rift',0,-115,0.569,-388,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,'2','ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17502571,'Uptala','Uptala',90480,-115.352,0.035,-388.774,131);
+REPLACE INTO `mob_spawn_points` VALUES (17502572,'Bisa','Bisa',90479,-112.754,-0.113,-388.136,236);
+INSERT INTO `mob_spawn_points` VALUES (17502573,'Trna','Trna',90478,-113.754,-0.113,-389.136,236);
