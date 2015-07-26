@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -59,6 +60,19 @@ function onMobFight(mob, target)
     -- if (os.time(t) > depopTime) then
        -- DespawnMob(mob:getID());
     -- end
+end;
+
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,10) > 4) or (target:hasStatusEffect(EFFECT_SILENCE) == true)) then
+        return 0,0,0;
+    else
+        target:addStatusEffect(EFFECT_SILENCE,1,0,10);
+    end
+    return SUBEFFECT_SILENCE,163,EFFECT_SILENCE;
 end;
 
 -----------------------------------

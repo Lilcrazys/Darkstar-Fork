@@ -14,6 +14,7 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -59,6 +60,22 @@ function onMobFight(mob, target)
     -- if (os.time(t) > depopTime) then
        -- DespawnMob(mob:getID());
     -- end
+end;
+
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob,target,damage)
+    if (target:hasStatusEffect(EFFECT_POISON)) then
+        target:delStatusEffect(EFFECT_POISON);
+    end
+
+    duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
+    utils.clamp(duration,1,30);
+    target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
+
+    return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 
 -----------------------------------

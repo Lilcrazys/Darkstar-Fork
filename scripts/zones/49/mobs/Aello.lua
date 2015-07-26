@@ -56,10 +56,28 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-       -- DespawnMob(mob:getID());
-    -- end
+    --[[if (os.time(t) > depopTime) then
+       DespawnMob(mob:getID());
+    end
+    local popTime = mob:getLocalVar("lastPetPop");
+
+    if (os.time() - popTime > 120) then
+        local alreadyPopped = false;
+        for Helper = mob:getID()+1, mob:getID()+3 do
+            if (alreadyPopped == true) then
+                break;
+            else
+                if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
+                    SpawnMob(Helper, 300):updateEnmity(target);
+                    mob:setLocalVar("lastPetPop", os.time());
+                    alreadyPopped = true;
+                end
+            end
+        end
+    end ]]
+
 end;
+
 
 -----------------------------------
 -- onMobDeath

@@ -1,5 +1,5 @@
 ---------------------------------------------------
--- Nosferatus Kiss
+-- Bloody Carress
 -- Steals an enemy's HP. Ineffective against undead.
 ---------------------------------------------------
 
@@ -14,7 +14,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local dmgmod = 15;
+	local dmgmod = 10;
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg(),ELE_DARK,dmgmod,TP_MAB_BONUS,1);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 

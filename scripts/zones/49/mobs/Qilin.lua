@@ -54,11 +54,51 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-       -- DespawnMob(mob:getID());
-    -- end
-end;
+function onMobFight( mob, target )
+
+    --[[if (mob:getBattleTime() ~= 0 and mob:getHPP() < 90) then
+        -- Ensure we have not spawned all pets yet..
+        local XuanWu = mob:getLocalVar("XuanWu");
+        local QingLong = mob:getLocalVar("QingLong");
+        local BaiHu = mob:getLocalVar("BaiHu");
+        local ZhuQue = mob:getLocalVar("ZhuQue");
+
+        if (XuanWu == 1 and QingLong == 1 and BaiHu == 1 and ZhuQue == 1) then
+            return;
+        end
+
+        -- Pick a pet to spawn at random..
+        local ChosenPet = nil;
+        local newVar = nil;
+        repeat
+
+            local rand = math.random( 0, 3 );
+            ChosenPet = 00000000 + rand;
+
+            switch (ChosenPet): caseof {
+                [00000000] = function (x) if ( XuanWu == 1) then ChosenPet = 0; else newVar = "XuanWu";  end end, -- XuanWu
+                [00000000] = function (x) if (QingLong == 1) then ChosenPet = 0; else newVar = "QingLong"; end end, -- QingLong
+                [00000000] = function (x) if (BaiHu == 1) then ChosenPet = 0; else newVar = "BaiHu"; end end, -- BaiHu
+                [00000000] = function (x) if (ZhuQue == 1) then ChosenPet = 0; else newVar = "ZhuQue"; end end, -- ZhuQue
+            }
+
+        until (ChosenPet ~= 0 and ChosenPet ~= nil)
+
+        -- Spawn the pet..
+        local pet = SpawnMob( ChosenPet );
+        pet:updateEnmity( target );
+        pet:setPos( mob:getXPos(), mob:getYPos(), mob:getZPos() );
+
+        mob:setLocalVar(newVar, 1);
+    end
+
+    -- Ensure all spawned pets are doing stuff..
+    for pets = 00000000, 00000000 do
+        if (GetMobAction( pets ) == 16) then
+            GetMobByID( pets ):updateEnmity( target );
+        end
+    end ]]
+end
 
 -----------------------------------
 -- onMobDeath

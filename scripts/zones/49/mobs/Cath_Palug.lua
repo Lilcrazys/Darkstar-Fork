@@ -46,10 +46,13 @@ function onMobEngage(mob, target)
 end;
 
 -----------------------------------
--- onMobWeaponSkill Action
+-- onSpellPrecast
 -----------------------------------
 
-function onMobWeaponSkill(target, mob, skill)
+function onSpellPrecast(mob, spell)
+    local power = math.random(50,150);
+    mob:addStatusEffect(EFFECT_SHOCK_SPIKES,power,0,30);
+    mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
 end;
 
 -----------------------------------
@@ -57,9 +60,26 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-       -- DespawnMob(mob:getID());
-    -- end
+    --[[if (os.time(t) > depopTime) then
+       DespawnMob(mob:getID());
+    end
+    local popTime = mob:getLocalVar("lastPetPop");
+
+    if (os.time() - popTime > 90) then
+        local alreadyPopped = false;
+        for Helper = mob:getID()+1, mob:getID()+2 do
+            if (alreadyPopped == true) then
+                break;
+            else
+                if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
+                    SpawnMob(Helper, 300):updateEnmity(target);
+                    mob:setLocalVar("lastPetPop", os.time());
+                    alreadyPopped = true;
+                end
+            end
+        end
+    end ]]
+
 end;
 
 -----------------------------------

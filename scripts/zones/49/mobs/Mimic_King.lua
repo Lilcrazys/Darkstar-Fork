@@ -13,7 +13,8 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
+    mob:setMobMod(MOBMOD_DRAW_IN, 1);
 end;
 
 -----------------------------------
