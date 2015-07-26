@@ -2495,20 +2495,23 @@ INSERT INTO `item_mods` VALUES (20563, 9, 20); --
 INSERT INTO `item_mods` VALUES (20564, 165, 25); --
 INSERT INTO `item_mods` VALUES (20564, 421, 50); --
 INSERT INTO `item_mods` VALUES (20564, 9, 20); --
-INSERT INTO `item_mods` VALUES (20604, 2, 45); -- HP
-INSERT INTO `item_mods` VALUES (20604, 25, 27); -- Acc
-INSERT INTO `item_mods` VALUES (20604, 289, 9); -- Subtle Blow
-INSERT INTO `item_mods` VALUES (20604, 302, 4); -- Triple Att
-INSERT INTO `item_mods` VALUES (20604, 68, 27); -- Eva
+INSERT INTO `item_mods` VALUES (20604, 2, 45); --  Hit Points +45
+INSERT INTO `item_mods` VALUES (20604, 25, 27); --  Accuracy +27
+INSERT INTO `item_mods` VALUES (20604, 68, 27);  --  Evasion +27
+INSERT INTO `item_mods` VALUES (20604, 302, 4); --  Triple Attack +4%
+INSERT INTO `item_mods` VALUES (20604, 289, 9); --  Subtle Blow +9
+INSERT INTO `item_mods` VALUES (20604, 11, 15); --  Agility +15
 INSERT INTO `item_mods` VALUES (20610, 11, 12); -- Agi
 INSERT INTO `item_mods` VALUES (20610, 25, 13); -- Acc
 INSERT INTO `item_mods` VALUES (20610, 31, 20); -- Meva
 INSERT INTO `item_mods` VALUES (20610, 491, 7); -- Waltz Pot
 INSERT INTO `item_mods` VALUES (20610, 68, 22); -- Eva
 INSERT INTO `item_mods` VALUES (20610, 9, 12); -- Dex
-INSERT INTO `item_mods` VALUES (20612, 23, 26); -- Att
-INSERT INTO `item_mods` VALUES (20612, 288, 3); -- Double Att
-INSERT INTO `item_mods` VALUES (20612, 302, 3); -- Triple Att
+INSERT INTO `item_mods` VALUES (20612, 23, 26); --  Attack +26
+INSERT INTO `item_mods` VALUES (20612, 288, 3); --  Double Attack +3%
+INSERT INTO `item_mods` VALUES (20612, 302, 3); --  Triple Attack +3%
+INSERT INTO `item_mods` VALUES (20612, 8, 7); --  Strength +7
+INSERT INTO `item_mods` VALUES (20612, 431, 1); -- Added Effect HP Drain
 INSERT INTO `item_mods` VALUES (20614, 113, 11); -- Enhancing
 INSERT INTO `item_mods` VALUES (20614, 300, -11); -- Stoneskin
 INSERT INTO `item_mods` VALUES (20614, 341, 11); -- Sword Enhancement
@@ -2801,6 +2804,21 @@ INSERT INTO `item_mods` VALUES (20986, 288, 4); -- Double Att
 INSERT INTO `item_mods` VALUES (20986, 289, 8); -- Subtle Blow
 INSERT INTO `item_mods` VALUES (20986, 68, 27); -- Eva
 INSERT INTO `item_mods` VALUES (20986, 73, 5); -- StoreTP
+INSERT INTO `item_mods` VALUES (26888, 2, 50); --  Hit Points +50
+INSERT INTO `item_mods` VALUES (26888, 5, 85); --  Mana Points +85
+INSERT INTO `item_mods` VALUES (26888, 8, 21); --  Strength +21
+INSERT INTO `item_mods` VALUES (26888, 9, 20); --  Dexterity +20
+INSERT INTO `item_mods` VALUES (26888, 10, 21); --  Vitality +21
+INSERT INTO `item_mods` VALUES (26888, 11, 21); --  Agility +21
+INSERT INTO `item_mods` VALUES (26888, 12, 29); --  Intelligence +29
+INSERT INTO `item_mods` VALUES (26888, 13, 29); --  Mind +29
+INSERT INTO `item_mods` VALUES (26888, 14, 29); --  Charisma +29
+INSERT INTO `item_mods` VALUES (26888, 68, 41); --  Evasion +41
+INSERT INTO `item_mods` VALUES (26888, 31, 80); --  Magic Evasion +80
+INSERT INTO `item_mods` VALUES (26888, 29, 6); -- Magic Defense Bonus +6
+INSERT INTO `item_mods` VALUES (26888, 384, 30); --  Haste +3%
+INSERT INTO `item_mods` VALUES (26888, 357, -8); --  Blood Pact ability delay -8
+INSERT INTO `item_mods` VALUES (26888, 369, 3); --  Refresh +3
 INSERT INTO `item_mods` VALUES (20989, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20989, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20989, 507, 200); -- occ
@@ -2989,9 +3007,11 @@ INSERT INTO `item_mods` VALUES (21212, 9, 20); --
 INSERT INTO `item_mods` VALUES (21213, 165, 25); --
 INSERT INTO `item_mods` VALUES (21213, 421, 50); --
 INSERT INTO `item_mods` VALUES (21213, 9, 20); --
-INSERT INTO `item_mods` VALUES (21220, 11, 15); -- Agi
-INSERT INTO `item_mods` VALUES (21220, 359, 11); -- Rapid Shot
-INSERT INTO `item_mods` VALUES (21220, 8, 15); -- Str
+INSERT INTO `item_mods` VALUES (21220, 8, 15); --  Strength +15
+INSERT INTO `item_mods` VALUES (21220, 11, 15); --  Agility +15
+INSERT INTO `item_mods` VALUES (21220, 24, 31); --  Ranged Attack +31
+INSERT INTO `item_mods` VALUES (21220, 359, 11);  --  Rapid Shot +11
+INSERT INTO `item_mods` VALUES (21220, 26, 20); --  Ranged Accuracy +20
 INSERT INTO `item_mods` VALUES (21221, 11, 10); -- Agi
 INSERT INTO `item_mods` VALUES (21221, 2, 30); -- HP
 INSERT INTO `item_mods` VALUES (21221, 25, 20); -- Acc
@@ -3034,9 +3054,10 @@ INSERT INTO `item_mods` VALUES (21342, 28, 3); --
 INSERT INTO `item_mods` VALUES (21345, 23, 10); -- Att
 INSERT INTO `item_mods` VALUES (21345, 25, -10); -- Acc
 INSERT INTO `item_mods` VALUES (21345, 288, 2); -- Double Att
-INSERT INTO `item_mods` VALUES (21350, 11, 6); -- Agi
-INSERT INTO `item_mods` VALUES (21350, 165, 2); -- Crit rate
-INSERT INTO `item_mods` VALUES (21350, 56, 20); -- Wind Ele
+INSERT INTO `item_mods` VALUES (21350, 11, 6); --  Agility +6
+INSERT INTO `item_mods` VALUES (21350, 56, 20); --  Wind Resistance +20
+INSERT INTO `item_mods` VALUES (21350, 165, 2); --  Critical Hit Rate +2%
+INSERT INTO `item_mods` VALUES (21350, 9, 5); --  Dexterity +5
 INSERT INTO `item_mods` VALUES (21358, 2, 15); -- HP
 INSERT INTO `item_mods` VALUES (21358, 29, -2); -- ENM
 INSERT INTO `item_mods` VALUES (21358, 30, 5); -- MACC
@@ -3061,6 +3082,9 @@ INSERT INTO `item_mods` VALUES (21376, 1, 10); -- DEF
 INSERT INTO `item_mods` VALUES (21376, 25, 10); -- ACC
 INSERT INTO `item_mods` VALUES (21382, 28, 6); -- Should be Magic Damage +13  added MAB
 INSERT INTO `item_mods` VALUES (21389, 25, 15); -- acc
+INSERT INTO `item_mods` VALUES (21402, 5, 20); --  Mana Points +20
+INSERT INTO `item_mods` VALUES (21402, 121, 3); --  Wind instrument skill +3
+INSERT INTO `item_mods` VALUES (21402, 440, 2); --  Lullaby +2
 INSERT INTO `item_mods` VALUES (21403, 121, 4); -- Wind Instrument Skill
 INSERT INTO `item_mods` VALUES (21403, 440, 3); -- Lullaby
 INSERT INTO `item_mods` VALUES (21403, 5, 25); -- MP
@@ -3772,6 +3796,19 @@ INSERT INTO `item_mods` VALUES (26702, 9, 25); -- DEX
 INSERT INTO `item_mods` VALUES (26710, 11, 27); -- AGI
 INSERT INTO `item_mods` VALUES (26710, 68, 70); -- Evasion
 INSERT INTO `item_mods` VALUES (26710, 9, 27); -- DEX
+INSERT INTO `item_mods` VALUES (26714, 2, 38); --  Hit Points +38
+INSERT INTO `item_mods` VALUES (26714, 8, 23); --  Strength +23
+INSERT INTO `item_mods` VALUES (26714, 9, 19); --  Dexterity +19
+INSERT INTO `item_mods` VALUES (26714, 10, 23); --  Vitality +23
+INSERT INTO `item_mods` VALUES (26714, 11, 19); --  Agility +19
+INSERT INTO `item_mods` VALUES (26714, 12, 19); --  Intelligence +19
+INSERT INTO `item_mods` VALUES (26714, 13, 19); --  Mind +19
+INSERT INTO `item_mods` VALUES (26714, 14, 19); --  Charisma +19
+INSERT INTO `item_mods` VALUES (26714, 68, 53); --  Evasion +53
+INSERT INTO `item_mods` VALUES (26714, 29, 2); --  Magic Defense Bonus +2
+INSERT INTO `item_mods` VALUES (26714, 384, 100); --  Haste +10%
+INSERT INTO `item_mods` VALUES (26714, 27, -7); --  Enmity -7
+INSERT INTO `item_mods` VALUES (26714, 23, 15); --  Attack +15
 INSERT INTO `item_mods` VALUES (26715, 1, 112);
 INSERT INTO `item_mods` VALUES (26715, 10, 23); -- VIT
 INSERT INTO `item_mods` VALUES (26715, 11, 19); -- AGI
