@@ -14,10 +14,9 @@ require("scripts/zones/Rolanberry_Fields/TextIDs");
 
 function onTrade(player,npc,trade)
     local PRIZE = 0;
+    -------------------------------Legion Gear +1---------------------------------------------------
 
-    -------------------------------Legion Gear +1 109----------------------------------------------------
-
-    if (player:getCurrency("legion_point") >= 5000) then
+    if (player:getCurrency("legion_point") >= 2500) then
         ----------------------------Gorney +1 -------------------------------------
         if (trade:hasItemQty(3925, 25) and trade:hasItemQty(27761,1) and trade:getItemCount() == 26) then -- head
             PRIZE = 27711
@@ -51,22 +50,9 @@ function onTrade(player,npc,trade)
             PRIZE = 28154
         elseif (trade:hasItemQty(3925, 25) and trade:hasItemQty(28329,1) and trade:getItemCount() == 26) then -- feet
             PRIZE = 28291
-        end
 
-        if (PRIZE > 0) then
-            if (player:getFreeSlotsCount() >= 1) then
-                player:delCurrency("legion_point", 5000);
-                player:messageSpecial(ITEM_OBTAINED, PRIZE);
-                player:tradeComplete();
-                player:addItem(PRIZE, 1);
-            else
-                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
-            end
-        end
-    -------------------------------Legion Gear +1 109----------------------------------------------------
-    elseif (player:getCurrency("legion_point") >= 2500) then
         ----------------------------Karieyh-------------------------------------
-        if (trade:hasItemQty(3925, 10) and trade:hasItemQty(27785,1) and trade:getItemCount() == 11) then -- head
+        elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27785,1) and trade:getItemCount() == 11) then -- head
             PRIZE = 27752
         elseif (trade:hasItemQty(3925, 10) and trade:hasItemQty(27925,1) and trade:getItemCount() == 11) then -- body
             PRIZE = 27895
