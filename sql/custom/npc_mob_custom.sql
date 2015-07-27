@@ -3229,9 +3229,9 @@ INSERT INTO `mob_spawn_points` VALUES (17404341,'Modrons_Druid','Modron\'s Druid
 
 -- Ro'Maeve: Mimic King
 REPLACE INTO `npc_list` VALUES (17277245,'Planar_Rift','Planar Rift',0,114,-8,47,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
-INSERT INTO `mob_spawn_points` VALUES (17277138,'Mimic_King','Mimic King',90470,114,-8,47,254);
-INSERT INTO `mob_spawn_points` VALUES (17277139,'Mimic_Jester','Mimic Jester',90469,113,-8,47,254);
-INSERT INTO `mob_spawn_points` VALUES (17277140,'Mimic_Mage','Mimic Mage',90468,115,-8,47,254);
+REPLACE INTO `mob_spawn_points` VALUES (17277138,'Mimic_King','Mimic King',90470,114,-8,47,254);
+REPLACE INTO `mob_spawn_points` VALUES (17277139,'Mimic_Jester','Mimic Jester',90469,113,-8,47,254);
+REPLACE INTO `mob_spawn_points` VALUES (17277140,'Mimic_Mage','Mimic Mage',90468,115,-8,47,254);
 
 -- Ru'Aun Gardens: Aello
 REPLACE INTO `npc_list` VALUES (17310109,'Planar_Rift','Planar Rift',0,77,-40.2,-460,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');

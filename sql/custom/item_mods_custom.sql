@@ -2804,21 +2804,6 @@ INSERT INTO `item_mods` VALUES (20986, 288, 4); -- Double Att
 INSERT INTO `item_mods` VALUES (20986, 289, 8); -- Subtle Blow
 INSERT INTO `item_mods` VALUES (20986, 68, 27); -- Eva
 INSERT INTO `item_mods` VALUES (20986, 73, 5); -- StoreTP
-INSERT INTO `item_mods` VALUES (26888, 2, 50); --  Hit Points +50
-INSERT INTO `item_mods` VALUES (26888, 5, 85); --  Mana Points +85
-INSERT INTO `item_mods` VALUES (26888, 8, 21); --  Strength +21
-INSERT INTO `item_mods` VALUES (26888, 9, 20); --  Dexterity +20
-INSERT INTO `item_mods` VALUES (26888, 10, 21); --  Vitality +21
-INSERT INTO `item_mods` VALUES (26888, 11, 21); --  Agility +21
-INSERT INTO `item_mods` VALUES (26888, 12, 29); --  Intelligence +29
-INSERT INTO `item_mods` VALUES (26888, 13, 29); --  Mind +29
-INSERT INTO `item_mods` VALUES (26888, 14, 29); --  Charisma +29
-INSERT INTO `item_mods` VALUES (26888, 68, 41); --  Evasion +41
-INSERT INTO `item_mods` VALUES (26888, 31, 80); --  Magic Evasion +80
-INSERT INTO `item_mods` VALUES (26888, 29, 6); -- Magic Defense Bonus +6
-INSERT INTO `item_mods` VALUES (26888, 384, 30); --  Haste +3%
-INSERT INTO `item_mods` VALUES (26888, 357, -8); --  Blood Pact ability delay -8
-INSERT INTO `item_mods` VALUES (26888, 369, 3); --  Refresh +3
 INSERT INTO `item_mods` VALUES (20989, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20989, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20989, 507, 200); -- occ
