@@ -32,7 +32,7 @@ function onMobSpawn(mob)
 
 
     -- addMod
-    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_MDEF,25);
     mob:addMod(MOD_ATT,150);
 end;
 
@@ -78,7 +78,6 @@ function onMobDeath(mob, killer)
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
     DespawnMob(mob:getID()+3);
-    DespawnMob(mob:getID()+4);
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Aello Kill
         if (killer:getMaskBit(killer:getVar("ZILART_VW"), 0) == false) then

@@ -33,7 +33,6 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -55,9 +54,7 @@ end;
 -----------------------------------
 
 function onMobFight( mob, target )
-    if (os.time(t) > depopTime) then
-       DespawnMob(mob:getID());
-    end
+
     if (mob:getBattleTime() ~= 0 and mob:getHPP() < 90) then
         -- Ensure we have not spawned all pets yet..
         local XuanWu = mob:getLocalVar("XuanWu");
@@ -75,13 +72,13 @@ function onMobFight( mob, target )
         repeat
 
             local rand = math.random( 0, 3 );
-            ChosenPet = 00000000 + rand;
+            ChosenPet = 17506682 + rand;
 
             switch (ChosenPet): caseof {
-                [00000000] = function (x) if ( XuanWu == 1) then ChosenPet = 0; else newVar = "XuanWu";  end end, -- XuanWu
-                [00000000] = function (x) if (QingLong == 1) then ChosenPet = 0; else newVar = "QingLong"; end end, -- QingLong
-                [00000000] = function (x) if (BaiHu == 1) then ChosenPet = 0; else newVar = "BaiHu"; end end, -- BaiHu
-                [00000000] = function (x) if (ZhuQue == 1) then ChosenPet = 0; else newVar = "ZhuQue"; end end, -- ZhuQue
+                [17506685] = function (x) if ( XuanWu == 1) then ChosenPet = 0; else newVar = "XuanWu";  end end, -- XuanWu
+                [17506683] = function (x) if (QingLong == 1) then ChosenPet = 0; else newVar = "QingLong"; end end, -- QingLong
+                [17506682] = function (x) if (BaiHu == 1) then ChosenPet = 0; else newVar = "BaiHu"; end end, -- BaiHu
+                [17506684] = function (x) if (ZhuQue == 1) then ChosenPet = 0; else newVar = "ZhuQue"; end end, -- ZhuQue
             }
 
         until (ChosenPet ~= 0 and ChosenPet ~= nil)
@@ -95,7 +92,7 @@ function onMobFight( mob, target )
     end
 
     -- Ensure all spawned pets are doing stuff..
-    for pets = 00000000, 00000000 do
+    for pets = 17506682, 17506685 do
         if (GetMobAction( pets ) == 16) then
             GetMobByID( pets ):updateEnmity( target );
         end

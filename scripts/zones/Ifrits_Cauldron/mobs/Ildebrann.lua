@@ -67,36 +67,6 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
