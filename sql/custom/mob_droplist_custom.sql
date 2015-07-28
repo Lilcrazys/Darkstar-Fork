@@ -714,12 +714,12 @@ INSERT INTO `mob_droplist` VALUES (9215,0,3208,86); -- Charis Seal: Feet DNC
 INSERT INTO `mob_droplist` VALUES (9215,0,3208,87); -- Charis Seal: Feet DNC
 
 -- ------------------ Kadraeth the Hatespawn ------------------------------
-INSERT INTO `mob_droplist` VALUES (9216,0,0,91); -- Qirmiz Tathlum
-INSERT INTO `mob_droplist` VALUES (9216,0,0,231); -- Aoidos' Seal: Feet BRD
-INSERT INTO `mob_droplist` VALUES (9216,0,0,149); -- Creed Seal: Feet PLD
-INSERT INTO `mob_droplist` VALUES (9216,0,0,148); -- Creed Seal: Feet PLD
-INSERT INTO `mob_droplist` VALUES (9216,0,0,220); -- Mavi Seal: Feet BLU
-INSERT INTO `mob_droplist` VALUES (9216,0,0,237); -- Sylvan Seal: Feet RNG
+INSERT INTO `mob_droplist` VALUES (9216,0,19258,91); -- Qirmiz Tathlum
+INSERT INTO `mob_droplist` VALUES (9216,0,3199,231); -- Aoidos' Seal: Feet BRD
+INSERT INTO `mob_droplist` VALUES (9216,0,3196,149); -- Creed Seal: Feet PLD
+INSERT INTO `mob_droplist` VALUES (9216,0,3196,148); -- Creed Seal: Feet PLD
+INSERT INTO `mob_droplist` VALUES (9216,0,3205,220); -- Mavi Seal: Feet BLU
+INSERT INTO `mob_droplist` VALUES (9216,0,3200,237); -- Sylvan Seal: Feet RNG
 
 -- ------------------ Karkadann ------------------------------
 INSERT INTO `mob_droplist` VALUES (9217,0,11615,1000); -- Orison Locket
