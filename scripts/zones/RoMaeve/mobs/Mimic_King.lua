@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -57,9 +57,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-       -- DespawnMob(mob:getID());
-    -- end
+    if (os.time(t) > depopTime) then
+       DespawnMob(mob:getID());
+    end
 end;
 
 -----------------------------------
@@ -67,4 +67,19 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 650);
+    killer:addExp(10000);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Mimic King Kill
+        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM_II"), 2) == false) then
+           killer:setMaskBit(killer:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",2,true);
+        end
+        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM_II"),3) == true) then
+           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+           killer:setVar("ASHEN_STRATUM_II", 0);
+        end
+    end;
 end;

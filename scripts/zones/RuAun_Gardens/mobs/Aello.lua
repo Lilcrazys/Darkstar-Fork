@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 end;
 
 -----------------------------------
@@ -22,19 +22,19 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
+    mob:setMod(MOD_MATT,70);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
-    mob:setMod(MOD_TERRORRES, 1000);
-
 
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,150);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -56,13 +56,14 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-       -- DespawnMob(mob:getID());
-    -- end
-   --[[ local popTime = mob:getLocalVar("lastPetPop");
-    if (os.time() - popTime > 90) then
+    if (os.time(t) > depopTime) then
+       DespawnMob(mob:getID());
+    end
+    local popTime = mob:getLocalVar("lastPetPop");
+
+    if (os.time() - popTime > 120) then
         local alreadyPopped = false;
-        for Helper = mob:getID()+1, mob:getID()+5 do
+        for Helper = mob:getID()+1, mob:getID()+3 do
             if (alreadyPopped == true) then
                 break;
             else
@@ -73,17 +74,29 @@ function onMobFight(mob, target)
                 end
             end
         end
-    end  ]]
+    end
+
 end;
+
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    -- DespawnMob(mob:getID()+1);
-    -- DespawnMob(mob:getID()+2);
-    -- DespawnMob(mob:getID()+3);
-    -- DespawnMob(mob:getID()+4);
-    -- DespawnMob(mob:getID()+5);
+    killer:addCurrency("bayld", 750);
+    killer:addExp(10000);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+    DespawnMob(mob:getID()+3);
+    DespawnMob(mob:getID()+4);
+
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Aello Kill
+        if (killer:getMaskBit(killer:getVar("ZILART_VW"), 0) == false) then
+	       killer:setMaskBit(killer:getVar("ZILART_VW"),"ZILART_VW",0,true);
+        end
+        if (killer:isMaskFull(killer:getVar("ZILART_VW"),3) == true) then
+           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+        end
+    end
 end;

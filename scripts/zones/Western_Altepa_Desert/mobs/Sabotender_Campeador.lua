@@ -13,7 +13,6 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -27,12 +26,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
+    mob:setMod(MOD_TERRORRES, 1000);
+
 
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -54,14 +56,13 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[if (os.time(t) > depopTime) then
+    if (os.time(t) > depopTime) then
        DespawnMob(mob:getID());
     end
     local popTime = mob:getLocalVar("lastPetPop");
-
     if (os.time() - popTime > 120) then
         local alreadyPopped = false;
-        for Helper = mob:getID()+1, mob:getID()+3 do
+        for Helper = mob:getID()+1, mob:getID()+4 do
             if (alreadyPopped == true) then
                 break;
             else
@@ -72,24 +73,7 @@ function onMobFight(mob, target)
                 end
             end
         end
-    end ]]
-
-end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
-function onAdditionalEffect(mob,target,damage)
-    if (target:hasStatusEffect(EFFECT_POISON)) then
-        target:delStatusEffect(EFFECT_POISON);
     end
-
-    duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
-    utils.clamp(duration,1,30);
-    target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
-
-    return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 
 -----------------------------------
@@ -97,4 +81,21 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 550);
+    killer:addExp(10000);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+    DespawnMob(mob:getID()+3);
+    DespawnMob(mob:getID()+4);
+
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Sabotender Kill
+        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 3) == false) then
+           killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",3,true);
+        end
+        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
+           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
+           killer:setVar("ASHEN_STRATUM", 0);
+        end
+    end;
 end;

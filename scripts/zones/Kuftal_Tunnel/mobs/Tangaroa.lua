@@ -31,9 +31,8 @@ function onMobSpawn(mob)
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -55,14 +54,14 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[if (os.time(t) > depopTime) then
+    if (os.time(t) > depopTime) then
        DespawnMob(mob:getID());
     end
     local popTime = mob:getLocalVar("lastPetPop");
 
     if (os.time() - popTime > 120) then
         local alreadyPopped = false;
-        for Helper = mob:getID()+1, mob:getID()+2 do
+        for Helper = mob:getID()+1, mob:getID()+3 do
             if (alreadyPopped == true) then
                 break;
             else
@@ -73,7 +72,8 @@ function onMobFight(mob, target)
                 end
             end
         end
-    end ]]
+    end
+
 end;
 
 -----------------------------------
@@ -81,12 +81,15 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) > 4) or (target:hasStatusEffect(EFFECT_SLOW) == true)) then
-        return 0,0,0;
-    else
-        target:addStatusEffect(EFFECT_SLOW,50,0,20);
+    if (target:hasStatusEffect(EFFECT_POISON)) then
+        target:delStatusEffect(EFFECT_POISON);
     end
-    return SUBEFFECT_SILENCE,163,EFFECT_SLOW;
+
+    duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
+    utils.clamp(duration,1,30);
+    target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
+
+    return SUBEFFECT_POISON, 160, EFFECT_POISON;
 end;
 
 -----------------------------------
@@ -94,4 +97,20 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 550);
+    killer:addExp(10000);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+    DespawnMob(mob:getID()+3);
+
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Tangora Kill
+        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 5) == false) then
+           killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",5,true);
+        end
+        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
+           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
+           killer:setVar("ASHEN_STRATUM", 0);
+        end
+    end;
 end;

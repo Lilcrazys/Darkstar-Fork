@@ -26,16 +26,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,2250);
-    mob:setMod(MOD_MATT,100);
+    mob:setMod(MOD_MACC,2200);
+    mob:setMod(MOD_MATT,75);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_ATT,150);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -46,13 +45,10 @@ function onMobEngage(mob, target)
 end;
 
 -----------------------------------
--- onSpellPrecast
+-- onMobWeaponSkill Action
 -----------------------------------
 
-function onSpellPrecast(mob, spell)
-    local power = math.random(50,150);
-    mob:addStatusEffect(EFFECT_SHOCK_SPIKES,power,0,30);
-    mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
+function onMobWeaponSkill(target, mob, skill)
 end;
 
 -----------------------------------
@@ -60,7 +56,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[if (os.time(t) > depopTime) then
+    if (os.time(t) > depopTime) then
        DespawnMob(mob:getID());
     end
     local popTime = mob:getLocalVar("lastPetPop");
@@ -78,7 +74,7 @@ function onMobFight(mob, target)
                 end
             end
         end
-    end ]]
+    end
 
 end;
 
@@ -87,4 +83,19 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 650);
+    killer:addExp(10000);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Mordon Kill
+        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM_II"), 1) == false) then
+           killer:setMaskBit(killer:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",1,true);
+        end
+        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM_II"),3) == true) then
+           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+           killer:setVar("ASHEN_STRATUM_II", 0);
+        end
+    end;
 end;

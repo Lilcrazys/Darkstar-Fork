@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
 -----------------------------------
@@ -23,17 +23,17 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
-    mob:setMod(MOD_TRIPLE_ATTACK,25);
+    mob:setMod(MOD_DOUBLE_ATTACK,25);
 
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,50);
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_ATT,150);
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -55,9 +55,11 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[if (os.time(t) > depopTime) then
+    if (os.time(t) > depopTime) then
        DespawnMob(mob:getID());
     end
+    local popTime = mob:getLocalVar("lastPetPop");
+
     if (os.time() - popTime > 120) then
         local alreadyPopped = false;
         for Helper = mob:getID()+1, mob:getID()+2 do
@@ -71,7 +73,20 @@ function onMobFight(mob, target)
                 end
             end
         end
-    end    ]]
+    end
+end;
+
+-----------------------------------
+-- onAdditionalEffect Action
+-----------------------------------
+
+function onAdditionalEffect(mob,target,damage)
+    if ((math.random(1,10) > 4) or (target:hasStatusEffect(EFFECT_SLOW) == true)) then
+        return 0,0,0;
+    else
+        target:addStatusEffect(EFFECT_SLOW,50,0,20);
+    end
+    return SUBEFFECT_SILENCE,163,EFFECT_SLOW;
 end;
 
 -----------------------------------
@@ -79,4 +94,19 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 550);
+    killer:addExp(10000);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- MAlleator Maurok Kill
+        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 4) == false) then
+           killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",4,true);
+        end
+        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
+           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
+           killer:setVar("ASHEN_STRATUM", 0);
+        end
+    end;
 end;
