@@ -55,13 +55,10 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- if (os.time(t) > depopTime) then
-       -- DespawnMob(mob:getID());
-    -- end
     local popTime = mob:getLocalVar("lastPetPop");
 
     if (os.time() - popTime > 120) then
-        for Helper = mob:getID()+1, mob:getID()+3 do
+        for Helper = mob:getID()+1, mob:getID()+2 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
                 mob:setLocalVar("lastPetPop", os.time());
@@ -79,8 +76,6 @@ function onMobDeath(mob, killer)
     killer:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
-    DespawnMob(mob:getID()+3);
-    DespawnMob(mob:getID()+4);
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Holy Moly Kill
         if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 0) == false) then

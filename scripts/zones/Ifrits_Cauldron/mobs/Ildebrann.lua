@@ -47,7 +47,6 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_ATT,150);
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -69,22 +68,13 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > depopTime) then
-       DespawnMob(mob:getID());
-    end
     local popTime = mob:getLocalVar("lastPetPop");
 
     if (os.time() - popTime > 240) then
-        local alreadyPopped = false;
         for Helper = mob:getID()+1, mob:getID()+2 do
-            if (alreadyPopped == true) then
-                break;
-            else
-                if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
-                    SpawnMob(Helper, 300):updateEnmity(target);
-                    mob:setLocalVar("lastPetPop", os.time());
-                    alreadyPopped = true;
-                end
+            if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
+                SpawnMob(Helper, 300):updateEnmity(target);
+                mob:setLocalVar("lastPetPop", os.time());
             end
         end
     end
