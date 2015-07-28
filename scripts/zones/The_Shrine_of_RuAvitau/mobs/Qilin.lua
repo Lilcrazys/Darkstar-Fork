@@ -53,51 +53,38 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight( mob, target )
+function onMobFight(mob, target)
+    local XuanWu = mob:getLocalVar("XuanWu");
+    local QingLong = mob:getLocalVar("QingLong");
+    local BaiHu = mob:getLocalVar("BaiHu");
+    local ZhuQue = mob:getLocalVar("ZhuQue");
 
-    if (mob:getBattleTime() ~= 0 and mob:getHPP() < 90) then
-        -- Ensure we have not spawned all pets yet..
-        local XuanWu = mob:getLocalVar("XuanWu");
-        local QingLong = mob:getLocalVar("QingLong");
-        local BaiHu = mob:getLocalVar("BaiHu");
-        local ZhuQue = mob:getLocalVar("ZhuQue");
-
-        if (XuanWu == 1 and QingLong == 1 and BaiHu == 1 and ZhuQue == 1) then
-            return;
+    if (mob:getHPP() < 90) then
+        if (XuanWu == 0) then
+            SpawnMob(17261049, 300):updateEnmity(player);
+            mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
+            mob:setLocalVar("XuanWu", 1);
         end
-
-        -- Pick a pet to spawn at random..
-        local ChosenPet = nil;
-        local newVar = nil;
-        repeat
-
-            local rand = math.random( 0, 3 );
-            ChosenPet = 17506682 + rand;
-
-            switch (ChosenPet): caseof {
-                [17506685] = function (x) if ( XuanWu == 1) then ChosenPet = 0; else newVar = "XuanWu";  end end, -- XuanWu
-                [17506683] = function (x) if (QingLong == 1) then ChosenPet = 0; else newVar = "QingLong"; end end, -- QingLong
-                [17506682] = function (x) if (BaiHu == 1) then ChosenPet = 0; else newVar = "BaiHu"; end end, -- BaiHu
-                [17506684] = function (x) if (ZhuQue == 1) then ChosenPet = 0; else newVar = "ZhuQue"; end end, -- ZhuQue
-            }
-
-        until (ChosenPet ~= 0 and ChosenPet ~= nil)
-
-        -- Spawn the pet..
-        local pet = SpawnMob( ChosenPet );
-        pet:updateEnmity( target );
-        pet:setPos( mob:getXPos(), mob:getYPos(), mob:getZPos() );
-
-        mob:setLocalVar(newVar, 1);
-    end
-
-    -- Ensure all spawned pets are doing stuff..
-    for pets = 17506682, 17506685 do
-        if (GetMobAction( pets ) == 16) then
-            GetMobByID( pets ):updateEnmity( target );
+    elseif (mob:getHPP() < 70) then
+        if (QingLong == 0) then
+            SpawnMob(17506683, 300):updateEnmity(player);
+            mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
+            mob:setLocalVar("QingLong", 1);
+        end
+    elseif (mob:getHPP() < 50) then
+        if (BaiHu == 0) then
+            SpawnMob(17506682, 300):updateEnmity(player);
+            mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
+            mob:setLocalVar("BaiHu", 1);
+        end
+    elseif (mob:getHPP() < 30) then
+        if (ZhuQue == 0) then
+            SpawnMob(17506684, 300):updateEnmity(player);
+            mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
+            mob:setLocalVar("ZhuQue", 1);
         end
     end
-end
+end;
 
 -----------------------------------
 -- onMobDeath
