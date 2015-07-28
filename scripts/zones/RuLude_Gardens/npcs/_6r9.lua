@@ -111,7 +111,7 @@ function onEventFinish(player,csid,option)
         player:addKeyItem(VOIDWATCHERS_EMBLEM_JEUNO);
         player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCHERS_EMBLEM_JEUNO);
-    elseif (csid == 10188) then
+    elseif (csid == 10189) then
         player:completeQuest(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT);
         player:addQuest(CRYSTAL_WAR, VOIDWALKER_OP_126);
         player:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
