@@ -80,14 +80,10 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local WYNAV_1 = GetMobAction(mob:getID()+1);
-    local WYNAV_2 = GetMobAction(mob:getID()+2);
-    local WYNAV_3 = GetMobAction(mob:getID()+3);
-    local WYNAV_4 = GetMobAction(mob:getID()+4);
     local DID2HR = mob:getLocalVar("DID2HR");
     local RND = math.random(1,12);
     local AV2HR = nil;
-    local WynavTime = mob:getLocalVar("WynavTime")
+    local popTime = mob:getLocalVar("lastPetPop");
 
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         -- In retail, this is where it'd just depop instead..Except we'd be tracking it from JoL's pop time instead of BattleTime.
@@ -95,21 +91,15 @@ function onMobFight(mob, target)
         mob:setLocalVar("RAGED", 1);
     end
 
-    if (mob:getBattleTime() - mob:getLocalVar("WynavTime") > 90) then
-        -- If all 4 aren't up, don't pop any. Timer resets even if none pop.
-        if ((WYNAV_1 == ACTION_NONE or WYNAV_1 == ACTION_SPAWN)
-        and (WYNAV_2 == ACTION_NONE or WYNAV_2 == ACTION_SPAWN)
-        and (WYNAV_3 == ACTION_NONE or WYNAV_3 == ACTION_SPAWN)
-        and (WYNAV_4 == ACTION_NONE or WYNAV_4 == ACTION_SPAWN)) then
-            SpawnMob(mob:getID()+1, 300):updateEnmity(target);
-            SpawnMob(mob:getID()+2, 300):updateEnmity(target);
-            SpawnMob(mob:getID()+3, 300):updateEnmity(target);
-            SpawnMob(mob:getID()+4, 300):updateEnmity(target);
-            -- SpawnMob(mob:getID()+5, 300):updateEnmity(target);
-            -- SpawnMob(mob:getID()+6, 300):updateEnmity(target);
-            -- SpawnMob(mob:getID()+7, 300):updateEnmity(target);
+    if (os.time() - popTime > 120) then
+        for Helper = mob:getID()+1, mob:getID()+4 do
+            if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
+                SpawnMob(Helper, 300):updateEnmity(target);
+                mob:setLocalVar("lastPetPop", os.time());
+            end
         end
-        mob:setLocalVar("WynavTime", mob:getBattleTime());
+
+
     else
         if (RND == 1) then
             AV2HR = 432;
