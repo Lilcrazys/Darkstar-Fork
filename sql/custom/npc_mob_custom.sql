@@ -3180,7 +3180,7 @@ INSERT INTO `mob_spawn_points` VALUES (17281501,'Moly','Moly',90451,-245,0,405,2
 
 -- Temple of Uggalepih: Neith
 REPLACE INTO `npc_list` VALUES (17429018,'Planar_Rift','Planar Rift',0,180.100,0.001,-65,1,40,40,0,5,100,0,3,0x00006f0900000000000000000000000000000000,2,'ABYSSEA');
-INSERT INTO `mob_spawn_points` VALUES (17428818,'Neith','Neith',90452,180,0,293.694,254);
+INSERT INTO `mob_spawn_points` VALUES (17428818,'Neith','Neith',90452,180,0,-65,254);
 INSERT INTO `mob_spawn_points` VALUES (17428819,'Neiths_Bobbin','Neith\'s Bobbin',90453,181,0,-65,254);
 INSERT INTO `mob_spawn_points` VALUES (17428820,'Neiths_Bobbin','Neith\'s Bobbin',90453,182,0,-65,254);
 INSERT INTO `mob_spawn_points` VALUES (17428821,'Neiths_Bobbin','Neith\'s Bobbin',90453,183,0,-65,254);

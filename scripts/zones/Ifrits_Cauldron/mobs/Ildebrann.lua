@@ -67,6 +67,36 @@ end;
 -- onMobFight Action
 -----------------------------------
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
@@ -76,26 +106,24 @@ function onMobFight(mob, target)
                 SpawnMob(Helper, 300):updateEnmity(target);
                 mob:setLocalVar("lastPetPop", os.time());
             end
-        end
-    end
 
-
-
-    if (mob:AnimationSub() == 1) then
-        if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
-           mob:useMobAbility(1026);
-        end
-    elseif (mob:AnimationSub() == 2) then
-        if (GetMobAction(Helper) == ACTION) then
-           mob:AnimationSub(1); -- fly
-           mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-           mob:SetMobSkillAttack(true);
-        end
-    elseif (mob:AnimationSub() == 0) then
-        if (GetMobAction(Helper) == ACTION) then
-           mob:AnimationSub(1); -- fly
-           mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-           mob:SetMobSkillAttack(true);
+            if (mob:AnimationSub() == 1) then
+                if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
+                   mob:useMobAbility(1026);
+                end
+            elseif (mob:AnimationSub() == 2) then
+                if (GetMobAction(Helper) == ACTION) then
+                   mob:AnimationSub(1); -- fly
+                   mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+                   mob:SetMobSkillAttack(true);
+                end
+            elseif (mob:AnimationSub() == 0) then
+                if (GetMobAction(Helper) == ACTION) then
+                   mob:AnimationSub(1); -- fly
+                   mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+                   mob:SetMobSkillAttack(true);
+                end
+            end
         end
     end
 end;
