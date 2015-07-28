@@ -88,9 +88,9 @@ function onTrigger(player,npc)
             end
         elseif (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_ACCEPTED) then
             player:startEvent(1035);
-        --[[ future use
-        elseif
+        elseif (player:getQuestStatus(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
             player:startEvent(1036);
+        --[[ future use
         elseif
             player:startEvent(1037);
         elseif
@@ -165,21 +165,28 @@ function onEventFinish(player,csid,option)
         player:completeQuest(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID);
         player:addQuest(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
-    --[[ future use
     elseif (csid == 1036) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
+    --[[ future use
     elseif (csid == 1037) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     elseif (csid == 1039) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     elseif (csid == 1040) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     elseif (csid == 1041) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     elseif (csid == 1042) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     elseif (csid == 1043) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     ]]
     end
 end;

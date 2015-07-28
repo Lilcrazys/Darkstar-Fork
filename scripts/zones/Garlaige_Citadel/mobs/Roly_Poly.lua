@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC: Roly Poly
+-- VWNM: Roly Poly
 -----------------------------------
 
 require("scripts/globals/status");
@@ -13,8 +13,12 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    --setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -30,9 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,125);
 
-
-    -- addMod
-    mob:addMod(MOD_ATT,250);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -93,7 +95,7 @@ function onAdditionalEffect(mob,target,damage)
         dmg = adjustForTarget(target,dmg,ELE_LIGHT);
 
         if (dmg < 0) then
-            dmg = 10
+            dmg = 0
         end
 
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_LIGHT,dmg);
@@ -115,10 +117,5 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_II"), 0) == false) then
            killer:setMaskBit(killer:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",0,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
-           killer:setVar("WHITE_STRATUM_II", 0);
-        end
-    end;
+    end
 end;

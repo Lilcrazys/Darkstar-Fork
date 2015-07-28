@@ -37,12 +37,24 @@ function onTrigger(player,npc)
 		else
 			player:startEvent(0x003c);
 		end
-	elseif (player:hasKeyItem(VOIDWATCH_ALARUM) and player:getQuestStatus(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED) then
-		if (player:getRank() > 5) then
-			player:startEvent(10188,0,0,0,0,0,0,0,1);
-		else -- The diff is which NPC you see in CS..Rank 6 starts Zilart, so shouldn't see the Duke.
-			player:startEvent(10188);
-		end
+--------------------------------------
+    -- Begin VW stuff
+    elseif (player:hasKeyItem(VOIDWATCH_ALARUM) then
+        if (player:getQuestStatus(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED) then
+            if (player:getRank() > 5) then
+                player:startEvent(10188,0,0,0,0,0,0,0,1);
+            else -- The diff is which NPC you see in CS..Rank 6 starts Zilart, so shouldn't see the Duke.
+                player:startEvent(10188);
+            end
+        elseif (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_ACCEPTED) then
+            if (player:getRank() > 5) then
+                player:startEvent(10189,0,0,0,0,0,0,0,1);
+            else
+                player:startEvent(10189);
+            end
+        end
+    -- end VW stuffs
+--------------------------------------
 	elseif(player:hasKeyItem(ARCHDUCAL_AUDIENCE_PERMIT)) then
 		player:messageSpecial(SOVEREIGN_WITHOUT_AN_APPOINTMENT);
 	else
@@ -89,14 +101,26 @@ function onEventFinish(player,csid,option)
 		player:setVar("MissionStatus",6); -- all that's left is to go back to the embassy
 	elseif(csid == 0x2742) then
 	    player:setVar("PromathiaStatus",2);
-	elseif (csid == 10188) then
-		player:completeQuest(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY);
-		player:addQuest(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT);
-		player:delKeyItem(VOIDWATCH_ALARUM);
-		player:addKeyItem(WHITE_STRATUM_ABYSSITE);
-		player:addKeyItem(VOIDWATCHERS_EMBLEM_JEUNO)
-		player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE);
-		player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCHERS_EMBLEM_JEUNO);
+--------------------------------------
+    -- Begin VW stuff
+    elseif (csid == 10188) then
+        player:completeQuest(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY);
+        player:addQuest(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT);
+        player:delKeyItem(VOIDWATCH_ALARUM);
+        player:addKeyItem(WHITE_STRATUM_ABYSSITE);
+        player:addKeyItem(VOIDWATCHERS_EMBLEM_JEUNO);
+        player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCHERS_EMBLEM_JEUNO);
+    elseif (csid == 10188) then
+        player:completeQuest(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT);
+        player:addQuest(CRYSTAL_WAR, VOIDWALKER_OP_126);
+        player:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
+        player:addKeyItem(VOIDWATCHERS_EMBLEM_QUFIM);
+        player:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
+        player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
+        player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCHERS_EMBLEM_QUFIM);
+    -- end VW stuffs
+--------------------------------------
 	end
 	
 end;

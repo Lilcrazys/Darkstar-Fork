@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: VoiddWatch NM
--- NPC: Gasha 3
+-- VWNM: Gasha 3
 -----------------------------------
 
 require("scripts/globals/status");
@@ -13,7 +13,13 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_MDEF,60);
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -28,11 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,105);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,60);
-    mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,250);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -52,6 +54,7 @@ function onMobFight(mob, target)
     if (os.time(t) > mob:getLocalVar("depopTime")) then
        DespawnMob(mob:getID());
     end
+
     if (mob:getHPP() <= 40) then
         if (Gasha_2hr_Used == 0) then
             mob:useMobAbility(474); -- SAM
@@ -70,6 +73,7 @@ function onAdditionalEffect(mob,target,damage)
     else
         target:addStatusEffect(EFFECT_PARALYSIS,1,0,10);
     end
+
     return SUBEFFECT_PARALYSIS,163,EFFECT_PARALYSIS;
 end;
 
@@ -85,10 +89,5 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_II"), 4) == false) then
            killer:setMaskBit(killer:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",4,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
-           killer:setVar("WHITE_STRATUM_II", 0);
-        end
-    end;
+    end
 end;
