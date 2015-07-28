@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Lancing Lamorak
+-- Area: ?
+-- VWNM: Lancing Lamorak
 -----------------------------------
 
 require("scripts/globals/status");

@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Kaggen
+-- Area: ?
+-- VWNM: Kaggen
 -----------------------------------
 
 require("scripts/globals/status");

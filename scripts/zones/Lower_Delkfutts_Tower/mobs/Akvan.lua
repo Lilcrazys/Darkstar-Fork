@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Akvan
+-- Area: ?
+-- VWNM: Akvan
 -----------------------------------
 
 require("scripts/globals/status");

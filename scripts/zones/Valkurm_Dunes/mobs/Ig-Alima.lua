@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Ig-Alima
+-- Area: ?
+-- VWNM: Ig-Alima
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");

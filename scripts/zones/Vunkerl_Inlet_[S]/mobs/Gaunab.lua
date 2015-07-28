@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Gaunab
+-- Area: ?
+-- VWNM: Gaunab
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");

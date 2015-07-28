@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Pil
+-- Area: ?
+-- VWNM: Pil
 -----------------------------------
 
 require("scripts/globals/status");
