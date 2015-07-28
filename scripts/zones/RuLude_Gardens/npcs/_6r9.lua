@@ -18,28 +18,28 @@ require("scripts/zones/RuLude_Gardens/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
-	
+
 	CurrentMission = player:getCurrentMission(player:getNation());
 	if( player:getCurrentMission(COP) ==MORE_QUESTIONS_THAN_ANSWERS and player:getVar("PromathiaStatus")==1)then
         player:startEvent(0x2742);
 	elseif(player:hasKeyItem(ARCHDUCAL_AUDIENCE_PERMIT) and CurrentMission == 255 and player:getVar("MissionStatus") == 1) then
 		player:startEvent(0x0080);
 	elseif(player:hasKeyItem(MAGICITE_OPTISTONE) and player:hasKeyItem(MAGICITE_AURASTONE) and player:hasKeyItem(MAGICITE_ORASTONE)) then
-		if(player:hasKeyItem(AIRSHIP_PASS)) then 
+		if(player:hasKeyItem(AIRSHIP_PASS)) then
 			player:startEvent(0x003c,1);
 		else
 			player:startEvent(0x003c);
 		end
 --------------------------------------
     -- Begin VW stuff
-    elseif (player:hasKeyItem(VOIDWATCH_ALARUM) then
+    elseif (player:hasKeyItem(VOIDWATCH_ALARUM)) then
         if (player:getQuestStatus(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED) then
             if (player:getRank() > 5) then
                 player:startEvent(10188,0,0,0,0,0,0,0,1);
@@ -91,19 +91,19 @@ end;
 function onEventFinish(player,csid,option)
 --printf("CSID: %u",csid);
 --printf("RESULT: %u",option);
-	
+
 	if(csid == 0x0080) then
 		player:setVar("MissionStatus",2);
 		player:addMission(player:getNation(),13);
 		player:addKeyItem(LETTERS_TO_ALDO);
-		player:messageSpecial(KEYITEM_OBTAINED,LETTERS_TO_ALDO); 
+		player:messageSpecial(KEYITEM_OBTAINED,LETTERS_TO_ALDO);
 	elseif(csid == 0x003c) then
 		player:delKeyItem(MAGICITE_OPTISTONE);
 		player:delKeyItem(MAGICITE_AURASTONE);
 		player:delKeyItem(MAGICITE_ORASTONE);
 		if(player:hasKeyItem(AIRSHIP_PASS)) then
 			player:addGil(GIL_RATE*20000);
-			player:messageSpecial(GIL_OBTAINED,GIL_RATE*20000); 
+			player:messageSpecial(GIL_OBTAINED,GIL_RATE*20000);
 			player:addTitle(CONQUEROR_OF_FATE);
 		else
 			player:addKeyItem(AIRSHIP_PASS);
@@ -149,5 +149,5 @@ function onEventFinish(player,csid,option)
     -- end VW stuffs
 --------------------------------------
 	end
-	
+
 end;
