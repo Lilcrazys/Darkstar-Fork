@@ -52,6 +52,18 @@ function onTrigger(player,npc)
             else
                 player:startEvent(10189);
             end
+        elseif (player:getQuestStatus(CRYSTAL_WAR, VOIDWALKER_OP_126) == QUEST_ACCEPTED) then
+            if (player:getRank() > 5) then
+                player:startEvent(10190,0,0,0,0,0,0,0,1);
+            else
+                player:startEvent(10190);
+            end
+        elseif (player:getQuestStatus(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED) then
+            if (player:getRank() > 5) then
+                player:startEvent(10199,0,0,0,0,0,0,0,1);
+            else
+                player:startEvent(10199);
+            end
         end
     -- end VW stuffs
 --------------------------------------
@@ -117,8 +129,23 @@ function onEventFinish(player,csid,option)
         player:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
         player:addKeyItem(VOIDWATCHERS_EMBLEM_QUFIM);
         player:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
+        player:setVar("WHITE_STRATUM_II", 0);
         player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCHERS_EMBLEM_QUFIM);
+    elseif (csid == 10190) then
+        player:completeQuest(CRYSTAL_WAR, VOIDWALKER_OP_126);
+        player:addQuest(CRYSTAL_WAR, A_CAIT_CALLS);
+        player:addGil(50000 * GIL_RATE);
+        player:messageSpecial(GIL_OBTAINED, 50000 * GIL_RATE);
+    elseif (csid == 10199) then
+        player:completeQuest(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY);
+        player:addQuest(CRYSTAL_WAR, A_NEW_MENACE);
+        player:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+        player:addKeyItem(TRICOLOR_VOIDWATCHERS_EMBLEM);
+        player:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
+        player:setVar("WHITE_STRATUM_III", 0);
+        player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_IV);
+        player:messageSpecial(KEYITEM_OBTAINED, TRICOLOR_VOIDWATCHERS_EMBLEM);
     -- end VW stuffs
 --------------------------------------
 	end

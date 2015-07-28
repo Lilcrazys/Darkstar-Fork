@@ -13,8 +13,14 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_MDEF,60);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,200);
 end;
 
 -----------------------------------
@@ -30,11 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2000);
     mob:setMod(MOD_MATT,75);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,60);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,200);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -79,10 +81,5 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_III"), 1) == false) then
            killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",1,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
-           killer:setVar("WHITE_STRATUM_III", 0);
-        end
-    end;
+    end
 end;

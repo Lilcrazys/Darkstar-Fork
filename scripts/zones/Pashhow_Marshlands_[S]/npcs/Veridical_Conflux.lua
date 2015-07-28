@@ -26,6 +26,8 @@ function onTrigger(player,npc)
         if (player:isMaskFull(player:getVar("VW_3_NATIONS"),3) == true) then
             player:startEvent(7);
         end
+    elseif (player:getQuestStatus(CRYSTAL_WAR, A_CAIT_CALLS) == QUEST_ACCEPTED) then
+        player:startEvent(9);
     end
 end;
 
@@ -52,12 +54,13 @@ function onEventFinish(player,csid,option)
     elseif (csid == 8) then
         -- This damned thing won't exec any code here, so temp moved to end of cs 7
         -- until dsp fixes their bugs with daisy-chained cs events..
-        -- This means if player gets connection lost midway, they will never see cs 8 at all..
-        -- Same shit likely to happen in other places, like cs 9 and 10 here...
     elseif (csid == 9) then
+        player:completeQuest(CRYSTAL_WAR, A_CAIT_CALLS); -- Should actually be at end of cs 10...
+        player:addQuest(CRYSTAL_WAR, THE_TRUTH_IS_OUT_THERE); -- Should actually be at end of cs 10...
         player:startEvent(10);
     elseif (csid == 10) then
-        -- player:addQuest(CRYSTAL_WAR, ???);
+        -- This damned thing won't exec any code here, so temp moved to end of cs 9
+        -- until dsp fixes their bugs with daisy-chained cs events..
     elseif (csid == 12) then
         -- player:addQuest(CRYSTAL_WAR, ???);
     end

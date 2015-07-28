@@ -88,13 +88,13 @@ function onTrigger(player,npc)
             end
         elseif (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_ACCEPTED) then
             player:startEvent(1035);
-        elseif (player:getQuestStatus(CRYSTAL_WAR, DRAFTED_BY_THE_DUCHY) == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
+        elseif (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
             player:startEvent(1036);
-        --[[ future use
-        elseif
+        elseif (player:getQuestStatus(CRYSTAL_WAR, VOIDWALKER_OP_126) == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
             player:startEvent(1037);
-        elseif
+        elseif (player:getQuestStatus(CRYSTAL_WAR, THE_TRUTH_IS_OUT_THERE) == QUEST_ACCEPTED) then
             player:startEvent(1039);
+        --[[ future use
         elseif
             player:startEvent(1040);
         elseif
@@ -168,13 +168,15 @@ function onEventFinish(player,csid,option)
     elseif (csid == 1036) then
         player:addKeyItem(VOIDWATCH_ALARUM);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
-    --[[ future use
     elseif (csid == 1037) then
         player:addKeyItem(VOIDWATCH_ALARUM);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
     elseif (csid == 1039) then
         player:addKeyItem(VOIDWATCH_ALARUM);
+        player:completeQuest(CRYSTAL_WAR, THE_TRUTH_IS_OUT_THERE);
+        player:addQuest(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);
+    --[[ future use
     elseif (csid == 1040) then
         player:addKeyItem(VOIDWATCH_ALARUM);
         player:messageSpecial(KEYITEM_OBTAINED, VOIDWATCH_ALARUM);

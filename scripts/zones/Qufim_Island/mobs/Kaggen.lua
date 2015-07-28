@@ -13,7 +13,12 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,60);
+    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -31,10 +36,7 @@ function onMobSpawn(mob)
     mob:SetMobSkillAttack(true);
     mob:setMod(MOD_ACC,1600);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,60);
-    mob:addMod(MOD_ATT,150);
+    -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -54,6 +56,7 @@ function onMobFight(mob, target)
     if (os.time(t) > mob:getLocalVar("depopTime")) then
        DespawnMob(mob:getID());
     end
+
     if (mob:getHPP() <= 40) then
         if (Boost_Used == 0) then
             mob:addMod(MOD_EVASION, 100);
@@ -74,10 +77,5 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_III"), 0) == false) then
            killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",0,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
-           killer:setVar("WHITE_STRATUM_III", 0);
-        end
-    end;
+    end
 end;
