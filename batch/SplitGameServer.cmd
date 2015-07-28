@@ -11,9 +11,9 @@ if exist DSGame-Abyssea.exe del DSGame-Abyssea.exe
 echo ------------------------
 echo Creating new EXE's...
 if not exist DSGame-GM.exe copy DSGame-server.exe /b DSGame-GM.exe /b
-if not exist DSGame-BCNM.exe copy DSGame-server.exe /b DSGame-BCNM.exe /b
+REM if not exist DSGame-BCNM.exe copy DSGame-server.exe /b DSGame-BCNM.exe /b
 if not exist DSGame-DynaLimbus.exe copy DSGame-server.exe /b DSGame-DynaLimbus.exe /b
-if not exist DSGame-Abyssea.exe copy DSGame-server.exe /b DSGame-Abyssea.exe /b
+REM if not exist DSGame-Abyssea.exe copy DSGame-server.exe /b DSGame-Abyssea.exe /b
 echo ------------------------
 echo Done.
 PAUSE
