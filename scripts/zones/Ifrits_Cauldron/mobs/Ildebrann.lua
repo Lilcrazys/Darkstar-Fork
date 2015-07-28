@@ -68,32 +68,40 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local popTime = mob:getLocalVar("lastPetPop");
+local popTime = mob:getLocalVar("lastPetPop");
 
+    -- Pop an add after 4 minutes..
     if (os.time() - popTime > 240) then
-        for Helper = mob:getID()+1, mob:getID()+2 do
+        for Helper = mob:getID() + 1, mob:getID() + 2 do
+            -- Pop this helper..
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
                 mob:setLocalVar("lastPetPop", os.time());
             end
+        end
+    end
 
-            if (mob:AnimationSub() == 1) then
-                if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
-                   mob:useMobAbility(1026);
-                end
-            elseif (mob:AnimationSub() == 2) then
-                if (GetMobAction(Helper) == ACTION) then
-                   mob:AnimationSub(1); -- fly
-                   mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-                   mob:SetMobSkillAttack(true);
-                end
-            elseif (mob:AnimationSub() == 0) then
-                if (GetMobAction(Helper) == ACTION) then
-                   mob:AnimationSub(1); -- fly
-                   mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-                   mob:SetMobSkillAttack(true);
-                end
-            end
+    -- Determine if we have a helper alive and should fly..
+    local helpersAlive = 0;
+    for Helper = mob:getID() + 1, mob:getID() + 2 do
+        if (GetMobAction(Helper) ~= ACTION_NONE and GetMobAction(Helper) ~= ACTION_SPAWN) then
+            helpersAlive = helpersAlive + 1;
+        end
+    end
+
+    -- Check if we are on the ground..
+    local animSub = mob:AnimationSub();
+    if (animSub == 0 or animSub == 2) then
+        -- We are on the ground, check if we should be flying..
+        if (helpersAlive > 0) then
+            mob:AnimationSub(1); -- fly
+            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+            mob:SetMobSkillAttack(true);
+        end
+    else
+        -- We are flying, see if we should land..
+        if (animSub == 1 and helpersAlive == 0) then
+            mob:useMobAbility(1026); -- touchdown
         end
     end
 end;
