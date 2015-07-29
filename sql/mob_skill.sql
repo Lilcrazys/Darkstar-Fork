@@ -5451,8 +5451,8 @@ INSERT INTO `mob_skill` VALUES (1073,1130,903,'Gala_Macabre',1,10.0,2000,2000,4,
 
 -- Kaggen (1131)
 INSERT INTO `mob_skill` VALUES (2360,1131,1922,'Mantis_Melee',0,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2361,1131,1923,'Mantis_Melee2',0,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1131,1924,'Mantis_Melee_Jump',0,15.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2361,1131,1923,'Mantis_Melee2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,1131,1924,'Mantis_Melee_Jump',1,15.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2495,1131,1923,'VW_Slicing_Sickle',4,20.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2496,1131,1926,'VW_Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2497,1131,1927,'VW_Phlegm_Expulsion',1,20.0,2000,1000,4,0,0,0);
@@ -5514,9 +5514,9 @@ INSERT INTO `mob_skill` VALUES (229,1139,1911,'VW_Blood_Saber',0,25.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (2568,1139,1465,'Cloudscourge',1,30.0,2000,1500,4,0,0,7);
 
 -- Gaunab (1140)
-INSERT INTO `mob_skill` VALUES (2360,1140,1922,'Mantis_Melee',0,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2360,1140,1922,'Mantis_Melee',1,7.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2361,1140,1923,'Mantis_Melee2',0,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1140,1924,'Mantis_Melee_Jump',0,15.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2362,1140,1924,'Mantis_Melee_Jump',1,15.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2495,1140,1923,'VW_Slicing_Sickle',4,18.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2496,1140,1926,'VW_Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2497,1140,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
@@ -5801,8 +5801,8 @@ INSERT INTO `mob_skill` VALUES (892,1185,311,'VW_Condemnation',4,10.0,2000,1500,
 
 -- Tsui-Goab (1186)
 INSERT INTO `mob_skill` VALUES (2360,1186,1922,'Mantis_Melee',0,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2361,1186,1923,'Mantis_Melee2',0,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2362,1186,1924,'Mantis_Melee_Jump',0,15.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2361,1186,1923,'Mantis_Melee2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2362,1186,1924,'Mantis_Melee_Jump',1,15.0,2000,0,4,16,0,3);
 INSERT INTO `mob_skill` VALUES (2495,1186,1923,'VW_Slicing_Sickle',4,18.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2496,1186,1926,'VW_Raptorial_Claw',1,15.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2497,1186,1927,'VW_Phlegm_Expulsion',1,18.0,2000,1000,4,0,0,0);
