@@ -1699,6 +1699,8 @@ SLOT_RING1  = 13
 SLOT_RING2  = 14
 SLOT_BACK   = 15
 
+MAX_SLOTID  = 15
+
 ----------------------------------
 -- Objtype Definitions
 ----------------------------------

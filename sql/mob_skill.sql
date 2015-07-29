@@ -1875,11 +1875,11 @@ INSERT INTO `mob_skill` VALUES (1096,269,1003,'Saline_Coat',4,10.0,2000,1000,4,0
 INSERT INTO `mob_skill` VALUES (475,269,18,'Mijin_Gakure', 1, 20.0, 2000, 0, 4, 2, 0, 0);
 
 -- Hpemde
-INSERT INTO `mob_skill` VALUES (1113,144,1027,'Ichor_stream',4,10.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1112,144,1028,'Rapid_molt',0,7.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1111,144,1031,'Temporal_Shift',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1110,144,1030,'Sinuate_rush',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1109,144,1029,'Tail_thrust',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1109,144,1043,'Tail_thrust',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1110,144,1044,'Temporal_Shift',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1111,144,1031,'Sinuate_rush',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1112,144,1030,'Rapid_molt',0,7.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1113,144,1045,'Ichor_stream',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (437,144,432,'Perfect_Dodge',0,7.0,2000,0,1,2,0,0);
 
 

@@ -260,7 +260,7 @@ INSERT INTO `abilities` VALUES ('211', 'footwork', '2', '65', '1', '300', '21', 
 INSERT INTO `abilities` VALUES ('212', 'despoil', '6', '77', '4', '300', '61', '125', '0', '232', '3.0', '0', '1', '300', '0', '0','WOTG');
 INSERT INTO `abilities` VALUES ('213', 'pianissimo', '10', '20', '1', '15', '112', '0', '0', '194', '20.0', '0', '1', '80', '0', '0','WOTG');
 INSERT INTO `abilities` VALUES ('214', 'sekkanoki', '12', '40', '1', '300', '140', '0', '0', '199', '20.0', '0', '1', '80', '0', '0','WOTG');
-INSERT INTO `abilities` VALUES ('216', 'elemental_siphon', '15', '50', '1', '300', '175', '0', '0', '201', '20.0', '0', '1', '0', '0', '0','WOTG');
+INSERT INTO `abilities` VALUES ('216', 'elemental_siphon', '15', '50', '1', '300', '175', '451', '0', '201', '20.0', '0', '1', '0', '0', '0','WOTG');
 INSERT INTO `abilities` VALUES ('217', 'sublimation', '20', '35', '1', '30', '234', '0', '0', '189', '20.0', '0', '1', '80', '0', '0','WOTG');
 INSERT INTO `abilities` VALUES ('218', 'addendum_white', '20', '10', '1', '0', '231', '0', '0', '191', '20.0', '0', '1', '80', '0', '16','WOTG');
 INSERT INTO `abilities` VALUES ('219', 'addendum_black', '20', '30', '1', '0', '231', '0', '0', '192', '20.0', '0', '1', '80', '0', '32','WOTG');

@@ -67,35 +67,6 @@ function onGameIn(player, firstlogin, zoning)
         player:setGMHidden(true);
     end
 
-    ----- Start of custom and workaround stuffs -----
-
-    if (player:hasKeyItem(PORTAL_CHARM) == false) then
-        player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
-    end
-
-    if (player:hasKeyItem(LEUJAOAM_ASSAULT_ORDERS))then
-        player:delKeyItem(LEUJAOAM_ASSAULT_ORDERS);
-    end
-    if (player:hasKeyItem(MAMOOL_JA_ASSAULT_ORDERS))then
-        player:delKeyItem(MAMOOL_JA_ASSAULT_ORDERS);
-    end
-    if (player:hasKeyItem(LEBROS_ASSAULT_ORDERS))then
-        player:delKeyItem(LEBROS_ASSAULT_ORDERS);
-    end
-    if (player:hasKeyItem(PERIQIA_ASSAULT_ORDERS))then
-        player:delKeyItem(PERIQIA_ASSAULT_ORDERS);
-    end
-    if (player:hasKeyItem(ILRUSI_ASSAULT_ORDERS ))then
-        player:delKeyItem(ILRUSI_ASSAULT_ORDERS);
-    end
-    if (player:hasKeyItem(NYZUL_ISLE_ASSAULT_ORDERS))then
-        player:delKeyItem(NYZUL_ISLE_ASSAULT_ORDERS);
-    end
-    if (player:hasKeyItem(IMPERIAL_ARMY_ID_TAG)) then
-        player:delKeyItem(IMPERIAL_ARMY_ID_TAG);
-    end
-
-    ----- End of custom and workaround stuffs -----
 end;
 
 -----------------------------------
@@ -370,6 +341,8 @@ function CharCreate(player)
 	if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
 		player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
 	end
+
+    player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
 
 	----- End of custom stuffs for new players -----
 end;
