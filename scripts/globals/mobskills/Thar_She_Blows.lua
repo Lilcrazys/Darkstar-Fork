@@ -15,7 +15,6 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_KO;
-    -- target:SpoofChatParty( "..3...2...1.." MESSAGE_SAY )
     if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
         skill:setMsg(243); -- Effect of KO
         target:setHP(0);

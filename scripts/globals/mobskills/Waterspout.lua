@@ -1,10 +1,5 @@
 ---------------------------------------------
---  Bad Breath
---
---  Description: Deals earth damage that inflicts multiple status ailments on enemies within a fan-shaped area originating from the caster.
---  Type: Magical (Earth)
---
---
+--  Waterspout
 ---------------------------------------------
 require("/scripts/globals/settings");
 require("/scripts/globals/status");
@@ -15,19 +10,20 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local numhits = 1;
+    local accmod = 10;
+    local dmgmod = 3;
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
 
-	MobStatusEffectMove(mob, target, EFFECT_SLOW, 128, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 110, 90, 60); -- Tick won't happen because effect will have worn off
+    MobStatusEffectMove(mob, target, EFFECT_DEX_DOWN, 110, 90, 60); -- This is intentional because tick of zero may be a prob.
+    MobStatusEffectMove(mob, target, EFFECT_VIT_DOWN, 110, 90, 60);
+    MobStatusEffectMove(mob, target, EFFECT_AGI_DOWN, 110, 90, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 110, 90, 60);
+    MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 110, 90, 60);
+    MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 110, 90, 60);
 
-	MobStatusEffectMove(mob, target, EFFECT_POISON, (mob:getMainLvl()/10), 3, 60);
-	MobStatusEffectMove(mob, target, EFFECT_SILENCE, 1, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 15, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 1, 0, 30);
-	MobStatusEffectMove(mob, target, EFFECT_BLINDNESS, 15, 0, 60);
-	MobStatusEffectMove(mob, target, EFFECT_WEIGHT, 50, 0, 60);
-
-	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_WATER, 500);
-
-	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_EARTH,MOBPARAM_IGNORE_SHADOWS);
-	target:delHP(dmg);
-	return dmg;
+    target:delHP(dmg);
+    return dmg;
 end;

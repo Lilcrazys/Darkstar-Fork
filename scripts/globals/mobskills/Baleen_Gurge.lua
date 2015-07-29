@@ -1,6 +1,5 @@
 ---------------------------------------------------
--- Nosferatus Kiss
--- Steals an enemy's HP. Ineffective against undead.
+-- Baleen Gurge
 ---------------------------------------------------
 
 require("/scripts/globals/settings");

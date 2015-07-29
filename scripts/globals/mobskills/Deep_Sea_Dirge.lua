@@ -16,10 +16,10 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_AMNESIA;
 	MobStatusEffectMove(mob, target, typeEffect, 10, 3, 120);
-	
+
     local numhits = 1;
-    local accmod = 1;
-    local dmgmod = 2.6;
+    local accmod = 10;
+    local dmgmod = 3;
 
     local info = MobRangedMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
 
