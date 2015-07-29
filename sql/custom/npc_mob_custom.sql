@@ -786,38 +786,18 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- INSERT INTO `mob_spawn_points` VALUES (16977943,'Matamata','Matamata',90098,100,0,1,0);
 -- INSERT INTO `mob_spawn_points` VALUES (16977945,'Trembling_Tilfaire','Trembling_Tilfaire',90100,110,0,1,0);
 
--- voidwatch chapter 3
-INSERT INTO `mob_spawn_points` VALUES (16977922,'Holy_Moly','Holy Moly',90450,0,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977923,'Moly','Moly',90451,5,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977924,'Neith','Neith',90452,10,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977925,'Neiths_Bobbin','Neiths Bobbin',90453,15,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977926,'Ildebrann','Ildebrann',90454,20,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977927,'Hraun_Dragon','Hraun Dragon',90455,25,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977928,'Sabotender_Campeador','Sabotender Campeador',90456,30,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977929,'Sabotender_Mercenario','Sabotender Mercenario',90457,35,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977930,'Malleator_Maurrok','Malleator Maurrok',90458,40,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977931,'Peon_Pounder','Peon Pounder',90459,45,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977932,'Tangaroa','Tangaroa',90460,50,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977933,'Koura','Koura',90461,55,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977934,'Pekapeka','Pekapeka',90462,60,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977935,'Moki','Moki',90463,65,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977936,'Cath_Palug','Cath Palug',90464,70,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977937,'Grwnan','Grwnan',90465,75,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977938,'Modron','Modron',90466,80,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977939,'Modrons_Druid','Modrons Druid',90467,85,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977940,'Mimic_Mage','Mimic Mage',90468,90,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977941,'Mimic_Jester','Mimic Jester',90469,95,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977942,'Mimic_King','Mimic King',90470,100,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977943,'Aello','Aello',90471,105,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977944,'Aello_Handmaiden','Aello Handmaiden',90472,110,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977945,'Xuan_Wu','Xuan Wu',90473,115,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977946,'Zhu_Que','Zhu Que',90474,120,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977947,'Qing_Long','Qing Long',90475,125,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977948,'Bai_Hu','Bai Hu',90476,130,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977949,'Qilin','Qilin',90477,135,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977950,'Trna','Trna',90478,140,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977951,'Bisa','Bisa',90479,145,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977952,'Uptala','Uptala',90480,150,0,1,0);
+-- voidwatch chapter 4
+INSERT INTO `mob_spawn_points` VALUES (16977922,'Fjalar','Fjalar',90481,0,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977923,'Bloody_Skull','Bloody_Skull',90482,5,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977924,'Abununnu','Abununnu',90483,10,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977925,'Gloam_Servitor_Melee','Gloam_Servitor_Melee',90484,15,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977926,'Gloam_Servitor_Mage','Gloam_Servitor_Mage',90485,20,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977927,'Tsui-Goab','Tsui-Goab',90486,25,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977928,'Bloodswiller_Fly','Bloodswiller_Fly',90487,30,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977929,'Isarukitsck','Isarukitsck',90488,35,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977930,'Little_Wingman','Little_Wingman',90489,40,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977931,'Bismark','Bismark',90490,45,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977932,'Primordial_Pugil','Primordial_Pugil',90491,50,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.

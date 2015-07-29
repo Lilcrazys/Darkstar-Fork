@@ -1974,7 +1974,16 @@ INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 187, 1, 255); -- Aeroga 4
 INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 157, 1, 255); -- Aero 4
 INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 158, 1, 255); -- Aero 5
 
--- list IDs 433 - 589 available for use! please use'em!
+-- Bismark
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 500, 1, 255); -- thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 211, 1, 255); -- burst_ii
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 213, 1, 255); -- flood_ii
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 501, 1, 255); -- Waterja
+INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 173, 1, 255); -- Water 5
+-- list IDs 441 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?

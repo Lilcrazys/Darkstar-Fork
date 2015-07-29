@@ -788,6 +788,17 @@ INSERT INTO `mob_family_system` VALUES (1177,'Qilin',6,'Beast',3,60,140,130,1,3,
 INSERT INTO `mob_family_system` VALUES (1178,'Trna',19,'Undead',1,40,95,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,1,1,1,1,1.25,0.5,4);
 INSERT INTO `mob_family_system` VALUES (1179,'Bisa',19,'Undead',1,40,95,140,1,3,3,3,1,5,1,3,3,3,3,0.875,0.5,1.125,1.25,1.25,0.875,1,1,1,1,1.25,0.5,4);
 INSERT INTO `mob_family_system` VALUES (1180,'Uptala',19,'Undead',0,40,70,140,6,3,6,3,8,5,4,3,3,3,3,0.75,0.75,0.5,0.5,1.25,0.3,1,1,1,1,1,0.3,2);
+INSERT INTO `mob_family_system` VALUES (1181,'Fjalar',9,'Demon',1,40,90,140,6,3,3,3,1,5,4,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0.875,0);
+INSERT INTO `mob_family_system` VALUES (1182,'Bloody_Skull',19,'Undead',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,8);
+INSERT INTO `mob_family_system` VALUES (1183,'Abununnu',9,'Demon',0,70,110,140,1,2,4,4,1,2,4,3,3,3,3,1,1,1,1,0.75,0.75,0.75,0.75,0.75,0.75,1.25,0.75,8);
+INSERT INTO `mob_family_system` VALUES (1184,'Gloam_Servitor_Melee',9,'Demon',0,70,110,140,1,2,4,4,1,2,4,3,3,3,3,1,1,1,1,0.75,0.75,0.75,0.75,0.75,0.75,1.25,0.75,8);
+INSERT INTO `mob_family_system` VALUES (1185,'Gloam_Servitor_Mage',9,'Demon',0,70,110,140,1,2,4,4,1,2,4,3,3,3,3,1,1,1,1,0.75,0.75,0.75,0.75,0.75,0.75,1.25,0.75,8);
+INSERT INTO `mob_family_system` VALUES (1186,'Tsui-Goab',20,'Vermin',0,40,105,120,3,18,4,3,3,6,5,3,5,18,3,1,1,1,1,1,1.25,1,1,1.25,1,1.125,1.25,4);
+INSERT INTO `mob_family_system` VALUES (1187,'Bloodswiller_Fly',20,'Vermin',0,40,92,90,1,3,4,3,6,6,5,3,3,3,3,1,1.25,1,1,1,1.25,0.875,1,1,1,1,1,3);
+INSERT INTO `mob_family_system` VALUES (1188,'Isarukitsck',8,'Bird',1,40,120,90,3,2,1,6,6,4,5,3,3,3,3,1,1,1,1,1,1,1,1.125,0.875,0.5,1,1,6);
+INSERT INTO `mob_family_system` VALUES (1189,'Little_Wingman',8,'Bird',1,40,120,90,3,2,1,6,6,4,5,3,3,3,3,1,1,1,1,1,1,1,1.125,0.875,0.5,1,1,6);
+INSERT INTO `mob_family_system` VALUES (1190,'Bismark',2,'Aquan',4,40,120,140,6,5,4,5,3,3,4,4,4,2,2,1,1,1,1,1,1.25,1,1,1.25,0.75,1,1,6);
+INSERT INTO `mob_family_system` VALUES (1191,'Primordial_Pugil',2,'Aquan',1,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1.25,1,1,1.25,0.5,1,1,6);
 
 -- 1145 to 1199 currently unused
 INSERT INTO `mob_family_system` VALUES (1200,'Tiamat',10,'Dragon',4,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,0,8);
