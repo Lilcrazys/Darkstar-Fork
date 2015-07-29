@@ -1,6 +1,6 @@
 @ECHO OFF
 cd ..\..\sql
-ECHO This file must NOT be used whiel the server is live with players logged in!
+ECHO This file must NOT be used while the server is live with players logged in!
 ECHO ONLY use this when server is completely down! Lobby AND all Map Server!
 ECHO ------------------------------------------------------------------
 PAUSE
