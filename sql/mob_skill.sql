@@ -5773,8 +5773,8 @@ INSERT INTO `mob_skill` VALUES (1860,1181,1462,'VW_Necrobane',1,15.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (1861,1181,1461,'VW_Necropurge',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1862,1181,1458,'VW_Bilgestorm',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1863,1181,1459,'VW_Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2557,1181,1456,'Dunur_Strike',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2556,1181,1459,'Bilfrost_Squall',1,25.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2557,1181,1459,'Dunur_Strike',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2556,1181,1994,'Bilfrost_Squall',1,25.0,2000,1000,4,0,0,0);
 
 -- Bloody_Skull (1182)
 INSERT INTO `mob_skill` VALUES (2255,1182,1463,'VW_Corpse_Breath',1,15.0,2000,1500,4,0,0,0);
@@ -5784,8 +5784,8 @@ INSERT INTO `mob_skill` VALUES (303,1183,303,'VW_Soul_Drain',1,10.0,2000,1500,4,
 INSERT INTO `mob_skill` VALUES (304,1183,304,'VW_Hecatomb_Wave',4,10.0,2000,2000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (307,1183,307,'VW_Demonic_Howl',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (892,1183,311,'VW_Condemnation',4,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2116,1183,311,'Hellborn_Yawp',4,15.0,2000,1500,4,0,0,0); -- animation / script
-INSERT INTO `mob_skill` VALUES (2565,1183,304,'Accurst_Spear',1,20.0,2000,1500,4,0,0,0); -- animation / script
+INSERT INTO `mob_skill` VALUES (2116,1183,1960,'Hellborn_Yawp',4,15.0,2000,1500,4,0,0,0); -- animation / script
+INSERT INTO `mob_skill` VALUES (2565,1183,1997,'Accurst_Spear',1,20.0,2000,1500,4,0,0,0); -- animation / script
 
 -- Gloam_Servitor_Melee (1184)
 INSERT INTO `mob_skill` VALUES (303,1184,303,'VW_Soul_Drain',0,7.0,2000,1500,4,0,0,0);
@@ -5816,20 +5816,24 @@ INSERT INTO `mob_skill` VALUES (2630,1186,1925,'Exorender',4,22.0,2000,1000,4,0,
 INSERT INTO `mob_skill` VALUES (62,1187,401,'VW_Somersault',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (403,1187,403,'VW_Cursed_Sphere',2,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (404,1187,404,'VW_Venom',0,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1368,1187,401,'Debilitating_Drone',1,17.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1368,1187,1992,'Debilitating_Drone',1,17.0,2000,1500,4,0,0,0);
 
 -- Isarukitsck (1188)
 INSERT INTO `mob_skill` VALUES (1460,1188,1162,'VW_Frigid_Shuffle',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1459,1188,1161,'VW_Beak_Lunge',0,7.0,2000,1500,4,0,0,5);
 INSERT INTO `mob_skill` VALUES (1457,1188,1159,'VW_Yawn',1,18.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1458,1188,1160,'VW_Wing_Slap',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2563,1188,1159,'Whiteout',1,18.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2563,1188,1680,'Whiteout',1,18.0,2000,1500,4,0,0,0);
 
 -- Little_Wingman (1189)
 INSERT INTO `mob_skill` VALUES (1457,1189,1159,'VW_Yawn',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1459,1189,1161,'VW_Beak_Lunge',0,7.0,2000,1500,4,0,0,0);
 
 -- Bismark (1190)
+INSERT INTO `mob_skill` VALUES (2606,1190,1999,'Bismark_Front',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2607,1190,2000,'Bismark_Side_1',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2608,1190,2001,'Bismark_Side_2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2610,1190,2003,'Bismark_Tail',1,10.0,2000,0,4,16,0,1);
 INSERT INTO `mob_skill` VALUES (2620,1190,2012,'Thar_She_Blows',1,10.0,8000,5000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2619,1190,2010,'Waterspout',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2618,1190,2011,'Angry_Seas',1,18.0,2000,1000,4,0,0,0);
