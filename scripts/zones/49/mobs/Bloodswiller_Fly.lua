@@ -28,6 +28,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
+    mob:setMod(MOD_MATT,80);
 end;
 
 -----------------------------------

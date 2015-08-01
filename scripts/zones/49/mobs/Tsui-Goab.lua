@@ -17,7 +17,7 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
     -- addMod
-    mob:addMod(MOD_MDEF,60);
+    mob:addMod(MOD_MDEF,30);
     mob:addMod(MOD_ATT,150);
 end;
 
@@ -27,14 +27,14 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 45);
     mob:setMod(MOD_MACC,2000);
     mob:setMod(MOD_MATT,80);
     mob:SetMobSkillAttack(true);
-    mob:setMod(MOD_ACC,1600);
+    mob:setMod(MOD_ACC,2200);
 end;
 
 -----------------------------------
