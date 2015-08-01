@@ -31,5 +31,5 @@ function onMobWeaponSkill(target, mob, skill)
     mob:lowerEnmity(target, 70);
 
     target:delHP(dmg);
-    return dispel;
+    return dmg;
 end
