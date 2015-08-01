@@ -14,6 +14,11 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_ATT,150);
+    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------
@@ -29,12 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,150);
-    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------
