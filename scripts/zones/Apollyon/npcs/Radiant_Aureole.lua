@@ -14,6 +14,13 @@ require("scripts/zones/Apollyon/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    if (player:getLocalVar("Warn") == 0) then
+        player:PrintToPlayer("Dual Boxing here will crash the server!");
+        player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Limbus!");
+        player:PrintToPlayer("Trade again to continue.")
+        player:setLocalVar("Warn", 1);
+    else
+
 local count = trade:getItemCount();
 if(player:hasKeyItem(COSMOCLEANSE))then 
   if(count==1 and trade:hasItemQty(2127,1))then-- metal chip
@@ -34,6 +41,7 @@ if(player:hasKeyItem(COSMOCLEANSE))then
 	 print("error player  don't have cosmo clean");
  end 
   
+    end
 end;
 
 -----------------------------------
@@ -41,6 +49,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    player:PrintToPlayer("Dual Boxing here will crash the server!");
+    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Limbus!");
  local instancelist ={};
  local limbusbitmap = 0 ;
  local AllowLimbusToPlayer = true ;   

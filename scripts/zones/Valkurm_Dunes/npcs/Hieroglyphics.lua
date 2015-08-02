@@ -24,7 +24,9 @@ end;
 -- onTrigger Action
 -----------------------------------
 
-function onTrigger(player,npc)  
+function onTrigger(player,npc) 
+    player:PrintToPlayer("Dual Boxing here will crash the server!");
+    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!"); 
 
 	if(player:hasCompletedMission(COP,DARKNESS_NAMED) or FREE_COP_DYNAMIS == 1) then
 		local firstDyna = 0;

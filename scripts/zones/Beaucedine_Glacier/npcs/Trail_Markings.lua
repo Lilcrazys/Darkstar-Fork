@@ -24,6 +24,9 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    player:PrintToPlayer("Dual Boxing here will crash the server!");
+    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
+
     if (player:getVar("DynaBeaucedine_Win") == 1) then
         player:startEvent(0x0086,HYDRA_CORPS_INSIGNIA); -- Win CS
     elseif (player:hasKeyItem(HYDRA_CORPS_COMMAND_SCEPTER) and

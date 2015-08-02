@@ -24,6 +24,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    player:PrintToPlayer("Dual Boxing here will crash the server!");
+    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
 	
 	if(player:getVar("Dynamis_Status") == 1) then
 		player:startEvent(0x02AE); -- cs with Cornelia

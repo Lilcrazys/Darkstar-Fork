@@ -9,6 +9,14 @@ cmdprops =
     parameters = "s"
 };
 function onTrigger(player, hall)
+    if (player:getLocalVar("Warn") == 0) then
+        player:PrintToPlayer("Dual Boxing here will crash the server!");
+        player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Legion!");
+        player:PrintToPlayer("Run this command again to continue.")
+        player:setLocalVar("Warn", 1);
+        return;
+    end
+
     if (hall == nil) then
         player:PrintToPlayer("Must specify a valid Legion Hall name");
         player:PrintToPlayer("@legionhall <hall name>");

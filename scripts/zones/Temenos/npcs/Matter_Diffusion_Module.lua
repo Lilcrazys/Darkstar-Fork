@@ -15,6 +15,13 @@ require("scripts/zones/Temenos/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    if (player:getLocalVar("Warn") == 0) then
+        player:PrintToPlayer("Dual Boxing here will crash the server!");
+        player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Limbus!");
+        player:PrintToPlayer("Trade again to continue.")
+        player:setLocalVar("Warn", 1);
+    else
+
 local count = trade:getItemCount();
 local InstanceTrade=0;
 if(player:hasKeyItem(COSMOCLEANSE) and player:hasKeyItem(WHITE_CARD) )then 
@@ -46,13 +53,16 @@ if(player:hasKeyItem(COSMOCLEANSE) and player:hasKeyItem(WHITE_CARD) )then
   
   
   
+    end
 end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
-function onTrigger(player,npc)
+function onTrigger(player,npc)  
+    player:PrintToPlayer("Dual Boxing here will crash the server!");
+    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Limbus!");
  local instancelist ={};
  local limbusbitmap = 0 ;
  local AllowLimbusToPlayer = true ;   
