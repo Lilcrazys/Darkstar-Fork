@@ -3233,3 +3233,43 @@ REPLACE INTO `npc_list` VALUES (17502696,'Planar_Rift','Planar Rift',0,-119,0,-3
 REPLACE INTO `mob_spawn_points` VALUES (17502571,'Uptala','Uptala',90480,-120.352,0.035,-384.774,131);
 REPLACE INTO `mob_spawn_points` VALUES (17502572,'Bisa','Bisa',90479,-121.754,-0.113,-384.136,236);
 INSERT INTO `mob_spawn_points` VALUES (17502573,'Trna','Trna',90478,-122.754,-0.113,-384.136,236);
+
+-- Attohwa Chasm (Fjalar)
+REPLACE INTO `npc_list` VALUES (16806372,'Planar_Rift','Planar Rift',0,40,-4,-119,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,'2','ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (16806250,'Fjalar','Fjalar',90481,40,-4,-119,0);
+REPLACE INTO `mob_spawn_points` VALUES (16806251,'Bloody_Skull','Bloody Skull',90482,39,-4,-119,0);
+REPLACE INTO `mob_spawn_points` VALUES (16806252,'Bloody_Skull','Bloody Skull',90482,40,-4,-119,0);
+REPLACE INTO `mob_spawn_points` VALUES (16806253,'Bloody_Skull','Bloody Skull',90482,41,-4,-119,0);
+
+-- Lufaise Meadows (Abununnu)
+REPLACE INTO `npc_list` VALUES (16875876,'Planar_Rift','Planar Rift',0,-406,-8,44,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (16875780,'Abununnu','Abununnu',90483,-406,-8,44,0);
+REPLACE INTO `mob_spawn_points` VALUES (16875781,'Gloam_Servitor_Melee','Gloam Servitor',90484,-405,-8,44,241);
+REPLACE INTO `mob_spawn_points` VALUES (16875782,'Gloam_Servitor_Mage','Gloam Servitor',90485,-407,-8,44,16);
+
+-- Misareaux Coast (Tsui-Goab)
+REPLACE INTO `npc_list` VALUES (16879982,'Planar_Rift','Planar Rift',0,443,-15,126,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (16879901,'Tsui-Goab','Tsui-Goab',90486,443,-15,126,0);
+REPLACE INTO `mob_spawn_points` VALUES (16879902,'Bloodswiller_Fly','Bloodswiller Fly',90487,442,-15,126,0);
+REPLACE INTO `mob_spawn_points` VALUES (16879903,'Bloodswiller_Fly','Bloodswiller Fly',90487,444,-15,126,0);
+
+-- Uleguerand Range (Isarukitsck)
+REPLACE INTO `npc_list` VALUES (16798140,'Planar_Rift','Planar Rift',0,-141,-19,-325,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (16798081,'Isarukitsck','Isarukitsck',90488,-141,-19,-325,0);
+REPLACE INTO `mob_spawn_points` VALUES (16798082,'Little Wingman','Little Wingman',90489,-140,-19,-325,0);
+REPLACE INTO `mob_spawn_points` VALUES (16798083,'Little Wingman','Little Wingman',90489,-141,-19,-325,0);
+REPLACE INTO `mob_spawn_points` VALUES (16798084,'Little Wingman','Little Wingman',90489,-142,-19,-325,0);
+
+-- Bibiki Bay (Bismarck)
+REPLACE INTO `npc_list` VALUES (16793963,'Planar_Rift','Planar Rift','0','-643','0.3','-655','1','40','40','0','5','100','0','3',0x00006F0900000000000000000000000000000000,'2','ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (16793862,'Bismarck','Bismarck',90490,-643,0.3,-655,108);
+REPLACE INTO `mob_spawn_points` VALUES (16793863,'Primordial_Pugil','Primordial Pugil',90491,-640,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793864,'Primordial_Pugil','Primordial Pugil',90491,-640.5,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793865,'Primordial_Pugil','Primordial Pugil',90491,-641,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793866,'Primordial_Pugil','Primordial Pugil',90491,-641.5,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793867,'Primordial_Pugil','Primordial Pugil',90491,-642,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793868,'Primordial_Pugil','Primordial Pugil',90491,-642.5,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793869,'Primordial_Pugil','Primordial Pugil',90491,-643,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793870,'Primordial_Pugil','Primordial Pugil',90491,-643.5,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793871,'Primordial_Pugil','Primordial Pugil',90491,-644,0.3,-655,0);
+REPLACE INTO `mob_spawn_points` VALUES (16793872,'Primordial_Pugil','Primordial Pugil',90491,-644.5,0.3,-655,0);
