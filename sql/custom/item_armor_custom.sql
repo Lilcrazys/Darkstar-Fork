@@ -141,3 +141,4 @@ REPLACE INTO `item_armor` VALUES (27918,'manibozho_jerkin',99,110,2593826,350,0,
 REPLACE INTO `item_armor` VALUES (27777,'manibozho_beret',99,110,2593826,350,0,0,16,0);
 
 REPLACE INTO `item_armor` VALUES (27410,'hippomenes_socks_+1',99,119,3851870,350,0,0,256,0);
+INSERT INTO `item_armor` VALUES (28005,'alrunas_gloves_+1',99,118,66592,223,0,0,64,0);

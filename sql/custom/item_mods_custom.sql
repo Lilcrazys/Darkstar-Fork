@@ -256,3 +256,25 @@ REPLACE INTO `item_mods` VALUES (21181, 28, 168); -- MATT
 REPLACE INTO `item_mods` VALUES (21182, 28, 130); --  Magic Attack Bonus +25
 REPLACE INTO `item_mods` VALUES (21194, 28, 95); -- Should be 19 see below
 REPLACE INTO `item_mods` VALUES (21208, 28, 73); -- Should be 40   see below
+
+
+-- -------------------- NEW ITEMS BELOW THIS LINE PLEASE ------------------------
+
+-- alrunas_gloves_+1
+INSERT INTO `item_mods` VALUES (28005, 1, 88);
+INSERT INTO `item_mods` VALUES (28005, 2, 23);
+INSERT INTO `item_mods` VALUES (28005, 8, 11);
+INSERT INTO `item_mods` VALUES (28005, 9, 34);
+INSERT INTO `item_mods` VALUES (28005, 10, 31);
+INSERT INTO `item_mods` VALUES (28005, 11, 11);
+INSERT INTO `item_mods` VALUES (28005, 12, 12);
+INSERT INTO `item_mods` VALUES (28005, 13, 29);
+INSERT INTO `item_mods` VALUES (28005, 14, 17);
+INSERT INTO `item_mods` VALUES (28005, 26, 20);
+INSERT INTO `item_mods` VALUES (28005, 23, 20);
+INSERT INTO `item_mods` VALUES (28005, 68, 23);
+INSERT INTO `item_mods` VALUES (28005, 31, 36);
+INSERT INTO `item_mods` VALUES (28005, 29, 1);
+INSERT INTO `item_mods` VALUES (28005, 384, 51);
+INSERT INTO `item_mods` VALUES (28005, 365, 5);
+INSERT INTO `item_mods` VALUES (28005, 162, 3);
