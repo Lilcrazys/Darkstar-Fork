@@ -2,8 +2,8 @@
 -- Scilliant Lance
 -- Moneceros
 ---------------------------------------------
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)

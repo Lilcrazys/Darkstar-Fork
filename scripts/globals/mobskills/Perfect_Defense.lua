@@ -3,11 +3,11 @@
 --  Description: Grants Shield effect for a time.
 --  Type: Enhancing
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
     if (mob:getHPP() <= 25) then
         return 0;

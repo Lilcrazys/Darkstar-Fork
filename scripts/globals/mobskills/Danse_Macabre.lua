@@ -1,6 +1,6 @@
 ---------------------------------------------------
 --  Danse Macabre
---
+-- 
 --  Description: Charms a single target.
 --  Type: Enfeebling
 --  Utsusemi/Blink absorb: N/A
@@ -19,19 +19,11 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_CHARM_I;
-	local power = 0;
+    local typeEffect = EFFECT_CHARM_I;
+    local msg = MobStatusEffectMove(mob, target, typeEffect, 0, 0, 60)
 
-    if (not target:isPC()) then
-        skill:setMsg(MSG_MISS);
-        return typeEffect;
-    end
-
-    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 75)
-    if (msg == MSG_ENFEEB_IS) then
-        mob:charm(target);
-    end
     skill:setMsg(msg);
+    mob:resetEnmity(target);
 
     return typeEffect;
-end;
+end

@@ -11,10 +11,11 @@
 -- Waxing Gibbous 75%~90% - Grants Attack Boost of ~12.25% and Magic Attack Boost of ~2-3.
 -- Full Moon 90%~100% - Grants Attack Boost of ~15.0% and Magic Attack Boost of ~1.
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
 	if (mob:AnimationSub() == 1) then
 		return 1;

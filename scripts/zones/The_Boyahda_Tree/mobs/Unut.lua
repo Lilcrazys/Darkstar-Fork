@@ -2,12 +2,14 @@
 -- Area: The Boyhoda Tree
 -- MOB:  Unut
 -----------------------------------
-
-require("/scripts/globals/fieldsofvalor");
 package.loaded["scripts/zones/The_Boyhoda_Tree/TextIDs"] = nil;
+-----------------------------------
+
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
+require("scripts/globals/status");
+require("scripts/globals/fieldsofvalor");
+require("scripts/zones/The_Boyhoda_Tree/TextIDs");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -46,4 +48,3 @@ function onMobDeath(mob,killer)
     end
     checkRegime(killer,mob,90,3);
 end;
-

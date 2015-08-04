@@ -1,7 +1,10 @@
 ---------------------------------------------
---  Perfect Defense
---  Description: Grants Shield effect for a time.
+--  Polar Bulwark
+--
+--  Description: Grants a Magic Shield effect for a time.
 --  Type: Enhancing
+--  
+--  Range: Self
 ---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");

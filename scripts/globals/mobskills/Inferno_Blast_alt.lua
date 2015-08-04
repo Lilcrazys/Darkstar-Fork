@@ -12,11 +12,21 @@ require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-        return 1;
+    return 1;
 end;
 
-
 function onMobWeaponSkill(target, mob, skill)
+    --[[
+
+	local dmgmod = 1;
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_FIRE,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
+	target:delHP(dmg);
+    skill:setMsg(1);
+	return dmg;
+    ]]--
+    -- DSP code is commented out above.
+    -- Custom code is below this line
     local dmgmod = 2;
     local POW = 1;
     -- target:PrintToPlayer(string.format("ATT %u ", mob:getStat(MOD_ATT)));

@@ -1,26 +1,22 @@
 -----------------------------------
--- 
+--
 -----------------------------------
 
 require("scripts/globals/titles");
-require("/scripts/globals/fieldsofvalor");
+require("scripts/globals/fieldsofvalor");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-	mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
-	mob:setMobMod(MOBMOD_SOUND_RANGE,30);
-end;
+    -- setMobMod
+    mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
+    mob:setMobMod(MOBMOD_SOUND_RANGE,30);
 
------------------------------------
--- onMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
-    mob:setMod(MOD_REGAIN,33);
+    -- addMod
     mob:addMod(MOD_STR,77);
     mob:addMod(MOD_INT,30);
     mob:addMod(MOD_MATT,400);
@@ -33,8 +29,17 @@ function onMobSpawn(mob)
     mob:addMod(MOD_CRIT_DMG_INCREASE,15);
     mob:addMod(MOD_CRITHITRATE,22);
     mob:addMod(MOD_DOUBLE_ATTACK,35);
-end;	
-	
+end;
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
+end;
+
 -----------------------------------
 -- onMobEngaged
 -----------------------------------

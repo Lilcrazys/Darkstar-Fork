@@ -2,11 +2,9 @@
 -- Hydro Wave
 -- Deals Water damage and strips one piece of equipment. User temporarily gains ability to absorb Water elemental damage.
 ---------------------------------------------------
-
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)

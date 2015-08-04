@@ -10,8 +10,8 @@
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
     if (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
         return 1;
@@ -20,17 +20,17 @@ function onMobSkillCheck(target,mob,skill)
 	elseif (target:isBehind(mob, 48) == true) then
         return 1;
     end
-        return 0;
+	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_PARALYSIS;
+	local typeEffect = EFFECT_PARALYSIS;
 
-    MobStatusEffectMove(mob, target, typeEffect, 40, 0, 120);
+	MobStatusEffectMove(mob, target, typeEffect, 40, 0, 120);
 
-    local dmgmod = 1.1;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_ICE,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_WIPE_SHADOWS);
-    target:delHP(dmg);
-    return dmg;
+	local dmgmod = 1;
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_ICE,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_WIPE_SHADOWS);
+	target:delHP(dmg);
+	return dmg;
 end;

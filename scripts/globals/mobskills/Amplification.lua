@@ -2,9 +2,11 @@
 -- Amplification
 -- Enhances Magic Attack and Magic Defense. Bonus stacks when used by mobs.
 ---------------------------------------------------
+
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
+
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -12,6 +14,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+
     local typeEffect1 = EFFECT_MAGIC_ATK_BOOST;
     local typeEffect2 = EFFECT_MAGIC_DEF_BOOST;
     local mabTotal = mob:getStatusEffect(EFFECT_MAGIC_ATK_BOOST);

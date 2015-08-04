@@ -1,11 +1,9 @@
 ---------------------------------------------------
 -- Gorge
 ---------------------------------------------------
-
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -17,7 +15,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
 
-    if(target:isUndead() == false) then
+    if (target:isUndead() == false) then
         target:delHP(dmg);
         mob:addHP(dmg);
         skill:setMsg(MSG_DRAIN_HP);

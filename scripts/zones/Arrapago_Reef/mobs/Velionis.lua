@@ -1,21 +1,27 @@
 -----------------------------------
 -- Area: Arrapago Reef
--- NPC:  Velionis
+--  ZNM: Velionis
+-----------------------------------
+package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
 -----------------------------------
 
-require("/scripts/globals/fieldsofvalor");
-package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/monstertpmoves");
+require("scripts/zones/Arrapago_Reef/TextIDs"");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+    mob:addMod(MOD_MACC,420);
+    mob:addMod(MOD_MATT,115);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_MACC,420);
-	mob:addMod(MOD_MATT,115);
 end;
 
 -----------------------------------

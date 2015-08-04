@@ -27,7 +27,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 	local typeEffect = EFFECT_ACCURACY_DOWN;
 
-         MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 25, 0, 120);
+    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 25, 0, 120);
 
 	target:delHP(dmg);
 	return dmg;

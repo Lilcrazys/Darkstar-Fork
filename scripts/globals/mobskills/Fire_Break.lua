@@ -7,12 +7,12 @@
 --  Range: Unknown cone
 --  Notes: Used only by Tiamat, Smok and Ildebrann
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-require("/scripts/globals/utils");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
+require("scripts/globals/utils");
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
     if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES)) then
         return 1;

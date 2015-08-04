@@ -3,12 +3,12 @@
 --  Gallu
 
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
-require("/scripts/globals/utils");
-
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
+require("scripts/globals/utils");
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
 	return 0;
 end;

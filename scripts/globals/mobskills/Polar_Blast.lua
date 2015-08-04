@@ -21,7 +21,8 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-   local dmgmod = MobBreathMove(mob, target, 0.01, 0.1, ELE_ICE, 1200);
+   -- local dmgmod = MobBreathMove(mob, target, 0.01, 0.1, ELE_ICE, 200); -- DSP
+   local dmgmod = MobBreathMove(mob, target, 0.01, 0.1, ELE_ICE, 1200); -- Custom
 	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_ICE,MOBPARAM_IGNORE_SHADOWS);
 
    MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 15, 0, 60);

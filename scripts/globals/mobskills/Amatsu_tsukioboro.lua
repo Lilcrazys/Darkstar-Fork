@@ -6,9 +6,9 @@
 --  Shadow per hit
 --  Range: Melee
 ---------------------------------------------
-require("/scripts/globals/settings");
-require("/scripts/globals/status");
-require("/scripts/globals/monstertpmoves");
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
 
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
@@ -17,7 +17,7 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	mob:messageBasic(43, 0, 692+256);
+	mob:messageBasic(43, 0, 692+256); -- The hell is this shit?
 	skill:setSkillchain(152);
 
 	local numhits = 1;

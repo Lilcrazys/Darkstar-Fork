@@ -15,18 +15,20 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+	return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local typeEffect = EFFECT_STUN;
+	-- KNOCKBACK
 
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 4);
+	local typeEffect = EFFECT_STUN;
 
-    local dmgmod = 1;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_WIND,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WIND,MOBPARAM_WIPE_SHADOWS);
-    target:delHP(dmg);
-    return dmg;
+	MobStatusEffectMove(mob, target, typeEffect, 1, 0, 4);
+
+	local dmgmod = 1;
+	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*4,ELE_WIND,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WIND,MOBPARAM_WIPE_SHADOWS);
+	target:delHP(dmg);
+	return dmg;
 end;
