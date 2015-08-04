@@ -5925,11 +5925,11 @@ INSERT INTO `mob_skill` VALUES (1703,1208,1361,'VW_Water_Bomb',1,16.0,2000,1500,
 INSERT INTO `mob_skill` VALUES (1702,1208,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
 
 -- Yalungur (1209)
-INSERT INTO `mob_skill` VALUES (1445,287,1178,'Feather_Tickle',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1444,287,1177,'Snatch_Morsel',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1443,287,1176,'VW_Pecking_Flurry',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1446,287,1177,'Wisecrack',1,10.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (????,287,????,'Tropic_Terror',1,15.0,2000,1500,4,0,0,3); -- script / animation
+INSERT INTO `mob_skill` VALUES (1445,1209,1178,'Feather_Tickle',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1444,1209,1177,'Snatch_Morsel',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1443,1209,1176,'VW_Pecking_Flurry',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1446,1209,1177,'Wisecrack',1,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (????,1209,????,'Tropic_Terror',1,15.0,2000,1500,4,0,0,3); -- script / animation
 
 -- Predatory_Colibri (1210)
 INSERT INTO `mob_skill` VALUES (1445,1210,1178,'Feather_Tickle',0,7.0,2000,1500,4,0,0,0);

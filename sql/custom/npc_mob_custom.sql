@@ -776,8 +776,8 @@ INSERT INTO `mob_spawn_points` VALUES (16977926,'Yalungur','Yalungur',90496,20,0
 INSERT INTO `mob_spawn_points` VALUES (16977927,'Predatory_Colibri','Predatory_Colibri',90497,25,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977928,'Vanasarvik','Vanasarvik',90498,30,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977929,'Elder_Imp','Elder_Imp',90499,35,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977930,'Morta','Morta',90500,40,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977931,'Ravishing_Rafflesia','Ravishing_Rafflesia',90501,45,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977930,'Morta','Morta',90505,40,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977931,'Ravishing_Rafflesia','Ravishing_Rafflesia',90506,45,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.
