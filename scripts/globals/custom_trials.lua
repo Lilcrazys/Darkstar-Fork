@@ -1,20 +1,19 @@
 -----------------------------------
--- Functions for LegionXI custom trials content
--- Author: Teo & Omni LegionFFXI
+-- Functions for LegionDS custom trials content
 -----------------------------------
+require("scripts/globals/status");
 require("scripts/globals/utils");
 -----------------------------------
 
 -- ID Tables
-local Relic1 = {18318, 15070, 18336, 18306, 18294, 18330, 18276, 18342, 18300, 18288, 18312, 18270, 18324, 18282, 18264, 18348}
-local Relic2 = {18646, 16196, 18649, 18644, 18642, 18648, 18639, 18578, 18643, 18641, 18645, 18638, 18647, 18640, 18637, 18650}
-local Relic3 = {18674, 16198, 18677, 18672, 18670, 18676, 18667, 18580, 18671, 18669, 18673, 18666, 18675, 18668, 18665, 18678}
--- local Relic4 = {19755, 11927, 19758, 19753, 19751, 19757, 19748, 18572, 19752, 19750, 19754, 19747, 19756, 19749, 19746, 19759}
-local Mythic1 = {18999, 18997, 19000, 18991, 19007, 19001, 18992, 19002, 18994, 18998, 18995, 19003, 19005, 19004, 18989, 19006, 18990}
-local Mythic2 = {19088, 19086, 19089, 19080, 19096, 19090, 19081, 19091, 19083, 19087, 19084, 19092, 19094, 19093, 19098, 19095, 19099}
-local Mythic3 = {19718, 19716, 19719, 19710, 19726, 19720, 19711, 19721, 19713, 19717, 19714, 19722, 19724, 19723, 19728, 19725, 19729}
--- local Mythic4 = {19827, 19825, 19828, 19819, 19835, 19829, 19820, 19830, 19822, 19826, 19823, 19831, 19962, 19832, 19837, 19834, 19838}
-
+local RelicStage1 = {18318, 15070, 18336, 18306, 18294, 18330, 18276, 18342, 18300, 18288, 18312, 18270, 18324, 18282, 18264, 18348}
+local RelicStage2 = {18646, 16196, 18649, 18644, 18642, 18648, 18639, 18578, 18643, 18641, 18645, 18638, 18647, 18640, 18637, 18650}
+local RelicStage3 = {18674, 16198, 18677, 18672, 18670, 18676, 18667, 18580, 18671, 18669, 18673, 18666, 18675, 18668, 18665, 18678}
+local RelicStage4 = {19755, 11927, 19758, 19753, 19751, 19757, 19748, 18572, 19752, 19750, 19754, 19747, 19756, 19749, 19746, 19759}
+local MythicStage1 = {18996, 18999, 18997, 19000, 18991, 19007, 19001, 18992, 19002, 18994, 18998, 18995, 19003, 19005, 19004, 18989, 19006, 18990}
+local MythicStage2 = {19085, 19088, 19086, 19089, 19080, 19096, 19090, 19081, 19091, 19083, 19087, 19084, 19092, 19094, 19093, 19098, 19095, 19099}
+local MythicStage3 = {19715, 19718, 19716, 19719, 19710, 19726, 19720, 19711, 19721, 19713, 19717, 19714, 19722, 19724, 19723, 19728, 19725, 19729}
+local MythicStage4 = {19824, 19827, 19825, 19828, 19819, 19835, 19829, 19820, 19830, 19822, 19826, 19823, 19831, 19962, 19832, 19837, 19834, 19838}
 
 -- function doCustomTrial(mob, killer, isKillShot, killType)
 function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
@@ -39,7 +38,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 	-- Relic 1 75-85
 	---------------------
-	if (utils.inTable(Relic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(RelicStage1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		local SewwTheSquidLimbedKillCount = killer:getVar("Seww_the_Squidlimbed_KILLS");
 		local MegalobugardKillCount = killer:getVar("Megalobugard_KILLS");
 		local DuneWidowKillCount = killer:getVar("Dune_Widow_KILLS");
@@ -77,7 +76,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 	-- Relic 2 85-95
 	---------------------
-	if (utils.inTable(Relic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(RelicStage2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		local AdamantoiseKillCount = killer:getVar("Adamantoise_KILLS");
 		local BehemothKillCount = killer:getVar("Behemoth_KILLS");
 		local FafnirKillCount = killer:getVar("Fafnir_KILLS");
@@ -102,7 +101,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 	-- Relic 3 95-99
 	---------------------
-	if (utils.inTable(Relic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(RelicStage3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		local AspidocheloneKillCount = killer:getVar("Aspidochelone_KILLS");
 		local KingBehemothKillCount = killer:getVar("King_Behemoth_KILLS");
 		local AshDragonKillCount = killer:getVar("Ash_Dragon_KILLS");
@@ -136,7 +135,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 	-- Mythic 1 75-85
 	---------------------
-	if (utils.inTable(Mythic1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(MythicStage1, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		local BrassBorerKillCount = killer:getVar("Brass_Borer_KILLS");
 		local ZareehklKillCount = killer:getVar("Zareehkl_the_Jubilant_KILLS");
 		local VelionisKillCount = killer:getVar("Velionis_KILLS");
@@ -174,7 +173,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 	-- Mythic 2 85-95
 	---------------------
-	if (utils.inTable(Mythic2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(MythicStage2, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		local ExperimentalLamiaKillCount = killer:getVar("Experimental_Lamia_KILLS");
 		local NosferatuKillCount = killer:getVar("Nosferatu_KILLS");
 		local AchamothKillCount = killer:getVar("Achamoth_KILLS");
@@ -204,7 +203,7 @@ function doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill)
 	---------------------
 	-- Mythic 2 95-99
 	---------------------
-	if (utils.inTable(Mythic3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
+	if (utils.inTable(MythicStage3, TRIAL) == true and (MAIN == TRIAL or SUB == TRIAL or RANGED == TRIAL)) then
 		local CerberusKillCount = killer:getVar("Cerberus_KILLS");
 		local KhimaraKillCount = killer:getVar("Khimara_KILLS");
 		local MedusaKillCount = killer:getVar("Medusa_KILLS");
