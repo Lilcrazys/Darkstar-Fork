@@ -17,7 +17,7 @@ require("scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     local dispel = target:eraseStatusEffect();
 
-    if( dispel ~= EFFECT_NONE) then
+	if (dispel ~= EFFECT_NONE) then
         return 0;
     end
 

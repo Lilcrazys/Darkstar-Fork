@@ -28,7 +28,7 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
 		if (killer:getEquipID(SLOT_MAIN) == 16607 and isKillShot == true and isWeaponSkillKill == false) then
 			if (ChaosbringerKills < 200) then
 				killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);
-				if(ChaosbringerKills == 1) then
+				if (ChaosbringerKills == 1) then
 					killer:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
 				else
 					killer:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );

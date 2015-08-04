@@ -29,13 +29,13 @@ function onSpellCast(caster,target,spell)
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-	if(caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
+	if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
 		multi = multi + 1.50;
 	end
 
 	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
 
-	if(damage > 0 and resist < 0.4) then
+	if (damage > 0 and resist < 0.4) then
 	local typeEffect = EFFECT_SILENCE;
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,25,0,getBlueEffectDuration(caster,resist,typeEffect));

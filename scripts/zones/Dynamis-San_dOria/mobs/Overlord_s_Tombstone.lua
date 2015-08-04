@@ -39,7 +39,7 @@ function onMobDeath(mob,killer)
 		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_COMMAND_SCEPTER);
 	end
 
-	if(alreadyReceived(killer,8) == false) then
+	if (alreadyReceived(killer,8) == false) then
 		addDynamisList(killer,128);
 
 		killer:addTitle(DYNAMISSAN_DORIA_INTERLOPER); -- Add title

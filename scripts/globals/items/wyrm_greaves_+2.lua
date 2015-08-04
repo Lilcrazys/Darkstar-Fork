@@ -15,7 +15,7 @@ function onItemCheck(target)
 	local pet = target:getPet();
 	
 	if (target:getEquipID(SLOT_FEET) == 10743) then
-		if(pet:getPetType() == PETTYPE_WYVERN) then
+		if (pet:getPetType() == PETTYPE_WYVERN) then
 			pet:addMod(MOD_HPP, 10);
 		else
 			pet:delMod(MOD_HPP, 10);

@@ -13,7 +13,7 @@ require("scripts/globals/status");
 
 function onAbilityCheck(player,target,ability)
 
-	if(player:hasStatusEffect(EFFECT_SPONTANEITY) == true) then
+	if (player:hasStatusEffect(EFFECT_SPONTANEITY) == true) then
 		return MSGBASIC_UNABLE_TO_USE_JA,0;
 	else
 		return 0,0;

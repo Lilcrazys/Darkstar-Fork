@@ -22,10 +22,10 @@ function onSpellCast(caster,target,spell)
 	local dmg = calculateMagicDamage(basedmg,3,caster,spell,target,DARK_MAGIC_SKILL,MOD_INT,false);
 
 	-- Softcaps at 200, should always do at least 1
-	if(dmg > 200) then
+	if (dmg > 200) then
 		dmg = 200;
 	end
-	if(dmg < 1) then
+	if (dmg < 1) then
 		dmg = 1;
 	end
 
@@ -50,14 +50,14 @@ function onSpellCast(caster,target,spell)
 	local dotdmg = 6 + math.floor(caster:getSkillLevel(DARK_MAGIC_SKILL) / 60);
 
 	-- Do it!
-	if(dia == nil or (BIO_OVERWRITE == 0 and dia:getPower() <= 5) or (BIO_OVERWRITE == 1 and dia:getPower() < 5)) then
+	if (dia == nil or (BIO_OVERWRITE == 0 and dia:getPower() <= 5) or (BIO_OVERWRITE == 1 and dia:getPower() < 5)) then
 		target:delStatusEffect(EFFECT_BIO); -- delete old bio
 		target:addStatusEffect(EFFECT_BIO,dotdmg,3,duration,FLAG_ERASABLE,20);
 	end
 
 	--Try to kill same tier Dia (default behavior)
-	if(DIA_OVERWRITE == 1 and dia ~= nil) then
-		if(dia:getPower() <= 5) then
+	if (DIA_OVERWRITE == 1 and dia ~= nil) then
+		if (dia:getPower() <= 5) then
 			target:delStatusEffect(EFFECT_DIA);
 		end
 	end

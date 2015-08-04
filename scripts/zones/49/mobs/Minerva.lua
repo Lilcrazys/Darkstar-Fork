@@ -14,23 +14,9 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 28); -- Time between Magic Cast attempts
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID());
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID());
-end
-
------------------------------------
--- onMobSpawn Action
------------------------------------
-
-function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGEN, 20);
-    mob:setMod(MOD_REFRESH, 20);
-    mob:setMod(MOD_REGAIN, 20);
-    mob:setMod(MOD_UFASTCAST, 80);
-    mob:setMod(MOD_CURE_POTENCY, 21);
-    mob:setMod(MOD_CURE_POTENCY_RCVD, 28);
 
     -- addMod
     mob:addMod(MOD_DIVINE, 200);
@@ -43,6 +29,23 @@ function onMobSpawn(mob)
     mob:addMod(MOD_CHR, 24);
     mob:addMod(MOD_MATT, 40);
     mob:addMod(MOD_MACC, 124);
+end
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 28); -- Time between Magic Cast attempts
+
+    -- setMod
+    mob:setMod(MOD_REGEN, 20);
+    mob:setMod(MOD_REFRESH, 20);
+    mob:setMod(MOD_REGAIN, 20);
+    mob:setMod(MOD_UFASTCAST, 80);
+    mob:setMod(MOD_CURE_POTENCY, 21);
+    mob:setMod(MOD_CURE_POTENCY_RCVD, 28);
 
     -- Other
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.

@@ -26,16 +26,16 @@ function onSpellCast(caster,target,spell)
         power = 155;
     end
 
-    if(math.random(0,100) >= target:getMod(MOD_POISONRES)) then
+    if (math.random(0,100) >= target:getMod(MOD_POISONRES)) then
         local bonus = AffinityBonus(caster, spell:getElement());
         local resist = applyResistance(caster,spell,target,dINT,ENFEEBLING_MAGIC_SKILL,bonus);
-        if(resist == 1 or resist == 0.5) then -- effect taken
+        if (resist == 1 or resist == 0.5) then -- effect taken
             duration = duration / resist;
 
             -- Try to erase a weaker poison.
             local poison = target:getStatusEffect(effect)
-            if(poison ~= nil) then
-                if(poison:getPower() < power) then
+            if (poison ~= nil) then
+                if (poison:getPower() < power) then
                     -- remove weaker poison
                     target:delStatusEffect(effect);
                     target:addStatusEffect(effect,power,3,duration);

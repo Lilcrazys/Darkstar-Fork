@@ -16,9 +16,9 @@ require("scripts/globals/bcnm");
 
 function onMagicCastingCheck(caster,target,spell)
 	local result = 0;
-	if(caster:getObjType() == TYPE_PC) then
+	if (caster:getObjType() == TYPE_PC) then
 		result = avatarMiniFightCheck(caster);
-	elseif(caster:hasPet()) then
+	elseif (caster:hasPet()) then
         result = 1;
     elseif (not caster:canUsePet()) then
 		result = 0;

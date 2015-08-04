@@ -16,7 +16,7 @@ function onMobWeaponSkill(target, mob, skill)
     local currentHP = target:getHP();
     local damage = 0;
 
-    if(currentHP / target:getMaxHP() > 0.2) then
+    if (currentHP / target:getMaxHP() > 0.2) then
         damage = currentHP * .85;
     else
         -- else you die

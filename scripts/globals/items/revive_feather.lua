@@ -22,10 +22,10 @@ end;
 function onItemUse(target)
 	power = 1;
 	duration = 1800;
-	if(target:hasStatusEffect(EFFECT_RERAISE) ==true)then
+	if (target:hasStatusEffect(EFFECT_RERAISE) ==true)then
 		effect = target:getStatusEffect(EFFECT_RERAISE);
 		oPower = effect:getPower();
-		if(oPower > power) then
+		if (oPower > power) then
 			target:messageBasic(283); -- Higher Tiered verson means no effect!
 		else
 			target:delStatusEffect(EFFECT_RERAISE);

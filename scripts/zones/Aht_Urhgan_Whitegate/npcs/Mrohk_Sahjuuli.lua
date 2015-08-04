@@ -196,7 +196,7 @@ function onTrade(player,npc,trade)
         csid = 971;
         PRIZE = 27928;
         player:setVar("NyzulTradeItem", PRIZE);
-    elseif(trade:hasItemQty(15625,1) and trade:getItemCount() == 1) then
+    elseif (trade:hasItemQty(15625,1) and trade:getItemCount() == 1) then
         upgradeitem = 15625; -- Legs
         csid = 970;
         mats = 28081;

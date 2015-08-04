@@ -17,56 +17,56 @@ function onItemCheck(target)
 	local defMod = 0
 	local mpMod = 0
 	if (target:getEquipID(SLOT_BACK) == 13681) then
-		if(lvl >= 25) then
+		if (lvl >= 25) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 30) then
+		if (lvl >= 30) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 35) then
+		if (lvl >= 35) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 40) then
+		if (lvl >= 40) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 45) then
+		if (lvl >= 45) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 50) then
+		if (lvl >= 50) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 55) then
+		if (lvl >= 55) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 60) then
+		if (lvl >= 60) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 65) then
+		if (lvl >= 65) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 70) then
+		if (lvl >= 70) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 75) then
+		if (lvl >= 75) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 80) then
+		if (lvl >= 80) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 85) then
+		if (lvl >= 85) then
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 90) then
+		if (lvl >= 90) then
 			defMod = defMod + 1
 			mpMod = mpMod + 2
 		end
-		if(lvl >= 95) then
+		if (lvl >= 95) then
 			mpMod = mpMod + 2
 		end
 		target:addMod(MOD_DEF, defMod);

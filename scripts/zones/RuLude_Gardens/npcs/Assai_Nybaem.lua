@@ -850,7 +850,7 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-	-- if(csid == 0x2750) then
+	-- if (csid == 0x2750) then
 		-- npc:setAnimation(0);
 	-- end
 --printf("CSID: %u",csid);

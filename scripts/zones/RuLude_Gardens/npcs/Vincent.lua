@@ -60,31 +60,31 @@ end;
 
 function onEventFinish(player,csid,option)
 	cost = 200;
-	if(option == 262) then 		--La Theine Plateau (E-4)["La Theine"]
+	if (option == 262) then 		--La Theine Plateau (E-4)["La Theine"]
 		player:setPos(-562, 0, 667, 62, 102);
 		
-	elseif(option == 266) then 	--Konschtat Highlands (I-12)["Konschtat"]
+	elseif (option == 266) then 	--Konschtat Highlands (I-12)["Konschtat"]
 		player:setPos(81, -67, -580, 11, 108);
 		
-	elseif(option == 270) then 	--Tahrongi Canyon (H-12)["Tahrongi"]
+	elseif (option == 270) then 	--Tahrongi Canyon (H-12)["Tahrongi"]
 		player:setPos(-6, 40, -677, 123, 117);
 		
-	elseif(option == 278) then 	--Valkurm Dunes (I-9)["Misareaux"]
+	elseif (option == 278) then 	--Valkurm Dunes (I-9)["Misareaux"]
 		player:setPos(351, 0, -116, 8, 103);
 		
-	elseif(option == 274) then 	--Jugner Forest (J-8)["Vunkerl"] 
+	elseif (option == 274) then 	--Jugner Forest (J-8)["Vunkerl"] 
 		player:setPos(231, 0, 13, 20, 104);
 		
-	elseif(option == 282) then 	--Buburimu Peninsula (F-7)["Attohwa"]
+	elseif (option == 282) then 	--Buburimu Peninsula (F-7)["Attohwa"]
 		player:setPos(-328, -23, 42, 168, 118);			
 		
-	elseif(option == 286) then 	--South Gustaberg (J-10)["Altepa"]
+	elseif (option == 286) then 	--South Gustaberg (J-10)["Altepa"]
 		player:setPos(338, 0, -660, 55, 107);	
 		
-	elseif(option == 294) then 	--North Gustaberg (G-6)["Grauberg"]
+	elseif (option == 294) then 	--North Gustaberg (G-6)["Grauberg"]
 		player:setPos(-57, 0, 600, 126, 106);		
 	
-	elseif(option == 290) then 	--Xarcabard (H-8)["Uleguerand"]
+	elseif (option == 290) then 	--Xarcabard (H-8)["Uleguerand"]
 		player:setPos(270, -7, -84, 192, 112);	
 	end
 	player:delCruor(cost);

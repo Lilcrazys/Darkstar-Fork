@@ -39,7 +39,7 @@ function onMobDeath(mob,killer)
 		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_LANTERN);
 	end
 
-	if(alreadyReceived(killer,8) == false) then
+	if (alreadyReceived(killer,8) == false) then
 		addDynamisList(killer,128);
 
 		killer:addTitle(DYNAMISWINDURST_INTERLOPER); -- Add title

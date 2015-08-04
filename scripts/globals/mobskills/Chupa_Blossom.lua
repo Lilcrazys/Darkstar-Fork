@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
     MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 110, 90, 60);
     MobStatusEffectMove(mob, target, EFFECT_INT_DOWN, 110, 90, 60);
 
-    if(target:isUndead() == false) then
+    if (target:isUndead() == false) then
         target:delHP(dmg);
         mob:addHP(dmg);
         skill:setMsg(MSG_DRAIN_HP);

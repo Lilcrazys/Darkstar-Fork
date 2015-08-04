@@ -27,7 +27,7 @@ end;
 function onItemUse(target)
 
 	local effect = target:eraseStatusEffect();
-	if(effect == EFFECT_NONE) then
+	if (effect == EFFECT_NONE) then
 		target:messageBasic(423); -- no effect
 	else
 		while effect ~= EFFECT_NONE do

@@ -25,7 +25,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_ICE,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_IGNORE_SHADOWS);
 	local reset = 0;
-    if(target:getTP() == 0) then
+    if (target:getTP() == 0) then
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     else
         target:setTP(reset);

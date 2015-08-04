@@ -20,7 +20,7 @@ function OnUseAbility(player, target, ability)
 	local duration = 30;
 	duration = duration + player:getMod(MOD_BLOOD_RAGE);
 	
-	if(player:hasStatusEffect(EFFECT_WARCRY) == true) then
+	if (player:hasStatusEffect(EFFECT_WARCRY) == true) then
 		player:delStatusEffect(EFFECT_WARCRY);
 	end
 	player:addStatusEffect(EFFECT_BLOOD_RAGE,20,0,duration);

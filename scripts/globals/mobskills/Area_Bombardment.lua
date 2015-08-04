@@ -21,10 +21,10 @@ function onMobWeaponSkill(target, mob, skill)
     MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_BLINDNESS, 10, 0, 60);
 
 
-    if(dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
+    if (dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
         skill:setMsg(MSG_DISAPPEAR_NUM);
         return 2;
-    elseif(dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
+    elseif (dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
         -- dispeled only one
         skill:setMsg(MSG_DISAPPEAR_NUM);
         return 1;

@@ -10,7 +10,7 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	if(target:isBehind(mob, 48) == true) then
+	if (target:isBehind(mob, 48) == true) then
 		return 1;
     else
        return 0;
@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     local dispel =  target:dispelAllStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
 
-    if(dispel == 0) then
+    if (dispel == 0) then
         -- no effect
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     else

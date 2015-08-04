@@ -36,8 +36,8 @@ function onUseWeaponSkill(player, target, wsID)
     local damage, tpHits, extraHits = doMagicWeaponskill(player, target, params);
     damage = damage * WEAPON_SKILL_POWER
 
-    if(player:getMainJob() == JOB_COR) then
-        if(damage > 0) then
+    if (player:getMainJob() == JOB_COR) then
+        if (damage > 0) then
         -- AFTERMATH LEVEL 1
         if ((player:getTP() >= 100) and (player:getTP() <= 110)) then
             player:addStatusEffect(EFFECT_AFTERMATH_LV1, 10, 0, 180, 0, 3);

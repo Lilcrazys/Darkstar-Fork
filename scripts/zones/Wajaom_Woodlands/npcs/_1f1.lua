@@ -20,7 +20,7 @@ end;
 function onTrigger(player,npc)
 	player:startEvent(0x0202);
 	--[[
-	if(player:hasKeyItem(SICKLEMOON_SALT)) then
+	if (player:hasKeyItem(SICKLEMOON_SALT)) then
 		player:startEvent(0x0202);
 	else
 		player:startEvent(0x0204);
@@ -45,7 +45,7 @@ function onEventFinish(player,csid,option)
 -- printf("CSID: %u",csid);
 -- printf("RESULT: %u",option);
 	--[[
-	if(csid == 0x0202 and option == 1) then
+	if (csid == 0x0202 and option == 1) then
 		player:delKeyItem(SICKLEMOON_SALT);
 	end
 	]]

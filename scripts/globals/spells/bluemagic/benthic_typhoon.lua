@@ -37,7 +37,7 @@ function onSpellCast(caster,target,spell)
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
  
-	if(damage > 0 and resist > 1.0) then
+	if (damage > 0 and resist > 1.0) then
 		local typeEffect = EFFECT_DEFENSE_DOWN;
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,10,0,getBlueEffectDuration(caster,resist,typeEffect));

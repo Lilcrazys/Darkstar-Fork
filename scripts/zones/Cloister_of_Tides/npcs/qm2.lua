@@ -25,7 +25,7 @@ function onTrigger(player,npc)
     local TIDESTONE = 2798;
 
     -- Give Player a Tidestone if they don't have one
-    if(player:hasItem(TIDESTONE) == false) then
+    if (player:hasItem(TIDESTONE) == false) then
         player:addItem(TIDESTONE);
         player:messageSpecial(ITEM_OBTAINED, TIDESTONE);
     else

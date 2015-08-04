@@ -18,10 +18,19 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
+
+    -- effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0);
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32);
+
+    -- addmod
+    mob:addMod(MOD_HUMANOID_KILLER, 11);
+    mob:addMod(MOD_MATT, 20);
+    mob:addMod(MOD_MACC, 100);
+    mob:addMod(MOD_INT, 20);
 end
 
 -----------------------------------
@@ -34,12 +43,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 3);
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_UFASTCAST, 80);
-
-    -- addmod
-    mob:addMod(MOD_HUMANOID_KILLER, 11);
-    mob:addMod(MOD_MATT, 20);
-    mob:addMod(MOD_MACC, 100);
-    mob:addMod(MOD_INT, 20);
 end;
 
 -----------------------------------

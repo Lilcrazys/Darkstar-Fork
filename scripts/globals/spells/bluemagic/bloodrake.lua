@@ -42,7 +42,7 @@ function onSpellCast(caster, target, spell)
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 	
-	if(target:getHP() > dmg) then
+	if (target:getHP() > dmg) then
 		caster:addHP(dmg);
 		target:delHP(dmg);
 	else
@@ -52,7 +52,7 @@ function onSpellCast(caster, target, spell)
 		target:delHP(dmg);
 	end
 	
-	if(target:isUndead()) then
+	if (target:isUndead()) then
 		spell:setMsg(75); -- No effect
 		return dmg;
 	end

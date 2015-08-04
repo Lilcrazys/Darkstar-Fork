@@ -25,7 +25,7 @@ function onTrigger(player,npc)
     local FROSTSTONE = 2794;
 
     -- Give Player a Froststone if they don't have one
-    if(player:hasItem(FROSTSTONE) == false) then
+    if (player:hasItem(FROSTSTONE) == false) then
         player:addItem(FROSTSTONE);
         player:messageSpecial(ITEM_OBTAINED, FROSTSTONE);
     else

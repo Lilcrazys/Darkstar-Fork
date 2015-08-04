@@ -15,7 +15,7 @@ function onItemCheck(target)
 	local pet = target:getPet();
 	
 	if (target:getEquipID(SLOT_HANDS) == 14904) then
-		if(pet:getPetType() == PETTYPE_AVATAR) then
+		if (pet:getPetType() == PETTYPE_AVATAR) then
 			pet:addMod(MOD_ENMITY, -2);
 		else
 			pet:delMod(MOD_ENMITY, -2);

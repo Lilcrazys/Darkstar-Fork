@@ -25,7 +25,7 @@ function onTrigger(player,npc)
 	-- 255 dunno cs
 	-- 262 supply mission cs
 	-- 265 some chocobo cs thing
-	--if(player:startEvent(0x0065) then
+	--if (player:startEvent(0x0065) then
 	     player:startEvent(455);
 	--else
 	--    player:startEvent(0x0451);
@@ -49,8 +49,8 @@ end;
 function onEventFinish(player,csid,option)
 --print("CSID:",csid);
 --print("RESULT:",option);
-	if(option == 2) then
-	    if(csid == 455) then
+	if (option == 2) then
+	    if (csid == 455) then
 	    player:addStatusEffect(EFFECT_ALLIED_TAGS);
 	    end	
     end

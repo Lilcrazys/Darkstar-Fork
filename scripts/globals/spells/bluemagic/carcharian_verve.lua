@@ -24,17 +24,17 @@ end;
 
 function onSpellCast(caster,target,spell)
        
-    if(caster:hasStatusEffect(EFFECT_DIFFUSION)) then
+    if (caster:hasStatusEffect(EFFECT_DIFFUSION)) then
         local diffMerit = caster:getMerit(MERIT_DIFFUSION);
         
-        if(diffMerit > 0) then
+        if (diffMerit > 0) then
             duration = duration + (duration/100)* diffMerit;
         end
         
         caster:delStatusEffect(EFFECT_DIFFUSION);
     end
     
-    if(caster:hasStatusEffect(EFFECT_MAGIC_ATK_BOOST) and caster:hasStatusEffect(EFFECT_MAGIC_DEF_BOOST) == true) then
+    if (caster:hasStatusEffect(EFFECT_MAGIC_ATK_BOOST) and caster:hasStatusEffect(EFFECT_MAGIC_DEF_BOOST) == true) then
         spell:setMsg(75);
     else
         caster:addStatusEffect(EFFECT_MAGIC_ATK_BOOST,25,0,90);

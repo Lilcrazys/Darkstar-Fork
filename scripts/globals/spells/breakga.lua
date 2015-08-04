@@ -22,7 +22,7 @@ function onSpellCast(caster,target,spell)
     local duration = 30 * resist;
 
     -- Begin nerfing of Break on NMs
-    if(target:isMob() == true) then
+    if (target:isMob() == true) then
         if (target:isNM() == true) then
             spell:setMsg(75);
             return EFFECT_PETRIFICATION;
@@ -30,8 +30,8 @@ function onSpellCast(caster,target,spell)
     end
     -- End nerfing of Break on NMs
 
-    if(resist > 0.5) then
-        if(target:addStatusEffect(EFFECT_PETRIFICATION,1,0,duration)) then
+    if (resist > 0.5) then
+        if (target:addStatusEffect(EFFECT_PETRIFICATION,1,0,duration)) then
             spell:setMsg(236);
         else
             spell:setMsg(75);

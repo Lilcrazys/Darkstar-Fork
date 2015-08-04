@@ -21,14 +21,14 @@ function onSpellCast(caster,target,spell)
 	local mINT = target:getStat(MOD_INT);
 	local dINT = (pINT - mINT);
 	local resm = applyResistance(caster,spell,target,dINT,BLUE_SKILL,bonus);
-	if(resm < 1.0425) then
+	if (resm < 1.0425) then
 		spell:setMsg(85);--resist message
 		return EFFECT_DOOM;
 	end
 
 	duration = duration * resm;
 
-	if(target:addStatusEffect(EFFECT_DOOM,10,3,duration)) then
+	if (target:addStatusEffect(EFFECT_DOOM,10,3,duration)) then
 		spell:setMsg(237);
 	else
 		spell:setMsg(75);

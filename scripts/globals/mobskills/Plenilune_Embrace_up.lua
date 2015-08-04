@@ -30,7 +30,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local AB = 0;
 	local MB = 0;
 
-	if(potency == 0) then
+	if (potency == 0) then
 		potency = 20;
 	end
 	if (AB == 0) then

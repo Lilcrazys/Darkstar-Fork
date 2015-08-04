@@ -32,11 +32,11 @@ function onSpellCast(caster,target,spell)
 
 	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
 
-	if(caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
+	if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
 		multi = multi + 0.50;
     end
 
-	if(damage > 0 and resist < 0.4) then
+	if (damage > 0 and resist < 0.4) then
 		local typeEffect = EFFECT_BLINDNESS;
 		target:delStatusEffect(typeEffect); -- Wiki says it can overwrite itself or other binds
 		target:addStatusEffect(typeEffect,52,0,getBlueEffectDuration(caster,resist,typeEffect)); -- No info for power on the internet, static to 12 for now.

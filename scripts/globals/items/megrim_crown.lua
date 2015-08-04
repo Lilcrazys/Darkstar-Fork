@@ -46,11 +46,11 @@ function onItemUse(target)
 			target:addStatusEffect(EFFECT_REGEN,3,1,900);
 		end
 	elseif (var == 6) then
-		if(target:hasStatusEffect(EFFECT_REFRESH) == false) then
+		if (target:hasStatusEffect(EFFECT_REFRESH) == false) then
 			target:addStatusEffect(EFFECT_REFRESH,5,1,900);
 		end
 	elseif (var == 7) then
-		if(target:hasStatusEffect(EFFECT_BLAZE_SPIKES) == false) then
+		if (target:hasStatusEffect(EFFECT_BLAZE_SPIKES) == false) then
 			target:addStatusEffect(EFFECT_BLAZE_SPIKES,4,3,900);
 		end
 	end;

@@ -17,7 +17,7 @@ require("scripts/globals/status");
 
 function onTrade(player,npc,trade)
     -- Trade the Fourth Virtue, Fifth Virtue and Sixth Virtue
-    --[[if(GetMobAction(16912848) == 0 and GetMobAction(16912876) == 0 and trade:hasItemQty(1848,1) and trade:hasItemQty(1847,1) and 
+    --[[if (GetMobAction(16912848) == 0 and GetMobAction(16912876) == 0 and trade:hasItemQty(1848,1) and trade:hasItemQty(1847,1) and 
     trade:hasItemQty(1849,1) and trade:getItemCount() == 3) then
         player:tradeComplete();
         SpawnMob(16912848,900):updateClaim(player); -- Spawn Jailer of Love

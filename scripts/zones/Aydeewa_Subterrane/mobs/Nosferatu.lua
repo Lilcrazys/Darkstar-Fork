@@ -39,7 +39,7 @@ function onMobFight(mob,target)
 	local petIDs2 = {MobID+4, MobID+5, MobID+6}; -- Nosferatu_Wolf
 	local petIDs3 = {MobID+7, MobID+8, MobID+9}; -- Nosferatu_Murk
 
-	if(target:getAnimation() == 0) then
+	if (target:getAnimation() == 0) then
 		mob:resetEnmity(target);
 		mob:ActionDisengage(true);
 	end
@@ -50,7 +50,7 @@ function onMobFight(mob,target)
     end
 
 
-    if(mobHP <= 25) then
+    if (mobHP <= 25) then
         if (Nos_SMN_Used == 2) then
             SpawnMob(petIDs3[i],800):updateEnmity(target);
             mob:setLocalVar("Nos_SMN", 3);

@@ -22,7 +22,7 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 
 function onTrade(player,npc,trade)
 
-	if(TradeBCNM(player,player:getZoneID(),trade,npc))then
+	if (TradeBCNM(player,player:getZoneID(),trade,npc))then
 		return;
 	end
 
@@ -34,7 +34,7 @@ end;
 
 function onTrigger(player,npc)
 
-	if(EventTriggerBCNM(player,npc))then
+	if (EventTriggerBCNM(player,npc))then
 	    return;
 	end
 
@@ -48,7 +48,7 @@ function onEventUpdate(player,csid,option)
 	-- printf("onUpdate CSID: %u",csid);
 	-- printf("onUpdate RESULT: %u",option);
 
-	if(EventUpdateBCNM(player,csid,option))then
+	if (EventUpdateBCNM(player,csid,option))then
 		return;
 	end
 
@@ -62,7 +62,7 @@ function onEventFinish(player,csid,option)
 	-- printf("onFinish CSID: %u",csid);
 	-- printf("onFinish RESULT: %u",option);
 
-	if(EventFinishBCNM(player,csid,option))then
+	if (EventFinishBCNM(player,csid,option))then
 		return;
 	end
 

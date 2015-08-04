@@ -22,7 +22,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    if(target:addStatusEffect(EFFECT_BARFIRE,20,0,300,0,1);) then
+    if (target:addStatusEffect(EFFECT_BARFIRE,20,0,300,0,1);) then
         target:messageBasic(205);
     else
         target:messageBasic(423); -- no effect

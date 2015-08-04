@@ -25,11 +25,11 @@ function OnGameDayAutomatisation()
 	local tbl;
 	local SacrariumWallOffset = 16892108;
 	
-	if(day == 3 or day == 7) then
+	if (day == 3 or day == 7) then
 		tbl = {9,9,8,8,9,9,8,9,8,8,9,8,8,8,9,8,9,8};
-	elseif(day == 1 or day == 5) then
+	elseif (day == 1 or day == 5) then
 		tbl = {9,9,8,9,8,8,8,8,9,9,9,8,9,8,8,8,8,9};
-	elseif(day == 0 or day == 4) then
+	elseif (day == 0 or day == 4) then
 		tbl = {8,9,8,9,8,9,9,8,9,9,8,8,9,8,8,8,8,9};
 	else
 		tbl = {9,8,9,9,8,9,8,8,9,8,8,9,8,9,8,9,8,8};
@@ -59,7 +59,7 @@ function OnGameDayAutomatisation()
 	local direction = VanadielMoonDirection();
 	local phase = VanadielMoonPhase();
 	
-	if(((direction == 2 and phase >= 90) or (direction == 1 and phase >= 95)) and GetNPCByID(Moongate_Offset):getWeather() == 0) then
+	if (((direction == 2 and phase >= 90) or (direction == 1 and phase >= 95)) and GetNPCByID(Moongate_Offset):getWeather() == 0) then
 		GetNPCByID(Moongate_Offset):openDoor(432);
 		GetNPCByID(Moongate_Offset+1):openDoor(432);
 	end
@@ -78,19 +78,19 @@ function OnGameHourAutomatisation()
 	local FlameSpout = 17617199;
 	
 	-- Community Service Quest
-	if(VanadielHour == 1) then
-		if(GetServerVariable("[JEUNO]CommService") == 0) then
+	if (VanadielHour == 1) then
+		if (GetServerVariable("[JEUNO]CommService") == 0) then
 			GetNPCByID(17780880):setStatus(0); -- Vhana Ehgaklywha
 			GetNPCByID(17780880):initNpcAi();
 		end;
 		
-	elseif(VanadielHour == 5) then
+	elseif (VanadielHour == 5) then
 		SetServerVariable("[JEUNO]CommService",0);
 		
 	end
 	GetNPCByID(16806282):openDoor(); -- Attohwa Chasm miasma
 	
-	if(VanadielHour % 3 == 0) then -- Opens flame spouts every 3 hours Vana'diel time
+	if (VanadielHour % 3 == 0) then -- Opens flame spouts every 3 hours Vana'diel time
 		GetNPCByID(FlameSpout):openDoor(90); -- Ifrit's Cauldron flame spout (H-6) Map 1
 		GetNPCByID(FlameSpout+1):openDoor(90); -- Ifrit's Cauldron flame spout (H-6) Map 5
 		GetNPCByID(FlameSpout+2):openDoor(90); -- Ifrit's Cauldron flame spout (I-10) Map 8

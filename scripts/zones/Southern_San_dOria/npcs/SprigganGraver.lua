@@ -62,7 +62,7 @@ function onSpawn(npc)
 	local start = pathfind.fromStart(path, 2);
 	local startFirst = pathfind.get(path, 3);
 
-	if(start[1] ~= startFirst[1] or start[2] ~= startFirst[2] or start[3] ~= startFirst[3]) then
+	if (start[1] ~= startFirst[1] or start[2] ~= startFirst[2] or start[3] ~= startFirst[3]) then
 		printf("[Error] start path is not right %f %f %f actually = %f %f %f", startFirst[1], startFirst[2], startFirst[3], start[1], start[2], start[3]);
 	end
 
@@ -70,7 +70,7 @@ function onSpawn(npc)
 	-- local endPt = pathfind.fromEnd(path, 2);
 	-- local endFirst = pathfind.get(path, 37);
 
-	-- if(endPt[1] ~= endFirst[1] or endPt[2] ~= endFirst[2] or endPt[3] ~= endFirst[3]) then
+	-- if (endPt[1] ~= endFirst[1] or endPt[2] ~= endFirst[2] or endPt[3] ~= endFirst[3]) then
 	-- 	printf("[Error] endPt path is not right %f %f %f actually = %f %f %f", endFirst[1], endFirst[2], endFirst[3], endPt[1], endPt[2], endPt[3]);
 	-- end
 end;

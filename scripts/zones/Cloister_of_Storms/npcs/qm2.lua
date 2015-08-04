@@ -25,7 +25,7 @@ function onTrigger(player,npc)
     local STORMSTONE = 2797;
 
     -- Give Player a Stormstone if they don't have one
-    if(player:hasItem(STORMSTONE) == false) then
+    if (player:hasItem(STORMSTONE) == false) then
         player:addItem(STORMSTONE);
         player:messageSpecial(ITEM_OBTAINED, STORMSTONE);
     else

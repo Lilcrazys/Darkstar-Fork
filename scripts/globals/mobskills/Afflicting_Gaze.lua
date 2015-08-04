@@ -14,7 +14,7 @@ require("/scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if(target:getCurrentRegion() == 18) then
+    if (target:getCurrentRegion() == 18) then
         return 0;
     end
 

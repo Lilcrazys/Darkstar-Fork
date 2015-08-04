@@ -15,7 +15,7 @@ require("/scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
   --  if (mob:AnimationSub() == 1) then
      --   return 1;
-	--if(target:isBehind(mob, 48) == true) then
+	--if (target:isBehind(mob, 48) == true) then
     --    return 1;
    -- end
 	return 0;
@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
 	-- remove all by 1%
 	local damage = 0;
 	-- if have more hp then 30%, then reduce to 1%
-	if(currentHP / target:getMaxHP() > 0.2) then
+	if (currentHP / target:getMaxHP() > 0.2) then
 		damage = currentHP * .99;
 	else
 		-- else you die

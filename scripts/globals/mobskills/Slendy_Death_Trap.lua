@@ -18,7 +18,7 @@ function onMobWeaponSkill(target, mob, skill)
     local duration = 10;
     local power = 1;
 
-    if(math.random() <= 0.5) then
+    if (math.random() <= 0.5) then
         -- stun
         typeEffect = EFFECT_POISON;
         duration = 60;

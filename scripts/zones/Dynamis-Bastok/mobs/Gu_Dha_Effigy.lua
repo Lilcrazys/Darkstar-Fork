@@ -32,7 +32,7 @@ function onMobDeath(mob,killer)
 		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
 	end
 
-	if(mob:isInBattlefieldList() == false) then
+	if (mob:isInBattlefieldList() == false) then
 		mob:addInBattlefieldList();
 
 		killer:addTimeToDynamis(30); -- Add + 30min

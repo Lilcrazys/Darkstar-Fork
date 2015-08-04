@@ -21,7 +21,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    if(target:addStatusEffect(EFFECT_BLINDNESS, 5, 0, 60)) then
+    if (target:addStatusEffect(EFFECT_BLINDNESS, 5, 0, 60)) then
         target:messageBasic(205);
     else
         target:messageBasic(423); -- no effect

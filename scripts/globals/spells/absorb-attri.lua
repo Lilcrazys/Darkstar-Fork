@@ -75,13 +75,13 @@ function onSpellCast(caster,target,spell)
 		amountMods = amountMods + 3;
 	end	
 
-	if(caster:hasStatusEffect(EFFECT_ACCURACY_BOOST)) then
+	if (caster:hasStatusEffect(EFFECT_ACCURACY_BOOST)) then
 		spell:setMsg(75); -- no effect
 	else
 		bonus = AffinityBonus(caster,spell:getElement());
 		dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
 		resist = applyResistance(caster,spell,target,dINT,37,bonus);
-		if(resist <= 0.125) then
+		if (resist <= 0.125) then
 			spell:setMsg(85);
 		else
 			spell:setMsg(533);

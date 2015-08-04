@@ -63,7 +63,7 @@ end;
 
 function onEventFinish(player,csid,option)
 
-    --if(csid == 1002 and option == 1) then
+    --if (csid == 1002 and option == 1) then
 	   --GetNPCByID():setStatus(STATUS_DISAPPEAR);   
 	--end
 

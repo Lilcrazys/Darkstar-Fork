@@ -26,7 +26,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    if(target:hasStatusEffect(EFFECT_FOOD) == true) then
+    if (target:hasStatusEffect(EFFECT_FOOD) == true) then
         target:delStatusEffect(EFFECT_FOOD);
     end
 end;

@@ -26,7 +26,7 @@ function onSpellCast(caster,target,spell)
 	
 	if (caster:getEquipID(SLOT_BODY) == 11093) then -- Aoidos Hongreline +2
 		duration = duration * 1.1;
-	elseif(caster:getEquipID(SLOT_BODY) == 11193) then -- Aoidos Hongreline +1
+	elseif (caster:getEquipID(SLOT_BODY) == 11193) then -- Aoidos Hongreline +1
 		duration = duration * 1.05;
 	end
 	if (caster:getEquipID(SLOT_NECK) == 11618) then -- Aoidos Matinee
@@ -50,11 +50,11 @@ function onSpellCast(caster,target,spell)
 	elseif (weapon == 19957 or weapon2 == 19957) then -- Carnwenhan Lvl 99 - 2
 		duration = duration * 1.4;
 	end
-	if(sItem == 18342 or sItem == 18577 or sItem == 18578) then -- Gjallarhorn Lvl 75 - 80 - 85
+	if (sItem == 18342 or sItem == 18577 or sItem == 18578) then -- Gjallarhorn Lvl 75 - 80 - 85
 		power = power + 4;
-	elseif(sItem == 18579 or sItem == 18580) then -- Gjallarhorn Lvl 90 - 95
+	elseif (sItem == 18579 or sItem == 18580) then -- Gjallarhorn Lvl 90 - 95
 		power = power + 6;
-	elseif(sItem == 18840 or sItem == 18572) then -- Gjallarhorn Lvl 99 - 99-2
+	elseif (sItem == 18840 or sItem == 18572) then -- Gjallarhorn Lvl 99 - 99-2
 		power = power + 8;
 	end
 	if (sItem == 18575) then -- Daurdabla Lvl 90

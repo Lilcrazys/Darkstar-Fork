@@ -23,7 +23,7 @@ function onSpellCast(caster,target,spell)
 
 	local power = 307;
 
-	if(target:addStatusEffect(EFFECT_HASTE_II,power,0,duration) == false) then
+	if (target:addStatusEffect(EFFECT_HASTE_II,power,0,duration) == false) then
 		spell:setMsg(75);
 	end
 

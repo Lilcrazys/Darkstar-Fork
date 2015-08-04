@@ -22,7 +22,7 @@ end;
 
 function onItemUse(target)
     local pet = target:getPet();
-    if(pet:addStatusEffect(EFFECT_STONESKIN, 200, 0, 60)) then
+    if (pet:addStatusEffect(EFFECT_STONESKIN, 200, 0, 60)) then
         target:messageBasic(205);
     else
         target:messageBasic(423); -- no effect

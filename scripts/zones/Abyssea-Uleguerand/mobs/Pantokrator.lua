@@ -68,7 +68,7 @@ function onMobFight(mob,target)
         -- mob:delMod(MOD_MAGIC_ABSORB,0,300);
     -- end
 
-    if(mobHP > 70) then
+    if (mobHP > 70) then
         mob:AnimationSub(1);
         mob:setMod(MOD_SLASHRES,1400);
         mob:setMod(MOD_PIERCERES,1400);
@@ -80,7 +80,7 @@ function onMobFight(mob,target)
         for n =1,table.getn (defenseMod),1 do
         mob:setMod(defenseMod[n],100);
         end
-    elseif(mobHP < 70 and mobHP > 55)then
+    elseif (mobHP < 70 and mobHP > 55)then
         mob:AnimationSub(2);
         mob:setMod(MOD_SLASHRES,1450);
         mob:setMod(MOD_PIERCERES,1450);
@@ -92,7 +92,7 @@ function onMobFight(mob,target)
         for n =1,table.getn (defenseMod),1 do
         mob:setMod(defenseMod[n],-50);
         end
-    elseif(mobHP < 55 and mobHP > 45)then
+    elseif (mobHP < 55 and mobHP > 45)then
         mob:AnimationSub(1);
         mob:setMod(MOD_SLASHRES,1400);
         mob:setMod(MOD_PIERCERES,1400);
@@ -104,7 +104,7 @@ function onMobFight(mob,target)
         for n =1,table.getn (defenseMod),1 do
         mob:setMod(defenseMod[n],100);
         end
-    elseif(mobHP < 45 and mobHP > 25)then
+    elseif (mobHP < 45 and mobHP > 25)then
         mob:AnimationSub(2);
         mob:setMod(MOD_SLASHRES,1450);
         mob:setMod(MOD_PIERCERES,1450);
@@ -116,7 +116,7 @@ function onMobFight(mob,target)
         for n =1,table.getn (defenseMod),1 do
         mob:setMod(defenseMod[n],-50);
         end
-    elseif(mobHP < 25 and mobHP > 20)then
+    elseif (mobHP < 25 and mobHP > 20)then
         mob:AnimationSub(1);
         mob:setMod(MOD_SLASHRES,1400);
         mob:setMod(MOD_PIERCERES,1400);
@@ -129,7 +129,7 @@ function onMobFight(mob,target)
         for n =1,table.getn (defenseMod),1 do
         mob:setMod(defenseMod[n],100);
         end
-    elseif(mobHP < 10 and mobHP > 8)then
+    elseif (mobHP < 10 and mobHP > 8)then
         mob:AnimationSub(2);
         mob:setMod(MOD_SLASHRES,1450);
         mob:setMod(MOD_PIERCERES,1450);

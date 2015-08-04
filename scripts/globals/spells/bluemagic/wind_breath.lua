@@ -33,7 +33,7 @@ function onSpellCast(caster,target,spell)
 	
 	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
     
-    if(caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
+    if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
         multi = multi + 0.50;
     end
 

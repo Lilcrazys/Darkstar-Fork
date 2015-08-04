@@ -20,13 +20,13 @@ end;
 
 function onItemUse(target)
 	local effect = target:dispelStatusEffect();
-	if(effect == EFFECT_NONE) then
+	if (effect == EFFECT_NONE) then
 		target:messageBasic(423); -- no effect
 	else
 		local z = 0;
 		while z <= 3 do
 			target:dispelStatusEffect();
-			if(effect == EFFECT_NONE) then
+			if (effect == EFFECT_NONE) then
 				z = 3;
 			end
 		z = z + 1;

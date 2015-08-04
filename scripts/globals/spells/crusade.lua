@@ -18,7 +18,7 @@ function onSpellCast(caster,target,spell)
 	
 	local power = 30;
 	
-	if(target:addStatusEffect(EFFECT_ENMITY_BOOST,power,0,duration) == false) then
+	if (target:addStatusEffect(EFFECT_ENMITY_BOOST,power,0,duration) == false) then
 		spell:setMsg(75);
 	end
 

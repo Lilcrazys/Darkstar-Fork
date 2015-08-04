@@ -39,7 +39,7 @@ function onMobPath(mob)
 end;
 function onMobRoam(mob)
 -- move to start position if not moving
-    if(mob:isFollowingPath() == false) then
+    if (mob:isFollowingPath() == false) then
        mob:pathThrough(pathfind.first(path));
     end
     if (math.random(0,0) == 0) then

@@ -16,13 +16,13 @@ function onItemCheck(target)
 	local lvl = target:getMainLvl();
 	local attribMod = 0
 	if (target:getEquipID(SLOT_BACK) == 13680) then
-		if(lvl >= 45) then
+		if (lvl >= 45) then
 			attribMod = attribMod + 1
 		end
-		if(lvl >= 60) then
+		if (lvl >= 60) then
 			attribMod = attribMod + 1
 		end
-		if(lvl >= 75) then
+		if (lvl >= 75) then
 			attribMod = attribMod + 1
 		end
 		target:addMod(MOD_STR, attribMod);

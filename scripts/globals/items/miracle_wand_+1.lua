@@ -25,7 +25,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if(target:hasStatusEffect(EFFECT_REGEN) == false) then
+	if (target:hasStatusEffect(EFFECT_REGEN) == false) then
 		target:addStatusEffect(EFFECT_REGEN,12,3,180);
 	else
 		target:messageBasic(423);

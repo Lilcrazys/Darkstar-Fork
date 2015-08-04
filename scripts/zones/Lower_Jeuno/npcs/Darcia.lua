@@ -13,10 +13,10 @@ require("scripts/globals/missions");
 -----------------------------------
 
 function onTrigger(player,npc)
-	if(player:hasKeyItem(2156)) and (player:hasKeyItem(2158)) then
+	if (player:hasKeyItem(2156)) and (player:hasKeyItem(2158)) then
 		player:showText(npc,10210);	--It will let you teleport to Adoulin...
 	else
-	if(player:hasKeyItem(2156))  then	--Adoulin Charter Permit
+	if (player:hasKeyItem(2156))  then	--Adoulin Charter Permit
 		player:showText( npc,10209);	--There is one more thing. Take this with you.
 		player:addKeyItem(2158);		--Temporary Geomagnet
 		player:messageSpecial(KEYITEM_OBTAINED,2158);

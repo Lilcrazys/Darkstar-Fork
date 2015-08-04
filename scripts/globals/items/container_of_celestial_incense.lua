@@ -24,7 +24,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if(target:addStatusEffect(EFFECT_MEDICINE,0,0,20,5245)) then
+	if (target:addStatusEffect(EFFECT_MEDICINE,0,0,20,5245)) then
 		target:messageBasic(205);
 	else
         	target:messageBasic(423); -- no effect

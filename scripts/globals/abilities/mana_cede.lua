@@ -36,9 +36,9 @@ function OnUseAbility(player, target, ability)
 	
 	local hands = player:getEquipID(SLOT_HANDS);
 	
-	if(hands == 11218) then
+	if (hands == 11218) then
 		equipBonus = 50;
-	elseif(hands == 11118) then
+	elseif (hands == 11118) then
 		equipBonus = 100;
 	end
 	

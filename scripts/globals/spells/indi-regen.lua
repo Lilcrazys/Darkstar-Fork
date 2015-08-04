@@ -25,7 +25,7 @@ function onSpellCast(caster,target,spell)
 	hp = hp + caster:getLvl(JOB_GEO) >+1;
     
 	
-	if(target:addStatusEffect(EFFECT_REGEN,hp,3,360)) then
+	if (target:addStatusEffect(EFFECT_REGEN,hp,3,360)) then
 		spell:setMsg(230);
 	else
 		spell:setMsg(75); -- no effect

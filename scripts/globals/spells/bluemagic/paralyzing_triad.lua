@@ -21,7 +21,7 @@ function onSpellCast(caster,target,spell)
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
     
 	
-    if(target:hasStatusEffect(EFFECT_PARALYSIS) == false) then		
+    if (target:hasStatusEffect(EFFECT_PARALYSIS) == false) then		
        target:addStatusEffect(EFFECT_PARALYSIS,25,20,math.random(0,60));
     end
 

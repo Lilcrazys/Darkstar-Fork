@@ -34,7 +34,7 @@ end;
 
 function onItemUse(target)
 
-	if(target:addStatusEffect(EFFECT_MEDICINE,0,0,180,5354)) then
+	if (target:addStatusEffect(EFFECT_MEDICINE,0,0,180,5354)) then
 		target:messageBasic(205);
 		target:addHP((target:getMaxHP()/100)*5);
 		target:addMP((target:getMaxMP()/100)*5);

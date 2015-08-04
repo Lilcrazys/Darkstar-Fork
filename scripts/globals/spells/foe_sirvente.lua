@@ -20,7 +20,7 @@ function onSpellCast(caster,target,spell)
 
 	local duration = 120;
 	local power = 30;
-	if(caster:getObjType() == TYPE_PC) then
+	if (caster:getObjType() == TYPE_PC) then
 		local merit =((target:getMerit(MERIT_FOE_SIRVENTE) * .01) - .05);
 		power = power + (power * merit);
 	end

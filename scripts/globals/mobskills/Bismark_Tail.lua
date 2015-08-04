@@ -6,7 +6,7 @@ require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-    if(target:isBehind(mob) == false) then
+    if (target:isBehind(mob) == false) then
 	    return 0;
     else
         return 1;

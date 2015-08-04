@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
         return 0;
     else
 
-    if(potency == 0) then
+    if (potency == 0) then
         potency = 10;
     end
 

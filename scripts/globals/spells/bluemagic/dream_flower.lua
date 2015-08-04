@@ -20,14 +20,14 @@ function onSpellCast(caster,target,spell)
 	local mINT = target:getStat(MOD_INT);
 	local dINT = (pINT - mINT);
 	local resm = applyResistance(caster,spell,target,dINT,BLUE_SKILL,bonus);
-	if(resm < 0.5) then
+	if (resm < 0.5) then
 		spell:setMsg(85);--resist message
 		return EFFECT_SLEEP_II;
 	end
 
 	duration = duration * resm;
 
-	if(target:addStatusEffect(EFFECT_SLEEP_II,1,0,duration)) then
+	if (target:addStatusEffect(EFFECT_SLEEP_II,1,0,duration)) then
 		spell:setMsg(236);
 	else
 		spell:setMsg(75);

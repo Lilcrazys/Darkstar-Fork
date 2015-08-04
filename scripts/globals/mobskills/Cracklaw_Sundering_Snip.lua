@@ -24,7 +24,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_WIPE_SHADOWS,info.hitslanded);
 
     -- keep damage around 700
-    if(dmg > 1000) then
+    if (dmg > 1000) then
         dmg = dmg * 0.5;
     end
 

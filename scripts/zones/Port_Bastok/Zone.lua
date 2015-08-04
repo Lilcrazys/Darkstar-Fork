@@ -62,7 +62,7 @@ function onZoneIn(player,prevZone)
         end
     end
 
-    if(player:getCurrentMission(COP) == THE_ENDURING_TUMULT_OF_WAR and player:getVar("PromathiaStatus") == 0)then
+    if (player:getCurrentMission(COP) == THE_ENDURING_TUMULT_OF_WAR and player:getVar("PromathiaStatus") == 0)then
         cs = 0x0132;
     end
     return cs;

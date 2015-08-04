@@ -25,7 +25,7 @@ function onTrigger(player,npc)
     local GALESTONE = 2795;
 
     -- Give Player a Galestone if they don't have one
-    if(player:hasItem(GALESTONE) == false) then
+    if (player:hasItem(GALESTONE) == false) then
         player:addItem(GALESTONE);
         player:messageSpecial(ITEM_OBTAINED, GALESTONE);
     else

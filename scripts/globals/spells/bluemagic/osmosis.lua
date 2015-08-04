@@ -30,7 +30,7 @@ function onSpellCast(caster,target,spell)
         dmg = 0
     end
     
-	if(target:isUndead()) or (effect == EFFECT_NONE) then
+	if (target:isUndead()) or (effect == EFFECT_NONE) then
 	    spell:setMsg(75); 
 		return dmg;
 	end
@@ -39,7 +39,7 @@ function onSpellCast(caster,target,spell)
 
 	dmg = (dmg * DRAIN_POWER);
 
-	if(effect == EFFECT_NONE) then
+	if (effect == EFFECT_NONE) then
 	    spell:setMsg(75);
 	else	
 	    spell:setMsg(227);

@@ -16,25 +16,25 @@ function onItemCheck(target)
 	local lvl = target:getMainLvl();
 	local defMod = 0
 	if (target:getEquipID(SLOT_BACK) == 13680) then
-		if(lvl >= 30) then
+		if (lvl >= 30) then
 			defMod = defMod + 1
 		end
-		if(lvl >= 40) then
+		if (lvl >= 40) then
 			defMod = defMod + 1
 		end
-		if(lvl >= 50) then
+		if (lvl >= 50) then
 			defMod = defMod + 1
 		end
-		if(lvl >= 60) then
+		if (lvl >= 60) then
 			defMod = defMod + 1
 		end
-		if(lvl >= 70) then
+		if (lvl >= 70) then
 			defMod = defMod + 1
 		end
-		if(lvl >= 80) then
+		if (lvl >= 80) then
 			defMod = defMod + 1
 		end
-		if(lvl >= 90) then
+		if (lvl >= 90) then
 			defMod = defMod + 1
 		end
 		target:addMod(MOD_DEF, defMod);

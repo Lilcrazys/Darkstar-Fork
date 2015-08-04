@@ -56,7 +56,7 @@ function onSpellCast(caster,target,spell)
 
     -- Try to kill same tier Bio
     if (BIO_OVERWRITE == 1 and bio ~= nil) then
-        if(bio:getPower() <= 2) then
+        if (bio:getPower() <= 2) then
             target:delStatusEffect(EFFECT_BIO);
         end
     end

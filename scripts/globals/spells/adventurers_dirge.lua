@@ -19,7 +19,7 @@ function onSpellCast(caster,target,spell)
 --[[
 	local duration = 120;
 	local power = 20;
-	if(caster:getObjType() == TYPE_PC) then
+	if (caster:getObjType() == TYPE_PC) then
 		local merit =((target:getMerit(MERIT_ADVENTURERS_DIRGE) * .03) - .03);
 		power = power + (power * merit);
 		-- printf("Power and Merit %d",power);

@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
 	-- remove all by 1%
 	local damage = 0;
 	-- if have more hp then 30%, then reduce to 1%
-	if(currentHP / target:getMaxHP() > 0.2) then
+	if (currentHP / target:getMaxHP() > 0.2) then
 		damage = currentHP * .99;
 	else
 		-- else you die

@@ -19,13 +19,13 @@ function onSpellCast(caster,target,spell)
 
 	local dINT = caster:getStat(MOD_MND) - target:getStat(MOD_MND);
 	local resist = applyResistance(caster,spell,target,dINT,37);
-	if(resist > 0.0625) then
+	if (resist > 0.0625) then
 		-- resisted!
 		spell:setMsg(85);
 		return 0;
 	end
 
-	if(target:hasStatusEffect(EFFECT_SILENCE) == true) then
+	if (target:hasStatusEffect(EFFECT_SILENCE) == true) then
 		-- no effect
 		spell:setMsg(75);
 	else
@@ -36,7 +36,7 @@ function onSpellCast(caster,target,spell)
 
 	end
 
-	if(target:hasStatusEffect(EFFECT_BLIND) == true) then
+	if (target:hasStatusEffect(EFFECT_BLIND) == true) then
 		-- no effect
 		spell:setMsg(75);
 	else

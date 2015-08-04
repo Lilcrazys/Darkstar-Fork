@@ -51,10 +51,10 @@ function PyxisLootTier1(zone,npc)
 	rand = math.random();
 	rand = math.random();
 	for u = 1, table.getn(keyitem), 2 do
-		if(keyitem[u] == zone) then
-			if(rand <= keyitem[u + 1][1])then
+		if (keyitem[u] == zone) then
+			if (rand <= keyitem[u + 1][1])then
 				reward = {"keyitem",math.random(keyitem[u + 1][2],keyitem[u + 1][3])};
-			elseif(rand <= (keyitem[u + 1][1] + item1Tier1s[u + 1][1])) then
+			elseif (rand <= (keyitem[u + 1][1] + item1Tier1s[u + 1][1])) then
 				local num_item1Tier1s = 0;
 				local curr_item1Tier1 = 2;
 				while(item1Tier1s[u + 1][curr_item1Tier1] ~= nil) do
@@ -123,10 +123,10 @@ function PyxisLootTier2(zone,npc)
 	rand = math.random();
 	rand = math.random();
 	for u = 1, table.getn(keyitem), 2 do
-		if(keyitem[u] == zone) then
-			if(rand <= keyitem[u + 1][1])then
+		if (keyitem[u] == zone) then
+			if (rand <= keyitem[u + 1][1])then
 				reward = {"keyitem",math.random(keyitem[u + 1][2],keyitem[u + 1][3])};
-			elseif(rand <= (keyitem[u + 1][1] + item1Tier2s[u + 1][1])) then
+			elseif (rand <= (keyitem[u + 1][1] + item1Tier2s[u + 1][1])) then
 				local num_item1Tier2s = 0;
 				local curr_item1Tier2 = 2;
 				while(item1Tier2s[u + 1][curr_item1Tier2] ~= nil) do
@@ -195,10 +195,10 @@ function PyxisLootTier3(zone,npc)
 	rand = math.random();
 	rand = math.random();
 	for u = 1, table.getn(keyitem), 2 do
-		if(keyitem[u] == zone) then
-			if(rand <= keyitem[u + 1][1])then
+		if (keyitem[u] == zone) then
+			if (rand <= keyitem[u + 1][1])then
 				reward = {"keyitem",math.random(keyitem[u + 1][2],keyitem[u + 1][3])};
-			elseif(rand <= (keyitem[u + 1][1] + item1Tier3s[u + 1][1])) then
+			elseif (rand <= (keyitem[u + 1][1] + item1Tier3s[u + 1][1])) then
 				local num_item1Tier3s = 0;
 				local curr_item1Tier3 = 2;
 				while(item1Tier3s[u + 1][curr_item1Tier3] ~= nil) do
@@ -267,10 +267,10 @@ function PyxisLootTier4(zone,npc)
 	rand = math.random();
 	rand = math.random();
 	for u = 1, table.getn(keyitem), 2 do
-		if(keyitem[u] == zone) then
-			if(rand <= keyitem[u + 1][1])then
+		if (keyitem[u] == zone) then
+			if (rand <= keyitem[u + 1][1])then
 				reward = {"keyitem",math.random(keyitem[u + 1][2],keyitem[u + 1][3])};
-			elseif(rand <= (keyitem[u + 1][1] + item1Tier4s[u + 1][1])) then
+			elseif (rand <= (keyitem[u + 1][1] + item1Tier4s[u + 1][1])) then
 				local num_item1Tier4s = 0;
 				local curr_item1Tier4 = 2;
 				while(item1Tier4s[u + 1][curr_item1Tier4] ~= nil) do

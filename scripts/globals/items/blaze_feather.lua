@@ -35,7 +35,7 @@ function onItemUse(target)
 		power = ((int + 2) / 12 + 4) * (1 + (magicAtk / 100)) + (int * (8/256));
 	end
 
-	if(target:addStatusEffect(EFFECT_BLAZE_SPIKES,power,0,90)) then
+	if (target:addStatusEffect(EFFECT_BLAZE_SPIKES,power,0,90)) then
 		target:messageBasic(205);
 	else
         	target:messageBasic(423); -- no effect

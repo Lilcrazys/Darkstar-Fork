@@ -69,102 +69,102 @@ function onTrigger(player,npc)
 	dnc = {11603,250000,11721,250000,19256,250000,12026,1000000,12046,1000000,12066,1000000,12086,1000000,12106,1000000}	
 	sch = {19247,250000,11722,250000,11620,250000,12027,1000000,12047,1000000,12067,1000000,12087,1000000,12107,1000000}
 -----------------------------------	
-	if(mJob == 1) then   	  	   	   
+	if (mJob == 1) then   	  	   	   
 	   showShop(player, STATIC, war);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for WAR -- -- --	   	
 	return 1   
 	end		
-    if(mJob == 2) then   	  	   	   
+    if (mJob == 2) then   	  	   	   
 	   showShop(player, STATIC, mnk);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for MNK -- -- --	   	
 	return 1   
 	end			
-    if(mJob == 3) then   	  	   	   
+    if (mJob == 3) then   	  	   	   
 	   showShop(player, STATIC, whm);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for WHM -- -- --	   
 	return 1   
 	end		
-    if(mJob == 4) then   	  	   	   
+    if (mJob == 4) then   	  	   	   
 	   showShop(player, STATIC, blm);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for BLM -- -- --	   	
 	return 1   
 	end		
-	if(mJob == 5) then   	  	   	   
+	if (mJob == 5) then   	  	   	   
 	   showShop(player, STATIC, rdm);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for RDM -- -- --	   	
 	return 1   
 	end 		
-	if(mJob == 6) then   	  	   	   
+	if (mJob == 6) then   	  	   	   
 	   showShop(player, STATIC, thf);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for THF -- -- --	  
 	return 1   
 	end		
-	if(mJob == 7) then   	  	   	   
+	if (mJob == 7) then   	  	   	   
 	   showShop(player, STATIC, pld);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for PLD -- -- --	   	
 	return 1   
 	end			
-	if(mJob == 8) then   	  	   	   
+	if (mJob == 8) then   	  	   	   
 	   showShop(player, STATIC, drk);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for DRK -- -- --	   
 	return 1   
 	end   	
-    if(mJob == 9) then   	  	   	   
+    if (mJob == 9) then   	  	   	   
 	   showShop(player, STATIC, bst);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for BST -- -- --	   	
 	return 1   
 	end		
-    if(mJob == 10) then   	  	   	   
+    if (mJob == 10) then   	  	   	   
 	   showShop(player, STATIC, brd);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for BRD -- -- --	   	
 	return 1   
 	end		
-	if(mJob == 11) then   	  	   	   
+	if (mJob == 11) then   	  	   	   
 	   showShop(player, STATIC, rng);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for RNG -- -- --	   	
 	return 1   
 	end   		
-    if(mJob == 12) then   	  	   	   
+    if (mJob == 12) then   	  	   	   
 	   showShop(player, STATIC, sam);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for SAM -- -- --	   	
 	return 1   
 	end  		
-	if(mJob == 13) then   	  	   	   
+	if (mJob == 13) then   	  	   	   
 	   showShop(player, STATIC, nin);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for NIN -- -- --	   	
 	return 1   
 	end		
-	if(mJob == 14) then   	  	   	   
+	if (mJob == 14) then   	  	   	   
 	   showShop(player, STATIC, drg);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for DRG -- -- --	   	
 	return 1   
 	end
-	if(mJob == 15) then   	  	   	   
+	if (mJob == 15) then   	  	   	   
 	   showShop(player, STATIC, smn);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for SMN -- -- --	   
 	return 1   
 	end
-	if(mJob == 16) then   	  	   	   
+	if (mJob == 16) then   	  	   	   
 	   showShop(player, STATIC, blu);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for BLU -- -- --	   
 	return 1   
 	end
-	if(mJob == 17) then   	  	   	   
+	if (mJob == 17) then   	  	   	   
 	   showShop(player, STATIC, cor);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for COR -- -- --	   
 	return 1   
 	end
-	if(mJob == 18) then   	  	   	   
+	if (mJob == 18) then   	  	   	   
 	   showShop(player, STATIC, pup);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for PUP -- -- --	   
 	return 1   
 	end
-	if(mJob == 19) then   	  	   	   
+	if (mJob == 19) then   	  	   	   
 	   showShop(player, STATIC, dnc);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for DNC -- -- --	   
 	return 1   
 	end
-	if(mJob == 20) then   	  	   	   
+	if (mJob == 20) then   	  	   	   
 	   showShop(player, STATIC, sch);
 	   player:showText(npc,ABYSSEA_SHOP_DIALOG); -- -- -- Shop for SCH -- -- --	   	
 	return 1   

@@ -25,7 +25,7 @@ function onTrigger(player,npc)
     local FLAMESTONE = 2793;
 
     -- Give Player a Flamestone if they don't have one
-    if(player:hasItem(FLAMESTONE) == false) then
+    if (player:hasItem(FLAMESTONE) == false) then
         player:addItem(FLAMESTONE);
         player:messageSpecial(ITEM_OBTAINED, FLAMESTONE);
     else
