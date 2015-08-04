@@ -20,10 +20,6 @@ function onMobWeaponSkill(target, mob, skill)
 
     MobStatusEffectMove(mob, target, EFFECT_STUN, 10, 0, 5);
 
-    if (dispel == 0) then
-        skill:setMsg(MSG_DISAPPEAR_NUM);
-    end
-
     target:delHP(dmg);
     return dmg;
 end;
