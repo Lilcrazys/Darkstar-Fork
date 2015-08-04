@@ -5953,7 +5953,7 @@ INSERT INTO `mob_skill` VALUES (2527,1213,2015,'Morta_Radial',1,10.0,2000,0,4,16
 INSERT INTO `mob_skill` VALUES (2624,1213,2016,'Night_stalker',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2625,1213,2017,'Atropine_spore',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2626,1213,2018,'Frond_fatale',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2627,1213,2019,'Full_bloom',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2627,1213,2019,'Full_bloom',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2628,1213,2020,'Deracinator',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2629,1213,2021,'Beautiful_death',1,15.0,2000,1000,4,0,0,0);
 

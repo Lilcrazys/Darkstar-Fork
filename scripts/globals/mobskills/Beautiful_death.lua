@@ -28,7 +28,7 @@ function onMobWeaponSkill(target, mob, skill)
     local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 75)
     if (msg == MSG_ENFEEB_IS) then
         mob:charm(target);
-        target:setModelId(2024);
+        -- target:setModelId(2024);
     end
     skill:setMsg(msg);
 
