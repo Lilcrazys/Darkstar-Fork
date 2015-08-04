@@ -2921,8 +2921,8 @@ INSERT INTO `mob_skill` VALUES (1076,296,63,'Extremely_Bad_Breath',4,7.0,2000,15
 -- Iriri Samariri (297)
 INSERT INTO `mob_skill` VALUES (1703,297,1361,'Water_Bomb',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1702,297,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1704,297,1361,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1706,295,1361,'Frog_Chorus',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1704,297,1362,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1706,295,1364,'Frog_Chorus',1,16.0,2000,1500,4,0,0,0);
 
 -- Anantaboga (298)
 INSERT INTO `mob_skill` VALUES (388,298,388,'Wind_Breath',4,10.0,2000,1500,4,0,0,0);
@@ -5898,6 +5898,68 @@ INSERT INTO `mob_skill` VALUES (436,1203,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (438,1203,438,'Invincible',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (3009,1203,432,'Elemental_Sforzo',0,7.0,2000,0,1,2,0,0);
 
+
+-- Dimgruzub (1205)
+INSERT INTO `mob_skill` VALUES (1522,1205,1205,'VW_Spinal_Cleave',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1523,1205,1206,'VW_Mangle',4,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1524,1205,1207,'VW_Leaping_Cleave',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1525,1205,1208,'VW_Hex_Palm',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1526,1205,1209,'VW_Animating_Wail',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1528,1205,1211,'Unblest_Jambiya',1,15.0,2000,1500,4,0,0,0); -- script / animation
+-- INSERT INTO `mob_skill` VALUES (????,1205,????,'Genei_Ryodan',1,20.0,2000,1500,4,0,0,3); -- script / animation
+
+-- Assassins_Apprentice (1206)
+INSERT INTO `mob_skill` VALUES (1522,1206,1205,'VW_Spinal_Cleave',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1524,1206,1207,'VW_Leaping_Cleave',0,7.0,2000,1500,4,0,0,0);
+
+-- Brekekex (1207)
+INSERT INTO `mob_skill` VALUES (1703,1207,1361,'VW_Water_Bomb',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1702,1207,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1704,1207,1362,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (1706,1207,1364,'Frog_Chorus',1,16.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (????,1207,????,'Usurping_Scepter',1,16.0,2000,1500,4,0,0,0); -- script / animation
+INSERT INTO `mob_skill` VALUES(1705,1207,1363,'Providence',0,7.0,2000,1500,1,0,0,0); -- script / animation
+
+-- Chorus_toad (1208)
+INSERT INTO `mob_skill` VALUES (1703,1208,1361,'VW_Water_Bomb',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1702,1208,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
+
+-- Yalungur (1209)
+INSERT INTO `mob_skill` VALUES (1445,287,1178,'Feather_Tickle',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1444,287,1177,'Snatch_Morsel',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1443,287,1176,'VW_Pecking_Flurry',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1446,287,1177,'Wisecrack',1,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (????,287,????,'Tropic_Terror',1,15.0,2000,1500,4,0,0,3); -- script / animation
+
+-- Predatory_Colibri (1210)
+INSERT INTO `mob_skill` VALUES (1445,1210,1178,'Feather_Tickle',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1444,1210,1177,'Snatch_Morsel',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1443,1210,1176,'VW_Pecking_Flurry',0,7.0,2000,1500,4,0,0,0);
+
+-- Vanasarvik (1211)
+INSERT INTO `mob_skill` VALUES(1455,1211,1180,'VW_Frenetic_Rip',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1747,1211,1182,'VW_Grating_Tantara',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES(1748,1211,1182,'VW_Stifling_Tantara',1,10.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES(????,1211,????,'Dark_Recital',1,15.0,2000,1500,4,0,0,1); - script / animation
+
+-- Elder_Imp (1212)
+INSERT INTO `mob_skill` VALUES (1455,1212,1180,'VW_Frenetic_Rip',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1453,1212,1181,'Abrasive_Tantara',1,10.0,2000,2000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1454,1212,1182,'Deafening_Tantara',1,10.0,2000,1500,4,0,0,0);
+
+-- Morta (1213)
+-- INSERT INTO `mob_skill` VALUES (2525,1213,????,'Morta_Single',0,10.0,2000,0,4,16,0,0);
+-- INSERT INTO `mob_skill` VALUES (2526,1213,????,'Morta_Frontal',4,10.0,2000,0,4,16,0,0);
+-- INSERT INTO `mob_skill` VALUES (2527,1213,????,'Morta_Radial',1,10.0,2000,0,4,16,0,3);
+INSERT INTO `mob_skill` VALUES (2624,1213,2016,'Night_stalker',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2625,1213,2017,'Atropine_spore',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2626,1213,2018,'Frond_fatale',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2627,1213,2019,'Full_bloom',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2628,1213,2020,'Deracinator',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2629,1213,2021,'Beautiful_death',1,18.0,2000,1000,4,0,0,0);
+
+-- Ravishing_Rafflesia (1214)
+INSERT INTO `mob_skill` VALUES (1912,1214,1554,'VW_Bloody_Caress',0,10.0,2000,1500,4,0,0,3);
 
 -- The Jumping Crab
 INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback
