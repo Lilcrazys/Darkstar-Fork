@@ -2,13 +2,13 @@
 -- Area: The Boyhoda Tree
 -- MOB:  Unut
 -----------------------------------
-package.loaded["scripts/zones/The_Boyhoda_Tree/TextIDs"] = nil;
+package.loaded["scripts/zones/The_Boyahda_Tree/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/globals/status");
 require("scripts/globals/status");
 require("scripts/globals/fieldsofvalor");
-require("scripts/zones/The_Boyhoda_Tree/TextIDs");
+require("scripts/zones/The_Boyahda_Tree/TextIDs");
 
 -----------------------------------
 -- onMobInitialize

@@ -1983,7 +1983,38 @@ INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 213, 1, 255); -- flood_ii
 INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 202, 1, 255); -- Waterga 4
 INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 501, 1, 255); -- Waterja
 INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 173, 1, 255); -- Water 5
--- list IDs 441 - 589 available for use! please use'em!
+
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 202, 1, 255); -- waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 501, 1, 255); -- waterja
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 173, 1, 255); -- water 5
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 182, 1, 255); -- blizzga 4
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 497, 1, 255); -- blizzija
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 153, 1, 255); -- Blizzard 5
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 367, 1, 255); -- death
+INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 252, 1, 255); -- Stun
+
+INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 404, 1, 255); -- dragonfoe mambo
+INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 462, 1, 255); -- magic finale
+INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 377, 1, 255); -- horde lullaby II
+INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 419, 1, 255); -- Advancing march
+INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 421, 1, 255); -- Bettlefeild elegy
+INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 397, 1, 255); -- Valor minuet
+
+INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 22, 1, 255); -- Holy II
+INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 219, 1, 255); -- Comet
+
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 162, 1, 255); -- Stone 4
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 191, 1, 255); -- Stonega 3
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 211, 1, 255); -- Quake 2
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 248, 1, 255); -- Aspir 2
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 246, 1, 255); -- Drain 2
+INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 503, 1, 255); -- Impact
+
+-- list IDs 445 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 246, 1, 255); -- Spell Name?
