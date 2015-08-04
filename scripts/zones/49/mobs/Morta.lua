@@ -29,7 +29,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,100);
     mob:SetMobSkillAttack(true);
-    mob:setMod(MOD_DARK,500);
+    mob:setMod(MOD_DARK,600);
 
 end;
 

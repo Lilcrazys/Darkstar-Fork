@@ -16,8 +16,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_CHARM_I;
 	local power = 0;
 
-    MobStatusEffectMove(mob, target, EFFECT_DOOM, 10, 3, 9);
-    player:setModelId(2024);
+    MobStatusEffectMove(mob, target, EFFECT_DOOM, 9, 3, 9);
 
 
     if (not target:isPC()) then
@@ -29,6 +28,7 @@ function onMobWeaponSkill(target, mob, skill)
     local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 75)
     if (msg == MSG_ENFEEB_IS) then
         mob:charm(target);
+        target:setModelId(2024);
     end
     skill:setMsg(msg);
 
