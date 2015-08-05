@@ -16,8 +16,7 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
     -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,200);
+    mob:addMod(MOD_MDEF,25);
 end;
 
 -----------------------------------
@@ -31,7 +30,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,65);
+    mob:setMod(MOD_MATT,90);
+    mob:setMod(MOD_DOUBLE_ATTACK,25);
 end;
 
 -----------------------------------
@@ -55,11 +55,17 @@ end;
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 120) then
-        for Helper = mob:getID()+1, mob:getID()+3 do
-            if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
-                SpawnMob(Helper, 300):updateEnmity(target);
-                mob:setLocalVar("lastPetPop", os.time());
+    if (os.time() - popTime > 90) then
+        local alreadyPopped = false;
+        for Helper = mob:getID()+1, mob:getID()+5 do
+            if (alreadyPopped == true) then
+                break;
+            else
+                if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
+                    SpawnMob(Helper, 300):updateEnmity(target);
+                    mob:setLocalVar("lastPetPop", os.time());
+                    alreadyPopped = true;
+                end
             end
         end
     end
@@ -70,17 +76,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 750);
+    killer:addCurrency("bayld", 900);
     killer:addExp(10000);
 
-    if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then -- Fjalar Kill
-        if (killer:getMaskBit(killer:getVar("HYACINTH_STRATUM"), 0) == false) then
-           killer:setMaskBit(killer:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",0,true);
+    if (killer:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Yalungur Kill
+        if (killer:getMaskBit(killer:getVar("AMBER_STRATUM"), 2) == false) then
+           killer:setMaskBit(killer:getVar("AMBER_STRATUM"),"AMBER_STRATUM",2,true);
         end
-        if (killer:isMaskFull(killer:getVar("HYACINTH_STRATUM"),4) == true) then
-           killer:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
-           killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
-           killer:setVar("HYACINTH_STRATUM", 0);
+        if (killer:isMaskFull(killer:getVar("AMBER_STRATUM"),4) == true) then
+           killer:addKeyItem(AMBER_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(AMBER_STRATUM_ABYSSITE);
+           killer:setVar("AMBER_STRATUM", 0);
         end
     end;
 end;

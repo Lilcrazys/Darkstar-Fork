@@ -73,4 +73,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 750);
+    killer:addExp(10000);
+
+    if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then -- Tsui-Goab Kill
+        if (killer:getMaskBit(killer:getVar("HYACINTH_STRATUM"), 2) == false) then
+           killer:setMaskBit(killer:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",2,true);
+        end
+        if (killer:isMaskFull(killer:getVar("HYACINTH_STRATUM"),4) == true) then
+           killer:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
+           killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
+           killer:setVar("HYACINTH_STRATUM", 0);
+        end
+    end;
 end;

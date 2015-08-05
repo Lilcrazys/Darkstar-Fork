@@ -87,4 +87,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addCurrency("bayld", 1000);
+    killer:addExp(10000);
+    if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
+        killer:setVar("VW_TAVNAZIA", 1);
+    end
 end;

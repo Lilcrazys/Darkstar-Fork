@@ -5918,6 +5918,7 @@ INSERT INTO `mob_skill` VALUES (1702,1207,1360,'Magic_Hammer',0,16.0,2000,1500,4
 INSERT INTO `mob_skill` VALUES (1704,1207,1362,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (1706,1207,1364,'Frog_Chorus',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2633,1207,1905,'Usurping_Scepter',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (436,1207,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Chorus_toad (1208)
 INSERT INTO `mob_skill` VALUES (1703,1208,1361,'VW_Water_Bomb',1,16.0,2000,1500,4,0,0,0);
@@ -5956,6 +5957,7 @@ INSERT INTO `mob_skill` VALUES (2626,1213,2018,'Frond_fatale',1,18.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2627,1213,2019,'Full_bloom',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2628,1213,2020,'Deracinator',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2629,1213,2021,'Beautiful_death',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (436,1213,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Ravishing_Rafflesia (1214)
 INSERT INTO `mob_skill` VALUES (1912,1214,1554,'VW_Bloody_Caress',0,10.0,2000,1500,4,0,0,3);

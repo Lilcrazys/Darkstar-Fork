@@ -14,11 +14,6 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,150);
-    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------
@@ -32,8 +27,11 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,90);
-    mob:setMod(MOD_DOUBLE_ATTACK,25);
+    mob:setMod(MOD_MATT,100);
+    mob:SetMobSkillAttack(true);
+    mob:setMod(MOD_DARK,600);
+    mob:setMod(MOD_CRITHITRATE,25);
+
 end;
 
 -----------------------------------
@@ -55,15 +53,53 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    local Morta_2hr_Used = mob:getLocalVar("Morta_2hr");
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 120) then
-        for Helper = mob:getID()+1, mob:getID()+3 do
+    if (os.time() - popTime > 180) then
+        for Helper = mob:getID()+1, mob:getID()+6 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
                 mob:setLocalVar("lastPetPop", os.time());
             end
         end
+    end
+    if (mob:getHPP() <= 25) then
+        if (Morta_2hr_Used == 2) then
+            mob:useMobAbility(436);
+            mob:setLocalVar("Morta_2hr", 3);
+        end
+    elseif (mob:getHPP() <= 50) then
+        if (Morta_2hr_Used == 1) then
+            mob:useMobAbility(436);
+            mob:setLocalVar("Morta_2hr", 2);
+        end
+    elseif (mob:getHPP() <= 75) then
+        if (Morta_2hr_Used == 0) then
+            mob:useMobAbility(436);
+            mob:setLocalVar("Morta_2hr", 1);
+        end
+    end
+end;
+
+-----------------------------------
+-- onSpellPrecast
+-----------------------------------
+
+function onSpellPrecast(mob, spell)
+    if (spell:getID() == 503) then -- Impact
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
+        spell:setAnimation(280);
+    elseif (spell:getID() == 246) then -- Drain 2
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
+    elseif (spell:getID() == 248) then -- Aspir 2
+        spell:setAoE(SPELLAOE_RADIAL);
+        spell:setFlag(SPELLFLAG_HIT_ALL);
+        spell:setRadius(30);
     end
 end;
 
@@ -72,17 +108,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 750);
+    killer:addCurrency("bayld", 1250);
     killer:addExp(10000);
-
-    if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then -- Isarukitsck Kill
-        if (killer:getMaskBit(killer:getVar("HYACINTH_STRATUM"), 3) == false) then
-           killer:setMaskBit(killer:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",3,true);
-        end
-        if (killer:isMaskFull(killer:getVar("HYACINTH_STRATUM"),4) == true) then
-           killer:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
-           killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
-           killer:setVar("HYACINTH_STRATUM", 0);
-        end
-    end;
+    if (killer:hasKeyItem(AMBER_STRATUM_ABYSSITE_II)) then -- Morta Kill
+        killer:setVar("VW_TOAU", 1);
+    end
 end;

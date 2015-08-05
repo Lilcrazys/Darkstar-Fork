@@ -3253,3 +3253,46 @@ REPLACE INTO `mob_spawn_points` VALUES (16793869,'Primordial_Pugil','Primordial 
 REPLACE INTO `mob_spawn_points` VALUES (16793870,'Primordial_Pugil','Primordial Pugil',90491,-643.5,0.3,-655,0);
 REPLACE INTO `mob_spawn_points` VALUES (16793871,'Primordial_Pugil','Primordial Pugil',90491,-644,0.3,-655,0);
 REPLACE INTO `mob_spawn_points` VALUES (16793872,'Primordial_Pugil','Primordial Pugil',90491,-644.5,0.3,-655,0);
+
+-- Arrapago Reef
+REPLACE INTO `npc_list` VALUES (16999056,'Planar_Rift','Planar Rift',64,548,-7,80,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (16998875,'Dimgruzub','Dimgruzub',90492,544.49,-7.480,80,0);
+REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',90493,549,-7,80,50);
+REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',90493,547,-7,80,21);
+
+-- Caedarva Mire
+REPLACE INTO `npc_list` VALUES (17101339,'Planar_Rift','Planar Rift',150,269,-4,-732,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17101218,'Brekekex','Brekekekex',90494,259,-4,-732,152);
+REPLACE INTO `mob_spawn_points` VALUES (17101219,'Chorus_toad','Chorus Toad',90495,259,-4,-732,254);
+REPLACE INTO `mob_spawn_points` VALUES (17101220,'Chorus_toad','Chorus Toad',90495,260,-4,-732,50);
+REPLACE INTO `mob_spawn_points` VALUES (17101221,'Chorus_toad','Chorus Toad',90495,261,-4,-732,226);
+REPLACE INTO `mob_spawn_points` VALUES (17101222,'Chorus_toad','Chorus Toad',90495,258,-4,-732,70);
+REPLACE INTO `mob_spawn_points` VALUES (17101223,'Chorus_toad','Chorus Toad',90495,257,-4,-732,196);
+REPLACE INTO `mob_spawn_points` VALUES (17101224,'Chorus_toad','Chorus Toad',90495,256,-4,-732,30);
+
+-- mamook
+REPLACE INTO `npc_list` VALUES (17044048,'Planar_Rift','Planar Rift',54,319,-3,-183,1,50,50,0,5,100,0,3,0x00006f0900000000000000000000000000000000,2,'ABYSSEA');
+INSERT INTO `mob_spawn_points` VALUES (17043893,'Yalungur','Yalungur',90496,319,-3,-183,64);
+INSERT INTO `mob_spawn_points` VALUES (17043894,'Predatory_Colibri','Predatory Colibri',90497,316,-3,-183,205);
+INSERT INTO `mob_spawn_points` VALUES (17043895,'Predatory_Colibri','Predatory Colibri',90497,317,-3,-183,195);
+INSERT INTO `mob_spawn_points` VALUES (17043896,'Predatory_Colibri','Predatory Colibri',90497,318,-3,-183,199);
+INSERT INTO `mob_spawn_points` VALUES (17043897,'Predatory_Colibri','Predatory Colibri',90497,319,-3,-183,200);
+INSERT INTO `mob_spawn_points` VALUES (17043898,'Predatory_Colibri','Predatory Colibri',90497,320,-3,-183,175);
+
+-- Mount Zhayolm
+REPLACE INTO `npc_list` VALUES (17027609,'Planar_Rift','Planar Rift',98,902,-15,336,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17027486,'Vanasarvik','Vanasarvik',90498,902,-15.729,333.408,41);
+INSERT INTO `mob_spawn_points` VALUES (17027487,'Elder_Imp','Elder Imp',90499,901,-15,336,41);
+INSERT INTO `mob_spawn_points` VALUES (17027488,'Elder_Imp','Elder Imp',90499,902,-15,336,41);
+INSERT INTO `mob_spawn_points` VALUES (17027489,'Elder_Imp','Elder Imp',90499,903,-15,336,41);
+INSERT INTO `mob_spawn_points` VALUES (17027490,'Elder_Imp','Elder Imp',90499,904,-15,336,41);
+
+-- Aydeewa Subterrane
+REPLACE INTO `npc_list` VALUES (17056310,'Planar_Rift','Planar Rift',0,280,1,396,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17056187,'Morta','Morta',90500,280,1,396,64);
+REPLACE INTO `mob_spawn_points` VALUES (17056188,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,277,1,396,205);
+REPLACE INTO `mob_spawn_points` VALUES (17056189,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,278,1,396,195);
+REPLACE INTO `mob_spawn_points` VALUES (17056190,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,279,1,396,199);
+REPLACE INTO `mob_spawn_points` VALUES (17056191,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,280,1,396,200);
+REPLACE INTO `mob_spawn_points` VALUES (17056192,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,281,1,396,175);
+REPLACE INTO `mob_spawn_points` VALUES (17056193,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,282,1,396,202);
