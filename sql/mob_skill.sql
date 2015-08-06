@@ -6016,11 +6016,11 @@ INSERT INTO `mob_skill` VALUES (2518,1220,1812,'Flank_Opening',1,25.0,2000,1000,
 -- Provenance Watcher  (1221) (100-50% no wings,50-31 2 wings,<31 4 wings)
 INSERT INTO `mob_skill` VALUES (2140,1221,2049,'Watcher_Front',4,7.0,2000,0,4,16,0,1);
 INSERT INTO `mob_skill` VALUES (2141,1221,2050,'Watcher_Side_1',1,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2142,1221,2051,'Watcher_Side_2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2142,1221,2051,'Watcher_Side_2',0,7.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2143,1221,2052,'Watcher_Tail',1,10.0,2000,0,4,16,0,1);
-INSERT INTO `mob_skill` VALUES (2144,1221,2053,'Watcher_Front_2',4,7.0,2000,0,4,16,0,1);
-INSERT INTO `mob_skill` VALUES (2145,1221,2054,'Watcher_Side_3',1,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2146,1221,2055,'Watcher_Side_4',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2144,1221,2053,'Watcher_Front_2',0,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2145,1221,2054,'Watcher_Side_3',4,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2146,1221,2055,'Watcher_Side_4',0,7.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2583,1221,2056,'Prismatic_Breath',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2584,1221,2057,'Acicular_Brand',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2585,1221,2058,'Orogenesis',1,18.0,2000,1000,4,0,0,0);
@@ -6029,11 +6029,11 @@ INSERT INTO `mob_skill` VALUES (2587,1221,2060,'Diffractive_Break',1,18.0,2000,1
 INSERT INTO `mob_skill` VALUES (2588,1221,2061,'Euhedral_Swat',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2242,1221,2062,'Alt_Watcher_Front',4,7.0,2000,0,4,16,0,1);
 INSERT INTO `mob_skill` VALUES (2243,1221,2063,'Alt_Watcher_Side_1',1,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2244,1221,2064,'Alt_Watcher_Side_2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2244,1221,2064,'Alt_Watcher_Side_2',0,7.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2245,1221,2065,'Alt_Watcher_Tail',1,10.0,2000,0,4,16,0,1);
-INSERT INTO `mob_skill` VALUES (2246,1221,2066,'Alt_Watcher_Front_2',4,7.0,2000,0,4,16,0,1);
-INSERT INTO `mob_skill` VALUES (2247,1221,2067,'Alt_Watcher_Side_3',1,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2248,1221,2068,'Alt_Watcher_Side_4',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2246,1221,2066,'Alt_Watcher_Front_2',0,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2247,1221,2067,'Alt_Watcher_Side_3',4,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2248,1221,2068,'Alt_Watcher_Side_4',0,7.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2596,1221,2069,'Prismatic_Breath_Wing',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2597,1221,2070,'Acicular_Brand_Wing',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2598,1221,2071,'Orogenesis_Wing',1,18.0,2000,1000,4,0,0,0);
