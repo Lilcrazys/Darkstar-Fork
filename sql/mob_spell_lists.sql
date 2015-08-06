@@ -2056,6 +2056,33 @@ INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 201, 1, 255); -
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 202, 1, 255); -- Waterga 4
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 203, 1, 255); -- Waterga 5
 
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 177, 1, 255); -- Firaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 182, 1, 255); -- Blizzaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 153, 1, 255); -- Blizz 5
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 168, 1, 255); -- Thund 5
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 496, 1, 255); -- Firaja
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 497, 1, 255); -- Blizzaja
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 498, 1, 255); -- Stoneja
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 499, 1, 255); -- Aeroja
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 500, 1, 255); -- Thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 501, 1, 255); -- Waterja
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 356, 1, 255); -- Parlyga
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 360, 1, 255); -- Dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 362, 1, 255); -- Bindga
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 219, 1, 255); -- Comet
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 503, 1, 255); -- Impact
 
 -- list IDs 445 - 589 available for use! please use'em!
 
