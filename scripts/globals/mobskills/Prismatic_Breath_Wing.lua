@@ -1,5 +1,5 @@
 ---------------------------------------------
---  Aciular Brand
+--  Prismatic Breath
 ---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
@@ -7,7 +7,7 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if ((mob:AnimationSub() == 1)) then
+    if ((mob:AnimationSub() == 2)) then
         return 0;
     else
         return 1;
@@ -15,13 +15,12 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_MUTE;
 
-	MobStatusEffectMove(mob, target, typeEffect, 10, 0, 45);
+	MobStatusEffectMove(mob, target, EFFECT_PLAGUE, 30, 3, 60);
 
-	local dmgmod = 2;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_LIGHT,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
+	local dmgmod = MobBreathMove(mob, target, 0.15, 3, ELE_LIGHT, 900);
+
+	local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_LIGHT,MOBPARAM_IGNORE_SHADOWS);
 	target:delHP(dmg);
 	return dmg;
 end;
