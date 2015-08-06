@@ -54,6 +54,7 @@ function onMobFight(mob, target)
     local Form_Change = mob:getLocalVar("PW_Form");
     -- this should change twice once at 75% for 2 wing form and then again at 50% for 4 wing form.
     -- Currently cant find animation sub for 2 wing mode, will add in once i can figure it out.
+    -- Also need to sort a check for fetters up to adjsut dmg taken.
     if (mob:getHPP() <= 50) then
         if (Form_Change == 0) then
             mob:AnimationSub(2);

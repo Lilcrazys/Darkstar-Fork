@@ -1,11 +1,5 @@
 ---------------------------------------------
---  Grim Reaper
---
---  Description: Deals damage in a threefold attack to targets in a fan-shaped area of effect. Additional effect: Doom
---  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown cone
---  Notes: Used only by certain Lamia NMs (e.g. Lamia No.3). If they lost their staff, they'll use Hysteric Barrage instead.
+--  Diffractive Break
 ---------------------------------------------
 
 require("scripts/globals/settings");
@@ -18,16 +12,15 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_DOOM;
-	local typeEffect = EFFECT_SILENCE;
-	local typeEffect = EFFECT_AMNESIA;
-	
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 60));
 
+	local numhits = 1;
+	local accmod = 10;
+	local dmgmod = 3;
 
-	local numhits = 2;
-	local accmod = 1;
-	local dmgmod = 1;
+    MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 10, 0, 30);
+    MobStatusEffectMove(mob, target, EFFECT_SILENCE, 10, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_MUDDLE, 10, 0, 30);
+
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
 	target:delHP(dmg);
