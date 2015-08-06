@@ -5959,6 +5959,92 @@ INSERT INTO `mob_skill` VALUES (2628,1213,2020,'Deracinator',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2629,1213,2021,'Beautiful_death',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (436,1213,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
+-- Pil (1215)
+INSERT INTO `mob_skill` VALUES (2316,1215,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2436,1215,1812,'VW_Royal_decree',1,18.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2519,1215,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1215,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2518,1215,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2444,1215,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2552,1215,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+
+-- Rukh (1216)
+INSERT INTO `mob_skill` VALUES (2519,1216,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1216,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2311,1216,1787,'Stygian_Cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2316,1216,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2552,1216,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2550,1216,????,'Beleaguerment',1,18.0,2000,1000,4,0,0,0);
+
+-- Asb (1217)
+INSERT INTO `mob_skill` VALUES (2519,1217,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2310,1217,1786,'Diabolic_Claw',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1217,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2312,1217,1788,'Deathly_Diminuendo',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2313,1217,1789,'Hellish_Crescendo',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2551,1217,????,'Unchivalrous_Stab',1,18.0,2000,1000,4,0,0,0);
+
+-- Sarbaz (1218)
+INSERT INTO `mob_skill` VALUES (2519,1218,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2311,1218,1787,'Stygian_Cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2316,1218,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2552,1218,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2549,1218,????,'Pawns_Penumbra',1,18.0,2000,1000,4,0,0,0);
+
+-- Wazir (1219)
+INSERT INTO `mob_skill` VALUES (2519,1219,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2312,1219,1788,'Deathly_Diminuendo',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2310,1219,1786,'Diabolic_Claw',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2311,1219,1787,'Stygian_Cyclone',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2316,1219,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2313,1219,1789,'Hellish_Crescendo',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1219,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2552,1219,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2650,1219,????,'False_Promises',1,18.0,2000,1000,4,0,0,0);
+
+-- Shah (1220)
+INSERT INTO `mob_skill` VALUES (2519,1220,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skill` VALUES (2520,1220,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2312,1220,1788,'Deathly_Diminuendo',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2518,1220,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
+-- INSERT INTO `mob_skill` VALUES (2550,1220,????,'Beleaguerment',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2649,1220,????,'Shahs_Decree',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2551,1220,????,'Unchivalrous_Stab',1,18.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skill` VALUES (2549,1220,????,'Pawns_Penumbra',1,18.0,2000,1000,4,0,0,0);
+
+
+-- Provenance Watcher  (1221) (100-50% no wings,50-31 2 wings,<31 4 wings)
+INSERT INTO `mob_skill` VALUES (2140,1221,2049,'Watcher_Front',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2141,1221,2050,'Watcher_Side_1',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2142,1221,2051,'Watcher_Side_2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2143,1221,2052,'Watcher_Tail',1,10.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2144,1221,2053,'Watcher_Front_2',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2145,1221,2054,'Watcher_Side_3',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2146,1221,2055,'Watcher_Side_4',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2583,1221,2056,'Prismatic_Breath',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2584,1221,2057,'Acicular_Brand',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2585,1221,2058,'Orogenesis',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2586,1221,2059,'Phason_Beam',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2587,1221,2060,'Diffractive_Break',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2588,1221,2061,'Euhedral_Swat',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2242,1221,2062,'Alt_Watcher_Front',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2243,1221,2063,'Alt_Watcher_Side_1',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2244,1221,2064,'Alt_Watcher_Side_2',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2245,1221,2065,'Alt_Watcher_Tail',1,10.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2246,1221,2066,'Alt_Watcher_Front_2',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2247,1221,2067,'Alt_Watcher_Side_3',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2248,1221,2068,'Alt_Watcher_Side_4',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2596,1221,2069,'Prismatic_Breath_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2597,1221,2070,'Acicular_Brand_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2598,1221,2071,'Orogenesis_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2259,1221,2072,'Phason_Beam_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2600,1221,2073,'Diffractive_Break_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2601,1221,2074,'Euhedral_Swat_Wing',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2602,1221,2075,'Crystallite_Shower',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2603,1221,2076,'Graviton_Crux',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2604,1221,2077,'Crystal_Bolide',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2605,1221,2078,'Fragor_maximus',1,18.0,2000,1000,4,0,0,0);
+
 -- Ravishing_Rafflesia (1214)
 INSERT INTO `mob_skill` VALUES (1912,1214,1554,'VW_Bloody_Caress',0,10.0,2000,1500,4,0,0,3);
 

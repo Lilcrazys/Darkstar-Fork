@@ -767,17 +767,18 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- 16977921 to 16978943
 -- ------------------------------------------------------------
 
--- voidwatch chapter 4
-INSERT INTO `mob_spawn_points` VALUES (16977922,'Dimgruzub','Dimgruzub',90492,0,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977923,'Assassins_Apprentice','Assassins_Apprentice',90493,5,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977924,'Brekekex','Brekekex',90494,10,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977925,'Chorus_toad','Chorus_toad',90495,15,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977926,'Yalungur','Yalungur',90496,20,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977927,'Predatory_Colibri','Predatory_Colibri',90497,25,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977928,'Vanasarvik','Vanasarvik',90498,30,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977929,'Elder_Imp','Elder_Imp',90499,35,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977930,'Morta','Morta',90505,40,0,1,0);
-INSERT INTO `mob_spawn_points` VALUES (16977931,'Ravishing_Rafflesia','Ravishing_Rafflesia',90506,45,0,1,0);
+-- voidwatch chapter 6
+INSERT INTO `mob_spawn_points` VALUES (16977922,'Pil-Provenance','Pil-Provenance',90507,0,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977923,'Rukh','Rukh',90508,5,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977924,'Asb','Asb',90509,10,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977925,'Sarbaz','Sarbaz',90510,15,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977926,'Wazir','Wazir',90511,20,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977927,'Shah','Shah',90512,25,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977928,'Provenance_Watcher','Provenance_Watcher',90513,30,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977929,'Crystal_Fetter','Crystal_Fetter',90514,31,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977930,'Crystal_Fetter','Crystal_Fetter',90514,30,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977931,'Crystal_Fetter','Crystal_Fetter',90514,29,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977932,'Crystal_Fetter','Crystal_Fetter',90514,28,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.
