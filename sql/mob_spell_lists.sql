@@ -2014,6 +2014,49 @@ INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 248, 1, 255); -- Aspir 2
 INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 246, 1, 255); -- Drain 2
 INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 503, 1, 255); -- Impact
 
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 286, 1, 255); -- Addle
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 242, 1, 255); -- Stun
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 356, 1, 255); -- Paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 361, 1, 255); -- Blindga
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 365, 1, 255); -- Breakga
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 35, 1, 255); -- Diaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 147, 1, 255); -- Fire 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 152, 1, 255); -- Bliz 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 157, 1, 255); -- Aero 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 162, 1, 255); -- Stone 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 167, 1, 255); -- Thunder 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 172, 1, 255); -- Water 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 148, 1, 255); -- Fire 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 153, 1, 255); -- Bliz 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 158, 1, 255); -- Aero 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 21, 1, 255); -- Holy
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 22, 1, 255); -- Holy 2
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 219, 1, 255); -- Comet
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 218, 1, 255); -- Meteor
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 176, 1, 255); -- Firga 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 177, 1, 255); -- Firga 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 178, 1, 255); -- Firga 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 181, 1, 255); -- Blizga 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 182, 1, 255); -- Blizga 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 183, 1, 255); -- Blizga 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 186, 1, 255); -- Aeroga 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 187, 1, 255); -- Aeroga 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 188, 1, 255); -- Aeroga 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 191, 1, 255); -- Stonega 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 193, 1, 255); -- Stonega 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 196, 1, 255); -- Thundaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 198, 1, 255); -- Thundaga 5
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 201, 1, 255); -- Waterga 3
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 203, 1, 255); -- Waterga 5
+
+
 -- list IDs 445 - 589 available for use! please use'em!
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
