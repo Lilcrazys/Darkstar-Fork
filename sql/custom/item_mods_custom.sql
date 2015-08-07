@@ -281,7 +281,6 @@ INSERT INTO `item_mods` VALUES (28005, 162, 3);
 
 INSERT INTO `item_mods` VALUES (28479, 67, 7);
 INSERT INTO `item_mods` VALUES (28479, 66, 7);
-INSERT INTO `item_mods` VALUES (28479, 27, -3);
 INSERT INTO `item_mods` VALUES (28479, 73, 4);
 
 INSERT INTO `item_mods` VALUES (28483, 2, 40);
