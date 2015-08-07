@@ -1,0 +1,26 @@
+---------------------------------------------
+--  Deathly Diminuendo
+---------------------------------------------
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/monstertpmoves");
+---------------------------------------------
+
+function onMobSkillCheck(target,mob,skill)
+	return 0;
+end;
+
+function onMobWeaponSkill(target, mob, skill)
+	local numhits = 1;
+	local accmod = 10;
+	local dmgmod = 2;
+
+    MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 40, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_WEIGHT, 50, 0, 90);
+    MobStatusEffectMove(mob, target, EFFECT_DIA, 100, 3, 90);
+
+	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
+	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
+	target:delHP(dmg);
+	return dmg;
+end;

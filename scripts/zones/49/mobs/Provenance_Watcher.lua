@@ -28,7 +28,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
-    mob:setMod(MOD_MATT,80);
+    mob:setMod(MOD_MATT,90);
     mob:SetMobSkillAttack(true);
 end;
 
