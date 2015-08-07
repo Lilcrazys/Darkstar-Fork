@@ -5966,15 +5966,15 @@ INSERT INTO `mob_skill` VALUES (2519,1215,1791,'Tabbiyaa_Gambit',0,10.0,2000,100
 INSERT INTO `mob_skill` VALUES (2520,1215,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1215,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (2444,1215,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2552,1215,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2552,1215,1983,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
 
 -- Rukh (1216)
 INSERT INTO `mob_skill` VALUES (2519,1216,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1216,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2311,1216,1787,'Stygian_Cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2316,1216,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2552,1216,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2550,1216,????,'Beleaguerment',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2552,1216,1983,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2550,1216,1985,'Beleaguerment',1,18.0,2000,1000,4,0,0,1);
 
 -- Asb (1217)
 INSERT INTO `mob_skill` VALUES (2519,1217,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
@@ -5982,14 +5982,14 @@ INSERT INTO `mob_skill` VALUES (2310,1217,1786,'Diabolic_Claw',0,7.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2520,1217,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2312,1217,1788,'Deathly_Diminuendo',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2313,1217,1789,'Hellish_Crescendo',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2551,1217,????,'Unchivalrous_Stab',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2551,1217,1981,'Unchivalrous_Stab',1,18.0,2000,1000,4,0,0,3);
 
 -- Sarbaz (1218)
 INSERT INTO `mob_skill` VALUES (2519,1218,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2311,1218,1787,'Stygian_Cyclone',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2316,1218,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2552,1218,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2549,1218,????,'Pawns_Penumbra',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2552,1218,1983,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2549,1218,2022,'Pawns_Penumbra',1,18.0,2000,1000,4,0,0,1);
 
 -- Wazir (1219)
 INSERT INTO `mob_skill` VALUES (2519,1219,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
@@ -5999,18 +5999,18 @@ INSERT INTO `mob_skill` VALUES (2311,1219,1787,'Stygian_Cyclone',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2316,1219,1792,'VW_Malign_invocation',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2313,1219,1789,'Hellish_Crescendo',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1219,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2552,1219,????,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2650,1219,????,'False_Promises',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2552,1219,1983,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2650,1219,1992,'False_Promises',1,18.0,2000,1000,4,0,0,0);
 
 -- Shah (1220)
 INSERT INTO `mob_skill` VALUES (2519,1220,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1220,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2312,1220,1788,'Deathly_Diminuendo',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1220,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
--- INSERT INTO `mob_skill` VALUES (2550,1220,????,'Beleaguerment',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2649,1220,????,'Shahs_Decree',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2551,1220,????,'Unchivalrous_Stab',1,18.0,2000,1000,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (2549,1220,????,'Pawns_Penumbra',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2550,1220,1985,'Beleaguerment',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2649,1220,1982,'Shahs_Decree',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2551,1220,1981,'Unchivalrous_Stab',1,18.0,2000,1000,4,0,0,3);
+INSERT INTO `mob_skill` VALUES (2549,1220,2022,'Pawns_Penumbra',1,18.0,2000,1000,4,0,0,1);
 
 
 -- Provenance Watcher  (1221) (100-50% no wings,50-31 2 wings,<31 4 wings)
