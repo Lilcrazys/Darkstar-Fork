@@ -142,7 +142,7 @@ INSERT INTO `item_basic` VALUES (28005,0,'alrunas_gloves_+1','alrunas_gloves_+1'
 
 
 
-INSERT INTO `item_basic` VALUES (28478,0,'etiolation_earring','etiolation_earring',1,63552,0,0,0);
-INSERT INTO `item_basic` VALUES (28479,0,'enervating_earring','enervating_earring',1,63552,0,0,0);
-INSERT INTO `item_basic` VALUES (27507,0,'deviant_necklace','deviant_necklace',1,63552,0,0,0);
-INSERT INTO `item_basic` VALUES (28547,0,'merirosvo_ring','merirosvo_ring',1,63552,0,0,0);
+REPLACE INTO `item_basic` VALUES (28478,0,'etiolation_earring','etiolation_earring',1,63552,0,0,0);
+REPLACE INTO `item_basic` VALUES (28479,0,'enervating_earring','enervating_earring',1,63552,0,0,0);
+REPLACE INTO `item_basic` VALUES (27507,0,'deviant_necklace','deviant_necklace',1,63552,0,0,0);
+REPLACE INTO `item_basic` VALUES (28547,0,'merirosvo_ring','merirosvo_ring',1,63552,0,0,0);
