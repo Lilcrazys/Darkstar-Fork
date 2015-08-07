@@ -298,6 +298,6 @@ INSERT INTO `item_mods` VALUES (28547, 329, 3);
 INSERT INTO `item_mods` VALUES (28547, 330, 3);
 INSERT INTO `item_mods` VALUES (28547, 331, 3);
 
---Ghostfyre Cape (28621)
+-- Ghostfyre Cape (28621)
 INSERT INTO `item_mods` VALUES (28621, 274, 6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621, 311, 6); -- Magic Damage
