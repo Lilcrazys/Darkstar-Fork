@@ -10436,7 +10436,7 @@ INSERT INTO `item_armor` VALUES (27701,'foire_taj_+1',99,119,131072,169,0,0,16,0
 INSERT INTO `item_armor` VALUES (27702,'maxixi_tiara_+1',99,119,262144,211,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27704,'academics_mortarboard_+1',99,119,524288,214,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27710,'sahip_helm',99,119,10689,206,0,0,16,0);
-INSERT INTO `item_armor` VALUES (27720,'umbani_cap',99,119,2593825,330,0,0,16,0);
+INSERT INTO `item_armor` VALUES (27720,'umbani_cap',99,119,2593826,330,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27722,'ighwa_cap',99,119,8641,333,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27723,'xaddi_headgear',99,119,10689,365,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27724,'qaaxo_mask',99,119,2593826,363,0,0,16,0);

@@ -82,11 +82,11 @@ INSERT INTO `item_armor` VALUES (27046,'acro_gauntlets',99,119,10689,325,0,0,64,
 INSERT INTO `item_armor` VALUES (27233,'acro_breeches',99,119,10689,325,0,0,128,0);
 INSERT INTO `item_armor` VALUES (27403,'acro_leggings',99,119,10689,325,0,0,256,0);
 
-INSERT INTO `item_armor` VALUES (26735,'taeon_chapeau',99,119,2593826,326,0,0,16,0);
-INSERT INTO `item_armor` VALUES (26893,'taeon_tabard',99,119,2593826,326,0,0,32,0);
-INSERT INTO `item_armor` VALUES (27047,'taeon_gloves',99,119,2593826,326,0,0,64,0);
-INSERT INTO `item_armor` VALUES (27234,'taeon_tights',99,119,2593826,326,0,0,128,0);
-INSERT INTO `item_armor` VALUES (27404,'taeon_boots',99,119,2593826,326,0,0,256,0);
+INSERT INTO `item_armor` VALUES (26735,'taeon_chapeau',99,119,2602290,326,0,0,16,0);
+INSERT INTO `item_armor` VALUES (26893,'taeon_tabard',99,119,2602290,326,0,0,32,0);
+INSERT INTO `item_armor` VALUES (27047,'taeon_gloves',99,119,2602290,326,0,0,64,0);
+INSERT INTO `item_armor` VALUES (27234,'taeon_tights',99,119,2602290,326,0,0,128,0);
+INSERT INTO `item_armor` VALUES (27404,'taeon_boots',99,119,2602290,326,0,0,256,0);
 
 INSERT INTO `item_armor` VALUES (26736,'telchine_cap',99,119,1622556,143,0,0,16,0);
 INSERT INTO `item_armor` VALUES (26894,'telchine_chausable',99,119,1622556,143,0,0,32,0);
@@ -142,3 +142,15 @@ REPLACE INTO `item_armor` VALUES (27777,'manibozho_beret',99,110,2593826,350,0,0
 
 REPLACE INTO `item_armor` VALUES (27410,'hippomenes_socks_+1',99,119,3851870,350,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28005,'alrunas_gloves_+1',99,118,66592,223,0,0,64,0);
+
+
+INSERT INTO `item_armor` VALUES (28478,'etiolation_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28479,'enervating_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (28483,'cryptic_earring',99,0,4194303,0,0,0,6144,0);
+INSERT INTO `item_armor` VALUES (27507,'deviant_necklace',99,0,4194303,0,0,0,512,0);
+INSERT INTO `item_armor` VALUES (28547,'merirosvo_ring',99,0,65536,0,0,0,6144,0);
+
+REPLACE INTO `item_armor` VALUES (28200,'bokwus_slops',99,110,1589788,351,0,0,128,0);
+REPLACE INTO `item_armor` VALUES (28059,'bokwus_gloves',99,110,1589788,351,0,0,64,0);
+REPLACE INTO `item_armor` VALUES (27919,'bokwus_robe',99,110,1589788,351,0,0,32,0);
+REPLACE INTO `item_armor` VALUES (27778,'bokwus_circlet',99,110,1589788,351,0,0,16,0);

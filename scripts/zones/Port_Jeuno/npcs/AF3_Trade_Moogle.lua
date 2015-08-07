@@ -726,7 +726,7 @@ function onTrade(player,npc,trade)
             player:tradeComplete();
         end
     ----------------------------DRK-------------------------------------
-        if (trade:hasItemQty(3212,6) and trade:hasItemQty(11171,1) and trade:getItemCount() == 7) then              --head
+        if (trade:hasItemQty(3211,6) and trade:hasItemQty(11171,1) and trade:getItemCount() == 7) then              --head
             player:addItem(11071);
             player:messageSpecial(ITEM_OBTAINED,11071);
             player:tradeComplete();
