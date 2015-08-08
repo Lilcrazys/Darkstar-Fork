@@ -87,7 +87,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobID = 17526788 and 17526790;
+    local mobID = 17526788, 17526790;
     local mobNotUp = false
     killer:addCurrency("legion_point", 50);
 
