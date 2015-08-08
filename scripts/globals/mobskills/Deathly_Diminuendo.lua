@@ -1,11 +1,5 @@
 ---------------------------------------------
---  Malign Invocation
---
---  Description: Spins around dealing damage to targets in an area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: 2-4 shadows
---  Range: 10' radial
---  Notes:
+--  Deathly Diminuendo
 ---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
@@ -17,9 +11,13 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local numhits = 2;
-	local accmod = 1;
+	local numhits = 1;
+	local accmod = 10;
 	local dmgmod = 2;
+
+    MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 40, 0, 60);
+    MobStatusEffectMove(mob, target, EFFECT_BIO, 50, 3, 90);
+
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
 	target:delHP(dmg);
