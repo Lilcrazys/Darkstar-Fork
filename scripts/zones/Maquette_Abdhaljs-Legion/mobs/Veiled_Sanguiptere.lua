@@ -91,7 +91,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 30);
-    SpawnMob(mob:getID()+3) -- Spawns Veiled_IronClad
+function onMobDeath(mob, killer)
+    local mobID = 17526837 and 17526838;
+    local mobNotUp = false
+    killer:addCurrency("legion_point", 50);
+
+    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
+        mobNotUp = true;
+    end
+
+    if (mobNotUp == true) then
+        SpawnMob(17526839, 300):updateClaim(player); -- Veiled_Ironclad Spawn
+    end
 end;

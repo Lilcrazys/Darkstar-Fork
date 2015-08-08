@@ -19,7 +19,7 @@ function onMobInitialize(mob)
 
     -- addMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_ACC,125);
     mob:addMod(MOD_ATT,125);
 end;

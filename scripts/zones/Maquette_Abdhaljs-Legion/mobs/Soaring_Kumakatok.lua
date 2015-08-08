@@ -18,9 +18,9 @@ function onMobInitialize(mob)
 
     -- addMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_DEF,145);
-    mob:addMod(MOD_MDEF,50); 
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
@@ -64,7 +64,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(435); -- MF
             mob:setLocalVar("Soaring_Kumakatok", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -92,6 +92,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 25); 
+function onMobDeath(mob, killer)
+    local mobID = 17526823 and 17526824;
+    local mobNotUp = false
+    killer:addCurrency("legion_point", 50);
+
+    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
+        mobNotUp = true;
+    end
+
+    if (mobNotUp == true) then
+        SpawnMob(17526825, 300):updateClaim(player); -- Soaring_Naraka Spawn
+    end
 end;

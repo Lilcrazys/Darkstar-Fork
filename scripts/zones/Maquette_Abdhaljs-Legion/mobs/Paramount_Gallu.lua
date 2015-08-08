@@ -30,10 +30,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 30);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_MACC,1925);
-    mob:setMod(MOD_MATT,120);  
-    mob:setMod(MOD_ACC,1925);  
+    mob:setMod(MOD_MATT,120);
+    mob:setMod(MOD_ACC,1925);
     mob:setMod(MOD_DARK_AFFINITY,20);
-      
+
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
@@ -114,6 +114,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 150);
+    killer:addCurrency("legion_point", 400);
     killer:addTitle(LEGENDARY_LEGIONNAIRE);
 end;

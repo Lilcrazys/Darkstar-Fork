@@ -29,7 +29,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 10);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,125);  
+    mob:setMod(MOD_MATT,125);
 end;
 
 -----------------------------------
@@ -101,6 +101,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 125);
+    killer:addCurrency("legion_point", 300);
     SpawnMob(mob:getID()-1) -- Spawns Paramount_Gallu
 end;

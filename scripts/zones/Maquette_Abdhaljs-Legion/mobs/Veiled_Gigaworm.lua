@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 25);
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
 end;
 
 -----------------------------------
@@ -92,6 +92,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 30);
+function onMobDeath(mob, killer)
+    local mobID = 17526836 and 17526837;
+    local mobNotUp = false
+    killer:addCurrency("legion_point", 50);
+
+    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
+        mobNotUp = true;
+    end
+
+    if (mobNotUp == true) then
+        SpawnMob(17526839, 300):updateClaim(player); -- Veiled_Ironclad Spawn
+    end
 end;

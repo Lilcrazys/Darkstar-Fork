@@ -27,7 +27,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,25);
     mob:setMod(MOD_REGEN,35);
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_DEF,75);
 end;
 
@@ -88,6 +88,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 25);
+function onMobDeath(mob, killer)
+    local mobID = 17526789 and 17526790;
+    local mobNotUp = false
+    killer:addCurrency("legion_point", 50);
+
+    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
+        mobNotUp = true;
+    end
+
+    if (mobNotUp == true) then
+        SpawnMob(17526791, 300):updateClaim(player); -- Lofty_Harpeia Spawn
+    end
 end;

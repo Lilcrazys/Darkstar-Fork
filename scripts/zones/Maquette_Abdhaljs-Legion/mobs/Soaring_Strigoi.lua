@@ -28,7 +28,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_REGEN, 30);
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 35);
@@ -64,7 +64,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(435); -- MF
             mob:setLocalVar("Soaring_Strigoi_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -91,7 +91,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 25);
-    SpawnMob(mob:getID()+1) -- Spawns Soaring_Naraka
+function onMobDeath(mob, killer)
+    local mobID = 17526823 and 17526822;
+    local mobNotUp = false
+    killer:addCurrency("legion_point", 50);
+
+    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
+        mobNotUp = true;
+    end
+
+    if (mobNotUp == true) then
+        SpawnMob(17526825, 300):updateClaim(player); -- Soaring_Naraka Spawn
+    end
 end;

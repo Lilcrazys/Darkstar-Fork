@@ -96,6 +96,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 100);
+    killer:addCurrency("legion_point", 150);
     killer:addTitle(SUBJUGATOR_OF_THE_VEILED);
 end;

@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 35);
     mob:setMod(MOD_QUAD_ATTACK, 25);
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
 end;
 
 -----------------------------------
@@ -52,8 +52,8 @@ end;
 
 function onMobFight(mob, target)
     local SN_2hr = mob:getLocalVar("Soaring_Naraka_2hr_Used");
-    -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha  
-    
+    -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
+
     if (mob:getHPP() <= 10 and SN_2hr == 2) then
         mob:useMobAbility(474); -- Meikyo Shisui
         mob:setLocalVar("Soaring_Naraka_2hr_Used", 3);
@@ -93,6 +93,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 100);
+    killer:addCurrency("legion_point", 250);
     killer:addTitle(SUBJUGATOR_OF_THE_SOARING);
 end;
