@@ -98,5 +98,5 @@ function onMobDeath(mob, killer)
         end
         SpawnMob(17526839, 300);
     end
-    killer:addCurrency("legion_point", 150);
+    killer:addCurrency("legion_point", 50);
 end;
