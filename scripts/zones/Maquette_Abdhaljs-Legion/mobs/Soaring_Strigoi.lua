@@ -92,11 +92,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobAct1 = GetMobAction(17526823);
-    local mobAct2 = GetMobAction(17526822);
+    -- local mobAct1 = GetMobAction(17526823);
+    -- local mobAct2 = GetMobAction(17526822);
     killer:addCurrency("legion_point", 50);
 
-    if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
+    -- if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
         SpawnMob(17526825, 300); -- Soaring_Naraka Spawn
-    end
+    -- end
 end;

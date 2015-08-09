@@ -92,11 +92,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    for Veiled = 17526833, 17526838 do
-        if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
-            break;
-        end
+    -- for Veiled = 17526833, 17526838 do
+       -- if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
+           -- break;
+        -- end
         SpawnMob(17526839, 300);
-    end
+    -- end
     killer:addCurrency("legion_point", 50);
 end;

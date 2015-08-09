@@ -87,11 +87,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobAct1 = GetMobAction(17526788);
-    local mobAct2 = GetMobAction(17526790);
+    -- for Hall = 17526785, 17526790 do
+        -- if (GetMobAction(Hall) ~= ACTION_NONE or GetMobAction(Hall) ~= ACTION_SPAWN) then
+            -- break;
+        -- end
+        SpawnMob(17526791, 300);
+    -- end
     killer:addCurrency("legion_point", 50);
-
-    if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
-        SpawnMob(17526791, 300); -- Lofty_Harpeia Spawn
-    end
 end;
