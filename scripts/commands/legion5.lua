@@ -23,6 +23,7 @@ function onTrigger(player)
        SpawnMob('17526852'); -- Paramount_Harpeia
        SpawnMob('17526853'); -- Paramount_Mantis
        SpawnMob('17526854'); -- Paramount_Ironclad
+       SpawnMob('17526856'); -- Paramount_Ironclad
        player:setPos(-20, 12, 68, 64, 183);
     end
 end;
