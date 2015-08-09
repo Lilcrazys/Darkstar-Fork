@@ -96,7 +96,7 @@ end;
 function onMobDeath(mob, killer)
     local mobAct1 = GetMobAction(17526853);
     local mobAct2 = GetMobAction(17526851);
-    local mobAct2 = GetMobAction(17526854);
+    local mobAct3 = GetMobAction(17526854);
     killer:addCurrency("legion_point", 150);
 
     if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
