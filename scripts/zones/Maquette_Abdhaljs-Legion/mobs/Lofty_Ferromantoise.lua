@@ -90,11 +90,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobID = 17526788, 17526789;
+    local mobID = 17526788;
+    local mobID = 17526789;
     local mobNotUp = false
     killer:addCurrency("legion_point", 50);
 
-    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
+    if (GetMobAction(mobID1) == ACTION_NONE or GetMobAction(mobID1) == ACTION_SPAWN) then
+        if (GetMobAction(mobID2) == ACTION_NONE or GetMobAction(mobID2) == ACTION_SPAWN) then
         mobNotUp = true;
     end
 
