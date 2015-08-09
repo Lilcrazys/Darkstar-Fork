@@ -18,7 +18,7 @@ function onMobInitialize(mob)
 
     -- addMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_DEF,125);
 end;
 
@@ -59,7 +59,7 @@ function onMobFight(mob, target)
             mob:useMobAbility(434); -- HF
             mob:setLocalVar("Veiled_Amphiptere_2hr", 1);
         end
-    end 
+    end
 end;
 
 -----------------------------------
@@ -86,7 +86,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 15);
-    SpawnMob(mob:getID()+3) -- Spawns Veiled_Sanguiptere
+function onMobDeath(mob, killer)
+    for Veiled = 17526833, 17526838 do
+        if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
+            break;
+        end
+        SpawnMob(17526839, 300);
+    end
+    killer:addCurrency("legion_point", 150);
 end;

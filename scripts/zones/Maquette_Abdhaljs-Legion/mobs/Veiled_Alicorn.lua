@@ -108,11 +108,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobAct1 = GetMobAction(17526838);
-    local mobAct2 = GetMobAction(17526836);
-    killer:addCurrency("legion_point", 50);
-
-    if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
-        SpawnMob(17526839, 300); -- Veiled_Ironclad Spawn
+    for Veiled = 17526833, 17526838 do
+        if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
+            break;
+        end
+        SpawnMob(17526839, 300);
     end
+    killer:addCurrency("legion_point", 150);
 end;
