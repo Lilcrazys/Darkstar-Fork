@@ -108,11 +108,18 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    for Veiled = 17526833, 17526838 do
+    killer:PrintToPlayer("This line is before the loop.");
+    local MobIDs = {17526833, 17526834, 17526835, 17526836, 17526838, 17526839};
+    -- Veiled_Alicorn 17526837
+    for Veiled, ID in pairs(MobIDs) do
+        killer:PrintToPlayer("Ima runnin my loop!");
         if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
+            killer:PrintToPlayer("BREAK!");
             break;
         end
         SpawnMob(17526839, 300);
+        killer:PrintToPlayer("Crap should be spawned!");
     end
+    killer:PrintToPlayer("This line is after the loop.");
     killer:addCurrency("legion_point", 150);
 end;
