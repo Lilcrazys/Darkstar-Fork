@@ -80,24 +80,18 @@ end;
 -----------------------------------
 
 -- function onSpikesDamage(mob,target,damage)
---end;
+-- end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobID1 = 17526788;
-    local mobID2 = 17526790;
-    local mobNotUp = false
+    local mobAct1 = GetMobAction(17526788);
+    local mobAct2 = GetMobAction(17526790);
     killer:addCurrency("legion_point", 50);
 
-    if (GetMobAction(mobID1) == ACTION_NONE or GetMobAction(mobID1) == ACTION_SPAWN) then
-        if (GetMobAction(mobID2) == ACTION_NONE or GetMobAction(mobID2) == ACTION_SPAWN) then
-        mobNotUp = true;
-    end
-
-    if (mobNotUp == true) then
+    if ((mobAct1) == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
         SpawnMob(17526791, 300):updateClaim(player); -- Lofty_Harpeia Spawn
     end
 end;
