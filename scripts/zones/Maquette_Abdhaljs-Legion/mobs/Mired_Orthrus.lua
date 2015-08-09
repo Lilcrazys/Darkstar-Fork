@@ -89,15 +89,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobID = 17526809 and 17526810;
-    local mobNotUp = false
+    local mobAct1 = GetMobAction(17526809);
+    local mobAct2 = GetMobAction(17526810);
     killer:addCurrency("legion_point", 50);
 
-    if (GetMobAction(mobID) == ACTION_NONE or GetMobAction(mobID) == ACTION_SPAWN) then
-        mobNotUp = true;
-    end
-
-    if (mobNotUp == true) then
+    if ((mobAct1) == ACTION_NONE or mobAct1 == ACTION_SPAWN) and ((mobAct2) == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
         SpawnMob(17526811, 300):updateClaim(player); -- Mired_Mantis Spawn
     end
 end;

@@ -91,7 +91,7 @@ function onMobDeath(mob, killer)
     local mobAct2 = GetMobAction(17526790);
     killer:addCurrency("legion_point", 50);
 
-    if ((mobAct1) == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
+    if ((mobAct1) == ACTION_NONE or mobAct1 == ACTION_SPAWN) and ((mobAct2) == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
         SpawnMob(17526791, 300):updateClaim(player); -- Lofty_Harpeia Spawn
     end
 end;
