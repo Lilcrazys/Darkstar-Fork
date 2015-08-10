@@ -24,10 +24,6 @@ function onMobInitialize(mob)
     -- Effects
     mob:addStatusEffect(EFFECT_BLAZE_SPIKES,75,0,0);
     mob:getStatusEffect(EFFECT_BLAZE_SPIKES):setFlag(32);
-
-    -- Other
-    mob:SetMobSkillAttack(true);
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -43,6 +39,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,75);
     mob:setMod(MOD_ACC,1950);
+
+    -- Other
+    mob:SetMobSkillAttack(true);
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
