@@ -11,7 +11,7 @@
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
 
--- INSERT INTO `item_weapon` VALUES (itemId,'name',skill,subskill,dmgType,hit,delay,dmg,unlock_points);
+-- INSERT INTO `item_weapon` VALUES (itemId,'name',skill,subskill,ilvl_skill,ilvl_parry,ilvl_macc,dmgType,hit,delay,dmg,unlock_points);
 -- New entries below this line, and sorted by itemID please.
 REPLACE INTO `item_weapon` VALUES (18852,'octave_club',11,0,0,0,0,3,8,264,11,0);
 

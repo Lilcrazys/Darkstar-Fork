@@ -11,7 +11,7 @@
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
 
--- INSERT INTO `item_armor` VALUES ('itemId', 'name', 'level', 'jobs', 'MId', 'shieldSize', 'scriptType', 'slot', 'rslot');
+-- INSERT INTO `item_armor` VALUES (itemId,'name',level,ilevel,jobs,MId,shieldSize,scriptType,slot,rslot);
 -- New entries below this line, and sorted by itemID please.
 
 REPLACE INTO `item_armor` VALUES (18852,'octave_club',99,0,32767,110,0,0,3,0);
