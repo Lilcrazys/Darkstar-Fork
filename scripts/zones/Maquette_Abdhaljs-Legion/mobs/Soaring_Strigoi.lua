@@ -92,11 +92,18 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    -- local mobAct1 = GetMobAction(17526823);
-    -- local mobAct2 = GetMobAction(17526822);
-    killer:addCurrency("legion_point", 50);
+    killer:addCurrency("legion_point", 75);
+    local popBoss = true;
+    local MobIDs = {17526819, 17526820, 17526821, 17526822, 17526823, 17526825};
+    -- Soaring_Strigoi 17526824
 
-    -- if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
-        SpawnMob(17526825, 300); -- Soaring_Naraka Spawn
-    -- end
+    for Veiled, ID in pairs(MobIDs) do
+        if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+            popBoss = false;
+        end
+    end
+
+    if (popBoss == true) then
+        SpawnMob(17526825, 300);
+    end
 end;

@@ -91,11 +91,18 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    -- local mobAct1 = GetMobAction(17526808);
-    -- local mobAct2 = GetMobAction(17526810);
-    killer:addCurrency("legion_point", 50);
+    killer:addCurrency("legion_point", 75);
+    local popBoss = true;
+    local MobIDs = {17526805, 17526806, 17526807, 17526808, 17526810, 17526811};
+    -- Mired_Khrysokhimaira 17526809
 
-    -- if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
-        SpawnMob(17526811, 300); -- Mired_Mantis Spawn
-    -- end
+    for Veiled, ID in pairs(MobIDs) do
+        if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+            popBoss = false;
+        end
+    end
+
+    if (popBoss == true) then
+        SpawnMob(17526811, 300);
+    end
 end;

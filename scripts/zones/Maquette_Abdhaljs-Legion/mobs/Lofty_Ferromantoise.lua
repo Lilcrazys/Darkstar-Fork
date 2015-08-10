@@ -90,11 +90,18 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    for Hall = 17526785, 17526790 do
-        if (GetMobAction(Hall) ~= ACTION_NONE or GetMobAction(Hall) ~= ACTION_SPAWN) then
-            break;
+    killer:addCurrency("legion_point", 50);
+    local popBoss = true;
+    local MobIDs = {17526785, 17526786, 17526787, 17526788, 17526789, 17526791};
+    -- Lofty_Ferromantoise 17526790
+
+    for Veiled, ID in pairs(MobIDs) do
+        if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+            popBoss = false;
         end
+    end
+
+    if (popBoss == true) then
         SpawnMob(17526791, 300);
     end
-    killer:addCurrency("legion_point", 50);
 end;

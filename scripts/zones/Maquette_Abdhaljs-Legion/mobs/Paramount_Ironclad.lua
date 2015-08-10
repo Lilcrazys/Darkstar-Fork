@@ -70,11 +70,18 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    for Veiled = 17526833, 17526838 do
-        if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
-            break;
+    killer:addCurrency("legion_point", 75);
+    local popBoss = true;
+    local MobIDs = {17526852, 17526853, 17526851, 17526856};
+    -- Paramount_Ironclad 17526854
+
+    for Veiled, ID in pairs(MobIDs) do
+        if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+            popBoss = false;
         end
-        SpawnMob(17526839, 300);
     end
-    killer:addCurrency("legion_point", 150);
+
+    if (popBoss == true) then
+        SpawnMob(17526856, 300);
+    end
 end;

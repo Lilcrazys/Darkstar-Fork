@@ -94,14 +94,18 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    local mobAct1 = GetMobAction(17526853);
-    local mobAct2 = GetMobAction(17526851);
-    local mobAct3 = GetMobAction(17526854);
-    killer:addCurrency("legion_point", 150);
+    killer:addCurrency("legion_point", 75);
+    local popBoss = true;
+    local MobIDs = {17526853, 17526851, 17526854, 17526856};
+    -- Paramount_Harpeia 17526852
 
-    if (mobAct1 == ACTION_NONE or mobAct1 == ACTION_SPAWN) and (mobAct2 == ACTION_NONE or mobAct2 == ACTION_SPAWN) then
-        if (mobAct3 == ACTION_NONE or mobAct3 == ACTION_SPAWN) then
-            SpawnMob(17526856, 300); -- Paramount_Botulus Spawn
+    for Veiled, ID in pairs(MobIDs) do
+        if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+            popBoss = false;
         end
+    end
+
+    if (popBoss == true) then
+        SpawnMob(17526856, 300);
     end
 end;

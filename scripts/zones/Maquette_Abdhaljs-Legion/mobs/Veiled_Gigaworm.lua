@@ -93,18 +93,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    killer:PrintToPlayer("This line is before the loop.");
+    local popBoss = true;
     local MobIDs = {17526833, 17526834, 17526835, 17526836, 17526837, 17526839};
     -- Veiled_Gigaworm 17526838
+
     for Veiled, ID in pairs(MobIDs) do
-        killer:PrintToPlayer("Ima runnin my loop!");
-        if (GetMobAction(Veiled) ~= ACTION_NONE or GetMobAction(Veiled) ~= ACTION_SPAWN) then
-            killer:PrintToPlayer("BREAK!");
-            break;
+        if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+            popBoss = false;
         end
-        SpawnMob(17526839, 300);
-        killer:PrintToPlayer("Crap should be spawned!");
     end
-    killer:PrintToPlayer("This line is after the loop.");
-    killer:addCurrency("legion_point", 150);
+
+    if (popBoss == true) then
+        SpawnMob(17526839, 300);
+    end
 end;
