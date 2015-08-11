@@ -154,3 +154,7 @@ REPLACE INTO `item_armor` VALUES (28200,'bokwus_slops',99,110,1589788,351,0,0,12
 REPLACE INTO `item_armor` VALUES (28059,'bokwus_gloves',99,110,1589788,351,0,0,64,0);
 REPLACE INTO `item_armor` VALUES (27919,'bokwus_robe',99,110,1589788,351,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (27778,'bokwus_circlet',99,110,1589788,351,0,0,16,0);
+
+INSERT INTO `item_armor` VALUES (28276,'jute_boots_+1',99,119,1056,0,0,0,256,0);
+INSERT INTO `item_armor` VALUES (27230,'zoar_subligar',99,119,2473969,0,0,0,128,0);
+INSERT INTO `item_armor` VALUES (28445,'shetal_stone',99,0,4194303,0,0,0,1024,0);

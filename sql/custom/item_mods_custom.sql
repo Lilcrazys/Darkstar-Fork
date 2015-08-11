@@ -58,6 +58,9 @@ INSERT INTO `item_mods` VALUES (20946, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20901, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20901, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
+INSERT INTO `item_mods` VALUES (20809, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20809, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (26910, 480, 10); -- null dmg
 INSERT INTO `item_mods` VALUES (26911, 480, 12); -- null dmg
 
@@ -301,3 +304,37 @@ INSERT INTO `item_mods` VALUES (28547, 331, 3);
 -- Ghostfyre Cape (28621)
 INSERT INTO `item_mods` VALUES (28621, 274, 6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621, 311, 6); -- Magic Damage
+
+--Jute Boots
+INSERT INTO `item_mods` VALUES (28276, 2, 13);
+INSERT INTO `item_mods` VALUES (28276, 5, 14);
+INSERT INTO `item_mods` VALUES (28276, 8, 10);
+INSERT INTO `item_mods` VALUES (28276, 9, 11);
+INSERT INTO `item_mods` VALUES (28276, 10, 10);
+INSERT INTO `item_mods` VALUES (28276, 11, 36);
+INSERT INTO `item_mods` VALUES (28276, 12, 17);
+INSERT INTO `item_mods` VALUES (28276, 13, 19);
+INSERT INTO `item_mods` VALUES (28276, 14, 34);
+INSERT INTO `item_mods` VALUES (28276, 108, 65);
+INSERT INTO `item_mods` VALUES (28276, 31, 107);
+INSERT INTO `item_mods` VALUES (28276, 384, 30);
+INSERT INTO `item_mods` VALUES (28276, 249, 15);
+INSERT INTO `item_mods` VALUES (28276, 169, 12);
+
+--Zoar Subligar
+INSERT INTO `item_mods` VALUES (27230, 2, 47);
+INSERT INTO `item_mods` VALUES (27230, 8, 29);
+INSERT INTO `item_mods` VALUES (27230, 10, 16);
+INSERT INTO `item_mods` VALUES (27230, 11, 20);
+INSERT INTO `item_mods` VALUES (27230, 12, 30);
+INSERT INTO `item_mods` VALUES (27230, 13, 17);
+INSERT INTO `item_mods` VALUES (27230, 14, 11);
+INSERT INTO `item_mods` VALUES (27230, 108, 38);
+INSERT INTO `item_mods` VALUES (27230, 31, 69);
+INSERT INTO `item_mods` VALUES (27230, 29, 5);
+INSERT INTO `item_mods` VALUES (27230, 384, 60);
+INSERT INTO `item_mods` VALUES (27230, 27, 5);
+INSERT INTO `item_mods` VALUES (27230, 302, 2);
+INSERT INTO `item_mods` VALUES (27230, 73, -4);
+INSERT INTO `item_mods` VALUES (27230, 288, 5);
+

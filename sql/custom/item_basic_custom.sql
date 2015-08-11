@@ -141,6 +141,9 @@ INSERT INTO `item_basic` VALUES (28005,0,'alrunas_gloves_+1','alrunas_gloves_+1'
 
 REPLACE INTO `item_basic` VALUES (4049,0,'rusted_coin','rusted_coin',12,29760,0,1,0);
 
+INSERT INTO `item_basic` VALUES (28445,0,'shetal_stone','shetal_stone',1,63552,0,0,0);
+INSERT INTO `item_basic` VALUES (27230,0,'zoar_subligar','zoar_subligar',1,63552,0,0,0);
+
 
 
 REPLACE INTO `item_basic` VALUES (28478,0,'etiolation_earring','etiolation_earring',1,63552,0,0,0);
