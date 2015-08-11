@@ -158,3 +158,7 @@ REPLACE INTO `item_armor` VALUES (27778,'bokwus_circlet',99,110,1589788,351,0,0,
 INSERT INTO `item_armor` VALUES (28276,'jute_boots_+1',99,119,1056,0,0,0,256,0);
 INSERT INTO `item_armor` VALUES (27230,'zoar_subligar',99,119,2473969,0,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28445,'shetal_stone',99,0,4194303,0,0,0,1024,0);
+
+INSERT INTO `item_armor` VALUES (28351,'cloud_hairpin_+1',99,0,4194303,0,0,0,512,0);
+INSERT INTO `item_armor` VALUES (21425,'lentus_grip',99,0,4194303,0,0,0,2,0);
+INSERT INTO `item_armor` VALUES (27044,'crusher_gauntlets',99,119,10690,342,0,0,64,0);
