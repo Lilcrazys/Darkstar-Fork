@@ -31,17 +31,49 @@ function onTrigger(player,page)
 		return
 	end
 
-	local Sandy_clear = player:hasCompletedMission(SANDORIA,THE_HEIR_TO_THE_LIGHT);
-	local Basty_clear = player:hasCompletedMission(BASTOK,WHERE_TWO_PATHS_CONVERGE);
-	local Windy_clear = player:hasCompletedMission(WINDURST,MOON_READING);
-	local Zilart_clear = player:hasCompletedMission(ZILART,AWAKENING);
-	local Chains_clear = player:hasCompletedMission(COP,DAWN);
-	local AhtUrgan_clear = player:hasCompletedMission(TOAU,THE_EMPRESS_CROWNED);
-	local Goddess_clear = player:hasCompletedMission(WOTG,A_TOKEN_OF_TROTH);
-	local Abyssea_clear = (countLunars(player) == 3 and title == 10);
-	local Dyna_clearA = player:hasKeyItem(HYDRA_CORPS_BATTLE_STANDARD);
-	local Dyna_clearB = player:hasKeyItem(DYNAMIS_TAVNAZIA_SLIVER);
-	local Legion_clear = player:hasTitle(LEGENDARY_LEGIONNAIRE);
+    local Sandy_clear = player:hasCompletedMission(SANDORIA,THE_HEIR_TO_THE_LIGHT);
+    local Basty_clear = player:hasCompletedMission(BASTOK,WHERE_TWO_PATHS_CONVERGE);
+    local Windy_clear = player:hasCompletedMission(WINDURST,MOON_READING);
+    local Zilart_clear = player:hasCompletedMission(ZILART,AWAKENING);
+    local Chains_clear = player:hasCompletedMission(COP,DAWN);
+    local AhtUrgan_clear = player:hasCompletedMission(TOAU,THE_EMPRESS_CROWNED);
+    local Goddess_clear = player:hasCompletedMission(WOTG,A_TOKEN_OF_TROTH);
+    local Abyssea_clear = (countLunars(player) == 3 and title == 10);
+    local Dyna_clearA = player:hasKeyItem(HYDRA_CORPS_BATTLE_STANDARD);
+    local Dyna_clearB = player:hasKeyItem(DYNAMIS_TAVNAZIA_SLIVER);
+    local Legion_clear = player:hasTitle(LEGENDARY_LEGIONNAIRE);
+    local title = 0;
+
+    if (player:hasTitle(BRIAREUS_FELLER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(KUKULKAN_DEFANGER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(GLAVOID_STAMPEDER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(ITZPAPALOTL_DECLAWER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(CIREINCROIN_HARPOONER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(SEDNA_TUSKBREAKER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(BENNU_DEPLUMER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(RESHEPH_ERADICATOR)) then
+        title = title+1;
+    end
+    if (player:hasTitle(AMPHITRITE_SHUCKER)) then
+        title = title+1;
+    end
+    if (player:hasTitle(WYRM_GOD_DEFIER)) then
+        title = title+1;
+    end
 
 	if ((Sandy_clear == false or Basty_clear == true or Windy_clear == true) and Zilart_clear == true
 	and Chains_clear == true and AhtUrgan_clear == true and Goddess_clear == true and Abyssea_clear == true
@@ -65,11 +97,11 @@ function onTrigger(player,page)
 		if (Zilart_clear == true) then
 			local stock_2 =
 			{
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
+				14739,    5000000,    -- Suppanomimi
+				14742,    5000000,    -- Beastly Earring
+				14743,    5000000,    -- Bushinomimi
+				14740,    5000000,    -- knights earring
+				14741,    5000000,    -- abyssal earring
 			};
 			showShop(player, STATIC, stock_2);
 		end
@@ -125,8 +157,8 @@ function onTrigger(player,page)
 				11798,    3000000,    -- Twilight Helm
 				19132,    1000000,    -- Twilight Knife
 				16259,    1000000,    -- Twilight Cape
-				5877,    50000,    -- Terror Screen
-				5879,    50000,    -- Doom Screen
+				5877,     100000,       -- Terror Screen
+				5879,     100000,       -- Doom Screen
 			};
 			showShop(player, STATIC, stock_6);
 		end
@@ -148,8 +180,8 @@ function onTrigger(player,page)
 		if (Legion_clear == true) then
 			local stock_8 =
 			{
-				-- ItemID,    Price,    -- Item Name
-				-- ItemID,    Price,    -- Item Name
+				21337,    7000,    -- achiyal-bullet
+				21307,    7000,    -- achiyal-arrow
 				-- ItemID,    Price,    -- Item Name
 				-- ItemID,    Price,    -- Item Name
 				-- ItemID,    Price,    -- Item Name
