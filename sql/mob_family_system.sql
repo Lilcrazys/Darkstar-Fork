@@ -826,6 +826,7 @@ INSERT INTO `mob_family_system` VALUES (1219,'Wazir',3,'Arcana',1,40,90,90,1,3,4
 INSERT INTO `mob_family_system` VALUES (1220,'Shah',3,'Arcana',1,40,90,90,1,3,4,3,6,6,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0);
 INSERT INTO `mob_family_system` VALUES (1221,'Provenance_Watcher',10,'Dragon',6,40,120,90,1,3,1,3,6,3,1,3,3,3,3,1,1,1,1,1,0.875,1,1,1,1,1,1,1);
 INSERT INTO `mob_family_system` VALUES (1222,'Crystal_Fetter',11,'Elemental',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0);
+INSERT INTO `mob_family_system` VALUES (1223,'Yztarg',6,'Beast',2,40,110,90,1,3,4,3,6,6,1,3,3,3,3,1,1,1,1,1,1.25,1,1,1,1,1,1,5);
 
 -- 1215 to 6655 currently unused
 INSERT INTO `mob_family_system` VALUES (6656,'Tatenashi Armor',13,'Humanoid',0,100,90,110,3,3,2,3,2,2,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0); -- Hume

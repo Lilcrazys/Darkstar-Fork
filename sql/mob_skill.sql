@@ -6048,6 +6048,16 @@ INSERT INTO `mob_skill` VALUES (2605,1221,2078,'Fragor_maximus',1,18.0,2000,1000
 -- Ravishing_Rafflesia (1214)
 INSERT INTO `mob_skill` VALUES (1912,1214,1554,'VW_Bloody_Caress',0,10.0,2000,1500,4,0,0,3);
 
+-- Umagrhk
+INSERT INTO `mob_skill` VALUES (2140,1223,2091,'Umagrhk_Triple',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2141,1223,2092,'Umagrhk_Front1',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2142,1223,2093,'Umagrhk_Front2',0,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2666,1223,2094,'Soulshattering_Roar',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2667,1223,2095,'Calcifying_Claw',1,18.0,2000,1000,4,0,0,1);
+INSERT INTO `mob_skill` VALUES (2668,1223,2096,'Divesting_Stampede',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2669,1223,2097,'Bonebreaking_Barrage',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2670,1223,2098,'Beastruction',1,18.0,2000,1000,4,0,0,7);
+
 -- The Jumping Crab
 INSERT INTO `mob_skill` VALUES (44,6665,431,'Crab_Head_Butt',0,9.5,2000,1000,4,0,0,2); -- Stun, Grav, Slow, knockback
 INSERT INTO `mob_skill` VALUES (186,6665,186,'Tegmine_Bubble_Shower',1,12.0,2000,1500,4,0,0,0);
