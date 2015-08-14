@@ -283,7 +283,7 @@ function onWeaponskillHit(mob, attacker, weaponskill)
     local TP = 0;
 
     if (attacker:isPC()) then
-        if (utils.inTable(QUEST_WS_TABLE, weaponskill)) then
+        if (isInTable(QUEST_WS_TABLE, weaponskill)) then
             if (math.random(0,99) > 24) then
                 -- Reset jump timers
                 mob:setLocalVar("J1", 0);
@@ -293,7 +293,7 @@ function onWeaponskillHit(mob, attacker, weaponskill)
                 TP = mob:getTP() *0.1; -- 10% Bonus TP
                 mob:addTP(TP);
             end
-        elseif (utils.inTable(MERIT_WS_TABLE, weaponskill)) then
+        elseif (isInTable(MERIT_WS_TABLE, weaponskill)) then
             if (math.random(0,99) > 19) then
                 mob:setLocalVar("wasMeritWS", 1);
             elseif (math.random(0,99) > 32) then
@@ -329,6 +329,15 @@ function onWeaponskillHit(mob, attacker, weaponskill)
     end
 
     return 1;
+end;
+
+function isInTable(table, element)
+    for aire, value in pairs(table) do -- "My life for Aire." /suchanerd
+        if (value == element) then
+            return true
+        end
+    end
+    return false
 end;
 
 -----------------------------------

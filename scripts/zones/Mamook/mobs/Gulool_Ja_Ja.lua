@@ -5,6 +5,8 @@
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
+require("scripts/globals/spoofchat");
+require("scripts/globals/custom_trials");
 
 -----------------------------------
 -- onMobInitialize
@@ -47,4 +49,14 @@ end;
 
 function onMobDeath(mob, killer)
 	killer:addTitle(SHINING_SCALE_RIFLER);
+
+    -- Custom (Mythic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_4");
+        if (KILLED < 3) then
+            killer:setVar("C_TRIAL_OBJ_4", KILLED + 1);
+        end
+        cTrialProgress(killer,MYTHIC);
+    end
+
 end;

@@ -6,6 +6,8 @@
 require("scripts/globals/settings");
 require("scripts/globals/titles");
 require("scripts/globals/status");
+require("scripts/globals/spoofchat");
+require("scripts/globals/custom_trials");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -28,6 +30,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
 
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
@@ -58,7 +61,21 @@ function onMobDeath(mob, killer)
         UpdateNMSpawnPoint(Behemoth);
         GetMobByID(Behemoth):setRespawnTime(math.random((21600),(32400)));
     end
+
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_4");
+        if (KILLED < 4) then
+            killer:setVar("C_TRIAL_OBJ_4", KILLED + 1);
+        end
+        cTrialProgress(killer,RELIC);
+    end
+
 end;
+
+-----------------------------------
+-- onSpellPrecast
+-----------------------------------
 
 function onSpellPrecast(mob, spell)
     if (spell:getID() == 218) then

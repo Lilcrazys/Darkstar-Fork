@@ -1,24 +1,16 @@
 -----------------------------------
--- Area: Caedarva Mire
---  NM:  Khimaira
+-- Area: Halvung
+--  ZNM: Achamoth
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
--- onMobInitialize
+-- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- addMod
-    mob:addMod(MOD_REGAIN,33);
-    mob:addMod(MOD_MATT,75);
-    mob:addMod(MOD_MACC,500);
-    mob:addMod(MOD_ACC,250);
-    mob:addMod(MOD_ATT,50);
-    mob:addMod(MOD_DEF,50);
 end;
 
 -----------------------------------
@@ -33,16 +25,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-	killer:addTitle(KHIMAIRA_CARVER);
-	mob:setRespawnTime(math.random((75600),(86400))); -- 21-24 hours
 
     -- Custom (Mythic) Trial Code
     if (cTrialItemEquipped(killer) == true) then
-        local KILLED = killer:getVar("C_TRIAL_OBJ_3");
-        if (KILLED < 3) then
-            killer:setVar("C_TRIAL_OBJ_3", KILLED + 1);
+        local KILLED = killer:getVar("C_TRIAL_OBJ_1");
+        if (KILLED < 4) then
+            killer:setVar("C_TRIAL_OBJ_1", KILLED + 1);
         end
         cTrialProgress(killer,MYTHIC);
     end
-
 end;

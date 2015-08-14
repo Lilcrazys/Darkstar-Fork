@@ -1,10 +1,12 @@
 -----------------------------------
 -- Area: Wajaom Woodlands
--- NPC:  Hydra
+--  NM:  Hydra
 -- @pos -282 -24 -1 51
 -----------------------------------
 
 require("scripts/globals/titles");
+require("scripts/globals/spoofchat");
+require("scripts/globals/custom_trials");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -64,5 +66,15 @@ end;
 function onMobDeath(mob, killer)
 
 	killer:addTitle(HYDRA_HEADHUNTER);
+
+
+    -- Custom (Mythic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_1");
+        if (KILLED < 3) then
+            killer:setVar("C_TRIAL_OBJ_1", KILLED + 1);
+        end
+        cTrialProgress(killer,MYTHIC);
+    end
 
 end;

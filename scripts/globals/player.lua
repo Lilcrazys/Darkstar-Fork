@@ -12,6 +12,7 @@ require("scripts/globals/shop");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/gear_sets");
+require("scripts/globals/custom_trials"); -- temp
 
 -----------------------------------
 -- onGameIn
@@ -30,6 +31,7 @@ function onGameIn(player, firstlogin, zoning)
 
     -- Things checked BOTH during logon AND zone in below this line.
     checkForGearSet(player);
+    nukeOldTrialVars(player); -- temp
 
     if (player:getVar("GodMode") == 1) then
         -- Add bonus effects to the player..
@@ -335,8 +337,8 @@ function CharCreate(player)
 
 	-- Needs Moghouse Intro
 	player:setVar("MoghouseExplication",1);
-    
-	----- Start of custom stuffs for new players -----
+
+	-- Start of custom stuffs for new players
 
 	if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
 		player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players

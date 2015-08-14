@@ -1,10 +1,11 @@
 -----------------------------------
 -- Area: Aydeewa Subterrane
---  NM:  Nosferatu
+--  ZNM: Nosferatu
 -----------------------------------
 
 require("scripts/globals/status");
--- require("scripts/globals/titles"); if its not being used why is it here?
+require("scripts/globals/spoofchat");
+require("scripts/globals/custom_trials");
 
 -----------------------------------
 -- onMobInitialize
@@ -82,4 +83,13 @@ function onMobDeath(mob,killer)
 		DespawnMob(petIDs2[i]);
 		DespawnMob(petIDs3[i]);
 	end
+
+    -- Custom (Mythic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_3");
+        if (KILLED < 4) then
+            killer:setVar("C_TRIAL_OBJ_3", KILLED + 1);
+        end
+        cTrialProgress(killer,MYTHIC);
+    end
 end;

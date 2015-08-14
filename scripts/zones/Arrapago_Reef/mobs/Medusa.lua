@@ -1,19 +1,31 @@
 -----------------------------------
 -- Area: Arrapago Reef
--- NPC:  Medusa
+--  NM:  Medusa
 -- @pos -460 -20.5 460 54
 -----------------------------------
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
+require("scripts/globals/spoofchat");
+require("scripts/globals/custom_trials");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_REGAIN,1);
+end;
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
-    mob:addMod(MOD_REGAIN,1);
 end;
 
 -----------------------------------
@@ -21,8 +33,8 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-
 end;
+
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
@@ -76,4 +88,14 @@ function onMobDeath(mob, killer)
     DespawnMob(16998865);
     DespawnMob(16998866);
     killer:addTitle(GORGONSTONE_SUNDERER);
+
+    -- Custom (Mythic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_6");
+        if (KILLED < 3) then
+            killer:setVar("C_TRIAL_OBJ_6", KILLED + 1);
+        end
+        cTrialProgress(killer,MYTHIC);
+    end
+
 end;
