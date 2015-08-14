@@ -1,7 +1,7 @@
 ---------------------------------------------------------------------------------------------------
--- func: @message2server <MSG_TEXT> <optional MSG_TYPE>
+-- func: @message2self <MSG_TEXT> <optional MSG_TYPE>
 -- auth: TeoTwawki
--- desc: Spoofs a chat message to the entire server. Max 20 words.
+-- desc: Spoofs a chat message to self for testing
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
@@ -11,6 +11,8 @@ cmdprops =
 };
 
 function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t)
+    require("scripts/globals/spoofchat");
+
     if (MSG_TYPE == nil or tonumber(MSG_TYPE) == nil) then
         player:PrintToPlayer("Didn't see a valid MSG_TYPE, so printing available types at you!");
         player:SpoofChatPlayer("Say = 0", 0, nil );
@@ -42,6 +44,6 @@ function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o
         if (d == nil) then d = ""; end      if (c == nil) then c = ""; end
         if (b == nil) then b = ""; end      if (a == nil) then a = ""; end
         local MSG_TEXT = table.concat({a, " ", b, " ", c, " ", d, " ", e, " ", f, " ", g, " ", h, " ", i, " ", j, " ", k, " ", l, " ", m, " ", n, " ", o, " ", p, " ", q, " ", r, " ", s, " ", t});
-        player:SpoofChatServer(MSG_TEXT, MSG_TYPE);
+        player:SpoofChatPlayer(MSG_TEXT, MSG_TYPE, nil);
     end
 end;
