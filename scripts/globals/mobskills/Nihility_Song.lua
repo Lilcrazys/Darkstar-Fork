@@ -1,10 +1,10 @@
 ---------------------------------------------
 --  Nihility Song
---
---  Description: AOE that Dispels a single beneficial status effects from all targets in range, including food effects.
+--  Family: Hippogryph
+--  Description: A song dispels a positive effect in an area of effect, including food.
 --  Type: Enfeebling
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: 20' radial
+--  Utsusemi/Blink absorb: Ignores shadows 
+--  Range: Radial 12.5'
 --  Notes:
 ---------------------------------------------
 require("scripts/globals/settings");
@@ -18,17 +18,14 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local effect = 0;
-   
-    effect = target:dispelStatusEffect();
+    local dispel =  target:dispelStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
 
-    if (effect == EFFECT_NONE) then
+    if (dispel == EFFECT_NONE) then
+        -- no effect
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     else
         skill:setMsg(MSG_DISAPPEAR);
     end
-    
-    
 
-    return effect;
-end;
+    return dispel;
+end

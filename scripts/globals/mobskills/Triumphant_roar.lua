@@ -1,18 +1,31 @@
----------------------------------------------------
--- Berserk
--- Berserk Ability.
----------------------------------------------------
+---------------------------------------------
+--  Triumphant Roar
+--  Family: Gargouille
+--  Description: Enhances Attack.
+--  Type: Enhancing
+--  Utsusemi/Blink absorb: N/A
+--  Range: Self
+--  Notes: Only used when standing
+-----------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
----------------------------------------------------
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    if (mob:AnimationSub() ~=0) then
+        return 1;
+    else
+        return 0;
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_BERSERK;
-    skill:setMsg(MobBuffMove(mob, typeEffect, 1, 0, 180));
-	return typeEffect;
+    local power = 15;
+    local duration = 90;
+    local typeEffect = EFFECT_ATTACK_BOOST;
+
+    skill:setMsg(MobBuffMove(mob, typeEffect, power, 0, duration));
+
+    return typeEffect;
 end;

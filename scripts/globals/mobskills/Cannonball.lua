@@ -1,32 +1,32 @@
----------------------------------------------------
--- Ranged Attack
--- Deals a ranged attack to a single target.
----------------------------------------------------
-
+---------------------------------------------
+--  Cannonball
+--  Family: Wamouracampa
+--  Description: Damage varies with TP.
+--  Type: Physical
+--  Utsusemi/Blink absorb: One shadow
+--  Range: 20
+--  Notes: Uses defense instead of attack. Curled form only.
+---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+    if (mob:AnimationSub() ~=1) then
+        return 1;
+    else
+        return 0;
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)
     local numhits = 1;
-    local accmod = 3;
-    local dmgmod = 6;
-
-    local info = MobRangedMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_RANGED,MOBPARAM_PIERCE,info.hitslanded);
-
-    if (dmg > 0) then
-       target:addTP(2);
-       mob:addTP(8);
-    end
-
+    local accmod = 1;
+    local dmgmod = 1.75;
+    local offcratio = mob:getStat(MOD_DEF);
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1.75,2.125,2.75,offcratio);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
     target:delHP(dmg);
     return dmg;
 end;

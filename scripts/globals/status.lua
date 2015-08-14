@@ -1245,12 +1245,17 @@ MOD_DIA_DOT         = 0x139 -- Increases the DoT damage of Dia (modId = 313)
 MOD_SHARPSHOT       = 0x13A -- Sharpshot accuracy bonus (modId = 314)
 MOD_ENH_DRAIN_ASPIR = 0x13B -- % damage boost to Drain and Aspir(modId = 315)
 MOD_TRICK_ATK_AGI   = 0x208 -- % AGI boost to Trick Attack (if gear mod, needs to be equipped on hit) (modId = 520)
+MOD_NIN_NUKE_BONUS  = 0x20A -- magic attack bonus for NIN nukes (modId = 522)
+MOD_AMMO_SWING      = 0x20B -- Extra swing rate w/ ammo (ie. Jailer weapons). Use gearsets, and does nothing for non-players. (modId = 523)
+
+-- Mythic Weapon Mods
+MOD_AUGMENTS_ABSORB    = 0x209  -- Direct Absorb spell increase while Liberator is equipped (percentage based) (modId = 521)
 
 -- The entire mod list is in desperate need of kind of some organizing.
 -- The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
 
--- MOD_SPARE = 0x209 -- (modId = 521)
--- MOD_SPARE = 0x20A -- (modId = 522)
+-- MOD_SPARE = 0x20C -- (modId = 524)
+-- MOD_SPARE = 0x20D -- (modId = 525)
 
 
 -- Start of LegionDS Custom MOD
@@ -1742,6 +1747,7 @@ MSGBASIC_ALREADY_CLAIMED        = 12 -- Cannot attack. Your target is already cl
 MSGBASIC_IS_INTERRUPTED         = 16 -- The <player>'s casting is interrupted.
 MSGBASIC_UNABLE_TO_CAST         = 18 -- Unable to cast spells at this time.
 MSGBASIC_CANNOT_PERFORM         = 71 -- The <player> cannot perform that action.
+MSGBASIC_CANNOT_PERFORM_TARG    = 72 -- That action cannot be performed on <target>.
 MSGBASIC_UNABLE_TO_USE_JA       = 87 -- Unable to use job ability.
 MSGBASIC_UNABLE_TO_USE_JA2      = 88 -- Unable to use job ability.
 MSGBASIC_IS_PARALYZED           = 29 -- The <player> is paralyzed.

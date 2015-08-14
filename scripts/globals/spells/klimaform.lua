@@ -1,7 +1,6 @@
 -----------------------------------------
 -- Spell: Klimaform
--- Increases MACC for spells of the same
--- element as current weather.
+-- Increases magic accuracy for spells of the same element as current weather
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -11,19 +10,16 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+	
+    return 0;
+
 end;
+
+
 
 function onSpellCast(caster,target,spell)
 
-   	local power = 1;
-	local duration = 180;
-
-	-- Estoqueurs Bonus THIS MOD DOES NOT EXIST. STOP PASTING CODE FROM NON DARKSTAR SOURCES.
-	-- duration = duration + (duration * caster:getMod(MOD_ENHANCING_DUR));
-	
-	target:delStatusEffect(EFFECT_KLIMAFORM);
-	target:addStatusEffect(EFFECT_KLIMAFORM,power,0,duration);
+    target:addStatusEffect(EFFECT_KLIMAFORM,1,0,180);
 
     return EFFECT_KLIMAFORM;
 end;

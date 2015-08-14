@@ -1467,14 +1467,52 @@ INSERT INTO `item_latents` VALUES(18581, 431, 2, 21, 8);  -- Additional effect: 
 INSERT INTO `item_latents` VALUES(17711, 431, 1, 21, 14); -- Additional effect: Ice damage
 
 -- -------------------------------------------------------
--- Amood
+-- Selene's Bow
 -- -------------------------------------------------------
-INSERT INTO `item_latents` VALUES(18482, 288, 1, 37, 0); -- Occasionally Attacks Twice
+INSERT INTO `item_latents` VALUES(17212, 24, 25, 37, 0); -- New moon ratk
+INSERT INTO `item_latents` VALUES(17212, 26, 5, 37, 0); -- New moon racc
+INSERT INTO `item_latents` VALUES(17212, 24, 20, 37, 1); -- Waxing crescent
+INSERT INTO `item_latents` VALUES(17212, 26, 10, 37, 1);
+INSERT INTO `item_latents` VALUES(17212, 24, 15, 37, 2); -- First quarter
+INSERT INTO `item_latents` VALUES(17212, 26, 15, 37, 2);
+INSERT INTO `item_latents` VALUES(17212, 24, 10, 37, 3); -- Waxing gibbous
+INSERT INTO `item_latents` VALUES(17212, 26, 20, 37, 3);
+INSERT INTO `item_latents` VALUES(17212, 24, 5, 37, 4); -- Full moon
+INSERT INTO `item_latents` VALUES(17212, 26, 25, 37, 4);
+INSERT INTO `item_latents` VALUES(17212, 24, 10, 37, 5); -- Waning gibbous
+INSERT INTO `item_latents` VALUES(17212, 26, 20, 37, 5);
+INSERT INTO `item_latents` VALUES(17212, 24, 15, 37, 6); -- Last quarter
+INSERT INTO `item_latents` VALUES(17212, 26, 15, 37, 6);
+INSERT INTO `item_latents` VALUES(17212, 24, 20, 37, 7); -- Waning crescent
+INSERT INTO `item_latents` VALUES(17212, 26, 10, 37, 7);
 
 -- -------------------------------------------------------
--- Amood +1
+-- Luna Subligar
 -- -------------------------------------------------------
-INSERT INTO `item_latents` VALUES(18483, 288, 1, 37, 0); -- Occasionally Attacks Twice
+INSERT INTO `item_latents` VALUES(14287, 9, 2, 37, 4); -- Full moon DEX+2
+INSERT INTO `item_latents` VALUES(14287, 11, 2, 37, 4); -- Full moon AGI+2
+INSERT INTO `item_latents` VALUES(14287, 14, 4, 37, 4); -- Full moon CHR +4 (total +7)
+
+-- -------------------------------------------------------
+-- Gnole Sainti (+1)
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES(18757, 8, 2, 37, 4); -- Full moon STR+2
+INSERT INTO `item_latents` VALUES(18757, 9, 2, 37, 4); -- Full moon DEX+2
+INSERT INTO `item_latents` VALUES(18758, 8, 3, 37, 4); -- Full moon STR+3
+INSERT INTO `item_latents` VALUES(18758, 9, 3, 37, 4); -- Full moon DEX+3
+
+-- -------------------------------------------------------
+-- Diana Corona
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES(11486, 28, 4, 37, 4); -- Full moon magic attack bonus +4
+
+-- -------------------------------------------------------
+-- Inferno Sabots (+1)
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES(14164, 12, 1, 37, 0); -- New moon INT+1
+INSERT INTO `item_latents` VALUES(14164, 116, 3, 37, 0); -- New moon Dark Magic skill +3
+INSERT INTO `item_latents` VALUES(14165, 12, 2, 37, 0); -- New moon INT+2
+INSERT INTO `item_latents` VALUES(14165, 116, 5, 37, 0); -- New moon Dark Magic skill +5
 
 -- -------------------------------------------------------
 -- Sirius Axe
@@ -1655,7 +1693,7 @@ INSERT INTO `item_latents` VALUES(14014, 68, 7, 53, 1); -- EVA +7 in areas outsi
 -- Master Caster's Mitts
 -- -------------------------------------------------------
 INSERT INTO `item_latents` VALUES(14016, 11, 2, 53, 1); -- AGI +2 in areas outside own nation's control
-INSERT INTO `item_latents` VALUES(14016, 68, 10, 53, 1); -- EVA +10 in areas outside own nation's control
+INSERT INTO `item_latents` VALUES(14016, 108, 10, 53, 1); -- EVA skill +10 in areas outside own nation's control
 
 -- -------------------------------------------------------
 -- Tactician Magician's Hooks +1/+2

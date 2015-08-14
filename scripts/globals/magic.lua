@@ -323,6 +323,7 @@ function applyResistance(player,spell,target,diff,skill,bonus)
     local resist = 1.0;
     local magicaccbonus = 0;
     local element = spell:getElement();
+    local castersWeather = player:getWeather();
 
     if (bonus ~= nil) then
         magicaccbonus = magicaccbonus + bonus;
@@ -340,18 +341,26 @@ function applyResistance(player,spell,target,diff,skill,bonus)
     if player:hasStatusEffect(EFFECT_ALTRUISM) and spell:getSpellGroup() == SPELLGROUP_WHITE then
         magicacc = magicacc + player:getStatusEffect(EFFECT_ALTRUISM):getPower();
     end
+	
     if player:hasStatusEffect(EFFECT_FOCALIZATION) and spell:getSpellGroup() == SPELLGROUP_BLACK then
         magicacc = magicacc + player:getStatusEffect(EFFECT_FOCALIZATION):getPower();
     end
     --difference in int/mnd
+	
     if (diff > 10) then
         magicacc = magicacc + 10 + (diff - 10)/2;
     else
         magicacc = magicacc + diff;
     end
-    --add acc for ele/dark seal
+	
+    --Add acc for dark seal
     if (player:getStatusEffect(EFFECT_DARK_SEAL) ~= nil and skill == DARK_MAGIC_SKILL) then
         magicaccbonus = magicaccbonus + 256;
+    end
+	
+    --Add acc for klimaform
+    if (player:hasStatusEffect(EFFECT_KLIMAFORM) and (castersWeather == singleWeatherStrong[element] or castersWeather == doubleWeatherStrong[element])) then
+        magicaccbonus = magicaccbonus + 15;
     end
 
     if (element > ELE_NONE) then
@@ -1497,11 +1506,11 @@ function doDivineNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistB
     return doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,DIVINE_MAGIC_SKILL,MOD_MND);
 end
 
-function doNinjutsuNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus)
-    return doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,NINJUTSU_SKILL,MOD_INT);
+function doNinjutsuNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,mabBonus)
+    return doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,NINJUTSU_SKILL,MOD_INT,mabBonus);
 end
 
-function doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,skill,modStat)
+function doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,skill,modStat,mabBonus)
     --calculate raw damage
     local dmg = calculateMagicDamage(V,M,caster,spell,target,skill,modStat,hasMultipleTargetReduction);
     --get resist multiplier (1x if no resist)
@@ -1509,13 +1518,6 @@ function doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,s
     --get the resisted damage
     dmg = dmg*resist;
     if (skill == NINJUTSU_SKILL) then
-        -- boost ninjitsu damage
-        -- 5% ninjitsu damage
-        local head = caster:getEquipID(SLOT_HEAD);
-        if (head == 15084) then
-            dmg = math.floor(dmg * 1.05);
-        end
-
         -- boost with Futae
         if (caster:hasStatusEffect(EFFECT_FUTAE)) then
             dmg = math.floor(dmg * 1.50);
@@ -1524,7 +1526,7 @@ function doNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus,s
     end
 
     --add on bonuses (staff/day/weather/jas/mab/etc all go in this function)
-    dmg = addBonuses(caster,spell,target,dmg);
+    dmg = addBonuses(caster,spell,target,dmg,mabBonus);
     --add in target adjustment
     dmg = adjustForTarget(target,dmg,spell:getElement());
     --add in final adjustments

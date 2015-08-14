@@ -1,10 +1,11 @@
 ---------------------------------------------
---  Dark Spore
---
---  Description: Unleashes a torrent of black spores in a fan-shaped area of effect, dealing dark damage to targets. Additional effect: Blind
---  Type: Magical Dark (Element)
---
---
+--  Dark Orb
+--  Family: Gargouille
+--  Description: Deals dark damage to an enemy.
+--  Type: Magical (dark)
+--  Utsusemi/Blink absorb: Ignores shadows 
+--  Range: Radial
+--  Notes: Only used when flying
 ---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
@@ -12,16 +13,18 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+    if (mob:AnimationSub() ~=1) then
+        return 1;
+    else
+        return 0;
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_BLINDNESS;
-    MobStatusEffectMove(mob, target, typeEffect, 15, 3, 120);
-
-    local dmgmod = MobBreathMove(mob, target, 0.25, 2, ELE_DARK, 800);
-
-    local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
+    local numhits = 1;
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5.5,ELE_DARK,dmgmod,TP_MAB_BONUS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
     target:delHP(dmg);
     return dmg;

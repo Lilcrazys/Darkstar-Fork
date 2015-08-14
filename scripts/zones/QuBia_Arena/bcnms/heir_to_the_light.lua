@@ -6,7 +6,7 @@ package.loaded["scripts/zones/Qubia_arena/TextIDs"] = nil;
 
 require("scripts/globals/keyitems");
 require("scripts/globals/missions");
-require("scripts/zones/Qubia_arena/TextIDs");
+require("scripts/zones/QuBia_Arena/TextIDs");
 
 -----------------------------------
 
@@ -52,6 +52,7 @@ end;
 	
 function onEventFinish(player,csid,option)
 	--print("bc finish csid "..csid.." and option "..option);
+	local currentMission = player:getCurrentMission(SANDORIA);
 	local MissionStatus = player:getVar("MissionStatus");
 
 	if (csid == 0x7d01) then 

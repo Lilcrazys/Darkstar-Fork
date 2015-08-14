@@ -32,6 +32,13 @@
 
 enum MODIFIER
 {
+    // Start of LegionDS Custom MOD
+    MOD_TERRORRES                 = 0xFFC, // Resist Terror (modId = 4092)
+    MOD_DOOMRES                   = 0xFFD, // Resist Doom (modId = 4093)
+    // MOD_EFFECTIVE_LV              = 0xFFE, // Only highest mod value item applies: Treat players LV as this number instead of actual LV (modId = 4094)
+    // MOD_REQUIRED_LV               = 0xFFF, // Apply to item, not player: Increase the items LV requirement by this much (modId = 4095)
+    // End of LegionDS Custom MOD
+
     MOD_NONE                      = 0x00,
 
     MOD_DEF                       = 0x01,  // Target's Defense (modId = 1)
@@ -309,6 +316,7 @@ enum MODIFIER
     MOD_STEAL                     = 0x12A, // Increase/Decrease THF Steal chance (modId = 298)
     MOD_TRIPLE_ATTACK             = 0x12E, // Percent chance (modId = 302)
     MOD_TREASURE_HUNTER           = 0x12F, // Percent chance (modId = 303)
+    MOD_TRICK_ATK_AGI             = 0x208, // % AGI boost to Trick Attack (if gear mod, needs to be equipped on hit) (modId = 520)
 
     // Paladin
     MOD_ABSORB_PHYSDMG_TO_MP      = 0x1AA, // Absorbs a percentage of physical damage taken to MP. (modId = 426)
@@ -370,6 +378,7 @@ enum MODIFIER
     // Ninja
     MOD_UTSUSEMI                  = 0x133, // Everyone's favorite --tracks shadows. (modId = 307)
     MOD_NINJA_TOOL                = 0x134, // Percent chance to not use a tool. (modId = 308)
+    MOD_NIN_NUKE_BONUS            = 0x20A, // magic attack bonus for NIN nukes (modId = 522)
 
     // Dragoon
     MOD_JUMP_TP_BONUS             = 0x169, // bonus tp player receives when using jump (must be divided by 10) (modId = 361)
@@ -568,19 +577,11 @@ enum MODIFIER
     MOD_SHIELDBLOCKRATE           = 0x206, // Affects shield block rate, percent based (modID = 518)
     MOD_DIA_DOT                   = 0x139, //Increases the DoT damage of Dia (modId = 313)
     MOD_ENH_DRAIN_ASPIR           = 0x13B, // % damage boost to Drain and Aspir(modId = 315)
-    MOD_TRICK_ATK_AGI             = 0x208, // % AGI boost to Trick Attack (if gear mod, needs to be equipped on hit) (modId = 520)
+    MOD_AUGMENTS_ABSORB           = 0x209, // Direct Absorb spell increase while Liberator is equipped (percentage based) (modId = 521)
+    MOD_AMMO_SWING                = 0x20B  // Extra swing rate w/ ammo (ie. Jailer weapons). Use gearsets, and does nothing for non-players. (modId = 523)
 
-    // MOD_SPARE = 0x209, // (modId = 521)
-    // MOD_SPARE = 0x20A, // (modId = 522)
-
-
-
-    // Start of LegionDS Custom MOD
-    MOD_TERRORRES                 = 0xFFC, // Resist Terror (modId = 4092)
-    MOD_DOOMRES                   = 0xFFD, // Resist Doom (modId = 4093)
-    // MOD_EFFECTIVE_LV              = 0xFFE, // Only highest mod value item applies: Treat players LV as this number instead of actual LV (modId = 4094)
-    // MOD_REQUIRED_LV               = 0xFFF, // Apply to item, not player: Increase the items LV requirement by this much (modId = 4095)
-    // End of LegionDS Custom MOD
+    // MOD_SPARE = 0x20C, // (modId = 524)
+    // MOD_SPARE = 0x20D, // (modId = 525)
 
 };
 

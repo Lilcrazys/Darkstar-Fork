@@ -5,19 +5,23 @@
 
 require("scripts/globals/status");
 require("scripts/globals/magic");
--- require("scripts/globals/utils");
--- require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
---[[
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
-]]
+    -- mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,100);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,120);
 end;
 
 -----------------------------------
@@ -36,11 +40,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_DOUBLE_ATTACK, 30);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,100);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,120);
+    -- Other
+    mob:setSpellList(0); -- If it dies with the ability to cast spells, the next spawn would be able to cast from the start.
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 20); -- This gives around 6 - 15 seconds between casts. Doesn't seem to work anywhere except in this function.
 end;
 
 -----------------------------------
@@ -86,6 +88,22 @@ function onMobFight(mob, target)
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end
+
+    if (mob:getLocalVar("SpellTime") < os.time() and mob:getLocalVar("SpellTime") ~= 0) then -- Checks for it being 0 because it gets set to 0 to avoid setting the spell list repeatedly
+        mob:setSpellList(0);
+        mob:setLocalVar("SpellTime", 0)
+    end;
+end;
+
+-----------------------------------
+-- onMobWeaponSkill Action
+-----------------------------------
+
+function onMobWeaponSkill(target, mob, skill)
+    if (skill:getID() == 1102) then -- Set spell list for Burst2/Thundaga3 upon using Plasma Charge. Allow for 60 seconds.
+        mob:setSpellList(140);
+        mob:setLocalVar("SpellTime", os.time() + 60);
+    end;
 end;
 
 -----------------------------------
@@ -93,6 +111,17 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
+    --[[
+    -- Guestimating 2 in 3 chance to stun on melee.
+    if ((math.random(1,100) >= 66) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
+        return 0,0,0;
+    else
+        local duration = math.random(4,8);
+        target:addStatusEffect(EFFECT_STUN,5,0,duration);
+        return SUBEFFECT_STUN,0,EFFECT_STUN;
+    end
+    DSP CODE ABOVE THIS LINE, LEGION CUSTOM BELOW]]--
+
     if (math.random(1,15) ~= 5 or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
         return 0,0,0;
     else
