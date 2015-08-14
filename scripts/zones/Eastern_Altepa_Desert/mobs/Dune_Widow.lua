@@ -26,7 +26,7 @@ function onMobDeath(mob,killer)
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(killer) == true) then
         local KILLED = killer:getVar("C_TRIAL_OBJ_3");
-        if (KILLED < 4) then
+        if (KILLED < 3) then
             killer:setVar("C_TRIAL_OBJ_3", KILLED + 1);
         end
         cTrialProgress(killer,RELIC);
