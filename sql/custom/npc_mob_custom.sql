@@ -779,6 +779,7 @@ INSERT INTO `mob_spawn_points` VALUES (16977929,'Crystal_Fetter','Crystal_Fetter
 INSERT INTO `mob_spawn_points` VALUES (16977930,'Crystal_Fetter','Crystal_Fetter',90514,30,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977931,'Crystal_Fetter','Crystal_Fetter',90514,29,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977932,'Crystal_Fetter','Crystal_Fetter',90514,28,0,1,0);
+INSERT INTO `mob_spawn_points` VALUES (16977933,'Umagrhk','Umagrhk',90515,40,0,1,0);
 
 
 -- Super experimental, will not spawn without script or GM command.
