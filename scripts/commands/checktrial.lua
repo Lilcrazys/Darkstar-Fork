@@ -13,7 +13,7 @@ cmdprops =
 };
 
 function onTrigger(player, target)
-    if (player:getGMLevel() == 0 or player:getVar("AssistantGM") == 0)
+    if (player:getGMLevel() == 0 or player:getVar("AssistantGM") == 0) then
         -- No message so reg plays can't even tell it exists!
         return;
     end
