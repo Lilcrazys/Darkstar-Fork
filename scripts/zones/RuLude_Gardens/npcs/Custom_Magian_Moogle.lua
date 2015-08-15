@@ -47,11 +47,11 @@ function onTrade(player,npc,trade)
             player:setVar("C_TRIAL_OBJ_1", trade:getItemQty(3925));
             player:confirmTrade(); -- Remove all of item 3925
         elseif (TOTAL > 50) then
-            player:PrintToPlayer(string.format("You only need to trade %d not %d",) total -50, trade:getItemQty(3925));
+            player:PrintToPlayer(string.format("You only need to trade %d not %d", TOTAL -50, trade:getItemQty(3925)));
         end
         cTrialProgress(player);
     elseif (trade:hasItemQty(2184,1) and COUNT == 1) then
-            if (STAGE4 = true and player:setVar("C_TRIAL_OBJ_1") > 0) then
+            if (STAGE4 == true and player:getVar("C_TRIAL_OBJ_1") > 0) then
                 if (player:getFreeSlotsCount() >= 1) then
                     player:addItem(3925, player:setVar("C_TRIAL_OBJ_1"));
                     player:PrintToPlayer("Your trial items are refunded.");
