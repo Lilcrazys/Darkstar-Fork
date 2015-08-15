@@ -42,7 +42,7 @@ function onTrigger(player)
             player:PrintToPlayer(string.format("King Behemoth : %u of 4", player:getVar("C_TRIAL_OBJ_4")));
             player:PrintToPlayer(string.format("Nidhogg : %u of 4", player:getVar("C_TRIAL_OBJ_5")));
         elseif (RELIC_LV == 4) then
-            player:PrintToPlayer(string.format("Tanzenite Jewels delivered : %u of 50", player:getVar("C_TRIAL_OBJ_1")));"
+            player:PrintToPlayer(string.format("Tanzenite Jewels delivered : %u of 50", player:getVar("C_TRIAL_OBJ_1")));
         elseif (MYTHIC_LV == 1) then
             player:PrintToPlayer(string.format("Brass Borer : %u of 5", player:getVar("C_TRIAL_OBJ_1")));
             player:PrintToPlayer(string.format("Iriz Irma : %u of 5", player:getVar("C_TRIAL_OBJ_2")));
@@ -63,7 +63,7 @@ function onTrigger(player)
             player:PrintToPlayer(string.format("Gurfurlur the Menacing : %u of 3", player:getVar("C_TRIAL_OBJ_5")));
             player:PrintToPlayer(string.format("Medusa : %u of 3", player:getVar("C_TRIAL_OBJ_6")));
         elseif (MYTHIC_LV == 4) then
-            player:PrintToPlayer(string.format("Tanzenite Jewels delivered : %u of 50", player:getVar("C_TRIAL_OBJ_1")));"
+            player:PrintToPlayer(string.format("Tanzenite Jewels delivered : %u of 50", player:getVar("C_TRIAL_OBJ_1")));
         else
             player:PrintToPlayer("You have an Trial active, but it is one not handled by this command.");
         end
