@@ -19,8 +19,10 @@ function onTrade(player,npc,trade)
     local COUNT = trade:getItemCount();
     local TRIAL = player:getVar("C_TRIAL_ITEM");
     local STATUS = player:getVar("C_TRIAL_COMPLETE");
-    local RELIC_LV = getCurrentStage(RELIC, TRIAL);
-    local MYTHIC_LV = getCurrentStage(MYTHIC, TRIAL);
+    local RELIC_LV = getCurrentStage(RELIC, trade:getItem());
+    local MYTHIC_LV = getCurrentStage(MYTHIC, trade:getItem());
+    local RELIC_TRIAL_LV = getCurrentStage(RELIC, TRIAL);
+    local MYTHIC_TRIAL_LV = getCurrentStage(MYTHIC, TRIAL);
 
     if (TRIAL == 0 and COUNT == 1) then
         if (RELIC_LV == 0 and MYTHIC_LV == 0) then
@@ -28,7 +30,7 @@ function onTrade(player,npc,trade)
         elseif (RELIC_LV < MAX_RELIC or MYTHIC_LV < MAX_MYTHIC) then
             local MSG = string.format("Ok, Trial %d has begun, kupo!", trade:getItem());
             player:setVar("C_TRIAL_ITEM", trade:getItem());
-            -- player:injectActionPacket(6, 206);
+            player:injectActionPacket(6, 203);
             player:SpoofChatPlayer(MSG, MESSAGE_SAY, npc:getID());
         end
     elseif (STATUS == 1 and TRIAL == trade:getItem() and COUNT == 1) then
@@ -38,9 +40,10 @@ function onTrade(player,npc,trade)
         elseif (RELIC_LV < MAX_RELIC or MYTHIC_LV < MAX_MYTHIC) then
             player:injectActionPacket(6, 206);
             cTrialEnd(player);
+            player:injectActionPacket(6, 205);
             player:SpoofChatPlayer("KUPOW!", MESSAGE_SAY, npc:getID());
         end
-    elseif (trade:getItem() == 3925 and RELIC_LV == 4 and MYTHIC_LV == 4) then -- Tanzenites
+    elseif (trade:getItem() == 3925 and (RELIC_TRIAL_LV == 4 or MYTHIC_TRIAL_LV == 4)) then -- Tanzenites
         local TOTAL = (trade:getItemQty(3925) + player:getVar("C_TRIAL_OBJ_1"));
         trade:confirmItem(3925); -- Sets item 3925 as only item to remove
         if (TOTAL <= 50) then
@@ -86,6 +89,7 @@ function onTrigger(player,npc)
     if (TRIAL == 0) then
         player:SpoofChatPlayer( "Hand me a RELIC or MYTHIC item to begin a trial, Kupo!", MESSAGE_SAY, npc:getID() );
     elseif (STATUS > 0 and TRIAL > 0) then
+        player:SpoofChatPlayer( "The lady mogs love Cool James.", MESSAGE_SAY, npc:getID() );
         player:SpoofChatPlayer( "Oh! It looks like you finished! Hand it over, kupo.", MESSAGE_SAY, npc:getID() );
     elseif (STATUS == 0 and TRIAL > 0) then
         player:SpoofChatPlayer( "If you wish to cancel your current trial...", MESSAGE_SAY, npc:getID() );
