@@ -178,13 +178,13 @@ function cTrialProgress(player, itemTable)
             if (player:getVar("C_TRIAL_OBJ_1") == 50) then
                 player:setVar("C_TRIAL_COMPLETE", 1);
                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
-            else -- Not done yet, need more souls..I mean Tanzenites.
+            elseif (player:getVar("C_TRIAL_OBJ_1") < 50) then
+                -- Not done yet, need more souls..I mean Tanzenites.
                 player:SpoofChatPlayer(string.format("%s more to go."), MESSAGE_ECHO, 50 -player:getVar("C_TRIAL_COMPLETE"));
+                player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
             elseif (player:getVar("C_TRIAL_OBJ_1") > 50) then
                 player:PrintToPlayer("Error: trial variable overloaded, Please report this message.");
                 player:PrintToPlayer("Error Info: C_TRIAL_OBJ_1 > 50 in Moogle script L48");
-            else
-                player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
             end
     elseif (itemTable == MYTHIC) then
         if (getCurrentStage(MYTHIC, TRIAL) == 0) then
@@ -227,11 +227,13 @@ function cTrialProgress(player, itemTable)
             if (player:getVar("C_TRIAL_OBJ_1") == 50) then
                 player:setVar("C_TRIAL_COMPLETE", 1);
                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
-            else -- Not done yet, need more souls..I mean Tanzenites.
+            elseif (player:getVar("C_TRIAL_OBJ_1") < 50) then
+                -- Not done yet, need more souls..I mean Tanzenites.
                 player:SpoofChatPlayer(string.format("%s more to go."), MESSAGE_ECHO, 50 -player:getVar("C_TRIAL_COMPLETE"));
+                player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
             elseif (player:getVar("C_TRIAL_OBJ_1") > 50) then
-                player:PrintToPlayer("Error: Trial variable overloaded, Please report this message.");
-                player:PrintToPlayer("Error Info: C_TRIAL_OBJ_1 was over 50 in Moogle script L43");
+                player:PrintToPlayer("Error: trial variable overloaded, Please report this message.");
+                player:PrintToPlayer("Error Info: C_TRIAL_OBJ_1 > 50 in Moogle script L48");
             end
         end
     end
@@ -296,128 +298,128 @@ function nukeOldTrialVars(player)
     end
 
     if (player:getVar("Seww_the_Squidlimbed_KILLS") > player:getVar("C_TRIAL_OBJ_1")) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("Seww_the_Squidlimbed_KILLS");
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("Seww_the_Squidlimbed_KILLS"));
         player:setVar("Seww_the_Squidlimbed_KILLS", 0);
     end
     if (player:getVar("Megalobugard_KILLS") > player:getVar("C_TRIAL_OBJ_2")) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("Megalobugard_KILLS");
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("Megalobugard_KILLS"));
         player:setVar("Megalobugard_KILLS", 0);
     end
     if (player:getVar("Dune_Widow_KILLS") > player:getVar("C_TRIAL_OBJ_3")) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("Dune_Widow_KILLS");
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("Dune_Widow_KILLS"));
         player:setVar("Dune_Widow_KILLS", 0);
     end
     if (player:getVar("Mischievous_Micholas_KILLS") > player:getVar("C_TRIAL_OBJ_4")) then
-        player:setVar("C_TRIAL_OBJ_4", player:getVar("Mischievous_Micholas_KILLS");
+        player:setVar("C_TRIAL_OBJ_4", player:getVar("Mischievous_Micholas_KILLS"));
         player:setVar("Mischievous_Micholas_KILLS", 0);
     end
     if (player:getVar("Intulo_KILLS") > player:getVar("C_TRIAL_OBJ_5")) then
-        player:setVar("C_TRIAL_OBJ_5", player:getVar("Intulo_KILLS");
+        player:setVar("C_TRIAL_OBJ_5", player:getVar("Intulo_KILLS"));
         player:setVar("Intulo_KILLS", 0);
     end
     if (player:getVar("Keeper_of_Halidom_KILLS") > player:getVar("C_TRIAL_OBJ_6")) then
-        player:setVar("C_TRIAL_OBJ_6", player:getVar("Keeper_of_Halidom_KILLS");
+        player:setVar("C_TRIAL_OBJ_6", player:getVar("Keeper_of_Halidom_KILLS"));
         player:setVar("Keeper_of_Halidom_KILLS", 0);
     end
 
     if (player:getVar("Adamantoise_KILLS") > player:getVar("C_TRIAL_OBJ_1")) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("Adamantoise_KILLS");
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("Adamantoise_KILLS"));
         player:setVar("Adamantoise_KILLS", 0);
     end
     if (player:getVar("Behemoth_KILLS") > player:getVar("C_TRIAL_OBJ_2")) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("Behemoth_KILLS");
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("Behemoth_KILLS"));
         player:setVar("Behemoth_KILLS", 0);
     end
     if (player:getVar("Fafnir_KILLS") > player:getVar("C_TRIAL_OBJ_3")) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("Fafnir_KILLS");
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("Fafnir_KILLS"));
         player:setVar("Fafnir_KILLS", 0);
     end
 
     if (player:getVar("Juggler_Hecatomb_KILLS") > player:getVar("C_TRIAL_OBJ_1")) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("Juggler_Hecatomb_KILLS");
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("Juggler_Hecatomb_KILLS"));
         player:setVar("Juggler_Hecatomb_KILLS", 0);
     end
     if (player:getVar("Ash_Dragon_KILLS") > player:getVar("C_TRIAL_OBJ_2")) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("Ash_Dragon_KILLS");
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("Ash_Dragon_KILLS"));
         player:setVar("Ash_Dragon_KILLS", 0);
     end
     if (player:getVar("Aspidochelone_KILLS") > player:getVar("C_TRIAL_OBJ_3")) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("Aspidochelone_KILLS");
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("Aspidochelone_KILLS"));
         player:setVar("Aspidochelone_KILLS", 0);
     end
     if (player:getVar("King_Behemoth_KILLS") > player:getVar("C_TRIAL_OBJ_4")) then
-        player:setVar("C_TRIAL_OBJ_4", player:getVar("King_Behemoth_KILLS");
+        player:setVar("C_TRIAL_OBJ_4", player:getVar("King_Behemoth_KILLS"));
         player:setVar("King_Behemoth_KILLS", 0);
     end
     if (player:getVar("Nidhogg_KILLS") > player:getVar("C_TRIAL_OBJ_5")) then
-        player:setVar("C_TRIAL_OBJ_5", player:getVar("Nidhogg_KILLS");
+        player:setVar("C_TRIAL_OBJ_5", player:getVar("Nidhogg_KILLS"));
         player:setVar("Nidhogg_KILLS", 0);
     end
 
     if (player:getVar("Brass_Borer_KILLS") > player:getVar("C_TRIAL_OBJ_1")) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("Brass_Borer_KILLS");
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("Brass_Borer_KILLS"));
         player:setVar("Brass_Borer_KILLS", 0);
     end
-    if (player:getVar("Iriz_Irma_KILLS" > player:getVar("C_TRIAL_OBJ_2")) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("Iriz_Irma_KILLS");
+    if (player:getVar("Iriz_Irma_KILLS") > player:getVar("C_TRIAL_OBJ_2")) then
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("Iriz_Irma_KILLS"));
         player:setVar("Iriz_Irma_KILLS", 0);
     end
     if (player:getVar("Velionis_KILLS") > player:getVar("C_TRIAL_OBJ_3")) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("Velionis_KILLS");
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("Velionis_KILLS"));
         player:setVar("Velionis_KILLS", 0);
     end
     if (player:getVar("Zareehkl_the_Jubilant_KILLS") > player:getVar("C_TRIAL_OBJ_4")) then
-        player:setVar("C_TRIAL_OBJ_4", player:getVar("Zareehkl_the_Jubilant_KILLS");
+        player:setVar("C_TRIAL_OBJ_4", player:getVar("Zareehkl_the_Jubilant_KILLS"));
         player:setVar("Zareehkl_the_Jubilant_KILLS", 0);
     end
     if (player:getVar("Dextrose_KILLS") > player:getVar("C_TRIAL_OBJ_5")) then
-        player:setVar("C_TRIAL_OBJ_5", player:getVar("Dextrose_KILLS");
+        player:setVar("C_TRIAL_OBJ_5", player:getVar("Dextrose_KILLS"));
         player:setVar("Dextrose_KILLS", 0);
     end
     if (player:getVar("Iriri_Samariri_KILLS") > player:getVar("C_TRIAL_OBJ_6")) then
-        player:setVar("C_TRIAL_OBJ_6", player:getVar("Iriri_Samariri_KILLS");
+        player:setVar("C_TRIAL_OBJ_6", player:getVar("Iriri_Samariri_KILLS"));
         player:setVar("Iriri_Samariri_KILLS", 0);
     end
 
     if (player:getVar("Achamoth_KILLS") > player:getVar("C_TRIAL_OBJ_1")) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("Achamoth_KILLS");
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("Achamoth_KILLS"));
         player:setVar("Achamoth_KILLS", 0);
     end
     if (player:getVar("Armed_Gears_KILLS") > player:getVar("C_TRIAL_OBJ_2")) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("Armed_Gears_KILLS");
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("Armed_Gears_KILLS"));
         player:setVar("Armed_Gears_KILLS", 0);
     end
     if (player:getVar("Nosferatu_KILLS") > player:getVar("C_TRIAL_OBJ_3")) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("Nosferatu_KILLS");
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("Nosferatu_KILLS"));
         player:setVar("Nosferatu_KILLS", 0);
     end
     if (player:getVar("Experimental_Lamia_KILLS") > player:getVar("C_TRIAL_OBJ_4")) then
-        player:setVar("C_TRIAL_OBJ_4", player:getVar("Experimental_Lamia_KILLS");
+        player:setVar("C_TRIAL_OBJ_4", player:getVar("Experimental_Lamia_KILLS"));
         player:setVar("Experimental_Lamia_KILLS", 0);
     end
 
-    if (player:getVar("Hydra_KILLS") > player:getVar("C_TRIAL_OBJ_"1)) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("Hydra_KILLS");
+    if (player:getVar("Hydra_KILLS") > player:getVar("C_TRIAL_OBJ_1")) then
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("Hydra_KILLS"));
         player:setVar("Hydra_KILLS", 0);
     end
-    if (player:getVar("Cerberus_KILLS") > player:getVar("C_TRIAL_OBJ_"2)) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("Cerberus_KILLS");
+    if (player:getVar("Cerberus_KILLS") > player:getVar("C_TRIAL_OBJ_2")) then
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("Cerberus_KILLS"));
         player:setVar("Cerberus_KILLS", 0);
     end
-    if (player:getVar("Khimara_KILLS") > player:getVar("C_TRIAL_OBJ_"3)) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("Khimara_KILLS");
+    if (player:getVar("Khimara_KILLS") > player:getVar("C_TRIAL_OBJ_3")) then
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("Khimara_KILLS"));
         player:setVar("Khimara_KILLS", 0);
     end
-    if (player:getVar("Gulool_Ja_Ja_KILLS") > player:getVar("C_TRIAL_OBJ_"4)) then
-        player:setVar("C_TRIAL_OBJ_4", player:getVar("Gulool_Ja_Ja_KILLS");
+    if (player:getVar("Gulool_Ja_Ja_KILLS") > player:getVar("C_TRIAL_OBJ_4")) then
+        player:setVar("C_TRIAL_OBJ_4", player:getVar("Gulool_Ja_Ja_KILLS"));
         player:setVar("Gulool_Ja_Ja_KILLS", 0);
     end
-    if (player:getVar("Gurfurlur_the_Menacing_KILLS") > player:getVar("C_TRIAL_OBJ_"5)) then
-        player:setVar("C_TRIAL_OBJ_5", player:getVar("Gurfurlur_the_Menacing_KILLS");
+    if (player:getVar("Gurfurlur_the_Menacing_KILLS") > player:getVar("C_TRIAL_OBJ_5")) then
+        player:setVar("C_TRIAL_OBJ_5", player:getVar("Gurfurlur_the_Menacing_KILLS"));
         player:setVar("Gurfurlur_the_Menacing_KILLS", 0);
     end
-    if (player:getVar("Medusa_KILLS") > player:getVar("C_TRIAL_OBJ_")6) then
-        player:setVar("C_TRIAL_OBJ_6", player:getVar("Medusa_KILLS");
+    if (player:getVar("Medusa_KILLS") > player:getVar("C_TRIAL_OBJ_6")) then
+        player:setVar("C_TRIAL_OBJ_6", player:getVar("Medusa_KILLS"));
         player:setVar("Medusa_KILLS", 0);
     end
 end;
