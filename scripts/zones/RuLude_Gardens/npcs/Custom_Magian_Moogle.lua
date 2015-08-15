@@ -51,23 +51,23 @@ function onTrade(player,npc,trade)
         end
         cTrialProgress(player);
     elseif (trade:hasItemQty(2184,1) and COUNT == 1) then
-            if (STAGE4 == true and player:getVar("C_TRIAL_OBJ_1") > 0) then
-                if (player:getFreeSlotsCount() >= 1) then
-                    player:addItem(3925, player:setVar("C_TRIAL_OBJ_1"));
-                    player:PrintToPlayer("Your trial items are refunded.");
-                    player:messageSpecial(ITEM_OBTAINED,3925);
-                    cTrialCleanUp(player);
-                    player:tradeComplete();
-                else
-                    player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,3925);
-                end
-            else
+        if (STAGE4 == true and player:getVar("C_TRIAL_OBJ_1") > 0) then
+            if (player:getFreeSlotsCount() >= 1) then
+                player:addItem(3925, player:setVar("C_TRIAL_OBJ_1"));
+                player:PrintToPlayer("Your trial items are refunded.");
+                player:messageSpecial(ITEM_OBTAINED,3925);
                 cTrialCleanUp(player);
                 player:tradeComplete();
-                player:SpoofChatPlayer( "Ok your trial has been canceled.", MESSAGE_SAY, npc:getID() );
-                player:SpoofChatPlayer( "You can now begin a new trial.", MESSAGE_SAY, npc:getID() );
+            else
+                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,3925);
             end
+        else
+            cTrialCleanUp(player);
+            player:tradeComplete();
+            player:SpoofChatPlayer( "Ok your trial has been canceled.", MESSAGE_SAY, npc:getID() );
+            player:SpoofChatPlayer( "You can now begin a new trial.", MESSAGE_SAY, npc:getID() );
         end
+
     else
         -- Trading anything other than expected during an active trial triggers this.
         player:SpoofChatPlayer( "If you wish to cancel your current trial...", MESSAGE_SAY, npc:getID() );
