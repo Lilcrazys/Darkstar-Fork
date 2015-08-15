@@ -47,7 +47,7 @@ function onTrigger(player, target)
             player:PrintToPlayer(string.format("Megalobugard : %u of 4", thisDude:getVar("C_TRIAL_OBJ_2")));
             player:PrintToPlayer(string.format("Dune Widow : %u of 3", thisDude:getVar("C_TRIAL_OBJ_3")));
             player:PrintToPlayer(string.format("Mischievous Micholas : %u of 4", thisDude:getVar("C_TRIAL_OBJ_4")));
-            player:PrintToPlayer(string.format("Intulo : %u of x", thisDude:getVar("C_TRIAL_OBJ_5")));
+            player:PrintToPlayer(string.format("Intulo : %u of 4", thisDude:getVar("C_TRIAL_OBJ_5")));
             player:PrintToPlayer(string.format("Keeper of Halidom : %u of 4", thisDude:getVar("C_TRIAL_OBJ_6")));
         elseif (RELIC_LV == 2) then
             player:PrintToPlayer(string.format("Adamantoise : %u of 7", thisDude:getVar("C_TRIAL_OBJ_1")));

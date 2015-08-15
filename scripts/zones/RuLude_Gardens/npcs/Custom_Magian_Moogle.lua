@@ -37,10 +37,10 @@ function onTrade(player,npc,trade)
             player:SpoofChatPlayer("I don't have a trial for that item, kupo..", MESSAGE_SAY, npc:getID());
         elseif (RELIC_LV < MAX_RELIC or MYTHIC_LV < MAX_MYTHIC) then
             player:injectActionPacket(6, 206);
-            cTrialEnd(TRIAL);
+            cTrialEnd(player);
             player:SpoofChatPlayer("KUPOW!", MESSAGE_SAY, npc:getID());
         end
-    elseif (trade:getItem() == 3925 and (RELIC_LV == 4 or MYTHIC_LV == 4)) then -- Tanzenites
+    elseif (trade:getItem() == 3925 and RELIC_LV == 4 and MYTHIC_LV == 4) then -- Tanzenites
         local TOTAL = (trade:getItemQty(3925) + player:getVar("C_TRIAL_OBJ_1"));
         trade:confirmItem(3925); -- Sets item 3925 as only item to remove
         if (TOTAL <= 50) then

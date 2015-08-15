@@ -52,10 +52,10 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
 	-----------------------------------
 
 	-- Custom trials
-	if (killer:getVar("customtrial") ~= nil) then
+	--[[if (killer:getVar("customtrial") ~= nil) then
 		-- doCustomTrial(mob, killer, isKillShot, killType);
 		doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill);
-	end
+	end]]
 
 	-- Bonus points
 	if (mob:getSystem() == SYSTEM_BEASTMEN) then

@@ -275,13 +275,14 @@ end;
 -- Handles Trial var cleanup
 -----------------------------------
 function cTrialCleanUp(player)
+    player:setVar("C_TRIAL_ITEM", 0);
     player:setVar("C_TRIAL_OBJ_1", 0);
     player:setVar("C_TRIAL_OBJ_2", 0);
     player:setVar("C_TRIAL_OBJ_3", 0);
     player:setVar("C_TRIAL_OBJ_4", 0);
     player:setVar("C_TRIAL_OBJ_5", 0);
     player:setVar("C_TRIAL_OBJ_6", 0);
-    player:setVar("C_TRIAL_COMPLETE", 1);
+    player:setVar("C_TRIAL_COMPLETE", 0);
 end
 
 -----------------------------------
