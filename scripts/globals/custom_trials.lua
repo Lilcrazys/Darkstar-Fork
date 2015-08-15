@@ -186,6 +186,7 @@ function cTrialProgress(player, itemTable)
                 player:PrintToPlayer("Error: trial variable overloaded, Please report this message.");
                 player:PrintToPlayer("Error Info: C_TRIAL_OBJ_1 > 50 in Moogle script L48");
             end
+        end
     elseif (itemTable == MYTHIC) then
         if (getCurrentStage(MYTHIC, TRIAL) == 0) then
             player:PrintToPlayer("Error: Trial item stage not found in MYTHIC table. Please report this message.");
