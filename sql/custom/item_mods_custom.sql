@@ -316,23 +316,8 @@ INSERT INTO `item_mods` VALUES (28547, 331, 3);
 INSERT INTO `item_mods` VALUES (28621, 274, 6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621, 311, 6); -- Magic Damage
 
---Jute Boots
-INSERT INTO `item_mods` VALUES (28276, 2, 13);
-INSERT INTO `item_mods` VALUES (28276, 5, 14);
-INSERT INTO `item_mods` VALUES (28276, 8, 10);
-INSERT INTO `item_mods` VALUES (28276, 9, 11);
-INSERT INTO `item_mods` VALUES (28276, 10, 10);
-INSERT INTO `item_mods` VALUES (28276, 11, 36);
-INSERT INTO `item_mods` VALUES (28276, 12, 17);
-INSERT INTO `item_mods` VALUES (28276, 13, 19);
-INSERT INTO `item_mods` VALUES (28276, 14, 34);
-INSERT INTO `item_mods` VALUES (28276, 108, 65);
-INSERT INTO `item_mods` VALUES (28276, 31, 107);
-INSERT INTO `item_mods` VALUES (28276, 384, 30);
-INSERT INTO `item_mods` VALUES (28276, 249, 15);
-INSERT INTO `item_mods` VALUES (28276, 169, 12);
 
---Zoar Subligar
+-- Zoar Subligar
 INSERT INTO `item_mods` VALUES (27230, 2, 47);
 INSERT INTO `item_mods` VALUES (27230, 8, 29);
 INSERT INTO `item_mods` VALUES (27230, 10, 16);
