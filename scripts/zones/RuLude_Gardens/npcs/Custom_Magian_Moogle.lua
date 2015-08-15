@@ -20,10 +20,10 @@ function onTrade(player,npc,trade)
     local TRIAL = player:getVar("C_TRIAL_ITEM");
     local STATUS = player:getVar("C_TRIAL_COMPLETE");
     local RELIC_LV = getCurrentStage(RELIC, TRIAL);
-    local MYTHIC_LV = getCurrentStage(RELIC, TRIAL);
+    local MYTHIC_LV = getCurrentStage(MYTHIC, TRIAL);
 
     if (TRIAL == 0 and COUNT == 1) then
-        if (RELIC_LV == 0 or MYTHIC_LV == 0) then
+        if (RELIC_LV == 0 and MYTHIC_LV == 0) then
             player:SpoofChatPlayer("I don't have a trial for that item, kupo..", MESSAGE_SAY, npc:getID());
         elseif (RELIC_LV < MAX_RELIC or MYTHIC_LV < MAX_MYTHIC) then
             local MSG = string.format("Ok, Trial %d has begun, kupo!", trade:getItem());
@@ -33,7 +33,7 @@ function onTrade(player,npc,trade)
         end
     elseif (STATUS == 1 and TRIAL == trade:getItem() and COUNT == 1) then
         local REWARD = 0;
-        if (RELIC_LV == 0 or MYTHIC_LV == 0) then
+        if (RELIC_LV == 0 and MYTHIC_LV == 0) then
             player:SpoofChatPlayer("I don't have a trial for that item, kupo..", MESSAGE_SAY, npc:getID());
         elseif (RELIC_LV < MAX_RELIC or MYTHIC_LV < MAX_MYTHIC) then
             player:injectActionPacket(6, 206);
