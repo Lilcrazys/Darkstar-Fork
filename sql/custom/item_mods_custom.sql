@@ -269,7 +269,9 @@ REPLACE INTO `item_mods` VALUES (21182, 28, 130); --  Magic Attack Bonus +25
 REPLACE INTO `item_mods` VALUES (21194, 28, 95); -- Should be 19 see below
 REPLACE INTO `item_mods` VALUES (21208, 28, 73); -- Should be 40   see below
 
-
+REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
+REPLACE INTO `item_mods` VALUES (26710,11,34);
+INSERT INTO `item_mods` VALUES (28135,369,2); -- Didn't include Unity refresh
 -- -------------------- NEW ITEMS BELOW THIS LINE PLEASE ------------------------
 
 -- alrunas_gloves_+1

@@ -72,35 +72,35 @@ INSERT INTO `item_basic` VALUES (28501,0,'allegro_earring','allegro_earring',1,6
 INSERT INTO `item_basic` VALUES (28502,0,'impregnable_earring','impregnable_earring',1,60480,0,1,0);
 INSERT INTO `item_basic` VALUES (28504,0,'spellbreaker_earring','spellbreaker_earring',1,60480,0,1,0);
 
-INSERT INTO `item_basic` VALUES (26733,0,'yorium_barbuta','yorium_barbuta',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (26891,0,'yorium_cuirass','yorium_cuirass',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27045,0,'yorium_gauntlets','yorium_gauntlets',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27232,0,'yorium_cuisses','yorium_cuisses',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27402,0,'yorium_sabatons','yorium_sabatons',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26733,0,'yorium_barbuta','yorium_barbuta',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (26891,0,'yorium_cuirass','yorium_cuirass',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27045,0,'yorium_gauntlets','yorium_gauntlets',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27232,0,'yorium_cuisses','yorium_cuisses',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27402,0,'yorium_sabatons','yorium_sabatons',1,16384,0,1,0);
 
-INSERT INTO `item_basic` VALUES (26734,0,'acro_helm','acro_helm',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (26892,0,'acro_surcoat','acro_surcoat',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27046,0,'acro_gauntlets','acro_gauntlets',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27233,0,'acro_breeches','acro_breeches',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27403,0,'acro_leggings','acro_leggings',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26734,0,'acro_helm','acro_helm',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (26892,0,'acro_surcoat','acro_surcoat',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27046,0,'acro_gauntlets','acro_gauntlets',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27233,0,'acro_breeches','acro_breeches',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27403,0,'acro_leggings','acro_leggings',1,16384,0,1,0);
 
-INSERT INTO `item_basic` VALUES (26735,0,'taeon_chapeau','taeon_chapeau',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (26893,0,'taeon_tabard','taeon_tabard',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27047,0,'taeon_gloves','taeon_gloves',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27234,0,'taeon_tights','taeon_tights',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27404,0,'taeon_boots','taeon_boots',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26735,0,'taeon_chapeau','taeon_chapeau',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (26893,0,'taeon_tabard','taeon_tabard',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27047,0,'taeon_gloves','taeon_gloves',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27234,0,'taeon_tights','taeon_tights',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27404,0,'taeon_boots','taeon_boots',1,16384,0,1,0);
 
-INSERT INTO `item_basic` VALUES (26736,0,'telchine_cap','telchine_cap',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (26894,0,'telchine_chausable','telchine_chausable',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27048,0,'telchine_gloves','telchine_gloves',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27235,0,'telchine_braconi','telchine_braconi',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27405,0,'telchine_pigaches','telchine_pigaches',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26736,0,'telchine_cap','telchine_cap',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (26894,0,'telchine_chausable','telchine_chausable',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27048,0,'telchine_gloves','telchine_gloves',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27235,0,'telchine_braconi','telchine_braconi',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27405,0,'telchine_pigaches','telchine_pigaches',1,16384,0,1,0);
 
-INSERT INTO `item_basic` VALUES (26737,0,'helios_band','helios_band',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (26895,0,'helios_jacket','helios_jacket',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27049,0,'helios_gloves','helios_gloves',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27236,0,'helios_spats','helios_spats',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (27406,0,'helios_boots','helios_boots',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (26737,0,'helios_band','helios_band',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (26895,0,'helios_jacket','helios_jacket',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27049,0,'helios_gloves','helios_gloves',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27236,0,'helios_spats','helios_spats',1,16384,0,1,0);
+INSERT INTO `item_basic` VALUES (27406,0,'helios_boots','helios_boots',1,16384,0,1,0);
 
 INSERT INTO `item_basic` VALUES (27711,0,'gorney_morion_+1','gorney_morion_+1',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (27863,0,'gorney_haubert_+1','gorney_haubert_+1',1,63568,0,1,0);
