@@ -2744,6 +2744,7 @@ REPLACE INTO `npc_list` VALUES (17818101,'qm21','???',0,-583.052,-167.480,138.24
 REPLACE INTO `npc_list` VALUES (17818102,'qm22','???',0,-162.311,-32.000,-220.781,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA'); --
 
 INSERT INTO `npc_list` VALUES (17818110,'Cruor_Prospector','Cruor Prospector',193,-527,26,-780,7,40,40,0,0,0,0,515,0x01000404FC100221C930B9408950006000700000,0,'ABYSSEA');
+REPLACE INTO `mob_spawn_points` VALUES (17818041,'Ironclad_Sunderer','Ironclad Sunderer',90210,503,26,503,220);
 
 
 -- ------------------------------------------------------------
