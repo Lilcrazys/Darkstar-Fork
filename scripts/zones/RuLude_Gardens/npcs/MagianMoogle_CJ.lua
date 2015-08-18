@@ -4,9 +4,6 @@
 -----------------------------------
 package.loaded["scripts/zones/Rulude_Gardens/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/globals/common");
-require("scripts/globals/settings");
 require("scripts/zones/RuLude_Gardens/TextIDs");
 require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
@@ -43,16 +40,16 @@ function onTrade(player,npc,trade)
             player:injectActionPacket(6, 205);
             player:SpoofChatPlayer("KUPOW!", MESSAGE_SAY, npc:getID());
         end
-    elseif (trade:getItem() == 3925 and (RELIC_TRIAL_LV == 4 or MYTHIC_TRIAL_LV == 4)) then -- Tanzenites
-        local TOTAL = (trade:getItemQty(3925) + player:getVar("C_TRIAL_OBJ_1"));
-        trade:confirmItem(3925); -- Sets item 3925 as only item to remove
+    elseif (trade:hasItemQty(3925,COUNT) and trade:getItemCount() == COUNT
+    and (RELIC_TRIAL_LV == 4 or MYTHIC_TRIAL_LV == 4)) then -- Tanzenites
+        local TOTAL = (COUNT + player:getVar("C_TRIAL_OBJ_1"));
         if (TOTAL <= 50) then
-            player:setVar("C_TRIAL_OBJ_1", trade:getItemQty(3925));
-            player:confirmTrade(); -- Remove all of item 3925
+            player:setVar("C_TRIAL_OBJ_1", TOTAL);
+            player:tradeComplete(trade);
+            cTrialProgress(player);
         elseif (TOTAL > 50) then
             player:PrintToPlayer(string.format("You only need to trade %d not %d", TOTAL -50, trade:getItemQty(3925)));
         end
-        cTrialProgress(player);
     elseif (trade:hasItemQty(2184,1) and COUNT == 1) then
         if (STAGE4 == true and player:getVar("C_TRIAL_OBJ_1") > 0) then
             if (player:getFreeSlotsCount() >= 1) then
