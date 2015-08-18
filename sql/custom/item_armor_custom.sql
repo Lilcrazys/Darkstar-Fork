@@ -162,3 +162,5 @@ INSERT INTO `item_armor` VALUES (28445,'shetal_stone',99,0,4194303,0,0,0,1024,0)
 INSERT INTO `item_armor` VALUES (28351,'cloud_hairpin_+1',99,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (21425,'lentus_grip',99,0,4194303,0,0,0,2,0);
 INSERT INTO `item_armor` VALUES (27044,'crusher_gauntlets',99,119,10690,342,0,0,64,0);
+
+INSERT INTO `item_armor` VALUES (26874,'supay_weskit',99,119,8,137,0,0,32,0);
