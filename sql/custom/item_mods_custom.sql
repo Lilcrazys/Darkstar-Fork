@@ -60,7 +60,6 @@ INSERT INTO `item_mods` VALUES (20901, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20809, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20809, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20620, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20620, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20620, 507, 200); -- occ
