@@ -11,75 +11,23 @@
 -- REPLACE INTO `item_mods` VALUES (itemId, modId, value); -- remember to comment what the item is and what this mod is!
 -- New entries below this line, and sorted by itemID then modID.
 
-INSERT INTO `item_mods` VALUES (11926, 416, 15); -- Custom
+INSERT INTO `item_mods` VALUES (11926, 416, 15); -- USELESS COMMENT "Custom" CUSTOM WHAT?
+REPLACE INTO `item_mods` VALUES (11958, 384, 30);
 INSERT INTO `item_mods` VALUES (13215, 2, 9999); -- HP to GM belt to test things
-INSERT INTO `item_mods` VALUES (16193, 416, 10); -- Custom
-INSERT INTO `item_mods` VALUES (16194, 416, 12); -- Custom
-INSERT INTO `item_mods` VALUES (16199, 109, 106); -- Shield skill   Custom
-INSERT INTO `item_mods` VALUES (16199, 416, 25); -- Custom
+INSERT INTO `item_mods` VALUES (16193, 416, 10); -- USELESS COMMENT "Custom" CUSTOM WHAT?
+INSERT INTO `item_mods` VALUES (16194, 416, 12); -- USELESS COMMENT "Custom" CUSTOM WHAT?
+INSERT INTO `item_mods` VALUES (16199, 109, 106); -- Shield skill (Custom)
+INSERT INTO `item_mods` VALUES (16199, 416, 25); -- USELESS COMMENT "Custom" CUSTOM WHAT?
+REPLACE INTO `item_mods` VALUES (18264, 507, 300); -- Occ. 3x dmg / was 2.5 wiki says 3x
 INSERT INTO `item_mods` VALUES (18852, 289, 50); -- MODDED OCTAVE CLUB
-INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
-INSERT INTO `item_mods` VALUES (21052, 73, 25); -- Should be Save TP +250   added Store TP +25
-INSERT INTO `item_mods` VALUES (28235, 169, 25); -- Dusk to dawn: Movement speed +25% (Just added movement speed 24/7)
-INSERT INTO `item_mods` VALUES (28535, 27, 50); -- enm
-INSERT INTO `item_mods` VALUES (28535, 502, 50); -- reduces emn loss (TESTING)
-
--- ---------- Custom Alluvian Skirmish Weapons (occ does dbl dmg, tp bonus)--------------------------
-INSERT INTO `item_mods` VALUES (20857, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20857, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20857, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20758, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20758, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20758, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20759, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20759, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20759, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20718, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20718, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20718, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20721, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20721, 506, 300); -- occ
-INSERT INTO `item_mods` VALUES (20721, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20616, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20616, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20616, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20530, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20530, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20530, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (21173, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (21173, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (21173, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20989, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20989, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20989, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20946, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20946, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20946, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20901, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20901, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20809, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20809, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20620, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20620, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20620, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20995, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20995, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20995, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (20906, 345, 1000); -- tp bonus
-INSERT INTO `item_mods` VALUES (20906, 506, 200); -- occ
-INSERT INTO `item_mods` VALUES (20906, 507, 200); -- occ
-INSERT INTO `item_mods` VALUES (26910, 480, 10); -- null dmg
-INSERT INTO `item_mods` VALUES (26911, 480, 12); -- null dmg
-
--- -------------- Custom Empy Weapons (crit % and crit dmg)-----------------------------
-INSERT INTO `item_mods` VALUES (19458, 165, 10); --
-INSERT INTO `item_mods` VALUES (19458, 421, 20); --
-INSERT INTO `item_mods` VALUES (19457, 165, 10); --
-INSERT INTO `item_mods` VALUES (19457, 421, 20); --
+REPLACE INTO `item_mods` VALUES (19001, 420, 10); -- Barrage accuracy
+REPLACE INTO `item_mods` VALUES (19090, 420, 20); -- Barrage accuracy
 INSERT INTO `item_mods` VALUES (19456, 165, 10); --
 INSERT INTO `item_mods` VALUES (19456, 421, 20); --
+INSERT INTO `item_mods` VALUES (19457, 165, 10); --
+INSERT INTO `item_mods` VALUES (19457, 421, 20); --
+INSERT INTO `item_mods` VALUES (19458, 165, 10); --
+INSERT INTO `item_mods` VALUES (19458, 421, 20); --
 INSERT INTO `item_mods` VALUES (19459, 165, 10); --
 INSERT INTO `item_mods` VALUES (19459, 421, 20); --
 INSERT INTO `item_mods` VALUES (19460, 165, 10); --
@@ -152,51 +100,148 @@ INSERT INTO `item_mods` VALUES (20486, 165, 25); --
 INSERT INTO `item_mods` VALUES (20486, 421, 50); --
 INSERT INTO `item_mods` VALUES (20487, 165, 25); --
 INSERT INTO `item_mods` VALUES (20487, 421, 50); --
+INSERT INTO `item_mods` VALUES (20530, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20530, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20530, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20563, 165, 25); --
 INSERT INTO `item_mods` VALUES (20563, 421, 50); --
 INSERT INTO `item_mods` VALUES (20564, 165, 25); --
 INSERT INTO `item_mods` VALUES (20564, 421, 50); --
+INSERT INTO `item_mods` VALUES (20616, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20616, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20616, 507, 200); -- occ
+INSERT INTO `item_mods` VALUES (20620, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20620, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20620, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20653, 165, 25); --
 INSERT INTO `item_mods` VALUES (20653, 421, 50); --
 INSERT INTO `item_mods` VALUES (20654, 165, 25); --
 INSERT INTO `item_mods` VALUES (20654, 421, 50); --
+INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
+INSERT INTO `item_mods` VALUES (20718, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20718, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20718, 507, 200); -- occ
+INSERT INTO `item_mods` VALUES (20721, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20721, 506, 300); -- occ
+INSERT INTO `item_mods` VALUES (20721, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20747, 165, 25); --
 INSERT INTO `item_mods` VALUES (20747, 421, 50); --
 INSERT INTO `item_mods` VALUES (20748, 165, 25); --
 INSERT INTO `item_mods` VALUES (20748, 421, 50); --
+INSERT INTO `item_mods` VALUES (20758, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20758, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20758, 507, 200); -- occ
+INSERT INTO `item_mods` VALUES (20759, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20759, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20759, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20794, 165, 25); --
 INSERT INTO `item_mods` VALUES (20794, 421, 50); --
 INSERT INTO `item_mods` VALUES (20795, 165, 25); --
 INSERT INTO `item_mods` VALUES (20795, 421, 50); --
+INSERT INTO `item_mods` VALUES (20809, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20809, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20839, 165, 25); --
 INSERT INTO `item_mods` VALUES (20839, 421, 50); --
 INSERT INTO `item_mods` VALUES (20840, 165, 25); --
 INSERT INTO `item_mods` VALUES (20840, 421, 50); --
+INSERT INTO `item_mods` VALUES (20857, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20857, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20857, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20884, 165, 25); --
 INSERT INTO `item_mods` VALUES (20884, 421, 50); --
 INSERT INTO `item_mods` VALUES (20885, 165, 25); --
 INSERT INTO `item_mods` VALUES (20885, 421, 50); --
+INSERT INTO `item_mods` VALUES (20901, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20901, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20901, 507, 200); -- occ
+INSERT INTO `item_mods` VALUES (20906, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20906, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20906, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20929, 165, 25); --
 INSERT INTO `item_mods` VALUES (20929, 421, 50); --
 INSERT INTO `item_mods` VALUES (20930, 165, 25); --
 INSERT INTO `item_mods` VALUES (20930, 421, 50); --
+INSERT INTO `item_mods` VALUES (20946, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20946, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20946, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20974, 165, 25); --
 INSERT INTO `item_mods` VALUES (20974, 421, 50); --
 INSERT INTO `item_mods` VALUES (20975, 165, 25); --
 INSERT INTO `item_mods` VALUES (20975, 421, 50); --
+INSERT INTO `item_mods` VALUES (20989, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20989, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20989, 507, 200); -- occ
+INSERT INTO `item_mods` VALUES (20995, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (20995, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (20995, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (21019, 165, 25); --
 INSERT INTO `item_mods` VALUES (21019, 421, 50); --
+INSERT INTO `item_mods` VALUES (21052, 73, 25); -- Should be Save TP +250   added Store TP +25
+REPLACE INTO `item_mods` VALUES (21062, 28, 65); --
+REPLACE INTO `item_mods` VALUES (21111, 28, 60); -- Matt
+REPLACE INTO `item_mods` VALUES (21139, 28, 165); -- Should be 60   magic dmg +  unknown
+REPLACE INTO `item_mods` VALUES (21140, 28, 185); -- Should be 60   magic dmg +  unknown
+INSERT INTO `item_mods` VALUES (21144, 28, 100); --
+REPLACE INTO `item_mods` VALUES (21161, 28, 135); -- Matt
+REPLACE INTO `item_mods` VALUES (21173, 28, 120); -- Matt
+INSERT INTO `item_mods` VALUES (21173, 345, 1000); -- tp bonus
+INSERT INTO `item_mods` VALUES (21173, 506, 200); -- occ
+INSERT INTO `item_mods` VALUES (21173, 507, 200); -- occ
+REPLACE INTO `item_mods` VALUES (21176, 28, 120); -- Should be 18 see below
+REPLACE INTO `item_mods` VALUES (21177, 28, 125); -- Matt
+REPLACE INTO `item_mods` VALUES (21181, 28, 168); -- MATT
+REPLACE INTO `item_mods` VALUES (21182, 28, 130); --  Magic Attack Bonus +25
+REPLACE INTO `item_mods` VALUES (21194, 28, 95); -- Should be 19 see below
+REPLACE INTO `item_mods` VALUES (21208, 28, 73); -- Should be 40   see below
 INSERT INTO `item_mods` VALUES (21212, 165, 25); --
 INSERT INTO `item_mods` VALUES (21212, 421, 50); --
 INSERT INTO `item_mods` VALUES (21213, 165, 25); --
 INSERT INTO `item_mods` VALUES (21213, 421, 50); --
 INSERT INTO `item_mods` VALUES (21265, 165, 25); --
 INSERT INTO `item_mods` VALUES (21265, 421, 50); --
-
--- ------------------- Lots of replacing here (not sure why... will investigate later) ----------------------------------------
+REPLACE INTO `item_mods` VALUES (26710,11,34);
+REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
+INSERT INTO `item_mods` VALUES (26910, 480, 10); -- null dmg
+INSERT INTO `item_mods` VALUES (26911, 480, 12); -- null dmg
+REPLACE INTO `item_mods` VALUES (27174, 10, 12); --  VIT+12
+REPLACE INTO `item_mods` VALUES (27174, 11, 9); -- AGI+9
+REPLACE INTO `item_mods` VALUES (27174, 12, 17); --  INT+17
+REPLACE INTO `item_mods` VALUES (27174, 13, 10); -- MND+10
+REPLACE INTO `item_mods` VALUES (27174, 14, 8); --  CHR+8
+REPLACE INTO `item_mods` VALUES (27174, 2, 23); -- HP+23
+REPLACE INTO `item_mods` VALUES (27174, 23, 15); --  Attack+15
+REPLACE INTO `item_mods` VALUES (27174, 29, 1); --  Magic Def. Bonus+1 (used magic defence ?)
+REPLACE INTO `item_mods` VALUES (27174, 31, 51); -- Magic Evasion+51
+REPLACE INTO `item_mods` VALUES (27174, 8, 21); --  STR+21
+REPLACE INTO `item_mods` VALUES (27175, 1, 125); --  DEF:89
+REPLACE INTO `item_mods` VALUES (27175, 10, 19); --  VIT+12
+REPLACE INTO `item_mods` VALUES (27175, 11, 15); -- AGI+9
+REPLACE INTO `item_mods` VALUES (27175, 12, 26); --  INT+17
+REPLACE INTO `item_mods` VALUES (27175, 13, 16); -- MND+10
+REPLACE INTO `item_mods` VALUES (27175, 14, 12); --  CHR+8
+REPLACE INTO `item_mods` VALUES (27175, 2, 50); -- HP+23
+REPLACE INTO `item_mods` VALUES (27175, 23, 18); --  Attack+15
+REPLACE INTO `item_mods` VALUES (27175, 29, 3); --  Magic Def. Bonus+1 (used magic defence ?)
+REPLACE INTO `item_mods` VALUES (27175, 31, 75); -- Magic Evasion+51
+REPLACE INTO `item_mods` VALUES (27175, 384, 51); --  Haste +5%
 REPLACE INTO `item_mods` VALUES (27175, 508, 35); -- Third Eye": "Counter" rate +35
 REPLACE INTO `item_mods` VALUES (27175, 65, 40); --  Evasion+25
 REPLACE INTO `item_mods` VALUES (27175, 8, 33); --  STR+21
+INSERT INTO `item_mods` VALUES (27230, 10, 16);
+INSERT INTO `item_mods` VALUES (27230, 108, 38);
+INSERT INTO `item_mods` VALUES (27230, 11, 20);
+INSERT INTO `item_mods` VALUES (27230, 12, 30);
+INSERT INTO `item_mods` VALUES (27230, 13, 17);
+INSERT INTO `item_mods` VALUES (27230, 14, 11);
+INSERT INTO `item_mods` VALUES (27230, 2, 47);
+INSERT INTO `item_mods` VALUES (27230, 27, 5);
+INSERT INTO `item_mods` VALUES (27230, 288, 5);
+INSERT INTO `item_mods` VALUES (27230, 29, 5);
+INSERT INTO `item_mods` VALUES (27230, 302, 2);
+INSERT INTO `item_mods` VALUES (27230, 31, 69);
+INSERT INTO `item_mods` VALUES (27230, 384, 60);
+INSERT INTO `item_mods` VALUES (27230, 73, -4);
+INSERT INTO `item_mods` VALUES (27230, 8, 29);
 REPLACE INTO `item_mods` VALUES (27676, 1, 82); -- DEF:82
 REPLACE INTO `item_mods` VALUES (27676, 10, 19); -- VIT+19
 REPLACE INTO `item_mods` VALUES (27676, 11, 14); -- AGI+14
@@ -223,79 +268,33 @@ REPLACE INTO `item_mods` VALUES (27697, 5, 23); -- MP+19
 REPLACE INTO `item_mods` VALUES (27697, 65, 33); -- Evasion+15
 REPLACE INTO `item_mods` VALUES (27697, 8, 27); -- STR+20
 REPLACE INTO `item_mods` VALUES (27697, 9, 20); -- DEX+14
-REPLACE INTO `item_mods` VALUES (28227, 384, 41); -- Haste +4%
-REPLACE INTO `item_mods` VALUES (28230, 2, 20); -- MP+20
-REPLACE INTO `item_mods` VALUES (28230, 2, 28); -- HP+28
-REPLACE INTO `item_mods` VALUES (28247, 384, 41); -- Haste +4%
-REPLACE INTO `item_mods` VALUES (11958, 384, 30);
-REPLACE INTO `item_mods` VALUES (18264, 507, 300); -- Occ. 3x dmg / was 2.5 wiki says 3x
-REPLACE INTO `item_mods` VALUES (19001, 420, 10); -- Barrage accuracy
-REPLACE INTO `item_mods` VALUES (19090, 420, 20); -- Barrage accuracy
-REPLACE INTO `item_mods` VALUES (21111, 28, 60); -- Matt
-REPLACE INTO `item_mods` VALUES (21173, 28, 120); -- Matt
-REPLACE INTO `item_mods` VALUES (27174, 10, 12); --  VIT+12
-REPLACE INTO `item_mods` VALUES (27174, 11, 9); -- AGI+9
-REPLACE INTO `item_mods` VALUES (27174, 12, 17); --  INT+17
-REPLACE INTO `item_mods` VALUES (27174, 13, 10); -- MND+10
-REPLACE INTO `item_mods` VALUES (27174, 14, 8); --  CHR+8
-REPLACE INTO `item_mods` VALUES (27174, 2, 23); -- HP+23
-REPLACE INTO `item_mods` VALUES (27174, 23, 15); --  Attack+15
-REPLACE INTO `item_mods` VALUES (27174, 29, 1); --  Magic Def. Bonus+1 (used magic defence ?)
-REPLACE INTO `item_mods` VALUES (27174, 31, 51); -- Magic Evasion+51
-REPLACE INTO `item_mods` VALUES (27174, 8, 21); --  STR+21
-REPLACE INTO `item_mods` VALUES (27175, 1, 125); --  DEF:89
-REPLACE INTO `item_mods` VALUES (27175, 10, 19); --  VIT+12
-REPLACE INTO `item_mods` VALUES (27175, 11, 15); -- AGI+9
-REPLACE INTO `item_mods` VALUES (27175, 12, 26); --  INT+17
-REPLACE INTO `item_mods` VALUES (27175, 13, 16); -- MND+10
-REPLACE INTO `item_mods` VALUES (27175, 14, 12); --  CHR+8
-REPLACE INTO `item_mods` VALUES (27175, 2, 50); -- HP+23
-REPLACE INTO `item_mods` VALUES (27175, 23, 18); --  Attack+15
-REPLACE INTO `item_mods` VALUES (27175, 29, 3); --  Magic Def. Bonus+1 (used magic defence ?)
-REPLACE INTO `item_mods` VALUES (27175, 31, 75); -- Magic Evasion+51
-REPLACE INTO `item_mods` VALUES (27175, 384, 51); --  Haste +5%
-
--- ---------------- MATT shit (higher values than retail. temp leaving in)--------------------------------------
-
-REPLACE INTO `item_mods` VALUES (21062, 28, 65); --
-REPLACE INTO `item_mods` VALUES (21139, 28, 165); -- Should be 60   magic dmg +  unknown
-REPLACE INTO `item_mods` VALUES (21140, 28, 185); -- Should be 60   magic dmg +  unknown
-INSERT INTO `item_mods` VALUES (21144, 28, 100); --
-REPLACE INTO `item_mods` VALUES (21161, 28, 135); -- Matt
-REPLACE INTO `item_mods` VALUES (21176, 28, 120); -- Should be 18 see below
-REPLACE INTO `item_mods` VALUES (21177, 28, 125); -- Matt
-REPLACE INTO `item_mods` VALUES (21181, 28, 168); -- MATT
-REPLACE INTO `item_mods` VALUES (21182, 28, 130); --  Magic Attack Bonus +25
-REPLACE INTO `item_mods` VALUES (21194, 28, 95); -- Should be 19 see below
-REPLACE INTO `item_mods` VALUES (21208, 28, 73); -- Should be 40   see below
-
-REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
-REPLACE INTO `item_mods` VALUES (26710,11,34);
-INSERT INTO `item_mods` VALUES (28135,369,2); -- Didn't include Unity refresh
--- -------------------- NEW ITEMS BELOW THIS LINE PLEASE ------------------------
-
--- alrunas_gloves_+1
 INSERT INTO `item_mods` VALUES (28005, 1, 88);
-INSERT INTO `item_mods` VALUES (28005, 2, 23);
-INSERT INTO `item_mods` VALUES (28005, 8, 11);
-INSERT INTO `item_mods` VALUES (28005, 9, 34);
 INSERT INTO `item_mods` VALUES (28005, 10, 31);
 INSERT INTO `item_mods` VALUES (28005, 11, 11);
 INSERT INTO `item_mods` VALUES (28005, 12, 12);
 INSERT INTO `item_mods` VALUES (28005, 13, 29);
 INSERT INTO `item_mods` VALUES (28005, 14, 17);
-INSERT INTO `item_mods` VALUES (28005, 26, 20);
-INSERT INTO `item_mods` VALUES (28005, 23, 20);
-INSERT INTO `item_mods` VALUES (28005, 68, 23);
-INSERT INTO `item_mods` VALUES (28005, 31, 36);
-INSERT INTO `item_mods` VALUES (28005, 29, 1);
-INSERT INTO `item_mods` VALUES (28005, 384, 51);
-INSERT INTO `item_mods` VALUES (28005, 365, 5);
 INSERT INTO `item_mods` VALUES (28005, 162, 3);
-
-INSERT INTO `item_mods` VALUES (28479, 67, 7);
+INSERT INTO `item_mods` VALUES (28005, 2, 23);
+INSERT INTO `item_mods` VALUES (28005, 23, 20);
+INSERT INTO `item_mods` VALUES (28005, 26, 20);
+INSERT INTO `item_mods` VALUES (28005, 29, 1);
+INSERT INTO `item_mods` VALUES (28005, 31, 36);
+INSERT INTO `item_mods` VALUES (28005, 365, 5);
+INSERT INTO `item_mods` VALUES (28005, 384, 51);
+INSERT INTO `item_mods` VALUES (28005, 68, 23);
+INSERT INTO `item_mods` VALUES (28005, 8, 11);
+INSERT INTO `item_mods` VALUES (28005, 9, 34);
+INSERT INTO `item_mods` VALUES (28135,369,2); -- Didn't include Unity refresh
+REPLACE INTO `item_mods` VALUES (28227, 384, 41); -- Haste +4%
+REPLACE INTO `item_mods` VALUES (28230, 2, 20); -- MP+20
+REPLACE INTO `item_mods` VALUES (28230, 2, 28); -- HP+28
+INSERT INTO `item_mods` VALUES (28235, 169, 25); -- Dusk to dawn: Movement speed +25% (Just added movement speed 24/7)
+REPLACE INTO `item_mods` VALUES (28247, 384, 41); -- Haste +4%
 INSERT INTO `item_mods` VALUES (28479, 66, 7);
-
+INSERT INTO `item_mods` VALUES (28479, 67, 7);
+INSERT INTO `item_mods` VALUES (28535, 27, 50); -- enm
+INSERT INTO `item_mods` VALUES (28535, 502, 50); -- reduces emn loss (TESTING)
 INSERT INTO `item_mods` VALUES (28547, 317, 3);
 INSERT INTO `item_mods` VALUES (28547, 318, 3);
 INSERT INTO `item_mods` VALUES (28547, 319, 3);
@@ -311,26 +310,6 @@ INSERT INTO `item_mods` VALUES (28547, 328, 3);
 INSERT INTO `item_mods` VALUES (28547, 329, 3);
 INSERT INTO `item_mods` VALUES (28547, 330, 3);
 INSERT INTO `item_mods` VALUES (28547, 331, 3);
-
--- Ghostfyre Cape (28621)
 INSERT INTO `item_mods` VALUES (28621, 274, 6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621, 311, 6); -- Magic Damage
-
-
--- Zoar Subligar
-INSERT INTO `item_mods` VALUES (27230, 2, 47);
-INSERT INTO `item_mods` VALUES (27230, 8, 29);
-INSERT INTO `item_mods` VALUES (27230, 10, 16);
-INSERT INTO `item_mods` VALUES (27230, 11, 20);
-INSERT INTO `item_mods` VALUES (27230, 12, 30);
-INSERT INTO `item_mods` VALUES (27230, 13, 17);
-INSERT INTO `item_mods` VALUES (27230, 14, 11);
-INSERT INTO `item_mods` VALUES (27230, 108, 38);
-INSERT INTO `item_mods` VALUES (27230, 31, 69);
-INSERT INTO `item_mods` VALUES (27230, 29, 5);
-INSERT INTO `item_mods` VALUES (27230, 384, 60);
-INSERT INTO `item_mods` VALUES (27230, 27, 5);
-INSERT INTO `item_mods` VALUES (27230, 302, 2);
-INSERT INTO `item_mods` VALUES (27230, 73, -4);
-INSERT INTO `item_mods` VALUES (27230, 288, 5);
 

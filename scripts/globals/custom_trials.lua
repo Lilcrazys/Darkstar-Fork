@@ -29,7 +29,6 @@ RELIC =
     ["SPHARAI"] =       {[1] = 18264, [2] = 18637, [3] = 18665, [4] = 19746, [5] = 20481},
     ["YOICHINOYUMI"] =  {[1] = 18348, [2] = 18650, [3] = 18678, [4] = 19759, [5] = 21211},
 };
-MAX_RELIC = 5;
 
 MYTHIC =
 {
@@ -54,7 +53,6 @@ MYTHIC =
     ["VAJRA"] =         {[1] = 18996, [2] = 19085, [3] = 19715, [4] = 19824, [5] = 20560},
     ["YAGRUSH"] =       {[1] = 18993, [2] = 19082, [3] = 19712, [4] = 19821, [5] = 21063},
 };
-MAX_MYTHIC = 5;
 
 --[[ Other?
 Also just FYI, we can have more or fewer than 5 stages without problems.
@@ -80,8 +78,7 @@ function getCurrentStage(itemTable, itemID)
             end
         end
     end
-    -- If we somehow checked the wrong table..
-    -- ..We'll return the zero we started with.
+
     return CURRENT;
 end;
 
@@ -99,7 +96,7 @@ function getNextTrialID(itemTable, itemID)
         end
     end
     -- If we somehow checked one that doesn't have any
-    -- "next" ID we'll return the zero we started with.
+    -- "next" ID we'll return the itemID we started with.
     return NEXT_ID;
 end;
 
@@ -135,7 +132,7 @@ end;
 -----------------------------------
 function cTrialProgress(player, itemTable)
     local TRIAL = player:getVar("C_TRIAL_ITEM");
-    -- local TRIAL = player:getVar("C_TRIAL_ITEM"); <- for future use
+    -- local TRIAL2 = player:getVar("C_TRIAL2_ITEM"); <- for future use
     -- This whole function could have been done better. But am tired.
     -- Should define the required totals for each objective somewhere
     -- and then check the vars against that instead of all this if/else'ing.
@@ -174,6 +171,7 @@ function cTrialProgress(player, itemTable)
             else
                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
             end
+        --[[ Temp disabled, handled in Magian_Mog_CJ.lua for now
         elseif (getCurrentStage(RELIC, TRIAL) == 4) then
             if (player:getVar("C_TRIAL_OBJ_1") == 50) then
                 player:setVar("C_TRIAL_COMPLETE", 1);
@@ -186,6 +184,7 @@ function cTrialProgress(player, itemTable)
                 player:PrintToPlayer("Error: trial variable overloaded, Please report this message.");
                 player:PrintToPlayer("Error Info: C_TRIAL_OBJ_1 > 50 in Moogle script L48");
             end
+        ]]
         end
     elseif (itemTable == MYTHIC) then
         if (getCurrentStage(MYTHIC, TRIAL) == 0) then
@@ -212,7 +211,7 @@ function cTrialProgress(player, itemTable)
             else
                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
             end
-        elseif (GetCurrentStage(MYTHIC, TRIAL) == 3) then
+        elseif (getCurrentStage(MYTHIC, TRIAL) == 3) then
             if (player:getVar("C_TRIAL_OBJ_1") >= 3
             and player:getVar("C_TRIAL_OBJ_2") >= 3
             and player:getVar("C_TRIAL_OBJ_3") >= 3
@@ -224,6 +223,7 @@ function cTrialProgress(player, itemTable)
             else
                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
             end
+        --[[ Temp disabled, handled in Magian_Mog_CJ.lua for now
         elseif (getCurrentStage(MYTHIC, TRIAL) == 4) then
             if (player:getVar("C_TRIAL_OBJ_1") == 50) then
                 player:setVar("C_TRIAL_COMPLETE", 1);
@@ -236,6 +236,7 @@ function cTrialProgress(player, itemTable)
                 player:PrintToPlayer("Error: trial variable overloaded, Please report this message.");
                 player:PrintToPlayer("Error Info: C_TRIAL_OBJ_1 > 50 in Moogle script L48");
             end
+        ]]
         end
     end
 end;
