@@ -78,7 +78,7 @@ SUBEFFECT_DEATH             = 19;
 SUBEFFECT_SHIELD            = 20;
 SUBEFFECT_HP_DRAIN          = 21;  -- 1-10101      43
 SUBEFFECT_MP_DRAIN          = 22;  -- This is correct animation
-SUBEFFECT_TP_DRAIN          = 22;  -- Not sure this is correct, might be 21
+SUBEFFECT_TP_DRAIN          = 22;  -- Verified this should look exactly like Aspir Samba.
 SUBEFFECT_HASTE             = 23;
 
 -- SPIKES
@@ -1250,12 +1250,13 @@ MOD_AMMO_SWING      = 0x20B -- Extra swing rate w/ ammo (ie. Jailer weapons). Us
 
 -- Mythic Weapon Mods
 MOD_AUGMENTS_ABSORB    = 0x209  -- Direct Absorb spell increase while Liberator is equipped (percentage based) (modId = 521)
+MOD_AOE_NA             = 0x20C  -- Set to 1 to make -na spells/erase always AoE w/ Divine Veil (modId = 524)
 
 -- The entire mod list is in desperate need of kind of some organizing.
 -- The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
 
--- MOD_SPARE = 0x20C -- (modId = 524)
 -- MOD_SPARE = 0x20D -- (modId = 525)
+-- MOD_SPARE = 0x20CE -- (modId = 526)
 
 
 -- Start of LegionDS Custom MOD
@@ -1769,14 +1770,17 @@ MSGBASIC_CANT_BE_USED_IN_AREA   = 316 -- That action cannot be used in this area
 MSGBASIC_REQUIRES_SHIELD        = 199 -- That action requires a shield.
 MSGBASIC_REQUIRES_COMBAT        = 525 -- .. can only be performed during battle.
 MSGBASIC_STATUS_PREVENTS        = 569 -- Your current status prevents you from using that ability.
+
 -- Distance
 MSGBASIC_TARG_OUT_OF_RANGE      = 4 -- <target> is out of range.
 MSGBASIC_UNABLE_TO_SEE_TARG     = 5 -- Unable to see <target>.
 MSGBASIC_LOSE_SIGHT             = 36 -- You lose sight of <target>.
 MSGBASIC_TOO_FAR_AWAY           = 78 -- <target> is too far away.
+
 -- Weaponskills
 MSGBASIC_CANNOT_USE_WS          = 190 -- The <player> cannot use that weapon ability.
 MSGBASIC_NOT_ENOUGH_TP          = 192 -- The <player> does not have enough TP.
+
 -- Pets
 MSGBASIC_REQUIRES_A_PET         = 215 -- That action requires a pet.
 MSGBASIC_THAT_SOMEONES_PET      = 235 -- That is someone's pet.
@@ -1786,22 +1790,35 @@ MSGBASIC_NO_JUG_PET_ITEM        = 337 -- You do not have the necessary item equi
 MSGBASIC_MUST_HAVE_FOOD         = 347 -- You must have pet food equipped to use that command.
 MSGBASIC_PET_CANNOT_DO_ACTION   = 574 -- <player>'s pet is currently unable to perform that action.
 MSGBASIC_PET_NOT_ENOUGH_TP      = 575 -- <player>'s pet does not have enough TP to perform that action.
+
 -- Items
 MSGBASIC_CANNOT_USE_ITEM_ON     = 92  -- Cannot use the <item> on <target>.
 MSGBASIC_ITEM_FAILS_TO_ACTIVATE = 62  -- The <item> fails to activate.
 MSGBASIC_FULL_INVENTORY         = 356 --  Cannot execute command. Your inventory is full.
+
 -- Ranged
 MSGBASIC_NO_RANGED_WEAPON       = 216 -- You do not have an appropriate ranged weapon equipped.
 MSGBASIC_CANNOT_SEE             = 217 -- You cannot see <target>.
 MSGBASIC_MOVE_AND_INTERRUPT     = 218 -- You move and interrupt your aim.
+
+-- Additional effects and spike effects
+MSGBASIC_ADD_EFFECT_STATUS      = 160 -- Additional effect: <Status Effect>.
+MSGBASIC_ADD_EFFECT_HP_DRAIN    = 161 -- Additional effect: <number> HP drained from <target>.
+MSGBASIC_ADD_EFFECT_MP_DRAIN    = 162 -- Additional effect: <number> MP drained from <target>.
+MSGBASIC_ADD_EFFECT_DMG         = 163 -- Additional effect: <number> points of damage.
+MSGBASIC_ADD_EFFECT_STATUS2     = 164 -- Additional effect: <Status Effect>. (Duplicate?)
+MSGBASIC_ADD_EFFECT_TP_DRAIN    = 165 -- Additional effect: <number> TP drained from <target>.
+
 -- Charm
 MSGBASIC_CANNOT_CHARM           = 210 -- The <player> cannot charm <target>!
 MSGBASIC_VERY_DIFFICULT_CHARM   = 211 -- It would be very difficult for the <player> to charm <target>.
 MSGBASIC_DIFFICULT_TO_CHARM     = 212 -- It would be difficult for the <player> to charm <target>.
 MSGBASIC_MIGHT_BE_ABLE_CHARM    = 213 -- The <player> might be able to charm <target>.
 MSGBASIC_SHOULD_BE_ABLE_CHARM   = 214 -- The <player> should be able to charm <target>.
+
 -- BLU
 MSGBASIC_LEARNS_SPELL           = 419 -- <target> learns (NULL)!
+
 -- COR
 MSGBASIC_ROLL_MAIN              = 420 -- The <player> uses .. The total comes to ..! <target> receives the effect of ..
 MSGBASIC_ROLL_SUB               = 421 -- <target> receives the effect of ..
