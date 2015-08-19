@@ -1602,6 +1602,7 @@ INSERT INTO `mob_droplist` VALUES (9617,0,28197,50);
 INSERT INTO `mob_droplist` VALUES (9617,0,27563,100);
 INSERT INTO `mob_droplist` VALUES (9617,0,28441,100);
 INSERT INTO `mob_droplist` VALUES (9617,0,28293,40);
+INSERT INTO `mob_droplist` VALUES (9617,0,5103,400);
 
 -- Voidwatch Chapter 2
 
