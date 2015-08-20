@@ -2845,6 +2845,7 @@ INSERT INTO `item_basic` VALUES (2953,0,'jar_of_viscous_spittle','viscous_spittl
 INSERT INTO `item_basic` VALUES (2954,0,'powder_casket','powder_casket',1,61504,0,1,0);
 INSERT INTO `item_basic` VALUES (2955,0,'kindreds_crest','kindreds_crest',99,28736,0,1,0);
 INSERT INTO `item_basic` VALUES (2956,0,'high_kindreds_crest','h_kindred_crest',99,28736,0,1,0);
+INSERT INTO `item_basic` VALUES (2957,0,'sacred_kindreds_crest','s_kindred_crest',99,28736,0,1,0);
 INSERT INTO `item_basic` VALUES (2958,0,'mog_bonanza_kupon_e','bonanza_kupon_e',1,61504,0,1,0);
 INSERT INTO `item_basic` VALUES (2959,0,'mog_bonanza_kupon_j','bonanza_kupon_j',1,61504,0,1,0);
 INSERT INTO `item_basic` VALUES (2960,0,'water_lily','water_lily',12,0,44,0,45);
@@ -5708,6 +5709,8 @@ INSERT INTO `item_basic` VALUES (6329,0,'beists_coffer','beists_coffer',99,22080
 INSERT INTO `item_basic` VALUES (6330,0,'malatrixs_coffer','malatrixs_coffer',99,22080,0,1,0);
 INSERT INTO `item_basic` VALUES (6331,0,'velozs_coffer','velozs_coffer',99,22080,0,1,0);
 INSERT INTO `item_basic` VALUES (6332,0,'menders_coffer','menders_coffer',99,22080,0,1,0);
+INSERT INTO `item_basic` VALUES (6343,0,'grape_daifuku','grape_daifuku',12,1536,56,0,128);
+INSERT INTO `item_basic` VALUES (6344,0,'grape_daifuku+1','grape_daifuku+1',12,1536,56,0,143);
 INSERT INTO `item_basic` VALUES (6350,0,'saman_coffer','saman_coffer',99,22080,0,1,0);
 INSERT INTO `item_basic` VALUES (6351,0,'heiligtums_coffer','heiligtums_coffer',99,22080,0,1,0);
 INSERT INTO `item_basic` VALUES (6352,0,'doumas_coffer','doumas_coffer',99,22080,0,1,0);
@@ -17013,6 +17016,7 @@ INSERT INTO `item_basic` VALUES (29322,0,'storage_slip_11','storage_slip_11',1,6
 INSERT INTO `item_basic` VALUES (29323,0,'storage_slip_12','storage_slip_12',1,61505,0,1,0);
 INSERT INTO `item_basic` VALUES (29324,0,'storage_slip_13','storage_slip_13',1,61505,0,1,0);
 INSERT INTO `item_basic` VALUES (29325,0,'storage_slip_14','storage_slip_14',1,61505,0,1,0);
+
 /*!40000 ALTER TABLE `item_basic` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
