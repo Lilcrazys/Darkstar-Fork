@@ -4531,14 +4531,6 @@ INSERT INTO `mob_skill` VALUES (223,1576,223,'Horror_Cloud',0,7.0,2000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (228,1576,228,'Black_Cloud',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (229,1576,229,'Blood_Saber',1,15.0,2000,1500,4,0,0,0);
 
--- Konjac (1587)
-INSERT INTO `mob_skill` VALUES (175,1587,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (176,1587,176,'Fluid_Toss',0,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (177,1587,177,'Digest',0,7.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2258,1587,177,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2296,1587,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2295,1587,175,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0);
-
 -- Vouivre (1578)
 INSERT INTO `mob_skill` VALUES(566,1578,494,'Chaos_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES(563,1578,491,'Blizzard_Breath',4,15.0,2000,1500,4,0,0,0);
