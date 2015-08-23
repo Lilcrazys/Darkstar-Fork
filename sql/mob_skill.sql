@@ -6010,9 +6010,9 @@ INSERT INTO `mob_skill` VALUES (2605,1771,2078,'Fragor_maximus',1,18.0,2000,1000
 INSERT INTO `mob_skill` VALUES (1912,1764,1554,'VW_Bloody_Caress',0,10.0,2000,1500,4,0,0,3);
 
 -- Umagrhk
-INSERT INTO `mob_skill` VALUES (2140,1773,2091,'Umagrhk_Triple',4,7.0,2000,0,4,16,0,1);
-INSERT INTO `mob_skill` VALUES (2141,1773,2092,'Umagrhk_Front1',1,7.0,2000,0,4,16,0,0);
-INSERT INTO `mob_skill` VALUES (2142,1773,2093,'Umagrhk_Front2',0,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2140,1773,2093,'Umagrhk_Triple',4,7.0,2000,0,4,16,0,1);
+INSERT INTO `mob_skill` VALUES (2141,1773,2091,'Umagrhk_Front1',1,7.0,2000,0,4,16,0,0);
+INSERT INTO `mob_skill` VALUES (2142,1773,2092,'Umagrhk_Front2',0,7.0,2000,0,4,16,0,0);
 INSERT INTO `mob_skill` VALUES (2666,1773,2094,'Soulshattering_Roar',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2667,1773,2095,'Calcifying_Claw',1,18.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skill` VALUES (2668,1773,2096,'Divesting_Stampede',1,18.0,2000,1000,4,0,0,0);
