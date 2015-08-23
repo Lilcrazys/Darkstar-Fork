@@ -27,7 +27,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,90);
     mob:SetMobSkillAttack(true);
-    mob:setMod(MOD_HUMANOID_KILLER,5);
+    mob:setMod(MOD_HUMANOID_KILLER,8);
 end;
 
 -----------------------------------
@@ -42,7 +42,6 @@ end;
 -----------------------------------
 
 function onMobWeaponSkill(target, mob, skill)
-    mob:addStatusEffectEx(EFFECT_PHYSICAL_SHIELD,0,1,0,5);
 end;
 
 -----------------------------------
