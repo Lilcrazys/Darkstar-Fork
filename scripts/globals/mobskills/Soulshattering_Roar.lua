@@ -12,7 +12,9 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-	local dmgmod = 2;
+    local numhits = 1;
+    local accmod = 10;
+    local dmgmod = 2.5;
 
 	MobStatusEffectMove(mob, target, EFFECT_TERROR, 10, 0, 10);
     mob:addStatusEffectEx(EFFECT_PHYSICAL_SHIELD,0,1,0,60);
