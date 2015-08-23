@@ -13,7 +13,6 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
 end;
 
@@ -24,12 +23,11 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_REGAIN, 15);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,90);
     mob:SetMobSkillAttack(true);
+    mob:setMod(MOD_HUMANOID_KILLER,5);
 end;
 
 -----------------------------------
@@ -44,6 +42,7 @@ end;
 -----------------------------------
 
 function onMobWeaponSkill(target, mob, skill)
+    mob:addStatusEffectEx(EFFECT_PHYSICAL_SHIELD,0,1,0,5);
 end;
 
 -----------------------------------
@@ -54,10 +53,11 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onSpellPrecast
+-- onMobDrawIn
 -----------------------------------
 
-function onSpellPrecast(mob, spell)
+function onMobDrawIn(mob, target)
+    mob:useMobAbility(2670); -- Beastruction
 end;
 
 -----------------------------------
