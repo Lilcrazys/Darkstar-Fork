@@ -140,9 +140,9 @@ function cTrialProgress(player, itemTable)
         if (getCurrentStage(RELIC, TRIAL) == 0 or getCurrentStage(RELIC, TRIAL) == nil) then
             player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(RELIC, TRIAL) == 1) then
-            if (player:getVar("C_TRIAL_OBJ_1") >= 3
+            if (player:getVar("C_TRIAL_OBJ_1") >= 4
             and player:getVar("C_TRIAL_OBJ_2") >= 4
-            and player:getVar("C_TRIAL_OBJ_3") >= 4
+            and player:getVar("C_TRIAL_OBJ_3") >= 3
             and player:getVar("C_TRIAL_OBJ_4") >= 4
             and player:getVar("C_TRIAL_OBJ_5") >= 4
             and player:getVar("C_TRIAL_OBJ_6") >= 4) then
