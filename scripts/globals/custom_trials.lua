@@ -137,8 +137,8 @@ function cTrialProgress(player, itemTable)
     -- Should define the required totals for each objective somewhere
     -- and then check the vars against that instead of all this if/else'ing.
     if (itemTable == RELIC) then
-        if (getCurrentStage(RELIC, TRIAL) == 0) then
-            player:PrintToPlayer("Error: Trial item stage not found in RELIC table. Please report this message.");
+        if (getCurrentStage(RELIC, TRIAL) == 0 or getCurrentStage(RELIC, TRIAL) == nil) then
+            player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(RELIC, TRIAL) == 1) then
             if (player:getVar("C_TRIAL_OBJ_1") >= 3
             and player:getVar("C_TRIAL_OBJ_2") >= 4
@@ -187,8 +187,8 @@ function cTrialProgress(player, itemTable)
         ]]
         end
     elseif (itemTable == MYTHIC) then
-        if (getCurrentStage(MYTHIC, TRIAL) == 0) then
-            player:PrintToPlayer("Error: Trial item stage not found in MYTHIC table. Please report this message.");
+        if (getCurrentStage(MYTHIC, TRIAL) == 0 or getCurrentStage(MYTHIC, TRIAL) == nil) then
+            player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(MYTHIC, TRIAL) == 1) then
             if (player:getVar("C_TRIAL_OBJ_1") >= 5
             and player:getVar("C_TRIAL_OBJ_2") >= 5
