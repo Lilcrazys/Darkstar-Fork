@@ -11,10 +11,10 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    if (trade:hasItemQty(2981,1) == false) then -- Player is missing at least one required item.
-        player:startEvent(1010, 2981); -- Inform payer what items they need.
+    if (trade:hasItemQty(2891,1) == false) then -- Player is missing at least one required item.
+        player:startEvent(1010, 2891); -- Inform payer what items they need.
     elseif (GetMobAction(17318434) == ACTION_NONE) then -- mob not already spawned from this
-        if (trade:hasItemQty(2981,1) and trade:getItemCount() == 1) then -- Player has all the required items.
+        if (trade:hasItemQty(2891,1) and trade:getItemCount() == 1) then -- Player has all the required items.
             SpawnMob(17318434, 300):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
             player:tradeComplete();
         end

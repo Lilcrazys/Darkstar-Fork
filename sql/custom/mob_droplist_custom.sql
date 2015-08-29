@@ -22,6 +22,7 @@
 REPLACE INTO `mob_droplist` VALUES (24,0,3344,120); -- Clump of Red Pondweed Aspi
 INSERT INTO `mob_droplist` VALUES (32,0,12094,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (52,0,3291,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (55,0,10452,330);
 INSERT INTO `mob_droplist` VALUES (75,0,19405,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (83,0,12105,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (118,0,646,40);
