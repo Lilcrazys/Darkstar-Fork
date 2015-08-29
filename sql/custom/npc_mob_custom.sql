@@ -1227,6 +1227,8 @@ REPLACE INTO `npc_list` VALUES (17228395,'Legion_Moogle','Legion Moogle',128,244
 -- Beaucedine Glacier (Zone 111)
 -- 17232895
 -- ------------------------------------------------------------
+REPLACE INTO `npc_list` VALUES (17232238,'burning_circle','???',0,-280,-80,-81,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,null);
+INSERT INTO `mob_spawn_points` VALUES (17232894,'Umagrhk','Umagrhk',90515,-280,-80,-81,0);
 
 
 -- ------------------------------------------------------------
