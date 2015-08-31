@@ -25,9 +25,18 @@ function onTrigger(player,npc)
         -- for VW_3_NATIONS instead of for a var named for the KIs.
         if (player:isMaskFull(player:getVar("VW_3_NATIONS"),3) == true) then
             player:startEvent(7);
+        else
+            player:PrintToPlayer("Conditions not met.");
+            player:PrintToPlayer(string.format("Variable 'VW_3_NATIONS' value is: %u ..and must be 7", player:getVar("VW_3_NATIONS")));
+            player:PrintToPlayer(string.format("Quest 'GUARDIAN_OF_THE_VOID' Status is: %u ..and must be 0", player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID)));
         end
     elseif (player:getQuestStatus(CRYSTAL_WAR, A_CAIT_CALLS) == QUEST_ACCEPTED) then
         player:startEvent(9);
+    else
+        player:PrintToPlayer("Conditions not met.");
+        player:PrintToPlayer(string.format("Variable 'VW_3_NATIONS' value is: %u", player:getVar("VW_3_NATIONS")));
+        player:PrintToPlayer(string.format("Quest 'GUARDIAN_OF_THE_VOID' Status is: %u", player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID)));
+        player:PrintToPlayer(string.format("Quest 'A_CAIT_CALLS' Status is: %u", player:getQuestStatus(CRYSTAL_WAR, A_CAIT_CALLS)));
     end
 end;
 

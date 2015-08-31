@@ -1,13 +1,13 @@
 -----------------------------------
 -- Area: ?
--- VWNM: Lorbulcrud
+-- VWNM: ?
 -- @pos ? ? ? ?
 -----------------------------------
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------

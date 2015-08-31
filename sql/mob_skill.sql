@@ -6041,7 +6041,7 @@ INSERT INTO `mob_skill` VALUES (3009,6665,432,'Elemental_Sforzo',0,7.0,2000,0,1,
 -- SlenderMan
 INSERT INTO `mob_skill` VALUES (190,6666,190,'Slendy_Dimensional_Death',0,7.0,2000,0,4,1,0,0);
 INSERT INTO `mob_skill` VALUES (200,6666,61,'Slendy_Tentacle',0,7.0,1200,600,4,0,0,0);
--- INSERT INTO `mob_skill` VALUES (249,6666,239,'Netherspikes',4,10.0,2000,0,4,1,0,0); -- Animates incorrectly
+INSERT INTO `mob_skill` VALUES (249,6666,249,'Netherspikes',4,10.0,2000,0,4,1,0,0); -- Animates incorrectly
 INSERT INTO `mob_skill` VALUES (332,6666,107,'Slendy_Death_Trap',1,30.0,2000,2000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (943,6666,801,'Slendy_Gate_of_Tartarus',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1424,6666,392,'Predatory_Glare',4,16.0,2000,1500,4,0,0,0);
