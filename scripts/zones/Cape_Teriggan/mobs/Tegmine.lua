@@ -20,6 +20,7 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DOUBLE_ATTACK, 30)
     mob:addMod(MOD_ATT, 100);
 end;
+
 -----------------------------------
 -- onMobSpawn
 -----------------------------------
@@ -30,13 +31,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC, 950);
-end;
-
------------------------------------
--- onMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
     mob:setMod(MOD_MACC, 500); -- My mad ninja skills do not miss/resist!
     mob:setMod(MOD_MATT, 50); -- They don't hit very hard either though..
     -- Adjust MOD_MATT as needed, Tegmine's nin nuke should not land zero but not land over 50 dmg on an average lv99 either.
@@ -105,13 +99,9 @@ function onAdditionalEffect(mob,target,damage)
         dmg = dmg * applyResistanceAddEffect(mob,target,ELE_WATER,0);
         dmg = adjustForTarget(target,dmg,ELE_WATER);
 
-        if (dmg < 0) then
-            dmg = 10
-        end
-
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_WATER,dmg);
 
-        return SUBEFFECT_WATER_DAMAGE,163,dmg;
+        return SUBEFFECT_WATER_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
     end
 
 end;

@@ -42,12 +42,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_MATT,100);
 end;
+
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight( mob, target )
-
     -- Spawn the pets if they are despawned
     -- TODO: summon animations?
     if (GetMobAction(wynavA) == 0) then
@@ -68,7 +68,6 @@ function onMobFight( mob, target )
             GetMobByID(pets):updateEnmity(target);
         end
     end
-
 end
 
 -----------------------------------
@@ -81,13 +80,8 @@ function onMobDeath(mob, killer)
 	DespawnMob(wynavB);
 	DespawnMob(wynavC);
 
-    local IxAernDRG_PH = GetServerVariable("[SEA]IxAernDRG_PH"); -- Should be be the ID of the mob that spawns the actual PH
-
-    -- Pick the Ix'Aern (DRG) PH if the server doesn't have one, set it.
-    if (GetMobAction(realAwAern_PH) == 0 and GetMobAction(IxAernDRG) == 0 and GetServerVariable("[SEA]IxAernDRG_PH") == 0) then  -- This should be cleared when the mob is killed.
-        IxAernDRG_PH = AwAernGroups[math.random(1, #AwAernGroups)] + math.random(0, 2); -- The 4th mobid in each group is a pet. F that son
-        SetServerVariable("[SEA]IxAernDRG_PH", IxAernDRG_PH);
-    end
+    -- Pick a new for PH Ix'Aern (DRG)
+    SetServerVariable("[SEA]IxAernDRG_PH", AwAernDRGGroups[math.random(1, #AwAernDRGGroups)] + math.random(0, 2));
 end;
 
 -----------------------------------
@@ -99,16 +93,6 @@ function onMobDespawn( mob )
 	DespawnMob(wynavB);
 	DespawnMob(wynavC);
 
-    local IxAernDRG_PH = GetServerVariable("[SEA]IxAernDRG_PH"); -- Should be be the ID of the mob that spawns the actual PH
-
-    -- Pick the Ix'Aern (DRG) PH if the server doesn't have one, set it.
-    if (GetMobAction(realAwAern_PH) == 0 and GetMobAction(IxAernDRG) == 0 and GetServerVariable("[SEA]IxAernDRG_PH") == 0) then  -- This should be cleared when the mob is killed.
-        local AwAernGroups = {16920777,16920781,16920785,16920789}; -- First Aw'Aerns in each group.
-        IxAernDRG_PH = AwAernGroups[math.random(1, #AwAernGroups)] + math.random(0, 2); -- The 4th mobid in each group is a pet. F that son
-        SetServerVariable("[SEA]IxAernDRG_PH", IxAernDRG_PH);
-    end
-
-
-    -- Reset popped var..
-    SetServerVariable("[PH]Ix_aern_drg",0);
+    -- Pick a new PH for Ix'Aern (DRG)
+    SetServerVariable("[SEA]IxAernDRG_PH", AwAernDRGGroups[math.random(1, #AwAernDRGGroups)] + math.random(0, 2));
 end

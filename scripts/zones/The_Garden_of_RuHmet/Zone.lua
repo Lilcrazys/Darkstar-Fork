@@ -56,7 +56,6 @@ function onInitialize(zone)
 	zone:registerRegion(32,  97,-4,372,  102,4,379);--mithra niv 2 176 vers niv 3
 	zone:registerRegion(33,  97,-4,-427, 102,4,-421);--mithra niv 3 182 vers niv 2	
 	
---[[
 	-- Give the Fortitude ??? a random spawn
 	local qm1 = GetNPCByID(Jailer_of_Fortitude_QM);
 	local qm1position = math.random(1,5);
@@ -66,7 +65,9 @@ function onInitialize(zone)
 	local qm3 = GetNPCByID(Jailer_of_Faith_QM);
 	local qm3position = math.random(1,5);
 	qm3:setPos(Jailer_of_Faith_QM_POS[qm3position][1], Jailer_of_Faith_QM_POS[qm3position][2], Jailer_of_Faith_QM_POS[qm3position][3]);
-]]
+
+    -- Give Ix'DRG a random placeholder by picking one of the four groups at random, then adding a random number of 0-2 for the specific mob.
+    SetServerVariable("[SEA]IxAernDRG_PH", AwAernDRGGroups[math.random(1, #AwAernDRGGroups)] + math.random(0, 2));
 end;
 
 -----------------------------------		
@@ -74,7 +75,6 @@ end;
 -----------------------------------		  
 
 function onGameHour(npc, mob, player)
-	--[[
 	
 	local VanadielHour = VanadielHour();
 	local qm2 = GetNPCByID(16921028); -- Jailer of Faith
@@ -103,6 +103,7 @@ function onGameHour(npc, mob, player)
 		qm3:setPos(Jailer_of_Faith_QM_POS[qm3position][1], Jailer_of_Faith_QM_POS[qm3position][2], Jailer_of_Faith_QM_POS[qm3position][3]);
 	end
 	
+	--[[
 	-- Ix'DRK spawn randomiser
 	if (VanadielHour % 6 == 0) then -- Change ??? position every 6 hours Vana'diel time (~15 mins)
 		local qm2p = math.random(1,4); -- random for next @pos. -- start in spawn pos 1.
@@ -125,8 +126,7 @@ function onGameHour(npc, mob, player)
 					SetServerVariable("[POSI]Ix_aern_drk",4);
 					--printf("Qm2 is at pos 4");               
 				end
-	end
-	]]--
+	end	]]--
 end;
 
 -----------------------------------		
