@@ -1,19 +1,19 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Taweret
+-- Area: EDIT ME
+-- VWNM: Taweret
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -27,10 +27,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
-
-    -- addMod
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,250);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

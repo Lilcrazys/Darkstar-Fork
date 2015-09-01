@@ -1,21 +1,26 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:  Sallow_Seymour
+-- Area: East Ronfaure [S]
+-- VWNM: Cottus
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,150);
+    mob:addMod(MOD_RATT,300);
+    mob:addMod(MOD_ACC,100);
+    mob:addMod(MOD_RACC,300);
 end;
 
 -----------------------------------
@@ -30,13 +35,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,115);
     mob:setMod(MOD_DEF,1000);
 
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,150);
-    mob:addMod(MOD_RATT,300);
-    mob:addMod(MOD_ACC,100);
-    mob:addMod(MOD_RACC,300);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -65,7 +64,7 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE)) then -- Cottus Kill
         if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM"), 1) == false) then
-	        killer:setMaskBit(killer:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",1,true);
+            killer:setMaskBit(killer:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",1,true);
         end
         if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM"),2) == true) then
            killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);

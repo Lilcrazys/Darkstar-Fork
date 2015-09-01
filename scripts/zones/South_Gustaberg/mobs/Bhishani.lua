@@ -1,21 +1,22 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Bhishani
+-- Area: EDIT ME
+-- VWNM: Bhishani
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- addMod
+    mob:addMod(MOD_ATT,200);
 end;
 
 -----------------------------------
@@ -31,9 +32,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,80);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
-
-    -- addMod
-    mob:addMod(MOD_ATT,200);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

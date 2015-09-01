@@ -1,20 +1,26 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Botulus Rex
+-- Area: EDIT ME
+-- VWNM: Botulus Rex
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,20);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_DMGMAGIC,32);
+
+    -- Other
+    mob:SetMobSkillAttack(true);
 end;
 
 -----------------------------------
@@ -30,12 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,80);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,20);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_DMGMAGIC,32);
-    mob:SetMobSkillAttack(true);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -88,7 +89,7 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Botulus Rex Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 4) == false) then
-	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",4,true);
+           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",4,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);

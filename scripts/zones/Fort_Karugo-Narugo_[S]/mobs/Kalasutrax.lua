@@ -1,18 +1,22 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:
+-- Area: EDIT ME
+-- VWNM: ME TO
 -----------------------------------
-require("scripts/globals/quests");
+
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,40);
+    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -30,10 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_TRIPLE_ATTACK,25);
     mob:setMod(MOD_ACC,2200);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,40);
-    mob:addMod(MOD_ATT,150);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -66,7 +67,7 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Kalasutrax Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 2) == false) then
-	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",2,true);
+           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",2,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);

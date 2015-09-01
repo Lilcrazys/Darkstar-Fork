@@ -1,20 +1,23 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Goji
+-- Area: EDIT ME
+-- VWNM: Goji
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,20);
+    mob:addMod(MOD_DEF,80);
+    mob:addMod(MOD_ATT,250);
 end;
 
 -----------------------------------
@@ -30,11 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_DARK_AFFINITY,300);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,20);
-    mob:addMod(MOD_DEF,80);
-    mob:addMod(MOD_ATT,250);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

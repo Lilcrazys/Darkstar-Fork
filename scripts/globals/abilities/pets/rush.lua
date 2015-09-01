@@ -1,5 +1,5 @@
 ---------------------------------------------------
--- Double Slap M=6, 2 (still guessing here)
+-- Rush M=5, 2
 ---------------------------------------------------
 
 require("scripts/globals/settings");

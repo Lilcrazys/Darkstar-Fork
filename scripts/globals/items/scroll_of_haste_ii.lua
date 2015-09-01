@@ -1,7 +1,7 @@
 -----------------------------------------
---  ID: 4692
---  Scroll of Haste II
---  Teaches Haste II RDM 96
+-- ID: 4692
+-- Scroll of Haste II
+-- Teaches the white magic Haste II
 -----------------------------------------
 
 -----------------------------------------
@@ -9,7 +9,7 @@
 -----------------------------------------
 
 function onItemCheck(target)
-	return target:canLearnSpell(511);
+    return target:canLearnSpell(511);
 end;
 
 -----------------------------------------
@@ -17,5 +17,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addSpell(511);
+    target:addSpell(511);
 end;
