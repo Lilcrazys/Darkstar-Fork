@@ -1545,7 +1545,7 @@ INSERT INTO `mob_droplist` VALUES (2741,0,27710,90);
 INSERT INTO `mob_droplist` VALUES (2741,0,28151,80);
 INSERT INTO `mob_droplist` VALUES (2741,0,27868,70);
 -- yeti (9504)
-INSERT INTO `mob_droplist` VALUES (9504,0,28351,300); -- Izuna
+INSERT INTO `mob_droplist` VALUES (9504,0,20989,300); -- Izuna
 INSERT INTO `mob_droplist` VALUES (9504,0,27886,180); -- mes haub
 INSERT INTO `mob_droplist` VALUES (9504,0,28009,240); -- kotes
 INSERT INTO `mob_droplist` VALUES (9504,0,21181,260); -- venebellum

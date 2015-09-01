@@ -14,9 +14,6 @@ require("scripts/globals/quests");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- setMobMod
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,120);
@@ -29,11 +26,9 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_MACC,2200);
-    mob:setMod(MOD_MATT,70);
+    mob:setMod(MOD_MATT,65);
 
     -- Vars
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
@@ -70,7 +65,7 @@ end;
 
 function onSpellPrecast(mob, spell)
     local power = math.random(50,150);
-    mob:addStatusEffect(EFFECT_SHOCK_SPIKES,power,0,30);
+    mob:addStatusEffect(EFFECT_SHOCK_SPIKES,power,0,15);
     mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
 end;
 
