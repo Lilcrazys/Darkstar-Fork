@@ -1,11 +1,9 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:
+-- Area: EDIT ME
+-- VWNM: ME TO
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
 -----------------------------------

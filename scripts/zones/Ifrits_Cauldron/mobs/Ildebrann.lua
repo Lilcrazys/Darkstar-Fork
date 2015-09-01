@@ -1,24 +1,27 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:
+-- Area: EDIT ME
+-- VWNM: ME TO
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-    mob:addMod(MOD_DMGMAGIC, -128);
-    mob:addMod(MOD_DMGRANGE, -50);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
+
+    -- addMod
+    mob:addMod(MOD_DMGMAGIC, -128);
+    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -42,12 +45,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HUMANOID_KILLER, 5);
     mob:setMod(MOD_FIRE_ABSORB, 100);
     mob:setMod(MOD_TERRORRES, 1000);
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,50);
-    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -69,7 +66,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-local popTime = mob:getLocalVar("lastPetPop");
+    local popTime = mob:getLocalVar("lastPetPop");
 
     -- Pop an add after 4 minutes..
     if (os.time() - popTime > 240) then

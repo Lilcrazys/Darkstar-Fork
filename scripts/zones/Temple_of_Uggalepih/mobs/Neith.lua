@@ -1,20 +1,23 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:
+-- Area: EDIT ME
+-- VWNM: ME TO
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,150);
+    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -28,13 +31,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
     mob:setMod(MOD_TERRORRES, 1000);
-
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,150);
-    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------

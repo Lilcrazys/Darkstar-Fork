@@ -1,13 +1,10 @@
 -----------------------------------
--- Area: VoiddWatch NM
+-- Area: EDIT ME
 -- VWNM: Laidly Laurence
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -32,7 +29,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
     mob:setMod(MOD_ACC,1950);
 
-    -- Vars
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------

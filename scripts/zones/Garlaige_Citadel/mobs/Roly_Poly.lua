@@ -1,5 +1,5 @@
 -----------------------------------
--- Area: VoiddWatch NM
+-- Area: EDIT ME
 -- VWNM: Roly Poly
 -----------------------------------
 
@@ -7,7 +7,6 @@ require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -35,7 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,125);
 
-    -- Vars
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -94,12 +93,11 @@ function onAdditionalEffect(mob,target,damage)
         dmg = addBonusesAbility(mob, ELE_LIGHT, target, dmg, params);
         dmg = dmg * applyResistanceAddEffect(mob,target,ELE_LIGHT,0);
         dmg = adjustForTarget(target,dmg,ELE_LIGHT);
+        dmg = finalMagicNonSpellAdjustments(mob,target,ELE_LIGHT,dmg);
 
         if (dmg < 0) then
             dmg = 0
         end
-
-        dmg = finalMagicNonSpellAdjustments(mob,target,ELE_LIGHT,dmg);
 
         return SUBEFFECT_LIGHT_DAMAGE,163,dmg;
     end

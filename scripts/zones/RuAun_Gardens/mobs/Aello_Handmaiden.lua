@@ -1,11 +1,9 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC:
+-- Area: EDIT ME
+-- VWNM: ME TO
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
 
 -----------------------------------
@@ -13,7 +11,11 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -29,9 +31,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
-
-    -- addMod
-    mob:addMod(MOD_ATT,150);
+    -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 

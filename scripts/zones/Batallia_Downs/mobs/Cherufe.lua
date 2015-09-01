@@ -1,13 +1,10 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Cherufe
+-- Area: Batallia Downs
+-- VWNM: Cherufe
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action

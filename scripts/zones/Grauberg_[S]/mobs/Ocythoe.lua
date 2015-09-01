@@ -1,20 +1,22 @@
 -----------------------------------
--- Area: VoiddWatch NM
--- NPC: Ocythoe
+-- Area: EDIT ME
+-- VWNM: Ocythoe
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,40);
+    mob:addMod(MOD_ATT,100);
 end;
 
 -----------------------------------
@@ -30,10 +32,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,85);
 
-
-    -- addMod
-    mob:addMod(MOD_MDEF,40);
-    mob:addMod(MOD_ATT,100);
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -51,10 +50,8 @@ function onMobFight(mob, target)
     if (os.time(t) > depopTime) then
         DespawnMob(mob:getID());
     end
-    local Ocythoe = 0;
-    if (mob:getLocalVar("Ocythoe") ~= nil) then
-        Ocythoe_Used = mob:getLocalVar("Ocythoe");
-    end
+
+    local Ocythoe = mob:getLocalVar("Ocythoe");
 
     if (mob:getHPP() <= 15) then
         if (Ocythoe_Used == 2) then
@@ -94,7 +91,7 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ocythoe Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 1) == false) then
-	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
+           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);

@@ -1,19 +1,17 @@
 -----------------------------------
--- Area: VoiddWatch NM
---  NM:  Murk-Veined_Baneberry
+-- Area: EDIT ME
+-- VWNM: Murk-Veined_Baneberry
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
 
     -- addMod
@@ -35,7 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,100);
 
-    -- Vars
+    -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
@@ -97,7 +95,7 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_III)) then -- Baneberry Kill
         if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 0) == false) then
-	       killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",0,true);
+           killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",0,true);
         end
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
