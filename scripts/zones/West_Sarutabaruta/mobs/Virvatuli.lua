@@ -8,6 +8,7 @@ require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action

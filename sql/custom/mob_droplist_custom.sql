@@ -1544,6 +1544,13 @@ INSERT INTO `mob_droplist` VALUES (2741,0,27862,70);
 INSERT INTO `mob_droplist` VALUES (2741,0,27710,90);
 INSERT INTO `mob_droplist` VALUES (2741,0,28151,80);
 INSERT INTO `mob_droplist` VALUES (2741,0,27868,70);
+-- yeti (9504)
+INSERT INTO `mob_droplist` VALUES (9504,0,28351,300); -- Izuna
+INSERT INTO `mob_droplist` VALUES (9504,0,27886,180); -- mes haub
+INSERT INTO `mob_droplist` VALUES (9504,0,28009,240); -- kotes
+INSERT INTO `mob_droplist` VALUES (9504,0,21181,260); -- venebellum
+INSERT INTO `mob_droplist` VALUES (9504,0,26874,400); -- supay weskit
+INSERT INTO `mob_droplist` VALUES (9504,0,28172,200); -- mes slacks
 
 -- Voidwatch Chapter 1
 INSERT INTO `mob_droplist` VALUES (9600,0,28351,90);
@@ -1795,3 +1802,74 @@ INSERT INTO `mob_droplist` VALUES (9645,0,26874,200); -- Supay_Weskit
 INSERT INTO `mob_droplist` VALUES (9645,0,28135,120); -- Assiduity_Pants
 INSERT INTO `mob_droplist` VALUES (9645,0,21112,220); -- Gabaxorea
 INSERT INTO `mob_droplist` VALUES (9645,0,4049,1000); -- Rusted_Coin
+
+-- VW Chapter 3 9646-9657
+
+INSERT INTO `mob_droplist` VALUES (9646,0,21403,300); -- Damani Horn
+INSERT INTO `mob_droplist` VALUES (9646,0,28442,300); -- Olseni Belt
+INSERT INTO `mob_droplist` VALUES (9646,0,28636,300); -- Bookworms Cape
+INSERT INTO `mob_droplist` VALUES (9646,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9647,0,20949,300); --  Kumalo
+INSERT INTO `mob_droplist` VALUES (9647,0,27634,300); -- Thornfin shield +1
+INSERT INTO `mob_droplist` VALUES (9647,0,28627,300); -- Lutian Cape
+INSERT INTO `mob_droplist` VALUES (9647,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9648,0,20906,300); --  Vunetshelo
+INSERT INTO `mob_droplist` VALUES (9648,0,28443,300); -- Yamabuki-no-obi
+INSERT INTO `mob_droplist` VALUES (9648,0,28633,300); -- Gunslingers Cape
+INSERT INTO `mob_droplist` VALUES (9648,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9649,0,20620,300); --  Sabeus
+INSERT INTO `mob_droplist` VALUES (9649,0,28604,300); -- Mubvum Mantle
+INSERT INTO `mob_droplist` VALUES (9649,0,28630,300); -- Updraft Mantle
+INSERT INTO `mob_droplist` VALUES (9649,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9650,0,28351,300); --  Cloud Hairpin +1
+INSERT INTO `mob_droplist` VALUES (9650,0,28443,300); -- Yamabuki-no-obo
+INSERT INTO `mob_droplist` VALUES (9650,0,28635,300); -- Toetaper Mantle
+INSERT INTO `mob_droplist` VALUES (9650,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9651,0,20995,300); --  Isuka
+INSERT INTO `mob_droplist` VALUES (9651,0,28603,300); -- Kumbria Cape
+INSERT INTO `mob_droplist` VALUES (9651,0,28628,300); -- Takaha Mantle
+INSERT INTO `mob_droplist` VALUES (9651,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9652,0,27051,300); --  Kachmusha Kote +1
+INSERT INTO `mob_droplist` VALUES (9652,0,27044,300); -- Crushers Gauntlets
+INSERT INTO `mob_droplist` VALUES (9652,0,20945,300); -- Nativus Halberd
+INSERT INTO `mob_droplist` VALUES (9652,0,28625,1000); -- Pastoralist Mantle
+INSERT INTO `mob_droplist` VALUES (9652,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9653,0,27044,300); --  Crushers Gauntlets
+INSERT INTO `mob_droplist` VALUES (9653,0,26715,300); -- Adorned Helm
+INSERT INTO `mob_droplist` VALUES (9653,0,20722,300); -- Usonmunku
+INSERT INTO `mob_droplist` VALUES (9653,0,28629,1000); -- Yokaze Mantle
+INSERT INTO `mob_droplist` VALUES (9653,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9654,0,21220,300); --  Paloma +1
+INSERT INTO `mob_droplist` VALUES (9654,0,27892,300); -- Shabti Cuirass
+INSERT INTO `mob_droplist` VALUES (9654,0,21177,300); -- Twebuliij
+INSERT INTO `mob_droplist` VALUES (9654,0,28626,1000); -- Rhapsodes Cape
+INSERT INTO `mob_droplist` VALUES (9654,0,4049,1000); -- Rusted_Coin
+
+INSERT INTO `mob_droplist` VALUES (9655,0,20805,300); --  Perun +_1
+INSERT INTO `mob_droplist` VALUES (9655,0,26869,300); -- Reosette Jaseran +1
+INSERT INTO `mob_droplist` VALUES (9655,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9655,0,4066,1000); -- Rems 3
+INSERT INTO `mob_droplist` VALUES (9655,0,4066,1000); -- Rems 3
+INSERT INTO `mob_droplist` VALUES (9655,0,4066,1000); -- Rems 3
+
+INSERT INTO `mob_droplist` VALUES (9656,0,20612,300); --  Sangarius +1
+INSERT INTO `mob_droplist` VALUES (9656,0,26873,300); -- Hime Domaru +1
+INSERT INTO `mob_droplist` VALUES (9656,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9656,0,4066,1000); -- Rems 3
+INSERT INTO `mob_droplist` VALUES (9656,0,4066,1000); -- Rems 3
+INSERT INTO `mob_droplist` VALUES (9656,0,4066,1000); -- Rems 3
+
+INSERT INTO `mob_droplist` VALUES (9657,0,20988,300); --  Tancho +1
+INSERT INTO `mob_droplist` VALUES (9657,0,26888,300); -- Shomonjijoe +1
+INSERT INTO `mob_droplist` VALUES (9657,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9657,0,4066,1000); -- Rems 3
+INSERT INTO `mob_droplist` VALUES (9657,0,4066,1000); -- Rems 3
+INSERT INTO `mob_droplist` VALUES (9657,0,4066,1000); -- Rems 3

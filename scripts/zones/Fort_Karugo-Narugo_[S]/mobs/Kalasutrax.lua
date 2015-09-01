@@ -2,7 +2,7 @@
 -- Area: VoiddWatch NM
 -- NPC:
 -----------------------------------
-
+require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
