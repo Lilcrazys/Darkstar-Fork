@@ -95,5 +95,10 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_II"), 2) == false) then
            killer:setMaskBit(killer:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",2,true);
         end
+        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
+           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
+           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
+           killer:setVar("WHITE_STRATUM_II", 0);
+        end
     end;
 end;
