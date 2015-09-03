@@ -1,9 +1,10 @@
 -----------------------------------
--- Area: EDIT ME
+-- Area: Buburimu Peninsula
 -- VWNM: Botulus Rex
 -----------------------------------
 
 require("scripts/globals/status");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------
@@ -52,10 +53,12 @@ end;
 
 function onMobFight(mob, target)
     local Botulus_Used = mob:getLocalVar("Botulus");
+    local notBusy = mob:actionQueueEmpty();
 
-    if (os.time(t) > mob:getLocalVar("depopTime")) then
-       DespawnMob(mob:getID());
+    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
+        DespawnMob(mob:getID());
     end
+
     if (mob:getHPP() <= 80) then
         if (Botulus_Used == 0) then
             mob:useMobAbility(436); -- RDM
@@ -94,5 +97,9 @@ function onMobDeath(mob, killer)
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
+    end
+
+    if (player:getQuestStatus(JEUNO, VW_OP_118_BUBURIMU_SQUALL) == QUEST_ACCEPTED) then
+        player:completeQuest(JEUNO, VW_OP_118_BUBURIMU_SQUALL);
     end
 end;

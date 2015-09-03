@@ -1,12 +1,11 @@
 -----------------------------------
--- Area: ?
+-- Area: Valkurm Dunes
 -- VWNM: Ig-Alima
 -----------------------------------
+
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/keyitems");
 require("scripts/globals/quests");
+require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -49,7 +48,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > depopTime) then
+    local notBusy = mob:actionQueueEmpty();
+
+    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
         DespawnMob(mob:getID());
     end
 end;
@@ -64,10 +65,14 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ig-Alima Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 3) == false) then
-	       killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",3,true);
+           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",3,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
+    end
+
+    if (player:getQuestStatus(JEUNO, VW_OP_115_VALKURM_DUSTER) == QUEST_ACCEPTED) then
+        player:completeQuest(JEUNO, VW_OP_115_VALKURM_DUSTER);
     end
 end;
