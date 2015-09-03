@@ -64,6 +64,12 @@ function onTrigger(player,npc)
             else
                 player:startEvent(10199);
             end
+        elseif (player:getQuestStatus(CRYSTAL_WAR, A_NEW_MENACE) == QUEST_ACCEPTED) then
+            if (player:getRank() > 5) then
+                player:startEvent(10200,0,0,0,0,0,0,0,1);
+            else
+                player:startEvent(10200);
+            end
         end
     -- end VW stuffs
 --------------------------------------
@@ -146,6 +152,13 @@ function onEventFinish(player,csid,option)
         player:setVar("WHITE_STRATUM_III", 0);
         player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_IV);
         player:messageSpecial(KEYITEM_OBTAINED, TRICOLOR_VOIDWATCHERS_EMBLEM);
+    elseif (csid == 10200) then
+        player:completeQuest(CRYSTAL_WAR, A_NEW_MENACE);
+        player:addQuest(JEUNO, VW_OP_115_VALKURM_DUSTER);
+        player:addQuest(JEUNO, VW_OP_118_BUBURIMU_SQUALL);
+        player:addQuest(CRYSTAL_WAR, NO_REST_FOR_THE_WEARY);
+        player:addGil(50000 * GIL_RATE);
+        player:messageSpecial(GIL_OBTAINED, 50000 * GIL_RATE);
     -- end VW stuffs
 --------------------------------------
 	end
