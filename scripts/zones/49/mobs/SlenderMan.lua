@@ -132,7 +132,7 @@ function onAdditionalEffect(mob,target,damage)
         INT_diff = INT_diff * 0.25;
         dmg = dmg + INT_diff;
         dmg = utils.clamp(dmg, 5, 66);
-        return SUBEFFECT_FIRE_DAMAGE,163,dmg;
+        return SUBEFFECT_FIRE_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
     end
 end;
 

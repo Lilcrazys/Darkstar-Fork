@@ -57,7 +57,7 @@ function onAdditionalEffect(mob,target,damage)
     else
         target:addStatusEffect(EFFECT_AMNESIA,1,0,10);
     end
-    return SUBEFFECT_NONE,163,EFFECT_AMNESIA;
+    return SUBEFFECT_NONE, MSGBASIC_ADD_EFFECT_DMG,EFFECT_AMNESIA;
 end;
 -----------------------------------
 -- onMobDeath

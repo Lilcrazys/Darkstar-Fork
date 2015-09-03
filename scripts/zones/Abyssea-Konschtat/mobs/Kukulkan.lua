@@ -59,7 +59,7 @@ function onAdditionalEffect(mob,target,damage)
         local duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
         utils.clamp(duration,1,30);
         target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
-        return SUBEFFECT_POISON, 160, EFFECT_POISON;
+        return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
     end
 end;
 
