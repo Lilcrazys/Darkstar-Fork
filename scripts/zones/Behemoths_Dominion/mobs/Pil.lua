@@ -6,6 +6,7 @@
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------
@@ -116,10 +117,12 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_III"), 2) == false) then
            killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",2,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
-           killer:setVar("WHITE_STRATUM_III", 0);
+        if (player:getQuestStatus(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY) == QUEST_COMPLETED) then
+            if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
+               killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+               killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
+               killer:setVar("WHITE_STRATUM_III", 0);
+            end
         end
     end
 end;
