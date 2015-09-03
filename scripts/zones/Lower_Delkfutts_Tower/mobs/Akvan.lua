@@ -88,5 +88,6 @@ function onMobDeath(mob, killer)
                killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
                killer:setVar("WHITE_STRATUM_III", 0);
             end
+        end
     end
 end;
