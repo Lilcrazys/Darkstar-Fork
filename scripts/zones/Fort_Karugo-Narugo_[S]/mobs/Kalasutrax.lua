@@ -67,10 +67,10 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Kalasutrax Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 2) == false) then
-           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",2,true);
+            killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",2,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
 end;

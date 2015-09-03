@@ -65,10 +65,10 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ig-Alima Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 3) == false) then
-           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",3,true);
+            killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",3,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
 

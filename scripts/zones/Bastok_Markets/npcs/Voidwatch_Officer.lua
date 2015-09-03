@@ -9,7 +9,6 @@ require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 require("scripts/zones/Bastok_Markets/TextIDs");
 require("scripts/globals/spoofchat");
-require("scripts/globals/utils");
 
 -----------------------------------
 -- onTrade Action

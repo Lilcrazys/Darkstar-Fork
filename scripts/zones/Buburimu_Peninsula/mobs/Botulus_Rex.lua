@@ -92,10 +92,10 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Botulus Rex Kill
         if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 4) == false) then
-           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",4,true);
+            killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",4,true);
         end
         if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
 
