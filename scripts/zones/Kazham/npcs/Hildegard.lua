@@ -25,7 +25,7 @@ end;
 function onTrigger(player,npc)
     local VWBC = player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING);
     local elshimoList = player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST);
-    local bitMaskFull = player:isMaskFull(killer:getVar("VW_OP_054"),3);
+    local bitMaskFull = player:isMaskFull(player:getVar("VW_OP_054"),3);
 
     if (VWBC == QUEST_AVAILABLE) then
         player:startEvent(312); -- Go away.
@@ -67,5 +67,6 @@ function onEventFinish(player,csid,option)
         end
     elseif (csid == 315) then
         player:completeQuest(OUTLANDS, VW_OP_054_ELSHIMO_LIST);
+        player:setVar("VW_OP_054", 0)
     end
 end;

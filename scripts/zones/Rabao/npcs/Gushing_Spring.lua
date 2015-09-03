@@ -25,7 +25,7 @@ end;
 function onTrigger(player,npc)
     local VWBC = player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING);
     local zepwellDetour = player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL);
-    local bitMaskFull = player:isMaskFull(killer:getVar("VW_OP_101"),3);
+    local bitMaskFull = player:isMaskFull(player:getVar("VW_OP_101"),3);
 
     if (VWBC == QUEST_AVAILABLE) then
         player:startEvent(12); -- Go away.
@@ -67,5 +67,6 @@ function onEventFinish(player,csid,option)
         end
     elseif (csid == 15) then
         player:completeQuest(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL);
+        player:setVar("VW_OP_101", 0)
     end
 end;
