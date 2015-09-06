@@ -46,6 +46,20 @@ function onTrigger(player,npc)
         player:startEvent(0x00ad);
     elseif (ZilartMission == AWAKENING) then
         player:startEvent(0x00b1);
+--------------------------------------
+    -- Begin VW stuff
+    elseif (player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING) == QUEST_COMPLETED
+    and player:getQuestStatus(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT) == QUEST_AVAILABLE) then
+        if (player:getVar("NORG_VW_STATUS") == 0) then
+            player:startEvent(256);
+        else
+            player:startEvent(257);
+        end
+    else
+        -- 262 Return from sky, part 2, get sent to Aht Urgan.
+        -- 263 repeat Gilgamesh dialog
+        -- End VW stuff
+--------------------------------------
 	end
 	
 end;
@@ -77,6 +91,15 @@ function onEventFinish(player,csid,option)
 	if (csid == 0x0063) then
 		player:tradeComplete();
 		player:setVar("MissionStatus",3);
+--------------------------------------
+    -- Begin VW stuff
+    elseif (csid == 256);
+        player:setVar("NORG_VW_STATUS", 1);
+    else
+        -- 262 Return from sky, part 2, get sent to Aht Urgan.
+        -- 263 repeat Gilgamesh dialog
+        -- End VW stuff
+--------------------------------------
 	end
 	
 end;

@@ -78,7 +78,10 @@ function onTrigger(player,npc)
                 player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE);
                 if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                     player:addCurrency("voidstones", 1);
-                    player:setVar("VOIDSTONE_TIMER", os.time()+72000); -- 20 hours till next voidstone. Slightly less than 1 day, so that player can do VW once a day at aprox same time of day.
+                    player:addKeyItem(VOIDSTONE1); -- so morons stop showing us their KI screenshots..
+                    player:setVar("VOIDSTONE_TIMER", os.time()+72000);
+                    -- 20 hours till next voidstone. Slightly less than 1 day,
+                    -- so that player can do VW once a day at aprox same time of day.
                     player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
                 end
                 -- Now that we have a KI, we no longer need this var to tell if you have gotten the dialogs preceding that part.
@@ -121,7 +124,10 @@ function onTrigger(player,npc)
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                 player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
                 player:addCurrency("voidstones", 1);
-                player:setVar("VOIDSTONE_TIMER", os.time()+72000); -- 20 hours till next voidstone. Slightly less than 1 day, so that player can do VW once a day at aprox same time of day.
+                player:addKeyItem(VOIDSTONE1); -- so morons stop showing us their KI screenshots..
+                player:setVar("VOIDSTONE_TIMER", os.time()+72000);
+                -- 20 hours till next voidstone. Slightly less than 1 day,
+                -- so that player can do VW once a day at aprox same time of day.
                 player:messageSpecial(KEYITEM_OBTAINED,VOIDSTONE1);
             else
                 player:SpoofChatPlayer("Voidstones are issued once per Earth day.");
