@@ -86,12 +86,12 @@ SUBEFFECT_AMNESIA           = 11; --
 SUBEFFECT_DISPEL            = 13; -- Correct ID possibly 20 ?
 
 -- SPIKES
-SUBEFFECT_BLAZE_SPIKES      = 1;    -- 01-1000       6
-SUBEFFECT_ICE_SPIKES        = 2;    -- 01-0100      10
-SUBEFFECT_DREAD_SPIKES      = 3;    -- 01-1100      14
-SUBEFFECT_CURSE_SPIKES      = 4;    -- 01-0010      18
-SUBEFFECT_SHOCK_SPIKES      = 5;    -- 01-1010      22
-SUBEFFECT_REPRISAL          = 6;    -- 01-0110      26
+SUBEFFECT_BLAZE_SPIKES      = 1;   -- 01-1000       6
+SUBEFFECT_ICE_SPIKES        = 2;   -- 01-0100      10
+SUBEFFECT_DREAD_SPIKES      = 3;   -- 01-1100      14
+SUBEFFECT_CURSE_SPIKES      = 4;   -- 01-0010      18
+SUBEFFECT_SHOCK_SPIKES      = 5;   -- 01-1010      22
+SUBEFFECT_REPRISAL          = 6;   -- 01-0110      26
 SUBEFFECT_WIND_SPIKES       = 7;
 SUBEFFECT_STONE_SPIKES      = 8;
 SUBEFFECT_DELUGE_SPIKES     = 9;
@@ -734,6 +734,8 @@ EFFECT_CHAINBOUND               = 798
 EFFECT_SKILLCHAIN               = 799
 EFFECT_DYNAMIS                  = 800
 EFFECT_MEDITATE                 = 801 -- Dummy effect for SAM Meditate JA
+-- EFFECT_PLACEHOLDER              = 802 -- Description
+-- 802-1022
 EFFECT_ATMA_2                   = 802 -- Dummy for 2nd ATMA effect
 EFFECT_ATMA_3                   = 803 -- Dummy for 3rd ATMA effect
 -- 804-1013
@@ -871,7 +873,7 @@ MOD_IMPACTRES         = 51
 MOD_HTHRES            = 52
 MOD_FIRERES           = 54
 MOD_ICERES            = 55
-MOD_WINDRES           = 59
+MOD_WINDRES           = 56
 MOD_EARTHRES          = 57
 MOD_THUNDERRES        = 58
 MOD_WATERRES          = 59
@@ -1931,6 +1933,7 @@ MOBMOD_ADD_EFFECT     = 45
 MOBMOD_AUTO_SPIKES    = 46
 MOBMOD_SPAWN_LEASH    = 47
 MOBMOD_SHARE_TARGET   = 48
+MOBMOD_SCRIPTED_2HOUR = 49
 
 
 ------------------------------------
