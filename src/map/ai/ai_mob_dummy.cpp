@@ -1202,6 +1202,12 @@ void CAIMobDummy::ActionAbilityFinish()
         findFlags |= FINDFLAGS_HIT_ALL;
     }
 
+    // Mob buff abilities also hit monster's pets
+    if(m_PMobSkill->getValidTargets() == TARGET_SELF)
+    {
+        findFlags |= FINDFLAGS_PET;
+    }
+
     if (m_PTargetFind->isWithinRange(&m_PBattleSubTarget->loc.p, distance))
     {
         if (m_PMobSkill->isAoE())
@@ -1211,11 +1217,11 @@ void CAIMobDummy::ActionAbilityFinish()
         else if (m_PMobSkill->isConal())
         {
             float angle = 45.0f;
-            m_PTargetFind->findWithinCone(m_PBattleSubTarget, distance, angle);
+            m_PTargetFind->findWithinCone(m_PBattleSubTarget, distance, angle, findFlags);
         }
         else
         {
-            m_PTargetFind->findSingleTarget(m_PBattleSubTarget);
+            m_PTargetFind->findSingleTarget(m_PBattleSubTarget, findFlags);
         }
     }
 
