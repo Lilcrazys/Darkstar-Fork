@@ -10821,7 +10821,7 @@ INSERT INTO `item_armor` VALUES (28389,'agitators_collar',99,0,6593,0,0,0,512,0)
 INSERT INTO `item_armor` VALUES (28390,'fiend_torque',50,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28401,'eddy_necklace',99,0,7438776,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28402,'asperity_necklace',99,0,4194303,0,0,0,512,0);
-INSERT INTO `item_armor` VALUES (28403,'inquisitor_bead_necklace',99,0,5139044,0,0,0,512,0);
+INSERT INTO `item_armor` VALUES (28403,'inquisitor_bead_necklace',99,0,2569522,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28404,'ej_necklace',99,0,5188164,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28405,'ej_necklace_+1',99,0,5188164,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28406,'nuna_gorget',99,0,1758748,0,0,0,512,0);
