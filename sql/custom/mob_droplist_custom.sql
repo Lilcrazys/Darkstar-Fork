@@ -34,8 +34,6 @@ INSERT INTO `mob_droplist` VALUES (118,0,2518,500);
 INSERT INTO `mob_droplist` VALUES (118,0,3232,160);
 INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- COMMENT ME
 
-
-
 INSERT INTO `mob_droplist` VALUES (198,0,3171,600); -- Tantra seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3171,630); -- Tantra seal leg from Athamas
 INSERT INTO `mob_droplist` VALUES (198,0,3175,320); -- Raider's seal leg from Athamas
@@ -60,9 +58,6 @@ INSERT INTO `mob_droplist` VALUES (529,0,2965,400); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (529,0,2965,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (529,0,19406,340); -- COMMENT ME
 
-
-
-
 INSERT INTO `mob_droplist` VALUES (727,0,19402,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (788,0,3288,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (788,0,3288,1000); -- COMMENT ME
@@ -84,7 +79,6 @@ INSERT INTO `mob_droplist` VALUES (1708,0,3204,370); -- Callers seal feet into H
 INSERT INTO `mob_droplist` VALUES (1708,0,3204,170); -- Callers seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3205,380); -- Mavi seal feet into Hrosshvalur
 INSERT INTO `mob_droplist` VALUES (1708,0,3205,180); -- Mavi seal feet into Hrosshvalur
-
 
 INSERT INTO `mob_droplist` VALUES (1774,0,3194,320); -- Estoqueur`s Seal Feet from Iktomi
 INSERT INTO `mob_droplist` VALUES (1774,0,3194,350); -- Estoqueur`s Seal Feet from Iktomi
@@ -122,13 +116,14 @@ INSERT INTO `mob_droplist` VALUES (3632,0,12096,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3632,0,19403,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3648,0,2963,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (3648,0,19399,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4372,0,271,500); -- alex statue
+
 INSERT INTO `mob_droplist` VALUES (4071,0,12107,340); -- COMMENT ME
+
+INSERT INTO `mob_droplist` VALUES (4372,0,271,500); -- alex statue
+
 INSERT INTO `mob_droplist` VALUES (4516,0,19302,330); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,12103,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,19401,340); -- COMMENT ME
-
-
 INSERT INTO `mob_droplist` VALUES (4519,0,13791,420); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,11733,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4519,0,11637,700); -- COMMENT ME
@@ -231,7 +226,7 @@ INSERT INTO `mob_droplist` VALUES (4543,0,19255,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,19256,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (4543,0,11750,1000); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4544,0,21227,110); -- hanqaku-no-yumi
+INSERT INTO `mob_droplist` VALUES (4544,0,21227,110); -- Hanqaku-no-yumi
 INSERT INTO `mob_droplist` VALUES (4544,0,20858,120); -- Lightreaver
 INSERT INTO `mob_droplist` VALUES (4544,0,21364,380); -- Elders Grip
 INSERT INTO `mob_droplist` VALUES (4544,0,28665,050); -- Killedar_Shield_+1

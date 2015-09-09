@@ -47,34 +47,39 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
 
 	-- doMagiantTrialCheck(mob, killer, isKillShot, killType);
 
-	-----------------------------------
-	-- Legion XI custom section
-	-----------------------------------
+    -----------------------------------
+    -- Legion XI custom section
+    -----------------------------------
 
-	-- Custom trials
-	--[[if (killer:getVar("customtrial") ~= nil) then
-		-- doCustomTrial(mob, killer, isKillShot, killType);
-		doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill);
-	end]]
+    -- Custom trials
+    --[[if (killer:getVar("customtrial") ~= nil) then
+        -- doCustomTrial(mob, killer, isKillShot, killType);
+        doCustomTrial(mob, killer, isKillShot, isWeaponSkillKill);
+    end]]
 
-	-- Bonus points
-	if (mob:getSystem() == SYSTEM_BEASTMEN) then
-		-- Bonus Imperial Standing for ToAU beastmen
-		if (killer:hasStatusEffect(EFFECT_SANCTION) and killer:checkDistance(mob) < 100
-		and killer:getCurrentRegion() >= 28 and killer:getCurrentRegion() <= 32 ) then
-			if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
-				killer:addCurrency("imperial_standing", 1+mob:getMainLvl()*0.5);
-			else -- Not an exp mob, no soup and only 1 point for you!
-				killer:addCurrency("imperial_standing", 1);
-			end
-		-- Bonus Allied notes for WotG beastmen
-		elseif (killer:hasStatusEffect(EFFECT_SIGIL) and killer:checkDistance(mob) < 100
-		and killer:getCurrentRegion() >= 33 and killer:getCurrentRegion() <= 40 ) then
-			if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
-				killer:addCurrency("allied_notes", 1+mob:getMainLvl()*0.5);
-			else -- Not an exp mob, no soup and only 1 point for you!
-				killer:addCurrency("allied_notes", 1);
-			end
-		end
-	end
+    -- Bonus points
+    if (mob:getSystem() == SYSTEM_BEASTMEN) then
+        -- Bonus Imperial Standing for ToAU beastmen
+        if (killer:hasStatusEffect(EFFECT_SANCTION) and killer:checkDistance(mob) < 100
+        and killer:getCurrentRegion() >= 28 and killer:getCurrentRegion() <= 32 ) then
+            if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
+                killer:addCurrency("imperial_standing", 1+mob:getMainLvl()*0.5);
+            else -- Not an exp mob, no soup and only 1 point for you!
+                killer:addCurrency("imperial_standing", 1);
+            end
+        -- Bonus Allied notes for WotG beastmen
+        elseif (killer:hasStatusEffect(EFFECT_SIGIL) and killer:checkDistance(mob) < 100
+        and killer:getCurrentRegion() >= 33 and killer:getCurrentRegion() <= 40 ) then
+            if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
+                killer:addCurrency("allied_notes", 1+mob:getMainLvl()*0.5);
+            else -- Not an exp mob, no soup and only 1 point for you!
+                killer:addCurrency("allied_notes", 1);
+            end
+        end
+    end
+
+    -- Work around for effing limbus issues
+    if (getCurrentRegion() == 27) then -- 27 = REGION_LIMBUS
+        bonusLimbusDrop(killer);
+    end
 end;
