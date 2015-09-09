@@ -136,7 +136,6 @@ INSERT INTO `item_basic` VALUES (27563,0,'metamorph_ring_+1','metamorph_ring_+1'
 INSERT INTO `item_basic` VALUES (28441,0,'ponente_sash','ponente_sash',1,63552,0,1,0);
 
 INSERT INTO `item_basic` VALUES (5103,476,'scroll_of_crusade','crusade',1,34432,28,0,666);
-INSERT INTO `item_basic` VALUES (4692,511,'scroll_of_haste_ii','haste_ii',1,34432,28,0,666);
 INSERT INTO `item_basic` VALUES (28005,0,'alrunas_gloves_+1','alrunas_gloves_+1',1,63552,19,0,0);
 
 REPLACE INTO `item_basic` VALUES (4049,0,'rusted_coin','rusted_coin',12,29760,0,1,0);
