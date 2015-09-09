@@ -83,3 +83,37 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
         bonusLimbusDrop(killer);
     end
 end;
+
+function bonusLimbusDrop(killer);
+    local itemRate = 25;
+    local itemID = 0;
+    local itemList =
+    {
+        [1] = 1930, [2] = 1931, [3] = 1932,
+        [4] = 1933, [5] = 1934, [6] = 1935,
+        [7] = 1936, [8] = 1937, [9] = 1938,
+        [10] = 1939, [11] = 1940, [12] = 1941,
+        [13] = 1942, [14] = 1943, [15] = 1944,
+        [16] = 1945, [17] = 1946, [18] = 1947,
+        [19] = 1948, [20] = 1949, [21] = 1950,
+        [22] = 1951, [23] = 1954, [24] = 1955,
+        [25] = 1956, [26] = 1957, [27] = 1958,
+        [28] = 1959, [29] = 2656, [30] = 2657,
+        [31] = 2658, [32] = 2659, [33] = 2660,
+        [34] = 2661, [35] = 2714, [36] = 2715,
+        [37] = 2716, [38] = 2717 -- Big damn thing ain't it?
+    };
+
+    if (itemRate > math.random(0,99)) then
+        itemID = itemList[math.random(1,38)];
+    end
+
+    if (itemID > 0) then
+        if (killer:getFreeSlotsCount() > 0) then
+            killer:addItem(itemID);
+            killer:messageSpecial(ITEM_OBTAINED,itemID);
+        else
+            killer:messageSpecial(ITEM_CANNOT_BE_OBTAINED,itemID);
+        end
+    end
+end;
