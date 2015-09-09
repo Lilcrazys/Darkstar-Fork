@@ -69,8 +69,8 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    player:PrintToPlayer(string.format("CSID: %u",csid));
-    player:PrintToPlayer(string.format("RESULT: %u",option));
+    -- player:PrintToPlayer(string.format("CSID: %u",csid));
+    -- player:PrintToPlayer(string.format("RESULT: %u",option));
     if (csid == 250 and option == 1) then
         player:addKeyItem(ASHEN_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, ASHEN_STRATUM_ABYSSITE);
