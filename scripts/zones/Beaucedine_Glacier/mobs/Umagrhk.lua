@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
+    mob:setMobMod(MOBMOD_DRAW_IN, 1);
 end;
 
 -----------------------------------
@@ -74,7 +74,7 @@ end;
 -----------------------------------
 
 function onMobDrawIn(mob, target)
-    -- mob:useMobAbility(2670); -- Beastruction
+    mob:useMobAbility(2670); -- Beastruction
 end;
 
 -----------------------------------
