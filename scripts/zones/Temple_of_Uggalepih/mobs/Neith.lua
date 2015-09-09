@@ -4,6 +4,7 @@
 -----------------------------------
 
 require("scripts/globals/status");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------

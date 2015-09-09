@@ -4,6 +4,7 @@
 -----------------------------------
 
 require("scripts/globals/status");
+require("scripts/globals/quests");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/keyitems");
@@ -84,12 +85,15 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Cath Palug Kill
         if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM_II"), 0) == false) then
-           killer:setMaskBit(killer:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",0,true);
+            killer:setMaskBit(killer:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",0,true);
         end
-        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM_II"),3) == true) then
-           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
-           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
-           killer:setVar("ASHEN_STRATUM_II", 0);
+
+        if (player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING) == QUEST_COMPLETED) then
+            if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM_II"),3) == true) then
+                killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+                killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+                killer:setVar("ASHEN_STRATUM_II", 0);
+            end
         end
-    end;
+    end
 end;
