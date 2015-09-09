@@ -79,13 +79,20 @@ function onMobDeath(mob, killer)
     DespawnMob(mob:getID()+2);
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Holy Moly Kill
-        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 0) == false) then
-           killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",0,true);
+        if (player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
+            if (killer:getMaskBit(killer:getVar("VW_OP_101"), 0) == false) then
+               killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",0,true);
+            end
+        else
+            if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 3) == false) then
+               killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",3,true);
+            end
+
+            if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
+                killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+                killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
+                killer:setVar("ASHEN_STRATUM", 0);
+            end
         end
-        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
-           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
-           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
-           killer:setVar("ASHEN_STRATUM", 0);
-        end
-    end;
+    end
 end;

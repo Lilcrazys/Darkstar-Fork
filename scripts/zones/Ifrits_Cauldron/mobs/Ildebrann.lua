@@ -114,14 +114,21 @@ function onMobDeath(mob, killer)
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
-    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- IIdebran Kill
-        if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 2) == false) then
-           killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",2,true);
+    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Ildebran Kill
+        if (player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
+            if (killer:getMaskBit(killer:getVar("VW_OP_101"), 2) == false) then
+               killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",2,true);
+            end
+        else
+            if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 5) == false) then
+               killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",5,true);
+            end
+
+            if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
+                killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+                killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
+                killer:setVar("ASHEN_STRATUM", 0);
+            end
         end
-        if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
-           killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
-           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
-           killer:setVar("ASHEN_STRATUM", 0);
-        end
-    end;
+    end
 end;
