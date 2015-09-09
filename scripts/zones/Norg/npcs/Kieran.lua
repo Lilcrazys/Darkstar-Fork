@@ -37,7 +37,7 @@ function onTrigger(player,npc)
     -- player:startEvent(252);
     -- player:startEvent(253);
     ------------------------------
-    elseif (VWBC == QUEST_ACCEPTED and elshimoList == QUEST_COMPLETED and zepwellDetour == QUEST_COMPLETED)
+    elseif (VWBC == QUEST_ACCEPTED and elshimoList == QUEST_COMPLETED and zepwellDetour == QUEST_COMPLETED) then
         player:startEvent(254); -- Told to go see Gilgamesh
     elseif (VWBC == QUEST_COMPLETED and status == 0) then
         player:startEvent(255); -- Reminder to go see Gilgamesh

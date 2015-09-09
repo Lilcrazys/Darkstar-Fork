@@ -93,7 +93,7 @@ function onEventFinish(player,csid,option)
 		player:setVar("MissionStatus",3);
 --------------------------------------
     -- Begin VW stuff
-    elseif (csid == 256)
+    elseif (csid == 256) then
         player:setVar("NORG_VW_STATUS", 1);
     else
         -- 262 Return from sky, part 2, get sent to Aht Urgan.
