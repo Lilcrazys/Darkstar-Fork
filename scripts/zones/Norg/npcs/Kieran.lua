@@ -43,7 +43,7 @@ function onTrigger(player,npc)
         player:startEvent(255); -- Reminder to go see Gilgamesh
     elseif (VWBC == QUEST_COMPLETED and status == 1) then
         player:startEvent(258); -- Spoke with Gilgamesh
-    else
+    -- elseif
         -- player:startEvent(260); -- Spoke with Gilgamesh (To Sky!)
         -- player:startEvent(261); -- Return from sky, part 1
     else
