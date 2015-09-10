@@ -5,6 +5,8 @@
 package.loaded["scripts/zones/Western_Altepa_Desert/TextIDs"] = nil;
 -----------------------------------
 
+require("scripts/globals/status");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 require("scripts/zones/Western_Altepa_Desert/TextIDs");
 
@@ -20,6 +22,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    local QUEST = player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL);
     local STRATUM = player:hasKeyItem(ASHEN_STRATUM_ABYSSITE);
     local mobID = 17289658, 17289662;
     local mobNotUp = false
@@ -33,7 +36,7 @@ function onTrigger(player,npc)
         correctNPC = true;
     end
 
-    if (STRATUM == true and mobNotUp == true and correctNPC == true) then
+    if (QUEST ~= QUEST_AVAILABLE and STRATUM == true and mobNotUp == true and correctNPC == true) then
         if (player:getCurrency("voidstones") > 0) then
             player:startEvent(6000, 7);
         else

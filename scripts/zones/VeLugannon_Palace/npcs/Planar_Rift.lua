@@ -5,6 +5,7 @@
 package.loaded["scripts/zones/VeLugannon_Palace/TextIDs"] = nil;
 -----------------------------------
 
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/zones/VeLugannon_Palace/TextIDs");
 

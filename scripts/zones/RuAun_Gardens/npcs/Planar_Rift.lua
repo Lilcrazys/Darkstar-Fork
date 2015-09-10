@@ -5,6 +5,7 @@
 package.loaded["scripts/zones/RuAun_Gardens/TextIDs"] = nil;
 -----------------------------------
 
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/zones/RuAun_Gardens/TextIDs");
 

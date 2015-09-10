@@ -5,6 +5,7 @@
 package.loaded["scripts/zones/The_Boyahda_Tree/TextIDs"] = nil;
 -----------------------------------
 
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/zones/The_Boyahda_Tree/TextIDs");
 
