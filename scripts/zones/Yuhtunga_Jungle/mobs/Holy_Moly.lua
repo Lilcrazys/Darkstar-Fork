@@ -15,6 +15,9 @@ require("scripts/globals/quests");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_DEF,75);
+    mob:addMod(MOD_ATT,200);
 end;
 
 -----------------------------------
@@ -30,10 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
-
-    -- addMod
-    mob:addMod(MOD_DEF,75);
-    mob:addMod(MOD_ATT,200);
+    -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 

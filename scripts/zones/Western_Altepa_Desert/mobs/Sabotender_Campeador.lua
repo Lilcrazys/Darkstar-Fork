@@ -15,6 +15,11 @@ require("scripts/globals/quests");
 -----------------------------------
 
 function onMobInitialize(mob)
+
+    -- addMod
+    mob:addMod(MOD_MDEF,25);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
@@ -29,13 +34,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
     mob:setMod(MOD_TERRORRES, 1000);
-
-
-
-    -- addMod
-    mob:addMod(MOD_MDEF,25);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_ATT,150);
 end;
 
 -----------------------------------
