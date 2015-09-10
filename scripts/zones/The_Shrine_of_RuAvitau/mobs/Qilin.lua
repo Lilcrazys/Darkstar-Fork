@@ -61,7 +61,7 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() < 90) then
         if (XuanWu == 0) then
-            SpawnMob(17261049, 300):updateEnmity(player);
+            SpawnMob(17506685, 300):updateEnmity(player);
             mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
             mob:setLocalVar("XuanWu", 1);
         end
