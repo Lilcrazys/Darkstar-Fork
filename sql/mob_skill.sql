@@ -2007,12 +2007,12 @@ INSERT INTO `mob_skill` VALUES (1516,182,1259,'Torrent',0,10,2000,2000,4,0,0,0);
 -- INSERT INTO `mob_skill` VALUES (1519,?,?,'Rising_Swell',0,10,2000,2000,4,0,0,0);  -- Merrow NM only
 
 -- Poroggos
-INSERT INTO `mob_skill` VALUES (1701,196,1359,'Frog_Song',0,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1701,196,1359,'Frog_Song',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1702,196,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1703,196,1361,'Water_Bomb',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1704,196,1362,'Frog_Cheer',0,7.0,2000,1500,2,0,0,0);
 INSERT INTO `mob_skill` VALUES (1705,196,1363,'Providence',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1706,196,1364,'Frog_Chorus',1,20.0,2000,2000,4,0,0,0); -- NMs only
+INSERT INTO `mob_skill` VALUES (1706,196,1364,'Frog_Chorus',1,10.0,2000,2000,4,0,0,0); -- NMs only
 
 -- Vampyr
 INSERT INTO `mob_skill` VALUES (1850,252,1449,'Bloodrake',0,7.0,2000,1000,4,0,0,0);
@@ -2021,7 +2021,7 @@ INSERT INTO `mob_skill` VALUES (1852,252,1451,'Nosferatus_kiss',1,20.0,2000,1000
 INSERT INTO `mob_skill` VALUES (1853,252,1452,'Heliovoid',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1854,252,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1855,252,1454,'Eternal_damnation',4,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1856,252,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1856,252,1452,'Nocturnal_Servitude',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2132,252,1451,'Dirty_breath',4,15.0,2000,1000,4,0,0,0);
 
 INSERT INTO `mob_skill` VALUES (2278,252,1450,'Minax_glare',4,15.0,2000,1000,4,0,0,0); -- Lord Ruthven,Soaring Strigoi and Shadowbreath only.
@@ -2216,7 +2216,7 @@ INSERT INTO `mob_skill` VALUES (2255,91,1463,'Corpse_Breath',0,10.0,2000,1500,4,
 
 -- Rafflesia regular mob
 INSERT INTO `mob_skill` VALUES (1911,207,1553,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- noncharmed vers.?
-INSERT INTO `mob_skill` VALUES (1910,207,1552,'Floral_Bouquet',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1910,207,1552,'Floral_Bouquet',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1909,207,1551,'Rotten_Stench',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1908,207,1550,'Viscid_Emission',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1907,207,1549,'Seedspray',0,7.0,2000,1500,4,0,0,0);
@@ -2889,7 +2889,7 @@ INSERT INTO `mob_skill` VALUES (1076,296,63,'Extremely_Bad_Breath',4,7.0,2000,15
 INSERT INTO `mob_skill` VALUES (1703,297,1361,'Water_Bomb',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1702,297,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1704,297,1362,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1706,295,1364,'Frog_Chorus',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1706,295,1364,'Frog_Chorus',1,10.0,2000,1500,4,0,0,0);
 
 -- Anantaboga (298)
 INSERT INTO `mob_skill` VALUES (388,298,388,'Wind_Breath',4,10.0,2000,1500,4,0,0,0);
@@ -3316,7 +3316,7 @@ INSERT INTO `mob_skill` VALUES (2378,450,1810,'Interference',1,18.0,2000,1000,4,
 INSERT INTO `mob_skill` VALUES (2379,450,1811,'Dark_arrivisme',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2381,450,1813,'Besiegers_bane',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2436,450,1812,'Royal_decree',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2444,450,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2444,450,1982,'Enthrall',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2380,450,1983,'Banneret_charge',1,30.0,2000,1000,4,0,0,0);
 
 -- Amphipteres
@@ -3866,7 +3866,7 @@ INSERT INTO `mob_skill` VALUES (63,1503,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (470,1503,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2318,1503,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1076,1503,63,'EE_Extremely_Bad_Breath',4,15.0,2000,1500,4,0,0,0); -- used only by Evil Oscar,Cirrate Christelle,Lividroot Amooshah,Eccentric Eve and Melancholic Moira.
-INSERT INTO `mob_skill` VALUES (2319,1503,63,'Tainting_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2319,1503,63,'Tainting_Breath',4,10.0,2000,1500,4,0,0,0);
 
 -- Glaviod
 INSERT INTO `mob_skill` VALUES (1931,1504,1537,'Dustvoid',1,18.0,2000,1000,4,0,0,0);
@@ -4068,7 +4068,7 @@ INSERT INTO `mob_skill` VALUES (1852,1524,1451,'Nosferatus_kiss',1,20.0,2000,100
 INSERT INTO `mob_skill` VALUES (1853,1524,1452,'Heliovoid',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1854,1524,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1855,1524,1454,'Eternal_Damnation',4,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1856,1524,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1856,1524,1452,'Nocturnal_Servitude',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2132,1524,1451,'Dirty_Breath',4,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2278,1524,1450,'Minax_Glare',4,15.0,2000,1000,4,0,0,0);
 
@@ -4317,7 +4317,7 @@ INSERT INTO `mob_skill` VALUES (2378,1552,1810,'Interference',1,18.0,2000,1000,4
 INSERT INTO `mob_skill` VALUES (2379,1552,1811,'Dark_Arrivisme',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2381,1552,1813,'Besiegers_Bane',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2436,1552,1812,'Royal_Decree',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2444,1552,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2444,1552,1982,'Enthrall',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2380,1552,1983,'Banneret_Charge',1,30.0,2000,1000,4,0,0,0);
 
 -- Xibalba (1553)
@@ -4762,7 +4762,7 @@ INSERT INTO `mob_skill` VALUES (436,1611,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 INSERT INTO `mob_skill` VALUES (1850,1612,1449,'Bloodrake',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1852,1612,1451,'Nosferatus_kiss',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1854,1612,1454,'Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1856,1612,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1856,1612,1452,'Nocturnal_Servitude',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (439,1612,432,'Blood_Weapon',0,7.0,2000,0,1,2,0,0);
 
 -- Soaring Kumakatok
@@ -5248,7 +5248,7 @@ INSERT INTO `mob_skill` VALUES (63,1673,63,'EE_Bad_Breath',4,15.0,2000,1500,4,0,
 INSERT INTO `mob_skill` VALUES (470,1673,1213,'EE_Drain_Whip',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2318,1673,60,'EE_Thousand Spears',4,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1076,1673,63,'EE_Extremely_Bad_Breath',4,15.0,6000,1500,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (2319,1673,63,'Tainting_Breath',4,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2319,1673,63,'Tainting_Breath',4,10.0,2000,1500,4,0,0,0);
 
 -- Belphoebe (1674)
 INSERT INTO `mob_skill` VALUES (1939,1674,1583,'VW_Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
@@ -5270,7 +5270,7 @@ INSERT INTO `mob_skill` VALUES (2330,1675,378,'VW_Ecliptic_Meteor',1,30.0,2000,1
 INSERT INTO `mob_skill` VALUES (1850,1676,1449,'VW_Bloodrake',0,7.0,2000,1000,4,0,0,3);
 INSERT INTO `mob_skill` VALUES (1852,1676,1451,'VW_Nosferatus_kiss',1,20.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1854,1676,1454,'VW_Wings_of_Gehenna',1,20.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skill` VALUES (1856,1676,1452,'Nocturnal_Servitude',4,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1856,1676,1452,'Nocturnal_Servitude',4,10.0,2000,1000,4,0,0,0);
 
 -- Akupara (1677)
 INSERT INTO `mob_skill` VALUES (548,1677,476,'VW_Tortoise_Song',1,20.0,2000,1500,4,0,0,0);
@@ -5429,7 +5429,7 @@ INSERT INTO `mob_skill` VALUES (2436,1696,1812,'VW_Royal_decree',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2519,1696,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1696,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1696,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2444,1696,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2444,1696,1982,'Enthrall',1,10.0,2000,1000,4,0,0,0);
 
 -- Lancing_Lamorak (1697)
 INSERT INTO `mob_skill` VALUES (82,1697,82,'VW_Power_Attack_Beetle',4,30.0,2000,1500,4,0,0,3);
@@ -5525,13 +5525,13 @@ INSERT INTO `mob_skill` VALUES (2548,1707,1970,'VW_Just_Desserts',1,20.0,2000,15
 INSERT INTO `mob_skill` VALUES (436,1707,432,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
 -- Holy_Moly (1708)
-INSERT INTO `mob_skill` VALUES (1910,1708,1552,'VW_Floral_Bouquet',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1910,1708,1552,'VW_Floral_Bouquet',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1908,1708,1550,'VW_Viscid_Emission',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1912,1708,1554,'VW_Bloody_Caress',0,10.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (1913,1708,1555,'Soothing_Aroma',1,20.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1913,1708,1555,'Soothing_Aroma',1,10.0,2000,1500,4,0,0,0);
 
 -- Moly (1709)
-INSERT INTO `mob_skill` VALUES (1910,1709,1552,'VW_Floral_Bouquet',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1910,1709,1552,'VW_Floral_Bouquet',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1907,1709,1549,'VW_Seedspray',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1909,1709,1551,'VW_Rotten_Stench',1,15.0,2000,1500,4,0,0,0);
 
@@ -5872,7 +5872,7 @@ INSERT INTO `mob_skill` VALUES (1524,1756,1207,'VW_Leaping_Cleave',0,7.0,2000,15
 INSERT INTO `mob_skill` VALUES (1703,1757,1361,'VW_Water_Bomb',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1702,1757,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1704,1757,1362,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1706,1757,1364,'Frog_Chorus',1,16.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1706,1757,1364,'Frog_Chorus',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2633,1757,1905,'Usurping_Scepter',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (436,1757,436,'Chainspell',0,7.0,2000,0,1,2,0,0);
 
@@ -5921,7 +5921,7 @@ INSERT INTO `mob_skill` VALUES (2436,1765,1812,'VW_Royal_decree',1,18.0,2000,100
 INSERT INTO `mob_skill` VALUES (2519,1765,1791,'Tabbiyaa_Gambit',0,10.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skill` VALUES (2520,1765,1811,'Shah_Mat',1,30.0,4000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2518,1765,1812,'Flank_Opening',1,25.0,2000,1000,4,0,0,3);
-INSERT INTO `mob_skill` VALUES (2444,1765,1982,'Enthrall',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (2444,1765,1982,'Enthrall',1,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (2552,1765,1983,'Discordant_Gambit',1,18.0,2000,1000,4,0,0,0);
 
 -- Rukh (1766)
