@@ -31,7 +31,7 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGEN, 25);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
@@ -70,7 +70,7 @@ function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
     -- Pop an add after 4 minutes..
-    if (os.time() - popTime > 240) then
+    if (os.time() - popTime > 320) then
         for Helper = mob:getID() + 1, mob:getID() + 2 do
             -- Pop this helper..
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then

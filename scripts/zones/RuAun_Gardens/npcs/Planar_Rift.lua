@@ -66,8 +66,5 @@ function onEventFinish(player,csid,option)
     if (csid == 6000 and option == 1) then
         player:delCurrency("voidstones", 1);
         SpawnMob(17309993, 300):updateClaim(player);
-        SpawnMob(17309994, 300):updateClaim(player);
-        SpawnMob(17309995, 300):updateClaim(player);
-        SpawnMob(17309996, 300):updateClaim(player);
     end
 end;

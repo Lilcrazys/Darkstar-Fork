@@ -70,7 +70,5 @@ function onEventFinish(player,csid,option)
         SpawnMob(17281497, 300):updateClaim(player);
         SpawnMob(17281498, 300):updateClaim(player);
         SpawnMob(17281499, 300):updateClaim(player);
-        SpawnMob(17281500, 300):updateClaim(player);
-        SpawnMob(17281501, 300):updateClaim(player);
     end
 end;
