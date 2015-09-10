@@ -5,6 +5,7 @@
 -- Functions as a Voidwatch Officer
 -----------------------------------
 
+require("scripts/globals/status");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 require("scripts/zones/Norg/TextIDs");
