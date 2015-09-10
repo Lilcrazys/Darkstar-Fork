@@ -77,7 +77,7 @@ function onEventFinish(player,csid,option)
         player:addKeyItem(ASHEN_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, ASHEN_STRATUM_ABYSSITE);
     elseif (csid == 254) then
-        player:completeQuest(OUTLANDS, VW_OP_054_ELSHIMO_LIST);
+        player:completeQuest(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING);
     elseif (csid == 258) then
         player:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
         player:addQuest(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT);
