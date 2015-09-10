@@ -84,7 +84,7 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
     end
 end;
 
-function bonusLimbusDrop(killer);
+function bonusLimbusDrop(killer)
     local itemRate = 25;
     local itemID = 0;
     local itemList =
