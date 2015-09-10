@@ -4,11 +4,11 @@
 -- @pos 3 8 32 247
 -- Functions as a Voidwatch Officer
 -----------------------------------
-package.loaded["scripts/zones/Kazham/TextIDs"] = nil;
+package.loaded["scripts/zones/Rabao/TextIDs"] = nil;
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/quests");
-require("scripts/zones/Kazham/TextIDs");
+require("scripts/zones/Rabao/TextIDs");
 require("scripts/globals/spoofchat");
 
 -----------------------------------

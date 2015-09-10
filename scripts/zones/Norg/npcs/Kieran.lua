@@ -4,7 +4,8 @@
 -- @pos ? ? ? 252
 -- Functions as a Voidwatch Officer
 -----------------------------------
-
+package.loaded["scripts/zones/Norg/TextIDs"] = nil;
+-----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");
@@ -89,7 +90,7 @@ function onEventFinish(player,csid,option)
             player:setVar("VOIDSTONE_TIMER", os.time()+72000);
             -- 20 hours till next voidstone. Slightly less than 1 day,
             -- so that player can do VW once a day at aprox same time of day.
-            player:messageSpecial(KEYITEM_OBTAINED,VOIDSTONE1);
+            player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
         else
             player:SpoofChatPlayer("Voidstones are issued once per Earth day.");
         end
