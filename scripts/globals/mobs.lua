@@ -1,4 +1,4 @@
------------------------------------
+ -----------------------------------
 --
 --
 --
@@ -79,7 +79,7 @@ function onMobDeathEx(mob, killer, isKillShot, isWeaponSkillKill)
     end
 
     -- Work around for effing limbus issues
-    if (getCurrentRegion() == 27) then -- 27 = REGION_LIMBUS
+    if (killer:getCurrentRegion() == 27) then -- 27 = REGION_LIMBUS
         bonusLimbusDrop(killer);
     end
 end;
