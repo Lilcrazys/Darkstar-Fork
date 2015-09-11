@@ -61,25 +61,25 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() < 90) then
         if (XuanWu == 0) then
-            SpawnMob(17506685, 300):updateEnmity(player);
+            SpawnMob(17506685, 300):updateEnmity(target);
             mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
             mob:setLocalVar("XuanWu", 1);
         end
     elseif (mob:getHPP() < 70) then
         if (QingLong == 0) then
-            SpawnMob(17506683, 300):updateEnmity(player);
+            SpawnMob(17506683, 300):updateEnmity(target);
             mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
             mob:setLocalVar("QingLong", 1);
         end
     elseif (mob:getHPP() < 50) then
         if (BaiHu == 0) then
-            SpawnMob(17506682, 300):updateEnmity(player);
+            SpawnMob(17506682, 300):updateEnmity(target);
             mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
             mob:setLocalVar("BaiHu", 1);
         end
     elseif (mob:getHPP() < 30) then
         if (ZhuQue == 0) then
-            SpawnMob(17506684, 300):updateEnmity(player);
+            SpawnMob(17506684, 300):updateEnmity(target);
             mob:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos());
             mob:setLocalVar("ZhuQue", 1);
         end
