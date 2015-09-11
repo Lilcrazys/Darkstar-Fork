@@ -43,20 +43,25 @@ CChatMessagePacket::CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE Mes
 
     ref<uint8>(0x04) = MessageType;
     if (PChar->nameflags.flags & FLAG_GM)
-    ref<uint8>(0x05) = 0x01;
+    {
+        ref<uint8>(0x05) = 0x01;
+    }
     ref<uint16>(0x06) = PChar->getZone();
 
-    memcpy(data + (0x08) , PChar->GetName(), PChar->name.size());
-    memcpy(data + (0x18) , buff, buffSize);
+    memcpy(data + (0x08), PChar->GetName(), PChar->name.size());
+    memcpy(data + (0x18), buff, buffSize);
 }
 
 CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_MESSAGE_TYPE MessageType, int8* buff)
 {
-    int32 buffSize = (strlen(buff) > 108) ? 108 : strlen(buff);
+    int32 buffSize = (strlen(buff) > 236) ? 236 : strlen(buff);
     this->type = 0x17;
-    this->size = dsp_min((32 + (buffSize + 1) + ((4 - ((buffSize + 1) % 4)) % 4)) / 2, 128);
-    WBUFB(data, (0x04) ) = MessageType;
-     WBUFW(data, (0x06) ) = PChar->getZone();
-    memcpy(data + (0x08) , name, size);
-    memcpy(data + (0x18) , buff, buffSize);
+    this->size = 0x82;
+    //this->size = dsp_min((32 + (buffSize + 1) + ((4 - ((buffSize + 1) % 4)) % 4)) / 2, 128);
+
+    ref<uint8>(0x04) = MessageType;
+    ref<uint16>(0x06) = PChar->getZone();
+
+    memcpy(data + (0x08), name, size);
+    memcpy(data + (0x18), buff, buffSize);
 }
