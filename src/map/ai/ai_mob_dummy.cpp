@@ -915,7 +915,6 @@ void CAIMobDummy::ActionAbilityStart()
     // We don't have any skills we can use, so let's go back to attacking
     if (MobSkills.size() == 0)
     {
-        m_PMob->PBattleAI->SetMobAbilityEnabled(false);
         TransitionBack(true);
         return;
     }
@@ -1041,6 +1040,7 @@ void CAIMobDummy::ActionAbilityStart()
     if (!valid)
     {
         // couldn't find anything so go back to attack
+        m_PMob->health.tp = 0;
         TransitionBack(true);
         return;
     }
