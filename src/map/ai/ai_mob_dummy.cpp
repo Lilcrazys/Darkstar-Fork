@@ -915,6 +915,7 @@ void CAIMobDummy::ActionAbilityStart()
     // We don't have any skills we can use, so let's go back to attacking
     if (MobSkills.size() == 0)
     {
+        m_PMob->PBattleAI->SetMobAbilityEnabled(false);
         TransitionBack(true);
         return;
     }
