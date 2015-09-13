@@ -127,7 +127,7 @@ function onTrigger(player, skill, skillLV, target)
             elseif (skillLV >= 58 and skillLV < 68) then
                 targ:setSkillRank(skillID,6);   -- Craftsman 58-68
             elseif (skillLV >= 68 and skillLV < 78) then
-                targ:setSkillRank(skillID,7);   -- Artisan" 68-78
+                targ:setSkillRank(skillID,7);   -- Artisan 68-78
             elseif (skillLV >= 78 and skillLV < 88) then
                 if (skillID == 57) then
                     targ:setSkillRank(skillID,7); -- Synergy currently caps at 80 on retail.

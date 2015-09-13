@@ -21,14 +21,14 @@ function onTrigger(player,logId,questId,target)
         local targ = GetPlayerByName(target);
         if (targ ~= nil) then
             local targetQuestStatus = targ:getQuestStatus(logId, questId);
-            player:PrintToPlayer(string.format("Status of Log %d Quest %d for player %s is: %d", logId, questId, target, targetQuestStatus));
             player:PrintToPlayer("0 = Available (not active), 1 = Accepted (flagged), 2 = Completed." );
+            player:PrintToPlayer(string.format("Status of Log %d Quest %d for player %s is: %d", logId, questId, target, targetQuestStatus));
         else
             player:PrintToPlayer(string.format("Player named '%s' not found!", target));
         end
     else
         local playerQuestStatus = player:getQuestStatus(logId, questId);
-        player:PrintToPlayer(string.format("Status of Log %d Quest %d is: %d", logId, QuestId, playerQuestStatus));
         player:PrintToPlayer("0 = Available (not active), 1 = Accepted (flagged), 2 = Completed." );
+        player:PrintToPlayer(string.format("Status of Log %d Quest %d is: %d", logId, QuestId, playerQuestStatus));
     end
 end;
