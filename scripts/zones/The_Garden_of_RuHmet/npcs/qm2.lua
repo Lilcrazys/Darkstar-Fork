@@ -14,7 +14,7 @@ require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
 -- onTrade Action
 -----------------------------------
 
-function onTrade(player,npc,trade);
+function onTrade(player,npc,trade)
     -- The IDs are variablized in MobIDs.lua
     local ActionMobA = GetMobAction(IxAernDRK);
     local ActionMobB = GetMobAction(QnAernA);
