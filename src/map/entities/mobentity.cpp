@@ -348,7 +348,7 @@ void CMobEntity::ChangeMJob(uint16 job)
 
 uint8 CMobEntity::TPUseChance()
 {
-    auto& MobSkillList = battleutils::GetMobSkillList(getMobMod(MOBMOD_SKILL_LIST));
+    auto& MobSkillList = battleutils::GetMobSkillsByFamily(getMobMod(MOBMOD_SKILLS));
 
     if (health.tp < 1000 || MobSkillList.empty() == true || !PBattleAI->GetMobAbilityEnabled())
     {
