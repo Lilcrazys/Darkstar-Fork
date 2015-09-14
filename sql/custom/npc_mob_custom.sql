@@ -3116,7 +3116,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17297452,'Pil','Pil',90435,-210,-20.835,
 -- West Ronfaure
 REPLACE INTO `mob_spawn_points` VALUES (17187289,'Lancing_Lamorak','Lancing Lamorak',90436,-360,-50.5,270,33);
 -- South Gustaberg
-REPLACE INTO `mob_spawn_points` VALUES (17215956,'Bishani','Bhishani',90437,605,-0.471,-519.283,112);
+REPLACE INTO `mob_spawn_points` VALUES (17215956,'Bhishani','Bhishani',90437,605,-0.471,-519.283,112);
 -- East Sarubaruta
 REPLACE INTO `mob_spawn_points` VALUES (17252816,'RwNwPrtMHrw','Rw Nw Prt M Hrw',90438,-120,-5,-415,166);
 -- La Theine Plateau
