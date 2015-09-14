@@ -14,8 +14,42 @@ require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
 -- onTrade Action
 -----------------------------------
 
-function onTrade(player,npc,trade)
+function onTrade(player,npc,trade);
+    -- The IDs are variablized in MobIDs.lua
+    local ActionMobA = GetMobAction(IxAernDRK);
+    local ActionMobB = GetMobAction(QnAernA);
+    local ActionMobC = GetMobAction(QnAernB);
+    if (ActionMobA == ACTION_NONE and ActionMobB == ACTION_NONE and ActionMobC == ACTION_NONE) then
+        -- 8 full stacks of Aern Organs.
+        -- Would be 48 (4 stacks) if people were less naggy.
+        if (trade:hasItemQty(1786, 96) and trade:getItemCount() == 96) then
+            local RND = 0;
+            if (math.random(0,1) == 1) then
+                RND = 1;
+            else
+                RND = -1;
+            end
+            local X = player:getXPos()+RND;
+            local Y = player:getYPos();
+            local Z = player:getZPos()+RND;
+            GetMobByID(IxAernDRK):setSpawn(X,Y,Z);
+            GetMobByID(QnAernA):setSpawn(X,Y,Z);
+            GetMobByID(QnAernB):setSpawn(X,Y,Z);
+            SpawnMob(IxAernDRK,180):updateClaim(player);
+            SpawnMob(QnAernA,180):updateEnmity(player);
+            SpawnMob(QnAernB,180):updateEnmity(player);
 
+            if (math.random(0,1) == 1) then -- 50/50 chance of either drop, at 100% drop rate.
+                SetDropRate(4397,1854,1000);
+                SetDropRate(4397,1902,0);
+            else
+                SetDropRate(4397,1854,0);
+                SetDropRate(4397,1902,1000);
+            end
+        end
+    else
+        player:PrintToPlayer("Cannot spawn mob - are you sure it isn't already up?");
+    end
 end;
 
 -----------------------------------
