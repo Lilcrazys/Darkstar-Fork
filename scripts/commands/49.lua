@@ -5,7 +5,7 @@
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1, // Disabled non GM use because of multi-boxing related server crash
     parameters = ""
 };
 
