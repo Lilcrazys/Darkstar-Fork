@@ -27,6 +27,7 @@
 #include <string.h>
 
 #include "mobentity.h"
+#include "../utils/battleutils.h"
 
 CMobEntity::CMobEntity()
 {
