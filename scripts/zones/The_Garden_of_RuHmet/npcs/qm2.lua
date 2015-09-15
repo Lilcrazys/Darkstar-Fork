@@ -20,9 +20,8 @@ function onTrade(player,npc,trade)
     local ActionMobB = GetMobAction(QnAernA);
     local ActionMobC = GetMobAction(QnAernB);
     if (ActionMobA == ACTION_NONE and ActionMobB == ACTION_NONE and ActionMobC == ACTION_NONE) then
-        -- 8 full stacks of Aern Organs.
-        -- Would be 48 (4 stacks) if people were less naggy.
-        if (trade:hasItemQty(1786, 96) and trade:getItemCount() == 96) then
+        -- 5 full stacks of Aern Organs. KEEP IT A MULTIPLE OF 12
+        if (trade:hasItemQty(1786, 60) and trade:getItemCount() == 60) then
             local RND = 0;
             if (math.random(0,1) == 1) then
                 RND = 1;
