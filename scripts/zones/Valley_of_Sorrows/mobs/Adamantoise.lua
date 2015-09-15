@@ -10,11 +10,11 @@ require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
--- onMobInitialize Action
+-- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-    --addMod
+    -- addMod
     mob:addMod(MOD_MACC,400);
     mob:addMod(MOD_ACC,400);
     mob:addMod(MOD_DOUBLE_ATTACK,15);
@@ -36,6 +36,21 @@ end;
 function onMobDeath(mob, killer)
     killer:addTitle(TORTOISE_TORTURER);
 
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_1");
+        if (KILLED < 7) then
+            killer:setVar("C_TRIAL_OBJ_1", KILLED + 1);
+        end
+        cTrialProgress(killer,RELIC);
+    end
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     local Adamantoise  = mob:getID();
     local Aspidochelone = 17301538;
     local ToD     = GetServerVariable("[POP]Aspidochelone");
@@ -58,14 +73,4 @@ function onMobDeath(mob, killer)
         mob:setRespawnTime(math.random((21600),(32400)));
         SetServerVariable("[PH]Aspidochelone", kills + 1);
     end
-
-    -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        local KILLED = killer:getVar("C_TRIAL_OBJ_1");
-        if (KILLED < 7) then
-            killer:setVar("C_TRIAL_OBJ_1", KILLED + 1);
-        end
-        cTrialProgress(killer,RELIC);
-    end
-
 end;

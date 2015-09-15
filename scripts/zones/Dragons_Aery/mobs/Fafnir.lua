@@ -10,7 +10,7 @@ require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
--- onMobInitialize Action
+-- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -33,14 +33,29 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
+    killer:addTitle(FAFNIR_SLAYER);
+
     local SPELL_ID = 738;
     local CHANCE = 25;
     if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
         killer:addSpell(SPELL_ID);
     end
 
-    killer:addTitle(FAFNIR_SLAYER);
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        local KILLED = killer:getVar("C_TRIAL_OBJ_3");
+        if (KILLED < 7) then
+            killer:setVar("C_TRIAL_OBJ_3", KILLED + 1);
+        end
+        cTrialProgress(killer,RELIC);
+    end
+end;
 
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     local Fafnir  = mob:getID();
     local Nidhogg = 17408019;
     local ToD     = GetServerVariable("[POP]Nidhogg");
@@ -64,15 +79,4 @@ function onMobDeath(mob, killer)
         mob:setRespawnTime(math.random((21600),(32400)));
         SetServerVariable("[PH]Nidhogg", kills + 1);
     end
-
-
-    -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        local KILLED = killer:getVar("C_TRIAL_OBJ_3");
-        if (KILLED < 7) then
-            killer:setVar("C_TRIAL_OBJ_3", KILLED + 1);
-        end
-        cTrialProgress(killer,RELIC);
-    end
-
 end;
