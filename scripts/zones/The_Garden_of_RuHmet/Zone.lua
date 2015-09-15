@@ -75,7 +75,7 @@ end;
 -----------------------------------		  
 
 function onGameHour(npc, mob, player)
-	
+	--[[ This is stupid they mixed up which NPC was which.
 	local VanadielHour = VanadielHour();
 	local qm2 = GetNPCByID(16921028); -- Jailer of Faith
 	local qm3 = GetNPCByID(16921029); -- Ix'aern drk
@@ -102,7 +102,7 @@ function onGameHour(npc, mob, player)
 		-- Set the new ??? place
 		qm3:setPos(Jailer_of_Faith_QM_POS[qm3position][1], Jailer_of_Faith_QM_POS[qm3position][2], Jailer_of_Faith_QM_POS[qm3position][3]);
 	end
-	
+	]]
 	--[[
 	-- Ix'DRK spawn randomiser
 	if (VanadielHour % 6 == 0) then -- Change ??? position every 6 hours Vana'diel time (~15 mins)
