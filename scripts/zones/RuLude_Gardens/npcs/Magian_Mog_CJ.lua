@@ -29,7 +29,8 @@ function onTrade(player,npc,trade)
             player:SpoofChatPlayer("I don't have a trial for that item, kupo..", MESSAGE_SAY, npc:getID());
         else
             local MSG = string.format("Ok, Trial %d has begun, kupo! Use '@trial' to review your progress!", ITEM);
-            player:setVar("C_TRIAL_ITEM", ITEM);
+            cTrialCleanUp(player); -- If any previous trial var left dangling, kill them
+            player:setVar("C_TRIAL_ITEM", ITEM); -- Sets new trial.
             player:injectActionPacket(6, 203);
             player:SpoofChatPlayer(MSG, MESSAGE_SAY, npc:getID());
         end
