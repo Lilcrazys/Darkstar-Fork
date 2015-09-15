@@ -66,7 +66,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
+    if (killer:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
         if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_IV)) then
             if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 0) == false) then
                 killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
