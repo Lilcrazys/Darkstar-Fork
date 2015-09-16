@@ -3071,7 +3071,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17203697,'Belphoebe','Belphoebe',90411,7
 REPLACE INTO `mob_spawn_points` VALUES (17113826,'Kholomodumo','Kholomodumo',90412,77,0,118,93);
 REPLACE INTO `mob_spawn_points` VALUES (17265130,'Lord_Asag','Lord Asag',90413,-282,16,602,0);
 REPLACE INTO `mob_spawn_points` VALUES (17175251,'Akupara','Akupara',90414,-282,16,602,16);
-INSERT INTO `mob_spawn_points` VALUES (17559871,'Celano','Celano',90415,-253,4,505,118);
+REPLACE INTO `mob_spawn_points` VALUES (17559871,'Celaeno','Celaeno',90415,-253,4,505,118);
 REPLACE INTO `mob_spawn_points` VALUES (17555901,'Hahava','Hahava',90416,-115,9,60,118);
 REPLACE INTO `mob_spawn_points` VALUES (17572219,'Voidwrought','Voidwrought',90417,-380,0,740,0);
 REPLACE INTO `npc_list` VALUES (17559925,'Planar_Rift','Planar Rift',0,-253,4,505,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA'); -- dangruf celano spawn
