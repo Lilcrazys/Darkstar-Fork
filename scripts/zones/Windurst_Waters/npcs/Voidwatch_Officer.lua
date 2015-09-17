@@ -61,6 +61,7 @@ function onTrigger(player,npc)
             -- player:SpoofChatPlayer("My duty is to recruit able-bodied soldiers to assist in repelling the Voidwalker threat.", MESSAGE_SYS_SAY, nil);
             player:setVar("VW_STATUS", 1);
         elseif (JADE == false) then
+            player:PrintToPlayer("DEBUG: Initial Abysite check started.");
             if (player:hasKeyItem(ADVENTURERS_CERTIFICATE) == false) then
                 player:showText(npc, COMMEND_YOUR_ENTHUSIASM, ADVENTURERS_CERTIFICATE)
                 player:showText(npc, PROOF_OF_ONES_VALOR, ADVENTURERS_CERTIFICATE)
@@ -88,13 +89,17 @@ function onTrigger(player,npc)
                 player:setVar("VW_STATUS", 0);
                 -- The same var my be used again during future Voidwatch quests, so its important not to leave it dangling at "1".
             end
-        elseif (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_ACCEPTED) then
+        elseif (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_ACCEPTED and player:hasKeyItem(VOIDWATCH_ALARUM) == false) then
+            player:PrintToPlayer("DEBUG: GUARDIAN_OF_THE_VOID");
             player:startEvent(1035);
-        elseif (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
+        elseif (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_ACCEPTED and player:isMaskFull(player:getVar("WHITE_STRATUM_II"),6) == true and player:hasKeyItem(VOIDWATCH_ALARUM) == false) then
+            player:PrintToPlayer("DEBUG: BATTLE_ON_A_NEW_FRONT");
             player:startEvent(1036);
-        elseif (player:getQuestStatus(CRYSTAL_WAR, VOIDWALKER_OP_126) == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
+        elseif (player:getQuestStatus(CRYSTAL_WAR, VOIDWALKER_OP_126) == QUEST_ACCEPTED and player:isMaskFull(player:getVar("WHITE_STRATUM_III"),3) == true and player:hasKeyItem(VOIDWATCH_ALARUM) == false) then
+            player:PrintToPlayer("DEBUG: VOIDWALKER_OP_126");
             player:startEvent(1037);
-        elseif (player:getQuestStatus(CRYSTAL_WAR, THE_TRUTH_IS_OUT_THERE) == QUEST_ACCEPTED) then
+        elseif (player:getQuestStatus(CRYSTAL_WAR, THE_TRUTH_IS_OUT_THERE) == QUEST_ACCEPTED and player:hasKeyItem(VOIDWATCH_ALARUM) == false) then
+            player:PrintToPlayer("DEBUG: THE_TRUTH_IS_OUT_THERE");
             player:startEvent(1039);
         --[[ future use
         elseif
@@ -107,6 +112,7 @@ function onTrigger(player,npc)
             player:startEvent(1043);
         ]]
         else
+            player:PrintToPlayer("DEBUG: VOIDSTONE CHECK");
             if (player:hasKeyItem(JADE_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
                 player:addKeyItem(JADE_STRATUM_ABYSSITE);
                 player:delKeyItem(JADE_STRATUM_ABYSSITE_IV);
