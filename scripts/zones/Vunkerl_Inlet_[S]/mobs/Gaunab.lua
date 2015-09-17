@@ -71,10 +71,10 @@ function onSpikesDamage(mob,target,damage)
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
 
     if (INT_diff > 20) then
-        INT_diff = 20 + (INT_diff - 20) / 2;
+        INT_diff = 20 + ((INT_diff - 20)*0.5); -- INT above 20 is half as effective.
     end
 
-    local dmg = INT_diff+damage/2;
+    local dmg = ((damage+INT_diff)*0.5); -- INT adjustment and base damage averaged together.
     local params = {};
     params.bonusmab = 0;
     params.includemab = false;
@@ -83,7 +83,12 @@ function onSpikesDamage(mob,target,damage)
     dmg = adjustForTarget(target,dmg,ELE_FIRE);
     dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
 
-    return SUBEFFECT_BLAZE_SPIKES,64,dmg;
+    -- Prevent player with high resist from 1 shotting self.
+    if (dmg < 0) then
+        dmg = 0;
+    end
+
+    return SUBEFFECT_BLAZE_SPIKES,44,dmg;
 end;
 
 -----------------------------------
