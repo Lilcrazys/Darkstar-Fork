@@ -31,6 +31,8 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,55);
     mob:addMod(MOD_DEF,75);
     mob:addMod(MOD_ACC,125);
+    mob:setMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMod(MOBMOD_SOUND_RANGE,20);
 end;
 
 -----------------------------------

@@ -30,6 +30,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,125);
+    mob:setMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMod(MOBMOD_SOUND_RANGE,20);
 end;
 
 -----------------------------------

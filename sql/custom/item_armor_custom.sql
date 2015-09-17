@@ -149,6 +149,7 @@ REPLACE INTO `item_armor` VALUES (28479,'enervating_earring',99,0,4194303,0,0,0,
 REPLACE INTO `item_armor` VALUES (28483,'cryptic_earring',99,0,4194303,0,0,0,6144,0);
 REPLACE INTO `item_armor` VALUES (27507,'deviant_necklace',99,0,4194303,0,0,0,512,0);
 REPLACE INTO `item_armor` VALUES (28547,'merirosvo_ring',99,0,65536,0,0,0,6144,0);
+REPLACE INTO `item_armor` VALUES (21345,'focal_orb',99,0,2473971,0,0,0,8,0);
 
 REPLACE INTO `item_armor` VALUES (28200,'bokwus_slops',99,110,1589788,351,0,0,128,0);
 REPLACE INTO `item_armor` VALUES (28059,'bokwus_gloves',99,110,1589788,351,0,0,64,0);

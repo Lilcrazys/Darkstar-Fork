@@ -33,6 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 25);
     mob:setMod(MOD_COUNTER, 10);
     mob:setMod(MOD_QUAD_ATTACK, 25);
+    mob:setMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMod(MOBMOD_SOUND_RANGE,20);
 end;
 
 -----------------------------------

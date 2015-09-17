@@ -33,6 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
+    mob:setMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMod(MOBMOD_SOUND_RANGE,20);
 end;
 
 -----------------------------------

@@ -17,7 +17,7 @@ function onMobInitialize(mob)
 
     -- addMod
     mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);  
+    mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_DEF,95);
 end;
 
@@ -29,6 +29,8 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_REGEN,25);
+    mob:setMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMod(MOBMOD_SOUND_RANGE,20);
 end;
 
 -----------------------------------

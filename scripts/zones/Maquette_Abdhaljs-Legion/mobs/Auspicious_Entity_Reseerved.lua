@@ -13,8 +13,8 @@
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
+-- require("scripts/globals/magic");
+-- require("scripts/globals/utils");
 -- require("scripts/globals/spoofchat");
 
 -----------------------------------
@@ -22,13 +22,6 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMod(MOD_MACC,1500);
-    mob:setMod(MOD_MATT,110);
-    mob:addMod(MOD_DEF,200);
-    mob:addMod(MOD_ATT,250);
-    mob:addMod(MOBMOD_SIGHT_RANGE,20);
-    mob:addMod(MOBMOD_SOUND_RANGE,20);
-
 end;
 
 -----------------------------------
@@ -36,9 +29,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
+    mob:addMod(MOD_MACC,425);
 end;
 
 -----------------------------------
@@ -60,7 +51,6 @@ end;
 -- onAdditionalEffect Action
 -----------------------------------
 -- function onAdditionalEffect(mob,target,damage)
-    -- come back later and set added effect on ele type
 -- end;
 
 -----------------------------------
@@ -75,7 +65,6 @@ end;
 -----------------------------------
 
 -- function onSpikesDamage(mob,target,damage)
-    -- come back later and set spikes depending on ele type
 -- end;
 
 -----------------------------------
@@ -83,9 +72,37 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:delStatusEffect(EFFECT_WEAKNESS);
-    killer:restoreHP(3000);
-    killer:messageBasic(024,(killer:getMaxHP()-killer:getHP()));
-    killer:restoreMP(3000);
-    killer:messageBasic(025,(killer:getMaxMP()-killer:getMP()));
+    local mobID = mob:getID();
+    local duration = killer:getStatusEffect(EFFECT_LEGION):getDuration();
+
+    if (mobID == 17526873) then -- Hall of An : TE
+        -- Add +15min
+        -- killer:addTimeToDynamis(15);
+    elseif (mobID == 17526874) then -- Hall of Ki : TE
+        -- Add +15min
+        -- killer:addTimeToDynamis(15);
+    elseif (mobID == 17526875) then -- Hall of Im : TE
+        -- Add +15min
+        -- killer:addTimeToDynamis(15);
+    elseif (mobID == 17526876) then -- Hall of Muru : TE
+        -- Add +15min
+        -- killer:addTimeToDynamis(15);
+    elseif (mobID == 17526877) then -- Hall of Muru : Restore
+        killer:restoreHP(3000);
+        killer:messageBasic(024,(killer:getMaxHP()-killer:getHP()));
+        killer:restoreMP(3000);
+        killer:messageBasic(025,(killer:getMaxMP()-killer:getMP()));
+    elseif (mobID == 17526878) then -- Hall of Mul : TE
+        -- Add +15min
+        -- killer:addTimeToDynamis(15);
+    elseif (mobID == 17526879) then -- Hall of Mul : Restore
+        killer:delStatusEffect(EFFECT_WEAKNESS);
+        killer:restoreHP(3000);
+        killer:messageBasic(024,(killer:getMaxHP()-killer:getHP()));
+        killer:restoreMP(3000);
+        killer:messageBasic(025,(killer:getMaxMP()-killer:getMP()));
+    elseif (mobID == 17526880) then -- Hall of Mul : 2hr reset
+        killer:resetRecasts();
+        killer:injectActionPacket( 6, 312 );
+    end
 end;

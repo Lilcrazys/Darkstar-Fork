@@ -33,7 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_ACC,1925);
     mob:setMod(MOD_DARK_AFFINITY,20);
-
+    mob:setMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMod(MOBMOD_SOUND_RANGE,20);
     mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
