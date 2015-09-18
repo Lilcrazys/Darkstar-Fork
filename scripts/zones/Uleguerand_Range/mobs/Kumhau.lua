@@ -26,6 +26,8 @@ function onMobSpawn(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMod(MOD_ACC,1450);
     mob:addMod(MOD_ICE_AFFINITY,20);
+    mob:setMod(MOD_STUNRES, 500);
+    mob:addMod(MOD_MDEF, 30);
 end;
 
 -----------------------------------

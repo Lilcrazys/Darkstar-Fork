@@ -14,7 +14,8 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); -- Invincible
-
+    mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMobMod(MOBMOD_SOUND_RANGE,20);
     -- addMod
     mob:addMod(MOD_EVA,-115);
 end;
@@ -29,8 +30,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN,25);
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);
-    mob:setMod(MOBMOD_SIGHT_RANGE,20);
-    mob:setMod(MOBMOD_SOUND_RANGE,20);
+
 end;
 
 -----------------------------------

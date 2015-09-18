@@ -26,9 +26,6 @@ function onMobInitialize(mob)
     mob:setMod(MOD_MATT,125);
     mob:addMod(MOD_DEF,200);
     mob:addMod(MOD_ATT,250);
-    mob:addMod(MOBMOD_SIGHT_RANGE,20);
-    mob:addMod(MOBMOD_SOUND_RANGE,20);
-
 end;
 
 -----------------------------------

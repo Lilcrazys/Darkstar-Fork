@@ -25,6 +25,7 @@ function onMobInitialize(mob)
 
     -- addMod
     mob:addMod(MOD_ACC,100);
+    mob:addMod(MOD_MDEF, 50);
 
     -- setMod
     mob:setMod(MOD_REGEN, 50);
@@ -32,6 +33,8 @@ function onMobInitialize(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,20);
     mob:setMod(MOD_MACC, 1900);
     mob:setMod(MOD_MATT, 110);
+    mob:setMod(MOD_STUNRES, 500);
+
 end;
 
 -----------------------------------

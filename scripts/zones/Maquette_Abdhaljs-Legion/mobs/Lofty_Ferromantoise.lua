@@ -16,6 +16,8 @@ require("scripts/globals/spoofchat");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+    mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
+    mob:setMobMod(MOBMOD_SOUND_RANGE,20);
 end;
 
 -----------------------------------
@@ -31,8 +33,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,55);
     mob:addMod(MOD_DEF,75);
     mob:addMod(MOD_ACC,125);
-    mob:setMod(MOBMOD_SIGHT_RANGE,20);
-    mob:setMod(MOBMOD_SOUND_RANGE,20);
+
 end;
 
 -----------------------------------

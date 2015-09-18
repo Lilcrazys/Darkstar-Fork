@@ -28,6 +28,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_ACC,1500);
     mob:setMod(MOD_WATER_AFFINITY,20);
     mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MDEF, 50);
 
 end;
 
