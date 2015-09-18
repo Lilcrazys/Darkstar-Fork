@@ -20,8 +20,8 @@ function onTrade(player,npc,trade)
     local ActionMobB = GetMobAction(QnAernA);
     local ActionMobC = GetMobAction(QnAernB);
     if (ActionMobA == ACTION_NONE and ActionMobB == ACTION_NONE and ActionMobC == ACTION_NONE) then
-        -- 5 full stacks of Aern Organs. KEEP IT A MULTIPLE OF 12
-        if (trade:hasItemQty(1786, 60) and trade:getItemCount() == 60) then
+        -- 4 full stacks of Aern Organs. KEEP IT A MULTIPLE OF 12
+        if (trade:hasItemQty(1786, 48) and trade:getItemCount() == 60) then
             local RND = 0;
             if (math.random(0,1) == 1) then
                 RND = 1;
@@ -45,6 +45,7 @@ function onTrade(player,npc,trade)
                 SetDropRate(4397,1854,0);
                 SetDropRate(4397,1902,1000);
             end
+            player:tradeComplete();
         end
     else
         player:PrintToPlayer("Cannot spawn mob - are you sure it isn't already up?");
