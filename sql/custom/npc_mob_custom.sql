@@ -3106,7 +3106,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17478058,'Kalos_Eunomia','Kalos Eunomia'
 REPLACE INTO `npc_list` VALUES (17449559,'Planar_Rift','Planar Rift',0,-259,0,379,1,40,40,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
 REPLACE INTO `mob_spawn_points` VALUES (17596732,'Roly_Poly','Roly-Poly',90426,-259,0,379,61);
 -- Garlaige [s]
-REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Lauren','Laidly Laurence',90427,-260,-0.579,-20,9);
+REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Laurence','Laidly Laurence',90427,-260,-0.579,-20,9);
 -- Quifim Island
 REPLACE INTO `mob_spawn_points` VALUES (17293648,'Kaggen','Kaggen',90433,150,-20.5,150,0);
 -- Lower Delkfutt
