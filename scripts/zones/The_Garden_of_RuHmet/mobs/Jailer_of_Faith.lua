@@ -12,6 +12,7 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
 
@@ -47,12 +48,12 @@ end;
 -- Randomly change forms 
 -----------------------------------
 
-function onMobFight(mob)
+function onMobFight(mob, target)
 	-- Forms: 0 = Closed  1 = Closed  2 = Open 3 = Closed 
+--[[
 	local randomTime = math.random(45,180);
 	local changeTime = mob:getLocalVar("changeTime");
 
---[[
 	if (mob:getBattleTime() - changeTime > randomTime) then
 		-- Change close to open.
 		if (mob:AnimationSub() == 1) then
@@ -75,7 +76,7 @@ function onMobDeath(mob, killer, npc)
 	qm3:hideNPC(900);
 	local qm3position = math.random(1,5);
 	qm3:setPos(Jailer_of_Faith_QM_POS[qm3position][1], Jailer_of_Faith_QM_POS[qm3position][2], Jailer_of_Faith_QM_POS[qm3position][3]);
-]]
+
     local qm3 = GetNPCByID(16921029);
     qm3:hideNPC(900);
     local qm3p = math.random(1,5); -- random for next @pos.
@@ -96,4 +97,5 @@ function onMobDeath(mob, killer, npc)
         qm3:setPos(-682,0.00,-340); -- spawn point 5 "Mithra"
         -- printf("Qm3 is at pos 5, jailer death");
     end
+    ]]
 end;
