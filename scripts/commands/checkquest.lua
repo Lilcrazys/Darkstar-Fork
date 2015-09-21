@@ -12,7 +12,7 @@ cmdprops =
 function onTrigger(player,logId,questId,target)
     if (logId == nil or questId == nil) then
         player:PrintToPlayer( "You must enter a valid LogID and Quest ID!" );
-        player:PrintToPlayer( "NUMBERS ONLY! See scripts\globals\quests.lua" );
+        player:PrintToPlayer( "NUMBERS ONLY! See quests.lua global" );
         player:PrintToPlayer( "@checkquest <Log ID> <Quest ID> <Player>" );
         return;
     end
