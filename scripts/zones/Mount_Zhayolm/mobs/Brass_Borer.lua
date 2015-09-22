@@ -47,7 +47,7 @@ function onMobFight(mob,target)
     end
 end;
 
-function onMobDeath(mob)
+function onMobDeath(mob,killer)
 
     -- Custom (Mythic) Trial Code
     if (cTrialItemEquipped(killer) == true) then
