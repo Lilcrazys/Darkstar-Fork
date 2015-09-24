@@ -138,7 +138,8 @@ function cTrialProgress(player, itemTable, var)
     -- and then check the vars against that instead of all this if/else'ing.
     if (itemTable == RELIC) then
         if (getCurrentStage(RELIC, TRIAL) == 0 or getCurrentStage(RELIC, TRIAL) == nil) then
-            player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
+            -- Temp commenetd out till Objective requirements are arrayed
+            -- player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(RELIC, TRIAL) == 1) then
             incrementTrialVariable(player, var)
             if (player:getVar("C_TRIAL_OBJ_1") >= 4
@@ -178,7 +179,8 @@ function cTrialProgress(player, itemTable, var)
         end
     elseif (itemTable == MYTHIC) then
         if (getCurrentStage(MYTHIC, TRIAL) == 0 or getCurrentStage(MYTHIC, TRIAL) == nil) then
-            player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
+            -- Temp commenetd out till Objective requirements are arrayed
+            -- player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(MYTHIC, TRIAL) == 1) then
             incrementTrialVariable(player, var)
             if (player:getVar("C_TRIAL_OBJ_1") >= 5
