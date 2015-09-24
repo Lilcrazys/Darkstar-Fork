@@ -31,7 +31,6 @@ function onGameIn(player, firstlogin, zoning)
 
     -- Things checked BOTH during logon AND zone in below this line.
     checkForGearSet(player);
-    nukeOldTrialVars(player); -- temp
 
     if (player:getVar("GodMode") == 1) then
         -- Add bonus effects to the player..

@@ -28,10 +28,6 @@ function onMobDeath(mob, killer)
 
     -- Custom (Mythic) Trial Code
     if (cTrialItemEquipped(killer) == true) then
-        local KILLED = killer:getVar("C_TRIAL_OBJ_1");
-        if (KILLED < 4) then
-            killer:setVar("C_TRIAL_OBJ_1", KILLED + 1);
-        end
-        cTrialProgress(killer,MYTHIC);
+        cTrialProgress(killer, MYTHIC, 1);
     end
 end;
