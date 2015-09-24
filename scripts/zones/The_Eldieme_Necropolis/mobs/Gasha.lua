@@ -48,7 +48,9 @@ end;
 
 function onMobFight(mob, target)
     if (os.time(t) > mob:getLocalVar("depopTime")) then
-       DespawnMob(mob:getID());
+        if (mob:actionQueueEmpty() == true) then
+            DespawnMob(mob:getID());
+        end
     end
 end;
 

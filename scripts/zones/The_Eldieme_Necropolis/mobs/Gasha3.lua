@@ -53,7 +53,9 @@ function onMobFight(mob, target)
     local Gasha_2hr_Used = mob:getLocalVar("Gasha_2hr");
 
     if (os.time(t) > mob:getLocalVar("depopTime")) then
-       DespawnMob(mob:getID());
+        if (mob:actionQueueEmpty() == true) then
+            DespawnMob(mob:getID());
+        end
     end
 
     if (mob:getHPP() <= 40) then
