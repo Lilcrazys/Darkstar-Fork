@@ -15,7 +15,7 @@
 -- New entries below this line, and sorted by itemID please.
 REPLACE INTO `item_weapon` VALUES (18852,'octave_club',11,0,0,0,0,3,8,264,11,0);
 
-INSERT INTO `item_weapon` VALUES (20540,'eminent_baghnakhs',2,0,203,203,167,4,1,501,91,0);
+INSERT INTO `item_weapon` VALUES (20540,'eminent_baghnakhs',1,0,203,203,167,4,1,501,91,0);
 INSERT INTO `item_weapon` VALUES (20624,'eminent_dagger',2,0,203,203,167,1,1,183,89,0);
 INSERT INTO `item_weapon` VALUES (20726,'eminent_scimitar',3,0,215,215,167,2,1,264,128,0);
 INSERT INTO `item_weapon` VALUES (20766,'eminent_sword',4,0,215,215,167,2,1,430,209,0);

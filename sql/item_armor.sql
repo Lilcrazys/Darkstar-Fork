@@ -10461,7 +10461,7 @@ INSERT INTO `item_armor` VALUES (27766,'ukuxkaj_cap',99,115,2593826,330,0,0,16,0
 INSERT INTO `item_armor` VALUES (27767,'buremte_hat',99,115,1589788,352,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27773,'yaoyotl_helm',99,119,10689,348,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27774,'whirlpool_mask',99,119,2593826,347,0,0,16,0);
-INSERT INTO `item_armor` VALUES (27775,'nahtirah_hat',99,119,3179576,346,0,0,16,0);
+INSERT INTO `item_armor` VALUES (27775,'nahtirah_hat',99,119,1589788,346,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27776,'mikinaak_helm',99,110,10689,349,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27777,'manibozho_beret',99,110,5187652,350,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27778,'bokwus_circlet',99,110,3179576,351,0,0,16,0);

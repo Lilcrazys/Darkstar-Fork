@@ -268,6 +268,21 @@ REPLACE INTO `item_mods` VALUES (27697, 5, 23); -- MP+19
 REPLACE INTO `item_mods` VALUES (27697, 65, 33); -- Evasion+15
 REPLACE INTO `item_mods` VALUES (27697, 8, 27); -- STR+20
 REPLACE INTO `item_mods` VALUES (27697, 9, 20); -- DEX+14
+
+REPLACE INTO `item_mods` VALUES (27777, 1, 72); -- DEF
+REPLACE INTO `item_mods` VALUES (27777, 10, 10); -- VIT
+REPLACE INTO `item_mods` VALUES (27777, 11, 13); -- AGI
+REPLACE INTO `item_mods` VALUES (27777, 13, 10); -- MND
+REPLACE INTO `item_mods` VALUES (27777, 14, 11); -- CHR
+REPLACE INTO `item_mods` VALUES (27777, 2, 19); -- HP
+REPLACE INTO `item_mods` VALUES (27777, 12, 10); -- INT
+REPLACE INTO `item_mods` VALUES (27777, 31, 38); -- Magic Evasion
+REPLACE INTO `item_mods` VALUES (27777, 384, 61); -- Haste
+REPLACE INTO `item_mods` VALUES (27777, 5, 20); -- MP
+REPLACE INTO `item_mods` VALUES (27777, 65, 22); -- Evasion
+REPLACE INTO `item_mods` VALUES (27777, 8, 10); -- STR
+REPLACE INTO `item_mods` VALUES (27777, 9, 13); -- DEX
+
 INSERT INTO `item_mods` VALUES (28005, 1, 88);
 INSERT INTO `item_mods` VALUES (28005, 10, 31);
 INSERT INTO `item_mods` VALUES (28005, 11, 11);
@@ -316,3 +331,4 @@ INSERT INTO `item_mods` VALUES (28621, 311, 6); -- Magic Damage
 INSERT INTO `item_mods` VALUES (28538, 5, 40); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28538, 374, 3); -- Magic Damage
 INSERT INTO `item_mods` VALUES (28538, 27, -5); -- enm
+

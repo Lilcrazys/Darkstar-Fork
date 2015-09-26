@@ -2889,7 +2889,7 @@ INSERT INTO `mob_skill` VALUES (1076,296,63,'Extremely_Bad_Breath',4,7.0,2000,15
 INSERT INTO `mob_skill` VALUES (1703,297,1361,'Water_Bomb',1,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1702,297,1360,'Magic_Hammer',0,16.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skill` VALUES (1704,297,1362,'Frog_Cheer',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skill` VALUES (1706,295,1364,'Frog_Chorus',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skill` VALUES (1706,297,1364,'Frog_Chorus',1,10.0,2000,1500,4,0,0,0);
 
 -- Anantaboga (298)
 INSERT INTO `mob_skill` VALUES (388,298,388,'Wind_Breath',4,10.0,2000,1500,4,0,0,0);

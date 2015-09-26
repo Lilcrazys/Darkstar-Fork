@@ -166,3 +166,6 @@ INSERT INTO `item_armor` VALUES (27044,'crusher_gauntlets',99,119,10689,342,0,0,
 
 INSERT INTO `item_armor` VALUES (26874,'supay_weskit',99,119,8,137,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27222,'limbo_trousers',99,119,2371507,206,0,0,128,0);
+
+INSERT INTO `item_armor` VALUES (28274,'regal_pumps_+1',99,119,3310120,131,0,0,256,0);
+INSERT INTO `item_armor` VALUES (28385,'atzintli_necklace',99,119,4194303,131,0,0,512,0);

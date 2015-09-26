@@ -3481,7 +3481,7 @@ INSERT INTO `item_weapon` VALUES (20483,'glanzfaust',1,0,242,242,215,4,2,576,118
 INSERT INTO `item_weapon` VALUES (20485,'kenkonken',1,0,242,242,215,4,2,526,93,0);
 INSERT INTO `item_weapon` VALUES (20486,'verethragna',1,0,242,242,215,4,1,531,99,0);
 INSERT INTO `item_weapon` VALUES (20487,'verethragna',1,0,242,242,215,4,1,531,99,0);
-INSERT INTO `item_weapon` VALUES (20528,'fists_of_fury+1',1,0,242,242,188,4,1,91,128,0);
+INSERT INTO `item_weapon` VALUES (20528,'fists_of_fury+1',1,0,242,242,188,4,1,501,128,0);
 INSERT INTO `item_weapon` VALUES (20530,'ohrmazd',1,0,242,242,188,4,1,526,128,0);
 INSERT INTO `item_weapon` VALUES (20536,'tinhaspa',1,242,242,188,0,4,1,526,121,0);
 INSERT INTO `item_weapon` VALUES (20546,'ninzas_+1',1,0,162,162,126,4,1,531,79,0);
