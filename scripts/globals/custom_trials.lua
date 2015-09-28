@@ -259,17 +259,17 @@ end;
 -----------------------------------
 function incrementTrialVariable(player, var)
     if (var == 1) then
-        player:setVar("C_TRIAL_OBJ_1", player:getVar("C_TRIAL_OBJ_1")+1)
+        player:setVar("C_TRIAL_OBJ_1", player:getVar("C_TRIAL_OBJ_1")+1);
     elseif (var == 2) then
-        player:setVar("C_TRIAL_OBJ_2", player:getVar("C_TRIAL_OBJ_2")+1)
+        player:setVar("C_TRIAL_OBJ_2", player:getVar("C_TRIAL_OBJ_2")+1);
     elseif (var == 3) then
-        player:setVar("C_TRIAL_OBJ_3", player:getVar("C_TRIAL_OBJ_3")+1)
+        player:setVar("C_TRIAL_OBJ_3", player:getVar("C_TRIAL_OBJ_3")+1);
     elseif (var == 4) then
-        player:setVar("C_TRIAL_OBJ_4", player:getVar("C_TRIAL_OBJ_4")+1)
+        player:setVar("C_TRIAL_OBJ_4", player:getVar("C_TRIAL_OBJ_4")+1);
     elseif (var == 5) then
-        player:setVar("C_TRIAL_OBJ_5", player:getVar("C_TRIAL_OBJ_5")+1)
+        player:setVar("C_TRIAL_OBJ_5", player:getVar("C_TRIAL_OBJ_5")+1);
     elseif (var == 6) then
-        player:setVar("C_TRIAL_OBJ_6", player:getVar("C_TRIAL_OBJ_6")+1)
+        player:setVar("C_TRIAL_OBJ_6", player:getVar("C_TRIAL_OBJ_6")+1);
     end
 end;
 

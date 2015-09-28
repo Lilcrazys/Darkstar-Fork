@@ -12,6 +12,11 @@ require("scripts/globals/custom_trials");
 
 function onMobDeath(mob,killer)
 
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(killer) == true) then
+        cTrialProgress(killer, RELIC, 3);
+    end
+
     -- Set Dune_Widow's Window Open Time
     wait = math.random((1),(5)) * 3600
     SetServerVariable("[POP]Dune_Widow", os.time(t) + wait); -- 1-5 hours
@@ -22,11 +27,6 @@ function onMobDeath(mob,killer)
     SetServerVariable("[PH]Dune_Widow", 0);
     DeterMob(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
-
-    -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, RELIC, 3);
-    end
 
 end;
 
