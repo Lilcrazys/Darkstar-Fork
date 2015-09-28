@@ -45,10 +45,10 @@ function onTrigger(player)
             player:PrintToPlayer(string.format("Tanzenite Jewels delivered : %u of 50", player:getVar("C_TRIAL_OBJ_1")));
         elseif (MYTHIC_LV == 1) then
             player:PrintToPlayer(string.format("Brass Borer : %u of 5", player:getVar("C_TRIAL_OBJ_1")));
-            player:PrintToPlayer(string.format("Iriz Irma : %u of 5", player:getVar("C_TRIAL_OBJ_2")));
-            player:PrintToPlayer(string.format("Velionis : KILLS %u of 5", player:getVar("C_TRIAL_OBJ_3")));
+            player:PrintToPlayer(string.format("Iriz Ima : %u of 5", player:getVar("C_TRIAL_OBJ_2")));
+            player:PrintToPlayer(string.format("Velionis : %u of 5", player:getVar("C_TRIAL_OBJ_3")));
             player:PrintToPlayer(string.format("Zareehkl the Jubilant : %u of 5", player:getVar("C_TRIAL_OBJ_4")));
-            player:PrintToPlayer(string.format("Dextrose KILLS : %u of 5", player:getVar("C_TRIAL_OBJ_5")));
+            player:PrintToPlayer(string.format("Dextrose : %u of 5", player:getVar("C_TRIAL_OBJ_5")));
             player:PrintToPlayer(string.format("Iriri Samariri : %u of 5", player:getVar("C_TRIAL_OBJ_6")));
         elseif (MYTHIC_LV == 2) then
             player:PrintToPlayer(string.format("Achamoth : %u of 4", player:getVar("C_TRIAL_OBJ_1")));
