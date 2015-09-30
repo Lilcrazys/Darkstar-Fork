@@ -284,7 +284,7 @@ function onTrade(player,npc,trade)
         elseif (trade:hasItemQty(4066, 5) and trade:hasItemQty(27947,1) and trade:getItemCount() == 6) then                  --hands
             PRIZE = 27967
         elseif (trade:hasItemQty(4065, 5) and trade:hasItemQty(28094,1) and trade:getItemCount() == 6) then                  --legs
-            PRIZE = 28114
+            PRIZE = 28115
         elseif (trade:hasItemQty(4064, 5) and trade:hasItemQty(27336,1) and trade:getItemCount() == 6) then                  --feet
             PRIZE = 28247
     ----------------------------BLM-------------------------------------
@@ -295,7 +295,7 @@ function onTrade(player,npc,trade)
         elseif (trade:hasItemQty(4066, 5) and trade:hasItemQty(27946,1) and trade:getItemCount() == 6) then              --hands
             PRIZE = 27968
         elseif (trade:hasItemQty(4065, 5) and trade:hasItemQty(28093,1) and trade:getItemCount() == 6) then              --legs
-            PRIZE = 28115
+            PRIZE = 28114
         elseif (trade:hasItemQty(4064, 5) and trade:hasItemQty(28226,1) and trade:getItemCount() == 6) then              --feet
             PRIZE = 28248
     ----------------------------PLD-------------------------------------

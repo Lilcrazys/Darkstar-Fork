@@ -32,3 +32,5 @@ INSERT INTO `item_weapon` VALUES (21251,'eminent_crossbow',26,0,215,215,167,5,1,
 INSERT INTO `item_weapon` VALUES (21281,'eminent_gun',26,1,215,215,167,6,1,600,102,0);
 
 INSERT INTO `item_weapon` VALUES (21405,'eminent_flute',42,0,0,0,0,0,0,240,0,0);
+
+REPLACE INTO `item_weapon` VALUES (20718,'claidheamh_soluis',3,0,242,242,188,2,1,270,142,0);
