@@ -136,9 +136,13 @@ function cTrialProgress(player, itemTable, var)
     -- This whole function could have been done better. But am tired.
     -- Should define the required totals for each objective somewhere
     -- and then check the vars against that instead of all this if/else'ing.
-    if (itemTable == RELIC) then
+    if (itemTable == nil or getCurrentStage(itemTable, TRIAL) == nil) then
+        player:PrintToPlayer("Error: The trial itemTable checked was nil. Report this message and mob you were fighting.");
+    elseif (var == nil) then
+        player:PrintToPlayer("Error: The trial variable checked was nil. Report this message and mob you were fighting.");
+    elseif (itemTable == RELIC) then
         if (getCurrentStage(RELIC, TRIAL) == 0 or getCurrentStage(RELIC, TRIAL) == nil) then
-            -- Temp commenetd out till Objective requirements are arrayed
+            -- Temp commented out till Objective requirements are arrayed
             -- player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(RELIC, TRIAL) == 1) then
             incrementTrialVariable(player, var)
@@ -179,7 +183,7 @@ function cTrialProgress(player, itemTable, var)
         end
     elseif (itemTable == MYTHIC) then
         if (getCurrentStage(MYTHIC, TRIAL) == 0 or getCurrentStage(MYTHIC, TRIAL) == nil) then
-            -- Temp commenetd out till Objective requirements are arrayed
+            -- Temp commented out till Objective requirements are arrayed
             -- player:PrintToPlayer("Error: Trial item stage check returned zero or nil. Please report this message.");
         elseif (getCurrentStage(MYTHIC, TRIAL) == 1) then
             incrementTrialVariable(player, var)

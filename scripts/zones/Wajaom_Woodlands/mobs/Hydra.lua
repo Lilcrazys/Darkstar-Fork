@@ -70,7 +70,7 @@ function onMobDeath(mob, killer)
 
     -- Custom (Mythic) Trial Code
     if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, Mythic, 1);
+        cTrialProgress(killer, MYTHIC, 1);
     end
 
 end;
