@@ -283,6 +283,24 @@ REPLACE INTO `item_mods` VALUES (27777, 65, 22); -- Evasion
 REPLACE INTO `item_mods` VALUES (27777, 8, 10); -- STR
 REPLACE INTO `item_mods` VALUES (27777, 9, 13); -- DEX
 
+INSERT INTO `item_mods` VALUES (27868, 2, 54); --  Hit Points +54
+INSERT INTO `item_mods` VALUES (27868, 5, 59); --  Mana Points +59
+INSERT INTO `item_mods` VALUES (27868, 8, 21); --  Strength +21
+INSERT INTO `item_mods` VALUES (27868, 9, 21); --  Dexterity +21
+INSERT INTO `item_mods` VALUES (27868, 10, 21); --  Vitality +21
+INSERT INTO `item_mods` VALUES (27868, 11, 21); --  Agility +21
+INSERT INTO `item_mods` VALUES (27868, 12, 29); --  Intelligence +29
+INSERT INTO `item_mods` VALUES (27868, 13, 29); --  Mind +29
+INSERT INTO `item_mods` VALUES (27868, 14, 29); --  Charisma +29
+INSERT INTO `item_mods` VALUES (27868, 25, 25); --  Accuracy +25
+INSERT INTO `item_mods` VALUES (27868, 30, 15); --  Magic Accuracy +15
+INSERT INTO `item_mods` VALUES (27868, 68, 41); --  Evasion +41
+INSERT INTO `item_mods` VALUES (27868, 31, 80); --  Magic Evasion +80
+INSERT INTO `item_mods` VALUES (27868, 29, 6); --  Magic Defense Bonus + 68
+INSERT INTO `item_mods` VALUES (27868, 114, 18); --  Enfeebling Magic Skill +18
+INSERT INTO `item_mods` VALUES (27868, 384, 30); --  Haste +3%
+INSERT INTO `item_mods` VALUES (27868, 369, 2); --  Refresh +2
+
 INSERT INTO `item_mods` VALUES (28005, 1, 88);
 INSERT INTO `item_mods` VALUES (28005, 10, 31);
 INSERT INTO `item_mods` VALUES (28005, 11, 11);
@@ -301,6 +319,21 @@ INSERT INTO `item_mods` VALUES (28005, 68, 23);
 INSERT INTO `item_mods` VALUES (28005, 8, 11);
 INSERT INTO `item_mods` VALUES (28005, 9, 34);
 INSERT INTO `item_mods` VALUES (28135,369,2); -- Didn't include Unity refresh
+
+-- Manibozho Brais (ID: 28199)
+INSERT INTO `item_mods` VALUES (28199, 2, 25); --  Hit Points +25
+INSERT INTO `item_mods` VALUES (28199, 8, 13); --  Strength +13
+INSERT INTO `item_mods` VALUES (28199, 9, 12); --  Dexterity +12
+INSERT INTO `item_mods` VALUES (28199, 10, 4); --  Vitality +4
+INSERT INTO `item_mods` VALUES (28199, 11, 6); --  Agility +6
+INSERT INTO `item_mods` VALUES (28199, 12, 13); --  Intelligence +13
+INSERT INTO `item_mods` VALUES (28199, 13, 5); --  Mind +5
+INSERT INTO `item_mods` VALUES (28199, 23, 15); --  Attack +15
+INSERT INTO `item_mods` VALUES (28199, 68, 19); --  Evasion +19
+INSERT INTO `item_mods` VALUES (28199, 31, 49); --  Magic Evasion +49
+INSERT INTO `item_mods` VALUES (28199, 29, 2); --  Magic Defense Bonus +2
+INSERT INTO `item_mods` VALUES (28199, 384, 60); --  Haste +6%
+
 REPLACE INTO `item_mods` VALUES (28227, 384, 41); -- Haste +4%
 REPLACE INTO `item_mods` VALUES (28230, 2, 20); -- MP+20
 REPLACE INTO `item_mods` VALUES (28230, 2, 28); -- HP+28
