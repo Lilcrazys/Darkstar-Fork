@@ -19,10 +19,15 @@ end;
 
 function onMobDeath(mob,killer)
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
+    local HAS_RESTORAL = killer:hasSpell(711);
+    local HAS_RAIL_CANNON = killer:hasSpell(712);
+    local isBLU = (killer:getMainJob() == JOB_BLU);
+
+    if (math.random(0,99) < CHANCE and isBLU and HAS_RESTORAL == false) then
         killer:addSpell(711);
     end
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
+
+    if (math.random(0,99) < CHANCE and isBLU and HAS_RAIL_CANNON == false) then
         killer:addSpell(712);
     end
 
