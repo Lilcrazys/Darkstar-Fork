@@ -19,7 +19,11 @@ cmdprops =
 function onTrigger(player, victim, jinx, power)
     if (victim == nil) then
         player:PrintToPlayer("Must specify a victim!");
-        player:PrintToPlayer("@jinx <victim> <type>");
+        player:PrintToPlayer("@jinx <victim> <crit agro speed interupt>");
+        player:PrintToPlayer("If player re-logs zones or job changes, jinx will be removed.");
+        player:PrintToPlayer("DO NOT TELL PLAYER THIS.");
+        player:PrintToPlayer("DO NOT TELL PLAYER WHAT THIS COMMAND DOES.");
+        player:PrintToPlayer("DO NOT EVEN TELL EVEN PLAYER THIS COMMAND EXISTS.");
     else
         local targ = GetPlayerByName(victim);
         if (targ ~= nil) then
