@@ -10,8 +10,9 @@
 
 -- REPLACE INTO `item_mods` VALUES (itemId, modId, value); -- remember to comment what the item is and what this mod is!
 -- New entries below this line, and sorted by itemID then modID.
-
 INSERT INTO `item_mods` VALUES (11926, 416, 15); -- USELESS COMMENT "Custom" CUSTOM WHAT?
+INSERT INTO `item_mods` VALUES (11927, 1, 40); -- Aegis (lv99 no afterglow) DEF
+INSERT INTO `item_mods` VALUES (11927, 163, -128); -- Aegis (lv99 no afterglow) -50% Magic Damage Taken
 REPLACE INTO `item_mods` VALUES (11958, 384, 30);
 INSERT INTO `item_mods` VALUES (13215, 2, 9999); -- HP to GM belt to test things
 INSERT INTO `item_mods` VALUES (16193, 416, 10); -- USELESS COMMENT "Custom" CUSTOM WHAT?
