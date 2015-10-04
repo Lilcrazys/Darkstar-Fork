@@ -17,7 +17,7 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
     -- addMod
-    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_MDEF,30);
     mob:addMod(MOD_ATT,200);
 end;
 

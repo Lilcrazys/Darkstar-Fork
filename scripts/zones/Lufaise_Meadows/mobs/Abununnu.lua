@@ -16,7 +16,8 @@ require("scripts/globals/quests");
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
     -- addMod
-    mob:addMod(MOD_ATT,150);
+    mob:addMod(MOD_ATT,50);
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
