@@ -1643,14 +1643,14 @@ INSERT INTO `mob_droplist` VALUES (9623,0,28500,400); -- Upsurge Earring
 INSERT INTO `mob_droplist` VALUES (9624,0,10284,600); -- Grandoynes_Mail
 INSERT INTO `mob_droplist` VALUES (9624,0,27884,700); -- Temachtiani_Shirt
 INSERT INTO `mob_droplist` VALUES (9624,0,28309,700); -- Temachtiani boots
-INSERT INTO `mob_droplist` VALUES (9624,0,28303,120); -- Wayfarer_Clogs
+INSERT INTO `mob_droplist` VALUES (9624,0,28308,120); -- Wayfarer_Clogs
 INSERT INTO `mob_droplist` VALUES (9624,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9624,0,21183,220); -- Eminent_Pole
 INSERT INTO `mob_droplist` VALUES (9624,0,28501,400); -- Allegro_Earring
 
 INSERT INTO `mob_droplist` VALUES (9625,0,28309,700); -- Temachtiani boots
 INSERT INTO `mob_droplist` VALUES (9625,0,27884,700); -- Temachtiani_Shirt
-INSERT INTO `mob_droplist` VALUES (9625,0,28303,120); -- Wayfarer_Clogs
+INSERT INTO `mob_droplist` VALUES (9625,0,28308,120); -- Wayfarer_Clogs
 INSERT INTO `mob_droplist` VALUES (9625,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9625,0,20954,220); -- Eminent_Lance
 INSERT INTO `mob_droplist` VALUES (9625,0,28501,400); -- Allegro_Earring

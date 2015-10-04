@@ -62,7 +62,7 @@ INSERT INTO `item_armor` VALUES (27742,'wayfarer_circlet',99,117,4179646,20,0,0,
 INSERT INTO `item_armor` VALUES (27883,'wayfarer_robe',99,117,4179646,20,0,0,32,0);
 INSERT INTO `item_armor` VALUES (28031,'wayfarer_cuffs',99,117,4179646,20,0,0,64,0);
 INSERT INTO `item_armor` VALUES (28170,'wayfarer_slops',99,117,4179646,20,0,0,128,0);
-INSERT INTO `item_armor` VALUES (28303,'wayfarer_clogs',99,117,4179646,20,0,0,256,0);
+INSERT INTO `item_armor` VALUES (28308,'wayfarer_clogs',99,117,4179646,20,0,0,256,0);
 
 INSERT INTO `item_armor` VALUES (27743,'temachtiani_headband',99,105,4194303,102,0,0,16,0);
 INSERT INTO `item_armor` VALUES (28032,'temachtiani_gloves',99,105,4194303,102,0,0,64,0);

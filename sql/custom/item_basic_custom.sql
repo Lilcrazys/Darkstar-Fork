@@ -54,7 +54,7 @@ INSERT INTO `item_basic` VALUES (27742,0,'wayfarer_circlet','wayfarer_circlet',1
 INSERT INTO `item_basic` VALUES (27883,0,'wayfarer_robe','wayfarer_robe',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28031,0,'wayfarer_cuffs','wayfarer_cuffs',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28170,0,'wayfarer_slops','wayfarer_slops',1,63552,0,1,0);
-INSERT INTO `item_basic` VALUES (28303,0,'wayfarer_clogs','wayfarer_clogs',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28308,0,'wayfarer_clogs','wayfarer_clogs',1,63552,0,1,0);
 
 INSERT INTO `item_basic` VALUES (27743,0,'temachtiani_headband','temachtiani_headband',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28032,0,'temachtiani_gloves','temachtiani_gloves',1,63552,0,1,0);
