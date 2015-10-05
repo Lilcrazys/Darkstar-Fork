@@ -5,7 +5,7 @@
 -- If player re-logs zones or job changes, jinx will be removed.
 -- DO NOT TELL PLAYER THIS.
 -- DO NOT TELL PLAYER WHAT THIS COMMAND DOES.
--- DO NOT EVEN TELL EVEN PLAYER THIS COMMAND EXISTS.
+-- DO NOT EVEN TELL PLAYER THIS COMMAND EXISTS.
 -- Default type of jinx used is "Agro Magnet" :)
 -- Power and Duration are only for status effect type jinxing.
 ---------------------------------------------------------------------------------------------------
