@@ -217,7 +217,6 @@ function onTrade(player,npc,trade)
                 player:addItem(1451,1); -- R. Stripeshell
                 player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
             elseif (trade:hasItemQty(1454,1)) then
-                player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
                 player:addItem(1454,1); -- R. Goldpiece
                 player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
             elseif (trade:hasItemQty(1457,1)) then
