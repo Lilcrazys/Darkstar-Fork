@@ -126,6 +126,12 @@ end;
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    if (player:getFreeSlotsCount() < 1) then
+        player:PrintToPlayer("Not enough free space! This message is here to prevent item loss.");
+        do return end;
+    end
+
+
    local itemid = hasRelic(trade,2);
    local eventParams = {}; -- item1, item2, item3, num_items, currencytype, currencyamount, finalvar
    local currentRelic = player:getVar("RELIC_IN_PROGRESS"); -- Stores which item has been taken from the player
@@ -204,6 +210,23 @@ function onTrade(player,npc,trade)
          elseif (eventParams[7] == 3) then
             player:setVar("RELIC_DUE_AT",os.time() + RELIC_3RD_UPGRADE_WAIT_TIME);
          end
+
+        -- Begin currency theft workarounds...
+        if (count == 1) then
+            if (trade:hasItemQty(1451,1)) then
+                player:addItem(1451,1); -- R. Stripeshell
+                player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
+            elseif (trade:hasItemQty(1454,1)) then
+                player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
+                player:addItem(1454,1); -- R. Goldpiece
+                player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
+            elseif (trade:hasItemQty(1457,1)) then
+                player:addItem(1457,1); -- 10,000 Byne Bill
+                player:PrintToPlayer("You aren't supposed to actually trade it to the goblin.");
+            end
+        end
+        -- End currency theft workarounds...
+
          player:tradeComplete();
          player:startEvent(13, currentRelic, eventParams[5], eventParams[6], 0, 0, 0, 0, eventParams[8]);
       end
@@ -254,11 +277,11 @@ function onTrigger(player,npc)
       player:startEvent(12, currentRelic, eventParams[5], eventParams[6], 0, 0, 0, 0, eventParams[8]);
 
    -- No relic, or waiting until next conquest tally.
-   elseif (itemid == nil) then -- or relicConquest > os.time()) then
+   elseif (itemid == nil or relicConquest > os.time()) then
       player:startEvent(10);
 
    -- Found a relic and conquest tally is not due (0, or passed), time to explain a stage
-   elseif (itemid ~= nil) then -- and relicConquest <= os.time()) then
+   elseif (itemid ~= nil and relicConquest <= os.time()) then
       eventParams = getRelicParameters(itemid);
 
       -- Determine stage based on eventParams[7]
