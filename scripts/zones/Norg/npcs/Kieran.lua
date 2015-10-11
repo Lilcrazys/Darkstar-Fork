@@ -26,6 +26,7 @@ function onTrigger(player,npc)
     local VWBC = player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING);
     local elshimoList = player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST);
     local zepwellDetour = player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL);
+    local litelorVariant = player:getQuestStatus(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT);
     local status = player:getVar("NORG_VW_STATUS");
 
     if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) ~= QUEST_COMPLETED) then
@@ -41,9 +42,9 @@ function onTrigger(player,npc)
     ------------------------------
     elseif (VWBC == QUEST_ACCEPTED and elshimoList == QUEST_COMPLETED and zepwellDetour == QUEST_COMPLETED) then
         player:startEvent(254); -- Told to go see Gilgamesh
-    elseif (VWBC == QUEST_COMPLETED and status == 0) then
+    elseif (litelorVariant == QUEST_AVAILABLE and VWBC == QUEST_COMPLETED and status == 0) then
         player:startEvent(255); -- Reminder to go see Gilgamesh
-    elseif (VWBC == QUEST_COMPLETED and status == 1) then
+    elseif (litelorVariant == QUEST_AVAILABLE and VWBC == QUEST_COMPLETED and status == 1) then
         player:startEvent(258); -- Spoke with Gilgamesh
     -- elseif
         -- player:startEvent(260); -- Spoke with Gilgamesh (To Sky!)
@@ -82,6 +83,7 @@ function onEventFinish(player,csid,option)
     elseif (csid == 258) then
         player:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
         player:addQuest(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT);
+        player:delKeyItem(ASHEN_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, ASHEN_STRATUM_ABYSSITE_II);
     elseif (csid == 259) then
         if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
