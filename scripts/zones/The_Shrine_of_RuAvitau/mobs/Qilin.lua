@@ -100,10 +100,12 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Qilin Kill
         if (killer:getMaskBit(killer:getVar("ZILART_VW"), 1) == false) then
-	       killer:setMaskBit(killer:getVar("ZILART_VW"),"ZILART_VW",1,true);
+            killer:setMaskBit(killer:getVar("ZILART_VW"),"ZILART_VW",1,true);
         end
+
         if (killer:isMaskFull(killer:getVar("ZILART_VW"),3) == true) then
-           killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+            killer:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
+            killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
         end
     end
 end;
