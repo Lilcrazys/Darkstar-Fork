@@ -67,12 +67,27 @@ function onEventFinish(player,csid,option)
         player:addMission(WOTG,BACK_TO_THE_BEGINNING);
         if (r == 1) then
             player:addNationTeleport(MAW,1);
+            player:addNationTeleport(MAW,2);
+            player:addNationTeleport(MAW,3);
+            player:addNationTeleport(MAW,4);
+            player:addNationTeleport(MAW,5);
+            player:addNationTeleport(MAW,6);
             toMaw(player,1); -- go to Batallia_Downs[S]
         elseif (r == 2) then
+            player:addNationTeleport(MAW,1);
             player:addNationTeleport(MAW,2);
+            player:addNationTeleport(MAW,3);
+            player:addNationTeleport(MAW,4);
+            player:addNationTeleport(MAW,5);
+            player:addNationTeleport(MAW,6);
             toMaw(player,3); -- go to Rolanberry_Fields_[S]
         elseif (r == 3) then
+            player:addNationTeleport(MAW,1);
+            player:addNationTeleport(MAW,2);
+            player:addNationTeleport(MAW,3);
             player:addNationTeleport(MAW,4);
+            player:addNationTeleport(MAW,5);
+            player:addNationTeleport(MAW,6);
             toMaw(player,5); -- go to Sauromugue_Champaign_[S]
         end;
     elseif (csid == 904 and option == 1) then
