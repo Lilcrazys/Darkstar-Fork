@@ -1,7 +1,7 @@
 -----------------------------------
 -- Zone: Abyssea-LTP
--- NPC: ???
--- Spawns: Briareus
+--  NPC: ???
+-- Spawns Briareus
 -----------------------------------
 
 require("scripts/globals/status");

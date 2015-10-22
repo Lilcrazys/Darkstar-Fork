@@ -113,20 +113,16 @@ function onTrigger(player,npc)
         ]]
         else
             player:PrintToPlayer("DEBUG: VOIDSTONE CHECK");
-            if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
-                player:addKeyItem(CRIMSON_STRATUM_ABYSSITE);
-                player:delKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
-                player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE);
             --[[
-            elseif (VW_OP_SANDORIA < 9) then
+            if (VW_OP_SANDORIA < 9) then
                 -- 0:East Ronfaure 1:East Ronfaure 2:Ordelle's Caves
                 -- 3:the Jugner Forest 4:the Jugner Forest 5:King Ranperre's Tomb
                 -- 6:West Ronfaure 7:La Theine Plateau 8:Vunkerl Inlet
                 -- After 8, cycle back to zero - DO NOT PROCEED TO 9!
                 player:messageSpecial(OPERATIONS1, VW_OP_SANDORIA);
                 player:messageSpecial(REQUEST1, VW_OP_SANDORIA);
+            elseif (player:getVar("VOIDSTONE_TIMER") < os.time()) then
             ]]
-            end
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                 player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
                 player:addCurrency("voidstones", 1);

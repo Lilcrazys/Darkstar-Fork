@@ -113,20 +113,16 @@ function onTrigger(player,npc)
         ]]
         else
             player:PrintToPlayer("DEBUG: VOIDSTONE CHECK");
-            if (player:hasKeyItem(JADE_STRATUM_ABYSSITE_IV) and player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_COMPLETED) then
-                player:addKeyItem(JADE_STRATUM_ABYSSITE);
-                player:delKeyItem(JADE_STRATUM_ABYSSITE_IV);
-                player:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE);
             --[[
-            elseif (VW_OP_WINDURST < 9) then
+            if (VW_OP_WINDURST < 9) then
                 -- 0:North Gustaberg 1:North Gustaberg 2:the Gusgen Mines
                 -- 3:the Pashhow Marshlands 4:the Pashhow Marshlands 5:Dangruf Wadi
                 -- 6:South Gustaberg 7:the Konschtat Highlands 8:Grauberg
                 -- After 8, cycle back to zero - DO NOT PROCEED TO 9!
                 player:messageSpecial(OPERATIONS3, VW_OP_WINDURST);
                 player:messageSpecial(REQUEST3, VW_OP_WINDURST);
+            elseif (player:getVar("VOIDSTONE_TIMER") < os.time()) then
             ]]
-            end
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
                 player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
                 player:addCurrency("voidstones", 1);

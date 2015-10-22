@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: ?
--- VWNM: ?
+-- Area: Dangruf Wadi
+-- VWNM: Celaeno
 -- @pos ? ? ? ?
 -----------------------------------
 
@@ -41,7 +41,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
 
     -- Vars
-    mob:setLocalVar("depopTimer", os.time());
+    mob:setLocalVar("depopTime", os.time());
 end;
 
 -----------------------------------
@@ -56,31 +56,27 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Paramount_Harpeia_2hr_Used = 0;
+    local Used2hr = mob:getLocalVar("Used2hr");
+    local notBusy = mob:actionQueueEmpty();
 
-    if (os.time() - mob:getLocalVar("depopTimer") > 1800) then
-        -- despawn in 30 min
+    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
         DespawnMob(mob:getID());
     end
 
-    if (mob:getLocalVar("Paramount_Harpeia_2hr_Used") ~= nil) then
-        Paramount_Harpeia_2hr_Used = mob:getLocalVar("Paramount_Harpeia_2hr_Used");
-    end
-
     if (mob:getHPP() <= 15) then
-        if (Paramount_Harpeia_2hr_Used == 2) then
-            mob:useMobAbility(436); -- CS
-            mob:setLocalVar("Paramount_Harpeia_2hr_Used", 3);
+        if (Used2hr == 2) then
+            mob:useMobAbility(436); -- ChainSpell
+            mob:setLocalVar("Used2hr", 3);
         end
     elseif (mob:getHPP() <= 40) then
-        if (Paramount_Harpeia_2hr_Used == 1) then
-            mob:useMobAbility(436); -- CS
-            mob:setLocalVar("Paramount_Harpeia_2hr_Used", 2);
+        if (Used2hr == 1) then
+            mob:useMobAbility(436); -- ChainSpell
+            mob:setLocalVar("Used2hr", 2);
         end
     elseif (mob:getHPP() <= 60) then
-        if (Paramount_Harpeia_2hr_Used == 0) then
-            mob:useMobAbility(433); -- Ben
-            mob:setLocalVar("Paramount_Harpeia_2hr_Used", 1);
+        if (Used2hr == 0) then
+            mob:useMobAbility(433); -- Benediction
+            mob:setLocalVar("Used2hr", 1);
         end
     end
 end;
@@ -90,12 +86,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (killer:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
-        if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
+    if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_IV)) then
+        if (killer:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
             if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 1) == false) then
-               killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",1,true);
+                killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",1,true);
             end
         end
+        killer:addKeyItem(INDIGO_STRATUM_ABYSSITE);
+        killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
+        killer:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE);
     end
     killer:addCurrency("bayld", 125);
     killer:addExp(10000);

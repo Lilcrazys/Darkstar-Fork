@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: ?
--- VWNM: ?
+-- Area: KRT
+-- VWNM: Hahava
 -- @pos ? ? ? ?
 -----------------------------------
 
@@ -39,7 +39,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_QUAD_ATTACK,25);
 
     -- Vars
-    mob:setLocalVar("depopTimer", os.time());
+    mob:setLocalVar("depopTime", os.time());
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -53,10 +53,10 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
+    -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
+    local notBusy = mob:actionQueueEmpty();
 
-    if (os.time() - mob:getLocalVar("depopTimer") > 1800) then
-        -- despawn in 30 min
+    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
         DespawnMob(mob:getID());
     end
 end;
@@ -80,12 +80,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    if (killer:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
-        if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
+    if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
+        if (killer:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
             if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 2) == false) then
-               killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
+                killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
             end
         end
+        killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE);
+        killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
+        killer:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE);
     end
     killer:addCurrency("bayld", 125);
     killer:addExp(10000);
