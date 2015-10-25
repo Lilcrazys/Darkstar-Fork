@@ -40,8 +40,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
 
-    -- Vars
-    mob:setLocalVar("depopTime", os.time());
+    -- var
+    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -57,11 +57,6 @@ end;
 
 function onMobFight(mob, target)
     local Used2hr = mob:getLocalVar("Used2hr");
-    local notBusy = mob:actionQueueEmpty();
-
-    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
-        DespawnMob(mob:getID());
-    end
 
     if (mob:getHPP() <= 15) then
         if (Used2hr == 2) then
@@ -77,6 +72,16 @@ function onMobFight(mob, target)
         if (Used2hr == 0) then
             mob:useMobAbility(433); -- Benediction
             mob:setLocalVar("Used2hr", 1);
+        end
+    end
+
+    -- Check for timed depop
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+        if (mob:actionQueueEmpty() == true) then
+            DespawnMob(mob:getID());
+
+            -- Prevent moronic "bug" reports..
+            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
         end
     end
 end;

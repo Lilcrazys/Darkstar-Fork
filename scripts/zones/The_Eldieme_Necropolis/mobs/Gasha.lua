@@ -50,6 +50,9 @@ function onMobFight(mob, target)
     if (os.time(t) > mob:getLocalVar("depopTime")) then
         if (mob:actionQueueEmpty() == true) then
             DespawnMob(mob:getID());
+
+            -- Prevent moronic "bug" reports..
+            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
         end
     end
 end;

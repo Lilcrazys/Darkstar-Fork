@@ -2,16 +2,15 @@
 -- Area: Abyssea - La_Theine
 --  NPC: Cruor Prospector
 -- Type: Cruor NPC
---
+-- @pos ? ? ? ? (needs filled in)
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-La_Theine/TextIDs"] = nil;
 -----------------------------------
-
+require("scripts/zones/Abyssea-La_Theine/TextIDs");
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
-require("scripts/zones/Abyssea-La_Theine/TextIDs");
 
 -----------------------------------
 -- onTrade Action
