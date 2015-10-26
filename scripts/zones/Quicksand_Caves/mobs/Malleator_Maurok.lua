@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: EDIT ME
--- VWNM: ME TO
+-- Area: Quicksand Caves
+-- VWNM: Malleator Maurrok
 -----------------------------------
 
 require("scripts/globals/status");
@@ -91,11 +91,11 @@ function onMobDeath(mob, killer)
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- MAlleator Maurok Kill
         if (player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
             if (killer:getMaskBit(killer:getVar("VW_OP_101"), 1) == false) then
-               killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",1,true);
+                killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",1,true);
             end
         else
             if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 1) == false) then
-               killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",1,true);
+                killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",1,true);
             end
 
             if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
