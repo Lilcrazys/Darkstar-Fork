@@ -89,7 +89,7 @@ function onMobDeath(mob, killer)
     DespawnMob(mob:getID()+2);
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- MAlleator Maurok Kill
-        if (player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
+        if (killer:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
             if (killer:getMaskBit(killer:getVar("VW_OP_101"), 1) == false) then
                 killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",1,true);
             end

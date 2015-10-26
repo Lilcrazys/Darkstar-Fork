@@ -78,13 +78,13 @@ function onMobDeath(mob, killer)
     DespawnMob(mob:getID()+4);
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Neith Kill
-        if (player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
+        if (killer:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
             if (killer:getMaskBit(killer:getVar("VW_OP_101"), 1) == false) then
-               killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",1,true);
+                killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",1,true);
             end
         else
             if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 4) == false) then
-               killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",4,true);
+                killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",4,true);
             end
 
             if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then

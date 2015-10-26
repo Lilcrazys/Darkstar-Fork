@@ -79,7 +79,7 @@ function onMobDeath(mob, killer)
     DespawnMob(mob:getID()+4);
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Sabotender Kill
-        if (player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
+        if (killer:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
             if (killer:getMaskBit(killer:getVar("VW_OP_101"), 2) == false) then
                 killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",2,true);
             end
