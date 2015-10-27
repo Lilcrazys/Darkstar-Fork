@@ -28,7 +28,21 @@ function onTrigger(player,npc)
 	
 	local ZilartMission = player:getCurrentMission(ZILART);
 	
-	if (ZilartMission == KAZAMS_CHIEFTAINESS) then
+--------------------------------------
+    -- Begin VW stuff
+    if (player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING) == QUEST_COMPLETED
+    and player:getQuestStatus(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT) == QUEST_AVAILABLE) then
+        if (player:getVar("NORG_VW_STATUS") == 0) then
+            player:startEvent(256);
+        else
+            player:startEvent(257);
+        end
+    -- elseif
+        -- 262 Return from sky, part 2, get sent to Aht Urgan.
+        -- 263 repeat Gilgamesh dialog
+        -- End VW stuff
+--------------------------------------
+	elseif (ZilartMission == KAZAMS_CHIEFTAINESS) then
 		player:startEvent(0x0007);
 	elseif (ZilartMission == THE_TEMPLE_OF_UGGALEPIH) then
 		player:startEvent(0x0008);
@@ -46,20 +60,6 @@ function onTrigger(player,npc)
         player:startEvent(0x00ad);
     elseif (ZilartMission == AWAKENING) then
         player:startEvent(0x00b1);
---------------------------------------
-    -- Begin VW stuff
-    elseif (player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING) == QUEST_COMPLETED
-    and player:getQuestStatus(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT) == QUEST_AVAILABLE) then
-        if (player:getVar("NORG_VW_STATUS") == 0) then
-            player:startEvent(256);
-        else
-            player:startEvent(257);
-        end
-    else
-        -- 262 Return from sky, part 2, get sent to Aht Urgan.
-        -- 263 repeat Gilgamesh dialog
-        -- End VW stuff
---------------------------------------
 	end
 	
 end;
