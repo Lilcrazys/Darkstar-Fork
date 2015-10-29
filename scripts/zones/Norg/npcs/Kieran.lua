@@ -46,8 +46,9 @@ function onTrigger(player,npc)
         player:startEvent(255); -- Reminder to go see Gilgamesh
     elseif (litelorVariant == QUEST_AVAILABLE and VWBC == QUEST_COMPLETED and status == 1) then
         player:startEvent(258); -- Spoke with Gilgamesh
+    elseif (litelorVariant == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("ASHEN_STRATUM_II"),3) == true) then)
+        player:startEvent(260); -- To Sky!
     -- elseif
-        -- player:startEvent(260); -- Spoke with Gilgamesh (To Sky!)
         -- player:startEvent(261); -- Return from sky, part 1
     else
         player:startEvent(259); -- menu
@@ -96,5 +97,11 @@ function onEventFinish(player,csid,option)
         else
             player:SpoofChatPlayer("Voidstones are issued once per Earth day.");
         end
+    elseif (csid == 260) then
+        player:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+        player:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+        player:completeQuest(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT);
+        player:addQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
+        player:messageSpecial(KEYITEM_OBTAINED, ASHEN_STRATUM_ABYSSITE_III);
     end
 end;
