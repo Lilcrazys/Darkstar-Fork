@@ -46,7 +46,7 @@ function onTrigger(player,npc)
         player:startEvent(255); -- Reminder to go see Gilgamesh
     elseif (litelorVariant == QUEST_AVAILABLE and VWBC == QUEST_COMPLETED and status == 1) then
         player:startEvent(258); -- Spoke with Gilgamesh
-    elseif (litelorVariant == QUEST_ACCEPTED and player:isMaskFull(killer:getVar("ASHEN_STRATUM_II"),3) == true) then)
+    elseif (litelorVariant == QUEST_ACCEPTED and player:isMaskFull(player:getVar("ASHEN_STRATUM_II"),3) == true) then
         player:startEvent(260); -- To Sky!
     -- elseif
         -- player:startEvent(261); -- Return from sky, part 1
