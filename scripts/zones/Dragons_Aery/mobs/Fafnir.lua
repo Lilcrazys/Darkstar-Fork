@@ -41,6 +41,9 @@ function onMobDeath(mob, killer)
         killer:addSpell(SPELL_ID);
     end
 
+    -- Set server var for custom @command to check ToD
+    SetServerVariable("Our_Fafnir_ToD", os.time());
+
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(killer) == true) then
         cTrialProgress(killer, RELIC, 3);
