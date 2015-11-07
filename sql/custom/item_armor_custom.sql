@@ -183,7 +183,7 @@ REPLACE INTO `item_armor` VALUES (27012,'horos_bangles',99,109,262144,304,0,0,64
 REPLACE INTO `item_armor` VALUES (27013,'horos_bangles_+1',99,119,262144,304,0,0,64,0);
 REPLACE INTO `item_armor` VALUES (26836,'horos_casaque',99,109,262144,304,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (26837,'horos_casaque_+1',99,119,262144,304,0,0,32,0);
-INSERT INTO `item_armor` VALUES (28274,'regal_pumps_+1',99,119,1720332,131,0,0,256,0);
+REPLACE INTO `item_armor` VALUES (28274,'regal_pumps_+1',99,119,1720332,131,0,0,256,0);
 REPLACE INTO `item_armor` VALUES (17668,'firmament_+1',77,0,2195665,277,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (10452,'rubeus_jacket',99,0,1589788,327,0,0,32,0);
 

@@ -433,4 +433,3 @@ INSERT INTO `item_mods` VALUES (28275,68,65); -- 10 Evasion added to total of 55
 INSERT INTO `item_mods` VALUES (28275,169,12);
 INSERT INTO `item_mods` VALUES (28275,249,15);
 INSERT INTO `item_mods` VALUES (28275,384,30);
-INSERT INTO `item_mods` VALUES (28275,68,65);
