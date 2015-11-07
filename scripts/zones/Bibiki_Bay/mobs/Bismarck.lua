@@ -66,6 +66,7 @@ function onMobFight(mob, target)
             else
                 if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                     SpawnMob(Helper, 300):updateEnmity(target);
+                    helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
                     mob:setLocalVar("lastPetPop", os.time());
                     alreadyPopped = true;
                 end
