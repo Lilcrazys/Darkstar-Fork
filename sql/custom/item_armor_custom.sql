@@ -186,3 +186,11 @@ INSERT INTO `item_armor` VALUES (26837,'horos_casaque_+1',99,119,262144,304,0,0,
 INSERT INTO `item_armor` VALUES (28274,'regal_pumps_+1',99,119,1720332,131,0,0,256,0);
 INSERT INTO `item_armor` VALUES (17668,'firmament_+1',77,0,2195665,277,0,0,1,0);
 INSERT INTO `item_armor` VALUES (10452,'rubeus_jacket',99,0,1589788,327,0,0,32,0);
+
+REPLACE INTO `item_armor` VALUES (10911,'nares_cap',99,0,1589788,197,0,0,16,0);
+REPLACE INTO `item_armor` VALUES (10484,'nares_saio',99,0,1589788,197,0,0,32,0);
+REPLACE INTO `item_armor` VALUES (10533,'nares_cuffs',99,0,1589788,197,0,0,64,0);
+REPLACE INTO `item_armor` VALUES (10564,'nares_trews',99,0,1589788,197,0,0,128,0);
+REPLACE INTO `item_armor` VALUES (10630,'nares_clogs',99,0,1589788,197,0,0,256,0);
+
+INSERT INTO `item_armor` VALUES (28275,'jute_boots',99,119,1056,11,0,0,256,0);

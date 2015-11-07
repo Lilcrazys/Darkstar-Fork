@@ -153,3 +153,4 @@ REPLACE INTO `item_basic` VALUES (28547,0,'merirosvo_ring','merirosvo_ring',1,63
 
 INSERT INTO `item_basic` VALUES (20609,0,'jugo_kukri_+1','jugo_kukri_+1',1,53568,0,1,0);
 INSERT INTO `item_basic` VALUES (26896,0,'lugra_cloak','lugra_cloak',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (28275,0,'jute_boots','jute_boots',1,63552,0,1,0);
