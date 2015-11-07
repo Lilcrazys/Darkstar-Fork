@@ -1894,7 +1894,7 @@ INSERT INTO `mob_droplist` VALUES (9660,0,20862,300); --
 INSERT INTO `mob_droplist` VALUES (9660,0,28622,1000); --
 INSERT INTO `mob_droplist` VALUES (9660,0,4049,1000); -- Rusted_Coin
 -- Bismark
-INSERT INTO `mob_droplist` VALUES (9662,28696,300); --
+INSERT INTO `mob_droplist` VALUES (9662,0,28696,300); --
 INSERT INTO `mob_droplist` VALUES (9662,0,27220,300); --
 INSERT INTO `mob_droplist` VALUES (9662,0,27407,300); --
 INSERT INTO `mob_droplist` VALUES (9662,0,28617,300); --
