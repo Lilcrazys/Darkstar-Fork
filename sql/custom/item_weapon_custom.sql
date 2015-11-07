@@ -36,5 +36,5 @@ INSERT INTO `item_weapon` VALUES (21405,'eminent_flute',42,0,0,0,0,0,0,240,0,0);
 REPLACE INTO `item_weapon` VALUES (20718,'claidheamh_soluis',3,0,242,242,188,2,1,270,142,0);
 
 INSERT INTO `item_weapon` VALUES (20609,'jugo_kukri_+1',2,0,242,242,188,1,1,142,82,0);
-INSERT INTO `item_weapon` VALUES (17668,'firmament_+1',3,0,0,0,0,2,1,227,45,0);
-INSERT INTO `item_weapon` VALUES (16630,'striker_sword',3,0,0,0,0,2,1,234,54,0);
+REPLACE INTO `item_weapon` VALUES (17668,'firmament_+1',3,0,0,0,0,2,1,227,45,0);
+REPLACE INTO `item_weapon` VALUES (16630,'striker_sword',3,0,0,0,0,2,1,234,54,0);
