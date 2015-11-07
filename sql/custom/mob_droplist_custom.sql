@@ -1868,3 +1868,37 @@ INSERT INTO `mob_droplist` VALUES (9657,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9657,0,4066,1000); -- Rems 3
 INSERT INTO `mob_droplist` VALUES (9657,0,4066,1000); -- Rems 3
 INSERT INTO `mob_droplist` VALUES (9657,0,4066,1000); -- Rems 3
+
+-- Isarukitsck
+INSERT INTO `mob_droplist` VALUES (9661,0,28478,300); --
+INSERT INTO `mob_droplist` VALUES (9661,0,21350,300); --
+INSERT INTO `mob_droplist` VALUES (9661,0,20604,300); --
+INSERT INTO `mob_droplist` VALUES (9661,0,28632,1000); --
+INSERT INTO `mob_droplist` VALUES (9661,0,4049,1000); -- Rusted_Coin
+-- fjalar
+INSERT INTO `mob_droplist` VALUES (9658,0,28479,300); --
+INSERT INTO `mob_droplist` VALUES (9658,0,21104,300); --
+INSERT INTO `mob_droplist` VALUES (9658,0,21276,300); --
+INSERT INTO `mob_droplist` VALUES (9658,0,28631,1000); --
+INSERT INTO `mob_droplist` VALUES (9658,0,4049,1000); -- Rusted_Coin
+-- Abununnu
+INSERT INTO `mob_droplist` VALUES (9659,0,28483,300); --
+INSERT INTO `mob_droplist` VALUES (9659,0,20949,300); --
+INSERT INTO `mob_droplist` VALUES (9659,0,20813,300); --
+INSERT INTO `mob_droplist` VALUES (9659,0,28624,1000); --
+INSERT INTO `mob_droplist` VALUES (9659,0,4049,1000); -- Rusted_Coin
+-- Tsui-Goab
+INSERT INTO `mob_droplist` VALUES (9660,0,27507,300); --
+INSERT INTO `mob_droplist` VALUES (9660,0,20609,300); --
+INSERT INTO `mob_droplist` VALUES (9660,0,20862,300); --
+INSERT INTO `mob_droplist` VALUES (9660,0,28622,1000); --
+INSERT INTO `mob_droplist` VALUES (9660,0,4049,1000); -- Rusted_Coin
+-- Bismark
+INSERT INTO `mob_droplist` VALUES (9662,28696,300); --
+INSERT INTO `mob_droplist` VALUES (9662,0,27220,300); --
+INSERT INTO `mob_droplist` VALUES (9662,0,27407,300); --
+INSERT INTO `mob_droplist` VALUES (9662,0,28617,300); --
+INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
+INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
+INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
+INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
