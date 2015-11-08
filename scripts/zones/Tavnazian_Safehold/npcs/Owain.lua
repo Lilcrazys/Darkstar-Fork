@@ -27,18 +27,20 @@ function onTrigger(player,npc)
     local bibiki = player:getQuestStatus(OUTLANDS, VW_OP_004_BIBIKI_BOMBARDMENT);
     local status = player:getVar("TAV_VW_STATUS");
 
-    if (skyward == QUEST_COMPLETED) or (player:getMaskBit(player:getVar("ZILART_VW"), 3) == true) and (status == 0) then
-        player:addQuest(OUTLANDS, VW_OP_026_TAVNAZIAN_TERRORS);
+
+    if (bibiki == QUEST_COMPLETED) and (status == 0) then
         player:addKeyItem(HYACINTH_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE);
-        player:setVar("TAV_VW_STATUS",1);
     elseif (terrors == QUEST_COMPLETED) and (status == 1) then
         player:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
         player:addQuest(OUTLANDS, VW_OP_004_BIBIKI_BOMBARDMENT);
         player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE_II);
-    elseif (bibiki == QUEST_COMPLETED) then
+        player:setVar("TAV_VW_STATUS",0);
+    elseif (skyward == QUEST_COMPLETED) or (player:getMaskBit(player:getVar("ZILART_VW"), 3) == true) and (status == 0) then
+        player:addQuest(OUTLANDS, VW_OP_026_TAVNAZIAN_TERRORS);
         player:addKeyItem(HYACINTH_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE);
+        player:setVar("TAV_VW_STATUS",1);
     end
 end;
 
