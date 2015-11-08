@@ -58,7 +58,7 @@ end;
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 60) then
+    if (os.time() - popTime > 90) then
         local alreadyPopped = false;
         for Helper = mob:getID()+1, mob:getID()+10 do
             if (alreadyPopped == true) then

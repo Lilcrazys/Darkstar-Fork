@@ -59,10 +59,11 @@ end;
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 120) then
+    if (os.time() - popTime > 90) then
         for Helper = mob:getID()+1, mob:getID()+2 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
+                helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
                 mob:setLocalVar("lastPetPop", os.time());
             end
         end
