@@ -61,6 +61,7 @@ function onMobFight(mob, target)
         for Helper = mob:getID()+1, mob:getID()+6 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
+                helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
                 mob:setLocalVar("lastPetPop", os.time());
             end
         end
@@ -112,6 +113,6 @@ function onMobDeath(mob, killer)
     killer:addCurrency("bayld", 1250);
     killer:addExp(10000);
     if (killer:hasKeyItem(AMBER_STRATUM_ABYSSITE_II)) then -- Morta Kill
-        killer:setVar("VW_TOAU", 1);
+       killer:completeQuest(AHT_URHGAN, VW_OP_068_SUBTERRAINEAN_SKIRMISH);
     end
 end;

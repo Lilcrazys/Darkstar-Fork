@@ -60,6 +60,7 @@ function onMobFight(mob, target)
         for Helper = mob:getID()+1, mob:getID()+2 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
+                helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
                 mob:setLocalVar("lastPetPop", os.time());
             end
         end
@@ -79,8 +80,7 @@ function onMobDeath(mob, killer)
            killer:setMaskBit(killer:getVar("AMBER_STRATUM"),"AMBER_STRATUM",0,true);
         end
         if (killer:isMaskFull(killer:getVar("AMBER_STRATUM"),4) == true) then
-           killer:addKeyItem(AMBER_STRATUM_ABYSSITE_II);
-           killer:delKeyItem(AMBER_STRATUM_ABYSSITE);
+           killer:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
            killer:setVar("AMBER_STRATUM", 0);
         end
     end;

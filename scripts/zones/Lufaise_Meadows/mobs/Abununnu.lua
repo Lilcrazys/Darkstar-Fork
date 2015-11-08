@@ -69,7 +69,7 @@ function onMobDeath(mob, killer)
            killer:setMaskBit(killer:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",1,true);
         end
         if (killer:isMaskFull(killer:getVar("HYACINTH_STRATUM"),4) == true) then
-           killer:completeQuest(OUTLANDS, VW_OP_026_TAVNAZIAN_TERRORS);
+           killer:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
            killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
         end
     end;
