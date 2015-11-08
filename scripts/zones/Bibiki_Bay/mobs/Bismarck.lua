@@ -92,6 +92,7 @@ function onMobDeath(mob, killer)
     killer:addCurrency("bayld", 1000);
     killer:addExp(10000);
     if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
-        killer:setVar("VW_TAVNAZIA", 1);
+           killer:completeQuest(OUTLANDS, VW_OP_004_BIBIKI_BOMBARDMENT);
+           killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
     end
 end;

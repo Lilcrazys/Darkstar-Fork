@@ -1,10 +1,13 @@
 -----------------------------------
--- Area: EDIT ME
--- VWNM: ME TO
+-- Area: Ru'ann Gardens
+-- VWNM: Aello
 -----------------------------------
 
 require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/utils");
 require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -83,6 +86,7 @@ function onMobDeath(mob, killer)
         end
 
         if (killer:isMaskFull(killer:getVar("ZILART_VW"),3) == true) then
+            killer:completeQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
             killer:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
             killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
         end
