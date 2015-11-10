@@ -2,7 +2,9 @@
 -- Area: ?
 -- VWNM: Pil
 -----------------------------------
-
+package.loaded["scripts/zones/Behemoths_Dominion/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Behemoths_Dominion/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
@@ -15,6 +17,7 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     -- setMobMod
+    mob:setMobMod(MOBMOD_IDLE_DESPAWN, 180);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
 
     -- addMod
@@ -52,8 +55,15 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > depopTime) then
-        DespawnMob(mob:getID());
+
+    -- Check for timed depop
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+        if (mob:actionQueueEmpty() == true) then
+            DespawnMob(mob:getID());
+
+            -- Prevent moronic "bug" reports..
+            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
+        end
     end
 end;
 
@@ -115,13 +125,15 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Pil Kill
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_III"), 2) == false) then
-           killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",2,true);
+            killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",2,true);
         end
-        if (player:getQuestStatus(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY) == QUEST_COMPLETED) then
+
+        if (killer:getQuestStatus(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY) == QUEST_COMPLETED) then
             if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
-               killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-               killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
-               killer:setVar("WHITE_STRATUM_III", 0);
+                killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+                killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
+                killer:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_IV);
+                killer:setVar("WHITE_STRATUM_III", 0);
             end
         end
     end
