@@ -2,7 +2,9 @@
 -- Area: ?
 -- VWNM: Melancholic_Moira
 -----------------------------------
-
+package.loaded["scripts/zones/Pashhow_Marshlands_[S][/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Pashhow_Marshlands_[S]/TextIDs");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
@@ -78,12 +80,15 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 1) == false) then
             killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",1,true);
         end
+
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
-           killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
-           killer:setVar("INDIGO_STRATUM_III", 0);
+            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
+            killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+            killer:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_IV);
+            killer:setVar("INDIGO_STRATUM_III", 0);
         end
     end
+
     killer:addCurrency("bayld", 75);
     killer:addExp(10000);
 end;

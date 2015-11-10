@@ -2,7 +2,9 @@
 -- Area: ?
 -- VWNM: Kholomodumo
 -----------------------------------
-
+package.loaded["scripts/zones/Jugner_Forest_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Jugner_Forest_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/keyitems");
@@ -89,12 +91,14 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_III)) then -- Kholomodumo Kill
         if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_III"), 1) == false) then
-           killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
+            killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
         end
+
         if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM_III"),2) == true) then
-           killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
-           killer:setVar("CRIMSON_STRATUM_III", 0);
+            killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
+            killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
+            killer:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_IV);
+            killer:setVar("CRIMSON_STRATUM_III", 0);
         end
     end;
 end;
