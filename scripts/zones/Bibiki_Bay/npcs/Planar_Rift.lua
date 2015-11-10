@@ -67,6 +67,5 @@ function onEventFinish(player,csid,option)
         SpawnMob(16793862):updateClaim(player);
         SpawnMob(16793863):updateClaim(player);
         SpawnMob(16793864):updateClaim(player);
-        SpawnMob(16793865):updateClaim(player);
     end
 end;

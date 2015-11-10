@@ -58,7 +58,7 @@ end;
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 60) then
+    if (os.time() - popTime > 320) then
         local alreadyPopped = false;
         for Helper = mob:getID()+1, mob:getID()+10 do
             if (alreadyPopped == true) then
@@ -92,6 +92,7 @@ function onMobDeath(mob, killer)
     killer:addCurrency("bayld", 1000);
     killer:addExp(10000);
     if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
-        killer:setVar("VW_TAVNAZIA", 1);
+       killer:completeQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
+       killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
     end
 end;

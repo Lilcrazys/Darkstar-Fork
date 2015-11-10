@@ -59,10 +59,11 @@ end;
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 120) then
+    if (os.time() - popTime > 90) then
         for Helper = mob:getID()+1, mob:getID()+2 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);
+                helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
                 mob:setLocalVar("lastPetPop", os.time());
             end
         end
@@ -82,9 +83,8 @@ function onMobDeath(mob, killer)
            killer:setMaskBit(killer:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",2,true);
         end
         if (killer:isMaskFull(killer:getVar("HYACINTH_STRATUM"),4) == true) then
-           killer:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
+           killer:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
            killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
-           killer:setVar("HYACINTH_STRATUM", 0);
         end
     end;
 end;
