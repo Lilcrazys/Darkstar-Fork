@@ -17,7 +17,7 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     -- setMobMod
-    mob:setMobMod(MOBMOD_IDLE_DESPAWN, 180);
+    -- mob:setMobMod(MOBMOD_IDLE_DESPAWN, 180);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
 
     -- addMod
