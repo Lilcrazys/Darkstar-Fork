@@ -16,10 +16,10 @@
 -- ---------------------------------------------------------------------------
 
 -- Examples
--- DELETE FROM `mob_droplist` WHERE 'dropid'=1 and 'type'=2 and 'itemid'=3 'droprate'=4;
+-- DELETE FROM `mob_droplist` WHERE 'dropid'=1 and 'type'=2 and 'itemid'=3 and 'droprate'=4;
 -- INSERT INTO `mob_droplist` VALUES (5,6,7,8);
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
-DELETE FROM `mob_droplist` WHERE 'dropid'=24 and 'type'=0 and 'itemid'=3344 'droprate'=500; -- Clump of Red Pondweed
+DELETE FROM `mob_droplist` WHERE 'dropid'=24 and 'type'=0 and 'itemid'=3344 and 'droprate'=500; -- Clump of Red Pondweed
 INSERT INTO `mob_droplist` VALUES (32,0,12094,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (52,0,3291,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (55,0,10452,330);
@@ -47,7 +47,7 @@ INSERT INTO `mob_droplist` VALUES (222,0,3292,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (222,0,3292,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (229,0,12106,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (231,0,12097,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE 'dropid'=270 and 'type'=0 and 'itemid'=3342 'droprate'=500; -- Savory Shank King Behemoth
+DELETE FROM `mob_droplist` WHERE 'dropid'=270 and 'type'=0 and 'itemid'=3342 and 'droprate'=500; -- Savory Shank King Behemoth
 INSERT INTO `mob_droplist` VALUES (321,0,12098,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (396,0,2929,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (396,0,2929,200); -- COMMENT ME
@@ -64,7 +64,7 @@ INSERT INTO `mob_droplist` VALUES (788,0,3288,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (788,0,10255,240); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (838,0,12091,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (838,0,19407,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE 'dropid'=918 and 'type'=0 and 'itemid'=3340 'droprate'=500; -- Cup of Sweet Tea Nidhogg
+DELETE FROM `mob_droplist` WHERE 'dropid'=918 and 'type'=0 and 'itemid'=3340 and 'droprate'=500; -- Cup of Sweet Tea Nidhogg
 INSERT INTO `mob_droplist` VALUES (962,0,2931,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (962,0,12090,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1621,0,16192,340); -- COMMENT ME
