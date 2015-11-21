@@ -3,7 +3,9 @@
 -- VWNM: Celaeno
 -- @pos ? ? ? ?
 -----------------------------------
-
+package.loaded["scripts/zones/Dangruf_Wadi/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Dangruf_Wadi/TextIDs");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
@@ -97,10 +99,12 @@ function onMobDeath(mob, killer)
                 killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",1,true);
             end
         end
+
         killer:addKeyItem(INDIGO_STRATUM_ABYSSITE);
         killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
         killer:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE);
     end
+
     killer:addCurrency("bayld", 125);
     killer:addExp(10000);
 end;

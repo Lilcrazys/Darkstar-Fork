@@ -2,7 +2,9 @@
 -- Area: ?
 -- VWNM: Lorbulcrud
 -----------------------------------
-
+package.loaded["scripts/zones/Meriphataud_Mountains_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Meriphataud_Mountains_[S]/TextIDs");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
@@ -70,12 +72,15 @@ function onMobDeath(mob, killer)
         if (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 1) == false) then
             killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",1,true);
         end
+
         if (killer:isMaskFull(killer:getVar("JADE_STRATUM_III"),2) == true) then
-           killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
-           killer:setVar("JADE_STRATUM_III", 0);
+            killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
+            killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
+            killer:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
+            killer:setVar("JADE_STRATUM_III", 0);
         end
     end
+
     killer:addCurrency("bayld", 75);
     killer:addExp(10000);
 end;

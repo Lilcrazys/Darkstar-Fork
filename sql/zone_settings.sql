@@ -229,7 +229,7 @@ INSERT INTO `zone_settings` VALUES (179,4,'127.0.0.1',54230,'Stellar_Fulcrum',0,
 INSERT INTO `zone_settings` VALUES (180,4,'127.0.0.1',54230,'LaLoff_Amphitheater',0,0,196,196,0,0.00,145);
 INSERT INTO `zone_settings` VALUES (181,4,'127.0.0.1',54230,'The_Celestial_Nexus',0,0,198,198,0,0.00,145);
 INSERT INTO `zone_settings` VALUES (182,4,'127.0.0.1',54230,'Walk_of_Echoes',0,0,215,215,0,0.00,152);
-INSERT INTO `zone_settings` VALUES (183,6,'127.0.0.1',54430,'Maquette_Abdhaljs-Legion',0,0,143,143,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (183,6,'127.0.0.1',54230,'Maquette_Abdhaljs-Legion',0,0,143,143,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (184,3,'127.0.0.1',54230,'Lower_Delkfutts_Tower',0,0,115,102,0,0.00,1169);
 INSERT INTO `zone_settings` VALUES (185,5,'127.0.0.1',54430,'Dynamis-San_dOria',121,121,121,121,0,0.00,400);
 INSERT INTO `zone_settings` VALUES (186,5,'127.0.0.1',54430,'Dynamis-Bastok',121,121,121,121,0,0.00,400);
@@ -342,12 +342,12 @@ INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54130,'292',0,0,0,0,0,0.00
 INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54130,'293',0,0,0,0,0,0.00,0);
 
 -- Temp workaround for Legion battles because instancing there isn't ready, so its BCNM for now
-REPLACE INTO `zone_settings` VALUES (183,4,'127.0.0.1',54430,'Maquette_Abdhaljs-Legion',143,143,143,143,0,0.00,145);
+REPLACE INTO `zone_settings` VALUES (183,3,'127.0.0.1',54230,'Maquette_Abdhaljs-Legion',143,143,143,143,0,0.00,145);
 
 -- -------------------------------------------------------
 -- This Sets zone IP on all of the above without causing
 -- edit conflicts every time DarkStar changes the table.
-UPDATE zone_settings SET zoneip = '74.199.66.47';
+UPDATE zone_settings SET zoneip = '69.14.81.203';
 -- Usually people just save a query and run it as needed
 -- instead of storing IP in zone_settings.sql like this.
 -- -------------------------------------------------------

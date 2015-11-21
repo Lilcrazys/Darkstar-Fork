@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: Bhishani
 -----------------------------------
-
+package.loaded["scripts/zones/South_Gustaberg/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/South_Gustaberg/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -86,12 +88,14 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_IV)) then -- Bhishani Kill
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_IV"), 1) == false) then
-           killer:setMaskBit(killer:getVar("WHITE_STRATUM_IV"),"WHITE_STRATUM_IV",1,true);
+            killer:setMaskBit(killer:getVar("WHITE_STRATUM_IV"),"WHITE_STRATUM_IV",1,true);
         end
+
         if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_IV"),3) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-           killer:setVar("WHITE_STRATUM_IV", 0);
+            killer:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
+            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+            killer:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
+            killer:setVar("WHITE_STRATUM_IV", 0);
         end
     end;
 end;

@@ -64,12 +64,12 @@ function onEventFinish(player,csid,option)
     -- printf("RESULT: %u",option);
     if (csid == 6000 and option == 1) then
         player:delCurrency("voidstones", 1);
-        SpawnMob(17101218, 300):updateClaim(player);
-        SpawnMob(17101219, 300):updateClaim(player);
-        SpawnMob(17101220, 300):updateClaim(player);
-        SpawnMob(17101221, 300):updateClaim(player);
-        SpawnMob(17101222, 300):updateClaim(player);
-        SpawnMob(17101223, 300):updateClaim(player);
-        SpawnMob(17101224, 300):updateClaim(player);
+        SpawnMob(17101218):updateClaim(player);
+        SpawnMob(17101219):updateClaim(player);
+        SpawnMob(17101220):updateClaim(player);
+        SpawnMob(17101221):updateClaim(player);
+        SpawnMob(17101222):updateClaim(player);
+        SpawnMob(17101223):updateClaim(player);
+        SpawnMob(17101224):updateClaim(player);
     end
 end;

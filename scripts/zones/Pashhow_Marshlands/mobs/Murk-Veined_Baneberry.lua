@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: Murk-Veined_Baneberry
 -----------------------------------
-
+package.loaded["scripts/zones/Pashhow_Marshlands/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Pashhow_Marshlands/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -95,14 +97,17 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_III)) then -- Baneberry Kill
         if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 0) == false) then
-           killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",0,true);
+            killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",0,true);
         end
+
         if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
-           killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
-           killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
-           killer:setVar("INDIGO_STRATUM_III", 0);
+            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
+            killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+            killer:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_IV);
+            killer:setVar("INDIGO_STRATUM_III", 0);
         end
     end
+
     killer:addCurrency("bayld", 75);
     killer:addExp(10000);
 end;

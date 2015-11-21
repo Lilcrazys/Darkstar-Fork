@@ -2,7 +2,9 @@
 -- Area: ?
 -- VWNM: Lancing Lamorak
 -----------------------------------
-
+package.loaded["scripts/zones/West_Ronfaure/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/West_Ronfaure/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
@@ -75,12 +77,14 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_IV)) then -- Lancing Lamorak Kill
         if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_IV"), 0) == false) then
-           killer:setMaskBit(killer:getVar("WHITE_STRATUM_IV"),"WHITE_STRATUM_IV",0,true);
+            killer:setMaskBit(killer:getVar("WHITE_STRATUM_IV"),"WHITE_STRATUM_IV",0,true);
         end
+
         if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_IV"),3) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-           killer:setVar("WHITE_STRATUM_IV", 0);
+            killer:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
+            killer:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+            killer:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
+            killer:setVar("WHITE_STRATUM_IV", 0);
         end
     end;
 end;

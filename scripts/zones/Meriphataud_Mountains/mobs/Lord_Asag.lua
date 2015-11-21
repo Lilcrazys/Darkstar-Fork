@@ -2,7 +2,9 @@
 -- Area: ?
 -- VWNM: Lord_Asag
 -----------------------------------
-
+package.loaded["scripts/zones/Meriphataud_Mountains/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Meriphataud_Mountains/TextIDs");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
@@ -69,14 +71,17 @@ end;
 function onMobDeath(mob, killer)
     if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Lord Asag Kill
         if (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 0) == false) then
-           killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",0,true);
+            killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",0,true);
         end
+
         if (killer:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
             killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
             killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
+            killer:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
             killer:setVar("JADE_STRATUM_III", 0);
         end
     end
+
     killer:addCurrency("bayld", 75);
     killer:addExp(10000);
 end;

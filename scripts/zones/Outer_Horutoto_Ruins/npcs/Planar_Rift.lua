@@ -69,6 +69,6 @@ function onEventFinish(player,csid,option)
     -- I know this isn't what retail does. Retail also lets them gain more than 1 per day too.
     if (csid == 6000 and option == 1) then
         player:delCurrency("voidstones", 1);
-        SpawnMob(17572219, 300):updateClaim(player);
+        SpawnMob(17572219):updateClaim(player);
     end
 end;

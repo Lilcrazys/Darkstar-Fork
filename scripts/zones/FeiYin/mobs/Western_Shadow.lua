@@ -1,10 +1,9 @@
 -----------------------------------
 -- Area: Fei'Yin
--- NM:   Capricious_Cassie
+--  NM:  Western Shadow
 -----------------------------------
-require("scripts/globals/keyitems");
-require("scripts/globals/magic");
-require("scripts/zones/FeiYin/TextIDs");
+require("scripts/globals/status");
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
