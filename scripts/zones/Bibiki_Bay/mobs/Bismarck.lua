@@ -14,8 +14,8 @@ require("scripts/globals/quests");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
@@ -33,8 +33,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,80);
     mob:setMod(MOD_CRITHITRATE,25);
-    mob:SetMobSkillAttack(true);
 
+    -- Other
+    mob:SetMobSkillAttack(true);
 end;
 
 -----------------------------------
@@ -56,9 +57,9 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local popTime = mob:getLocalVar("lastPetPop");
+    local popTime = mob:getLocalVar("nextPetPop");
 
-    if (os.time() - popTime > 320) then
+    if (os.time() > popTime) then
         local alreadyPopped = false;
         for Helper = mob:getID()+1, mob:getID()+10 do
             if (alreadyPopped == true) then
@@ -67,7 +68,7 @@ function onMobFight(mob, target)
                 if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                     SpawnMob(Helper, 300):updateEnmity(target);
                     helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
-                    mob:setLocalVar("lastPetPop", os.time());
+                    mob:setLocalVar("nextPetPop", os.time()+360);
                     alreadyPopped = true;
                 end
             end
@@ -92,7 +93,7 @@ function onMobDeath(mob, killer)
     killer:addCurrency("bayld", 1000);
     killer:addExp(10000);
     if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
-       killer:completeQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
-       killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
+        killer:completeQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
+        killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
     end
 end;

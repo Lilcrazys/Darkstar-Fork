@@ -13,13 +13,13 @@
 cmdprops =
 {
     permission = 1,
-    parameters = "ssii"
+    parameters = "ssi"
 };
 
 function onTrigger(player, victim, jinx, power)
     if (victim == nil) then
         player:PrintToPlayer("Must specify a victim!");
-        player:PrintToPlayer("@jinx <victim> <crit agro speed interupt>");
+        player:PrintToPlayer("@jinx <victim> <crit agro speed interrupt>");
         player:PrintToPlayer("If player re-logs zones or job changes, jinx will be removed.");
         player:PrintToPlayer("DO NOT TELL PLAYER THIS.");
         player:PrintToPlayer("DO NOT TELL PLAYER WHAT THIS COMMAND DOES.");
@@ -79,16 +79,16 @@ function onTrigger(player, victim, jinx, power)
                 end
                 targ:addMod(MOD_MOVE, -power);
                 player:PrintToPlayer(string.format("Victim '%s' now has decreased movement speed.", victim));
-            elseif (jinx == "interupt") then
+            elseif (jinx == "interrupt") then
                 if (power == nil or power == 0) then
                     power = 25;
                 elseif (power > 80) then
                     power = 80;
                 end
                 targ:addMod(MOD_SPELLINTERRUPT, -power);
-                player:PrintToPlayer(string.format("Victim '%s' now has increased spell interuption chance.", victim));
+                player:PrintToPlayer(string.format("Victim '%s' now has increased spell interruption chance.", victim));
             else
-                player:PrintToPlayer("@jinx <victim> <crit agro speed interupt>");
+                player:PrintToPlayer("@jinx <victim> <crit agro speed interrupt>");
                 player:PrintToPlayer("If player re-logs zones or job changes, jinx will be removed.");
                 player:PrintToPlayer("DO NOT TELL PLAYER THIS.");
                 player:PrintToPlayer("DO NOT TELL PLAYER WHAT THIS COMMAND DOES.");
