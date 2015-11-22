@@ -172,7 +172,7 @@ function onTrade(player,npc,trade)
         elseif (trade:hasItemQty(2962, 30) and trade:hasItemQty(11134,1) and trade:getItemCount() == 31) then              --legs
             PRIZE = 27257
         elseif (trade:hasItemQty(2930, 30) and trade:hasItemQty(11154,1) and trade:getItemCount() == 31) then              --feet
-            PRIZE = 27341
+            PRIZE = 27431
     ----------------------------SAM-------------------------------------
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11075,1) and trade:getItemCount() == 31) then              --head
             PRIZE = 26762

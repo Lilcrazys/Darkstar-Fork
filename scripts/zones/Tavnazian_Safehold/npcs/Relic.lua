@@ -162,7 +162,7 @@ function onTrade(player,npc,trade)
             player:addItem(26812);
             player:messageSpecial(ITEM_OBTAINED,26812);
             player:tradeComplete();
-        elseif (trade:hasItemQty(2817,20) and trade:hasItemQty(10698,1) and trade:getItemCount() == 21) then                --hands
+        elseif (trade:hasItemQty(2817,20) and trade:hasItemQty(10696,1) and trade:getItemCount() == 21) then                --hands
             player:addItem(26988);
             player:messageSpecial(ITEM_OBTAINED,26988);
             player:tradeComplete();

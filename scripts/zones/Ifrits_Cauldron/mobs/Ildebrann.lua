@@ -70,7 +70,7 @@ function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
 
     -- Pop an add after 4 minutes..
-    if (os.time() - popTime > 320) then
+    if (os.time() - popTime > 440) then
         for Helper = mob:getID() + 1, mob:getID() + 2 do
             -- Pop this helper..
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
