@@ -23,13 +23,15 @@ function onTrigger(player,npc)
             player:addItem(15793, 1);
             player:setVar("ANNIRING_TIMER", os.time()+86400);
         else
-            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 15793);
+            player:SpoofChatPlayer("Check back later. Rings are issued once a day.");
         end
-    end
+    else 
+        player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 15793);
+    end	    
 
     if (player:getVar("ANNIBUFF_TIMER") < os.time()) then
         if (annibuff == 1) then
-            player:addStatusEffect(EFFECT_FLEE,1,0,1800);
+            player:addStatusEffect(EFFECT_FLEE,5,0,1800);
             player:setVar("ANNIBUFF_TIMER", os.time()+3600);
             -- add costume of something....??
         elseif (annibuff == 2) then
@@ -37,7 +39,7 @@ function onTrigger(player,npc)
             player:addStatusEffect(EFFECT_REFRESH, 10,1,1800);
             player:setVar("ANNIBUFF_TIMER", os.time()+3600);
         elseif (annibuff == 3) then
-            player:addStatusEffect(EFFECT_REGAIN, 100,1,1800);
+            player:addStatusEffect(EFFECT_REGAIN, 10,1,1800);
             player:setVar("ANNIBUFF_TIMER", os.time()+3600);
         elseif (annibuff == 4) then
             player:addStatusEffect(EFFECT_MAX_HP_BOOST,40,0,1800);
@@ -77,7 +79,6 @@ function onTrigger(player,npc)
             player:addStatusEffect(EFFECT_REGAIN,150,1,900);
             player:addStatusEffect(EFFECT_REFRESH,99,0,900);
             player:addStatusEffect(EFFECT_REGEN,99,0,900);
-            player:addStatusEffectEx(EFFECT_SJCAP_BOOST,EFFECT_TRANSCENDENCY,1,0,900)
             player:setVar("ANNIBUFF_TIMER", os.time()+3600);
         end
     else
