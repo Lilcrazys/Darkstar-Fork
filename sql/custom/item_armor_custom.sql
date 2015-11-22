@@ -197,6 +197,6 @@ INSERT INTO `item_armor` VALUES (28275,'jute_boots',99,119,1056,11,0,0,256,0);
 REPLACE INTO `item_armor` VALUES (21350,'wingcutter_+1',99,119,4128,24,0,0,8,0);
 REPLACE INTO `item_armor` VALUES (18642,'bravura',85,0,1,339,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (18656,'bravura',90,0,1,339,0,0,1,0);
-REPLACE INTO `item_armor` VALUES (27223,'feast_hose',99,119,2462754,162,0,128,0);
+REPLACE INTO `item_armor` VALUES (27223,'feast_hose',99,119,2462754,162,0,0,128,0);
 
 REPLACE INTO `item_armor` VALUES (27220,'miasmic_pants',99,119,3850780,329,0,0,128,0);
