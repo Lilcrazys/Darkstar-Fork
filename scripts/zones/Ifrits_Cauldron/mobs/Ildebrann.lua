@@ -116,8 +116,8 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Ildebran Kill
         if (killer:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
-            if (killer:getMaskBit(killer:getVar("VW_OP_101"), 2) == false) then
-                killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",2,true);
+            if (killer:getMaskBit(killer:getVar("VW_OP_054"), 2) == false) then
+                killer:setMaskBit(killer:getVar("VW_OP_054"),"VW_OP_054",2,true);
             end
         else
             if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 5) == false) then

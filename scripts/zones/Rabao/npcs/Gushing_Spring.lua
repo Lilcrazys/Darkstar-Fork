@@ -27,6 +27,10 @@ function onTrigger(player,npc)
     local zepwellDetour = player:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL);
     local bitMaskFull = player:isMaskFull(player:getVar("VW_OP_101"),3);
 
+    if (zepwellDetour == QUEST_ACCEPTED and bitMaskFull == false) then
+        player:PrintToPlayer(string.format("Quest variable: %u and needs to be 7!", player:getVar("VW_OP_101")));
+    end
+
     if (VWBC == QUEST_AVAILABLE) then
         player:startEvent(12); -- Go away.
     elseif (zepwellDetour == QUEST_AVAILABLE) then

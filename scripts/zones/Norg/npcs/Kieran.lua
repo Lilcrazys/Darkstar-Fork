@@ -29,6 +29,16 @@ function onTrigger(player,npc)
     local litelorVariant = player:getQuestStatus(OUTLANDS, VW_OP_115_LI_TELOR_VARIANT);
     local status = player:getVar("NORG_VW_STATUS");
 
+    if (elshimoList == QUEST_ACCEPTED and player:isMaskFull(player:getVar("VW_OP_054"),3)) then
+        player:PrintToPlayer("VW_OP_054_ELSHIMO_LIST not finished dumbass!");
+        player:PrintToPlayer("Go back to Kazham and talk to Hildegard!");
+    end
+
+    if (zepwellDetour == QUEST_ACCEPTED and player:isMaskFull(player:getVar("VW_OP_101"),3)) then
+        player:PrintToPlayer("VW_OP_101_DETOUR_TO_ZEPWELL not finished dumbass!");
+        player:PrintToPlayer("Go back to Rabao and talk to Gushing spring!");
+    end
+
     if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) ~= QUEST_COMPLETED) then
         player:startEvent(249); -- No Voidwatch
     elseif (VWBC == QUEST_AVAILABLE) then

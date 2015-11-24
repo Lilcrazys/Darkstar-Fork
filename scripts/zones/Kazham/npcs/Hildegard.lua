@@ -27,6 +27,10 @@ function onTrigger(player,npc)
     local elshimoList = player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST);
     local bitMaskFull = player:isMaskFull(player:getVar("VW_OP_054"),3);
 
+    if (elshimoList == QUEST_ACCEPTED and bitMaskFull == false) then
+        player:PrintToPlayer(string.format("Quest variable: %u and needs to be 7!", player:getVar("VW_OP_054")));
+    end
+
     if (VWBC == QUEST_AVAILABLE) then
         player:startEvent(312); -- Go away.
     elseif (elshimoList == QUEST_AVAILABLE) then

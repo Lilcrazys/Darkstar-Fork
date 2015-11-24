@@ -80,8 +80,8 @@ function onMobDeath(mob, killer)
 
     if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Neith Kill
         if (killer:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
-            if (killer:getMaskBit(killer:getVar("VW_OP_101"), 1) == false) then
-                killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",1,true);
+            if (killer:getMaskBit(killer:getVar("VW_OP_054"), 1) == false) then
+                killer:setMaskBit(killer:getVar("VW_OP_054"),"VW_OP_054",1,true);
             end
         else
             if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 4) == false) then
