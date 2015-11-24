@@ -20,8 +20,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    local STRATUM = player:hasKeyItem(HYACINTH_STRATUM_ABYSSITE);
-    local mobID = 16793862, 16793872;
+    local STRATUM = player:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
+    local mobID = 16793862;
     local mobNotUp = false
     local correctNPC = false
 
@@ -65,7 +65,5 @@ function onEventFinish(player,csid,option)
     if (csid == 6000 and option == 1) then
         player:delCurrency("voidstones", 1);
         SpawnMob(16793862):updateClaim(player);
-        SpawnMob(16793863):updateClaim(player);
-        SpawnMob(16793864):updateClaim(player);
     end
 end;
