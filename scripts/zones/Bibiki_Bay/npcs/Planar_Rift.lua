@@ -4,7 +4,7 @@
 -----------------------------------
 package.loaded["scripts/zones/Bibiki_Bay/TextIDs"] = nil;
 -----------------------------------
-
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/zones/Bibiki_Bay/TextIDs");
 

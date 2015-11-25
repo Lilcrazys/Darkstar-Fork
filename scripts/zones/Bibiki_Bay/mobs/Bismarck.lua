@@ -57,29 +57,21 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local popTime = mob:getLocalVar("nextPetPop");
+    local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() > popTime) then
+    if (os.time() - popTime > 60) then
         local alreadyPopped = false;
-        local helper1 = mob:getID()+1, mob:getID()+3;
-        local helper2 = mob:getID()+4, mob:getID()+6;
-        local helper3 = mob:getID()+7, mob:getID()+10;
-
-        if (GetMobAction(Helper1) == ACTION_NONE or GetMobAction(Helper1) == ACTION_SPAWN) then
-            SpawnMob(Helper1, 300):updateEnmity(target);
-            helper1:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
-            mob:setLocalVar("nextPetPop", os.time()+360);
-            alreadyPopped = true;
-        elseif (GetMobAction(Helper2) == ACTION_NONE or GetMobAction(Helper2) == ACTION_SPAWN) then
-            SpawnMob(Helper2, 300):updateEnmity(target);
-            helper2:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
-            mob:setLocalVar("nextPetPop", os.time()+360);
-            alreadyPopped = true;
-        elseif (GetMobAction(Helper3) == ACTION_NONE or GetMobAction(Helper3) == ACTION_SPAWN) then
-            SpawnMob(Helper3, 300):updateEnmity(target);
-            helper3:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
-            mob:setLocalVar("nextPetPop", os.time()+360);
-            alreadyPopped = true;
+        for helper = mob:getID()+1, mob:getID()+10 do
+            if (alreadyPopped == true) then
+                break;
+            else
+                if (GetMobAction(helper) == ACTION_NONE or GetMobAction(helper) == ACTION_SPAWN) then
+                    SpawnMob(helper, 300):updateEnmity(target);
+                    helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+                    mob:setLocalVar("lastPetPop", os.time());
+                    alreadyPopped = true;
+                end
+            end
         end
     end
 end;
