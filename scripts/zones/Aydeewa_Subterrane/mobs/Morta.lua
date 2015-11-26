@@ -57,7 +57,7 @@ function onMobFight(mob, target)
     local Morta_2hr_Used = mob:getLocalVar("Morta_2hr");
     local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 180) then
+    if (os.time() - popTime > 120) then
         for Helper = mob:getID()+1, mob:getID()+6 do
             if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
                 SpawnMob(Helper, 300):updateEnmity(target);

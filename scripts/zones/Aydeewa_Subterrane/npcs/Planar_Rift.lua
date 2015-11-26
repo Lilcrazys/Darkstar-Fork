@@ -4,7 +4,7 @@
 -----------------------------------
 package.loaded["scripts/zones/Aydeewa_Subterrane/TextIDs"] = nil;
 -----------------------------------
-
+require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/zones/Aydeewa_Subterrane/TextIDs");
 
@@ -67,9 +67,5 @@ function onEventFinish(player,csid,option)
         SpawnMob(17056187):updateClaim(player);
         SpawnMob(17056188):updateClaim(player);
         SpawnMob(17056189):updateClaim(player);
-        SpawnMob(17056190):updateClaim(player);
-        SpawnMob(17056191):updateClaim(player);
-        SpawnMob(17056192):updateClaim(player);
-        SpawnMob(17056193):updateClaim(player);
     end
 end;
