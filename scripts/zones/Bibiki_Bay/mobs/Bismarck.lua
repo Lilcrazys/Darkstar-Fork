@@ -57,25 +57,64 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local popTime = mob:getLocalVar("lastPetPop");
 
-    if (os.time() - popTime > 60) then
-        local alreadyPopped = false;
-        for helper = mob:getID()+1, mob:getID()+10 do
-            if (alreadyPopped == true) then
-                break;
-            else
-                if (GetMobAction(helper) == ACTION_NONE or GetMobAction(helper) == ACTION_SPAWN) then
-                    SpawnMob(helper, 300):updateEnmity(target);
-                    helper:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
-                    mob:setLocalVar("lastPetPop", os.time());
-                    alreadyPopped = true;
-                end
-            end
+    local lastpet = mob:getLocalVar("pop_pet");
+
+    if (os.time() - lastpet > 90) then
+        local pet1 = GetMobAction(mob:getID()+1);
+        local pet2 = GetMobAction(mob:getID()+2);
+        local pet3 = GetMobAction(mob:getID()+3);
+        local pet4 = GetMobAction(mob:getID()+4);
+        local pet5 = GetMobAction(mob:getID()+5);
+        local pet6 = GetMobAction(mob:getID()+6);
+        local pet7 = GetMobAction(mob:getID()+7);
+        local pet8 = GetMobAction(mob:getID()+8);
+        local pet9 = GetMobAction(mob:getID()+9);
+        local pet10 = GetMobAction(mob:getID()+10);
+
+        if (pet1 == ACTION_NONE or pet1 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+1, 300):updateEnmity(target);
+            pet1:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet2 == ACTION_NONE or pet2 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+2, 300):updateEnmity(target);
+            pet2:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet3 == ACTION_NONE or pet3 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+3, 300):updateEnmity(target);
+            pet3:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet4 == ACTION_NONE or pet4 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+4, 300):updateEnmity(target);
+            pet4:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet5 == ACTION_NONE or pet5 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+5, 300):updateEnmity(target);
+            pet5:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet6 == ACTION_NONE or pet6 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
+            pet6:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet7 == ACTION_NONE or pet7 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
+            pet7:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet8 == ACTION_NONE or pet8 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
+            pet8:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet9 == ACTION_NONE or pet9 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
+            pet9:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
+        elseif (pet10 == ACTION_NONE or pet10 == ACTION_SPAWN) then
+            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
+            pet10:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            mob:setLocalVar("pop_pet", os.time());
         end
     end
 end;
-
 -----------------------------------
 -- onSpellPrecast
 -----------------------------------
