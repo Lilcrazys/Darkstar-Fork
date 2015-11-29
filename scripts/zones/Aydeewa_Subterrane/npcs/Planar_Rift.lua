@@ -21,7 +21,7 @@ end;
 
 function onTrigger(player,npc)
     local STRATUM = player:hasKeyItem(AMBER_STRATUM_ABYSSITE_II);
-    local mobID = 17056187, 17056193;
+    local mobID = 17056187;
     local mobNotUp = false
     local correctNPC = false
 
@@ -65,7 +65,7 @@ function onEventFinish(player,csid,option)
     if (csid == 6000 and option == 1) then
         player:delCurrency("voidstones", 1);
         SpawnMob(17056187):updateClaim(player);
-        SpawnMob(17056188):updateClaim(player);
-        SpawnMob(17056189):updateClaim(player);
+        SpawnMob(17056188):updateEnmity(player);
+        SpawnMob(17056189):updateEnmity(player);
     end
 end;
