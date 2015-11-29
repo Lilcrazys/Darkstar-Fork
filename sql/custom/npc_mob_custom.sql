@@ -3303,3 +3303,11 @@ REPLACE INTO `mob_spawn_points` VALUES (17056190,'Ravishing_Rafflesia','Ravishin
 REPLACE INTO `mob_spawn_points` VALUES (17056191,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,280,1,396,200);
 REPLACE INTO `mob_spawn_points` VALUES (17056192,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,281,1,396,175);
 REPLACE INTO `mob_spawn_points` VALUES (17056193,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,282,1,396,202);
+
+-- basty markets event moogle
+REPLACE INTO `npc_list` VALUES (17740135,'Anniversary_Moogle','Moogle',17,-259.329,-12.021,-78.102,1,40,40,0,1,0,0,27,0x0000520000000000000000000000000000000000,0,null);
+-- Southers San_dOria event moogle
+REPLACE INTO `npc_list` VALUES (17719833,'Anniversary_Moogle','Moogle',198,59.002,1.999,-25.885,1,40,40,0,1,0,0,27,0x0000520000000000000000000000000000000000,0,null);
+-- Windurst Waters event moogle
+REPLACE INTO `npc_list` VALUES (17752499,'Anniversary_Moogle','Moogle',209,-53.708,-5.368,214.583,1,40,40,0,1,0,0,27,0x0000520000000000000000000000000000000000,'0',null);
+
