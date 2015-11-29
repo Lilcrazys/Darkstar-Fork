@@ -86,6 +86,7 @@ function onMobFight(mob, target)
         elseif (GetMobAction(mob:getID()+6) == ACTION_NONE) then
             SpawnMob(mob:getID()+6):updateEnmity(target);
             GetMobByID(mob:getID()+6):setPos(mob:getXPos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         end
     end
 
