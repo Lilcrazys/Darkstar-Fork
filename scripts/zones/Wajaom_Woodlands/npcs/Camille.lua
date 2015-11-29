@@ -28,10 +28,10 @@ function onTrigger(player,npc)
     local status = player:getVar("TOAU_VW_STATUS");
 
 
-    if (skirmish == QUEST_COMPLETED) and (status == 0) then
+    if (skirmish == QUEST_COMPLETED and status == 0) then
         player:addKeyItem(AMBER_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, AMBER_STRATUM_ABYSSITE);
-    elseif (assult == QUEST_COMPLETED) and (status == 1) then
+    elseif (assult == QUEST_COMPLETED and status == 1) then
         player:addKeyItem(AMBER_STRATUM_ABYSSITE_II);
         player:addQuest(AHT_URHGAN, VW_OP_068_SUBTERRAINEAN_SKIRMISH);
         player:messageSpecial(KEYITEM_OBTAINED, AMBER_STRATUM_ABYSSITE_II);

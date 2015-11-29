@@ -28,10 +28,10 @@ function onTrigger(player,npc)
     local status = player:getVar("TAV_VW_STATUS");
 
 
-    if (bibiki == QUEST_COMPLETED) and (status == 0) then
+    if (bibiki == QUEST_COMPLETED and status == 0) then
         player:addKeyItem(HYACINTH_STRATUM_ABYSSITE);
         player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE);
-    elseif (terrors == QUEST_COMPLETED) and (status == 1) then
+    elseif (terrors == QUEST_COMPLETED and status == 1) then
         player:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
         player:addQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
         player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE_II);
