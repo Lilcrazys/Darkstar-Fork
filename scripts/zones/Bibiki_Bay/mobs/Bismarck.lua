@@ -82,39 +82,39 @@ function onMobFight(mob, target)
         elseif (pet2 == ACTION_NONE) then
             SpawnMob(mob:getID()+2):updateEnmity(target);
             pet2:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet3 == ACTION_NONE) then
             SpawnMob(mob:getID()+3):updateEnmity(target);
             pet3:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet4 == ACTION_NONE) then
             SpawnMob(mob:getID()+4):updateEnmity(target);
             pet4:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet5 == ACTION_NONE) then
             SpawnMob(mob:getID()+5):updateEnmity(target);
             pet5:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet6 == ACTION_NONE) then
             SpawnMob(mob:getID()+6):updateEnmity(target);
             pet6:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet7 == ACTION_NONE) then
             SpawnMob(mob:getID()+7):updateEnmity(target);
             pet7:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet8 == ACTION_NONE) then
             SpawnMob(mob:getID()+8):updateEnmity(target);
             pet8:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet9 == ACTION_NONE) then
             SpawnMob(mob:getID()+9):updateEnmity(target);
             pet9:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         elseif (pet10 == ACTION_NONE) then
             SpawnMob(mob:getID()+10):updateEnmity(target);
             pet10:setPos(mob:getXpos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mmob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
+            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         end
     end
 end;
