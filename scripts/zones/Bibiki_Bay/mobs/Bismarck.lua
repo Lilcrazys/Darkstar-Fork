@@ -56,7 +56,7 @@ end;
 
 function onMobFight(mob, target)
 
-    local popTimerDelay = 90; -- For easy adjustment.
+    local popTimerDelay = 180; -- For easy adjustment.
     local popTime = mob:getLocalVar("nextPetPop");
     local rndPos = math.random(0,2); -- So they aren't all unforgettably stacked..
     if (rndPos == 2) then
