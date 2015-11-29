@@ -3296,13 +3296,13 @@ INSERT INTO `mob_spawn_points` VALUES (17027490,'Elder_Imp','Elder Imp',90499,90
 
 -- Aydeewa Subterrane
 REPLACE INTO `npc_list` VALUES (17056310,'Planar_Rift','Planar Rift',0,280,1,396,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA');
-REPLACE INTO `mob_spawn_points` VALUES (17056187,'Morta','Morta',90500,280,1,396,64);
-REPLACE INTO `mob_spawn_points` VALUES (17056188,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,277,1,396,205);
-REPLACE INTO `mob_spawn_points` VALUES (17056189,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,278,1,396,195);
-REPLACE INTO `mob_spawn_points` VALUES (17056190,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,279,1,396,199);
-REPLACE INTO `mob_spawn_points` VALUES (17056191,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,280,1,396,200);
-REPLACE INTO `mob_spawn_points` VALUES (17056192,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,281,1,396,175);
-REPLACE INTO `mob_spawn_points` VALUES (17056193,'Ravishing_Rafflesia','Ravishing Rafflesia',90501,282,1,396,202);
+REPLACE INTO `mob_spawn_points` VALUES (17056187,'Morta','Morta',90505,280,1,396,64);
+REPLACE INTO `mob_spawn_points` VALUES (17056188,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,277,1,396,205);
+REPLACE INTO `mob_spawn_points` VALUES (17056189,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,278,1,396,195);
+REPLACE INTO `mob_spawn_points` VALUES (17056190,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,279,1,396,199);
+REPLACE INTO `mob_spawn_points` VALUES (17056191,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,280,1,396,200);
+REPLACE INTO `mob_spawn_points` VALUES (17056192,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,281,1,396,175);
+REPLACE INTO `mob_spawn_points` VALUES (17056193,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,282,1,396,202);
 
 -- basty markets event moogle
 REPLACE INTO `npc_list` VALUES (17740135,'Anniversary_Moogle','Moogle',17,-259.329,-12.021,-78.102,1,40,40,0,1,0,0,27,0x0000520000000000000000000000000000000000,0,null);
