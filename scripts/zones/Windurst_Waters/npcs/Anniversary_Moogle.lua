@@ -36,6 +36,7 @@ function onTrigger(player,npc)
         if (player:getVar("ANNIBUFF_TIMER") < os.time()) then
             if (annibuff == 1) then
                 player:addStatusEffect(EFFECT_FLEE,5,0,1800);
+                player:addStatusEffect(EFFECT_COSTUME,2414,0,1800);
                 player:setVar("ANNIBUFF_TIMER", os.time()+3600);
                 -- add costume of something....??
             elseif (annibuff == 2) then
