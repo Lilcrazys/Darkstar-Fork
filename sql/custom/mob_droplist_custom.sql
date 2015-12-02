@@ -8,18 +8,18 @@
 -- Using the wrong 1 of these 2 commands will result in errors.
 --
 -- To REMOVE a drop that DarkStar has we don't want in Legion, use:
--- DELETE FROM `mob_droplist` WHERE `dropId`=0 and `type`=0 and `itemId`=0 `rate`=0;
+-- DELETE FROM `mob_droplist` WHERE dropId=0 and type=0 and itemId=0 `rate`=0;
 -- Where the zero is replaced by whatever values DarkStar was using.
 --
 -- Please comment what is dropping from what mob on each line:
--- REPLACE INTO '`mob_droplist` VALUES (dropId,type,itemId,rate); -- Item name from NM name
+-- REPLACE INTO `mob_droplist` VALUES (dropId,type,itemId,rate); -- Item name from NM name
 -- ---------------------------------------------------------------------------
 
 -- Examples
--- DELETE FROM `mob_droplist` WHERE 'dropId'=1 and 'type'=2 and 'itemId'=3 and 'rate'=4;
+-- DELETE FROM `mob_droplist` WHERE dropId=1 and type=2 and itemId=3 and rate=4;
 -- INSERT INTO `mob_droplist` VALUES (5,6,7,8);
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
-DELETE FROM `mob_droplist` WHERE 'dropId'=24 and 'type'=0 and 'itemId'=3344 and 'rate'=500; -- Clump of Red Pondweed
+DELETE FROM `mob_droplist` WHERE dropId=24 and type=0 and itemId=3344 and rate=500; -- Clump of Red Pondweed
 INSERT INTO `mob_droplist` VALUES (32,0,12094,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (52,0,3291,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (55,0,10452,330);
@@ -47,7 +47,7 @@ INSERT INTO `mob_droplist` VALUES (222,0,3292,200); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (222,0,3292,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (229,0,12106,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (231,0,12097,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE 'dropId'=270 and 'type'=0 and 'itemId'=3342 and 'rate'=500; -- Savory Shank King Behemoth
+DELETE FROM `mob_droplist` WHERE dropId=270 and type=0 and itemId=3342 and rate=500; -- Savory Shank King Behemoth
 INSERT INTO `mob_droplist` VALUES (321,0,12098,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (396,0,2929,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (396,0,2929,200); -- COMMENT ME
@@ -64,7 +64,7 @@ INSERT INTO `mob_droplist` VALUES (788,0,3288,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (788,0,10255,240); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (838,0,12091,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (838,0,19407,340); -- COMMENT ME
-DELETE FROM `mob_droplist` WHERE 'dropId'=918 and 'type'=0 and 'itemId'=3340 and 'rate'=500; -- Cup of Sweet Tea Nidhogg
+DELETE FROM `mob_droplist` WHERE dropId=918 and type=0 and itemId=3340 and rate=500; -- Cup of Sweet Tea Nidhogg
 INSERT INTO `mob_droplist` VALUES (962,0,2931,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (962,0,12090,340); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (1621,0,16192,340); -- COMMENT ME
@@ -1908,3 +1908,36 @@ INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
+
+-- Dimgruzub
+INSERT INTO `mob_droplist` VALUES (9670,0,26785,300); --
+INSERT INTO `mob_droplist` VALUES (9670,0,21221,300); --
+INSERT INTO `mob_droplist` VALUES (9670,0,28620,300); --
+INSERT INTO `mob_droplist` VALUES (9670,0,28632,1000); --
+INSERT INTO `mob_droplist` VALUES (9670,0,4049,1000); -- Rusted_Coin
+-- Brekekex
+INSERT INTO `mob_droplist` VALUES (9671,0,28137,300); --
+INSERT INTO `mob_droplist` VALUES (9671,0,28506,300); --
+INSERT INTO `mob_droplist` VALUES (9671,0,20986,300); --
+INSERT INTO `mob_droplist` VALUES (9671,0,28618,1000); --
+INSERT INTO `mob_droplist` VALUES (9671,0,4049,1000); -- Rusted_Coin
+-- Yalungar
+INSERT INTO `mob_droplist` VALUES (9672,0,28418,300); --
+INSERT INTO `mob_droplist` VALUES (9672,0,28380,300); --
+INSERT INTO `mob_droplist` VALUES (9672,0,20900,300); --
+INSERT INTO `mob_droplist` VALUES (9672,0,28621,1000); --
+INSERT INTO `mob_droplist` VALUES (9672,0,4049,1000); -- Rusted_Coin
+-- Vanasarvik
+INSERT INTO `mob_droplist` VALUES (9673,0,27994,300); --
+INSERT INTO `mob_droplist` VALUES (9673,0,21161,300); --
+INSERT INTO `mob_droplist` VALUES (9673,0,20715,300); --
+INSERT INTO `mob_droplist` VALUES (9673,0,28619,1000); --
+INSERT INTO `mob_droplist` VALUES (9673,0,4049,1000); -- Rusted_Coin
+-- Morta
+INSERT INTO `mob_droplist` VALUES (9674,0,26871,300); --
+INSERT INTO `mob_droplist` VALUES (9674,0,27221,300); --
+INSERT INTO `mob_droplist` VALUES (9674,0,26732,300); --
+INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
+INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
+INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
+INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
