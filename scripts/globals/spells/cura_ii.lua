@@ -16,66 +16,70 @@ require("scripts/globals/magic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    if (caster:getID() ~= target:getID()) then
+        return MSGBASIC_CANNOT_PERFORM_TARG;
+    else
+        return 0;
+    end;
 end;
 
 function onSpellCast(caster,target,spell)
-	local divisor = 0;
-	local constant = 0;
-	local basepower = 0;
-	local power = 0;
-	local basecure = 0;
-	local final = 0;
+    local divisor = 0;
+    local constant = 0;
+    local basepower = 0;
+    local power = 0;
+    local basecure = 0;
+    local final = 0;
 
-	local minCure = 60;
-	if (USE_OLD_CURE_FORMULA == true) then
-		power = getCurePowerOld(caster);
-		divisor = 1;
-		constant = 20;
-		if (power > 170) then
-				divisor = 35.6666;
-				constant = 87.62;
-		elseif (power > 110) then
-				divisor = 2;
-				constant = 47.5;
-		end
-	else
-		power = getCurePower(caster);
-		if (power < 70) then
-			divisor = 1;
-			constant = 60;
-			basepower = 40;
-		elseif (power < 125) then
-			divisor = 5.5;
-			constant = 90;
-			basepower = 70;
-		elseif (power < 200) then
-			divisor = 7.5;
-			constant = 100;
-			basepower = 125;
-		elseif (power < 400) then
-			divisor = 10;
-			constant = 110;
-			basepower = 200;
-		elseif (power < 700) then
-			divisor = 20;
-			constant = 130;
-			basepower = 400;
-		else
-			divisor = 999999;
-			constant = 145;
-			basepower = 0;
-		end
-	end
+    local minCure = 60;
+    if (USE_OLD_CURE_FORMULA == true) then
+        power = getCurePowerOld(caster);
+        divisor = 1;
+        constant = 20;
+        if (power > 170) then
+                divisor = 35.6666;
+                constant = 87.62;
+        elseif (power > 110) then
+                divisor = 2;
+                constant = 47.5;
+        end
+    else
+        power = getCurePower(caster);
+        if (power < 70) then
+            divisor = 1;
+            constant = 60;
+            basepower = 40;
+        elseif (power < 125) then
+            divisor = 5.5;
+            constant = 90;
+            basepower = 70;
+        elseif (power < 200) then
+            divisor = 7.5;
+            constant = 100;
+            basepower = 125;
+        elseif (power < 400) then
+            divisor = 10;
+            constant = 110;
+            basepower = 200;
+        elseif (power < 700) then
+            divisor = 20;
+            constant = 130;
+            basepower = 400;
+        else
+            divisor = 999999;
+            constant = 145;
+            basepower = 0;
+        end
+    end
 
-	if (USE_OLD_CURE_FORMULA == true) then
-		basecure = getBaseCure(power,divisor,constant);
-	else
-		basecure = getBaseCure(power,divisor,constant,basepower);
-	end
+    if (USE_OLD_CURE_FORMULA == true) then
+        basecure = getBaseCure(power,divisor,constant);
+    else
+        basecure = getBaseCure(power,divisor,constant,basepower);
+    end
 
-	--Apply Afflatus Misery Bonus to Final Result
-	if (caster:hasStatusEffect(EFFECT_AFFLATUS_MISERY)) then
+    --Apply Afflatus Misery Bonus to Final Result
+    if (caster:hasStatusEffect(EFFECT_AFFLATUS_MISERY)) then
 		local misery = caster:getMod(MOD_AFFLATUS_MISERY);
 
 		--THIS IS LARELY SEMI-EDUCATED GUESSWORK. THERE IS NOT A
@@ -118,5 +122,6 @@ function onSpellCast(caster,target,spell)
 	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242 or 11126) then
 		caster:addMp(final*0.05);
 	end
+
 	return final;
 end;

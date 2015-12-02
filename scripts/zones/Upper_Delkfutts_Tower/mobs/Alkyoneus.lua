@@ -28,25 +28,16 @@ function onMobSpawn(mob)
 end; 
 
 -----------------------------------
--- onMobEngaged
------------------------------------
-
-function onMobEngaged(mob,target)
-end;
-
------------------------------------
--- onMobFight
------------------------------------
-function onMobFight(mob,target)
-end
-
-
------------------------------------
 -- OnMobDeath Action
 -----------------------------------
 
 function onMobDeath(mob,killer)
-    killer:addTitle(HERO_AMONG_HEROES);
+end;
 
-	GetNPCByID(17424518):hideNPC(900); -- qm1 in npc_list
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    GetNPCByID(17424518):updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
 end;

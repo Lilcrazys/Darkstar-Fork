@@ -1,7 +1,8 @@
+
 -----------------------------------------
---	ID: 4891
---	Scroll of Blizzaja
---	Teaches the black magic Blizzaja
+-- ID: 4891
+-- Scroll of blizzaja
+-- Teaches the black magic blizzaja
 -----------------------------------------
 
 -----------------------------------------
@@ -9,7 +10,7 @@
 -----------------------------------------
 
 function onItemCheck(target)
-	return target:canLearnSpell(497);
+    return target:canLearnSpell(497);
 end;
 
 -----------------------------------------
@@ -17,5 +18,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addSpell(497);
+    target:addSpell(497);
 end;

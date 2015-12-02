@@ -132,7 +132,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;dsUDPSERV;DEBUGLOGMAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;dsUDPSERV;DEBUGLOGMAP;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
@@ -140,6 +140,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>$(ProjectDir)..\external;$(ProjectDir)..\external\mysql;$(ProjectDir)..\external\zmq;</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libmariadb.lib;lua51.lib;libzmq.lib;WS2_32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -156,7 +157,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;dsUDPSERV;DEBUGLOGMAP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;dsUDPSERV;DEBUGLOGMAP;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <PrecompiledHeader>
@@ -356,6 +357,8 @@
     <ClInclude Include="..\..\src\map\packets\message_standard.h" />
     <ClInclude Include="..\..\src\map\packets\message_system.h" />
     <ClInclude Include="..\..\src\map\packets\message_text.h" />
+    <ClInclude Include="..\..\src\map\packets\party_effects.h" />
+    <ClInclude Include="..\..\src\map\packets\status_effects.h" />
     <ClInclude Include="..\..\src\map\packets\synth_result.h" />
     <ClInclude Include="..\..\src\map\packets\synth_suggestion.h" />
     <ClInclude Include="..\..\src\map\packets\trade_action.h" />
@@ -590,6 +593,8 @@
     <ClCompile Include="..\..\src\map\packets\message_standard.cpp" />
     <ClCompile Include="..\..\src\map\packets\message_system.cpp" />
     <ClCompile Include="..\..\src\map\packets\message_text.cpp" />
+    <ClCompile Include="..\..\src\map\packets\party_effects.cpp" />
+    <ClCompile Include="..\..\src\map\packets\status_effects.cpp" />
     <ClCompile Include="..\..\src\map\packets\synth_result.cpp" />
     <ClCompile Include="..\..\src\map\packets\synth_suggestion.cpp" />
     <ClCompile Include="..\..\src\map\packets\trade_action.cpp" />

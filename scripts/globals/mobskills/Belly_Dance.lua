@@ -19,19 +19,27 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_CHARM_I;
-	local power = 0;
 
-    if (not target:isPC()) then
+	--[[
+    power = 1;
+    tic = 0;
+    duration = 60;
+
+    isEnfeeble = true;
+    typeEffect = EFFECT_NAME;
+    statmod = MOD_INT;
+
+    resist = applyPlayerResistance(mob,typeEffect,target,isEnfeeble,typeEffect,statmod);
+    if (resist > 0.2) then
+        if (target:getStatusEffect(typeEffect) == nil) then
+            skill:setMsg(MSG_ENFEEB_IS);
+            target:addStatusEffect(typeEffect,power,tic,duration);
+        else
+            skill:setMsg(MSG_NO_EFFECT);
+        end
+    else
         skill:setMsg(MSG_MISS);
-        return typeEffect;
     end
-
-    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 45)
-    if (msg == MSG_ENFEEB_IS) then
-        mob:charm(target);
-    end
-    skill:setMsg(msg);
-
     return typeEffect;
+	]]
 end;

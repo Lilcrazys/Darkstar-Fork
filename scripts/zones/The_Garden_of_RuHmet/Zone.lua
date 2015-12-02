@@ -71,29 +71,37 @@ function onInitialize(zone)
 end;
 
 -----------------------------------		
+-- afterZoneIn
+-----------------------------------
+
+function afterZoneIn(player)
+    player:entityVisualPacket("door");
+    player:entityVisualPacket("lst1");
+    player:entityVisualPacket("lst2");
+    player:entityVisualPacket("lst3");
+    player:entityVisualPacket("lop1");
+    player:entityVisualPacket("lop2");
+    player:entityVisualPacket("lop3");
+    player:entityVisualPacket("lpmy");
+    player:entityVisualPacket("clop");
+    player:entityVisualPacket("slp1");
+    player:entityVisualPacket("slp2");
+    player:entityVisualPacket("slp3");
+end;
+
+-----------------------------------        
 -- onGameHour		
 -----------------------------------		  
 
 function onGameHour(npc, mob, player)
 	--[[ This is stupid they mixed up which NPC was which.
 	local VanadielHour = VanadielHour();
-	local qm2 = GetNPCByID(16921028); -- Jailer of Faith
-	local qm3 = GetNPCByID(16921029); -- Ix'aern drk
+    local qm2 = GetNPCByID(16921028); -- Ix'aern drk
+    local qm3 = GetNPCByID(16921029); -- Jailer of Faith
     local s = math.random(6,12) -- wait time till change to next spawn pos, random 15~30 mins.
-	
-	-- Jailer of Fortitude spawn randomiser
-	if (VanadielHour % 6 == 0) then
-		local qm1 = GetNPCByID(Jailer_of_Fortitude_QM);
-		qm1:hideNPC(60);
-		
-		local qm1position = math.random(1,5);
-		qm1:setPos(Jailer_of_Fortitude_QM_POS[qm1position][1], Jailer_of_Fortitude_QM_POS[qm1position][2], Jailer_of_Fortitude_QM_POS[qm1position][3]);
-	end
 	
 	-- Jailer of Faith spawn randomiser
 	if (VanadielHour % s == 0) then
-		-- Get the ??? NPC 
-		local qm3 = GetNPCByID(Jailer_of_Faith_QM);
 		-- Hide it for 60 seconds
 		qm3:hideNPC(60);
 		

@@ -1,7 +1,8 @@
 -----------------------------------
 -- Zone: Abyssea-Konschtat
--- NPC: ???
+--  NPC: qm14 (???)
 -- Spawns: Eccentric Eve
+-- @pos ? ? ? 15
 -----------------------------------
 
 require("scripts/globals/status");
@@ -12,6 +13,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
+--[[
     if (GetMobAction(16839007) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(FRAGRANT_TREANT_PETAL)
         and player:hasKeyItem(FETID_RAFFLESIA_STALK)
@@ -23,6 +25,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, FRAGRANT_TREANT_PETAL, FETID_RAFFLESIA_STALK, DECAYING_MORBOL_TOOTH, TURBID_SLIME_OIL, VENOMOUS_PEISTE_CLAW); -- Do not ask, because player is missing at least 1.
         end
     end
+]]
 end;
 
 -----------------------------------
@@ -42,7 +45,7 @@ function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
     if (csid == 1020 and option == 1) then
-        SpawnMob(16839007, 300):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+        SpawnMob(16839007):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
         player:delKeyItem(FRAGRANT_TREANT_PETAL);
         player:delKeyItem(FETID_RAFFLESIA_STALK);
         player:delKeyItem(DECAYING_MORBOL_TOOTH);

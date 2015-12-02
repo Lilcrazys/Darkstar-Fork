@@ -1,6 +1,6 @@
 ---------------------------------------------------
--- Binding Wave
--- Additional effect: bind
+-- Epoxy Spread
+-- AOE Bind
 ---------------------------------------------------
 
 require("scripts/globals/settings");

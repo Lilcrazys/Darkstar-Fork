@@ -4,7 +4,6 @@
 -----------------------------------
 
 require("scripts/globals/titles");
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

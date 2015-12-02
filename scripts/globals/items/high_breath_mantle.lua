@@ -1,8 +1,7 @@
 -----------------------------------------
---	ID: 15487
---	Item: High Breath Mantle
---	Enchantment: HP +38 Eminity +5
---	Durration: 30 Mins   Charges: 50
+-- ID: 15487
+-- Item: High Breath Mantle
+-- Item Effect: HP+38 / Enmity+5
 -----------------------------------------
 
 require("scripts/globals/settings");
@@ -13,7 +12,13 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	return 0;
+    local effect = target:getStatusEffect(EFFECT_ENCHANTMENT);
+    if (effect ~= nil) then
+        if (effect:getSubType() == 15487) then
+            target:delStatusEffect(EFFECT_ENCHANTMENT);
+        end;
+    end;
+    return 0;
 end;
 
 -----------------------------------------
@@ -21,9 +26,12 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == false) then
-		target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,1800,15487);
-	end;
+    if (target:hasStatusEffect(EFFECT_ENCHANTMENT) == true) then
+        target:delStatusEffect(EFFECT_ENCHANTMENT);
+        target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,1800,15487);
+    else
+        target:addStatusEffect(EFFECT_ENCHANTMENT,0,0,1800,15487);
+    end;
 end;
 
 -----------------------------------------
@@ -31,8 +39,8 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_HP, 38);
-	target:addMod(MOD_ENMITY, 5);
+    target:addMod(MOD_HP, 38);
+    target:addMod(MOD_ENMITY, 5);
 end;
 
 -----------------------------------------
@@ -40,6 +48,6 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_HP, 38);
-	target:delMod(MOD_ENMITY, 5);
+    target:delMod(MOD_HP, 38);
+    target:delMod(MOD_ENMITY, 5);
 end;

@@ -43,7 +43,7 @@
 #include "lua_trade_container.h"
 #include "lua_zone.h"
 #include "lua_item.h"
-
+#include "../packets/chat_message.h"
 #include "../alliance.h"
 #include "../ability.h"
 #include "../entities/baseentity.h"
@@ -63,7 +63,6 @@
 #include "../packets/char_update.h"
 #include "../packets/entity_update.h"
 #include "../packets/char.h"
-#include "../packets/chat_message.h"
 #include "../packets/menu_raisetractor.h"
 #include "../packets/message_basic.h"
 #include "../packets/entity_visual.h"
@@ -135,9 +134,7 @@ namespace luautils
 
         lua_register(LuaHandle, "getCorsairRollEffect", luautils::getCorsairRollEffect);
         lua_register(LuaHandle, "getSpell", luautils::getSpell);
-
-	lua_register(LuaHandle,"isValidLS",luautils::isValidLS);
-
+        lua_register(LuaHandle,"isValidLS",luautils::isValidLS);
         Lunar<CLuaAbility>::Register(LuaHandle);
         Lunar<CLuaAction>::Register(LuaHandle);
         Lunar<CLuaBaseEntity>::Register(LuaHandle);
@@ -974,30 +971,6 @@ namespace luautils
         }
         ShowError(CL_RED"luautils::GetMobAction: mob <%u> was not found\n" CL_RESET, mobid);
         lua_pushnil(L);
-        return 1;
-    }
-
-    /************************************************************************
-    *                                                                       *
-    * Check if a given linkshell exists by checking the name in database    *
-    *                                                                       *
-    ************************************************************************/
-
-    int32 isValidLS(lua_State* L)
-    {
-        const int8* linkshellName = lua_tostring(L, 1);
-        const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
-        int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
-
-        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-        {
-            lua_pushboolean(L, true);
-        }
-            else
-        {
-            lua_pushboolean(L, false);
-        }
-
         return 1;
     }
 
@@ -4438,6 +4411,30 @@ namespace luautils
         lua_pop(LuaHandle, 1);
 
         return canDig;
+    }
+
+    /************************************************************************
+    *                                                                       *
+    * Check if a given linkshell exists by checking the name in database    *
+    *                                                                       *
+    ************************************************************************/
+
+    int32 isValidLS(lua_State* L)
+    {
+        const int8* linkshellName = lua_tostring(L, 1);
+        const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
+        int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
+
+        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+        {
+            lua_pushboolean(L, true);
+        }
+        else
+        {
+            lua_pushboolean(L, false);
+        }
+
+        return 1;
     }
 
 }; // namespace luautils

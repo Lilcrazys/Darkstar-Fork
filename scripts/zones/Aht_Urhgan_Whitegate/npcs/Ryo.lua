@@ -1,14 +1,13 @@
 -----------------------------------
 -- Area: Aht Urhgan Whitegate
 -- NPC:  Ryo
--- Type: ZNM
+-- Type: ZNM assistant
 -- @pos -127.086 0.999 22.693 50
 -----------------------------------
 package.loaded["scripts/zones/Aht_Urhgan_Whitegate/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/globals/besieged");
 require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
+require("scripts/globals/besieged");
 
 -----------------------------------
 -- onTrade Action
@@ -34,7 +33,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	-- player:startEvent(0x0391);
+    player:startEvent(0x0391);
 	-- player:SpoofChatPlayer( "Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", MESSAGE_SAY, npc:getID() );
 	-- The spoofs crash if both these lines are sent..But they work fine separately. WTF.
 	player:SpoofChatPlayer( "Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", MESSAGE_SAY, npc:getID() );
@@ -45,8 +44,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-	-- printf("updateCSID: %u",csid);
-	-- printf("updateRESULT: %u",option);
+    -- printf("updateCSID: %u",csid);
+    -- printf("updateRESULT: %u",option);
 	if (option == 300) then
 		player:updateEvent(player:getCurrency("zeni_point"),0);
 	else

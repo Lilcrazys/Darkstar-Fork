@@ -3,7 +3,6 @@
 --  NM:  Seww the Squidlimbed
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

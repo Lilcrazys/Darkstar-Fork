@@ -1,7 +1,8 @@
+
 -----------------------------------------
---	ID: 4776
---	Scroll of Thunder V
---	Teaches the black magic Thunder V
+-- ID: 4776
+-- Scroll of thunder v
+-- Teaches the black magic thunder v
 -----------------------------------------
 
 -----------------------------------------
@@ -9,7 +10,7 @@
 -----------------------------------------
 
 function onItemCheck(target)
-	return target:canLearnSpell(168);
+    return target:canLearnSpell(168);
 end;
 
 -----------------------------------------
@@ -17,5 +18,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addSpell(168);
+    target:addSpell(168);
 end;

@@ -1,42 +1,45 @@
 -----------------------------------
---  Area: Abyssea - Uleguerand (253)
---   Mob: Ermit_Imp
+-- Area: Abyssea - Uleguerand
+-- NPC: Ermit Imp
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Uleguerand/MobIDs");
-
+require("scripts/globals/status");
+    
 -----------------------------------
--- onMobInitialize
+-- onMobInitialize Action
 -----------------------------------
 
-function onMobInitialize(mob)	
+function onMobInitialize(mob)
 end;
 
 -----------------------------------
--- onMobSpawn
+-- onMobSpawn Action
 -----------------------------------
 
-function onMobSpawn(mob)	
+function onMobSpawn(mob)
 end;
 
 -----------------------------------
--- onMobEngaged
+-- onMobFight Action
 -----------------------------------
 
-function onMobEngaged(mob,target)	
+function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onMobFight
+-- onCriticalHit
 -----------------------------------
 
-function onMobFight(mob,target)	
+function onCriticalHit(mob)   
+ 
+    if (math.random(100) < 20 and mob:AnimationSub() == 0) then  -- 20% change to break that horn on crit   
+        mob:AnimationSub(1);
+    end
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)	
+function onMobDeath(mob, killer)
 end;
-

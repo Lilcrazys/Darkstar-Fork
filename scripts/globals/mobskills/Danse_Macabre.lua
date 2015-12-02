@@ -25,7 +25,7 @@ function onMobWeaponSkill(target, mob, skill)
         return typeEffect;
     end;
 
-    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 45)
+    local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 60)
     if (msg == MSG_ENFEEB_IS) then
         mob:charm(target);
     end;

@@ -25,13 +25,11 @@ function onMobWeaponSkill(target, mob, skill)
     else
         mabTotal = 10;
     end;
-
     if (mob:getStatusEffect(EFFECT_MAGIC_DEF_BOOST) ~= nil) then -- mag def bonus stacking
         mdbTotal = mdbTotal:getPower() + 10;
     else
         mdbTotal = 10;
     end;
-
     -- print(mabTotal)
     -- print(mdbTotal)
 

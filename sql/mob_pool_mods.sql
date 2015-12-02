@@ -26,7 +26,7 @@ CREATE TABLE `mob_pool_mods` (
   `poolid` smallint(5) unsigned NOT NULL,
   `modid` smallint(5) unsigned NOT NULL,
   `value` smallint(5) NOT NULL DEFAULT '0',
-  `type` smallint(5) NOT NULL DEFAULT '0',
+  `is_mob_mod` boolean NOT NULL DEFAULT '0',
   PRIMARY KEY (`poolid`,`modid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=13 PACK_KEYS=1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -94,7 +94,6 @@ INSERT INTO `mob_pool_mods` VALUES (2265,370,50,0);
 INSERT INTO `mob_pool_mods` VALUES (44,368,150,0);
 INSERT INTO `mob_pool_mods` VALUES (268,370,50,0);
 INSERT INTO `mob_pool_mods` VALUES (268,368,150,0);
-INSERT INTO `mob_pool_mods` VALUES (979,14,700,1);
 INSERT INTO `mob_pool_mods` VALUES (370,28,5,1);
 INSERT INTO `mob_pool_mods` VALUES (768,28,5,1);
 INSERT INTO `mob_pool_mods` VALUES (958,28,5,1);
@@ -214,17 +213,74 @@ INSERT INTO `mob_pool_mods` VALUES (459, 430, 20, 0); -- Quad Attack
 INSERT INTO `mob_pool_mods` VALUES (459, 23, 50, 0); -- Attack 
 INSERT INTO `mob_pool_mods` VALUES (459, 73, 25, 0); -- Store TP  
 
--- -------------------------
--- Quadav NM (Dynamis)
--- -------------------------
-INSERT INTO `mob_pool_mods` VALUES (16, 14, 705, 1); -- Special mob skills
-INSERT INTO `mob_pool_mods` VALUES (1859, 14, 705, 1);
-INSERT INTO `mob_pool_mods` VALUES (400, 14, 705, 1);
-INSERT INTO `mob_pool_mods` VALUES (1614, 14, 705, 1);
-INSERT INTO `mob_pool_mods` VALUES (2285, 14, 705, 1);
-INSERT INTO `mob_pool_mods` VALUES (4499, 14, 705, 1);
-INSERT INTO `mob_pool_mods` VALUES (1179, 14, 705, 1);
-INSERT INTO `mob_pool_mods` VALUES (1855, 14, 705, 1);
+-- Add promyvian boss mods
+INSERT INTO `mob_pool_mods` VALUES (681,14,706,1);
+INSERT INTO `mob_pool_mods` VALUES (681,368,10,0);
+INSERT INTO `mob_pool_mods` VALUES (4382,14,706,1);
+INSERT INTO `mob_pool_mods` VALUES (3172,14,706,1);
+INSERT INTO `mob_pool_mods` VALUES (760,14,706,1);
+INSERT INTO `mob_pool_mods` VALUES (782,14,706,1);
+INSERT INTO `mob_pool_mods` VALUES (63,14,706,1);
+INSERT INTO `mob_pool_mods` VALUES (820,368,10,0);
+INSERT INTO `mob_pool_mods` VALUES (820,14,707,1);
+INSERT INTO `mob_pool_mods` VALUES (861,14,707,1);
+INSERT INTO `mob_pool_mods` VALUES (966,14,707,1);
+INSERT INTO `mob_pool_mods` VALUES (1237,14,707,1);
+INSERT INTO `mob_pool_mods` VALUES (3351,14,707,1);
+INSERT INTO `mob_pool_mods` VALUES (3699,14,707,1);
+INSERT INTO `mob_pool_mods` VALUES (3206,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (2080,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (2081,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (2824,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (2825,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (2826,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (2827,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (3202,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (3204,14,708,1);
+INSERT INTO `mob_pool_mods` VALUES (3483,14,708,1);
+
+INSERT INTO `mob_pool_mods` VALUES (4186,34,20,1);
+INSERT INTO `mob_pool_mods` VALUES (4186,35,0,1);
+INSERT INTO `mob_pool_mods` VALUES (4186,244,15,0);
+
+INSERT INTO `mob_pool_mods` VALUES (4187,34,20,1);
+INSERT INTO `mob_pool_mods` VALUES (4187,35,0,1);
+INSERT INTO `mob_pool_mods` VALUES (4187,244,15,0);
+
+INSERT INTO `mob_pool_mods` VALUES (4188,34,20,1);
+INSERT INTO `mob_pool_mods` VALUES (4188,35,0,1);
+INSERT INTO `mob_pool_mods` VALUES (4188,244,15,0);
+
+INSERT INTO `mob_pool_mods` VALUES (4189,34,20,1);
+INSERT INTO `mob_pool_mods` VALUES (4189,35,0,1);
+INSERT INTO `mob_pool_mods` VALUES (4189,244,15,0);
+
+INSERT INTO `mob_pool_mods` VALUES (2032,34,20,1);
+INSERT INTO `mob_pool_mods` VALUES (2032,35,0,1);
+INSERT INTO `mob_pool_mods` VALUES (2032,244,15,0);
+
+INSERT INTO `mob_pool_mods` VALUES (236,30,476,1);
+INSERT INTO `mob_pool_mods` VALUES (236,33,60,1);
+
+-- Scale Maat's pets HP down
+INSERT INTO `mob_pool_mods` VALUES (2461,61,25,1);
+INSERT INTO `mob_pool_mods` VALUES (2462,61,25,1);
+INSERT INTO `mob_pool_mods` VALUES (2463,61,20,1);
+
+-- Qiqirn standback forever
+INSERT INTO `mob_pool_mods` VALUES (3245,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (3252,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (3257,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (3262,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (3264,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (3265,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (3268,56,1,1);
+INSERT INTO `mob_pool_mods` VALUES (1750,56,1,1);
+
+-- Cerberus
+INSERT INTO `mob_pool_mods` VALUES (680,1,322,0); -- 650 defense total
+INSERT INTO `mob_pool_mods` VALUES (680,31,200,0); -- 120 magic evasion boost recommended but 200 felt more retail
+INSERT INTO `mob_pool_mods` VALUES (680,251,-50,0); -- he shouldn't be so resistant to stun, tho this is a systemic stun problem, this is a hack
 
 /*!40000 ALTER TABLE `mob_pool_mods` ENABLE KEYS */;
 UNLOCK TABLES;

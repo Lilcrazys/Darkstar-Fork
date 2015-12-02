@@ -3,7 +3,6 @@
 --  ZNM: Experimental Lamia
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

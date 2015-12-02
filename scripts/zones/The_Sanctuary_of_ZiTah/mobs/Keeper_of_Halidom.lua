@@ -3,7 +3,6 @@
 --  NM:  Keeper of Halidom
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

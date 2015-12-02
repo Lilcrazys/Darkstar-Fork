@@ -1,12 +1,13 @@
 -----------------------------------
 -- Area: Arrapago Reef
 --  NM:  Medusa
--- @pos -460 -20.5 460 54
+-- @pos -458 -20 458
+-- TODO: resists, attack/def boosts
 -----------------------------------
 
 require("scripts/globals/titles");
+require("scripts/zones/Arrapago_Reef/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
@@ -26,56 +27,34 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    mob:setLocalVar("eeshpp", math.random(5,99)); -- Uses EES randomly during the fight
 end;
 
 -----------------------------------
 -- onMobEngaged Action
 -----------------------------------
 
-function onMobEngaged(mob,target)
+function onMobEngaged(mob, target)
+    local mobID = mob:getID();
+    target:showText(mob, MEDUSA_ENGAGE);
+    SpawnMob(mobID+1):updateEnmity(target);
+    SpawnMob(mobID+2):updateEnmity(target);
+    SpawnMob(mobID+3):updateEnmity(target);
+    SpawnMob(mobID+4):updateEnmity(target);
 end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob,target)
---[[
-    local mobHP = mob:getHPP();
-    local mobID = mob:getID();
-    local petIDs = {16998863,16998864,16998865,16998866};
-    local petStatus = {GetMobAction(petIDs[1]),GetMobAction(petIDs[2]),GetMobAction(petIDs[3]),GetMobAction(petIDs[4])};
-
-    if (mobHP < 75) then
-        for i = 1, 4 do
-            GetMobByID(petIDs[i]):changeSkin(18);
-            if petStatus[i] == 0 then
-                SpawnMob(petIDs[i],800):updateEnmity(target);
-            end
+function onMobFight(mob, target)
+    local HPP = mob:getHPP();
+    if (mob:getLocalVar("usedees") == 0) then
+        if (HPP <= mob:getLocalVar("eeshpp")) then
+            mob:useMobAbility(1675); -- Eagle Eye Shot
+            mob:setLocalVar("usedees", 1);
         end
     end
-
-    if (mobHP < 50 and mobHP > 25) then
-        mob:setdMod(MOD_REGAIN,7);
-    end
-
-    if (mobHP < 25 and mobHP > 10) then
-        mob:setMod(MOD_REGAIN,1);
-    end
-
-    if (mobHP < 10) then -- WHAT THE FUCK this is NOT how you make mobs 2hr.
-        GetMobByID(16998863):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
-        GetMobByID(16998864):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
-        GetMobByID(16998865):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
-        GetMobByID(16998866):addStatusEffect(EFFECT_CHAINSPELL,0,0,15);
-    end
-
-    for i = 1, 4 do
-        if (petStatus[i] == 16 or petStatus[i] == 18) then
-            GetMobByID(petIDs[i],800):updateEnmity(target);
-        end
-    end
-]]
 end;
 
 -----------------------------------
@@ -83,11 +62,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer)
-    DespawnMob(16998863);
+    killer:showText(mob, MEDUSA_DEATH);
+	killer:addTitle(GORGONSTONE_SUNDERER);    DespawnMob(16998863);
+
     DespawnMob(16998864);
     DespawnMob(16998865);
     DespawnMob(16998866);
-    killer:addTitle(GORGONSTONE_SUNDERER);
 
     -- Custom (Mythic) Trial Code
     if (cTrialItemEquipped(killer) == true) then

@@ -13,8 +13,7 @@ function onMobSkillCheck(target,mob,skill)
         return 1;
     elseif (skill:getParam() == 2 and math.random() <= 0.5) then -- not always used
         return 1;
-    end
-    if (mob:getHPP() <= 60) then
+    elseif (mob:getHPP() <= mob:getMobMod(MOBMOD_2HOUR_PROC)) then
         return 0;
     end
     return 1;
@@ -22,10 +21,15 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     local dmgmod = 1;
+    local hpmod = skill:getHPP() / 100;
+    local basePower = 6;
 
-	local hpmod = mob:getHP() / mob:getMaxHP();
-	
-    local power = hpmod * 8 + 7;
+    -- Maat has a weaker Mijin
+    if (mob:getFamily() == 335) then
+        basePower = 4;
+    end
+
+    local power = hpmod * 10 + basePower;
 
     local baseDmg = mob:getWeaponDmg() * power;
 

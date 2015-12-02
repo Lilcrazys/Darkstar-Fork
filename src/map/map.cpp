@@ -213,7 +213,6 @@ int32 do_init(int32 argc, int8** argv)
 
     guildutils::Initialize();
     charutils::LoadExpTable();
-    linkshell::LoadLinkshellList();
     traits::LoadTraitsList();
     effects::LoadEffectsParameters();
     battleutils::LoadSkillTable();
@@ -225,7 +224,7 @@ int32 do_init(int32 argc, int8** argv)
     petutils::LoadPetList();
     mobutils::LoadCustomMods();
 
-    ShowStatus("do_init: loading zones\n");
+    ShowStatus("do_init: loading zones");
     zoneutils::LoadZoneList();
     ShowMessage("\t\t\t - " CL_GREEN"[OK]" CL_RESET"\n");
 
@@ -269,7 +268,7 @@ void do_final(int code)
 
     itemutils::FreeItemList();
     battleutils::FreeWeaponSkillsList();
-    battleutils::FreeSkillChainDamageModifiers();
+    battleutils::FreeMobSkillList();
 
     petutils::FreePetList();
     zoneutils::FreeZoneList();
@@ -828,6 +827,8 @@ int32 map_cleanup(uint32 tick, CTaskMgr::CTask* PTask)
                         }
 
                         PChar->StatusEffectContainer->SaveStatusEffects(true);
+                        charutils::SaveCharPosition(PChar);
+
                         ShowDebug(CL_CYAN"map_cleanup: %s timed out, closing session\n" CL_RESET, PChar->GetName());
 
                         PChar->status = STATUS_SHUTDOWN;
@@ -1276,6 +1277,10 @@ int32 map_config_read(const int8* cfgName)
         else if (strcmp(w1, "msg_server_ip") == 0)
         {
             map_config.msg_server_ip = aStrdup(w2);
+        }
+        else if (strcmp(w1, "mob_no_despawn") == 0)
+        {
+            map_config.mob_no_despawn = atoi(w2);
         }
         else
         {

@@ -1908,36 +1908,3 @@ INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
-
--- Dimgruzub
-INSERT INTO `mob_droplist` VALUES (9670,0,26785,300); --
-INSERT INTO `mob_droplist` VALUES (9670,0,21221,300); --
-INSERT INTO `mob_droplist` VALUES (9670,0,28620,300); --
-INSERT INTO `mob_droplist` VALUES (9670,0,28632,1000); --
-INSERT INTO `mob_droplist` VALUES (9670,0,4049,1000); -- Rusted_Coin
--- Brekekex
-INSERT INTO `mob_droplist` VALUES (9671,0,28137,300); --
-INSERT INTO `mob_droplist` VALUES (9671,0,28506,300); --
-INSERT INTO `mob_droplist` VALUES (9671,0,20986,300); --
-INSERT INTO `mob_droplist` VALUES (9671,0,28618,1000); --
-INSERT INTO `mob_droplist` VALUES (9671,0,4049,1000); -- Rusted_Coin
--- Yalungar
-INSERT INTO `mob_droplist` VALUES (9672,0,28418,300); --
-INSERT INTO `mob_droplist` VALUES (9672,0,28380,300); --
-INSERT INTO `mob_droplist` VALUES (9672,0,20900,300); --
-INSERT INTO `mob_droplist` VALUES (9672,0,28621,1000); --
-INSERT INTO `mob_droplist` VALUES (9672,0,4049,1000); -- Rusted_Coin
--- Vanasarvik
-INSERT INTO `mob_droplist` VALUES (9673,0,27994,300); --
-INSERT INTO `mob_droplist` VALUES (9673,0,21161,300); --
-INSERT INTO `mob_droplist` VALUES (9673,0,20715,300); --
-INSERT INTO `mob_droplist` VALUES (9673,0,28619,1000); --
-INSERT INTO `mob_droplist` VALUES (9673,0,4049,1000); -- Rusted_Coin
--- Morta
-INSERT INTO `mob_droplist` VALUES (9674,0,26871,300); --
-INSERT INTO `mob_droplist` VALUES (9674,0,27221,300); --
-INSERT INTO `mob_droplist` VALUES (9674,0,26732,300); --
-INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
-INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
-INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
-INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5

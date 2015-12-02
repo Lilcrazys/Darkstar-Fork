@@ -79,7 +79,10 @@ struct Pet_t
     uint8        chrRank;
     uint8        attRank;
     uint8        defRank;
+    uint8        evaRank;
     uint8        accRank;
+
+    uint16       m_MobSkillList;
 
     // magic stuff
     bool hasSpellScript;
@@ -151,10 +154,11 @@ namespace petutils
                 mob_family_system.DEF,\
                 mob_family_system.ATT,\
                 mob_family_system.ACC, \
+                mob_family_system.EVA, \
                 hasSpellScript, spellList, \
                 Slash, Pierce, H2H, Impact, \
                 Fire, Ice, Wind, Earth, Lightning, Water, Light, Dark, \
-                cmbDelay, name_prefix \
+                cmbDelay, name_prefix, mob_pools.skill_list_id \
                 FROM pet_list, mob_pools, mob_family_system \
                 WHERE pet_list.poolid = mob_pools.poolid AND mob_pools.familyid = mob_family_system.familyid";
 
@@ -191,37 +195,39 @@ namespace petutils
                 Pet->defRank = (uint8)Sql_GetIntData(SqlHandle, 20);
                 Pet->attRank = (uint8)Sql_GetIntData(SqlHandle, 21);
                 Pet->accRank = (uint8)Sql_GetIntData(SqlHandle, 22);
+                Pet->evaRank = (uint8)Sql_GetIntData(SqlHandle, 23);
 
-                Pet->hasSpellScript = (bool)Sql_GetIntData(SqlHandle, 23);
+                Pet->hasSpellScript = (bool)Sql_GetIntData(SqlHandle, 24);
 
-                Pet->spellList = (uint8)Sql_GetIntData(SqlHandle, 24);
+                Pet->spellList = (uint8)Sql_GetIntData(SqlHandle, 25);
 
                 // resistances
-                Pet->slashres = (uint16)(Sql_GetFloatData(SqlHandle, 25) * 1000);
-                Pet->pierceres = (uint16)(Sql_GetFloatData(SqlHandle, 26) * 1000);
-                Pet->hthres = (uint16)(Sql_GetFloatData(SqlHandle, 27) * 1000);
-                Pet->impactres = (uint16)(Sql_GetFloatData(SqlHandle, 28) * 1000);
+                Pet->slashres = (uint16)(Sql_GetFloatData(SqlHandle, 26) * 1000);
+                Pet->pierceres = (uint16)(Sql_GetFloatData(SqlHandle, 27) * 1000);
+                Pet->hthres = (uint16)(Sql_GetFloatData(SqlHandle, 28) * 1000);
+                Pet->impactres = (uint16)(Sql_GetFloatData(SqlHandle, 29) * 1000);
 
-                Pet->firedef = (uint16)((Sql_GetFloatData(SqlHandle, 29) - 1) * -1000);
-                Pet->icedef = (uint16)((Sql_GetFloatData(SqlHandle, 30) - 1) * -1000);
-                Pet->winddef = (uint16)((Sql_GetFloatData(SqlHandle, 31) - 1) * -1000);
-                Pet->earthdef = (uint16)((Sql_GetFloatData(SqlHandle, 32) - 1) * -1000);
-                Pet->thunderdef = (uint16)((Sql_GetFloatData(SqlHandle, 33) - 1) * -1000);
-                Pet->waterdef = (uint16)((Sql_GetFloatData(SqlHandle, 34) - 1) * -1000);
-                Pet->lightdef = (uint16)((Sql_GetFloatData(SqlHandle, 35) - 1) * -1000);
-                Pet->darkdef = (uint16)((Sql_GetFloatData(SqlHandle, 36) - 1) * -1000);
+                Pet->firedef = 0;
+                Pet->icedef = 0;
+                Pet->winddef = 0;
+                Pet->earthdef = 0;
+                Pet->thunderdef = 0;
+                Pet->waterdef = 0;
+                Pet->lightdef = 0;
+                Pet->darkdef = 0;
 
-                Pet->fireres = (uint16)((Sql_GetFloatData(SqlHandle, 29) - 1) * -100);
-                Pet->iceres = (uint16)((Sql_GetFloatData(SqlHandle, 30) - 1) * -100);
-                Pet->windres = (uint16)((Sql_GetFloatData(SqlHandle, 31) - 1) * -100);
-                Pet->earthres = (uint16)((Sql_GetFloatData(SqlHandle, 32) - 1) * -100);
-                Pet->thunderres = (uint16)((Sql_GetFloatData(SqlHandle, 33) - 1) * -100);
-                Pet->waterres = (uint16)((Sql_GetFloatData(SqlHandle, 34) - 1) * -100);
-                Pet->lightres = (uint16)((Sql_GetFloatData(SqlHandle, 35) - 1) * -100);
-                Pet->darkres = (uint16)((Sql_GetFloatData(SqlHandle, 36) - 1) * -100);
+                Pet->fireres = (uint16)((Sql_GetFloatData(SqlHandle, 30) - 1) * -100);
+                Pet->iceres = (uint16)((Sql_GetFloatData(SqlHandle, 31) - 1) * -100);
+                Pet->windres = (uint16)((Sql_GetFloatData(SqlHandle, 32) - 1) * -100);
+                Pet->earthres = (uint16)((Sql_GetFloatData(SqlHandle, 33) - 1) * -100);
+                Pet->thunderres = (uint16)((Sql_GetFloatData(SqlHandle, 34) - 1) * -100);
+                Pet->waterres = (uint16)((Sql_GetFloatData(SqlHandle, 35) - 1) * -100);
+                Pet->lightres = (uint16)((Sql_GetFloatData(SqlHandle, 36) - 1) * -100);
+                Pet->darkres = (uint16)((Sql_GetFloatData(SqlHandle, 37) - 1) * -100);
 
-                Pet->cmbDelay = (uint16)Sql_GetIntData(SqlHandle, 37);
-                Pet->name_prefix = (uint8)Sql_GetUIntData(SqlHandle, 38);
+                Pet->cmbDelay = (uint16)Sql_GetIntData(SqlHandle, 38);
+                Pet->name_prefix = (uint8)Sql_GetUIntData(SqlHandle, 39);
+                Pet->m_MobSkillList = (uint16)Sql_GetUIntData(SqlHandle, 40);
 
                 g_PPetList.push_back(Pet);
             }
@@ -381,10 +387,8 @@ namespace petutils
         PMob->health.hp = PMob->GetMaxHP();
         PMob->health.mp = PMob->GetMaxMP();
 
-        uint16 evaRank = battleutils::GetSkillRank(SKILL_EVA, PMob->GetMJob());
-
         PMob->setModifier(MOD_DEF, GetJugBase(PMob, petStats->defRank));
-        PMob->setModifier(MOD_EVA, GetJugBase(PMob, evaRank));
+        PMob->setModifier(MOD_EVA, GetJugBase(PMob, petStats->evaRank));
         PMob->setModifier(MOD_ATT, GetJugBase(PMob, petStats->attRank));
         PMob->setModifier(MOD_ACC, GetJugBase(PMob, petStats->accRank));
 
@@ -794,6 +798,7 @@ namespace petutils
 
         PPet->look = petData->look;
         PPet->name = petData->name;
+        PPet->SetMJob(petData->mJob);
         PPet->m_EcoSystem = petData->EcoSystem;
         PPet->m_Family = petData->m_Family;
         PPet->m_Element = petData->m_Element;
@@ -804,8 +809,11 @@ namespace petutils
         PPet->allegiance = PMaster->allegiance;
         PMaster->StatusEffectContainer->CopyConfrontationEffect(PPet);
 
-        // assuming elemental spawn
-        PPet->setModifier(MOD_DMGPHYS, -50); //-50% PDT
+        if (PPet->m_EcoSystem == SYSTEM_AVATAR || PPet->m_EcoSystem == SYSTEM_ELEMENTAL)
+        {
+            // assuming elemental spawn
+            PPet->setModifier(MOD_DMGPHYS, -50); //-50% PDT
+        }
 
         PPet->m_SpellListContainer = mobSpellList::GetMobSpellList(petData->spellList);
 
@@ -1249,6 +1257,7 @@ namespace petutils
         }
         PPet->m_name_prefix = g_PPetList.at(PetID)->name_prefix;
         PPet->m_Family = g_PPetList.at(PetID)->m_Family;
+        PPet->m_MobSkillList = g_PPetList.at(PetID)->m_MobSkillList;
         PPet->SetMJob(g_PPetList.at(PetID)->mJob);
         PPet->m_Element = g_PPetList.at(PetID)->m_Element;
         PPet->m_PetID = PetID;
@@ -1340,8 +1349,8 @@ namespace petutils
 			CCharEntity* PChar = (CCharEntity*)PMaster;
 			highestLvl += PChar->PMeritPoints->GetMeritValue(MERIT_BEAST_AFFINITY, PChar);
 
-            // 0-2 lvls lower
-            highestLvl -= dsprand::GetRandomNumber(3);
+            // 0-2 lvls lower, less Monster Gloves(+1/+2) bonus
+            highestLvl -= dsprand::GetRandomNumber(3 - dsp_cap(PChar->getMod(MOD_JUG_LEVEL_RANGE), 0, 2));
 
             PPet->SetMLevel(highestLvl);
             LoadJugStats(PPet, PPetData); //follow monster calcs (w/o SJ)
@@ -1378,7 +1387,7 @@ namespace petutils
         }
 
 		FinalizePetStatistics(PMaster, PPet);
-		PPet->PetSkills = battleutils::GetMobSkillsByFamily(PPet->m_Family);
+		PPet->PetSkills = battleutils::GetMobSkillList(PPet->m_MobSkillList);
 		PPet->status = STATUS_NORMAL;
 		PPet->m_ModelSize += g_PPetList.at(PetID)->size;
 		PPet->m_EcoSystem = g_PPetList.at(PetID)->EcoSystem;

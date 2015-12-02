@@ -7,7 +7,6 @@ package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
 
 require("scripts/globals/status");
 require("scripts/zones/Arrapago_Reef/TextIDs");
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

@@ -1,19 +1,25 @@
 -----------------------------------
--- Area: Mount Z
+-- Area: Mount Zhayolm
 --  ZNM: Sarameya
+-- @pos 322 -14 -581 61
+-- Spawned with Buffalo Corpse: @additem 2583
+-- Wiki: http://ffxiclopedia.wikia.com/wiki/Sarameya
+-- TODO: PostAIRewrite: Code the Howl effect and gradual resists.
 -----------------------------------
 
-require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
+require("scripts/globals/status");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_GA_CHANCE, 50);
+    mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID());
 
     -- addMod
     mob:addMod(MOD_ACC,150);
@@ -26,7 +32,7 @@ function onMobInitialize(mob)
 end;
 
 -----------------------------------
--- OnMobSpawn
+-- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
@@ -34,9 +40,20 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_UFASTCAST, 45);
+    mob:addMod(MOD_MEVA, 95);
+    mob:addMod(MOD_MDEF, 30);
+    mob:addMod(MOD_SILENCERES, 20);
+    mob:addMod(MOD_GRAVITYRES, 20);
+    mob:addMod(MOD_LULLABYRES, 30);
+    -- mob:setMobMod(MOBMOD_RAGE, 3600); -- 60 minute rage timer
 end;
 
+-----------------------------------
+-- onMobRoam Action
+-----------------------------------
 
+function onMobRoam(mob)
+end;
 
 -----------------------------------
 -- onMobDisEngage Action
@@ -51,37 +68,48 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-
 function onMobFight(mob, target)
-    local Sara_2hr_Used = 0;
-    if (mob:getLocalVar("Sara_2hr") ~= nil) then
-        Sara_2hr_Used = mob:getLocalVar("Sara_2hr");
-    end
 
-    if (mob:getHPP() <= 9) then
-        if (Sara_2hr_Used == 4) then
-            mob:useMobAbility(436);
-            mob:setLocalVar("Sara_2hr", 5);
+    local hpp = mob:getHPP();
+    local useChainspell = false;
+    if (hpp < 90 and mob:getLocalVar("chainspell89") == 0) then
+        mob:setLocalVar("chainspell89",1);
+        useChainspell = true;
+    elseif (hpp < 70 and mob:getLocalVar("chainspell69") == 0) then
+        mob:setLocalVar("chainspell69",1);
+        useChainspell = true;
+    elseif (hpp < 50 and mob:getLocalVar("chainspell49") == 0) then
+        mob:setLocalVar("chainspell49",1);
+        useChainspell = true;
+    elseif (hpp < 30 and mob:getLocalVar("chainspell29") == 0) then
+        mob:setLocalVar("chainspell29",1);
+        useChainspell = true;
+    elseif (hpp < 10 and mob:getLocalVar("chainspell9") == 0) then
+        mob:setLocalVar("chainspell9",1);
+        useChainspell = true;
+    end;
+        
+    if (useChainspell == true) then  
+        mob:useMobAbility(436); -- Chainspell
+        mob:setMobMod(MOBMOD_GA_CHANCE, 100);
+
+    end
+    
+    -- Spams TP moves and -ga spells
+    if (mob:hasStatusEffect(EFFECT_CHAINSPELL) == true) then
+        mob:setTP(200);
+    else
+        if (mob:getMobMod(MOBMOD_GA_CHANCE) == 100) then
+            mob:setMobMod(MOBMOD_GA_CHANCE, 50);
         end
-    elseif (mob:getHPP() <= 29) then
-        if (Sara_2hr_Used == 3) then
-            mob:useMobAbility(436);
-            mob:setLocalVar("Sara_2hr", 4);
-        end
-    elseif (mob:getHPP() <= 49) then
-        if (Sara_2hr_Used == 2) then
-            mob:useMobAbility(436);
-            mob:setLocalVar("Sara_2hr", 3);
-        end
-    elseif (mob:getHPP() <= 69) then
-        if (Sara_2hr_Used == 1) then
-            mob:useMobAbility(436);
-            mob:setLocalVar("Sara_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 89) then
-        if (Sara_2hr_Used == 0) then
-            mob:useMobAbility(436);
-            mob:setLocalVar("Sara_2hr", 1);
+    end;
+
+    -- Regens 1% of his HP a tick with Blaze Spikes on
+    if (mob:hasStatusEffect(EFFECT_BLAZE_SPIKES) == true) then
+        mob:setMod(MOD_REGEN, math.floor(mob:getMaxHP()/100));
+    else
+        if (mob:getMod(MOD_REGEN) > 0) then
+            mob:setMod(MOD_REGEN, 0);
         end
     end
 
@@ -92,15 +120,25 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onAdditionalEffect Action
+-- onAdditionalEffect
 -----------------------------------
-function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_POISON) == true)) then
+
+function onAdditionalEffect(mob, player)
+    local chance = 40;
+    local resist = applyResistanceAddEffect(mob,player,ELE_WATER,EFFECT_POISON);
+    if (math.random(0,99) >= chance or resist <= 0.5) then
         return 0,0,0;
     else
         local duration = 30;
-        target:addStatusEffect(EFFECT_POISON, 50, 3, duration);
-        return SUBEFFECT_POISON, 160, EFFECT_POISON;
+        if (mob:getMainLvl() > player:getMainLvl()) then
+            duration = duration + (mob:getMainLvl() - player:getMainLvl())
+        end
+        duration = utils.clamp(duration,1,30);
+        duration = duration * resist;
+        if (player:hasStatusEffect(EFFECT_POISON) == false) then
+            player:addStatusEffect(EFFECT_POISON, 50, 3, duration); -- Don't know potency on the poison.
+        end
+        return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
     end
 end;
 

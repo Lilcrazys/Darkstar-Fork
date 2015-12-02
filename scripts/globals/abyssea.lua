@@ -216,6 +216,7 @@ end;
 
 function getDemiluneAbyssite(player)
     local Demilune = 0;
+    -- Todo: change this into proper bitmask
     if (player:hasKeyItem(CLEAR_DEMILUNE_ABYSSITE)) then
         Demilune = Demilune + 1;
     end

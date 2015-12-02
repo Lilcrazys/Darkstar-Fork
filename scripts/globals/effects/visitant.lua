@@ -1,8 +1,9 @@
 -----------------------------------
--- Type: VISITANT STATUS
+--
+-- EFFECT_VISITANT
+--
 -----------------------------------
-require("scripts/globals/status");
-require("scripts/globals/utils");
+
 -----------------------------------
 -- onEffectGain Action
 -----------------------------------
@@ -22,6 +23,13 @@ end;
 -----------------------------------
 
 function onEffectTick(target,effect)
+    --[[
+    local duration = effect:getDuration();
+    if (target:getVar("Abyssea_Time") >= 3) then
+        target:setVar("Abyssea_Time",duration);
+    end
+    Some messages about remaining time.will need to handled outside of this effect (zone ejection warnings after visitant is gone).
+    ]]
 --[[
 	local TextIDs = "scripts/zones/" .. target:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;

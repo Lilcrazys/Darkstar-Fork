@@ -3,7 +3,6 @@
 --  ZNM: Armed Gears
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

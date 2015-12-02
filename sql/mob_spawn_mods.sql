@@ -26,7 +26,7 @@ CREATE TABLE `mob_spawn_mods` (
   `mobid` int(10) unsigned NOT NULL,
   `modid` smallint(5) unsigned NOT NULL,
   `value` smallint(5) NOT NULL DEFAULT '0',
-  `type` smallint(5) NOT NULL DEFAULT '0',
+  `is_mob_mod` boolean NOT NULL DEFAULT '0',
   PRIMARY KEY (`mobid`,`modid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=13 PACK_KEYS=1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -156,8 +156,8 @@ INSERT INTO `mob_spawn_mods` VALUES (17629430,1,1200,1);
 INSERT INTO `mob_spawn_mods` VALUES (17629430,2,3000,1);
 INSERT INTO `mob_spawn_mods` VALUES (16990474,1,5000,1);
 INSERT INTO `mob_spawn_mods` VALUES (16990474,2,7000,1);
-INSERT INTO `mob_spawn_mods` VALUES (17404333,1,20000,1);
-INSERT INTO `mob_spawn_mods` VALUES (17404333,2,24000,1);
+INSERT INTO `mob_spawn_mods` VALUES (17404331,1,20000,1);
+INSERT INTO `mob_spawn_mods` VALUES (17404331,2,24000,1);
 INSERT INTO `mob_spawn_mods` VALUES (17461478,1,3000,1);
 INSERT INTO `mob_spawn_mods` VALUES (17461478,2,9900,1);
 INSERT INTO `mob_spawn_mods` VALUES (17285460,1,379,1);
@@ -229,6 +229,50 @@ INSERT INTO `mob_spawn_mods` VALUES (16926464,49,1,1); -- Prishe in CoP 8-4
 INSERT INTO `mob_spawn_mods` VALUES (16916815,49,1,1); -- Ix'Aern MNK and helpers
 INSERT INTO `mob_spawn_mods` VALUES (16916816,49,1,1);
 INSERT INTO `mob_spawn_mods` VALUES (16916817,49,1,1);
+
+INSERT INTO `mob_spawn_mods` VALUES (17326081,50,25,1); -- Angra_Mainyu chainspell at 25%
+
+INSERT INTO `mob_spawn_mods` VALUES (17293486,51,1,1);
+INSERT INTO `mob_spawn_mods` VALUES (17293486,31,5,1);
+
+INSERT INTO `mob_spawn_mods` VALUES (17428812,17,1,1); -- Habetrot's Rumble Crawler
+INSERT INTO `mob_spawn_mods` VALUES (17428811,1,2000,1);
+INSERT INTO `mob_spawn_mods` VALUES (17428811,2,5625,1);
+
+INSERT INTO `mob_spawn_mods` VALUES (16986431,16,1,1); -- Tinnin 2hour
+
+-- Timers for mobs that depop when idle+unclaimed
+INSERT INTO `mob_spawn_mods` VALUES (16986428,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16986429,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16986430,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16986431,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16998871,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16998872,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16998873,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16998874,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16990473,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (16990474,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17027471,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17027472,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17027473,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17027474,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17027485,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17031598,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17031599,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17031600,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17043887,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17043888,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17056157,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17056186,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17072171,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17072172,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17072178,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17072179,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17101202,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17101203,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17101204,55,180,1);
+INSERT INTO `mob_spawn_mods` VALUES (17101205,55,180,1);
+
 /*!40000 ALTER TABLE `mob_spawn_mods` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

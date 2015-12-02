@@ -1,53 +1,45 @@
 -----------------------------------
---  Area: Abyssea - Konschtat (15)
---   Mob: Dapifer_Imp
------------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+-- Area: Abyssea - Konschtat
+-- NPC: Dapifer Imp
 -----------------------------------
 
-require("scripts/zones/Abyssea-Konschtat/textIDs");
-require("scripts/globals/abyssea");
 require("scripts/globals/status");
-
+    
 -----------------------------------
--- onMobInitialize
+-- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
 end;
 
 -----------------------------------
--- onMobSpawn
+-- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
 end;
 
 -----------------------------------
--- onMobEngaged
+-- onMobFight Action
 -----------------------------------
 
-function onMobEngaged(mob,target)
+function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onMobFight
+-- onCriticalHit
 -----------------------------------
 
-function onMobFight(mob,target)
+function onCriticalHit(mob)   
+ 
+    if (math.random(100) < 20 and mob:AnimationSub() == 0) then  -- 20% change to break that horn on crit   
+        mob:AnimationSub(1);
+    end
 end;
 
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-
-end;
-
-function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
-    -- DoLights(killer,mob,action)
-	-- PyxisSpawn(mob,killer,npc);
+function onMobDeath(mob, killer)
 end;

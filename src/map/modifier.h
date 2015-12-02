@@ -54,6 +54,7 @@ enum MODIFIER
     MOD_CHR                       = 14, // Charisma
 
     // Elemental Defenses
+    // 128 = 128 / 256 = 50% reduction
     MOD_FIREDEF                   = 15, // Fire Defense
     MOD_ICEDEF                    = 16, // Ice Defense
     MOD_WINDDEF                   = 17, // Wind Defense
@@ -210,6 +211,8 @@ enum MODIFIER
     MOD_CRITHITRATE               = 165, // Raises chance to crit
     MOD_CRIT_DMG_INCREASE         = 421, // Raises the damage of critcal hit by percent %
     MOD_ENEMYCRITRATE             = 166, // Raises chance enemy will crit
+    MOD_MAGIC_CRITHITRATE         = 562, // Raises chance to magic crit
+    MOD_MAGIC_CRIT_DMG_INCREASE   = 563, // Raises damage done when criting with magic
 
     MOD_HASTE_MAGIC               = 167, // Haste (and Slow) from magic - 1024 base! (448 cap)
     MOD_HASTE_ABILITY             = 383, // Haste (and Slow) from abilities - 1024 base! (256 cap?)
@@ -275,7 +278,7 @@ enum MODIFIER
     MOD_STUNRES                   = 251, // Enhances "Resist Stun" effect
     MOD_CHARMRES                  = 252, // Enhances "Resist Charm" effect
     MOD_AMNESIARES                = 253, // Enhances "Resist Amnesia" effect
-    // PLACEHOLDER                   = 254, // placeholder for future resist effect
+    MOD_LULLABYRES                = 254, // Enhances "Resist Lullaby" effect
     MOD_DEATHRES                  = 255, // Used by gear and ATMA that give resistance to instance KO
 
     MOD_PARALYZE                  = 257, // Paralyze -- percent chance to proc
@@ -328,6 +331,7 @@ enum MODIFIER
     MOD_REWARD_HP_BONUS           = 364, // Percent to add to reward HP healed. (364)
     MOD_CHARM_CHANCE              = 391, // extra chance to charm (light+apollo staff ect)
     MOD_FERAL_HOWL_DURATION       = 503, // +20% duration per merit when wearing augmented Monster Jackcoat +2
+    MOD_JUG_LEVEL_RANGE           = 564, // Decreases the level range of spawned jug pets. Maxes out at 2.
 
     // Bard
     MOD_MINNE_EFFECT              = 433, //
@@ -386,6 +390,8 @@ enum MODIFIER
     MOD_DAY_REDUCTION             = 373, // stores perpetuation reduction depending on day
     MOD_PERPETUATION_REDUCTION    = 346, // stores the MP/tick reduction from gear
     MOD_BP_DELAY                  = 357, // stores blood pact delay reduction
+    MOD_ENHANCES_ELEMENTAL_SIPHON = 540, // Bonus Base MP added to Elemental Siphon skill.
+    MOD_BP_DELAY_II               = 541, // Blood Pact Delay Reduction II
 
     // Blue Mage
     MOD_BLUE_POINTS               = 309, // Tracks extra blue points
@@ -393,6 +399,7 @@ enum MODIFIER
     // Corsair
     MOD_EXP_BONUS                 = 382, //
     MOD_ROLL_RANGE                = 528, // Additional range for COR roll abilities.
+    MOD_JOB_BONUS_CHANCE          = 542, // Chance to apply job bonus to COR roll without having the job in the party.
 
     MOD_DMG_REFLECT               = 316, // Tracks totals
     MOD_ROLL_ROGUES               = 317, // Tracks totals
@@ -457,15 +464,34 @@ enum MODIFIER
 
     MOD_TP_BONUS                  = 345, //
 
-    //stores the amount of elemental affinity (elemental staves mostly)
-    MOD_FIRE_AFFINITY             = 347, // Fire Affinity
-    MOD_EARTH_AFFINITY            = 348, // Earth Affinity
-    MOD_WATER_AFFINITY            = 349, // Water Affinity
-    MOD_ICE_AFFINITY              = 350, // Ice Affinity
-    MOD_THUNDER_AFFINITY          = 351, // Lightning Affinity
-    MOD_WIND_AFFINITY             = 352, // Wind Affinity
-    MOD_LIGHT_AFFINITY            = 353, // Light Affinity
-    MOD_DARK_AFFINITY             = 354, // Dark Affinity
+    //stores the amount of elemental affinity (elemental staves mostly) - damage, acc, and perpetuation is all handled separately
+    MOD_FIRE_AFFINITY_DMG         = 347, // They're stored separately due to Magian stuff - they can grant different levels of
+    MOD_EARTH_AFFINITY_DMG        = 348, // the damage/acc/perp affinity on the same weapon, so they must be separated.
+    MOD_WATER_AFFINITY_DMG        = 349, // Each level of damage affinity is +/-5% damage, acc is +/-10 acc, and perp is
+    MOD_ICE_AFFINITY_DMG          = 350, // +/-1 mp/tic. This means that anyone adding these modifiers will have to add
+    MOD_THUNDER_AFFINITY_DMG      = 351, // 1 to the wiki amount. For example, Fire Staff has 2 in fire affinity for
+    MOD_WIND_AFFINITY_DMG         = 352, // DMG, ACC, and PERP, while the wiki lists it as having 1 in each.
+    MOD_LIGHT_AFFINITY_DMG        = 353,
+    MOD_DARK_AFFINITY_DMG         = 354,
+    MOD_ALL_AFFINITY_DMG          = 543,
+    MOD_FIRE_AFFINITY_ACC         = 544,
+    MOD_EARTH_AFFINITY_ACC        = 545,
+    MOD_WATER_AFFINITY_ACC        = 546,
+    MOD_ICE_AFFINITY_ACC          = 547,
+    MOD_THUNDER_AFFINITY_ACC      = 548,
+    MOD_WIND_AFFINITY_ACC         = 549,
+    MOD_LIGHT_AFFINITY_ACC        = 550,
+    MOD_DARK_AFFINITY_ACC         = 551,
+    MOD_ALL_AFFINITY_ACC          = 552,
+    MOD_FIRE_AFFINITY_PERP        = 553,
+    MOD_EARTH_AFFINITY_PERP       = 554,
+    MOD_WATER_AFFINITY_PERP       = 555,
+    MOD_ICE_AFFINITY_PERP         = 556,
+    MOD_THUNDER_AFFINITY_PERP     = 557,
+    MOD_WIND_AFFINITY_PERP        = 558,
+    MOD_LIGHT_AFFINITY_PERP       = 559,
+    MOD_DARK_AFFINITY_PERP        = 560,
+    MOD_ALL_AFFINITY_PERP         = 561,
 
     // Special Modifier+
     MOD_ADDS_WEAPONSKILL          = 355, //
@@ -587,6 +613,7 @@ enum MODIFIER
     MOD_FORCE_LIGHTNING_DWBONUS   = 536, // Set to 1 to force lightning day/weather spell bonus/penalty. Do not have it total more than 1.
     MOD_FORCE_LIGHT_DWBONUS       = 537, // Set to 1 to force light day/weather spell bonus/penalty. Do not have it total more than 1.
     MOD_FORCE_DARK_DWBONUS        = 538, // Set to 1 to force dark day/weather spell bonus/penalty. Do not have it total more than 1.
+    MOD_STONESKIN_BONUS_HP        = 539, // Bonus "HP" granted to Stoneskin spell.
 
     // MOD_SPARE = 92, // stuff
     // MOD_SPARE = 93, // stuff
@@ -597,8 +624,8 @@ enum MODIFIER
     // MOD_SPARE = 98, // stuff
     // MOD_SPARE = 99, // stuff
     // MOD_SPARE = 100, // stuff
-    // MOD_SPARE = 539, // stuff
-    // MOD_SPARE = 540, // stuff
+    // MOD_SPARE = 565, // stuff
+    // MOD_SPARE = 566, // stuff
 
 };
 

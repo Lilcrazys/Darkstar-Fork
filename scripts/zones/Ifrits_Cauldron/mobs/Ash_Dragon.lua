@@ -5,7 +5,6 @@
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

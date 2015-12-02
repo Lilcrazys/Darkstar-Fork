@@ -31,6 +31,10 @@ MOBPARAM_SLASH = 2;
 MOBPARAM_PIERCE = 3;
 MOBPARAM_H2H = 4;
 
+MOBDRAIN_HP = 0;
+MOBDRAIN_MP = 1;
+MOBDRAIN_TP = 2;
+
 --skillparam (MAGICAL)
 -- this is totally useless and should be removed
 -- add resistence using ELE_FIRE, see bomb_toss.lua
@@ -78,6 +82,7 @@ MSG_DAMAGE = 185; -- player uses, target takes 10 damage. DEFAULT
 MSG_MISS = 188;
 MSG_RESIST = 85;
 MSG_EFFECT_DRAINED = 370; -- <num> status effects are drained from <target>.
+MSG_ATTR_DRAINED = 369;
 MSG_TP_REDUCED = 362; -- tp reduced to
 MSG_DISAPPEAR = 159; -- <target>'s stun effect disappears!
 MSG_DISAPPEAR_NUM = 231; -- <num> of <target>'s effects disappear!
@@ -132,7 +137,6 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
         -- print ("Nothing passed, defaulting to attack");
     end;
     local ratio = offcratiomod/target:getStat(MOD_DEF);
-    ratio = utils.clamp(ratio, 0, 2);
 
     local lvldiff = lvluser - lvltarget;
     if lvldiff < 0 then
@@ -143,30 +147,29 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
     ratio = utils.clamp(ratio, 0, 4);
     
     --work out hit rate for mobs (bias towards them)
-    local hitrate = (acc*accmod) - eva + (lvldiff*3) + 85;
+    local hitrate = (acc*accmod) - eva + (lvldiff*2) + 75;
 
     -- printf("acc: %f, eva: %f, hitrate: %f", acc, eva, hitrate);
-    if (hitrate > 95) then
-        hitrate = 95;
-    elseif (hitrate < 20) then
-        hitrate = 20;
-    end
-
+    hitrate = utils.clamp(hitrate, 20, 95);
 
     --work out the base damage for a single hit
-    local hitdamage = (base + lvldiff);
+    local hitdamage = base + lvldiff;
     if (hitdamage < 1) then
         hitdamage = 1;
     end
 
-    hitdamage = hitdamage * dmgmod * MobTPMod(skill:getTP());
+    hitdamage = hitdamage * dmgmod;
+
+    if (tpeffect == TP_DMG_VARIES) then
+        hitdamage = hitdamage * MobTPMod(skill:getTP());
+    end
 
     --work out min and max cRatio
     local maxRatio = 1;
     local minRatio = 0;
     
     if (ratio < 0.5) then
-        maxRatio = ratio + 1;
+        maxRatio = ratio + 0.5;
     elseif ((0.5 <= ratio) and (ratio <= 0.7)) then
         maxRatio = 1;
     elseif ((0.7 < ratio) and (ratio <= 1.2)) then
@@ -217,7 +220,7 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
         firstHitChance = hitrate * 1.2;
     end
 
-    firstHitChance = utils.clamp(firstHitChance, 60, 95);
+    firstHitChance = utils.clamp(firstHitChance, 35, 95);
 
     if ((chance*100) <= firstHitChance) then
         pdif = math.random((minRatio*1000),(maxRatio*1000)) --generate random PDIF
@@ -237,6 +240,7 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
     end
 
     -- printf("final: %f, hits: %f, acc: %f", finaldmg, hitslanded, hitrate);
+    -- printf("ratio: %f, min: %f, max: %f, pdif, %f hitdmg: %f", ratio, minRatio, maxRatio, pdif, hitdamage);
 
     -- if an attack landed it must do at least 1 damage
     if (hitslanded >= 1 and finaldmg < 1) then
@@ -303,20 +307,11 @@ function MobMagicalMove(mob,target,skill,damage,element,dmgmod,tpeffect,tpvalue)
     finaldmg = damage * mab * dmgmod;
 
     -- get resistence
-    resist = applyPlayerResistance(mob,-1,target,mob:getStat(MOD_INT)-target:getStat(MOD_INT),0,element);
+    resist = applyPlayerResistance(mob,nil,target,mob:getStat(MOD_INT)-target:getStat(MOD_INT),0,element);
 
-    -- get elemental damage reduction
-    local defense = 1;
-    if (element > 0) then
-        defense = 1 + (target:getMod(defenseMod[element]) / -1000);
+    local magicDefense = getElementalDamageReduction(target, element);
 
-        -- max defense is 50%
-        if (defense < 0.5) then
-            defense = 0.5;
-        end
-    end
-
-    finaldmg = finaldmg * resist * defense;
+    finaldmg = finaldmg * resist * magicDefense;
 
     returninfo.dmg = finaldmg;
 
@@ -328,149 +323,33 @@ end
 --effect = EFFECT_WHATEVER if enfeeble
 --statmod = the stat to account for resist (INT,MND,etc) e.g. MOD_INT
 --This determines how much the monsters ability resists on the player.
---TODO: update all mob moves to use the new function
 function applyPlayerResistance(mob,effect,target,diff,bonus,element)
-    resist = 1.0;
-    magicaccbonus = 0;
+    local percentBonus = 0;
+    local magicaccbonus = 0;
 
-    --get the base acc (just skill plus magic acc mod)
-    magicacc = getSkillLvl(1, mob:getMainLvl()) + bonus;
-
-    --difference in int/mnd
-    if diff > 10 then
-        magicacc = magicacc + 10 + (diff - 10)/2;
+    if (diff > 10) then
+        magicaccbonus = magicaccbonus + 10 + (diff - 10)/2;
     else
-        magicacc = magicacc + diff;
+        magicaccbonus = magicaccbonus + diff;
     end
 
-    --base magic evasion (base magic evasion plus resistances(players), plus elemental defense(mobs)
-    local magiceva = target:getMod(MOD_MEVA);
-
-    -- add elemental resistence
-    if (element > 0) then
-        magiceva = magiceva + target:getMod(resistMod[element]);
+    if (bonus ~= nil) then
+        magicaccbonus = magicaccbonus + bonus;
     end
 
-    p = magicacc - (magiceva * 0.8);
-
-    --printf("acc: %f, eva: %f, bonus: %f", magicacc, magiceva, magicaccbonus);
-    --double any acc over 50 if it's over 50
-    if (p > 5) then
-        p = 5 + (p - 5) * 2;
+    if(effect ~= nil) then
+        percentBonus = percentBonus - getEffectResistance(target, effect);
     end
 
-    --add a flat bonus that won't get doubled in the previous step
-    p = p + 45;
+    local p = getMagicHitRate(mob, target, 0, element, percentBonus, magicaccbonus);
 
-    --add a scaling bonus or penalty based on difference of targets level from caster
-    leveldiff = mob:getMainLvl() - target:getMainLvl();
-    if leveldiff > 0 then
-        p = p - (25 * ( (mob:getMainLvl()) / 75 )) + leveldiff;
-    else
-        p = p + (25 * ( (mob:getMainLvl()) / 75 )) + leveldiff;
-    end
-
-    -- printf("final power: %f", p);
-    --cap accuracy
-    if (p > 95) then
-        p = 95;
-    elseif (p < 5) then
-        p = 5;
-    end
-
-    p = p / 100;
-
-    -- Resistance thresholds based on p.  A higher p leads to lower resist rates, and a lower p leads to higher resist rates.
-    half = (1 - p);
-
-    -- add effect resistence
-    if (effect ~= nil and effect > 0) then
-        local effectres = 0;
-        if (effect == EFFECT_SLEEP_I or effect == EFFECT_SLEEP_II or effect == EFFECT_LULLABY) then
-            effectres = MOD_SLEEPRES;
-        elseif (effect == EFFECT_POISON) then
-            effectres = MOD_POISONRES;
-        elseif (effect == EFFECT_PARALYZE) then
-            effectres = MOD_PARALYZERES;
-        elseif (effect == EFFECT_BLIND) then
-            effectres = MOD_BLINDRES
-        elseif (effect == EFFECT_SILENCE) then
-            effectres = MOD_SILENCERES;
-        elseif (effect == EFFECT_PLAGUE or effect == EFFECT_DISEASE) then
-            effectres = MOD_VIRUSRES;
-        elseif (effect == EFFECT_PETRIFICATION) then
-            effectres = MOD_PETRIFYRES;
-        elseif (effect == EFFECT_BIND) then
-            effectres = MOD_BINDRES;
-        elseif (effect == EFFECT_CURSE_I or effect == EFFECT_CURSE_II or effect == EFFECT_BANE) then
-            effectres = MOD_CURSERES;
-        elseif (effect == EFFECT_WEIGHT) then
-            effectres = MOD_GRAVITYRES;
-        elseif (effect == EFFECT_SLOW) then
-            effectres = MOD_SLOWRES;
-        elseif (effect == EFFECT_STUN) then
-            effectres = MOD_STUNRES;
-        elseif (effect == EFFECT_CHARM) then
-            effectres = MOD_CHARMRES;
-        elseif (effect == EFFECT_AMNESIA) then
-            effectres = MOD_AMNESIARES;
-        elseif (effect == EFFECT_TERROR) then
-            effectres = MOD_TERRORRES;
-        elseif (effect == EFFECT_DOOM) then
-            effectres = MOD_DOOMRES;
-        end
-
-        if (effectres > 0) then
-            local resrate = 1+(target:getMod(effectres)/20);
-            if (resrate > 1.5) then
-                resrate = 1.5;
-            end
-
-            -- printf("Resist percentage: %f", resrate);
-            -- increase resistance based on effect
-            half = half * resrate;
-        end
-    end
-
-    -- Resistance thresholds based on p.  A higher p leads to lower resist rates, and a lower p leads to higher resist rates.
-    --half = (1 - p); defined and possibly modified above
-    quart = half^2;
-    eighth = half^3;
-    sixteenth = half^4;
-    -- printf("HALF: %f", half);
-    -- printf("QUART: %f", quart);
-    -- printf("EIGHTH: %f", eighth);
-    -- printf("SIXTEENTH: %f", sixteenth);
-
-
-    resvar = math.random();
-
-    -- Determine final resist based on which thresholds have been crossed.
-    if (resvar <= sixteenth) then
-        resist = 0.0625;
-        --printf("Spell resisted to 1/16!!!  Threshold = %u",sixteenth);
-    elseif (resvar <= eighth) then
-        resist = 0.125;
-        --printf("Spell resisted to 1/8!  Threshold = %u",eighth);
-    elseif (resvar <= quart) then
-        resist = 0.25;
-        --printf("Spell resisted to 1/4.  Threshold = %u",quart);
-    elseif (resvar <= half) then
-        resist = 0.5;
-        --printf("Spell resisted to 1/2.  Threshold = %u",half);
-    else
-        resist = 1.0;
-        --printf("Not resisted: 1.0");
-    end
-    return resist;
-
+    return getMagicResist(p);
 end;
 
 function mobAddBonuses(caster, spell, target, dmg, ele)
 
-    speciesReduction = target:getMod(defenseMod[ele]);
-    speciesReduction = 1.00 - (speciesReduction/1000);
-    dmg = math.floor(dmg * speciesReduction);
+    local magicDefense = getElementalDamageReduction(target, ele);
+    dmg = math.floor(dmg * magicDefense);
 
     dayWeatherBonus = 1.00;
 
@@ -571,37 +450,26 @@ function MobBreathMove(mob, target, percent, base, element, cap)
     local damage = (mob:getHP() * percent) + (mob:getMainLvl() / base);
 
     if (cap == nil) then
-        -- super cap for high health mobs
-        if (damage > 700) then
-            damage = 700 + math.random(200);
-        end
-
         -- cap max damage
-        if (damage > mob:getHP()/5) then
-            damage = math.floor(mob:getHP()/5);
-        end
-    else
-        if (damage > cap) then
-            damage = cap;
-        end
+        cap = math.floor(mob:getHP()/5);
     end
+
+    -- Deal bonus damage vs mob ecosystem
+    local systemBonus = utils.getSystemStrengthBonus(mob, target);
+    damage = damage + (damage * (systemBonus * 0.25));
 
     -- elemental resistence
     if (element ~= nil and element > 0) then
         -- no skill available, pass nil
-        -- breath moves get a bonus accuracy because they are hard to resist
-        local resist = applyPlayerResistance(mob,nil,target,mob:getStat(MOD_INT)-target:getStat(MOD_INT),mob:getMainLvl(),element);
+        local resist = applyPlayerResistance(mob,nil,target,mob:getStat(MOD_INT)-target:getStat(MOD_INT),0,element);
 
         -- get elemental damage reduction
-        local defense = 1 - (target:getMod(resistMod[element]) + target:getMod(defenseMod[element])) / 256;
-
-        -- max defense is 50%
-        if (defense < 0.5) then
-            defense = 0.5;
-        end
+        local defense = getElementalDamageReduction(target, element)
 
         damage = damage * resist * defense;
     end
+
+    damage = utils.clamp(damage, 1, cap);
 
     return damage;
 end;
@@ -709,6 +577,119 @@ end;
 -- function MobMagicAoEHit()
 -- end;
 
+function MobDrainMove(mob, target, drainType, drain)
+
+    if (target:isUndead() == false) then
+
+        if (drainType == MOBDRAIN_MP) then
+            -- can't go over limited mp
+            if (target:getMP() < drain) then
+                drain = target:getMP();
+            end
+
+            target:delMP(drain);
+            mob:addMP(drain);
+
+            return MSG_DRAIN_MP;
+        elseif (drainType == MOBDRAIN_TP) then
+
+            -- can't go over limited tp
+            if (target:getTP() < drain) then
+                drain = target:getTP();
+            end
+
+            target:delTP(drain);
+            mob:addTP(drain);
+
+            return MSG_DRAIN_TP;
+        elseif (drainType == MOBDRAIN_HP) then
+            -- can't go over limited hp
+            if (target:getHP() < drain) then
+                drain = target:getHP();
+            end
+
+            target:delHP(drain);
+            mob:addHP(drain);
+
+            return MSG_DRAIN_HP;
+        end
+
+    else
+        -- it's undead so just deal damage
+        -- can't go over limited hp
+        if (target:getHP() < drain) then
+            drain = target:getHP();
+        end
+
+        target:delHP(drain);
+        return MSG_DAMAGE;
+    end
+
+    return MSG_NO_EFFECT;
+end;
+
+function MobPhysicalDrainMove(mob, target, skill, drainType, drain)
+    if (MobPhysicalHit(skill)) then
+        return MobDrainMove(mob, target, drainType, drain);
+    end
+
+    return MSG_MISS;
+end;
+
+function MobDrainAttribute(mob, target, typeEffect, power, tick, duration)
+    local positive = nil;
+    if (typeEffect == EFFECT_STR_DOWN) then
+        positive = EFFECT_STR_BOOST;
+    elseif (typeEffect == EFFECT_DEX_DOWN) then
+        positive = EFFECT_DEX_BOOST;
+    elseif (typeEffect == EFFECT_AGI_DOWN) then
+        positive = EFFECT_AGI_BOOST;
+    elseif (typeEffect == EFFECT_VIT_DOWN) then
+        positive = EFFECT_VIT_BOOST;
+    elseif (typeEffect == EFFECT_MND_DOWN) then
+        positive = EFFECT_MND_BOOST;
+    elseif (typeEffect == EFFECT_INT_DOWN) then
+        positive = EFFECT_INT_BOOST;
+    elseif (typeEffect == EFFECT_CHR_DOWN) then
+        positive = EFFECT_CHR_BOOST;
+    elseif (effect == EFFECT_TERROR) then
+        effectres = MOD_TERRORRES;
+    elseif (effect == EFFECT_DOOM) then
+        effectres = MOD_DOOMRES;
+    end
+
+    if (positive ~= nil) then
+        local results = MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
+
+        if (results == MSG_ENFEEB_IS) then
+            mob:addStatusEffect(positive, power, tick, duration);
+
+            return MSG_ATTR_DRAINED;
+        end
+
+        return MSG_MISS;
+    end
+
+    return MSG_NO_EFFECT;
+end;
+
+function MobDrainStatusEffectMove(mob, target)
+    -- try to drain buff
+    local effect = target:stealStatusEffect();
+    local dmg = 0;
+
+    if (effect ~= nil) then
+        if (mob:hasStatusEffect(effect:getType()) == false) then
+            -- add to myself
+            mob:addStatusEffect(effect:getType(), effect:getPower(), effect:getTickCount(), effect:getDuration());
+        end
+        -- add buff to myself
+        return MSG_EFFECT_DRAINED;
+    end
+
+    return MSG_NO_EFFECT;
+end;
+
 -- Adds a status effect to a target
 function MobStatusEffectMove(mob, target, typeEffect, power, tick, duration)
 
@@ -718,8 +699,11 @@ function MobStatusEffectMove(mob, target, typeEffect, power, tick, duration)
 
         local resist = applyPlayerResistance(mob,typeEffect,target,mob:getStat(statmod)-target:getStat(statmod),0,element);
 
-        if (resist >= 0.5) then
-            target:addStatusEffect(typeEffect,power,tick,duration*resist);
+        if (resist >= 0.25) then
+
+            local totalDuration = utils.clamp(duration * resist, 1);
+            target:addStatusEffect(typeEffect, power, tick, totalDuration);
+
             return MSG_ENFEEB_IS;
         end
 
@@ -732,8 +716,10 @@ end;
 function MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, power, tick, duration)
 
     if (MobPhysicalHit(skill)) then
-        MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
+        return MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
     end
+
+    return MSG_MISS;
 end;
 
 -- similar to statuseffect move except it will only take effect if facing
@@ -769,11 +755,6 @@ function MobHealMove(target, heal)
 end
 
 function MobTakeAoEShadow(mob, target, max)
-
-    -- local chance = 75;
-
-    -- local targetSkill = target:getSkillLevel(NINJUTSU_SKILL);
-    -- local mobSkill = getSkillLvl(3, mob:getMainLvl());
 
     -- this is completely crap and should be using actual nin skill
     -- TODO fix this

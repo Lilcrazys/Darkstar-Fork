@@ -384,11 +384,6 @@ void CZone::LoadZoneSettings()
 
 void CZone::LoadNavMesh()
 {
-    // Cities don't have roaming mobs
-    if(m_zoneType == ZONETYPE_CITY){
-      return;
-    }
-
     if (m_navMesh == nullptr)
     {
         m_navMesh = new CNavMesh((uint16)GetID());
@@ -979,7 +974,7 @@ void CZone::CharZoneOut(CCharEntity* PChar)
 
     if (PChar->PParty && PChar->loc.destination != 0 && PChar->m_moghouseID != 0)
     {
-        uint8 data[4];
+        uint8 data[4] {};
         WBUFL(data, 0) = PChar->PParty->GetPartyID();
         message::send(MSG_PT_RELOAD, data, sizeof data, nullptr);
     }

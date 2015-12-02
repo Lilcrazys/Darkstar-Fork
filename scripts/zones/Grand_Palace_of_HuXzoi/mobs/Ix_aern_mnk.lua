@@ -4,14 +4,13 @@
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 
     -- addMod
@@ -46,6 +45,7 @@ function onMobSpawn(mob)
     end
     GetNPCByID(QuestionMark):setLocalVar("[SEA]IxAern_DropRate", 0); -- Clears the var from the ???.
     ]]
+    mob:AnimationSub(1); -- Reset the subanim - otherwise it will respawn with bracers on. Note that Aerns are never actually supposed to be in subanim 0.
 end;
 
 -----------------------------------
@@ -107,16 +107,6 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onMobDespawn
------------------------------------
-
-function onMobDespawn(mob)
-    -- Despawn his minions if they are alive (Qn'aern)
-    DespawnMob(mob:getID()+1);
-    DespawnMob(mob:getID()+2);
-end;
-
------------------------------------
 -- onMobDeath
 -----------------------------------
 
@@ -124,4 +114,16 @@ function onMobDeath(mob, killer)
     -- Despawn his minions if they are alive (Qn'aern)
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    -- Despawn his minions if they are alive (Qn'aern)
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+    local QuestionMark = 16916819; -- The ??? that spawned this mob.
+    QuestionMark:updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
 end;

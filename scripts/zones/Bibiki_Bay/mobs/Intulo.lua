@@ -3,7 +3,6 @@
 --  NM:  Intulo
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

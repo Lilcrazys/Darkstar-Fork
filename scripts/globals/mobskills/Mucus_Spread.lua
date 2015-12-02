@@ -1,6 +1,6 @@
 ---------------------------------------------------
--- Gravity Field
--- Entangles all targets in an area of effect.
+-- Mucus Spread
+-- AOE Slow
 ---------------------------------------------------
 
 require("scripts/globals/settings");
@@ -15,7 +15,8 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_SLOW;
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 128, 0, 120));
+
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 25, 0, 30));
 
     return typeEffect;
 end;

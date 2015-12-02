@@ -10,8 +10,8 @@
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
----------------------------------------------
 
+---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
     if (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
         return 1;

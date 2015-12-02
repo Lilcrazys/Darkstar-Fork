@@ -28,6 +28,7 @@
 #include <string.h>
 #include <algorithm>
 #include <unordered_map>
+#include <array>
 
 #include "../packets/char.h"
 #include "../packets/char_health.h"
@@ -69,15 +70,15 @@
 *	lists used in battleutils											*
 ************************************************************************/
 
-uint16 g_SkillTable[100][14];									// All Skills by level/skilltype
-uint8  g_SkillRanks[MAX_SKILLTYPE][MAX_JOBTYPE];				// Holds skill ranks by skilltype and job
-uint16 g_SkillChainDamageModifiers[MAX_SKILLCHAIN_LEVEL + 1][MAX_SKILLCHAIN_COUNT + 1]; // Holds damage modifiers for skill chains [chain level][chain count]
+std::array<std::array<uint16, 14>, 100> g_SkillTable;
+std::array<std::array<uint8, MAX_JOBTYPE>, MAX_SKILLTYPE> g_SkillRanks;
+std::array<std::array<uint16, MAX_SKILLCHAIN_COUNT + 1>, MAX_SKILLCHAIN_LEVEL + 1> g_SkillChainDamageModifiers;
 
-CWeaponSkill* g_PWeaponSkillList[MAX_WEAPONSKILL_ID];			// Holds all Weapon skills
-std::unordered_map<uint16, CMobSkill*> g_PMobSkillList;			// List of mob skills
+std::array<CWeaponSkill*, MAX_WEAPONSKILL_ID> g_PWeaponSkillList;			// Holds all Weapon skills
+std::array<CMobSkill*, 4096> g_PMobSkillList;		        	// List of mob skills
 
-std::list<CWeaponSkill*> g_PWeaponSkillsList[MAX_SKILLTYPE];	// Holds Weapon skills by type
-std::unordered_map<uint16, std::vector<CMobSkill*>>  g_PMobFamilySkills;	// Mob Skills By Family
+std::array<std::list<CWeaponSkill*>, MAX_SKILLTYPE> g_PWeaponSkillsList;
+std::unordered_map<uint16, std::vector<uint16>>  g_PMobSkillLists;	// List of mob skills defined from mob_skill_lists.sql
 
 /************************************************************************
 *  battleutils															*
@@ -94,9 +95,6 @@ namespace battleutils
 
     void LoadSkillTable()
     {
-        memset(g_SkillTable, 0, sizeof(g_SkillTable));
-        memset(g_SkillRanks, 0, sizeof(g_SkillRanks));
-
         const int8* fmtQuery = "SELECT r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13 \
 						    FROM skill_caps \
 							ORDER BY level \
@@ -141,8 +139,6 @@ namespace battleutils
 
     void LoadWeaponSkillsList()
     {
-        memset(g_PWeaponSkillList, 0, sizeof(g_PWeaponSkillList));
-
         const int8* fmtQuery = "SELECT weaponskillid, name, jobs, type, skilllevel, element, animation, `range`, aoe, primary_sc, secondary_sc, tertiary_sc, main_only \
 							FROM weapon_skills \
 							WHERE weaponskillid < %u \
@@ -184,86 +180,64 @@ namespace battleutils
 
     void LoadMobSkillsList()
     {
-        const int8* fmtQuery = "SELECT mob_skill_id, family_id, mob_anim_id, mob_skill_name, \
-        mob_skill_aoe, mob_skill_distance, mob_anim_time, mob_prepare_time, \
-        mob_valid_targets, mob_skill_flag, mob_skill_param, knockback \
-        FROM mob_skill \
-        INNER JOIN mob_family_system ON family_id = familyid \
-        INNER JOIN mob_pools ON mob_pools.familyid = mob_family_system.familyid \
-        INNER JOIN mob_groups ON mob_groups.poolid = mob_pools.poolid \
-        INNER JOIN zone_settings ON mob_groups.zoneid = zone_settings.zoneid \
-        WHERE IF(%d <> 0, '%s' = zoneip AND %d = zoneport, TRUE) \
-        UNION \
-        (SELECT  mob_skill_id, family_id, mob_anim_id, mob_skill_name, \
-        mob_skill_aoe, mob_skill_distance, mob_anim_time, mob_prepare_time, \
-        mob_valid_targets, mob_skill_flag, mob_skill_param, knockback \
-        FROM mob_skill \
-        INNER JOIN mob_family_system ON family_id = familyid \
-        INNER JOIN mob_pools ON mob_pools.familyid = mob_family_system.familyid \
-        WHERE family_id IN(SELECT familyid FROM pet_list JOIN mob_pools USING(poolid))) \
-        ORDER BY family_Id, mob_skill_id ASC;";
 
-        int32 ret = Sql_Query(SqlHandle, fmtQuery, map_ip, inet_ntoa(map_ip), map_port);
+        // Load all mob skills
+        const int8* specialQuery = "SELECT mob_skill_id, mob_anim_id, mob_skill_name, \
+        mob_skill_aoe, mob_skill_distance, mob_anim_time, mob_prepare_time, \
+        mob_valid_targets, mob_skill_flag, mob_skill_param, knockback \
+        FROM mob_skills;";
+
+        int32 ret = Sql_Query(SqlHandle, specialQuery);
 
         if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0)
         {
             while (Sql_NextRow(SqlHandle) == SQL_SUCCESS)
             {
                 CMobSkill* PMobSkill = new CMobSkill(Sql_GetIntData(SqlHandle, 0));
-                PMobSkill->setfamilyID(Sql_GetIntData(SqlHandle, 1));
-                PMobSkill->setAnimationID(Sql_GetIntData(SqlHandle, 2));
-                PMobSkill->setName(Sql_GetData(SqlHandle, 3));
-                PMobSkill->setAoe(Sql_GetIntData(SqlHandle, 4));
-                PMobSkill->setDistance(Sql_GetFloatData(SqlHandle, 5));
-                PMobSkill->setAnimationTime(Sql_GetIntData(SqlHandle, 6));
-                PMobSkill->setActivationTime(Sql_GetIntData(SqlHandle, 7));
-                PMobSkill->setValidTargets(Sql_GetIntData(SqlHandle, 8));
-                PMobSkill->setFlag(Sql_GetIntData(SqlHandle, 9));
-                PMobSkill->setParam(Sql_GetIntData(SqlHandle, 10));
-                PMobSkill->setKnockback(Sql_GetUIntData(SqlHandle, 11));
+                PMobSkill->setAnimationID(Sql_GetIntData(SqlHandle, 1));
+                PMobSkill->setName(Sql_GetData(SqlHandle, 2));
+                PMobSkill->setAoe(Sql_GetIntData(SqlHandle, 3));
+                PMobSkill->setDistance(Sql_GetFloatData(SqlHandle, 4));
+                PMobSkill->setAnimationTime(Sql_GetIntData(SqlHandle, 5));
+                PMobSkill->setActivationTime(Sql_GetIntData(SqlHandle, 6));
+                PMobSkill->setValidTargets(Sql_GetIntData(SqlHandle, 7));
+                PMobSkill->setFlag(Sql_GetIntData(SqlHandle, 8));
+                PMobSkill->setParam(Sql_GetIntData(SqlHandle, 9));
+                PMobSkill->setKnockback(Sql_GetUIntData(SqlHandle, 10));
                 PMobSkill->setMsg(185); //standard damage message. Scripters will change this.
                 g_PMobSkillList[PMobSkill->getID()] = PMobSkill;
-                g_PMobFamilySkills[PMobSkill->getfamilyID()].push_back(PMobSkill);
             }
         }
 
+        const int8* fmtQuery = "SELECT skill_list_id, mob_skill_id \
+        FROM mob_skill_lists;";
 
-        // Load special skills; ranged attacks, call beast, etc
-        const int8* specialQuery = "SELECT mob_skill_id, family_id, mob_anim_id, mob_skill_name, \
-        mob_skill_aoe, mob_skill_distance, mob_anim_time, mob_prepare_time, \
-        mob_valid_targets, mob_skill_flag, mob_skill_param, knockback \
-        FROM mob_skill \
-        WHERE family_id = 0;";
-
-        ret = Sql_Query(SqlHandle, specialQuery);
+        ret = Sql_Query(SqlHandle, fmtQuery);
 
         if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0)
         {
             while (Sql_NextRow(SqlHandle) == SQL_SUCCESS)
             {
-                CMobSkill* PMobSkill = new CMobSkill(Sql_GetIntData(SqlHandle, 0));
-                PMobSkill->setfamilyID(Sql_GetIntData(SqlHandle, 1));
-                PMobSkill->setAnimationID(Sql_GetIntData(SqlHandle, 2));
-                PMobSkill->setName(Sql_GetData(SqlHandle, 3));
-                PMobSkill->setAoe(Sql_GetIntData(SqlHandle, 4));
-                PMobSkill->setDistance(Sql_GetFloatData(SqlHandle, 5));
-                PMobSkill->setAnimationTime(Sql_GetIntData(SqlHandle, 6));
-                PMobSkill->setActivationTime(Sql_GetIntData(SqlHandle, 7));
-                PMobSkill->setValidTargets(Sql_GetIntData(SqlHandle, 8));
-                PMobSkill->setFlag(Sql_GetIntData(SqlHandle, 9));
-                PMobSkill->setParam(Sql_GetIntData(SqlHandle, 10));
-                PMobSkill->setKnockback(Sql_GetUIntData(SqlHandle, 11));
-                PMobSkill->setMsg(185); //standard damage message. Scripters will change this.
-                g_PMobSkillList[PMobSkill->getID()] = PMobSkill;
-                g_PMobFamilySkills[PMobSkill->getfamilyID()].push_back(PMobSkill);
+                int16 skillListId = Sql_GetIntData(SqlHandle, 0);
+
+                uint16 skillId = Sql_GetIntData(SqlHandle, 1);
+
+                // ensure mobskill actually exists
+                if (!battleutils::GetMobSkill(skillId))
+                {
+                    ShowError("battleutils::LoadMobSkillsList Mob skill (%d) does not exist but was added to list (%d)\n", skillId, skillListId);
+                }
+                else
+                {
+                    g_PMobSkillLists[skillListId].push_back(skillId);
+                }
+
             }
         }
     }
 
     void LoadSkillChainDamageModifiers()
     {
-        memset(g_SkillChainDamageModifiers, 0, sizeof(g_SkillChainDamageModifiers));
-
         const int8* fmtQuery = "SELECT chain_level, chain_count, initial_modifier, magic_burst_modifier \
                            FROM skillchain_damage_modifiers \
                            ORDER BY chain_level, chain_count";
@@ -303,13 +277,8 @@ namespace battleutils
     {
         for (auto mobskill : g_PMobSkillList)
         {
-            delete mobskill.second;
+            delete mobskill;
         }
-    }
-
-    void FreeSkillChainDamageModifiers()
-    {
-        // These aren't dynamicly allocated at this point so no need to free them.
     }
 
     /************************************************************************
@@ -415,14 +384,134 @@ namespace battleutils
 
     /************************************************************************
     *                                                                       *
-    *  Get Mob Skills by family id                                          *
+    *  Get Mob Skills by list id                                          *
     *                                                                       *
     ************************************************************************/
 
-    std::vector<CMobSkill*> GetMobSkillsByFamily(uint16 FamilyID)
+    const std::vector<uint16>& GetMobSkillList(uint16 ListID)
     {
-        return g_PMobFamilySkills[FamilyID];
+        return g_PMobSkillLists[ListID];
     }
+
+    /************************************************************************
+    *                                                                       *
+    *	get mobs 2 hour skills	(should be moved into mobskill.cpp)         *
+    *                                                                       *
+    ************************************************************************/
+    CMobSkill* GetTwoHourMobSkill(JOBTYPE job, uint16 familyId)
+    {
+        uint16 id = 0;
+
+        if(familyId == 335)
+        {
+            // Maat has his own two hour animations
+            switch (job)
+            {
+                case JOB_WAR: id = 752; break;
+                case JOB_MNK: id = 753; break;
+                case JOB_WHM: id = 754; break;
+                case JOB_BLM: id = 755; break;
+                case JOB_RDM: id = 756; break;
+                case JOB_THF: id = 757; break;
+                case JOB_PLD: id = 758; break;
+                case JOB_DRK: id = 759; break;
+                case JOB_BST: id = 760; break;
+                case JOB_BRD: id = 762; break;
+                case JOB_RNG: id = 763; break;
+                case JOB_SAM: id = 764; break;
+                case JOB_NIN: id = 765; break;
+                case JOB_DRG: id = 766; break;
+                case JOB_SMN: id = 767; break;
+            }
+
+            return GetMobSkill(id);
+        }
+
+        switch (job)
+        {
+            case JOB_WAR: id = 432; break;
+            case JOB_MNK: id = 434; break;
+            case JOB_WHM: id = 433; break;
+            case JOB_BLM: id = 435; break;
+            case JOB_RDM: id = 436; break;
+            case JOB_THF: id = 437; break;
+            case JOB_PLD: id = 438; break;
+            case JOB_DRK: id = 439; break;
+            case JOB_BST: id = 484; break;
+            case JOB_BRD: id = 440; break;
+            case JOB_RNG:
+                          if(familyId == 270 || familyId == 360)
+                          {
+                              // Yagudo has it's own version
+                              id = 865;
+                          }
+                          else if(familyId == 169 || familyId == 358)
+                          {
+                              // Kindred has it's own version
+                              id = 895;
+                          }
+                          else if (familyId == 133 || familyId == 327)
+                          {
+                              // Goblin
+                              id = 479;
+                          }
+                          else if (familyId == 25)
+                          {
+                              // Antica
+                              id = 480;
+                          }
+                          else if (familyId == 189 || familyId == 334)
+                          {
+                              // Orc
+                              id = 481;
+                          }
+                          else if (familyId == 115 || familyId == 359 || familyId == 221
+                                  || familyId == 222 || familyId == 223)
+                          {
+                              // Fomor / Shadow
+                              id = 482;
+                          }
+                          else if (familyId == 328 || familyId >= 126 && familyId <= 130)
+                          {
+                              // Giga
+                              id = 483;
+                          }
+                          else if(familyId == 337 || familyId == 200 || familyId == 201
+                                  || familyId == 202)
+                          {
+                              // Quadav has it's own version
+                              id = 866;
+                          }
+                          else if(familyId == 171)
+                          {
+                              // Lamiae
+                              id = 1675;
+                          }
+                          else if(familyId == 246)
+                          {
+                              // Troll
+                              id = 1996;
+                          }
+                          else
+                          {
+                              // Defaulting to crappy goblin animation
+                              id = 479;
+                          }
+                          break;
+            case JOB_SAM: id = 474; break;
+            case JOB_NIN: id = 475; break;
+            case JOB_DRG: id = 476; break;
+            case JOB_SMN: id = 2000; break;  // alt 2000
+                // case JOB_BLU: id = 1933; break; // alt 2001
+                // case JOB_COR: id = 1934; break; // alt 2002
+                // case JOB_PUP: id = 1935; break; // alt 2003
+                // case JOB_DNC: id = 2454; break; // alt 2004
+                // case JOB_SCH: id = 2102 break;  // alt 2005
+            default: return nullptr;
+        }
+        return GetMobSkill(id);
+    }
+
 
     int32 CalculateEnspellDamage(CBattleEntity* PAttacker, CBattleEntity* PDefender, uint8 Tier, uint8 element) {
         int32 damage = 0;
@@ -656,7 +745,24 @@ namespace battleutils
                     {
                         Action->addEffectMessage = 132;
 
-                        PDefender->addHP(Action->spikesParam);
+                        if (PDefender->isAlive())
+                        {
+                            auto PEffect = PDefender->StatusEffectContainer->GetStatusEffect(EFFECT_DREAD_SPIKES);
+                            if (PEffect)
+                            {
+                                // Subpower is the remaining damage that can be drained. When it reaches 0 the effect ends
+                                int remainingDrain = PEffect->GetSubPower();
+                                if (remainingDrain - Action->spikesParam <= 0)
+                                {
+                                    PDefender->StatusEffectContainer->DelStatusEffect(EFFECT_DREAD_SPIKES);
+                                }
+                                else
+                                {
+                                    PEffect->SetSubPower(remainingDrain - Action->spikesParam);
+                                }
+                            }
+                            PDefender->addHP(Action->spikesParam);
+                        }
                         PAttacker->addHP(-Action->spikesParam);
                     }
                     break;
@@ -665,13 +771,19 @@ namespace battleutils
                     if (Action->reaction == REACTION_BLOCK && PDefender->objtype != TYPE_MOB) // Don't trigger this on mobs!
                     {
                         PAttacker->addHP(-Action->spikesParam);
-
-                        // Subpower is the remaining damage that can be reflected. When it reaches 0 the effect ends
-                        int remainingReflect = PDefender->StatusEffectContainer->GetStatusEffect(EFFECT_REPRISAL)->GetSubPower();
-                        PDefender->StatusEffectContainer->GetStatusEffect(EFFECT_REPRISAL)->SetSubPower(remainingReflect - Action->spikesParam);
-                        if (PDefender->StatusEffectContainer->GetStatusEffect(EFFECT_REPRISAL)->GetSubPower() <= 0)
+                        auto PEffect = PDefender->StatusEffectContainer->GetStatusEffect(EFFECT_REPRISAL);
+                        if (PEffect)
                         {
-                            PDefender->StatusEffectContainer->DelStatusEffect(EFFECT_REPRISAL);
+                            // Subpower is the remaining damage that can be reflected. When it reaches 0 the effect ends
+                            int remainingReflect = PEffect->GetSubPower();
+                            if (remainingReflect - Action->spikesParam <= 0)
+                            {
+                                PDefender->StatusEffectContainer->DelStatusEffect(EFFECT_REPRISAL);
+                            }
+                            else
+                            {
+                                PEffect->SetSubPower(remainingReflect - Action->spikesParam);
+                            }
                         }
                     }
                     else if (PDefender->objtype == TYPE_MOB) // Mobs don't need a shield or the subpower.
@@ -960,8 +1072,8 @@ namespace battleutils
             if ((PDefender->m_EcoSystem != SYSTEM_UNDEAD) || (daze == EFFECT_HASTE_DAZE))
             {
                 PDefender->StatusEffectContainer->AddStatusEffect(new CStatusEffect(daze,
-                                                                                    0, power,
-                                                                                    0, 10, PAttacker->id), true);
+                    0, power,
+                    0, 10, PAttacker->id), true);
             }
         }
 
@@ -1041,7 +1153,7 @@ namespace battleutils
         }
         //check weapon for additional effects
         else if (PAttacker->objtype == TYPE_PC && weapon->getModifier(MOD_ADDITIONAL_EFFECT) > 0 && PAttacker->GetMLevel() >= weapon->getReqLvl() &&
-                 luautils::OnAdditionalEffect(PAttacker, PDefender, weapon, Action, finaldamage) == 0 && Action->additionalEffect)
+            luautils::OnAdditionalEffect(PAttacker, PDefender, weapon, Action, finaldamage) == 0 && Action->additionalEffect)
         {
             if (Action->addEffectMessage == 163 && Action->addEffectParam < 0)
             {
@@ -1586,7 +1698,7 @@ namespace battleutils
             if (cap == 0)
             {
                 cap = GetMaxSkill((SKILLTYPE)PChar->PBattleAI->GetCurrentSpell()->getSkillType(), PChar->GetSJob(),
-                                  PChar->GetSLevel()); // << this might be GetMLevel, however this leaves no chance of avoiding interuption
+                    PChar->GetSLevel()); // << this might be GetMLevel, however this leaves no chance of avoiding interuption
             }
 
             if (skill > cap)
@@ -1692,7 +1804,7 @@ namespace battleutils
     {
         CItemWeapon* PWeapon = GetEntityWeapon(PDefender, SLOT_MAIN);
         if ((PWeapon != nullptr && PWeapon->getID() != 0 && PWeapon->getID() != 65535 &&
-             PWeapon->getSkillType() != SKILL_H2H) && battleutils::IsEngauged(PDefender))
+            PWeapon->getSkillType() != SKILL_H2H) && battleutils::IsEngauged(PDefender))
         {
             JOBTYPE job = PDefender->GetMJob();
 
@@ -1859,7 +1971,7 @@ namespace battleutils
                         // Subpower is the remaining damage that can be reflected. When it reaches 0 the effect ends
                         // Set Reprisal spike damage
                         PDefender->setModifier(MOD_SPIKES_DMG, dsp_cap((int32)(blockedDamage * (reprisalEffect->GetPower())) / 100,
-                                                                       0, reprisalEffect->GetSubPower()));
+                            0, reprisalEffect->GetSubPower()));
                     }
                 }
 
@@ -1923,6 +2035,12 @@ namespace battleutils
                 case TYPE_PET:
                     ((CPetEntity*)PDefender)->loc.zone->PushPacket(PDefender, CHAR_INRANGE, new CEntityUpdatePacket(PDefender, ENTITY_UPDATE, UPDATE_COMBAT));
                     break;
+                case TYPE_PC:
+                    if (PAttacker->objtype == TYPE_MOB)
+                    {
+                        ((CMobEntity*)PAttacker)->PEnmityContainer->UpdateEnmityFromAttack(PDefender, damage);
+                    }
+                    break;
             }
 
             // try to interrupt spell if not a ranged attack and not blocked by Shield Mastery
@@ -1957,14 +2075,14 @@ namespace battleutils
 
                 if (PAttacker->m_Weapons[SLOT_SUB]->getDmgType() > 0 &&
                     PAttacker->m_Weapons[SLOT_SUB]->getDmgType() < 4 &&
-                    PAttacker->m_Weapons[slot]->getDmgType() != DAMAGE_HTH)
+                    PAttacker->m_Weapons[slot]->getSkillType() != SKILL_H2H)
                 {
                     delay = delay / 2;
                 }
 
                 float ratio = 1.0f;
 
-                if (PAttacker->m_Weapons[slot]->getDmgType() == DAMAGE_HTH)
+                if (PAttacker->m_Weapons[slot]->getSkillType() == SKILL_H2H)
                     ratio = 2.0f;
 
                 baseTp = CalculateBaseTP((delay * 60) / 1000) / ratio;
@@ -2078,14 +2196,14 @@ namespace battleutils
 
                 if (PChar->m_Weapons[SLOT_SUB]->getDmgType() > 0 &&
                     PChar->m_Weapons[SLOT_SUB]->getDmgType() < 4 &&
-                    PChar->m_Weapons[slot]->getDmgType() != DAMAGE_HTH)
+                    PChar->m_Weapons[slot]->getSkillType() != SKILL_H2H)
                 {
                     delay /= 2;
                 }
 
                 float ratio = 1.0f;
 
-                if (PChar->m_Weapons[slot]->getDmgType() == DAMAGE_HTH)
+                if (PChar->m_Weapons[slot]->getSkillType() == SKILL_H2H)
                     ratio = 2.0f;
 
                 baseTp = CalculateBaseTP((delay * 60) / 1000) / ratio;
@@ -2129,7 +2247,7 @@ namespace battleutils
         int32 hitrate = 75;
 
         if (PAttacker->objtype == TYPE_PC && ((PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_SNEAK_ATTACK) && (abs(PDefender->loc.p.rotation - PAttacker->loc.p.rotation) < 23 || PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_HIDE))) ||
-                                              (charutils::hasTrait((CCharEntity*)PAttacker, TRAIT_ASSASSIN) && PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK) && battleutils::getAvailableTrickAttackChar(PAttacker, PDefender))))
+            (charutils::hasTrait((CCharEntity*)PAttacker, TRAIT_ASSASSIN) && PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK) && battleutils::getAvailableTrickAttackChar(PAttacker, PDefender))))
         {
             hitrate = 100; //attack with SA active or TA/Assassin cannot miss
         }
@@ -2192,7 +2310,7 @@ namespace battleutils
             }
         }
         else if (PAttacker->objtype == TYPE_PC && PAttacker->GetMJob() == JOB_THF && charutils::hasTrait((CCharEntity*)PAttacker, TRAIT_ASSASSIN) && (!ignoreSneakTrickAttack) &&
-                 PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
+            PAttacker->StatusEffectContainer->HasStatusEffect(EFFECT_TRICK_ATTACK))
         {
             CBattleEntity* taChar = battleutils::getAvailableTrickAttackChar(PAttacker, PDefender);
             if (taChar != nullptr) crithitrate = 100;
@@ -2262,7 +2380,7 @@ namespace battleutils
         cRatio = dsp_cap(cRatio, 0, 4);
 
         if ((0 <= cRatio) && (cRatio < 0.5)) {
-            cRatioMax = cRatio + 1;
+            cRatioMax = cRatio + 0.5f;
         }
         else if ((0.5 <= cRatio) && (cRatio <= 0.7)) {
             cRatioMax = 1;
@@ -2957,7 +3075,7 @@ namespace battleutils
             if (skillchain != SC_NONE)
             {
                 PSCEffect->SetStartTime(gettick());
-             //   ShowDebug("duration: %d", PSCEffect->GetDuration());
+                //   ShowDebug("duration: %d", PSCEffect->GetDuration());
                 PSCEffect->SetDuration(PSCEffect->GetDuration() - 1000);
                 PSCEffect->SetTier(GetSkillchainTier((SKILLCHAIN_ELEMENT)skillchain));
                 PSCEffect->SetPower(skillchain);
@@ -3206,9 +3324,9 @@ namespace battleutils
         //            TODO:     × (1 + Staff Affinity)
 
         int32 damage = floor((double)(abs(lastSkillDamage))
-                             * g_SkillChainDamageModifiers[chainLevel][chainCount] / 1000
-                             * (100 + PAttacker->getMod(MOD_SKILLCHAINBONUS)) / 100
-                             * (100 + PAttacker->getMod(MOD_SKILLCHAINDMG)) / 100);
+            * g_SkillChainDamageModifiers[chainLevel][chainCount] / 1000
+            * (100 + PAttacker->getMod(MOD_SKILLCHAINBONUS)) / 100
+            * (100 + PAttacker->getMod(MOD_SKILLCHAINDMG)) / 100);
 
         damage = damage * (1000 - resistance) / 1000;
         damage = MagicDmgTaken(PDefender, damage, appliedEle);
@@ -3314,9 +3432,9 @@ namespace battleutils
         DSP_DEBUG_BREAK_IF(PEntity == nullptr);
 
         return (PEntity->animation == ANIMATION_ATTACK &&
-                PEntity->PBattleAI != nullptr &&
-                PEntity->PBattleAI->GetBattleTarget() != nullptr &&
-                PEntity->status != STATUS_DISAPPEAR);
+            PEntity->PBattleAI != nullptr &&
+            PEntity->PBattleAI->GetBattleTarget() != nullptr &&
+            PEntity->status != STATUS_DISAPPEAR);
     }
 
     /************************************************************************
@@ -3573,22 +3691,19 @@ namespace battleutils
     *                                                                       *
     ************************************************************************/
 
-    void GenerateCureEnmity(CBattleEntity* PSource, CBattleEntity* PTarget, uint16 amount)
+    void GenerateCureEnmity(CCharEntity* PSource, CBattleEntity* PTarget, uint16 amount)
     {
         DSP_DEBUG_BREAK_IF(PSource == nullptr);
         DSP_DEBUG_BREAK_IF(PTarget == nullptr);
         DSP_DEBUG_BREAK_IF(amount < 0);
-        DSP_DEBUG_BREAK_IF(PSource->objtype != TYPE_PC);
 
-        CCharEntity* PChar = (CCharEntity*)PSource;
-
-        for (SpawnIDList_t::const_iterator it = PChar->SpawnMOBList.begin(); it != PChar->SpawnMOBList.end(); ++it)
+        for (SpawnIDList_t::const_iterator it = PSource->SpawnMOBList.begin(); it != PSource->SpawnMOBList.end(); ++it)
         {
             CMobEntity* PCurrentMob = (CMobEntity*)it->second;
 
             if (PCurrentMob->PEnmityContainer->HasTargetID(PTarget->id))
             {
-                PCurrentMob->PEnmityContainer->UpdateEnmityFromCure(PChar, PTarget->GetMLevel(), amount, (amount == 65535)); //true for "cure v"
+                PCurrentMob->PEnmityContainer->UpdateEnmityFromCure(PSource, PTarget->GetMLevel(), amount, (amount == 65535)); //true for "cure v"
             }
         }
     }
@@ -3809,7 +3924,7 @@ namespace battleutils
             numattacksLeftHand = battleutils::CheckMultiHits(PAttacker, PAttacker->m_Weapons[SLOT_SUB]);
 
         //h2h equipped
-        if (PAttacker->m_Weapons[SLOT_MAIN]->getDmgType() == DAMAGE_HTH)
+        if (PAttacker->m_Weapons[SLOT_MAIN]->getSkillType() == SKILL_H2H)
             numattacksLeftHand = battleutils::CheckMultiHits(PAttacker, PAttacker->m_Weapons[SLOT_MAIN]);
 
         // normal multi hit from left hand
@@ -3833,7 +3948,7 @@ namespace battleutils
                 if (PVictim->isDead())
                     break;
 
-                if (PAttacker->m_Weapons[SLOT_MAIN]->getDmgType() != DAMAGE_HTH && i >= numattacksRightHand)
+                if (PAttacker->m_Weapons[SLOT_MAIN]->getSkillType() != SKILL_H2H && i >= numattacksRightHand)
                 {
                     PWeapon = PAttacker->m_Weapons[SLOT_SUB];
                     fstrslot = SLOT_SUB;
@@ -3899,6 +4014,12 @@ namespace battleutils
         if (tier == 2 && PVictim->objtype == TYPE_MOB)
         {
             uint16 enmityReduction = PAttacker->getMod(MOD_HIGH_JUMP_ENMITY_REDUCTION) + 50;
+
+            // DRG sub has only 30% enmity removed instead of 50%.
+            if (PAttacker->GetSJob() == JOB_DRG)
+            {
+                enmityReduction = PAttacker->getMod(MOD_HIGH_JUMP_ENMITY_REDUCTION) + 30;
+            }
 
             // cap it
             if (enmityReduction > 100)
@@ -4217,13 +4338,14 @@ namespace battleutils
 
     int32 BreathDmgTaken(CBattleEntity* PDefender, int32 damage)
     {
-        float resist = 1.0f + (PDefender->getMod(MOD_UDMGBREATH) / 100.0f);
+        float resist = 1.0f + floor( 256.0f * ( PDefender->getMod(MOD_UDMGBREATH) / 100.0f )  ) / 256.0f;
         resist = dsp_max(resist, 0);
         damage *= resist;
 
-        resist = 1.0f + (PDefender->getMod(MOD_DMGBREATH) / 100.0f) + (PDefender->getMod(MOD_DMG) / 100.0f);
-        resist = dsp_max(resist, 0.5f);
-        damage = damage * resist;
+        resist = 1.0f + ( floor( 256.0f * ( PDefender->getMod(MOD_DMGBREATH) / 100.0f ) ) / 256.0f )
+                      + ( floor( 256.0f * ( PDefender->getMod(MOD_DMG)       / 100.0f ) ) / 256.0f );
+        resist = dsp_cap(resist, 0.5f, 1.5f); //assuming if its floored at .5f its capped at 1.5f but who's stacking +dmgtaken equip anyway???
+        damage *= resist;
 
         if (dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_ABSORB_DMG_CHANCE))
             damage = -damage;
@@ -4243,20 +4365,21 @@ namespace battleutils
         MODIFIER absorb[8] = { MOD_FIRE_ABSORB, MOD_EARTH_ABSORB, MOD_WATER_ABSORB, MOD_WIND_ABSORB, MOD_ICE_ABSORB, MOD_LTNG_ABSORB, MOD_LIGHT_ABSORB, MOD_DARK_ABSORB };
         MODIFIER nullarray[8] = { MOD_FIRE_NULL, MOD_EARTH_NULL, MOD_WATER_NULL, MOD_WIND_NULL, MOD_ICE_NULL, MOD_LTNG_NULL, MOD_LIGHT_NULL, MOD_DARK_NULL };
 
-        float resist = (256 + PDefender->getMod(MOD_UDMGMAGIC)) / 256.0f;
+        float resist = 1.0f + floor( 256.0f * ( PDefender->getMod(MOD_UDMGMAGIC) / 100.0f )  ) / 256.0f;
         resist = dsp_max(resist, 0);
         damage *= resist;
 
-        resist = ((256 + PDefender->getMod(MOD_DMGMAGIC)) / 256.0f) + (PDefender->getMod(MOD_DMG) / 100.0f);
-        resist = dsp_max(resist, 0.5f);
-        damage = damage * resist;
+        resist = 1.0f + ( floor( 256.0f * ( PDefender->getMod(MOD_DMGMAGIC) / 100.0f ) ) / 256.0f )
+                      + ( floor( 256.0f * ( PDefender->getMod(MOD_DMG)      / 100.0f ) ) / 256.0f );
+        resist = dsp_cap(resist, 0.5f, 1.5f); //assuming if its floored at .5f its capped at 1.5f but who's stacking +dmgtaken equip anyway???
+        damage *= resist;
 
         if (dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_ABSORB_DMG_CHANCE) ||
             (element && dsprand::GetRandomNumber(100) < PDefender->getMod(absorb[element - 1])) ||
             dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_MAGIC_ABSORB))
             damage = -damage;
         else if ((element && dsprand::GetRandomNumber(100) < PDefender->getMod(nullarray[element - 1])) ||
-                 dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_MAGIC_NULL))
+            dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_MAGIC_NULL))
             damage = 0;
         else
         {
@@ -4272,13 +4395,14 @@ namespace battleutils
 
     int32 PhysicalDmgTaken(CBattleEntity* PDefender, int32 damage)
     {
-        float resist = 1.0f + (PDefender->getMod(MOD_UDMGPHYS) / 100.0f);
+        float resist = 1.0f + floor( 256.0f * ( PDefender->getMod(MOD_UDMGPHYS) / 100.0f )  ) / 256.0f;
         resist = dsp_max(resist, 0);
         damage *= resist;
 
-        resist = 1.0f + (PDefender->getMod(MOD_DMGPHYS) / 100.0f) + (PDefender->getMod(MOD_DMG) / 100.0f);
-        resist = dsp_max(resist, 0.5f);
-        damage = damage * resist;
+        resist = 1.0f + ( floor( 256.0f * ( PDefender->getMod(MOD_DMGPHYS) / 100.0f ) ) / 256.0f )
+                      + ( floor( 256.0f * ( PDefender->getMod(MOD_DMG)     / 100.0f ) ) / 256.0f );
+        resist = dsp_cap(resist, 0.5f, 1.5f); //assuming if its floored at .5f its capped at 1.5f but who's stacking +dmgtaken equip anyway???
+        damage *= resist;
 
         if (dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_ABSORB_DMG_CHANCE) ||
             dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_PHYS_ABSORB))
@@ -4299,13 +4423,14 @@ namespace battleutils
 
     int32 RangedDmgTaken(CBattleEntity* PDefender, int32 damage)
     {
-        float resist = 1.0f + (PDefender->getMod(MOD_UDMGRANGE) / 100.0f);
+        float resist = 1.0f + floor( 256.0f * ( PDefender->getMod(MOD_UDMGRANGE) / 100.0f )  ) / 256.0f;
         resist = dsp_max(resist, 0);
         damage *= resist;
 
-        resist = 1.0f + (PDefender->getMod(MOD_DMGRANGE) / 100.0f) + (PDefender->getMod(MOD_DMG) / 100.0f);
-        resist = dsp_max(resist, 0.5f);
-        damage = damage * resist;
+        resist = 1.0f + ( floor( 256.0f * ( PDefender->getMod(MOD_DMGRANGE) / 100.0f ) ) / 256.0f )
+                      + ( floor( 256.0f * ( PDefender->getMod(MOD_DMG)      / 100.0f ) ) / 256.0f );
+        resist = dsp_cap(resist, 0.5f, 1.5f); //assuming if its floored at .5f its capped at 1.5f but who's stacking +dmgtaken equip anyway???
+        damage *= resist;
 
         if (dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_ABSORB_DMG_CHANCE) ||
             dsprand::GetRandomNumber(100) < PDefender->getMod(MOD_PHYS_ABSORB))
@@ -4514,44 +4639,6 @@ namespace battleutils
         return damage;
     }
 
-    /************************************************************************
-    *                                                                       *
-    *	get mobs 2 hour skills	(should be moved into mobskill.cpp)         *
-    *                                                                       *
-    ************************************************************************/
-    CMobSkill* GetTwoHourMobSkill(JOBTYPE job)
-    {
-        uint16 id = 0;
-
-        switch (job)
-        {
-            case JOB_WAR: id = 432; break;
-            case JOB_MNK: id = 434; break;
-            case JOB_WHM: id = 433; break;
-            case JOB_BLM: id = 435; break;
-            case JOB_RDM: id = 436; break;
-            case JOB_THF: id = 437; break;
-            case JOB_PLD: id = 438; break;
-            case JOB_DRK: id = 439; break;
-            case JOB_BST: id = 484; break;
-            case JOB_BRD: id = 440; break;
-            case JOB_RNG: id = 479; break;
-            case JOB_SAM: id = 474; break;
-            case JOB_NIN: id = 475; break;
-            case JOB_DRG: id = 476; break;
-                // case JOB_SMN: id = 478; break;  // alt 2000
-                // case JOB_BLU: id = 1933; break; // alt 2001
-                // case JOB_COR: id = 1934; break; // alt 2002
-                // case JOB_PUP: id = 1935; break; // alt 2003
-                // case JOB_DNC: id = 2454; break; // alt 2004
-                // case JOB_SCH: id = 2102 break;  // alt 2005
-                // case JOB_GEO: id = ??? break;
-                // case JOB_RUN: id = 3009 break;
-            default: return nullptr;
-        }
-        return GetMobSkill(id);
-    }
-
 
 
     /************************************************************************
@@ -4587,8 +4674,8 @@ namespace battleutils
     {
         if (PSpell->getAOE() == SPELLAOE_RADIAL_ACCE) // Divine Veil goes here because -na spells have AoE w/ Accession
             if (PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_ACCESSION) || (PCaster->objtype == TYPE_PC &&
-            charutils::hasTrait((CCharEntity*)PCaster, TRAIT_DIVINE_VEIL) && PSpell->isNa() &&
-            (PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_DIVINE_SEAL) || PCaster->getMod(MOD_AOE_NA) == 1)))
+                charutils::hasTrait((CCharEntity*)PCaster, TRAIT_DIVINE_VEIL) && PSpell->isNa() &&
+                (PCaster->StatusEffectContainer->HasStatusEffect(EFFECT_DIVINE_SEAL) || PCaster->getMod(MOD_AOE_NA) == 1)))
                 return SPELLAOE_RADIAL;
             else
                 return SPELLAOE_NONE;
@@ -4750,7 +4837,7 @@ namespace battleutils
         position_t nearEntity = nearPosition(*pos, offset, M_PI);
 
         // validate the drawin position before continuing
-        if(!PMob->PBattleAI->m_PPathFind->ValidPosition(pos))
+        if (!PMob->PBattleAI->m_PPathFind->ValidPosition(pos))
         {
             return false;
         }
@@ -5017,6 +5104,34 @@ namespace battleutils
                 }
             }
         }
+    }
+
+    bool HasClaim(CBattleEntity* PEntity, CBattleEntity* PTarget)
+    {
+        DSP_DEBUG_BREAK_IF(PTarget == nullptr);
+        CBattleEntity* PMaster = PEntity;
+
+        if (PEntity->PMaster != nullptr)
+        {
+            PMaster = PEntity->PMaster;
+        }
+
+        if (PTarget->m_OwnerID.id == 0 || PTarget->m_OwnerID.id == PMaster->id || PTarget->objtype == TYPE_PC ||
+                PTarget->objtype == TYPE_PET)
+        {
+            return true;
+        }
+
+        bool found = false;
+
+        PMaster->ForAlliance([&PTarget, &found](CBattleEntity* PChar){
+                if (PChar->id == PTarget->m_OwnerID.id)
+                {
+                    found = true;
+                }
+                });
+
+        return found;
     }
 
 };

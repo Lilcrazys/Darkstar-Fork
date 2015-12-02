@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 4630
---	Scroll of Holy
---	Teaches the white magic Holy
+-- ID: 4629
+-- Scroll of Holy II
+-- Teaches the white magic Holy II
 -----------------------------------------
 
 -----------------------------------------
@@ -9,7 +9,7 @@
 -----------------------------------------
 
 function onItemCheck(target)
-	return target:canLearnSpell(22);
+    return target:canLearnSpell(22);
 end;
 
 -----------------------------------------
@@ -17,5 +17,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addSpell(22);
+    target:addSpell(22);
 end;

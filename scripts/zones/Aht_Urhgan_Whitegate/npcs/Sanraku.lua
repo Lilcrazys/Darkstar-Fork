@@ -123,6 +123,8 @@ function onTrigger(player,npc)
         end;
 
         player:startEvent(0x038D,param);
+    end
+    ]]
     -- end
 end;
 

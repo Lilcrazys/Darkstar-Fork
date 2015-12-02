@@ -3,7 +3,6 @@
 --  NM:  Dune_Widow
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------

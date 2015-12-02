@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.31, for debian-linux-gnu (i686)
+-- MySQL dump 10.14  Distrib 5.5.37-MariaDB, for debian-linux-gnu (x86_64)
 --
--- Host: localhost    Database: dspdb
+-- Host: localhost    Database: dspdbtest
 -- ------------------------------------------------------
--- Server version   5.5.31-0ubuntu1
+-- Server version	5.5.40-MariaDB-0ubuntu0.14.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -45,8 +45,8 @@ CREATE TABLE `zone_settings` (
 
 LOCK TABLES `zone_settings` WRITE;
 /*!40000 ALTER TABLE `zone_settings` DISABLE KEYS */;
--- INSERT INTO `zone_settings` VALUES (0,1,'127.0.0.1',54130,'Demonstration_Area',0,0,0,0,0,0.00,1056);
 INSERT INTO `zone_settings` VALUES (0,1,'127.0.0.1',54230,'Residential_Area',0,0,0,0,0,0.00,1056);
+-- INSERT INTO `zone_settings` VALUES (0,1,'127.0.0.1',54130,'Demonstration_Area',0,0,0,0,0,0.00,1056);
 INSERT INTO `zone_settings` VALUES (1,2,'127.0.0.1',54230,'Phanauet_Channel',229,229,101,219,0,0.00,1176);
 INSERT INTO `zone_settings` VALUES (2,2,'127.0.0.1',54230,'Carpenters_Landing',0,0,101,219,0,0.00,1180);
 INSERT INTO `zone_settings` VALUES (3,2,'127.0.0.1',54230,'Manaclipper',229,229,101,219,0,0.00,1176);
@@ -334,14 +334,14 @@ INSERT INTO `zone_settings` VALUES (284,1,'127.0.0.1',54230,'Celennia_Memorial_L
 INSERT INTO `zone_settings` VALUES (285,1,'127.0.0.1',54230,'Feretory',0,0,0,0,0,0.00,1056);
 INSERT INTO `zone_settings` VALUES (286,0,'127.0.0.1',54130,'286',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (287,0,'127.0.0.1',54130,'287',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (288,0,'127.0.0.1',54130,'Escha-ZiTah',80,80,80,80,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (289,0,'127.0.0.1',54130,'289',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (290,0,'127.0.0.1',54130,'290',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (291,0,'127.0.0.1',54130,'291',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54130,'292',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54130,'293',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (288,2,'127.0.0.1',54230,'Escha_ZiTah',80,80,80,80,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (289,2,'127.0.0.1',54230,'Escha_RuAun',80,80,80,80,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (290,0,'127.0.0.1',54230,'Desuetia_Empyreal_Paradox',0,0,0,0,0,0.00,128);
+INSERT INTO `zone_settings` VALUES (291,0,'127.0.0.1',54230,'Reisenjima',79,79,79,79,0,0.00,128);
+INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',0,'292',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54230,'Reisenjima_Sanctorium',0,0,0,0,0,0.00,128);
 
--- Temp workaround for Legion battles because instancing there isn't ready, so its BCNM for now
+-- Temp workaround for Legion battles because instancing there isn't ready
 REPLACE INTO `zone_settings` VALUES (183,3,'127.0.0.1',54230,'Maquette_Abdhaljs-Legion',143,143,143,143,0,0.00,145);
 
 -- -------------------------------------------------------

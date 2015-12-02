@@ -52,7 +52,7 @@ public:
 
     uint16      getID();
     uint16      getAnimationID();
-    uint16      getfamilyID();
+    uint16      getPetAnimationID();
     uint8       getAoe();
     float       getDistance();
     uint8       getFlag();
@@ -62,6 +62,7 @@ public:
     uint16      getAoEMsg();
     uint16      getValidTargets();
     int16       getTP();
+    uint8       getHPP();
     uint16      getTotalTargets();
     uint16      getMsgForAction();
     float       getRadius();
@@ -73,7 +74,6 @@ public:
 
     void        setID(uint16 id);
     void        setAnimationID(uint16 aid);
-    void        setfamilyID(uint16 familyID);
     void        setAoe(uint8 aoe);
     void        setDistance(float distance);
     void        setFlag(uint8 flag);
@@ -82,6 +82,7 @@ public:
     void        setMsg(uint16 msg);
     void        setValidTargets(uint16 targ);
     void        setTP(int16 tp);
+    void        setHPP(uint8 hpp);
     void        setTotalTargets(uint16 targets);
     void        setParam(int16 value);
     void        setKnockback(uint8 knockback);
@@ -94,7 +95,6 @@ private:
 
     uint16      m_ID;
     uint16      m_TotalTargets;
-    uint16      m_FamilyID;
     int16       m_Param;
     uint16      m_AnimID;           //animation id
     uint8       m_Aoe;              // не используется
@@ -105,6 +105,7 @@ private:
     uint16      m_ActivationTime;   //how long the mob prepares the tp move for
     uint16      m_Message;          //message param, scripters can edit this depending on self/resist/etc.
     int16       m_TP;               //the tp at the time of finish readying (for scripts)
+    uint8       m_HPP;              // HPP at the time of using mob skill (for scripts)
     uint8       m_knockback;        //knockback value (0-7)
     uint8       m_skillchain;       //weaponskill ID of skillchain properties
 

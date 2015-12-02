@@ -21,8 +21,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_CURSE_I;
 
-    -- skill:setMsg(MobStatusEffectMove(mob, target, typeEffect,  25, 0, 360)); -- DSP
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 50, 0, 360)); -- Custom
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 25, 0, 360));
 
 	return typeEffect;
 end;

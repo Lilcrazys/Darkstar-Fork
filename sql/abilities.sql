@@ -383,6 +383,7 @@ INSERT INTO `abilities` VALUES ('364', 'effusion', '22', '25', '1', '300', '143'
 INSERT INTO `abilities` VALUES ('365', 'chocobo_jig_ii', '19', '70', '1', '60', '218', '126', '0', '13', '20.0', '1', '1', '300', '0', '0',null);
 
 INSERT INTO `abilities` VALUES ('367', 'Vivacious_pulse', '22', '1', '1', '300', '0', '0', '0', '327', '20.0', '0', '1', '300', '0', '0',null);
+INSERT INTO `abilities` VALUES ('369', 'apogee', '15', '70', '1', '180', '108', '0', '0', '333', '20.0', '0', '1', '0', '0', '0',null);
 
 -- run
 
@@ -485,8 +486,6 @@ INSERT INTO `abilities` VALUES ('649', 'night_terror', '15', '80', '4', '60', '1
 INSERT INTO `abilities` VALUES ('650', 'pavor_nocturnus', '15', '98', '4', '60', '174', '0', '0', '0', '18.0', '0', '1', '60', '0', '0',null);
 INSERT INTO `abilities` VALUES ('654', 'zantetsuken', '15', '75', '4', '0', '0', '0', '0', '0', '18.0', '1', '0', '0', '0', '0',null);
 INSERT INTO `abilities` VALUES ('655', 'perfect_defense', '15', '75', '1', '0', '0', '0', '0', '0', '18.0', '1', '0', '0', '0', '0',null);
-
-
 
 
 -- For old school server simply comment out the matching 1 hour abilities above, and uncomment the 2hrs below.

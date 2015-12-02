@@ -3,7 +3,6 @@
 --  ZNM: Dextrose
 -----------------------------------
 
-require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
