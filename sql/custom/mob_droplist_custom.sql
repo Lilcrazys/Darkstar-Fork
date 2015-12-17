@@ -654,6 +654,8 @@ INSERT INTO `mob_droplist` VALUES (9706,0,3224,550); --  Balance Jewel
 -- Abas
 -- -----------
 
+DELETE FROM `mob_droplist` WHERE dropId=4520 and type=0 and itemId=11409 and rate=167; --
+INSERT INTO `mob_droplist` VALUES (9707,0,11409,167);
 INSERT INTO `mob_droplist` VALUES (9707,0,11525,520); -- Maestria Mask  
 INSERT INTO `mob_droplist` VALUES (9707,0,2949,1000); -- Quivering Eft Egg
 
@@ -661,137 +663,242 @@ INSERT INTO `mob_droplist` VALUES (9707,0,2949,1000); -- Quivering Eft Egg
 -- Adze
 -- -----------
 
+DELETE FROM `mob_droplist` WHERE dropId=4521 and type=0 and itemId=2428 and rate=50; --
+DELETE FROM `mob_droplist` WHERE dropId=4521 and type=0 and itemId=2426 and rate=60; --
+DELETE FROM `mob_droplist` WHERE dropId=4521 and type=0 and itemId=2427 and rate=205; --
+INSERT INTO `mob_droplist` VALUES (9708,0,2428,50);
+INSERT INTO `mob_droplist` VALUES (9708,0,2426,60);
+INSERT INTO `mob_droplist` VALUES (9708,0,2427,205);
 INSERT INTO `mob_droplist` VALUES (9708,0,11594,108); --  Estoqueur's Collar
 INSERT INTO `mob_droplist` VALUES (9708,0,11735,631); --  Impulse Belt 
 
-INSERT INTO `mob_droplist` VALUES (4522,0,11642,250); -- COMMENT ME
+-- -----------
+-- Alectryon
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4523,0,2928,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,2928,82); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,11509,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,12741,796); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,14888,186); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,3225,193); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,3223,217); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,20553,101); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4523,0,2928,1000); -- COMMENT ME
+DELETE FROM `mob_droplist` WHERE dropId=4522 and type=0 and itemId=16374 and rate=140; --
+INSERT INTO `mob_droplist` VALUES (9709,0,16374,140); -- 
+INSERT INTO `mob_droplist` VALUES (9709,0,11642,250); -- Hoard Ring
 
-INSERT INTO `mob_droplist` VALUES (4524,0,11595,102); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4524,0,17185,592); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4524,0,2933,830); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4524,0,2933,91); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4524,0,646,500); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4524,0,646,130); -- COMMENT ME
+-- -----------
+-- Chloris
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4525,0,17626,373); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4525,0,11592,55); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4525,0,2939,620); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4525,0,2939,120); -- COMMENT ME
+DELETE FROM `mob_droplist` WHERE dropId=4523 and type=0 and itemId=19610 and rate=384; --
+INSERT INTO `mob_droplist` VALUES (9710,0,2928,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9710,0,2928,82); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9710,0,11509,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9710,0,12741,796); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9710,0,14888,186); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9710,0,3225,193); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9710,0,3223,217); -- COMMENT ME
+-- INSERT INTO `mob_droplist` VALUES (9710,0,20553,101); -- ninzas
+INSERT INTO `mob_droplist` VALUES (9710,0,2928,1000); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4526,0,19249,300); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4526,0,3223,217); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4526,0,3225,193); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4526,0,2948,1000); -- COMMENT ME
+-- -----------
+-- Chukwas
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4527,0,2927,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,2927,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,11508,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,11523,250); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,3222,288); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,3225,266); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,21013,104); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4527,0,2927,220); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9711,0,11595,102); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9711,0,17185,592); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9711,0,2933,830); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9711,0,2933,91); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9711,0,646,500); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9711,0,646,130); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4528,0,12388,500); -- COMMENT ME
+-- -----------
+-- Cuelebre
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4529,0,11564,420); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4529,0,2945,1000); -- Shriveled Wing
+INSERT INTO `mob_droplist` VALUES (9712,0,17626,373); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9712,0,11592,55); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9712,0,2939,620); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9712,0,2939,120); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4530,0,19250,386); -- COMMENT ME
+-- -----------
+-- Gancanagh
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4531,0,11521,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,11729,92); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,11507,231); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,3224,142); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,3222,142); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,12104,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4531,0,20641,103); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9713,0,19249,300); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9713,0,3223,217); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9713,0,3225,193); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9713,0,2948,1000); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4532,0,11604,250); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4532,0,11737,420); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4532,0,11596,415); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4532,0,18510,320); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4532,0,3222,288); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4532,0,3224,230); -- COMMENT ME
+-- -----------
+-- Glavoid
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4533,0,15019,386); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4533,0,11597,84); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4533,0,20833,103); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,2927,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,2927,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,11508,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,11523,250); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,3222,288); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,3225,266); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,21013,104); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,2927,220); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4534,0,18510,654); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4534,0,11596,141); -- COMMENT ME
+-- -----------
+-- Hedetet
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4535,0,11596,286); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9715,0,12388,500); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4536,0,17113,152); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4536,0,11548,200); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4536,0,11517,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4536,0,3222,150); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4536,0,3223,151); -- COMMENT ME
+-- -----------
+-- Halimede
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4537,0,15429,252); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9716,0,11564,420); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9716,0,2945,1000); -- Shriveled Wing
 
-INSERT INTO `mob_droplist` VALUES (4538,0,11551,174); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4538,0,11605,230); -- COMMENT ME
+-- -----------
+-- Lachrymater
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4539,0,11741,474); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4539,0,3225,274); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4539,0,3223,370); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4539,0,3224,234); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4539,0,3222,434); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4539,0,2950,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9717,0,19250,386); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4540,0,11641,320); -- COMMENT ME
+-- -----------
+-- Lacovie
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4541,0,11640,420); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4541,0,2946,1000); -- Tarnished Pincer
+INSERT INTO `mob_droplist` VALUES (9718,0,11521,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9718,0,11729,92); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9718,0,11507,231); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9718,0,3224,142); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9718,0,3222,142); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9718,0,12104,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9718,0,20641,103); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4542,0,28576,225); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4542,0,11646,200); -- Sirona's Ring from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3196,350); -- Creed seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3196,380); -- Creed seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3202,280); -- Iga seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3202,310); -- Iga seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3206,330); -- Navarch's seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3206,360); -- Navarch's seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3191,400); -- Tantra seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,3191,430); -- Tantra seal feet from Pascerpot
-INSERT INTO `mob_droplist` VALUES (4542,0,12101,340); -- COMMENT ME
+-- -----------
+-- Manananaggal
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4543,0,12089,340); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4543,0,28404,225); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4543,0,11361,87); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4543,0,19255,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4543,0,19256,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4543,0,11750,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9719,0,11604,250); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9719,0,11737,420); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9719,0,11596,415); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9719,0,18510,320); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9719,0,3222,288); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9719,0,3224,230); -- COMMENT ME
 
-INSERT INTO `mob_droplist` VALUES (4544,0,21227,110); -- Hanqaku-no-yumi
-INSERT INTO `mob_droplist` VALUES (4544,0,20858,120); -- Lightreaver
-INSERT INTO `mob_droplist` VALUES (4544,0,21364,380); -- Elders Grip
-INSERT INTO `mob_droplist` VALUES (4544,0,28665,050); -- Killedar_Shield_+1
-INSERT INTO `mob_droplist` VALUES (4544,0,20991,140); -- Chidori
-INSERT INTO `mob_droplist` VALUES (4544,0,21284,120); -- Vanir_Gun
-INSERT INTO `mob_droplist` VALUES (4544,0,28155,050); -- Scuff._Cosciales
-INSERT INTO `mob_droplist` VALUES (4544,0,28287,050); -- Durgai_Leggings
-INSERT INTO `mob_droplist` VALUES (4544,0,28465,120); -- Pya'ekue Belt +1
-INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
-INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
-INSERT INTO `mob_droplist` VALUES (4544,0,3925,300); -- Tanz
+-- -----------
+-- No Custom Mob at dropid 4533
+-- -----------
 
-INSERT INTO `mob_droplist` VALUES (4545,0,15807,140); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4545,0,4023,1000); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4545,0,4023,250); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (4545,0,4023,50); -- COMMENT ME
+-- INSERT INTO `mob_droplist` VALUES (4533,0,15019,386); -- COMMENT ME
+-- INSERT INTO `mob_droplist` VALUES (4533,0,11597,84); -- COMMENT ME
+-- INSERT INTO `mob_droplist` VALUES (4533,0,20833,103); -- COMMENT ME
+
+-- -----------
+-- Minhocao
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9720,0,18510,654); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9720,0,11596,141); -- COMMENT ME
+
+-- -----------
+-- Muscaliet
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9721,0,11596,286); -- COMMENT ME
+
+-- -----------
+-- Myrmecoleon
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9722,0,17113,152); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9722,0,11548,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9722,0,11517,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9722,0,3222,150); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9722,0,3223,151); -- COMMENT ME
+
+-- -----------
+-- Ophanim
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9723,0,15429,252); -- COMMENT ME
+
+-- -----------
+-- Quetzalli
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9724,0,11551,174); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9724,0,11605,230); -- COMMENT ME
+
+-- -----------
+-- Tefenet
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9725,0,11741,474); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9725,0,3225,274); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9725,0,3223,370); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9725,0,3224,234); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9725,0,3222,434); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9725,0,2950,1000); -- COMMENT ME
+
+-- -----------
+-- Treble_Noctules
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9726,0,11641,320); -- COMMENT ME
+
+-- -----------
+-- Vetehinen
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9727,0,11640,420); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9727,0,2946,1000); -- Tarnished Pincer
+
+-- -----------
+-- Pascerpot
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9728,0,28576,225); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9728,0,11646,200); -- Sirona's Ring from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3196,350); -- Creed seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3196,380); -- Creed seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3202,280); -- Iga seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3202,310); -- Iga seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3206,330); -- Navarch's seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3206,360); -- Navarch's seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3191,400); -- Tantra seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,3191,430); -- Tantra seal feet from Pascerpot
+INSERT INTO `mob_droplist` VALUES (9728,0,12101,340); -- COMMENT ME
+
+-- -----------
+-- Ironclad Executioner
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9729,0,12089,340); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9729,0,28404,225); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9729,0,11361,87); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9729,0,19255,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9729,0,19256,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9729,0,11750,1000); -- COMMENT ME
+
+-- -----------
+-- Shinryu
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9730,0,21227,110); -- Hanqaku-no-yumi
+INSERT INTO `mob_droplist` VALUES (9730,0,20858,120); -- Lightreaver
+INSERT INTO `mob_droplist` VALUES (9730,0,21364,380); -- Elders Grip
+INSERT INTO `mob_droplist` VALUES (9730,0,28665,050); -- Killedar_Shield_+1
+INSERT INTO `mob_droplist` VALUES (9730,0,20991,140); -- Chidori
+INSERT INTO `mob_droplist` VALUES (9730,0,21284,120); -- Vanir_Gun
+INSERT INTO `mob_droplist` VALUES (9730,0,28155,050); -- Scuff._Cosciales
+INSERT INTO `mob_droplist` VALUES (9730,0,28287,050); -- Durgai_Leggings
+INSERT INTO `mob_droplist` VALUES (9730,0,28465,120); -- Pya'ekue Belt +1
+INSERT INTO `mob_droplist` VALUES (9730,0,3925,300); -- Tanz
+INSERT INTO `mob_droplist` VALUES (9730,0,3925,300); -- Tanz
+INSERT INTO `mob_droplist` VALUES (9730,0,3925,300); -- Tanz
+
+-- -----------
+-- Hydra
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9731,0,15807,140); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9731,0,4023,1000); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9731,0,4023,250); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9731,0,4023,50); -- COMMENT ME
 
 
 -- -------- Begin Legion Drop-- In Progress - Jewels-Trophy-MainGear Only ATM -----
