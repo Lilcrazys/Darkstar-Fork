@@ -46,7 +46,6 @@ REPLACE INTO `item_usable` VALUES (4144,'hi-elixir',1,20,34,9,0,0,0,0);
 REPLACE INTO `item_usable` VALUES (4145,'elixir',1,20,34,9,0,0,0,0);
 
 INSERT INTO `item_usable` VALUES (4619,'scroll_of_curaga_v',1,1,11,5,0,0,0,0);
-INSERT INTO `item_usable` VALUES (4630,'scroll_of_holy_ii',1,1,11,5,0,0,0,0);
 
 REPLACE INTO `item_usable` VALUES (4174,'vile_elixir',1,1,34,1,0,0,90,0); -- That 90 second timer might not function as expected, DSp seems to expect that field to be for "charged" items
 REPLACE INTO `item_usable` VALUES (4175,'vile_elixir_+1',1,1,34,1,0,0,90,0);
