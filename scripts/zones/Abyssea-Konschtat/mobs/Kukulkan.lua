@@ -4,7 +4,6 @@
 -----------------------------------
 package.loaded["scripts/globals/abyssea"] = nil;
 -----------------------------------
-
 require("scripts/zones/Abyssea-Konschtat/textIDs");
 require("scripts/globals/status");
 require("scripts/globals/titles");
@@ -49,15 +48,17 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if (target:hasStatusEffect(EFFECT_POISON)) then
         return 0, 0, 0;
     else
         local duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
-        utils.clamp(duration,1,30);
+        duartion = utils.clamp(duration,1,30);
         target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
         return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
     end
