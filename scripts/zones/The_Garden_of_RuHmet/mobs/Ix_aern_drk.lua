@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: The Garden of Ru'Hmet
---  NM:  Ix'aern (drk)
+--  MOB: Ix'aern (drk)
 -----------------------------------
 
 require("scripts/globals/status");
@@ -54,7 +54,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     --SetServerVariable("[PH]Ix_aern_drk", 0);
 
 end;

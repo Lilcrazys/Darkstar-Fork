@@ -44,11 +44,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_UNDYING) == false) then
-        killer:addKeyItem(ATMA_OF_THE_UNDYING);
-        killer:messageSpecial(6385, ATMA_OF_THE_UNDYING);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_UNDYING) == false) then
+        ally:addKeyItem(ATMA_OF_THE_UNDYING);
+        ally:messageSpecial(6385, ATMA_OF_THE_UNDYING);
     end
 end;
 

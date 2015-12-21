@@ -47,10 +47,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(HOLLOW_DRAGON_EYE) == false) then
-        killer:addKeyItem(HOLLOW_DRAGON_EYE);
-        killer:messageSpecial(6385, HOLLOW_DRAGON_EYE);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(HOLLOW_DRAGON_EYE) == false) then
+        ally:addKeyItem(HOLLOW_DRAGON_EYE);
+        ally:messageSpecial(6385, HOLLOW_DRAGON_EYE);
     end
 end;

@@ -292,9 +292,9 @@ end;
 -- onMobDeath Action
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    if (killer:getParty() ~= nil) then
-        local targets = killer:getParty(); -- local targets = mob:getEnmityList();
+function onMobDeath(mob, killer, ally)
+    if (ally:getParty() ~= nil) then
+        local targets = ally:getParty(); -- local targets = mob:getEnmityList();
         for hey, dude in pairs(targets) do
             if (dude:isPC()) then
                 dude:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
@@ -303,11 +303,11 @@ function onMobDeath(mob,killer)
                 dude:ChangeMusic(3, 187); -- Party Battle Music
             end
         end
-    elseif (killer:isPC()) then
-        killer:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-        killer:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-        killer:ChangeMusic(2, 187); -- SoloBattle Music
-        killer:ChangeMusic(3, 187); -- Party Battle Music
+    elseif (ally:isPC()) then
+        ally:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+        ally:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+        ally:ChangeMusic(2, 187); -- SoloBattle Music
+        ally:ChangeMusic(3, 187); -- Party Battle Music
     end
 
     -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)

@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SAPPHIRE_ABYSSITE_OF_LENITY) == false) then
-        killer:addKeyItem(SAPPHIRE_ABYSSITE_OF_LENITY);
-        killer:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_LENITY);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SAPPHIRE_ABYSSITE_OF_LENITY) == false) then
+        ally:addKeyItem(SAPPHIRE_ABYSSITE_OF_LENITY);
+        ally:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_LENITY);
     end
 end;
 

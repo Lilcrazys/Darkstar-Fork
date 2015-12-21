@@ -57,18 +57,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 400);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 400);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_V)) then -- Gwynn Ap Nudd Kill
-        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_V"), 1) == false) then
-           killer:setMaskBit(killer:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",1,true);
+    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_V)) then -- Gwynn Ap Nudd Kill
+        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_V"), 1) == false) then
+           ally:setMaskBit(ally:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",1,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_V"),3) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
-           killer:setVar("WHITE_STRATUM_V", 0);
+        if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_V"),3) == true) then
+           ally:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+           ally:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
+           ally:setVar("WHITE_STRATUM_V", 0);
         end
     end;
 end;

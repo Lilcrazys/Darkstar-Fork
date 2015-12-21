@@ -41,12 +41,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local SPELL_ID = 650;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
-        killer:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
+        ally:addSpell(SPELL_ID);
     end
 
-    -- killer:messageSpecial(CRUOR_OBTAINED,result);
+    -- ally:messageSpecial(CRUOR_OBTAINED,result);
 end;

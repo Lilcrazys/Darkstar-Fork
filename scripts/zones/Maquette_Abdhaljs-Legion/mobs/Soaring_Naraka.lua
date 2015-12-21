@@ -94,7 +94,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 250);
-    killer:addTitle(SUBJUGATOR_OF_THE_SOARING);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("legion_point", 250);
+    ally:addTitle(SUBJUGATOR_OF_THE_SOARING);
 end;

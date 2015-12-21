@@ -81,17 +81,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 20;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(AZURE_ABYSSITE_OF_MERIT) == false) then
-        killer:addKeyItem(AZURE_ABYSSITE_OF_MERIT);
-        killer:messageSpecial(6385, AZURE_ABYSSITE_OF_MERIT);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(AZURE_ABYSSITE_OF_MERIT) == false) then
+        ally:addKeyItem(AZURE_ABYSSITE_OF_MERIT);
+        ally:messageSpecial(6385, AZURE_ABYSSITE_OF_MERIT);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_STORMBIRD) == false) then
-        killer:addKeyItem(ATMA_OF_THE_STORMBIRD);
-        killer:messageSpecial(6385, ATMA_OF_THE_STORMBIRD);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_STORMBIRD) == false) then
+        ally:addKeyItem(ATMA_OF_THE_STORMBIRD);
+        ally:messageSpecial(6385, ATMA_OF_THE_STORMBIRD);
     end
 end;

@@ -53,18 +53,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
-    killer:addTitle(GLAVOID_STAMPEDER);
+    ally:addTitle(GLAVOID_STAMPEDER);
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(CHIPPED_SANDWORM_TOOTH) == false) then
-        killer:addKeyItem(CHIPPED_SANDWORM_TOOTH);
-        killer:messageSpecial(6385, CHIPPED_SANDWORM_TOOTH);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(CHIPPED_SANDWORM_TOOTH) == false) then
+        ally:addKeyItem(CHIPPED_SANDWORM_TOOTH);
+        ally:messageSpecial(6385, CHIPPED_SANDWORM_TOOTH);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_DUNES) == false) then
-        killer:addKeyItem(ATMA_OF_DUNES);
-        killer:messageSpecial(6385, ATMA_OF_DUNES);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_DUNES) == false) then
+        ally:addKeyItem(ATMA_OF_DUNES);
+        ally:messageSpecial(6385, ATMA_OF_DUNES);
     end
 end;

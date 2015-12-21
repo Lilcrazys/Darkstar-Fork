@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN) == false) then
-        killer:addKeyItem(DISTENDED_CHIGOE_ABDOMEN);
-        killer:messageSpecial(6385, DISTENDED_CHIGOE_ABDOMEN);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN) == false) then
+        ally:addKeyItem(DISTENDED_CHIGOE_ABDOMEN);
+        ally:messageSpecial(6385, DISTENDED_CHIGOE_ABDOMEN);
     end
 end;
 

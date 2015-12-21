@@ -38,11 +38,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(DENTED_GIGAS_SHIELD) == false) then
-        killer:addKeyItem(DENTED_GIGAS_SHIELD);
-        killer:messageSpecial(6385, DENTED_GIGAS_SHIELD);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(DENTED_GIGAS_SHIELD) == false) then
+        ally:addKeyItem(DENTED_GIGAS_SHIELD);
+        ally:messageSpecial(6385, DENTED_GIGAS_SHIELD);
     end
 end;
 

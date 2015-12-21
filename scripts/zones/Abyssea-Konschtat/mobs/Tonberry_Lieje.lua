@@ -43,10 +43,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TWISTED_TONBERRY_CROWN) == false) then
-        killer:addKeyItem(TWISTED_TONBERRY_CROWN);
-        killer:messageSpecial(6385, TWISTED_TONBERRY_CROWN);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(TWISTED_TONBERRY_CROWN) == false) then
+        ally:addKeyItem(TWISTED_TONBERRY_CROWN);
+        ally:messageSpecial(6385, TWISTED_TONBERRY_CROWN);
     end
 end;

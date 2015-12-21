@@ -39,18 +39,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(WAUGYLS_CLAW) == false) then
-        killer:addKeyItem(WAUGYLS_CLAW);
-        killer:messageSpecial(6385, WAUGYLS_CLAW);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(WAUGYLS_CLAW) == false) then
+        ally:addKeyItem(WAUGYLS_CLAW);
+        ally:messageSpecial(6385, WAUGYLS_CLAW);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(EMERALD_ABYSSITE_OF_SOJOURN) == false) then
-        killer:addKeyItem(EMERALD_ABYSSITE_OF_SOJOURN);
-        killer:messageSpecial(6385, EMERALD_ABYSSITE_OF_SOJOURN);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(EMERALD_ABYSSITE_OF_SOJOURN) == false) then
+        ally:addKeyItem(EMERALD_ABYSSITE_OF_SOJOURN);
+        ally:messageSpecial(6385, EMERALD_ABYSSITE_OF_SOJOURN);
     end
 end;
 

@@ -85,20 +85,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 75);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 75);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_III)) then -- Kholomodumo Kill
-        if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM_III"), 1) == false) then
-            killer:setMaskBit(killer:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
+    if (ally:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_III)) then -- Kholomodumo Kill
+        if (ally:getMaskBit(ally:getVar("CRIMSON_STRATUM_III"), 1) == false) then
+            ally:setMaskBit(ally:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
         end
 
-        if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM_III"),2) == true) then
-            killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
-            killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
-            killer:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_IV);
-            killer:setVar("CRIMSON_STRATUM_III", 0);
+        if (ally:isMaskFull(ally:getVar("CRIMSON_STRATUM_III"),2) == true) then
+            ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
+            ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
+            ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_IV);
+            ally:setVar("CRIMSON_STRATUM_III", 0);
         end
     end;
 end;

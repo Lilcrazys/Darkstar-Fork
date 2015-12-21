@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Dynamis San d'Oria
--- NPC:  Overlord's Tombstone
+--  MOB: Overlord's Tombstone
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -32,23 +32,23 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-	if (killer:hasKeyItem(HYDRA_CORPS_COMMAND_SCEPTER) == false)then
-		killer:setVar("DynaSandoria_Win",1);
-		killer:addKeyItem(HYDRA_CORPS_COMMAND_SCEPTER);
-		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_COMMAND_SCEPTER);
+function onMobDeath(mob,killer,ally)
+	if (ally:hasKeyItem(HYDRA_CORPS_COMMAND_SCEPTER) == false)then
+		ally:setVar("DynaSandoria_Win",1);
+		ally:addKeyItem(HYDRA_CORPS_COMMAND_SCEPTER);
+		ally:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_COMMAND_SCEPTER);
 	end
 
 	if (alreadyReceived(killer,8) == false) then
 		addDynamisList(killer,128);
 
-		killer:addTitle(DYNAMISSAN_DORIA_INTERLOPER); -- Add title
+		ally:addTitle(DYNAMISSAN_DORIA_INTERLOPER); -- Add title
 
 		local npc = GetNPCByID(17535224); -- Spawn ???
 		npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
 		npc:setStatus(0);
 
-		killer:launchDynamisSecondPart(); -- Spawn dynamis second part
+		ally:launchDynamisSecondPart(); -- Spawn dynamis second part
 	end
 
 	for i = 17534978, 17534979 do

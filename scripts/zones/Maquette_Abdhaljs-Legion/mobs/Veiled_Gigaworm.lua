@@ -94,7 +94,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     local popBoss = true;
     local MobIDs = {17526833, 17526834, 17526835, 17526836, 17526837, 17526839};
     -- Veiled_Gigaworm 17526838

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: The Garden of Ru'Hmet
---  NM:  Ix'aern (drg)
+--  MOB: Ix'aern (drg)
 -----------------------------------
 
 require("scripts/globals/status");
@@ -47,7 +47,7 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight( mob, target )
+function onMobFight(mob,target)
     -- Spawn the pets if they are despawned
     -- TODO: summon animations?
     if (GetMobAction(wynavA) == 0) then
@@ -74,11 +74,11 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     -- Despawn pets..
-	DespawnMob(wynavA);
-	DespawnMob(wynavB);
-	DespawnMob(wynavC);
+    DespawnMob(wynavA);
+    DespawnMob(wynavB);
+    DespawnMob(wynavC);
 
     -- Pick a new for PH Ix'Aern (DRG)
     SetServerVariable("[SEA]IxAernDRG_PH", AwAernDRGGroups[math.random(1, #AwAernDRGGroups)] + math.random(0, 2));
@@ -89,9 +89,9 @@ end;
 -----------------------------------
 function onMobDespawn( mob )
     -- Despawn pets.
-	DespawnMob(wynavA);
-	DespawnMob(wynavB);
-	DespawnMob(wynavC);
+    DespawnMob(wynavA);
+    DespawnMob(wynavB);
+    DespawnMob(wynavC);
 
     -- Pick a new PH for Ix'Aern (DRG)
     SetServerVariable("[SEA]IxAernDRG_PH", AwAernDRGGroups[math.random(1, #AwAernDRGGroups)] + math.random(0, 2));

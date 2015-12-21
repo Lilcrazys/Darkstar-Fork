@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Fei'Yin
--- NM:   Capricious_Cassie
+--  NM:  Capricious_Cassie
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -16,12 +16,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
 
-    killer:addTitle(CASSIENOVA);
+    ally:addTitle(CASSIENOVA);
 
     -- Set Capricious_Cassie's spawnpoint and respawn time (1-2 hours)
     UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random((3600),(5800)));
+    mob:setRespawnTime(math.random(3600,5800));
 
 end;

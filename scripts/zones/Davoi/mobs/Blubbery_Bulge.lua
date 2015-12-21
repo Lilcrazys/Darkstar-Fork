@@ -17,19 +17,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0);
     mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32);
-end
-
------------------------------------
--- onMobDeath
------------------------------------
-
-function onMobDeath(mob, killer)
-    -- Set PH back to normal
-    local PH = GetServerVariable("[PH]Blubbery_Bulge");
-    SetServerVariable("[PH]Blubbery_Bulge", 0);
-    DeterMob(PH, false);
-    GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
-    DeterMob(mob:getID(), true);
 end;
 
 -----------------------------------
@@ -52,4 +39,17 @@ function onSpikesDamage(mob,target,damage)
         end
         return SUBEFFECT_DELUGE_SPIKES,44,dmg;
     end
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob, killer, ally)
+    -- Set PH back to normal
+    local PH = GetServerVariable("[PH]Blubbery_Bulge");
+    SetServerVariable("[PH]Blubbery_Bulge", 0);
+    DeterMob(PH, false);
+    GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
+    DeterMob(mob:getID(), true);
 end;

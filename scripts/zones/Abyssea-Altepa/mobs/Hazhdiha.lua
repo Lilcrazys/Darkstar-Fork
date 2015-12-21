@@ -54,17 +54,17 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BLOODIED_DRAGON_EAR) == false) then
-        killer:addKeyItem(BLOODIED_DRAGON_EAR);
-        killer:messageSpecial(6385, BLOODIED_DRAGON_EAR);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(BLOODIED_DRAGON_EAR) == false) then
+        ally:addKeyItem(BLOODIED_DRAGON_EAR);
+        ally:messageSpecial(6385, BLOODIED_DRAGON_EAR);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_CRIMSON_SCALE) == false) then
-        killer:addKeyItem(ATMA_OF_THE_CRIMSON_SCALE);
-        killer:messageSpecial(6385, ATMA_OF_THE_CRIMSON_SCALE);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_CRIMSON_SCALE) == false) then
+        ally:addKeyItem(ATMA_OF_THE_CRIMSON_SCALE);
+        ally:messageSpecial(6385, ATMA_OF_THE_CRIMSON_SCALE);
     end
 end;

@@ -103,7 +103,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 300);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("legion_point", 300);
     SpawnMob(mob:getID()-1) -- Spawns Paramount_Gallu
 end;

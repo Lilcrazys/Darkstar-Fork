@@ -42,10 +42,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(CRACKED_WIVRE_HORN) == false) then
-        killer:addKeyItem(CRACKED_WIVRE_HORN);
-        killer:messageSpecial(6385, CRACKED_WIVRE_HORN);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(CRACKED_WIVRE_HORN) == false) then
+        ally:addKeyItem(CRACKED_WIVRE_HORN);
+        ally:messageSpecial(6385, CRACKED_WIVRE_HORN);
     end
 end;

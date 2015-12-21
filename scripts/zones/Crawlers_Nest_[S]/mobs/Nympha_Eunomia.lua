@@ -70,6 +70,6 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     SpawnMob(mob:getID()+1) -- Spawns Next Form
 end;

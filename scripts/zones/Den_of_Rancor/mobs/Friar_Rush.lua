@@ -37,6 +37,6 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     checkRegime(killer,mob,60,3);
 end;

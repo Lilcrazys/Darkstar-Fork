@@ -42,11 +42,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(WRITHING_GHOST_FINGER) == false) then
-        killer:addKeyItem(WRITHING_GHOST_FINGER);
-        killer:messageSpecial(6385, WRITHING_GHOST_FINGER);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(WRITHING_GHOST_FINGER) == false) then
+        ally:addKeyItem(WRITHING_GHOST_FINGER);
+        ally:messageSpecial(6385, WRITHING_GHOST_FINGER);
     end
 end;
 

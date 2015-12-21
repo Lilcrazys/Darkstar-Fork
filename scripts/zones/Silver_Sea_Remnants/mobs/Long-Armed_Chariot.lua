@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area:
--- NPC:  Long-Armed_Chariot
+--  MOB: Long-Armed_Chariot
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -16,11 +16,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addTitle(MOON_CHARIOTEER);
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(MOON_CHARIOTEER);
+
     local SPELL_ID = 713;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
-        killer:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
+        ally:addSpell(SPELL_ID);
     end
 end;

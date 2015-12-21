@@ -48,17 +48,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
-        killer:addKeyItem(SCARLET_ABYSSITE_OF_SOJOURN);
-        killer:messageSpecial(6385, SCARLET_ABYSSITE_OF_SOJOURN);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
+        ally:addKeyItem(SCARLET_ABYSSITE_OF_SOJOURN);
+        ally:messageSpecial(6385, SCARLET_ABYSSITE_OF_SOJOURN);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_HEAVENS) == false) then
-        killer:addKeyItem(ATMA_OF_THE_HEAVENS);
-        killer:messageSpecial(6385, ATMA_OF_THE_HEAVENS);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_HEAVENS) == false) then
+        ally:addKeyItem(ATMA_OF_THE_HEAVENS);
+        ally:messageSpecial(6385, ATMA_OF_THE_HEAVENS);
     end
 end;

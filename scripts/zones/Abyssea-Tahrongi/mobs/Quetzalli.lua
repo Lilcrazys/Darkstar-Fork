@@ -43,11 +43,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 35;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VIRIDIAN_ABYSSITE_OF_AVARICE) == false) then
-        killer:addKeyItem(VIRIDIAN_ABYSSITE_OF_AVARICE);
-        killer:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_AVARICE);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(VIRIDIAN_ABYSSITE_OF_AVARICE) == false) then
+        ally:addKeyItem(VIRIDIAN_ABYSSITE_OF_AVARICE);
+        ally:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_AVARICE);
     end
 end;
 

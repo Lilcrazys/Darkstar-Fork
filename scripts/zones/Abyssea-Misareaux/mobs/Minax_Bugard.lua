@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(BLOODSTAINED_BUGARD_FANG) == false) then
-        killer:addKeyItem(BLOODSTAINED_BUGARD_FANG);
-        killer:messageSpecial(6385, BLOODSTAINED_BUGARD_FANG);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(BLOODSTAINED_BUGARD_FANG) == false) then
+        ally:addKeyItem(BLOODSTAINED_BUGARD_FANG);
+        ally:messageSpecial(6385, BLOODSTAINED_BUGARD_FANG);
     end
 end;
 

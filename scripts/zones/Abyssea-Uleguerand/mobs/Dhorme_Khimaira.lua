@@ -44,17 +44,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(TORN_KHIMAIRA_WING) == false) then
-        killer:addKeyItem(TORN_KHIMAIRA_WING);
-        killer:messageSpecial(6385, TORN_KHIMAIRA_WING);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(TORN_KHIMAIRA_WING) == false) then
+        ally:addKeyItem(TORN_KHIMAIRA_WING);
+        ally:messageSpecial(6385, TORN_KHIMAIRA_WING);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_PURGATORY) == false) then
-        killer:addKeyItem(ATMA_OF_PURGATORY);
-        killer:messageSpecial(6385, ATMA_OF_PURGATORY);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_PURGATORY) == false) then
+        ally:addKeyItem(ATMA_OF_PURGATORY);
+        ally:messageSpecial(6385, ATMA_OF_PURGATORY);
     end
 end;

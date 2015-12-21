@@ -61,17 +61,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:showText(mob, MEDUSA_DEATH);
-	killer:addTitle(GORGONSTONE_SUNDERER);    DespawnMob(16998863);
+function onMobDeath(mob, killer, ally)
+    ally:showText(mob, MEDUSA_DEATH);
+    ally:addTitle(GORGONSTONE_SUNDERER);
 
-    DespawnMob(16998864);
-    DespawnMob(16998865);
-    DespawnMob(16998866);
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
+    DespawnMob(mob:getID()+3);
+    DespawnMob(mob:getID()+4);
 
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, MYTHIC, 6);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, MYTHIC, 6);
     end
 
 end;

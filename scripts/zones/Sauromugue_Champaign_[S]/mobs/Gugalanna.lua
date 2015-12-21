@@ -53,18 +53,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 100);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 100);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- gugalanna Kill
-        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM"), 1) == false) then
-           killer:setMaskBit(killer:getVar("WHITE_STRATUM"),"WHITE_STRATUM",1,true);
+    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- gugalanna Kill
+        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM"), 1) == false) then
+           ally:setMaskBit(ally:getVar("WHITE_STRATUM"),"WHITE_STRATUM",1,true);
         end
-        if (killer:isMaskFull(killer:getVar("WHITE_STRATUM"),6) == true) then
-           killer:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE);
-           killer:setVar("WHITE_STRATUM", 0);
+        if (ally:isMaskFull(ally:getVar("WHITE_STRATUM"),6) == true) then
+           ally:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
+           ally:delKeyItem(WHITE_STRATUM_ABYSSITE);
+           ally:setVar("WHITE_STRATUM", 0);
         end
     end;
 end;

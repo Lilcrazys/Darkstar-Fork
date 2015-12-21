@@ -88,13 +88,13 @@ function onMobFight(mob, target)
         mob:setLocalVar("chainspell9",1);
         useChainspell = true;
     end;
-        
-    if (useChainspell == true) then  
+
+    if (useChainspell == true) then
         mob:useMobAbility(436); -- Chainspell
         mob:setMobMod(MOBMOD_GA_CHANCE, 100);
 
     end
-    
+
     -- Spams TP moves and -ga spells
     if (mob:hasStatusEffect(EFFECT_CHAINSPELL) == true) then
         mob:setTP(200);
@@ -146,6 +146,6 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     mob:setLocalVar("RAGED", 0);
 end;

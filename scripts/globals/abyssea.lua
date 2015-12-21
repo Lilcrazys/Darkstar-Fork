@@ -268,7 +268,7 @@ end;
 -- Calculating lights
 -----------------------------------
 
-function DoLights(mob,killer)
+function DoLights(mob,player)
 
 	----------------------
 	-- Lights
@@ -277,10 +277,10 @@ function DoLights(mob,killer)
 	local ran2 = math.random(5,8);
 	local NMbonus = math.random(32,128);
 	local bonus = 0;
-    local pearl = killer:getVar("LightPearl");
-	local ruby = killer:getVar("LightRuby");
-	local amber = killer:getVar("LightAmber");
-	local azure = killer:getVar("LightAzure");
+    local pearl = player:getVar("LightPearl");
+	local ruby = player:getVar("LightRuby");
+	local amber = player:getVar("LightAmber");
+	local azure = player:getVar("LightAzure");
 	local pearllight = pearl+ran1+bonus;
 	local rubylight = ruby+ran2+bonus;
 	local amberlight = amber+ran2+bonus;
@@ -290,7 +290,7 @@ function DoLights(mob,killer)
 	-- 		Add lights on mob death
 	--------------------------------------------
 	local lightchance = 1; --math.random(0,3);
-	--local action = killer:getVar("Action");
+	--local action = player:getVar("Action");
 
 	if mob:isNM() then
 		bonus = NMbonus;
@@ -300,27 +300,27 @@ function DoLights(mob,killer)
 
 	-- if (action == 0) and (lightchance == 1) then
 		-- if (pearl > 230) then
-			-- killer:setVar("LightPearl",230);
+			-- player:setVar("LightPearl",230);
 		-- else
-			-- killer:setVar("LightPearl",pearllight);
+			-- player:setVar("LightPearl",pearllight);
 		-- end
 	--if (GetWeaponSkill() == true) and (lightchance == 1) then
 		--if (amber > 255) then
-		--	killer:setVar("LightAmber",255);
+		--	player:setVar("LightAmber",255);
 		--else
-		--	killer:setVar("LightAmber",amberlight);
+		--	player:setVar("LightAmber",amberlight);
 		--end
 	-- elseif (action == 2) and (lightchance == 1) then
 		-- if (azure > 255) then
-			-- killer:setVar("LightAzure",255);
+			-- player:setVar("LightAzure",255);
 		-- else
-			-- killer:setVar("LightAzure",azurelight);
+			-- player:setVar("LightAzure",azurelight);
 		-- end
 	-- elseif (math.random(10) == 1) then
 		-- if (ruby > 255) then
-			-- killer:setVar("LightRuby",255);
+			-- player:setVar("LightRuby",255);
 		-- else
-			-- killer:setVar("LightRuby",rubylight);
+			-- player:setVar("LightRuby",rubylight);
 		-- end
 	--end
 end;
@@ -356,20 +356,20 @@ end;
 -- Calculating cruor drop from mobs
 -----------------------------------
 
-function DoCruor(mob,killer)
-	local TextIDs = "scripts/zones/" .. killer:getZoneName() .. "/TextIDs";
+function DoCruor(mob,player)
+	local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
 	package.loaded[TextIDs] = nil;
 	require(TextIDs);
 
-	local zone = killer:getZone();
-    local silver = killer:getVar("LightSilver");
-	local mycruor = killer:getCruor();
+	local zone = player:getZone();
+    local silver = player:getVar("LightSilver");
+	local mycruor = player:getCruor();
 	if (zone == 132 or zone == 15 or zone == 45 or
 		zone == 215 or zone == 216 or zone == 217 or
 		zone == 218 or zone == 253 or zone == 254) then
 		cruor = (10+silver*2);
-		killer:addCruor(cruor);
-		killer:messageSpecial(CRUOR_OBTAINED,cruor,mycruor,0,0,zone);
+		player:addCruor(cruor);
+		player:messageSpecial(CRUOR_OBTAINED,cruor,mycruor,0,0,zone);
 	end
 end;
 
@@ -377,9 +377,9 @@ end;
 -- Exp bonus from Ebon Light
 -----------------------------------
 
-function DoExp(mob,killer)
+function DoExp(mob,player)
 
-	local bonus = killer:getVar("LightEbon");
+	local bonus = player:getVar("LightEbon");
 	local caprate = 100;
 	if (mob:checkBaseExp() == true) then
 		if (zone == 132 or zone == 15 or zone == 45 or
@@ -389,7 +389,7 @@ function DoExp(mob,killer)
 				bonus = caprate;
 			end
 		end
-		killer:addExp(bonus * 2);
+		player:addExp(bonus * 2);
 	end
 end;
 

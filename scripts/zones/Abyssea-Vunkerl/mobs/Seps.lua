@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_APPARITIONS) == false) then
-        killer:addKeyItem(ATMA_OF_APPARITIONS);
-        killer:messageSpecial(6385, ATMA_OF_APPARITIONS);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_APPARITIONS) == false) then
+        ally:addKeyItem(ATMA_OF_APPARITIONS);
+        ally:messageSpecial(6385, ATMA_OF_APPARITIONS);
     end
 end;
 

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Pashhow Marshlands
--- MOB:  Jolly Green
+--  MOB: Jolly Green
 -----------------------------------
 
 require("scripts/globals/fieldsofvalor");
@@ -9,6 +9,6 @@ require("scripts/globals/fieldsofvalor");
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-	checkRegime(killer,mob,60,3);
+function onMobDeath(mob,killer,ally)
+    checkRegime(ally,mob,60,3);
 end;

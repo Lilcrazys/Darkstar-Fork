@@ -43,11 +43,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VEINOUS_HECTEYES_EYELID) == false) then
-        killer:addKeyItem(VEINOUS_HECTEYES_EYELID);
-        killer:messageSpecial(6385, VEINOUS_HECTEYES_EYELID);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(VEINOUS_HECTEYES_EYELID) == false) then
+        ally:addKeyItem(VEINOUS_HECTEYES_EYELID);
+        ally:messageSpecial(6385, VEINOUS_HECTEYES_EYELID);
     end
 end;
 

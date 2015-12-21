@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(JAGGED_APKALLU_BEAK) == false) then
-        killer:addKeyItem(JAGGED_APKALLU_BEAK);
-        killer:messageSpecial(6385, JAGGED_APKALLU_BEAK);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(JAGGED_APKALLU_BEAK) == false) then
+        ally:addKeyItem(JAGGED_APKALLU_BEAK);
+        ally:messageSpecial(6385, JAGGED_APKALLU_BEAK);
     end
 end;
 

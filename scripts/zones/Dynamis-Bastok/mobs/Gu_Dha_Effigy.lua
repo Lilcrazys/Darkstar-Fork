@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Dynamis Bastok
--- NPC:  Gu'Dha Effigy
+--  MOB: Gu'Dha Effigy
 -- Mega Boss
 -----------------------------------
 require("scripts/globals/status");
@@ -25,25 +25,25 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-	if (killer:hasKeyItem(HYDRA_CORPS_EYEGLASS) == false) then
-		killer:setVar("DynaBastok_Win",1);
-		killer:addKeyItem(HYDRA_CORPS_EYEGLASS);
-		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
+function onMobDeath(mob,killer,ally)
+	if (ally:hasKeyItem(HYDRA_CORPS_EYEGLASS) == false) then
+		ally:setVar("DynaBastok_Win",1);
+		ally:addKeyItem(HYDRA_CORPS_EYEGLASS);
+		ally:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
 	end
 
-	if (mob:isInBattlefieldList() == false) then
-		mob:addInBattlefieldList();
+    if (mob:isInBattlefieldList() == false) then
+        mob:addInBattlefieldList();
 
-		killer:addTimeToDynamis(30); -- Add + 30min
+        ally:addTimeToDynamis(30); -- Add + 30min
 
-		killer:addTitle(DYNAMISBASTOK_INTERLOPER); -- Add title
+        ally:addTitle(DYNAMISBASTOK_INTERLOPER); -- Add title
 
-		local npc = GetNPCByID(17539323); -- Spawn ???
-		npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
-		npc:setStatus(0);
+        local npc = GetNPCByID(17539323); -- Spawn ???
+        npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
+        npc:setStatus(0);
 
-		killer:launchDynamisSecondPart(); -- Spawn dynamis second part
-	end
+        ally:launchDynamisSecondPart(); -- Spawn dynamis second part
+    end
 
 end;

@@ -79,7 +79,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:resetRecasts();
-    killer:injectActionPacket( 6, 312 );
+function onMobDeath(mob, killer, ally)
+    ally:resetRecasts();
+    ally:injectActionPacket( 6, 312 );
 end;

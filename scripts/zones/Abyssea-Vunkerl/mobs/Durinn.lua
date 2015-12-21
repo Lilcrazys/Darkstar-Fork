@@ -49,11 +49,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 35;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_MINIKIN_MONSTROSITY) == false) then
-        killer:addKeyItem(ATMA_OF_THE_MINIKIN_MONSTROSITY);
-        killer:messageSpecial(6385, ATMA_OF_THE_MINIKIN_MONSTROSITY);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_MINIKIN_MONSTROSITY) == false) then
+        ally:addKeyItem(ATMA_OF_THE_MINIKIN_MONSTROSITY);
+        ally:messageSpecial(6385, ATMA_OF_THE_MINIKIN_MONSTROSITY);
     end
 end;
 

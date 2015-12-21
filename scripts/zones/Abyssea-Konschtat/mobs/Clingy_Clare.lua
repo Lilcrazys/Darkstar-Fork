@@ -41,10 +41,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(DECAYING_MORBOL_TOOTH) == false) then
-        killer:addKeyItem(DECAYING_MORBOL_TOOTH);
-        killer:messageSpecial(6385, DECAYING_MORBOL_TOOTH);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(DECAYING_MORBOL_TOOTH) == false) then
+        ally:addKeyItem(DECAYING_MORBOL_TOOTH);
+        ally:messageSpecial(6385, DECAYING_MORBOL_TOOTH);
     end
 end;

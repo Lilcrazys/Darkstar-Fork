@@ -110,7 +110,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
 end;
 

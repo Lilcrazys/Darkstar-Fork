@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 100;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(PULSATING_SOULFLAYER_BEARD) == false) then
-        killer:addKeyItem(PULSATING_SOULFLAYER_BEARD);
-        killer:messageSpecial(6385, PULSATING_SOULFLAYER_BEARD);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(PULSATING_SOULFLAYER_BEARD) == false) then
+        ally:addKeyItem(PULSATING_SOULFLAYER_BEARD);
+        ally:messageSpecial(6385, PULSATING_SOULFLAYER_BEARD);
     end
 end;
 

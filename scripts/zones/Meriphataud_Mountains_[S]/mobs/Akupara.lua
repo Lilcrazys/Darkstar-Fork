@@ -67,20 +67,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Akupara Kill
-        if (killer:getMaskBit(killer:getVar("JADE_STRATUM_III"), 1) == false) then
-            killer:setMaskBit(killer:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",1,true);
+function onMobDeath(mob, killer, ally)
+    if (ally:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Akupara Kill
+        if (ally:getMaskBit(ally:getVar("JADE_STRATUM_III"), 1) == false) then
+            ally:setMaskBit(ally:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",1,true);
         end
 
-        if (killer:isMaskFull(killer:getVar("JADE_STRATUM_III"),2) == true) then
-            killer:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
-            killer:delKeyItem(JADE_STRATUM_ABYSSITE_III);
-            killer:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
-            killer:setVar("JADE_STRATUM_III", 0);
+        if (ally:isMaskFull(ally:getVar("JADE_STRATUM_III"),2) == true) then
+            ally:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
+            ally:delKeyItem(JADE_STRATUM_ABYSSITE_III);
+            ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
+            ally:setVar("JADE_STRATUM_III", 0);
         end
     end
 
-    killer:addCurrency("bayld", 75);
-    killer:addExp(10000);
+    ally:addCurrency("bayld", 75);
+    ally:addExp(10000);
 end;

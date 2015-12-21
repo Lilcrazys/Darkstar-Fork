@@ -97,27 +97,27 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 550);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 550);
+    ally:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
     DespawnMob(mob:getID()+3);
 
-    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Tangora Kill
-        if (killer:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
-            if (killer:getMaskBit(killer:getVar("VW_OP_101"), 0) == false) then
-                killer:setMaskBit(killer:getVar("VW_OP_101"),"VW_OP_101",0,true);
+    if (ally:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Tangora Kill
+        if (ally:getQuestStatus(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL) == QUEST_ACCEPTED) then
+            if (ally:getMaskBit(ally:getVar("VW_OP_101"), 0) == false) then
+                ally:setMaskBit(ally:getVar("VW_OP_101"),"VW_OP_101",0,true);
             end
         else
-            if (killer:getMaskBit(killer:getVar("ASHEN_STRATUM"), 0) == false) then
-                killer:setMaskBit(killer:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",0,true);
+            if (ally:getMaskBit(ally:getVar("ASHEN_STRATUM"), 0) == false) then
+                ally:setMaskBit(ally:getVar("ASHEN_STRATUM"),"ASHEN_STRATUM",0,true);
             end
 
-            if (killer:isMaskFull(killer:getVar("ASHEN_STRATUM"),6) == true) then
-                killer:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
-                killer:delKeyItem(ASHEN_STRATUM_ABYSSITE);
-                killer:setVar("ASHEN_STRATUM", 0);
+            if (ally:isMaskFull(ally:getVar("ASHEN_STRATUM"),6) == true) then
+                ally:addKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+                ally:delKeyItem(ASHEN_STRATUM_ABYSSITE);
+                ally:setVar("ASHEN_STRATUM", 0);
             end
         end
     end;

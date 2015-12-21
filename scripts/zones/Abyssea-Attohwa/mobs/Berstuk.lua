@@ -39,10 +39,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 40;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_GLUTINOUS_OOZE) == false) then
-        killer:addKeyItem(ATMA_OF_THE_GLUTINOUS_OOZE);
-        killer:messageSpecial(6385, ATMA_OF_THE_GLUTINOUS_OOZE);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_GLUTINOUS_OOZE) == false) then
+        ally:addKeyItem(ATMA_OF_THE_GLUTINOUS_OOZE);
+        ally:messageSpecial(6385, ATMA_OF_THE_GLUTINOUS_OOZE);
     end
 end;

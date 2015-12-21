@@ -1,6 +1,6 @@
 ----------------------------------
 -- Area: Labyrinth of Onzozo
--- NM: Lord of Onzozo
+--   NM: Lord of Onzozo
 -----------------------------------
 
 require("scripts/zones/Labyrinth_of_Onzozo/MobIDs");
@@ -33,8 +33,10 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    
+function onMobDeath(mob,killer,ally)
+
+    checkGoVregime(ally,mob,774,1);
+
     -- Set LoO's Window Open Time
     local wait = math.random((18000),(28800));
     SetServerVariable("[POP]Lord_of_Onzozo", os.time(t) + wait); -- 5-8 Hours
@@ -45,4 +47,5 @@ function onMobDeath(mob,killer)
     SetServerVariable("[PH]Lord_of_Onzozo", 0);
     DeterMob(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
+
 end;

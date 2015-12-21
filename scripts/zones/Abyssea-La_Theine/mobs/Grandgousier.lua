@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SEVERED_GIGAS_COLLAR) == false) then
-        killer:addKeyItem(SEVERED_GIGAS_COLLAR);
-        killer:messageSpecial(6385, SEVERED_GIGAS_COLLAR);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SEVERED_GIGAS_COLLAR) == false) then
+        ally:addKeyItem(SEVERED_GIGAS_COLLAR);
+        ally:messageSpecial(6385, SEVERED_GIGAS_COLLAR);
     end
 end;
 

@@ -49,10 +49,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_MERCILESS_MATRIARCH) == false) then
-        killer:addKeyItem(ATMA_OF_THE_MERCILESS_MATRIARCH);
-        killer:messageSpecial(6385, ATMA_OF_THE_MERCILESS_MATRIARCH);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_MERCILESS_MATRIARCH) == false) then
+        ally:addKeyItem(ATMA_OF_THE_MERCILESS_MATRIARCH);
+        ally:messageSpecial(6385, ATMA_OF_THE_MERCILESS_MATRIARCH);
     end
 end;

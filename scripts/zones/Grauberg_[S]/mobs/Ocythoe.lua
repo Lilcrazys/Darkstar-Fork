@@ -85,16 +85,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 600);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 600);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ocythoe Kill
-        if (killer:getMaskBit(killer:getVar("JEUNO_VW"), 1) == false) then
-           killer:setMaskBit(killer:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
+    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ocythoe Kill
+        if (ally:getMaskBit(ally:getVar("JEUNO_VW"), 1) == false) then
+           ally:setMaskBit(ally:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
         end
-        if (killer:isMaskFull(killer:getVar("JEUNO_VW"),5) == true) then
-           killer:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        if (ally:isMaskFull(ally:getVar("JEUNO_VW"),5) == true) then
+           ally:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
 end;

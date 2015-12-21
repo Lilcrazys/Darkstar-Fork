@@ -39,10 +39,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_MOUNTED_CHAMPION) == false) then
-        killer:addKeyItem(ATMA_OF_THE_MOUNTED_CHAMPION);
-        killer:messageSpecial(6385, ATMA_OF_THE_MOUNTED_CHAMPION);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_MOUNTED_CHAMPION) == false) then
+        ally:addKeyItem(ATMA_OF_THE_MOUNTED_CHAMPION);
+        ally:messageSpecial(6385, ATMA_OF_THE_MOUNTED_CHAMPION);
     end
 end;

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Horlais Peak
--- NPC:  Maat
+--  MOB: Maat
 -- Genkai 5 Fight
 -----------------------------------
 package.loaded["scripts/zones/Horlais_Peak/TextIDs"] = nil;
@@ -48,6 +48,6 @@ end;
 -- onMobDeath Action
 -----------------------------------
 
-function onMobDeath(mob,killer)
-	killer:showText(mob,YOUVE_COME_A_LONG_WAY);
+function onMobDeath(mob,killer,ally)
+	ally:showText(mob,YOUVE_COME_A_LONG_WAY);
 end;

@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(IMBRUED_VAMPYR_FANG) == false) then
-        killer:addKeyItem(IMBRUED_VAMPYR_FANG);
-        killer:messageSpecial(6385, IMBRUED_VAMPYR_FANG);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(IMBRUED_VAMPYR_FANG) == false) then
+        ally:addKeyItem(IMBRUED_VAMPYR_FANG);
+        ally:messageSpecial(6385, IMBRUED_VAMPYR_FANG);
     end
 end;
 

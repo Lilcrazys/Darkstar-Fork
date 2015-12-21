@@ -49,10 +49,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 10;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_BROTHER_WOLF) == false) then
-        killer:addKeyItem(ATMA_OF_THE_BROTHER_WOLF);
-        killer:messageSpecial(6385, ATMA_OF_THE_BROTHER_WOLF);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_BROTHER_WOLF) == false) then
+        ally:addKeyItem(ATMA_OF_THE_BROTHER_WOLF);
+        ally:messageSpecial(6385, ATMA_OF_THE_BROTHER_WOLF);
     end
 end;

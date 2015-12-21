@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(JADE_ABYSSITE_OF_SOJOURN) == false) then
-        killer:addKeyItem(JADE_ABYSSITE_OF_SOJOURN);
-        killer:messageSpecial(6385, JADE_ABYSSITE_OF_SOJOURN);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(JADE_ABYSSITE_OF_SOJOURN) == false) then
+        ally:addKeyItem(JADE_ABYSSITE_OF_SOJOURN);
+        ally:messageSpecial(6385, JADE_ABYSSITE_OF_SOJOURN);
     end
 end;
 

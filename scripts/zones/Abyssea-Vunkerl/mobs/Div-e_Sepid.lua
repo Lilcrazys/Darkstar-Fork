@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(CHIPPED_IMPS_OLIFANT) == false) then
-        killer:addKeyItem(CHIPPED_IMPS_OLIFANT);
-        killer:messageSpecial(6385, CHIPPED_IMPS_OLIFANT);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(CHIPPED_IMPS_OLIFANT) == false) then
+        ally:addKeyItem(CHIPPED_IMPS_OLIFANT);
+        ally:messageSpecial(6385, CHIPPED_IMPS_OLIFANT);
     end
 end;
 

@@ -23,10 +23,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
 
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, MYTHIC, 5);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, MYTHIC, 5);
     end
 end;

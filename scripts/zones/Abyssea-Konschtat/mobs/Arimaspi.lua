@@ -42,11 +42,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(MUCID_AHRIMAN_EYEBALL) == false) then
-        killer:addKeyItem(MUCID_AHRIMAN_EYEBALL);
-        killer:messageSpecial(6385, MUCID_AHRIMAN_EYEBALL);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(MUCID_AHRIMAN_EYEBALL) == false) then
+        ally:addKeyItem(MUCID_AHRIMAN_EYEBALL);
+        ally:messageSpecial(6385, MUCID_AHRIMAN_EYEBALL);
     end
 end;
 

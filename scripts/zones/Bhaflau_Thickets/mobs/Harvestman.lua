@@ -36,6 +36,7 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if (target:hasStatusEffect(EFFECT_POISON)) then
         target:delStatusEffect(EFFECT_POISON);
@@ -52,5 +53,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob,killer,ally)
+    --[[
+    -- Set spawnpoint and respawn time (21-24 hours)
+    UpdateNMSpawnPoint(mob:getID());
+    mob:setRespawnTime(math.random(75600,86400));
+    ]]--
 end;

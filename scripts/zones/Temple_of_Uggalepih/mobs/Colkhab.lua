@@ -85,10 +85,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(744) == false) then
-        killer:addSpell(744);
+    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(744) == false) then
+        ally:addSpell(744);
     end
     mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
 end;

@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SODDEN_SANDWORM_HUSK) == false) then
-        killer:addKeyItem(SODDEN_SANDWORM_HUSK);
-        killer:messageSpecial(6385, SODDEN_SANDWORM_HUSK);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SODDEN_SANDWORM_HUSK) == false) then
+        ally:addKeyItem(SODDEN_SANDWORM_HUSK);
+        ally:messageSpecial(6385, SODDEN_SANDWORM_HUSK);
     end
 end;
 

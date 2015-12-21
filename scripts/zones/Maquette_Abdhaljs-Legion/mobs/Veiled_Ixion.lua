@@ -104,7 +104,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     SpawnMob(17526837, 300);
-    killer:addCurrency("legion_point", 50);
+    ally:addCurrency("legion_point", 50);
 end;

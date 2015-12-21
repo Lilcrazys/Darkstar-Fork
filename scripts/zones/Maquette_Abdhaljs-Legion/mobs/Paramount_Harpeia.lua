@@ -95,8 +95,8 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("legion_point", 75);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("legion_point", 75);
     local popBoss = true;
     local MobIDs = {17526853, 17526851, 17526854, 17526856};
     -- Paramount_Harpeia 17526852

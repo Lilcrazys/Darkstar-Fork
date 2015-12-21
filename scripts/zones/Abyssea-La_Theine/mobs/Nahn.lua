@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(SMOLDERING_CRAB_SHELL) == false) then
-        killer:addKeyItem(SMOLDERING_CRAB_SHELL);
-        killer:messageSpecial(6385, SMOLDERING_CRAB_SHELL);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SMOLDERING_CRAB_SHELL) == false) then
+        ally:addKeyItem(SMOLDERING_CRAB_SHELL);
+        ally:messageSpecial(6385, SMOLDERING_CRAB_SHELL);
     end
 end;
 

@@ -90,17 +90,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 900);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 900);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Yalungur Kill
-        if (killer:getMaskBit(killer:getVar("AMBER_STRATUM"), 2) == false) then
-           killer:setMaskBit(killer:getVar("AMBER_STRATUM"),"AMBER_STRATUM",2,true);
+    if (ally:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Yalungur Kill
+        if (ally:getMaskBit(ally:getVar("AMBER_STRATUM"), 2) == false) then
+           ally:setMaskBit(ally:getVar("AMBER_STRATUM"),"AMBER_STRATUM",2,true);
         end
-        if (killer:isMaskFull(killer:getVar("AMBER_STRATUM"),4) == true) then
-           killer:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
-           killer:setVar("AMBER_STRATUM", 0);
+        if (ally:isMaskFull(ally:getVar("AMBER_STRATUM"),4) == true) then
+           ally:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
+           ally:setVar("AMBER_STRATUM", 0);
         end
     end;
 end;

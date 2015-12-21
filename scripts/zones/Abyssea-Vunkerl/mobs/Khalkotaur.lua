@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(INGROWN_TAURUS_NAIL) == false) then
-        killer:addKeyItem(INGROWN_TAURUS_NAIL);
-        killer:messageSpecial(6385, INGROWN_TAURUS_NAIL);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(INGROWN_TAURUS_NAIL) == false) then
+        ally:addKeyItem(INGROWN_TAURUS_NAIL);
+        ally:messageSpecial(6385, INGROWN_TAURUS_NAIL);
     end
 end;
 

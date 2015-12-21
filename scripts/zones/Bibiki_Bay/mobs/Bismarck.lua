@@ -122,11 +122,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 1000);
-    killer:addExp(10000);
-    if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
-        killer:completeQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
-        killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 1000);
+    ally:addExp(10000);
+    if (ally:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
+        ally:completeQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
+        ally:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
     end
 end;

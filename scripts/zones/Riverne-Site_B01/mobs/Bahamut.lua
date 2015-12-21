@@ -156,6 +156,6 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    -- killer:addTitle(WYRM_ASTONISHER);
+function onMobDeath(mob, killer, ally)
+    -- ally:addTitle(WYRM_ASTONISHER);
 end;

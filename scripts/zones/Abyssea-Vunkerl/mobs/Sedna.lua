@@ -51,17 +51,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
     local SPELL_CHANCE = 40;
 
-    killer:addTitle(SEDNA_TUSKBREAKER);
+    ally:addTitle(SEDNA_TUSKBREAKER);
 
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_TUSKED_TERROR) == false) then
-        killer:addKeyItem(ATMA_OF_THE_TUSKED_TERROR);
-        killer:messageSpecial(6385, ATMA_OF_THE_TUSKED_TERROR);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_TUSKED_TERROR) == false) then
+        ally:addKeyItem(ATMA_OF_THE_TUSKED_TERROR);
+        ally:messageSpecial(6385, ATMA_OF_THE_TUSKED_TERROR);
     end
-    if (math.random(0,99) < SPELL_CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(654) == false) then
-        killer:addSpell(654);
+    if (math.random(0,99) < SPELL_CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(654) == false) then
+        ally:addSpell(654);
     end
 end;

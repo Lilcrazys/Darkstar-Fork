@@ -40,10 +40,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VERMILLION_ABYSSITE_OF_GUERDON) == false) then
-        killer:addKeyItem(VERMILLION_ABYSSITE_OF_GUERDON);
-        killer:messageSpecial(6385, VERMILLION_ABYSSITE_OF_GUERDON);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(VERMILLION_ABYSSITE_OF_GUERDON) == false) then
+        ally:addKeyItem(VERMILLION_ABYSSITE_OF_GUERDON);
+        ally:messageSpecial(6385, VERMILLION_ABYSSITE_OF_GUERDON);
     end
 end;

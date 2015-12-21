@@ -9,5 +9,5 @@ require("scripts/globals/campaign");
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
 end;

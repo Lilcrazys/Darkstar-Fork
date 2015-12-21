@@ -1,6 +1,6 @@
 -----------------------------------------
 -- Spell: Firaga IV
--- Deals fire damage to an enemy.
+-- Deals fire damage to enemies within area of effect.
 -----------------------------------------
 
 require("scripts/globals/magic");
@@ -10,21 +10,21 @@ require("scripts/globals/status");
 -- OnSpellCast
 -----------------------------------------
 
-function onMagicCastingCheck(caster,target,spell)
-	return 0;
+function onMagicCastingCheck(caster, target, spell)
+    return 0;
 end;
 
 function onSpellCast(caster, target, spell)
     local spellParams = {};
     spellParams.hasMultipleTargetReduction = true;
     spellParams.resistBonus = 1.0;
-    spellParams.V0 = 850;
-    spellParams.V50 = 1130;
-    spellParams.V100 = 1367;
-    spellParams.V200 = 1762;
-    spellParams.M0 = 5.6;
-    spellParams.M50 = 4.74;
-    spellParams.M100 = 3.95;
+    spellParams.V0 = 930;
+    spellParams.V50 = 1200;
+    spellParams.V100 = 1400;
+    spellParams.V200 = 1800;
+    spellParams.M0 = 5.2;
+    spellParams.M50 = 4.7;
+    spellParams.M100 = 3.85;
     spellParams.M200 = 3;
 
     return doElementalNuke(caster, spell, target, spellParams);

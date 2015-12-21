@@ -73,20 +73,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 200);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 200);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Gilitine Kill
-        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_II"), 5) == false) then
-           killer:setMaskBit(killer:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",5,true);
+    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Gilitine Kill
+        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_II"), 5) == false) then
+           ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",5,true);
         end
 
         if (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
-            if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_II"),6) == true) then
-                killer:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
-                killer:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
-                killer:setVar("WHITE_STRATUM_II", 0);
+            if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_II"),6) == true) then
+                ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
+                ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
+                ally:setVar("WHITE_STRATUM_II", 0);
             end
         end
     end

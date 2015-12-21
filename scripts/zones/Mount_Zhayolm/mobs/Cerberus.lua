@@ -24,12 +24,10 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,15);
 end;
 
 -----------------------------------
--- onMobFight Action
+-- onMobFight
 -----------------------------------
 
 function onMobFight(mob, target)
@@ -44,13 +42,14 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-	killer:addTitle(CERBERUS_MUZZLER);
-   mob:setRespawnTime((math.random((0),(24))*3600)+172800); -- 48-72 hours proper 1 hour windows
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(CERBERUS_MUZZLER);
+    -- mob:setRespawnTime((math.random(0,24)*3600)+172800); -- 48-72 hours proper 1 hour windows
+    mob:setRespawnTime((math.random(21,24)*3600)+0); -- 21-24 hours proper 1 hour windows
 
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, MYTHIC, 2);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, MYTHIC, 2);
     end
 
 end;

@@ -43,11 +43,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_IMPALER) == false) then
-        killer:addKeyItem(ATMA_OF_THE_IMPALER);
-        killer:messageSpecial(6385, ATMA_OF_THE_IMPALER);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_IMPALER) == false) then
+        ally:addKeyItem(ATMA_OF_THE_IMPALER);
+        ally:messageSpecial(6385, ATMA_OF_THE_IMPALER);
     end
 end;
 

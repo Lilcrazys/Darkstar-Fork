@@ -80,16 +80,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
     local LUNAR = 100;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET) == false) then
-        killer:addKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET);
-        killer:messageSpecial(6385, ATMA_OF_THE_VORACIOUS_VIOLET);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET) == false) then
+        ally:addKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET);
+        ally:messageSpecial(6385, ATMA_OF_THE_VORACIOUS_VIOLET);
     end
 
-    if (math.random(0,99) < LUNAR  and killer:hasKeyItem(LUNAR_ABYSSITE1) == false) then
-        killer:addKeyItem(LUNAR_ABYSSITE1);
-        killer:messageSpecial(6385, LUNAR_ABYSSITE1);
+    if (math.random(0,99) < LUNAR  and ally:hasKeyItem(LUNAR_ABYSSITE1) == false) then
+        ally:addKeyItem(LUNAR_ABYSSITE1);
+        ally:messageSpecial(6385, LUNAR_ABYSSITE1);
     end
 end;

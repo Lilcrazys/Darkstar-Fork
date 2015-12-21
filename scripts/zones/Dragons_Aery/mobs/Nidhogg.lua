@@ -54,14 +54,14 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     local SPELL_ID = 738;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(SPELL_ID) == false) then
-        killer:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
+        ally:addSpell(SPELL_ID);
     end
 
-    killer:addTitle(NIDHOGG_SLAYER);
+    ally:addTitle(NIDHOGG_SLAYER);
 
     -- Set Nidhogg's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
@@ -83,8 +83,8 @@ function onMobDeath(mob, killer)
 
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, RELIC, 5);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, RELIC, 5);
     end
 
 end;

@@ -25,7 +25,7 @@ require("scripts/globals/keyitems");
 require("scripts/globals/status");
 require("scripts/globals/utils");
 -----------------------------------
-function PyxisSpawn(mob,killer,npc)
+function PyxisSpawn(mob,player,npc)
 	-- -------------------------------------------------------------------------------------
 	-- Pearlescent: All sturdy pyxides will appear with greater frequency. 
 	-- Ebon: Enemies will bestow experience points and cruor at an increased rate.
@@ -35,14 +35,14 @@ function PyxisSpawn(mob,killer,npc)
 	-- Ruby: Red pyxides will appear with greater frequency and yield superior spoils. 
 	-- Amber: Gold pyxides will appear with greater frequency and yield superior spoils.
 	-- -------------------------------------------------------------------------------------
-    local zone = killer:getZone();   
-	local LightPearl = killer:getVar("LightPearl");
-	local LightEbon = killer:getVar("LightEbon");
-	local LightGold = killer:getVar("LightGold");
-	local LightSilver = killer:getVar("LightSilver");
-	local LightAzure = killer:getVar("LightAzure");
-	local LightRuby = killer:getVar("LightRuby");
-	local LightAmber = killer:getVar("LightAmber");
+    local zone = player:getZone();   
+	local LightPearl = player:getVar("LightPearl");
+	local LightEbon = player:getVar("LightEbon");
+	local LightGold = player:getVar("LightGold");
+	local LightSilver = player:getVar("LightSilver");
+	local LightAzure = player:getVar("LightAzure");
+	local LightRuby = player:getVar("LightRuby");
+	local LightAmber = player:getVar("LightAmber");
 	
     if (LightPearl < 50) then
 	
@@ -79,7 +79,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 			
@@ -113,7 +113,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -146,7 +146,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end		
 		
@@ -183,7 +183,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 		end
@@ -226,7 +226,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -260,7 +260,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -293,7 +293,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -322,7 +322,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 		end
@@ -365,7 +365,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -399,7 +399,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 		 
@@ -432,7 +432,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		elseif (LightAzure > 150) and (LightAzure < 200) then
@@ -468,7 +468,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 			
@@ -498,7 +498,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end	
 			end
 		end	
@@ -541,7 +541,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -575,7 +575,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 		
@@ -608,7 +608,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 		
@@ -645,7 +645,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end	
 		
@@ -678,7 +678,7 @@ function PyxisSpawn(mob,killer,npc)
 						GetNPCByID(NPC):AnimationSub(2);
 						GetNPCByID(NPC):setStatus(STATUS_NORMAL);
 						print("NPC",NPC); -- Debug, shows what Pyxis spawned by ID, uncomment to use.
-						killer:messageSpecial(7445);
+						player:messageSpecial(7445);
 					end
 			end
 		end	

@@ -41,10 +41,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 50;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_DRIFTER) == false) then
-        killer:addKeyItem(ATMA_OF_THE_DRIFTER);
-        killer:messageSpecial(6385, ATMA_OF_THE_DRIFTER);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_DRIFTER) == false) then
+        ally:addKeyItem(ATMA_OF_THE_DRIFTER);
+        ally:messageSpecial(6385, ATMA_OF_THE_DRIFTER);
     end
 end;

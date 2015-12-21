@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Gusgen Mines
--- MOB:  Skeleton Warrior
+--  MOB: Skeleton Warrior
 -----------------------------------
 
 require("scripts/globals/groundsofvalor");
@@ -17,7 +17,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-   checkGoVregime(killer,mob,679,1);
-   checkGoVregime(killer,mob,680,2);
+function onMobDeath(mob,killer,ally)
+    checkGoVregime(ally,mob,679,1);
+    checkGoVregime(ally,mob,680,2);
 end;

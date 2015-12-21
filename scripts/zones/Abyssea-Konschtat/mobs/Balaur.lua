@@ -49,16 +49,16 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 40;
     local SPELL_CHANCE = 40;
   
-    if (math.random(0,99) < KI_CHANCE and killer:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
-        killer:addKeyItem(ATMA_OF_STORMBREATH);
-        killer:messageSpecial(6385, ATMA_OF_STORMBREATH);
+    if (math.random(0,99) < KI_CHANCE and ally:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
+        ally:addKeyItem(ATMA_OF_STORMBREATH);
+        ally:messageSpecial(6385, ATMA_OF_STORMBREATH);
     end
 
-    if (math.random(0,99) < SPELL_CHANCE and killer:getMainJob() == JOB_BLU and killer:hasSpell(695) == false) then
-        killer:addSpell(695);
+    if (math.random(0,99) < SPELL_CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(695) == false) then
+        ally:addSpell(695);
     end
 end;

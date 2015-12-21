@@ -1,8 +1,8 @@
-----------------------------------	
+----------------------------------
 -- Area: Gustav Tunnel
 --   NM: Baobhan Sith
------------------------------------	
-  
+-----------------------------------
+
 require("scripts/globals/titles");
 require("scripts/globals/status");
 
@@ -11,41 +11,19 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
-	
-end;
-
------------------------------------
--- onMobSpawn
------------------------------------
-
-function onMobSpawn(mob)
 	mob:addMod(MOD_MATT,20);
 	mob:addMod(MOD_MACC,400);
-	
-end;	
-	
------------------------------------
--- onMobEngaged
------------------------------------
-
-function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
--- onMobFight
+-- onMobDeath
 -----------------------------------
-function onMobFight(mob,target)
-end
 
------------------------------------	
--- onMobDeath	
------------------------------------	
-	
-function onMobDeath(mob,killer)	
-	killer:addTitle(GHOSTIE_BUSTER);
-  
+function onMobDeath(mob, killer, ally)
+	ally:addTitle(GHOSTIE_BUSTER);
+
     -- Set Baobhan Sith's Window Open Time
-    local wait = math.random((4),(8)) * 3600
+    local wait = math.random(4,8) * 3600;
     SetServerVariable("[POP]Baobhan_Sith", os.time(t) + wait); -- 4-8 hours
     DeterMob(mob:getID(), true);
 
@@ -54,5 +32,5 @@ function onMobDeath(mob,killer)
     SetServerVariable("[PH]Baobhan_Sith", 0);
     DeterMob(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
-  
+
 end;

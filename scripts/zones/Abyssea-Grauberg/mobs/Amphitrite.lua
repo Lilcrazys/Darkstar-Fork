@@ -71,12 +71,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    killer:addTitle(AMPHITRITE_SHUCKER);
+    ally:addTitle(AMPHITRITE_SHUCKER);
     
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SEA_DAUGHTER) == false) then
-        killer:addKeyItem(ATMA_OF_THE_SEA_DAUGHTER);
-        killer:messageSpecial(6385, ATMA_OF_THE_SEA_DAUGHTER);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_SEA_DAUGHTER) == false) then
+        ally:addKeyItem(ATMA_OF_THE_SEA_DAUGHTER);
+        ally:messageSpecial(6385, ATMA_OF_THE_SEA_DAUGHTER);
     end
 end;

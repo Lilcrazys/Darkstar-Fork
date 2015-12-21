@@ -75,19 +75,19 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
-    killer:addTitle(BRIAREUS_FELLER);
+    ally:addTitle(BRIAREUS_FELLER);
     
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
-        killer:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);
-        killer:messageSpecial(6385, BLOOD_SMEARED_GIGAS_HELM);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
+        ally:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);
+        ally:messageSpecial(6385, BLOOD_SMEARED_GIGAS_HELM);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_STOUT_ARM) == false) then
-        killer:addKeyItem(ATMA_OF_THE_STOUT_ARM);
-        killer:messageSpecial(6385, ATMA_OF_THE_STOUT_ARM);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_STOUT_ARM) == false) then
+        ally:addKeyItem(ATMA_OF_THE_STOUT_ARM);
+        ally:messageSpecial(6385, ATMA_OF_THE_STOUT_ARM);
     end
 end;

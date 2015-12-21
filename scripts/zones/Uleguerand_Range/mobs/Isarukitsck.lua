@@ -84,17 +84,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 750);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 750);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then -- Isarukitsck Kill
-        if (killer:getMaskBit(killer:getVar("HYACINTH_STRATUM"), 3) == false) then
-           killer:setMaskBit(killer:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",3,true);
+    if (ally:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then -- Isarukitsck Kill
+        if (ally:getMaskBit(ally:getVar("HYACINTH_STRATUM"), 3) == false) then
+           ally:setMaskBit(ally:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",3,true);
         end
-        if (killer:isMaskFull(killer:getVar("HYACINTH_STRATUM"),4) == true) then
-           killer:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
-           killer:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
+        if (ally:isMaskFull(ally:getVar("HYACINTH_STRATUM"),4) == true) then
+           ally:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
+           ally:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
         end
     end;
 end;

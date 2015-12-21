@@ -359,7 +359,7 @@ INSERT INTO `traits` VALUES ('76','ambush','6','75','1','0','0','TOAU');
 INSERT INTO `traits` VALUES ('77','iron will','7','75','1','0','0','TOAU');
 INSERT INTO `traits` VALUES ('78','guardian','7','75','1','0','0','TOAU');
 INSERT INTO `traits` VALUES ('79','muted soul','8','75','1','0','0','TOAU');
-INSERT INTO `traits` VALUES ('80','desperate blows','8','75','1','383','15','TOAU');
+INSERT INTO `traits` VALUES ('80','desperate blows','8','75','1','0','0','TOAU');
 INSERT INTO `traits` VALUES ('81','beast affinity ','9','75','1','0','0','TOAU');
 INSERT INTO `traits` VALUES ('82','beast healer','9','75','1','0','0','TOAU');
 INSERT INTO `traits` VALUES ('83','snapshot','11','75','1','0','0','TOAU');

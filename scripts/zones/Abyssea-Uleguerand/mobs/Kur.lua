@@ -40,17 +40,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BEGRIMED_DRAGON_HIDE) == false) then
-        killer:addKeyItem(BEGRIMED_DRAGON_HIDE);
-        killer:messageSpecial(6385, BEGRIMED_DRAGON_HIDE);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(BEGRIMED_DRAGON_HIDE) == false) then
+        ally:addKeyItem(BEGRIMED_DRAGON_HIDE);
+        ally:messageSpecial(6385, BEGRIMED_DRAGON_HIDE);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_BLIGHTED_BREATH) == false) then
-        killer:addKeyItem(ATMA_OF_BLIGHTED_BREATH);
-        killer:messageSpecial(6385, ATMA_OF_BLIGHTED_BREATH);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_BLIGHTED_BREATH) == false) then
+        ally:addKeyItem(ATMA_OF_BLIGHTED_BREATH);
+        ally:messageSpecial(6385, ATMA_OF_BLIGHTED_BREATH);
     end
 end;

@@ -50,11 +50,11 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 10;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_SCORPION_QUEEN) == false) then
-        killer:addKeyItem(ATMA_OF_THE_SCORPION_QUEEN);
-        killer:messageSpecial(6385, ATMA_OF_THE_SCORPION_QUEEN);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_SCORPION_QUEEN) == false) then
+        ally:addKeyItem(ATMA_OF_THE_SCORPION_QUEEN);
+        ally:messageSpecial(6385, ATMA_OF_THE_SCORPION_QUEEN);
     end
 end;
 

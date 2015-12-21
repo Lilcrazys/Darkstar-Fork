@@ -10,74 +10,76 @@ require("scripts/globals/quests");
 -- array to map (for each zone) the item id of the valid trade item with the bcnmid in the database
 -- e.g. zone,{itemid,bcnmid,itemid,bcnmid,itemid,bcnmid}
 -- DO NOT INCLUDE MAAT FIGHTS
-itemid_bcnmid_map = { 6,{0,0},-- Bearclaw_Pinnacle
-                      8,{0,0},-- Boneyard_Gully
-                     10,{0,0},-- The_Shrouded_Maw
-					 13,{0,0},-- Mine_Shaft_2716
-                     17,{0,0},-- Spire of Holla
-					 19,{0,0},-- Spire of Dem
-					 21,{0,0},-- Spire of Mea
-					 23,{0,0},-- Spire of Vahzl
-					 31,{0,0},-- Monarch Linn
-					 32,{0,0},-- Sealion's Den
-					 35,{0,0},-- The Garden of RuHmet
-					 36,{0,0},-- Empyreal Paradox
-					 139,{1177,4,1552,10,1553,11,1131,12,1175,15,1180,17}, -- Horlais Peak
-					 140,{1551,34,1552,35,1552,36}, -- Ghelsba Outpost
-					 144,{1166,68,1178,81,1553,76,1180,82,1130,79,1552,73}, -- Waughroon Shrine
-					 146,{1553,107,1551,105,1177,100}, -- Balgas Dias
-					 163,{1130,129}, -- Sacrificial Chamber
-					 168,{0,0}, -- Chamber of Oracles
-					 170,{0,0}, -- Full Moon Fountain
-					 180,{1550,293}, -- LaLoff Amphitheater
-                     181,{0,0}, -- The Celestial Nexus
-					 201,{1546,418,1174,417}, -- Cloister of Gales
-					 202,{1548,450,1172,449}, -- Cloister of Storms
-					 203,{1545,482,1171,481}, -- Cloister of Frost
-					 206,{0,0}, -- Qu'Bia Arena
-					 207,{1544,545}, -- Cloister of Flames
-					 209,{1547,578,1169,577}, -- Cloister of Tremors
-					 211,{1549,609}, -- Cloister of Tides
-					 255,{3924,1308}}; -- Abyssea Empyreal Paradox (Custom Shinryu)
-					 
+itemid_bcnmid_map = {6, {0, 0}, -- Bearclaw_Pinnacle
+                   8, {0, 0}, -- Boneyard_Gully
+                   10, {0, 0}, -- The_Shrouded_Maw
+                   13, {0, 0}, -- Mine_Shaft_2716
+                   17, {0, 0}, -- Spire of Holla
+                   19, {0, 0}, -- Spire of Dem
+                   21, {0, 0}, -- Spire of Mea
+                   23, {0, 0}, -- Spire of Vahzl
+                   29, {0, 0}, -- Riverne Site #B01
+                   31, {0, 0}, -- Monarch Linn
+                   32, {0, 0}, -- Sealion's Den
+                   35, {0, 0}, -- The Garden of RuHmet
+                   36, {0, 0}, -- Empyreal Paradox
+                   139, {1177, 4, 1552, 10, 1553, 11, 1131, 12, 1175, 15, 1180, 17}, -- Horlais Peak
+                   140, {1551, 34, 1552, 35, 1552, 36}, -- Ghelsba Outpost
+                   144, {1166, 68, 1178, 81, 1553, 76, 1180, 82, 1130, 79, 1552, 73}, -- Waughroon Shrine
+                   146, {1553, 107, 1551, 105, 1177, 100}, -- Balgas Dias
+                   163, {1130, 129}, -- Sacrificial Chamber
+                   168, {0, 0}, -- Chamber of Oracles
+                   170, {0, 0}, -- Full Moon Fountain
+                   180, {1550, 293}, -- LaLoff Amphitheater
+                   181, {0, 0}, -- The Celestial Nexus
+                   201, {1546, 418, 1174, 417}, -- Cloister of Gales
+                   202, {1548, 450, 1172, 449}, -- Cloister of Storms
+                   203, {1545, 482, 1171, 481}, -- Cloister of Frost
+                   206, {0, 0}, -- Qu'Bia Arena
+                   207, {1544, 545}, -- Cloister of Flames
+                   209, {1547, 578, 1169, 577}, -- Cloister of Tremors
+                   211, {1549, 609}, -- Cloister of Tides
+                   255, {3924,1308}}; -- Abyssea Empyreal Paradox (Custom Shinryu)
+
 -- array to map (for each zone) the BCNM ID to the Event Parameter corresponding to this ID.
 -- DO NOT INCLUDE MAAT FIGHTS (only included one for testing!)
 -- bcnmid,paramid,bcnmid,paramid,etc
 -- The BCNMID is found via the database.
 -- The paramid is a bitmask which you need to find out. Being a bitmask, it will be one of:
--- 0,1,2,3,4,5,...
-bcnmid_param_map = {6,{640,0},
-                    8,{672,0,673,1},
-                    10,{704,0,706,2},
-                    13,{736,0},
-                    17,{768,0},
-					19,{800,0},
-					21,{832,0},
-                    23,{864,0},
-					31,{960,0,961,1},
-					32,{992,0,993,1},
-					35,{1024,0},
-                    36,{1056,0},
-					139,{0,0,3,3,4,4,5,5,6,6,7,7,10,10,11,11,12,12,15,15,17,17},
-					140,{32,0,33,1,34,2,35,3,36,4},
-					144,{65,1,73,9,64,0,67,3,68,4,70,6,71,7,72,8,81,17,76,12,82,18,79,15},
-					146,{99,3,96,0,101,5,102,6,103,7,107,11,105,9},
-					163,{128,0,129,1},
-					165,{160,0,161,1},
-					168,{192,0,194,2,195,3,196,4},
-					170,{224,0,225,1},
-					179,{256,0},
-					180,{293,5,288,0,289,1,290,2,291,3,292,4},
-                    181,{320,0},
-					201,{416,0,417,1,418,2,420,4},
-					202,{448,0,449,1,450,2,452,4},
-					203,{480,0,481,1,482,2,484,4},
-					206,{512,0,516,4,517,5,518,6,519,7,532,20},
-					207,{544,0,545,1,547,3},
-					209,{576,0,577,1,578,2,580,4},
-					211,{608,0,609,1,611,3},
-					255,{1308,0,1308,3,1308,5}}; -- Abyssea Empyreal Paradox (Retail Shinryu)
-					
+-- 0, 1, 2, 3, 4, 5, ...
+bcnmid_param_map = {6, {640, 0},
+                  8, {672, 0, 673, 1},
+                  10, {704, 0, 706, 2},
+                  13, {736, 0},
+                  17, {768, 0},
+                  19, {800, 0},
+                  21, {832, 0},
+                  23, {864, 0},
+                  29, {896, 0},
+                  31, {960, 0, 961, 1},
+                  32, {992, 0, 993, 1},
+                  35, {1024, 0},
+                  36, {1056, 0},
+                  139, {0, 0, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 10, 10, 11, 11, 12, 12, 15, 15, 17, 17},
+                  140, {32, 0, 33, 1, 34, 2, 35, 3, 36, 4},
+                  144, {65, 1, 73, 9, 64, 0, 67, 3, 68, 4, 70, 6, 71, 7, 72, 8, 81, 17, 76, 12, 82, 18, 79, 15},
+                  146, {99, 3, 96, 0, 101, 5, 102, 6, 103, 7, 107, 11, 105, 9},
+                  163, {128, 0, 129, 1},
+                  165, {160, 0, 161, 1},
+                  168, {192, 0, 194, 2, 195, 3, 196, 4},
+                  170, {224, 0, 225, 1},
+                  179, {256, 0},
+                  180, {293, 5, 288, 0, 289, 1, 290, 2, 291, 3, 292, 4},
+                  181, {320, 0},
+                  201, {416, 0, 417, 1, 418, 2, 420, 4},
+                  202, {448, 0, 449, 1, 450, 2, 452, 4},
+                  203, {480, 0, 481, 1, 482, 2, 484, 4},
+                  206, {512, 0, 516, 4, 517, 5, 518, 6, 519, 7, 532, 20},
+                  207, {544, 0, 545, 1, 547, 3},
+                  209, {576, 0, 577, 1, 578, 2, 580, 4},
+                  211, {608, 0, 609, 1, 611, 3},
+                  255, {1308,0,1308,3,1308,5}}; -- Abyssea Empyreal Paradox (Retail Shinryu)
+
 -- Call this onTrade for burning circles
 function TradeBCNM(player,zone,trade,npc)
 	-- return false;
@@ -419,65 +421,70 @@ function checkNonTradeBCNM(player,npc)
 	         player:setVar("trade_bcnmid",706);
 	    end
     elseif (Zone == 13) then -- Mine_Shaft_2716
-	    if (player:getCurrentMission(COP) == THREE_PATHS  and  player:getVar("COP_Louverance_s_Path") == 5) then --century_of_hardship
-	    	 mask = GetBattleBitmask(736,Zone,1);
-	         player:setVar("trade_bcnmid",736);
-		end
-	elseif (Zone == 17) then -- Spire of Holla
-		if (player:getCurrentMission(COP) == BELOW_THE_ARKS and player:getVar("PromathiaStatus") ==1 )then
-			mask = GetBattleBitmask(768,Zone,1);
-	        player:setVar("trade_bcnmid",768);
-		elseif (player:getCurrentMission(COP) == THE_MOTHERCRYSTALS and player:hasKeyItem(LIGHT_OF_HOLLA) == false) then -- light of holla
-	        mask = GetBattleBitmask(768,Zone,1);
-	        player:setVar("trade_bcnmid",768);
-	    end
-	elseif (Zone == 19) then -- Spire of Dem
-		if (player:getCurrentMission(COP) == BELOW_THE_ARKS and player:getVar("PromathiaStatus") ==1 )then
-			mask = GetBattleBitmask(800,Zone,1);
-	        player:setVar("trade_bcnmid",800);
-		elseif (player:getCurrentMission(COP) == THE_MOTHERCRYSTALS and player:hasKeyItem(LIGHT_OF_DEM) == false) then -- light of dem
-	        mask = GetBattleBitmask(800,Zone,1);
-	        player:setVar("trade_bcnmid",800);
-	    end
-	elseif (Zone == 21) then -- Spire of Mea
-		if (player:getCurrentMission(COP) == BELOW_THE_ARKS and player:getVar("PromathiaStatus") ==1 )then
-			mask = GetBattleBitmask(832,Zone,1);
-	        player:setVar("trade_bcnmid",832);
-	    elseif (player:getCurrentMission(COP) == THE_MOTHERCRYSTALS and player:hasKeyItem(LIGHT_OF_MEA) == false) then -- light of mea
-	        mask = GetBattleBitmask(832,Zone,1);
-	        player:setVar("trade_bcnmid",832);
-	    end
-	elseif (Zone == 23) then -- Spire of vahzl
-	    if (player:getCurrentMission(COP) == DESIRES_OF_EMPTINESS and player:getVar("PromathiaStatus")==8) then -- desires of emptiness
-	        mask = GetBattleBitmask(864,Zone,1);
-	        player:setVar("trade_bcnmid",864);
-	    end
-	elseif (Zone == 31) then -- Monarch Linn
-	    if (player:getCurrentMission(COP) == ANCIENT_VOWS and player:getVar("PromathiaStatus") == 2) then  -- Ancient Vows bcnm
-	      	mask = GetBattleBitmask(960,Zone,1);
-	        player:setVar("trade_bcnmid",960);
-		elseif (player:getCurrentMission(COP) == THE_SAVAGE and player:getVar("PromathiaStatus") == 1) then
-	      	mask = GetBattleBitmask(961,Zone,1);
-	        player:setVar("trade_bcnmid",961);
-	    end
-	elseif (Zone == 32) then -- Sealion's Den
-	    if (player:getCurrentMission(COP) == ONE_TO_BE_FEARED and player:getVar("PromathiaStatus")==2) then -- one_to_be_feared
-	        mask = GetBattleBitmask(992,Zone,1);
-	        player:setVar("trade_bcnmid",992);
-		elseif (player:getCurrentMission(COP) == THE_WARRIOR_S_PATH) then --warriors_path
-			mask = GetBattleBitmask(993,Zone,1);
-	        player:setVar("trade_bcnmid",993);
-	    end
-	elseif (Zone == 35) then -- The Garden of RuHmet
-	    if (player:getCurrentMission(COP) == WHEN_ANGELS_FALL and player:getVar("PromathiaStatus")==4) then --when_angels_fall
-	        mask = GetBattleBitmask(1024,Zone,1);
-	        player:setVar("trade_bcnmid",1024);
-	    end
-	elseif (Zone == 36) then -- Empyreal Paradox
-	    if (player:getCurrentMission(COP) ==  DAWN and player:getVar("PromathiaStatus")==2) then --dawn
-	        mask = GetBattleBitmask(1056,Zone,1);
-	        player:setVar("trade_bcnmid",1056);
-	    end
+        if (player:getCurrentMission(COP) == THREE_PATHS  and  player:getVar("COP_Louverance_s_Path") == 5) then -- century_of_hardship
+             mask = GetBattleBitmask(736, Zone, 1);
+             player:setVar("trade_bcnmid", 736);
+        end
+    elseif (Zone == 17) then -- Spire of Holla
+        if (player:getCurrentMission(COP) == BELOW_THE_ARKS and player:getVar("PromathiaStatus") ==1 ) then
+            mask = GetBattleBitmask(768, Zone, 1);
+            player:setVar("trade_bcnmid", 768);
+        elseif (player:getCurrentMission(COP) == THE_MOTHERCRYSTALS and player:hasKeyItem(LIGHT_OF_HOLLA) == false) then -- light of holla
+            mask = GetBattleBitmask(768, Zone, 1);
+            player:setVar("trade_bcnmid", 768);
+        end
+    elseif (Zone == 19) then -- Spire of Dem
+        if (player:getCurrentMission(COP) == BELOW_THE_ARKS and player:getVar("PromathiaStatus") ==1 ) then
+            mask = GetBattleBitmask(800, Zone, 1);
+            player:setVar("trade_bcnmid", 800);
+        elseif (player:getCurrentMission(COP) == THE_MOTHERCRYSTALS and player:hasKeyItem(LIGHT_OF_DEM) == false) then -- light of dem
+            mask = GetBattleBitmask(800, Zone, 1);
+            player:setVar("trade_bcnmid", 800);
+        end
+    elseif (Zone == 21) then -- Spire of Mea
+        if (player:getCurrentMission(COP) == BELOW_THE_ARKS and player:getVar("PromathiaStatus") ==1 ) then
+            mask = GetBattleBitmask(832, Zone, 1);
+            player:setVar("trade_bcnmid", 832);
+        elseif (player:getCurrentMission(COP) == THE_MOTHERCRYSTALS and player:hasKeyItem(LIGHT_OF_MEA) == false) then -- light of mea
+            mask = GetBattleBitmask(832, Zone, 1);
+            player:setVar("trade_bcnmid", 832);
+        end
+    elseif (Zone == 23) then -- Spire of vahzl
+        if (player:getCurrentMission(COP) == DESIRES_OF_EMPTINESS and player:getVar("PromathiaStatus")==8) then -- desires of emptiness
+            mask = GetBattleBitmask(864, Zone, 1);
+            player:setVar("trade_bcnmid", 864);
+        end
+    elseif (Zone == 29) then -- Riverne Site #B01
+        if (player:getQuestStatus(JEUNO,STORMS_OF_FATE) == QUEST_ACCEPTED and player:getVar('StormsOfFate') == 2) then  -- Storms of Fate BCNM
+            mask = GetBattleBitmask(896, Zone, 1);
+            player:setVar("trade_bcnmid", 896);
+        end
+    elseif (Zone == 31) then -- Monarch Linn
+        if (player:getCurrentMission(COP) == ANCIENT_VOWS and player:getVar("PromathiaStatus") == 2) then  -- Ancient Vows bcnm
+              mask = GetBattleBitmask(960, Zone, 1);
+            player:setVar("trade_bcnmid", 960);
+        elseif (player:getCurrentMission(COP) == THE_SAVAGE and player:getVar("PromathiaStatus") == 1) then
+              mask = GetBattleBitmask(961, Zone, 1);
+            player:setVar("trade_bcnmid", 961);
+        end
+    elseif (Zone == 32) then -- Sealion's Den
+        if (player:getCurrentMission(COP) == ONE_TO_BE_FEARED and player:getVar("PromathiaStatus")==2) then -- one_to_be_feared
+            mask = GetBattleBitmask(992, Zone, 1);
+            player:setVar("trade_bcnmid", 992);
+        elseif (player:getCurrentMission(COP) == THE_WARRIOR_S_PATH) then -- warriors_path
+            mask = GetBattleBitmask(993, Zone, 1);
+            player:setVar("trade_bcnmid", 993);
+        end
+    elseif (Zone == 35) then -- The Garden of RuHmet
+        if (player:getCurrentMission(COP) == WHEN_ANGELS_FALL and player:getVar("PromathiaStatus")==4) then -- when_angels_fall
+            mask = GetBattleBitmask(1024, Zone, 1);
+            player:setVar("trade_bcnmid", 1024);
+        end
+    elseif (Zone == 36) then -- Empyreal Paradox
+        if (player:getCurrentMission(COP) ==  DAWN and player:getVar("PromathiaStatus")==2) then -- dawn
+            mask = GetBattleBitmask(1056, Zone, 1);
+            player:setVar("trade_bcnmid", 1056);
+        end
 
 	elseif (Zone == 139) then -- Horlais Peak
 		if ((player:getCurrentMission(BASTOK) == THE_EMISSARY_SANDORIA2 or
@@ -668,92 +675,96 @@ function CutsceneSkip(player,npc)
 			skip = 1;
 	    end
     elseif (Zone == 13) then -- Mine Shaft 2716
-	    if ((player:hasCompletedMission(COP,THREE_PATHS)) or (player:getCurrentMission(COP) == THREE_PATHS and player:getVar("COP_Louverance_s_Path") > 5)) then -- century_of_hardship
-			skip = 1;
-		end
-	elseif (Zone == 17) then -- Spire of Holla
-	    if ((player:hasCompletedMission(COP,THE_MOTHERCRYSTALS)) or (player:hasKeyItem(LIGHT_OF_HOLLA))) then -- light of holla
-			skip = 1;
-	    end
-	elseif (Zone == 19) then -- Spire of Dem
-	    if ((player:hasCompletedMission(COP,THE_MOTHERCRYSTALS)) or (player:hasKeyItem(LIGHT_OF_DEM))) then -- light of dem
-			skip = 1;
-	    end
-	elseif (Zone == 21) then -- Spire of Mea
-	    if ((player:hasCompletedMission(COP,THE_MOTHERCRYSTALS)) or (player:hasKeyItem(LIGHT_OF_MEA))) then -- light of mea
-			skip = 1;
-	    end
-	elseif (Zone == 23) then -- Spire of Vahzl
-	    if ((player:hasCompletedMission(COP,DESIRES_OF_EMPTINESS)) or (player:getCurrentMission(COP) == DESIRES_OF_EMPTINESS and player:getVar("PromathiaStatus") > 8)) then -- desires of emptiness
-			skip = 1;
-	    end
-	elseif (Zone == 31) then -- Monarch Linn
-	    if (player:hasCompletedMission(COP,ANCIENT_VOWS)) then -- Ancient Vows
-			skip = 1;
-		elseif ((player:hasCompletedMission(COP,THE_SAVAGE)) or (player:getCurrentMission(COP) == THE_SAVAGE and player:getVar("PromathiaStatus") > 1)) then
-			skip = 1;
-	    end
-	elseif (Zone == 32) then -- Sealion's Den
-	    if (player:hasCompletedMission(COP,ONE_TO_BE_FEARED)) then -- one_to_be_feared
-			skip = 1;
-		elseif (player:hasCompletedMission(COP,THE_WARRIOR_S_PATH)) then -- warriors_path
-			skip = 1;
-	    end
-	elseif (Zone == 35) then -- The Garden of RuHmet
-	    if ((player:hasCompletedMission(COP,WHEN_ANGELS_FALL)) or (player:getCurrentMission(COP) == WHEN_ANGELS_FALL and player:getVar("PromathiaStatus") > 4)) then -- when_angels_fall
-			skip = 1;
-	    end
-	elseif (Zone == 36) then -- Empyreal Paradox
-	    if ((player:hasCompletedMission(COP,DAWN)) or (player:getCurrentMission(COP) == DAWN and player:getVar("PromathiaStatus") > 2)) then -- dawn
-			skip = 1;
-	    end
-	elseif (Zone == 139) then -- Horlais Peak
-		if ((player:hasCompletedMission(BASTOK,THE_EMISSARY_SANDORIA2) or player:hasCompletedMission(WINDURST,THE_THREE_KINGDOMS_SANDORIA2)) or 
-		((player:getCurrentMission(BASTOK) == THE_EMISSARY_SANDORIA2 or player:getCurrentMission(WINDURST) == THE_THREE_KINGDOMS_SANDORIA2) and player:getVar("MissionStatus") > 9)) then -- Mission 2-3
-			skip = 1;
-		elseif ((player:hasCompletedMission(SANDORIA,THE_SECRET_WEAPON)) or (player:getCurrentMission(SANDORIA) == THE_SECRET_WEAPON and player:getVar("SecretWeaponStatus") > 2)) then
-			skip = 1;
-		end
-	elseif (Zone == 140) then -- Ghelsba Outpost
-		if ((player:hasCompletedMission(SANDORIA,SAVE_THE_CHILDREN)) or (player:getCurrentMission(SANDORIA) == SAVE_THE_CHILDREN and player:getVar("MissionStatus") > 2)) then -- Sandy Mission 1-3
-			skip = 1;
-		elseif (player:hasCompleteQuest(SANDORIA,THE_HOLY_CREST)) then -- DRG Flag Quest
-			skip = 1;
-		end
-	elseif (Zone == 144) then -- Waughroon Shrine
-		if ((player:hasCompletedMission(SANDORIA,JOURNEY_TO_BASTOK2) or player:hasCompletedMission(WINDURST,THE_THREE_KINGDOMS_BASTOK2)) or 
-		((player:getCurrentMission(SANDORIA) == JOURNEY_TO_BASTOK2 or player:getCurrentMission(WINDURST) == THE_THREE_KINGDOMS_BASTOK2) and player:getVar("MissionStatus") > 10)) then -- Mission 2-3
-			skip = 1;
-		elseif ((player:hasCompletedMission(BASTOK,ON_MY_WAY)) or (player:getCurrentMission(BASTOK) == ON_MY_WAY and player:getVar("MissionStatus") > 2)) then
-			skip = 1;
-		end
-	elseif (Zone == 146) then -- Balga's Dais
-		if ((player:hasCompletedMission(SANDORIA,JOURNEY_TO_WINDURST2) or player:hasCompletedMission(BASTOK,THE_EMISSARY_WINDURST2)) or 
-		((player:getCurrentMission(SANDORIA) == JOURNEY_TO_WINDURST2 or player:getCurrentMission(BASTOK) == THE_EMISSARY_WINDURST2) and player:getVar("MissionStatus") > 8)) then -- Mission 2-3
-			skip = 1;
-		elseif ((player:hasCompletedMission(WINDURST,SAINTLY_INVITATION)) or (player:getCurrentMission(WINDURST) == SAINTLY_INVITATION and player:getVar("MissionStatus") > 1)) then -- Mission 6-2
-			skip = 1;
-		end
-	elseif (Zone == 165) then -- Throne Room
-		if ((player:hasCompletedMission(player:getNation(),15)) or (player:getCurrentMission(player:getNation()) == 15 and player:getVar("MissionStatus") > 3)) then -- Mission 5-2
-			skip = 1;
-		end
-	elseif (Zone == 168) then -- Chamber of Oracles
-		if (player:hasCompletedMission(ZILART,THROUGH_THE_QUICKSAND_CAVES)) then -- Zilart Mission 6
-			skip = 1;
-		end
-	elseif (Zone == 170) then -- Full Moon Fountain
-		if ((player:hasCompleteQuest(WINDURST,THE_MOONLIT_PATH)) or (player:hasKeyItem(WHISPER_OF_THE_MOON))) then -- The Moonlit Path
-			skip = 1;
-		end
-	elseif (Zone == 179) then -- Stellar Fulcrum
-		if (player:hasCompletedMission(ZILART,RETURN_TO_DELKFUTTS_TOWER)) then -- Zilart Mission 8
-			skip = 1;
-		end
-	elseif (Zone == 180) then -- La'Loff Amphitheater
-		if (player:hasCompletedMission(ZILART,ARK_ANGELS)) then
-			skip = 1;
-		end
+        if ((player:hasCompletedMission(COP, THREE_PATHS)) or (player:getCurrentMission(COP) == THREE_PATHS and player:getVar("COP_Louverance_s_Path") > 5)) then -- century_of_hardship
+            skip = 1;
+        end
+    elseif (Zone == 17) then -- Spire of Holla
+        if ((player:hasCompletedMission(COP, THE_MOTHERCRYSTALS)) or (player:hasKeyItem(LIGHT_OF_HOLLA))) then -- light of holla
+            skip = 1;
+        end
+    elseif (Zone == 19) then -- Spire of Dem
+        if ((player:hasCompletedMission(COP, THE_MOTHERCRYSTALS)) or (player:hasKeyItem(LIGHT_OF_DEM))) then -- light of dem
+            skip = 1;
+        end
+    elseif (Zone == 21) then -- Spire of Mea
+        if ((player:hasCompletedMission(COP, THE_MOTHERCRYSTALS)) or (player:hasKeyItem(LIGHT_OF_MEA))) then -- light of mea
+            skip = 1;
+        end
+    elseif (Zone == 23) then -- Spire of Vahzl
+        if ((player:hasCompletedMission(COP, DESIRES_OF_EMPTINESS)) or (player:getCurrentMission(COP) == DESIRES_OF_EMPTINESS and player:getVar("PromathiaStatus") > 8)) then -- desires of emptiness
+            skip = 1;
+        end
+    elseif (Zone == 29) then -- Riverne Site #B01
+        if ((player:getQuestStatus(JEUNO,STORMS_OF_FATE) == QUEST_COMPLETED) or (player:getQuestStatus(JEUNO,STORMS_OF_FATE) == QUEST_ACCEPTED and player:getVar("StormsOfFate") > 2)) then -- Storms of Fate
+            skip = 1;
+        end
+    elseif (Zone == 31) then -- Monarch Linn
+        if (player:hasCompletedMission(COP, ANCIENT_VOWS)) then -- Ancient Vows
+            skip = 1;
+        elseif ((player:hasCompletedMission(COP, THE_SAVAGE)) or (player:getCurrentMission(COP) == THE_SAVAGE and player:getVar("PromathiaStatus") > 1)) then
+            skip = 1;
+        end
+    elseif (Zone == 32) then -- Sealion's Den
+        if (player:hasCompletedMission(COP, ONE_TO_BE_FEARED)) then -- one_to_be_feared
+            skip = 1;
+        elseif (player:hasCompletedMission(COP, THE_WARRIOR_S_PATH)) then -- warriors_path
+            skip = 1;
+        end
+    elseif (Zone == 35) then -- The Garden of RuHmet
+        if ((player:hasCompletedMission(COP, WHEN_ANGELS_FALL)) or (player:getCurrentMission(COP) == WHEN_ANGELS_FALL and player:getVar("PromathiaStatus") > 4)) then -- when_angels_fall
+            skip = 1;
+        end
+    elseif (Zone == 36) then -- Empyreal Paradox
+        if ((player:hasCompletedMission(COP, DAWN)) or (player:getCurrentMission(COP) == DAWN and player:getVar("PromathiaStatus") > 2)) then -- dawn
+            skip = 1;
+        end
+    elseif (Zone == 139) then -- Horlais Peak
+        if ((player:hasCompletedMission(BASTOK, THE_EMISSARY_SANDORIA2) or player:hasCompletedMission(WINDURST, THE_THREE_KINGDOMS_SANDORIA2)) or
+        ((player:getCurrentMission(BASTOK) == THE_EMISSARY_SANDORIA2 or player:getCurrentMission(WINDURST) == THE_THREE_KINGDOMS_SANDORIA2) and player:getVar("MissionStatus") > 9)) then -- Mission 2-3
+            skip = 1;
+        elseif ((player:hasCompletedMission(SANDORIA, THE_SECRET_WEAPON)) or (player:getCurrentMission(SANDORIA) == THE_SECRET_WEAPON and player:getVar("SecretWeaponStatus") > 2)) then
+            skip = 1;
+        end
+    elseif (Zone == 140) then -- Ghelsba Outpost
+        if ((player:hasCompletedMission(SANDORIA, SAVE_THE_CHILDREN)) or (player:getCurrentMission(SANDORIA) == SAVE_THE_CHILDREN and player:getVar("MissionStatus") > 2)) then -- Sandy Mission 1-3
+            skip = 1;
+        elseif (player:hasCompleteQuest(SANDORIA, THE_HOLY_CREST)) then -- DRG Flag Quest
+            skip = 1;
+        end
+    elseif (Zone == 144) then -- Waughroon Shrine
+        if ((player:hasCompletedMission(SANDORIA, JOURNEY_TO_BASTOK2) or player:hasCompletedMission(WINDURST, THE_THREE_KINGDOMS_BASTOK2)) or
+        ((player:getCurrentMission(SANDORIA) == JOURNEY_TO_BASTOK2 or player:getCurrentMission(WINDURST) == THE_THREE_KINGDOMS_BASTOK2) and player:getVar("MissionStatus") > 10)) then -- Mission 2-3
+            skip = 1;
+        elseif ((player:hasCompletedMission(BASTOK, ON_MY_WAY)) or (player:getCurrentMission(BASTOK) == ON_MY_WAY and player:getVar("MissionStatus") > 2)) then
+            skip = 1;
+        end
+    elseif (Zone == 146) then -- Balga's Dais
+        if ((player:hasCompletedMission(SANDORIA, JOURNEY_TO_WINDURST2) or player:hasCompletedMission(BASTOK, THE_EMISSARY_WINDURST2)) or
+        ((player:getCurrentMission(SANDORIA) == JOURNEY_TO_WINDURST2 or player:getCurrentMission(BASTOK) == THE_EMISSARY_WINDURST2) and player:getVar("MissionStatus") > 8)) then -- Mission 2-3
+            skip = 1;
+        elseif ((player:hasCompletedMission(WINDURST, SAINTLY_INVITATION)) or (player:getCurrentMission(WINDURST) == SAINTLY_INVITATION and player:getVar("MissionStatus") > 1)) then -- Mission 6-2
+            skip = 1;
+        end
+    elseif (Zone == 165) then -- Throne Room
+        if ((player:hasCompletedMission(player:getNation(), 15)) or (player:getCurrentMission(player:getNation()) == 15 and player:getVar("MissionStatus") > 3)) then -- Mission 5-2
+            skip = 1;
+        end
+    elseif (Zone == 168) then -- Chamber of Oracles
+        if (player:hasCompletedMission(ZILART, THROUGH_THE_QUICKSAND_CAVES)) then -- Zilart Mission 6
+            skip = 1;
+        end
+    elseif (Zone == 170) then -- Full Moon Fountain
+        if ((player:hasCompleteQuest(WINDURST, THE_MOONLIT_PATH)) or (player:hasKeyItem(WHISPER_OF_THE_MOON))) then -- The Moonlit Path
+            skip = 1;
+        end
+    elseif (Zone == 179) then -- Stellar Fulcrum
+        if (player:hasCompletedMission(ZILART, RETURN_TO_DELKFUTTS_TOWER)) then -- Zilart Mission 8
+            skip = 1;
+        end
+    elseif (Zone == 180) then -- La'Loff Amphitheater
+        if (player:hasCompletedMission(ZILART, ARK_ANGELS)) then
+            skip = 1;
+        end
     elseif (Zone == 181) then -- The Celestial Nexus
 		if (player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS)) then -- Zilart Mission 16
 			skip = 1;

@@ -39,10 +39,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(DECAYED_DVERGR_TOOTH) == false) then
-        killer:addKeyItem(DECAYED_DVERGR_TOOTH);
-        killer:messageSpecial(6385, DECAYED_DVERGR_TOOTH);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(DECAYED_DVERGR_TOOTH) == false) then
+        ally:addKeyItem(DECAYED_DVERGR_TOOTH);
+        ally:messageSpecial(6385, DECAYED_DVERGR_TOOTH);
     end
 end;

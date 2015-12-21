@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_A_THOUSAND_NEEDLES) == false) then
-        killer:addKeyItem(ATMA_OF_A_THOUSAND_NEEDLES);
-        killer:messageSpecial(6385, ATMA_OF_A_THOUSAND_NEEDLES);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_A_THOUSAND_NEEDLES) == false) then
+        ally:addKeyItem(ATMA_OF_A_THOUSAND_NEEDLES);
+        ally:messageSpecial(6385, ATMA_OF_A_THOUSAND_NEEDLES);
     end
 end;
 

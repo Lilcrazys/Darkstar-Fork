@@ -1,10 +1,9 @@
 -----------------------------------
 -- Area: Castle Zvahl Baileys (161)
---  NM:  Duke_Haborym
+--   NM: Duke_Haborym
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/titles");
 
 -----------------------------------
 -- onMobInitialize
@@ -34,24 +33,10 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
--- onMobEngaged
------------------------------------
-
-function onMobEngaged(mob,target)
-end;
-
------------------------------------
--- onMobFight
------------------------------------
-function onMobFight(mob,target)
-end
-
------------------------------------
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addTitle(SMITER_OF_THE_SHADOW);
+function onMobDeath(mob,killer,ally)
 
     -- Set Duke_Haborym's spawnpoint and respawn time (21-24 hours)
     UpdateNMSpawnPoint(mob:getID());

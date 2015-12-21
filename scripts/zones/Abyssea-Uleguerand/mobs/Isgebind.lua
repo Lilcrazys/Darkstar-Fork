@@ -83,17 +83,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 20;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
-        killer:addKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE);
-        killer:messageSpecial(6385, IVORY_ABYSSITE_OF_FURTHERANCE);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE) == false) then
+        ally:addKeyItem(IVORY_ABYSSITE_OF_FURTHERANCE);
+        ally:messageSpecial(6385, IVORY_ABYSSITE_OF_FURTHERANCE);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_FROZEN_FETTERS) == false) then
-        killer:addKeyItem(ATMA_OF_THE_FROZEN_FETTERS);
-        killer:messageSpecial(6385, ATMA_OF_THE_FROZEN_FETTERS);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_FROZEN_FETTERS) == false) then
+        ally:addKeyItem(ATMA_OF_THE_FROZEN_FETTERS);
+        ally:messageSpecial(6385, ATMA_OF_THE_FROZEN_FETTERS);
     end
 end;

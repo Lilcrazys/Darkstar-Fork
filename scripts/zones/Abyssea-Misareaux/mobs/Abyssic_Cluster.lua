@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(BLAZING_CLUSTER_SOUL) == false) then
-        killer:addKeyItem(BLAZING_CLUSTER_SOUL);
-        killer:messageSpecial(6385, BLAZING_CLUSTER_SOUL);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(BLAZING_CLUSTER_SOUL) == false) then
+        ally:addKeyItem(BLAZING_CLUSTER_SOUL);
+        ally:messageSpecial(6385, BLAZING_CLUSTER_SOUL);
     end
 end;
 

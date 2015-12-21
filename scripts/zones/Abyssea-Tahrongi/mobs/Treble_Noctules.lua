@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(TORN_BAT_WING) == false) then
-        killer:addKeyItem(TORN_BAT_WING);
-        killer:messageSpecial(6385, TORN_BAT_WING);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(TORN_BAT_WING) == false) then
+        ally:addKeyItem(TORN_BAT_WING);
+        ally:messageSpecial(6385, TORN_BAT_WING);
     end
 end;
 

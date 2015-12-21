@@ -44,11 +44,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(LUXURIANT_MANTICORE_MANE) == false) then
-        killer:addKeyItem(LUXURIANT_MANTICORE_MANE);
-        killer:messageSpecial(6385, LUXURIANT_MANTICORE_MANE);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(LUXURIANT_MANTICORE_MANE) == false) then
+        ally:addKeyItem(LUXURIANT_MANTICORE_MANE);
+        ally:messageSpecial(6385, LUXURIANT_MANTICORE_MANE);
     end
 end;
 

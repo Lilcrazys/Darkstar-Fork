@@ -32,15 +32,15 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addTitle(TORTOISE_TORTURER);
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(TORTOISE_TORTURER);
 
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Adamantoise_ToD", os.time());
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, RELIC, 1);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, RELIC, 1);
     end
 end;
 

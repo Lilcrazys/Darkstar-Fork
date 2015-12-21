@@ -39,17 +39,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(BLOODIED_SABER_TOOTH) == false) then
-        killer:addKeyItem(BLOODIED_SABER_TOOTH);
-        killer:messageSpecial(6385, BLOODIED_SABER_TOOTH);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(BLOODIED_SABER_TOOTH) == false) then
+        ally:addKeyItem(BLOODIED_SABER_TOOTH);
+        ally:messageSpecial(6385, BLOODIED_SABER_TOOTH);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_SAVAGE_TIGER) == false) then
-        killer:addKeyItem(ATMA_OF_THE_SAVAGE_TIGER);
-        killer:messageSpecial(6385, ATMA_OF_THE_SAVAGE_TIGER);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_SAVAGE_TIGER) == false) then
+        ally:addKeyItem(ATMA_OF_THE_SAVAGE_TIGER);
+        ally:messageSpecial(6385, ATMA_OF_THE_SAVAGE_TIGER);
     end
 end;

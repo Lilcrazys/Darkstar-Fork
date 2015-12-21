@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Arrapago Reef
--- NPC:  Lamia no.19
+--  MOB: Medusa
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -27,5 +27,5 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
 end;

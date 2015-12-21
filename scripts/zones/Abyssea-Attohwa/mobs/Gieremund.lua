@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(RUSTED_HOUND_COLLAR) == false) then
-        killer:addKeyItem(RUSTED_HOUND_COLLAR);
-        killer:messageSpecial(6385, RUSTED_HOUND_COLLAR);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(RUSTED_HOUND_COLLAR) == false) then
+        ally:addKeyItem(RUSTED_HOUND_COLLAR);
+        ally:messageSpecial(6385, RUSTED_HOUND_COLLAR);
     end
 end;
 

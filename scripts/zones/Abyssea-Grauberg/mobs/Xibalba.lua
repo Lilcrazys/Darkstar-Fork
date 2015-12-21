@@ -54,11 +54,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(INDIGO_ABYSSITE_OF_MERIT) == false) then
-        killer:addKeyItem(INDIGO_ABYSSITE_OF_MERIT);
-        killer:messageSpecial(6385, INDIGO_ABYSSITE_OF_MERIT);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(INDIGO_ABYSSITE_OF_MERIT) == false) then
+        ally:addKeyItem(INDIGO_ABYSSITE_OF_MERIT);
+        ally:messageSpecial(6385, INDIGO_ABYSSITE_OF_MERIT);
     end
 end;
 

@@ -46,9 +46,9 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
 
-    killer:addTitle(BLOODY_BERSERKER);
+    ally:addTitle(BLOODY_BERSERKER);
 
     -- Set Juggler_Hecatomb's spawnpoint and respawn time (21-24 hours)
     UpdateNMSpawnPoint(mob:getID());
@@ -56,8 +56,8 @@ function onMobDeath(mob, killer)
 
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, RELIC, 1);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, RELIC, 1);
     end
 
 end;

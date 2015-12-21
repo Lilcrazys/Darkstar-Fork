@@ -93,7 +93,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     local popBoss = true;
     local MobIDs = {17526833, 17526834, 17526835, 17526837, 17526838, 17526839};
     -- Veiled_Sanguiptere 17526836

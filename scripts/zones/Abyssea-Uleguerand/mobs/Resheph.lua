@@ -66,13 +66,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    killer:addTitle(RESHEPH_ERADICATOR);
+    ally:addTitle(RESHEPH_ERADICATOR);
 
-    if (math.random(0,99) < CHANCE and killer:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
-        killer:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
-        killer:messageSpecial(6385, ATMA_OF_THE_PLAGUEBRINGER);
+    if (math.random(0,99) < CHANCE and ally:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
+        ally:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
+        ally:messageSpecial(6385, ATMA_OF_THE_PLAGUEBRINGER);
     end
 
 end;

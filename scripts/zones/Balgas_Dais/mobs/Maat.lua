@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Balga Dais
--- NPC:  Maat
+--  MOB: Maat
 -- Genkai 5 Fight
 -----------------------------------
 package.loaded["scripts/zones/Balgas_Dais/TextIDs"] = nil;
@@ -48,6 +48,6 @@ end;
 -- onMobDeath Action
 -----------------------------------
 
-function onMobDeath(mob,killer)
-	killer:showText(mob,YOUVE_COME_A_LONG_WAY);
+function onMobDeath(mob,killer,ally)
+	ally:showText(mob,YOUVE_COME_A_LONG_WAY);
 end;

@@ -51,12 +51,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    killer:addTitle(ITZPAPALOTL_DECLAWER);
+    ally:addTitle(ITZPAPALOTL_DECLAWER);
     
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_CLAWED_BUTTERFLY) == false) then
-        killer:addKeyItem(ATMA_OF_THE_CLAWED_BUTTERFLY);
-        killer:messageSpecial(6385, ATMA_OF_THE_CLAWED_BUTTERFLY);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_CLAWED_BUTTERFLY) == false) then
+        ally:addKeyItem(ATMA_OF_THE_CLAWED_BUTTERFLY);
+        ally:messageSpecial(6385, ATMA_OF_THE_CLAWED_BUTTERFLY);
     end
 end;

@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_UNTOUCHED) == false) then
-        killer:addKeyItem(ATMA_OF_THE_UNTOUCHED);
-        killer:messageSpecial(6385, ATMA_OF_THE_UNTOUCHED);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_UNTOUCHED) == false) then
+        ally:addKeyItem(ATMA_OF_THE_UNTOUCHED);
+        ally:messageSpecial(6385, ATMA_OF_THE_UNTOUCHED);
     end
 end;
 

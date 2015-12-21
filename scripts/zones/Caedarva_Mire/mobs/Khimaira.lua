@@ -31,13 +31,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-	killer:addTitle(KHIMAIRA_CARVER);
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(KHIMAIRA_CARVER);
 	mob:setRespawnTime(math.random((75600),(86400))); -- 21-24 hours
 
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, MYTHIC, 3);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, MYTHIC, 3);
     end
 
 end;

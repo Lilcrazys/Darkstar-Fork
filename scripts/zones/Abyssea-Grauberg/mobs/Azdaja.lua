@@ -63,11 +63,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(ATMA_OF_THE_WINGED_GLOOM) == false) then
-        killer:addKeyItem(ATMA_OF_THE_WINGED_GLOOM);
-        killer:messageSpecial(6385, ATMA_OF_THE_WINGED_GLOOM);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_WINGED_GLOOM) == false) then
+        ally:addKeyItem(ATMA_OF_THE_WINGED_GLOOM);
+        ally:messageSpecial(6385, ATMA_OF_THE_WINGED_GLOOM);
     end
 end;
 

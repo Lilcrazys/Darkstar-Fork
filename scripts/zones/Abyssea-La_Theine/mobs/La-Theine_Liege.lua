@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(PELLUCID_FLY_EYE) == false) then
-        killer:addKeyItem(PELLUCID_FLY_EYE);
-        killer:messageSpecial(6385, PELLUCID_FLY_EYE);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(PELLUCID_FLY_EYE) == false) then
+        ally:addKeyItem(PELLUCID_FLY_EYE);
+        ally:messageSpecial(6385, PELLUCID_FLY_EYE);
     end
 end;
 

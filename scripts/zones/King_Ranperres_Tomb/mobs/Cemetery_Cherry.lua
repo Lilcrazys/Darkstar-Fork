@@ -1,13 +1,19 @@
 -----------------------------------
 -- Area: King Ranperres Tomb
--- NPC:  Cemetery Cherry
+--  NM:  Cemetery Cherry
 -- @pos 33.000 0.500 -287.000 190
 -----------------------------------
 
 require("scripts/globals/titles");
 require("scripts/globals/status");
 
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
 function onMobInitialize(mob)
+    -- setMobMod
 	mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
 	mob:setMobMod(MOBMOD_SOUND_RANGE,30);
 
@@ -52,6 +58,6 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-	killer:addTitle(MON_CHERRY);
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(MON_CHERRY);
 end;

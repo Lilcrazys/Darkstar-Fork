@@ -50,18 +50,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 20;
     local ATMA_CHANCE = 15;
-    killer:addTitle(CIREINCROIN_HARPOONER);
+    ally:addTitle(CIREINCROIN_HARPOONER);
     
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT) == false) then
-        killer:addKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT);
-        killer:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_MERIT);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT) == false) then
+        ally:addKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT);
+        ally:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_MERIT);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_DEEP_DEVOURER) == false) then
-        killer:addKeyItem(ATMA_OF_THE_DEEP_DEVOURER);
-        killer:messageSpecial(6385, ATMA_OF_THE_DEEP_DEVOURER);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_DEEP_DEVOURER) == false) then
+        ally:addKeyItem(ATMA_OF_THE_DEEP_DEVOURER);
+        ally:messageSpecial(6385, ATMA_OF_THE_DEEP_DEVOURER);
     end
 end;

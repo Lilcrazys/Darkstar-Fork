@@ -79,16 +79,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    if (killer:hasKeyItem(CRIMSON_STRATUM_ABYSSITE)) then -- Sarimanok Kill
-        if (killer:getMaskBit(killer:getVar("CRIMSON_STRATUM"), 0) == false) then
-            killer:setMaskBit(killer:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",0,true);
+function onMobDeath(mob, killer, ally)
+    if (ally:hasKeyItem(CRIMSON_STRATUM_ABYSSITE)) then -- Sarimanok Kill
+        if (ally:getMaskBit(ally:getVar("CRIMSON_STRATUM"), 0) == false) then
+            ally:setMaskBit(ally:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",0,true);
         end
-        if (killer:isMaskFull(killer:getVar("CRIMSON_STRATUM"), 2) == true) then
-            killer:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
-            killer:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
-            killer:setVar("CRIMSON_STRATUM", 0);
+        if (ally:isMaskFull(ally:getVar("CRIMSON_STRATUM"), 2) == true) then
+            ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
+            ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
+            ally:setVar("CRIMSON_STRATUM", 0);
         end
     end
-    killer:addExp(10000);
+    ally:addExp(10000);
 end;

@@ -98,7 +98,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-    killer:addCurrency("legion_point", 100);
-    killer:addTitle(SUBJUGATOR_OF_THE_LOFTY);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("legion_point", 100);
+    ally:addTitle(SUBJUGATOR_OF_THE_LOFTY);
 end;

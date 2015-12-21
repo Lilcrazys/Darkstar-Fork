@@ -94,8 +94,8 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("legion_point", 75);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("legion_point", 75);
     local popBoss = true;
     local MobIDs = {17526819, 17526820, 17526821, 17526823, 17526824, 17526825};
     -- Soaring_Kumakatok 17526822

@@ -42,11 +42,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(DOFFED_POROGGO_HAT) == false) then
-        killer:addKeyItem(DOFFED_POROGGO_HAT);
-        killer:messageSpecial(6385, DOFFED_POROGGO_HAT);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(DOFFED_POROGGO_HAT) == false) then
+        ally:addKeyItem(DOFFED_POROGGO_HAT);
+        ally:messageSpecial(6385, DOFFED_POROGGO_HAT);
     end
 end;
 

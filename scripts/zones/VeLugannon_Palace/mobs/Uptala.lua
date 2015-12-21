@@ -77,21 +77,21 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 750);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 750);
+    ally:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
-    if (killer:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Uptala Kill
-        if (killer:getMaskBit(killer:getVar("ZILART_VW"), 2) == false) then
-            killer:setMaskBit(killer:getVar("ZILART_VW"),"ZILART_VW",2,true);
+    if (ally:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Uptala Kill
+        if (ally:getMaskBit(ally:getVar("ZILART_VW"), 2) == false) then
+            ally:setMaskBit(ally:getVar("ZILART_VW"),"ZILART_VW",2,true);
         end
 
-        if (killer:isMaskFull(killer:getVar("ZILART_VW"),3) == true) then
-            killer:completeQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
-            killer:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
-            killer:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+        if (ally:isMaskFull(ally:getVar("ZILART_VW"),3) == true) then
+            ally:completeQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
+            ally:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
+            ally:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
         end
     end
 end;

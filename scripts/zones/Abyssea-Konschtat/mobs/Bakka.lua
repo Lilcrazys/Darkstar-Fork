@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Abyssea - Konschtat
--- NPC: Bakka
+--  MOB: Bakka
 -- ID: 16839045
 -----------------------------------
 
@@ -18,8 +18,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:setMod(MOD_MATT,75);
-    mob:setMod(MOD_MACC,700);
 end;
 
 -----------------------------------
@@ -44,5 +42,5 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
 end;

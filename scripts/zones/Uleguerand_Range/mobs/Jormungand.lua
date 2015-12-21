@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Uleguaerand Range
--- NPC:  Jormungand
+--  HNM: Jormungand
 -----------------------------------
 
 require("scripts/globals/status");
@@ -65,11 +65,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
-        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
-        mob:setLocalVar("RAGED", 1);
-    end
-	
     if (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON) == false and mob:actionQueueEmpty() == true) then
         local changeTime = mob:getLocalVar("changeTime");
         local twohourTime = mob:getLocalVar("twohourTime");
@@ -94,8 +89,7 @@ function onMobFight(mob,target)
             mob:useMobAbility(1036);
             mob:setLocalVar("changeTime", mob:getBattleTime());
         -- subanimation 2 is grounded mode, so check if he should take off
-        elseif (mob:AnimationSub() == 2 and 
-                mob:getBattleTime() - changeTime > 60) then
+        elseif (mob:AnimationSub() == 2 and mob:getBattleTime() - changeTime > 60) then
             mob:AnimationSub(1);
             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
             mob:SetMobSkillAttack(true);
@@ -109,6 +103,11 @@ function onMobFight(mob,target)
             mob:addMod(MOD_REGAIN, 10);
         end
 	end
+
+    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
+        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        mob:setLocalVar("RAGED", 1);
+    end
 end;
 
 -----------------------------------
@@ -179,7 +178,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addTitle(WORLD_SERPENT_SLAYER);
-    mob:setRespawnTime(math.random((75600),(86400)));   -- 3 to 5 days
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(WORLD_SERPENT_SLAYER);
+    mob:setRespawnTime(math.random(75600,86400)); -- 3 to 5 days
 end;

@@ -70,17 +70,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    if (killer:hasKeyItem(JADE_STRATUM_ABYSSITE_IV)) then
-        if (killer:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
-            if (killer:getMaskBit(killer:getVar("VW_3_NATIONS"), 0) == false) then
-                killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
+function onMobDeath(mob, killer, ally)
+    if (ally:hasKeyItem(JADE_STRATUM_ABYSSITE_IV)) then
+        if (ally:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
+            if (ally:getMaskBit(ally:getVar("VW_3_NATIONS"), 0) == false) then
+                ally:setMaskBit(ally:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
             end
         end
-        killer:addKeyItem(JADE_STRATUM_ABYSSITE);
-        killer:delKeyItem(JADE_STRATUM_ABYSSITE_IV);
-        killer:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE);
+        ally:addKeyItem(JADE_STRATUM_ABYSSITE);
+        ally:delKeyItem(JADE_STRATUM_ABYSSITE_IV);
+        ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE);
     end
-    killer:addCurrency("bayld", 125);
-    killer:addExp(10000);
+    ally:addCurrency("bayld", 125);
+    ally:addExp(10000);
 end;

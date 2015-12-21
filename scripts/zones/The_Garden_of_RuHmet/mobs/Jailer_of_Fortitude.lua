@@ -115,7 +115,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
+function onMobDeath(mob, killer, ally)
     --[[
 	-- Despawn the pets if alive
 	DespawnMob(Kf_Ghrah_WHM);

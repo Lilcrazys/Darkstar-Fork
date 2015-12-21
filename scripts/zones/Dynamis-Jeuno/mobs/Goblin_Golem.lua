@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Dynamis Jeuno
--- NPC:  Goblin Golem
+--  MOB: Goblin Golem
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -17,19 +17,19 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
-	if (killer:hasKeyItem(HYDRA_CORPS_TACTICAL_MAP) == false)then
-		killer:setVar("DynaJeuno_Win",1);
-		killer:addKeyItem(HYDRA_CORPS_TACTICAL_MAP);
-		killer:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_TACTICAL_MAP);
+function onMobDeath(mob,killer,ally)
+	if (ally:hasKeyItem(HYDRA_CORPS_TACTICAL_MAP) == false)then
+		ally:setVar("DynaJeuno_Win",1);
+		ally:addKeyItem(HYDRA_CORPS_TACTICAL_MAP);
+		ally:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_TACTICAL_MAP);
 	end
 
-	killer:addTitle(DYNAMISJEUNO_INTERLOPER); -- Add title
+    ally:addTitle(DYNAMISJEUNO_INTERLOPER); -- Add title
 
-	local npc = GetNPCByID(17547510); -- Spawn ???
-	npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
-	npc:setStatus(0);
+    local npc = GetNPCByID(17547510); -- Spawn ???
+    npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
+    npc:setStatus(0);
 
-	killer:launchDynamisSecondPart(); -- Spawn dynamis second part
+    ally:launchDynamisSecondPart(); -- Spawn dynamis second part
 
 end;

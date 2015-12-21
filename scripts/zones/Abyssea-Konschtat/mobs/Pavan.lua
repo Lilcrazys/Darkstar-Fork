@@ -41,10 +41,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(AZURE_ABYSSITE_OF_LENITY) == false) then
-        killer:addKeyItem(AZURE_ABYSSITE_OF_LENITY);
-        killer:messageSpecial(6385, AZURE_ABYSSITE_OF_LENITY);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(AZURE_ABYSSITE_OF_LENITY) == false) then
+        ally:addKeyItem(AZURE_ABYSSITE_OF_LENITY);
+        ally:messageSpecial(6385, AZURE_ABYSSITE_OF_LENITY);
     end
 end;

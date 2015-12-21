@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(VENOMOUS_WAMOURA_FEELER) == false) then
-        killer:addKeyItem(VENOMOUS_WAMOURA_FEELER);
-        killer:messageSpecial(6385, VENOMOUS_WAMOURA_FEELER);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(VENOMOUS_WAMOURA_FEELER) == false) then
+        ally:addKeyItem(VENOMOUS_WAMOURA_FEELER);
+        ally:messageSpecial(6385, VENOMOUS_WAMOURA_FEELER);
     end
 end;
 

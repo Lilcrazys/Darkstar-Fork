@@ -72,12 +72,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addTitle(TROLL_SUBJUGATOR);
+function onMobDeath(mob, killer, ally)
+    ally:addTitle(TROLL_SUBJUGATOR);
 
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(killer) == true) then
-        cTrialProgress(killer, MYTHIC, 5);
+    if (cTrialItemEquipped(ally) == true) then
+        cTrialProgress(ally, MYTHIC, 5);
     end
 
 end;

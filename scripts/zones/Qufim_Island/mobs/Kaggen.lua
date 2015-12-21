@@ -78,21 +78,21 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    killer:addCurrency("bayld", 450);
-    killer:addExp(10000);
+function onMobDeath(mob, killer, ally)
+    ally:addCurrency("bayld", 450);
+    ally:addExp(10000);
 
-    if (killer:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Kaggen Kill
-        if (killer:getMaskBit(killer:getVar("WHITE_STRATUM_III"), 0) == false) then
-            killer:setMaskBit(killer:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",0,true);
+    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Kaggen Kill
+        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_III"), 0) == false) then
+            ally:setMaskBit(ally:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",0,true);
         end
 
-        if (killer:getQuestStatus(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY) == QUEST_COMPLETED) then
-            if (killer:isMaskFull(killer:getVar("WHITE_STRATUM_III"),3) == true) then
-                killer:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-                killer:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
-                killer:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_IV);
-                killer:setVar("WHITE_STRATUM_III", 0);
+        if (ally:getQuestStatus(CRYSTAL_WAR, REDRAFTED_BY_THE_DUCHY) == QUEST_COMPLETED) then
+            if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_III"),3) == true) then
+                ally:addKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+                ally:delKeyItem(WHITE_STRATUM_ABYSSITE_III);
+                ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_IV);
+                ally:setVar("WHITE_STRATUM_III", 0);
             end
         end
     end

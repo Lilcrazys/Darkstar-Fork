@@ -75,20 +75,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer)
-    if (killer:hasKeyItem(INDIGO_STRATUM_ABYSSITE_III)) then -- Melancholic Kill
-        if (killer:getMaskBit(killer:getVar("INDIGO_STRATUM_III"), 1) == false) then
-            killer:setMaskBit(killer:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",1,true);
+function onMobDeath(mob, killer, ally)
+    if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE_III)) then -- Melancholic Kill
+        if (ally:getMaskBit(ally:getVar("INDIGO_STRATUM_III"), 1) == false) then
+            ally:setMaskBit(ally:getVar("INDIGO_STRATUM_III"),"INDIGO_STRATUM_III",1,true);
         end
 
-        if (killer:isMaskFull(killer:getVar("INDIGO_STRATUM_III"),2) == true) then
-            killer:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
-            killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
-            killer:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_IV);
-            killer:setVar("INDIGO_STRATUM_III", 0);
+        if (ally:isMaskFull(ally:getVar("INDIGO_STRATUM_III"),2) == true) then
+            ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
+            ally:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+            ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_IV);
+            ally:setVar("INDIGO_STRATUM_III", 0);
         end
     end
 
-    killer:addCurrency("bayld", 75);
-    killer:addExp(10000);
+    ally:addCurrency("bayld", 75);
+    ally:addExp(10000);
 end;

@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(MARBLED_MUTTON_CHOP) == false) then
-        killer:addKeyItem(MARBLED_MUTTON_CHOP);
-        killer:messageSpecial(6385, MARBLED_MUTTON_CHOP);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(MARBLED_MUTTON_CHOP) == false) then
+        ally:addKeyItem(MARBLED_MUTTON_CHOP);
+        ally:messageSpecial(6385, MARBLED_MUTTON_CHOP);
     end
 end;
 

@@ -41,10 +41,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(FRAGRANT_TREANT_PETAL) == false) then
-        killer:addKeyItem(FRAGRANT_TREANT_PETAL);
-        killer:messageSpecial(6385, FRAGRANT_TREANT_PETAL);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(FRAGRANT_TREANT_PETAL) == false) then
+        ally:addKeyItem(FRAGRANT_TREANT_PETAL);
+        ally:messageSpecial(6385, FRAGRANT_TREANT_PETAL);
     end
 end;

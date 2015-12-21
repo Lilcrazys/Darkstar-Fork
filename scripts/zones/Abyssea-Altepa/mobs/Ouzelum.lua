@@ -41,18 +41,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(RESPLENDENT_ROC_QUILL) == false) then
-        killer:addKeyItem(RESPLENDENT_ROC_QUILL);
-        killer:messageSpecial(6385, RESPLENDENT_ROC_QUILL);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(RESPLENDENT_ROC_QUILL) == false) then
+        ally:addKeyItem(RESPLENDENT_ROC_QUILL);
+        ally:messageSpecial(6385, RESPLENDENT_ROC_QUILL);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THE_SCARLET_WING) == false) then
-        killer:addKeyItem(ATMA_OF_THE_SCARLET_WING);
-        killer:messageSpecial(6385, ATMA_OF_THE_SCARLET_WING);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_SCARLET_WING) == false) then
+        ally:addKeyItem(ATMA_OF_THE_SCARLET_WING);
+        ally:messageSpecial(6385, ATMA_OF_THE_SCARLET_WING);
     end
 end;
 

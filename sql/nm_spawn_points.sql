@@ -6355,10 +6355,6 @@ INSERT INTO `nm_spawn_points` VALUES (17219787,2,-499.000, 2.901, -48.000);
 INSERT INTO `nm_spawn_points` VALUES (17219787,3,-499.000, 2.901, -48.000);
 INSERT INTO `nm_spawn_points` VALUES (17219787,4,-499.000, 2.901, -48.000);
 
-
-INSERT INTO `nm_spawn_points` VALUES (17318456,6951,-189.000,7.000,270.000); -- What mob is this? Who added it?
-
-
 /*!40000 ALTER TABLE `nm_spawn_points` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

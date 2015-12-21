@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and killer:hasKeyItem(CRACKED_SKELETON_CLAVICLE) == false) then
-        killer:addKeyItem(CRACKED_SKELETON_CLAVICLE);
-        killer:messageSpecial(6385, CRACKED_SKELETON_CLAVICLE);
+    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(CRACKED_SKELETON_CLAVICLE) == false) then
+        ally:addKeyItem(CRACKED_SKELETON_CLAVICLE);
+        ally:messageSpecial(6385, CRACKED_SKELETON_CLAVICLE);
     end
 end;
 

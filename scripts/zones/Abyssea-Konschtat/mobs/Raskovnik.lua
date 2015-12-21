@@ -41,17 +41,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer)
+function onMobDeath(mob, killer, ally)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and killer:hasKeyItem(FETID_RAFFLESIA_STALK) == false) then
-        killer:addKeyItem(FETID_RAFFLESIA_STALK);
-        killer:messageSpecial(6385, FETID_RAFFLESIA_STALK);
+    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(FETID_RAFFLESIA_STALK) == false) then
+        ally:addKeyItem(FETID_RAFFLESIA_STALK);
+        ally:messageSpecial(6385, FETID_RAFFLESIA_STALK);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and killer:hasKeyItem(ATMA_OF_THRASHING_TENDRILS) == false) then
-        killer:addKeyItem(ATMA_OF_THRASHING_TENDRILS);
-        killer:messageSpecial(6385, ATMA_OF_THRASHING_TENDRILS);
+    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THRASHING_TENDRILS) == false) then
+        ally:addKeyItem(ATMA_OF_THRASHING_TENDRILS);
+        ally:messageSpecial(6385, ATMA_OF_THRASHING_TENDRILS);
     end
 end;
