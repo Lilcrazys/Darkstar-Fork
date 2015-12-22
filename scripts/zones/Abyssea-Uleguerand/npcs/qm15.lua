@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17813918) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(WARPED_IRON_GIANT_NAIL) and player:hasKeyItem(DENTED_CHARIOT_SHIELD)) then
             player:startEvent(1020, WARPED_IRON_GIANT_NAIL, DENTED_CHARIOT_SHIELD); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1025, WARPED_IRON_GIANT_NAIL, DENTED_CHARIOT_SHIELD); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

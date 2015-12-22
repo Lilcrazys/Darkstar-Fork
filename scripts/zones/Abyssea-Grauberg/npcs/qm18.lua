@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17818062) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(VARIEGATED_URAGNITE_SHELL)) then
             player:startEvent(1020, VARIEGATED_URAGNITE_SHELL); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, VARIEGATED_URAGNITE_SHELL); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

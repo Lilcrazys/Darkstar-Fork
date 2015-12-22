@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17666502) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(MALODOROUS_MARID_FUR) and player:hasKeyItem(WARPED_SMILODON_CHOKER)) then
             player:startEvent(1015, MALODOROUS_MARID_FUR, WARPED_SMILODON_CHOKER); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1120, MALODOROUS_MARID_FUR, WARPED_SMILODON_CHOKER); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

@@ -13,7 +13,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(16839007) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(FRAGRANT_TREANT_PETAL)
         and player:hasKeyItem(FETID_RAFFLESIA_STALK)
@@ -25,7 +25,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, FRAGRANT_TREANT_PETAL, FETID_RAFFLESIA_STALK, DECAYING_MORBOL_TOOTH, TURBID_SLIME_OIL, VENOMOUS_PEISTE_CLAW); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

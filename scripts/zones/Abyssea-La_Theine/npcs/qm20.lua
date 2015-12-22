@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17318460) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(PELLUCID_FLY_EYE) and player:hasKeyItem(SHIMMERING_PIXIE_PINION)) then
             player:startEvent(1020, PELLUCID_FLY_EYE, SHIMMERING_PIXIE_PINION); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, PELLUCID_FLY_EYE, SHIMMERING_PIXIE_PINION); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

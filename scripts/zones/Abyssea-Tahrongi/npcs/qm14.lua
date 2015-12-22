@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(16961950) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(FAT_LINED_COCKATRICE_SKIN) and player:hasKeyItem(SODDEN_SANDWORM_HUSK)
         and player:hasKeyItem(LUXURIANT_MANTICORE_MANE) -- I broke it into 3 lines at the 'and' because it was so long.
@@ -22,7 +22,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, FAT_LINED_COCKATRICE_SKIN, SODDEN_SANDWORM_HUSK, LUXURIANT_MANTICORE_MANE, STICKY_GNAT_WING); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

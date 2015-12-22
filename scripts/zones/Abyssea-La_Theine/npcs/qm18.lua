@@ -11,7 +11,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17318448) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(MARBLED_MUTTON_CHOP) and player:hasKeyItem(BLOODIED_SABER_TOOTH)
         and player:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) and player:hasKeyItem(GLITTERING_PIXIE_CHOKER)) then
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, MARBLED_MUTTON_CHOP, BLOODIED_SABER_TOOTH, GLITTERING_PIXIE_CHOKER, BLOOD_SMEARED_GIGAS_HELM); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

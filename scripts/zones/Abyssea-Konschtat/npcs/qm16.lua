@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(16839068) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(TWISTED_TONBERRY_CROWN)) then
             player:startEvent(1020, TWISTED_TONBERRY_CROWN); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, TWISTED_TONBERRY_CROWN); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

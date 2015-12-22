@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17813920) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(BEGRIMED_DRAGON_HIDE)) then
             player:startEvent(1020, BEGRIMED_DRAGON_HIDE); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1025, BEGRIMED_DRAGON_HIDE); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

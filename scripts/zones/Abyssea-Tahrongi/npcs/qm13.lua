@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(16961946) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(VEINOUS_HECTEYES_EYELID) and player:hasKeyItem(TORN_BAT_WING)
         and player:hasKeyItem(GORY_SCORPION_CLAW) -- I broke it into 3 lines at the 'and' because it was so long.
@@ -22,7 +22,7 @@ function onTrigger(player,npc)
             player:startEvent(1021, VEINOUS_HECTEYES_EYELID, TORN_BAT_WING, GORY_SCORPION_CLAW, MOSSY_ADAMANTOISE_SHELL); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------

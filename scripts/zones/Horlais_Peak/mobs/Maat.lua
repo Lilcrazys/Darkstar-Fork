@@ -20,15 +20,18 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-	if (target:hasStatusEffect(EFFECT_FOOD) == true and mob:hasStatusEffect(EFFECT_FOOD) == false) then
-		local FOOD_ID = target:getStatusEffect(EFFECT_FOOD):getSubType();
-		if (FOOD_ID == 4331 or FOOD_ID == 4564) then
-			FOOD_ID = 5166;
-		end
-		mob:SpoofChatParty("eats the same food you did!", MESSAGE_EMOTION);
-		mob:addStatusEffect(EFFECT_FOOD,0,0,600,FOOD_ID);
-		mob:SpoofChatParty("Maat gains the effect of OH-SNAP!", MESSAGE_ECHO);
-	end
+    if (target:hasStatusEffect(EFFECT_FOOD) == true and mob:hasStatusEffect(EFFECT_FOOD) == false) then
+        local FOOD_ID = target:getStatusEffect(EFFECT_FOOD):getSubType();
+        if (FOOD_ID == 5163 FOOD_ID == 5610 or  or FOOD_ID == 5718 or FOOD_ID == 5764 or FOOD_ID == 5765) then
+            mob:SpoofChatParty("eats the same food you did!", MESSAGE_EMOTION);
+            mob:addStatusEffect(EFFECT_FOOD,0,0,600,FOOD_ID);
+            mob:SpoofChatParty("Maat gains the effect of OH-SNAP!", MESSAGE_ECHO);
+        else
+            mob:SpoofChatParty("drinks Granny's Toonic!", MESSAGE_EMOTION);
+            mob:addStatusEffect(EFFECT_FOOD,0,0,600,5674);
+            mob:SpoofChatParty("Maat gains the effect of OH-SNAP!", MESSAGE_ECHO);
+        end
+    end
 end;
 
 -----------------------------------
@@ -36,12 +39,12 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	target:showText(mob,YOU_DECIDED_TO_SHOW_UP);
-	printf("Maat Horlais Peak works");
-	-- When he take damage: target:showText(mob,THAT_LL_HURT_IN_THE_MORNING);
-	-- He use dragon kick or tackle: target:showText(mob,TAKE_THAT_YOU_WHIPPERSNAPPER);
-	-- He use spining attack: target:showText(mob,TEACH_YOU_TO_RESPECT_ELDERS);
-	-- If you dying: target:showText(mob,LOOKS_LIKE_YOU_WERENT_READY);
+    target:showText(mob,YOU_DECIDED_TO_SHOW_UP);
+    printf("Maat Horlais Peak works");
+    -- When he take damage: target:showText(mob,THAT_LL_HURT_IN_THE_MORNING);
+    -- He use dragon kick or tackle: target:showText(mob,TAKE_THAT_YOU_WHIPPERSNAPPER);
+    -- He use spining attack: target:showText(mob,TEACH_YOU_TO_RESPECT_ELDERS);
+    -- If you dying: target:showText(mob,LOOKS_LIKE_YOU_WERENT_READY);
 end;
 
 -----------------------------------
@@ -49,5 +52,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer,ally)
-	ally:showText(mob,YOUVE_COME_A_LONG_WAY);
+    killer:showText(mob,YOUVE_COME_A_LONG_WAY);
 end;

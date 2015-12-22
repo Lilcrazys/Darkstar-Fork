@@ -11,7 +11,7 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onTrade(player,npc,trade)
---[[
+
     if (trade:hasItemQty(2950,1) == false or trade:hasItemQty(2925,1) == false) then -- Player is missing at least one required item.
         player:startEvent(1010, 2950 ,2925); -- Inform payer what items they need.
     elseif (GetMobAction(16961927) == ACTION_NONE) then -- mob not already spawned from this
@@ -20,5 +20,5 @@ function onTrade(player,npc,trade)
             player:tradeComplete();
         end
     end
-]]
+
 end;

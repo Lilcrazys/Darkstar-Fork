@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
+
     if (GetMobAction(17658276) == ACTION_NONE) then -- NM not already spawned from this
         if (player:hasKeyItem(MUCID_WORM_SEGMENT) and player:hasKeyItem(SHRIVELED_HECTEYES_STALK)) then
             player:startEvent(1022, MUCID_WORM_SEGMENT, SHRIVELED_HECTEYES_STALK); -- Ask if player wants to use KIs
@@ -20,7 +20,7 @@ function onTrigger(player,npc)
             player:startEvent(1023, MUCID_WORM_SEGMENT, SHRIVELED_HECTEYES_STALK); -- Do not ask, because player is missing at least 1.
         end
     end
-]]
+
 end;
 
 -----------------------------------
