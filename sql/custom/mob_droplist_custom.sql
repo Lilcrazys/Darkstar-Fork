@@ -366,6 +366,19 @@ INSERT INTO `mob_droplist` VALUES (466,0,2930,1000); -- Carabosse's Gem
 -- INSERT INTO `mob_droplist` VALUES (466,0,21208,109); -- Lehbrailg  +54 Skill
 
 -- -----------
+-- Cerberus
+-- ----------
+
+DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=2168 and rate=1000;
+DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=2169 and rate=1000;
+DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=5565 and rate=1000;
+DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=18385 and rate=450;
+INSERT INTO `mob_droplist` VALUES (502,0,15808,140);
+INSERT INTO `mob_droplist` VALUES (502,0,4023,1000);
+INSERT INTO `mob_droplist` VALUES (502,0,4023,250);
+INSERT INTO `mob_droplist` VALUES (502,0,4023,50);
+
+-- -----------
 -- Chamrosh
 -- ----------
 
@@ -548,6 +561,22 @@ INSERT INTO `mob_droplist` VALUES (1602,0,10408,88);
 INSERT INTO `mob_droplist` VALUES (1602,0,10493,353);
 
 -- -----------
+-- Gulool Ja Ja
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1607,0,4023,1000);
+INSERT INTO `mob_droplist` VALUES (1607,0,4023,250);
+INSERT INTO `mob_droplist` VALUES (1607,0,4023,50);
+
+-- -----------
+-- Gurfurlur the Menacing
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1609,0,4023,1000);
+INSERT INTO `mob_droplist` VALUES (1609,0,4023,250);
+INSERT INTO `mob_droplist` VALUES (1609,0,4023,50);
+
+-- -----------
 -- Hadhayosh
 -- -----------
 
@@ -705,6 +734,23 @@ INSERT INTO `mob_droplist` VALUES (1861,0,10885,330);
 INSERT INTO `mob_droplist` VALUES (1861,0,10463,332);
 INSERT INTO `mob_droplist` VALUES (1861,0,10514,331);
 INSERT INTO `mob_droplist` VALUES (1861,0,11971,332);
+
+-- -----------
+-- Khimara
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=1893 and type=0 and itemId=2371 and rate=1000;
+DELETE FROM `mob_droplist` WHERE dropId=1893 and type=0 and itemId=2372 and rate=1000;
+DELETE FROM `mob_droplist` WHERE dropId=1893 and type=0 and itemId=2372 and rate=500;
+DELETE FROM `mob_droplist` WHERE dropId=1893 and type=0 and itemId=2373 and rate=1000;
+INSERT INTO `mob_droplist` VALUES (1893,0,15809,140);
+INSERT INTO `mob_droplist` VALUES (1893,0,4023,1000);
+INSERT INTO `mob_droplist` VALUES (1893,0,4023,250);
+INSERT INTO `mob_droplist` VALUES (1893,0,4023,50);
+
+-- -----------
+-- Khromasoul Bhurborlor
+-- -----------
 
 INSERT INTO `mob_droplist` VALUES (1894,0,14546,150);
 INSERT INTO `mob_droplist` VALUES (1894,0,10450,150);
@@ -983,6 +1029,11 @@ INSERT INTO `mob_droplist` VALUES (2728,0,14568,222);
 INSERT INTO `mob_droplist` VALUES (2728,0,15648,221);
 INSERT INTO `mob_droplist` VALUES (2728,0,15734,222);
 INSERT INTO `mob_droplist` VALUES (2728,0,14985,223);
+
+-- -----------
+-- Medusa
+-- -----------
+--  DropID 2237 Placeholder for Medusa Custom drops
 
 -- -----------
 -- Ovni
