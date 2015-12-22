@@ -21,6 +21,20 @@
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
 
 -- -----------
+-- Achamoth
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=15 and type=0 and itemId=11376 and rate=300; --
+DELETE FROM `mob_droplist` WHERE dropId=15 and type=0 and itemId=16342 and rate=510; --
+DELETE FROM `mob_droplist` WHERE dropId=15 and type=0 and itemId=17753 and rate=150; --
+DELETE FROM `mob_droplist` WHERE dropId=15 and type=0 and itemId=19034 and rate=580; --
+DELETE FROM `mob_droplist` WHERE dropId=15 and type=0 and itemId=19035 and rate=570; --
+INSERT INTO `mob_droplist` VALUES (15,0,14546,150);
+INSERT INTO `mob_droplist` VALUES (15,0,10450,150);
+INSERT INTO `mob_droplist` VALUES (15,0,28027,100);
+INSERT INTO `mob_droplist` VALUES (15,0,19007,100);
+INSERT INTO `mob_droplist` VALUES (15,0,18993,100);
+
+-- -----------
 -- Adamantoise
 -- -----------
 
@@ -100,7 +114,7 @@ DELETE FROM `mob_droplist` WHERE dropId=75 and type=0 and itemId=5564 and rate=4
 INSERT INTO `mob_droplist` VALUES (75,0,19405,340); -- Kannagi 
 
 -- -----------
--- Amhuluk
+-- Amun
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=83 and type=0 and itemId=3111 and rate=630; -- Tantra Seal: Hd.
@@ -116,6 +130,17 @@ INSERT INTO `mob_droplist` VALUES (83,0,21236,81); --  Bocluamni +1
 INSERT INTO `mob_droplist` VALUES (83,0,12105,340); -- Cirque Scarpe
 
 -- -----------
+-- Anantaboga
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=84 and type=0 and itemId=19109 and rate=310; --
+INSERT INTO `mob_droplist` VALUES (84,0,16084,50);
+INSERT INTO `mob_droplist` VALUES (84,0,15625,50);
+INSERT INTO `mob_droplist` VALUES (84,0,10876,50);
+INSERT INTO `mob_droplist` VALUES (84,0,11969,50);
+INSERT INTO `mob_droplist` VALUES (84,0,16155,610);
+
+-- -----------
 -- Ansherekh
 -- -----------
 
@@ -123,6 +148,44 @@ DELETE FROM `mob_droplist` WHERE dropId=118 and type=0 and itemId=5466 and rate=
 DELETE FROM `mob_droplist` WHERE dropId=118 and type=0 and itemId=5568 and rate=40; --  Apkallu Egg
 DELETE FROM `mob_droplist` WHERE dropId=118 and type=0 and itemId=5668 and rate=50; --
 INSERT INTO `mob_droplist` VALUES (118,0,28388,150); -- Tlamiztli collar
+
+-- -----------
+-- Apademak
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=151 and type=0 and itemId=3216 and rate=30; -- Ardor Jewel
+-- INSERT INTO `mob_droplist` VALUES (151,0,20997,76); --  Raimitsukane 242 Weapon
+INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- Apademak Horn
+
+-- -----------
+-- Armed Gears
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=177 and type=0 and itemId=15022 and rate=480;
+DELETE FROM `mob_droplist` WHERE dropId=177 and type=0 and itemId=18126 and rate=340;
+DELETE FROM `mob_droplist` WHERE dropId=177 and type=0 and itemId=19035 and rate=220;
+DELETE FROM `mob_droplist` WHERE dropId=177 and type=0 and itemId=19036 and rate=550;
+INSERT INTO `mob_droplist` VALUES (177,0,18991,100);
+INSERT INTO `mob_droplist` VALUES (177,0,19005,100);
+INSERT INTO `mob_droplist` VALUES (177,0,14550,150);
+INSERT INTO `mob_droplist` VALUES (177,0,10276,150);
+INSERT INTO `mob_droplist` VALUES (177,0,10451,150);
+INSERT INTO `mob_droplist` VALUES (177,0,10928,100);
+
+-- -----------
+-- Ash Dragon
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=867 and rate=150; --
+DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=903 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=1133 and rate=40; --
+DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=4486 and rate=30; --
+DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=16961 and rate=20; --
+INSERT INTO `mob_droplist` VALUES (191,0,10890,332);
+INSERT INTO `mob_droplist` VALUES (191,0,10457,333);
+INSERT INTO `mob_droplist` VALUES (191,0,10513,321);
+INSERT INTO `mob_droplist` VALUES (191,0,11982,330);
+INSERT INTO `mob_droplist` VALUES (191,0,10602,332);
 
 -- -----------
 -- Aspidochelone
@@ -152,29 +215,6 @@ INSERT INTO `mob_droplist` VALUES (195,0,10571,81);
 INSERT INTO `mob_droplist` VALUES (195,0,10541,300);
 INSERT INTO `mob_droplist` VALUES (195,0,10639,350);
 INSERT INTO `mob_droplist` VALUES (195,0,10409,333);
-
--- -----------
--- Apademak
--- -----------
-
-DELETE FROM `mob_droplist` WHERE dropId=151 and type=0 and itemId=3216 and rate=30; -- Ardor Jewel
--- INSERT INTO `mob_droplist` VALUES (151,0,20997,76); --  Raimitsukane 242 Weapon
-INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- Apademak Horn
-
--- -----------
--- Ash Dragon
--- -----------
-
-DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=867 and rate=150; --
-DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=903 and rate=1000; --
-DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=1133 and rate=40; --
-DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=4486 and rate=30; --
-DELETE FROM `mob_droplist` WHERE dropId=191 and type=0 and itemId=16961 and rate=20; --
-INSERT INTO `mob_droplist` VALUES (191,0,10890,332);
-INSERT INTO `mob_droplist` VALUES (191,0,10457,333);
-INSERT INTO `mob_droplist` VALUES (191,0,10513,321);
-INSERT INTO `mob_droplist` VALUES (191,0,11982,330);
-INSERT INTO `mob_droplist` VALUES (191,0,10602,332);
 
 -- -----------
 -- Athamas
@@ -280,6 +320,13 @@ DELETE FROM `mob_droplist` WHERE dropId=370 and type=0 and itemId=5152 and rate=
 INSERT INTO `mob_droplist` VALUES (370,0,11867,390);
 INSERT INTO `mob_droplist` VALUES (370,0,19794,330);
 
+-- -----------
+-- Brass Borer
+-- -----------
+INSERT INTO `mob_droplist` VALUES (385,0,14961,50);
+INSERT INTO `mob_droplist` VALUES (385,0,15711,50);
+INSERT INTO `mob_droplist` VALUES (385,0,10500,50);
+INSERT INTO `mob_droplist` VALUES (385,0,10600,50);
 
 -- -----------
 -- Briareus
@@ -319,12 +366,78 @@ INSERT INTO `mob_droplist` VALUES (466,0,2930,1000); -- Carabosse's Gem
 -- INSERT INTO `mob_droplist` VALUES (466,0,21208,109); -- Lehbrailg  +54 Skill
 
 -- -----------
+-- Chamrosh
+-- ----------
+
+DELETE FROM `mob_droplist` WHERE dropId=506 and type=0 and itemId=18593 and rate=650; --
+DELETE FROM `mob_droplist` WHERE dropId=506 and type=0 and itemId=16240 and rate=400; --
+INSERT INTO `mob_droplist` VALUES (506,0,14965,150);
+INSERT INTO `mob_droplist` VALUES (506,0,14969,150);
+INSERT INTO `mob_droplist` VALUES (506,0,10320,150);
+INSERT INTO `mob_droplist` VALUES (506,0,10501,150);
+
+-- -----------
+-- Cheese Hoarder Gigiroon
+-- ----------
+
+INSERT INTO `mob_droplist` VALUES (517,0,15715,150);
+INSERT INTO `mob_droplist` VALUES (517,0,15719,150);
+INSERT INTO `mob_droplist` VALUES (517,0,10367,150);
+INSERT INTO `mob_droplist` VALUES (517,0,10601,150);
+
+-- -----------
+-- Chigre
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=525 and type=0 and itemId=15827 and rate=360; --
+INSERT INTO `mob_droplist` VALUES (525,0,14977,50);
+INSERT INTO `mob_droplist` VALUES (525,0,15727,50);
+INSERT INTO `mob_droplist` VALUES (525,0,15723,50);
+INSERT INTO `mob_droplist` VALUES (525,0,14973,50);
+INSERT INTO `mob_droplist` VALUES (525,0,10368,50);
+INSERT INTO `mob_droplist` VALUES (525,0,10321,50);
+INSERT INTO `mob_droplist` VALUES (525,0,10323,50);
+INSERT INTO `mob_droplist` VALUES (525,0,18948,666);
+
+-- -----------
 -- Cirein-croin
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (529,0,21286,112); --  Hgafircian +1 162 skill
+-- INSERT INTO `mob_droplist` VALUES (529,0,21286,112); --  Hgafircian +1 162 skill
 INSERT INTO `mob_droplist` VALUES (529,0,2965,1000); -- Cirein. Lantern  
 INSERT INTO `mob_droplist` VALUES (529,0,19406,340); -- Masamune  
+
+-- -----------
+-- Claret
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (535,0,14961,150);
+INSERT INTO `mob_droplist` VALUES (535,0,10500,150);
+
+-- -----------
+-- Dea
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=652 and type=0 and itemId=11377 and rate=410; --
+DELETE FROM `mob_droplist` WHERE dropId=652 and type=0 and itemId=16343 and rate=330; --
+DELETE FROM `mob_droplist` WHERE dropId=652 and type=0 and itemId=18125 and rate=460; --
+DELETE FROM `mob_droplist` WHERE dropId=652 and type=0 and itemId=18125 and rate=230; --
+DELETE FROM `mob_droplist` WHERE dropId=652 and type=0 and itemId=19031 and rate=540; --
+DELETE FROM `mob_droplist` WHERE dropId=652 and type=0 and itemId=19038 and rate=510; --
+INSERT INTO `mob_droplist` VALUES (652,0,14554,150);
+INSERT INTO `mob_droplist` VALUES (652,0,10276,150);
+INSERT INTO `mob_droplist` VALUES (652,0,10451,150);
+INSERT INTO `mob_droplist` VALUES (652,0,10957,100);
+INSERT INTO `mob_droplist` VALUES (652,0,18992,100);
+INSERT INTO `mob_droplist` VALUES (652,0,19004,100);
+
+-- -----------
+-- Dextrose
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (725,0,11283,550);
+INSERT INTO `mob_droplist` VALUES (725,0,15625,150);
+INSERT INTO `mob_droplist` VALUES (725,0,11969,150);
 
 -- -----------
 -- Dhorme Khimaira
@@ -360,15 +473,20 @@ INSERT INTO `mob_droplist` VALUES (808,0,10464,333);
 INSERT INTO `mob_droplist` VALUES (808,0,10502,335);
 
 -- -----------
--- Eccentric Eve
+-- Experimental Lamia 
 -- -----------
-
--- INSERT INTO `mob_droplist` VALUES (9702,0,21242,110); --  Bocluamni 54 skill
-INSERT INTO `mob_droplist` VALUES (9702,0,11513,1000); --
-INSERT INTO `mob_droplist` VALUES (9702,0,12997,100); --
-INSERT INTO `mob_droplist` VALUES (9702,0,14887,100); --
-INSERT INTO `mob_droplist` VALUES (9702,0,12091,340); -- Goetia Sabots 
-INSERT INTO `mob_droplist` VALUES (9702,0,19407,340); --  Gambanteinn
+DELETE FROM `mob_droplist` WHERE dropId=913 and type=0 and itemId=11378 and rate=390; --
+DELETE FROM `mob_droplist` WHERE dropId=913 and type=0 and itemId=11378 and rate=190; --
+DELETE FROM `mob_droplist` WHERE dropId=913 and type=0 and itemId=16341 and rate=390; --
+DELETE FROM `mob_droplist` WHERE dropId=913 and type=0 and itemId=18595 and rate=190; --
+DELETE FROM `mob_droplist` WHERE dropId=913 and type=0 and itemId=19032 and rate=560; --
+DELETE FROM `mob_droplist` WHERE dropId=913 and type=0 and itemId=19036 and rate=540; --
+INSERT INTO `mob_droplist` VALUES (913,0,14558,150);
+INSERT INTO `mob_droplist` VALUES (913,0,10279,150);
+INSERT INTO `mob_droplist` VALUES (913,0,10277,150);
+INSERT INTO `mob_droplist` VALUES (913,0,21342,100);
+INSERT INTO `mob_droplist` VALUES (913,0,19000,100);
+INSERT INTO `mob_droplist` VALUES (913,0,18996,100);
 
 -- -----------
 -- Fafnir
@@ -390,6 +508,25 @@ INSERT INTO `mob_droplist` VALUES (918,0,1320,100);
 INSERT INTO `mob_droplist` VALUES (918,0,1330,370); -- M.Abjuration: Bd. 
 INSERT INTO `mob_droplist` VALUES (918,0,1342,260); -- N.Abjuration: Lg. 
 INSERT INTO `mob_droplist` VALUES (918,0,1526,700); -- Wyrm Beard
+
+-- -----------
+-- Gotoh Zha the Redolent
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=15023 and rate=390;
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=15023 and rate=190;
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=16341 and rate=420;
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=16341 and rate=210;
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=19032 and rate=600;
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=19037 and rate=560;
+DELETE FROM `mob_droplist` WHERE dropId=1536 and type=0 and itemId=19153 and rate=280;
+INSERT INTO `mob_droplist` VALUES (1536,0,18998,100);
+INSERT INTO `mob_droplist` VALUES (1536,0,18995,100);
+INSERT INTO `mob_droplist` VALUES (1536,0,10451,150);
+INSERT INTO `mob_droplist` VALUES (1536,0,10839,100);
+INSERT INTO `mob_droplist` VALUES (1536,0,14550,150);
+INSERT INTO `mob_droplist` VALUES (1536,0,14554,150);
+INSERT INTO `mob_droplist` VALUES (1536,0,10276,150);
 
 -- -----------
 -- Guivre
@@ -483,6 +620,32 @@ INSERT INTO `mob_droplist` VALUES (1786,0,12093,340); -- Raider's Poulaines
 INSERT INTO `mob_droplist` VALUES (1786,0,19404,340); -- Rhongomiant
 
 -- -----------
+-- Iriri Samariri
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1792,0,16088,150);
+INSERT INTO `mob_droplist` VALUES (1792,0,16092,150);
+INSERT INTO `mob_droplist` VALUES (1792,0,10438,150);
+INSERT INTO `mob_droplist` VALUES (1792,0,10877,150);
+INSERT INTO `mob_droplist` VALUES (1792,0,16156,450);
+
+-- -----------
+-- Iriz Ima
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=1793 and type=0 and itemId=2147 and rate=40; --
+DELETE FROM `mob_droplist` WHERE dropId=1793 and type=0 and itemId=2147 and rate=20; --
+DELETE FROM `mob_droplist` WHERE dropId=1793 and type=0 and itemId=19514 and rate=200; --
+INSERT INTO `mob_droplist` VALUES (1793,0,16088,100);
+INSERT INTO `mob_droplist` VALUES (1793,0,15629,50);
+INSERT INTO `mob_droplist` VALUES (1793,0,16092,50);
+INSERT INTO `mob_droplist` VALUES (1793,0,15633,50);
+INSERT INTO `mob_droplist` VALUES (1793,0,10438,50);
+INSERT INTO `mob_droplist` VALUES (1793,0,10326,50);
+INSERT INTO `mob_droplist` VALUES (1793,0,10877,50);
+INSERT INTO `mob_droplist` VALUES (1793,0,11970,50);
+
+-- -----------
 -- Ironclad Cleaver
 -- -----------
 
@@ -543,6 +706,13 @@ INSERT INTO `mob_droplist` VALUES (1861,0,10463,332);
 INSERT INTO `mob_droplist` VALUES (1861,0,10514,331);
 INSERT INTO `mob_droplist` VALUES (1861,0,11971,332);
 
+INSERT INTO `mob_droplist` VALUES (1894,0,14546,150);
+INSERT INTO `mob_droplist` VALUES (1894,0,10450,150);
+INSERT INTO `mob_droplist` VALUES (1894,0,10806,100);
+INSERT INTO `mob_droplist` VALUES (1894,0,2621,1000);
+INSERT INTO `mob_droplist` VALUES (1894,0,15022,380);
+INSERT INTO `mob_droplist` VALUES (1894,0,18997,100);
+
 -- -----------
 -- King Behemoth
 -- -----------
@@ -571,6 +741,31 @@ INSERT INTO `mob_droplist` VALUES (1936,0,10490,330);
 INSERT INTO `mob_droplist` VALUES (1936,0,10490,90);
 INSERT INTO `mob_droplist` VALUES (1936,0,10542,343);
 INSERT INTO `mob_droplist` VALUES (1936,0,10574,333);
+
+-- -----------
+-- Lil' Apkallu
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2061 and type=0 and itemId=11368 and rate=470; --
+INSERT INTO `mob_droplist` VALUES (2061,0,15015,520);
+INSERT INTO `mob_droplist` VALUES (2061,0,14977,150);
+INSERT INTO `mob_droplist` VALUES (2061,0,14973,150);
+INSERT INTO `mob_droplist` VALUES (2061,0,10321,150);
+INSERT INTO `mob_droplist` VALUES (2061,0,10323,150);
+
+-- -----------
+-- Lividroot Amooshah
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2065 and type=0 and itemId=920 and rate=0; --
+DELETE FROM `mob_droplist` WHERE dropId=2065 and type=0 and itemId=16153 and rate=400; --
+INSERT INTO `mob_droplist` VALUES (2065,0,2614,1000);
+INSERT INTO `mob_droplist` VALUES (2065,0,11367,470);
+INSERT INTO `mob_droplist` VALUES (2065,2,11284,600);
+INSERT INTO `mob_droplist` VALUES (2065,0,15629,150);
+INSERT INTO `mob_droplist` VALUES (2065,0,15633,150);
+INSERT INTO `mob_droplist` VALUES (2065,0,10326,150);
+INSERT INTO `mob_droplist` VALUES (2065,0,11970,150);
 
 -- -----------
 -- Lord of Onzozo
@@ -606,6 +801,23 @@ DELETE FROM `mob_droplist` WHERE dropId=2080 and type=0 and itemId=3207 and rate
 DELETE FROM `mob_droplist` WHERE dropId=2080 and type=0 and itemId=2307 and rate=130; --  
 -- INSERT INTO `mob_droplist` VALUES (2080,0,20634,82); --  Leisilonu +1 + 162 skill
 INSERT INTO `mob_droplist` VALUES (2080,0,12100,340); --  Iga Kyahan 
+
+-- -----------
+-- Mahjiaef the Paintom
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2133 and type=0 and itemId=15021 and rate=470; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2133 and type=0 and itemId=15021 and rate=230; --
+DELETE FROM `mob_droplist` WHERE dropId=2133 and type=0 and itemId=16177 and rate=340; --  
+DELETE FROM `mob_droplist` WHERE dropId=2133 and type=0 and itemId=19031 and rate=570; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2133 and type=0 and itemId=19035 and rate=530; -- 
+INSERT INTO `mob_droplist` VALUES (2133,0,14562,150);
+INSERT INTO `mob_droplist` VALUES (2133,0,10277,150);
+INSERT INTO `mob_droplist` VALUES (2133,0,10279,150);
+INSERT INTO `mob_droplist` VALUES (2133,0,11669,100);
+INSERT INTO `mob_droplist` VALUES (2133,0,19008,100);
+INSERT INTO `mob_droplist` VALUES (2133,0,18994,100);
+INSERT INTO `mob_droplist` VALUES (2133,0,18990,100);
 
 -- -----------
 -- Namtar
@@ -672,12 +884,38 @@ INSERT INTO `mob_droplist` VALUES (2473,0,28467,150); -- Dynamic Belt +1
 DELETE FROM `mob_droplist` WHERE dropId=2487 and type=0 and itemId=11378 and rate=350; -- 
 DELETE FROM `mob_droplist` WHERE dropId=2487 and type=0 and itemId=15021 and rate=220; -- 
 DELETE FROM `mob_droplist` WHERE dropId=2487 and type=0 and itemId=17960 and rate=150; -- 
--- INSERT INTO `mob_droplist` VALUES (2487,0,14546,150); -- Ares Cuirass
+INSERT INTO `mob_droplist` VALUES (2487,0,14546,150); -- Ares Cuirass
 INSERT INTO `mob_droplist` VALUES (2487,0,10450,50); --  Ogier's Surcoat
 -- INSERT INTO `mob_droplist` VALUES (2487,0,18989,100); -- Terpsichore 
 -- INSERT INTO `mob_droplist` VALUES (2487,0,19001,100); --  Gastraphetes
 -- INSERT INTO `mob_droplist` VALUES (2487,0,19003,100); --  Nagi 
 INSERT INTO `mob_droplist` VALUES (2487,0,28440,150); -- Windbuffet Belt +1
+
+-- -----------
+-- Nuhn
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=11377 and rate=460; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=11377 and rate=230; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=15023 and rate=280; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=15023 and rate=140; --
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=18430 and rate=460; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=18430 and rate=230; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=19033 and rate=480; -- 
+DELETE FROM `mob_droplist` WHERE dropId=2491 and type=0 and itemId=19037 and rate=510; --  
+INSERT INTO `mob_droplist` VALUES (2491,0,14562,150);
+INSERT INTO `mob_droplist` VALUES (2491,0,14558,150);
+INSERT INTO `mob_droplist` VALUES (2491,0,10277,150);
+INSERT INTO `mob_droplist` VALUES (2491,0,10279,150);
+INSERT INTO `mob_droplist` VALUES (2491,0,28450,100);
+INSERT INTO `mob_droplist` VALUES (2491,0,18999,100);
+INSERT INTO `mob_droplist` VALUES (2491,0,19002,100);
+
+-- -----------
+-- Ob
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (2496,0,15711,150);
+INSERT INTO `mob_droplist` VALUES (2496,0,10600,150);
 
 
 -- -----------
@@ -755,6 +993,37 @@ DELETE FROM `mob_droplist` WHERE dropId=2732 and type=0 and itemId=4254 and rate
 INSERT INTO `mob_droplist` VALUES (2732,0,18574,340); -- Daurdabla
 
 -- -----------
+-- Reaction
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2936 and type=0 and itemId=17316 and rate=0; -- 
+INSERT INTO `mob_droplist` VALUES (2936,2,16156,550);
+INSERT INTO `mob_droplist` VALUES (2936,0,16084,150);
+INSERT INTO `mob_droplist` VALUES (2936,0,10876,150);
+
+-- -----------
+-- Sarameya
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=2168 and rate=1000; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=5565 and rate=1000; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=11283 and rate=280; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=16155 and rate=420; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=16156 and rate=410; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=16337 and rate=130; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=18446 and rate=210; -- 
+DELETE FROM `mob_droplist` WHERE dropId=3059 and type=0 and itemId=18497 and rate=140; -- 
+INSERT INTO `mob_droplist` VALUES (3059,0,28218,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,27799,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,27939,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,27940,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,28083,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,27802,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,27662,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,27661,100);
+INSERT INTO `mob_droplist` VALUES (3059,0,28221,100);
+
+-- -----------
 -- Sozu Rogberry
 -- -----------
 
@@ -797,11 +1066,55 @@ INSERT INTO `mob_droplist` VALUES (3441,0,10280,330);
 INSERT INTO `mob_droplist` VALUES (3441,0,18524,300);
 
 -- -----------
+-- Tinnin
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=2158 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=2172 and rate=500; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=5564 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=11284 and rate=370; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=11364 and rate=100; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=16516 and rate=300; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=16517 and rate=320; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=18429 and rate=150; --
+DELETE FROM `mob_droplist` WHERE dropId=3525 and type=0 and itemId=18593 and rate=130; --
+INSERT INTO `mob_droplist` VALUES (3525,0,27942,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,28085,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,27801,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,27941,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,27658,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,27798,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,28082,100);
+INSERT INTO `mob_droplist` VALUES (3525,0,28220,100);
+
+-- -----------
 -- Triarius X-XV
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (3588,0,18904,320);
 INSERT INTO `mob_droplist` VALUES (3588,0,11872,333);
+
+-- -----------
+-- Tyger
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=2371 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=2372 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=2373 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=11282 and rate=360; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=15015 and rate=180; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=16155 and rate=360; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=16157 and rate=400; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=18857 and rate=120; --
+DELETE FROM `mob_droplist` WHERE dropId=3638 and type=0 and itemId=18948 and rate=160; --
+INSERT INTO `mob_droplist` VALUES (3638,0,27938,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,28081,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,28219,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,27659,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,27660,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,27800,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,28222,100);
+INSERT INTO `mob_droplist` VALUES (3638,0,28084,100);
 
 -- -----------
 -- Tyrannic Tunnok
@@ -894,6 +1207,24 @@ INSERT INTO `mob_droplist` VALUES (3648,0,19399,340); -- Almace
 INSERT INTO `mob_droplist` VALUES (3663,0,19302,50);
 
 -- -----------
+-- Velionis
+-- ----------
+
+INSERT INTO `mob_droplist` VALUES (4000,0,15727,150);
+INSERT INTO `mob_droplist` VALUES (4000,0,15723,150);
+INSERT INTO `mob_droplist` VALUES (4000,0,10368,150);
+
+-- -----------
+-- Verdelet
+-- ----------
+
+INSERT INTO `mob_droplist` VALUES (4007,0,11282,580);
+INSERT INTO `mob_droplist` VALUES (4007,0,15641,150);
+INSERT INTO `mob_droplist` VALUES (4007,0,15637,150);
+INSERT INTO `mob_droplist` VALUES (4007,0,10327,150);
+INSERT INTO `mob_droplist` VALUES (4007,0,10329,150);
+
+-- -----------
 -- Viscount Morax
 -- ----------
 
@@ -915,6 +1246,29 @@ DELETE FROM `mob_droplist` WHERE dropId=4071 and type=0 and itemId=3114 and rate
 DELETE FROM `mob_droplist` WHERE dropId=4071 and type=0 and itemId=3118 and rate=30; --
 -- INSERT INTO `mob_droplist` VALUES (4071,0,20824,84); --  Faizzeer +1 162 Skill
 INSERT INTO `mob_droplist` VALUES (4071,0,12107,340); --  Savant's Loafers 
+
+-- -----------
+-- Vulpange
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=4035 and type=0 and itemId=16154 and rate=380; --
+DELETE FROM `mob_droplist` WHERE dropId=4035 and type=0 and itemId=17754 and rate=340; --
+INSERT INTO `mob_droplist` VALUES (4035,0,14965,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,15715,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,14969,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,15719,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,10320,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,10367,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,10501,50);
+INSERT INTO `mob_droplist` VALUES (4035,0,10601,50);
+
+-- -----------
+-- Zareehkl the Jubilant
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (4340,0,16100,150);
+INSERT INTO `mob_droplist` VALUES (4340,0,16096,150);
+INSERT INTO `mob_droplist` VALUES (4340,0,10439,150);
 
 -- -----------
 -- Kirin
@@ -946,10 +1300,22 @@ INSERT INTO `mob_droplist` VALUES (4372,0,28615,190); --  Toro Cape
 INSERT INTO `mob_droplist` VALUES (4372,0,28614,190); -- Iximulew Cape  
 INSERT INTO `mob_droplist` VALUES (4372,0,271,500); --  Alexander Statue
 
+-- -----------
+-- Wulgaru
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=4381 and type=0 and itemId=16174 and rate=340; --
+INSERT INTO `mob_droplist` VALUES (4381,0,16157,540);
+INSERT INTO `mob_droplist` VALUES (4381,0,16100,50);
+INSERT INTO `mob_droplist` VALUES (4381,0,15641,50);
+INSERT INTO `mob_droplist` VALUES (4381,0,16096,50);
+INSERT INTO `mob_droplist` VALUES (4381,0,15637,50);
+INSERT INTO `mob_droplist` VALUES (4381,0,10327,50);
+INSERT INTO `mob_droplist` VALUES (4381,0,10439,50);
+INSERT INTO `mob_droplist` VALUES (4381,0,10329,50);
 
 -- -----------
 -- Za'Dha Adamantking
-
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=4383 and type=0 and itemId=1428 and rate=950; --
@@ -2703,6 +3069,17 @@ INSERT INTO `mob_droplist` VALUES (9701,0,11591,100);
 INSERT INTO `mob_droplist` VALUES (9701,0,13000,100);
 -- INSERT INTO `mob_droplist` VALUES (9701,0,21294,101); -- hgafircian 54 skill weapon
 INSERT INTO `mob_droplist` VALUES (9701,0,12097,340); --  Aoidos' Cothurnes
+
+-- -----------
+-- Eccentric Eve
+-- -----------
+
+-- INSERT INTO `mob_droplist` VALUES (9702,0,21242,110); --  Bocluamni 54 skill
+INSERT INTO `mob_droplist` VALUES (9702,0,11513,1000); --
+INSERT INTO `mob_droplist` VALUES (9702,0,12997,100); --
+INSERT INTO `mob_droplist` VALUES (9702,0,14887,100); --
+INSERT INTO `mob_droplist` VALUES (9702,0,12091,340); -- Goetia Sabots 
+INSERT INTO `mob_droplist` VALUES (9702,0,19407,340); --  Gambanteinn
 
 -- -----------
 -- Fistule
