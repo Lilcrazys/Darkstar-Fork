@@ -21,6 +21,29 @@
 -- REPLACE INTO `mob_droplist` VALUES (9,10,11,12);
 
 -- -----------
+-- Absolute Virtue
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1913 and rate=300; --
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1914 and rate=440; --
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1915 and rate=130; --
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1916 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1917 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1918 and rate=1000; --
+DELETE FROM `mob_droplist` WHERE dropId=4 and type=0 and itemId=1919 and rate=600; --
+INSERT INTO `mob_droplist` VALUES (4,0,27580,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27582,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27584,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27586,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27588,70);
+INSERT INTO `mob_droplist` VALUES (4,0,27590,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27581,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27583,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27585,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27587,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27589,50);
+INSERT INTO `mob_droplist` VALUES (4,0,27591,50);
+
+-- -----------
 -- Achamoth
 -- -----------
 DELETE FROM `mob_droplist` WHERE dropId=15 and type=0 and itemId=11376 and rate=300; --
@@ -722,6 +745,63 @@ INSERT INTO `mob_droplist` VALUES (1812,0,2962,1000); -- Itzpapa. Scale
 INSERT INTO `mob_droplist` VALUES (1812,0,2962,200); --
 -- INSERT INTO `mob_droplist` VALUES (1812,0,21621,200); -- Invalid Item ID
 INSERT INTO `mob_droplist` VALUES (1812,0,19400,340); -- Caladbolg
+
+
+-- -----------
+-- Jailer of Faith
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1832,0,1913,70);
+INSERT INTO `mob_droplist` VALUES (1832,0,20536,200);
+INSERT INTO `mob_droplist` VALUES (1832,0,21252,200);
+
+-- -----------
+-- Jailer of Fortitude
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1833,0,1914,40);
+INSERT INTO `mob_droplist` VALUES (1833,0,20860,200);
+INSERT INTO `mob_droplist` VALUES (1833,0,20717,200);
+
+-- -----------
+-- Jailer of Hope
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1834,0,1915,80);
+INSERT INTO `mob_droplist` VALUES (1834,0,20994,200);
+INSERT INTO `mob_droplist` VALUES (1834,0,21229,200);
+
+-- -----------
+-- Jailer of Justice
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1835,0,1916,100);
+INSERT INTO `mob_droplist` VALUES (1835,0,20904,200);
+INSERT INTO `mob_droplist` VALUES (1835,0,21040,200);
+
+-- -----------
+-- Jailer of Love
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1836,0,1917,100);
+INSERT INTO `mob_droplist` VALUES (1836,0,20954,200);
+INSERT INTO `mob_droplist` VALUES (1836,0,20636,200);
+
+-- -----------
+-- Jailer of Prudence
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1837,0,1918,100);
+INSERT INTO `mob_droplist` VALUES (1837,0,21111,200);
+INSERT INTO `mob_droplist` VALUES (1837,0,20763,200);
+
+-- -----------
+-- Jailer of Temperance
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1838,0,1919,60);
+INSERT INTO `mob_droplist` VALUES (1838,0,20809,200);
+INSERT INTO `mob_droplist` VALUES (1838,0,21169,200);
 
 -- -----------
 -- Juggler Hecatomb
@@ -2635,42 +2715,6 @@ INSERT INTO `mob_droplist` VALUES (9665,2,3925,33); -- Stealable Tanzenite Jewel
 -- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
 -- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
 -- End of Jumping Crabs Droplist. Other items may be / may become available via script.
-
--- AV Changed retail rates and added rings
-INSERT INTO `mob_droplist` VALUES (4,0,27580,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27582,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27584,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27586,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27588,70);
-INSERT INTO `mob_droplist` VALUES (4,0,27590,50);
-INSERT INTO `mob_droplist` VALUES (4,0,27581,50);
-INSERT INTO `mob_droplist` VALUES (4,0,27583,50);
-INSERT INTO `mob_droplist` VALUES (4,0,27585,50);
-INSERT INTO `mob_droplist` VALUES (4,0,27587,50);
-INSERT INTO `mob_droplist` VALUES (4,0,27589,50);
-INSERT INTO `mob_droplist` VALUES (4,0,27591,50);
-
--- Temp
-INSERT INTO `mob_droplist` VALUES (1838,0,20809,200);
-INSERT INTO `mob_droplist` VALUES (1838,0,21169,200);
--- faith
-INSERT INTO `mob_droplist` VALUES (1832,0,20536,200);
-INSERT INTO `mob_droplist` VALUES (1832,0,21252,200);
--- fort
-INSERT INTO `mob_droplist` VALUES (1833,0,20860,200);
-INSERT INTO `mob_droplist` VALUES (1833,0,20717,200);
--- prud
-INSERT INTO `mob_droplist` VALUES (1837,0,21111,200);
-INSERT INTO `mob_droplist` VALUES (1837,0,20763,200);
--- justice
-INSERT INTO `mob_droplist` VALUES (1835,0,20904,200);
-INSERT INTO `mob_droplist` VALUES (1835,0,21040,200);
--- love
-INSERT INTO `mob_droplist` VALUES (1836,0,20954,200);
-INSERT INTO `mob_droplist` VALUES (1836,0,20636,200);
--- hope
-INSERT INTO `mob_droplist` VALUES (1834,0,20994,200);
-INSERT INTO `mob_droplist` VALUES (1834,0,21229,200);
 
 -- tiamat (9502)
 INSERT INTO `mob_droplist` VALUES (9502,0,28017,40);
