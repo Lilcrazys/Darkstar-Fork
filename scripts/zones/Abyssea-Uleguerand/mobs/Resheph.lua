@@ -2,7 +2,8 @@
 -- Area: Abyssea - Uleguerand (253)
 --  NM:  Resheph
 -----------------------------------
-
+package.loaded["scripts/zones/Abyssea-Uleguerand/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Uleguerand/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

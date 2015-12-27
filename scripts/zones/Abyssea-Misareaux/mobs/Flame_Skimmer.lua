@@ -2,10 +2,10 @@
 --  Area: Abyssea - Misareaux (216)
 --   Mob: Flame_Skimmer
 -----------------------------------
-
+package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Misareaux/TextIDs");
 require("scripts/zones/Abyssea-Misareaux/MobIDs");
 require("scripts/globals/keyitems");
-require("scripts/zones/Abyssea-Misareaux/TextIDs");
 -----------------------------------
 -- onMobInitialize
 -----------------------------------

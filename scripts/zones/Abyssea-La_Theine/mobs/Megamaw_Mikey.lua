@@ -2,7 +2,8 @@
 --  Area: Abyssea - La Theine (132)
 --   Mob: Megamaw_Mikey
 -----------------------------------
-require("scripts/zones/Abyssea-La_Theine/textIDs");
+package.loaded["scripts/zones/Abyssea-La_Theine/TextIDs"] = nil;
+require("scripts/zones/Abyssea-La_Theine/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

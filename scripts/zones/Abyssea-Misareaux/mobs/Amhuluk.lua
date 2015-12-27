@@ -2,9 +2,9 @@
 --  Area: Abyssea - Misareaux (216)
 --   Mob: Amhuluk
 -----------------------------------
-
+package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Misareaux/TextIDs");
 require("scripts/globals/pathfind");
-require("scripts/zones/Abyssea-Misareaux/textIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

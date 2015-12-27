@@ -2,7 +2,9 @@
 --  Area: Abyssea - Attohwa (215)
 --   Mob: Berstuk
 -----------------------------------
-require("scripts/zones/Abyssea-Attohwa/textIDs");
+package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
+
+require("scripts/zones/Abyssea-Attohwa/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

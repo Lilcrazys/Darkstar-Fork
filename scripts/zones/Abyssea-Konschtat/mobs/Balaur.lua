@@ -2,10 +2,10 @@
 --  Area: Abyssea - Konschtat (15)
 --   Mob: Balaur
 -----------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
 -----------------------------------
 
-require("scripts/zones/Abyssea-Konschtat/textIDs");
+require("scripts/zones/Abyssea-Konschtat/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

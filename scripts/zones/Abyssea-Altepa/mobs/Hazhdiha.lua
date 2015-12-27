@@ -3,7 +3,8 @@
 --   Mob: Hazhdiha
 -----------------------------------
 
-require("scripts/zones/Abyssea-Altepa/textIDs");
+package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Altepa/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

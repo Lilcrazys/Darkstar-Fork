@@ -2,8 +2,8 @@
 -- Area: Abyssea - Uleguerand (253)
 --  NM:  Dhorme_Khimaira
 -----------------------------------
-
-require("scripts/zones/Abyssea-Uleguerand/textIDs");
+package.loaded["scripts/zones/Abyssea-Uleguerand/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Uleguerand/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

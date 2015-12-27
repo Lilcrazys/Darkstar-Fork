@@ -4,8 +4,8 @@
 -----------------------------------
 
 -----------------------------------
-
-require("scripts/zones/Abyssea-Konschtat/textIDs");
+package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Konschtat/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

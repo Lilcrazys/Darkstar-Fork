@@ -2,8 +2,8 @@
 -- Area: Abyssea - Tahrongi (45)
 --   NM: Glavoid
 -----------------------------------
-
-require("scripts/zones/Abyssea-Tahrongi/textIDs");
+package.loaded["scripts/zones/Abyssea-Tahrongi/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Tahrongi/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

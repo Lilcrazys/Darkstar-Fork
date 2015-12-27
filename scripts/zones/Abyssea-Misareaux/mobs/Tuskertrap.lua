@@ -2,7 +2,8 @@
 --  Area: Abyssea - Misareaux (216)
 --   Mob: Tuskertrap
 -----------------------------------
-require("scripts/zones/Abyssea-Misareaux/textIDs");
+package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Misareaux/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

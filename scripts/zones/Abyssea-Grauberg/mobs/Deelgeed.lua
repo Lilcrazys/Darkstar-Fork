@@ -2,7 +2,8 @@
 --  Area: Abyssea - Grauberg (254)
 --   Mob: Deelgeed
 -----------------------------------
-require("scripts/zones/Abyssea-Grauberg/textIDs");
+package.loaded["scripts/zones/Abyssea-Grauberg/TextIDs"] = nil;
+require("scripts/zones/Abyssea-Grauberg/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");

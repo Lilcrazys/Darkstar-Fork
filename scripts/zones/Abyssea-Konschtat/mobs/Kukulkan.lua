@@ -2,9 +2,9 @@
 -- Area: Abyssea - Konschtat (15)
 --  Mob: Kukulkan
 -----------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
 -----------------------------------
-require("scripts/zones/Abyssea-Konschtat/textIDs");
+require("scripts/zones/Abyssea-Konschtat/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/keyitems");

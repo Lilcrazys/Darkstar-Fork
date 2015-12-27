@@ -2,7 +2,7 @@
 --  Area: Abyssea - Attohwa (215)
 --   Mob: Warbler
 -----------------------------------
-
+package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
 require("scripts/globals/abyssea");
 require("scripts/zones/Abyssea-Attohwa/TextIDs");
 require("scripts/globals/status");
