@@ -11,38 +11,36 @@ require("scripts/globals/bluemagic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	local duration = 60;
+    local effect = EFFECT_NONE;
+    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
+    -- The 2 effects roll their resistance separately..
+    local BLIND_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_BLIND);
+    local SILENCE_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_SILENCE);
 
-	local dINT = caster:getStat(MOD_MND) - target:getStat(MOD_MND);
-	local resist = applyResistance(caster,spell,target,dINT,37);
-	if (resist > 0.0625) then
-		-- resisted!
-		spell:setMsg(85);
-		return 0;
-	end
+    if (target:hasStatusEffect(EFFECT_BLIND) and target:hasStatusEffect(EFFECT_SILENCE)) then
+        spell:setMsg(75); -- No effect.
+        return EFFECT_NONE;
+    else
+        local MSG = 85; -- Will be used if both effects are resited.
 
-	if (target:hasStatusEffect(EFFECT_SILENCE) == true) then
-		-- no effect
-		spell:setMsg(75);
-	else
-		target:addStatusEffect(EFFECT_SILENCE,20,0,duration);
-		spell:setMsg(236);
+        if (BLIND_RES > 0.125) then
+            target:addStatusEffect(EFFECT_BLIND,60,0,60);
+            effect = EFFECT_BLIND;
+            MSG = 237; -- Landed it.
+        end
 
-	return EFFECT_SILENCE;
+        if (SILENCE_RES > 0.125) then
+            target:addStatusEffect(EFFECT_SILENCE,20,0,60);
+            effect = EFFECT_SILENCE;
+            MSG = 237; -- Landed it.
+        end
 
-	end
+        spell:setMsg(MSG);
 
-	if (target:hasStatusEffect(EFFECT_BLIND) == true) then
-		-- no effect
-		spell:setMsg(75);
-	else
-		target:addStatusEffect(EFFECT_BLIND,20,0,duration);
-		spell:setMsg(236);
-	end
-
-	return EFFECT_BLIND;
+        return effect;
+    end
 end;
