@@ -2,13 +2,12 @@
 -- Area: ?
 -- VWNM: Ogbunabali
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/Maze_of_Shakhrami/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Maze_of_Shakhrami/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -79,6 +78,7 @@ function onMobDeath(mob, killer, ally)
     if (ally:hasKeyItem(JADE_STRATUM_ABYSSITE_II)) then -- Ogbunabali Kill
        ally:addKeyItem(JADE_STRATUM_ABYSSITE_III);
        ally:delKeyItem(JADE_STRATUM_ABYSSITE_II);
+       ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_III);
     end
     ally:addCurrency("bayld", 50);
     ally:addExp(10000);

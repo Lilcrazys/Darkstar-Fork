@@ -2,13 +2,11 @@
 -- Area: ?
 -- VWNM: Pancimanci
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/West_Sarutabaruta_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/West_Sarutabaruta_[S]/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -75,6 +73,7 @@ function onMobDeath(mob, killer, ally)
            ally:addKeyItem(JADE_STRATUM_ABYSSITE_II);
            ally:delKeyItem(JADE_STRATUM_ABYSSITE);
            ally:setVar("JADE_STRATUM", 0);
+           ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_II);
         end
     end
     ally:addExp(10000);

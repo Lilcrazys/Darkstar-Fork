@@ -6,7 +6,6 @@
 package.loaded["scripts/zones/Dangruf_Wadi/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Dangruf_Wadi/TextIDs");
-require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/quests");

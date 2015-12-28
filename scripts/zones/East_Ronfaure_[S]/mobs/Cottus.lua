@@ -2,7 +2,9 @@
 -- Area: East Ronfaure [S]
 -- VWNM: Cottus
 -----------------------------------
-
+package.loaded["scripts/zones/East_Ronfaure_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/East_Ronfaure_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -70,6 +72,7 @@ function onMobDeath(mob, killer, ally)
            ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
            ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
            ally:setVar("CRIMSON_STRATUM", 0);
+           ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_II);
         end
     end
     ally:addExp(10000);

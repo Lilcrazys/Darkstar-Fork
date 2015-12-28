@@ -3,8 +3,9 @@
 -- VWNM: Hahava
 -- @pos ? ? ? ?
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/King_Ranperres_Tomb/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/King_Ranperres_Tomb/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/quests");

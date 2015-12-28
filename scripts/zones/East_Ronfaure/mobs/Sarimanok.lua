@@ -2,13 +2,12 @@
 -- Area: ?
 -- VWNM: Sarimanok
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/East_Ronfaure/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/East_Ronfaure/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -88,6 +87,7 @@ function onMobDeath(mob, killer, ally)
             ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
             ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
             ally:setVar("CRIMSON_STRATUM", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_II);
         end
     end
     ally:addExp(10000);

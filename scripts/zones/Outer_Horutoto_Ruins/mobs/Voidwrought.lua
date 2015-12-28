@@ -3,10 +3,10 @@
 -- VWNM: Voidwrought
 -- @pos ? ? ? ?
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/Outer_Horutoto_Ruins/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Outer_Horutoto_Ruins/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/magic");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 

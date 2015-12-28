@@ -5,12 +5,8 @@
 package.loaded["scripts/zones/Pashhow_Marshlands_[S][/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Pashhow_Marshlands_[S]/TextIDs");
-require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -84,8 +80,8 @@ function onMobDeath(mob, killer, ally)
         if (ally:isMaskFull(ally:getVar("INDIGO_STRATUM_III"),2) == true) then
             ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
             ally:delKeyItem(INDIGO_STRATUM_ABYSSITE_III);
-            ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_IV);
             ally:setVar("INDIGO_STRATUM_III", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_IV);
         end
     end
 

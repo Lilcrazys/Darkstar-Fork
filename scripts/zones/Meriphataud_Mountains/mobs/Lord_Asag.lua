@@ -5,12 +5,8 @@
 package.loaded["scripts/zones/Meriphataud_Mountains/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Meriphataud_Mountains/TextIDs");
-require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -77,8 +73,8 @@ function onMobDeath(mob, killer, ally)
         if (ally:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
             ally:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
             ally:delKeyItem(JADE_STRATUM_ABYSSITE_III);
-            ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
             ally:setVar("JADE_STRATUM_III", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
         end
     end
 

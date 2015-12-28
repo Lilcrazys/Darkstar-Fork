@@ -8,7 +8,6 @@ require("scripts/zones/Jugner_Forest_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -97,8 +96,8 @@ function onMobDeath(mob, killer, ally)
         if (ally:isMaskFull(ally:getVar("CRIMSON_STRATUM_III"),2) == true) then
             ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
             ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
-            ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_IV);
             ally:setVar("CRIMSON_STRATUM_III", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_IV);
         end
     end;
 end;

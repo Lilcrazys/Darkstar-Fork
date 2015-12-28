@@ -2,13 +2,11 @@
 -- Area: ?
 -- VWNM: Lorbulcrud
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/Gusgen_Mines/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Gusgen_Mines/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -70,5 +68,6 @@ function onMobDeath(mob, killer, ally)
     if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE_II)) then -- Lorbulcrud Kill
        ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_III);
        ally:delKeyItem(INDIGO_STRATUM_ABYSSITE_II);
+       ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_III);
     end
 end;
