@@ -80,10 +80,11 @@ end;
 
 function onMobDeath(mob, killer, ally)
     if (ally:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_II)) then -- Krabimanjaro Kill
-       ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
-       ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
-       ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_III);
+        ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
+        ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
+        ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_III);
     end
+
     ally:addCurrency("bayld", 50);
     ally:addExp(10000);
 end;

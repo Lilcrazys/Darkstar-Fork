@@ -2,7 +2,6 @@
 -- Area: ?
 -- VWNM: Sallow_Seymour
 -----------------------------------
-
 package.loaded["scripts/zones/North_Gustaberg/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/North_Gustaberg/TextIDs");
@@ -73,10 +72,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-        if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Sallow Seymour Kill
+    if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Sallow Seymour Kill
         if (ally:getMaskBit(ally:getVar("INDIGO_STRATUM"), 0) == false) then
             ally:setMaskBit(ally:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",0,true);
         end
+
         if (ally:isMaskFull(ally:getVar("INDIGO_STRATUM"),2) == true) then
             ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
             ally:delKeyItem(INDIGO_STRATUM_ABYSSITE);
@@ -84,5 +84,6 @@ function onMobDeath(mob, killer, ally)
             ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_II);
         end
     end
-            ally:addExp(10000);
+
+    ally:addExp(10000);
 end;

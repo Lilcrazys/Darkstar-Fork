@@ -92,10 +92,12 @@ function onMobDeath(mob, killer, ally)
                 ally:setMaskBit(ally:getVar("VW_3_NATIONS"),"VW_3_NATIONS",2,true);
             end
         end
+
         ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE);
         ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE_IV);
         ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE);
     end
+
     ally:addCurrency("bayld", 125);
     ally:addExp(10000);
 end;

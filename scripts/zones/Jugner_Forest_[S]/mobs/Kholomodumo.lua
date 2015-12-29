@@ -85,9 +85,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 75);
-    ally:addExp(10000);
-
     if (ally:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_III)) then -- Kholomodumo Kill
         if (ally:getMaskBit(ally:getVar("CRIMSON_STRATUM_III"), 1) == false) then
             ally:setMaskBit(ally:getVar("CRIMSON_STRATUM_III"),"CRIMSON_STRATUM_III",1,true);
@@ -100,4 +97,7 @@ function onMobDeath(mob, killer, ally)
             ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_IV);
         end
     end;
+
+    ally:addCurrency("bayld", 75);
+    ally:addExp(10000);
 end;

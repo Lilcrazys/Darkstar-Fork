@@ -77,10 +77,12 @@ function onMobDeath(mob, killer, ally)
                 ally:setMaskBit(ally:getVar("VW_3_NATIONS"),"VW_3_NATIONS",0,true);
             end
         end
+
         ally:addKeyItem(JADE_STRATUM_ABYSSITE);
         ally:delKeyItem(JADE_STRATUM_ABYSSITE_IV);
         ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE);
     end
+
     ally:addCurrency("bayld", 125);
     ally:addExp(10000);
 end;

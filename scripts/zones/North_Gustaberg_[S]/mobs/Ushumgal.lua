@@ -76,14 +76,16 @@ end;
 function onMobDeath(mob, killer, ally)
     if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Ushumgal Kill
         if (ally:getMaskBit(ally:getVar("INDIGO_STRATUM"), 1) == false) then
-           ally:setMaskBit(ally:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",1,true);
+            ally:setMaskBit(ally:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",1,true);
         end
+
         if (ally:isMaskFull(ally:getVar("INDIGO_STRATUM"),2) == true) then
-           ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
-           ally:delKeyItem(INDIGO_STRATUM_ABYSSITE);
-           ally:setVar("INDIGO_STRATUM", 0);
-           ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_II);
+            ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
+            ally:delKeyItem(INDIGO_STRATUM_ABYSSITE);
+            ally:setVar("INDIGO_STRATUM", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_II);
         end
     end
+
     ally:addExp(10000);
 end;
