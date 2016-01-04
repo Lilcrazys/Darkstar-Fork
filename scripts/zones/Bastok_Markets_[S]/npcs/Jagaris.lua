@@ -139,7 +139,7 @@ function onEventFinish(player,csid,option)
                end;
             end;
          end;
-      end;		
+      end;        
    end;
    if (csid == Deposit) then
       player:tradeComplete();

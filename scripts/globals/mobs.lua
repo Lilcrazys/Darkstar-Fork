@@ -19,33 +19,33 @@ require("scripts/globals/custom_trials");
 
 -- function onMobDeathEx(mob, killer, ally, killType)
 function onMobDeathEx(mob, killer, ally, isWeaponSkillKill)
-	-- DRK quest - Blade Of Darkness
-	local BladeofDarkness = killer:getQuestStatus(BASTOK, BLADE_OF_DARKNESS);
-	local BladeofDeath = killer:getQuestStatus(BASTOK, BLADE_OF_DEATH);
-	local ChaosbringerKills = killer:getVar("ChaosbringerKills");
+    -- DRK quest - Blade Of Darkness
+    local BladeofDarkness = killer:getQuestStatus(BASTOK, BLADE_OF_DARKNESS);
+    local BladeofDeath = killer:getQuestStatus(BASTOK, BLADE_OF_DEATH);
+    local ChaosbringerKills = killer:getVar("ChaosbringerKills");
 
-	if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
-		if (killer:getEquipID(SLOT_MAIN) == 16607 and isWeaponSkillKill == false) then
-			if (ChaosbringerKills < 200) then
-				killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);
-				if (ChaosbringerKills == 1) then
-					killer:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
-				else
-					killer:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
-				end
-			end
-		end
-	end
+    if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
+        if (killer:getEquipID(SLOT_MAIN) == 16607 and isWeaponSkillKill == false) then
+            if (ChaosbringerKills < 200) then
+                killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);
+                if (ChaosbringerKills == 1) then
+                    killer:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+                else
+                    killer:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+                end
+            end
+        end
+    end
 
-	if (ally:getCurrentMission(WINDURST) == A_TESTING_TIME) then
-		if (ally:hasCompletedMission(WINDURST,A_TESTING_TIME) and ally:getZoneID() == 118) then
-			ally:setVar("testingTime_crea_count",ally:getVar("testingTime_crea_count") + 1);
-		elseif (ally:hasCompletedMission(WINDURST,A_TESTING_TIME) == false and ally:getZoneID() == 117) then
-			ally:setVar("testingTime_crea_count",ally:getVar("testingTime_crea_count") + 1);
-		end
-	end
+    if (ally:getCurrentMission(WINDURST) == A_TESTING_TIME) then
+        if (ally:hasCompletedMission(WINDURST,A_TESTING_TIME) and ally:getZoneID() == 118) then
+            ally:setVar("testingTime_crea_count",ally:getVar("testingTime_crea_count") + 1);
+        elseif (ally:hasCompletedMission(WINDURST,A_TESTING_TIME) == false and ally:getZoneID() == 117) then
+            ally:setVar("testingTime_crea_count",ally:getVar("testingTime_crea_count") + 1);
+        end
+    end
 
-	-- doMagiantTrialCheck(mob, killer, ally, killType);
+    -- doMagiantTrialCheck(mob, killer, ally, killType);
 
     -----------------------------------
     -- Legion XI custom section

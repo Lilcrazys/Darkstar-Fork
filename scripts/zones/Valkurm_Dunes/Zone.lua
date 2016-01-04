@@ -88,7 +88,7 @@ function onZoneIn( player, prevZone)
 
     if (triggerLightCutscene(player)) then -- Quest: I Can Hear A Rainbow
         cs = 0x0003;
-    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then	
+    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then    
         cs = 0x0005;
     end
 
@@ -130,7 +130,7 @@ function onEventUpdate( player, csid, option)
             else
             player:updateEvent(0,0,0,0,0,3);
             end
-        end	
+        end    
     end
 end;
 
