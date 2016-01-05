@@ -7,6 +7,7 @@ package.loaded["scripts/zones/The_Eldieme_Necropolis_[S]/TextIDs"] = nil;
 require("scripts/zones/The_Eldieme_Necropolis_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------

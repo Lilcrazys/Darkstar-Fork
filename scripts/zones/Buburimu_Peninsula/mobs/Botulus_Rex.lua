@@ -2,7 +2,9 @@
 -- Area: Buburimu Peninsula
 -- VWNM: Botulus Rex
 -----------------------------------
-
+package.loaded["scripts/zones/Buburimu_Peninsula/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Buburimu_Peninsula/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");

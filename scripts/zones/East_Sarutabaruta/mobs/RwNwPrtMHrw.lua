@@ -79,8 +79,8 @@ function onMobDeath(mob, killer, ally)
         if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_IV"),3) == true) then
             ally:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
             ally:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
             ally:setVar("WHITE_STRATUM_IV", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
         end
     end;
 end;

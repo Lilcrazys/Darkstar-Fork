@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: GwynnApnudd
 -----------------------------------
-
+package.loaded["scripts/zones/Konschtat_Highlands/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Konschtat_Highlands/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -69,6 +71,7 @@ function onMobDeath(mob, killer, ally)
            ally:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
            ally:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
            ally:setVar("WHITE_STRATUM_V", 0);
+           ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
         end
     end;
 end;

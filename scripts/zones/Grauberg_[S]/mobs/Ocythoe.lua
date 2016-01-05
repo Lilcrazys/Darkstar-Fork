@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: Ocythoe
 -----------------------------------
-
+package.loaded["scripts/zones/Grauberg_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Grauberg_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 

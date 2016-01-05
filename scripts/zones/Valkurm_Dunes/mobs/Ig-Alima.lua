@@ -2,7 +2,9 @@
 -- Area: Valkurm Dunes
 -- VWNM: Ig-Alima
 -----------------------------------
-
+package.loaded["scripts/zones/Valkurm_Dunes/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Valkurm_Dunes/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");

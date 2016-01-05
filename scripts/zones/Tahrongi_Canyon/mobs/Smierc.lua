@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: Smierc
 -----------------------------------
-
+package.loaded["scripts/zones/Tahrongi_Canyon/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Tahrongi_Canyon/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/keyitems");
@@ -103,6 +105,7 @@ function onMobDeath(mob, killer, ally)
            ally:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
            ally:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
            ally:setVar("WHITE_STRATUM_V", 0);
+           ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
         end
     end;
 end;

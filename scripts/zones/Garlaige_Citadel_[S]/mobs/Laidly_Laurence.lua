@@ -6,6 +6,7 @@ package.loaded["scripts/zones/Garlaige_Citadel_[S]/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Garlaige_Citadel_[S]/TextIDs");
 require("scripts/globals/status");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------

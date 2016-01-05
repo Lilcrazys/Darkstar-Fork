@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: ME TO
 -----------------------------------
-
+package.loaded["scripts/zones/Fort_Karugo-Narugo_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Fort_Karugo-Narugo_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 

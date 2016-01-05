@@ -2,11 +2,12 @@
 -- Area: ?
 -- VWNM: Gaunab
 -----------------------------------
+package.loaded["scripts/zones/Vunkerl_Inlet_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Vunkerl_Inlet_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action

@@ -6,6 +6,7 @@ package.loaded["scripts/zones/Crawlers_Nest/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Crawlers_Nest/TextIDs");
 require("scripts/globals/status");
+require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 
 -----------------------------------
