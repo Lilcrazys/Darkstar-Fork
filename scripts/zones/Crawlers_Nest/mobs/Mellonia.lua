@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: Mellonia
 -----------------------------------
-
+package.loaded["scripts/zones/Crawlers_Nest/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Crawlers_Nest/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -101,6 +103,7 @@ function onMobDeath(mob, killer, ally)
                 ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
                 ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
                 ally:setVar("WHITE_STRATUM_II", 0);
+                ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
             end
         end
     end

@@ -2,11 +2,11 @@
 -- Area: ?
 -- VWNM:
 -----------------------------------
-
+package.loaded["scripts/zones/The_Eldieme_Necropolis/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/The_Eldieme_Necropolis/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action

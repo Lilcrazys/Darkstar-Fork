@@ -6,8 +6,6 @@ package.loaded["scripts/zones/Lower_Delkfutts_Tower/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Lower_Delkfutts_Tower/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 

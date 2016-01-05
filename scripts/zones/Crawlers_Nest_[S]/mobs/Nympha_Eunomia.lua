@@ -2,9 +2,10 @@
 -- Area: EDIT ME
 -- VWNM: Nympha Eunomia
 -----------------------------------
-
+package.loaded["scripts/zones/Crawlers_Nest_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Crawlers_Nest_[S]/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action

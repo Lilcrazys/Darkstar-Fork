@@ -2,7 +2,9 @@
 -- Area: EDIT ME
 -- VWNM: Gugalanna
 -----------------------------------
-
+package.loaded["scripts/zones/Sauromugue_Champaign_[S]/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/Sauromugue_Champaign_[S]/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
@@ -65,6 +67,7 @@ function onMobDeath(mob, killer, ally)
            ally:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
            ally:delKeyItem(WHITE_STRATUM_ABYSSITE);
            ally:setVar("WHITE_STRATUM", 0);
+           ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
         end
     end;
 end;

@@ -7,7 +7,6 @@ package.loaded["scripts/zones/Behemoths_Dominion/TextIDs"] = nil;
 require("scripts/zones/Behemoths_Dominion/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/quests");
 require("scripts/globals/keyitems");
 

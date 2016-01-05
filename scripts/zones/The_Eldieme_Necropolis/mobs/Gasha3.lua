@@ -2,12 +2,13 @@
 -- Area: ?
 -- VWNM: Gasha 3
 -----------------------------------
-
+package.loaded["scripts/zones/The_Eldieme_Necropolis/TextIDs"] = nil;
+-----------------------------------
+require("scripts/zones/The_Eldieme_Necropolis/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/keyitems");
-require("scripts/globals/quests");
+
 
 -----------------------------------
 -- onMobInitialize Action
@@ -98,6 +99,7 @@ function onMobDeath(mob, killer, ally)
                 ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
                 ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
                 ally:setVar("WHITE_STRATUM_II", 0);
+                ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
             end
         end
     end
