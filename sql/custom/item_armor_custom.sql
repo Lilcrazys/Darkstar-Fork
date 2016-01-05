@@ -97,8 +97,8 @@ INSERT INTO `item_armor` VALUES (21358,'plumose_sachet',99,0,4194303,0,0,0,8,0);
 INSERT INTO `item_armor` VALUES (21371,'ginsen',99,0,2473971,0,0,0,8,0);
 INSERT INTO `item_armor` VALUES (21373,'sihirik',99,0,30639,0,0,0,8,0);
 INSERT INTO `item_armor` VALUES (21376,'inlamvuyeso',99,0,2589730,0,0,0,8,0);
-INSERT INTO `item_armor` VALUES (21378,'yetshila',99,0,2166961,0,0,8,2);
-INSERT INTO `item_armor` VALUES (21379,'yetshila_+1',99,0,2166961,0,0,8,2);
+INSERT INTO `item_armor` VALUES (21378,'yetshila',99,0,2166961,0,0,0,8,2);
+INSERT INTO `item_armor` VALUES (21379,'yetshila_+1',99,0,2166961,0,0,0,8,2);
 INSERT INTO `item_armor` VALUES (21400,'blurred_harp',99,0,512,72,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21401,'blurred_harp_+1',99,0,512,72,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21405,'eminent_flute',99,117,512,69,0,0,4,0);
@@ -118,10 +118,10 @@ INSERT INTO `item_armor` VALUES (26735,'taeon_chapeau',99,119,2602290,326,0,0,16
 INSERT INTO `item_armor` VALUES (26736,'telchine_cap',99,119,1622556,143,0,0,16,0);
 INSERT INTO `item_armor` VALUES (26737,'helios_band',99,119,1622044,327,0,0,16,0);
 REPLACE INTO `item_armor` VALUES (26836,'horos_casaque',99,109,262144,304,0,0,32,0);
-REPLACE INTO `item_armor` VALUES (26837,'horos_casaque_+1',99,119,262144,304,0,0,32,0)
+REPLACE INTO `item_armor` VALUES (26837,'horos_casaque_+1',99,119,262144,304,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26874,'supay_weskit',99,119,8,137,0,0,32,0);
-INSERT INTO `item_armor` VALUES (26877,'foppish_tunica',99,119,382,0,0,32,0);
-INSERT INTO `item_armor` VALUES (26878,'foppish_tunica_+1',99,119,382,0,0,32,0);
+INSERT INTO `item_armor` VALUES (26877,'foppish_tunica',99,119,2593826,382,0,0,32,0);
+INSERT INTO `item_armor` VALUES (26878,'foppish_tunica_+1',99,119,2593826,382,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26879,'wretched_coat',99,0,2638364,381,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26880,'wretched_coat_+1',99,0,2638364,381,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26881,'gefechtbrust',99,0,10433,138,0,0,32,0);
@@ -207,13 +207,12 @@ INSERT INTO `item_armor` VALUES (27863,'gorney_haubert_+1',99,117,10689,354,0,0,
 INSERT INTO `item_armor` VALUES (27864,'shneddick_tabard_+1',99,117,2593826,355,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27865,'weatherspoon_robe_+1',99,117,3719708,356,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27883,'wayfarer_robe',99,117,4179646,20,0,0,32,0);
-INSERT INTO `item_armor` VALUES (27889,'aetosaur_jerkin_+1',99,0,2473969,6,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27892,'shabti_cuirass_+1',99,0,193,22,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27894,'haruspex_coat_+1',99,119,4179656,280,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (27918,'manibozho_jerkin',99,110,2593826,350,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (27919,'bokwus_robe',99,110,1589788,351,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27987,'gefechthentzes',99,0,10433,138,0,0,64,0);
-INSERT INTO `item_armor` VALUES (27988,'wildheithentzes'99,0,10433,138,0,0,64,0);
+INSERT INTO `item_armor` VALUES (27988,'wildheithentzes',99,0,10433,138,0,0,64,0);
 
 INSERT INTO `item_armor` VALUES (28005,'alrunas_gloves_+1',99,118,66592,223,0,0,64,0);
 INSERT INTO `item_armor` VALUES (28010,'gorney_moufles_+1',99,117,10689,354,0,0,64,0);
@@ -258,8 +257,8 @@ INSERT INTO `item_armor` VALUES (28314,'aetosaur_ledelsens',99,0,2473969,6,0,0,2
 INSERT INTO `item_armor` VALUES (28315,'aetosaur_ledelsens_+1',99,0,2473969,6,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28316,'shabti_sabatons',99,0,193,22,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28317,'shabti_sabatons_+1',99,0,193,22,0,0,256,0);
-INSERT INTO `item_armor` VALUES (28318,'haruspex_pigaches',99,0,4179656,0,0,256,0);
-INSERT INTO `item_armor` VALUES (28319,'haruspex_pigaches_+1',99,0,4179656,0,0,256,0);
+INSERT INTO `item_armor` VALUES (28318,'haruspex_pigaches',99,0,4179656,0,0,0,256,0);
+INSERT INTO `item_armor` VALUES (28319,'haruspex_pigaches_+1',99,0,4179656,0,0,0,256,0);
 REPLACE INTO `item_armor` VALUES (28339,'manibozho_boots',99,110,2593826,350,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28351,'cloud_hairpin_+1',99,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (28374,'dakatsu_nodowa',99,0,6146,0,0,0,512,0);
@@ -269,8 +268,8 @@ REPLACE INTO `item_armor` VALUES (28385,'atzintli_necklace',99,119,4194303,131,0
 INSERT INTO `item_armor` VALUES (28428,'sailfi_belt_+1',99,0,2473969,0,0,0,1024,0);
 INSERT INTO `item_armor` VALUES (28441,'ponente_sash',99,0,66560,0,0,0,1024,0);
 INSERT INTO `item_armor` VALUES (28445,'shetal_stone',99,0,4194303,0,0,0,1024,0);
-INSERT INTO `item_armor` VALUES (28446,'sweordfaetels',99,0,2473969,0,0,1024,0);
-INSERT INTO `item_armor` VALUES (28447,'sweordfaetels_+1',99,0,2473969,0,0,1024,0);
+INSERT INTO `item_armor` VALUES (28446,'sweordfaetels',99,0,2473969,0,0,0,1024,0);
+INSERT INTO `item_armor` VALUES (28447,'sweordfaetels_+1',99,0,2473969,0,0,0,1024,0);
 REPLACE INTO `item_armor` VALUES (28478,'etiolation_earring',99,0,4194303,0,0,0,6144,0);
 REPLACE INTO `item_armor` VALUES (28479,'enervating_earring',99,0,4194303,0,0,0,6144,0);
 REPLACE INTO `item_armor` VALUES (28483,'cryptic_earring',99,0,4194303,0,0,0,6144,0);
@@ -294,7 +293,7 @@ INSERT INTO `item_armor` VALUES (28552,'fistmele_ring',99,0,4194303,0,0,0,24576,
 INSERT INTO `item_armor` VALUES (28553,'perception_ring',99,0,4194303,0,0,0,24576,0);
 INSERT INTO `item_armor` VALUES (28601,'seshaw_cape',99,0,1753628,0,0,0,32768,0);
 INSERT INTO `item_armor` VALUES (28602,'seshaw_cape_+1',99,0,1753628,0,0,0,32768,0);
-INSERT INTO `item_armor` VALUES (28606,'aput_mantle',99,0,2473969,0,0,32768,0);
-INSERT INTO `item_armor` VALUES (28607,'aput_mantle_+1',99,0,2473969,0,0,32768,0);
+INSERT INTO `item_armor` VALUES (28606,'aput_mantle',99,0,2473969,0,0,0,32768,0);
+INSERT INTO `item_armor` VALUES (28607,'aput_mantle_+1',99,0,2473969,0,0,0,32768,0);
 REPLACE INTO `item_armor` VALUES (28641,'vespid_mantle',99,0,2473971,0,0,0,32768,0);
 INSERT INTO `item_armor` VALUES (28656,'eminent_shield',99,117,193,30,3,0,2,0);
