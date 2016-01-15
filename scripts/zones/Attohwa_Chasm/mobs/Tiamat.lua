@@ -33,19 +33,24 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 200);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_DOUBLE_ATTACK, 15);
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,120);
-    mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_FIRE_AFFINITY,5);
-    mob:setMod(MOD_SLEEPRES,100);
-    mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
+    mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_HUMANOID_KILLER, 5);
-    mob:setMod(MOD_FIRE_ABSORB, 100);
+    mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_TERRORRES, 100);
+    mob:setMod(MOD_FIRE_ABSORB, 100);
+    mob:setMod(MOD_FIRE_AFFINITY_DMG,5);
+    mob:setMod(MOD_FIRE_AFFINITY_ACC,5);
+    mob:setMod(MOD_HUMANOID_KILLER, 5);
+
+    -- Other
+    mob:SetMobSkillAttack(0); -- resetting so it doesn't respawn in flight mode.
+    mob:AnimationSub(0); -- subanim 0 is only used when it spawns until first flight.
 end;
 
 -----------------------------------
@@ -71,7 +76,7 @@ end;
 
 function onMobFight(mob,target)
     --[[
-    -- Gains a large attack boost when health is under 25% which cannot be Dispelled. 
+    -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
     if (mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
         if (mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
             mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
@@ -83,12 +88,12 @@ function onMobFight(mob,target)
         local changeTime = mob:getLocalVar("changeTime")
         local twohourTime = mob:getLocalVar("twohourTime")
         local changeHP = mob:getLocalVar("changeHP")
-        
+
         if (twohourTime == 0) then
             twohourTime = math.random(8, 14);
             mob:setLocalVar("twohourTime", twohourTime);
         end;
-        
+
         if (mob:AnimationSub() == 2 and mob:getBattleTime()/15 > twohourTime) then
             mob:useMobAbility(432);
             mob:setLocalVar("twohourTime", math.random((mob:getBattleTime()/15)+4, (mob:getBattleTime()/15)+8));
@@ -123,48 +128,40 @@ function onMobFight(mob,target)
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
-        end;
+    end;
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
         if (mob:AnimationSub() == 1) then
-             mob:useMobAbility(1026);
-             mob:setLocalVar("Wings", mob:getBattleTime());
-         elseif (mob:AnimationSub() == 2) then
-             mob:AnimationSub(1); -- fly
-             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-             mob:SetMobSkillAttack(true);
-             mob:setLocalVar("Wings", mob:getBattleTime());
-         elseif (mob:AnimationSub() == 0) then
-             mob:AnimationSub(1); -- fly
-             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-             mob:SetMobSkillAttack(true);
-             mob:setLocalVar("Wings", mob:getBattleTime());
-
-    if (mob:getHPP() <= 20) then
-         if (Tia_2hr_Used == 3) then
-              mob:useMobAbility(432); -- MS
-              mob:setLocalVar("Tia_2hr", 4);
-              mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-              mob:addMod(MOD_DOUBLE_ATTACK, 15);
-              mob:addMod(MOD_REGAIN, 10);
-              mob:addStatusEffect(EFFECT_ATTACK_BOOST,125,0,0);
-              mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-         end
-    elseif (mob:getHPP() <= 40) then
-         if (Tia_2hr_Used == 2) then
-              mob:useMobAbility(432); -- MS
-              mob:setLocalVar("Tia_2hr", 3);
-         end
-    elseif (mob:getHPP() <= 60) then
-         if (Tia_2hr_Used == 1) then
-              mob:useMobAbility(432); -- MS
-              mob:setLocalVar("Tia_2hr", 2);
-         end
-    elseif (mob:getHPP() <= 80) then
-         if (Tia_2hr_Used == 0) then
-              mob:useMobAbility(432); -- MS
-              mob:setLocalVar("Tia_2hr", 1);
-         end
+            mob:useMobAbility(1026);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        elseif (mob:AnimationSub() == 2) then
+            mob:AnimationSub(1); -- fly
+            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+            mob:SetMobSkillAttack(true);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        elseif (mob:AnimationSub() == 0) then
+            mob:AnimationSub(1); -- fly
+            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+            mob:SetMobSkillAttack(true);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        end
+    elseif (mob:getHPP() <= 20 and Tia_2hr_Used == 3) then
+        mob:useMobAbility(432); -- MS
+        mob:setLocalVar("Tia_2hr", 4);
+        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
+        mob:addMod(MOD_DOUBLE_ATTACK, 15);
+        mob:addMod(MOD_REGAIN, 10);
+        mob:addStatusEffect(EFFECT_ATTACK_BOOST,125,0,0);
+        mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
+    elseif (mob:getHPP() <= 40 and Tia_2hr_Used == 2) then
+        mob:useMobAbility(432); -- MS
+        mob:setLocalVar("Tia_2hr", 3);
+    elseif (mob:getHPP() <= 60 and Tia_2hr_Used == 1) then
+        mob:useMobAbility(432); -- MS
+        mob:setLocalVar("Tia_2hr", 2);
+    elseif (mob:getHPP() <= 80 and Tia_2hr_Used == 0) then
+        mob:useMobAbility(432); -- MS
+        mob:setLocalVar("Tia_2hr", 1);
     end
 end;
 
@@ -187,8 +184,6 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    -- Wiki says nothing about proc rate, going with 80% for now.
-    -- I remember it going off every hit when I fought him.
     local chance = 45;
     local LV_diff = target:getMainLvl() - mob:getMainLvl();
 
@@ -200,29 +195,28 @@ function onAdditionalEffect(mob,target,damage)
     if (math.random(0,99) >= chance) then
         return 0,0,0;
     else
-         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
+        local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
 
-         if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20) / 2;
-         end
+        if (INT_diff > 20) then
+           INT_diff = 20 + (INT_diff - 20) / 2;
+        end
 
-         local dmg = INT_diff+LV_diff+damage/3;
-         local params = {};
-         params.bonusmab = 0;
-         params.includemab = false;
-         dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
-         dmg = dmg * applyResistanceAddEffect(mob,target,ELE_FIRE,0);
-         dmg = adjustForTarget(target,dmg,ELE_FIRE);
+        local dmg = INT_diff+LV_diff+damage/3;
+        local params = {};
+        params.bonusmab = 0;
+        params.includemab = false;
+        dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
+        dmg = dmg * applyResistanceAddEffect(mob,target,ELE_FIRE,0);
+        dmg = adjustForTarget(target,dmg,ELE_FIRE);
 
-         if (dmg < 0) then
-            dmg = 10
-         end
+        if (dmg < 0) then
+           dmg = 0;
+        end
 
-         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
+        dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
 
-         return SUBEFFECT_FIRE_DAMAGE,163,dmg;
+        return SUBEFFECT_FIRE_DAMAGE,163,dmg;
     end
-
 end;
 
 -----------------------------------
