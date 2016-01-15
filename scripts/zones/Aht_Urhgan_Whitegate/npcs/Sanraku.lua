@@ -80,9 +80,11 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    -- if (player:getVar("ZeniStatus") == 0) then
-        -- player:startEvent(0x038c);
-    -- else
+    --[[
+    if (player:getVar("ZeniStatus") == 0) then
+        player:startEvent(0x038c);
+    else
+    ]]
         local param = 2140136440; -- Defaut bitmask, Tier 1 ZNM Menu + don't ask option
 
         -- Tinnin Path
@@ -123,9 +125,9 @@ function onTrigger(player,npc)
         end;
 
         player:startEvent(0x038D,param);
+    --[[
     end
     ]]
-    -- end
 end;
 
 -----------------------------------
