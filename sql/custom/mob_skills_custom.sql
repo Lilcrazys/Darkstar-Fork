@@ -1055,7 +1055,7 @@ INSERT INTO `mob_skills` VALUES (1010,951,'High-Tension_Discharger',4,10.0,2000,
 INSERT INTO `mob_skills` VALUES (1011,952,'Hydro_Canon',4,10.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1012,1012,'Nuclear_Waste',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1013,954,'Chemical_Bomb',0,10.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (1014,1014,'Particle_Shield',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1014,1014,'Particle_Shield',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1015,1015,'Empty_Cutter',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1016,1016,'Negative_Whirl',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1017,1017,'Winds_of_Promyvion',0,7.0,2000,1500,4,0,0,0);
@@ -1322,8 +1322,8 @@ INSERT INTO `mob_skills` VALUES (1277,1089,'Pile_Pitch',0,10.0,2000,1500,4,0,0,0
 INSERT INTO `mob_skills` VALUES (1278,1090,'Guided_Missile',2,5.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1279,1279,'Hyper_Pulse',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1280,1280,'Target_Analysis',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (1281,1281,'Discharger',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (1282,1282,'Ion_Efflux',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1281,1281,'Discharger',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1282,1282,'Ion_Efflux',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1283,1283,'Rear_Lasers',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1284,1284,'Citadel_Buster',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1285,1285,'Blighted_Gloom',0,7.0,2000,1500,4,0,0,0);
