@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Bibiki Bay
--- NPC:  Tchakka
+--  MOB: Tchakka (Custom Version)
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -11,8 +11,13 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MDEF, 50);
 end;
 
 -----------------------------------
@@ -24,12 +29,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 110);
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_ACC,1500);
-    mob:setMod(MOD_WATER_AFFINITY,20);
-    mob:addMod(MOD_DEF, 100);
-    mob:addMod(MOD_MDEF, 50);
+    mob:setMod(MOD_WATER_AFFINITY_DMG, 20);
+    mob:setMod(MOD_WATER_AFFINITY_ACC, 20);
 
+    -- Other
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -71,5 +76,5 @@ function onMobDeath(mob, killer, ally)
     if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(745) == false) then
          ally:addSpell(745);
     end
-    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+    mob:setRespawnTime(math.random(18000,28800));   -- 5 to 8 hours
 end;

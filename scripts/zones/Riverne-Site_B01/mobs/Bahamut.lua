@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: inSomeZone
---  NM:  Bahamut
+--  NM:  Bahamut (Custom version)
 -----------------------------------
 require("scripts/globals/titles");
 require("scripts/globals/status");
@@ -37,7 +37,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_ACC,2500);
     mob:setMod(MOD_MATT,115);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
-    mob:setMod(MOD_FIRE_AFFINITY,5);
+    mob:setMod(MOD_FIRE_AFFINITY_DMG, 5);
+    mob:setMod(MOD_FIRE_AFFINITY_ACC, 5);
     mob:setMod(MOD_WIND_AFFINITY,5);
     mob:setMod(MOD_EARTH_AFFINITY,5);
     mob:setMod(MOD_SLEEPRES,100);

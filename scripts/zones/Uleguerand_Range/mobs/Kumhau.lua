@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Uleguaerand Range
--- NPC:  Kumhau
+--  MOB: Kumhau (Custom version)
 -----------------------------------
 
 require("scripts/globals/status");
@@ -11,7 +11,14 @@ require("scripts/globals/titles");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF, 30);
+    mob:addMod(MOD_ICE_AFFINITY_DMG, 20);
+    mob:addMod(MOD_ICE_AFFINITY_ACC, 20);
 end;
 
 -----------------------------------
@@ -22,12 +29,11 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 100);
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMod(MOD_ACC,1450);
-    mob:addMod(MOD_ICE_AFFINITY,20);
     mob:setMod(MOD_STUNRES, 500);
-    mob:addMod(MOD_MDEF, 30);
+
+    -- Other
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -57,22 +63,16 @@ function onMobFight(mob, target)
         Kumhau_2hr_Used = mob:getLocalVar("Kumhau_2hr");
     end
 
-    if (mob:getHPP() <= 10) then
-        if (Kamhau_2hr_Used == 2) then
-            mob:useMobAbility(438); -- Invincible
-            mob:setLocalVar("Kumhau_2hr", 3);
+    if (mob:getHPP() <= 10 and Kamhau_2hr_Used == 2) then
+        mob:useMobAbility(438); -- Invincible
+        mob:setLocalVar("Kumhau_2hr", 3);
         mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-        end
-    elseif (mob:getHPP() <= 30) then
-        if (Kamhau_2hr_Used == 1) then
-            mob:useMobAbility(438); -- Invincible
-            mob:setLocalVar("Kumhau_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 70) then
-        if (Kamhau_2hr_Used == 0) then
-            mob:useMobAbility(438); -- Invincible
-            mob:setLocalVar("Kamhau_2hr", 1);
-        end
+    elseif (mob:getHPP() <= 30 and Kamhau_2hr_Used == 1) then
+        mob:useMobAbility(438); -- Invincible
+        mob:setLocalVar("Kumhau_2hr", 2);
+    elseif (mob:getHPP() <= 70 and Kamhau_2hr_Used == 0) then
+        mob:useMobAbility(438); -- Invincible
+        mob:setLocalVar("Kamhau_2hr", 1);
     elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
@@ -84,5 +84,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+    mob:setRespawnTime(math.random(18000,28800));   -- 5 to 8 hours
 end;

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Yuhtunga Jungle
--- NPC:  Darrcuiln
+--  MOB: Darrcuiln (Custom Version)
 -----------------------------------
 require("scripts/globals/status");
 
@@ -9,7 +9,14 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_WIND_AFFINITY_DMG, 20);
+    mob:addMod(MOD_WIND_AFFINITY_ACC, 20);
+    mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MDEF, 30);
 end;
 
 -----------------------------------
@@ -22,14 +29,11 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 120);
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_ACC,1500);
     mob:setMod(MOD_STUNRES, 500);
 
-    mob:addMod(MOD_WIND_AFFINITY,20);
-    mob:addMod(MOD_DEF, 100);
-    mob:addMod(MOD_MDEF, 30);
-
+    -- Other
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------

@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Attohwa Chasm
--- NPC:  Achuka
+--  MOB: Achuka (Custom Version)
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -12,6 +12,10 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MDEF, 30);
 end;
 
 -----------------------------------
@@ -23,13 +27,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,10);
     mob:setMod(MOD_MACC, 2000);
     mob:setMod(MOD_MATT, 100);
-    mob:addMod(MOD_FIRE_AFFINITY, 10);
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
-    mob:addMod(MOD_DEF, 100);
+    mob:setMod(MOD_FIRE_AFFINITY_DMG, 10);
+    mob:setMod(MOD_FIRE_AFFINITY_ACC, 10);
     mob:setMod(MOD_STUNRES, 500);
-    mob:addMod(MOD_MDEF, 30);
-    -- addMod
     mob:setMod(MOD_ACC,1500);
+
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------

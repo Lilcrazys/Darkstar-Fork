@@ -38,7 +38,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_FIRE_AFFINITY,5);
+    mob:setMod(MOD_FIRE_AFFINITY_DMG, 5);
+    mob:setMod(MOD_FIRE_AFFINITY_ACC, 5);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);

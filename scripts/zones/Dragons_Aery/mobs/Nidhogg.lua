@@ -65,7 +65,7 @@ function onMobDeath(mob, killer, ally)
 
     -- Set Nidhogg's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
-        local wait = 72 * 3600;
+        local wait = 72 * 360;
         SetServerVariable("[POP]Nidhogg", os.time(t) + wait); -- 3 days
         if (LandKingSystem_HQ == 0) then -- Is time spawn only
             DeterMob(mob:getID(), true);

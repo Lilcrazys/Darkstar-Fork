@@ -33,7 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,125);
-    mob:setMod(MOD_DARK_AFFINITY,300);
+    mob:setMod(MOD_DARK_AFFINITY_DMG, 300);
+    mob:setMod(MOD_DARK_AFFINITY_ACC, 300);
 
     -- var
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
@@ -50,10 +51,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > mob:getLocalVar("depopTime")) then
-       DespawnMob(mob:getID());
-    end
-
     local Wings = mob:getLocalVar("Wings");
 
     if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
@@ -64,6 +61,16 @@ function onMobFight(mob, target)
            mob:AnimationSub(1); -- fly
            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 180);
            mob:setLocalVar("Wings", mob:getBattleTime());
+        end
+    end
+
+    -- Check for timed depop
+    if (os.time(t) > mob:getLocalVar("depopTime")) then
+        if (mob:actionQueueEmpty() == true) then
+            DespawnMob(mob:getID());
+
+            -- Prevent moronic "bug" reports..
+            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
         end
     end
 end;
@@ -78,13 +85,13 @@ function onMobDeath(mob, killer, ally)
 
     if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Goji Kill
         if (ally:getMaskBit(ally:getVar("WHITE_STRATUM"), 0) == false) then
-           ally:setMaskBit(ally:getVar("WHITE_STRATUM"),"WHITE_STRATUM",0,true);
+            ally:setMaskBit(ally:getVar("WHITE_STRATUM"),"WHITE_STRATUM",0,true);
         end
         if (ally:isMaskFull(ally:getVar("WHITE_STRATUM"),6) == true) then
-           ally:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
-           ally:delKeyItem(WHITE_STRATUM_ABYSSITE);
-           ally:setVar("WHITE_STRATUM", 0);
-           ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
+            ally:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
+            ally:delKeyItem(WHITE_STRATUM_ABYSSITE);
+            ally:setVar("WHITE_STRATUM", 0);
+            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
         end
     end;
 end;

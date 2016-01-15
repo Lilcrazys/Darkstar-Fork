@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Temple of Ulg
--- NPC:  Colkhab
+--  MOB: Colkhab (Custom Version)
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -12,6 +12,8 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    mob:addMod(MOD_MDEF, 30);
 end;
 
 -----------------------------------
@@ -23,12 +25,12 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_MACC, 2500);
     mob:setMod(MOD_MATT, 110);
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_ACC, 1500);
-    mob:setMod(MOD_WIND_AFFINITY, 20);
+    mob:setMod(MOD_WIND_AFFINITY_DMG, 20);
+    mob:setMod(MOD_WIND_AFFINITY_ACC, 20);
     mob:setMod(MOD_STUNRES, 500);
-    mob:addMod(MOD_MDEF, 30);
 
+    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
