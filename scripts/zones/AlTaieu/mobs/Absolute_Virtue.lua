@@ -245,4 +245,41 @@ function onMobDeath(mob, killer, ally)
     DespawnMob(16912878);
     DespawnMob(16912879);
     DespawnMob(16912880);
+    
+    
+    local RND1 = math.random(1,7);
+    local RND2 = math.random(1,5);
+    if (RND1 == 1) then
+        SetDropRate(4,0,27590,50); -- Shneddick Ring -- 1
+        SetDropRate(4,0,27581,0); -- Woltaris Ring -- 2
+        SetDropRate(4,0,27583,0); -- Janniston Ring -- 3
+        SetDropRate(4,0,27585,0); -- Gorney Ring -- 4
+        SetDropRate(4,0,27587,0); -- Karieyh Ring -- 5
+        SetDropRate(4,0,27589,0); -- Thurandaut Ring -- 6
+        SetDropRate(4,0,27591,0); -- Orvail Ring  -- 7
+    elseif (RND1 == 2) then
+        SetDropRate(4,0,27590,0); -- Shneddick Ring -- 1
+        SetDropRate(4,0,27581,50); -- Woltaris Ring -- 2
+        SetDropRate(4,0,27583,0); -- Janniston Ring -- 3
+        SetDropRate(4,0,27585,0); -- Gorney Ring -- 4
+        SetDropRate(4,0,27587,0); -- Karieyh Ring -- 5
+        SetDropRate(4,0,27589,0); -- Thurandaut Ring -- 6
+        SetDropRate(4,0,27591,0); -- Orvail Ring  -- 7
+    end
+
+    if (RND2 == 1) then
+        SetDropRate(4,0,27580,70); -- Adoulin Ring -- 1
+        SetDropRate(4,0,27582,0); -- Weather Ring -- 2
+        SetDropRate(4,0,27584,0); -- Renaye Ring -- 3
+        SetDropRate(4,0,27586,0); -- Haverton Ring -- 4
+        SetDropRate(4,0,27588,0); -- Vocane Ring -- 5
+    elseif (RND2 ==2) then
+        SetDropRate(4,0,27580,0); -- Adoulin Ring -- 1
+        SetDropRate(4,0,27582,70); -- Weather Ring -- 2
+        SetDropRate(4,0,27584,0); -- Renaye Ring -- 3
+        SetDropRate(4,0,27586,0); -- Haverton Ring -- 4
+        SetDropRate(4,0,27588,0); -- Vocane Ring -- 5
+    end
+
+    
 end;

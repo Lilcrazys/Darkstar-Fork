@@ -36,9 +36,23 @@ end
 function onMobDeath(mob,killer,ally)
 
     checkGoVregime(ally,mob,774,1);
+    
+    if (math.random(1,100) <= 3) then
+        SetDropRate(2079,18852,1000); -- Ocatave Club
+        SetDropRate(2079,17440,0); -- Kraken Club
+        SetDropRate(2079,17030,0); -- Great Club
+    elseif (math.random(1,100) <= 10) then
+        SetDropRate(2079,18852,0); -- Ocatave Club
+        SetDropRate(2079,17440,1000); -- Kraken Club
+        SetDropRate(2079,17030,0); -- Great Club
+    else
+        SetDropRate(2079,18852,0); -- Ocatave Club
+        SetDropRate(2079,17440,0); -- Kraken Club
+        SetDropRate(2079,17030,1000); -- Great Club
+    end
 
     -- Set LoO's Window Open Time
-    local wait = math.random((18000),(28800));
+    local wait = math.random(18000,28800);
     SetServerVariable("[POP]Lord_of_Onzozo", os.time(t) + wait); -- 5-8 Hours
     DeterMob(mob:getID(), true);
 
