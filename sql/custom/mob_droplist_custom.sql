@@ -2867,7 +2867,7 @@ INSERT INTO `mob_droplist` VALUES (9604,0,8926,50); -- Fenritear
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (9605,0,28338,90); -- mikinaak greaves
-INSERT INTO `mob_droplist` VALUES (9605,0,21403,87); -- Damani Horn +1
+INSERT INTO `mob_droplist` VALUES (9605,0,21403,87); -- Damani Horn +1 -- item_basic fix needed
 INSERT INTO `mob_droplist` VALUES (9605,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9605,0,8920,50); -- Leviatear    
 INSERT INTO `mob_droplist` VALUES (9605,0,8921,50); -- Ramutear    
@@ -2877,52 +2877,207 @@ INSERT INTO `mob_droplist` VALUES (9605,0,8924,50); -- Shivatear
 INSERT INTO `mob_droplist` VALUES (9605,0,8925,50); -- Carbutear
 INSERT INTO `mob_droplist` VALUES (9605,0,8926,50); -- Fenritear 
 
-INSERT INTO `mob_droplist` VALUES (9606,0,28506,111);
-INSERT INTO `mob_droplist` VALUES (9606,0,28059,123);
-INSERT INTO `mob_droplist` VALUES (9606,0,21425,20);
-INSERT INTO `mob_droplist` VALUES (9607,0,28565,49);
-INSERT INTO `mob_droplist` VALUES (9607,0,28058,167);
-INSERT INTO `mob_droplist` VALUES (9607,0,21420,159);
-INSERT INTO `mob_droplist` VALUES (9608,0,21374,169);
-INSERT INTO `mob_droplist` VALUES (9608,0,28057,110);
-INSERT INTO `mob_droplist` VALUES (9608,0,28005,169);
-INSERT INTO `mob_droplist` VALUES (9609,0,28604,143);
-INSERT INTO `mob_droplist` VALUES (9609,0,27778,131);
-INSERT INTO `mob_droplist` VALUES (9609,0,21359,101);
-INSERT INTO `mob_droplist` VALUES (9610,0,28581,37);
-INSERT INTO `mob_droplist` VALUES (9610,0,28200,40);
-INSERT INTO `mob_droplist` VALUES (9610,0,21371,31);
-INSERT INTO `mob_droplist` VALUES (9611,0,28507,123);
-INSERT INTO `mob_droplist` VALUES (9611,0,27777,105);
-INSERT INTO `mob_droplist` VALUES (9611,0,28379,149);
-INSERT INTO `mob_droplist` VALUES (9612,0,28603,20);
-INSERT INTO `mob_droplist` VALUES (9612,0,28199,39);
-INSERT INTO `mob_droplist` VALUES (9612,0,27594,145);
-INSERT INTO `mob_droplist` VALUES (9613,0,28605,105);
-INSERT INTO `mob_droplist` VALUES (9613,0,27776,77);
-INSERT INTO `mob_droplist` VALUES (9613,0,28445,126);
-INSERT INTO `mob_droplist` VALUES (9614,0,28580,101);
-INSERT INTO `mob_droplist` VALUES (9614,0,28198,79);
-INSERT INTO `mob_droplist` VALUES (9614,0,28493,40);
-INSERT INTO `mob_droplist` VALUES (9615,0,21373,30);
-INSERT INTO `mob_droplist` VALUES (9615,0,27919,144);
-INSERT INTO `mob_droplist` VALUES (9615,0,28056,109);
-INSERT INTO `mob_droplist` VALUES (9615,0,27505,99);
-INSERT INTO `mob_droplist` VALUES (9615,0,28538,131);
-INSERT INTO `mob_droplist` VALUES (9615,0,27775,122);
-INSERT INTO `mob_droplist` VALUES (9616,0,28403,50);
-INSERT INTO `mob_droplist` VALUES (9616,0,27918,131);
-INSERT INTO `mob_droplist` VALUES (9616,0,27773,137);
-INSERT INTO `mob_droplist` VALUES (9616,0,28428,147);
-INSERT INTO `mob_droplist` VALUES (9616,0,21366,29);
-INSERT INTO `mob_droplist` VALUES (9616,0,27720,153);
-INSERT INTO `mob_droplist` VALUES (9617,0,21376,131);
-INSERT INTO `mob_droplist` VALUES (9617,0,27917,161);
-INSERT INTO `mob_droplist` VALUES (9617,0,28197,156);
-INSERT INTO `mob_droplist` VALUES (9617,0,27563,124);
-INSERT INTO `mob_droplist` VALUES (9617,0,28441,111);
-INSERT INTO `mob_droplist` VALUES (9617,0,28293,118);
-INSERT INTO `mob_droplist` VALUES (9617,0,5103,81);
+-- -----------
+-- Lorbulcrab
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9606,0,28506,111); -- andoaa_earring
+INSERT INTO `mob_droplist` VALUES (9606,0,28059,123); -- bokwus_gloves
+INSERT INTO `mob_droplist` VALUES (9606,0,21425,20); --lentus_grip
+INSERT INTO `mob_droplist` VALUES (9606,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9606,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9606,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9606,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9606,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9606,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9606,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9606,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Krabimanjaro
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9607,0,28565,49); -- Zanhi Ring -- Item_basic fix needed
+INSERT INTO `mob_droplist` VALUES (9607,0,28058,167); -- manibozho gloves
+INSERT INTO `mob_droplist` VALUES (9607,0,21420,159); -- Benthos Grip  -- Item_Basic fix needed
+INSERT INTO `mob_droplist` VALUES (9607,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9607,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9607,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9607,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9607,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9607,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9607,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9607,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Obgunabali
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9608,0,21374,69); -- Paeapua
+INSERT INTO `mob_droplist` VALUES (9608,0,28057,110); -- mikinaak_gauntlets
+INSERT INTO `mob_droplist` VALUES (9608,0,28005,169); -- alrunas_gloves_+1
+INSERT INTO `mob_droplist` VALUES (9608,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9608,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9608,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9608,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9608,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9608,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9608,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9608,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Murk-veined Baneberry
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9609,0,28604,83); -- mubvum_mantle
+INSERT INTO `mob_droplist` VALUES (9609,0,27778,131); --bokwus_circlet
+INSERT INTO `mob_droplist` VALUES (9609,0,21359,101); --Quartz Tathlum +1 -- Item_Basic fix needed
+INSERT INTO `mob_droplist` VALUES (9609,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9609,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9609,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9609,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9609,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9609,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9609,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9609,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Melancholic Moira
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9610,0,28581,77); -- beeline_ring
+INSERT INTO `mob_droplist` VALUES (9610,0,28200,140); -- bokwus_slops
+INSERT INTO `mob_droplist` VALUES (9610,0,21371,131); -- ginsen
+INSERT INTO `mob_droplist` VALUES (9610,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9610,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9610,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9610,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9610,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9610,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9610,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9610,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Belphoebe
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9611,0,28507,82); -- gwati_earring
+INSERT INTO `mob_droplist` VALUES (9611,0,27777,105); -- manibozho_beret
+INSERT INTO `mob_droplist` VALUES (9611,0,28379,149); -- mizukage-no-kubikazari
+INSERT INTO `mob_droplist` VALUES (9611,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9611,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9611,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9611,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9611,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9611,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9611,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9611,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Kholomodumo
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9612,0,28603,80); -- kumbira_cape
+INSERT INTO `mob_droplist` VALUES (9612,0,28199,139); -- manibozho_brais
+INSERT INTO `mob_droplist` VALUES (9612,0,27594,145); -- annealed_mantle
+INSERT INTO `mob_droplist` VALUES (9612,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9612,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9612,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9612,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9612,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9612,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9612,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9612,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Lord Asag
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9613,0,28605,85); -- samanisi_cape
+INSERT INTO `mob_droplist` VALUES (9613,0,27776,127); -- mikinaak_helm
+INSERT INTO `mob_droplist` VALUES (9613,0,28445,126); -- shetal_stone
+INSERT INTO `mob_droplist` VALUES (9613,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9613,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9613,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9613,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9613,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9613,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9613,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9613,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Akupara
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9614,0,28580,91); -- sangoma_ring
+INSERT INTO `mob_droplist` VALUES (9614,0,28198,179); -- mikinaak_cuisses
+INSERT INTO `mob_droplist` VALUES (9614,0,28493,80); -- neritic_earring
+INSERT INTO `mob_droplist` VALUES (9614,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9614,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9614,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9614,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9614,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9614,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9614,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9614,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Celaeno
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9615,0,21373,30); -- sihirik
+INSERT INTO `mob_droplist` VALUES (9615,0,27919,144); -- bokwus_robe
+INSERT INTO `mob_droplist` VALUES (9615,0,28056,48); -- yaoyotl_gloves
+INSERT INTO `mob_droplist` VALUES (9615,0,27505,99); -- warders_charm_+1
+INSERT INTO `mob_droplist` VALUES (9615,0,28538,131); -- lebeche_ring
+INSERT INTO `mob_droplist` VALUES (9615,0,27775,62); -- nahtirah_hat
+INSERT INTO `mob_droplist` VALUES (9615,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9615,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9615,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9615,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9615,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9615,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9615,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9615,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Hahava
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9616,0,28403,50);  -- inquisitor_bead_necklace
+INSERT INTO `mob_droplist` VALUES (9616,0,27918,131); -- manibozho_jerkin
+INSERT INTO `mob_droplist` VALUES (9616,0,27773,37); -- yaoyotl_helm
+INSERT INTO `mob_droplist` VALUES (9616,0,28428,67); -- sailfi_belt_+1
+INSERT INTO `mob_droplist` VALUES (9616,0,21366,129); -- Floestone -- Item_Basic fix needed
+INSERT INTO `mob_droplist` VALUES (9616,0,27720,53); -- umbani_cap
+INSERT INTO `mob_droplist` VALUES (9616,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9616,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9616,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9616,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9616,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9616,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9616,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9616,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Voidwrought
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9617,0,21376,131); -- inlamvuyeso
+INSERT INTO `mob_droplist` VALUES (9617,0,27917,161); -- mikinaak_breastplate
+INSERT INTO `mob_droplist` VALUES (9617,0,28197,56); -- nahtirah_trousers
+INSERT INTO `mob_droplist` VALUES (9617,0,27563,74); -- metamorph_ring_+1
+INSERT INTO `mob_droplist` VALUES (9617,0,28441,111); -- ponente_sash
+INSERT INTO `mob_droplist` VALUES (9617,0,28293,43); -- umbani_boots
+INSERT INTO `mob_droplist` VALUES (9617,0,5103,81); -- scroll_of_crusade
+INSERT INTO `mob_droplist` VALUES (9617,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9617,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9617,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9617,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9617,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9617,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9617,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9617,0,8926,50); -- Fenritear 
 
 -- Voidwatch Chapter 2
 
