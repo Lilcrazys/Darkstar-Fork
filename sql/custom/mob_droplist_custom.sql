@@ -1310,11 +1310,11 @@ DELETE FROM `mob_droplist` WHERE dropId=3645 and type=0 and itemId=1132 and rate
 DELETE FROM `mob_droplist` WHERE dropId=3645 and type=0 and itemId=4173 and rate=80; --
 DELETE FROM `mob_droplist` WHERE dropId=3645 and type=0 and itemId=4174 and rate=30; --
 DELETE FROM `mob_droplist` WHERE dropId=3645 and type=0 and itemId=4175 and rate=30; --
-INSERT INTO `mob_droplist` VALUES (3645,0,14983,58);
-INSERT INTO `mob_droplist` VALUES (3645,0,15647,161);
-INSERT INTO `mob_droplist` VALUES (3645,0,14984,88);
-INSERT INTO `mob_droplist` VALUES (3645,0,16108,113);
-INSERT INTO `mob_droplist` VALUES (3645,0,14570,132);
+INSERT INTO `mob_droplist` VALUES (3645,0,14983,158); -- Askar Manopolas 
+INSERT INTO `mob_droplist` VALUES (3645,0,15647,161); -- Askar Dirs 
+INSERT INTO `mob_droplist` VALUES (3645,0,14984,188); -- Denali Wristbands
+INSERT INTO `mob_droplist` VALUES (3645,0,16108,113); -- Goliard Chapeau
+INSERT INTO `mob_droplist` VALUES (3645,0,14570,132); -- Goliard Saio
 
 -- -----------
 -- Sobek
@@ -1359,38 +1359,38 @@ INSERT INTO `mob_droplist` VALUES (3648,0,19399,94); -- Almace
 -- Unut
 -- ----------
 
-INSERT INTO `mob_droplist` VALUES (3663,0,19302,92);
+INSERT INTO `mob_droplist` VALUES (3663,0,19302,142); -- Uguisu
 
 -- -----------
 -- Velionis
 -- ----------
 
-INSERT INTO `mob_droplist` VALUES (4000,0,15727,191);
-INSERT INTO `mob_droplist` VALUES (4000,0,15723,78);
-INSERT INTO `mob_droplist` VALUES (4000,0,10368,160);
+INSERT INTO `mob_droplist` VALUES (4000,0,15727,191); -- Morrigan's Pgch.
+INSERT INTO `mob_droplist` VALUES (4000,0,15723,178); -- Marduk's Crackows  
+INSERT INTO `mob_droplist` VALUES (4000,0,10368,77); -- Adhara Crackows 
 
 -- -----------
 -- Verdelet
 -- ----------
 
-INSERT INTO `mob_droplist` VALUES (4007,0,11282,580);
-INSERT INTO `mob_droplist` VALUES (4007,0,15641,146);
-INSERT INTO `mob_droplist` VALUES (4007,0,15637,142);
-INSERT INTO `mob_droplist` VALUES (4007,0,10327,167);
-INSERT INTO `mob_droplist` VALUES (4007,0,10329,175);
+INSERT INTO `mob_droplist` VALUES (4007,0,11282,580); -- Aurum Cuirass
+INSERT INTO `mob_droplist` VALUES (4007,0,15641,146); -- Morrigan's Slops
+INSERT INTO `mob_droplist` VALUES (4007,0,15637,142); -- Marduk's Shalwar
+INSERT INTO `mob_droplist` VALUES (4007,0,10327,87); -- Adhara Seraweels
+INSERT INTO `mob_droplist` VALUES (4007,0,10329,75); -- Shedir Seraweels 
 
 -- -----------
 -- Viscount Morax
 -- ----------
 
-INSERT INTO `mob_droplist` VALUES (4019,0,18558,94);
+INSERT INTO `mob_droplist` VALUES (4019,0,18558,294); -- Wroth Scythe  
 
 -- -----------
 -- Vouivre
 -- ----------
 
-INSERT INTO `mob_droplist` VALUES (4031,0,18525,114);
-INSERT INTO `mob_droplist` VALUES (4031,0,19298,54);
+INSERT INTO `mob_droplist` VALUES (4031,0,18525,214); --Himthige  
+INSERT INTO `mob_droplist` VALUES (4031,0,19298,254); -- Ikarigiri  
 
 
 -- -----------
@@ -1408,22 +1408,22 @@ INSERT INTO `mob_droplist` VALUES (4071,0,12107,108); --  Savant's Loafers
 
 DELETE FROM `mob_droplist` WHERE dropId=4035 and type=0 and itemId=16154 and rate=380; --
 DELETE FROM `mob_droplist` WHERE dropId=4035 and type=0 and itemId=17754 and rate=340; --
-INSERT INTO `mob_droplist` VALUES (4035,0,14965,105);
-INSERT INTO `mob_droplist` VALUES (4035,0,15715,155);
-INSERT INTO `mob_droplist` VALUES (4035,0,14969,165);
-INSERT INTO `mob_droplist` VALUES (4035,0,15719,167);
-INSERT INTO `mob_droplist` VALUES (4035,0,10320,96);
-INSERT INTO `mob_droplist` VALUES (4035,0,10367,65);
-INSERT INTO `mob_droplist` VALUES (4035,0,10501,84);
-INSERT INTO `mob_droplist` VALUES (4035,0,10601,91);
+INSERT INTO `mob_droplist` VALUES (4035,0,14965,105); -- Skadi's Bazubands
+INSERT INTO `mob_droplist` VALUES (4035,0,15715,155); -- Skadi's Jambeaux
+INSERT INTO `mob_droplist` VALUES (4035,0,14969,165); -- Usukane Gote  
+INSERT INTO `mob_droplist` VALUES (4035,0,15719,167); -- Usukane Sune-Ate
+INSERT INTO `mob_droplist` VALUES (4035,0,10320,96); -- Enif Manopolas
+INSERT INTO `mob_droplist` VALUES (4035,0,10367,65); -- Enif Gambieras
+INSERT INTO `mob_droplist` VALUES (4035,0,10501,124); -- Athos's Gloves
+INSERT INTO `mob_droplist` VALUES (4035,0,10601,131); -- Athos's Boots 
 
 -- -----------
 -- Zareehkl the Jubilant
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (4340,0,16100,84);
-INSERT INTO `mob_droplist` VALUES (4340,0,16096,129);
-INSERT INTO `mob_droplist` VALUES (4340,0,10439,120);
+INSERT INTO `mob_droplist` VALUES (4340,0,16100,184); -- Morrigan's Coron.
+INSERT INTO `mob_droplist` VALUES (4340,0,16096,129); -- Marduk's Tiara  
+INSERT INTO `mob_droplist` VALUES (4340,0,10439,81); -- Adhara Turban 
 
 -- -----------
 -- Kirin
@@ -1460,14 +1460,14 @@ INSERT INTO `mob_droplist` VALUES (4372,0,271,196); --  Alexander Statue
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=4381 and type=0 and itemId=16174 and rate=340; --
-INSERT INTO `mob_droplist` VALUES (4381,0,16157,540);
-INSERT INTO `mob_droplist` VALUES (4381,0,16100,73);
-INSERT INTO `mob_droplist` VALUES (4381,0,15641,61);
-INSERT INTO `mob_droplist` VALUES (4381,0,16096,75);
-INSERT INTO `mob_droplist` VALUES (4381,0,15637,79);
-INSERT INTO `mob_droplist` VALUES (4381,0,10327,64);
-INSERT INTO `mob_droplist` VALUES (4381,0,10439,122);
-INSERT INTO `mob_droplist` VALUES (4381,0,10329,113);
+INSERT INTO `mob_droplist` VALUES (4381,0,16157,540); -- Enkidu's Cap
+INSERT INTO `mob_droplist` VALUES (4381,0,16100,173); -- Morrigan's Coron.
+INSERT INTO `mob_droplist` VALUES (4381,0,15641,161); -- Morrigan's Slops
+INSERT INTO `mob_droplist` VALUES (4381,0,16096,175); -- Marduk's Tiara 
+INSERT INTO `mob_droplist` VALUES (4381,0,15637,179); -- Marduk's Shalwar
+INSERT INTO `mob_droplist` VALUES (4381,0,10327,64); -- Adhara Seraweels
+INSERT INTO `mob_droplist` VALUES (4381,0,10439,85); --Adhara Turban
+INSERT INTO `mob_droplist` VALUES (4381,0,10329,103); -- Shedir Seraweels 
 
 -- -----------
 -- Za'Dha Adamantking
@@ -1497,11 +1497,11 @@ DELETE FROM `mob_droplist` WHERE dropId=4383 and type=0 and itemId=1132 and rate
 DELETE FROM `mob_droplist` WHERE dropId=4383 and type=0 and itemId=4172 and rate=70; --
 DELETE FROM `mob_droplist` WHERE dropId=4383 and type=0 and itemId=4174 and rate=30; --
 DELETE FROM `mob_droplist` WHERE dropId=4383 and type=0 and itemId=4748 and rate=930; --
-INSERT INTO `mob_droplist` VALUES (4383,0,15733,177);
-INSERT INTO `mob_droplist` VALUES (4383,0,16107,123);
-INSERT INTO `mob_droplist` VALUES (4383,0,14569,113);
-INSERT INTO `mob_droplist` VALUES (4383,0,15649,138);
-INSERT INTO `mob_droplist` VALUES (4383,0,15735,82);
+INSERT INTO `mob_droplist` VALUES (4383,0,15733,177); -- Askar Gambieras  
+INSERT INTO `mob_droplist` VALUES (4383,0,16107,123); -- Denali Bonnet 
+INSERT INTO `mob_droplist` VALUES (4383,0,14569,113); -- Denali Jacket
+INSERT INTO `mob_droplist` VALUES (4383,0,15649,138); -- Goliard Trews
+INSERT INTO `mob_droplist` VALUES (4383,0,15735,182); -- Goliard Clogs  
 
 -- -----------
 -- No Custom Mob at dropid 4533
@@ -2784,20 +2784,99 @@ INSERT INTO `mob_droplist` VALUES (9504,0,26874,191); -- supay weskit
 INSERT INTO `mob_droplist` VALUES (9504,0,28172,20); -- mes slacks
 
 -- Voidwatch Chapter 1
-INSERT INTO `mob_droplist` VALUES (9600,0,28351,31);
-INSERT INTO `mob_droplist` VALUES (9600,0,28340,147);
-INSERT INTO `mob_droplist` VALUES (9600,0,3922,41);
+
+-- -----------
+-- Sallow Seymour
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9600,0,28351,31); -- Cloud Hairpin +1
+INSERT INTO `mob_droplist` VALUES (9600,0,28340,147); -- Bokwus Boots
+INSERT INTO `mob_droplist` VALUES (9600,0,3922,41); -- Rhodium Ore
 INSERT INTO `mob_droplist` VALUES (9600,0,3922,155);
-INSERT INTO `mob_droplist` VALUES (9601,0,27634,31);
-INSERT INTO `mob_droplist` VALUES (9601,0,28340,99);
-INSERT INTO `mob_droplist` VALUES (9602,0,21419,160);
-INSERT INTO `mob_droplist` VALUES (9602,0,28339,114);
-INSERT INTO `mob_droplist` VALUES (9603,0,28339,66);
-INSERT INTO `mob_droplist` VALUES (9603,0,28366,39);
-INSERT INTO `mob_droplist` VALUES (9604,0,27592,55);
-INSERT INTO `mob_droplist` VALUES (9604,0,28338,135);
-INSERT INTO `mob_droplist` VALUES (9605,0,28338,90);
-INSERT INTO `mob_droplist` VALUES (9605,0,21403,87);
+INSERT INTO `mob_droplist` VALUES (9600,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9600,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9600,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9600,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9600,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9600,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9600,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9600,0,8926,50); -- Fenritear  
+
+-- -----------
+-- Ushumgal
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9601,0,27634,31); -- thorfinn shield +1
+INSERT INTO `mob_droplist` VALUES (9601,0,28340,99); -- bokwus_boots
+INSERT INTO `mob_droplist` VALUES (9601,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9601,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9601,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9601,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9601,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9601,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9601,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9601,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Sarimanok
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9602,0,21419,160); -- rigorous grip 1
+INSERT INTO `mob_droplist` VALUES (9602,0,28339,114); -- manibozho_boots
+INSERT INTO `mob_droplist` VALUES (9602,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9602,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9602,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9602,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9602,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9602,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9602,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9602,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Cottus
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9603,0,28339,66); -- manibozho_boots
+INSERT INTO `mob_droplist` VALUES (9603,0,28366,39); -- gaudryi necklace
+INSERT INTO `mob_droplist` VALUES (9603,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9603,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9603,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9603,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9603,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9603,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9603,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9603,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Virvatuli
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9604,0,27592,55); -- vengeful ring
+INSERT INTO `mob_droplist` VALUES (9604,0,28338,135); -- mikinaak greaves
+INSERT INTO `mob_droplist` VALUES (9604,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9604,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9604,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9604,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9604,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9604,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9604,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9604,0,8926,50); -- Fenritear 
+
+-- -----------
+-- Pancimanci
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9605,0,28338,90); -- mikinaak greaves
+INSERT INTO `mob_droplist` VALUES (9605,0,21403,87); -- Damani Horn +1
+INSERT INTO `mob_droplist` VALUES (9605,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9605,0,8920,50); -- Leviatear    
+INSERT INTO `mob_droplist` VALUES (9605,0,8921,50); -- Ramutear    
+INSERT INTO `mob_droplist` VALUES (9605,0,8922,50); -- Garutear    
+INSERT INTO `mob_droplist` VALUES (9605,0,8923,50); -- Titatear    
+INSERT INTO `mob_droplist` VALUES (9605,0,8924,50); -- Shivatear   
+INSERT INTO `mob_droplist` VALUES (9605,0,8925,50); -- Carbutear
+INSERT INTO `mob_droplist` VALUES (9605,0,8926,50); -- Fenritear 
+
 INSERT INTO `mob_droplist` VALUES (9606,0,28506,111);
 INSERT INTO `mob_droplist` VALUES (9606,0,28059,123);
 INSERT INTO `mob_droplist` VALUES (9606,0,21425,20);

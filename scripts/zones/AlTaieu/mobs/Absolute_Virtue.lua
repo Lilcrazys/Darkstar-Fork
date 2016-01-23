@@ -264,7 +264,7 @@ function onMobDeath(mob, killer, ally)
         SetDropRate(4,0,27587,0); -- Karieyh Ring 
         SetDropRate(4,0,27589,0); -- Thurandaut Ring 
         SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND2 == 3) then
+    elseif (RND1 == 3) then
         SetDropRate(4,0,27590,0); -- Shneddick Ring 
         SetDropRate(4,0,27581,0); -- Woltaris Ring 
         SetDropRate(4,0,27583,50); -- Janniston Ring 
@@ -272,7 +272,7 @@ function onMobDeath(mob, killer, ally)
         SetDropRate(4,0,27587,0); -- Karieyh Ring 
         SetDropRate(4,0,27589,0); -- Thurandaut Ring 
         SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND2 == 4) then
+    elseif (RND1 == 4) then
         SetDropRate(4,0,27590,0); -- Shneddick Ring 
         SetDropRate(4,0,27581,0); -- Woltaris Ring 
         SetDropRate(4,0,27583,0); -- Janniston Ring 
@@ -280,7 +280,7 @@ function onMobDeath(mob, killer, ally)
         SetDropRate(4,0,27587,0); -- Karieyh Ring 
         SetDropRate(4,0,27589,0); -- Thurandaut Ring 
         SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND2 == 5) then
+    elseif (RND1 == 5) then
         SetDropRate(4,0,27590,0); -- Shneddick Ring 
         SetDropRate(4,0,27581,0); -- Woltaris Ring 
         SetDropRate(4,0,27583,0); -- Janniston Ring 
@@ -288,7 +288,7 @@ function onMobDeath(mob, killer, ally)
         SetDropRate(4,0,27587,50); -- Karieyh Ring 
         SetDropRate(4,0,27589,0); -- Thurandaut Ring 
         SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND2 == 6) then
+    elseif (RND1 == 6) then
         SetDropRate(4,0,27590,0); -- Shneddick Ring 
         SetDropRate(4,0,27581,0); -- Woltaris Ring 
         SetDropRate(4,0,27583,0); -- Janniston Ring 
@@ -296,7 +296,7 @@ function onMobDeath(mob, killer, ally)
         SetDropRate(4,0,27587,0); -- Karieyh Ring 
         SetDropRate(4,0,27589,50); -- Thurandaut Ring 
         SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND2 == 7) then
+    elseif (RND1 == 7) then
         SetDropRate(4,0,27590,0); -- Shneddick Ring 
         SetDropRate(4,0,27581,0); -- Woltaris Ring 
         SetDropRate(4,0,27583,0); -- Janniston Ring 
