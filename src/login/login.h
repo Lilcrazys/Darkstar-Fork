@@ -67,6 +67,7 @@ struct login_config_t
 struct version_info_t
 {
     std::string Min_Client_Ver; // Minimum Client version allowed to login to server.
+    std::string Max_Client_Ver; // Maximum Client version allowed to login to server.
 };
 
 extern login_config_t login_config;
