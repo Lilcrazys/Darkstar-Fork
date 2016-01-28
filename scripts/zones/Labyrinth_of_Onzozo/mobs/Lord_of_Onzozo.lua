@@ -36,6 +36,10 @@ end
 function onMobDeath(mob,killer,ally)
 
     checkGoVregime(ally,mob,774,1);
+
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
     
     if (math.random(1,100) <= 3) then
         SetDropRate(2079,18852,1000); -- Ocatave Club
@@ -56,6 +60,10 @@ function onMobDeath(mob,killer,ally)
     SetServerVariable("[POP]Lord_of_Onzozo", os.time(t) + wait); -- 5-8 Hours
     DeterMob(mob:getID(), true);
 
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+    
     -- Set PH back to normal, then set to respawn spawn
     local PH = GetServerVariable("[PH]Lord_of_Onzozo");
     SetServerVariable("[PH]Lord_of_Onzozo", 0);

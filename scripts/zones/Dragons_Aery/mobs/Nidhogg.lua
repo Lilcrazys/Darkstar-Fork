@@ -72,7 +72,11 @@ function onMobDeath(mob, killer, ally)
         end
     end
 
-    -- Set Fafnir's spawnpoint and respawn time (21-24 hours)
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+    -- Set Fafnir's spawnpoint and respawn time (5-8 hours)
     if (LandKingSystem_NQ ~= 1) then
         local Fafnir = mob:getID()-1;
         SetServerVariable("[PH]Nidhogg", 0);
@@ -81,10 +85,22 @@ function onMobDeath(mob, killer, ally)
         GetMobByID(Fafnir):setRespawnTime(math.random(21600,32400));
     end
 
-
+    
+    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
+        SetDropRate(195,20738,1000); -- Buramenk'ah
+        SetDropRate(195,19799,0);
+    else
+        SetDropRate(195,20618,0);
+        SetDropRate(195,19799,1000); -- Herja's Fork
+    end
+    
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(ally) == true) then
         cTrialProgress(ally, RELIC, 5);
     end
 
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+    
 end;

@@ -70,6 +70,10 @@ function onMobDeath(mob, killer, ally)
         end
     end
 
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
     -- Set Behemoth's spawnpoint and respawn time (21-24 hours)
     if (LandKingSystem_NQ ~= 1) then
         SetServerVariable("[PH]King_Behemoth", 0);
@@ -78,10 +82,14 @@ function onMobDeath(mob, killer, ally)
         UpdateNMSpawnPoint(Behemoth);
         GetMobByID(Behemoth):setRespawnTime(math.random(21600,32400));
     end
-
+    
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(ally) == true) then
         cTrialProgress(ally, RELIC, 4);
     end
 
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+    
 end;

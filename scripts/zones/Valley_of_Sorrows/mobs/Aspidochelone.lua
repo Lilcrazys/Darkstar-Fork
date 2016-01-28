@@ -45,7 +45,11 @@ function onMobDeath(mob, killer, ally)
         end
     end
 
-    -- Set Adamantoise's spawnpoint and respawn time (21-24 hours)
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+        -- Set Adamantoise's spawnpoint and respawn time (21-24 hours)
     if (LandKingSystem_NQ ~= 1) then
         Adamantoise = mob:getID()-1;
         SetServerVariable("[PH]Aspidochelone", 0);
@@ -53,11 +57,22 @@ function onMobDeath(mob, killer, ally)
         UpdateNMSpawnPoint(Adamantoise);
         GetMobByID(Adamantoise):setRespawnTime(math.random(21600,32400));
     end
-
-
+    
+    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
+        SetDropRate(195,20618,1000); -- Sandung
+        SetDropRate(195,18828,0);
+    else
+        SetDropRate(195,20618,0);
+        SetDropRate(195,18828,1000); -- Oxossi Facon +1
+    end
+    
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(ally) == true) then
         cTrialProgress(ally, RELIC, 3);
     end
 
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+    
 end;
