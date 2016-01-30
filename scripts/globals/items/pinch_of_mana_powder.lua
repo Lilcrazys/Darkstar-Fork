@@ -11,7 +11,7 @@ require("scripts/globals/settings");
 -----------------------------------------
 
 function onItemCheck(target)
-    result = 0;
+    local result = 0;
 
     if (target:getMP() == target:getMaxMP()) then
         result = 56; -- Does not let player use item if their mp is full
