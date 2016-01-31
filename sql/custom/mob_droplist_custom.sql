@@ -1644,16 +1644,106 @@ INSERT INTO `mob_droplist` VALUES (9001,0,28328,120); -- Shneddick Boots
 INSERT INTO `mob_droplist` VALUES (9001,0,28329,137); -- Weather. Souliers
 
 INSERT INTO `mob_droplist` VALUES (9020,0,3925,110); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9020,0,21294,81); -- Hgafircian
+INSERT INTO `mob_droplist` VALUES (9020,0,21132,81); -- Aedold    
+INSERT INTO `mob_droplist` VALUES (9020,0,20924,81); -- Iizamal    
+INSERT INTO `mob_droplist` VALUES (9020,0,21242,81); -- Bocluamni    
+INSERT INTO `mob_droplist` VALUES (9020,0,20742,81); -- Iztaasu    
+INSERT INTO `mob_droplist` VALUES (9020,0,21209,81); -- Uffrat   
+INSERT INTO `mob_droplist` VALUES (9020,0,21058,81); -- Shichishito
+INSERT INTO `mob_droplist` VALUES (9020,0,21208,81); -- Lehbrailg
+INSERT INTO `mob_droplist` VALUES (9020,0,20877,81); -- Iclamar
+INSERT INTO `mob_droplist` VALUES (9020,0,20833,81); -- Faizzeer    
+INSERT INTO `mob_droplist` VALUES (9020,0,20787,81); -- Crobaci    
+INSERT INTO `mob_droplist` VALUES (9020,0,21013,81); -- Kannakiri    
+INSERT INTO `mob_droplist` VALUES (9020,0,20641,81); -- Leisilonu    
+INSERT INTO `mob_droplist` VALUES (9020,0,20553,81); -- Ninzas   
+INSERT INTO `mob_droplist` VALUES (9020,0,20967,81); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9021,0,3925,125); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9021,0,21294,81); -- Hgafircian
+INSERT INTO `mob_droplist` VALUES (9021,0,21132,81); -- Aedold    
+INSERT INTO `mob_droplist` VALUES (9021,0,20924,81); -- Iizamal    
+INSERT INTO `mob_droplist` VALUES (9021,0,21242,81); -- Bocluamni    
+INSERT INTO `mob_droplist` VALUES (9021,0,20742,81); -- Iztaasu    
+INSERT INTO `mob_droplist` VALUES (9021,0,21209,81); -- Uffrat   
+INSERT INTO `mob_droplist` VALUES (9021,0,21058,81); -- Shichishito
+INSERT INTO `mob_droplist` VALUES (9021,0,21208,81); -- Lehbrailg
+INSERT INTO `mob_droplist` VALUES (9021,0,20877,81); -- Iclamar
+INSERT INTO `mob_droplist` VALUES (9021,0,20833,81); -- Faizzeer    
+INSERT INTO `mob_droplist` VALUES (9021,0,20787,81); -- Crobaci    
+INSERT INTO `mob_droplist` VALUES (9021,0,21013,81); -- Kannakiri    
+INSERT INTO `mob_droplist` VALUES (9021,0,20641,81); -- Leisilonu    
+INSERT INTO `mob_droplist` VALUES (9021,0,20553,81); -- Ninzas   
+INSERT INTO `mob_droplist` VALUES (9021,0,20967,81); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9022,0,3925,138); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9022,0,21294,81); -- Hgafircian
+INSERT INTO `mob_droplist` VALUES (9022,0,21132,81); -- Aedold    
+INSERT INTO `mob_droplist` VALUES (9022,0,20924,81); -- Iizamal    
+INSERT INTO `mob_droplist` VALUES (9022,0,21242,81); -- Bocluamni    
+INSERT INTO `mob_droplist` VALUES (9022,0,20742,81); -- Iztaasu    
+INSERT INTO `mob_droplist` VALUES (9022,0,21209,81); -- Uffrat   
+INSERT INTO `mob_droplist` VALUES (9022,0,21058,81); -- Shichishito
+INSERT INTO `mob_droplist` VALUES (9022,0,21208,81); -- Lehbrailg
+INSERT INTO `mob_droplist` VALUES (9022,0,20877,81); -- Iclamar
+INSERT INTO `mob_droplist` VALUES (9022,0,20833,81); -- Faizzeer    
+INSERT INTO `mob_droplist` VALUES (9022,0,20787,81); -- Crobaci    
+INSERT INTO `mob_droplist` VALUES (9022,0,21013,81); -- Kannakiri    
+INSERT INTO `mob_droplist` VALUES (9022,0,20641,81); -- Leisilonu    
+INSERT INTO `mob_droplist` VALUES (9022,0,20553,81); -- Ninzas   
+INSERT INTO `mob_droplist` VALUES (9022,0,20967,81); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9023,0,3925,178); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9023,0,21294,81); -- Hgafircian
+INSERT INTO `mob_droplist` VALUES (9023,0,21132,81); -- Aedold    
+INSERT INTO `mob_droplist` VALUES (9023,0,20924,81); -- Iizamal    
+INSERT INTO `mob_droplist` VALUES (9023,0,21242,81); -- Bocluamni    
+INSERT INTO `mob_droplist` VALUES (9023,0,20742,81); -- Iztaasu    
+INSERT INTO `mob_droplist` VALUES (9023,0,21209,81); -- Uffrat   
+INSERT INTO `mob_droplist` VALUES (9023,0,21058,81); -- Shichishito
+INSERT INTO `mob_droplist` VALUES (9023,0,21208,81); -- Lehbrailg
+INSERT INTO `mob_droplist` VALUES (9023,0,20877,81); -- Iclamar
+INSERT INTO `mob_droplist` VALUES (9023,0,20833,81); -- Faizzeer    
+INSERT INTO `mob_droplist` VALUES (9023,0,20787,81); -- Crobaci    
+INSERT INTO `mob_droplist` VALUES (9023,0,21013,81); -- Kannakiri    
+INSERT INTO `mob_droplist` VALUES (9023,0,20641,81); -- Leisilonu    
+INSERT INTO `mob_droplist` VALUES (9023,0,20553,81); -- Ninzas   
+INSERT INTO `mob_droplist` VALUES (9023,0,20967,81); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9024,0,3925,155); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9024,0,21294,81); -- Hgafircian
+INSERT INTO `mob_droplist` VALUES (9024,0,21132,81); -- Aedold    
+INSERT INTO `mob_droplist` VALUES (9024,0,20924,81); -- Iizamal    
+INSERT INTO `mob_droplist` VALUES (9024,0,21242,81); -- Bocluamni    
+INSERT INTO `mob_droplist` VALUES (9024,0,20742,81); -- Iztaasu    
+INSERT INTO `mob_droplist` VALUES (9024,0,21209,81); -- Uffrat   
+INSERT INTO `mob_droplist` VALUES (9024,0,21058,81); -- Shichishito
+INSERT INTO `mob_droplist` VALUES (9024,0,21208,81); -- Lehbrailg
+INSERT INTO `mob_droplist` VALUES (9024,0,20877,81); -- Iclamar
+INSERT INTO `mob_droplist` VALUES (9024,0,20833,81); -- Faizzeer    
+INSERT INTO `mob_droplist` VALUES (9024,0,20787,81); -- Crobaci    
+INSERT INTO `mob_droplist` VALUES (9024,0,21013,81); -- Kannakiri    
+INSERT INTO `mob_droplist` VALUES (9024,0,20641,81); -- Leisilonu    
+INSERT INTO `mob_droplist` VALUES (9024,0,20553,81); -- Ninzas   
+INSERT INTO `mob_droplist` VALUES (9024,0,20967,81); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9025,0,3925,102); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9025,0,21294,81); -- Hgafircian
+INSERT INTO `mob_droplist` VALUES (9025,0,21132,81); -- Aedold    
+INSERT INTO `mob_droplist` VALUES (9025,0,20924,81); -- Iizamal    
+INSERT INTO `mob_droplist` VALUES (9025,0,21242,81); -- Bocluamni    
+INSERT INTO `mob_droplist` VALUES (9025,0,20742,81); -- Iztaasu    
+INSERT INTO `mob_droplist` VALUES (9025,0,21209,81); -- Uffrat   
+INSERT INTO `mob_droplist` VALUES (9025,0,21058,81); -- Shichishito
+INSERT INTO `mob_droplist` VALUES (9025,0,21208,81); -- Lehbrailg
+INSERT INTO `mob_droplist` VALUES (9025,0,20877,81); -- Iclamar
+INSERT INTO `mob_droplist` VALUES (9025,0,20833,81); -- Faizzeer    
+INSERT INTO `mob_droplist` VALUES (9025,0,20787,81); -- Crobaci    
+INSERT INTO `mob_droplist` VALUES (9025,0,21013,81); -- Kannakiri    
+INSERT INTO `mob_droplist` VALUES (9025,0,20641,81); -- Leisilonu    
+INSERT INTO `mob_droplist` VALUES (9025,0,20553,81); -- Ninzas   
+INSERT INTO `mob_droplist` VALUES (9025,0,20967,81); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9026,0,3925,1000); -- Mantis - Legs -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9026,0,3530,1000); -- Mired Trophy
