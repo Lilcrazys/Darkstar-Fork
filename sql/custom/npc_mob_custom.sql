@@ -2304,6 +2304,8 @@ REPLACE INTO `npc_list` VALUES (17658375,'qm24','???',0,439.940,21.020,-179.227,
 
 REPLACE INTO `mob_spawn_points` VALUES (17658263,'Pallid_Percy','Pallid Percy',10216,281,20,174,200);
 
+INSERT INTO `npc_list` VALUES (17658877,'MOUNTAIN_WARP','MOUNTAIN_WARP',0,212.000,20.250,0.000,1,50,50,0,0,0,0,0,0x0000160900000000000000000000000000000000,0,NULL); -- So player can reach NM at top of mountain
+
 
 -- ------------------------------------------------------------
 -- Abyssea - Misareaux (Zone 216)

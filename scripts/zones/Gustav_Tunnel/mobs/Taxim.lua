@@ -1,8 +1,8 @@
-----------------------------------	
+----------------------------------
 -- Area: Gustav Tunnel
 --   NM: Taxim
 -----------------------------------
-  
+
 require("scripts/globals/status");
 
 -----------------------------------
@@ -10,16 +10,16 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
-	mob:addMod(MOD_MATT,40);
-	mob:addMod(MOD_MACC,400);
+    mob:addMod(MOD_MATT,40);
+    mob:addMod(MOD_MACC,400);
 end;
 
 -----------------------------------
--- onMobDeath	
------------------------------------	
-	
-function onMobDeath(mob,killer,ally))	
-  
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob,killer,ally)
+
     -- Set Taxim's Window Open Time
     SetServerVariable("[POP]Taxim", os.time(t) + 7200); -- 2 hours
     DeterMob(mob:getID(), true);
