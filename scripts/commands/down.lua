@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @down <optional number> <optional target>
--- auth: TeoTwawki
 -- desc: Alters vertical coordinate
 ---------------------------------------------------------------------------------------------------
 
@@ -24,9 +23,9 @@ function onTrigger(player, number, target)
     end
 
     if (number ~= nil and number > 0) then
-        VALUE = targ:getYPos() -number;
+        VALUE = targ:getYPos() +number;
     else
-        VALUE = targ:getYPos() -1;
+        VALUE = targ:getYPos() +1;
     end
 
     targ:setPos(targ:getXPos(), VALUE, targ:getZPos(), targ:getRotPos());
