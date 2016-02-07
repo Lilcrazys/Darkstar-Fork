@@ -97,18 +97,18 @@ REPLACE INTO `mob_groups` VALUES (917,2112,35,0,128,4396,100000,100000,110,110,0
 REPLACE INTO `mob_groups` VALUES (412,29,15,60,0,10,5300,0,106,110,0); -- Ab xzomit
 REPLACE INTO `mob_groups` VALUES (415,232,15,0,128,175,90000,20000,113,116,0); -- Arimaspi Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (416,261,15,0,128,9268,90000,20000,113,116,0); -- Ashtaerh the Gallvexed Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (418,326,15,750,0,9700,80000,30000,113,116,0); -- Baaka Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (419,330,15,600,0,9701,80000,20000,113,116,0); -- Balaur Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (418,326,15,750,0,229,80000,30000,113,116,0); -- Bakka Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (419,330,15,600,0,231,80000,20000,113,116,0); -- Balaur Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (421,458,15,0,128,329,60000,20000,113,116,0); -- Bloodguzzler Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (424,853,15,60,0,606,10000,10000,106,110,0); -- Cryptonberry_Occultist Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (425,902,15,60,0,633,10000,10000,106,110,0); -- Dapifier Imp Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (426,951,15,60,0,668,10000,10000,106,110,0); -- Deep Eye Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (428,1150,15,60,0,820,80000,10000,106,110,0); -- Dybbuk Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (429,1171,15,0,128,9702,130000,10000,113,116,0); -- Eccentric Eve Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (429,1171,15,0,128,838,130000,10000,113,116,0); -- Eccentric Eve Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (430,1244,15,60,0,887,10000,10000,106,110,0); -- Ephemeral Clionid Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (431,1245,15,60,0,889,10000,10000,106,110,0); -- Ephemeral Limule Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (432,1312,15,0,128,938,60000,20999,113,116,0); -- Fear Gorta Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (433,1348,15,600,0,9703,110000,0,113,116,0); -- Fistule Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (433,1348,15,600,0,962,110000,0,113,116,0); -- Fistule Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (434,1457,15,600,0,1075,80000,20999,113,116,0); -- Gangly Gean Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (435,1630,15,60,0,1197,10000,0,106,110,0); -- Gneiss Leech Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (436,1840,15,600,0,1600,80000,20999,113,116,0); -- Guimauve Abyssea-Konschtat
@@ -119,7 +119,7 @@ REPLACE INTO `mob_groups` VALUES (442,1943,15,60,0,1675,10000,0,106,110,0); -- H
 REPLACE INTO `mob_groups` VALUES (443,1967,15,60,0,1693,10000,0,106,110,0); -- Hoary Ragwort Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (444,2209,15,0,128,1886,80000,0,113,116,0); -- Keratyrannos Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (445,2217,15,600,0,1889,80000,0,113,116,0); -- Khalamari Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (446,2294,15,0,128,9704,110000,20000,113,116,0); -- Kukulkan Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (446,2294,15,0,128,1966,110000,20000,113,116,0); -- Kukulkan Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (447,2389,15,0,128,2041,60000,0,113,116,0); -- Lentor Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (449,2404,15,60,0,2051,10000,10999,106,110,0); -- Ley Clionid Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (450,2409,15,60,0,2058,10000,20999,106,110,0); -- Licorice Abyssea-Konschtat
@@ -135,7 +135,7 @@ REPLACE INTO `mob_groups` VALUES (464,3696,15,60,0,3274,10000,10000,106,110,0); 
 REPLACE INTO `mob_groups` VALUES (466,3948,15,60,0,3540,10000,0,106,110,0); -- Tonberry Bedeviler Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (467,3962,15,600,0,3553,80000,30000,113,116,0); -- Tonberry Lieje Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (468,4042,15,60,0,3617,10000,0,106,110,0); -- Trotting Sapling Abyssea-Konschtat
-REPLACE INTO `mob_groups` VALUES (469,4054,15,900,0,9705,110000,30000,113,116,0); -- Turul Abyssea-Konschtat
+REPLACE INTO `mob_groups` VALUES (469,4054,15,900,0,3632,110000,30000,113,116,0); -- Turul Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (470,4236,15,60,0,4016,10000,0,106,110,0); -- Viridis Wyvern Abyssea-Konschtat
 REPLACE INTO `mob_groups` VALUES (471,4480,15,60,0,4338,10000,0,106,110,0); -- Ypotryll
 INSERT INTO `mob_groups` VALUES (90200,86,15,0,128,9200,80000,10000,113,116,0); -- Alkonost
