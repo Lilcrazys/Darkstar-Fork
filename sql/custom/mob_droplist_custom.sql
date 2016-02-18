@@ -433,6 +433,10 @@ DELETE FROM `mob_droplist` WHERE dropId=424 and type=0 and itemId=2966 and rate=
 INSERT INTO `mob_droplist` VALUES (424,0,2966,1000); -- Bukhis's Wing
 INSERT INTO `mob_droplist` VALUES (424,0,2966,70); -- Bukhis's Wing
 INSERT INTO `mob_droplist` VALUES (424,0,19409,163); --  Gandiva
+INSERT INTO `mob_droplist` VALUES (424,0,8992,255);
+INSERT INTO `mob_droplist` VALUES (424,0,9075,46);
+INSERT INTO `mob_droplist` VALUES (424,0,766,20);
+INSERT INTO `mob_droplist` VALUES (424,0,4012,60);
 
 -- -----------
 -- Konjac
@@ -1156,6 +1160,10 @@ DELETE FROM `mob_droplist` WHERE dropId=2080 and type=0 and itemId=3202 and rate
 DELETE FROM `mob_droplist` WHERE dropId=2080 and type=0 and itemId=3207 and rate=190; --  
 DELETE FROM `mob_droplist` WHERE dropId=2080 and type=0 and itemId=2307 and rate=130; --  
 INSERT INTO `mob_droplist` VALUES (2080,0,12100,189); --  Iga Kyahan 
+INSERT INTO `mob_droplist` VALUES (2080,0,3449,24);
+INSERT INTO `mob_droplist` VALUES (2080,0,4015,285);
+INSERT INTO `mob_droplist` VALUES (2080,0,3550,244);
+INSERT INTO `mob_droplist` VALUES (2080,0,8707,200);
 
 -- -----------
 -- Mahjiaef the Paintom
