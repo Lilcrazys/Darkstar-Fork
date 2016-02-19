@@ -60,6 +60,59 @@ INSERT INTO `mob_skill_lists` VALUES ('Lofty_Adamantoise',4006,793) -- Tortoise_
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Adamantoise',4006,552) -- Earth_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Adamantoise',4006,553) -- Aqua_Breath
 
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Cerberus',4007,1529) -- Lava_Spit
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Cerberus',4007,1530) -- Sulfurous_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Cerberus',4007,1531) -- Scorching_Lash
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Cerberus',4007,1532) -- Ululation
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Cerberus',4007,1533) -- Magma_Hoplon
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Cerberus',4007,1534) -- Gates_of_Hades
+
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khimaira',4008,1766) -- Tenebrous_Mist
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khimaira',4008,1767) -- Thunderstrike
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khimaira',4008,1769) -- Dreadstorm
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khimaira',4008,1770) -- Fossilizing_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khimaira',4008,1771) -- Plague_Swipe
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khimaira',4008,1772) -- Fulmination
+
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1572) -- Pyric_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1573) -- Polar_Bulwark
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1574) -- Polar_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1575) -- Pyric_Bulwark
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1576) -- Barofield
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1578) -- Trembling
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1579) -- Serpentine_Tail
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Hydra',4009,1580) -- Nerve_Gas
+
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Orthrus',4010,1529) --
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Orthrus',4010,1530) --
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Orthrus',4010,1531) --
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Orthrus',4010,1532) --
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Orthrus',4010,1533) --
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Orthrus',4010,2445) -- Acheron_Flame
+
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,1766) -- Tenebrous_Mist
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,1767) -- Thunderstrike
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,1769) -- Dreadstorm
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,1770) -- Fossilizing_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,1771) -- Plague_Swipe
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,1772) -- Fulmination
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Khrysokhimaira',4011,2442) -- Lithic_Breath
+
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1572) -- Pyric_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1573) -- Polar_Bulwark
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1574) -- Polar_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1575) -- Pyric_Bulwark
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1576) -- Barofield
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1578) -- Trembling
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1579) -- Serpentine_Tail
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Alfard',4012,1580) -- Nerve_Gas
+
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2495) -- Slicing_Sickle
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2496) -- Raptorial_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2497) -- Phlegm_Expulsion
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2498) -- Macerating_Bile
+INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2500) -- Dead_Prophet
+
 -- New lines go BEFORE the crab till you run out of IDs.
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,44);   -- Head Butt (Stun, Grav, Slow, knockback)
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,186);  -- Bubble Shower ( )

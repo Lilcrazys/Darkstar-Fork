@@ -2483,10 +2483,10 @@ INSERT INTO `mob_skills` VALUES (2436,1812,'Royal_decree',1,18.0,2000,1000,4,0,0
 -- INSERT INTO `mob_skills` VALUES (2439,2439,'Torment_Tusk',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2440,2440,'Baleful_Roar',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2441,2441,'Infinite_Terror',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2442,2442,'Lithic_Breath',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2442,2442,'Lithic_Breath',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2443,2443,'Tarsal_Slam',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2444,2444,'Enthrall',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2445,2445,'Acheron_Flame',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2445,2445,'Acheron_Flame',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2446,2446,'Terra_Wing',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2447,2447,'Dread_Wind',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2448,2448,'???_Needles',0,7.0,2000,1500,4,0,0,0);
