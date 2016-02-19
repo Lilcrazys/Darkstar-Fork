@@ -113,6 +113,152 @@ INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2497) -- Phlegm_Expuls
 INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2498) -- Macerating_Bile
 INSERT INTO `mob_skill_lists` VALUES ('Mired_Mantis',4013,2500) -- Dead_Prophet
 
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,274) -- Memento_Mori
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,275) -- Silence_Seal
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,276) -- Envoutement
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,277) -- Danse_Macabre
+
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1857) -- Hellsnap
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1859) -- Cackle
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1861) -- Necropurge
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1863) -- Thundris_shriek
+
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1850) -- Bloodrake
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1852) -- Nosferatus_kiss
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1854) -- Wings_of_Gehenna
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1856) -- Nocturnal_Servitude
+
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,274) -- Memento_Mori
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,275) -- Silence_Seal
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,276) -- Envoutement
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,277) -- Danse_Macabre
+
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1857) -- Hellsnap
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1858) -- Hellclap
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1859) -- Cackle
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1860) -- Necrobane
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1861) -- Necropurge
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1862) -- Bilgestorm
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1863) -- Thundris_shriek
+
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,1852) -- Nosferatus_kiss
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,1854) -- Wings_of_Gehenna
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,2132) -- Dirty_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,2278) -- Minax_Glare
+
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2459) -- Yaksha_damnation
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2460) -- Yaksha_oblivion
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2461) -- Yaksha_bliss
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2463) -- Raksha_Judgment
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2464) -- Raksha_illusion
+INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2465) -- Raksha_vengeance
+
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2171) -- Tail_lash
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2172) -- Bloody_beak
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2173) -- Feral_peck
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2175) -- Reaving_wind
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2176) -- Storm_wing
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2177) -- Calamitous_wind
+
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ixion',4022,2079) -- Lightning_spear
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ixion',4022,2080) -- Acheron_kick
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ixion',4022,2082) -- Rampant_stance
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ixion',4022,2113) -- Scintillant_lance
+
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sandworm',4023,1931) -- Dustvoid
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sandworm',4023,1932) -- Slaverous_gale
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sandworm',4023,1933) -- Aeolian_Void
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sandworm',4023,1934) -- Extreme_Purgation
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sandworm',4023,2348) -- Gorge
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sandworm',4023,2349) -- Disgorge
+
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2171) -- Tail_lash
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2172) -- Bloody_beak
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2173) -- Feral_peck
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2174) -- Warped_Wail
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2175) -- Reaving_wind
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2176) -- Storm_wing
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2177) -- Calamitous_wind
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Sanguiptere',4024,2386) -- Vermilion_Wind
+
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Alicorn',4025,2078) -- Wrath_of_zeus
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Alicorn',4025,2079) -- Lightning_spear
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Alicorn',4025,2080) -- Acheron_kick
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Alicorn',4025,2081) -- Damsel_memento
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Alicorn',4025,2082) -- Rampant_stance
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Alicorn',4025,2113) -- Scintillant_lance
+
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1931) -- Dustvoid
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1932) -- Slaverous_gale
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1933) -- Aeolian_Void
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1934) -- Extreme_Purgation
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1935) -- Desiccation
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1936) -- Doomvoid
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,2348) -- Gorge
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,2349) -- Disgorge
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2360) -- Ironclad_Meele_Vertical
+-- INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2361) -- Ironclad_Meele_Stomp
+-- INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2362) -- Ironclad_Meele_Lateral
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2363) -- Turbine_cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2364) -- Seismic_impact
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2365) -- Incinerator
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2366) -- Arm_canon
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2367) -- Ballistic_kick
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2368) -- Scapula_beam
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2370) -- Auger_Smash
+INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2371) -- Area_Bombardment
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2525) -- Gallu_Triple
+-- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2526) -- Gallu_Frontal
+-- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2527) -- Gallu_Radial
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2528) -- Diluvial_wakes
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2529) -- Kurugi_collapse
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2530) -- Searing_halitus
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2531) -- Divesting_gale
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2532) -- Bolt_of_perdition
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2533) -- Crippling_rime
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2534) -- Oblivions_mantle
+
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2542) -- Gnash_n_Guttle
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2543) -- Sloughy_Sputum
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2544) -- Chymous_Reek
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2545) -- Rancid_Reflux
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2546) -- Crowning_Flatus
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2547) -- Slimy_Proposal
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Botulus',4029,2548) -- Just_Desserts
+
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Harpeia',4030,2469) -- Rending_talons
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Harpeia',4030,2470) -- Shrieking_gale
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Harpeia',4030,2471) -- Wings_of_woe
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Harpeia',4030,2472) -- Wings_of_agony
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Harpeia',4030,2474) -- Ravenous_wail
+
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Mantis',4031,2495) -- Slicing_Sickle
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Mantis',4031,2496) -- Raptorial_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Mantis',4031,2497) -- Phlegm_Expulsion
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Mantis',4031,2498) -- Macerating_Bile
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Mantis',4031,2500) -- Dead_Prophet
+
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2459) -- Yaksha_damnation
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2460) -- Yaksha_oblivion
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2461) -- Yaksha_bliss
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2463) -- Raksha_Judgment
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2464) -- Raksha_illusion
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2465) -- Raksha_vengeance
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2360) -- Ironclad_Meele_Vertical
+-- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2361) -- Ironclad_Meele_Stomp
+-- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2362) -- Ironclad_Meele_Lateral
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2363) -- Turbine_cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2364) -- Seismic_impact
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2365) -- Incinerator
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2366) -- Arm_canon
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2367) -- Ballistic_kick
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2368) -- Scapula_beam
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2370) -- Auger_Smash
+INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2371) -- Area_Bombardment
+
 -- New lines go BEFORE the crab till you run out of IDs.
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,44);   -- Head Butt (Stun, Grav, Slow, knockback)
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,186);  -- Bubble Shower ( )
