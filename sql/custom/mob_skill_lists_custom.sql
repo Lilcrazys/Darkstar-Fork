@@ -12,47 +12,47 @@
 -- KEEP IT IN ORDER BY ID!!
 -- INSERT INTO `mob_skill_lists` VALUES ('skill_list_name',skill_list_id,mob_skill_id);
 
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4000,548); -- Tortoise Song
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4000,549); -- Head_Butt_Turtle
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4000,793); -- Tortoise_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4000,551); -- Harden_Shell
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4000,552); -- Earth_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4000,2329); -- Tetsudo_Tremor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4000,2264); -- Sinister_Wing
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4000,2265); -- Chaos_blast
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4000,2267); -- Dancing_tail
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4000,2269); -- Chilling_roar
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4000,2271); -- Soul_douse
 
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4001,2135) -- Amnesic_Blast
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4001,372) -- Wild_Horn
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4001,373) -- Thunderbolt
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4001,376) -- Flame_Armor
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4001,2330) -- Ecliptic_Meteor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4001,2469); -- Rending_talons
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4001,2470); -- Shrieking_gale
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4001,2471); -- Wings_of_woe
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4001,2472); -- Wings_of_agony
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4001,2474); -- Ravenous_wail
 
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4002,2264) -- Sinister_Wing
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4002,2265) -- Chaos_blast
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4002,2267) -- Dancing_tail
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4002,2269) -- Chilling_roar
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4002,2271) -- Soul_douse
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,373); -- Thunderbolt
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,374); -- Kick_Out
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,375); -- Shock_Wave
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,376); -- Flame_Armor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,378); -- Meteor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,2135); -- Amnesic_Blast
 
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4003,2469) -- Rending_talons
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4003,2470) -- Shrieking_gale
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4003,2471) -- Wings_of_woe
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4003,2472) -- Wings_of_agony
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Harpeia',4003,2474) -- Ravenous_wail
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,372); -- Wild_Horn
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,373); -- Thunderbolt
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,376); -- Flame_Armor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,2330); -- Ecliptic_Meteor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,2135); -- Amnesic_Blast
 
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1031) -- Sleet_Blast
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1032) -- Sleet_Blast_alt
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1033) -- Gregale_Wing
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1034) -- Spike_Flail
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1035) -- Glacial_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1036) -- Touchdown
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1037) -- Sleet_Blast
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1038) -- Gregale_Wing_Air
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4004,1039) -- Absolute_Terror
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,548); -- Tortoise Song
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,549); -- Head_Butt_Turtle
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,793); -- Tortoise_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,551); -- Harden_Shell
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,552); -- Earth_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,2329); -- Tetsudo_Tremor
 
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4005,373) -- Thunderbolt
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4005,374) -- Kick_Out
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4005,375) -- Shock_Wave
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4005,376) -- Flame_Armor
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4005,378) -- Meteor
-INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4005,2135) -- Amnesic_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1031) -- Sleet_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1032) -- Sleet_Blast_alt
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1033) -- Gregale_Wing
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1034) -- Spike_Flail
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1035) -- Glacial_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1036) -- Touchdown
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1037) -- Sleet_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1038) -- Gregale_Wing_Air
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1039) -- Absolute_Terror
 
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Adamantoise',4006,548) -- Tortoise_Song
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Adamantoise',4006,549) -- Head_Butt_Turtle
@@ -259,6 +259,68 @@ INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2368) -- Scapula
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2370) -- Auger_Smash
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2371) -- Area_Bombardment
 
+-- INSERT INTO `mob_skill_lists` VALUES ('Bouncing_Bertha',4034,    Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Hugemaw_Harold',4035,     Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Prickly_Pitriv',4036,     Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Ironhorn_Baldurno',4037,  Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Sleepy_Mabel',4038,       Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Serpopard_Ninlil',4039,   Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Abyssdiver',4040,         Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Immanibugard',4041,       Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Intuila',4042,            Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Jester_Malatrix',4043,    Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Orcfeltrap',4044,         Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Steamy_Samantha',4045,    Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Sultry_Samantha',4046,    Wiki info is lacking, currently using DSP ID for normal mob!
+-- INSERT INTO `mob_skill_lists` VALUES ('Sybaritic_Samantha',4047, Wiki info is lacking, currently using DSP ID for normal mob!
+
+INSERT INTO `mob_skill_lists` VALUES ('Valkurm_Imperator',4048,659); -- Cursed Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Valkurm_Imperator',4048,660); -- Venom
+INSERT INTO `mob_skill_lists` VALUES ('Valkurm_Imperator',4048,1324); -- Debilitating_Drone A
+INSERT INTO `mob_skill_lists` VALUES ('Valkurm_Imperator',4048,1624); -- Debilitating_Drone B
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Cactrot_Veloz',4049,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Emperor_Arthro',4050,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Joyous_Green',4051,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Keeper_of_Heiligtum',4052,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Tiyanak',4053,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Voso',4054,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Warblade_Beak',4055,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Woodland_Mender',4056,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Arke',4057,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Ayapec'4058,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Beist',4059,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Coca',4060,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Douma_Weapon',4061,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Katashiro weapon',4062,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('King_Uropygid',4063,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Largantua',4064,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Lumber_Jill',4065,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Mephitas',4066,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Muut',4067,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Muuts_Sacrifice',4068,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Muuts_Hound Warrior',4068,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Specter_Worm',4070,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Strix',4071,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Azrael',4072,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Borealis_Shadow',4073,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Orientalis_Shadow',4074,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Australis_Shadow',4075,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Occidentalis_Shadow',4056,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Camahueto',4057,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Vedrfolnir',4058,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Tatenashi_Armor',4059,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Hachiryu_Armor',4059,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Hizamaru_Armor',4059,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Ubuginu_Armor',4059,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Omodaka_Armor',4059,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Benkei',4060,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Druk',4061,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Zomok',4062,PLACEHOLDER); -- Unfinished
+-- INSERT INTO `mob_skill_lists` VALUES ('Abzu',4063,PLACEHOLDER); -- Unfinished
+
+-- next: voidwatch mobs starting at ID 4064 ? Replace this line, begin adding here.
+
 -- New lines go BEFORE the crab till you run out of IDs.
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,44);   -- Head Butt (Stun, Grav, Slow, knockback)
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,186);  -- Bubble Shower ( )
@@ -277,7 +339,7 @@ INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,1181); -- Jump (Ao
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,1703); -- Water Bomb (AoE Silence)
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,2257); -- Mega Scissors (Bigger than Big Scissors o.o;)
 -- INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,3009); -- Elemental Sforzo (RUN 2hr (Magic Immunity)
-/* stuff below is temp disabled 
+/* stuff below is temp disabled
 INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,190);
 INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,200);
 INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,249);
