@@ -668,49 +668,246 @@ INSERT INTO `mob_skill_lists` VALUES ('Sabotender_Campeador',4115,3611); -- QM3_
 
 INSERT INTO `mob_skill_lists` VALUES ('Sabotender_Mercenario',4116,66); -- 1000_Needles
 
-INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Peon_Pounder',4118,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Koura',4120,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Pekapeka',4121,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Moki',4122,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Grwnan',4124,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Modron',4125,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Mimic_Mage',4127,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Mimic_Jester',4128,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Mimic_King',4129,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Aello',4130,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Aello_Handmaiden',4131,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Xuan_Wu',4132,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Zhu_Que',4133,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Bai_Hu',4135,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Trna',4137,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Bisa',4138,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Uptala',4139,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Bloody_Skull',4141,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Melee',4143,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Bloodswiller_Fly',4146,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Little_Wingman',4148,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Primordial_Pugil',4150,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Assassins_Apprentice',4152,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Chorus_toad',4154,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Yalungur',4155,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Predatory_Colibri',4156,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Vanasarvik',4157,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,PLACEHOLDER); -- Unfinished
-INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,PLACEHOLDER); -- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,98); -- VW_Wild_Rage
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,99); -- VW_Earth_Pounder
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,465); -- Stasis
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,466); -- Venom_Storm
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,467); -- Earthbreaker
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,1965); -- Hell_Scissors
+INSERT INTO `mob_skill_lists` VALUES ('Malleator_Maurrok',4117,2503); -- Telsonic_Tempest
+
+INSERT INTO `mob_skill_lists` VALUES ('Peon_Pounder',4118,98); -- VW_Wild_Rage
+INSERT INTO `mob_skill_lists` VALUES ('Peon_Pounder',4118,99); -- VW_Earth_Pounder
+
+INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,1315); -- VW_Gas_Shell
+INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,1316); -- VW_Venom_Shell
+INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,1317); -- Palsynyxis
+INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,1318); -- VW_Painful_Whip
+INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,1319); -- Suctorial_Tentacle
+INSERT INTO `mob_skill_lists` VALUES ('Tangaroa',4119,2437); -- Virulent_Haze
+
+INSERT INTO `mob_skill_lists` VALUES ('Koura',4120,186); -- VW_Bubble_Shower
+INSERT INTO `mob_skill_lists` VALUES ('Koura',4120,187); -- Bubble_Curtain
+INSERT INTO `mob_skill_lists` VALUES ('Koura',4120,189); -- Scissor_Guard
+INSERT INTO `mob_skill_lists` VALUES ('Koura',4120,2256); -- VW_Venom_Shower
+INSERT INTO `mob_skill_lists` VALUES ('Koura',4120,2257); -- VW_Mega_Scissors
+
+INSERT INTO `mob_skill_lists` VALUES ('Pekapeka',4121,200); -- VW_Tentacle
+INSERT INTO `mob_skill_lists` VALUES ('Pekapeka',4121,202); -- Ink_Jet
+INSERT INTO `mob_skill_lists` VALUES ('Pekapeka',4121,204); -- VW_Cross_Attack
+INSERT INTO `mob_skill_lists` VALUES ('Pekapeka',4121,206); -- VW_Maelstrom
+INSERT INTO `mob_skill_lists` VALUES ('Pekapeka',4121,207); -- VW_Whirlwind
+
+INSERT INTO `mob_skill_lists` VALUES ('Moki',4122,194); -- VW_Aqua_Ball
+INSERT INTO `mob_skill_lists` VALUES ('Moki',4122,195); -- VW_Splash_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Moki',4122,197); -- VW_Water_Wall
+INSERT INTO `mob_skill_lists` VALUES ('Moki',4122,385); -- VW_Recoil_Dive
+
+INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,224); -- Petrifactive_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,226); -- VW_Pounce
+INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,227); -- VW_Charged_Whisker
+INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,396); -- VW_Blaster
+INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,397); -- Chaotic_Eye
+INSERT INTO `mob_skill_lists` VALUES ('Cath_Palug',4123,2504); -- Preternatural_Glare
+
+INSERT INTO `mob_skill_lists` VALUES ('Grwnan',4124,227); -- VW_Charged_Whisker
+
+INSERT INTO `mob_skill_lists` VALUES ('Modron',4125,72); -- VW_Drill_Branch
+INSERT INTO `mob_skill_lists` VALUES ('Modron',4125,73); -- VW_Pinecone_Bomb
+INSERT INTO `mob_skill_lists` VALUES ('Modron',4125,75); -- VW_Leafstorm
+INSERT INTO `mob_skill_lists` VALUES ('Modron',4125,76); -- Entangle
+
+INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,527); -- Words_of_Bane
+INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,529); -- Light_of_Penance
+INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,530); -- VW_Lateral_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,531); -- VW_Vertical_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,532); -- Throat_Stab
+INSERT INTO `mob_skill_lists` VALUES ('Modrons_Druid',4126,665); -- VW_Everyones_Rancor
+
+INSERT INTO `mob_skill_lists` VALUES ('Mimic_Mage',4127,332); -- VW_Death_Trap
+
+INSERT INTO `mob_skill_lists` VALUES ('Mimic_Jester',4128,332); -- VW_Death_Trap
+
+INSERT INTO `mob_skill_lists` VALUES ('Mimic_King',4129,332); -- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Mimic_King',4129,2324); -- Pandoras_Curse
+INSERT INTO `mob_skill_lists` VALUES ('Mimic_King',4129,2325); -- Pandoras_Gift
+
+INSERT INTO `mob_skill_lists` VALUES ('Aello',4130,2469); -- Rending_talons
+INSERT INTO `mob_skill_lists` VALUES ('Aello',4130,2470); -- Shrieking_gale
+INSERT INTO `mob_skill_lists` VALUES ('Aello',4130,2472); -- Wings_of_agony
+INSERT INTO `mob_skill_lists` VALUES ('Aello',4130,2473); -- Typhoean_rage
+INSERT INTO `mob_skill_lists` VALUES ('Aello',4130,2502); -- Kaleidoscopic_Fury
+
+INSERT INTO `mob_skill_lists` VALUES ('Aello_Handmaiden',4131,1937); -- Zephyr_Arrow
+INSERT INTO `mob_skill_lists` VALUES ('Aello_Handmaiden',4131,1938); -- Lethe_Arrows
+INSERT INTO `mob_skill_lists` VALUES ('Aello_Handmaiden',4131,1944); -- Cyclonic_Torrent
+
+INSERT INTO `mob_skill_lists` VALUES ('Xuan_Wu',4132,549); -- Head_Butt_Turtle
+INSERT INTO `mob_skill_lists` VALUES ('Xuan_Wu',4132,550); -- Tortoise_Stomp_Custom
+INSERT INTO `mob_skill_lists` VALUES ('Xuan_Wu',4132,551); -- Harden_Shell
+INSERT INTO `mob_skill_lists` VALUES ('Xuan_Wu',4132,552); -- VW_Earth_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Xuan_Wu',4132,553); -- VW_Aqua_Breath
+
+INSERT INTO `mob_skill_lists` VALUES ('Zhu_Que',4133,143); -- Scratch
+INSERT INTO `mob_skill_lists` VALUES ('Zhu_Que',4133,144); -- Triple_Attack
+INSERT INTO `mob_skill_lists` VALUES ('Zhu_Que',4133,145); -- Gliding_Spike
+INSERT INTO `mob_skill_lists` VALUES ('Zhu_Que',4133,146); -- Feather_Barrier
+INSERT INTO `mob_skill_lists` VALUES ('Zhu_Que',4133,147); -- VW_Stormwind
+
+INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,558); -- Deadly_Drive_Custom
+INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,559); -- Wind_Wall
+INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,560); -- Fang_Rush
+INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,561); -- VW_Dread_Shriek
+INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,562); -- Tail_Crush
+INSERT INTO `mob_skill_lists` VALUES ('Qing_Long',4134,565); -- Radiant_Breath
+
+INSERT INTO `mob_skill_lists` VALUES ('Bai_Hu',4135,14); -- VW_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Bai_Hu',4135,15); -- VW_Razor_Fang
+INSERT INTO `mob_skill_lists` VALUES ('Bai_Hu',4135,17); -- VW_Claw_Cyclone
+
+INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,541); -- Deadly_Hold
+INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,542); -- Tail_Swing
+INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,543); -- Tail_Smash
+INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,544); -- Heat_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,546); -- VW_Great_Sandstorm
+INSERT INTO `mob_skill_lists` VALUES ('Qilin',4136,547); -- VW_Great_Whirlwind
+
+INSERT INTO `mob_skill_lists` VALUES ('Trna',4137,222); -- VW_Hell_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Trna',4137,223); -- VW_Horror_Cloud
+INSERT INTO `mob_skill_lists` VALUES ('Trna',4137,229); -- VW_Blood_Saber
+
+INSERT INTO `mob_skill_lists` VALUES ('Bisa',4138,222); -- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Bisa',4138,223); -- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Bisa',4138,229); -- Unfinished
+
+INSERT INTO `mob_skill_lists` VALUES ('Uptala',4139,2458); -- Uptala_Yaksha_stance
+INSERT INTO `mob_skill_lists` VALUES ('Uptala',4139,2459); -- Uptala_Yaksha_damnation
+INSERT INTO `mob_skill_lists` VALUES ('Uptala',4139,2460); -- Uptala_Yaksha_oblivion
+INSERT INTO `mob_skill_lists` VALUES ('Uptala',4139,2461); -- Uptala_Yaksha_bliss
+INSERT INTO `mob_skill_lists` VALUES ('Uptala',4139,2501); -- Sakra_storm
+
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1857); -- VW_Hellsnap
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1858); -- VW_Hellclap
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1859); -- VW_Cackle
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1860); -- VW_Necrobane
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1861); -- VW_Necropurge
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1862); -- VW_Bilgestorm
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1863); -- VW_Thundris_shriek
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,2556); -- Bilfrost_Squall
+INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,2557); -- Dunur_Strike
+
+INSERT INTO `mob_skill_lists` VALUES ('Bloody_Skull',4141,1463); -- VW_Corpse_Breath
+
+INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,303); -- VW_Soul_Drain
+INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,304); -- VW_Hecatomb_Wave
+INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,307); -- VW_Demonic_Howl
+INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,892); -- VW_Condemnation
+INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,2116); -- Hellborn_Yawp
+INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,2565); -- Accurst_Spear
+
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Melee',4143,303)-- VW_Soul_Drain
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Melee',4143,304)-- VW_Hecatomb_Wave
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Melee',4143,307)-- VW_Demonic_Howl
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Melee',4143,892)-- VW_Condemnation
+
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,303)-- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,304)-- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,307)-- Unfinished
+INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,892)-- Unfinished
+
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2360) -- Mantis_Melee
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2361) -- Mantis_Melee2
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2362) -- Mantis_Melee_Jump
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2495) -- VW_Slicing_Sickle
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2496) -- VW_Raptorial_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2497) -- VW_Phlegm_Expulsion
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2498) -- VW_Macerating_Bile
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2499) -- Preying_Posture
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2500); -- Death_Prophet
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2553); -- Immolating_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2630); -- Exorender
+
+INSERT INTO `mob_skill_lists` VALUES ('Bloodswiller_Fly',4146,62); -- VW_Somersault
+INSERT INTO `mob_skill_lists` VALUES ('Bloodswiller_Fly',4146,403); -- VW_Cursed_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Bloodswiller_Fly',4146,404); -- VW_Venom
+INSERT INTO `mob_skill_lists` VALUES ('Bloodswiller_Fly',4146,1368); -- Debilitating_Drone
+
+INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,1457); -- VW_Yawn
+INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,1458); -- VW_Wing_Slap
+INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,1459); -- VW_Beak_Lunge
+INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,1460); -- VW_Frigid_Shuffle
+INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,2563); -- Whiteout
+
+INSERT INTO `mob_skill_lists` VALUES ('Little_Wingman',4148,1457); -- VW_Yawn
+INSERT INTO `mob_skill_lists` VALUES ('Little_Wingman',4148,1459); -- VW_Beak_Lunge
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2606); -- Bismark_Front -- needs to be added
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2607); -- Bismark_Side_1
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2608); -- Bismark_Side_2
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2610); -- Bismark_Tail
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2612); -- Echolocation
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2613); -- Deep_Sea_Dirge
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2614); -- Caudal_Capacitor
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2615); -- Baleen_Gurge
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2616); -- Depht_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2617); -- Blowhole_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2618); -- Angry_Seas
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2619); -- Waterspout
+INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2620); -- Thar_She_Blows
+
+INSERT INTO `mob_skill_lists` VALUES ('Primordial_Pugil',4150,385); -- VW_Recoil_Dive
+
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,1522); -- VW_Spinal_Cleave
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,1523); -- VW_Mangle
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,1524); -- VW_Leaping_Cleave
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,1525); -- VW_Hex_Palm
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,1526); -- VW_Animating_Wail
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,2108); -- Unblest_Jambiya
+INSERT INTO `mob_skill_lists` VALUES ('Dimgruzub',4151,2634); -- Genei_Ryodan
+
+INSERT INTO `mob_skill_lists` VALUES ('Assassins_Apprentice',4152,1522); -- VW_Spinal_Cleave
+INSERT INTO `mob_skill_lists` VALUES ('Assassins_Apprentice',4152,1524); -- VW_Leaping_Cleave
+
+INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,436); -- Chainspell
+INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,1702); -- Magic_Hammer
+INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,1703); -- VW_Water_Bomb
+INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,1704); -- Frog_Cheer
+INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,1706); -- Frog_Chorus
+INSERT INTO `mob_skill_lists` VALUES ('Brekekex',4153,2633); -- Usurping_Scepter
+
+INSERT INTO `mob_skill_lists` VALUES ('Chorus_toad',4154,1702); -- Magic_Hammer
+INSERT INTO `mob_skill_lists` VALUES ('Chorus_toad',4154,1703); -- VW_Water_Bomb
+
+INSERT INTO `mob_skill_lists` VALUES ('Yalungur',4155,1443); -- VW_Pecking_Flurry
+INSERT INTO `mob_skill_lists` VALUES ('Yalungur',4155,1444); -- Snatch_Morsel
+INSERT INTO `mob_skill_lists` VALUES ('Yalungur',4155,1445); -- Feather_Tickle
+INSERT INTO `mob_skill_lists` VALUES ('Yalungur',4155,1446); -- Wisecrack
+INSERT INTO `mob_skill_lists` VALUES ('Yalungur',4155,2631); -- Tropic_Tenor
+
+INSERT INTO `mob_skill_lists` VALUES ('Predatory_Colibri',4156,1443); -- VW_Pecking_Flurry
+INSERT INTO `mob_skill_lists` VALUES ('Predatory_Colibri',4156,1444); -- Snatch_Morsel
+INSERT INTO `mob_skill_lists` VALUES ('Predatory_Colibri',4156,1445); -- Unfinished
+
+INSERT INTO `mob_skill_lists` VALUES ('Vanasarvik',4157,1455); -- VW_Frenetic_Rip
+INSERT INTO `mob_skill_lists` VALUES ('Vanasarvik',4157,1747); -- VW_Grating_Tantara
+INSERT INTO `mob_skill_lists` VALUES ('Vanasarvik',4157,1748); -- VW_Stifling_Tantara
+INSERT INTO `mob_skill_lists` VALUES ('Vanasarvik',4157,2632); -- Dark_Recital
+
+INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,1453); -- Abrasive_Tantara
+INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,1454); -- Deafening_Tantara
+INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,1455); -- VW_Frenetic_Rip
+
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,436); -- Chainspell
+-- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2525); -- Morta_Single
+-- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2526); -- Morta_Frontal
+-- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2527); -- Morta_Radial
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2624); -- Night_stalker
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2625); -- Atropine_spore
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2626); -- Frond_fatale
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2627); -- Full_bloom
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2628); -- Deracinator
+INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2629); -- Beautiful_death
+
 -- INSERT INTO `mob_skill_lists` VALUES ('Pil',4160,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Rukh',4161,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Asb',4162,PLACEHOLDER); -- Unfinished
