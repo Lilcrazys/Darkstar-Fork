@@ -3997,6 +3997,7 @@ INSERT INTO `mob_droplist` VALUES (9636,0,8926,50); -- Fenritear
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (9637,0,28403,40); -- Inquisitors_Bead_Necklace
+INSERT INTO `mob_droplist` VALUES (9637,0,10826,120); -- Witful belt
 INSERT INTO `mob_droplist` VALUES (9637,0,21182,220); -- Eminent_Staff
 INSERT INTO `mob_droplist` VALUES (9637,0,28554,30); -- Acumen_Ring
 INSERT INTO `mob_droplist` VALUES (9637,0,28031,120); -- Wayfarer_Cuffs
