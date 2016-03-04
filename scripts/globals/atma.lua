@@ -365,8 +365,10 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_RATT, 40);
     elseif (pwr == 100) then -- ATMA_OF_THE_APOCALYPSE
         target:addMod(MOD_TRIPLE_ATTACK, 15);
-        target:addMod(MOD_GRIMOIRE_INSTANT_CAST, 10); -- Wrong modifier, correct one not yet implimented.
-        target:addMod(MOD_RERAISE_III, 1);
+        target:addMod(MOD_GRIMOIRE_INSTANT_CAST, 10); -- Wrong modifier, correct one not yet implemented.
+        if (target:isPC()) then
+            target:addMod(MOD_RERAISE_III, 1);
+        end
     elseif (pwr == 101) then -- ATMA_OF_THE_HEIR                         KI ID = 1655;
     elseif (pwr == 102) then -- ATMA_OF_THE_HERO                         KI ID = 1656;
     elseif (pwr == 103) then -- ATMA_OF_THE_FULL_MOON                    KI ID = 1657;
@@ -785,7 +787,9 @@ function atmaEffectLose(target, effect)
     elseif (pwr == 100) then -- ATMA_OF_THE_APOCALYPSE
         target:delMod(MOD_TRIPLE_ATTACK, 15);
         target:delMod(MOD_GRIMOIRE_INSTANT_CAST, 10);
-        target:delMod(MOD_RERAISE_III, 1);
+        if (target:isPC()) then
+            target:delMod(MOD_RERAISE_III, 1);
+        end
     elseif (pwr == 101) then -- ATMA_OF_THE_HEIR                         = 1655;
     elseif (pwr == 102) then -- ATMA_OF_THE_HERO                         = 1656;
     elseif (pwr == 103) then -- ATMA_OF_THE_FULL_MOON                    = 1657;

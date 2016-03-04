@@ -20,7 +20,9 @@ require("scripts/globals/status");
 function onEffectGain(target,effect)
 	target:addMod(MOD_DEF,15);
 	target:addMod(MOD_EVA,15);
-	target:addMod(MOD_RERAISE_I,1);
+	if (target:isPC()) then
+		target:addMod(MOD_RERAISE_I,1);
+	end
 end;
 
 -----------------------------------
@@ -37,5 +39,7 @@ end;
 function onEffectLose(target,effect)
 	target:delMod(MOD_DEF,15);
 	target:delMod(MOD_EVA,15);
-	target:delMod(MOD_RERAISE_I,1);
+	if (target:isPC()) then
+		target:delMod(MOD_RERAISE_I,1);
+	end
 end;

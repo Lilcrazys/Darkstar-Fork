@@ -27,8 +27,10 @@ function onEffectGain(target,effect)
     end
 
     -- Begin Custom stuff
-    target:addMod(MOD_RERAISE_II,1);
-    target:addMod(MOD_EXP_BONUS,5);
+    if (target:isPC()) then
+        target:addMod(MOD_RERAISE_II,1);
+        target:addMod(MOD_EXP_BONUS,5);
+    end
     -- End Custom Stuff
 end;
 
@@ -61,7 +63,9 @@ function onEffectLose(target,effect)
     end
 
     -- Begin Custom stuff
-    target:delMod(MOD_RERAISE_II,1);
-    target:delMod(MOD_EXP_BONUS,5);
+    if (target:isPC()) then
+        target:delMod(MOD_RERAISE_II,1);
+        target:delMod(MOD_EXP_BONUS,5);
+    end
     -- End Custom Stuff
 end;
