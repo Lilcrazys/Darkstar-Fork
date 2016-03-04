@@ -1,15 +1,6 @@
 -----------------------------------
 -- Area: Legion
 --  Mob: Auspicious Entity
--- Notes:
--- 17526873 Water type Elemental
--- 17526874 Wind type Elemental
--- 17526875 water type Elemental
--- 17526876 Ice type Elemental
--- 17526877 Light type Elemental
--- 17526878 Ice type Elemental
--- 17526879 Light type Elemental
--- 17526880 Dark type Elemental
 -----------------------------------
 
 require("scripts/globals/status");
@@ -73,7 +64,7 @@ end;
 
 function onMobDeath(mob, killer, ally)
     local mobID = mob:getID();
-    local duration = ally:getStatusEffect(EFFECT_LEGION):getDuration();
+    -- local duration = ally:getStatusEffect(EFFECT_LEGION):getDuration();
 
     if (mobID == 17526873) then -- Hall of An : TE
         -- Add +15min

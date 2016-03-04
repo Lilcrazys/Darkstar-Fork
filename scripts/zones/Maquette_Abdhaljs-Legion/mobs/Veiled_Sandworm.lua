@@ -17,6 +17,7 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+
     -- addMod
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1425);
@@ -34,7 +35,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 20);
     mob:setMod(MOD_REGAIN, 35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-
 end;
 
 -----------------------------------
