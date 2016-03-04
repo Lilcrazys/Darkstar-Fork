@@ -11,8 +11,36 @@ require("scripts/globals/bluemagic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-    if (caster:isPC()) then
-        caster PrintToPlayer("this spell is broken, and will be fixed soon");
+    return 0;
+end;
+
+function onSpellCast(caster,target,spell)
+    local effect = EFFECT_NONE;
+    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
+    -- The 2 effects roll their resistance separately..
+    local BLIND_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_BLIND);
+    local SILENCE_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_SILENCE);
+
+    if (target:hasStatusEffect(EFFECT_BLIND) and target:hasStatusEffect(EFFECT_SILENCE)) then
+        spell:setMsg(75); -- No effect.
+        return EFFECT_NONE;
+    else
+        local MSG = 85; -- Will be used if both effects are resited.
+
+        if (BLIND_RES > 0.125) then
+            target:addStatusEffect(EFFECT_BLIND,60,0,60);
+            effect = EFFECT_BLIND;
+            MSG = 237; -- Landed it.
+        end
+
+        if (SILENCE_RES > 0.125) then
+            target:addStatusEffect(EFFECT_SILENCE,20,0,60);
+            effect = EFFECT_SILENCE;
+            MSG = 237; -- Landed it.
+        end
+
+        spell:setMsg(MSG);
+
+        return effect;
     end
-    return 1;
 end;
