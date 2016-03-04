@@ -1423,6 +1423,13 @@ INSERT INTO `mob_droplist` VALUES (2732,0,8990,214);
 INSERT INTO `mob_droplist` VALUES (2732,0,9063,225);
 
 -- -----------
+-- Quu Domi the Gallant
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2916 and type=0 and itemId=15737 and rate=700; -- Sarutobi kyahan
+INSERT INTO `mob_droplist` VALUES (2916,0,13054,77); -- Fuma Kyahan 
+
+-- -----------
 -- Rani
 -- -----------
 
