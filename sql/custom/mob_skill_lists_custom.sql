@@ -796,7 +796,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,1863); -- VW_Thundris_shriek
 INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,2556); -- Bilfrost_Squall
 INSERT INTO `mob_skill_lists` VALUES ('Fjalar',4140,2557); -- Dunur_Strike
 
-INSERT INTO `mob_skill_lists` VALUES ('Bloody_Skull',4141,1463); -- VW_Corpse_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Bloody_Skull',4141,2255); -- VW_Corpse_Breath
 
 INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,303); -- VW_Soul_Drain
 INSERT INTO `mob_skill_lists` VALUES ('Abununnu',4142,304); -- VW_Hecatomb_Wave
