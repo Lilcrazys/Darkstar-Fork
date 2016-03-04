@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @jinx <victim> <type> <power>
--- auth: TeoTwawki
 -- desc: Does mean things to annoying player.
 -- If player re-logs zones or job changes, jinx will be removed.
 -- DO NOT TELL PLAYER THIS.

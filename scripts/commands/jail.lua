@@ -10,7 +10,7 @@ cmdprops =
 };
 
 function onTrigger(player, target, cellId, reason)
-    local jailCells = 
+    local jailCells =
     {
         -- Floor 1 (Bottom)
         {-620, 11,  660, 0},  {-180, 11,  660, 0}, {-260, 11,  660, 0}, {-700, 11,  660, 0},
@@ -36,7 +36,7 @@ function onTrigger(player, target, cellId, reason)
     if (cellId == nil or cellId == 0 or cellId > 32) then
         cellId = 1;
     end
-    
+
     -- Validate the reason..
     if (reason == nil) then
         reason = "Unspecified.";

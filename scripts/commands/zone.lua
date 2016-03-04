@@ -289,13 +289,13 @@ function onTrigger(player, zoneId)
         player:PrintToPlayer("You must enter a zone id.");
         return;
     end
-    
+
     -- Was the zone auto-translated..
     if (string.sub(zoneId, 1, 2) == '\253\02' and string.byte(zoneId, 5) ~= nil and string.byte(zoneId, 6) == 0xFD) then
         -- Pull the group and message id from the translated string..
         local groupId = string.byte(zoneId, 4);
         local messageId = string.byte(zoneId, 5);
-    
+
         -- Attempt to lookup this zone..
         for k, v in pairs(zone_list) do
             if (v[1] == groupId and v[2] == messageId) then
@@ -303,11 +303,11 @@ function onTrigger(player, zoneId)
                 return;
             end
         end
-    
+
         -- Zone was not found, allow the user to know..
         player:PrintToPlayer('Unknown zone, could not teleport.');
         return;
     end
-    
+
     player:setPos(0, 0, 0, 0, zoneId);
 end

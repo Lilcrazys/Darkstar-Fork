@@ -1,13 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @door <NPC ID> <open/close>
--- auth: TeoTwawki
 -- desc: open or close a door. Works on invisible elevator doors as well.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-	permission = 1,
-	parameters = "is"
+    permission = 1,
+    parameters = "is"
 };
 
 function onTrigger(player, npcID, state, duration)

@@ -13,13 +13,13 @@ function onTrigger(player, target, keyId)
     -- Load needed text ids for players current zone..
     local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
     package.loaded[TextIDs] = nil;
-    require(TextIDs); 
+    require(TextIDs);
 
     if (keyId == nil) then
         player:PrintToPlayer("You must enter a valid keyitem id.");
         return;
     end
-    
+
     if (target == nil) then
         target = player:getName();
     end

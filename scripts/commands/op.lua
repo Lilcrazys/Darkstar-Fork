@@ -1,7 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @op <destination> <player>
--- auth: Demolish
--- Modified by: TeoTwawki
 -- desc: Warps GM or target player to a given outpost.
 ---------------------------------------------------------------------------------------------------
 
@@ -14,7 +12,7 @@ cmdprops =
 function onTrigger(player,op,target)
     -- Validate an Outpost was given
     if (op == nil) then
-        player:PrintToPlayer( string.format( "Invalid Region Name of Outpost '%s' given.", op ) );
+        player:PrintToPlayer( string.format("Invalid Region Name of Outpost '%s' given.", op));
         return;
     end
     -- Validate the target..
@@ -22,10 +20,10 @@ function onTrigger(player,op,target)
         target = player:getName();
     end
 
-    local targ = GetPlayerByName( target );
+    local targ = GetPlayerByName(target);
     if (targ ~= nil) then
         if (targ:getZoneID() == 131) then
-            player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
+            player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
             return
         end
 
@@ -70,6 +68,6 @@ function onTrigger(player,op,target)
             targ:setPos(-544,-5,-55,57,24);
         end
     else
-        player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
+        player:PrintToPlayer(string.format("Player named '%s' not found!", target));
     end
 end;

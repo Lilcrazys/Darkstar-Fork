@@ -20,12 +20,12 @@ function onTrigger(player, cmd)
     end
 
     -- Toggle the hide status..
-    if (isHidden == 0) then 
+    if (isHidden == 0) then
         isHidden = 1;
     else
         isHidden = 0;
     end
-    
+
     -- If hidden animate us beginning our hide..
     if (isHidden == 1) then
         player:setVar( "GMHidden", 1 );

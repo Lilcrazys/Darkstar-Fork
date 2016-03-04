@@ -1,6 +1,5 @@
 --------------------------------------------------------------
--- func: @shop
--- auth: TeoTwawki (aka Forgottenandlost)
+-- func: @shop <page>
 -- desc: opens a custom shop anywhere in the world
 --------------------------------------------------------------
 
@@ -18,31 +17,32 @@ cmdprops =
 
 function onTrigger(player,page)
     if (page == 0 or page == nil) then
-        player:PrintToPlayer( "1: Crystal Depot, 2: MogDonalds, 3: Meds, 4: Tools and gears");
+        player:PrintToPlayer("1: Crystal Depot, 2: MogDonalds, 3: Meds, 4: Tools and gears");
+        player:PrintToPlayer("@shop <page>");
         -- Edit and uncomment next line if you want more pages.
         -- player:PrintToPlayer( "5: ??, 6: ??, 7: ??, 8: ??");
     elseif (page == 1) then
         local stock_1 =
         {
-            4238,   5000,       -- HQ Fire Crystal
-            4239,   5000,       -- HQ Ice Crystal
-            4240,   5000,       -- HQ Wind Crystal
-            4241,   5000,       -- HQ Earth Crystal
-            4242,   5000,       -- HQ Lightning Crystal
-            4243,   5000,       -- HQ Water Crystal
-            4244,   5000,       -- HQ Light Crystal
-            4245,   5000,       -- HQ Dark Crystal
+            4238,   5000,    -- HQ Fire Crystal
+            4239,   5000,    -- HQ Ice Crystal
+            4240,   5000,    -- HQ Wind Crystal
+            4241,   5000,    -- HQ Earth Crystal
+            4242,   5000,    -- HQ Lightning Crystal
+            4243,   5000,    -- HQ Water Crystal
+            4244,   5000,    -- HQ Light Crystal
+            4245,   5000,    -- HQ Dark Crystal
         };
         showShop(player, STATIC, stock_1);
 
     elseif (page == 2) then -- Would you like fries with that?
         local stock_2 =
         {
-            5610,   60000,      -- Hellsteak +1
-            5163,   60000,      -- Plate of Sole Sushi +1
-            5765,   60000,      -- Red Curry Bun +1
-            5764,   60000,      -- Black Curry Bun +1
-            5718,   60000,      -- Cream Puff
+            5610,   60000,   -- Hellsteak +1
+            5163,   60000,   -- Plate of Sole Sushi +1
+            5765,   60000,   -- Red Curry Bun +1
+            5764,   60000,   -- Black Curry Bun +1
+            5718,   60000,   -- Cream Puff
         };
         showShop(player, STATIC, stock_2);
 
@@ -50,15 +50,15 @@ function onTrigger(player,page)
     elseif (page == 3) then -- Medicine chest.
         local stock_3 =
         {
-            4148,   316,    -- Antidote
-            4150,   2595,   -- Eye Drops
-            4151,   800,    -- Echo drops
-            4112,   910,    -- Potion
-            4128,   4832,   -- Ether
-			21335,   1000,  -- Titanium Bullet
-			21305,   1000,  -- Tulfaire Arrow
-			21336,   5000,  -- Adlivun Bullet
-			21306,   5000,  -- Adlivun Arrow			
+            4148,   316,     -- Antidote
+            4150,   2595,    -- Eye Drops
+            4151,   800,     -- Echo drops
+            4112,   910,     -- Potion
+            4128,   4832,    -- Ether
+            21335,   1000,   -- Titanium Bullet
+            21305,   1000,   -- Tulfaire Arrow
+            21336,   5000,   -- Adlivun Bullet
+            21306,   5000,   -- Adlivun Arrow
         };
         showShop(player, STATIC, stock_3);
 

@@ -5,7 +5,7 @@
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1,
     parameters = "s"
 };
 
@@ -14,14 +14,22 @@ function onTrigger(player, target)
         target = player:getName();
     end
 
-    local targ = GetPlayerByName( target );
+    local targ = GetPlayerByName(target);
     if (targ ~= nil) then
-        if (targ:getZoneID() ~= 131) then
-            targ:warp();
+        if (targ:getHPP() ~= 100) then
+            player:PrintToPlayer("To prevent abuse, the target must have full HP.");
+            return;
+        end
+
+        if (targ:getVar("inJail") == 0 and targ:getZoneID() ~= 131) then
+            require("scripts/globals/status");
+            require("scripts/globals/teleports");
+            targ:injectActionPacket(4, 261);
+            targ:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
         else
-            player:PrintToPlayer( "CANNOT TELEPORT JAILED CHARACTER!");
+            player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
         end
     else
-        player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
+        player:PrintToPlayer(string.format("Player named '%s' not found!", target));
     end
 end;

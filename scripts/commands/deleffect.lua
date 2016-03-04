@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
--- func: addeffect
+-- func: deleffect
 -- desc: Adds the given effect to the given player.
 ---------------------------------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ function onTrigger(player, target, id)
     end
 
     local effectTarget = player;
-    
+
     -- check if target name was entered
     local num = tonumber(target)
     if (type(num) == "number") then

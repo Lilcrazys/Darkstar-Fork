@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
--- func: @kill <victim> <exp loss>
--- auth: TeoTwawki (aka Forgottenandlost)
+-- func: @kill <victim> <exp loss> (aka Forgottenandlost)
 -- desc: Murders targeted player. Sometimes GM jail just isn't enough.
 --
 -- TODO: Alter method of applying death to ensure no exp loss without specifying an amount.

@@ -27,7 +27,7 @@ function onTrigger(player, target, level)
     end
 
     -- Validate the level..
-    if (level < 0) then 
+    if (level < 0) then
         level = 0;
     end
 

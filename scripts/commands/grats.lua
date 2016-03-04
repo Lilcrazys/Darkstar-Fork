@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @grats
--- auth: TeoTwawki
 -- desc: triggers the congratulation animation normally seen on fireworks
 ---------------------------------------------------------------------------------------------------
 
@@ -11,5 +10,5 @@ cmdprops =
 };
 
 function onTrigger(player)
-	player:injectActionPacket(5, 107);
+    player:injectActionPacket(5, 107);
 end;

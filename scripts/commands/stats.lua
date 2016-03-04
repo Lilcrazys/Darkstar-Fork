@@ -6,15 +6,13 @@
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1,
     parameters = ""
 };
 
 function onTrigger(player)
     require("scripts/globals/status");
     require("scripts/globals/spoofchat");
-
-  if (player:getGMLevel() > 0) then -- TEMP RESTRICTED TO GMs. PAY NO MIND TO MY ABNORMAL INDENT..
     player:SpoofChatPlayer(string.format("Treasure Hunter base bonus: %s", player:getMod(MOD_TREASURE_HUNTER)), MESSAGE_ECHO);
     if (player:getMod(MOD_CRITHITRATE) > 0 or player:getMod(MOD_CRIT_DMG_INCREASE) > 0 or player:getMod(MOD_ENEMYCRITRATE) ~= 0) then
         if (player:getMod(MOD_CRITHITRATE) > 0) then
@@ -77,7 +75,4 @@ function onTrigger(player)
         player:SpoofChatPlayer("No bonus to Magic Defense, Magic Attack, or Magic Accuracy.", MESSAGE_ECHO);
     end
     player:SpoofChatPlayer("Get additional info from: /checkparam", MESSAGE_ECHO);
-  else -- TEMP RESTRICTED TO GMs. PAY NO MIND TO MY ABNORMAL INDENT..
-    player:PrintToPlayer("Use /checkparam");
-  end
 end;

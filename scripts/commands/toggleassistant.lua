@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @toggleassistant
--- auth: TeoTwawki
 -- desc: Toggles a Assistant nameflags/icon (in retail, that icon is for trial accounts).
 ---------------------------------------------------------------------------------------------------
 

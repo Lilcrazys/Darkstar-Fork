@@ -18,7 +18,7 @@ function onTrigger(player, target, id, power, duration, subid, subPower)
     end
 
     local effectTarget = player;
-    
+
     -- check if target name was entered
     local num = tonumber(target)
     if (type(num) == "number") then

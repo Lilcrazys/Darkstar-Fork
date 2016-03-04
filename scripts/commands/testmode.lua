@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @testmode <on / off>
--- auth: TeoTwawki
 -- desc: Sometimes GodMode would actually get in the way of testing because of stats changes,
 --       yet you need to be able to survive the mob you are testing. So now we have TestMode.
 --       Note: does NOT persist through zoning, logout, or connection loss.
