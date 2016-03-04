@@ -190,6 +190,13 @@ DELETE FROM `mob_droplist` WHERE dropId=151 and type=0 and itemId=3216 and rate=
 INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- Apademak Horn
 
 -- -----------
+-- Argus
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=174 and type=0 and itemId=15515 and rate=230; -- Peacock Amulet
+INSERT INTO `mob_droplist` VALUES (174,0,13056,80); -- Peacock Charm
+
+-- -----------
 -- Armed Gears
 -- -----------
 
@@ -1032,6 +1039,13 @@ INSERT INTO `mob_droplist` VALUES (1894,0,15022,159); -- Oracle's Gloves
 INSERT INTO `mob_droplist` VALUES (1894,0,18997,130); -- Burtgang
 
 -- -----------
+-- King Arthro
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=1935 and type=0 and itemId=15899 and rate=80; -- comment me
+INSERT INTO `mob_droplist` VALUES (1935,0,13189,80); -- Speed Belt
+
+-- -----------
 -- King Behemoth
 -- -----------
 
@@ -1100,6 +1114,13 @@ INSERT INTO `mob_droplist` VALUES (1972,0,20870,81); -- Iclamar +1
 INSERT INTO `mob_droplist` VALUES (1972,0,21194,81); -- Lehbrailg +1
 INSERT INTO `mob_droplist` VALUES (1972,0,21004,81); -- Kannakiri +1
 INSERT INTO `mob_droplist` VALUES (1972,0,20824,81); -- Faizzeer +1
+
+-- -----------
+-- Leaping Lizzy
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2036 and type=0 and itemId=15351 and rate=70; -- Bounding Boots
+INSERT INTO `mob_droplist` VALUES (2036,0,13014,70); -- Leaping Boots
 
 -- -----------
 -- Lil' Apkallu
@@ -1181,6 +1202,13 @@ INSERT INTO `mob_droplist` VALUES (2133,0,11669,106); -- Strendu Ring
 INSERT INTO `mob_droplist` VALUES (2133,0,19008,198); --  Kenkonken
 INSERT INTO `mob_droplist` VALUES (2133,0,18994,154); -- Laevateinn
 INSERT INTO `mob_droplist` VALUES (2133,0,18990,163); -- Tupsimati
+
+-- -----------
+-- Mee Deggi the Punisher
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2238 and type=0 and itemId=14986 and rate=500; -- Ochimusha Kote
+INSERT INTO `mob_droplist` VALUES (2238,0,13952,74); -- Ochiudo's Kote
 
 -- -----------
 -- Megamaw Mikey
@@ -1432,6 +1460,13 @@ INSERT INTO `mob_droplist` VALUES (2936,0,10876,147); -- Ogier's Helm
 INSERT INTO `mob_droplist` VALUES (2964,0,3926,27);
 
 -- -----------
+-- Roc
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2987 and type=0 and itemId=18587 and rate=120; -- Dryad Staff
+INSERT INTO `mob_droplist` VALUES (2987,0,17108,80); -- Healing Staff
+
+-- -----------
 -- Rock Grinder
 -- -----------
 
@@ -1495,6 +1530,13 @@ INSERT INTO `mob_droplist` VALUES (3106,0,20870,76); -- Iclamar +1
 INSERT INTO `mob_droplist` VALUES (3106,0,21194,76); -- Lehbrailg +1
 INSERT INTO `mob_droplist` VALUES (3106,0,21004,76); -- Kannakiri +1
 INSERT INTO `mob_droplist` VALUES (3106,0,20824,76); -- Faizzeer +1
+
+-- -----------
+-- Simurgh
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3208 and type=0 and itemId=15736 and rate=1000; -- Trotter Boots
+INSERT INTO `mob_droplist` VALUES (3208,0,14080,76); -- Strider Boots
 
 -- -----------
 -- Sippoy
@@ -1675,7 +1717,10 @@ INSERT INTO `mob_droplist` VALUES (3273,0,3922,124);
 -- -----------
 -- Stroper Chyme
 -- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3387 and type=0 and itemId=15551 and rate=20; -- Shikaree Ring
 INSERT INTO `mob_droplist` VALUES (3387,0,3925,85); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (3387,0,3925,60); -- Archer Ring
 
 -- -----------
 -- Titlacauan
@@ -1702,6 +1747,13 @@ INSERT INTO `mob_droplist` VALUES (3648,0,19399,94); -- Almace
 -- ----------
 
 INSERT INTO `mob_droplist` VALUES (3663,0,19302,142); -- Uguisu
+
+-- -----------
+-- Valkrum Emperor
+-- ----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3678 and type=0 and itemId=15224 and rate=160; -- comment me
+INSERT INTO `mob_droplist` VALUES (3678,0,12486,72); -- Emperor Hairpin
 
 -- -----------
 -- Velionis
