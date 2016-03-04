@@ -72,10 +72,6 @@ function onMobDeath(mob, killer, ally)
         end
     end
 
-    ------------------------------------
-    -- Begin Custom Legion Code
-    ------------------------------------
-
     -- Set Fafnir's spawnpoint and respawn time (5-8 hours)
     if (LandKingSystem_NQ ~= 1) then
         local Fafnir = mob:getID()-1;
@@ -85,6 +81,9 @@ function onMobDeath(mob, killer, ally)
         GetMobByID(Fafnir):setRespawnTime(math.random(21600,32400));
     end
 
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
     
     if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
         SetDropRate(195,20738,1000); -- Buramenk'ah
