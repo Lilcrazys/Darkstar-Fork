@@ -40,8 +40,10 @@ function onSpellCast(caster,target,spell)
         caster:delStatusEffect(EFFECT_SABOTEUR);
     end
 
+    dotBonus = dotBonus+caster:getMod(MOD_DIA_DOT);  -- Dia Wand
+
     -- Check for Bio.
-    bio = target:getStatusEffect(EFFECT_BIO);
+    local bio = target:getStatusEffect(EFFECT_BIO);
 
     -- Do it!
     if (bio == nil or (DIA_OVERWRITE == 0 and bio:getPower() <= 5) or (DIA_OVERWRITE == 1 and bio:getPower() < 5)) then
