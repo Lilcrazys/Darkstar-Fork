@@ -1207,7 +1207,7 @@ INSERT INTO `mob_droplist` VALUES (2133,0,18990,163); -- Tupsimati
 -- Mee Deggi the Punisher
 -- -----------
 
-DELETE FROM `mob_droplist` WHERE dropId=2238 and type=0 and itemId=14986 and rate=500; -- Ochimusha Kote
+DELETE FROM `mob_droplist` WHERE dropId=2238 and type=0 and itemId=14986 and rate=50; -- Ochimusha Kote
 INSERT INTO `mob_droplist` VALUES (2238,0,13952,74); -- Ochiudo's Kote
 
 -- -----------
@@ -1426,7 +1426,7 @@ INSERT INTO `mob_droplist` VALUES (2732,0,9063,225);
 -- Quu Domi the Gallant
 -- -----------
 
-DELETE FROM `mob_droplist` WHERE dropId=2916 and type=0 and itemId=15737 and rate=700; -- Sarutobi kyahan
+DELETE FROM `mob_droplist` WHERE dropId=2916 and type=0 and itemId=15737 and rate=70; -- Sarutobi kyahan
 INSERT INTO `mob_droplist` VALUES (2916,0,13054,77); -- Fuma Kyahan 
 
 -- -----------
@@ -1542,7 +1542,7 @@ INSERT INTO `mob_droplist` VALUES (3106,0,20824,76); -- Faizzeer +1
 -- Simurgh
 -- -----------
 
-DELETE FROM `mob_droplist` WHERE dropId=3208 and type=0 and itemId=15736 and rate=1000; -- Trotter Boots
+DELETE FROM `mob_droplist` WHERE dropId=3208 and type=0 and itemId=15736 and rate=100; -- Trotter Boots
 INSERT INTO `mob_droplist` VALUES (3208,0,14080,76); -- Strider Boots
 
 -- -----------
@@ -1740,8 +1740,8 @@ INSERT INTO `mob_droplist` VALUES (3529,0,12099,141); --  Unkai Sune-Ate
 -- Ulhuadshi
 -- -----------
 
-DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=2693 and rate=1020; -- comment me
-DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=2693 and rate=510; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=2963 and rate=1020; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=2963 and rate=510; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=3211 and rate=350; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=3211 and rate=1050; -- comment me
 INSERT INTO `mob_droplist` VALUES (3648,0,3211,1000); --  Vision Coin
