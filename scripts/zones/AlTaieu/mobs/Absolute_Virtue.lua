@@ -57,6 +57,100 @@ end;
     if (GetServerVariable("JoL_Qn_hpemde_Killed") == 9) then
         mob:addMod(MOD_REGEN, -130)
     end
+    
+    local RND1 = math.random(1,7);
+    local RND2 = math.random(1,5);
+    
+    if (RND1 == 1) then
+        SetDropRate(4,27590,50); -- Shneddick Ring 
+        SetDropRate(4,27581,0); -- Woltaris Ring 
+        SetDropRate(4,27583,0); -- Janniston Ring 
+        SetDropRate(4,27585,0); -- Gorney Ring 
+        SetDropRate(4,27587,0); -- Karieyh Ring 
+        SetDropRate(4,27589,0); -- Thurandaut Ring 
+        SetDropRate(4,27591,0); -- Orvail Ring  
+    elseif (RND1 == 2) then
+        SetDropRate(4,27590,0); -- Shneddick Ring 
+        SetDropRate(4,27581,50); -- Woltaris Ring 
+        SetDropRate(4,27583,0); -- Janniston Ring 
+        SetDropRate(4,27585,0); -- Gorney Ring 
+        SetDropRate(4,27587,0); -- Karieyh Ring 
+        SetDropRate(4,27589,0); -- Thurandaut Ring 
+        SetDropRate(4,27591,0); -- Orvail Ring  
+    elseif (RND1 == 3) then
+        SetDropRate(4,27590,0); -- Shneddick Ring 
+        SetDropRate(4,27581,0); -- Woltaris Ring 
+        SetDropRate(4,27583,50); -- Janniston Ring 
+        SetDropRate(4,27585,0); -- Gorney Ring 
+        SetDropRate(4,27587,0); -- Karieyh Ring 
+        SetDropRate(4,27589,0); -- Thurandaut Ring 
+        SetDropRate(4,27591,0); -- Orvail Ring  
+    elseif (RND1 == 4) then
+        SetDropRate(4,27590,0); -- Shneddick Ring 
+        SetDropRate(4,27581,0); -- Woltaris Ring 
+        SetDropRate(4,27583,0); -- Janniston Ring 
+        SetDropRate(4,27585,50); -- Gorney Ring 
+        SetDropRate(4,27587,0); -- Karieyh Ring 
+        SetDropRate(4,27589,0); -- Thurandaut Ring 
+        SetDropRate(4,27591,0); -- Orvail Ring  
+    elseif (RND1 == 5) then
+        SetDropRate(4,27590,0); -- Shneddick Ring 
+        SetDropRate(4,27581,0); -- Woltaris Ring 
+        SetDropRate(4,27583,0); -- Janniston Ring 
+        SetDropRate(4,27585,0); -- Gorney Ring 
+        SetDropRate(4,27587,50); -- Karieyh Ring 
+        SetDropRate(4,27589,0); -- Thurandaut Ring 
+        SetDropRate(4,27591,0); -- Orvail Ring  
+    elseif (RND1 == 6) then
+        SetDropRate(4,27590,0); -- Shneddick Ring 
+        SetDropRate(4,27581,0); -- Woltaris Ring 
+        SetDropRate(4,27583,0); -- Janniston Ring 
+        SetDropRate(4,27585,0); -- Gorney Ring 
+        SetDropRate(4,27587,0); -- Karieyh Ring 
+        SetDropRate(4,27589,50); -- Thurandaut Ring 
+        SetDropRate(4,27591,0); -- Orvail Ring  
+    elseif (RND1 == 7) then
+        SetDropRate(4,27590,0); -- Shneddick Ring 
+        SetDropRate(4,27581,0); -- Woltaris Ring 
+        SetDropRate(4,27583,0); -- Janniston Ring 
+        SetDropRate(4,27585,0); -- Gorney Ring 
+        SetDropRate(4,27587,0); -- Karieyh Ring 
+        SetDropRate(4,27589,0); -- Thurandaut Ring 
+        SetDropRate(4,27591,50); -- Orvail Ring  
+    end
+
+    if (RND2 == 1) then
+        SetDropRate(4,27580,70); -- Adoulin Ring 
+        SetDropRate(4,27582,0); -- Weather Ring 
+        SetDropRate(4,27584,0); -- Renaye Ring 
+        SetDropRate(4,27586,0); -- Haverton Ring 
+        SetDropRate(4,27588,0); -- Vocane Ring 
+    elseif (RND2 == 2) then
+        SetDropRate(4,27580,0); -- Adoulin Ring 
+        SetDropRate(4,27582,70); -- Weather Ring 
+        SetDropRate(4,27584,0); -- Renaye Ring 
+        SetDropRate(4,27586,0); -- Haverton Ring 
+        SetDropRate(4,27588,0); -- Vocane Ring 
+    elseif (RND2 == 3) then
+        SetDropRate(4,27580,0); -- Adoulin Ring 
+        SetDropRate(4,27582,0); -- Weather Ring 
+        SetDropRate(4,27584,70); -- Renaye Ring 
+        SetDropRate(4,27586,0); -- Haverton Ring 
+        SetDropRate(4,27588,0); -- Vocane Ring
+    elseif (RND2 == 4) then
+        SetDropRate(4,27580,0); -- Adoulin Ring 
+        SetDropRate(4,27582,0); -- Weather Ring 
+        SetDropRate(4,27584,0); -- Renaye Ring 
+        SetDropRate(4,27586,70); -- Haverton Ring 
+        SetDropRate(4,27588,0); -- Vocane Ring
+    elseif (RND2 == 5) then
+        SetDropRate(4,27580,0); -- Adoulin Ring 
+        SetDropRate(4,27582,0); -- Weather Ring 
+        SetDropRate(4,27584,0); -- Renaye Ring 
+        SetDropRate(4,27586,0); -- Haverton Ring 
+        SetDropRate(4,27588,70); -- Vocane Ring
+    end    
+    
 end;
 
 -----------------------------------
@@ -245,96 +339,4 @@ function onMobDeath(mob, killer, ally)
     DespawnMob(16912878);
     DespawnMob(16912879);
     DespawnMob(16912880);
-
-    local RND1 = math.random(1,7);
-    local RND2 = math.random(1,5);
-    if (RND1 == 1) then
-        SetDropRate(4,0,27590,50); -- Shneddick Ring 
-        SetDropRate(4,0,27581,0); -- Woltaris Ring 
-        SetDropRate(4,0,27583,0); -- Janniston Ring 
-        SetDropRate(4,0,27585,0); -- Gorney Ring 
-        SetDropRate(4,0,27587,0); -- Karieyh Ring 
-        SetDropRate(4,0,27589,0); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND1 == 2) then
-        SetDropRate(4,0,27590,0); -- Shneddick Ring 
-        SetDropRate(4,0,27581,50); -- Woltaris Ring 
-        SetDropRate(4,0,27583,0); -- Janniston Ring 
-        SetDropRate(4,0,27585,0); -- Gorney Ring 
-        SetDropRate(4,0,27587,0); -- Karieyh Ring 
-        SetDropRate(4,0,27589,0); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND1 == 3) then
-        SetDropRate(4,0,27590,0); -- Shneddick Ring 
-        SetDropRate(4,0,27581,0); -- Woltaris Ring 
-        SetDropRate(4,0,27583,50); -- Janniston Ring 
-        SetDropRate(4,0,27585,0); -- Gorney Ring 
-        SetDropRate(4,0,27587,0); -- Karieyh Ring 
-        SetDropRate(4,0,27589,0); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND1 == 4) then
-        SetDropRate(4,0,27590,0); -- Shneddick Ring 
-        SetDropRate(4,0,27581,0); -- Woltaris Ring 
-        SetDropRate(4,0,27583,0); -- Janniston Ring 
-        SetDropRate(4,0,27585,50); -- Gorney Ring 
-        SetDropRate(4,0,27587,0); -- Karieyh Ring 
-        SetDropRate(4,0,27589,0); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND1 == 5) then
-        SetDropRate(4,0,27590,0); -- Shneddick Ring 
-        SetDropRate(4,0,27581,0); -- Woltaris Ring 
-        SetDropRate(4,0,27583,0); -- Janniston Ring 
-        SetDropRate(4,0,27585,0); -- Gorney Ring 
-        SetDropRate(4,0,27587,50); -- Karieyh Ring 
-        SetDropRate(4,0,27589,0); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND1 == 6) then
-        SetDropRate(4,0,27590,0); -- Shneddick Ring 
-        SetDropRate(4,0,27581,0); -- Woltaris Ring 
-        SetDropRate(4,0,27583,0); -- Janniston Ring 
-        SetDropRate(4,0,27585,0); -- Gorney Ring 
-        SetDropRate(4,0,27587,0); -- Karieyh Ring 
-        SetDropRate(4,0,27589,50); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,0); -- Orvail Ring  
-    elseif (RND1 == 7) then
-        SetDropRate(4,0,27590,0); -- Shneddick Ring 
-        SetDropRate(4,0,27581,0); -- Woltaris Ring 
-        SetDropRate(4,0,27583,0); -- Janniston Ring 
-        SetDropRate(4,0,27585,0); -- Gorney Ring 
-        SetDropRate(4,0,27587,0); -- Karieyh Ring 
-        SetDropRate(4,0,27589,0); -- Thurandaut Ring 
-        SetDropRate(4,0,27591,50); -- Orvail Ring  
-    end
-
-    if (RND2 == 1) then
-        SetDropRate(4,0,27580,70); -- Adoulin Ring 
-        SetDropRate(4,0,27582,0); -- Weather Ring 
-        SetDropRate(4,0,27584,0); -- Renaye Ring 
-        SetDropRate(4,0,27586,0); -- Haverton Ring 
-        SetDropRate(4,0,27588,0); -- Vocane Ring 
-    elseif (RND2 == 2) then
-        SetDropRate(4,0,27580,0); -- Adoulin Ring 
-        SetDropRate(4,0,27582,70); -- Weather Ring 
-        SetDropRate(4,0,27584,0); -- Renaye Ring 
-        SetDropRate(4,0,27586,0); -- Haverton Ring 
-        SetDropRate(4,0,27588,0); -- Vocane Ring 
-    elseif (RND2 == 3) then
-        SetDropRate(4,0,27580,0); -- Adoulin Ring 
-        SetDropRate(4,0,27582,0); -- Weather Ring 
-        SetDropRate(4,0,27584,70); -- Renaye Ring 
-        SetDropRate(4,0,27586,0); -- Haverton Ring 
-        SetDropRate(4,0,27588,0); -- Vocane Ring
-    elseif (RND2 == 4) then
-        SetDropRate(4,0,27580,0); -- Adoulin Ring 
-        SetDropRate(4,0,27582,0); -- Weather Ring 
-        SetDropRate(4,0,27584,0); -- Renaye Ring 
-        SetDropRate(4,0,27586,70); -- Haverton Ring 
-        SetDropRate(4,0,27588,0); -- Vocane Ring
-    elseif (RND2 == 5) then
-        SetDropRate(4,0,27580,0); -- Adoulin Ring 
-        SetDropRate(4,0,27582,0); -- Weather Ring 
-        SetDropRate(4,0,27584,0); -- Renaye Ring 
-        SetDropRate(4,0,27586,0); -- Haverton Ring 
-        SetDropRate(4,0,27588,70); -- Vocane Ring
-    end
 end;
