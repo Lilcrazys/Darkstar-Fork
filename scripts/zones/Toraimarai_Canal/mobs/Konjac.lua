@@ -27,6 +27,40 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
+    
+     local RND1 = math.random(1,5);
+    if (RND1 == 1) then
+        SetDropRate(455,4781,100); 
+        SetDropRate(455,4771,0);
+        SetDropRate(455,5505,0);
+        SetDropRate(455,4706,0);
+        SetDropRate(455,4707,0);
+    elseif (RND1 == 2) then
+        SetDropRate(455,4781,0);
+        SetDropRate(455,4771,100);
+        SetDropRate(455,5505,0); 
+        SetDropRate(455,4706,0); 
+        SetDropRate(455,4707,0); 
+    elseif (RND1 == 3) then
+        SetDropRate(455,4781,0); 
+        SetDropRate(455,4771,0); 
+        SetDropRate(455,5505,100); 
+        SetDropRate(455,4706,0); 
+        SetDropRate(455,4707,0); 
+    elseif (RND1 == 4) then
+        SetDropRate(455,4781,0); 
+        SetDropRate(455,4771,0); 
+        SetDropRate(455,5505,0); 
+        SetDropRate(455,4706,100); 
+        SetDropRate(455,4707,0); 
+    elseif (RND1 == 5) then
+        SetDropRate(455,4781,0); 
+        SetDropRate(455,4771,0); 
+        SetDropRate(455,5505,0); 
+        SetDropRate(455,4706,0); 
+        SetDropRate(455,4707,100);   
+    end      
+    
 end;
 
 -----------------------------------

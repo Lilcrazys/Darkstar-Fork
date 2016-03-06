@@ -24,6 +24,40 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+
+    local RND1 = math.random(1,5);
+    if (RND1 == 1) then
+        SetDropRate(1049,4748,100); 
+        SetDropRate(1049,4756,0);
+        SetDropRate(1049,4613,0);
+        SetDropRate(1049,5500,0);
+        SetDropRate(1049,4706,0);
+    elseif (RND1 == 2) then
+        SetDropRate(1049,4748,0);
+        SetDropRate(1049,4756,100);
+        SetDropRate(1049,4613,0); 
+        SetDropRate(1049,5500,0); 
+        SetDropRate(1049,4706,0); 
+    elseif (RND1 == 3) then
+        SetDropRate(1049,4748,0); 
+        SetDropRate(1049,4756,0); 
+        SetDropRate(1049,4613,100); 
+        SetDropRate(1049,5500,0); 
+        SetDropRate(1049,4706,0); 
+    elseif (RND1 == 4) then
+        SetDropRate(1049,4748,0); 
+        SetDropRate(1049,4756,0); 
+        SetDropRate(1049,4613,0); 
+        SetDropRate(1049,5500,100); 
+        SetDropRate(1049,4706,0); 
+    elseif (RND1 == 5) then
+        SetDropRate(1049,4748,0); 
+        SetDropRate(1049,4756,0); 
+        SetDropRate(1049,4613,0); 
+        SetDropRate(1049,5500,0); 
+        SetDropRate(1049,4706,100);   
+    end 
+
 end;
 
 -----------------------------------
