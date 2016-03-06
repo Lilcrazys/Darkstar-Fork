@@ -40,7 +40,6 @@ function onMobSpawn(mob)
     mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 
     local RND1 = math.random(1,8);
-
     if (RND1 == 1) then
         SetDropRate(9600,8919,50); -- Ifritear
         SetDropRate(9600,8920,0); -- Leviatear
