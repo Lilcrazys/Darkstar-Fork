@@ -15,7 +15,16 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ACC,100);
     mob:addMod(MOD_ATT,150);
     mob:addMod(MOD_EVA,-150);
-    mob:addMod(MOD_TRIPLE_ATTACK,15);
+    mob:addMod(MOD_TRIPLE_ATTACK,15); 
+end;
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
+function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_REGAIN,33);
     
     local RND1 = math.random(1,5);
     if (RND1 == 1) then
@@ -48,16 +57,8 @@ function onMobInitialize(mob)
         SetDropRate(3287,4863,0); 
         SetDropRate(3287,5078,0); 
         SetDropRate(3287,5479,100);   
-    end    
-end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
-
-function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,33);
+    end       
+    
 end;
 
 -----------------------------------

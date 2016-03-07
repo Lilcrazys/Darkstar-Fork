@@ -11,8 +11,15 @@ require("scripts/globals/status");
 
 function onMobInitialize(mob)
     mob:addMod(MOD_MATT,40);
-    mob:addMod(MOD_MACC,400);
-    
+    mob:addMod(MOD_MACC,400);    
+end;
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+
     local RND1 = math.random(1,5);
     if (RND1 == 1) then
         SetDropRate(3441,4748,100); 
@@ -44,8 +51,7 @@ function onMobInitialize(mob)
         SetDropRate(3441,5503,0); 
         SetDropRate(3441,5504,0); 
         SetDropRate(3441,6061,100);   
-    end     
-    
+    end  
 end;
 
 -----------------------------------

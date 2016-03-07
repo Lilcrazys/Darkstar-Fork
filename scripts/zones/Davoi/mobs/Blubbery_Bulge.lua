@@ -21,8 +21,15 @@ end;
 
 function onMobInitialize(mob)
 	mob:addMod(MOD_MATT,20);
-	mob:addMod(MOD_MACC,400);
-    
+	mob:addMod(MOD_MACC,400); 
+end;
+     
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+
     local RND1 = math.random(1,5);
     if (RND1 == 1) then
         SetDropRate(241,4781,100); 
@@ -54,11 +61,9 @@ function onMobInitialize(mob)
         SetDropRate(241,5502,0); 
         SetDropRate(241,6060,0);
         SetDropRate(241,5078,100);
-    end     
-    
-end;
-     
+    end  
 
+end;     
 -----------------------------------
 -- onSpikesDamage
 -----------------------------------
