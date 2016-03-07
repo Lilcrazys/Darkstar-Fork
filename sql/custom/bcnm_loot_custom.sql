@@ -1,0 +1,10 @@
+-- ---------------------------------------------------------------------------
+-- This file adds onto, or modifies portions of the table "bcnm_loot" created
+-- by the file bcnm_loot.sql and must be imported/executed AFTER that file.
+--
+-- For new entries DarkStar does not have, use "INSERT INTO"
+-- For changing entries that already exist use "REPLACE INTO"
+-- REPLACE tells MySQL to delete the old line and insert the new one.
+-- Using the wrong 1 of these 2 commands will result in errors.
+-- ---------------------------------------------------------------------------
+-- REPLACE INTO `bcnm_loot` VALUES ('LootDropId', 'itemId', 'rolls', 'lootGroupId'); -- BCNM, Item Name, grouping
