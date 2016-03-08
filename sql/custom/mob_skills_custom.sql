@@ -2296,7 +2296,7 @@ INSERT INTO `mob_skills` VALUES (2201,1695,'Level-6-Holy',1,18.0,2000,1000,4,0,0
 -- INSERT INTO `mob_skills` VALUES (2252,2252,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2253,2253,'Hypothermal_Combustion',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2254,2254,'.',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2255,2255,'Corpse_Breath',0,7.0,2000,1500,4,0,0,0); -- needs alt branch in script for VWNM
+INSERT INTO `mob_skills` VALUES (2255,2255,'Custom_Corpse_Breath',0,7.0,2000,1500,4,0,0,0); -- needs alt branch in script for VWNM
 INSERT INTO `mob_skills` VALUES (2256,2256,'Venom_Shower',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2257,2257,'Mega_Scissors',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2258,2258,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
