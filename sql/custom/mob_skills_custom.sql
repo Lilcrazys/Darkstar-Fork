@@ -107,7 +107,7 @@ INSERT INTO `mob_skills` VALUES (62,401,'Somersault',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (63,63,'Bad_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (64,64,'Sweet_Breath',4,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (65,65,'Needleshot',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (66,66,'1000_Needles',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (66,66,'Custom_1000_Needles',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (67,37,'Wild_Carrot',0,20.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (68,68,'Photosynthesis',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (69,161,'Random_Kiss',0,7.0,2000,1500,4,0,0,0);
@@ -2296,7 +2296,7 @@ INSERT INTO `mob_skills` VALUES (2201,1695,'Level-6-Holy',1,18.0,2000,1000,4,0,0
 -- INSERT INTO `mob_skills` VALUES (2252,2252,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2253,2253,'Hypothermal_Combustion',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2254,2254,'.',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2255,2255,'Custom_Corpse_Breath',0,7.0,2000,1500,4,0,0,0); -- needs alt branch in script for VWNM
+INSERT INTO `mob_skills` VALUES (2255,2255,'Custom_Corpse_Breath',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2256,2256,'Venom_Shower',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2257,2257,'Mega_Scissors',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2258,2258,'Cytokinesis',0,7.0,2000,1500,4,0,0,0);
@@ -2501,7 +2501,7 @@ INSERT INTO `mob_skills` VALUES (2453,1881,'Cataclysmic_Vortex',1,15.0,4000,5000
 -- INSERT INTO `mob_skills` VALUES (2457,2457,'.',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2458,1900,'Yaksha_stance',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2459,1901,'Yaksha_damnation',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2460,1903,'Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2460,1903,'Custom_Yaksha_oblivion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2461,1902,'Yaksha_bliss',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2462,1904,'Raksha_stance',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2463,1905,'Raksha_Judgment',1,18.0,2000,1000,4,0,0,0);
