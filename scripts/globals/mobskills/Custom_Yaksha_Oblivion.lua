@@ -19,8 +19,8 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    if (mob:getPoolID() == 9816 or mob:getPoolID() == 9880      -- Hahava, Uptala
-    or mob:getPoolID() == 9036 or mob:getPoolID() == 9058) then -- Soaring_Naraka, Paramount_Naraka
+    if (mob:getPool() == 9816 or mob:getPool() == 9880      -- Hahava, Uptala
+    or mob:getPool() == 9036 or mob:getPool() == 9058) then -- Soaring_Naraka, Paramount_Naraka
         local numhits = 1;
         local accmod = 10;
         local dmgmod = 4.0;

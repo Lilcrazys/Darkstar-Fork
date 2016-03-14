@@ -10,7 +10,7 @@ require("scripts/globals/status");
 
 function onMobSkillCheck(target,mob,skill)
     -- BEGIN TEMP
-    if (mob:getPoolOD() ~= 9804) then
+    if (mob:getPool() ~= 9804) then
         return 1; -- Fail it because the others do not exist yet.
     end
     -- END TEMP
@@ -18,7 +18,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    if (mob:getPoolOD() == 9804) then -- Virvatuli (9804)
+    if (mob:getPool() == 9804) then -- Virvatuli (9804)
         local typeEffect = EFFECT_BLINDNESS;
         local dmgmod = 1;
         local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_EARTH,dmgmod,TP_NO_EFFECT);
@@ -28,7 +28,7 @@ function onMobWeaponSkill(target, mob, skill)
 
         target:delHP(dmg);
         return dmg;
-    elseif (mob:getPoolOD() == 9840 or mob:getPoolOD() == 9882) then -- GwynnApnudd (9840) / Bloody Skull (9882)
+    elseif (mob:getPool() == 9840 or mob:getPool() == 9882) then -- GwynnApnudd (9840) / Bloody Skull (9882)
         -- Doesn't exist yet.
         return 0;
     else -- DSP version, regular non NM mobs should use this.

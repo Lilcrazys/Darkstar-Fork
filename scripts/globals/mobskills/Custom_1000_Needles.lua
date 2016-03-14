@@ -11,7 +11,7 @@ require("scripts/globals/status");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getPoolID() == 9856 or mob:getPoolID() == 9857) then -- VWNM can use at any HP level.
+    if (mob:getPool() == 9856 or mob:getPool() == 9857) then -- VWNM can use at any HP level.
         return 0;
     end
 
