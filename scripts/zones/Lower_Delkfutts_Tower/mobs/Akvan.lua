@@ -1,13 +1,13 @@
 -----------------------------------
--- Area: ?
+-- Area: Lower Delkfutt's Tower
 -- VWNM: Akvan
 -----------------------------------
 package.loaded["scripts/zones/Lower_Delkfutts_Tower/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Lower_Delkfutts_Tower/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/status");
 require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -38,7 +38,82 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,75);
 
     -- Vars
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+
+    local RND1 = math.random(1,8);
+    if (RND1 == 1) then
+        SetDropRate(9633,0,8919,50); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 2) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,50); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 3) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,50); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 4) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,50); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 5) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,50); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 6) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,50); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 7) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,50); -- Carbutear
+        SetDropRate(9633,0,8926,0); -- Fenritear
+    elseif (RND1 == 8) then
+        SetDropRate(9633,0,8919,0); -- Ifritear
+        SetDropRate(9633,0,8920,0); -- Leviatear
+        SetDropRate(9633,0,8921,0); -- Ramutear
+        SetDropRate(9633,0,8922,0); -- Garutear
+        SetDropRate(9633,0,8923,0); -- Titatear
+        SetDropRate(9633,0,8924,0); -- Shivatear
+        SetDropRate(9633,0,8925,0); -- Carbutear
+        SetDropRate(9633,0,8926,50); -- Fenritear
+    end
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -54,14 +129,14 @@ end;
 function onMobFight(mob, target)
 
     -- Check for timed depop
-    if (os.time(t) > mob:getLocalVar("depopTime")) then
+    --[[if (os.time(t) > mob:getLocalVar("depopTime")) then
         if (mob:actionQueueEmpty() == true) then
             DespawnMob(mob:getID());
 
             -- Prevent moronic "bug" reports..
             mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
         end
-    end
+    end]]
 end;
 
 -----------------------------------
@@ -82,9 +157,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 450);
-    ally:addExp(10000);
-
     if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Akvan Kill
         if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_III"), 1) == false) then
             ally:setMaskBit(ally:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",1,true);
@@ -99,80 +171,7 @@ function onMobDeath(mob, killer, ally)
             end
         end
     end
-    
-    local RND1 = math.random(1,8);
-        if (RND1 == 1) then
-            SetDropRate(9633,0,8919,50); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 2) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,50); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 3) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,50); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 4) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,50); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 5) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,50); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 6) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,50); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 7) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,50); -- Carbutear
-            SetDropRate(9633,0,8926,0); -- Fenritear
-        elseif (RND1 == 8) then
-            SetDropRate(9633,0,8919,0); -- Ifritear
-            SetDropRate(9633,0,8920,0); -- Leviatear    
-            SetDropRate(9633,0,8921,0); -- Ramutear    
-            SetDropRate(9633,0,8922,0); -- Garutear    
-            SetDropRate(9633,0,8923,0); -- Titatear    
-            SetDropRate(9633,0,8924,0); -- Shivatear   
-            SetDropRate(9633,0,8925,0); -- Carbutear
-            SetDropRate(9633,0,8926,50); -- Fenritear       
-    end
-    
+
+    ally:addCurrency("bayld", 450);
+    ally:addExp(10000);
 end;
