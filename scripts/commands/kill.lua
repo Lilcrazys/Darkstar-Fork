@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
--- func: @kill <victim> <exp loss> (aka Forgottenandlost)
+-- func: @kill <victim> <exp loss>
 -- desc: Murders targeted player. Sometimes GM jail just isn't enough.
 --
 -- TODO: Alter method of applying death to ensure no exp loss without specifying an amount.
@@ -27,6 +27,21 @@ function onTrigger(player, victim)
     else
         local targ = GetPlayerByName(victim);
         if (targ ~= nil) then
+            local dateStamp = os.date("%d/%m/%Y");
+            local timeStamp = os.date("%I:%M:%S %p");
+            local user = player:getName();
+            local file = io.open("log/commands/kill.log", "a");
+            file:write(
+            "\n", "----------------------------------------",
+            "\n", "Date: ".. dateStamp,
+            "\n", "Time: ".. timeStamp,
+            "\n", "User: ".. user,
+            "\n", "Target: ".. victim,
+            "\n", "----------------------------------------",
+            "\n" -- This MUST be final line.
+            );
+            file:close();
+
             -- Begin Wrath of the Gods Animation
             targ:injectActionPacket( 5, 271 );
             targ:injectActionPacket( 5, 202 );

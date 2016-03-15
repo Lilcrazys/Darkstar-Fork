@@ -16,6 +16,21 @@ function onTrigger(player, str)
         return;
     end
 
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local user = player:getName();
+    local file = io.open("log/commands/exec.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. user,
+    "\n", "string: ".. str,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
+
     -- For safety measures we will nuke the os table..
     local old_os = os;
     os = nil;
