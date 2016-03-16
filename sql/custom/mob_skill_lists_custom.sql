@@ -197,9 +197,11 @@ INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1936); -- Doomvoid
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,2348); -- Gorge
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,2349); -- Disgorge
 
--- INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2360); -- Ironclad_Meele_Vertical
--- INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2361); -- Ironclad_Meele_Stomp
--- INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2362); -- Ironclad_Meele_Lateral
+-- Begin temp!
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4027,2360); -- Iron_Giant_Melee_Vertical
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4027,2361); -- Iron_Giant_Melee_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4027,2362); -- Iron_Giant_Melee_Lateral
+-- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2363); -- Turbine_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2364); -- Seismic_impact
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2365); -- Incinerator
@@ -209,9 +211,11 @@ INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2368); -- Scapula_b
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2370); -- Auger_Smash
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2371); -- Area_Bombardment
 
--- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2525); -- Gallu_Triple
--- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2526); -- Gallu_Frontal
--- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2527); -- Gallu_Radial
+-- Begin temp!
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4028,2525); -- Gallu_Melee_Triple
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4028,2526); -- Gallu_Melee_Frontal
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4028,2527); -- Gallu_Melee_Radial
+-- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2528); -- Diluvial_wakes
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2529); -- Kurugi_collapse
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2530); -- Searing_halitus
@@ -247,9 +251,11 @@ INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2463); -- Raksha_J
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2464); -- Raksha_illusion
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2465); -- Raksha_vengeance
 
--- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2360); -- Ironclad_Meele_Vertical
--- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2361); -- Ironclad_Meele_Stomp
--- INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2362); -- Ironclad_Meele_Lateral
+-- Begin temp!
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4033,2360); -- Iron_Giant_Melee_Vertical
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4033,2361); -- Iron_Giant_Melee_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4033,2362); -- Iron_Giant_Melee_Lateral
+-- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2363); -- Turbine_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2364); -- Seismic_impact
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2365); -- Incinerator
@@ -423,9 +429,11 @@ INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2463); -- Raksha_Judgment
 INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2464); -- Raksha_illusion
 INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2465); -- Raksha_vengeance
 
--- INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2360); -- VW_Ironclad_Vertical needs info
--- INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2361); -- VW_Ironclad_Stomp 
--- INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2362); -- VW_Ironclad_Lateral
+-- Begin temp!
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2360); -- Iron_Giant_Melee_Vertical
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2361); -- Iron_Giant_Melee_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2362); -- Iron_Giant_Melee_Lateral
+-- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2363); -- Turbine_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2364); -- Seismic_impact
 INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2365); -- Incinerator
@@ -608,10 +616,11 @@ INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2464); -- VW_Raksha_Illu
 INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2465); -- VW_Raksha_Vengeance
 INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2554); -- Yamas_Jugement
 
--- INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,439); -- Blood_Weapon
--- INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2525); -- VW_Gallu_Triple
--- INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2526); -- VW_Gallu_Frontal
--- INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2527); -- VW_Gallu_Radial
+-- Begin temp!
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4108,2525); -- Gallu_Melee_Triple
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4108,2526); -- Gallu_Melee_Frontal
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4108,2527); -- Gallu_Melee_Radial
+-- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2528); -- VW_Diluvial_wakes
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2529); -- VW_Kurugi_collapse
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2530); -- VW_Searing_halitus
@@ -916,13 +925,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2629); -- Beautiful_death
 -- INSERT INTO `mob_skill_lists` VALUES ('Shah',4165,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Provenance_Watcher',4166,PLACEHOLDER); -- Unfinished
 
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2362); -- Iron_Giant_Melee_Lateral
-
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2525); -- Gallu_Melee_Triple
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2526); -- Gallu_Melee_Frontal
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2527); -- Gallu_Melee_Radial
+--INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2360); -- Iron_Giant_Melee_Vertical
+--INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2361); -- Iron_Giant_Melee_Stomp
+--INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2362); -- Iron_Giant_Melee_Lateral
+-- This is what melee substitute skills will change to when we catch up with Darkstar.
+--INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2525); -- Gallu_Melee_Triple
+--INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2526); -- Gallu_Melee_Frontal
+--INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2527); -- Gallu_Melee_Radial
 
 
 
