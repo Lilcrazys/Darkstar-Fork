@@ -37,7 +37,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DARK_AFFINITY_DMG, 20);
     mob:setMod(MOD_DARK_AFFINITY_ACC, 20);
 
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4168); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
