@@ -35,8 +35,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 50);
 
     -- Vars
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9611,8919,50); -- Ifritear
@@ -110,9 +110,9 @@ function onMobSpawn(mob)
         SetDropRate(9611,8924,0); -- Shivatear
         SetDropRate(9611,8925,0); -- Carbutear
         SetDropRate(9611,8926,50); -- Fenritear
-    end    
-    
+    end
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -126,11 +126,12 @@ end;
 
 function onMobFight(mob, target)
     local Boost_Used = mob:getLocalVar("Boost");
+    --[[
     local depopTime = mob:getLocalVar("depopTime");
-
     if (os.time(t) > depopTime) then
         DespawnMob(mob:getID());
     end
+    ]]
 
     if (mob:getHPP() <= 25) then
         if (Boost_Used == 1) then

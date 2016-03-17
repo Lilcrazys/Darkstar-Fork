@@ -115,6 +115,7 @@ function onMobSpawn(mob)
         SetDropRate(9633,0,8926,50); -- Fenritear
     end
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -131,10 +132,9 @@ function onMobFight(mob, target)
     -- Check for timed depop
     --[[if (os.time(t) > mob:getLocalVar("depopTime")) then
         if (mob:actionQueueEmpty() == true) then
-            DespawnMob(mob:getID());
-
             -- Prevent moronic "bug" reports..
             mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
+            DespawnMob(mob:getID());
         end
     end]]
 end;
