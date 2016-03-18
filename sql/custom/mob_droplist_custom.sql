@@ -1799,7 +1799,7 @@ DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=2963 and rate
 DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=3211 and rate=350; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=3648 and type=0 and itemId=3211 and rate=1050; -- comment me
 INSERT INTO `mob_droplist` VALUES (3648,0,3211,1000); --  Vision Coin
-INSERT INTO `mob_droplist` VALUES (3648,0,2963,163); --  Ulhuadshi's Fang
+INSERT INTO `mob_droplist` VALUES (3648,0,2963,93); --  Ulhuadshi's Fang
 INSERT INTO `mob_droplist` VALUES (3648,0,2963,1000); -- comment me
 INSERT INTO `mob_droplist` VALUES (3648,0,19399,94); -- Almace
 
