@@ -222,7 +222,6 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_DARKRES, 50);
         target:addMod(MOD_STUNRES, 30);
     elseif (pwr == 60) then -- ATMA_OF_THE_AVARICIOUS_APE
-        target:addMod(MOD_HASTE_GEAR, 5);
         -- not implemented: Monster Correlation
     elseif (pwr == 61) then -- ATMA_OF_THE_MERCILESS_MATRIARCH
         target:addMod(MOD_MACC, 50);
@@ -250,7 +249,8 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_DEX, 10);
     elseif (pwr == 67) then -- ATMA_OF_THE_BURNING_EFFIGY
         target:addMod(MOD_STR, 20);
-        target:addMod(MOD_FIRE_AFFINITY, 3);
+        target:addMod(MOD_FIRE_AFFINITY_DMG, 3);
+        target:addMod(MOD_FIRE_AFFINITY_ACC, 3);
         target:addMod(MOD_FIREATT, 1);
         target:addMod(MOD_FIREACC, 1);
     elseif (pwr == 68) then -- ATMA_OF_THE_SMITING_BLOW
@@ -264,7 +264,8 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_ENMITY, -20);
     elseif (pwr == 71) then -- ATMA_OF_THE_SCARLET_WING
         target:addMod(MOD_ELEM, 10);
-        target:addMod(MOD_WIND_AFFINITY, 5);
+        target:addMod(MOD_WIND_AFFINITY_DMG, 5);
+        target:addMod(MOD_WIND_AFFINITY_ACC, 5);
     elseif (pwr == 72) then -- ATMA_OF_THE_RAISED_TAIL
         target:addMod(MOD_ATT, 40);
         target:addMod(MOD_EVA, 40);
@@ -278,11 +279,13 @@ function atmaEffectGain(target, effect)
     elseif (pwr == 75) then -- ATMA_OF_THE_WAR_LION
         target:addMod(MOD_DEX, 20);
         target:addMod(MOD_THUNDERRES, 100);
-        target:addMod(MOD_THUNDER_AFFINITY, 10);
+        target:addMod(MOD_THUNDER_AFFINITY_DMG, 10);
+        target:addMod(MOD_THUNDER_AFFINITY_ACC, 10);
     elseif (pwr == 76) then -- ATMA_OF_THE_FROZEN_FETTERS
         target:addMod(MOD_INT, 20);
         target:addMod(MOD_ICERES, 100);
-        target:addMod(MOD_ICE_AFFINITY, 10);
+        target:addMod(MOD_ICE_AFFINITY_DMG, 10);
+        target:addMod(MOD_ICE_AFFINITY_ACC, 10);
     elseif (pwr == 77) then -- ATMA_OF_THE_PLAGUEBRINGER
         target:addMod(MOD_REGEN, 10);
         target:addMod(MOD_STORETP, 20);
@@ -294,11 +297,13 @@ function atmaEffectGain(target, effect)
     elseif (pwr == 79) then -- ATMA_OF_THE_HOLY_MOUNTAIN
         target:addMod(MOD_LIGHTRES, 100);
         target:addMod(MOD_LIGHTACC, 50);
-        target:addMod(MOD_LIGHT_AFFINITY, 10);
+        target:addMod(MOD_LIGHT_AFFINITY_DMG, 10);
+        target:addMod(MOD_LIGHT_AFFINITY_ACC, 10);
     elseif (pwr == 80) then -- ATMA_OF_THE_LAKE_LURKER
         target:addMod(MOD_MND, 20);
         target:addMod(MOD_WATERRES, 100);
-        target:addMod(MOD_WATER_AFFINITY, 10);
+        target:addMod(MOD_WATER_AFFINITY_DMG, 10);
+        target:addMod(MOD_WATER_AFFINITY_ACC, 10);
     elseif (pwr == 81) then -- ATMA_OF_THE_CRUSHING_CUDGEL
         target:addMod(MOD_ACC, 20);
         target:addMod(MOD_SKILLCHAINDMG, 5);
@@ -344,7 +349,8 @@ function atmaEffectGain(target, effect)
     elseif (pwr == 93) then -- ATMA_OF_THE_ENDLESS_NIGHTMARE
         target:addMod(MOD_MND, 20);
         target:addMod(MOD_DARKRES, 100);
-        target:addMod(MOD_DARK_AFFINITY, 10);
+        target:addMod(MOD_DARK_AFFINITY_DMG, 10);
+        target:addMod(MOD_DARK_AFFINITY_ACC, 10);
     elseif (pwr == 94) then -- ATMA_OF_THE_SUNDERING_SLASH
         target:addMod(MOD_ATT, 20);
         target:addMod(MOD_REGAIN, 3);
@@ -365,7 +371,7 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_RATT, 40);
     elseif (pwr == 100) then -- ATMA_OF_THE_APOCALYPSE
         target:addMod(MOD_TRIPLE_ATTACK, 15);
-        target:addMod(MOD_GRIMOIRE_INSTANT_CAST, 10); -- Wrong modifier, correct one not yet implemented.
+        target:addMod(MOD_GRIMOIRE_INSTANT_CAST, 10); -- Wrong modifier, correct one not yet implimented.
         if (target:isPC()) then
             target:addMod(MOD_RERAISE_III, 1);
         end
@@ -629,15 +635,7 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_DARKRES, 50);
         target:delMod(MOD_STUNRES, 30);
     elseif (pwr == 60) then -- ATMA_OF_THE_AVARICIOUS_APE
-        target:delMod(MOD_HASTE_GEAR, 5);
-        target:delMod(MOD_FIREACC, 5);
-        target:delMod(MOD_ICEACC, 5);
-        target:delMod(MOD_WINDACC, 5);
-        target:delMod(MOD_EARTHACC, 5);
-        target:delMod(MOD_THUNDERACC, 5);
-        target:delMod(MOD_WATERACC, 5);
-        target:delMod(MOD_LIGHTACC, 5);
-        target:delMod(MOD_DARKACC, 5);
+        -- not implemented: Monster Correlation
     elseif (pwr == 61) then -- ATMA_OF_THE_MERCILESS_MATRIARCH
         target:delMod(MOD_MACC, 50);
         target:delMod(MOD_FASTCAST, 20);
@@ -649,14 +647,6 @@ function atmaEffectLose(target, effect)
     elseif (pwr == 63) then -- ATMA_OF_THE_EARTH_WYRM
         target:delMod(MOD_EARTHRES, 100);
         target:delMod(MOD_DMG, -20);
-        target:delMod(MOD_FIRE_AFFINITY, 1);
-        target:delMod(MOD_EARTH_AFFINITY, 1);
-        target:delMod(MOD_WATER_AFFINITY, 1);
-        target:delMod(MOD_ICE_AFFINITY, 1);
-        target:delMod(MOD_THUNDER_AFFINITY, 1);
-        target:delMod(MOD_WIND_AFFINITY, 1);
-        target:delMod(MOD_LIGHT_AFFINITY, 1);
-        target:delMod(MOD_DARK_AFFINITY, 1);
     elseif (pwr == 64) then -- ATMA_OF_THE_ASCENDING_ONE
         target:delMod(MOD_WINDRES, 100);
         target:delMod(MOD_HASTE_GEAR, 5);
@@ -671,7 +661,8 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_DEX, 10);
     elseif (pwr == 67) then -- ATMA_OF_THE_BURNING_EFFIGY
         target:delMod(MOD_STR, 20);
-        target:delMod(MOD_FIRE_AFFINITY, 3);
+        target:delMod(MOD_FIRE_AFFINITY_DMG, 3);
+        target:delMod(MOD_FIRE_AFFINITY_ACC, 3);
         target:delMod(MOD_FIREATT, 1);
         target:delMod(MOD_FIREACC, 1);
     elseif (pwr == 68) then -- ATMA_OF_THE_SMITING_BLOW
@@ -685,7 +676,8 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_ENMITY, -20);
     elseif (pwr == 71) then -- ATMA_OF_THE_SCARLET_WING
         target:delMod(MOD_ELEM, 10);
-        target:delMod(MOD_WIND_AFFINITY, 5);
+        target:delMod(MOD_WIND_AFFINITY_DMG, 5);
+        target:delMod(MOD_WIND_AFFINITY_ACC, 5);
     elseif (pwr == 72) then -- ATMA_OF_THE_RAISED_TAIL
         target:delMod(MOD_ATT, 40);
         target:delMod(MOD_EVA, 40);
@@ -699,11 +691,13 @@ function atmaEffectLose(target, effect)
     elseif (pwr == 75) then -- ATMA_OF_THE_WAR_LION
         target:delMod(MOD_DEX, 20);
         target:delMod(MOD_THUNDERRES, 100);
-        target:delMod(MOD_THUNDER_AFFINITY, 10);
+        target:delMod(MOD_THUNDER_AFFINITY_DMG, 10);
+        target:delMod(MOD_THUNDER_AFFINITY_ACC, 10);
     elseif (pwr == 76) then -- ATMA_OF_THE_FROZEN_FETTERS
         target:delMod(MOD_INT, 20);
         target:delMod(MOD_ICERES, 100);
-        target:delMod(MOD_ICE_AFFINITY, 10);
+        target:delMod(MOD_ICE_AFFINITY_DMG, 10);
+        target:delMod(MOD_ICE_AFFINITY_ACC, 10);
     elseif (pwr == 77) then -- ATMA_OF_THE_PLAGUEBRINGER
         target:delMod(MOD_REGEN, 10);
         target:delMod(MOD_STORETP, 20);
@@ -715,11 +709,13 @@ function atmaEffectLose(target, effect)
     elseif (pwr == 79) then -- ATMA_OF_THE_HOLY_MOUNTAIN
         target:delMod(MOD_LIGHTRES, 100);
         target:delMod(MOD_LIGHTACC, 50);
-        target:delMod(MOD_LIGHT_AFFINITY, 10);
+        target:delMod(MOD_LIGHT_AFFINITY_DMG, 10);
+        target:delMod(MOD_LIGHT_AFFINITY_ACC, 10);
     elseif (pwr == 80) then -- ATMA_OF_THE_LAKE_LURKER
         target:delMod(MOD_MND, 20);
         target:delMod(MOD_WATERRES, 100);
-        target:delMod(MOD_WATER_AFFINITY, 10);
+        target:delMod(MOD_WATER_AFFINITY_DMG, 10);
+        target:delMod(MOD_WATER_AFFINITY_ACC, 10);
     elseif (pwr == 81) then -- ATMA_OF_THE_CRUSHING_CUDGEL
         target:delMod(MOD_ACC, 20);
         target:delMod(MOD_SKILLCHAINDMG, 5);
@@ -765,7 +761,8 @@ function atmaEffectLose(target, effect)
     elseif (pwr == 93) then -- ATMA_OF_THE_ENDLESS_NIGHTMARE
         target:delMod(MOD_MND, 20);
         target:delMod(MOD_DARKRES, 100);
-        target:delMod(MOD_DARK_AFFINITY, 10);
+        target:delMod(MOD_DARK_AFFINITY_DMG, 10);
+        target:delMod(MOD_DARK_AFFINITY_ACC, 10);
     elseif (pwr == 94) then -- ATMA_OF_THE_SUNDERING_SLASH
         target:delMod(MOD_ATT, 20);
         target:delMod(MOD_REGAIN, 3);
