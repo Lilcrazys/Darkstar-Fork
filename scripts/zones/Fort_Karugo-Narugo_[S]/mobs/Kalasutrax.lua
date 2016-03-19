@@ -37,7 +37,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_ACC,2200);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -54,9 +54,6 @@ function onMobFight(mob, target)
     local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
     local depopTime = mob:getLocalVar("depopTime");
 
-    if (os.time(t) > depopTime) then
-        DespawnMob(mob:getID());
-    end
 end;
 
 -----------------------------------

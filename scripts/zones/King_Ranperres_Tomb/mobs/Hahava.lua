@@ -40,7 +40,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_QUAD_ATTACK,25);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
     
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
@@ -133,14 +133,6 @@ end;
 function onMobFight(mob, target)
     -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
 
-    if (os.time(t) > mob:getLocalVar("depopTime")) then
-        if (mob:actionQueueEmpty() == true) then
-            DespawnMob(mob:getID());
-
-            -- Prevent moronic "bug" reports..
-            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
-        end
-    end
 end;
 
 -----------------------------------

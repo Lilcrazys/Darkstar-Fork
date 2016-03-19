@@ -36,7 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
     
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
@@ -131,9 +131,6 @@ function onMobFight(mob, target)
     local DELAY = mob:getLocalVar("DELAY");
     local depopTime = mob:getLocalVar("depopTime");
 
-    if (os.time(t) > depopTime) then
-        DespawnMob(mob:getID());
-    end
 
     if (STABBINGS > 0) then
         if (DELAY >= 2) then

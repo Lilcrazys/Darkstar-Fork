@@ -36,7 +36,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_MDEF,40);
     mob:addMod(MOD_DEF,60);
     mob:addMod(MOD_ATT,150);
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -50,11 +50,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local notBusy = mob:actionQueueEmpty();
-
-    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
-        DespawnMob(mob:getID());
-    end
 end;
 
 -----------------------------------

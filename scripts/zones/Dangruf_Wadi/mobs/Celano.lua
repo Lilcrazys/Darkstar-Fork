@@ -58,10 +58,6 @@ end;
 function onMobFight(mob, target)
     local Used2hr = mob:getLocalVar("Used2hr");
 
-    --[[if (os.time(t) > mob:getLocalVar("depopTime") and mob:actionQueueEmpty()) then
-        DespawnMob(mob:getID());
-    end]]
-
     if (mob:getHPP() <= 15) then
         if (Used2hr == 2) then
             mob:useMobAbility(436); -- ChainSpell
@@ -91,10 +87,12 @@ function onMobDeath(mob, killer)
                 killer:setMaskBit(killer:getVar("VW_3_NATIONS"),"VW_3_NATIONS",1,true);
             end
         end
+
         killer:addKeyItem(INDIGO_STRATUM_ABYSSITE);
         killer:delKeyItem(INDIGO_STRATUM_ABYSSITE_IV);
         killer:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE);
     end
+
     killer:addCurrency("bayld", 125);
     killer:addExp(10000);
 end;

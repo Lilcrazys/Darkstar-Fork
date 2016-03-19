@@ -1,8 +1,9 @@
 -----------------------------------
 --  Area: Abyssea - Tahrongi (45)
---   Mob: Chukwa
+--   Mob: Cuelebre
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Tahrongi/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Tahrongi/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");

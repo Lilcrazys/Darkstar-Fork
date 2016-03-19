@@ -128,15 +128,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-
-    -- Check for timed depop
-    --[[if (os.time(t) > mob:getLocalVar("depopTime")) then
-        if (mob:actionQueueEmpty() == true) then
-            -- Prevent moronic "bug" reports..
-            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
-            DespawnMob(mob:getID());
-        end
-    end]]
 end;
 
 -----------------------------------

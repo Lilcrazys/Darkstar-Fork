@@ -47,9 +47,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[if (os.time(t) > depopTime) then
-        DespawnMob(mob:getID());
-    end]]
 end;
 
 -----------------------------------

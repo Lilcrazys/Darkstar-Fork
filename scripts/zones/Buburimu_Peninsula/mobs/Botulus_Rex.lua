@@ -41,7 +41,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,90);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -56,11 +56,6 @@ end;
 
 function onMobFight(mob, target)
     local Botulus_Used = mob:getLocalVar("Botulus");
-    local notBusy = mob:actionQueueEmpty();
-
-    if (os.time(t) > mob:getLocalVar("depopTime") and notBusy == true) then
-        DespawnMob(mob:getID());
-    end
 
     if (mob:getHPP() <= 80) then
         if (Botulus_Used == 0) then

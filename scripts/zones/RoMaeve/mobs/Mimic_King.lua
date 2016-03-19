@@ -36,7 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 
 -----------------------------------
@@ -58,9 +58,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > depopTime) then
-       DespawnMob(mob:getID());
-    end
 end;
 
 -----------------------------------
@@ -68,8 +65,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 650);
-    ally:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
@@ -86,6 +81,9 @@ function onMobDeath(mob, killer, ally)
             end
         end
     end;
+
+    ally:addCurrency("bayld", 650);
+    ally:addExp(10000);
     
     local RND1 = math.random(1,8);
         if (RND1 == 1) then

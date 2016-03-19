@@ -37,7 +37,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,125);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -53,9 +53,6 @@ end;
 function onMobFight(mob, target)
     local Roly_2hr = mob:getLocalVar("Roly_2hr");
 
-    if (os.time(t) > mob:getLocalVar("depopTime")) then
-       DespawnMob(mob:getID());
-    end
 
     if (mob:getHPP() <= 40) then
         if (Roly_2hr == 0) then

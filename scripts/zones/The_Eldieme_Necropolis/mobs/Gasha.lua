@@ -35,7 +35,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,25);
 
     -- var
-    mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -49,14 +49,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    if (os.time(t) > mob:getLocalVar("depopTime")) then
-        if (mob:actionQueueEmpty() == true) then
-            DespawnMob(mob:getID());
-
-            -- Prevent moronic "bug" reports..
-            mob:SpoofChatParty("You take to long, I'm outa here!", MESSAGE_SAY);
-        end
-    end
 end;
 
 -----------------------------------

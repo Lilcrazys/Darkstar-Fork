@@ -103,10 +103,10 @@ function onMobFight(mob, target)
     if (target:getHPP() <= 5 and mob:getLocalVar("LaughingCrab") == 0) then
         mob:setLocalVar("LaughingCrab", 1);
         mob:SpoofChatParty("Seems to be laughing..You didn't even know giant crabs could laugh..", MESSAGE_ECHO);
-    elseif (mob:getLocalVar("SuperDuperJump") == 1) then
-        mob:setLocalVar("SuperDuperJump", 2);
-        DespawnMob(mob:getID());
-        mob:SpoofChatParty("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky.", MESSAGE_ECHO);
+    -- elseif (mob:getLocalVar("SuperDuperJump") == 1) then
+        -- mob:setLocalVar("SuperDuperJump", 2);
+        -- mob:SpoofChatParty("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky.", MESSAGE_ECHO);
+        -- DespawnMob(mob:getID());
     elseif (BattleTime > 7200 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
         mob:setLocalVar("SuperDuperJump", 1);
