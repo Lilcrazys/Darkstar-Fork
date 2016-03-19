@@ -49,7 +49,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HUMANOID_KILLER, 5);
 
     -- Other
-    mob:SetMobSkillAttack(0); -- resetting so it doesn't respawn in flight mode.
+    mob:SetMobSkillAttack(false); -- resetting so it doesn't respawn in flight mode.
     mob:AnimationSub(0); -- subanim 0 is only used when it spawns until first flight.
 end;
 

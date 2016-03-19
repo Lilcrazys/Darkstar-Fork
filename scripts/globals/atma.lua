@@ -222,6 +222,7 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_DARKRES, 50);
         target:addMod(MOD_STUNRES, 30);
     elseif (pwr == 60) then -- ATMA_OF_THE_AVARICIOUS_APE
+        target:addMod(MOD_HASTE_GEAR, 5);
         -- not implemented: Monster Correlation
     elseif (pwr == 61) then -- ATMA_OF_THE_MERCILESS_MATRIARCH
         target:addMod(MOD_MACC, 50);
@@ -249,8 +250,8 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_DEX, 10);
     elseif (pwr == 67) then -- ATMA_OF_THE_BURNING_EFFIGY
         target:addMod(MOD_STR, 20);
-        target:addMod(MOD_FIRE_AFFINITY_DMG, 3);
-        target:addMod(MOD_FIRE_AFFINITY_ACC, 3);
+        -- fire based ws + 0.2 fTP
+        -- Full benefit of firesday/fire weather bonus
         target:addMod(MOD_FIREATT, 1);
         target:addMod(MOD_FIREACC, 1);
     elseif (pwr == 68) then -- ATMA_OF_THE_SMITING_BLOW
@@ -635,6 +636,7 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_DARKRES, 50);
         target:delMod(MOD_STUNRES, 30);
     elseif (pwr == 60) then -- ATMA_OF_THE_AVARICIOUS_APE
+        target:delMod(MOD_HASTE_GEAR, 5);
         -- not implemented: Monster Correlation
     elseif (pwr == 61) then -- ATMA_OF_THE_MERCILESS_MATRIARCH
         target:delMod(MOD_MACC, 50);
@@ -661,10 +663,8 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_DEX, 10);
     elseif (pwr == 67) then -- ATMA_OF_THE_BURNING_EFFIGY
         target:delMod(MOD_STR, 20);
-        target:delMod(MOD_FIRE_AFFINITY_DMG, 3);
-        target:delMod(MOD_FIRE_AFFINITY_ACC, 3);
-        target:delMod(MOD_FIREATT, 1);
-        target:delMod(MOD_FIREACC, 1);
+        -- fire based ws + 0.2 fTP
+        -- Full benefit of firesday/fire weather bonus
     elseif (pwr == 68) then -- ATMA_OF_THE_SMITING_BLOW
         target:delMod(MOD_TP_BONUS, 50);
         target:delMod(MOD_WSACC, 50);
