@@ -38,12 +38,12 @@ INSERT INTO `item_armor` VALUES (20602,'blurred_knife_+1',99,119,333617,459,0,0,
 INSERT INTO `item_armor` VALUES (20609,'jugo_kukri_+1',99,119,32,172,0,0,3,0);
 INSERT INTO `item_armor` VALUES (20621,'nanti_knife',99,0,2309857,180,0,0,3,0);
 INSERT INTO `item_armor` VALUES (20622,'nanti_knife_+1',99,0,2309857,180,0,0,3,0);
-INSERT INTO `item_armor` VALUES (20624,'eminent_dagger',99,117,1605625,163,0,0,3,0);
+INSERT INTO `item_armor` VALUES (20624,'eminent_dagger',99,117,1867769,163,0,0,3,0);
 INSERT INTO `item_armor` VALUES (20711,'blurred_sword',99,119,2195665,460,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20712,'blurred_sword_+1',99,119,2195665,460,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20723,'dija_sword',99,117,2097345,287,0,0,3,0);
 INSERT INTO `item_armor` VALUES (20724,'dija_sword_+1',99,117,2097345,287,0,0,3,0);
-INSERT INTO `item_armor` VALUES (20726,'eminent_scimitar',99,117,34977,258,0,0,3,0);
+INSERT INTO `item_armor` VALUES (20726,'eminent_scimitar',99,117,2195665,258,0,0,3,0);
 INSERT INTO `item_armor` VALUES (20754,'malfeasance',99,119,128,386,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20755,'malfeasance_+1',99,119,128,386,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20766,'eminent_sword',99,117,2097345,70,0,0,1,0);
@@ -143,6 +143,7 @@ INSERT INTO `item_armor` VALUES (27044,'crusher_gauntlets',99,119,10689,342,0,0,
 INSERT INTO `item_armor` VALUES (27045,'yorium_gauntlets',99,119,193,55,0,0,64,0);
 INSERT INTO `item_armor` VALUES (27046,'acro_gauntlets',99,119,10689,325,0,0,64,0);
 INSERT INTO `item_armor` VALUES (27047,'taeon_gloves',99,119,2602290,326,0,0,64,0);
+INSERT INTO `item_armor` VALUES (27048,'telchine_gloves',99,119,1622556,15,0,0,64,0); -- Mid incorrect needs to be fixed
 INSERT INTO `item_armor` VALUES (27049,'helios_gloves',99,119,1622044,327,0,0,64,0);
 REPLACE INTO `item_armor` VALUES (27188,'horos_tights',99,109,262144,304,0,0,128,0);
 REPLACE INTO `item_armor` VALUES (27189,'horos_tights_+1',99,119,262144,304,0,0,128,0);
