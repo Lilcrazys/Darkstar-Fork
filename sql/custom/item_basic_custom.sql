@@ -19,11 +19,14 @@ REPLACE INTO `item_basic` VALUES (734,0,'chunk_of_thokcha_ore','thokcha_ore',12,
 REPLACE INTO `item_basic` VALUES (735,0,'thokcha_ingot','thokcha_ingot',12,0,38,1,0);
 REPLACE INTO `item_basic` VALUES (766,0,'ormolu_ingot','ormolu_ingot',12,0,38,0,1);
 
+
+REPLACE INTO `item_basic` VALUES (3449,0,'celaenos_cloth','celaenos_cloth',1,0,44,0,1);
 REPLACE INTO `item_basic` VALUES (3549,0,'vial_of_belladonna_sap','belladonna_sap',12,0,44,1,0);
 REPLACE INTO `item_basic` VALUES (3936,0,'jar_of_acuex_poison','acuex_poison',12,0,44,1,0);
 
 INSERT INTO `item_basic` VALUES (4012,0,'waktza_rostrum','waktza_rostrum',1,0,42,0,1);
 INSERT INTO `item_basic` VALUES (4013,0,'waktza_crest','waktza_crest',12,0,40,0,1);
+INSERT INTO `item_basic` VALUES (4014,0,'yggdreant_bole','yggdreant_bole',1,0,43,0,1);
 INSERT INTO `item_basic` VALUES (4015,0,'yggdreant_root','yggdreant_root',12,0,44,0,1);
 REPLACE INTO `item_basic` VALUES (4049,0,'rusted_coin','rusted_coin',12,29760,0,1,0);
 INSERT INTO `item_basic` VALUES (4058,0,'chunk_of_bismuth_ore','bismuth_ore',12,0,38,0,1);
@@ -59,6 +62,7 @@ INSERT INTO `item_basic` VALUES (8925,0,'carbutear','carbutear',12,0,39,0,3800);
 INSERT INTO `item_basic` VALUES (8926,0,'fenritear','fenritear',12,0,39,0,3800);
 INSERT INTO `item_basic` VALUES (8927,0,'handful_of_abrasion_bolt_heads','abr_bolt_heads',99,0,43,0,100);
 INSERT INTO `item_basic` VALUES (8928,0,'handful_of_righteous_bolt_heads','rig_bolt_heads',99,0,43,0,100);
+INSERT INTO `item_basic` VALUES (8976,0,'prickly_pitrivs_thread','pitrivs_thread',12,0,40,0,100);
 INSERT INTO `item_basic` VALUES (8982,0,'intuilas_hide','intuilas_hide',12,0,42,0,1);
 INSERT INTO `item_basic` VALUES (8983,0,'emperor_arthros_shell','athros_shell',12,0,42,0,1);
 INSERT INTO `item_basic` VALUES (8988,0,'warblade_beaks_hide','warblades_hide',12,0,41,0,1);
@@ -74,12 +78,7 @@ INSERT INTO `item_basic` VALUES (9063,0,'tartarian_soul','tartarian_soul',12,0,3
 INSERT INTO `item_basic` VALUES (9075,0,'vulcanite_ore','vulcanite_ore',12,0,38,0,1);
 
 REPLACE INTO `item_basic` VALUES (10503,0,'brego_gloves','brego_gloves',1,34816,19,0,0);
-INSERT INTO `item_basic` VALUES (10948,0,'carvers_torque','carvers_torque',1,2048,0,0,0);
-INSERT INTO `item_basic` VALUES (10950,0,'goldsmithing_torque','goldsm._torque',1,2048,0,0,0);
-INSERT INTO `item_basic` VALUES (10951,0,'weavers_torque','weavers_torque',1,2048,0,0,0);
-INSERT INTO `item_basic` VALUES (10955,0,'culinary_torque','culinary_torque',1,2048,0,0,0);
 
-REPLACE INTO `item_basic` VALUES (17440,0,'kraken_club','kraken_club',1,34816,0,0,12850); -- K.club removed from AH listing.
 INSERT INTO `item_basic` VALUES (17912,0,'jug_of_saline_broth','saline_broth',12,2048,48,0,0);
 
 INSERT INTO `item_basic` VALUES (20908,0,'eminent_sickle','eminent_sickle',1,63552,7,1,0);
