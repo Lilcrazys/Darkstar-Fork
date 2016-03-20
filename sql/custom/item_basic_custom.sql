@@ -65,6 +65,7 @@ INSERT INTO `item_basic` VALUES (8992,0,'jester_malatrixs_shard','malatrix_shard
 INSERT INTO `item_basic` VALUES (9003,0,'plovid_flesh','plovid_flesh',12,0,41,0,1);
 INSERT INTO `item_basic` VALUES (9004,0,'macuil_plating','macuil_plating',12,0,38,0,1);
 INSERT INTO `item_basic` VALUES (9006,0,'defiant_scarf','defiant_scarf',12,0,40,0,1);
+INSERT INTO `item_basic` VALUES (9062,0,'chunk_of_dark_matter','dark_matter',12,0,44,0,1);
 INSERT INTO `item_basic` VALUES (9063,0,'tartarian_soul','tartarian_soul',12,0,38,0,1);
 INSERT INTO `item_basic` VALUES (9075,0,'vulcanite_ore','vulcanite_ore',12,0,38,0,1);
 
