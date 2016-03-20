@@ -906,7 +906,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,1453); -- Abrasive_Tantar
 INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,1454); -- Deafening_Tantara
 INSERT INTO `mob_skill_lists` VALUES ('Elder_Imp',4158,1455); -- VW_Frenetic_Rip
 
-INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,436); -- Chainspell
+-- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,436); -- Chainspell
 -- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2525); -- Morta_Single
 -- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2526); -- Morta_Frontal
 -- INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2527); -- Morta_Radial
@@ -934,6 +934,80 @@ INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2629); -- Beautiful_death
 -- INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2527); -- Gallu_Melee_Radial
 
 
+-- INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2761); -- Achuka_Bite
+-- INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2762); -- Achuka_Charge
+-- INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2763); -- Achuka_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2764); -- Blistering_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2765); -- Searing_Serration
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2766); -- Volcanic_Stasis
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2767); -- Tyrannical_Blow
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2768); -- Batholit-hic_Shell
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2769); -- Pyroclastic_Surge
+INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2770); -- Incinerating_Lahar
+-- INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,432); -- Mighty_Strikes
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2816); -- Hurkan_AoE
+-- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2814); -- Hurkan_Dive
+-- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2815); -- Hurkan_Single
+INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2817); -- Crashing_Thunder
+INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2818); -- Reverberating_Cry
+INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2819); -- Brownout
+INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2820); -- Reverse_Current
+INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2821); -- Sparkstorm
+INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2822); -- Static_Prison
+-- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,432); -- Blood_Weapon
+-- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,436); -- Chainspell
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2909); -- Darrcuiln_Charge
+-- INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2910); -- Darrcuiln_Claw
+-- INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2911); -- Darrcuiln_Howl
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2912); -- Aurous_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2913); -- Howling_Gust
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2914); -- Righteous_Rasp
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2915); -- Starward_Yowl
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2916); -- Stalking_Prey
+-- INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,437); -- Perfect_Dodge
+
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2743); -- Colkhab_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2744); -- Colkhab_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2745); -- Colkhab_Stinger
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2746); -- Colkhab_Mandibular_Lashing
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2747); -- Colkhab_Vespine_Hurricane
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2748); -- Colkhab_Stinger_volley
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2749); -- Colkhab_Droning_Whirlwind
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2750); -- Colkhab_Incisive_Denouement
+INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2751); -- Colkhab_Incisive_Apotheosis
+-- INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,432); -- Mighty_Strikes
+-- INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,474); -- Meikyo_Shisui
+
+INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2701); -- Cracklaw_Impenetrable_carapace
+INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2702); -- Cracklaw_Rending_Deluge
+INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2703); -- Cracklaw_Sundering_Snip
+INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2704); -- Cracklaw_Viscid_Spindrift
+INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2705); -- Cracklaw_Riptide_Eupnea
+-- INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,432); -- Mighty_Strikes
+-- INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,439); -- Blood_Weapon
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2620); -- Tchakka_Single
+-- INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2621); -- Tchakka_AoE
+-- INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2752); -- Tchakka_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2755); -- Protolithic_Puncture
+INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2756); -- Aquatic_Lance
+INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2757); -- Pelagic_Cleaver
+INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2759); -- Tidal_Guillotine
+INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2760); -- Marine_Mayhem
+INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2758); -- Carcharian_verve
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2878); -- Kumhau_Left
+-- INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2879); -- Kumhau_Right
+-- INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2880); -- Kumhau_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2881); -- Polar_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2882); -- Brain_Freeze
+INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2883); -- Biting_Abrogation
+INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2884); -- Permafrost_Requiem
+INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2885); -- Glacial_Tomb
+INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2886); -- Glassy_Nova
+-- INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,438); -- Invincible
 
 -- New lines go BEFORE the crab till you run out of IDs.
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,44);   -- Head Butt (Stun, Grav, Slow, knockback)
