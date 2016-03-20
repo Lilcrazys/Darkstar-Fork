@@ -1066,6 +1066,10 @@ INSERT INTO `item_mods` VALUES (28308, 31, 100);
 INSERT INTO `item_mods` VALUES (28308, 29, 5);
 INSERT INTO `item_mods` VALUES (28308, 384, 30);
 
+INSERT INTO `item_mods` VALUES (28428, 302, 2);
+INSERT INTO `item_mods` VALUES (28428, 384, 90);
+-- INSERT INTO `item_mods` VALUES (28428, 0, 90); -- Attack+10～15 Unity Ranking Only
+
 INSERT INTO `item_mods` VALUES (28479, 66, 7);
 INSERT INTO `item_mods` VALUES (28479, 67, 7);
 
