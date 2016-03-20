@@ -3910,7 +3910,7 @@ INSERT INTO `mob_droplist` VALUES (9628,0,8925,50); -- Carbutear
 INSERT INTO `mob_droplist` VALUES (9628,0,8926,50); -- Fenritear
 
 -- -----------
--- Kalos Eunomia
+-- Nympha Eunomia
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (9629,0,28169,120); -- Espial_Hose
