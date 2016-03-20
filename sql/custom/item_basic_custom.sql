@@ -60,6 +60,7 @@ INSERT INTO `item_basic` VALUES (8927,0,'handful_of_abrasion_bolt_heads','abr_bo
 INSERT INTO `item_basic` VALUES (8928,0,'handful_of_righteous_bolt_heads','rig_bolt_heads',99,0,43,0,100);
 INSERT INTO `item_basic` VALUES (8982,0,'intuilas_hide','intuilas_hide',12,0,42,0,1);
 INSERT INTO `item_basic` VALUES (8983,0,'emperor_arthros_shell','athros_shell',12,0,42,0,1);
+INSERT INTO `item_basic` VALUES (8988,0,'warblade_beaks_hide','warblades_hide',12,0,41,0,1);
 INSERT INTO `item_basic` VALUES (8990,0,'largantuas_shard','largantuas_shard',12,0,38,0,1);
 INSERT INTO `item_basic` VALUES (8992,0,'jester_malatrixs_shard','malatrix_shard',12,0,38,0,1);
 
