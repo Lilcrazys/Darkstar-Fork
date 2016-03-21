@@ -74,10 +74,13 @@ end;
 
 function onMobDeath(mob, killer, ally)
     ally:addTitle(TROLL_SUBJUGATOR);
-
+    mob:setRespawnTime(math.random((75600),(86400)));   -- 21 to 24 hours
+    
     -- Custom (Mythic) Trial Code
     if (cTrialItemEquipped(ally) == true) then
         cTrialProgress(ally, MYTHIC, 5);
     end
+    
 
+    
 end;
