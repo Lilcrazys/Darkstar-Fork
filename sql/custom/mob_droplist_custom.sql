@@ -1029,6 +1029,24 @@ INSERT INTO `mob_droplist` VALUES (1838,0,20809,73); --  Kumbhakarna
 INSERT INTO `mob_droplist` VALUES (1838,0,21169,78); --  Keraunos
 
 -- -----------
+-- Jormungand
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=658 and rate=40; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=722 and rate=10;
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=836 and rate=70;
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=837 and rate=70;
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=658 and rate=40;
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=860 and rate=70;
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=1311 and rate=20;
+DELETE FROM `mob_droplist` WHERE dropId=1852 and type=0 and itemId=1313 and rate=670;
+INSERT INTO `mob_droplist` VALUES (1852,0,28159,51);
+INSERT INTO `mob_droplist` VALUES (1852,0,28157,83);
+INSERT INTO `mob_droplist` VALUES (1852,0,27723,94);
+INSERT INTO `mob_droplist` VALUES (1852,0,28158,62);
+INSERT INTO `mob_droplist` VALUES (1852,0,20759,153);
+INSERT INTO `mob_droplist` VALUES (1852,0,279,1000);
+
+-- -----------
 -- Juggler Hecatomb
 -- -----------
 
@@ -1641,6 +1659,29 @@ INSERT INTO `mob_droplist` VALUES (3441,0,5504,100);
 INSERT INTO `mob_droplist` VALUES (3441,0,6061,100);
 
 -- -----------
+-- Tiamat
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=655 and rate=60;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=658 and rate=30;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=722 and rate=90;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=836 and rate=30;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=837 and rate=70;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=860 and rate=130;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=1110 and rate=60;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=1311 and rate=110;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=1313 and rate=90;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=655 and rate=60;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=655 and rate=60;
+DELETE FROM `mob_droplist` WHERE dropId=3522 and type=0 and itemId=655 and rate=60;
+INSERT INTO `mob_droplist` VALUES (3522,0,28017,84);
+INSERT INTO `mob_droplist` VALUES (3522,0,27725,79);
+INSERT INTO `mob_droplist` VALUES (3522,0,28015,65);
+INSERT INTO `mob_droplist` VALUES (3522,0,28016,43);
+INSERT INTO `mob_droplist` VALUES (3522,0,20857,180);
+INSERT INTO `mob_droplist` VALUES (3522,0,269,1000);
+
+-- -----------
 -- Tinnin
 -- -----------
 
@@ -1861,6 +1902,23 @@ INSERT INTO `mob_droplist` VALUES (4031,0,4761,100);
 INSERT INTO `mob_droplist` VALUES (4031,0,4863,100);
 INSERT INTO `mob_droplist` VALUES (4031,0,5078,100);
 INSERT INTO `mob_droplist` VALUES (4031,0,5497,100);
+
+-- -----------
+-- Vrtra
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=4033 and type=0 and itemId=658 and rate=40; 
+DELETE FROM `mob_droplist` WHERE dropId=4033 and type=0 and itemId=836 and rate=70; 
+DELETE FROM `mob_droplist` WHERE dropId=4033 and type=0 and itemId=860 and rate=380; 
+DELETE FROM `mob_droplist` WHERE dropId=4033 and type=0 and itemId=903 and rate=20; 
+DELETE FROM `mob_droplist` WHERE dropId=4033 and type=0 and itemId=1133 and rate=10; 
+DELETE FROM `mob_droplist` WHERE dropId=4033 and type=0 and itemId=1816 and rate=80; 
+INSERT INTO `mob_droplist` VALUES (4033,0,28296,65);
+INSERT INTO `mob_droplist` VALUES (4033,0,28294,90);
+INSERT INTO `mob_droplist` VALUES (4033,0,27724,85);
+INSERT INTO `mob_droplist` VALUES (4033,0,28295,80);
+INSERT INTO `mob_droplist` VALUES (4033,0,20721,136);
+INSERT INTO `mob_droplist` VALUES (4033,0,280,1000);
 
 -- -----------
 -- Warbler
@@ -3390,27 +3448,6 @@ INSERT INTO `mob_droplist` VALUES (9665,2,3925,33); -- Stealable Tanzenite Jewel
 -- INSERT INTO `mob_droplist` VALUES (9665,0,?,?); -- future mystery item
 -- End of Jumping Crabs Droplist. Other items may be / may become available via script.
 
--- tiamat (9502)
-INSERT INTO `mob_droplist` VALUES (9502,0,28017,164);
-INSERT INTO `mob_droplist` VALUES (9502,0,27725,79);
-INSERT INTO `mob_droplist` VALUES (9502,0,28015,102);
-INSERT INTO `mob_droplist` VALUES (9502,0,28016,172);
-INSERT INTO `mob_droplist` VALUES (9502,0,20857,180);
-INSERT INTO `mob_droplist` VALUES (9502,0,269,1000);
--- jorm (9500)
-INSERT INTO `mob_droplist` VALUES (9500,0,28159,51);
-INSERT INTO `mob_droplist` VALUES (9500,0,28157,113);
-INSERT INTO `mob_droplist` VALUES (9500,0,27723,94);
-INSERT INTO `mob_droplist` VALUES (9500,0,28158,103);
-INSERT INTO `mob_droplist` VALUES (9500,0,20759,82);
-INSERT INTO `mob_droplist` VALUES (9500,0,279,1000);
--- vrtra (9501)
-INSERT INTO `mob_droplist` VALUES (9501,0,28296,65);
-INSERT INTO `mob_droplist` VALUES (9501,0,28294,90);
-INSERT INTO `mob_droplist` VALUES (9501,0,27724,119);
-INSERT INTO `mob_droplist` VALUES (9501,0,28295,124);
-INSERT INTO `mob_droplist` VALUES (9501,0,20721,118);
-INSERT INTO `mob_droplist` VALUES (9501,0,280,1000);
 -- bahamut (9503)
 INSERT INTO `mob_droplist` VALUES (9503,0,27871,91);
 INSERT INTO `mob_droplist` VALUES (9503,0,27869,65);
