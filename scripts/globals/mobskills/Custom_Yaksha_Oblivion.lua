@@ -9,13 +9,14 @@ require("scripts/globals/status");
 
 function onMobSkillCheck(target,mob,skill)
     -- This will need revisited if/when DSP ever implements this.
+    local result = 1;
     if (mob:getLocalVar("stance") == 0) then
         if (mob:getHPP() <= 50) then
-            return 0;
+            result = 0;
         end
-    else
-        return 1;
     end
+
+    return result;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
