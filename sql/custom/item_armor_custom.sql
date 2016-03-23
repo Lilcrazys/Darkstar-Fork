@@ -22,12 +22,12 @@ REPLACE INTO `item_armor` VALUES (10630,'nares_clogs',99,0,1589788,197,0,0,256,0
 REPLACE INTO `item_armor` VALUES (10911,'nares_cap',99,0,1589788,197,0,0,16,0);
 
 INSERT INTO `item_armor` VALUES (10948,'carvers_torque',70,0,4194303,0,0,0,512,0);
-INSERT INTO `item_armor` VALUES (10949,'smithys_torque',70,0,4194303,0,0,0,512,0);
+REPLACE INTO `item_armor` VALUES (10949,'smithys_torque',70,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (10950,'goldsmiths_torque',70,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (10951,'weavers_torque',70,0,4194303,0,0,0,512,0);
-INSERT INTO `item_armor` VALUES (10952,'tanners_torque',70,0,4194303,0,0,0,512,0);
-INSERT INTO `item_armor` VALUES (10953,'boneworkers_torque',70,0,4194303,0,0,0,512,0);
-INSERT INTO `item_armor` VALUES (10954,'alchemists_torque',70,0,4194303,0,0,0,512,0);
+REPLACE INTO `item_armor` VALUES (10952,'tanners_torque',70,0,4194303,0,0,0,512,0);
+REPLACE INTO `item_armor` VALUES (10953,'boneworkers_torque',70,0,4194303,0,0,0,512,0);
+REPLACE INTO `item_armor` VALUES (10954,'alchemists_torque',70,0,4194303,0,0,0,512,0);
 INSERT INTO `item_armor` VALUES (10955,'culinarians_torque',70,0,4194303,0,0,0,512,0);
 
 REPLACE INTO `item_armor` VALUES (17668,'firmament_+1',77,0,2195665,277,0,0,1,0);
