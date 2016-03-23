@@ -81,6 +81,14 @@ REPLACE INTO `item_basic` VALUES (10503,0,'brego_gloves','brego_gloves',1,34816,
 
 INSERT INTO `item_basic` VALUES (17912,0,'jug_of_saline_broth','saline_broth',12,2048,48,0,0);
 
+REPLACE INTO `item_basic` VALUES (10949,0,'smithys_torque','smithys_torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10950,0,'goldsmiths_torque','goldsm._torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10951,0,'weavers_torque','weavers_torque',1,63568,99,0,0);
+REPLACE INTO `item_basic` VALUES (10952,0,'tanners_torque','tanners_torque',1,63568,99,0,0);
+REPLACE INTO `item_basic` VALUES (10953,0,'boneworkers_torque','boneworkers_torque',1,63568,99,0,0);
+REPLACE INTO `item_basic` VALUES (10954,0,'alchemists_torque','alchemst._torque',1,63568,99,0,0);
+INSERT INTO `item_basic` VALUES (10955,0,'culinarians_torque','culin._torque',1,63568,99,0,0);
+
 INSERT INTO `item_basic` VALUES (20908,0,'eminent_sickle','eminent_sickle',1,63552,7,1,0);
 INSERT INTO `item_basic` VALUES (20998,0,'kaitsuburi','kaitsuburi',1,63552,9,1,0);
 INSERT INTO `item_basic` VALUES (20525,0,'blurred_claws','blurred_claws',1,2048,1,0,1);
