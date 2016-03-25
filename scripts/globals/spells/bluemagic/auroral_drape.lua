@@ -18,18 +18,18 @@ function onSpellCast(caster,target,spell)
     local effect = EFFECT_NONE;
     local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
     -- The 2 effects roll their resistance separately..
-    local BLIND_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_BLIND);
+    local BLIND_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_BLINDNESS);
     local SILENCE_RES = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,EFFECT_SILENCE);
 
-    if (target:hasStatusEffect(EFFECT_BLIND) and target:hasStatusEffect(EFFECT_SILENCE)) then
+    if (target:hasStatusEffect(EFFECT_BLINDNESS) and target:hasStatusEffect(EFFECT_SILENCE)) then
         spell:setMsg(75); -- No effect.
         return EFFECT_NONE;
     else
         local MSG = 85; -- Will be used if both effects are resited.
 
         if (BLIND_RES > 0.125) then
-            target:addStatusEffect(EFFECT_BLIND,60,0,60);
-            effect = EFFECT_BLIND;
+            target:addStatusEffect(EFFECT_BLINDNESS,60,0,60);
+            effect = EFFECT_BLINDNESS;
             MSG = 237; -- Landed it.
         end
 
