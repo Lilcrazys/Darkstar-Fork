@@ -3,6 +3,7 @@
 -- and must be imported/executed AFTER that file
 -- Please use gaps and comment spell names for easy readability.
 -- ---------------------------------------------------------------------------
+ALTER TABLE `mob_spell_lists` MODIFY `spell_list_name` varchar(40); -- Required because DSP stupidity
 -- INSERT INTO `mob_spell_lists` VALUES ('spell_list_name', spell_list_id, spell_id, min_level, max_level);
 
 INSERT INTO `mob_spell_lists` VALUES ('Tegmine', 399, 322, 1, 255); -- Katon: San
