@@ -632,19 +632,19 @@ INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 503, 1, 255); -- Impact
 -- list IDs 447 - 587 available for use! please use'em!
 -- INSERT INTO `mob_spell_lists` VALUES ('spell_list_name', spell_list_id, spell_id, min_level, max_level);
 
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Aero IV
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Aeroga III
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Silencega
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Thunder IV
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Thunder V 
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Thundaga III
-INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 229, 1, 255); -- Thundaga IV
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 157, 1, 255); -- Aero 4
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 186, 1, 255); -- Aeroga 3
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 359, 1, 255); -- Silencega
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 167, 1, 255); -- Thunder 4
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 196, 1, 255); -- Thundaga 3
+INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 197, 1, 255); -- Thundaga 4
 -- At lower HP Turul will start to cast these (not implemented yet)
--- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 229, 1, 255); -- Aero V and 
--- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 229, 1, 255); -- Aeroga IV 
--- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 229, 1, 255); -- AoE Burst
--- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 229, 1, 255); -- AoE Tornado
--- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 229, 1, 255); -- AoE Stun.
+-- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 158, 1, 255); -- Aero 5
+-- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 187, 1, 255); -- Aeroga 4
+-- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 212, 1, 255); -- AoE Burst
+-- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 208, 1, 255); -- AoE Tornado
+-- INSERT INTO `mob_spell_lists` VALUES ('Turul', 589, 252, 1, 255); -- AoE Stun.
 -- Also not implemented: Turul will often cast Thunder based spells on itself to recover HP.
 
 INSERT INTO `mob_spell_lists` VALUES ('Ravenous_Cracklaw', 590, 229, 1, 255); -- Spell Name?
