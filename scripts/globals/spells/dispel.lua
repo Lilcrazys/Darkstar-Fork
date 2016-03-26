@@ -1,24 +1,24 @@
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
 -----------------------------------------
 -- Spell: Dispel
---
 -----------------------------------------
 
+require("scripts/globals/status");
+require("scripts/globals/magic");
+
 -----------------------------------------
--- OnSpellCast
+-- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
     return 0;
 end;
 
+-----------------------------------------
+-- onSpellCast
+-----------------------------------------
+
 function onSpellCast(caster,target,spell)
-
-    -- Pull base stats.
     local dINT = (caster:getStat(MOD_INT) - target:getStat(MOD_INT));
-
     local resist = applyResistance(caster,spell,target,dINT,ENFEEBLING_MAGIC_SKILL);
     local effect = EFFECT_NONE;
 
