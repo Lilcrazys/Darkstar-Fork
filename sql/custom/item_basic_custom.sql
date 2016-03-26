@@ -77,6 +77,11 @@ INSERT INTO `item_basic` VALUES (9062,0,'chunk_of_dark_matter','dark_matter',12,
 INSERT INTO `item_basic` VALUES (9063,0,'tartarian_soul','tartarian_soul',12,0,38,0,1);
 INSERT INTO `item_basic` VALUES (9075,0,'vulcanite_ore','vulcanite_ore',12,0,38,0,1);
 
+REPLACE INTO `item_basic` VALUES (10318,0,'chelona_gloves','chelona_gloves',1,2080,19,0,0);
+REPLACE INTO `item_basic` VALUES (10319,0,'chelona_gloves_+1','chl_gloves_+1',1,2080,19,0,0);
+REPLACE INTO `item_basic` VALUES (10348,0,'chelona_trousers','chelona_trousers',1,2080,20,0,0);
+REPLACE INTO `item_basic` VALUES (10349,0,'chelona_trousers_+1','chl_trousers_+1',1,2080,20,0,0);
+
 REPLACE INTO `item_basic` VALUES (10503,0,'brego_gloves','brego_gloves',1,34816,19,0,0);
 
 INSERT INTO `item_basic` VALUES (17912,0,'jug_of_saline_broth','saline_broth',12,2048,48,0,0);
@@ -243,6 +248,7 @@ INSERT INTO `item_basic` VALUES (27864,0,'shneddick_tabard_+1','shneddick_tabard
 INSERT INTO `item_basic` VALUES (27865,0,'weatherspoon_robe_+1','weatherspoon_robe_+1',1,63568,0,1,0);
 INSERT INTO `item_basic` VALUES (27883,0,'wayfarer_robe','wayfarer_robe',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (27890,0,'aetosaur_jerkin_+1','aeto._jerkin_+1',1,2048,18,1,0);
+REPLACE INTO `item_basic` VALUES (27889,0,'aetosaur_jerkin','aetosaur_jerkin',1,2048,18,1,0);
 INSERT INTO `item_basic` VALUES (27892,0,'shabti_cuirass_+1','shab._cuirass_+1',1,2048,18,1,0);
 INSERT INTO `item_basic` VALUES (27987,0,'gefechthentzes','gefechthentzes',1,2048,19,1,0);
 INSERT INTO `item_basic` VALUES (27988,0,'wildheithentzes','wildheithentzes',1,2048,19,1,0);

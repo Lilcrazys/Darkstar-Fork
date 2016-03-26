@@ -43,6 +43,9 @@ REPLACE INTO `mob_groups` VALUES (918,2114,35,0,128,0,0,35000,85,87,0); -- Ix zd
 
 REPLACE INTO `mob_groups` VALUES (6495,1643,119,330,0,1243,80000,10000,16,20,0); -- ?
 
+REPLACE INTO `mob_groups` VALUES (10849,344,27,330,0,8999,0,0,81,84,0); -- Aqueduct Spider
+REPLACE INTO `mob_groups` VALUES (10850,344,28,330,0,8999,0,0,81,84,0); -- Aqueduct Spider
+
 -- Om ' Aern
 -- pld
 REPLACE INTO `mob_groups` VALUES (14100,5325,33,1056,0,2535,0,5000,75,78,0);

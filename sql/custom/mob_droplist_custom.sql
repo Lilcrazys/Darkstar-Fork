@@ -2060,6 +2060,12 @@ INSERT INTO `mob_droplist` VALUES (4558,0,3544,51);
 INSERT INTO `mob_droplist` VALUES (4558,0,9075,43);
 INSERT INTO `mob_droplist` VALUES (4558,0,1767,118);
 
+-- -----------
+-- Aqueduct Spider
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (8999,0,2198,155);
+
 -- --------Begin Legion Drop-- In Progress - Jewels-Trophy-MainGear Only ATM -----
 
 
@@ -3421,6 +3427,9 @@ INSERT INTO `mob_droplist` VALUES (4409,0,2658,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,2656,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,1936,040);
 INSERT INTO `mob_droplist` VALUES (4409,0,1946,040);
+
+
+
 -- -----------------------------END Temp Temenos Fix ----------------------------
 
 -- Unity NM drops

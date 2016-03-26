@@ -13,14 +13,14 @@ require("scripts/zones/Riverne-Site_B01/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    if (trade:hasItemQty(269,1) == false or trade:hasItemQty(279,1) == false or trade:hasItemQty(280,1) == false) then
-        player:startEvent(1010, 269 ,279 ,280);
-    elseif (GetMobAction(16896157) == ACTION_NONE) then
-        if (trade:hasItemQty(269,1) and trade:hasItemQty(279,1) and trade:hasItemQty(280,1) and trade:getItemCount() == 3) then
-            SpawnMob(16896157, 300):updateEnmity(player);
-            player:tradeComplete();
-        end
-    end
+--    if (trade:hasItemQty(269,1) == false or trade:hasItemQty(279,1) == false or trade:hasItemQty(280,1) == false) then
+--        player:startEvent(1010, 269 ,279 ,280);
+--    elseif (GetMobAction(16896157) == ACTION_NONE) then
+--        if (trade:hasItemQty(269,1) and trade:hasItemQty(279,1) and trade:hasItemQty(280,1) and trade:getItemCount() == 3) then
+--            SpawnMob(16896157, 300):updateEnmity(player);
+--            player:tradeComplete();
+--        end
+--    end
 end;
 
 -----------------------------------
