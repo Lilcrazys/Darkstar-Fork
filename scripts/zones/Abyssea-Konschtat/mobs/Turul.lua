@@ -14,6 +14,7 @@ require("scripts/globals/status");
 -----------------------------------
 local path =
 {
+    -- Needs corrected
     -13, 28, 305,
     180, 23, 333,
     293, 24, 332,
@@ -44,22 +45,46 @@ function onMobSpawn(mob)
     mob:addMod(MOD_FASTCAST,40);
 
     -- Start Pathing
-    -- onPath(mob);
+    onPath(mob);
 end;
 
 -----------------------------------
 -- onPath
 -----------------------------------
---[[
+
 function onPath(mob)
     pathfind.patrol(mob, path);
 end;
-]]
+
 -----------------------------------
 -- OnMobRoam
 -----------------------------------
 
 function onMobRoam(mob)
+    local state = mob:AnimationSub();
+    local FT = mob:getLocalVar("flyingTime");
+
+    if (os.time() - FT > 45) then
+        if (state == 0) then
+            mob:untargetable(true);
+            mob:AnimationSub(1);
+            mob:hideName(true);
+            mob:setLocalVar("flyingTime", os.time());
+        elseif (state == 1) then
+            mob:untargetable(false);
+            mob:AnimationSub(0);
+            mob:hideName(false);
+            mob:setLocalVar("flyingTime", os.time());
+        else
+            -- Mob has windwall state from mobskill,
+            -- so don't change AnimationSub value!
+        end
+    end
+
+    -- move to start position if not moving
+    if (mob:isFollowingPath() == false) then
+        mob:pathThrough(pathfind.first(path));
+    end
 end;
 
 -----------------------------------

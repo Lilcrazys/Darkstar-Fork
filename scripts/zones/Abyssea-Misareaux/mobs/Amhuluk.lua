@@ -1,28 +1,13 @@
 -----------------------------------
---  Area: Abyssea - Misareaux (216)
---   Mob: Amhuluk
+-- Area: Abyssea - Misareaux (216)
+--  Mob: Amhuluk
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Misareaux/TextIDs");
-require("scripts/globals/pathfind");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
-
------------------------------------
--- Roam Path
------------------------------------
-    local path =
-    {
-        49, -7, -54,
-        9, -15, -35,
-        61, -15, 53,
-        90, -15, -19,
-        105, 24, 370,
-        105, -7, -100,
-        67, -7, -93,
-    };
-
 
 -----------------------------------
 -- onMobInitialize
@@ -42,31 +27,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:AnimationSub(13);
-    mob:hideName(true);
-    mob:untargetable(true);
-end;
-
------------------------------------
--- OnMobPath
------------------------------------
-
-function onMobPath(mob)
-    pathfind.patrol(mob, path);
-end;
-
------------------------------------
--- OnMobRoam
------------------------------------
-function onMobRoam(mob)
--- move to start position if not moving
-    if (mob:isFollowingPath() == false) then
-        mob:pathThrough(pathfind.first(path));
-    else
-        mob:AnimationSub(13);
-        mob:hideName(true);
-        mob:untargetable(true);
-    end
 end;
 
 -----------------------------------
@@ -74,9 +34,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-    mob:AnimationSub(4);
-    mob:hideName(false);
-    mob:untargetable(false);
 end;
 
 -----------------------------------
@@ -92,7 +49,7 @@ end;
 
 function onMobDeath(mob, killer, ally)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_STRANGLING_WIND) == false) then
+    if (math.random(0,99) < CHANCE and ally:hasKeyItem(ATMA_OF_THE_STRANGLING_WIND) == false) then
         ally:addKeyItem(ATMA_OF_THE_STRANGLING_WIND);
         ally:messageSpecial(6385, ATMA_OF_THE_STRANGLING_WIND);
     end
