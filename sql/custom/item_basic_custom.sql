@@ -19,6 +19,7 @@ REPLACE INTO `item_basic` VALUES (734,0,'chunk_of_thokcha_ore','thokcha_ore',12,
 REPLACE INTO `item_basic` VALUES (735,0,'thokcha_ingot','thokcha_ingot',12,0,38,1,0);
 REPLACE INTO `item_basic` VALUES (766,0,'ormolu_ingot','ormolu_ingot',12,0,38,0,1);
 
+INSERT INTO `item_basic` VALUES (2198,0,'water_spiders_web','w._spiders_web',12,0,40,0,963);
 
 REPLACE INTO `item_basic` VALUES (3449,0,'celaenos_cloth','celaenos_cloth',1,0,44,0,1);
 REPLACE INTO `item_basic` VALUES (3549,0,'vial_of_belladonna_sap','belladonna_sap',12,0,44,1,0);
