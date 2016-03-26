@@ -1080,12 +1080,14 @@ INSERT INTO `mob_droplist` VALUES (1893,0,10285,86); -- Beguiler's jerkin
 -- Khromasoul Bhurborlor
 -- -----------
 
+DELETE FROM `mob_droplist` WHERE dropId=1894 and type=0 and itemId=15022 and rate=190;
+DELETE FROM `mob_droplist` WHERE dropId=1894 and type=0 and itemId=16343 and rate=200;
+DELETE FROM `mob_droplist` WHERE dropId=1894 and type=0 and itemId=16176 and rate=360;
 INSERT INTO `mob_droplist` VALUES (1894,0,14546,135); --  Ares' Cuirass
 INSERT INTO `mob_droplist` VALUES (1894,0,10450,86); --  Ogier's Surcoat
 INSERT INTO `mob_droplist` VALUES (1894,0,10806,114); -- Adamas
-INSERT INTO `mob_droplist` VALUES (1894,0,2621,1000); -- Bblr.'s Vambrace
-INSERT INTO `mob_droplist` VALUES (1894,0,15022,159); -- Oracle's Gloves
 INSERT INTO `mob_droplist` VALUES (1894,0,18997,130); -- Burtgang
+INSERT INTO `mob_droplist` VALUES (1894,0,19006,100); -- Tizona
 
 -- -----------
 -- King Arthro
