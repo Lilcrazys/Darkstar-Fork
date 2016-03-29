@@ -370,7 +370,7 @@ DELETE FROM `mob_droplist` WHERE dropId=270 and type=0 and itemId=860 and rate=1
 DELETE FROM `mob_droplist` WHERE dropId=270 and type=0 and itemId=3342 and rate=100; -- Savory Shank King Behemoth
 DELETE FROM `mob_droplist` WHERE dropId=270 and type=0 and itemId=16869 and rate=220; -- Thundercloud
 DELETE FROM `mob_droplist` WHERE dropId=270 and type=0 and itemId=17294 and rate=140; -- Comet Tail
-INSERT INTO `mob_droplist` VALUES (270,0,860,480); -- Behemoth Hide
+INSERT INTO `mob_droplist` VALUES (270,0,883,235); -- Behemoth Horn
 INSERT INTO `mob_droplist` VALUES (270,0,1322,310); --  E.Abjuration: Lg.
 INSERT INTO `mob_droplist` VALUES (270,0,1328,321); -- A.Abjuration: Ft.
 INSERT INTO `mob_droplist` VALUES (270,0,1332,300); -- M.Abjuration: Lg.
@@ -733,12 +733,14 @@ INSERT INTO `mob_droplist` VALUES (1185,0,3940,47);
 INSERT INTO `mob_droplist` VALUES (1370,0,20772,43);
 INSERT INTO `mob_droplist` VALUES (1370,0,4026,45);
 INSERT INTO `mob_droplist` VALUES (1370,0,741,56);
+INSERT INTO `mob_droplist` VALUES (1370,0,4058,10);
 
 -- -----------
 -- Goblin Plunderer
 -- -----------
 INSERT INTO `mob_droplist` VALUES (1416,0,3940,52);
 INSERT INTO `mob_droplist` VALUES (1416,0,741,45);
+INSERT INTO `mob_droplist` VALUES (1416,0,4058,14);
 
 -- -----------
 -- Gotoh Zha the Redolent
@@ -805,13 +807,14 @@ INSERT INTO `mob_droplist` VALUES (1609,0,4023,157);
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=646 and rate=980; -- Adaman Ore
-DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=883 and rate=500; -- Behemoth Horn
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1255 and rate=100; -- Fire Ore
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1256 and rate=100; -- Ice Ore
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1257 and rate=100; -- Wind Ore
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1258 and rate=100; -- Earth Ore
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1259 and rate=100; -- Lightning Ore
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1260 and rate=100; -- Water Ore
+DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1261 and rate=100; -- Water Ore
+DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1262 and rate=100; -- Water Ore
 DELETE FROM `mob_droplist` WHERE dropId=1621 and type=0 and itemId=1841 and rate=100; -- Unicorn Horn
 INSERT INTO `mob_droplist` VALUES (1621,0,16192,136); --  Ochain
 INSERT INTO `mob_droplist` VALUES (1621,0,1414,198);
@@ -1111,7 +1114,6 @@ DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=1332 and rate
 DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=860 and rate=1000; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=860 and rate=400; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=883 and rate=1000; -- comment me
-DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=883 and rate=250; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=1334 and rate=380; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1936 and type=0 and itemId=1334 and rate=190; -- comment me
 INSERT INTO `mob_droplist` VALUES (1936,0,18459,153); -- Heshikiri-hasebe
@@ -1536,6 +1538,7 @@ INSERT INTO `mob_droplist` VALUES (2987,0,17108,80); -- Healing Staff
 INSERT INTO `mob_droplist` VALUES (2998,0,4020,44);
 INSERT INTO `mob_droplist` VALUES (2998,0,756,14);
 INSERT INTO `mob_droplist` VALUES (2998,0,8747,15);
+
 
 -- -----------
 -- Sarameya

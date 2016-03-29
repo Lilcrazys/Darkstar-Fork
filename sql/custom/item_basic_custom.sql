@@ -87,6 +87,7 @@ REPLACE INTO `item_basic` VALUES (10503,0,'brego_gloves','brego_gloves',1,34816,
 
 INSERT INTO `item_basic` VALUES (17912,0,'jug_of_saline_broth','saline_broth',12,2048,48,0,0);
 
+REPLACE INTO `item_basic` VALUES (10948,0,'carvers_torque','carvers_torque',1,63568,99,0,0);
 REPLACE INTO `item_basic` VALUES (10949,0,'smithys_torque','smithys_torque',1,63568,99,0,0);
 INSERT INTO `item_basic` VALUES (10950,0,'goldsmiths_torque','goldsm._torque',1,63568,99,0,0);
 INSERT INTO `item_basic` VALUES (10951,0,'weavers_torque','weavers_torque',1,63568,99,0,0);
