@@ -4,9 +4,6 @@
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -271,54 +268,20 @@ function onMobSpawn(mob)
         SetDropRate(9002,20553,0); -- Ninzas   
         SetDropRate(9002,20967,75); -- Qatsunoci
     end    
-
 end;
-
------------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Lofty_Behemoth_2hr = 0;
-    if (mob:getLocalVar("Lofty_Behemoth_2hr") ~= nil) then
-        Lofty_Behemoth_2hr = mob:getLocalVar("Lofty_Behemoth_2hr");
-    end
+    local Lofty_Behemoth_2hr = mob:getLocalVar("Lofty_Behemoth_2hr");
 
-    if (mob:getHPP() <= 10) then
-        if (Lofty_Behemoth_2hr == 0) then
-            mob:useMobAbility(432); -- MS
-            mob:setLocalVar("Lofty_Behemoth_2hr", 1);
-        end
+    if (mob:getHPP() <= 10 and Lofty_Behemoth_2hr == 0) then
+        mob:useMobAbility(432); -- MS
+        mob:setLocalVar("Lofty_Behemoth_2hr", 1);
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath

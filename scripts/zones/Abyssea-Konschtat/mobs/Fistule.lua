@@ -1,12 +1,13 @@
 -----------------------------------
---  Area: Abyssea - Konschtat (15)
---   Mob: Fistule
+-- Area: Abyssea - Konschtat (15)
+--  Mob: Fistule
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Konschtat/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+require("scripts/globals/abyssea");
 
 -----------------------------------
 -- onMobInitialize
@@ -27,6 +28,35 @@ function onMobSpawn(mob)
     mob:addMod(MOD_DOUBLE_ATTACK,25);
     mob:addMod(MOD_MATT,100);
     mob:addMod(MOD_MACC,200);
+
+    -- temp
+    mob:hideName(false);
+    mob:untargetable(false);
+end;
+
+-----------------------------------
+-- OnMobRoam
+-----------------------------------
+
+function onMobRoam(mob)
+    --[[ Need way to force target these NMs with insta kill TP attack liek retail.
+    local BLOODGUZZLER = GetMobByID(16838899);
+    local GUIMAUVE = GetMobByID(16838912);
+
+    if (BLOODGUZZLER ~= nil) then
+        if (mob:checkDistance(BLOODGUZZLER) < 6) then
+            mob:hideName(false);
+            mob:untargetable(false);
+        end
+    end
+
+    if (GUIMAUVE ~= nil) then
+        if mob:checkDistance(GUIMAUVE) < 6) then
+            mob:hideName(false);
+            mob:untargetable(false);
+        end
+    end
+    ]]
 end;
 
 -----------------------------------

@@ -1009,6 +1009,12 @@ INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2885); -- Glacial_Tomb
 INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2886); -- Glassy_Nova
 -- INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,438); -- Invincible
 
+INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2258); -- Cytokinesis
+INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2294); -- Dissolve
+INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2295); -- Mucus_Spread
+INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
+
+
 -- New lines go BEFORE the crab till you run out of IDs.
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,44);   -- Head Butt (Stun, Grav, Slow, knockback)
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,186);  -- Bubble Shower ( )

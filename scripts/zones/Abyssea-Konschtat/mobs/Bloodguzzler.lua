@@ -1,13 +1,13 @@
 -----------------------------------
---  Area: Abyssea - Konschtat (15)
---   Mob: Bloodguzzler
+-- Area: Abyssea - Konschtat (15)
+--  Mob: Bloodguzzler
 -----------------------------------
-package.loaded["scripts/globals/abyssea"] = nil;
+package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/zones/Abyssea-Konschtat/textIDs");
-require("scripts/globals/abyssea");
+require("scripts/zones/Abyssea-Konschtat/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/status");
+require("scripts/globals/abyssea");
 
 -----------------------------------
 -- onMobInitialize
@@ -35,6 +35,15 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
+    --[[ Need way to force target these NMs with insta kill TP attack liek retail.
+    local FISTULE = GetMobByID(16838913);
+    if (FISTULE ~= nil) then
+        if (mob:checkDistance(FISTULE) < 6) then
+            mob:hideName(false);
+            mob:untargetable(false);
+        end
+    end
+    ]]
 end;
 
 -----------------------------------
@@ -42,12 +51,4 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-
-end;
-
-function onMobDeathEx(mob, killer, isWeaponSkillKill, action)
-	-- DoExp(mob,killer);
-	-- DoCruor(mob,killer);
-    -- DoLights(killer,mob,action)
-	-- PyxisSpawn(mob,killer,npc);
 end;
