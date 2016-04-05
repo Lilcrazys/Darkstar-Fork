@@ -1,30 +1,32 @@
 ---------------------------------------------
--- Mantis Melee
+-- Botulus_Melee_Left
+-- Botulus Special Melee
+-- AoE Physical damage and Knockback
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
-	return 1;
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local numhits = 1;
+    local accmod = 10;
+    local dmgmod = 1;
+    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,2,3);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_WIPE_SHADOWS);
 
-	local numhits = 1;
-	local accmod = 10;
-	local dmgmod = 0.33;
+    -- The Knockback is set in SQL
 
-	MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 10, 0, 10);
-
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_3_SHADOW,info.hitslanded);
-
-    target:addTP(-1);
-    mob:addTP(1);
+    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
+    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
-    skill:setMsg(1);
-	return dmg;
+    target:addTP(1);
+    mob:addTP(1);
+
+    return dmg;
 end;

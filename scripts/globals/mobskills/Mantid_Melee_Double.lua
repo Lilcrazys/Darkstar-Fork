@@ -1,7 +1,7 @@
 ---------------------------------------------
--- Botulus_Melee_Right
--- Botulus Special Melee
--- AoE Physical damage and Knockback
+-- Mantid_Melee_Double
+-- Mantid Special Melee
+-- Single Target Physical damage hits twice
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
@@ -13,16 +13,14 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 10;
+    local numhits = 2;
+    local accmod = 5;
     local dmgmod = 1;
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,2,3);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_WIPE_SHADOWS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW,info.hitslanded);
 
-    -- The Knockback is set in SQL
-
-    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    skill:setMsg(MSG_MELEE); -- Single Target MSG
+    -- skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
     target:addTP(1);

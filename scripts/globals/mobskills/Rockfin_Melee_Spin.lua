@@ -1,10 +1,10 @@
 ---------------------------------------------
--- Botulus_Melee_Right
--- Botulus Special Melee
--- AoE Physical damage and Knockback
+-- Rockfin_Melee_Spin
+-- Rockfin Special Melee
+-- AoE Water damage and silence
 ---------------------------------------------
-require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/status");
 ---------------------------------------------
 
@@ -13,13 +13,11 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 10;
-    local dmgmod = 1;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,2,3);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_WIPE_SHADOWS);
+    local dmgmod = 2;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*2.5,ELE_WATER,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_WIPE_SHADOWS);
 
-    -- The Knockback is set in SQL
+    MobStatusEffectMove(mob, target, EFFECT_SILENCE, 1, 0, 5);
 
     -- skill:setMsg(MSG_MELEE); -- Single Target MSG
     skill:setMsg(MSG_MELEE_AOE); -- AoE MSG

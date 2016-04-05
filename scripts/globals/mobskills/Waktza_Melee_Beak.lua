@@ -1,7 +1,8 @@
 ---------------------------------------------
--- Gallu_Melee_Radial
--- Gallu Special Melee
--- AoE Physical damage with Bind
+-- Waktza_Melee_Beak
+-- Waktza Special Melee
+-- Single Target Physical Damage
+-- Reduces targets TP by 5%
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
@@ -15,20 +16,16 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local numhits = 1;
     local accmod = 1;
-    local dmgmod = 1;
+    local dmgmod = 2.5;
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,1.2,1.5);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_NONE,MOBPARAM_IGNORE_SHADOWS);
-
-    if (math.random(1,10) == 5) then
-        target:addStatusEffect(EFFECT_BIND, 10, 0, 5);
-    end
-
-    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,info.hitslanded);
+ 
+    skill:setMsg(MSG_MELEE); -- Single Target MSG
+    -- skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
-    target:addTP(1);
-    mob:addTP(1);
+    target:addTP(-5);
+    mob:addTP(5);
 
     return dmg;
 end;

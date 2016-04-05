@@ -66,6 +66,8 @@ TP_DMG_BONUS = 3;
 TP_RANGED = 4;
 
 MSG_NONE = 0; -- display nothing
+MSG_MELEE     = 1;   -- Melee substitute skill (Single Target)
+MSG_MELEE_AOE = 264; -- Melee substitute skill (Area of Effect)
 MSG_USES = 101; -- simple uses message
 MSG_FAMILIAR = 108;
 MSG_SELF_HEAL = 238;

@@ -1,7 +1,7 @@
 ---------------------------------------------
--- Gallu_Melee_Radial
--- Gallu Special Melee
--- AoE Physical damage with Bind
+-- Gabbrath_Melee_Charge
+-- Gabbrath Special Melee
+-- Single Target Physical damage with Knockback
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
@@ -15,16 +15,14 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local numhits = 1;
     local accmod = 1;
-    local dmgmod = 1;
+    local dmgmod = 2.5;
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,1.2,1.5);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_NONE,MOBPARAM_IGNORE_SHADOWS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_PIERCE,info.hitslanded);
 
-    if (math.random(1,10) == 5) then
-        target:addStatusEffect(EFFECT_BIND, 10, 0, 5);
-    end
+    -- The Knockback is set in SQL
 
-    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    skill:setMsg(MSG_MELEE); -- Single Target MSG
+    -- skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
     target:addTP(1);

@@ -1,7 +1,7 @@
 ---------------------------------------------
--- Gallu_Melee_Radial
--- Gallu Special Melee
--- AoE Physical damage with Bind
+-- Gabbrath_Melee_Spin
+-- Gabbrath Special Melee
+-- AoE Target Fire damage and stun
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
@@ -13,15 +13,11 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 1;
-    local dmgmod = 1;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,1.2,1.5);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_NONE,MOBPARAM_IGNORE_SHADOWS);
+    local dmgmod = 1.5;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*2.5,ELE_FIRE,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_WIPE_SHADOWS);
 
-    if (math.random(1,10) == 5) then
-        target:addStatusEffect(EFFECT_BIND, 10, 0, 5);
-    end
+    MobStatusEffectMove(mob, target, EFFECT_STUN, 1, 0, 2);
 
     -- skill:setMsg(MSG_MELEE); -- Single Target MSG
     skill:setMsg(MSG_MELEE_AOE); -- AoE MSG

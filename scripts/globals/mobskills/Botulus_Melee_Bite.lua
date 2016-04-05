@@ -1,7 +1,7 @@
 ---------------------------------------------
--- Botulus_Melee_Front
+-- Botulus_Melee_Bite
 -- Botulus Special Melee
--- AoE Physical damage and Amnesia
+-- Single Target Physical damage and MaxHP down
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
@@ -20,14 +20,14 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local numhits = 1;
     local accmod = 10;
-    local dmgmod = 0.5;
+    local dmgmod = 0.25;
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_IGNORE_SHADOWS);
 
-    MobStatusEffectMove(mob, target, EFFECT_AMNESIA, 10, 0, 10);
+    MobStatusEffectMove(mob, target, EFFECT_MAX_HP_DOWN, 20, 0, 30);
 
-    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    skill:setMsg(MSG_MELEE); -- Single Target MSG
+    -- skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
     target:addTP(1);
