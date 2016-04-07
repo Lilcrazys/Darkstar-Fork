@@ -127,51 +127,51 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Macerating_Bile',4013,2498); -- Ma
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Dead_Prophet',4013,2500); -- Dead_Prophet
 
 -- Soaring_Corse
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,274); -- Memento_Mori
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,275); -- Silence_Seal
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,276); -- Envoutement
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Corse',4014,277); -- Danse_Macabre
+INSERT INTO `mob_skill_lists` VALUES ('Memento_Mori',4014,274); -- Memento_Mori
+INSERT INTO `mob_skill_lists` VALUES ('Silence_Seal',4014,275); -- Silence_Seal
+INSERT INTO `mob_skill_lists` VALUES ('Envoutement',4014,276); -- Envoutement
+INSERT INTO `mob_skill_lists` VALUES ('Danse_Macabre',4014,277); -- Danse_Macabre
 
 -- Soaring_Dvergar
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1857); -- Hellsnap
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1859); -- Cackle
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1861); -- Necropurge
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dvergar',4015,1863); -- Thundris_shriek
+INSERT INTO `mob_skill_lists` VALUES ('Hellsnap',4015,1857); -- Hellsnap
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Cackle',4015,1859); -- Cackle
+INSERT INTO `mob_skill_lists` VALUES ('Necropurge',4015,1861); -- Necropurge
+INSERT INTO `mob_skill_lists` VALUES ('Thundris_Shriek',4015,1863); -- Thundris_shriek
 
 -- Soaring_Vampyr
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1850); -- Bloodrake
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1852); -- Nosferatus_kiss
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1854); -- Wings_of_Gehenna
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Vampyr',4016,1856); -- Nocturnal_Servitude
+INSERT INTO `mob_skill_lists` VALUES ('Bloodrake',4016,1850); -- Bloodrake
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Nosferatus_Kiss',4016,1852); -- Nosferatus_kiss
+INSERT INTO `mob_skill_lists` VALUES ('Wings_of_Gehenna',4016,1854); -- Wings_of_Gehenna
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Nocturnal_Servitude',4016,1856); -- Nocturnal_Servitude
 
 -- Soaring_Kumakatok
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,274); -- Memento_Mori
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,275); -- Silence_Seal
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,276); -- Envoutement
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Kumakatok',4017,277); -- Danse_Macabre
+INSERT INTO `mob_skill_lists` VALUES ('Memento_Mori',4017,274); -- Memento_Mori
+INSERT INTO `mob_skill_lists` VALUES ('Silence_Seal',4017,275); -- Silence_Seal
+INSERT INTO `mob_skill_lists` VALUES ('Envoutement',4017,276); -- Envoutement
+INSERT INTO `mob_skill_lists` VALUES ('Danse_Macabre',4017,277); -- Danse_Macabre
 
 -- Soaring_Dweorg
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1857); -- Hellsnap
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1858); -- Hellclap
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1859); -- Cackle
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1860); -- Necrobane
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1861); -- Necropurge
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1862); -- Bilgestorm
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Dweorg',4018,1863); -- Thundris_shriek
+INSERT INTO `mob_skill_lists` VALUES ('Hellsnap',4018,1857); -- Hellsnap
+INSERT INTO `mob_skill_lists` VALUES ('Hellclap',4018,1858); -- Hellclap
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Cackle',4018,1859); -- Cackle
+INSERT INTO `mob_skill_lists` VALUES ('Necrobane',4018,1860); -- Necrobane
+INSERT INTO `mob_skill_lists` VALUES ('Necropurge',4018,1861); -- Necropurge
+INSERT INTO `mob_skill_lists` VALUES ('Bilgestorm',4018,1862); -- Bilgestorm
+INSERT INTO `mob_skill_lists` VALUES ('Thundris_Shriek',4018,1863); -- Thundris_shriek
 
 -- Soaring_Strigoi
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,1852); -- Nosferatus_kiss
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,1854); -- Wings_of_Gehenna
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,2132); -- Dirty_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Strigoi',4019,2278); -- Minax_Glare
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Nosferatus_Kiss',4019,1852); -- Nosferatus_kiss
+INSERT INTO `mob_skill_lists` VALUES ('Wings_of_Gehenna',4019,1854); -- Wings_of_Gehenna
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Dirty_Breath',4019,2132); -- Dirty_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Minax_Glare',4019,2278); -- Minax_Glare
 
 -- Soaring_Naraka
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2459); -- Yaksha_damnation
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2460); -- Yaksha_oblivion
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2461); -- Yaksha_bliss
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2463); -- Raksha_Judgment
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2464); -- Raksha_illusion
-INSERT INTO `mob_skill_lists` VALUES ('Soaring_Naraka',4020,2465); -- Raksha_vengeance
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Damnation',4020,2459); -- Yaksha_damnation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Oblivion',4020,2460); -- Yaksha_oblivion
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Bliss',4020,2461); -- Yaksha_bliss
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Judgement',4020,2463); -- Raksha_Judgment
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Illusion',4020,2464); -- Raksha_illusion
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Vengeance',4020,2465); -- Raksha_vengeance
 
 -- Veiled_Amphiptere
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Amphiptere',4021,2171); -- Tail_lash
