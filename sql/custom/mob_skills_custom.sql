@@ -1904,7 +1904,7 @@ INSERT INTO `mob_skills` VALUES (1859,1457,'Custom_Cackle',1,15.0,2000,1000,4,0,
 INSERT INTO `mob_skills` VALUES (1860,1462,'Custom_Necrobane',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1861,1461,'Custom_Necropurge',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1862,1458,'Custom_Bilgestorm',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (1863,1459,'Custom_Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1863,1459,'Thundris_shriek',1,15.0,2000,1000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1864,1864,'Ofnir',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1865,1865,'Valfodr',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1866,1866,'Yggr',0,7.0,2000,1500,4,0,0,0);
