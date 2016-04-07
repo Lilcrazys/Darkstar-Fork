@@ -325,125 +325,125 @@ INSERT INTO `mob_skill_lists` VALUES ('Valkurm_Imperator',4048,1624); -- Debilit
 -- INSERT INTO `mob_skill_lists` VALUES ('Zomok',4062,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Abzu',4063,PLACEHOLDER); -- Unfinished
 
-INSERT INTO `mob_skill_lists` VALUES ('Sallow_Seymour',4064,170); -- SS_Sandspin
-INSERT INTO `mob_skill_lists` VALUES ('Sallow_Seymour',4064,171); -- SS_Tremors
-INSERT INTO `mob_skill_lists` VALUES ('Sallow_Seymour',4064,2389); -- Mud_Stream -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Sandspin',4064,170); -- SS_Sandspin
+INSERT INTO `mob_skill_lists` VALUES ('Tremors',4064,171); -- SS_Tremors
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Mud_Stream',4064,2389); -- Mud_Stream -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,1869); -- Aqua_Fortis
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,1897); -- Regurgitation
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,1898); -- Delta_Thrust
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,1899); -- Torpefying_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,1900); -- Grim_Glower
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,1901); -- Calcifiying_Mist
-INSERT INTO `mob_skill_lists` VALUES ('Ushumgal',4065,2136); -- Oppressive_Glare
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Aqua_Fortis',4065,1869); -- Aqua_Fortis
+INSERT INTO `mob_skill_lists` VALUES ('Regurgitation',4065,1897); -- Regurgitation
+INSERT INTO `mob_skill_lists` VALUES ('Delta_Thrust',4065,1898); -- Delta_Thrust
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Torpefying_Charge',4065,1899); -- Torpefying_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Grim_Glower',4065,1900); -- Grim_Glower
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Calcifying_Mist',4065,1901); -- Calcifiying_Mist
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Oppressive_Gaze',4065,2136); -- Oppressive_Glaze
 
-INSERT INTO `mob_skill_lists` VALUES ('Sarimanok',4066,1462); -- Crosswind
-INSERT INTO `mob_skill_lists` VALUES ('Sarimanok',4066,1464); -- Wind_Shear
-INSERT INTO `mob_skill_lists` VALUES ('Sarimanok',4066,1465); -- Obfuscate
-INSERT INTO `mob_skill_lists` VALUES ('Sarimanok',4066,1466); -- Zephyr_Mantle
-INSERT INTO `mob_skill_lists` VALUES ('Sarimanok',4066,1467); -- Ill_Wind
-INSERT INTO `mob_skill_lists` VALUES ('Sarimanok',4066,1468); -- White_Wind
+INSERT INTO `mob_skill_lists` VALUES ('Crosswind',4066,1462); -- Crosswind
+INSERT INTO `mob_skill_lists` VALUES ('Wind_Shear',4066,1464); -- Wind_Shear
+INSERT INTO `mob_skill_lists` VALUES ('Obfuscate',4066,1465); -- Obfuscate
+INSERT INTO `mob_skill_lists` VALUES ('Zephyr_Mantle',4066,1466); -- Zephyr_Mantle
+INSERT INTO `mob_skill_lists` VALUES ('Ill_Wind',4066,1467); -- Ill_Wind
+INSERT INTO `mob_skill_lists` VALUES ('Custom_White_Wind',4066,1468); -- White_Wind
 
 -- INSERT INTO `mob_skill_lists` VALUES ('Cottus',4067,474); -- Meikyo_Shisui
-INSERT INTO `mob_skill_lists` VALUES ('Cottus',4067,1380); -- Trebuchet -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Cottus',4067,2111); -- Moribund_Hack
-INSERT INTO `mob_skill_lists` VALUES ('Cottus',4067,2320); -- Mercurial_Strike -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Cottus',4067,2322); -- Colossal_Slam -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Trebuchet',4067,1380); -- Trebuchet -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Moribund_Hack',4067,2111); -- Moribund_Hack
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Mercurial_Strike',4067,2320); -- Mercurial_Strike -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Colossal_Slam',4067,2322); -- Colossal_Slam -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Virvatuli',4068,2255); -- NM_Corpse_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Corpse_Breath',4068,2255); -- NM_Corpse_Breath
 
-INSERT INTO `mob_skill_lists` VALUES ('Pancimanci',4069,45); -- Dream_Flower
-INSERT INTO `mob_skill_lists` VALUES ('Pancimanci',4069,50); -- Scream_VW
-INSERT INTO `mob_skill_lists` VALUES ('Pancimanci',4069,1954); -- Petal_Pirouette -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Pancimanci',4069,2131); -- Petal_Pirouette -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Dream_Flower',4069,45); -- Dream_Flower
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Scream_VW',4069,50); -- Scream_VW
+INSERT INTO `mob_skill_lists` VALUES ('Petal_Pirouette',4069,1954); -- Petal_Pirouette -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Dream_Flower',4069,2131); -- Dream_Flower -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Lorbulcrub',4070,175); -- Fluid_Spread
-INSERT INTO `mob_skill_lists` VALUES ('Lorbulcrub',4070,177); -- Digest
-INSERT INTO `mob_skill_lists` VALUES ('Lorbulcrub',4070,2294); -- Dissolve
+INSERT INTO `mob_skill_lists` VALUES ('Fluid_Spread',4070,175); -- Fluid_Spread
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Digest',4070,177); -- Digest
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Dissolve',4070,2294); -- Dissolve
 
-INSERT INTO `mob_skill_lists` VALUES ('Krabimanjaro',4071,186); -- Bubble_Shower
-INSERT INTO `mob_skill_lists` VALUES ('Krabimanjaro',4071,187); -- Bubble_Curtain
-INSERT INTO `mob_skill_lists` VALUES ('Krabimanjaro',4071,189); -- Scissor_Guard
-INSERT INTO `mob_skill_lists` VALUES ('Krabimanjaro',4071,2256); -- Mega_Scissors -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Krabimanjaro',4071,2257); -- Venom_Shower -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Bubble_Shower',4071,186); -- Bubble_Shower
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Bubble_Curtain',4071,187); -- Bubble_Curtain
+INSERT INTO `mob_skill_lists` VALUES ('Scissor_Guard',4071,189); -- Scissor_Guard
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Mega_Scissors',4071,2256); -- Mega_Scissors -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Venom_Shower',4071,2257); -- Venom_Shower -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Ogbunabali',4072,19); -- Sand_Blast
-INSERT INTO `mob_skill_lists` VALUES ('Ogbunabali',4072,21); -- Venom_Spray
-INSERT INTO `mob_skill_lists` VALUES ('Ogbunabali',4072,23); -- Mandibular_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Ogbunabali',4072,2261); -- Quake_Blast -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Ogbunabali',4072,2260); -- Gravitic_Horn -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Sand_Blast',4072,19); -- Sand_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Venom_Spray',4072,21); -- Venom_Spray
+INSERT INTO `mob_skill_lists` VALUES ('Mandibular_Bite',4072,23); -- Mandibular_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Quake_Blast',4072,2261); -- Quake_Blast -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Gravitic_Horn',4072,2260); -- Gravitic_Horn -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,527); -- Words_of_Bane
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,529); -- Light_of_Penance
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,530); -- Lateral_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,531); -- Vertical_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,532); -- Throat_Stab
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,665); -- Everyones_Rancor
-INSERT INTO `mob_skill_lists` VALUES ('Murk-Veined_Baneberry',4073,2137); -- Ritual_Bind -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Words_of_Bane',4073,527); -- Words_of_Bane
+INSERT INTO `mob_skill_lists` VALUES ('Light_of_Penance',4073,529); -- Light_of_Penance
+INSERT INTO `mob_skill_lists` VALUES ('Lateral_Slash',4073,530); -- Lateral_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Vertical_Slash',4073,531); -- Vertical_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Throat_Stab',4073,532); -- Throat_Stab
+INSERT INTO `mob_skill_lists` VALUES ('Everyones_Rancor',4073,665); -- Everyones_Rancor
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Ritual_Bind',4073,2137); -- Ritual_Bind -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Melancholic_Moira',4074,63); -- EE_Bad_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Melancholic_Moira',4074,470); -- EE_Drain_Whip
-INSERT INTO `mob_skill_lists` VALUES ('Melancholic_Moira',4074,1076); -- EE_Extremely_Bad_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Melancholic_Moira',4074,2318); -- EE_Thousand Spears
-INSERT INTO `mob_skill_lists` VALUES ('Melancholic_Moira',4074,2319); -- Tainting_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Bad_Breath',4074,63); -- EE_Bad_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Drain_Whip',4074,470); -- EE_Drain_Whip
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Extremely_Bad_Breath',4074,1076); -- EE_Extremely_Bad_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Thousand Spears',4074,2318); -- EE_Thousand Spears
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Tainting_Breath',4074,2319); -- Tainting_Breath
 
-INSERT INTO `mob_skill_lists` VALUES ('Belphoebe',4075,1939); -- Spring_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Belphoebe',4075,1940); -- Summer_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Belphoebe',4075,1941); -- Autumn_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Belphoebe',4075,1942); -- Winter_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Belphoebe',4075,1943); -- Cyclonic_Turmoil
-INSERT INTO `mob_skill_lists` VALUES ('Belphoebe',4075,2262); -- Norn_Arrows
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Spring_Breeze',4075,1939); -- Spring_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Summer_Breeze',4075,1940); -- Summer_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Autumn_Breeze',4075,1941); -- Autumn_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Winter_Breeze',4075,1942); -- Winter_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Cyclonic_Turmoil',4075,1943); -- Cyclonic_Turmoil -- BROKEN AS FUCK IN DSP!
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Norn_Arrows',4075,2262); -- Norn_Arrows
 
-INSERT INTO `mob_skill_lists` VALUES ('Kholomodumo',4076,372); -- Wild_Horn
-INSERT INTO `mob_skill_lists` VALUES ('Kholomodumo',4076,373); -- Thunderbolt
-INSERT INTO `mob_skill_lists` VALUES ('Kholomodumo',4076,377); -- Howl
-INSERT INTO `mob_skill_lists` VALUES ('Kholomodumo',4076,2134); -- Accursed_Armor
-INSERT INTO `mob_skill_lists` VALUES ('Kholomodumo',4076,2135); -- Amnesic_Blast
-INSERT INTO `mob_skill_lists` VALUES ('Kholomodumo',4076,2330); -- Ecliptic_Meteor
+INSERT INTO `mob_skill_lists` VALUES ('Wild_Horn',4076,372); -- Wild_Horn
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Thunderbolt',4076,373); -- Thunderbolt
+INSERT INTO `mob_skill_lists` VALUES ('Howl',4076,377); -- Howlacc
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Accursed_Armor',4076,2134); -- Accursed_Armor
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Amnesic_Blast',4076,2135); -- Amnesic_Blast
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Ecliptic_Meteor',4076,2330); -- Ecliptic_Meteor
 
-INSERT INTO `mob_skill_lists` VALUES ('Lord_Asag',4077,1850); -- Bloodrake
-INSERT INTO `mob_skill_lists` VALUES ('Lord_Asag',4077,1852); -- Nosferatus_kiss
-INSERT INTO `mob_skill_lists` VALUES ('Lord_Asag',4077,1854); -- Wings_of_Gehenna
-INSERT INTO `mob_skill_lists` VALUES ('Lord_Asag',4077,1856); -- Nocturnal_Servitude
+INSERT INTO `mob_skill_lists` VALUES ('Bloodrake',4077,1850); -- Bloodrake
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Nosferatus_Kiss',4077,1852); -- Nosferatus_kiss
+INSERT INTO `mob_skill_lists` VALUES ('Wings_of_Gehenna',4077,1854); -- Wings_of_Gehenna
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Nocturnal_Servitude',4077,1856); -- Nocturnal_Servitude
 
-INSERT INTO `mob_skill_lists` VALUES ('Akupara',4078,548); -- Tortoise_Song
-INSERT INTO `mob_skill_lists` VALUES ('Akupara',4078,550); -- Tortoise_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Akupara',4078,552); -- Earth_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Akupara',4078,2329); -- Tetsudo_Tremor
-
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4079,2466); -- Harpeia_Melee_Stomp (not used by retail Celaeno)
-INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4079,2467); -- Harpeia_Melee_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4079,2468); -- Harpeia_Melee_Fly
--- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Celaeno',4079,2469); -- Rending_talons
-INSERT INTO `mob_skill_lists` VALUES ('Celaeno',4079,2470); -- Shrieking_gale
-INSERT INTO `mob_skill_lists` VALUES ('Celaeno',4079,2471); -- Wings_of_woe
-INSERT INTO `mob_skill_lists` VALUES ('Celaeno',4079,2472); -- Wings_of_agony
-INSERT INTO `mob_skill_lists` VALUES ('Celaeno',4079,2473); -- Typhoean_rage
-INSERT INTO `mob_skill_lists` VALUES ('Celaeno',4079,2474); -- Ravenous_wail
-
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2458); -- Yaksha_stance
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2459); -- Yaksha_damnation
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2460); -- Yaksha_oblivion
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2461); -- Yaksha_bliss
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2462); -- Raksha_stance
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2463); -- Raksha_Judgment
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2464); -- Raksha_illusion
-INSERT INTO `mob_skill_lists` VALUES ('Hahava',4080,2465); -- Raksha_vengeance
+INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Song',4078,548); -- Tortoise_Song
+INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Stomp',4078,550); -- Tortoise_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Earth_Breath',4078,552); -- Earth_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Tetsudo_Tremor',4078,2329); -- Tetsudo_Tremor
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2362); -- Iron_Giant_Melee_Lateral
+INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee_Stomp',4079,2466); -- Harpeia_Melee_Stomp (not used by retail Celaeno)
+INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee_Slash',4079,2467); -- Harpeia_Melee_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee_Fly',4079,2468); -- Harpeia_Melee_Fly
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2363); -- Turbine_cyclone
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2364); -- Seismic_impact
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2365); -- Incinerator
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2366); -- Arm_canon
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2367); -- Ballistic_kick
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2368); -- Scapula_beam
-INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2369); -- Eradicator
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Rending_Talons',4079,2469); -- Rending_talons
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Shrieking_Gale',4079,2470); -- Shrieking_gale
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Wings_of_Woe',4079,2471); -- Wings_of_woe
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Wings_of_Agony',4079,2472); -- Wings_of_agony
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Typhoean_Rage',4079,2473); -- Typhoean_rage
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Ravenous_Wail',4079,2474); -- Ravenous_wail
+
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Stance',4080,2458); -- Yaksha_stance
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Damnation',4080,2459); -- Yaksha_damnation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Oblivion',4080,2460); -- Yaksha_oblivion
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Yaksha_Bliss',4080,2461); -- Yaksha_bliss
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Stance',4080,2462); -- Raksha_stance
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Judgement',4080,2463); -- Raksha_Judgment
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Illusion',4080,2464); -- Raksha_illusion
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Vengeance',4080,2465); -- Raksha_vengeance
+
+-- Begin temp!
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee_Vertical',4081,2360); -- Iron_Giant_Melee_Vertical
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee_Stomp',4081,2361); -- Iron_Giant_Melee_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee_Lateral',4081,2362); -- Iron_Giant_Melee_Lateral
+-- End temp!
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Turbine_Cyclone',4081,2363); -- Turbine_cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Seismic_Impact',4081,2364); -- Seismic_impact
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Incinerator',4081,2365); -- Incinerator
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Arm_Cannon',4081,2366); -- Arm_canon
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Ballistic_Kick',4081,2367); -- Ballistic_kick
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Scapula_Beam',4081,2368); -- Scapula_beam
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Eradicator',4081,2369); -- Eradicator
 
 INSERT INTO `mob_skill_lists` VALUES ('Goji',4082,2165); -- Dark_orb
 INSERT INTO `mob_skill_lists` VALUES ('Goji',4082,2166); -- Dark_mist
