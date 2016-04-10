@@ -18,6 +18,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Chaos_Blast',4000,2265); -- Chaos_
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Dancing_Tail',4000,2267); -- Dancing_tail
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Chilling_Roar',4000,2269); -- Chilling_roar
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Soul_Douse',4000,2271); -- Soul_douse
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Dark_Star',4000,2273); -- Dark_star
 
 -- Lofty_Harpeia
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Rending_Talons',4001,2469); -- Rending_talons
@@ -44,7 +45,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Amnesic_Blast',4003,2135); -- Amne
 -- Lofty_Ferromantoise
 INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Song',4004,548); -- Tortoise Song
 INSERT INTO `mob_skill_lists` VALUES ('Head_Butt_Turtle',4004,549); -- Head_Butt_Turtle
-INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Stomp',4004,793); -- Tortoise_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Stomp',4004,550); -- Tortoise_Stomp
 INSERT INTO `mob_skill_lists` VALUES ('Harden_Shell',4004,551); -- Harden_Shell
 INSERT INTO `mob_skill_lists` VALUES ('Earth_Breath',4004,552); -- Earth_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Testudo_Tremor',4004,2329); -- Tetsudo_Tremor
@@ -62,7 +63,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Absolute_Terror',4005,1039); -- Absolute_
 -- Lofty_Adamantoise
 INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Song',4006,548); -- Tortoise_Song
 INSERT INTO `mob_skill_lists` VALUES ('Head_Butt_Turtle',4006,549); -- Head_Butt_Turtle
-INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Stomp',4006,793); -- Tortoise_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Tortoise_Stomp',4006,550); -- Tortoise_Stomp
 INSERT INTO `mob_skill_lists` VALUES ('Earth_Breath',4006,552); -- Earth_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Aqua_Breath',4006,553); -- Aqua_Breath
 
