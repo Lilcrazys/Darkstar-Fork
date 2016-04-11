@@ -13,19 +13,18 @@ require("scripts/globals/magic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	local power = 20
-	local duration = 120;
- 	duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
- 	duration = duration + (duration * ((caster:getMod(MOD_ALL_SONGS) * 10)/100));
-	
-	power = power + (caster:getMod(MOD_ALL_SONGS) * 4);
-	
-    -- Temporary solution EFFECT_NOCTURNE not avaliable in core
-    target:addStatusEffect(EFFECT_ADDLE,power,0,duration);
+    local power = 20
+    local duration = 120;
+    duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
+    duration = duration + (duration * ((caster:getMod(MOD_ALL_SONGS_EFFECT) * 10)/100));
+    power = power + (caster:getMod(MOD_ALL_SONGS_EFFECT) * 4);
+
+    target:addStatusEffect(EFFECT_NOCTURNE,power,0,duration);
     spell:setMsg(230);
-    return EFFECT_ADDLE;
+
+    return EFFECT_NOCTURNE;
 end;
