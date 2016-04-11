@@ -202,13 +202,12 @@ INSERT INTO `item_armor` VALUES (27644,'blurred_shield_+1',99,119,193,656,2,0,2,
 INSERT INTO `item_armor` VALUES (27711,'gorney_morion_+1',99,117,10689,354,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27712,'shneddick_chapeau_+1',99,117,2593826,355,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27713,'weathspoon_corona_+1',99,117,3719708,356,0,0,16,0);
-INSERT INTO `item_armor` VALUES (27746,'aetosaur_helm',99,114,2473969,6,0,0,16,0);
-INSERT INTO `item_armor` VALUES (27747,'aetosaur_helm_+1',99,115,2473969,6,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27740,'outrider_mask',99,117,6593,5,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27741,'espial_cap',99,117,3662710,23,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27742,'wayfarer_circlet',99,117,4179646,20,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27743,'temachtiani_headband',99,105,4194303,102,0,0,16,0);
-INSERT INTO `item_armor` VALUES (27747,'aetosaur_helm_+1',99,0,2473969,6,0,0,16,0);
+INSERT INTO `item_armor` VALUES (27746,'aetosaur_helm',99,114,2473969,6,0,0,16,0);
+INSERT INTO `item_armor` VALUES (27747,'aetosaur_helm_+1',99,115,2473969,6,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27748,'shabti_armet',99,0,193,22,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27749,'shabti_armet_+1',99,0,193,22,0,0,16,0);
 INSERT INTO `item_armor` VALUES (27750,'haruspex_hat',99,114,4179646,19,0,0,16,0);

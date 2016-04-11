@@ -252,7 +252,7 @@ INSERT INTO `item_basic` VALUES (27883,0,'wayfarer_robe','wayfarer_robe',1,63552
 REPLACE INTO `item_basic` VALUES (27889,0,'aetosaur_jerkin','aetosaur_jerkin',1,2048,18,1,0);
 INSERT INTO `item_basic` VALUES (27890,0,'aetosaur_jerkin_+1','aeto_jerkin_+1',1,2080,18,0,0);
 INSERT INTO `item_basic` VALUES (27892,0,'shabti_cuirass_+1','shab_cuirass_+1',1,2048,18,1,0);
-INSERT INTO `item_basic` VALUES (27893,0,'haruspex_coat','haruspex_coat',1,2080,18,0,0);
+REPLACE INTO `item_basic` VALUES (27893,0,'haruspex_coat','haruspex_coat',1,2080,18,0,0);
 INSERT INTO `item_basic` VALUES (27894,0,'haruspex_coat_+1','haruspex_coat_+1',1,2080,18,0,0);
 INSERT INTO `item_basic` VALUES (27987,0,'gefechthentzes','gefechthentzes',1,2048,19,1,0);
 INSERT INTO `item_basic` VALUES (27988,0,'wildheithentzes','wildheithentzes',1,2048,19,1,0);
