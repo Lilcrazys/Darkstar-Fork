@@ -356,7 +356,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Sandspin',4064,170); -- SS_Sandspi
 INSERT INTO `mob_skill_lists` VALUES ('Tremors',4064,171); -- SS_Tremors
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Mud_Stream',4064,2389); -- Mud_Stream -- need correct animation
 
-INSERT INTO `mob_skill_lists` VALUES ('Custom_Aqua_Fortis',4065,1869); -- Aqua_Fortis
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Aqua_Fortis',4065,1896); -- Aqua_Fortis
 INSERT INTO `mob_skill_lists` VALUES ('Regurgitation',4065,1897); -- Regurgitation
 INSERT INTO `mob_skill_lists` VALUES ('Delta_Thrust',4065,1898); -- Delta_Thrust
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Torpefying_Charge',4065,1899); -- Torpefying_Charge
@@ -382,7 +382,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Corpse_Breath',4068,2255); -- NM_C
 INSERT INTO `mob_skill_lists` VALUES ('Dream_Flower',4069,45); -- Dream_Flower
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Scream_VW',4069,50); -- Scream_VW
 INSERT INTO `mob_skill_lists` VALUES ('Petal_Pirouette',4069,1954); -- Petal_Pirouette -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Dream_Flower',4069,2131); -- Dream_Flower -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Dream_Flower',4069,1329); -- Dream_Flower -- need correct animation
 
 INSERT INTO `mob_skill_lists` VALUES ('Fluid_Spread',4070,175); -- Fluid_Spread
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Digest',4070,177); -- Digest
@@ -391,8 +391,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Dissolve',4070,2294); -- Dissolve
 INSERT INTO `mob_skill_lists` VALUES ('Bubble_Shower',4071,186); -- Bubble_Shower
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Bubble_Curtain',4071,187); -- Bubble_Curtain
 INSERT INTO `mob_skill_lists` VALUES ('Scissor_Guard',4071,189); -- Scissor_Guard
-INSERT INTO `mob_skill_lists` VALUES ('Custom_Mega_Scissors',4071,2256); -- Mega_Scissors -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Custom_Venom_Shower',4071,2257); -- Venom_Shower -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Mega_Scissors',4071,2257); -- Mega_Scissors -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Venom_Shower',4071,2256); -- Venom_Shower -- need correct animation
 
 INSERT INTO `mob_skill_lists` VALUES ('Sand_Blast',4072,19); -- Sand_Blast
 INSERT INTO `mob_skill_lists` VALUES ('Venom_Spray',4072,21); -- Venom_Spray
@@ -411,7 +411,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Ritual_Bind',4073,2137); -- Ritual
 INSERT INTO `mob_skill_lists` VALUES ('Bad_Breath',4074,63); -- EE_Bad_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Drain_Whip',4074,470); -- EE_Drain_Whip
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Extremely_Bad_Breath',4074,1076); -- EE_Extremely_Bad_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Custom_Thousand Spears',4074,2318); -- EE_Thousand Spears
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Thousand_Spears',4074,2318); -- EE_Thousand Spears
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Tainting_Breath',4074,2319); -- Tainting_Breath
 
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Spring_Breeze',4075,1939); -- Spring_Breeze
@@ -422,7 +422,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Cyclonic_Turmoil',4075,1943); -- Cyclonic
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Norn_Arrows',4075,2262); -- Norn_Arrows
 
 INSERT INTO `mob_skill_lists` VALUES ('Wild_Horn',4076,372); -- Wild_Horn
-INSERT INTO `mob_skill_lists` VALUES ('Custom_Thunderbolt',4076,373); -- Thunderbolt
+INSERT INTO `mob_skill_lists` VALUES ('Thunderbolt',4076,373); -- Thunderbolt
 INSERT INTO `mob_skill_lists` VALUES ('Howl',4076,377); -- Howlacc
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Accursed_Armor',4076,2134); -- Accursed_Armor
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Amnesic_Blast',4076,2135); -- Amnesic_Blast
