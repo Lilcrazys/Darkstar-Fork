@@ -221,7 +221,7 @@ INSERT INTO `item_armor` VALUES (27883,'wayfarer_robe',99,117,4179646,20,0,0,32,
 REPLACE INTO `item_armor` VALUES (27889,'aetosaur_jerkin',99,114,2473969,6,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27890,'aetosaur_jerkin_+1',99,115,2473969,6,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27892,'shabti_cuirass_+1',99,0,193,22,0,0,32,0);
-INSERT INTO `item_armor` VALUES (27893,'haruspex_coat',99,114,4179646,19,0,0,32,0);
+REPLACE INTO `item_armor` VALUES (27893,'haruspex_coat',99,114,4179646,19,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27894,'haruspex_coat_+1',99,115,4179646,19,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (27918,'manibozho_jerkin',99,110,2593826,350,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (27919,'bokwus_robe',99,110,1589788,351,0,0,32,0);
@@ -251,7 +251,7 @@ INSERT INTO `item_armor` VALUES (28168,'outrider_hose',99,117,6593,5,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28169,'espial_hose',99,117,3662710,23,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28170,'wayfarer_slops',99,117,4179646,20,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28171,'temachtiani_pants',99,105,4194303,102,0,0,128,0);
-INSERT INTO `item_armor` VALUES (28176,'aetosaur_trousers,'99,114,2473969,6,0,0,128,0);
+INSERT INTO `item_armor` VALUES (28176,'aetosaur_trousers',99,114,2473969,6,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28177,'aetosaur_trousers_+1',99,115,2473969,6,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28178,'shabti_cuisses',99,0,193,22,0,0,128,0);
 INSERT INTO `item_armor` VALUES (28179,'shabti_cuisses_+1',99,0,193,22,0,0,128,0);
@@ -269,7 +269,7 @@ INSERT INTO `item_armor` VALUES (28306,'outrider_greaves',99,117,6593,5,0,0,256,
 INSERT INTO `item_armor` VALUES (28307,'espial_socks',99,117,3662710,23,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28308,'wayfarer_clogs',99,117,4179646,20,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28309,'temachtiani_boots',99,105,4194303,102,0,0,256,0);
-INSERT INTO `item_armor` VALUES (28314,'aetosaur_ledelsens',99,114,2473969,6,0,0,256,0,);
+INSERT INTO `item_armor` VALUES (28314,'aetosaur_ledelsens',99,114,2473969,6,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28315,'aetosaur_ledelsens_+1',99,115,2473969,6,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28316,'shabti_sabatons',99,0,193,22,0,0,256,0);
 INSERT INTO `item_armor` VALUES (28317,'shabti_sabatons_+1',99,0,193,22,0,0,256,0);
