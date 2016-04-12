@@ -218,7 +218,7 @@ INSERT INTO `item_armor` VALUES (27863,'gorney_haubert_+1',99,117,10689,354,0,0,
 INSERT INTO `item_armor` VALUES (27864,'shneddick_tabard_+1',99,117,2593826,355,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27865,'weatherspoon_robe_+1',99,117,3719708,356,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27883,'wayfarer_robe',99,117,4179646,20,0,0,32,0);
-INSERT INTO `item_armor` VALUES (27889,'aetosaur_jerkin',99,114,2473969,6,0,0,32,0);
+REPLACE INTO `item_armor` VALUES (27889,'aetosaur_jerkin',99,114,2473969,6,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27890,'aetosaur_jerkin_+1',99,115,2473969,6,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27892,'shabti_cuirass_+1',99,0,193,22,0,0,32,0);
 INSERT INTO `item_armor` VALUES (27893,'haruspex_coat',99,114,4179646,19,0,0,32,0);

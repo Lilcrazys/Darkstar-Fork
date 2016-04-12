@@ -964,89 +964,89 @@ INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2629); -- Beautiful_death
 -- INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2527); -- Gallu_Melee_Radial
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4200,2761); -- Gabbrath_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4200,2762); -- Gabbrath_Melee_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4200,2763); -- Gabbrath_Melee_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee_Bite',4200,2761); -- Gabbrath_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee_Charge',4200,2762); -- Gabbrath_Melee_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee_Spin',4200,2763); -- Gabbrath_Melee_Spin
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2764); -- Blistering_Roar
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2765); -- Searing_Serration
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2766); -- Volcanic_Stasis
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2767); -- Tyrannical_Blow
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2768); -- Batholit-hic_Shell
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2769); -- Pyroclastic_Surge
-INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2770); -- Incinerating_Lahar
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Blistering_Roar',4200,2764); -- Blistering_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Searing_Serration',4200,2765); -- Searing_Serration
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Volcanic_Stasis',4200,2766); -- Volcanic_Stasis
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Tyrannical_Blow',4200,2767); -- Tyrannical_Blow
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Batholithic_Shell',4200,2768); -- Batholit-hic_Shell
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Pyroclastic_Surge',4200,2769); -- Pyroclastic_Surge
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Incinerating_Lahar',4200,2770); -- Incinerating_Lahar
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4201,2814); -- Waktza_Melee_Gust
-INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4201,2815); -- Waktza_Melee_Spin
-INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4201,2816); -- Waktza_Melee_Beak
+INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee_Gust',4201,2814); -- Waktza_Melee_Gust
+INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee_Spin',4201,2815); -- Waktza_Melee_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee_Beak',4201,2816); -- Waktza_Melee_Beak
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2817); -- Crashing_Thunder
-INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2818); -- Reverberating_Cry
-INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2819); -- Brownout
-INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2820); -- Reverse_Current
-INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2821); -- Sparkstorm
-INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2822); -- Static_Prison
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Crashing_Thunder',4201,2817); -- Crashing_Thunder
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Reverberating_Cry',4201,2818); -- Reverberating_Cry
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Brownout',4201,2819); -- Brownout
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Reverse_Current',4201,2820); -- Reverse_Current
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Sparkstorm',4201,2821); -- Sparkstorm
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Static_Prison',4201,2822); -- Static_Prison
 -- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,432); -- Blood_Weapon
 -- INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,436); -- Chainspell
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4202,2909); -- Darrcuiln_Melee_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4202,2910); -- Darrcuiln_Melee_Claw
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4202,2911); -- Darrcuiln_Melee_Howl
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee_Charge',4202,2909); -- Darrcuiln_Melee_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee_Claw',4202,2910); -- Darrcuiln_Melee_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee_Howl',4202,2911); -- Darrcuiln_Melee_Howl
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2912); -- Aurous_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2913); -- Howling_Gust
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2914); -- Righteous_Rasp
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2915); -- Starward_Yowl
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2916); -- Stalking_Prey
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Aurous_Charge',4202,2912); -- Aurous_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Howling_Gust',4202,2913); -- Howling_Gust
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Righteous_Rasp',4202,2914); -- Righteous_Rasp
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Starward_Yowl',4202,2915); -- Starward_Yowl
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Stalking_Prey',4202,2916); -- Stalking_Prey
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4203,2743); -- Bztavian_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4203,2744); -- Bztavian_Melee_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4203,2745); -- Bztavian_Melee_Stinger
+INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee_Bite',4203,2743); -- Bztavian_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee_Slash',4203,2744); -- Bztavian_Melee_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee_Stinger',4203,2745); -- Bztavian_Melee_Stinger
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2746); -- Colkhab_Mandibular_Lashing
-INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2747); -- Colkhab_Vespine_Hurricane
-INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2748); -- Colkhab_Stinger_volley
-INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2749); -- Colkhab_Droning_Whirlwind
-INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2750); -- Colkhab_Incisive_Denouement
-INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2751); -- Colkhab_Incisive_Apotheosis
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Mandibular_Lashing',4203,2746); -- Colkhab_Mandibular_Lashing
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Vespine_Hurricane',4203,2747); -- Colkhab_Vespine_Hurricane
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Stinger_Volley',4203,2748); -- Colkhab_Stinger_volley
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Droning_Whirlwind',4203,2749); -- Colkhab_Droning_Whirlwind
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Incisive_Denouement',4203,2750); -- Colkhab_Incisive_Denouement
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Incisive_Apotheosis',4203,2751); -- Colkhab_Incisive_Apotheosis
 
-INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2701); -- Cracklaw_Impenetrable_carapace
-INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2702); -- Cracklaw_Rending_Deluge
-INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2703); -- Cracklaw_Sundering_Snip
-INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2704); -- Cracklaw_Viscid_Spindrift
-INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2705); -- Cracklaw_Riptide_Eupnea
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Impenetrable_Carapace',4204,2701); -- Cracklaw_Impenetrable_carapace
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Rending_Deluge',4204,2702); -- Cracklaw_Rending_Deluge
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Sundering_Snip',4204,2703); -- Cracklaw_Sundering_Snip
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Viscid_Spindrift',4204,2704); -- Cracklaw_Viscid_Spindrift
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Riptide_Eupnea',4204,2705); -- Cracklaw_Riptide_Eupnea
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2750); -- Rockfin_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2751); -- Rockfin_Melee_Ram
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2752); -- Rockfin_Melee_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee_Bite',4205,2750); -- Rockfin_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee_Ram',4205,2751); -- Rockfin_Melee_Ram
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee_Spin',4205,2752); -- Rockfin_Melee_Spin
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2755); -- Protolithic_Puncture
-INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2756); -- Aquatic_Lance
-INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2757); -- Pelagic_Cleaver
-INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2759); -- Tidal_Guillotine
-INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2760); -- Marine_Mayhem
-INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2758); -- Carcharian_verve
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Protolithic_Puncture',4205,2755); -- Protolithic_Puncture
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Aquatic_Lance',4205,2756); -- Aquatic_Lance
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Pelagic_Cleaver',4205,2757); -- Pelagic_Cleaver
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Tidal_Guillotine',4205,2759); -- Tidal_Guillotine
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Marine_Mayhem',4205,2760); -- Marine_Mayhem
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Carcharian_Verve',4205,2758); -- Carcharian_verve
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4206,2878); -- Cehuetzi_Melee_Left
-INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4206,2879); -- Cehuetzi_Melee_Right
-INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4206,2880); -- Cehuetzi_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee_Left',4206,2878); -- Cehuetzi_Melee_Left
+INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee_Right',4206,2879); -- Cehuetzi_Melee_Right
+INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee_Bite',4206,2880); -- Cehuetzi_Melee_Bite
 -- End temp!
-INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2881); -- Polar_Roar
-INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2882); -- Brain_Freeze
-INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2883); -- Biting_Abrogation
-INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2884); -- Permafrost_Requiem
-INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2885); -- Glacial_Tomb
-INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2886); -- Glassy_Nova
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Polar_Roar',4206,2881); -- Polar_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Brain_Freeze',4206,2882); -- Brain_Freeze
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Biting_Abrogation',4206,2883); -- Biting_Abrogation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Permafrost_Requiem',4206,2884); -- Permafrost_Requiem
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Glacial_Tomb',4206,2885); -- Glacial_Tomb
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Glassy_Nova',4206,2886); -- Glassy_Nova
 
-INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2258); -- Cytokinesis
-INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2294); -- Dissolve
-INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2295); -- Mucus_Spread
-INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Cytokinesis',4207,2258); -- Cytokinesis
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Dissolve',4207,2294); -- Dissolve
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Mucus_Spread',4207,2295); -- Mucus_Spread
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Epoxy_Spread',4207,2296); -- Epoxy_Spread
 
 
 -- New lines go BEFORE the crab till you run out of IDs.

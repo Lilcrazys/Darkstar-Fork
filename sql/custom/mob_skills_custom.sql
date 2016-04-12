@@ -2742,7 +2742,7 @@ INSERT INTO `mob_skills` VALUES (2696,2205,'Blackout',1,18.0,2000,1000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2698,2698,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2699,2699,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2700,2700,'.',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2701,2180,'Custom_Impenetrable_carapace',1,18.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (2701,2180,'Custom_Impenetrable_Carapace',1,18.0,2000,1000,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (2702,2181,'Custom_Rending_Deluge',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2703,2182,'Custom_Sundering_Snip',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2704,2183,'Custom_Viscid_Spindrift',1,18.0,2000,1000,4,0,0,0);
@@ -2789,7 +2789,7 @@ INSERT INTO `mob_skills` VALUES (2744,2134,'Bztavian_Melee_Slash',0,7.0,2000,0,4
 INSERT INTO `mob_skills` VALUES (2745,2135,'Bztavian_Melee_Stinger',0,7.0,2000,0,4,0,0,0); -- Colkhab and Muyingwa Melee Specials
 INSERT INTO `mob_skills` VALUES (2746,2136,'Custom_Mandibular_Lashing',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2747,2137,'Custom_Vespine_Hurricane',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2748,2138,'Custom_Stinger_volley',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2748,2138,'Custom_Stinger_Volley',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2749,2139,'Custom_Droning_Whirlwind',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2750,2140,'Custom_Incisive_Denouement',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2751,2141,'Custom_Incisive_Apotheosis',1,18.0,2000,1000,4,0,0,0);
@@ -2799,7 +2799,7 @@ INSERT INTO `mob_skills` VALUES (2754,2195,'Rockfin_Melee_Spin',0,7.0,2000,0,4,0
 INSERT INTO `mob_skills` VALUES (2755,2196,'Custom_Protolithic_puncture',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2756,2197,'Custom_Aquatic_lance',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2757,2198,'Custom_Pelagic_cleaver',1,18.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2758,2199,'Custom_Carcharian_verve',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2758,2199,'Custom_Carcharian_Verve',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2759,2200,'Custom_Tidal_Guillotine',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2760,2201,'Custom_Marine_Mayhem',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2761,2761,'Gabbrath_Melee_Bite',0,7.0,2000,0,4,0,0,0);   -- Achuka and Tojil Melee Specials
