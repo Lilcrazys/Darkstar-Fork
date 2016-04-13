@@ -21,5 +21,5 @@ end;
 
 function onTrigger(player,npc)
     player:PrintToPlayer("To go up the mountain, trade me anything. Items will not be consumed.");
-    player:PrintToPlayer("To get back down, walk of the WEST side and use the conflux.");
+    player:PrintToPlayer("To get back down, walk off the WEST side and use the conflux.");
 end;
