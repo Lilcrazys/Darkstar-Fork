@@ -1,18 +1,29 @@
 -----------------------------------
---  Area: Abyssea - Attohwa (215)
---   Mob: Yaanei
+-- Area: Abyssea - Attohwa (215)
+--   NM: Yaanei
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Attohwa/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+require("scripts/globals/abyssea");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_ACC,50);
+    mob:addMod(MOD_ATT,200);
+    mob:addMod(MOD_DEF,200);
+    mob:addMod(MOD_MDEF,200);
+    mob:addMod(MOD_MATT,40);
+    mob:addMod(MOD_MACC,250);
+    mob:addMod(MOD_REGEN,50);
+    mob:addMod(MOD_REGAIN,10);
+    mob:addMod(MOD_FASTCAST,33);
 end;
 
 -----------------------------------
@@ -34,7 +45,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -50,7 +61,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -66,7 +77,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -82,7 +93,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -98,7 +109,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -114,7 +125,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -130,7 +141,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -146,7 +157,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -162,7 +173,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,81); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -178,7 +189,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,81); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -194,7 +205,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,81); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -210,7 +221,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,208781); -- Iclamar +1
+        SetDropRate(4207,20870,81); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -226,7 +237,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,81); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -242,7 +253,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,81); -- Kannakiri +1
         SetDropRate(4207,20824,0); -- Faizzeer +1
@@ -258,7 +269,7 @@ function onMobSpawn(mob)
         SetDropRate(4207,21236,0); -- Bocluamni +1
         SetDropRate(4207,20775,0); -- Crobaci +1
         SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870); -- Iclamar +1
+        SetDropRate(4207,20870,0); -- Iclamar +1
         SetDropRate(4207,21194,0); -- Lehbrailg +1
         SetDropRate(4207,21004,0); -- Kannakiri +1
         SetDropRate(4207,20824,81); -- Faizzeer +1
@@ -290,4 +301,3 @@ function onMobDeath(mob, killer, ally)
         ally:messageSpecial(6385, ATMA_OF_THE_IMPREGNABLE_TOWER);
     end
 end;
-
