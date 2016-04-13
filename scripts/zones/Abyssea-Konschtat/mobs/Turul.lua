@@ -45,6 +45,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_FASTCAST,40);
 
     -- Start Pathing
+    mob:AnimationSub(1);
     onPath(mob);
 end;
 
@@ -53,7 +54,27 @@ end;
 -----------------------------------
 
 function onPath(mob)
-    pathfind.patrol(mob, path);
+    local FT = mob:getLocalVar("flyingTime");
+
+    if (os.time() - FT > 40) then
+        -- Anything other than 1 or 0 is the animation state from Wind Wall
+        if (mob:AnimationSub() == 0) then
+            mob:AnimationSub(1);
+            mob:setLocalVar("flyingTime", os.time());
+        elseif (mob:AnimationSub() == 1) then
+            mob:AnimationSub(0);
+            mob:setLocalVar("flyingTime", os.time());
+        end
+    end
+
+    if (mob:AnimationSub() == 1) then
+        mob:hideName(true);
+        mob:untargetable(true);
+        pathfind.patrol(mob, path);
+    else
+        mob:hideName(false);
+        mob:untargetable(false);
+    end
 end;
 
 -----------------------------------
@@ -61,29 +82,29 @@ end;
 -----------------------------------
 
 function onMobRoam(mob)
-    local state = mob:AnimationSub();
     local FT = mob:getLocalVar("flyingTime");
 
-    if (os.time() - FT > 45) then
-        if (state == 0) then
-            mob:untargetable(true);
+    if (os.time() - FT > 40) then
+        -- Anything other than 1 or 0 is the animation state from Wind Wall
+        if (mob:AnimationSub() == 0) then
             mob:AnimationSub(1);
-            mob:hideName(true);
             mob:setLocalVar("flyingTime", os.time());
-        elseif (state == 1) then
-            mob:untargetable(false);
+        elseif (mob:AnimationSub() == 1) then
             mob:AnimationSub(0);
-            mob:hideName(false);
             mob:setLocalVar("flyingTime", os.time());
-        else
-            -- Mob has windwall state from mobskill,
-            -- so don't change AnimationSub value!
         end
     end
 
-    -- move to start position if not moving
-    if (mob:isFollowingPath() == false) then
-        mob:pathThrough(pathfind.first(path));
+    if (mob:AnimationSub() == 1) then
+        mob:hideName(true);
+        mob:untargetable(true);
+        -- Move to start position if not moving
+        if (mob:isFollowingPath() == false) then
+            mob:pathThrough(pathfind.first(path));
+        end
+    else
+        mob:hideName(false);
+        mob:untargetable(false);
     end
 end;
 

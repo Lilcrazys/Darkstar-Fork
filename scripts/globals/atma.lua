@@ -871,7 +871,7 @@ function hasATMA_KI(player)
         1699
     }
 
-    for index, value in ipairs(ATMA_KI) do
+    for index, value in pairs(ATMA_KI) do
         if (player:hasKeyItem(value)) then
             result = true;
         end

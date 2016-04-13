@@ -24,6 +24,7 @@ function onTrigger(player, option)
         else
             -- Loading saved ATMA
             require("scripts/globals/atma");
+            require("scripts/globals/keyitems");
 
             if (player:getVar("PREV_ATMA_1") == 0) then
                 player:PrintToPlayer("Saved ATMA set not found. You must first record a set to use.");

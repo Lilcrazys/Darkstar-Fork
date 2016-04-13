@@ -52,7 +52,7 @@ function onTrigger(player,npc)
     -- Bastok Mission 2-3 Part II - Windurst > San d'Oria
     elseif (currentMission == THE_EMISSARY_SANDORIA2) then
         missionStatus = player:getVar("MissionStatus");
-        if (missionStatus == 8) then
+        if (missionStatus == 7) then
             player:startEvent(0x0219);
         elseif (missionStatus == 9) then
             player:startEvent(0x021e);

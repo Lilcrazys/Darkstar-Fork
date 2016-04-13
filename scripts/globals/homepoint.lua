@@ -210,6 +210,10 @@ function hpTeleport( player, option)
         local hpIndex = bit.rshift( option, 16); -- Calculate hpIndex based on option selected
         
         local teleportCost = homepoints[hpIndex][8];
+        if (teleportCost == nil) then
+            player:PrintToPlayer("An error occured. Go tell darkstar what you did and that teleportCost was nil.");
+            return;
+        end
         if ( freeHpTeleport( player, hpIndex)) then
             teleportCost = 0;
         end
