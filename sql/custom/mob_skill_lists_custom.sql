@@ -1046,7 +1046,27 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2294); -- Dissolve
 INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2295); -- Mucus_Spread
 INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 
--- INSERT INTO `mob_skill_lists` VALUES ('Stroper Chyme',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,SKILL); -- Skill Name
+
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2311); -- Stygian_cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2312); -- Deathly_diminuendo
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2313); -- Hellish_crescendo
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2315); -- Stygian_sphere
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2316); -- Malign_invocation
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2378); -- Interference
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2379); -- Dark_arrivisme
+INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2381); -- Besiegers_bane
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,SKILL); -- Skill Name
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,SKILL); -- Skill Name
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,SKILL); -- Skill Name
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,SKILL); -- Skill Name
+
+
+-- INSERT INTO `mob_skill_lists` VALUES ('Stroper Chyme',LIST,SKILL); -- Skill Name
 -- 175,1587,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
 -- 176,1587,176,'Fluid_Toss',0,15.0,2000,1000,4,0,0,0);
 -- 177,1587,177,'Digest',0,7.0,2000,1000,4,0,0,0);
@@ -1054,38 +1074,38 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 2296,1587,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0);
 -- 2295,1587,175,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Megalobugard',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Megalobugard',LIST,SKILL); -- Skill Name
 -- 127,1556,820,'Tusk',0,7.0,2000,2000,4,0,0,2);
 -- 130,1556,823,'Awful_Eye',4,10.0,2000,1500,4,0,0,0);
 -- 131,1556,824,'Heavy_Bellow',4,10.0,2000,1500,4,0,0,0);
 -- 2387,1556,820,'Tyrant_Tusk',4,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Intulo',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Intulo',LIST,SKILL); -- Skill Name
 -- 259,1559,814,'Toxic_Spit',0,9.5,2000,1500,4,0,0,0);
 -- 260,1559,815,'Geist_Wall',1,10.0,2000,1500,4,0,0,0);
 -- 261,1559,816,'Numbing_Noise',4,10.0,2000,1500,4,0,0,0);
 -- 262,1559,817,'Nimble_Snap',0,7.0,2000,1500,4,0,0,0);
 -- 263,1559,818,'Cyclotail',1,10.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Keeper_of_Haildom',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Keeper_of_Haildom',LIST,SKILL); -- Skill Name
 -- 325,1560,325,'Blow',0,7.0,2000,1500,4,0,0,0);
 -- 327,1560,327,'Beatdown',0,7.0,2000,1500,4,0,0,0);
 -- 328,1560,328,'Uppercut',0,7.0,2000,1500,4,0,0,2);
 -- 330,1560,330,'Blank_Gaze',0,7.0,2000,2000,4,0,0,0);
 -- 331,1560,331,'Antiphase',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Dune_Widow',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Dune_Widow',LIST,SKILL); -- Skill Name
 -- 554,1558,482,'Sickle_Slash',0,7.0,2000,1500,4,0,0,0);
 -- 555,1558,483,'Acid_Spray',4,10.0,2000,1500,4,0,0,0);
 -- 556,1558,484,'Spider_Web',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Seww_the_Squidlimbed',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Seww_the_Squidlimbed',LIST,SKILL); -- Skill Name
 -- 515,1561,443,'Hydro_Ball',4,7.0,2000,1500,4,0,0,0);
 -- 521,1561,449,'Hydro_Shot',0,10.0,2000,3000,4,0,0,1);
 -- 524,1561,452,'Spinning_Fin',1,10.0,2000,1500,4,0,0,0);
 -- 518,1561,446,'Bubble_Armor',0,7.0,2000,1500,1,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Mischievous_Micholas',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Mischievous_Micholas',LIST,SKILL); -- Skill Name
 -- 38,1563,38,'Eye_Scratch',0,7.0,2000,1500,4,0,0,0);
 -- 32,1563,32,'Vicious_Claw',0,7.0,2000,1500,4,0,0,0);
 -- 34,1563,34,'Spinning_Claw',1,15.0,2000,1500,4,0,0,0);
@@ -1094,7 +1114,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 33,1563,33,'Stone_Throw',0,25.0,2000,1500,4,0,0,0);
 -- 36,1563,36,'Blank_Gaze_Dispel',0,16.0,2000,2000,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Ash_Dragon',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Ash_Dragon',LIST,SKILL); -- Skill Name
 -- 388,1557,388,'Wind_Breath',4,10.0,2000,1500,4,0,0,0);
 -- 389,1557,389,'Body_Slam',1,10.0,2000,1500,4,0,0,0);
 -- 390,1557,390,'Heavy_Stomp',1,10.0,2000,1500,4,0,0,0);
@@ -1106,25 +1126,25 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 395,1557,395,'Lodesong',1,15.0,2000,1500,4,0,0,0);
 -- 1536,1557,395,'Nullsong',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Juggler_Hecatomb',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Juggler_Hecatomb',LIST,SKILL); -- Skill Name
 -- 257,1562,257,'Smite_of_Rage',0,7.0,2000,1500,4,0,0,0);
 -- 258,1562,258,'Whirl_of_Rage',1,10.0,2000,1500,4,0,0,0);
 -- 1303,1562,258,'Flurry_of_Rage',0,7.0,2000,1500,4,0,0,0);
 -- 1302,1562,257,'Smite_of_Fury',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Gulool_Ja_Ja',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Gulool_Ja_Ja',LIST,SKILL); -- Skill Name
 -- 1541,1555,1147,'Rushing_Slash',0,7.0,2000,1500,4,0,0,0);
 -- 1542,1555,1147,'Decussate',1,16.0,2000,1500,4,0,0,0);
 -- 1543,1555,1156,'Tyranic_Blare',1,10.0,2000,1500,4,0,0,0);
 -- 1544,1555,1156,'Miasma',1,16.0,2000,1500,4,0,0,0);
 -- 1545,1555,1147,'Vorpal_Wheel',0,7.0,2000,1500,4,0,0,0);
 -- 1482,1555,1156,'Groundburst',0,7.0,2000,1500,4,0,0,0);
--- 1475,1555,1149,'Forceful_Blow',0,7.0,2000,1000,4,0,0,0); -- Hand to Hand Only / After Weapon Break
+-- 1475,1555,1149,'Forceful_Blow',0,7.0,2000,1000,4,0,0,0);
 -- 1476,1555,1150,'Somersault_Kick',0,7.0,2000,1000,4,0,0,4);
 -- 1477,1555,1151,'Firespit',0,25.0,2000,1000,4,0,0,0);
 -- 1478,1555,1152,'Warm-Up',0,7.0,2000,1000,1,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Tzee_Xicu_the_Manifest',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Tzee_Xicu_the_Manifest',LIST,SKILL); -- Skill Name
 -- 361,1564,361,'Feather_Storm',0,7.0,2000,1500,4,0,0,0);
 -- 377,1564,354,'Howl',1,20.0,2000,1500,2,0,0,0);
 -- 362,1564,362,'Double_Kick',0,7.0,2000,1500,4,0,0,1);
@@ -1135,7 +1155,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 1680,1564,1565,'Shibaraku',1,10.0,2000,1500,4,0,0,0);
 -- 2013,1564,1565,'Kamaitachi',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Overlord_Bakgodek',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Overlord_Bakgodek',LIST,SKILL); -- Skill Name
 -- 377,1565,354,'Howl',1,20.0,2000,1500,1,0,0,0);
 -- 2155,1565,353,'Phantasmal_Dance',1,15.0,2000,2000,4,0,0,0);
 -- 2007,1565,1626,'Tornado_Edge',4,10.0,2000,2000,4,0,0,0);
@@ -1147,7 +1167,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 350,1565,350,'Shoulder_Attack',0,7.0,2000,1500,4,0,0,1);
 -- 810,1565,740,'Fanatic_Dance',1,10.0,2000,2000,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Za_Dha_Adamantking',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Za_Dha_Adamantking',LIST,SKILL); -- Skill Name
 -- 355,1585,355,'Ore_Toss',0,10.0,2000,2000,4,0,0,0);
 -- 377,1585,354,'Howl',1,20.0,2000,1500,1,0,0,0);
 -- 356,1585,356,'Head_Butt',0,7.0,2000,2000,4,0,0,1);
@@ -1157,7 +1177,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 1977,1585,1608,'Diamond_Shell',0,7.0,2000,3000,1,0,0,0);
 -- 1978,1585,1609,'Ore_Lob',2,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Lord_of_Onzozo',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Lord_of_Onzozo',LIST,SKILL); -- Skill Name
 -- 202,1566,202,'Ink_Jet',4,12.0,2000,1500,4,0,0,0);
 -- 203,1566,203,'Hard_Membrane',0,7.0,2000,1500,1,0,0,0);
 -- 204,1566,204,'Cross_Attack',0,7.0,2000,1500,4,0,0,0);
@@ -1166,7 +1186,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 207,1566,207,'Whirlwind',1,15.0,2000,1500,4,0,0,0);
 -- 200,1566,200,'Tentacle',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Guivre',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Guivre',LIST,SKILL); -- Skill Name
 -- 566,1567,494,'Chaos_Breath',4,15.0,2000,1500,4,0,0,0);
 -- 563,1567,491,'Blizzard_Breath',4,15.0,2000,1500,4,0,0,0);
 -- 564,1567,492,'Thunder_Breath',4,15.0,2000,1500,4,0,0,0);
@@ -1175,7 +1195,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 558,1567,486,'Deadly_Drive_Custom',0,7.0,2000,1500,4,0,0,0);
 -- 562,1567,490,'Tail_Crush',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Biast',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Biast',LIST,SKILL); -- Skill Name
 -- 388,1568,388,'Wind_Breath',4,10.0,2000,1500,4,0,0,0);
 -- 389,1568,389,'Body_Slam',1,10.0,2000,1500,4,0,0,0);
 -- 390,1568,390,'Heavy_Stomp',1,10.0,2000,1500,4,0,0,0);
@@ -1185,14 +1205,14 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 387,1568,387,'Poison_Breath',4,12.0,2000,1500,4,0,0,0);
 -- 394,1568,394,'Thornsong',0,15.0,2000,1500,1,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Duke_Haborym',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Duke_Haborym',LIST,SKILL); -- Skill Name
 -- 303,1569,303,'Soul_Drain',0,7.0,2000,1500,4,0,0,0);
 -- 304,1569,304,'Hecatomb_Wave',4,10.0,2000,2000,4,0,0,0);
 -- 307,1569,307,'Demonic_Howl',1,10.0,2000,1500,4,0,0,0);
 -- 892,1569,311,'Condemnation',4,10.0,2000,1500,4,0,0,0);
 -- 893,1569,313,'Quadrastrike_Custom',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Ophion',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Ophion',LIST,SKILL); -- Skill Name
 -- 406,1570,406,'Lightning_Roar',4,9.0,2000,1500,4,0,0,0);
 -- 407,1570,407,'Ice_Roar',4,9.0,2000,1500,4,0,0,0);
 -- 408,1570,408,'Impact_Roar',4,9.0,2000,1500,4,0,0,0);
@@ -1202,7 +1222,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 2111,1570,411,'Moribund_Hack',1,15.0,2000,1500,4,0,0,0);
 -- 2322,1570,410,'Colossal_Slam',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Sozu_Rogberry',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Sozu_Rogberry',LIST,SKILL); -- Skill Name
 -- 527,1571,455,'Words_of_Bane',0,7.0,2000,1500,4,0,0,0);
 -- 528,1571,456,'Sigh',0,7.0,2000,1500,1,0,0,0);
 -- 529,1571,457,'Light_of_Penance',0,7.0,2000,1500,4,0,0,0);
@@ -1212,7 +1232,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 664,1571,503,'Everyones_Grudge',0,7.0,2000,1500,4,0,0,0);
 -- 665,1571,504,'Everyones_Rancor',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Tyrannic_Tunnok',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Tyrannic_Tunnok',LIST,SKILL); -- Skill Name
 -- 463,1572,94,'Critical_Bite',0,7.0,2000,1500,4,0,0,0);
 -- 465,1572,97,'Stasis',0,9.0,2000,1500,4,0,0,0);
 -- 466,1572,98,'Venom_Storm',1,40.0,2000,1500,4,0,0,0);
@@ -1224,7 +1244,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 98,1572,98,'Wild_Rage',1,15.0,2000,1500,4,0,0,0);
 -- 99,1572,99,'Earth_Pounder',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Bonnacon',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Bonnacon',LIST,SKILL); -- Skill Name
 -- 237,1573,846,'Rampant_Gnaw',0,7.0,2000,1500,4,0,0,0);
 -- 238,1573,847,'Big_Horn_Custom',0,7.0,2000,1500,4,0,0,1);
 -- 239,1573,848,'Snort',4,12.5,2000,1500,4,0,0,3);
@@ -1232,13 +1252,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 241,1573,850,'Lowing',1,15.0,2000,2500,4,0,0,0);
 -- 1108,1573,848,'Mighty_Snort',4,12.5,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Namtar',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Namtar',LIST,SKILL); -- Skill Name
 -- 222,1574,222,'Hell_Slash',0,7.0,2000,1500,4,0,0,0);
 -- 223,1574,223,'Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
 -- 228,1574,228,'Black_Cloud',1,15.0,2000,1500,4,0,0,0);
 -- 229,1574,229,'Blood_Saber',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Baobhan_Sith',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Baobhan_Sith',LIST,SKILL); -- Skill Name
 -- 220,1575,220,'Curse',1,15.0,2000,1500,4,0,0,0);
 -- 218,1575,218,'Fear_Touch',0,7.0,3000,1500,4,0,0,0);
 -- 219,1575,219,'Terror_Touch',0,7.0,3000,1500,4,0,0,0);
@@ -1247,13 +1267,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 216,1575,216,'Grave_Reel',1,15.0,2000,1500,4,0,0,0);
 -- 1538,1575,217,'Perdition',0,10.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Taxim',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Taxim',LIST,SKILL); -- Skill Name
 -- 222,1576,222,'Hell_Slash',0,7.0,2000,1500,4,0,0,0);
 -- 223,1576,223,'Horror_Cloud',0,7.0,2000,1500,4,0,0,0);
 -- 228,1576,228,'Black_Cloud',1,15.0,2000,1500,4,0,0,0);
 -- 229,1576,229,'Blood_Saber',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Vouivre',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Vouivre',LIST,SKILL); -- Skill Name
 -- 566,1578,494,'Chaos_Breath',4,15.0,2000,1500,4,0,0,0);
 -- 563,1578,491,'Blizzard_Breath',4,15.0,2000,1500,4,0,0,0);
 -- 564,1578,492,'Thunder_Breath',4,15.0,2000,1500,4,0,0,0);
@@ -1262,13 +1282,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 558,1578,486,'Deadly_Drive_Custom',0,7.0,2000,1500,4,0,0,0);
 -- 562,1578,490,'Tail_Crush',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Unut',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Unut',LIST,SKILL); -- Skill Name
 -- 1,1579,1,'Foot_Kick',0,7.0,2000,1500,4,0,0,0);
 -- 2,1579,2,'Dust_Cloud',4,10.0,2000,1500,4,0,0,0);
 -- 3,1579,3,'Whirl_Claws',1,5.0,2000,1500,4,0,0,0);
 -- 67,1579,37,'Wild_Carrot',0,20.0,2000,1500,1,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Viscount_Morax',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Viscount_Morax',LIST,SKILL); -- Skill Name
 -- 303,1580,303,'Soul_Drain',0,7.0,2000,1500,4,0,0,0);
 -- 304,1580,304,'Hecatomb_Wave',4,10.0,2000,2000,4,0,0,0);
 -- 307,1580,307,'Demonic_Howl',1,10.0,2000,1500,4,0,0,0);
@@ -1276,12 +1296,12 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 2116,1580,307,'Hellborn_Yawp',4,10.0,2000,1500,4,0,0,0);
 -- 893,1580,313,'Quadrastrike_Custom',0,7.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Friar_Rush',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Friar_Rush',LIST,SKILL); -- Skill Name
 -- 254,1581,254,'Berserk',0,7.0,2000,1500,1,0,0,0);
 -- 338,1581,880,'Vulcanian_Impact',0,7.0,2000,1500,4,0,0,0);
 -- 340,1581,882,'Hellstorm',1,15.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Bluberry_Bulge',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Bluberry_Bulge',LIST,SKILL); -- Skill Name
 -- 175,1582,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
 -- 176,1582,176,'Fluid_Toss',0,15.0,2000,1000,4,0,0,0);
 -- 177,1582,177,'Digest',0,7.0,2000,1000,4,0,0,0);
@@ -1289,7 +1309,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 -- 2296,1582,175,'Epoxy_Spread',1,10.0,2000,1500,4,0,0,0);
 -- 2295,1582,175,'Mucus_Spread',1,10.0,2000,1500,4,0,0,0);
 
--- INSERT INTO `mob_skill_lists` VALUES ('Triarius_XXV',LIST,SKILL); 
+-- INSERT INTO `mob_skill_lists` VALUES ('Triarius_XXV',LIST,SKILL); -- Skill Name
 -- 535,1583,463,'Magnetite_Cloud',4,10.0,2000,1500,4,0,0,0);
 -- 536,1583,464,'Sandstorm',1,10.0,2000,1500,4,0,0,0);
 -- 540,1583,468,'Jamming_Wave',1,16.0,2000,1500,4,0,0,0);

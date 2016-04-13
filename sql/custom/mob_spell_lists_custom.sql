@@ -629,7 +629,21 @@ INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 503, 1, 255); -- Impact
 
--- list IDs 447 - 587 available for use! please use'em!
+-- INSERT INTO `mob_spell_lists` VALUES ('Iratham', 447, SpellID, MinLV, MaxLV); -- Spell Name
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 255, 1, 255); -- Break
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 274, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 365, 1, 255); -- Breakga
+-- INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 449, SpellID, MinLV, MaxLV); -- Spell Name
+-- INSERT INTO `mob_spell_lists` VALUES ('Sippoy', 450, SpellID, MinLV, MaxLV); -- Spell Name
+-- INSERT INTO `mob_spell_lists` VALUES ('Rani', 451, SpellID, MinLV, MaxLV); -- Spell Name
+-- INSERT INTO `mob_spell_lists` VALUES ('Raja', 452, SpellID, MinLV, MaxLV); -- Spell Name
+
+-- list IDs 453 - 587 available for use! please use'em!
 -- INSERT INTO `mob_spell_lists` VALUES ('spell_list_name', spell_list_id, spell_id, min_level, max_level);
 
 INSERT INTO `mob_spell_lists` VALUES ('Turul', 588, 157, 1, 255); -- Aero 4
