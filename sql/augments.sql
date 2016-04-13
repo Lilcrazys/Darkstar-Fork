@@ -115,12 +115,12 @@ INSERT INTO `augments` VALUES ('76', '0', '0', '0', '0'); -- DMG+33 Unsure if ma
 INSERT INTO `augments` VALUES ('77', '0', '0', '0', '0'); -- Delay -33% Unsure if main hand or off hand so leaving values blank for now, goes up in increments of 1 after the initial 33.
 
 -- 78 to 95 currently unused. Leave at zero.
-INSERT INTO `augments` VALUES ('78', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('79', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('80', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('81', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('82', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('83', '0', '0', '0', '0');
+INSERT INTO `augments` VALUES ('78', '0', '0', '0', '0'); -- HP+2 (count by 2)
+INSERT INTO `augments` VALUES ('79', '0', '0', '0', '0'); -- HP+3 (count by 3)
+INSERT INTO `augments` VALUES ('80', '0', '0', '0', '0'); -- Mag. Acc+1/Mag. Dmg+1
+INSERT INTO `augments` VALUES ('81', '0', '0', '0', '0'); -- Eva+1/Mag Eva$+d (corrupted)
+INSERT INTO `augments` VALUES ('82', '0', '0', '0', '0'); -- MP+2 (count by 2)
+INSERT INTO `augments` VALUES ('83', '0', '0', '0', '0'); -- MP+3 (count by 3)
 INSERT INTO `augments` VALUES ('84', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('85', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('86', '0', '0', '0', '0');
@@ -2130,23 +2130,23 @@ INSERT INTO `augments` VALUES ('1806', '0', '9', '1', '1'); -- Cont.
 INSERT INTO `augments` VALUES ('1806', '0', '10', '1', '1'); -- Cont.
 
 -- 1807 to 2046 currently unused. Leave at zero.
-INSERT INTO `augments` VALUES ('1807', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1808', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1809', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1810', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1811', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1812', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1813', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1814', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1815', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1816', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1817', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1818', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1819', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1820', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1821', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1822', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('1823', '0', '0', '0', '0');
+INSERT INTO `augments` VALUES ('1807', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1808', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1809', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1810', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1811', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1812', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1813', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1814', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1815', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1816', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1817', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1818', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1819', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1820', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1821', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1822', '0', '0', '0', '0'); -- Pet: (thats all it says)
+INSERT INTO `augments` VALUES ('1823', '0', '0', '0', '0'); -- Pet: (thats all it says)
 INSERT INTO `augments` VALUES ('1824', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('1825', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('1826', '0', '0', '0', '0');
@@ -2399,7 +2399,30 @@ INSERT INTO `augments` VALUES ('2042', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('2043', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('2044', '0', '0', '0', '0');
 INSERT INTO `augments` VALUES ('2045', '0', '0', '0', '0');
-INSERT INTO `augments` VALUES ('2046', '0', '0', '0', '0');
--- End unused block
-
+-- --------------------------------------------------------
+-- Custom!
+-- Pair with Augment 2047 !!
+-- --------------------------------------------------------
+-- Aug 2046 April fools event 2016 reward (granted with aug power of 2, so double what you see here):
+INSERT INTO `augments` VALUES ('2046', '0', '4093', '5', '0'); -- (Hidden) Resist Doom +5
+INSERT INTO `augments` VALUES ('2046', '0', '4092', '6', '0'); -- (Hidden) Resist Terror +6
+INSERT INTO `augments` VALUES ('2046', '0', '255', '2', '0');  -- (Hidden) Resist Death+2
+INSERT INTO `augments` VALUES ('2046', '0', '254', '2', '0');  -- (Hidden) Resist Lullaby+2
+INSERT INTO `augments` VALUES ('2046', '0', '253', '2', '0');  -- (Hidden) Resist Amnesia+2
+INSERT INTO `augments` VALUES ('2046', '0', '252', '2', '0');  -- (Hidden) Resist Charm+2
+INSERT INTO `augments` VALUES ('2046', '0', '251', '2', '0');  -- (Hidden) Resist Slow+2
+INSERT INTO `augments` VALUES ('2046', '0', '250', '2', '0');  -- (Hidden) Resist Gravity+2
+INSERT INTO `augments` VALUES ('2046', '0', '249', '2', '0');  -- (Hidden) Resist Bind+2
+INSERT INTO `augments` VALUES ('2046', '0', '248', '2', '0');  -- (Hidden) Resist Stun+2
+INSERT INTO `augments` VALUES ('2046', '0', '247', '2', '0');  -- (Hidden) Resist Curse+2
+INSERT INTO `augments` VALUES ('2046', '0', '246', '2', '0');  -- (Hidden) Resist Virus+2
+INSERT INTO `augments` VALUES ('2046', '0', '245', '2', '0');  -- (Hidden) Resist Petrify+2
+INSERT INTO `augments` VALUES ('2046', '0', '244', '2', '0');  -- (Hidden) Resist Silence+2
+INSERT INTO `augments` VALUES ('2046', '0', '243', '2', '0');  -- (Hidden) Resist Blind+2
+INSERT INTO `augments` VALUES ('2046', '0', '242', '2', '0');  -- (Hidden) Resist Paralyze+2
+INSERT INTO `augments` VALUES ('2046', '0', '241', '2', '0');  -- (Hidden) Resist Poison+2
+INSERT INTO `augments` VALUES ('2046', '0', '240', '2', '0');  -- (Hidden) Resist Sleep+2
+INSERT INTO `augments` VALUES ('2046', '0', '31', '2', '1');   -- (Hidden) Pet: Mag. Evasion+2
+-- End Custom block
+-- --------------------------------------------------------
 INSERT INTO `augments` VALUES ('2047', '0', '0', '0', '0'); -- ??? (it literally just says "???")
