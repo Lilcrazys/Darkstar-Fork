@@ -2507,9 +2507,9 @@ INSERT INTO `mob_skills` VALUES (2462,1904,'Custom_Raksha_stance',1,18.0,2000,10
 INSERT INTO `mob_skills` VALUES (2463,1905,'Custom_Raksha_Judgement',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2464,1906,'Custom_Raksha_Illusion',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2465,1907,'Custom_Raksha_Vengeance',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2466,1909,'Harpeia_Melee_Stomp',0,7.0,2000,0,2000,0,4,16,0,0); -- Harpeia Melee Specials
-INSERT INTO `mob_skills` VALUES (2467,1910,'Harpeia_Melee_Slash',0,7.0,2000,0,2000,0,4,16,0,0); -- Harpeia Melee Specials
-INSERT INTO `mob_skills` VALUES (2468,1911,'Harpeia_Melee_Fly',0,7.0,2000,0,2000,0,4,16,0,0); -- Harpeia Melee Specials
+INSERT INTO `mob_skills` VALUES (2466,1909,'Harpeia_Melee_Stomp',0,7.0,2000,0,4,16,0,0); -- Harpeia Melee Specials
+INSERT INTO `mob_skills` VALUES (2467,1910,'Harpeia_Melee_Slash',0,7.0,2000,0,4,16,0,0); -- Harpeia Melee Specials
+INSERT INTO `mob_skills` VALUES (2468,1911,'Harpeia_Melee_Fly',0,7.0,2000,0,4,16,0,0); -- Harpeia Melee Specials
 INSERT INTO `mob_skills` VALUES (2469,1912,'Custom_Rending_Talons',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2470,1913,'Custom_Shrieking_Gale',1,15.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2471,1914,'Custom_Wings_of_Woe',1,15.0,2000,1000,4,0,0,0); -- Has alt ID
