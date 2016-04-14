@@ -15,15 +15,30 @@ require("scripts/globals/abyssea");
 
 function onMobInitialize(mob)
     -- addMod
-    mob:addMod(MOD_ACC,50);
-    mob:addMod(MOD_ATT,200);
-    mob:addMod(MOD_DEF,200);
-    mob:addMod(MOD_MDEF,200);
+    mob:addMod(MOD_MOVE,12);
+    mob:addMod(MOD_ACC,100);
+    mob:addMod(MOD_ATT,220);
+    mob:addMod(MOD_DEF,220);
+    mob:addMod(MOD_MDEF,220);
     mob:addMod(MOD_MATT,40);
-    mob:addMod(MOD_MACC,250);
+    mob:addMod(MOD_MACC,333);
     mob:addMod(MOD_REGEN,50);
     mob:addMod(MOD_REGAIN,10);
     mob:addMod(MOD_FASTCAST,33);
+    mob:addMod(MOD_HASTE_ABILITY,25);
+    mob:addMod(MOD_FIRERES,20);
+    mob:addMod(MOD_ICERES,20);
+    mob:addMod(MOD_WINDRES,25);
+    mob:addMod(MOD_EARTHRES,25);
+    mob:addMod(MOD_THUNDERRES,25);
+    mob:addMod(MOD_EARTHDEF,20);
+    mob:addMod(MOD_THUNDERDEF,20);
+    mob:addMod(MOD_EARTHACC,33);
+    mob:addMod(MOD_STUNRES,50);
+    mob:addMod(MOD_TERRORRES,50);
+
+    -- setMobMod
+    mob:setMobMod(MOBMOD_HP_STANDBACK,-1);
 end;
 
 -----------------------------------
