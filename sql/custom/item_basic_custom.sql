@@ -154,6 +154,8 @@ REPLACE INTO `item_basic` VALUES (21350,0,'wingcutter_+1','wingcutter_+1',1,6356
 INSERT INTO `item_basic` VALUES (21353,0,'happo_shuriken','happo_shuriken',99,2048,15,0,1);
 INSERT INTO `item_basic` VALUES (21354,0,'happo_shuriken_+1','happo_shuriken_+1',99,2048,15,0,1);
 INSERT INTO `item_basic` VALUES (21358,0,'plumose_sachet','plumose_sachet',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21359,0,'quartz_tathlum_+1','quartz_tathlum_+1',1,2048,15,0,0);
+INSERT INTO `item_basic` VALUES (21366,0,'floestone','floestone',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (21371,0,'ginsen','ginsen',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (21373,0,'sihirik','sihirik',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (21376,0,'inlamvuyeso','inlamvuyeso',1,63552,0,1,0);
@@ -161,8 +163,10 @@ INSERT INTO `item_basic` VALUES (21378,0,'yetshila','yetshila',1,2048,15,1,0);
 INSERT INTO `item_basic` VALUES (21379,0,'yetshila_+1','yetshila_+1',1,2048,15,1,0);
 INSERT INTO `item_basic` VALUES (21400,0,'blurred_harp','blurred_harp',1,2048,14,0,1);
 INSERT INTO `item_basic` VALUES (21401,0,'blurred_harp_+1','blurred_harp_+1',1,2048,14,0,1);
+INSERT INTO `item_basic` VALUES (21403,0,'damani_horn_+1','damani_horn_+1',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (21405,0,'eminent_flute','eminent_flute',1,63552,16,1,0);
 INSERT INTO `item_basic` VALUES (21419,0,'rigorous+_grip_+1','rigorous+_grip_+1',1,63552,0,1,0);
+INSERT INTO `item_basic` VALUES (21420,0,'benthos_grip','benthos_grip',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (21425,0,'lentus_grip','lentus_grip',1,63552,0,0,0);
 INSERT INTO `item_basic` VALUES (21480,0,'blurred_crossbow','blurred_crossbow',1,2048,13,0,1);
 INSERT INTO `item_basic` VALUES (21481,0,'blurred_crossbow','blurred_cross._+1',1,2048,13,0,1);
@@ -316,6 +320,7 @@ INSERT INTO `item_basic` VALUES (28500,0,'upsurge_earring','upsurge_earring',1,6
 INSERT INTO `item_basic` VALUES (28501,0,'allegro_earring','allegro_earring',1,60480,0,1,0);
 INSERT INTO `item_basic` VALUES (28502,0,'impregnable_earring','impregnable_earring',1,60480,0,1,0);
 INSERT INTO `item_basic` VALUES (28504,0,'spellbreaker_earring','spellbreaker_earring',1,60480,0,1,0);
+INSERT INTO `item_basic` VALUES (28505,0,'domes_earring','domes_earring',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28507,0,'gwati_earring','gwati_earring',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28538,0,'lebeche_ring','lebeche_ring',1,63552,0,1,0);
 INSERT INTO `item_basic` VALUES (28542,0,'rhodium_ring','rhodium_ring',1,2144,25,1,0);
@@ -328,6 +333,7 @@ INSERT INTO `item_basic` VALUES (28550,0,'vehemence_ring','vehemence_ring',1,604
 INSERT INTO `item_basic` VALUES (28551,0,'longshot_ring','longshot_ring',1,60480,0,1,0);
 INSERT INTO `item_basic` VALUES (28552,0,'fistmele_ring','fistmele_ring',1,60480,0,1,0);
 INSERT INTO `item_basic` VALUES (28553,0,'perception_ring','perception_ring',1,60480,0,1,0);
+INSERT INTO `item_basic` VALUES (28565,0,'zanhi_ring','zahni_ring',1,60480,0,1,0);
 INSERT INTO `item_basic` VALUES (28606,0,'aput_mantle','aput_mantle',1,2048,26,1,0);
 INSERT INTO `item_basic` VALUES (28607,0,'aput_mantle_+1','aput_mantle_+1',1,2048,26,1,0);
 INSERT INTO `item_basic` VALUES (28656,0,'eminent_shield','eminent_shield',1,63552,13,1,0);
