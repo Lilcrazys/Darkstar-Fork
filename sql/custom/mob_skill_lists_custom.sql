@@ -1029,7 +1029,14 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2294); -- Dissolve
 INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2295); -- Mucus_Spread
 INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 
--- INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2310); -- Diabolic_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2311); -- Stygian_Cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2312); -- Deathly_Diminuendo
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2313); -- Hellish_Crescendo
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2314); -- Afflicting_Gaze
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2317); -- Shadow_wreck
 
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2311); -- Stygian_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2312); -- Deathly_diminuendo
@@ -1040,13 +1047,32 @@ INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2378); -- Interference
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2379); -- Dark_arrivisme
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2381); -- Besiegers_bane
 
--- INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2380); -- Banneret_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2310); -- Diabolic_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2314); -- Afflicting_Gaze
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2378); -- Interference
 
--- INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2311); -- Stygian_cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2313); -- Hellish_crescendo
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2315); -- Stygian_sphere
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2316); -- Malign_invocation
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2378); -- Interference
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2379); -- Dark_arrivisme
 
--- INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2444); -- Enthrall
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2314); -- Afflicting_Gaze 
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2310); -- Diabolic_Claw 
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2378); -- Interference
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2311); -- Stygian_Cyclone 
 
--- INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2311); -- Stygian_Cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2436); -- Royal_Decree
 
 -- Begin temp!
 INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4214,2360); -- Iron_Giant_Melee_Vertical
