@@ -1,105 +1,73 @@
 -----------------------------------
 -- Area: The Garden of Ru'Hmet
--- MOB:  Aw'ghrah
+--  MOB: Kf'ghrah WHM
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
+
+-----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize
+    -- addMod
+    mob:addMod(MOD_REFRESH, 250);
+    mob:addMod(MOD_UFASTCAST, 66);
+    mob:addMod(MOD_MACC,120);
+    mob:addMod(MOD_MATT,120);
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_ATT,75);
+end;
+
 
 -----------------------------------
 -- OnMobSpawn Action
 -- Set core Skin and mob elemental bonus
--- Set to non aggro.
 -----------------------------------
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 
 function onMobSpawn(mob)
-    mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 75);
-    mob:setMod(MOD_MACC,925);
-    mob:setMod(MOD_MATT,100);
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_DEF,50);
-    mob:addMod(MOD_ATT,75);
-
     mob:AnimationSub(0);
-    mob:unsetAggroFlag(8);
     mob:setLocalVar("roamTime", os.time());
-    mob:setLocalVar("form2",math.random(1,3));
-    local skin = math.random(1161,1168);
-    mob:setModelId(skin);
-    if (skin == 1161) then -- Fire
-        mob:addMod(MOD_ICERES, 27);
-        mob:addMod(MOD_WATERRES, -27);
-    elseif (skin == 1164) then --Earth
-        mob:addMod(MOD_THUNDERRES, 27);
-        mob:addMod(MOD_WINDRES, -27);
-    elseif (skin == 1162) then -- Water
-        mob:addMod(MOD_FIRERES, 27);
-        mob:addMod(MOD_THUNDERRES, -27);
-    elseif (skin == 1163) then -- Wind
-        mob:addMod(MOD_EARTHRES, 27);
-        mob:addMod(MOD_ICERES, -27);
-    elseif (skin == 1166) then --Ice
-        mob:addMod(MOD_WINDRES, 27);
-        mob:addMod(MOD_FIRERES, -27);
-    elseif (skin == 1165) then --Lightning
-        mob:addMod(MOD_WATERRES, 27);
-        mob:addMod(MOD_EARTHRES, -27);
-    elseif (skin == 1167) then --Light
-        mob:addMod(MOD_LIGHTRES, 27);
-        mob:addMod(MOD_DARKRES, -27);
-    elseif (skin == 1168) then --Dark
-        mob:addMod(MOD_DARKRES, 27);
-        mob:addMod(MOD_LIGHTRES, -27);
-    end
+    mob:setModelId(1168); -- Dark
 end;
 
 function onMobEngage(mob)
 end;
 -----------------------------------
 -- onMobRoam Action
--- Autochange Aggro and Form
+-- AutochangeForm
 -----------------------------------
 
 function onMobRoam(mob)
     local roamTime = mob:getLocalVar("roamTime");
-    if (mob:AnimationSub() == 0 and os.time() - roamTime > 60) then
-        mob:AnimationSub(mob:getLocalVar("form2"));
+    local roamForm;
+    if (os.time() - roamTime > 60) then
+        roamForm = math.random(1,3) -- forms 2 and 3 are spider and bird; can change forms at will
+        if (roamForm == 1) then
+            roamForm = 0; -- We don't want form 1 as that's humanoid - make it 0 for ball
+        end;
+        mob:AnimationSub(roamForm);
         mob:setLocalVar("roamTime", os.time());
-        mob:setAggroFlag(8);
-    elseif (mob:AnimationSub() == mob:getLocalVar("form2") and os.time() - roamTime > 60) then
-        mob:AnimationSub(0);
-        mob:unsetAggroFlag(8);
-        mob:setLocalVar("roamTime", os.time());
-    end
+    end;
 end;
 
 -----------------------------------
 -- OnMobFight Action
--- Set ball form and secondary form
+-- Free form change between ball, spider, and bird.
 -----------------------------------
 function onMobFight(mob,target)
-    local meltdown = 0;
-
     local changeTime = mob:getLocalVar("changeTime");
+    local battleForm;
 
-    if (mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > 60) then
-        mob:AnimationSub(mob:getLocalVar("form2"));
+    if (mob:getBattleTime() - changeTime > 60) then
+        battleForm = math.random(1,3) -- same deal as above
+        if (battleForm == 1) then
+            battleForm = 0;
+        end;
+        mob:AnimationSub(battleForm);
         mob:setLocalVar("changeTime", mob:getBattleTime());
-    elseif (mob:AnimationSub() == mob:getLocalVar("form2") and mob:getBattleTime() - changeTime > 60) then
-        mob:AnimationSub(0);
-        mob:setLocalVar("changeTime", mob:getBattleTime());
-        meltdown = math.random(1,100);
-        if (meltdown >=95) then
-        mob:useMobAbility(1186); -- Use Meltdown
-        end
-    end
+    end;
 end;
 
 function onMobDeath(mob)
