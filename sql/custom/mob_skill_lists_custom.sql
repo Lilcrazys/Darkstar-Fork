@@ -1128,6 +1128,31 @@ INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2365); -- Incin
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2366); -- Arm_Cannon
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2368); -- Scapula_Beam
 
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2394); -- Shinryu0_Right
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2395); -- Shinryu0_Left
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2396); -- Shinryu0_Right_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2397); -- Shinryu0_Left_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2398); -- Shinryu_Attack_Tail_1
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2399); -- Shinryu_Attack_Tail_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2400); -- Shinryu0_Tail_Stun
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2408); -- Cosmic_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2409); -- Cataclysmic_Vortex
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2411); -- Mighty_Guard
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2412); -- Atomic_ray
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2414); -- Protostar
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2401); -- Shinryu1_Right
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2402); -- Shinryu1_Left
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2403); -- Shinryu1_Right_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2404); -- Shinryu1_Left_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2405); -- Shinryu_Attack_Tail_1
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2406); -- Shinryu_Attack_Tail_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2407); -- Shinryu1_Tail_Stun
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2408); -- Cosmic_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2409); -- Cataclysmic_Vortex
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2410); -- Gyre_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2413); -- Darkmatter
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2415); -- Supernova
+
 -- INSERT INTO `mob_skill_lists` VALUES ('Stroper Chyme',LIST,SKILL); -- Skill Name
 -- 175,1587,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
 -- 176,1587,176,'Fluid_Toss',0,15.0,2000,1000,4,0,0,0);

@@ -2435,28 +2435,28 @@ INSERT INTO `mob_skills` VALUES (2389,2389,'Custom_Mud_Stream',1,12.0,2000,1500,
 -- INSERT INTO `mob_skills` VALUES (2391,2391,'Melancholy_Jig',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2392,2392,'Forlorn_Impact',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2393,2393,'Essence_Jack',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2394,1861,'Shinryu_Attack_Right',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2395,1862,'Shinryu_Attack_Left',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2396,1863,'Shinryu_Attack_Right_2',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2397,1864,'Shinryu_Attack_Left_2',0,7.0,3000,2000,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (2394,1861,'Shinryu_Attack_Right',0,7.0,3000,0,4,16,0,3);
+INSERT INTO `mob_skills` VALUES (2395,1862,'Shinryu_Attack_Left',0,7.0,3000,0,4,16,0,3);
+INSERT INTO `mob_skills` VALUES (2396,1863,'Shinryu_Attack_Right_2',1,7.0,3000,0,4,16,0,0);
+INSERT INTO `mob_skills` VALUES (2397,1864,'Shinryu_Attack_Left_2',1,7.0,3000,0,4,16,0,0);
 INSERT INTO `mob_skills` VALUES (2398,1865,'Shinryu_Attack_Tail_1',0,7.0,3000,2000,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (2399,1866,'Shinryu_Attack_Tail_2',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2400,1867,'Shinryu_Attack_Tail_Stun',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2401,1873,'Shinryu_Attack_Right',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2402,1874,'Shinryu_Attack_Left',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2403,1875,'Shinryu_Attack_Right_2',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2404,1876,'Shinryu_Attack_Left_2',0,7.0,3000,2000,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (2400,1867,'Shinryu_Attack_Tail_Stun',0,7.0,3000,0,4,16,0,0);
+INSERT INTO `mob_skills` VALUES (2401,1873,'Shinryu_Attack_Right',0,7.0,3000,0,4,16,0,3);
+INSERT INTO `mob_skills` VALUES (2402,1874,'Shinryu_Attack_Left',0,7.0,3000,0,4,16,0,3);
+INSERT INTO `mob_skills` VALUES (2403,1875,'Shinryu_Attack_Right_2',1,7.0,3000,0,4,16,0,0);
+INSERT INTO `mob_skills` VALUES (2404,1876,'Shinryu_Attack_Left_2',1,7.0,3000,0,4,16,0,0);
 INSERT INTO `mob_skills` VALUES (2405,1877,'Shinryu_Attack_Tail_1',0,7.0,3000,2000,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (2406,1878,'Shinryu_Attack_Tail_2',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2407,1879,'Shinryu_Attack_Tail_Stun',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2408,1868,'Cosmic_Breath',4,15.0,4000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2409,1869,'Cataclysmic_Vortex',1,15.0,4000,5000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2410,1882,'Gyre_Charge',1,15.0,4000,2000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2411,1870,'Mighty_Guard',0,7.0,3000,2000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2412,1871,'Atomic_ray',1,20.0,4000,1500,4,0,0,0); -- 66% and below
-INSERT INTO `mob_skills` VALUES (2413,1883,'Darkmatter',1,20.0,4000,1500,4,0,0,0); -- 66% and below
-INSERT INTO `mob_skills` VALUES (2414,1872,'Protostar',1,20.0,5000,3500,4,0,0,0); -- 33% and below
-INSERT INTO `mob_skills` VALUES (2415,1884,'Supernova',1,20.0,5000,3500,4,0,0,0); -- 33% and below
+INSERT INTO `mob_skills` VALUES (2407,1879,'Shinryu_Attack_Tail_Stun',0,7.0,3000,0,4,16,0,0);
+INSERT INTO `mob_skills` VALUES (2408,1868,'Custom_Cosmic_Breath',4,15.0,4000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2409,1869,'Custom_Cataclysmic_Vortex',1,15.0,4000,5000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2410,1882,'Custom_Gyre_Charge',1,15.0,4000,2000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2411,1870,'Custom_Mighty_Guard',0,7.0,3000,2000,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (2412,1871,'Custom_Atomic_Ray',1,20.0,4000,1500,4,0,0,0); -- 66% and below
+INSERT INTO `mob_skills` VALUES (2413,1883,'Custom_Darkmatter',1,20.0,4000,1500,4,0,0,0); -- 66% and below
+INSERT INTO `mob_skills` VALUES (2414,1872,'Custom_Protostar',1,20.0,5000,3500,4,0,0,0); -- 33% and below
+INSERT INTO `mob_skills` VALUES (2415,1884,'Custom_Supernova',1,20.0,5000,3500,4,0,0,0); -- 33% and below
 -- INSERT INTO `mob_skills` VALUES (2416,2416,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2417,2417,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2418,2418,'.',0,7.0,2000,1500,4,0,0,0);
