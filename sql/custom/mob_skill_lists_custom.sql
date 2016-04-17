@@ -569,17 +569,17 @@ INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2520); -- Shah_Mat
 
 -- --------------------- Continue Here 
 
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,82); -- Power_Attack_Beetle
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,82); -- Power_Attack_Beetle -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,83); -- Freq_Field
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,84); -- Rhino_Attack
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,85); -- Rhino_Guard
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,84); -- Rhino_Attack -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,85); -- Rhino_Guard -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,2567); -- Rhinowrecker
 
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1939); -- Spring_Breeze
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1940); -- Summer_Breeze
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1941); -- Autumn_Breeze
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1942); -- Winter_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1943); -- Cyclonic_Turmoil
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1943); -- Cyclonic_Turmoil -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2262); -- Norn_Arrows
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2566); -- Eldritch_Wind
 
@@ -596,9 +596,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1848); -- Crippling_Sl
 INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2255); -- Corpse_Breath
 INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2569); -- Louring_Skies
 
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,222); -- Hell_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,223); -- Horror_Cloud
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,229); -- Blood_Saber
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,222); -- Hell_Slash -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,223); -- Horror_Cloud -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,229); -- Blood_Saber -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,2568); -- Cloudscourge
 
 -- Begin temp!
@@ -652,6 +652,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2545); -- Rancid_Reflux
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2546); -- Crowning_Flatus
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2547); -- Slimy_Proposal
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2548); -- Just_Desserts
+
+-- -------------------
 
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1908); -- Viscid_Emission
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1910); -- Floral_Bouquet
