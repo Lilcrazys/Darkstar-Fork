@@ -569,17 +569,17 @@ INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2520); -- Shah_Mat
 
 -- --------------------- Continue Here 
 
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,82); -- Power_Attack_Beetle
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,82); -- Power_Attack_Beetle -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,83); -- Freq_Field
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,84); -- Rhino_Attack
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,85); -- Rhino_Guard
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,84); -- Rhino_Attack -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,85); -- Rhino_Guard -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,2567); -- Rhinowrecker
 
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1939); -- Spring_Breeze
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1940); -- Summer_Breeze
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1941); -- Autumn_Breeze
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1942); -- Winter_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1943); -- Cyclonic_Turmoil
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1943); -- Cyclonic_Turmoil -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2262); -- Norn_Arrows
 INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2566); -- Eldritch_Wind
 
@@ -596,9 +596,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1848); -- Crippling_Sl
 INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2255); -- Corpse_Breath
 INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2569); -- Louring_Skies
 
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,222); -- Hell_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,223); -- Horror_Cloud
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,229); -- Blood_Saber
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,222); -- Hell_Slash -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,223); -- Horror_Cloud -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,229); -- Blood_Saber -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,2568); -- Cloudscourge
 
 -- Begin temp!
@@ -652,6 +652,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2545); -- Rancid_Reflux
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2546); -- Crowning_Flatus
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2547); -- Slimy_Proposal
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2548); -- Just_Desserts
+
+-- -------------------
 
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1908); -- Viscid_Emission
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1910); -- Floral_Bouquet
@@ -1027,7 +1029,14 @@ INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2294); -- Dissolve
 INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2295); -- Mucus_Spread
 INSERT INTO `mob_skill_lists` VALUES ('Fistule',4207,2296); -- Epoxy_Spread
 
--- INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2310); -- Diabolic_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2311); -- Stygian_Cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2312); -- Deathly_Diminuendo
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2313); -- Hellish_Crescendo
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2314); -- Afflicting_Gaze
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Iratham',4208,2317); -- Shadow_wreck
 
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2311); -- Stygian_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2312); -- Deathly_diminuendo
@@ -1038,13 +1047,32 @@ INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2378); -- Interference
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2379); -- Dark_arrivisme
 INSERT INTO `mob_skill_lists` VALUES ('Yaanei',4209,2381); -- Besiegers_bane
 
--- INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2380); -- Banneret_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2310); -- Diabolic_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2314); -- Afflicting_Gaze
+INSERT INTO `mob_skill_lists` VALUES ('Kutharei',4210,2378); -- Interference
 
--- INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2311); -- Stygian_cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2313); -- Hellish_crescendo
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2315); -- Stygian_sphere
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2316); -- Malign_invocation
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2378); -- Interference
+INSERT INTO `mob_skill_lists` VALUES ('Sippoy',4211,2379); -- Dark_arrivisme
 
--- INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2444); -- Enthrall
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2314); -- Afflicting_Gaze 
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2310); -- Diabolic_Claw 
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2378); -- Interference
+INSERT INTO `mob_skill_lists` VALUES ('Rani',4212,2311); -- Stygian_Cyclone 
 
--- INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,SKILL); -- Skill Name
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2311); -- Stygian_Cyclone
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2315); -- Stygian_Sphere
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2316); -- Malign_Invocation
+INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2436); -- Royal_Decree
 
 -- Begin temp!
 INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4214,2360); -- Iron_Giant_Melee_Vertical
@@ -1125,6 +1153,31 @@ INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2364); -- Seism
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2365); -- Incinerator
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2366); -- Arm_Cannon
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2368); -- Scapula_Beam
+
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2394); -- Shinryu0_Right
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2395); -- Shinryu0_Left
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2396); -- Shinryu0_Right_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2397); -- Shinryu0_Left_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2398); -- Shinryu_Attack_Tail_1
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2399); -- Shinryu_Attack_Tail_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2400); -- Shinryu0_Tail_Stun
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2408); -- Cosmic_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2409); -- Cataclysmic_Vortex
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2411); -- Mighty_Guard
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2412); -- Atomic_ray
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_Out',4222,2414); -- Protostar
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2401); -- Shinryu1_Right
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2402); -- Shinryu1_Left
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2403); -- Shinryu1_Right_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2404); -- Shinryu1_Left_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2405); -- Shinryu_Attack_Tail_1
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2406); -- Shinryu_Attack_Tail_2
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2407); -- Shinryu1_Tail_Stun
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2408); -- Cosmic_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2409); -- Cataclysmic_Vortex
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2410); -- Gyre_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2413); -- Darkmatter
+INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4222,2415); -- Supernova
 
 -- INSERT INTO `mob_skill_lists` VALUES ('Stroper Chyme',LIST,SKILL); -- Skill Name
 -- 175,1587,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
