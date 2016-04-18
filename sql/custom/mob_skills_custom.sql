@@ -419,7 +419,7 @@ INSERT INTO `mob_skills` VALUES (374,374,'Kick_Out',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (375,375,'Shock_Wave',4,7.0,2000,1500,4,0,0,2);
 INSERT INTO `mob_skills` VALUES (376,376,'Flame_Armor',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (377,354,'Howl',1,20.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (378,378,'Meteor',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (378,2256,'Meteor',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (379,379,'Burst',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (380,380,'Flame_Arrow',0,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (381,381,'Firebomb',4,9.5,2000,1500,4,0,0,0);
@@ -2371,7 +2371,7 @@ INSERT INTO `mob_skills` VALUES (2325,2325,'Pandoras_Gift',0,7.0,2000,1500,4,0,0
 -- INSERT INTO `mob_skills` VALUES (2327,2327,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2328,2328,'.',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2329,2329,'Custom_Testudo_Tremor',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2330,2330,'Custom_Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2330,2256,'Custom_Ecliptic_Meteor',1,30.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2331,2331,'Inspirit',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2332,2332,'Debonair_Rush',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2333,2333,'Iridal_Pierce',0,7.0,2000,1500,4,0,0,0);
@@ -2912,9 +2912,9 @@ INSERT INTO `mob_skills` VALUES (2846,2176,'Infaunal_Flop',1,18.0,2000,1000,4,0,
 -- INSERT INTO `mob_skills` VALUES (2868,2868,'Fighting_Stance_β',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2869,2869,'Fighting_Stance_γ',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2870,2870,'Fighting_Stance_δ',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2871,2871,'Frizz',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2872,2872,'#1336',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2873,2873,'#1337',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2871,2267,'Frizz',0,10.0,2000,1500,4,0,0,0); -- Basically a spell
+INSERT INTO `mob_skills` VALUES (2872,2268,'Astoltian_Slime_Hit',0,5.0,2000,0,4,0,0,0); -- Not a melee sub exactly
+INSERT INTO `mob_skills` VALUES (2873,2269,'Astoltian_Slime_Run',0,7.0,2000,0,4,0,0,0); -- Depops mob
 -- INSERT INTO `mob_skills` VALUES (2874,2874,'Barreling_Smash',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2875,2875,'Sweeping_Gouge',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2876,2876,'Zealous_Snort',0,7.0,2000,1500,4,0,0,0);
@@ -3309,8 +3309,8 @@ INSERT INTO `mob_skills` VALUES (3160,291,'Custom_Charged_Whisker',1,12.5,2000,1
 -- INSERT INTO `mob_skills` VALUES (3265,3265,'Gates_of_Hades',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3266,3266,'Magma_Hoplon',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3267,3267,'Bad_Breath',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (3268,3268,'Meteor',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (3269,3269,'Meteor',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skills` VALUES (3268,2256,'Meteor',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skills` VALUES (3269,2256,'Meteor',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3270,3270,'Thunderbolt',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3271,3271,'#1735',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3272,3272,'#1736',0,7.0,2000,1500,4,0,0,0);
