@@ -1,12 +1,11 @@
 ---------------------------------------------
--- Autumn Breeze
+-- Spring Breeze
 --
--- Description: Recovers HP. 
+-- Description: AoE TP-Reduction and Sleep effect.
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/utils");
 ---------------------------------------------
 
 function onMobSkillCheck(target, mob, skill)
@@ -14,15 +13,10 @@ function onMobSkillCheck(target, mob, skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local potency = skill:getParam();
+    local typeEffect = EFFECT_SLEEP_I;
 
-    if (potency == 0) then
-        potency = 15;
-    end
+    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 1, 0, 20));
+    target:setTP(target:getTP() * 0.5);
 
-    potency = potency - math.random(0, potency / 4);
-
-    skill:setMsg(MSG_SELF_HEAL);
-
-    return MobHealMove(mob, utils.clamp(mob:getMaxHP() * potency / 100),0,9999);
+    return typeEffect;
 end;

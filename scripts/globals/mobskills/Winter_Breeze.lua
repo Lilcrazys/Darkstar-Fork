@@ -1,12 +1,11 @@
 ---------------------------------------------
--- Autumn Breeze
+-- Winter Breeze
 --
--- Description: Recovers HP. 
+-- Description: AoE Dispel (Only removes one effect) and Stun
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/utils");
 ---------------------------------------------
 
 function onMobSkillCheck(target, mob, skill)
@@ -14,15 +13,13 @@ function onMobSkillCheck(target, mob, skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local potency = skill:getParam();
+    MobStatusEffectMove(mob, target, EFFECT_STUN, 1, 0, 2);
 
-    if (potency == 0) then
-        potency = 15;
+    if (target:dispelStatusEffect() == EFFECT_NONE) then
+        skill:setMsg(MSG_NO_EFFECT); -- no effect
+    else
+        skill:setMsg(MSG_DISAPPEAR);
     end
 
-    potency = potency - math.random(0, potency / 4);
-
-    skill:setMsg(MSG_SELF_HEAL);
-
-    return MobHealMove(mob, utils.clamp(mob:getMaxHP() * potency / 100),0,9999);
+    return typeEffect;
 end;

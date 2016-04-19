@@ -1,12 +1,11 @@
 ---------------------------------------------
--- Autumn Breeze
+-- Summer Breeze
 --
--- Description: Recovers HP. 
+-- Description: AoE Erase effect. (If nothing to Erase, it instead gains Regain.)
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/utils");
 ---------------------------------------------
 
 function onMobSkillCheck(target, mob, skill)
@@ -14,15 +13,13 @@ function onMobSkillCheck(target, mob, skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local potency = skill:getParam();
+    local erase = mob:eraseStatusEffect();
 
-    if (potency == 0) then
-        potency = 15;
+    if (mob:eraseStatusEffect() ~= EFFECT_NONE) then
+        skill:setMsg(MSG_DISAPPEAR);
+        return erase;
+    else
+        skill:setMsg(MobBuffMove(mob, EFFECT_REGAIN, 10, 3, 60));
+        return EFFECT_REGAIN;
     end
-
-    potency = potency - math.random(0, potency / 4);
-
-    skill:setMsg(MSG_SELF_HEAL);
-
-    return MobHealMove(mob, utils.clamp(mob:getMaxHP() * potency / 100),0,9999);
 end;
