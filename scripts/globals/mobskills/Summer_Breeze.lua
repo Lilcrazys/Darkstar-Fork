@@ -15,7 +15,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local erase = mob:eraseStatusEffect();
 
-    if (mob:eraseStatusEffect() ~= EFFECT_NONE) then
+    if (erase ~= EFFECT_NONE) then
         skill:setMsg(MSG_DISAPPEAR);
         return erase;
     else

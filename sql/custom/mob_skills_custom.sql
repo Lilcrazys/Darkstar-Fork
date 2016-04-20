@@ -1980,10 +1980,10 @@ INSERT INTO `mob_skills` VALUES (1935,1541,'Desiccation',0,10.0,2000,1000,4,0,0,
 INSERT INTO `mob_skills` VALUES (1936,1542,'Doomvoid',1,30.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1937,1581,'Zephyr_Arrow',0,15.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skills` VALUES (1938,1582,'Lethe_Arrows',0,15.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skills` VALUES (1939,1583,'Custom_Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (1940,1584,'Custom_Summer_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1939,1583,'Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1940,1584,'Summer_Breeze',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1941,1585,'Custom_Autumn_Breeze',1,15.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (1942,1586,'Custom_Winter_Breeze',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1942,1586,'Winter_Breeze',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1943,1587,'Cyclonic_Turmoil',1,15.0,2000,1500,4,0,0,5);
 INSERT INTO `mob_skills` VALUES (1944,1588,'Cyclonic_Torrent',1,15.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1945,1945,'Orcish_Counterstance',0,7.0,2000,1500,4,0,0,0);

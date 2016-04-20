@@ -13,13 +13,15 @@ function onMobSkillCheck(target, mob, skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+	local DISPEL = target:dispelStatusEffect();
+
     MobStatusEffectMove(mob, target, EFFECT_STUN, 1, 0, 2);
 
-    if (target:dispelStatusEffect() == EFFECT_NONE) then
+    if (DISPEL == EFFECT_NONE) then
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     else
         skill:setMsg(MSG_DISAPPEAR);
     end
 
-    return typeEffect;
+    return DISPEL;
 end;
