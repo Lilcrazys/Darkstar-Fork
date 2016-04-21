@@ -9,7 +9,7 @@ require("scripts/globals/magic");
 -- onMobInitialize Action
 -----------------------------------
 
-function onMobInitialize
+function onMobInitialize(mob)
     -- addMod
     mob:addMod(MOD_REFRESH, 250);
     mob:addMod(MOD_UFASTCAST, 66);
