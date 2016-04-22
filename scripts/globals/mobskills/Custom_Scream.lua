@@ -1,7 +1,7 @@
 ---------------------------------------------------
 -- Scream (Custom Version)
 -- 15' Reduces MND of players in area of effect.
--- Voidwatch NM version also does Terror
+-- Some NM versions also do Terror
 ---------------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
