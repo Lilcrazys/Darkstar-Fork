@@ -1,38 +1,28 @@
 ---------------------------------------------
---  Grim Reaper
+-- Fatal Scream
 --
---  Description: Deals damage in a threefold attack to targets in a fan-shaped area of effect. Additional effect: Doom
---  Type: Physical
---  Utsusemi/Blink absorb: 2-3 shadows
---  Range: Unknown cone
---  Notes: Used only by certain Lamia NMs (e.g. Lamia No.3). If they lost their staff, they'll use Hysteric Barrage instead.
+-- Description: AoE Doom.
+-- Fatal Scream radius increases asHP is lowered,
+-- reaching an approximate maximum of 20 yalms. (not implemented)
 ---------------------------------------------
-
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
-function onMobSkillCheck(target,mob,skill)
+function onMobSkillCheck(target, mob, skill)
+    -- Retail doesn't seem to have this HP check
     if (mob:getHPP() <= 50) then
-    	return 0;
-    else 
+        return 0;
+    else
         return 1;
-    end 	
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_DOOM;
+    local typeEffect = EFFECT_DOOM;
 
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 0, 10));
+    skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 30));
 
-
-	local numhits = 1;
-	local accmod = 1;
-	local dmgmod = 1;
-	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,info.hitslanded);
-	target:delHP(dmg);
-
-	return dmg;
+    return typeEffect;
 end;

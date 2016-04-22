@@ -1,12 +1,11 @@
 ---------------------------------------------------
--- Scream
+-- Scream (Custom Version)
 -- 15' Reduces MND of players in area of effect.
+-- Voidwatch NM version also does Terror
 ---------------------------------------------------
-
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -14,8 +13,17 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_MND_DOWN;
-    skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 10, 3, 120));
+    if (mob:getPool() == 2859 or mob:getPool() == 4554 or mob:getPool() == 9805) then
+        -- Nightmare Mandragora, Chloris, Pancimanci
+        MobStatusEffectMove(mob, target, EFFECT_MND_DOWN, 20, 3, 120);
+        skill:setMsg(MobStatusEffectMove(mob, target, EFFECT_TERROR, 10, 0, 30));
 
-    return typeEffect;
+        return EFFECT_TERROR;
+    else
+        -- DSP version
+        local typeEffect = EFFECT_MND_DOWN;
+        skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, 10, 3, 120));
+
+        return typeEffect;
+    end
 end;
