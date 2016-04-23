@@ -1,37 +1,37 @@
 -----------------------------------------
 -- Spell: Dream Flower
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+
+-----------------------------------------
+-- onMagicCastingCheck
+-----------------------------------------
+
+function onMagicCastingCheck(caster,target,spell)
+    return 0;
+end;
 
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
-function onMagicCastingCheck(caster,target,spell)
-	return 0;
-end;
-
 function onSpellCast(caster,target,spell)
-	local duration = 120;
-	local bonus = AffinityBonus(caster, spell:getElement());
-	local pINT = caster:getStat(MOD_INT);
-	local mINT = target:getStat(MOD_INT);
-	local dINT = (pINT - mINT);
-	local resm = applyResistance(caster,spell,target,dINT,BLUE_SKILL,bonus);
-	if (resm < 0.5) then
-		spell:setMsg(85);--resist message
-		return EFFECT_SLEEP_II;
-	end
+    local typeEffect = EFFECT_SLEEP_II;
+    local dINT = (caster:getStat(MOD_INT) - target:getStat(MOD_INT));
+    local resist = applyResistanceEffect(caster,spell,target,dINT,BLUE_SKILL,0,typeEffect);
+    local duration = 120 * resist;
 
-	duration = duration * resm;
+    if (resist > 0.5) then
+        if (target:addStatusEffect(typeEffect,1,0,duration)) then
+            spell:setMsg(236); -- Landed it.
+        else
+            spell:setMsg(75); -- Already slept
+        end
+    else
+        spell:setMsg(85); -- Resisted
+    end;
 
-	if (target:addStatusEffect(EFFECT_SLEEP_II,1,0,duration)) then
-		spell:setMsg(236);
-	else
-		spell:setMsg(75);
-	end
-
-	return EFFECT_SLEEP_II;
+    return typeEffect;
 end;
