@@ -2594,7 +2594,7 @@ namespace luautils
                     lua_getglobal(LuaHandle, "onMobDeath");
                     if (lua_isnil(LuaHandle, -1))
                     {
-                        ShowError("luautils::onMobDeath: undefined procedure onMobDeath\n");
+                        ShowError("luautils::onMobDeath: undefined procedure onMobDeath (mob: %s)\n", PMob->GetName());
                         lua_pop(LuaHandle, 1);
                         return;
                     }
@@ -2649,7 +2649,7 @@ namespace luautils
             lua_getglobal(LuaHandle, "onMobDeath");
             if (lua_isnil(LuaHandle, -1))
             {
-                ShowError("luautils::onMobDeath: undefined procedure onMobDeath\n");
+                ShowError("luautils::onMobDeath: undefined procedure onMobDeath (mob: %s)\n", PMob->GetName());
                 lua_pop(LuaHandle, 1);
                 return -1;
             }
