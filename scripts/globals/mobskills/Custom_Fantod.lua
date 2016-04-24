@@ -1,14 +1,14 @@
 ---------------------------------------------
---  Fantod
+-- Fantod
 --
---  Description: Enhances attack and magic attack
---  Type: Enhancing
---  
---  Range: Self
+-- Description: Enhances attack and magic attack
+-- Type: Enhancing
+--
+-- Range: Self
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -16,11 +16,9 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_MAGIC_ATK_BOOST;
-	local typeEffect = EFFECT_ATTACK_BOOST;
-  
 
-    skill:setMsg(MobBuffMove(mob, typeEffect, 30, 0, 120));
+    MobBuffMove(mob, EFFECT_MAGIC_ATK_BOOST, 30, 0, 120);
+    skill:setMsg(MobBuffMove(mob, EFFECT_ATTACK_BOOST, 30, 0, 120));
 
-	return typeEffect;
+    return EFFECT_ATTACK_BOOST;
 end;
