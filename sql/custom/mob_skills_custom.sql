@@ -91,7 +91,7 @@ INSERT INTO `mob_skills` VALUES (46,46,'Wild_Oats',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (47,47,'Hundred_Fists',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (48,48,'Photosynthesis',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (49,49,'Leaf_Dagger',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (50,50,'Custom_Scream_VW',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (50,50,'Custom_Scream',1,15.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (51,51,'Substitute',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (52,52,'Frogkick',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (53,53,'Spore',0,7.0,2000,1500,4,0,0,0);
@@ -2796,11 +2796,11 @@ INSERT INTO `mob_skills` VALUES (2751,2141,'Custom_Incisive_Apotheosis',1,18.0,2
 INSERT INTO `mob_skills` VALUES (2752,2193,'Rockfin_Melee_Bite',0,7.0,2000,0,4,16,0,0); -- Tchakka and Dakuwaqa Melee Specials
 INSERT INTO `mob_skills` VALUES (2753,2194,'Rockfin_Melee_Ram',0,7.0,2000,0,4,16,0,0);  -- Tchakka and Dakuwaqa Melee Specials
 INSERT INTO `mob_skills` VALUES (2754,2195,'Rockfin_Melee_Spin',1,7.0,2000,0,4,16,0,0); -- Tchakka and Dakuwaqa Melee Specials
-INSERT INTO `mob_skills` VALUES (2755,2196,'Custom_Protolithic_puncture',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2756,2197,'Custom_Aquatic_lance',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2757,2198,'Custom_Pelagic_cleaver',1,18.0,2000,1000,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (2758,2199,'Custom_Carcharian_Verve',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2759,2200,'Custom_Tidal_Guillotine',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2755,2196,'Custom_Protolithic_puncture',0,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2756,2197,'Custom_Aquatic_lance',0,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2757,2198,'Custom_Pelagic_cleaver',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2758,2199,'Custom_Carcharian_Verve',0,18.0,2000,1000,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (2759,2200,'Custom_Tidal_Guillotine',0,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2760,2201,'Custom_Marine_Mayhem',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2761,2761,'Gabbrath_Melee_Bite',0,7.0,2000,0,4,16,0,0);   -- Achuka and Tojil Melee Specials
 INSERT INTO `mob_skills` VALUES (2762,2762,'Gabbrath_Melee_Charge',0,7.0,2000,0,4,16,0,0); -- Achuka and Tojil Melee Specials
@@ -3629,7 +3629,7 @@ INSERT INTO `mob_skills` VALUES (3160,291,'Custom_Charged_Whisker',1,12.5,2000,1
 -- INSERT INTO `mob_skills` VALUES (3585,3585,'Dust_Cloud',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3586,3586,'Whirl_Claws',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3587,3587,'Head_Butt',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (3588,3588,'Custom_Dream_Flower',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skills` VALUES (3588,3588,'Dream_Flower',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3589,3589,'Wild_Oats',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3590,3590,'Leaf_Dagger',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3591,3591,'Scream',0,7.0,2000,1500,4,0,0,0);

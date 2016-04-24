@@ -14,8 +14,8 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 
     MobBuffMove(mob, EFFECT_DEFENSE_BOOST, 10, 0, 90);
-    MobBuffMove(mob, EFFECT_MAGIC_DEF_BOOST, 10, 0, 90);
-    skill:setMsg(MobBuffMove(mob, EFFECT_ATTACK_BOOST, 10, 0, 90));
+    MobBuffMove(mob, EFFECT_ATTACK_BOOST, 10, 0, 90);
+    skill:setMsg(MobBuffMove(mob, EFFECT_MAGIC_DEF_BOOST, 10, 0, 90));
 
-    return EFFECT_ATTACK_BOOST;
+    return EFFECT_MAGIC_DEF_BOOST;
 end;

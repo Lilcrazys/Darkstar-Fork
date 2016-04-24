@@ -1,21 +1,20 @@
 -----------------------------------------
 -- Spell: Carcharian Verve
 -----------------------------------------
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
 
 -----------------------------------------
--- OnSpellCast
+-- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	 if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
-      return 0;
-   else
-      return MSGBASIC_STATUS_PREVENTS;
-   end
+    if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
+        return 0;
+    else
+        return MSGBASIC_STATUS_PREVENTS;
+    end
 end;
 
 -----------------------------------------
@@ -23,17 +22,16 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
-       
     if (caster:hasStatusEffect(EFFECT_DIFFUSION)) then
         local diffMerit = caster:getMerit(MERIT_DIFFUSION);
-        
+
         if (diffMerit > 0) then
             duration = duration + (duration/100)* diffMerit;
         end
-        
+
         caster:delStatusEffect(EFFECT_DIFFUSION);
     end
-    
+
     if (caster:hasStatusEffect(EFFECT_MAGIC_ATK_BOOST) and caster:hasStatusEffect(EFFECT_MAGIC_DEF_BOOST) == true) then
         spell:setMsg(75);
     else
@@ -42,4 +40,4 @@ function onSpellCast(caster,target,spell)
     end
 
     return EFFECT_MAGIC_ATK_BOOST;
-end; 
+end;
