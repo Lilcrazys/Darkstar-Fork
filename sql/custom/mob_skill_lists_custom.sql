@@ -1001,9 +1001,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2704); -- iscid_S
 INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2705); -- iptide_Eupnea
 
 -- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2750); -- Rockfin_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2751); -- Rockfin_Melee_Ram
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2752); -- Rockfin_Melee_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2752); -- Rockfin_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2753); -- Rockfin_Melee_Ram
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2754); -- Rockfin_Melee_Spin
 -- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2755); -- Protolithic_Puncture
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2756); -- Aquatic_Lance
