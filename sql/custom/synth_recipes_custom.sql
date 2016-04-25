@@ -47,3 +47,4 @@ INSERT INTO `synth_recipes` VALUES (10043,1,0,0,0,0,0,115,0,0,0,4103,4245,8926,2
 -- Non Synergy Items need  to be moved to DSP
 
 INSERT INTO `synth_recipes` VALUES (10100,1,0,0,0,0,64,0,0,0,0,4096,4238,610,633,4297,4570,0,0,0,0,5758,5758,5764,5764,6,8,6,8); -- Black Curry Bun
+

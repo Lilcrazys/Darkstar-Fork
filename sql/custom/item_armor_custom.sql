@@ -31,7 +31,7 @@ REPLACE INTO `item_armor` VALUES (10954,'alchemists_torque',70,0,4194303,0,0,0,5
 INSERT INTO `item_armor` VALUES (10955,'culinarians_torque',70,0,4194303,0,0,0,512,0);
 
 REPLACE INTO `item_armor` VALUES (17668,'firmament_+1',77,0,2195665,277,0,0,1,0);
-INSERT INTO `item_armor` VALUES (17912,'jug_of_saline_broth',99,0,256,0,0,0,8,0);
+INSERT INTO `item_armor` VALUES (17913,'jug_of_saline_broth',99,0,256,0,0,0,8,0);
 
 REPLACE INTO `item_armor` VALUES (18642,'bravura',85,0,1,339,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (18656,'bravura',90,0,1,339,0,0,1,0);
@@ -70,6 +70,8 @@ INSERT INTO `item_armor` VALUES (20865,'eminent_voulge',99,117,2097281,365,0,0,1
 INSERT INTO `item_armor` VALUES (20896,'blurred_scythe',99,119,385,194,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20897,'blurred_scythe_+1',99,119,385,194,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20908,'eminent_sickle',99,117,128,393,0,0,1,0);
+REPLACE INTO `item_armor` VALUES (20919,'lacryma_sickle',99,117,128,366,0,0,1,0);
+REPLACE INTO `item_armor` VALUES (20920,'lacryma_sickle_+1',99,118,128,366,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20940,'blurred_lance',99,119,10241,461,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20941,'blurred_lance_+1',99,119,10241,461,0,0,1,0);
 INSERT INTO `item_armor` VALUES (20950,'terebrokath',99,117,8192,210,0,0,1,0);
@@ -92,13 +94,21 @@ INSERT INTO `item_armor` VALUES (21182,'eminent_staff',99,117,1590047,341,0,0,1,
 INSERT INTO `item_armor` VALUES (21183,'eminent_pole',99,117,16384,341,0,0,1,0);
 INSERT INTO `item_armor` VALUES (21192,'voay_staff',99,107,1598031,625,0,0,1,0);
 INSERT INTO `item_armor` VALUES (21193,'voay_staff_+1',99,109,1598031,625,0,0,1,0);
+REPLACE INTO `item_armor` VALUES (21200,'atinian_staff',99,117,1572872,291,0,0,1,0);
+REPLACE INTO `item_armor` VALUES (21201,'atinian_staff_+1',99,118,1572872,291,0,0,1,0);
+REPLACE INTO `item_armor` VALUES (21202,'balsam_staff',99,117,16384,417,0,0,1,0);
+REPLACE INTO `item_armor` VALUES (21203,'astralwatcher',99,118,16384,417,0,0,1,0);
 INSERT INTO `item_armor` VALUES (21217,'blurred_bow',99,119,1024,50,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21218,'blurred_bow_+1',99,119,1024,50,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21231,'eminent_bow',99,117,7665,40,0,0,4,0);
+REPLACE INTO `item_armor` VALUES (21239,'echidnas_bow',99,117,1024,32,0,0,4,0);
+REPLACE INTO `item_armor` VALUES (21240,'echidnas_bow_+1',99,118,1024,32,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21249,'iqonde_crossbow',99,117,1024,52,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21250,'iqonde_crossbow_+1',99,118,1024,52,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21251,'eminent_crossbow',99,117,1185,53,0,0,4,0);
 INSERT INTO `item_armor` VALUES (21281,'eminent_gun',99,117,1024,58,0,0,4,0);
+REPLACE INTO `item_armor` VALUES (21289,'donderbuss',99,117,66560,60,0,0,4,0);
+REPLACE INTO `item_armor` VALUES (21290,'donderbuss_+1',99,118,66560,60,0,0,4,0);
 REPLACE INTO `item_armor` VALUES (21345,'focal_orb',99,0,2473971,0,0,0,8,0);
 REPLACE INTO `item_armor` VALUES (21350,'wingcutter_+1',99,119,4128,24,0,0,8,0);
 INSERT INTO `item_armor` VALUES (21353,'happo_shuriken',99,117,4096,22,0,0,8,2);
@@ -130,6 +140,8 @@ INSERT INTO `item_armor` VALUES (26737,'helios_band',99,119,1622044,327,0,0,16,0
 REPLACE INTO `item_armor` VALUES (26836,'horos_casaque',99,109,262144,304,0,0,32,0);
 REPLACE INTO `item_armor` VALUES (26837,'horos_casaque_+1',99,119,262144,304,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26874,'supay_weskit',99,119,8,137,0,0,32,0);
+INSERT INTO `item_armor` VALUES (26875,'ravenous_breastplate',99,119,10689,380,0,0,32,0);
+INSERT INTO `item_armor` VALUES (26876,'ravenous_breastplate_+1',99,119,10689,380,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26877,'foppish_tunica',99,119,2593826,382,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26878,'foppish_tunica_+1',99,119,2593826,382,0,0,32,0);
 INSERT INTO `item_armor` VALUES (26879,'wretched_coat',99,0,2638364,381,0,0,32,0);
@@ -312,4 +324,6 @@ INSERT INTO `item_armor` VALUES (28602,'seshaw_cape_+1',99,0,1753628,0,0,0,32768
 INSERT INTO `item_armor` VALUES (28606,'aput_mantle',99,0,2473969,0,0,0,32768,0);
 INSERT INTO `item_armor` VALUES (28607,'aput_mantle_+1',99,0,2473969,0,0,0,32768,0);
 REPLACE INTO `item_armor` VALUES (28641,'vespid_mantle',99,0,2473971,0,0,0,32768,0);
+REPLACE INTO `item_armor` VALUES (28644,'ogapepo_cape',99,0,1753628,0,0,0,32768,0);
+REPLACE INTO `item_armor` VALUES (28645,'ogapepo_cape_+1',99,0,1753628,0,0,0,32768,0);
 INSERT INTO `item_armor` VALUES (28656,'eminent_shield',99,117,193,30,3,0,2,0);
