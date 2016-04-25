@@ -1,9 +1,9 @@
 -----------------------------------------
 -- Spell: Blistering Roar
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
 
 -----------------------------------------
 -- OnSpellCast
@@ -22,11 +22,9 @@ function onSpellCast(caster,target,spell)
     local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
     local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,1.0,EFFECT_TERROR)
 
-    if (resist < 0.3) then
-        local typeEffect = EFFECT_TERROR;
-        target:delStatusEffect(typeEffect);
-        target:addStatusEffect(typeEffect,25,0,10);
+    if (resist > 0.25) then
+        target:addStatusEffect(EFFECT_TERROR,1,0,10);
     end
 
-    return typeEffect;
+    return EFFECT_TERROR;
 end;

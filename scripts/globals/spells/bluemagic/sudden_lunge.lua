@@ -1,24 +1,39 @@
 -----------------------------------------
--- 
--- Sudden Lunge
--- 
+-- Spell: Sudden Lunge
+-- Damage varies with TP. Additional effect: "Stun."
+-- Spell cost: 18 MP
+-- Monster Type: Vermin
+-- Spell Type: Physical (Slashing)
+-- Blue Magic Points: 4
+-- Stat Bonus: HP-5 MP-5 DEX+1 AGI+1
+-- Level: 95
+-- Casting Time: 0.5 seconds
+-- Recast Time: 15 seconds
+-- Skillchain Element(s):
+-- Combos: Store TP
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+
 -----------------------------------------
--- OnSpellCast
+-- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
+
+-----------------------------------------
+-- OnSpellCast
+-----------------------------------------
 
 function onSpellCast(caster,target,spell)
     local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
     local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,0,EFFECT_STUN)
     local params = {};
-        params.tpmod = TPMOD_ATTACK;
+    -- Todo: determine if these param values are retail
+        params.tpmod = TPMOD_DAMAGE;
         params.dmgtype = DMGTYPE_SLASH;
         params.scattr = SC_DETONATION;
         params.numhits = 1;
@@ -26,7 +41,6 @@ function onSpellCast(caster,target,spell)
         params.tp150 = 1.25;
         params.tp300 = 1.50;
         params.azuretp = 1.4375;
-        params.tMultiplier = 2.0;
         params.duppercap = 100;
         params.str_wsc = 0.0;
         params.dex_wsc = 0.0;
@@ -35,17 +49,19 @@ function onSpellCast(caster,target,spell)
         params.int_wsc = 0.0;
         params.mnd_wsc = 0.0;
         params.chr_wsc = 0.0;
-
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    if (target:hasStatusEffect(EFFECT_STUN)) then
-        spell:setMsg(75); -- no effect
-    elseif (resist > 0.5) then -- This line may need adjusting for retail accuracy.
-        target:addStatusEffect(EFFECT_STUN,0,0,math.random(6,11));
-    elseif (resist > 0.25) then -- This line may need adjusting for retail accuracy.
-        target:addStatusEffect(EFFECT_STUN,0,0,math.random(1,6));
+    --[[ DSP code
+    if (resist > 0.25) then -- This line may need adjusting for retail accuracy.
+        target:addStatusEffect(EFFECT_STUN, 1, 0, 20 * resist); -- Wiki says duration of "up to" 20 second..
     end
+    ]]
+
+    -- Legion custom nerfage.
+    if (resist > 0.25) then
+        target:addStatusEffect(EFFECT_STUN, 1, 0, math.random(5,15) * resist);
+	end
 
     return damage;
 end;

@@ -314,9 +314,11 @@ end;
 function applyResistanceEffect(player,spell,target,diff,skill,bonus,effect)
 
     -- If Stymie is active, as long as the mob is not immune then the effect is not resisted
-    if (skill == ENFEEBLING_MAGIC_SKILL and player:hasStatusEffect(EFFECT_STYMIE) and target:canGainStatusEffect(effect)) then
-        player:delStatusEffect(EFFECT_STYMIE);
-        return 1;
+    if (effect ~= nil) then -- Dispel's script doesn't have an "effect" to send here, nor should it.
+        if (skill == ENFEEBLING_MAGIC_SKILL and player:hasStatusEffect(EFFECT_STYMIE) and target:canGainStatusEffect(effect)) then
+            player:delStatusEffect(EFFECT_STYMIE);
+            return 1;
+        end
     end
 
     if (skill == SINGING_SKILL and player:hasStatusEffect(EFFECT_TROUBADOUR)) then
