@@ -32,22 +32,22 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 200);
-    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REFRESH, 150);
+    mob:setMod(MOD_ACC, 2400);
+    mob:setMod(MOD_MATT, 120);
+    mob:setMod(MOD_MACC, 2400);
+    mob:setMod(MOD_DARK, 600); -- Dark magic Skill
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,2500);
-    mob:setMod(MOD_ACC,2500);
-    mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_DARK_AFFINITY_DMG, 300);
-    mob:setMod(MOD_DARK_AFFINITY_ACC, 300);
-    mob:setMod(MOD_SLEEPRES,100);
-    mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_STUNRES,500);
-    mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_DARK,600);
     mob:setMod(MOD_HUMANOID_KILLER, 5);
+    mob:setMod(MOD_DARK_AFFINITY_DMG, 250);
+    mob:setMod(MOD_DARK_AFFINITY_ACC, 250);
+    mob:setMod(MOD_SLEEPRES, 100);
+    mob:setMod(MOD_SILENCERES, 100);
+    mob:setMod(MOD_PARALYZERES, 30);
+    mob:setMod(MOD_STUNRES, 500);
     mob:setMod(MOD_TERRORRES, 100);
 end;
 
@@ -55,7 +55,7 @@ end;
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngage(mob, target)
+function onMobEngaged(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
     mob:resetLocalVars();
 end
@@ -65,7 +65,7 @@ end
 -----------------------------------
 
 function onMobFight(mob, target)
-    --[[
+
     local spawnTime = mob:getLocalVar("spawnTime");
     local twohourTime = mob:getLocalVar("twohourTime");
 
@@ -73,12 +73,12 @@ function onMobFight(mob, target)
         twohourTime = math.random(4, 6);
         mob:setLocalVar("twohourTime", twohourTime);
     end
-    
+
     if (spawnTime == 0) then
         spawnTime = math.random(3, 5);
         mob:setLocalVar("spawnTime", spawnTime);
     end
-    
+
     if (mob:getBattleTime()/15 > twohourTime) then
         mob:useMobAbility(454);
         mob:setLocalVar("twohourTime", (mob:getBattleTime()/15)+math.random(4,6));
@@ -93,69 +93,35 @@ function onMobFight(mob, target)
             end
         end
         mob:setLocalVar("spawnTime", (mob:getBattleTime()/15)+4);
-    end
-    ]]--
-
-    local vrtra_2hr_Used = mob:getLocalVar("vrtra_2hr");
-
-    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
-        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
-        mob:setLocalVar("RAGED", 1);
-    end
-
-    if (mob:getHPP() <= 20) then
-        if (vrtra_2hr_Used == 3) then
+    -----------------------------
+    -- Start Legion Custom Block
+    elseif (mob:actionQueueEmpty() == true) then
+        local BWMS = mob:getLocalVar("BWMS");
+        -- During Blood weapon, Iruci gains Magic Attack and Evasion, Airi gains Attack and Evasion
+        -- During Mighty Strikes, Pey gains Magic Defense, Airi gains Magic Attack and Magic Defense
+        if (mob:getHPP() <= 10 and BWMS == 4) then
+            mob:setLocalVar("BWMS", 5);
             mob:useMobAbility(439); -- BW
-            mob:setLocalVar("vrtra_2hr", 4);
-            mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-            mob:addMod(MOD_DOUBLE_ATTACK, 15);
-            mob:addMod(MOD_REGAIN, 10);
-        end
-    elseif (mob:getHPP() <= 40) then
-        if (vrtra_2hr_Used == 2) then
+        elseif (mob:getHPP() <= 20 and BWMS == 3) then
+            mob:setLocalVar("BWMS", 4);
             mob:useMobAbility(432); -- MS
-            mob:setLocalVar("vrtra_2hr", 3);
-        end
-    elseif (mob:getHPP() <= 60) then
-        if (vrtra_2hr_Used == 1) then
+        elseif (mob:getHPP() <= 30 and BWMS == 2) then
+            mob:setLocalVar("BWMS", 3);
             mob:useMobAbility(439); -- BW
-            mob:setLocalVar("vrtra_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 80) then
-        if (vrtra_2hr_Used == 0) then
+        elseif (mob:getHPP() <= 40 and BWMS == 1) then
+            mob:setLocalVar("BWMS", 2);
             mob:useMobAbility(432); -- MS
-            mob:setLocalVar("vrtra_2hr", 1);
+        elseif (mob:getHPP() <= 50 and BWMS == 0) then
+            mob:setLocalVar("BWMS", 1);
+            mob:useMobAbility(439); -- BW
         end
-    end
 
-    local lastpet = mob:getLocalVar("pop_pet");
-    if (os.time() - lastpet > 90) then
-        local pet1 = GetMobAction(mob:getID()+1);
-        local pet2 = GetMobAction(mob:getID()+2);
-        local pet3 = GetMobAction(mob:getID()+3);
-        local pet4 = GetMobAction(mob:getID()+4);
-        local pet5 = GetMobAction(mob:getID()+5);
-        local pet6 = GetMobAction(mob:getID()+6);
-
-        if (pet1 == ACTION_NONE or pet1 == ACTION_SPAWN) then
-            SpawnMob(mob:getID()+1, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pet", os.time());
-        elseif (pet2 == ACTION_NONE or pet2 == ACTION_SPAWN) then
-            SpawnMob(mob:getID()+2, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pet", os.time());
-        elseif (pet3 == ACTION_NONE or pet3 == ACTION_SPAWN) then
-            SpawnMob(mob:getID()+3, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pet", os.time());
-        elseif (pet4 == ACTION_NONE or pet4 == ACTION_SPAWN) then
-            SpawnMob(mob:getID()+4, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pet", os.time());
-        elseif (pet5 == ACTION_NONE or pet5 == ACTION_SPAWN) then
-            SpawnMob(mob:getID()+5, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pet", os.time());
-        elseif (pet6 == ACTION_NONE or pet6 == ACTION_SPAWN) then
-            SpawnMob(mob:getID()+6, 300):updateEnmity(target);
-            mob:setLocalVar("pop_pet", os.time());
-        end
+    	if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
+        	mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
+        	mob:setLocalVar("RAGED", 1);
+	    end
+    -- End Legion Custom Block
+    -----------------------------
     end
 end;
 
@@ -167,7 +133,7 @@ function onSpellPrecast(mob, spell)
     if (spell:getID() == 246)  then -- set drain 2 to AoE
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
-        spell:setRadius(30);
+        spell:setRadius(29);
     end
 end;
 
@@ -176,12 +142,11 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) > 3) or (target:hasStatusEffect(EFFECT_CURSE_I) == true)) then
+    if (math.random(1,10) > 4 or target:hasStatusEffect(EFFECT_CURSE_I)) then
         return 0,0,0;
     else
-        local duration = 10;
-        target:addStatusEffect(EFFECT_CURSE_I,40,0,duration);
-        return SUBEFFECT_CURSE,163,EFFECT_CURSE_I;
+        target:addStatusEffect(EFFECT_CURSE_I,40,0,10);
+        return SUBEFFECT_CURSE,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_CURSE_I;
     end
 end;
 
@@ -199,7 +164,7 @@ end;
 -- onMobDisengage
 -----------------------------------
 
-function onMobDisengage(mob, weather)
+function onMobDisengage(mob)
     for i, offset in ipairs(offsets) do
         DespawnMob(mob:getID()+offset);
     end
@@ -211,7 +176,7 @@ end
 
 function onMobDeath(mob, killer, ally)
     ally:addTitle(VRTRA_VANQUISHER);
-    
+
     -- Set Vrtra's spawnpoint and respawn time (3-5 days)
     UpdateNMSpawnPoint(mob:getID());
     mob:setRespawnTime(math.random(75600,86400));
