@@ -31,8 +31,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,125);
+    mob:setMod(MOD_MACC,1950); -- This needs converted to proper addmod
+    mob:setMod(MOD_MATT,125);  -- This needs converted to proper addmod
     mob:setMod(MOD_DARK_AFFINITY_DMG, 300);
     mob:setMod(MOD_DARK_AFFINITY_ACC, 300);
 
@@ -114,6 +114,7 @@ function onMobSpawn(mob)
         SetDropRate(9620,0,8926,50); -- Fenritear       
     end
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -126,19 +127,28 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Wings = mob:getLocalVar("Wings");
+    local BT = mob:getBattleTime();
+    local CT = mob:getLocalVar("changeTime");
 
-    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
-        if (mob:AnimationSub() == 1) then
-           mob:AnimationSub(0); -- fly
-           mob:setLocalVar("Wings", mob:getBattleTime());
-        elseif (mob:AnimationSub() == 0) then
-           mob:AnimationSub(1); -- fly
-           mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 180);
-           mob:setLocalVar("Wings", mob:getBattleTime());
+    if (mob:actionQueueEmpty() == true) then
+        -- subanimation 0 is only ever used before any flight happens
+        if (mob:AnimationSub() == 0 and BT - CT > 180) then
+            mob:AnimationSub(1);
+            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+            -- record the time this phase was started
+            mob:setLocalVar("changeTime", mob:getBattleTime());
+        -- subanimation 1 is flight, so check if she should land
+        elseif (mob:AnimationSub() == 1 and BT - CT > 180) then
+            mob:useMobAbility(1026);
+            mob:setLocalVar("changeTime", mob:getBattleTime());
+        -- subanimation 2 is grounded mode, so check if she should take off
+        elseif (mob:AnimationSub() == 2 and BT - CT > 180) then
+            mob:AnimationSub(1);
+            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
+            -- record the time this phase was started
+            mob:setLocalVar("changeTime", mob:getBattleTime());
         end
     end
-
 end;
 
 -----------------------------------

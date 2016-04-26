@@ -33,8 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1900);
-    mob:setMod(MOD_MATT,105);
+    mob:setMod(MOD_MACC,1900); -- This needs converted to proper addmod
+    mob:setMod(MOD_MATT,105);  -- This needs converted to proper addmod
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
@@ -127,8 +127,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local depopTime = mob:getLocalVar("depopTime");
-
+    -- local depopTime = mob:getLocalVar("depopTime");
 end;
 
 -----------------------------------

@@ -19,7 +19,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DEF,-50);
 
     -- setMobMod
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
@@ -66,7 +65,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-    --[[
+
     -- Gains a large attack boost when health is under 25% which cannot be Dispelled.
     if (mob:getHP() < ((mob:getMaxHP() / 10) * 2.5)) then
         if (mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
@@ -110,50 +109,27 @@ function onMobFight(mob,target)
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
         end;
+    -----------------------------
+	-- Begin Legion Custom Block
+    elseif (mob:getLocalVar("Tia_Boosted") == 0) then
+        if (mob:getHPP() <= 20 and mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
+            mob:setLocalVar("Tia_Boosted", 1);
+            mob:addMod(MOD_REGAIN, 10);
+            mob:addMod(MOD_DOUBLE_ATTACK, 15);
+            mob:addStatusEffect(EFFECT_HASTE,100,0,100);
+            mob:getStatusEffect(EFFECT_HASTE):setFlag(32);
+            mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
+            mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
+        end
+	-- End Legion Custom Block
+	-----------------------------
     end;
-    ]]--
-
-    local Wings = mob:getLocalVar("Wings");
-    local Tia_2hr_Used = mob:getLocalVar("Tia_2hr");
 
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end;
 
-    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
-        if (mob:AnimationSub() == 1) then
-            mob:useMobAbility(1026);
-            mob:setLocalVar("Wings", mob:getBattleTime());
-        elseif (mob:AnimationSub() == 2) then
-            mob:AnimationSub(1); -- fly
-            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
-            mob:setLocalVar("Wings", mob:getBattleTime());
-        elseif (mob:AnimationSub() == 0) then
-            mob:AnimationSub(1); -- fly
-            mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
-            mob:setLocalVar("Wings", mob:getBattleTime());
-        end
-    elseif (mob:getHPP() <= 20 and Tia_2hr_Used == 3) then
-        mob:useMobAbility(432); -- MS
-        mob:setLocalVar("Tia_2hr", 4);
-        mob:addStatusEffect(EFFECT_HASTE,200,0,200);
-        mob:addMod(MOD_DOUBLE_ATTACK, 15);
-        mob:addMod(MOD_REGAIN, 10);
-        mob:addStatusEffect(EFFECT_ATTACK_BOOST,125,0,0);
-        mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-    elseif (mob:getHPP() <= 40 and Tia_2hr_Used == 2) then
-        mob:useMobAbility(432); -- MS
-        mob:setLocalVar("Tia_2hr", 3);
-    elseif (mob:getHPP() <= 60 and Tia_2hr_Used == 1) then
-        mob:useMobAbility(432); -- MS
-        mob:setLocalVar("Tia_2hr", 2);
-    elseif (mob:getHPP() <= 80 and Tia_2hr_Used == 0) then
-        mob:useMobAbility(432); -- MS
-        mob:setLocalVar("Tia_2hr", 1);
-    end
 end;
 
 -----------------------------------
@@ -206,7 +182,7 @@ function onAdditionalEffect(mob,target,damage)
 
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
 
-        return SUBEFFECT_FIRE_DAMAGE,163,dmg;
+        return SUBEFFECT_FIRE_DAMAGE,MSGBASIC_ADD_EFFECT_DMG,dmg;
     end
 end;
 

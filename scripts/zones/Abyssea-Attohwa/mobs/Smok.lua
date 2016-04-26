@@ -3,6 +3,7 @@
 --   Mob: Smok
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Attohwa/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
@@ -47,8 +48,8 @@ function onMobFight(mob,target)
         if (mob:hasStatusEffect(EFFECT_ATTACK_BOOST) == false) then
             mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
-        end
-    end
+        end;
+    end;
 
     if (mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES) == false and mob:actionQueueEmpty() == true) then
         local changeTime = mob:getLocalVar("changeTime")
@@ -58,7 +59,7 @@ function onMobFight(mob,target)
         if (twohourTime == 0) then
             twohourTime = math.random(8, 14);
             mob:setLocalVar("twohourTime", twohourTime);
-        end
+        end;
 
         if (mob:AnimationSub() == 2 and mob:getBattleTime()/15 > twohourTime) then
             mob:useMobAbility(432);
@@ -84,7 +85,7 @@ function onMobFight(mob,target)
             mob:SetMobSkillAttack(true);
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
-        end
+        end;
     end
 end;
 
