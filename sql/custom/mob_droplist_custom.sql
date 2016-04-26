@@ -2506,7 +2506,7 @@ INSERT INTO `mob_droplist` VALUES (9091,0,28343,65); -- Chocaliztli boots
 INSERT INTO `mob_droplist` VALUES (9091,0,28401,69); -- Eddy Necklace
 INSERT INTO `mob_droplist` VALUES (9091,0,28057,50); -- Mikinaak gauntlets
 INSERT INTO `mob_droplist` VALUES (9091,0,10289,167); -- Sublime breastplate
-INSERT INTO `mob_droplist` VALUES (9091,0,9062,14); -- Chunk of Dark Matter
+-- INSERT INTO `mob_droplist` VALUES (9091,0,9062,14); -- Chunk of Dark Matter
 INSERT INTO `mob_droplist` VALUES (9091,0,4893,3); -- Scroll of Stoneja
 
 -- colkhab
@@ -4180,7 +4180,7 @@ INSERT INTO `mob_droplist` VALUES (9639,0,28496,40); -- Zennaroi_Earring
 INSERT INTO `mob_droplist` VALUES (9639,0,21119,300); -- Eminent_Wand
 INSERT INTO `mob_droplist` VALUES (9639,0,27741,12); -- Espial_Cap
 INSERT INTO `mob_droplist` VALUES (9639,0,4049,1000); -- Rusted_Coin
-INSERT INTO `mob_droplist` VALUES (9639,0,9062,12); -- Dark Matter
+-- INSERT INTO `mob_droplist` VALUES (9639,0,9062,12); -- Dark Matter
 INSERT INTO `mob_droplist` VALUES (9639,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9639,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9639,0,8921,50); -- Ramutear
