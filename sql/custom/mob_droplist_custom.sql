@@ -2468,6 +2468,8 @@ INSERT INTO `mob_droplist` VALUES (9084,0,21429,167); -- Memphitis grip
 INSERT INTO `mob_droplist` VALUES (9084,0,20818,54); -- Hurlbat
 INSERT INTO `mob_droplist` VALUES (9084,0,28338,101); -- Mikinaak greaves
 INSERT INTO `mob_droplist` VALUES (9084,0,10295,52); -- Kokou's earring
+INSERT INTO `mob_droplist` VALUES (9084,0,27871,10); -- Artsieq Jubbah  
+INSERT INTO `mob_droplist` VALUES (9084,0,4717,10); -- Refresh
 
 -- kumhao
 INSERT INTO `mob_droplist` VALUES (9085,0,10597,113); -- Akasha chaps
@@ -2475,6 +2477,7 @@ INSERT INTO `mob_droplist` VALUES (9085,0,28201,104); -- Xux trousers
 INSERT INTO `mob_droplist` VALUES (9085,0,28463,163); -- Zoran's belt
 INSERT INTO `mob_droplist` VALUES (9085,0,27917,140); -- Mikinaak breastplate
 INSERT INTO `mob_droplist` VALUES (9085,0,10290,106); -- Laudan cuirass
+INSERT INTO `mob_droplist` VALUES (9085,0,27869,11); -- Xaddi Mail
 
 -- achuka
 
@@ -2483,6 +2486,8 @@ INSERT INTO `mob_droplist` VALUES (9089,0,28062,74); -- Quauhpilli gloves
 INSERT INTO `mob_droplist` VALUES (9089,0,28579,123); -- K' ayes Ring
 INSERT INTO `mob_droplist` VALUES (9089,0,28198,152); -- Mikinaak cussies
 INSERT INTO `mob_droplist` VALUES (9089,0,10287,59); -- Feverish korazin
+INSERT INTO `mob_droplist` VALUES (9089,0,27870,10); -- Qaaxo Harness
+INSERT INTO `mob_droplist` VALUES (9089,0,4947,5); -- Utsetsumi Ni
 
 -- hurkan
 
@@ -2492,6 +2497,8 @@ INSERT INTO `mob_droplist` VALUES (9090,0,28389,179); -- Agitator's collar
 INSERT INTO `mob_droplist` VALUES (9090,0,28449,199); -- Metalsinger belt
 INSERT INTO `mob_droplist` VALUES (9090,0,20819,51); -- Antican axe
 INSERT INTO `mob_droplist` VALUES (9090,0,10292,74); -- Wikyo Cloak
+INSERT INTO `mob_droplist` VALUES (9090,0,20901,15); -- Inanna
+INSERT INTO `mob_droplist` VALUES (9090,0,4751,5); -- Erase
 
 -- darrcuiln
 
@@ -2499,6 +2506,8 @@ INSERT INTO `mob_droplist` VALUES (9091,0,28343,65); -- Chocaliztli boots
 INSERT INTO `mob_droplist` VALUES (9091,0,28401,69); -- Eddy Necklace
 INSERT INTO `mob_droplist` VALUES (9091,0,28057,50); -- Mikinaak gauntlets
 INSERT INTO `mob_droplist` VALUES (9091,0,10289,167); -- Sublime breastplate
+INSERT INTO `mob_droplist` VALUES (9091,0,9062,14); -- Chunk of Dark Matter
+INSERT INTO `mob_droplist` VALUES (9091,0,4893,3); -- Scroll of Stoneja
 
 -- colkhab
 
@@ -2507,6 +2516,8 @@ INSERT INTO `mob_droplist` VALUES (9093,0,28201,72); -- Xux trousers
 INSERT INTO `mob_droplist` VALUES (9093,0,28354,150); -- Voltsurge torque
 INSERT INTO `mob_droplist` VALUES (9093,0,27776,50); -- Mikinaak helm
 INSERT INTO `mob_droplist` VALUES (9093,0,10283,172); -- Vara Brigandine armor
+INSERT INTO `mob_droplist` VALUES (9093,0,20616,13); -- Ipetam
+INSERT INTO `mob_droplist` VALUES (9093,0,4717,6); -- Phalanx
 
 -- cracklaw
 
@@ -2514,6 +2525,8 @@ INSERT INTO `mob_droplist` VALUES (9105,0,21421,163); -- Immolation grip
 INSERT INTO `mob_droplist` VALUES (9105,0,28337,80); -- Whirlpool greaves
 INSERT INTO `mob_droplist` VALUES (9105,0,10282,127); -- Krabat Jacket
 INSERT INTO `mob_droplist` VALUES (9105,0,10297,52); -- Sortiarius earring
+INSERT INTO `mob_droplist` VALUES (9105,0,20718,10); -- Claidheamh Soluis
+INSERT INTO `mob_droplist` VALUES (9105,0,5086,6); -- Regen V
 
 -- besieged boss drops
 INSERT INTO `mob_droplist` VALUES (9106,0,3925,10);
@@ -3749,8 +3762,9 @@ INSERT INTO `mob_droplist` VALUES (9616,0,28403,50);  -- inquisitor_bead_necklac
 INSERT INTO `mob_droplist` VALUES (9616,0,27918,131); -- manibozho_jerkin
 INSERT INTO `mob_droplist` VALUES (9616,0,27773,37); -- yaoyotl_helm
 INSERT INTO `mob_droplist` VALUES (9616,0,28428,67); -- sailfi_belt_+1
-INSERT INTO `mob_droplist` VALUES (9616,0,21366,129); -- Floestone -- Item_Basic fix needed
+INSERT INTO `mob_droplist` VALUES (9616,0,21366,129); -- Floestone
 INSERT INTO `mob_droplist` VALUES (9616,0,27720,53); -- umbani_cap
+INSERT INTO `mob_droplist` VALUES (9616,0,3445,14); -- Hahava's Mail
 INSERT INTO `mob_droplist` VALUES (9616,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9616,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9616,0,8921,50); -- Ramutear
@@ -3792,6 +3806,7 @@ INSERT INTO `mob_droplist` VALUES (9620,0,28306,120); -- Outrider_Greaves
 INSERT INTO `mob_droplist` VALUES (9620,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9620,0,21119,53); -- Eminent Wand
 INSERT INTO `mob_droplist` VALUES (9620,0,28499,34); -- Influx_Earring
+INSERT INTO `mob_droplist` VALUES (9620,0,4890,15); -- Scroll Of Firaja
 INSERT INTO `mob_droplist` VALUES (9620,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9620,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9620,0,8921,50); -- Ramutear
@@ -3832,6 +3847,7 @@ INSERT INTO `mob_droplist` VALUES (9622,0,28307,120); -- Espial_Socks
 INSERT INTO `mob_droplist` VALUES (9622,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9622,0,21281,70); -- Eminent_Gun
 INSERT INTO `mob_droplist` VALUES (9622,0,28500,91); -- Upsurge Earring
+INSERT INTO `mob_droplist` VALUES (9622,0,4851,6); -- Meteor
 INSERT INTO `mob_droplist` VALUES (9622,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9622,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9622,0,8921,50); -- Ramutear
@@ -3891,7 +3907,8 @@ INSERT INTO `mob_droplist` VALUES (9625,0,28308,62); -- Wayfarer_Clogs
 INSERT INTO `mob_droplist` VALUES (9625,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9625,0,20954,81); -- Eminent_Lance
 INSERT INTO `mob_droplist` VALUES (9625,0,28501,39); -- Allegro_Earring
-INSERT INTO `mob_droplist` VALUES (9625,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9625,0,4856,11); -- Aspir II
+INSERT INTO `mob_droplist` VALUES (96254,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9625,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9625,0,8921,50); -- Ramutear
 INSERT INTO `mob_droplist` VALUES (9625,0,8922,50); -- Garutear
@@ -3931,6 +3948,7 @@ INSERT INTO `mob_droplist` VALUES (9627,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9627,0,26787,75); -- Alhazen_Hat
 INSERT INTO `mob_droplist` VALUES (9627,0,20766,220); -- Eminent_Sword
 INSERT INTO `mob_droplist` VALUES (9627,0,28549,28); -- Enlivened_Ring
+INSERT INTO `mob_droplist` VALUES (9627,0,4827,6); -- Comet
 INSERT INTO `mob_droplist` VALUES (9627,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9627,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9627,0,8921,50); -- Ramutear
@@ -4028,6 +4046,8 @@ INSERT INTO `mob_droplist` VALUES (9632,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9632,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9632,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9632,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9632,0,4850,7); -- Refresh II
+INSERT INTO `mob_droplist` VALUES (9632,0,8752,11); -- Cehuetzi Claw
 INSERT INTO `mob_droplist` VALUES (9632,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9632,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9632,0,8921,50); -- Ramutear
@@ -4047,6 +4067,8 @@ INSERT INTO `mob_droplist` VALUES (9633,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9633,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9633,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9633,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9632,0,4996,5); -- Mages Ballad III
+INSERT INTO `mob_droplist` VALUES (9632,0,4013,15); -- Waktza Crest
 INSERT INTO `mob_droplist` VALUES (9633,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9633,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9633,0,8921,50); -- Ramutear
@@ -4066,6 +4088,8 @@ INSERT INTO `mob_droplist` VALUES (9634,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9634,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9634,0,4064,1000); -- Rem's_Tale_Chapter_1
 INSERT INTO `mob_droplist` VALUES (9634,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9634,0,8728,13); -- Sif's Macrame
+INSERT INTO `mob_droplist` VALUES (9634,0,4895,7); -- Waterja
 INSERT INTO `mob_droplist` VALUES (9634,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9634,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9634,0,8921,50); -- Ramutear
@@ -4156,6 +4180,7 @@ INSERT INTO `mob_droplist` VALUES (9639,0,28496,40); -- Zennaroi_Earring
 INSERT INTO `mob_droplist` VALUES (9639,0,21119,300); -- Eminent_Wand
 INSERT INTO `mob_droplist` VALUES (9639,0,27741,12); -- Espial_Cap
 INSERT INTO `mob_droplist` VALUES (9639,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9639,0,9062,12); -- Dark Matter
 INSERT INTO `mob_droplist` VALUES (9639,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9639,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9639,0,8921,50); -- Ramutear
@@ -4194,6 +4219,7 @@ INSERT INTO `mob_droplist` VALUES (9641,0,27230,20); -- Zoar_Subligar
 INSERT INTO `mob_droplist` VALUES (9641,0,27222,12); -- Limbo_Trousers
 INSERT INTO `mob_droplist` VALUES (9641,0,20610,22); -- Rhadamanthus +242 Skill Weapon
 INSERT INTO `mob_droplist` VALUES (9641,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9641,0,3977,10); -- Gabbrath Horn
 INSERT INTO `mob_droplist` VALUES (9641,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9641,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9641,0,8921,50); -- Ramutear
@@ -4213,6 +4239,7 @@ INSERT INTO `mob_droplist` VALUES (9642,0,4065,1000); -- Rem's_Tale_Chapter 2
 INSERT INTO `mob_droplist` VALUES (9642,0,27996,20); -- Shigure_Tekko
 INSERT INTO `mob_droplist` VALUES (9642,0,26869,120); -- Rosette_Jaseran
 INSERT INTO `mob_droplist` VALUES (9642,0,20614,22); -- Pukulatmuj_
+INSERT INTO `mob_droplist` VALUES (9642,0,4014,13); -- Yggdreant Bole
 INSERT INTO `mob_droplist` VALUES (9642,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9642,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9642,0,8920,50); -- Leviatear
@@ -4274,6 +4301,7 @@ INSERT INTO `mob_droplist` VALUES (9645,0,26874,20); -- Supay_Weskit
 INSERT INTO `mob_droplist` VALUES (9645,0,28135,120); -- Assiduity_Pants
 INSERT INTO `mob_droplist` VALUES (9645,0,21112,22); -- Gabaxorea
 INSERT INTO `mob_droplist` VALUES (9645,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9645,0,4985,4); -- Scroll Of Horde Lullaby II
 INSERT INTO `mob_droplist` VALUES (9645,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9645,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9645,0,8921,50); -- Ramutear
