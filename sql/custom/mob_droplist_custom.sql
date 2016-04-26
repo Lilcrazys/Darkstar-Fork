@@ -3908,7 +3908,7 @@ INSERT INTO `mob_droplist` VALUES (9625,0,4049,1000); -- Rusted_Coin
 INSERT INTO `mob_droplist` VALUES (9625,0,20954,81); -- Eminent_Lance
 INSERT INTO `mob_droplist` VALUES (9625,0,28501,39); -- Allegro_Earring
 INSERT INTO `mob_droplist` VALUES (9625,0,4856,11); -- Aspir II
-INSERT INTO `mob_droplist` VALUES (96254,0,8919,50); -- Ifritear
+INSERT INTO `mob_droplist` VALUES (9625,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9625,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9625,0,8921,50); -- Ramutear
 INSERT INTO `mob_droplist` VALUES (9625,0,8922,50); -- Garutear
