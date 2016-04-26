@@ -52,7 +52,7 @@ end;
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngage(mob, target)
+function onMobEngaged(mob, target)
     SpawnMob(mob:getID()+1, 300):updateEnmity(target);
     SpawnMob(mob:getID()+2, 300):updateEnmity(target);
 end;

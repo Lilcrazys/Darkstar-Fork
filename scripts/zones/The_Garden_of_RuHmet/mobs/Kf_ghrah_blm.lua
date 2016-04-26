@@ -32,7 +32,7 @@ function onMobSpawn(mob)
     mob:setModelId(1168); -- Dark
 end;
 
-function onMobEngage(mob)
+function onMobEngaged(mob)
 end;
 -----------------------------------
 -- onMobRoam Action

@@ -33,7 +33,7 @@ function onMobSpawn(mob)
 
 end;
 
-function onMobEngage(mob)
+function onMobEngaged(mob)
 end;
 -----------------------------------
 -- onMobRoam Action

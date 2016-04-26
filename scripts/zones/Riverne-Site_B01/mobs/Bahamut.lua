@@ -52,7 +52,7 @@ end;
 -- onMobEngage Action
 -----------------------------------
 
-function onMobEngage(mob, target)
+function onMobEngaged(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
 

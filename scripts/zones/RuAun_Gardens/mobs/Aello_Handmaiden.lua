@@ -38,7 +38,7 @@ end;
 -- onMobEngage Action
 -----------------------------------
 
-function onMobEngage(mob, target)
+function onMobEngaged(mob, target)
 end;
 
 -----------------------------------
