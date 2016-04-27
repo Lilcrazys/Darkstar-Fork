@@ -19,7 +19,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     -- Wiki says max duration of blu spell is 20 sec, but doesn't say if mobskill is shorter
     -- nor do i trust DSP resistance code to shorten it properly..
-    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_STUN, 1, 0, (math.random(10,20));
+    MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_STUN, 1, 0, math.random(10,20));
     target:delHP(dmg);
 
     -- Mob loses 5% to 15% HP even if skill misses

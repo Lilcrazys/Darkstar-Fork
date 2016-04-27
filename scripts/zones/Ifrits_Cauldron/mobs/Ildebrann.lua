@@ -50,6 +50,7 @@ function onMobSpawn(mob)
 
     -- Temp
     mob:AnimationSub(0); -- reset
+    mob:delStatusEffect(EFFECT_ALL_MISS);
 
     local RND1 = math.random(1,8);
     if (RND1 == 1) then

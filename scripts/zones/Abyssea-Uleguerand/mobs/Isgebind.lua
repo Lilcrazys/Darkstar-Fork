@@ -15,7 +15,7 @@ require("scripts/globals/magic");
 -----------------------------------
 
 function onMobInitialize(mob)
-	-- addmod
+    -- addmod
     mob:addMod(MOD_REGAIN, 10);
     mob:addMod(MOD_REGEN, 100);
     mob:addMod(MOD_UFASTCAST, 55);
@@ -32,6 +32,7 @@ end;
 function onMobSpawn(mob)
     mob:setMod(MOD_MATT,110);  -- This needs converted to proper addmod
     mob:setMod(MOD_MACC,1800); -- This needs converted to proper addmod
+    mob:delStatusEffect(EFFECT_ALL_MISS);
 end;
 
 -----------------------------------

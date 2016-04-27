@@ -28,6 +28,7 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
+    mob:delStatusEffect(EFFECT_ALL_MISS);
 end;
 
 -----------------------------------

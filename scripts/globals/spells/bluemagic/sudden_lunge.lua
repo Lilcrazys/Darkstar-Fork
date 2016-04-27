@@ -61,7 +61,7 @@ function onSpellCast(caster,target,spell)
     -- Legion custom nerfage.
     if (resist > 0.25) then
         target:addStatusEffect(EFFECT_STUN, 1, 0, math.random(5,15) * resist);
-	end
+    end
 
     return damage;
 end;

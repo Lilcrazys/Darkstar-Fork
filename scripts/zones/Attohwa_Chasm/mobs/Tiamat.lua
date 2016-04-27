@@ -50,6 +50,7 @@ function onMobSpawn(mob)
     -- Other
     mob:SetMobSkillAttack(false); -- resetting so it doesn't respawn in flight mode.
     mob:AnimationSub(0); -- subanim 0 is only used when it spawns until first flight.
+    mob:delStatusEffect(EFFECT_ALL_MISS);
 end;
 
 -----------------------------------
@@ -110,7 +111,7 @@ function onMobFight(mob,target)
             mob:setLocalVar("changeHP", mob:getHP()/1000);
         end;
     -----------------------------
-	-- Begin Legion Custom Block
+    -- Begin Legion Custom Block
     elseif (mob:getLocalVar("Tia_Boosted") == 0) then
         if (mob:getHPP() <= 20 and mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
             mob:setLocalVar("Tia_Boosted", 1);
@@ -121,8 +122,8 @@ function onMobFight(mob,target)
             mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
         end
-	-- End Legion Custom Block
-	-----------------------------
+    -- End Legion Custom Block
+    -----------------------------
     end;
 
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
