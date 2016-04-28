@@ -1,14 +1,15 @@
 -----------------------------------
 -- Area: Tavnazian_Safehold
--- NPC: Owain
+--  NPC: Owain
 -- Functions as a Voidwatch Officer
 -----------------------------------
 package.loaded["scripts/zones/Tavnazian_Safehold/TextIDs"] = nil;
 -----------------------------------
-require("scripts/globals/status");
-require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 require("scripts/zones/Tavnazian_Safehold/TextIDs");
+require("scripts/globals/keyitems");
+require("scripts/globals/quests");
+require("scripts/globals/status");
+require("scripts/globals/spoofchat"); -- temp
 
 -----------------------------------
 -- onTrade Action
@@ -22,6 +23,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    --[[
     local skyward = player:getQuestStatus(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
     local terrors = player:getQuestStatus(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
     local bibiki = player:getQuestStatus(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
@@ -44,6 +46,10 @@ function onTrigger(player,npc)
             player:setVar("TAV_VW_STATUS",1);
         end
     end
+    ]]
+    player:SpoofChatPlayer("I am very sorry but I cannot help you with voidwatch right now. ", MESSAGE_SAY, npc:getID());
+    player:SpoofChatPlayer("I am a shame to my family, I was born with bad coding..         ", MESSAGE_SAY, npc:getID());
+    player:SpoofChatPlayer("cries.", MESSAGE_EMOTION, npc:getID());
 end;
 
 
@@ -60,3 +66,7 @@ end;
 -- onEventFinish
 -----------------------------------
 
+function onEventFinish(player,csid,option)
+    printf("CSID: %u",csid);
+    printf("RESULT: %u",option);
+end;
