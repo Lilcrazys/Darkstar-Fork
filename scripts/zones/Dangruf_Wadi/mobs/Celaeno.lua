@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Dangruf Wadi
--- VWNM: Celano
--- @pos ? ? ? ?
+-- VWNM: Celaeno
+-- Notes: 
 -----------------------------------
 
 require("scripts/globals/titles");

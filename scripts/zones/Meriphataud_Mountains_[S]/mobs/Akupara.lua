@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: ?
--- VWNM: Lorbulcrud
+-- Area: Meriphataud Mountains [S]
+-- VWNM: Akupara
 -----------------------------------
 package.loaded["scripts/zones/Meriphataud_Mountains_[S]/TextIDs"] = nil;
 -----------------------------------
@@ -33,8 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 20);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,135);
+    mob:setMod(MOD_MACC,1950); -- needs converted to proper addMod later..
+    mob:setMod(MOD_MATT,135);  -- needs converted to proper addMod later..
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
@@ -127,7 +127,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local depopTime = mob:getLocalVar("depopTime");
+    -- local depopTime = mob:getLocalVar("depopTime");
 
 end;
 

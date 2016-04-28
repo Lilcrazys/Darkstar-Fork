@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: ?
--- VWNM: Lord_Asag
+-- Area: Meriphataud Mountains
+-- VWNM: Lord Asag
 -----------------------------------
 package.loaded["scripts/zones/Meriphataud_Mountains/TextIDs"] = nil;
 -----------------------------------
@@ -33,8 +33,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REFRESH, 250);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,125);
+    mob:setMod(MOD_MACC,1950); -- needs converted to proper addMod later..
+    mob:setMod(MOD_MATT,125);  -- needs converted to proper addMod later..
     mob:setMod(MOD_DOUBLE_ATTACK,15);
     mob:setMod(MOD_STUNRES, 75);
 
@@ -129,7 +129,7 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local depopTime = mob:getLocalVar("depopTime");
+    -- local depopTime = mob:getLocalVar("depopTime");
 
 end;
 
