@@ -2759,11 +2759,6 @@ REPLACE INTO `mob_spawn_points` VALUES (17818041,'Ironclad_Sunderer','Ironclad S
 -- 17822719
 -- ------------------------------------------------------------
 
--- REPLACE INTO `mob_spawn_points` VALUES (17821697,'Shinryu','Shinryu',14087,-477.491,-0.5,515.33,43); -- In DSP file
--- REPLACE INTO `mob_spawn_points` VALUES (17821698,'Shinryu','Shinryu',14087,519,-500,519,249);        -- In DSP file
-INSERT INTO `mob_spawn_points` VALUES (17821699,'Shinryu','Shinryu',14087,-479,-1000,-471,65);          -- NOT in DSP file
-
-
 REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infusionist','Atma Infusionist',168,545,-500.5,-584,7,'50','50','0','0','0','0','3',0x0000150400000000000000000000000000000000,0,null);
 
 REPLACE INTO `npc_list` VALUES (17821710,'Transcendental_Radiance','Transcendental Radiance',0,540,-500,-599,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,null);
