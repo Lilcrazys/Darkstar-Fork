@@ -34,7 +34,7 @@ function onSpellCast(caster,target,spell)
 
     -- Calculate duration and bonus
     local duration = 120;
-    local dotBonus = 0;
+    local dotBonus = caster:getMod(MOD_DIA_DOT);  -- Dia Wand
 
     if (caster:hasStatusEffect(EFFECT_SABOTEUR)) then
         duration = duration * 2;
