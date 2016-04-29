@@ -767,7 +767,8 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- 16977921 to 16978943
 -- ------------------------------------------------------------
 
--- voidwatch chapter 6
+INSERT INTO `mob_spawn_points` VALUES (16977910,'Shinryu','Shinryu',14087,-10,0,-10,0);
+
 INSERT INTO `mob_spawn_points` VALUES (16977922,'Pil-Provenance','Pil-Provenance',90507,0,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977923,'Rukh','Rukh',90508,5,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977924,'Asb','Asb',90509,10,0,1,0);
