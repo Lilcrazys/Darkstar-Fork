@@ -767,8 +767,6 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- 16977921 to 16978943
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16977910,'Shinryu','Shinryu',140870,-10,0,-10,0);
-
 INSERT INTO `mob_spawn_points` VALUES (16977922,'Pil-Provenance','Pil-Provenance',90507,0,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977923,'Rukh','Rukh',90508,5,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977924,'Asb','Asb',90509,10,0,1,0);
@@ -782,6 +780,7 @@ INSERT INTO `mob_spawn_points` VALUES (16977931,'Crystal_Fetter','Crystal_Fetter
 INSERT INTO `mob_spawn_points` VALUES (16977932,'Crystal_Fetter','Crystal_Fetter',90514,28,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977933,'Umagrhk','Umagrhk',90515,40,0,1,0);
 
+INSERT INTO `mob_spawn_points` VALUES (16977950,'Shinryu','Shinryu',140870,-10,0,-10,0);
 
 -- Super experimental, will not spawn without script or GM command.
 -- INSERT INTO `mob_spawn_points` VALUES (16978938,'Zombaru','Zombaru',96665,-24,0,0,0);
