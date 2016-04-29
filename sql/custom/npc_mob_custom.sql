@@ -767,7 +767,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- 16977921 to 16978943
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16977910,'Shinryu','Shinryu',14087,-10,0,-10,0);
+INSERT INTO `mob_spawn_points` VALUES (16977910,'Shinryu','Shinryu',140870,-10,0,-10,0);
 
 INSERT INTO `mob_spawn_points` VALUES (16977922,'Pil-Provenance','Pil-Provenance',90507,0,0,1,0);
 INSERT INTO `mob_spawn_points` VALUES (16977923,'Rukh','Rukh',90508,5,0,1,0);
@@ -2758,6 +2758,11 @@ REPLACE INTO `mob_spawn_points` VALUES (17818041,'Ironclad_Sunderer','Ironclad S
 -- Abyssea - Empyreal Paradox (Zone 255)
 -- 17822719
 -- ------------------------------------------------------------
+
+-- REPLACE INTO `mob_spawn_points` VALUES (17821697,'Shinryu','Shinryu',14087,-477.491,-0.5,515.33,43); -- In DSP file
+-- REPLACE INTO `mob_spawn_points` VALUES (17821698,'Shinryu','Shinryu',14087,519,-500,519,249);        -- In DSP file
+INSERT INTO `mob_spawn_points` VALUES (17821699,'Shinryu','Shinryu',14087,-479,-1000,-471,65);          -- NOT in DSP file
+
 
 REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infusionist','Atma Infusionist',168,545,-500.5,-584,7,'50','50','0','0','0','0','3',0x0000150400000000000000000000000000000000,0,null);
 
