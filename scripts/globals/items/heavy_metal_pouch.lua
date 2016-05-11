@@ -1,7 +1,7 @@
------------------------------------------
+------------------------------------
 -- ID: 5910
--- Item: Heavy Metal Pouch
--- Effect: When used, you will obtain 3-19 Heavy Metal Sheets
+-- Heavy Metal Pouch
+-- Breaks up a Heavy Metal Pouch
 -----------------------------------------
 
 -----------------------------------------
@@ -9,11 +9,11 @@
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
+    local result = 0;
     if (target:getFreeSlotsCount() == 0) then
         result = 308;
     end
-return result;
+    return result;
 end;
 
 -----------------------------------------
@@ -21,7 +21,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	local amount = math.random(3,19)
-	target:addItem(3509,amount);
+    target:addItem(3509,math.random(3,19));
 end;
-

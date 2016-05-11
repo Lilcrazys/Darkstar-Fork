@@ -56,12 +56,10 @@
 #include "time_server.h"
 #include "transport.h"
 #include "vana_time.h"
+#include "status_effect_container.h"
 #include "utils/zoneutils.h"
 #include "conquest_system.h"
 #include "utils/mobutils.h"
-
-#include "ai/ai_char_gm.h"
-#include "ai/ai_char_normal.h"
 
 #include "lua/luautils.h"
 
@@ -240,9 +238,9 @@ int32 do_init(int32 argc, int8** argv)
 
     CTransportHandler::getInstance()->InitializeTransport();
 
-    CTaskMgr::getInstance()->AddTask("time_server", gettick(), nullptr, CTaskMgr::TASK_INTERVAL, time_server, 2400);
-    CTaskMgr::getInstance()->AddTask("map_cleanup", gettick(), nullptr, CTaskMgr::TASK_INTERVAL, map_cleanup, 5000);
-    CTaskMgr::getInstance()->AddTask("garbage_collect", gettick(), nullptr, CTaskMgr::TASK_INTERVAL, map_garbage_collect, 15 * 60 * 1000);
+    CTaskMgr::getInstance()->AddTask("time_server", server_clock::now(), nullptr, CTaskMgr::TASK_INTERVAL, time_server, 2400ms);
+    CTaskMgr::getInstance()->AddTask("map_cleanup", server_clock::now(), nullptr, CTaskMgr::TASK_INTERVAL, map_cleanup, 5s);
+    CTaskMgr::getInstance()->AddTask("garbage_collect", server_clock::now(), nullptr, CTaskMgr::TASK_INTERVAL, map_garbage_collect, 15min);
 
     CREATE(g_PBuff,   int8, map_config.buffer_size + 20);
     CREATE(PTempBuff, int8, map_config.buffer_size + 20);
@@ -319,20 +317,20 @@ void set_server_type()
 *                                                                       *
 ************************************************************************/
 
-int32 do_sockets(fd_set* rfd,int32 next)
+int32 do_sockets(fd_set* rfd, duration next)
 {
     struct timeval timeout;
     int32 ret;
     memcpy(rfd, &readfds, sizeof(*rfd));
 
-    timeout.tv_sec  = next/1000;
-    timeout.tv_usec = next%1000*1000;
+    timeout.tv_sec = std::chrono::duration_cast<std::chrono::seconds>(next).count();
+    timeout.tv_usec = std::chrono::duration_cast<std::chrono::microseconds>(next - std::chrono::duration_cast<std::chrono::seconds>(next)).count();
 
     ret = sSelect(fd_max, rfd, nullptr, nullptr, &timeout);
 
-    if (ret == SOCKET_ERROR )
+    if (ret == SOCKET_ERROR)
     {
-        if (sErrno != S_EINTR )
+        if (sErrno != S_EINTR)
         {
             ShowFatalError("do_sockets: select() failed, error code %d!\n", sErrno);
             do_final(EXIT_FAILURE);
@@ -342,30 +340,30 @@ int32 do_sockets(fd_set* rfd,int32 next)
 
     last_tick = time(nullptr);
 
-    if (sFD_ISSET(map_fd,rfd) )
+    if (sFD_ISSET(map_fd, rfd))
     {
         struct sockaddr_in from;
         socklen_t fromlen = sizeof(from);
 
-        int32 ret = recvudp(map_fd,g_PBuff,map_config.buffer_size,0,(struct sockaddr*)&from,&fromlen);
+        int32 ret = recvudp(map_fd, g_PBuff, map_config.buffer_size, 0, (struct sockaddr*)&from, &fromlen);
         if (ret != -1)
         {
             // find player char
-        #   ifdef WIN32
-            uint32 ip   = ntohl(from.sin_addr.S_un.S_addr);
-        #   else
-            uint32 ip   = ntohl(from.sin_addr.s_addr);
-        #   endif
+#   ifdef WIN32
+            uint32 ip = ntohl(from.sin_addr.S_un.S_addr);
+#   else
+            uint32 ip = ntohl(from.sin_addr.s_addr);
+#   endif
 
             uint64 port = ntohs(from.sin_port);
             uint64 ipp = ip;
-            ipp |= port<<32;
+            ipp |= port << 32;
             map_session_data_t* map_session_data = mapsession_getbyipp(ipp);
 
-            if (map_session_data == nullptr )
+            if (map_session_data == nullptr)
             {
-                map_session_data = mapsession_createsession(ip,ntohs(from.sin_port));
-                if (map_session_data == nullptr )
+                map_session_data = mapsession_createsession(ip, ntohs(from.sin_port));
+                if (map_session_data == nullptr)
                 {
 					map_session_list.erase(ipp);
                     return -1;
@@ -375,16 +373,16 @@ int32 do_sockets(fd_set* rfd,int32 next)
             map_session_data->last_update = time(nullptr);
             size_t size = ret;
 
-            if (recv_parse(g_PBuff,&size,&from,map_session_data) != -1 )
+            if (recv_parse(g_PBuff, &size, &from, map_session_data) != -1)
             {
                 // если предыдущий пакет был потерян, то мы не собираем новый,
                 // а отправляем предыдущий пакет повторно
-                if (!parse(g_PBuff,&size,&from,map_session_data))
+                if (!parse(g_PBuff, &size, &from, map_session_data))
                 {
-                    send_parse(g_PBuff,&size,&from,map_session_data);
+                    send_parse(g_PBuff, &size, &from, map_session_data);
                 }
 
-                ret = sendudp(map_fd,g_PBuff,size,0,(const struct sockaddr*)&from,fromlen);
+                ret = sendudp(map_fd, g_PBuff, size, 0, (const struct sockaddr*)&from, fromlen);
 
                 int8* data = g_PBuff;
                 g_PBuff = map_session_data->server_packet_data;
@@ -394,7 +392,7 @@ int32 do_sockets(fd_set* rfd,int32 next)
             }
             if (map_session_data->shuttingDown > 0)
             {
-                map_close_session(gettick(), map_session_data);
+                map_close_session(server_clock::now(), map_session_data);
             }
         }
     }
@@ -423,29 +421,29 @@ int32 map_decipher_packet(int8* buff, size_t size, sockaddr_in* from, map_sessio
     uint16 tmp, i;
 
     // counting blocks whose size = 4 byte
-    tmp = (size-FFXI_HEADER_SIZE)/4;
-    tmp -= tmp%2;
+    tmp = (size - FFXI_HEADER_SIZE) / 4;
+    tmp -= tmp % 2;
 
 #   ifdef WIN32
-    uint32 ip   = ntohl(from->sin_addr.S_un.S_addr);
+    uint32 ip = ntohl(from->sin_addr.S_un.S_addr);
 #   else
-    uint32 ip   = ntohl(from->sin_addr.s_addr);
+    uint32 ip = ntohl(from->sin_addr.s_addr);
 #   endif
 
     blowfish_t *pbfkey = &map_session_data->blowfish;
 
     for (i = 0; i < tmp; i += 2)
     {
-        blowfish_decipher((uint32*)buff+i+7,(uint32*)buff+i+8, pbfkey->P, pbfkey->S[0]);
+        blowfish_decipher((uint32*)buff + i + 7, (uint32*)buff + i + 8, pbfkey->P, pbfkey->S[0]);
     }
 
-    if (checksum((uint8*)(buff+FFXI_HEADER_SIZE),size-(FFXI_HEADER_SIZE+16),buff+size-16) == 0)
+    if (checksum((uint8*)(buff + FFXI_HEADER_SIZE), size - (FFXI_HEADER_SIZE + 16), buff + size - 16) == 0)
     {
         return 0;
     }
 
     int8 ip_str[16];
-    ShowError("map_encipher_packet: bad packet from <%s>\n",ip2str(ip,ip_str));
+    ShowError("map_encipher_packet: bad packet from <%s>\n", ip2str(ip, ip_str));
     return -1;
 }
 
@@ -478,7 +476,7 @@ int32 recv_parse(int8* buff, size_t* buffsize, sockaddr_in* from, map_session_da
     {
         if (map_session_data->PChar == nullptr)
         {
-            uint32 CharID = RBUFL(buff,FFXI_HEADER_SIZE+0x0C);
+            uint32 CharID = RBUFL(buff, FFXI_HEADER_SIZE + 0x0C);
 
             const int8* fmtQuery = "SELECT charid FROM chars WHERE charid = %u LIMIT 1;";
 
@@ -494,7 +492,7 @@ int32 recv_parse(int8* buff, size_t* buffsize, sockaddr_in* from, map_session_da
 
             fmtQuery = "SELECT session_key FROM accounts_sessions WHERE charid = %u LIMIT 1;";
 
-            ret = Sql_Query(SqlHandle,fmtQuery,CharID);
+            ret = Sql_Query(SqlHandle, fmtQuery, CharID);
 
             if (ret == SQL_ERROR ||
                 Sql_NumRows(SqlHandle) == 0 ||
@@ -505,15 +503,14 @@ int32 recv_parse(int8* buff, size_t* buffsize, sockaddr_in* from, map_session_da
             else
             {
                 int8* strSessionKey = nullptr;
-                Sql_GetData(SqlHandle,0,&strSessionKey,nullptr);
+                Sql_GetData(SqlHandle, 0, &strSessionKey, nullptr);
 
-                memcpy(map_session_data->blowfish.key,strSessionKey,20);
+                memcpy(map_session_data->blowfish.key, strSessionKey, 20);
             }
 
             // наверное создание персонажа лучше вынести в метод charutils::LoadChar() и загрузку инвентаря туда же сунуть
             CCharEntity* PChar = new CCharEntity();
             PChar->id = CharID;
-            PChar->PBattleAI = new CAICharNormal(PChar);
 
             charutils::LoadChar(PChar);
 
@@ -529,27 +526,27 @@ int32 recv_parse(int8* buff, size_t* buffsize, sockaddr_in* from, map_session_da
     {
         //char packets
 
-        if (map_decipher_packet(buff,*buffsize,from,map_session_data) == -1)
+        if (map_decipher_packet(buff, *buffsize, from, map_session_data) == -1)
         {
             *buffsize = 0;
             return -1;
         }
         // reading data size
-        uint32 PacketDataSize = RBUFL(buff,*buffsize-sizeof(int32)-16);
+        uint32 PacketDataSize = RBUFL(buff, *buffsize - sizeof(int32) - 16);
         // creating buffer for decompress data
         int8* PacketDataBuff = nullptr;
-        CREATE(PacketDataBuff,int8,map_config.buffer_size);
+        CREATE(PacketDataBuff, int8, map_config.buffer_size);
         // it's decompressing data and getting new size
-        PacketDataSize = zlib_decompress(buff+FFXI_HEADER_SIZE,
-                                         PacketDataSize,
-                                         PacketDataBuff,
-                                         map_config.buffer_size,
-                                         zlib_decompress_table);
+        PacketDataSize = zlib_decompress(buff + FFXI_HEADER_SIZE,
+            PacketDataSize,
+            PacketDataBuff,
+            map_config.buffer_size,
+            zlib_decompress_table);
 
         // it's making result buff
         // don't need memcpy header
-        memcpy(buff+FFXI_HEADER_SIZE,PacketDataBuff,PacketDataSize);
-        *buffsize = FFXI_HEADER_SIZE+PacketDataSize;
+        memcpy(buff + FFXI_HEADER_SIZE, PacketDataBuff, PacketDataSize);
+        *buffsize = FFXI_HEADER_SIZE + PacketDataSize;
 
         aFree(PacketDataBuff);
         return 0;
@@ -568,34 +565,34 @@ int32 parse(int8* buff, size_t* buffsize, sockaddr_in* from, map_session_data_t*
     // начало обработки входящего пакета
 
     int8* PacketData_Begin = &buff[FFXI_HEADER_SIZE];
-    int8* PacketData_End   = &buff[*buffsize];
+    int8* PacketData_End = &buff[*buffsize];
 
     CCharEntity *PChar = map_session_data->PChar;
 
     uint16 SmallPD_Size = 0;
     uint16 SmallPD_Type = 0;
-    uint16 SmallPD_Code = RBUFW(buff,0);
+    uint16 SmallPD_Code = RBUFW(buff, 0);
 
     for (int8* SmallPD_ptr = PacketData_Begin;
-        SmallPD_ptr + (RBUFB(SmallPD_ptr,1) & 0xFE)*2 <= PacketData_End && (RBUFB(SmallPD_ptr,1) & 0xFE);
-        SmallPD_ptr = SmallPD_ptr + SmallPD_Size*2)
+        SmallPD_ptr + (RBUFB(SmallPD_ptr, 1) & 0xFE) * 2 <= PacketData_End && (RBUFB(SmallPD_ptr, 1) & 0xFE);
+        SmallPD_ptr = SmallPD_ptr + SmallPD_Size * 2)
     {
-        SmallPD_Size = (RBUFB(SmallPD_ptr,1) & 0x0FE);
-        SmallPD_Type = (RBUFW(SmallPD_ptr,0) & 0x1FF);
+        SmallPD_Size = (RBUFB(SmallPD_ptr, 1) & 0x0FE);
+        SmallPD_Type = (RBUFW(SmallPD_ptr, 0) & 0x1FF);
 
         if (PacketSize[SmallPD_Type] == SmallPD_Size || PacketSize[SmallPD_Type] == 0) // Tests incoming packets for the correct size prior to processing
         {
             // если код текущего пакета меньше либо равен последнему полученному
             // или больше глобального то игнорируем пакет
 
-            if ((RBUFW(SmallPD_ptr,2) <= map_session_data->client_packet_id) ||
-                (RBUFW(SmallPD_ptr,2) >  SmallPD_Code))
+            if ((RBUFW(SmallPD_ptr, 2) <= map_session_data->client_packet_id) ||
+                (RBUFW(SmallPD_ptr, 2) > SmallPD_Code))
             {
                 continue;
             }
             if (SmallPD_Type != 0x15)
             {
-                ShowInfo("parse: %03hX | %04hX %04hX %02hX from user: %s\n", SmallPD_Type, RBUFW(SmallPD_ptr,2), RBUFW(buff,2), SmallPD_Size, PChar->GetName());
+                ShowInfo("parse: %03hX | %04hX %04hX %02hX from user: %s\n", SmallPD_Type, RBUFW(SmallPD_ptr, 2), RBUFW(buff, 2), SmallPD_Size, PChar->GetName());
             }
             if (PChar->loc.zone == nullptr && SmallPD_Type != 0x0A)
             {
@@ -608,22 +605,21 @@ int32 parse(int8* buff, size_t* buffsize, sockaddr_in* from, map_session_data_t*
         }
         else
         {
-            ShowWarning("Bad packet size %03hX | %04hX %04hX %02hX from user: %s\n", SmallPD_Type, RBUFW(SmallPD_ptr,2), RBUFW(buff,2), SmallPD_Size, PChar->GetName());
+            ShowWarning("Bad packet size %03hX | %04hX %04hX %02hX from user: %s\n", SmallPD_Type, RBUFW(SmallPD_ptr, 2), RBUFW(buff, 2), SmallPD_Size, PChar->GetName());
         }
     }
-    ((CAICharNormal*)PChar->PBattleAI)->CheckActionAfterReceive(gettick());
     map_session_data->client_packet_id = SmallPD_Code;
 
     // здесь мы проверяем, получил ли клиент предыдущий пакет
     // если не получил, то мы не создаем новый, а отправляем предыдущий
 
-    if (RBUFW(buff,2) != map_session_data->server_packet_id)
+    if (RBUFW(buff, 2) != map_session_data->server_packet_id)
     {
-        WBUFW(map_session_data->server_packet_data,2) = SmallPD_Code;
-        WBUFW(map_session_data->server_packet_data,8) = (uint32)time(nullptr);
+        WBUFW(map_session_data->server_packet_data, 2) = SmallPD_Code;
+        WBUFW(map_session_data->server_packet_data, 8) = (uint32)time(nullptr);
 
-        g_PBuff  = map_session_data->server_packet_data;
-       *buffsize = map_session_data->server_packet_size;
+        g_PBuff = map_session_data->server_packet_data;
+        *buffsize = map_session_data->server_packet_size;
 
         map_session_data->server_packet_data = buff;
         return -1;
@@ -650,11 +646,11 @@ int32 send_parse(int8 *buff, size_t* buffsize, sockaddr_in* from, map_session_da
     //  - присвоить исходящему пакету номер последнего отправленного клиенту пакета +1
     //  - записать текущее время отправки пакета
 
-    WBUFW(buff,0) = map_session_data->server_packet_id;
-    WBUFW(buff,2) = map_session_data->client_packet_id;
+    WBUFW(buff, 0) = map_session_data->server_packet_id;
+    WBUFW(buff, 2) = map_session_data->client_packet_id;
 
     // сохранение текущего времени (32 BIT!)
-    WBUFL(buff,8) = (uint32)time(nullptr);
+    WBUFL(buff, 8) = (uint32)time(nullptr);
 
     // собираем большой пакет, состоящий из нескольких маленьких
     CCharEntity *PChar = map_session_data->PChar;
@@ -695,7 +691,7 @@ int32 send_parse(int8 *buff, size_t* buffsize, sockaddr_in* from, map_session_da
     //Запись размера данных без учета заголовка
     uint8 hash[16];
     md5((uint8*)PTempBuff, hash, PacketSize);
-    memcpy(PTempBuff+PacketSize, hash, 16);
+    memcpy(PTempBuff + PacketSize, hash, 16);
     PacketSize += 16;
 
     if (PacketSize > map_config.buffer_size + 20)
@@ -704,15 +700,15 @@ int32 send_parse(int8 *buff, size_t* buffsize, sockaddr_in* from, map_session_da
     }
 
     //making total packet
-    memcpy(buff+FFXI_HEADER_SIZE, PTempBuff, PacketSize);
+    memcpy(buff + FFXI_HEADER_SIZE, PTempBuff, PacketSize);
 
-    uint32 CypherSize = (PacketSize/4)&-2;
+    uint32 CypherSize = (PacketSize / 4)&-2;
 
     blowfish_t* pbfkey = &map_session_data->blowfish;
 
     for (uint32 j = 0; j < CypherSize; j += 2)
     {
-        blowfish_encipher((uint32*)(buff)+j+7, (uint32*)(buff)+j+8, pbfkey->P, pbfkey->S[0]);
+        blowfish_encipher((uint32*)(buff)+j + 7, (uint32*)(buff)+j + 8, pbfkey->P, pbfkey->S[0]);
     }
 
     // контролируем размер отправляемого пакета. в случае,
@@ -722,7 +718,7 @@ int32 send_parse(int8 *buff, size_t* buffsize, sockaddr_in* from, map_session_da
     // в случае возникновения подобной ситуации выводим предупреждующее сообщение и
     // уменьшаем размер BuffMaxSize с шагом в 4 байта до ее устранения (вручную)
 
-    *buffsize = PacketSize+FFXI_HEADER_SIZE;
+    *buffsize = PacketSize + FFXI_HEADER_SIZE;
 
     return 0;
 }
@@ -734,7 +730,7 @@ int32 send_parse(int8 *buff, size_t* buffsize, sockaddr_in* from, map_session_da
 *                                                                       *
 ************************************************************************/
 
-int32 map_close_session(uint32 tick, map_session_data_t* map_session_data)
+int32 map_close_session(time_point tick, map_session_data_t* map_session_data)
 {
     if (map_session_data != nullptr &&
         map_session_data->server_packet_data != nullptr &&
@@ -773,7 +769,7 @@ int32 map_close_session(uint32 tick, map_session_data_t* map_session_data)
 *                                                                       *
 ************************************************************************/
 
-int32 map_cleanup(uint32 tick, CTaskMgr::CTask* PTask)
+int32 map_cleanup(time_point tick, CTaskMgr::CTask* PTask)
 {
     map_session_list_t::iterator it = map_session_list.begin();
 
@@ -998,7 +994,7 @@ int32 map_config_read(const int8* cfgName)
     int8 line[1024], w1[1024], w2[1024];
     FILE* fp;
 
-    fp = fopen(cfgName,"r");
+    fp = fopen(cfgName, "r");
     if (fp == nullptr)
     {
         ShowError("Map configuration file not found at: %s\n", cfgName);
@@ -1024,132 +1020,136 @@ int32 map_config_read(const int8* cfgName)
         ptr++;
         *ptr = '\0';
 
-        if (strcmpi(w1,"timestamp_format") == 0)
+        if (strcmpi(w1, "timestamp_format") == 0)
         {
             strncpy(timestamp_format, w2, 20);
         }
-        else if (strcmpi(w1,"stdout_with_ansisequence") == 0)
+        else if (strcmpi(w1, "stdout_with_ansisequence") == 0)
         {
             stdout_with_ansisequence = config_switch(w2);
         }
-        else if (strcmpi(w1,"console_silent") == 0)
+        else if (strcmpi(w1, "console_silent") == 0)
         {
             ShowInfo("Console Silent Setting: %d", atoi(w2));
             msg_silent = atoi(w2);
         }
-        else if (strcmpi(w1,"map_port") == 0)
+        else if (strcmpi(w1, "map_port") == 0)
         {
             map_config.usMapPort = (atoi(w2));
         }
-        else if (strcmp(w1,"buff_maxsize") == 0)
+        else if (strcmp(w1, "buff_maxsize") == 0)
         {
             map_config.buffer_size = atoi(w2);
         }
-        else if (strcmp(w1,"max_time_lastupdate") == 0)
+        else if (strcmp(w1, "max_time_lastupdate") == 0)
         {
             map_config.max_time_lastupdate = atoi(w2);
         }
-        else if (strcmp(w1,"vanadiel_time_offset") == 0)
+        else if (strcmp(w1, "vanadiel_time_offset") == 0)
         {
             map_config.vanadiel_time_offset = atoi(w2);
         }
-        else if (strcmp(w1,"lightluggage_block") == 0)
+        else if (strcmp(w1, "fame_multiplier") == 0)
+        {
+            map_config.fame_multiplier = atof(w2);
+        }
+        else if (strcmp(w1, "lightluggage_block") == 0)
         {
             map_config.lightluggage_block = atoi(w2);
         }
-        else if (strcmp(w1,"exp_rate") == 0)
+        else if (strcmp(w1, "exp_rate") == 0)
         {
             map_config.exp_rate = atof(w2);
         }
-        else if (strcmp(w1,"exp_loss_rate") == 0)
+        else if (strcmp(w1, "exp_loss_rate") == 0)
         {
             map_config.exp_loss_rate = atof(w2);
         }
-        else if (strcmp(w1,"exp_party_gap_penalties") == 0)
+        else if (strcmp(w1, "exp_party_gap_penalties") == 0)
         {
             map_config.exp_party_gap_penalties = atof(w2);
         }
-        else if (strcmp(w1,"fov_party_gap_penalties") == 0)
+        else if (strcmp(w1, "fov_party_gap_penalties") == 0)
         {
             map_config.fov_party_gap_penalties = atof(w2);
         }
-        else if (strcmp(w1,"fov_allow_alliance") == 0)
+        else if (strcmp(w1, "fov_allow_alliance") == 0)
         {
             map_config.fov_allow_alliance = atof(w2);
         }
-        else if (strcmp(w1,"mob_tp_multiplier") == 0)
+        else if (strcmp(w1, "mob_tp_multiplier") == 0)
         {
             map_config.mob_tp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"player_tp_multiplier") == 0)
+        else if (strcmp(w1, "player_tp_multiplier") == 0)
         {
             map_config.player_tp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"nm_hp_multiplier") == 0)
+        else if (strcmp(w1, "nm_hp_multiplier") == 0)
         {
             map_config.nm_hp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"mob_hp_multiplier") == 0)
+        else if (strcmp(w1, "mob_hp_multiplier") == 0)
         {
             map_config.mob_hp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"player_hp_multiplier") == 0)
+        else if (strcmp(w1, "player_hp_multiplier") == 0)
         {
             map_config.player_hp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"nm_mp_multiplier") == 0)
+        else if (strcmp(w1, "nm_mp_multiplier") == 0)
         {
             map_config.nm_mp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"mob_mp_multiplier") == 0)
+        else if (strcmp(w1, "mob_mp_multiplier") == 0)
         {
             map_config.mob_mp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"player_mp_multiplier") == 0)
+        else if (strcmp(w1, "player_mp_multiplier") == 0)
         {
             map_config.player_mp_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"sj_mp_divisor") == 0)
+        else if (strcmp(w1, "sj_mp_divisor") == 0)
         {
             map_config.sj_mp_divisor = atof(w2);
         }
-        else if (strcmp(w1,"nm_stat_multiplier") == 0)
+        else if (strcmp(w1, "nm_stat_multiplier") == 0)
         {
             map_config.nm_stat_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"mob_stat_multiplier") == 0)
+        else if (strcmp(w1, "mob_stat_multiplier") == 0)
         {
             map_config.mob_stat_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"player_stat_multiplier") == 0)
+        else if (strcmp(w1, "player_stat_multiplier") == 0)
         {
             map_config.player_stat_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"drop_rate_multiplier") == 0)
+        else if (strcmp(w1, "drop_rate_multiplier") == 0)
         {
             map_config.drop_rate_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"all_mobs_gil_bonus") == 0)
+        else if (strcmp(w1, "all_mobs_gil_bonus") == 0)
         {
             map_config.all_mobs_gil_bonus = atoi(w2);
         }
-        else if (strcmp(w1,"max_gil_bonus") == 0)
+        else if (strcmp(w1, "max_gil_bonus") == 0)
         {
             map_config.max_gil_bonus = atoi(w2);
         }
-        else if (strcmp(w1,"exp_retain") == 0)
+        else if (strcmp(w1, "exp_retain") == 0)
         {
             map_config.exp_retain = dsp_cap(atof(w2), 0.0f, 1.0f);
         }
-        else if (strcmp(w1,"exp_loss_level") == 0)
+        else if (strcmp(w1, "exp_loss_level") == 0)
         {
             map_config.exp_loss_level = atoi(w2);
         }
-        else if (strcmp(w1,"level_sync_enable") == 0)
+        else if (strcmp(w1, "level_sync_enable") == 0)
         {
             map_config.level_sync_enable = atoi(w2);
         }
-        else if (strcmp(w1,"all_jobs_widescan") == 0)
+        else if (strcmp(w1, "all_jobs_widescan") == 0)
         {
             map_config.all_jobs_widescan = atoi(w2);
         }
@@ -1165,15 +1165,15 @@ int32 map_config_read(const int8* cfgName)
         {
             map_config.speed_mod = atoi(w2);
         }
-        else if (strcmp(w1,"mob_speed_mod") == 0)
+        else if (strcmp(w1, "mob_speed_mod") == 0)
         {
             map_config.mob_speed_mod = atoi(w2);
         }
-        else if (strcmp(w1,"skillup_chance_multiplier") == 0)
+        else if (strcmp(w1, "skillup_chance_multiplier") == 0)
         {
             map_config.skillup_chance_multiplier = atof(w2);
         }
-        else if (strcmp(w1,"craft_chance_multiplier") == 0)
+        else if (strcmp(w1, "craft_chance_multiplier") == 0)
         {
             map_config.craft_chance_multiplier = atof(w2);
         }
@@ -1197,75 +1197,75 @@ int32 map_config_read(const int8* cfgName)
         {
             map_config.craft_direction_matters = atof(w2);
         }
-        else if (strcmp(w1,"mysql_host") == 0)
+        else if (strcmp(w1, "mysql_host") == 0)
         {
             map_config.mysql_host = aStrdup(w2);
         }
-        else if (strcmp(w1,"mysql_login") == 0)
+        else if (strcmp(w1, "mysql_login") == 0)
         {
             map_config.mysql_login = aStrdup(w2);
         }
-        else if (strcmp(w1,"mysql_password") == 0)
+        else if (strcmp(w1, "mysql_password") == 0)
         {
             map_config.mysql_password = aStrdup(w2);
         }
-        else if (strcmp(w1,"mysql_port") == 0)
+        else if (strcmp(w1, "mysql_port") == 0)
         {
             map_config.mysql_port = atoi(w2);
         }
-        else if (strcmp(w1,"mysql_database") == 0)
+        else if (strcmp(w1, "mysql_database") == 0)
         {
             map_config.mysql_database = aStrdup(w2);
         }
-        else if (strcmpi(w1,"import") == 0)
+        else if (strcmpi(w1, "import") == 0)
         {
             map_config_read(w2);
         }
-        else if(strcmpi(w1,"newstyle_skillups") == 0)
+        else if (strcmpi(w1, "newstyle_skillups") == 0)
         {
             map_config.newstyle_skillups = atoi(w2);
         }
-        else if (strcmp(w1,"Battle_cap_tweak") == 0)
+        else if (strcmp(w1, "Battle_cap_tweak") == 0)
         {
             map_config.Battle_cap_tweak = atoi(w2);
         }
-        else if (strcmp(w1,"CoP_Battle_cap") == 0)
+        else if (strcmp(w1, "CoP_Battle_cap") == 0)
         {
             map_config.CoP_Battle_cap = atoi(w2);
         }
-        else if (strcmp(w1,"max_merit_points") == 0)
+        else if (strcmp(w1, "max_merit_points") == 0)
         {
             map_config.max_merit_points = atoi(w2);
         }
-        else if (strcmp(w1,"yell_cooldown") == 0)
+        else if (strcmp(w1, "yell_cooldown") == 0)
         {
             map_config.yell_cooldown = atoi(w2);
         }
-        else if (strcmp(w1,"audit_chat") == 0)
+        else if (strcmp(w1, "audit_chat") == 0)
         {
             map_config.audit_chat = atoi(w2);
         }
-        else if (strcmp(w1,"audit_say") == 0)
+        else if (strcmp(w1, "audit_say") == 0)
         {
             map_config.audit_say = atoi(w2);
         }
-        else if (strcmp(w1,"audit_shout") == 0)
+        else if (strcmp(w1, "audit_shout") == 0)
         {
             map_config.audit_shout = atoi(w2);
         }
-        else if (strcmp(w1,"audit_tell") == 0)
+        else if (strcmp(w1, "audit_tell") == 0)
         {
             map_config.audit_tell = atoi(w2);
         }
-        else if (strcmp(w1,"audit_yell") == 0)
+        else if (strcmp(w1, "audit_yell") == 0)
         {
             map_config.audit_yell = atoi(w2);
         }
-        else if (strcmp(w1,"audit_linkshell") == 0)
+        else if (strcmp(w1, "audit_linkshell") == 0)
         {
             map_config.audit_linkshell = atoi(w2);
         }
-        else if (strcmp(w1,"audit_party") == 0)
+        else if (strcmp(w1, "audit_party") == 0)
         {
             map_config.audit_party = atoi(w2);
         }
@@ -1334,7 +1334,7 @@ int32 map_config_read(const int8* cfgName)
     return 0;
 }
 
-int32 map_garbage_collect(uint32 tick, CTaskMgr::CTask* PTask)
+int32 map_garbage_collect(time_point tick, CTaskMgr::CTask* PTask)
 {
     luautils::garbageCollect();
     return 0;

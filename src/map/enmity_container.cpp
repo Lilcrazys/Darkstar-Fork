@@ -124,9 +124,9 @@ void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int16 CE, int16 VE, 
         VE = 0;
     }
 
-    // Crash fix, PEntity was in ACTION_FALL
-    if (PEntity->PBattleAI->GetCurrentAction() == ACTION_FALL)
-        return;
+    auto PMob = dynamic_cast<CMobEntity*>(m_EnmityHolder);
+    if (PMob && PMob->m_HiPCLvl < PEntity->GetMLevel())
+        PMob->m_HiPCLvl = PEntity->GetMLevel();
 
     EnmityList_t::iterator PEnmity = m_EnmityList.lower_bound(PEntity->id);
 
@@ -156,9 +156,19 @@ void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int16 CE, int16 VE, 
     {
         EnmityObject_t* PEnmityObject = new EnmityObject_t;
 
+        bool initial = true;
+        for (auto&& enmityObject : m_EnmityList)
+        {
+            if (enmityObject.second->CE > 0 || enmityObject.second->VE > 0)
+            {
+                initial = false;
+                break;
+            }
+        }
+        if (initial) CE += 200;
         float bonus = CalculateEnmityBonus(PEntity);
 
-        PEnmityObject->CE = dsp_cap(CE * bonus, 1, 10000);
+        PEnmityObject->CE = dsp_cap(CE * bonus, 0, 10000);
         PEnmityObject->VE = dsp_cap(VE * bonus, 0, 10000);
         PEnmityObject->PEnmityOwner = PEntity;
         PEnmityObject->isAggroEnmity = aggroEnmity;
@@ -251,10 +261,6 @@ void CEnmityContainer::UpdateEnmityFromCure(CBattleEntity* PEntity, uint16 level
             VE = 0;
         }
 
-        // Crash fix, PEntity was in ACTION_FALL
-        if (PEntity->PBattleAI->GetCurrentAction() == ACTION_FALL)
-            return;
-
         EnmityList_t::iterator PEnmity = m_EnmityList.lower_bound(PEntity->id);
 
         // current highest enmity before this update
@@ -343,16 +349,46 @@ void CEnmityContainer::LowerEnmityByPercent(CBattleEntity* PEntity, uint8 percen
 
 /************************************************************************
 *                                                                       *
+*    Returns the CE or VE for the current entity                        *
+*                                                                       *
+************************************************************************/
+
+uint16 CEnmityContainer::GetCE(CBattleEntity* PEntity)
+{
+    EnmityList_t::iterator PEnmity = m_EnmityList.lower_bound(PEntity->id);
+    int32 CEValue = 0;
+
+    if (PEnmity != m_EnmityList.end() &&
+        !m_EnmityList.key_comp()(PEntity->id, PEnmity->first))
+    {
+        CEValue = (PEnmity->second->CE);
+    }
+    // ShowDebug("Current CE: %u\n", CEValue);
+    return CEValue;
+}
+
+uint16 CEnmityContainer::GetVE(CBattleEntity* PEntity)
+{
+    EnmityList_t::iterator PEnmity = m_EnmityList.lower_bound(PEntity->id);
+    int32 VEValue = 0;
+
+    if (PEnmity != m_EnmityList.end() &&
+        !m_EnmityList.key_comp()(PEntity->id, PEnmity->first))
+    {
+        VEValue = (PEnmity->second->VE);
+    }
+    // ShowDebug("Current VE: %u\n", VEValue);
+    return VEValue;
+}
+
+/************************************************************************
+*                                                                       *
 *                                                                       *
 *                                                                       *
 ************************************************************************/
 
 void CEnmityContainer::UpdateEnmityFromDamage(CBattleEntity* PEntity, uint16 Damage)
 {
-    // Crash fix, PEntity was in ACTION_FALL
-    if (PEntity->PBattleAI->GetCurrentAction() == ACTION_FALL)
-        return;
-
     Damage = (Damage < 1 ? 1 : Damage);
 
     uint16 mod = battleutils::GetEnmityModDamage(PEntity->GetMLevel()); //default fallback
@@ -416,9 +452,9 @@ void CEnmityContainer::DecayEnmity()
     for (EnmityList_t::iterator it = m_EnmityList.begin(); it != m_EnmityList.end(); ++it)
     {
         EnmityObject_t* PEnmityObject = it->second;
+        constexpr auto decay_amount = 60 / server_tick_rate;
 
-        //Should lose 60/sec, and this is called twice a sec, hence 30.
-        PEnmityObject->VE -= PEnmityObject->VE > 30 ? 30 : PEnmityObject->VE;
+        PEnmityObject->VE -= PEnmityObject->VE > decay_amount ? decay_amount : PEnmityObject->VE;
         // ShowDebug("CE: %d VE: %d\n", PEnmityObject->CE, PEnmityObject->VE);
     }
 }

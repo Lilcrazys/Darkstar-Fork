@@ -123,9 +123,14 @@ function onSpellCast(caster,target,spell)
     
     spell:setMsg(367);
 
-	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242 or 11126) then
-		caster:addMp(final*0.05);
-	end
+    if (caster:getObjType() == TYPE_PC) then
+        if (caster:getEquipID(SLOT_FEET) == 28151
+        or caster:getEquipID(SLOT_FEET) == 27241
+        or caster:getEquipID(SLOT_FEET) == 27242
+        or caster:getEquipID(SLOT_FEET) == 11126) then
+            caster:addMp(final*0.05);
+        end
+    end
 
     return final;
 end;

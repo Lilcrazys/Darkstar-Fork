@@ -14,12 +14,11 @@ function onMobDeath(mob,killer,ally)
 
     checkRegime(ally,mob,109,1);
 
-    mob = mob:getID();
-    if (Dune_Widow_PH[mob] ~= nil) then
-
-        ToD = GetServerVariable("[POP]Dune_Widow");
+    local mobID = mob:getID();
+    if (Dune_Widow_PH[mobID] ~= nil) then
+        local ToD = GetServerVariable("[POP]Dune_Widow");
         if (ToD <= os.time(t) and GetMobAction(Dune_Widow) == 0) then
-            if (math.random((1),(20)) == 5) then
+            if (math.random(1,20) == 5) then
                 UpdateNMSpawnPoint(Dune_Widow);
                 GetMobByID(Dune_Widow):setRespawnTime(GetMobRespawnTime(mobID));
                 SetServerVariable("[PH]Dune_Widow", mobID);

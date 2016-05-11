@@ -1215,4 +1215,4 @@ PET_AMIGO_SABOTENDER      = 47;
 
 
 -- Trust
-PET_PRISHE	  = 73;
+-- PET_PRISHE	  = 73;

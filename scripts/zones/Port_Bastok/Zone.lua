@@ -48,6 +48,7 @@ function onZoneIn(player,prevZone)
         player:setHomePoint();
     end
 
+    if (player:getXPos() == 0 and player:getYPos() == 0 and player:getZPos() == 0) then
     if ((player:getXPos() == 0) and (player:getYPos() == 0) and (player:getZPos() == 0)) then
         if (prevZone == 224) then
             cs = 0x0049;
@@ -62,9 +63,10 @@ function onZoneIn(player,prevZone)
         end
     end
 
-    if (player:getCurrentMission(COP) == THE_ENDURING_TUMULT_OF_WAR and player:getVar("PromathiaStatus") == 0)then
+    if (player:getCurrentMission(COP) == THE_ENDURING_TUMULT_OF_WAR and player:getVar("PromathiaStatus") == 0) then
         cs = 0x0132;
     end
+
     return cs;
 end;
 
@@ -73,9 +75,9 @@ end;
 -----------------------------------
 
 function onRegionEnter(player,region)
-    local regionID = region:GetRegionID();
+    local regionID =region:GetRegionID();
     -- printf("regionID: %u",regionID);
-    if (regionID ==1 and player:getCurrentMission(COP) == THE_CALL_OF_THE_WYRMKING and player:getVar("PromathiaStatus") == 0) then
+    if (regionID == 1 and player:getCurrentMission(COP) == THE_CALL_OF_THE_WYRMKING and player:getVar("PromathiaStatus") == 0) then
         player:startEvent(0x0131);
     elseif (regionID == 2) then
         player:setPos(60,6.2,-62,192);

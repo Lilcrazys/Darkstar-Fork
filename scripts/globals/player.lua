@@ -12,7 +12,6 @@ require("scripts/globals/shop");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/gear_sets");
-require("scripts/globals/custom_trials"); -- temp
 
 -----------------------------------
 -- onGameIn

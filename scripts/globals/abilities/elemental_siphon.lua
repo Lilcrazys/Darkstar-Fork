@@ -11,6 +11,7 @@ require("scripts/globals/pets");
 require("scripts/globals/magic")
 require("scripts/globals/utils")
 require("scripts/globals/weather");
+
 -----------------------------------
 -- onAbilityCheck
 -----------------------------------

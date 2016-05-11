@@ -28,6 +28,8 @@ This file is part of DarkStar-server source code.
 
 #include "party.h"
 #include "alliance.h"
+#include "linkshell.h"
+#include "status_effect_container.h"
 
 #include "entities/charentity.h"
 
@@ -35,9 +37,9 @@ This file is part of DarkStar-server source code.
 #include "packets/party_invite.h"
 #include "packets/server_ip.h"
 
-#include "utils/charutils.h"
 #include "utils/zoneutils.h"
 #include "utils/jailutils.h"
+#include "items/item_linkshell.h"
 
 namespace message
 {
@@ -81,9 +83,10 @@ namespace message
             }
             else
             {
-                PChar->status = STATUS_SHUTDOWN;
+                //TODO: disconnect the client, but leave the character in the disconnecting state
+                //PChar->status = STATUS_SHUTDOWN;
                 //won't save their position (since this is the wrong thread) but not a huge deal
-                PChar->pushPacket(new CServerIPPacket(PChar, 1, 0));
+                //PChar->pushPacket(new CServerIPPacket(PChar, 1, 0));
             }
             break;
         }

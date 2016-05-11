@@ -21,6 +21,11 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_GA_CHANCE, 50);
     mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID());
 
+    -- setMod
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_UFASTCAST, 45);
+
     -- addMod
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,10)
@@ -36,16 +41,14 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_UFASTCAST, 45);
     mob:addMod(MOD_MEVA, 95);
     mob:addMod(MOD_MDEF, 30);
     mob:addMod(MOD_SILENCERES, 20);
     mob:addMod(MOD_GRAVITYRES, 20);
     mob:addMod(MOD_LULLABYRES, 30);
-    -- mob:setMobMod(MOBMOD_RAGE, 3600); -- 60 minute rage timer
+    --[[
+    mob:setMobMod(MOBMOD_RAGE, 3600); -- 60 minute rage timer
+    ]]
 end;
 
 -----------------------------------
@@ -90,14 +93,14 @@ function onMobFight(mob, target)
     end;
 
     if (useChainspell == true) then
-        mob:useMobAbility(436); -- Chainspell
+        mob:useMobAbility(692); -- Chainspell
         mob:setMobMod(MOBMOD_GA_CHANCE, 100);
 
     end
 
     -- Spams TP moves and -ga spells
     if (mob:hasStatusEffect(EFFECT_CHAINSPELL) == true) then
-        mob:setTP(200);
+        mob:setTP(2000);
     else
         if (mob:getMobMod(MOBMOD_GA_CHANCE) == 100) then
             mob:setMobMod(MOBMOD_GA_CHANCE, 50);
@@ -113,7 +116,7 @@ function onMobFight(mob, target)
         end
     end
 
-    if (mob:getBattleTime() and mob:getLocalVar("RAGED") == 0) then
+    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
     end

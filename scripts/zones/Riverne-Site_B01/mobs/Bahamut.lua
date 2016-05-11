@@ -1,59 +1,25 @@
 -----------------------------------
--- Area: inSomeZone
---  NM:  Bahamut (Custom version)
+-- Area: Riverne - Site B01 (BCNM)
+--  NM:  Bahamut
 -----------------------------------
-require("scripts/globals/titles");
+
+require("scripts/globals/quests");
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
------------------------------------
--- onMobInibahamutlize Action
------------------------------------
 
-function onMobInibahamutlize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 
-    -- addMod
-    mob:addMod(MOD_DMGMAGIC, -128);
-    mob:addMod(MOD_DMGRANGE, -60);
-    mob:addMod(MOD_STUNRES,33);
-    mob:addMod(MOD_THUNDERRES,33);
+function onMobInitialise(mob)
+    mob:setMobMod(MOBMOD_HP_STANDBACK,-1);
 end;
+
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGEN, 300);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_HASTE_ABILITY, 20);
-    mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,2500);
-    mob:setMod(MOD_ACC,2500);
-    mob:setMod(MOD_MATT,115);
-    mob:setMod(MOD_DOUBLE_ATTACK, 20);
-    mob:setMod(MOD_FIRE_AFFINITY_DMG, 5);
-    mob:setMod(MOD_FIRE_AFFINITY_ACC, 5);
-    mob:setMod(MOD_WIND_AFFINITY,5);
-    mob:setMod(MOD_EARTH_AFFINITY,5);
-    mob:setMod(MOD_SLEEPRES,100);
-    mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_HUMANOID_KILLER, 5);
-    mob:setMod(MOD_TERRORRES, 200);
-end;
-
------------------------------------
--- onMobEngage Action
------------------------------------
-
-function onMobEngaged(mob, target)
-    mob:delStatusEffect(EFFECT_RAGE);
+    mob:addStatusEffect(EFFECT_PHALANX,35,0,180);
+    mob:addStatusEffect(EFFECT_STONESKIN,350,0,300);
+    mob:addStatusEffect(EFFECT_PROTECT,175,0,1800);
+    mob:addStatusEffect(EFFECT_SHELL,24,0,1800);
 end;
 
 -----------------------------------
@@ -61,96 +27,76 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
+    local MegaFlareQueue = mob:getLocalVar("MegaFlareQueue");
+    local MegaFlareTrigger = mob:getLocalVar("MegaFlareTrigger");
+    local MegaFlareUses = mob:getLocalVar("MegaFlareUses");
+    local FlareWait = mob:getLocalVar("FlareWait")
+    local GigaFlare = mob:getLocalVar("GigaFlare");
+    local tauntShown = mob:getLocalVar("tauntShown");
+    local mobHPP = mob:getHPP();
+    local isBusy = false;
+    if (GetMobAction(mob:getID()) == ACTION_MOBABILITY_START or GetMobAction(mob:getID()) == ACTION_MOBABILITY_USING or GetMobAction(mob:getID()) == ACTION_MOBABILITY_FINISH or GetMobAction(mob:getID()) == ACTION_MAGIC_START or GetMobAction(mob:getID()) == ACTION_MAGIC_CASTING or GetMobAction(mob:getID()) == ACTION_MAGIC_START) then
+        isBusy = true; -- is set to true if Bahamut is in any stage of using a mobskill or casting a spell
+    end;
 
-    local bahamut_2hr = mob:getLocalVar("bahamut_2hr");
+    if (mobHPP < 90 and MegaFlareTrigger < 1) then -- if Megaflare hasn't been set to be used this many times, increase the queue of Megaflares. This will allow it to use multiple Megaflares in a row if the HP is decreased quickly enough.
+        mob:setLocalVar("MegaFlareTrigger", 1);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 80 and MegaFlareTrigger < 2) then
+        mob:setLocalVar("MegaFlareTrigger", 2);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 70 and MegaFlareTrigger < 3) then
+        mob:setLocalVar("MegaFlareTrigger", 3);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 60 and MegaFlareTrigger < 4) then
+        mob:setLocalVar("MegaFlareTrigger", 4);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 50 and MegaFlareTrigger < 5) then
+        mob:setLocalVar("MegaFlareTrigger", 5);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 40 and MegaFlareTrigger < 6) then
+        mob:setLocalVar("MegaFlareTrigger", 6);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 30 and MegaFlareTrigger < 7) then
+        mob:setLocalVar("MegaFlareTrigger", 7);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    elseif (mobHPP < 20 and MegaFlareTrigger < 8) then
+        mob:setLocalVar("MegaFlareTrigger", 8);
+        mob:setLocalVar("MegaFlareQueue", MegaFlareQueue + 1);
+    end;
 
-    if (mob:getBattleTime() > 5400 and mob:getLocalVar("RAGED") == 0) then
-        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
-        mob:setLocalVar("RAGED", 1);
-    end
-
-	if (mob:getHPP() <= 10 and bahamut_2hr == 8) then
-		mob:useMobAbility(1297); -- Teraflare
-		mob:useMobAbility(438); -- Invincible
-		mob:setLocalVar("bahamut_2hr", 9);
-	elseif (mob:getHPP() <= 20 and bahamut_2hr == 7) then
-		mob:useMobAbility(1297); -- Gigaflare
-		mob:useMobAbility(436); -- Chainspell
-		mob:setLocalVar("bahamut_2hr", 8);
-	elseif (mob:getHPP() <= 30 and bahamut_2hr == 6) then
-		mob:useMobAbility(1297); -- Gigaflare
-		mob:useMobAbility(438); -- Invincible
-		mob:setLocalVar("bahamut_2hr", 7);
-	elseif (mob:getHPP() <= 40 and bahamut_2hr == 5) then
-		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(3009); -- Elemental_Sforzo
-		mob:setLocalVar("bahamut_2hr", 6);
-	elseif (mob:getHPP() <= 50 and bahamut_2hr == 4) then
-		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(438); -- Invincible
-		mob:setLocalVar("bahamut_2hr", 5);
-	elseif (mob:getHPP() <= 60 and bahamut_2hr == 3) then
-		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(436); -- Chainspell
-		mob:setLocalVar("bahamut_2hr", 4);
-	elseif (mob:getHPP() <= 70 and bahamut_2hr == 2) then
-		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(438); -- Invincible
-		mob:setLocalVar("bahamut_2hr", 3);
-	elseif (mob:getHPP() <= 80 and bahamut_2hr == 1) then
-		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(436); -- Elemental_Sforzo
-		mob:setLocalVar("bahamut_2hr", 2);
-	elseif (mob:getHPP() <= 90 and bahamut_2hr == 0) then
-		mob:useMobAbility(1296); -- Gigaflare
-		mob:useMobAbility(438); -- Invincible
-		mob:setLocalVar("bahamut_2hr", 1);
-	end
-end;
-
------------------------------------
--- onSpellPrecast
------------------------------------
-
-function onSpellPrecast(mob, spell)
-    if (spell:getID() == 218) then  -- AoE Meteor
-        spell:setAoE(SPELLAOE_RADIAL);
-        spell:setFlag(SPELLFLAG_HIT_ALL);
-        spell:setRadius(30);
-        spell:setAnimation(280);
-        spell:setMPCost(1);
-    elseif (spell:getID() == 496) then -- AoE Impact
-        spell:setAoE(SPELLAOE_RADIAL);
-        spell:setFlag(SPELLFLAG_HIT_ALL);
-        spell:setRadius(30);
-        spell:setAnimation(280);
-        spell:setMPCost(1);
-    end
-end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
-function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_CURSE_I) == true)) then
-        return 0,0,0;
-    else
-        local duration = 10;
-        target:addStatusEffect(EFFECT_CURSE_I,40,0,duration);
-        mob:resetEnmity(target);
-        return SUBEFFECT_CURSE,163,EFFECT_CURSE_I;
-    end
-end;
-
------------------------------------
--- onMobDrawIn
------------------------------------
-
-function onMobDrawIn(mob, target) -- Bind / Wing on Draw In
-    target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
-    mob:useMobAbility(1287);
-    mob:addTP(100);
+    if (mob:actionQueueEmpty() == true and isBusy == false) then -- the last check prevents multiple Mega/Gigaflares from being called at the same time.
+        if (MegaFlareQueue > 0) then
+            mob:SetMobAbilityEnabled(false); -- disable all other actions until Megaflare is used successfully
+            mob:SetMagicCastingEnabled(false);
+            mob:SetAutoAttackEnabled(false);
+            if (FlareWait == 0 and tauntShown == 0) then -- if there is a queued Megaflare and the last Megaflare has been used successfully or if the first one hasn't been used yet.
+                target:showText(mob,BAHAMUT_TAUNT);
+                mob:setLocalVar("FlareWait", mob:getBattleTime() + 2); -- second taunt happens two seconds after the first.
+                mob:setLocalVar("tauntShown", 1);
+            elseif (FlareWait < mob:getBattleTime() and FlareWait ~= 0 and tauntShown >= 0) then -- the wait time between the first and second taunt as passed. Checks for wait to be not 0 because it's set to 0 on successful use.
+                if (tauntShown == 1) then
+                    mob:setLocalVar("tauntShown", 2); -- if Megaflare gets stunned it won't show the text again, until successful use.
+                    target:showText(mob,BAHAMUT_TAUNT + 1);
+                end;
+                if (mob:checkDistance(target) <= 15) then -- without this check if the target is out of range it will keep attemping and failing to use Megaflare. Both Megaflare and Gigaflare have range 15.
+                    if (bit.band(mob:getBehaviour(),BEHAVIOUR_NO_TURN) > 0) then -- default behaviour
+                        mob:setBehaviour(bit.band(mob:getBehaviour(), bit.bnot(BEHAVIOUR_NO_TURN)))
+                    end;
+                    mob:useMobAbility(1551);
+                end;
+            end;
+        elseif (MegaFlareQueue == 0 and mobHPP < 10 and GigaFlare < 1 and mob:checkDistance(target) <= 15) then  -- All of the scripted Megaflares are to happen before Gigaflare.
+            if (tauntShown == 0) then
+                target:showText(mob,BAHAMUT_TAUNT + 2);
+                mob:setLocalVar("tauntShown", 3); -- again, taunt won't show again until the move is successfully used.
+            end;
+            if (bit.band(mob:getBehaviour(),BEHAVIOUR_NO_TURN) > 0) then -- default behaviour
+                mob:setBehaviour(bit.band(mob:getBehaviour(), bit.bnot(BEHAVIOUR_NO_TURN)))
+            end;
+            mob:useMobAbility(1552);
+        end;
+    end;
 end;
 
 -----------------------------------
@@ -158,5 +104,4 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    -- ally:addTitle(WYRM_ASTONISHER);
 end;

@@ -1,22 +1,15 @@
 -----------------------------------
---  Area: Abyssea - Attohwa (215)
---   Mob: Tunga
+-- Area: Abyssea - Attohwa (215)
+--  Mob: Tunga
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
-require("scripts/zones/Abyssea-Attohwa/TextIDs");
-require("scripts/globals/abyssea");
+
+--require("scripts/globals/titles");
+mixins = { require("scripts/mixins/families/chigoe") }
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 
 -----------------------------------
--- onMobInitialize
------------------------------------
-
-function onMobInitialize(mob)
-end;
-
------------------------------------
--- onMobSpawn
+-- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
@@ -26,14 +19,14 @@ end;
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)
+function onMobEngaged(mob, killer)
 end;
 
 -----------------------------------
--- onMobFight
+-- onMobDisengage
 -----------------------------------
 
-function onMobFight(mob,target)
+function onMobDisengage(mob)
 end;
 
 -----------------------------------
@@ -47,4 +40,3 @@ function onMobDeath(mob, killer, ally)
         ally:messageSpecial(6385, DISTENDED_CHIGOE_ABDOMEN);
     end
 end;
-

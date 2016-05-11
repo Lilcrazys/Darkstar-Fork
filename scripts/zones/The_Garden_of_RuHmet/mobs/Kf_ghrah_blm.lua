@@ -1,9 +1,10 @@
 -----------------------------------
--- Area: The Garden of Ru'Hmet
---  MOB: Kf'ghrah WHM
+-- Area: Grand Palace of Hu'Xzoi
+--  MOB: Kf'ghrah BLM
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+
 
 -----------------------------------
 -- onMobInitialize Action
@@ -32,10 +33,8 @@ function onMobSpawn(mob)
     mob:setModelId(1168); -- Dark
 end;
 
-function onMobEngaged(mob)
-end;
 -----------------------------------
--- onMobRoam Action
+-- onMobRoam
 -- AutochangeForm
 -----------------------------------
 
@@ -53,9 +52,17 @@ function onMobRoam(mob)
 end;
 
 -----------------------------------
--- OnMobFight Action
+-- onMobEngaged
+-----------------------------------
+
+function onMobEngaged(mob,target)
+end;
+
+-----------------------------------
+-- OnMobFight
 -- Free form change between ball, spider, and bird.
 -----------------------------------
+
 function onMobFight(mob,target)
     local changeTime = mob:getLocalVar("changeTime");
     local battleForm;
@@ -70,5 +77,9 @@ function onMobFight(mob,target)
     end;
 end;
 
-function onMobDeath(mob)
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob, killer, ally)
 end;

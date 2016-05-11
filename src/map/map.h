@@ -116,6 +116,7 @@ struct map_config_t
     int8   CoP_Battle_cap;            // Default is 0. Disable/enable old lv caps on Chains of Promathia mission battles.
     uint8  max_merit_points;          // global variable, amount of merit points players are allowed
     uint16 yell_cooldown;             // Minimum time between uses of yell command (in seconds).
+    float  fame_multiplier;           // Fame multiplier
     bool   audit_chat;
     bool   audit_say;
     bool   audit_shout;
@@ -156,6 +157,8 @@ extern map_config_t map_config;
 extern uint32 map_amntplayers;
 extern int32 map_fd;
 
+static constexpr float server_tick_rate = 2.5f;
+
 extern thread_local Sql_t* SqlHandle;
 
 extern CCommandHandler CmdHandler;
@@ -181,9 +184,9 @@ void  map_versionscreen(int32 flag);                                            
 int32 map_config_read(const int8 *cfgName);                                             // Map-Server Config [venom]
 int32 map_config_default();
 
-int32 map_cleanup(uint32 tick,CTaskMgr::CTask *PTask);									// Clean up timed out players
-int32 map_close_session(uint32 tick, map_session_data_t* map_session_data);
+int32 map_cleanup(time_point tick,CTaskMgr::CTask *PTask);                              // Clean up timed out players
+int32 map_close_session(time_point tick, map_session_data_t* map_session_data);
 
-int32 map_garbage_collect(uint32 tick, CTaskMgr::CTask* PTask);
+int32 map_garbage_collect(time_point tick, CTaskMgr::CTask* PTask);
 
 #endif //_MAP_H

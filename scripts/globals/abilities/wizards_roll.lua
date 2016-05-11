@@ -8,72 +8,68 @@
 --
 -- Die Roll    |No BLM  |With BLM
 -- --------    -------- -----------
--- 1           |+2      |+6
--- 2           |+3      |+6
--- 3           |+4      |+7
--- 4           |+4      |+7
--- 5           |+10     |+13
--- 6           |+5      |+8
--- 7           |+6      |+9
--- 8           |+7      |+9
--- 9           |+1      |+5
--- 10          |+7      |+10
--- 11          |+12     |+16
--- Bust        |-4      |-4
+-- 1           |+4      |+14
+-- 2           |+6      |+16
+-- 3           |+8      |+18
+-- 4           |+10     |+20
+-- 5           |+25     |+35
+-- 6           |+12     |+22
+-- 7           |+14     |+24
+-- 8           |+17     |+27
+-- 9           |+2      |+12
+-- 10          |+20     |+10
+-- 11          |+30     |+40
+-- Bust        |-10     |-10
 --
 -- If the Corsair is a lower level than the player receiving Wizard's Roll, the +MAB will be reduced
 -----------------------------------
 
 require("scripts/globals/settings");
 require("scripts/globals/status");
+require("scripts/globals/ability");
 
 -----------------------------------
 -- onAbilityCheck
 -----------------------------------
 
 function onAbilityCheck(player,target,ability)
-    local effectID = getCorsairRollEffect(ability:getID());
+    local effectID = EFFECT_WIZARDS_ROLL
     ability:setRange(ability:getRange() + player:getMod(MOD_ROLL_RANGE));
     if (player:hasStatusEffect(effectID) or player:hasBustEffect(effectID)) then
         return MSGBASIC_ROLL_ALREADY_ACTIVE,0;
     else
-        player:setLocalVar("BLM_roll_bonus", 0);
         return 0,0;
     end
 end;
 
 -----------------------------------
--- onUseAbilityRoll
+-- onUseAbility
 -----------------------------------
 
-function onUseAbilityRoll(caster,target,ability,total)
-    local duration = 300 + caster:getMerit(MERIT_WINNING_STREAK)
-    local effectpowers = {2, 3, 4, 4, 10, 5, 6, 7, 1, 7, 12, 4};
-    local effectpower = effectpowers[total]
-    local jobBonus = caster:getLocalVar("BLM_roll_bonus");
-
-    if (total < 12) then -- see chaos_roll.lua for comments
-        if (jobBonus == 0) then
-            if (caster:hasPartyJob(JOB_BLM) or math.random(0, 99) < caster:getMod(MOD_JOB_BONUS_CHANCE)) then
-                jobBonus = 1;
-            else
-                jobBonus = 2;
-            end
-        end
-        if (jobBonus == 1) then
-            effectpower = effectpower + 3;
-        end
-        if (target:getID() == caster:getID()) then
-            caster:setLocalVar("BLM_roll_bonus", jobBonus);
-        end
+function onUseAbility(caster,target,ability,action)
+    if (caster:getID() == target:getID()) then
+        corsairSetup(caster, ability, action, EFFECT_WIZARDS_ROLL, JOB_BLM)
     end
+    local total = caster:getLocalVar("corsairRollTotal")
+    return applyRoll(caster,target,ability,action,total)
+end;
 
+function applyRoll(caster,target,ability,action,total)
+    local duration = 300 + caster:getMerit(MERIT_WINNING_STREAK)
+    local effectpowers = {4, 6, 8, 10, 25, 12, 14, 17, 2, 20, 30, 10};
+    local effectpower = effectpowers[total];
+    if (caster:getLocalVar("corsairRollBonus") == 1 and total < 12) then
+        effectpower = effectpower + 10
+    end
     if (caster:getMainJob() == JOB_COR and caster:getMainLvl() < target:getMainLvl()) then
         effectpower = effectpower * (caster:getMainLvl() / target:getMainLvl());
     elseif (caster:getSubJob() == JOB_COR and caster:getSubLvl() < target:getMainLvl()) then
         effectpower = effectpower * (caster:getSubLvl() / target:getMainLvl());
     end
     if (target:addCorsairRoll(caster:getMainJob(), caster:getMerit(MERIT_BUST_DURATION), EFFECT_WIZARDS_ROLL, effectpower, 0, duration, caster:getID(), total, MOD_MATT) == false) then
-        ability:setMsg(423);
+        ability:setMsg(422);
+    elseif total > 11 then
+        ability:setMsg(426);
     end
-end;
+    return total;
+end

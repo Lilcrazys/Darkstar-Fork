@@ -4,7 +4,6 @@
 -----------------------------------
 
 require("scripts/globals/status");
-require("scripts/globals/titles");
 
 local path =
 {
@@ -375,7 +374,6 @@ local path =
     107.542999, 0.261044, 3.065771
 };
 
-
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -425,8 +423,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob,killer,ally)
-
-	ally:addTitle(SKULLCRUSHER);
 
     -- Set Guivre's spawnpoint and respawn time (18-24 hours)
     UpdateNMSpawnPoint(mob:getID());

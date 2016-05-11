@@ -108,8 +108,8 @@ function BluePhysicalSpell(caster, target, spell, params)
     if chainAffinity ~= nil then
         -- Calculate the total TP available for the fTP multiplier.
         local tp = caster:getTP() + caster:getMerit(MERIT_ENCHAINMENT);
-        if tp > 300 then
-            tp = 300;
+        if tp > 3000 then
+            tp = 3000;
         end;
 
         multiplier = BluefTP(tp, multiplier, params.tp150, params.tp300);
@@ -158,8 +158,8 @@ function BluePhysicalSpell(caster, target, spell, params)
 
             hitslanded = hitslanded + 1;
 
-            -- increment target's TP (10TP per hit landed)
-            target:addTP(10);
+            -- increment target's TP (100TP per hit landed)
+            target:addTP(100);
         end
 
         hitsdone = hitsdone + 1;
@@ -198,9 +198,6 @@ function BlueMagicalSpell(caster, target, spell, params, statMod)
         end
     end
 
-    local magAccMerit = caster:getMerit(MERIT_MAGICAL_ACCURACY);
-    -- print(magAccMerit);
-
     local statBonus = 0;
     local dStat = 0; -- Please make sure to add an additional stat check if there is to be a spell that uses neither INT, MND, or CHR. None currently exist.
     if (statMod == INT_BASED) then -- Stat mod is INT
@@ -221,7 +218,7 @@ function BlueMagicalSpell(caster, target, spell, params, statMod)
     local magicAttack = 1.0;
     local multTargetReduction = 1.0; -- TODO: Make this dynamically change, temp static till implemented.
     magicAttack = math.floor(D * multTargetReduction);
-    magicAttack = math.floor(magicAttack * applyResistance(caster,spell,target,dStat,BLUE_SKILL,magAccMerit));
+    magicAttack = math.floor(magicAttack * applyResistance(caster,spell,target,dStat,BLUE_SKILL,0));
     dmg = math.floor(addBonuses(caster, spell, target, magicAttack));
 
     caster:delStatusEffectSilent(EFFECT_BURST_AFFINITY);
@@ -234,6 +231,8 @@ function BlueFinalAdjustments(caster, target, spell, dmg, params)
         dmg = 0;
     end
 
+    dmg = dmg * BLUE_POWER;
+
     dmg = dmg - target:getMod(MOD_PHALANX);
     if (dmg<0) then
         dmg = 0;
@@ -244,6 +243,7 @@ function BlueFinalAdjustments(caster, target, spell, dmg, params)
 
     target:delHP(dmg);
     target:updateEnmityFromDamage(caster,dmg);
+    target:handleAfflatusMiseryDamage(dmg);
     -- TP has already been dealt with.
     return dmg;
 end;
@@ -310,13 +310,13 @@ end;
 -- ftp2 - The TP 150% value
 -- ftp3 - The TP 300% value
 function BluefTP(tp,ftp1,ftp2,ftp3)
-    if (tp>=0 and tp<150) then
-        return ftp1 + ( ((ftp2-ftp1)/100) * tp);
-    elseif (tp>=150 and tp<=300) then
+    if (tp>=0 and tp<1500) then
+        return ftp1 + ( ((ftp2-ftp1)/100) * (tp / 10));
+    elseif (tp>=1500 and tp<=3000) then
         -- generate a straight line between ftp2 and ftp3 and find point @ tp
-        return ftp2 + ( ((ftp3-ftp2)/100) * (tp-150));
+        return ftp2 + ( ((ftp3-ftp2)/100) * ((tp-1500) / 10));
     else
-        print("blue fTP error: TP value is not between 0-300!");
+        print("blue fTP error: TP value is not between 0-3000!");
     end
     return 1; -- no ftp mod
 end;
@@ -451,3 +451,4 @@ function BlueGetAlpha(level)
     end
     return alpha;
 end;
+

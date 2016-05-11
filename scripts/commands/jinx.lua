@@ -18,11 +18,11 @@ cmdprops =
 function onTrigger(player, victim, jinx, power)
     if (victim == nil) then
         player:PrintToPlayer("Must specify a victim!");
-        player:PrintToPlayer("@jinx <victim> <crit agro speed interrupt>");
+        player:PrintToPlayer("@jinx <victim> <agro crit speed interrupt>");
         player:PrintToPlayer("If player re-logs zones or job changes, jinx will be removed.");
         player:PrintToPlayer("DO NOT TELL PLAYER THIS.");
         player:PrintToPlayer("DO NOT TELL PLAYER WHAT THIS COMMAND DOES.");
-        player:PrintToPlayer("DO NOT EVEN TELL EVEN PLAYER THIS COMMAND EXISTS.");
+        player:PrintToPlayer("DO NOT EVEN TELL PLAYER THIS COMMAND EXISTS.");
     else
         local targ = GetPlayerByName(victim);
         if (targ ~= nil) then
@@ -52,6 +52,14 @@ function onTrigger(player, victim, jinx, power)
                 player:PrintToPlayer(string.format("Victim '%s' now has decreased movement speed.", victim));
                 targ:addMod(MOD_SPELLINTERRUPT, -power);
                 player:PrintToPlayer(string.format("Victim '%s' now has increased spell interuption chance.", victim));
+            elseif (jinx == "agro") then
+                if (power == nil or power == 0) then
+                    power = 10;
+                elseif (power > 50) then
+                    power = 50;
+                end
+                targ:addMod(MOD_STEALTH, -power);
+                player:PrintToPlayer(string.format("Victim '%s' now has increased agro range.", victim));
             elseif (jinx == "crit") then
                 if (power == nil or power == 0) then
                     power = 10;
@@ -62,14 +70,6 @@ function onTrigger(player, victim, jinx, power)
                 targ:addMod(MOD_CRITHITRATE, -power);
                 player:PrintToPlayer(string.format("Victim '%s' now receive more critical hits.", victim));
                 player:PrintToPlayer(string.format("Victim '%s' now delivers fewer critical hits.", victim));
-            elseif (jinx == "agro") then
-                if (power == nil or power == 0) then
-                    power = 10;
-                elseif (power > 50) then
-                    power = 50;
-                end
-                targ:addMod(MOD_STEALTH, -power);
-                player:PrintToPlayer(string.format("Victim '%s' now has increased agro range.", victim));
             elseif (jinx == "speed") then
                 if (power == nil or power == 0) then
                     power = 10;
@@ -87,11 +87,11 @@ function onTrigger(player, victim, jinx, power)
                 targ:addMod(MOD_SPELLINTERRUPT, -power);
                 player:PrintToPlayer(string.format("Victim '%s' now has increased spell interruption chance.", victim));
             else
-                player:PrintToPlayer("@jinx <victim> <crit agro speed interrupt>");
+                player:PrintToPlayer("@jinx <victim> <agro crit speed interrupt>");
                 player:PrintToPlayer("If player re-logs zones or job changes, jinx will be removed.");
                 player:PrintToPlayer("DO NOT TELL PLAYER THIS.");
                 player:PrintToPlayer("DO NOT TELL PLAYER WHAT THIS COMMAND DOES.");
-                player:PrintToPlayer("DO NOT EVEN TELL EVEN PLAYER THIS COMMAND EXISTS.");
+                player:PrintToPlayer("DO NOT EVEN TELL PLAYER THIS COMMAND EXISTS.");
             end
         else
             player:PrintToPlayer(string.format("Victim named '%s' not found!", victim));

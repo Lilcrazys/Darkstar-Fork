@@ -17,20 +17,21 @@ require("scripts/globals/settings");
 require("scripts/globals/weaponskills");
 -----------------------------------
 
-function onUseWeaponSkill(player, target, wsID)
-	local params = {};
-	params.ftp100 = 4.5; params.ftp200 = 6; params.ftp300 = 7.5;
-	params.str_wsc = 0.32; params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.0; params.mnd_wsc = 0.32; params.chr_wsc = 0.0;
-	params.ele = ELE_LIGHT;
-	params.skill = SKILL_SWD;
-	params.includemab = true;
+function onUseWeaponSkill(player, target, wsID, tp, primary)
 
-	local damage, criticalHit, tpHits, extraHits = doMagicWeaponskill(player, target, params);
-	damage = damage * WEAPON_SKILL_POWER
+    local params = {};
+    params.ftp100 = 4.5; params.ftp200 = 6; params.ftp300 = 7.5;
+    params.str_wsc = 0.32; params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.0; params.mnd_wsc = 0.32; params.chr_wsc = 0.0;
+    params.ele = ELE_LIGHT;
+    params.skill = SKILL_SWD;
+    params.includemab = true;
 
-	if (damage > 0 and target:hasStatusEffect(EFFECT_FLASH) == false) then
-		target:addStatusEffect(EFFECT_FLASH, 200, 0, 15);
-	end
+    local damage, criticalHit, tpHits, extraHits = doMagicWeaponskill(player, target, wsID, params, tp, primary);
 
-	return tpHits, extraHits, criticalHit, damage;
-end;
+    if (damage > 0 and target:hasStatusEffect(EFFECT_FLASH) == false) then
+    target:addStatusEffect(EFFECT_FLASH, 200, 0, 15);
+    end
+
+    return tpHits, extraHits, criticalHit, damage;
+
+end

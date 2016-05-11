@@ -3,7 +3,6 @@
 --   NM: Baobhan Sith
 -----------------------------------
 
-require("scripts/globals/titles");
 require("scripts/globals/status");
 
 -----------------------------------
@@ -60,7 +59,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addTitle(GHOSTIE_BUSTER);
 
     -- Set Baobhan Sith's Window Open Time
     local wait = math.random(4,8) * 3600;

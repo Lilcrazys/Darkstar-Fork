@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Wajoam Woodlands
--- ZNM:  Tinnin
+--  ZNM: Tinnin
 -- @pos 276 0 -694
 -- Spawned with Monkey Wine: @additem 2573
 -- Wiki: http://ffxiclopedia.wikia.com/wiki/Tinnin
@@ -107,8 +107,9 @@ function onMobFight(mob, target)
         if (bit.band(mob:getBehaviour(),BEHAVIOUR_NO_TURN) > 0) then -- disable no turning for the forced mobskills upon head growth
             mob:setBehaviour(bit.band(mob:getBehaviour(), bit.bnot(BEHAVIOUR_NO_TURN)))
         end
-        mob:useMobAbility(1576); -- Barofield
-        mob:useMobAbility(1574); -- Polar Blast
+        -- These need to be listed in reverse order as forced moves are added to the top of the queue.
+        mob:useMobAbility(1830); -- Polar Blast
+        mob:useMobAbility(1832); -- Barofield
 
     elseif (mob:AnimationSub() == 1 and os.time() > headTimer) then
         mob:AnimationSub(0);
@@ -126,9 +127,10 @@ function onMobFight(mob, target)
         if (bit.band(mob:getBehaviour(),BEHAVIOUR_NO_TURN) > 0) then -- disable no turning for the forced mobskills upon head growth
             mob:setBehaviour(bit.band(mob:getBehaviour(), bit.bnot(BEHAVIOUR_NO_TURN)))
         end
-        mob:useMobAbility(1576); -- Barofield
-        mob:useMobAbility(1574); -- Polar Blast
-        mob:useMobAbility(1572); -- Pyric Blast
+        -- Reverse order, same deal.
+        mob:useMobAbility(1828); -- Pyric Blast
+        mob:useMobAbility(1830); -- Polar Blast
+        mob:useMobAbility(1832); -- Barofield
     end
 end;
 
@@ -165,7 +167,7 @@ end;
 -----------------------------------
 
 function onMobDrawIn(mob, target)
-    mob:addTP(300); -- Uses a mobskill upon drawing in a player. Not necessarily on the person drawn in.
+    mob:addTP(3000); -- Uses a mobskill upon drawing in a player. Not necessarily on the person drawn in.
 end;
 
 -----------------------------------

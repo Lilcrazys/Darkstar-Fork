@@ -33,7 +33,9 @@ function onSpellCast(caster,target,spell)
 
     local typeEffect = EFFECT_TERROR;
     local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
-    -- local resist = applyResistance(caster,spell,target,dINT,BLUE_SKILL);
+    --[[ replacing DSP's resist check
+    local resist = applyResistance(caster,spell,target,dINT,BLUE_SKILL);
+    ]]
     local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,0,EFFECT_TERROR)
     local duration = 5 * resist;
 

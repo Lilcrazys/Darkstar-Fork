@@ -72,7 +72,7 @@ function onAdditionalEffect(mob,target,damage)
     target:addStatusEffect(EFFECT_POISON, 50, 3, duration);
     -- mob:resetEnmity(target);
 
-    return SUBEFFECT_POISON, 160, EFFECT_POISON;
+    return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
 end;
 
 -----------------------------------

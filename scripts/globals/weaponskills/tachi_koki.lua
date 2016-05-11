@@ -14,19 +14,9 @@
 require("scripts/globals/status");
 require("scripts/globals/settings");
 require("scripts/globals/weaponskills");
-require("scripts/globals/abyssea");
 -----------------------------------
 
-function onUseWeaponSkill(player, target, wsID)
-	local RedTrigger = player:getVar("RedTrigger");
-	if (RedTrigger == 149) then
-		WeaknessTriggerRed(player, target, wsID);
-	else
-		if (math.random(4) == 1) then
-			TriggerHintRED(player, target, wsID);
-		end
-	end
-
+function onUseWeaponSkill(player, target, wsID, tp, primary)
 
     local params = {};
     params.numHits = 1;
@@ -42,8 +32,7 @@ function onUseWeaponSkill(player, target, wsID)
         params.str_wsc = 0.3; params.dex_wsc = 0.0; params.vit_wsc = 0.0; params.agi_wsc = 0.0; params.int_wsc = 0.0; params.mnd_wsc = 0.5; params.chr_wsc = 0.0;
     end
 
-    local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, params);
-    damage = damage * WEAPON_SKILL_POWER
+    local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, wsID, params, tp, primary);
     return tpHits, extraHits, criticalHit, damage;
 
 end

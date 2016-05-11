@@ -15,7 +15,7 @@ require("scripts/zones/Chamber_of_Oracles/TextIDs");
 function onMobSpawn(mob)
 end;
 
-
+-----------------------------------
 -- onMobFight Action
 -----------------------------------
 

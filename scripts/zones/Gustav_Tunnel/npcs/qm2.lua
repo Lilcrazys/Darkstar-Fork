@@ -36,7 +36,7 @@ function onTrigger(player,npc)
                 else
                     player:messageSpecial(NOTHING_OUT_OF_ORDINARY);
                 end
-            elseif (player:getVar("BASTOK91") ==2) then
+            elseif (player:getVar("BASTOK91") == 2) then
                 SpawnMob(17645794);
             else
                 player:messageSpecial(NOTHING_OUT_OF_ORDINARY);

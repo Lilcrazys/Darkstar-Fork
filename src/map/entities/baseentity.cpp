@@ -25,6 +25,9 @@
 #include "baseentity.h"
 #include "../map.h"
 #include "../zone.h"
+#include "../ai/ai_container.h"
+#include "../instance.h"
+
 #include "../packets/chat_message.h"
 
 CBaseEntity::CBaseEntity()
@@ -32,7 +35,7 @@ CBaseEntity::CBaseEntity()
 	m_TargID = 0;
 	namevis = 1;
 
-    PBattleAI = nullptr;
+    PAI = nullptr;
 	PBCNM = nullptr;
 	PInstance = nullptr;
 
@@ -51,10 +54,21 @@ CBaseEntity::CBaseEntity()
 
 CBaseEntity::~CBaseEntity()
 {
-	if(PBattleAI != nullptr)
-	{
-	    delete PBattleAI;
-	}
+}
+
+void CBaseEntity::Spawn()
+{
+    status = allegiance == ALLEGIANCE_MOB ? STATUS_MOB : STATUS_NORMAL;
+    updatemask |= UPDATE_HP;
+    ResetLocalVars();
+    PAI->Reset();
+    PAI->EventHandler.triggerListener("SPAWN", this);
+}
+
+void CBaseEntity::FadeOut()
+{
+    status = STATUS_DISAPPEAR;
+    updatemask |= UPDATE_HP;
 }
 
 const int8* CBaseEntity::GetName()

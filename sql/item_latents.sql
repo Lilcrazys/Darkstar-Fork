@@ -61,18 +61,24 @@ INSERT INTO `item_latents` VALUES(16014, 23, 4, 22, 1); -- Stormer Earring, ATT+
 INSERT INTO `item_latents` VALUES(16020, 10, 1, 22, 7); -- Survivor Earring, VIT+1 if PLD is in party
 INSERT INTO `item_latents` VALUES(16033, 71, 1, 22, 20); -- Sylph Earring, Healing MP +1 if SCH is in party
 
-INSERT INTO `item_latents` VALUES(13870, 14, 14, 49, 4468);
-INSERT INTO `item_latents` VALUES(13870, 12, 1, 49, 4468);
-INSERT INTO `item_latents` VALUES(13870, 11, -3, 49, 4468); -- Opo-opo Crown, AGI+1 to AGI-2
-INSERT INTO `item_latents` VALUES(13870, 8, -3, 49, 4468); -- Opo-opo Crown, STR+1 to STR-2
-INSERT INTO `item_latents` VALUES(13870, 5, 50, 49, 4468);
-INSERT INTO `item_latents` VALUES(13870, 2, 50, 49, 4468);
-INSERT INTO `item_latents` VALUES(13870, 14, 14, 49, 4596);
-INSERT INTO `item_latents` VALUES(13870, 12, 1, 49, 4596);
-INSERT INTO `item_latents` VALUES(13870, 11, -3, 49, 4596); -- Opo-opo Crown, AGI+1 to AGI-2
-INSERT INTO `item_latents` VALUES(13870, 8, -3, 49, 4596); -- Opo-opo Crown, STR+1 to STR-2
-INSERT INTO `item_latents` VALUES(13870, 5, 50, 49, 4596);
-INSERT INTO `item_latents` VALUES(13870, 2, 50, 49, 4596);
+INSERT INTO `item_latents` VALUES(13870, 2, 50, 49, 4468); -- Opo-opo crown HP +50 (pamamas)
+INSERT INTO `item_latents` VALUES(13870, 5, 50, 49, 4468); -- MP +50
+INSERT INTO `item_latents` VALUES(13870, 14, 14, 49, 4468); -- CHR +14
+INSERT INTO `item_latents` VALUES(13870, 2, 50, 49, 4596); -- Opo-opo crown HP +50 (wild pamamas)
+INSERT INTO `item_latents` VALUES(13870, 5, 50, 49, 4596); -- MP +50
+INSERT INTO `item_latents` VALUES(13870, 14, 14, 49, 4596); -- CHR +14
+INSERT INTO `item_latents` VALUES(17590, 171, 83, 49, 4468); -- Primate Staff
+INSERT INTO `item_latents` VALUES(17590, 25, 10, 49, 4468);
+INSERT INTO `item_latents` VALUES(17590, 171, 83, 49, 4596); 
+INSERT INTO `item_latents` VALUES(17590, 25, 10, 49, 4596);
+INSERT INTO `item_latents` VALUES(17591, 171, 80, 49, 4468); -- Primate Staff +1
+INSERT INTO `item_latents` VALUES(17591, 25, 12, 49, 4468);
+INSERT INTO `item_latents` VALUES(17591, 171, 80, 49, 4596); 
+INSERT INTO `item_latents` VALUES(17591, 25, 12, 49, 4596);
+INSERT INTO `item_latents` VALUES(17592, 171, 83, 49, 4468); -- Kinkobo
+INSERT INTO `item_latents` VALUES(17592, 25, 10, 49, 4468);
+INSERT INTO `item_latents` VALUES(17592, 171, 83, 49, 4596); 
+INSERT INTO `item_latents` VALUES(17592, 25, 10, 49, 4596);
 INSERT INTO `item_latents` VALUES(17073, 406, 30, 7, 2); -- Mistilteinn drains 30TP if TP >= 30
 INSERT INTO `item_latents` VALUES(17073, 369, 1, 7, 2); -- Mistilteinn adds Refresh 1MP per tick
 
@@ -1096,7 +1102,7 @@ INSERT INTO `item_latents` VALUES(15283, 259, 1, 8, 13);
 INSERT INTO `item_latents` VALUES(15284, 87, 5, 8, 14); 
 
 -- 
-INSERT INTO `item_latents` VALUES(14737, 167, 5, 8, 14); 
+INSERT INTO `item_latents` VALUES(14737, 384, 51, 8, 14); 
 
 -- 
 INSERT INTO `item_latents` VALUES(13672, 23, 6, 8, 14);
@@ -2716,3 +2722,51 @@ INSERT INTO `item_latents` VALUES(14005, 25, 8, 52, 3); -- Tekko: Accuracy +8 in
 INSERT INTO `item_latents` VALUES(14026, 25, 9, 52, 3); -- Hailstorm Tekko: Accuracy +9 in Water weather
 INSERT INTO `item_latents` VALUES(14027, 25, 10, 52, 3); -- Hailstorm Tekko +1: Accuracy +10 in Water weather
 INSERT INTO `item_latents` VALUES(16883, 25, 10, 52, 3); -- Spear: Accuracy +10 in Water weather
+
+-- -------------------------------------------------------
+-- Rune equips
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES(18206, 25, 5, 56, 0); -- Rune Chopper +5 Acc.
+INSERT INTO `item_latents` VALUES(18206, 167, 9, 56, 0); -- Rune Chopper +9% haste
+INSERT INTO `item_latents` VALUES(18206, 369, -3, 56, 0); -- Rune Chopper -3MP/tic
+INSERT INTO `item_latents` VALUES(17333, 10, 1, 56, 0); -- Rune Arrow +1 VIT
+INSERT INTO `item_latents` VALUES(17333, 24, 10, 56, 0); -- Rune Arrow +10 R.Atk.
+INSERT INTO `item_latents` VALUES(17333, 369, -1, 56, 0); -- Rune Arrow -1MP/tic
+INSERT INTO `item_latents` VALUES(16647, 23, 5, 56, 0); -- Rune Axe +5 Atk.
+INSERT INTO `item_latents` VALUES(16647, 370, 5, 56, 0); -- Rune Axe +5HP/tic
+INSERT INTO `item_latents` VALUES(16647, 369, -3, 56, 0); -- Rune Axe -3MP/tic
+INSERT INTO `item_latents` VALUES(16408, 8, 7, 56, 0); -- Rune Baghnakhs +7 STR
+INSERT INTO `item_latents` VALUES(16408, 291, 1, 56, 0); -- Rune Baghnakhs +1 Counter
+INSERT INTO `item_latents` VALUES(16408, 369, -4, 56, 0); -- Rune Baghnakhs -4MP/tic
+INSERT INTO `item_latents` VALUES(12742, 68, 5, 56, 0); -- Rune Bangles +5 Eva.
+INSERT INTO `item_latents` VALUES(12742, 1, 32, 56, 0); -- Rune Bangles +32 Def.
+INSERT INTO `item_latents` VALUES(12742, 369, -4, 56, 0); -- Rune Bangles -4MP/tic
+INSERT INTO `item_latents` VALUES(16563, 9, 5, 56, 0); -- Rune Blade +5 DEX
+INSERT INTO `item_latents` VALUES(16563, 366, 4, 56, 0); -- Rune Blade DMG: 43
+INSERT INTO `item_latents` VALUES(16563, 369, -4, 56, 0); -- Rune Blade -4MP/tic
+INSERT INTO `item_latents` VALUES(17158, 26, 5, 56, 0); -- Rune Bow +5 R. Acc.
+INSERT INTO `item_latents` VALUES(17158, 27, -2, 56, 0); -- Rune Bow -2 Enmity
+INSERT INTO `item_latents` VALUES(17158, 369, -4, 56, 0); -- Rune Bow -4MP/tic
+INSERT INTO `item_latents` VALUES(18084, 9, 6, 56, 0); -- Rune Halberd +6 DEX
+INSERT INTO `item_latents` VALUES(18084, 288, 5, 56, 0); -- Rune Halberd +5% Dbl.Atk.
+INSERT INTO `item_latents` VALUES(18084, 369, -4, 56, 0); -- Rune Halberd -4MP/tic
+INSERT INTO `item_latents` VALUES(17461, 23, 10, 56, 0); -- Rune Rod +10 Atk.
+INSERT INTO `item_latents` VALUES(17461, 112, 6, 56, 0); -- Rune Rod +6 Healing Magic Skill
+INSERT INTO `item_latents` VALUES(17461, 369, -4, 56, 0); -- Rune Rod -4MP/tic
+INSERT INTO `item_latents` VALUES(17093, 12, 2, 56, 0); -- Rune Staff +2 INT
+INSERT INTO `item_latents` VALUES(17093, 13, 2, 56, 0); -- Rune Staff +2 MND
+INSERT INTO `item_latents` VALUES(17093, 14, 2, 56, 0); -- Rune Staff +2 CHR
+INSERT INTO `item_latents` VALUES(17093, 28, 1, 56, 0); -- Rune Staff +1 MAB
+INSERT INTO `item_latents` VALUES(17093, 369, -4, 56, 0); -- Rune Staff -4MP/tic
+
+-- -------------------------------------------------------
+-- Shark Necklace
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES(15532, 370, 1, 56, 0); -- Regen +1HP/tic
+INSERT INTO `item_latents` VALUES(15532, 369, -3, 56, 0); -- MP Drain -3MP/tic
+
+-- -------------------------------------------------------
+-- Shadow Mantle/Ring
+-- -------------------------------------------------------
+INSERT INTO `item_latents` VALUES(13658, 10, 20, 32, 0); -- Darksday: VIT+20
+INSERT INTO `item_latents` VALUES(14646, 29, 10, 32, 0); -- Darksday: MDB+10

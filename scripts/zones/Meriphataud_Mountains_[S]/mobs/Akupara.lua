@@ -38,7 +38,7 @@ function onMobSpawn(mob)
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9614,8919,50); -- Ifritear
@@ -112,8 +112,8 @@ function onMobSpawn(mob)
         SetDropRate(9614,8924,0); -- Shivatear
         SetDropRate(9614,8925,0); -- Carbutear
         SetDropRate(9614,8926,50); -- Fenritear
-    end    
-    
+    end
+
 end;
 -----------------------------------
 -- onMobEngage Action

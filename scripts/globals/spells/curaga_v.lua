@@ -12,40 +12,46 @@ require("scripts/globals/magic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	local minCure = 600;
+    local minCure = 600;
 
-	local divisor = 1;
-	local constant = 570;
-	local power = getCurePowerOld(caster);
-	if (power > 780) then
-		divisor = 2.667;
-		constant = 814;--this is too powerful and needs to be fixed when the rest of the curaga 5 numbers are determined
-	end
+    local divisor = 1;
+    local constant = 570;
+    local power = getCurePowerOld(caster);
+    if (power > 780) then
+        divisor = 2.667;
+        constant = 814;--this is too powerful and needs to be fixed when the rest of the curaga 5 numbers are determined
+    end
 
-	local final = getCureFinal(caster,spell,getBaseCureOld(power,divisor,constant),minCure,false);
+    local final = getCureFinal(caster,spell,getBaseCureOld(power,divisor,constant),minCure,false);
 
-	final = final + (final * (target:getMod(MOD_CURE_POTENCY_RCVD)/100));
+    final = final + (final * (target:getMod(MOD_CURE_POTENCY_RCVD)/100));
+    
+    --Applying server mods....
+    final = final * CURE_POWER;
+    
+    local diff = (target:getMaxHP() - target:getHP());
+    if (final > diff) then
+        final = diff;
+    end
+    target:restoreHP(final);
+    target:wakeUp();
 
-	--Applying server mods....
-	final = final * CURE_POWER;
+    caster:updateEnmityFromCure(target,final);
+    
+    spell:setMsg(367);
+    
+    if (caster:getObjType() == TYPE_PC) then
+        if (caster:getEquipID(SLOT_FEET) == 28151
+        or caster:getEquipID(SLOT_FEET) == 27241
+        or caster:getEquipID(SLOT_FEET) == 27242
+        or caster:getEquipID(SLOT_FEET) == 11126) then
+            caster:addMp(final*0.05);
+        end
+    end
 
-	local diff = (target:getMaxHP() - target:getHP());
-	if (final > diff) then
-		final = diff;
-	end
-	target:restoreHP(final);
-	target:wakeUp();
-
-	caster:updateEnmityFromCure(target,final);
-
-	spell:setMsg(367);
-	if caster:getEquipID(SLOT_FEET) == (28151 or 27241 or 27242 or 11126) then
-		caster:addMp(final*0.05);
-	end
-
-	return final;
+    return final;
 end;
