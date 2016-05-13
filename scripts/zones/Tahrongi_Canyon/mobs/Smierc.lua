@@ -176,7 +176,7 @@ function onMobDeath(mob, killer, ally)
             ally:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
             ally:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
             ally:setVar("WHITE_STRATUM_V", 0);
-            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
+            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_VI);
         end
     end
 

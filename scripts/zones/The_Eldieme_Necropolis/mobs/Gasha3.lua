@@ -5,10 +5,10 @@
 package.loaded["scripts/zones/The_Eldieme_Necropolis/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/The_Eldieme_Necropolis/TextIDs");
+require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -17,6 +17,13 @@ require("scripts/globals/keyitems");
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+
+    -- setMod
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGAIN, 30);
+    mob:setMod(MOD_HASTE_ABILITY, 25);
+    mob:setMod(MOD_MACC,1950); -- needs to be corrected amount of addMod instead..
+    mob:setMod(MOD_MATT,105);  -- needs to be corrected amount of addMod instead..
 
     -- addMod
     mob:addMod(MOD_MDEF,60);
@@ -29,12 +36,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 30);
-    mob:setMod(MOD_HASTE_ABILITY, 25);
-    mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,105);
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
@@ -143,13 +144,13 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,10) > 4) or (target:hasStatusEffect(EFFECT_PARALYSIS) == true)) then
+    if (math.random(1,10) > 4 or target:hasStatusEffect(EFFECT_PARALYSIS) == true) then
         return 0,0,0;
     else
         target:addStatusEffect(EFFECT_PARALYSIS,1,0,10);
     end
 
-    return SUBEFFECT_PARALYSIS,163,EFFECT_PARALYSIS;
+    return SUBEFFECT_PARALYSIS,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_PARALYSIS;
 end;
 
 -----------------------------------
@@ -157,15 +158,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 200);
-    ally:addExp(10000);
 
     if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Gasha Kill
         if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_II"), 4) == false) then
-           ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",4,true);
+            ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",4,true);
         end
 
-        if (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
+        if (ally:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
             if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_II"),6) == true) then
                 ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
                 ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
@@ -173,5 +172,8 @@ function onMobDeath(mob, killer, ally)
                 ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
             end
         end
-    end   
+    end
+
+    ally:addCurrency("bayld", 200);
+    ally:addExp(10000);
 end;

@@ -5,10 +5,10 @@
 package.loaded["scripts/zones/Garlaige_Citadel/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Garlaige_Citadel/TextIDs");
+require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -19,6 +19,14 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 
+    -- setMod
+    mob:setMod(MOD_REGEN, 100);
+    mob:setMod(MOD_REGAIN, 15);
+    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_MACC,2500); -- todo: covert to correct amoutn of addMod
+    mob:setMod(MOD_MATT,125);  -- todo: covert to correct amoutn of addMod
+
     -- addMod
     mob:addMod(MOD_ATT,250);
 end;
@@ -28,93 +36,86 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 15);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,2500);
-    mob:setMod(MOD_MATT,125);
 
     -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9626,0,8919,50); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 2) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,50); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,50); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 3) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,50); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,50); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 4) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,50); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,50); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 5) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,50); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,50); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 6) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,50); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,50); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 7) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,50); -- Carbutear
         SetDropRate(9626,0,8926,0); -- Fenritear
     elseif (RND1 == 8) then
         SetDropRate(9626,0,8919,0); -- Ifritear
-        SetDropRate(9626,0,8920,0); -- Leviatear    
-        SetDropRate(9626,0,8921,0); -- Ramutear    
-        SetDropRate(9626,0,8922,0); -- Garutear    
-        SetDropRate(9626,0,8923,0); -- Titatear    
-        SetDropRate(9626,0,8924,0); -- Shivatear   
+        SetDropRate(9626,0,8920,0); -- Leviatear
+        SetDropRate(9626,0,8921,0); -- Ramutear
+        SetDropRate(9626,0,8922,0); -- Garutear
+        SetDropRate(9626,0,8923,0); -- Titatear
+        SetDropRate(9626,0,8924,0); -- Shivatear
         SetDropRate(9626,0,8925,0); -- Carbutear
-        SetDropRate(9626,0,8926,50); -- Fenritear       
-    end    
-    
+        SetDropRate(9626,0,8926,50); -- Fenritear
+    end
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -184,15 +185,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 200);
-    ally:addExp(10000);
 
     if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Roly-Poly Kill
         if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_II"), 0) == false) then
-           ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",0,true);
+            ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",0,true);
         end
 
-        if (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
+        if (ally:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
             if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_II"),6) == true) then
                 ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
                 ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
@@ -200,5 +199,8 @@ function onMobDeath(mob, killer, ally)
                 ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
             end
         end
-    end  
+    end
+
+    ally:addCurrency("bayld", 200);
+    ally:addExp(10000);
 end;

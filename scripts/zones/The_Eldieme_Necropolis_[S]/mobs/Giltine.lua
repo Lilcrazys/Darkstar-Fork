@@ -5,16 +5,21 @@
 package.loaded["scripts/zones/The_Eldieme_Necropolis_[S]/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/The_Eldieme_Necropolis_[S]/TextIDs");
+require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMod
+    mob:setMod(MOD_REFRESH, 250); -- wtf
+    mob:setMod(MOD_MACC,2200);    -- wtf
+    mob:setMod(MOD_MATT,65);      -- wtf
+    
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,120);
@@ -26,10 +31,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_MACC,2200);
-    mob:setMod(MOD_MATT,65);
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
@@ -108,8 +109,8 @@ function onMobSpawn(mob)
         SetDropRate(9631,0,8925,0); -- Carbutear
         SetDropRate(9631,0,8926,50); -- Fenritear       
     end    
-    
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -148,15 +149,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 200);
-    ally:addExp(10000);
 
     if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Gilitine Kill
         if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_II"), 5) == false) then
-           ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",5,true);
+            ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",5,true);
         end
 
-        if (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
+        if (ally:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
             if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_II"),6) == true) then
                 ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
                 ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
@@ -164,5 +163,8 @@ function onMobDeath(mob, killer, ally)
                 ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
             end
         end
-    end    
+    end
+    
+    ally:addCurrency("bayld", 200);
+    ally:addExp(10000);
 end;
