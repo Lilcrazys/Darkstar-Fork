@@ -1,4 +1,4 @@
--- -- -------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------
 -- This file adds onto or modifies contents of mob_skill_lists.sql
 -- and must be imported/executed AFTER that file
 --
@@ -6,7 +6,7 @@
 -- For changing entries that already exist use "REPLACE INTO"
 -- REPLACE tells MySQL to delete the old line and insert the new one.
 -- Using the wrong 1 of these 2 commands will result in errors.
--- -- -------------------------------------------------------------------------
+-- ---------------------------------------------------------------------------
 -- NOTE: Any skill like Mighty Strikes being forced in script does not need to be in the mobs skill list to work.
 -- PRIMARY KEY (`skill_list_id`,`mob_skill_id`)
 -- KEEP IT IN ORDER BY ID!!
@@ -31,7 +31,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,373); -- Thunderbolt
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,374); -- Kick_Out
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,375); -- Shock_Wave
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,376); -- Flame_Armor
--- INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,378); -- Meteor
+-- INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,????); -- Meteor
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,2135); -- Amnesic_Blast
 
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,372); -- Wild_Horn
@@ -47,9 +47,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,551); -- Harden
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,552); -- Earth_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,2329); -- Tetsudo_Tremor
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Wyrm_Melee',4005,1032); -- Sleet_Blast_alt
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1031); -- Sleet_Blast
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1033); -- Gregale_Wing
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Wyrm',4005,1034); -- Spike_Flail
@@ -201,11 +198,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,1936); -- Doomvoid
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,2348); -- Gorge
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Gigaworm',4026,2349); -- Disgorge
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4027,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4027,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4027,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2363); -- Turbine_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2364); -- Seismic_impact
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2365); -- Incinerator
@@ -215,11 +207,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2368); -- Scapula_b
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2370); -- Auger_Smash
 INSERT INTO `mob_skill_lists` VALUES ('Veiled_Ironclad',4027,2371); -- Area_Bombardment
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4028,2525); -- Gallu_Melee_Triple
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4028,2526); -- Gallu_Melee_Frontal
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4028,2527); -- Gallu_Melee_Radial
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2528); -- Diluvial_wakes
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2529); -- Kurugi_collapse
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Gallu',4028,2530); -- Searing_halitus
@@ -255,11 +242,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2463); -- Raksha_J
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2464); -- Raksha_illusion
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Naraka',4032,2465); -- Raksha_vengeance
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4033,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4033,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4033,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2363); -- Turbine_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2364); -- Seismic_impact
 INSERT INTO `mob_skill_lists` VALUES ('Paramount_Ironclad',4033,2365); -- Incinerator
@@ -417,11 +399,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Earth_Breath',4078,552); -- Earth_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Tetsudo_Tremor',4078,2329); -- Tetsudo_Tremor
 -- End of incorrect block of list names...
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4079,2466); -- Harpeia_Melee_Stomp (not used by retail Celaeno)
-INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4079,2467); -- Harpeia_Melee_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4079,2468); -- Harpeia_Melee_Fly
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4079,2469); -- Rending_talons
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4079,2470); -- Shrieking_gale
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4079,2471); -- Wings_of_woe
@@ -438,11 +415,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Judgement',4080,2463); -- R
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Illusion',4080,2464); -- Raksha_illusion
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Raksha_Vengeance',4080,2465); -- Raksha_vengeance
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4081,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2363); -- Turbine_cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2364); -- Seismic_impact
 INSERT INTO `mob_skill_lists` VALUES ('Voidwrought',4081,2365); -- Incinerator
@@ -542,11 +514,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,276); -- Envoutement -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,1073); -- Gala_Macabre
 INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,2382); -- Hadal_Summons
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4081,2492); -- Mantid_Melee_Double
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4081,2493); -- Mantid_Melee_Slice
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4081,2494); -- Mantid_Melee_Jump
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2495); -- Slicing_Sickle
 INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2496); -- Raptorial_Claw
 INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2497); -- Phlegm_Expulsion
@@ -601,11 +568,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,223); -- Horror_Cloud -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,229); -- Blood_Saber -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,2568); -- Cloudscourge
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4105,2492); -- Mantid_Melee_Double
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4105,2493); -- Mantid_Melee_Slice
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4105,2494); -- Mantid_Melee_Jump
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2495); -- Slicing_Sickle
 INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2496); -- Raptorial_Claw
 INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2497); -- Phlegm_Expulsion
@@ -626,11 +588,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2464); -- Raksha_Illusio
 INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2465); -- Raksha_Vengeance
 INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2554); -- Yamas_Jugement
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4108,2525); -- Gallu_Melee_Triple
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4108,2526); -- Gallu_Melee_Frontal
-INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4108,2527); -- Gallu_Melee_Radial
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2528); -- Diluvial_wakes
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2529); -- Kurugi_collapse
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2530); -- Searing_halitus
@@ -639,12 +596,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2532); -- Bolt_of_perditio
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2533); -- Crippling_rime
 INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2534); -- Oblivions_mantle
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4109,2538); -- Botulus_Melee_Front
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4109,2539); -- Botulus_Melee_Left
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4109,2540); -- Botulus_Melee_Right
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4109,2541); -- Botulus_Melee_Back
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2542); -- Gnash_N_Guttle
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2543); -- Sloughy_Sputum
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2544); -- Chymous_Reek
@@ -652,8 +603,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2545); -- Rancid_Reflux
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2546); -- Crowning_Flatus
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2547); -- Slimy_Proposal
 INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2548); -- Just_Desserts
-
--- -------------------
 
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1908); -- Viscid_Emission
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1910); -- Floral_Bouquet
@@ -836,11 +785,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,304); -- Unfini
 INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,307); -- Unfinished
 INSERT INTO `mob_skill_lists` VALUES ('Gloam_Servitor_Mage',4144,892); -- Unfinished
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4145,2492); -- Mantid_Melee_Double
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4145,2493); -- Mantid_Melee_Slice
-INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4145,2494); -- Mantid_Melee_Jump
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2495); -- Slicing_Sickle
 INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2496); -- Raptorial_Claw
 INSERT INTO `mob_skill_lists` VALUES ('Tsui-Goab',4145,2497); -- Phlegm_Expulsion
@@ -938,19 +882,55 @@ INSERT INTO `mob_skill_lists` VALUES ('Morta',4159,2629); -- Beautiful_death
 -- INSERT INTO `mob_skill_lists` VALUES ('Shah',4165,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Provenance_Watcher',4166,PLACEHOLDER); -- Unfinished
 
--- INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2360); -- Iron_Giant_Melee_Vertical
--- INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2361); -- Iron_Giant_Melee_Stomp
--- INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2362); -- Iron_Giant_Melee_Lateral
--- This is what melee substitute skills will change to when we catch up with Darkstar.
--- INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2525); -- Gallu_Melee_Triple
--- INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2526); -- Gallu_Melee_Frontal
--- INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2527); -- Gallu_Melee_Radial
+-- ---------------------------------------------------------------------------
+-- Begin Melee subs
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2360); -- Iron_Giant_Melee_Vertical
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2361); -- Iron_Giant_Melee_Stomp
+INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4167,2362); -- Iron_Giant_Melee_Lateral
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4200,2761); -- Gabbrath_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4200,2762); -- Gabbrath_Melee_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4200,2763); -- Gabbrath_Melee_Spin
--- End temp!
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2525); -- Gallu_Melee_Triple
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2526); -- Gallu_Melee_Frontal
+INSERT INTO `mob_skill_lists` VALUES ('Gallu_Melee',4168,2527); -- Gallu_Melee_Radial
+
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4169,2538); -- Botulus_Melee_Front
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4169,2539); -- Botulus_Melee_Left
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4169,2540); -- Botulus_Melee_Right
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Melee',4169,2541); -- Botulus_Melee_Back
+
+INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4170,2466); -- Harpeia_Melee_Stomp (not used by retail Celaeno)
+INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4170,2467); -- Harpeia_Melee_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Harpeia_Melee',4170,2468); -- Harpeia_Melee_Fly
+
+INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4171,2492); -- Mantid_Melee_Double
+INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4171,2493); -- Mantid_Melee_Slice
+INSERT INTO `mob_skill_lists` VALUES ('Mantid_Melee',4171,2494); -- Mantid_Melee_Jump
+
+INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4172,2761); -- Gabbrath_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4172,2762); -- Gabbrath_Melee_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Gabbrath_Melee',4172,2763); -- Gabbrath_Melee_Spin
+
+INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4173,2814); -- Waktza_Melee_Gust
+INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4173,2815); -- Waktza_Melee_Spin
+INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4173,2816); -- Waktza_Melee_Beak
+
+INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4174,2743); -- Bztavian_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4174,2744); -- Bztavian_Melee_Slash
+INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4174,2745); -- Bztavian_Melee_Stinger
+
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4175,2752); -- Rockfin_Melee_Bite
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4175,2753); -- Rockfin_Melee_Ram
+INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4175,2754); -- Rockfin_Melee_Spin
+
+INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4176,2878); -- Cehuetzi_Melee_Left
+INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4176,2879); -- Cehuetzi_Melee_Right
+INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4176,2880); -- Cehuetzi_Melee_Bite
+
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4177,2909); -- Darrcuiln_Melee_Charge
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4177,2910); -- Darrcuiln_Melee_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4177,2911); -- Darrcuiln_Melee_Howl
+-- end Melee Subs
+-- ---------------------------------------------------------------------------
+
 INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2764); -- Blistering_Roar
 INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2765); -- Searing_Serration
 INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2766); -- Volcanic_Stasis
@@ -959,11 +939,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2768); -- Batholit-hic_Shell
 INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2769); -- Pyroclastic_Surge
 INSERT INTO `mob_skill_lists` VALUES ('Achuka',4200,2770); -- Incinerating_Lahar
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4201,2814); -- Waktza_Melee_Gust
-INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4201,2815); -- Waktza_Melee_Spin
-INSERT INTO `mob_skill_lists` VALUES ('Waktza_Melee',4201,2816); -- Waktza_Melee_Beak
--- End temp!
+
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2817); -- Crashing_Thunder
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2818); -- Reverberating_Cry
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2819); -- Brownout
@@ -971,22 +947,12 @@ INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2820); -- Reverse_Current
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2821); -- Sparkstorm
 INSERT INTO `mob_skill_lists` VALUES ('Hurkan',4201,2822); -- Static_Prison
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4202,2909); -- Darrcuiln_Melee_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4202,2910); -- Darrcuiln_Melee_Claw
-INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln_Melee',4202,2911); -- Darrcuiln_Melee_Howl
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2912); -- Aurous_Charge
 INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2913); -- Howling_Gust
 INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2914); -- Righteous_Rasp
 INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2915); -- Starward_Yowl
 INSERT INTO `mob_skill_lists` VALUES ('Darrcuiln',4202,2916); -- Stalking_Prey
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4203,2743); -- Bztavian_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4203,2744); -- Bztavian_Melee_Slash
-INSERT INTO `mob_skill_lists` VALUES ('Bztavian_Melee',4203,2745); -- Bztavian_Melee_Stinger
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2746); -- Mandibular_Lashing
 INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2747); -- Vespine_Hurricane
 INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,2748); -- Stinger_volley
@@ -1000,11 +966,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2703); -- underin
 INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2704); -- iscid_Spindrift
 INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2705); -- iptide_Eupnea
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2752); -- Rockfin_Melee_Bite
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2753); -- Rockfin_Melee_Ram
-INSERT INTO `mob_skill_lists` VALUES ('Rockfin_Melee',4205,2754); -- Rockfin_Melee_Spin
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2755); -- Protolithic_Puncture
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2756); -- Aquatic_Lance
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2757); -- Pelagic_Cleaver
@@ -1012,11 +973,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2759); -- Tidal_Guillotine
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2760); -- Marine_Mayhem
 INSERT INTO `mob_skill_lists` VALUES ('Tchakka',4205,2758); -- Carcharian_verve
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4206,2878); -- Cehuetzi_Melee_Left
-INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4206,2879); -- Cehuetzi_Melee_Right
-INSERT INTO `mob_skill_lists` VALUES ('Cehuetzi_Melee',4206,2880); -- Cehuetzi_Melee_Bite
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2881); -- Polar_Roar
 INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2882); -- Brain_Freeze
 INSERT INTO `mob_skill_lists` VALUES ('Kumhau',4206,2883); -- Biting_Abrogation
@@ -1074,35 +1030,15 @@ INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2315); -- Stygian_Sphere
 INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2316); -- Malign_Invocation
 INSERT INTO `mob_skill_lists` VALUES ('Raja',4213,2436); -- Royal_Decree
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4214,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4214,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4214,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Cleaver',4214,2363); -- Turbine_Cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Cleaver',4214,2364); -- Seismic_Impact
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4215,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4215,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4215,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Executioner',4215,2365); -- Incinerator
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Executioner',4215,2366); -- Arm_Cannon
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4216,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4216,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4216,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Observer',4216,2370); -- Auger_Smash
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Observer',4216,2371); -- Area_Bombardment
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4217,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4217,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4217,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Pulverizer',4217,2363); -- Turbine_Cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Pulverizer',4217,2364); -- Seismic_Impact
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Pulverizer',4217,2365); -- Incinerator
@@ -1113,41 +1049,21 @@ INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Pulverizer',4217,2369); -- Eradi
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Pulverizer',4217,2370); -- Auger_Smash
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Pulverizer',4217,2371); -- Area_Bombardment
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4218,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4218,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4218,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Severer',4218,2367); -- Ballistic_Kick
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Severer',4218,2368); -- Scapula_Beam
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4219,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4219,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4219,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Smiter',4219,2363); -- Turbine_Cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Smiter',4219,2364); -- Seismic_Impact
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Smiter',4219,2366); -- Arm_Cannon
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Smiter',4219,2367); -- Ballistic_Kick
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Smiter',4219,2368); -- Scapula_Beam
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4220,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4220,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4220,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Sunderer',4220,2363); -- Turbine_Cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Sunderer',4220,2364); -- Seismic_Impact
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Sunderer',4220,2365); -- Incinerator
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Sunderer',4220,2366); -- Arm_Cannon
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Sunderer',4220,2368); -- Scapula_Beam
 
--- Begin temp!
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4221,2360); -- Iron_Giant_Melee_Vertical
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4221,2361); -- Iron_Giant_Melee_Stomp
-INSERT INTO `mob_skill_lists` VALUES ('Iron_Giant_Melee',4221,2362); -- Iron_Giant_Melee_Lateral
--- End temp!
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2363); -- Turbine_Cyclone
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2364); -- Seismic_Impact
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Triturator',4221,2365); -- Incinerator
