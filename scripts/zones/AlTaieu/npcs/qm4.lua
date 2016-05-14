@@ -1,13 +1,12 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  ??? (Jailer of Love and Absolute Virtue Spawn)
+--  NPC: ??? (Jailer of Love and Absolute Virtue Spawn)
 -- Allows players to spawn the Jailer of Love by trading the Fourth Virtue, Fifth Virtue and Sixth Virtue to a ???.
 -- Allows players to spawn Absolute Virtue by killing Jailer of Love.
 -- @pos , 431 -0 -603
 -----------------------------------
 package.loaded["scripts/zones/AlTaieu/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/AlTaieu/TextIDs");
 require("scripts/globals/status");
 
@@ -27,7 +26,7 @@ function onTrade(player,npc,trade)
         player:startEvent(1010, 1848 ,1847 ,1849);
     elseif (GetMobAction(16912848) == ACTION_NONE) then
         if (trade:hasItemQty(1848,1) and trade:hasItemQty(1847,1) and trade:hasItemQty(1849,1) and trade:getItemCount() == 3) then
-            SpawnMob(16912848, 300):updateClaim(player);
+            SpawnMob(16912848):updateClaim(player);
             player:tradeComplete();
         end
     end
@@ -45,8 +44,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("onUpdate CSID: %u",csid);
---printf("onUpdate RESULT: %u",option);
+    -- printf("onUpdate CSID: %u",csid);
+    -- printf("onUpdate RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -54,6 +53,6 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("onFinish CSID: %u",csid);
---printf("onFinish RESULT: %u",option);
+    -- printf("onFinish CSID: %u",csid);
+    -- printf("onFinish RESULT: %u",option);
 end;

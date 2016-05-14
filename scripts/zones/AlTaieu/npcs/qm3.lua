@@ -1,12 +1,11 @@
 -----------------------------------
 -- Area: Al'Taieu
--- NPC:  ??? (Jailer of Prudence Spawn)
+--  NPC: ??? (Jailer of Prudence Spawn)
 -- Allows players to spawn the Jailer of Prudence by trading the Third Virtue, Deed of Sensibility, and High-Quality Hpemde Organ to a ???.
 -- @pos , 706 -1 22
 -----------------------------------
 package.loaded["scripts/zones/AlTaieu/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/AlTaieu/TextIDs");
 require("scripts/zones/AlTaieu/mobIDs");
 require("scripts/globals/status");
@@ -48,8 +47,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("onUpdate CSID: %u",csid);
---printf("onUpdate RESULT: %u",option);
+    -- printf("onUpdate CSID: %u",csid);
+    -- printf("onUpdate RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -57,6 +56,6 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("onFinish CSID: %u",csid);
---printf("onFinish RESULT: %u",option);
+    -- printf("onFinish CSID: %u",csid);
+    -- printf("onFinish RESULT: %u",option);
 end;
