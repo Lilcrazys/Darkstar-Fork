@@ -187,6 +187,7 @@ INSERT INTO `mob_droplist` VALUES (118,0,28388,65); -- Tlamiztli collar
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=151 and type=0 and itemId=3216 and rate=30; -- Ardor Jewel
+DELETE FROM `mob_droplist` WHERE dropId=151 and type=0 and itemId=3289 and rate=100; -- Apademak Horn
 INSERT INTO `mob_droplist` VALUES (151,0,3289,1000); -- Apademak Horn
 
 -- -----------
@@ -1503,6 +1504,27 @@ INSERT INTO `mob_droplist` VALUES (2732,0,8990,214);
 INSERT INTO `mob_droplist` VALUES (2732,0,9063,225);
 
 -- -----------
+-- Quadav Guard/Transporter Fix
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3192 and rate=100; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3192 and rate=50; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3192 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3192 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3193 and rate=100; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3193 and rate=50; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3193 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3193 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3194 and rate=100; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3194 and rate=50; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3194 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3194 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3209 and rate=100; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3209 and rate=50; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3209 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=2907 and type=0 and itemId=3209 and rate=30; -- comment me
+
+-- -----------
 -- Quu Domi the Gallant
 -- -----------
 
@@ -2087,17 +2109,6 @@ INSERT INTO `mob_droplist` VALUES (4383,0,16107,123); -- Denali Bonnet
 INSERT INTO `mob_droplist` VALUES (4383,0,14569,113); -- Denali Jacket
 INSERT INTO `mob_droplist` VALUES (4383,0,15649,138); -- Goliard Trews
 INSERT INTO `mob_droplist` VALUES (4383,0,15735,182); -- Goliard Clogs
-
--- -----------
--- Mictlantecuhtli
--- -----------
-
-INSERT INTO `mob_droplist` VALUES (4558,0,15019,386); -- Serpentes Cuffs
-INSERT INTO `mob_droplist` VALUES (4558,0,11597,84); -- Unkai Nodowa
-INSERT INTO `mob_droplist` VALUES (4558,0,15942,128);
-INSERT INTO `mob_droplist` VALUES (4558,0,3544,51);
-INSERT INTO `mob_droplist` VALUES (4558,0,9075,43);
-INSERT INTO `mob_droplist` VALUES (4558,0,1767,118);
 
 -- -----------
 -- Aqueduct Spider
@@ -4765,13 +4776,12 @@ INSERT INTO `mob_droplist` VALUES (9713,0,2948,1000); -- COMMENT ME
 -- Glavoid
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (9714,0,2927,200); -- COMMENT ME
+INSERT INTO `mob_droplist` VALUES (9714,0,2927,60); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (9714,0,2927,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (9714,0,11508,1000); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (9714,0,11523,250); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (9714,0,3222,288); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (9714,0,3225,266); -- COMMENT ME
-INSERT INTO `mob_droplist` VALUES (9714,0,2927,220); -- COMMENT ME
 INSERT INTO `mob_droplist` VALUES (9714,0,9075,42);
 INSERT INTO `mob_droplist` VALUES (9714,0,8724,96);
 INSERT INTO `mob_droplist` VALUES (9714,0,734,251);
@@ -4941,3 +4951,14 @@ INSERT INTO `mob_droplist` VALUES (9731,0,15807,140); -- Balrahn's Ring
 INSERT INTO `mob_droplist` VALUES (9731,0,4023,1000); -- Snowsteel Ore
 INSERT INTO `mob_droplist` VALUES (9731,0,4023,250);
 INSERT INTO `mob_droplist` VALUES (9731,0,4023,50);
+
+-- -----------
+-- Mictlantecuhtli
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (9732,0,15019,386); -- Serpentes Cuffs
+INSERT INTO `mob_droplist` VALUES (9732,0,11597,84); -- Unkai Nodowa
+INSERT INTO `mob_droplist` VALUES (9732,0,15942,128);
+INSERT INTO `mob_droplist` VALUES (9732,0,3544,51);
+INSERT INTO `mob_droplist` VALUES (9732,0,9075,43);
+INSERT INTO `mob_droplist` VALUES (9732,0,1767,118);
