@@ -298,6 +298,11 @@ INSERT INTO `mob_droplist` VALUES (222,0,3292,86); -- Azdaja's Horn
 INSERT INTO `mob_droplist` VALUES (222,0,3292,1000); -- Azdaja's Horn
 
 -- -----------
+-- Awahondo
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=212 and type=0 and itemId=4892 and rate=100; -- Aeroja
+
+-- -----------
 -- Bakka
 -- -----------
 
@@ -376,6 +381,12 @@ INSERT INTO `mob_droplist` VALUES (270,0,1328,321); -- A.Abjuration: Ft.
 INSERT INTO `mob_droplist` VALUES (270,0,1332,300); -- M.Abjuration: Lg.
 INSERT INTO `mob_droplist` VALUES (270,0,1334,302); -- W.Abjuration: Hd.
 INSERT INTO `mob_droplist` VALUES (270,0,1527,700); -- Behemoth Tongue
+
+-- -----------
+-- Bennu
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=273 and type=0 and itemId=4892 and rate=100; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=273 and type=0 and itemId=4890 and rate=100; -- comment me
 
 -- -----------
 -- Biast
@@ -1201,6 +1212,11 @@ INSERT INTO `mob_droplist` VALUES (2065,0,10326,70); --  Enif Cosciales
 INSERT INTO `mob_droplist` VALUES (2065,0,11970,191); -- Athos's Tights
 
 -- -----------
+-- Battlerigged Chariot
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=2075 and type=0 and itemId=4892 and rate=100; -- comment me
+
+-- -----------
 -- Lord of Onzozo
 -- -----------
 
@@ -1471,6 +1487,12 @@ INSERT INTO `mob_droplist` VALUES (2237,0,4023,116);
 INSERT INTO `mob_droplist` VALUES (2237,0,4023,186);
 
 -- -----------
+-- Ouzelum 
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2725 and type=0 and itemId=4890 and rate=10; -- comment me
+
+-- -----------
 -- Ovni
 -- -----------
 
@@ -1520,6 +1542,12 @@ INSERT INTO `mob_droplist` VALUES (2936,0,16084,152); -- Ares' MaskAres' Mask
 INSERT INTO `mob_droplist` VALUES (2936,0,10876,147); -- Ogier's Helm
 
 -- -----------
+-- Refitted Chariot
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=2946 and type=0 and itemId=4890 and rate=100; -- comment me
+
+-- -----------
 -- Rift Treant
 -- -----------
 INSERT INTO `mob_droplist` VALUES (2964,0,3926,27);
@@ -1561,6 +1589,12 @@ INSERT INTO `mob_droplist` VALUES (3059,0,27802,80); --  Neit's Coat
 INSERT INTO `mob_droplist` VALUES (3059,0,27662,98); -- Neit's Crown
 INSERT INTO `mob_droplist` VALUES (3059,0,27661,88); -- Namru's Tiara
 INSERT INTO `mob_droplist` VALUES (3059,0,28221,65); -- Namru's Crackows
+
+-- -----------
+-- Sisyphus
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=3212 and type=0 and itemId=4892 and rate=100; -- comment me
 
 -- -----------
 -- Sozu Rogberry
@@ -2379,7 +2413,7 @@ INSERT INTO `mob_droplist` VALUES (9053,0,3532,200); -- Veiled Trophy
 INSERT INTO `mob_droplist` VALUES (9054,0,3925,1000); -- Gallu - Bodies -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9054,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9054,0,3925,200); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9054,0,4851,141); -- Meteor
+-- INSERT INTO `mob_droplist` VALUES (9054,0,4851,141); -- Meteor
 INSERT INTO `mob_droplist` VALUES (9054,0,27925,115); -- Karieyh Haubert
 INSERT INTO `mob_droplist` VALUES (9054,0,27924,126); -- Thurandaut Tabard
 INSERT INTO `mob_droplist` VALUES (9054,0,27922,135); -- Orvail Robe
@@ -2390,12 +2424,12 @@ INSERT INTO `mob_droplist` VALUES (9054,0,27909,128); -- Weatherspoon Robe
 INSERT INTO `mob_droplist` VALUES (9055,0,3925,1000); -- Botulus -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9055,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9055,0,3925,153); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9055,0,4851,85); -- Meteor
+-- INSERT INTO `mob_droplist` VALUES (9055,0,4851,85); -- Meteor
 
 INSERT INTO `mob_droplist` VALUES (9056,0,3925,1000); -- Harpia -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9056,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9056,0,3925,200); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9056,0,4851,73); -- Meteor
+-- INSERT INTO `mob_droplist` VALUES (9056,0,4851,73); -- Meteor
 INSERT INTO `mob_droplist` VALUES (9056,0,28345,135); -- Karieyh Sollerets
 INSERT INTO `mob_droplist` VALUES (9056,0,28344,92); -- Thurandaut Boots
 INSERT INTO `mob_droplist` VALUES (9056,0,28342,107); -- Orvail Souliers
@@ -2406,7 +2440,7 @@ INSERT INTO `mob_droplist` VALUES (9056,0,28329,135); -- Weather. Souliers
 INSERT INTO `mob_droplist` VALUES (9057,0,3925,1000); -- Mantis -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9057,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9057,0,3925,200); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9057,0,4851,115); -- Meteor
+-- INSERT INTO `mob_droplist` VALUES (9057,0,4851,115); -- Meteor
 INSERT INTO `mob_droplist` VALUES (9057,0,28205,70); -- Karieyh Brayettes
 INSERT INTO `mob_droplist` VALUES (9057,0,28204,120); -- Thurandaut Tights
 INSERT INTO `mob_droplist` VALUES (9057,0,28203,57); -- Orvail Pants
@@ -2417,7 +2451,7 @@ INSERT INTO `mob_droplist` VALUES (9057,0,28190,91); -- Weathersp. Pants
 INSERT INTO `mob_droplist` VALUES (9058,0,3925,1000); -- Nakara -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9058,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9058,0,3925,200); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9058,0,4851,104); -- Meteor
+-- INSERT INTO `mob_droplist` VALUES (9058,0,4851,104); -- Meteor
 INSERT INTO `mob_droplist` VALUES (9058,0,28065,82); -- Karieyh Moufles
 INSERT INTO `mob_droplist` VALUES (9058,0,28064,142); -- Thurandaut Gloves
 INSERT INTO `mob_droplist` VALUES (9058,0,28061,143); -- Orvail Cuffs
@@ -2428,7 +2462,7 @@ INSERT INTO `mob_droplist` VALUES (9058,0,28048,98); -- Weather. Cuffs
 INSERT INTO `mob_droplist` VALUES (9059,0,3925,1000); -- ironclad -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9059,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9059,0,3925,200); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9059,0,4851,100); -- Meteor
+-- INSERT INTO `mob_droplist` VALUES (9059,0,4851,100); -- Meteor
 INSERT INTO `mob_droplist` VALUES (9059,0,27785,120); -- Karieyh Morion
 INSERT INTO `mob_droplist` VALUES (9059,0,27784,69); -- Thurandaut Chapeau
 INSERT INTO `mob_droplist` VALUES (9059,0,27782,145); -- Orvail Corona
