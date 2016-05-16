@@ -49,7 +49,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 100;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(PULSATING_SOULFLAYER_BEARD) == false) then
         player:addKeyItem(PULSATING_SOULFLAYER_BEARD);
-        player:messageSpecial(6385, PULSATING_SOULFLAYER_BEARD);
+        player:messageSpecial(KEYITEM_OBTAINED, PULSATING_SOULFLAYER_BEARD);
     end
 end;
 

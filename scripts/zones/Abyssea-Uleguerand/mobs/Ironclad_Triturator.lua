@@ -3,10 +3,10 @@
 --  NM:  Ironclad_Triturator
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Uleguerand/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Uleguerand/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
@@ -21,7 +21,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_MACC,1800);
@@ -41,9 +41,11 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
         return 0,0,0;
@@ -54,6 +56,7 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_NONE,0,EFFECT_STUN;
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
@@ -64,11 +67,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(WARPED_IRON_GIANT_NAIL) == false) then
         player:addKeyItem(WARPED_IRON_GIANT_NAIL);
-        player:messageSpecial(6385, WARPED_IRON_GIANT_NAIL);
+        player:messageSpecial(KEYITEM_OBTAINED, WARPED_IRON_GIANT_NAIL);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_CRUSHING_CUDGEL) == false) then
         player:addKeyItem(ATMA_OF_THE_CRUSHING_CUDGEL);
-        player:messageSpecial(6385, ATMA_OF_THE_CRUSHING_CUDGEL);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_CRUSHING_CUDGEL);
     end
 end;

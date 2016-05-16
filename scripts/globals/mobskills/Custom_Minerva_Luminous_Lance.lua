@@ -22,7 +22,7 @@ function onMobWeaponSkill(target, mob, skill)
     local info = MobRangedMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_RANGED,MOBPARAM_PIERCE,info.hitslanded);
 
-    mob:SetMobSkillAttack(false);
+    mob:SetMobSkillAttack(0);
     target:addStatusEffect(EFFECT_STUN, 0, 0, 20);
     mob:addStatusEffectEx(EFFECT_CUSTOM_ENSPELL, EFFECT_ENLIGHT, 7, 0, 600);
     target:delHP(dmg);

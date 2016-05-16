@@ -22,7 +22,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_RANGED,MOBPARAM_SLASH,info.hitslanded);
     local distance = mob:checkDistance(target)
 
-    mob:SetMobSkillAttack(false);
+    mob:SetMobSkillAttack(0);
     utils.clamp(distance, 0, 40)
     dmg = dmg * ((50 - distance) / 50);
     mob:addStatusEffectEx(EFFECT_CUSTOM_ENSPELL, EFFECT_ENLIGHT, 7, 0, 600);

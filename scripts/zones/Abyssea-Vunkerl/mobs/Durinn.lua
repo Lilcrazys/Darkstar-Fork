@@ -53,7 +53,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 35;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_MINIKIN_MONSTROSITY) == false) then
         player:addKeyItem(ATMA_OF_THE_MINIKIN_MONSTROSITY);
-        player:messageSpecial(6385, ATMA_OF_THE_MINIKIN_MONSTROSITY);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_MINIKIN_MONSTROSITY);
     end
 end;
 

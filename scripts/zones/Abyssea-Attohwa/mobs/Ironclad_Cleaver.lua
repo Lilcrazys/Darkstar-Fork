@@ -1,11 +1,13 @@
 -----------------------------------
---  Area: Abyssea - Attohwa (215)
---   Mob: Ironclad_Cleaver
+-- Area: Abyssea - Attohwa (215)
+--  Mob: Ironclad_Cleaver
+-----------------------------------
+package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Abyssea-Attohwa/textIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -26,7 +28,7 @@ function onMobSpawn(mob)
     mob:addMod(MOD_EVA,-100);
     mob:addMod(MOD_ACC,200);
 
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
     
 end;
 
@@ -43,9 +45,11 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
         return 0,0,0;
@@ -56,6 +60,7 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_NONE,0,EFFECT_STUN;
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------

@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(CHIPPED_IMPS_OLIFANT) == false) then
         player:addKeyItem(CHIPPED_IMPS_OLIFANT);
-        player:messageSpecial(6385, CHIPPED_IMPS_OLIFANT);
+        player:messageSpecial(KEYITEM_OBTAINED, CHIPPED_IMPS_OLIFANT);
     end
 end;
 

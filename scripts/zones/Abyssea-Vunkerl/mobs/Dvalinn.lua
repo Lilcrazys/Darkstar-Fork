@@ -43,6 +43,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(DECAYED_DVERGR_TOOTH) == false) then
         player:addKeyItem(DECAYED_DVERGR_TOOTH);
-        player:messageSpecial(6385, DECAYED_DVERGR_TOOTH);
+        player:messageSpecial(KEYITEM_OBTAINED, DECAYED_DVERGR_TOOTH);
     end
 end;

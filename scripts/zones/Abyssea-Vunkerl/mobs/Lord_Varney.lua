@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(IMBRUED_VAMPYR_FANG) == false) then
         player:addKeyItem(IMBRUED_VAMPYR_FANG);
-        player:messageSpecial(6385, IMBRUED_VAMPYR_FANG);
+        player:messageSpecial(KEYITEM_OBTAINED, IMBRUED_VAMPYR_FANG);
     end
 end;
 

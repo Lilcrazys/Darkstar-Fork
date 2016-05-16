@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(CRIMSON_ABYSSITE_OF_CONFLUENCE) == false) then
         player:addKeyItem(CRIMSON_ABYSSITE_OF_CONFLUENCE);
-        player:messageSpecial(6385, CRIMSON_ABYSSITE_OF_CONFLUENCE);
+        player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_ABYSSITE_OF_CONFLUENCE);
     end
 end;
 

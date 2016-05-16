@@ -1,14 +1,13 @@
 -----------------------------------
 -- Area: Outer Horutoto Ruins
 -- VWNM: Voidwrought
--- @pos ? ? ? ?
 -----------------------------------
 package.loaded["scripts/zones/Outer_Horutoto_Ruins/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Outer_Horutoto_Ruins/TextIDs");
-require("scripts/globals/status");
-require("scripts/globals/quests");
 require("scripts/globals/keyitems");
+require("scripts/globals/quests");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -24,7 +23,7 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ATT,150);
 
     -- other
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -42,7 +41,7 @@ function onMobSpawn(mob)
 
     -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9617,8919,50); -- Ifritear
@@ -116,8 +115,7 @@ function onMobSpawn(mob)
         SetDropRate(9617,8924,0); -- Shivatear
         SetDropRate(9617,8925,0); -- Carbutear
         SetDropRate(9617,8926,50); -- Fenritear
-    end    
-    
+    end
 end;
 
 -----------------------------------

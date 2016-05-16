@@ -52,6 +52,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_SANGUINE_SCYTHE) == false) then
         player:addKeyItem(ATMA_OF_THE_SANGUINE_SCYTHE);
-        player:messageSpecial(6385, ATMA_OF_THE_SANGUINE_SCYTHE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_SANGUINE_SCYTHE);
     end
 end;

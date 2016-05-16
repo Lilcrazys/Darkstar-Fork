@@ -3,10 +3,10 @@
 --   Mob: Ironclad_Observer
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Misareaux/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
@@ -35,9 +35,11 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
         return 0,0,0;
@@ -59,4 +61,3 @@ function onMobDeath(mob, player, isKiller)
         player:messageSpecial(6385, SCALDING_IRONCLAD_SPIKE);
     end
 end;
-

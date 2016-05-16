@@ -1,12 +1,12 @@
 -----------------------------------
---  Area: Abyssea - Grauberg (254)
---   Mob: Ironclad_Sunderer
+-- Area: Abyssea - Grauberg (254)
+--  Mob: Ironclad_Sunderer
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Grauberg/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Grauberg/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
@@ -20,7 +20,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -47,12 +47,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(SHATTERED_IRON_GIANT_CHAIN) == false) then
         player:addKeyItem(SHATTERED_IRON_GIANT_CHAIN);
-        player:messageSpecial(6385, SHATTERED_IRON_GIANT_CHAIN);
+        player:messageSpecial(KEYITEM_OBTAINED, SHATTERED_IRON_GIANT_CHAIN);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_SUNDERING_SLASH) == false) then
         player:addKeyItem(ATMA_OF_THE_SUNDERING_SLASH);
-        player:messageSpecial(6385, ATMA_OF_THE_SUNDERING_SLASH);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_SUNDERING_SLASH);
     end
 end;
-

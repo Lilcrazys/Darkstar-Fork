@@ -51,7 +51,7 @@ function onMobDeath(mob, player, isKiller)
 
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_SHIMMERING_SHELL) == false) then
         player:addKeyItem(ATMA_OF_THE_SHIMMERING_SHELL);
-        player:messageSpecial(6385, ATMA_OF_THE_SHIMMERING_SHELL);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_SHIMMERING_SHELL);
     end
     if (math.random(0,99) < SPELL_CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(692) == false) then
         player:addSpell(692);

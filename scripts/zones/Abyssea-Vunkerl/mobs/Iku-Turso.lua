@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(GLOSSY_SEA_MONK_SUCKER) == false) then
         player:addKeyItem(GLOSSY_SEA_MONK_SUCKER);
-        player:messageSpecial(6385, GLOSSY_SEA_MONK_SUCKER);
+        player:messageSpecial(KEYITEM_OBTAINED, GLOSSY_SEA_MONK_SUCKER);
     end
 end;
 

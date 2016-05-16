@@ -1,11 +1,12 @@
 -----------------------------------
---  Area: Abyssea - Vunkerl (217)
---   Mob: Ironclad_Executioner
+-- Area: Abyssea - Vunkerl (217)
+--  Mob: Ironclad_Executioner
+-----------------------------------
+package.loaded["scripts/zones/Abyssea-Vunkerl/textIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Abyssea-Vunkerl/textIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
@@ -19,11 +20,12 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
     mob:setMod(MOD_REGEN, 50);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_MACC,1800);
-    mob:setMod(MOD_MATT,110);    
+    mob:setMod(MOD_MATT,110);
+
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -39,9 +41,11 @@ end;
 
 function onMobFight(mob,target)
 end;
+
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 function onAdditionalEffect(mob,target,damage)
     if ((math.random(1,10) ~= 3) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
         return 0,0,0;
@@ -52,10 +56,10 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_NONE,0,EFFECT_STUN;
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
 end;
-

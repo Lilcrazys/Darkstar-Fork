@@ -48,7 +48,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_CURE_POTENCY_RCVD, 28);
 
     -- Other
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    -- mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -167,7 +167,7 @@ function onAdditionalEffect(mob,target,damage)
     local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
     -- target:PrintToPlayer( string.format( "MND diff: '%u' ", MND_diff) );
     if (mob:hasStatusEffect(EFFECT_CUSTOM_ENSPELL) == true) then
-        mob:SetMobSkillAttack(false); -- Disable Special Animation for melee attacks during effect.
+        mob:SetMobSkillAttack(0); -- Disable Special Animation for melee attacks during effect.
         if (mob:getStatusEffect(EFFECT_CUSTOM_ENSPELL):getPower() == 7) then -- Enlight
             IntMndBonus = (INT_diff * 0.25) + (MND_diff * 0.5);
             -- target:PrintToPlayer( string.format( "Enspell int+mnd bonus: '%u' ", IntMndBonus) );
@@ -230,7 +230,7 @@ function onAdditionalEffect(mob,target,damage)
             return 0,0,0;
         end
     else
-        mob:SetMobSkillAttack(true); -- Re-enable Special Animation for melee attacks.
+        -- mob:SetMobSkillAttack(true); -- Re-enable Special Animation for melee attacks.
         mob:setLocalVar("Minerva_Boost_from_Enspell", 0);
         return 0,0,0;
     end

@@ -1,12 +1,8 @@
 -----------------------------------
 -- Area: Legion
--- Veiled_Ironclad
+--  MOB: Veiled_Ironclad
 -----------------------------------
-
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
 
 -----------------------------------
@@ -18,9 +14,12 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+
+    -- setMod
+    mob:setMod(MOD_MACC,1425); -- Todo: convert to correct amount of addMod
+    mob:setMod(MOD_MATT,120);  -- Todo: convert to correct amount of addMod
+
     -- addMod
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_ATT,105);
     mob:addMod(MOD_MDEF,55);
     mob:addMod(MOD_DEF,125);
@@ -38,26 +37,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_COUNTER, 25);
 
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
 end;
-
------------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Veiled_Ironclad_2hr_Used = 0;
-    if (mob:getLocalVar("Veiled_Ironclad_2hr_Used") ~= nil) then
-        Veiled_Ironclad_2hr_Used = mob:getLocalVar("Veiled_Ironclad_2hr_Used");
-    end
+    local Veiled_Ironclad_2hr_Used = mob:getLocalVar("Veiled_Ironclad_2hr_Used");
 
     if (mob:getHPP() <= 10) then
         if (Veiled_Ironclad_2hr_Used == 2) then
@@ -76,21 +64,6 @@ function onMobFight(mob, target)
         end
     end
 end;
-
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath

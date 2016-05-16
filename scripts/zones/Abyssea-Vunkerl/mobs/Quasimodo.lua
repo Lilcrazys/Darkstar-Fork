@@ -49,7 +49,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(OSSIFIED_GARGOUILLE_HAND) == false) then
         player:addKeyItem(OSSIFIED_GARGOUILLE_HAND);
-        player:messageSpecial(6385, OSSIFIED_GARGOUILLE_HAND);
+        player:messageSpecial(KEYITEM_OBTAINED, OSSIFIED_GARGOUILLE_HAND);
     end
 end;
 

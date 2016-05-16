@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(INGROWN_TAURUS_NAIL) == false) then
         player:addKeyItem(INGROWN_TAURUS_NAIL);
-        player:messageSpecial(6385, INGROWN_TAURUS_NAIL);
+        player:messageSpecial(KEYITEM_OBTAINED, INGROWN_TAURUS_NAIL);
     end
 end;
 
