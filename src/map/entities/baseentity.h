@@ -147,6 +147,7 @@ public:
     virtual void    Spawn();
     virtual void    FadeOut();
     virtual const int8* GetName();      // имя сущности
+    virtual const int8* GetObjectName(); // The entity name 
     uint16			getZone();			// текущая зона
     float			GetXPos();			// позиция по координате X
     float			GetYPos();			// позиция по координате Y
