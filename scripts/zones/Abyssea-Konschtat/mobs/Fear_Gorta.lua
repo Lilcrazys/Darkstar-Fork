@@ -45,6 +45,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 30;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(AZURE_ABYSSITE_OF_THE_REAPER) == false) then
         player:addKeyItem(AZURE_ABYSSITE_OF_THE_REAPER);
-        player:messageSpecial(6385, AZURE_ABYSSITE_OF_THE_REAPER);
+        player:messageSpecial(KEYITEM_OBTAINED, AZURE_ABYSSITE_OF_THE_REAPER);
     end
 end;

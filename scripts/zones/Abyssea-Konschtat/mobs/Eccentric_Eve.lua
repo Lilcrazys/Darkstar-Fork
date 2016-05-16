@@ -85,11 +85,11 @@ function onMobDeath(mob, player, isKiller)
     local LUNAR = 100;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET) == false) then
         player:addKeyItem(ATMA_OF_THE_VORACIOUS_VIOLET);
-        player:messageSpecial(6385, ATMA_OF_THE_VORACIOUS_VIOLET);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_VORACIOUS_VIOLET);
     end
 
     if (math.random(0,99) < LUNAR  and player:hasKeyItem(LUNAR_ABYSSITE1) == false) then
         player:addKeyItem(LUNAR_ABYSSITE1);
-        player:messageSpecial(6385, LUNAR_ABYSSITE1);
+        player:messageSpecial(KEYITEM_OBTAINED, LUNAR_ABYSSITE1);
     end
 end;

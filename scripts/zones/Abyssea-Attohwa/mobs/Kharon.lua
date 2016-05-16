@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(CRACKED_SKELETON_CLAVICLE) == false) then
         player:addKeyItem(CRACKED_SKELETON_CLAVICLE);
-        player:messageSpecial(6385, CRACKED_SKELETON_CLAVICLE);
+        player:messageSpecial(KEYITEM_OBTAINED, CRACKED_SKELETON_CLAVICLE);
     end
 end;
 

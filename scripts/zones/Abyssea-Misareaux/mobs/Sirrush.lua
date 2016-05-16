@@ -47,7 +47,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(GNARLED_LIZARD_NAIL) == false) then
         player:addKeyItem(GNARLED_LIZARD_NAIL);
-        player:messageSpecial(6385, GNARLED_LIZARD_NAIL);
+        player:messageSpecial(KEYITEM_OBTAINED, GNARLED_LIZARD_NAIL);
     end
 end;
 

@@ -44,6 +44,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(VERMILLION_ABYSSITE_OF_GUERDON) == false) then
         player:addKeyItem(VERMILLION_ABYSSITE_OF_GUERDON);
-        player:messageSpecial(6385, VERMILLION_ABYSSITE_OF_GUERDON);
+        player:messageSpecial(KEYITEM_OBTAINED, VERMILLION_ABYSSITE_OF_GUERDON);
     end
 end;

@@ -48,7 +48,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 55;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(VEINOUS_HECTEYES_EYELID) == false) then
         player:addKeyItem(VEINOUS_HECTEYES_EYELID);
-        player:messageSpecial(6385, VEINOUS_HECTEYES_EYELID);
+        player:messageSpecial(KEYITEM_OBTAINED, VEINOUS_HECTEYES_EYELID);
     end
 end;
 

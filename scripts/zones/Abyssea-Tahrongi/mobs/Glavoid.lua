@@ -60,11 +60,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(CHIPPED_SANDWORM_TOOTH) == false) then
         player:addKeyItem(CHIPPED_SANDWORM_TOOTH);
-        player:messageSpecial(6385, CHIPPED_SANDWORM_TOOTH);
+        player:messageSpecial(KEYITEM_OBTAINED, CHIPPED_SANDWORM_TOOTH);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_DUNES) == false) then
         player:addKeyItem(ATMA_OF_DUNES);
-        player:messageSpecial(6385, ATMA_OF_DUNES);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_DUNES);
     end
 end;

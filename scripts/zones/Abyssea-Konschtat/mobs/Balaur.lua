@@ -55,7 +55,7 @@ function onMobDeath(mob, player, isKiller)
   
     if (math.random(0,99) < KI_CHANCE and player:hasKeyItem(ATMA_OF_STORMBREATH) == false) then
         player:addKeyItem(ATMA_OF_STORMBREATH);
-        player:messageSpecial(6385, ATMA_OF_STORMBREATH);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_STORMBREATH);
     end
 
     if (math.random(0,99) < SPELL_CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(695) == false) then

@@ -49,7 +49,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(MUCID_WORM_SEGMENT) == false) then
         player:addKeyItem(MUCID_WORM_SEGMENT);
-        player:messageSpecial(6385, MUCID_WORM_SEGMENT);
+        player:messageSpecial(KEYITEM_OBTAINED, MUCID_WORM_SEGMENT);
     end
 end;
 

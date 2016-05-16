@@ -300,11 +300,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT) == false) then
         player:addKeyItem(SAPPHIRE_ABYSSITE_OF_MERIT);
-        player:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_MERIT);
+        player:messageSpecial(KEYITEM_OBTAINED, SAPPHIRE_ABYSSITE_OF_MERIT);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_DEEP_DEVOURER) == false) then
         player:addKeyItem(ATMA_OF_THE_DEEP_DEVOURER);
-        player:messageSpecial(6385, ATMA_OF_THE_DEEP_DEVOURER);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_DEEP_DEVOURER);
     end
 end;

@@ -50,12 +50,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(MOSSY_ADAMANTOISE_SHELL) == false) then
         player:addKeyItem(MOSSY_ADAMANTOISE_SHELL);
-        player:messageSpecial(6385, MOSSY_ADAMANTOISE_SHELL);
+        player:messageSpecial(KEYITEM_OBTAINED, MOSSY_ADAMANTOISE_SHELL);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_ADAMANTINE) == false) then
         player:addKeyItem(ATMA_OF_THE_ADAMANTINE);
-        player:messageSpecial(6385, ATMA_OF_THE_ADAMANTINE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_ADAMANTINE);
     end
 end;
 

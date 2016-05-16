@@ -46,7 +46,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(MUCID_AHRIMAN_EYEBALL) == false) then
         player:addKeyItem(MUCID_AHRIMAN_EYEBALL);
-        player:messageSpecial(6385, MUCID_AHRIMAN_EYEBALL);
+        player:messageSpecial(KEYITEM_OBTAINED, MUCID_AHRIMAN_EYEBALL);
     end
 end;
 

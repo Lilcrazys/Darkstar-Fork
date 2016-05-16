@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(SAPPHIRE_ABYSSITE_OF_LENITY) == false) then
         player:addKeyItem(SAPPHIRE_ABYSSITE_OF_LENITY);
-        player:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_LENITY);
+        player:messageSpecial(KEYITEM_OBTAINED, SAPPHIRE_ABYSSITE_OF_LENITY);
     end
 end;
 

@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 30;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(JADE_ABYSSITE_OF_EXPERTISE) == false) then
         player:addKeyItem(JADE_ABYSSITE_OF_EXPERTISE);
-        player:messageSpecial(6385, JADE_ABYSSITE_OF_EXPERTISE);
+        player:messageSpecial(KEYITEM_OBTAINED, JADE_ABYSSITE_OF_EXPERTISE);
     end
 end;
 

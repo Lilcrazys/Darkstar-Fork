@@ -48,12 +48,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(RUSTED_CHARIOT_GEAR) == false) then
         player:addKeyItem(RUSTED_CHARIOT_GEAR);
-        player:messageSpecial(6385, RUSTED_CHARIOT_GEAR);
+        player:messageSpecial(KEYITEM_OBTAINED, RUSTED_CHARIOT_GEAR);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(EMERALD_ABYSSITE_OF_FORTUNE) == false) then
         player:addKeyItem(EMERALD_ABYSSITE_OF_FORTUNE);
-        player:messageSpecial(6385, EMERALD_ABYSSITE_OF_FORTUNE);
+        player:messageSpecial(KEYITEM_OBTAINED, EMERALD_ABYSSITE_OF_FORTUNE);
     end
 
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then

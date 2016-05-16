@@ -47,12 +47,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(WAUGYLS_CLAW) == false) then
         player:addKeyItem(WAUGYLS_CLAW);
-        player:messageSpecial(6385, WAUGYLS_CLAW);
+        player:messageSpecial(KEYITEM_OBTAINED, WAUGYLS_CLAW);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(EMERALD_ABYSSITE_OF_SOJOURN) == false) then
         player:addKeyItem(EMERALD_ABYSSITE_OF_SOJOURN);
-        player:messageSpecial(6385, EMERALD_ABYSSITE_OF_SOJOURN);
+        player:messageSpecial(KEYITEM_OBTAINED, EMERALD_ABYSSITE_OF_SOJOURN);
     end
 end;
 

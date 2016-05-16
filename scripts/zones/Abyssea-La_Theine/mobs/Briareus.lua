@@ -84,11 +84,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
         player:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);
-        player:messageSpecial(6385, BLOOD_SMEARED_GIGAS_HELM);
+        player:messageSpecial(KEYITEM_OBTAINED, BLOOD_SMEARED_GIGAS_HELM);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_STOUT_ARM) == false) then
         player:addKeyItem(ATMA_OF_THE_STOUT_ARM);
-        player:messageSpecial(6385, ATMA_OF_THE_STOUT_ARM);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_STOUT_ARM);
     end
 end;

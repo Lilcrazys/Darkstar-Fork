@@ -55,11 +55,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(SCARLET_ABYSSITE_OF_SOJOURN) == false) then
         player:addKeyItem(SCARLET_ABYSSITE_OF_SOJOURN);
-        player:messageSpecial(6385, SCARLET_ABYSSITE_OF_SOJOURN);
+        player:messageSpecial(KEYITEM_OBTAINED, SCARLET_ABYSSITE_OF_SOJOURN);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_HEAVENS) == false) then
         player:addKeyItem(ATMA_OF_THE_HEAVENS);
-        player:messageSpecial(6385, ATMA_OF_THE_HEAVENS);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_HEAVENS);
     end
 end;

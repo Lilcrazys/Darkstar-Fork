@@ -52,6 +52,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 10;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(JADE_ABYSSITE_OF_MERIT) == false) then
         player:addKeyItem(JADE_ABYSSITE_OF_MERIT);
-        player:messageSpecial(6385, JADE_ABYSSITE_OF_MERIT);
+        player:messageSpecial(KEYITEM_OBTAINED, JADE_ABYSSITE_OF_MERIT);
     end
 end;

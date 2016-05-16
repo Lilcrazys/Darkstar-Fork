@@ -45,6 +45,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 40;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_GLUTINOUS_OOZE) == false) then
         player:addKeyItem(ATMA_OF_THE_GLUTINOUS_OOZE);
-        player:messageSpecial(6385, ATMA_OF_THE_GLUTINOUS_OOZE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_GLUTINOUS_OOZE);
     end
 end;

@@ -135,11 +135,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(AZURE_ABYSSITE_OF_MERIT) == false) then
         player:addKeyItem(AZURE_ABYSSITE_OF_MERIT);
-        player:messageSpecial(6385, AZURE_ABYSSITE_OF_MERIT);
+        player:messageSpecial(KEYITEM_OBTAINED, AZURE_ABYSSITE_OF_MERIT);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_STORMBIRD) == false) then
         player:addKeyItem(ATMA_OF_THE_STORMBIRD);
-        player:messageSpecial(6385, ATMA_OF_THE_STORMBIRD);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_STORMBIRD);
     end
 end;

@@ -34,7 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_WATER_AFFINITY_ACC, 20);
 
     -- Other
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4175); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------

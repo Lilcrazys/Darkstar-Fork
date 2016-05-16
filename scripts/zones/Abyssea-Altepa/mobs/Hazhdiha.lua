@@ -61,11 +61,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(BLOODIED_DRAGON_EAR) == false) then
         player:addKeyItem(BLOODIED_DRAGON_EAR);
-        player:messageSpecial(6385, BLOODIED_DRAGON_EAR);
+        player:messageSpecial(KEYITEM_OBTAINED, BLOODIED_DRAGON_EAR);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_CRIMSON_SCALE) == false) then
         player:addKeyItem(ATMA_OF_THE_CRIMSON_SCALE);
-        player:messageSpecial(6385, ATMA_OF_THE_CRIMSON_SCALE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_CRIMSON_SCALE);
     end
 end;

@@ -49,11 +49,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(TATTERED_HIPPOGRYPH_WING) == false) then
         player:addKeyItem(TATTERED_HIPPOGRYPH_WING);
-        player:messageSpecial(6385, TATTERED_HIPPOGRYPH_WING);
+        player:messageSpecial(KEYITEM_OBTAINED, TATTERED_HIPPOGRYPH_WING);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_GALES) == false) then
         player:addKeyItem(ATMA_OF_GALES);
-        player:messageSpecial(6385, ATMA_OF_GALES);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_GALES);
     end
 end;

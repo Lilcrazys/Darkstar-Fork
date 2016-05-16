@@ -37,6 +37,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN) == false) then
         player:addKeyItem(DISTENDED_CHIGOE_ABDOMEN);
-        player:messageSpecial(6385, DISTENDED_CHIGOE_ABDOMEN);
+        player:messageSpecial(KEYITEM_OBTAINED, DISTENDED_CHIGOE_ABDOMEN);
     end
 end;

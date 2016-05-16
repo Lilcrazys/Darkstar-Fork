@@ -45,6 +45,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 30;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(AZURE_ABYSSITE_OF_LENITY) == false) then
         player:addKeyItem(AZURE_ABYSSITE_OF_LENITY);
-        player:messageSpecial(6385, AZURE_ABYSSITE_OF_LENITY);
+        player:messageSpecial(KEYITEM_OBTAINED, AZURE_ABYSSITE_OF_LENITY);
     end
 end;

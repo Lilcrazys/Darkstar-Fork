@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 40;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_TREMORS) == false) then
         player:addKeyItem(ATMA_OF_TREMORS);
-        player:messageSpecial(6385, ATMA_OF_TREMORS);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_TREMORS);
     end
 end;
 

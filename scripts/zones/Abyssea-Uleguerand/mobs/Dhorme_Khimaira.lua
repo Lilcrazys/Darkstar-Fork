@@ -50,11 +50,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(TORN_KHIMAIRA_WING) == false) then
         player:addKeyItem(TORN_KHIMAIRA_WING);
-        player:messageSpecial(6385, TORN_KHIMAIRA_WING);
+        player:messageSpecial(KEYITEM_OBTAINED, TORN_KHIMAIRA_WING);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_PURGATORY) == false) then
         player:addKeyItem(ATMA_OF_PURGATORY);
-        player:messageSpecial(6385, ATMA_OF_PURGATORY);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_PURGATORY);
     end
 end;

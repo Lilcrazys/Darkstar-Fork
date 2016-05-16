@@ -62,11 +62,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(IVORY_ABYSSITE_OF_MERIT) == false) then
         player:addKeyItem(IVORY_ABYSSITE_OF_MERIT);
-        player:messageSpecial(6385, IVORY_ABYSSITE_OF_MERIT);
+        player:messageSpecial(KEYITEM_OBTAINED, IVORY_ABYSSITE_OF_MERIT);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_EARTH_WYRM) == false) then
         player:addKeyItem(ATMA_OF_THE_EARTH_WYRM);
-        player:messageSpecial(6385, ATMA_OF_THE_EARTH_WYRM);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_EARTH_WYRM);
     end
 end;

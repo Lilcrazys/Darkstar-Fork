@@ -46,11 +46,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(BEGRIMED_DRAGON_HIDE) == false) then
         player:addKeyItem(BEGRIMED_DRAGON_HIDE);
-        player:messageSpecial(6385, BEGRIMED_DRAGON_HIDE);
+        player:messageSpecial(KEYITEM_OBTAINED, BEGRIMED_DRAGON_HIDE);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_BLIGHTED_BREATH) == false) then
         player:addKeyItem(ATMA_OF_BLIGHTED_BREATH);
-        player:messageSpecial(6385, ATMA_OF_BLIGHTED_BREATH);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_BLIGHTED_BREATH);
     end
 end;

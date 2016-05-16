@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(BLAZING_CLUSTER_SOUL) == false) then
         player:addKeyItem(BLAZING_CLUSTER_SOUL);
-        player:messageSpecial(6385, BLAZING_CLUSTER_SOUL);
+        player:messageSpecial(KEYITEM_OBTAINED, BLAZING_CLUSTER_SOUL);
     end
 end;
 

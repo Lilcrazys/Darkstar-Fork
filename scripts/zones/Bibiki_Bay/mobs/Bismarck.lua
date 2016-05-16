@@ -33,7 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_CRITHITRATE, 25);
 
     -- Other
-    mob:SetMobSkillAttack(true);
+    -- mob:SetMobSkillAttack(true);
     
     local RND1 = math.random(1,8);
     if (RND1 == 1) then

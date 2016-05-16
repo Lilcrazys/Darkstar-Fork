@@ -103,6 +103,6 @@ function onMobDeath(mob, player, isKiller)
   
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_ASCENDING_ONE) == false) then
         player:addKeyItem(ATMA_OF_THE_ASCENDING_ONE);
-        player:messageSpecial(6385, ATMA_OF_THE_ASCENDING_ONE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_ASCENDING_ONE);
     end
 end;

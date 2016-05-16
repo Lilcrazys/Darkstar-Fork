@@ -47,7 +47,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(WRITHING_GHOST_FINGER) == false) then
         player:addKeyItem(WRITHING_GHOST_FINGER);
-        player:messageSpecial(6385, WRITHING_GHOST_FINGER);
+        player:messageSpecial(KEYITEM_OBTAINED, WRITHING_GHOST_FINGER);
     end
 end;
 

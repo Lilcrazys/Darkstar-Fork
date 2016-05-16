@@ -77,12 +77,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(VENOMOUS_HYDRA_FANG) == false) then
         player:addKeyItem(VENOMOUS_HYDRA_FANG);
-        player:messageSpecial(6385, VENOMOUS_HYDRA_FANG);
+        player:messageSpecial(KEYITEM_OBTAINED, VENOMOUS_HYDRA_FANG);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_ENTWINED_SERPENTS) == false) then
         player:addKeyItem(ATMA_OF_ENTWINED_SERPENTS);
-        player:messageSpecial(6385, ATMA_OF_ENTWINED_SERPENTS);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_ENTWINED_SERPENTS);
     end
 end;
 

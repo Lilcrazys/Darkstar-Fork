@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(SMOLDERING_CRAB_SHELL) == false) then
         player:addKeyItem(SMOLDERING_CRAB_SHELL);
-        player:messageSpecial(6385, SMOLDERING_CRAB_SHELL);
+        player:messageSpecial(KEYITEM_OBTAINED, SMOLDERING_CRAB_SHELL);
     end
 end;
 

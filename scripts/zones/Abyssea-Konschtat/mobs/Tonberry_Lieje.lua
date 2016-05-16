@@ -47,6 +47,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(TWISTED_TONBERRY_CROWN) == false) then
         player:addKeyItem(TWISTED_TONBERRY_CROWN);
-        player:messageSpecial(6385, TWISTED_TONBERRY_CROWN);
+        player:messageSpecial(KEYITEM_OBTAINED, TWISTED_TONBERRY_CROWN);
     end
 end;

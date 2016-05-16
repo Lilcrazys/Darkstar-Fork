@@ -52,6 +52,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(HOLLOW_DRAGON_EYE) == false) then
         player:addKeyItem(HOLLOW_DRAGON_EYE);
-        player:messageSpecial(6385, HOLLOW_DRAGON_EYE);
+        player:messageSpecial(KEYITEM_OBTAINED, HOLLOW_DRAGON_EYE);
     end
 end;

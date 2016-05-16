@@ -49,7 +49,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(FAT_LINED_COCKATRICE_SKIN) == false) then
         player:addKeyItem(FAT_LINED_COCKATRICE_SKIN);
-        player:messageSpecial(6385, FAT_LINED_COCKATRICE_SKIN);
+        player:messageSpecial(KEYITEM_OBTAINED, FAT_LINED_COCKATRICE_SKIN);
     end
 end;
 

@@ -48,12 +48,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(RESPLENDENT_ROC_QUILL) == false) then
         player:addKeyItem(RESPLENDENT_ROC_QUILL);
-        player:messageSpecial(6385, RESPLENDENT_ROC_QUILL);
+        player:messageSpecial(KEYITEM_OBTAINED, RESPLENDENT_ROC_QUILL);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_SCARLET_WING) == false) then
         player:addKeyItem(ATMA_OF_THE_SCARLET_WING);
-        player:messageSpecial(6385, ATMA_OF_THE_SCARLET_WING);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_SCARLET_WING);
     end
 end;
 

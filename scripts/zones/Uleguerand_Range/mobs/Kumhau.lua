@@ -33,7 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 500);
 
     -- Other
-    mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    mob:SetMobSkillAttack(4176); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------

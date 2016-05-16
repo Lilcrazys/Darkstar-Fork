@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(MALODOROUS_MARID_FUR) == false) then
         player:addKeyItem(MALODOROUS_MARID_FUR);
-        player:messageSpecial(6385, MALODOROUS_MARID_FUR);
+        player:messageSpecial(KEYITEM_OBTAINED, MALODOROUS_MARID_FUR);
     end
 end;
 

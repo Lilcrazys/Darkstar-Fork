@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(PELLUCID_FLY_EYE) == false) then
         player:addKeyItem(PELLUCID_FLY_EYE);
-        player:messageSpecial(6385, PELLUCID_FLY_EYE);
+        player:messageSpecial(KEYITEM_OBTAINED, PELLUCID_FLY_EYE);
     end
 end;
 

@@ -49,7 +49,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 55;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(GORY_SCORPION_CLAW) == false) then
         player:addKeyItem(GORY_SCORPION_CLAW);
-        player:messageSpecial(6385, GORY_SCORPION_CLAW);
+        player:messageSpecial(KEYITEM_OBTAINED, GORY_SCORPION_CLAW);
     end
 end;
 

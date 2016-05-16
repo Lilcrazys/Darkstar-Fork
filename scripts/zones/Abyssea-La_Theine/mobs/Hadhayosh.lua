@@ -52,11 +52,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE) == false) then
         player:addKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE);
-        player:messageSpecial(6385, SCARLET_ABYSSITE_OF_FURTHERANCE);
+        player:messageSpecial(KEYITEM_OBTAINED, SCARLET_ABYSSITE_OF_FURTHERANCE);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_LION) == false) then
         player:addKeyItem(ATMA_OF_THE_LION);
-        player:messageSpecial(6385, ATMA_OF_THE_LION);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_LION);
     end
 end;

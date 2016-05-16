@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(SEVERED_GIGAS_COLLAR) == false) then
         player:addKeyItem(SEVERED_GIGAS_COLLAR);
-        player:messageSpecial(6385, SEVERED_GIGAS_COLLAR);
+        player:messageSpecial(KEYITEM_OBTAINED, SEVERED_GIGAS_COLLAR);
     end
 end;
 

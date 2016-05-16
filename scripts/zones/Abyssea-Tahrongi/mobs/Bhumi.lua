@@ -46,7 +46,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 17;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
         player:addKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT);
-        player:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_MERIT);
+        player:messageSpecial(KEYITEM_OBTAINED, VIRIDIAN_ABYSSITE_OF_MERIT);
     end
 end;
 

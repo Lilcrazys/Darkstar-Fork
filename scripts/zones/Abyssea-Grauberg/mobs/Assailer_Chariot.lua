@@ -49,12 +49,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(WARPED_CHARIOT_PLATE) == false) then
         player:addKeyItem(WARPED_CHARIOT_PLATE);
-        player:messageSpecial(6385, WARPED_CHARIOT_PLATE);
+        player:messageSpecial(KEYITEM_OBTAINED, WARPED_CHARIOT_PLATE);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(INDIGO_ABYSSITE_OF_SOJOURN) == false) then
         player:addKeyItem(INDIGO_ABYSSITE_OF_SOJOURN);
-        player:messageSpecial(6385, INDIGO_ABYSSITE_OF_SOJOURN);
+        player:messageSpecial(KEYITEM_OBTAINED, INDIGO_ABYSSITE_OF_SOJOURN);
     end
 
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then

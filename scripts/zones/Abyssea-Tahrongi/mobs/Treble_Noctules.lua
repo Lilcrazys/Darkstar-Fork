@@ -50,7 +50,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(TORN_BAT_WING) == false) then
         player:addKeyItem(TORN_BAT_WING);
-        player:messageSpecial(6385, TORN_BAT_WING);
+        player:messageSpecial(KEYITEM_OBTAINED, TORN_BAT_WING);
     end
 end;
 

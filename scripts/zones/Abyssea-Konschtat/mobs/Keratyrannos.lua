@@ -46,6 +46,6 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(CRACKED_WIVRE_HORN) == false) then
         player:addKeyItem(CRACKED_WIVRE_HORN);
-        player:messageSpecial(6385, CRACKED_WIVRE_HORN);
+        player:messageSpecial(KEYITEM_OBTAINED, CRACKED_WIVRE_HORN);
     end
 end;

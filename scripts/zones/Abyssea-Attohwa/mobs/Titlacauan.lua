@@ -49,7 +49,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_UNDYING) == false) then
         player:addKeyItem(ATMA_OF_THE_UNDYING);
-        player:messageSpecial(6385, ATMA_OF_THE_UNDYING);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_UNDYING);
     end
 end;
 

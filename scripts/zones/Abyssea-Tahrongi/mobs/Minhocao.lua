@@ -50,7 +50,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 55;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(SODDEN_SANDWORM_HUSK) == false) then
         player:addKeyItem(SODDEN_SANDWORM_HUSK);
-        player:messageSpecial(6385, SODDEN_SANDWORM_HUSK);
+        player:messageSpecial(KEYITEM_OBTAINED, SODDEN_SANDWORM_HUSK);
     end
 end;
 

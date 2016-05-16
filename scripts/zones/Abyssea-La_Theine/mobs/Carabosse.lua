@@ -54,11 +54,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(GLITTERING_PIXIE_CHOKER) == false) then
         player:addKeyItem(GLITTERING_PIXIE_CHOKER);
-        player:messageSpecial(6385, GLITTERING_PIXIE_CHOKER);
+        player:messageSpecial(KEYITEM_OBTAINED, GLITTERING_PIXIE_CHOKER);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_ALLURE) == false) then
         player:addKeyItem(ATMA_OF_ALLURE);
-        player:messageSpecial(6385, ATMA_OF_ALLURE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_ALLURE);
     end
 end;

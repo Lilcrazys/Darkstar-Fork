@@ -73,7 +73,7 @@ function onMobDeath(mob, player, isKiller)
 
     if (math.random(0,99) < CHANCE and player:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
         player:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
-        player:messageSpecial(6385, ATMA_OF_THE_PLAGUEBRINGER);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_PLAGUEBRINGER);
     end
 
 end;

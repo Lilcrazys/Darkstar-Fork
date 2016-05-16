@@ -48,12 +48,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(DENTED_CHARIOT_SHIELD) == false) then
         player:addKeyItem(DENTED_CHARIOT_SHIELD);
-        player:messageSpecial(6385, DENTED_CHARIOT_SHIELD);
+        player:messageSpecial(KEYITEM_OBTAINED, DENTED_CHARIOT_SHIELD);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(VERMILLION_ABYSSITE_OF_KISMET) == false) then
         player:addKeyItem(VERMILLION_ABYSSITE_OF_KISMET);
-        player:messageSpecial(6385, VERMILLION_ABYSSITE_OF_KISMET);
+        player:messageSpecial(KEYITEM_OBTAINED, VERMILLION_ABYSSITE_OF_KISMET);
     end
 
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then

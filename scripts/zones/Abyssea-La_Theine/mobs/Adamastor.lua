@@ -43,7 +43,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(DENTED_GIGAS_SHIELD) == false) then
         player:addKeyItem(DENTED_GIGAS_SHIELD);
-        player:messageSpecial(6385, DENTED_GIGAS_SHIELD);
+        player:messageSpecial(KEYITEM_OBTAINED, DENTED_GIGAS_SHIELD);
     end
 end;
 

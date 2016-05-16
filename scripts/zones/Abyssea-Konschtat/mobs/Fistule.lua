@@ -82,11 +82,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(TURBID_SLIME_OIL) == false) then
         player:addKeyItem(TURBID_SLIME_OIL);
-        player:messageSpecial(6385, TURBID_SLIME_OIL);
+        player:messageSpecial(KEYITEM_OBTAINED, TURBID_SLIME_OIL);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_VICISSITUDE) == false) then
         player:addKeyItem(ATMA_OF_VICISSITUDE);
-        player:messageSpecial(6385, ATMA_OF_VICISSITUDE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_VICISSITUDE);
     end
 end;

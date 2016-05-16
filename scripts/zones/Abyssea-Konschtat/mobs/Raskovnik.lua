@@ -47,11 +47,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(FETID_RAFFLESIA_STALK) == false) then
         player:addKeyItem(FETID_RAFFLESIA_STALK);
-        player:messageSpecial(6385, FETID_RAFFLESIA_STALK);
+        player:messageSpecial(KEYITEM_OBTAINED, FETID_RAFFLESIA_STALK);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THRASHING_TENDRILS) == false) then
         player:addKeyItem(ATMA_OF_THRASHING_TENDRILS);
-        player:messageSpecial(6385, ATMA_OF_THRASHING_TENDRILS);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THRASHING_TENDRILS);
     end
 end;

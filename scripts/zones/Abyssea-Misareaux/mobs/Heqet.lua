@@ -47,7 +47,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(DOFFED_POROGGO_HAT) == false) then
         player:addKeyItem(DOFFED_POROGGO_HAT);
-        player:messageSpecial(6385, DOFFED_POROGGO_HAT);
+        player:messageSpecial(KEYITEM_OBTAINED, DOFFED_POROGGO_HAT);
     end
 end;
 

@@ -46,11 +46,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(VARIEGATED_URAGNITE_SHELL) == false) then
         player:addKeyItem(VARIEGATED_URAGNITE_SHELL);
-        player:messageSpecial(6385, VARIEGATED_URAGNITE_SHELL);
+        player:messageSpecial(KEYITEM_OBTAINED, VARIEGATED_URAGNITE_SHELL);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_AQUATIC_ARDOR) == false) then
         player:addKeyItem(ATMA_OF_AQUATIC_ARDOR);
-        player:messageSpecial(6385, ATMA_OF_AQUATIC_ARDOR);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_AQUATIC_ARDOR);
     end
 end;

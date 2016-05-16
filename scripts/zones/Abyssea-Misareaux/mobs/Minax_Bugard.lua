@@ -44,7 +44,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(BLOODSTAINED_BUGARD_FANG) == false) then
         player:addKeyItem(BLOODSTAINED_BUGARD_FANG);
-        player:messageSpecial(6385, BLOODSTAINED_BUGARD_FANG);
+        player:messageSpecial(KEYITEM_OBTAINED, BLOODSTAINED_BUGARD_FANG);
     end
 end;
 

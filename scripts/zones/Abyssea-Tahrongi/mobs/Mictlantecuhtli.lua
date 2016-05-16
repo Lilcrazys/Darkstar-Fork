@@ -50,11 +50,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT) == false) then
         player:addKeyItem(VIRIDIAN_ABYSSITE_OF_MERIT);
-        player:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_MERIT);
+        player:messageSpecial(KEYITEM_OBTAINED, VIRIDIAN_ABYSSITE_OF_MERIT);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_BALEFUL_BONES) == false) then
         player:addKeyItem(ATMA_OF_BALEFUL_BONES);
-        player:messageSpecial(6385, ATMA_OF_BALEFUL_BONES);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_BALEFUL_BONES);
     end
 end;

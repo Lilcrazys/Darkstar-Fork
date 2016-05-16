@@ -46,11 +46,11 @@ function onMobDeath(mob, player, isKiller)
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(BLOODIED_SABER_TOOTH) == false) then
         player:addKeyItem(BLOODIED_SABER_TOOTH);
-        player:messageSpecial(6385, BLOODIED_SABER_TOOTH);
+        player:messageSpecial(KEYITEM_OBTAINED, BLOODIED_SABER_TOOTH);
     end
 
     if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_SAVAGE_TIGER) == false) then
         player:addKeyItem(ATMA_OF_THE_SAVAGE_TIGER);
-        player:messageSpecial(6385, ATMA_OF_THE_SAVAGE_TIGER);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_SAVAGE_TIGER);
     end
 end;
