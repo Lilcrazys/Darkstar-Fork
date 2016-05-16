@@ -48,17 +48,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(GLITTERING_PIXIE_CHOKER) == false) then
-        ally:addKeyItem(GLITTERING_PIXIE_CHOKER);
-        ally:messageSpecial(6385, GLITTERING_PIXIE_CHOKER);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(GLITTERING_PIXIE_CHOKER) == false) then
+        player:addKeyItem(GLITTERING_PIXIE_CHOKER);
+        player:messageSpecial(6385, GLITTERING_PIXIE_CHOKER);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_ALLURE) == false) then
-        ally:addKeyItem(ATMA_OF_ALLURE);
-        ally:messageSpecial(6385, ATMA_OF_ALLURE);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_ALLURE) == false) then
+        player:addKeyItem(ATMA_OF_ALLURE);
+        player:messageSpecial(6385, ATMA_OF_ALLURE);
     end
 end;

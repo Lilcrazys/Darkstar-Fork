@@ -58,17 +58,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(WARPED_IRON_GIANT_NAIL) == false) then
-        ally:addKeyItem(WARPED_IRON_GIANT_NAIL);
-        ally:messageSpecial(6385, WARPED_IRON_GIANT_NAIL);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(WARPED_IRON_GIANT_NAIL) == false) then
+        player:addKeyItem(WARPED_IRON_GIANT_NAIL);
+        player:messageSpecial(6385, WARPED_IRON_GIANT_NAIL);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_CRUSHING_CUDGEL) == false) then
-        ally:addKeyItem(ATMA_OF_THE_CRUSHING_CUDGEL);
-        ally:messageSpecial(6385, ATMA_OF_THE_CRUSHING_CUDGEL);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_CRUSHING_CUDGEL) == false) then
+        player:addKeyItem(ATMA_OF_THE_CRUSHING_CUDGEL);
+        player:messageSpecial(6385, ATMA_OF_THE_CRUSHING_CUDGEL);
     end
 end;

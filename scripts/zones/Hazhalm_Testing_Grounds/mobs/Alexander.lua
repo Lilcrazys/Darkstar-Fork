@@ -71,9 +71,9 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:getMainJob() == JOB_SMN and ally:hasSpell(306) == false) then
-        ally:addSpell(306);
+function onMobDeath(mob, player, isKiller)
+    if (player:getMainJob() == JOB_SMN and player:hasSpell(306) == false) then
+        player:addSpell(306);
     end
-    ally:addCurrency("legion_point", 250);
+    player:addCurrency("legion_point", 250);
 end;

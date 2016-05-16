@@ -51,7 +51,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     --[[
     local JoL = GetMobByID(16912848);
     local HPEMDES = JoL:getLocalVar("JoL_Qn_hpemde_Killed");

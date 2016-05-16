@@ -129,19 +129,19 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 400);
-    ally:addExp(10000);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 400);
+    player:addExp(10000);
 
-    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_V)) then -- Stachysaurus Kill
-        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_V"), 0) == false) then
-           ally:setMaskBit(ally:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",0,true);
+    if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_V)) then -- Stachysaurus Kill
+        if (player:getMaskBit(player:getVar("WHITE_STRATUM_V"), 0) == false) then
+           player:setMaskBit(player:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",0,true);
         end
-        if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_V"),3) == true) then
-           ally:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
-           ally:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
-           ally:setVar("WHITE_STRATUM_V", 0);
-           ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
+        if (player:isMaskFull(player:getVar("WHITE_STRATUM_V"),3) == true) then
+           player:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+           player:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
+           player:setVar("WHITE_STRATUM_V", 0);
+           player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
         end
     end;  
 end;

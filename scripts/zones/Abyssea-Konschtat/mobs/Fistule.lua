@@ -76,17 +76,17 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(TURBID_SLIME_OIL) == false) then
-        ally:addKeyItem(TURBID_SLIME_OIL);
-        ally:messageSpecial(6385, TURBID_SLIME_OIL);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(TURBID_SLIME_OIL) == false) then
+        player:addKeyItem(TURBID_SLIME_OIL);
+        player:messageSpecial(6385, TURBID_SLIME_OIL);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_VICISSITUDE) == false) then
-        ally:addKeyItem(ATMA_OF_VICISSITUDE);
-        ally:messageSpecial(6385, ATMA_OF_VICISSITUDE);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_VICISSITUDE) == false) then
+        player:addKeyItem(ATMA_OF_VICISSITUDE);
+        player:messageSpecial(6385, ATMA_OF_VICISSITUDE);
     end
 end;

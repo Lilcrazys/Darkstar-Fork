@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(FAT_LINED_COCKATRICE_SKIN) == false) then
-        ally:addKeyItem(FAT_LINED_COCKATRICE_SKIN);
-        ally:messageSpecial(6385, FAT_LINED_COCKATRICE_SKIN);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(FAT_LINED_COCKATRICE_SKIN) == false) then
+        player:addKeyItem(FAT_LINED_COCKATRICE_SKIN);
+        player:messageSpecial(6385, FAT_LINED_COCKATRICE_SKIN);
     end
 end;
 

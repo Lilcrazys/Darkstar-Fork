@@ -28,6 +28,14 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
+
+    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
+        SetDropRate(195,20738,1000); -- Buramenk'ah
+        SetDropRate(195,19799,0);
+    else
+        SetDropRate(195,20618,0);
+        SetDropRate(195,19799,1000); -- Herja's Fork
+    end
 end;
 
 -----------------------------------
@@ -54,14 +62,14 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local SPELL_ID = 738;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
-        ally:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+        player:addSpell(SPELL_ID);
     end
 
-    ally:addTitle(NIDHOGG_SLAYER);
+    player:addTitle(NIDHOGG_SLAYER);
 
     -- Set Nidhogg's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
@@ -85,17 +93,9 @@ function onMobDeath(mob, killer, ally)
     -- Begin Custom Legion Code
     ------------------------------------
     
-    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
-        SetDropRate(195,20738,1000); -- Buramenk'ah
-        SetDropRate(195,19799,0);
-    else
-        SetDropRate(195,20618,0);
-        SetDropRate(195,19799,1000); -- Herja's Fork
-    end
-    
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 5);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 5);
     end
 
     ------------------------------------

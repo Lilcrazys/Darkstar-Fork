@@ -48,9 +48,9 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer,ally)
+function onMobDeath(mob, player, isKiller)
 
-    checkGoVregime(ally,mob,774,1);
+    checkGoVregime(player,mob,774,1);
 
     ------------------------------------
     -- Begin Custom Legion Code

@@ -443,7 +443,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
     local npc = GetNPCByID(mob:getID()+1);
     npc:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos(), mob:getRotPos());

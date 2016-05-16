@@ -96,7 +96,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("legion_point", 150);
-    ally:addTitle(SUBJUGATOR_OF_THE_VEILED);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("legion_point", 150);
+    player:addTitle(SUBJUGATOR_OF_THE_VEILED);
 end;

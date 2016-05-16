@@ -136,17 +136,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(CRIMSON_STRATUM_ABYSSITE)) then -- Cottus Kill
-        if (ally:getMaskBit(ally:getVar("CRIMSON_STRATUM"), 1) == false) then
-            ally:setMaskBit(ally:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",1,true);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE)) then -- Cottus Kill
+        if (player:getMaskBit(player:getVar("CRIMSON_STRATUM"), 1) == false) then
+            player:setMaskBit(player:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",1,true);
         end
-        if (ally:isMaskFull(ally:getVar("CRIMSON_STRATUM"),2) == true) then
-           ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
-           ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
-           ally:setVar("CRIMSON_STRATUM", 0);
-           ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_II);
+        if (player:isMaskFull(player:getVar("CRIMSON_STRATUM"),2) == true) then
+           player:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
+           player:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
+           player:setVar("CRIMSON_STRATUM", 0);
+           player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_II);
         end
     end
-    ally:addExp(10000);
+    player:addExp(10000);
 end;

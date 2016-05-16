@@ -16,10 +16,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 5);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 5);
     end
 end;

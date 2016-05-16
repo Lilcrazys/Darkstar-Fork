@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(BLOODIED_BAT_FUR) == false) then
-        ally:addKeyItem(BLOODIED_BAT_FUR);
-        ally:messageSpecial(6385, BLOODIED_BAT_FUR);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(BLOODIED_BAT_FUR) == false) then
+        player:addKeyItem(BLOODIED_BAT_FUR);
+        player:messageSpecial(6385, BLOODIED_BAT_FUR);
     end
 end;
 

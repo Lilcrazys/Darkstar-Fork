@@ -46,17 +46,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 30;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(VIRIDIAN_ABYSSITE_OF_DESTINY) == false) then
-        ally:addKeyItem(VIRIDIAN_ABYSSITE_OF_DESTINY);
-        ally:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_DESTINY);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(VIRIDIAN_ABYSSITE_OF_DESTINY) == false) then
+        player:addKeyItem(VIRIDIAN_ABYSSITE_OF_DESTINY);
+        player:messageSpecial(6385, VIRIDIAN_ABYSSITE_OF_DESTINY);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_CLAW) == false) then
-        ally:addKeyItem(ATMA_OF_THE_CLAW);
-        ally:messageSpecial(6385, ATMA_OF_THE_CLAW);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_CLAW) == false) then
+        player:addKeyItem(ATMA_OF_THE_CLAW);
+        player:messageSpecial(6385, ATMA_OF_THE_CLAW);
     end
 end;

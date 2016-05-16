@@ -75,6 +75,6 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-	ally:addTitle(HOT_DOG);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(HOT_DOG);
 end;

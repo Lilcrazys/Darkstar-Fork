@@ -19,7 +19,7 @@ end;
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob, killer)
+function onMobEngaged(mob, target)
 end;
 
 -----------------------------------
@@ -33,10 +33,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN) == false) then
-        ally:addKeyItem(DISTENDED_CHIGOE_ABDOMEN);
-        ally:messageSpecial(6385, DISTENDED_CHIGOE_ABDOMEN);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(DISTENDED_CHIGOE_ABDOMEN) == false) then
+        player:addKeyItem(DISTENDED_CHIGOE_ABDOMEN);
+        player:messageSpecial(6385, DISTENDED_CHIGOE_ABDOMEN);
     end
 end;

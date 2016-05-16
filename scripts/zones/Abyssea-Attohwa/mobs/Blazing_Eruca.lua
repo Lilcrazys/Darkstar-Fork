@@ -46,11 +46,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(BULBOUS_CRAWLER_COCOON) == false) then
-        ally:addKeyItem(BULBOUS_CRAWLER_COCOON);
-        ally:messageSpecial(6385, BULBOUS_CRAWLER_COCOON);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(BULBOUS_CRAWLER_COCOON) == false) then
+        player:addKeyItem(BULBOUS_CRAWLER_COCOON);
+        player:messageSpecial(6385, BULBOUS_CRAWLER_COCOON);
     end
 end;
 

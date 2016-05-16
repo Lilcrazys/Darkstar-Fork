@@ -164,17 +164,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 900);
-    ally:addExp(10000);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 900);
+    player:addExp(10000);
 
-    if (ally:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Vanasarvik Kill
-        if (ally:getMaskBit(ally:getVar("AMBER_STRATUM"), 3) == false) then
-           ally:setMaskBit(ally:getVar("AMBER_STRATUM"),"AMBER_STRATUM",3,true);
+    if (player:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Vanasarvik Kill
+        if (player:getMaskBit(player:getVar("AMBER_STRATUM"), 3) == false) then
+           player:setMaskBit(player:getVar("AMBER_STRATUM"),"AMBER_STRATUM",3,true);
         end
-        if (ally:isMaskFull(ally:getVar("AMBER_STRATUM"),4) == true) then
-           ally:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
-           ally:setVar("AMBER_STRATUM", 0);
+        if (player:isMaskFull(player:getVar("AMBER_STRATUM"),4) == true) then
+           player:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
+           player:setVar("AMBER_STRATUM", 0);
         end
     end;   
 end;

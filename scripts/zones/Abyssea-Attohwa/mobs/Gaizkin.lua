@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(BLOTCHED_DOOMED_TONGUE) == false) then
-        ally:addKeyItem(BLOTCHED_DOOMED_TONGUE);
-        ally:messageSpecial(6385, BLOTCHED_DOOMED_TONGUE);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(BLOTCHED_DOOMED_TONGUE) == false) then
+        player:addKeyItem(BLOTCHED_DOOMED_TONGUE);
+        player:messageSpecial(6385, BLOTCHED_DOOMED_TONGUE);
     end
 end;
 

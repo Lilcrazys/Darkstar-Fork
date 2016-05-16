@@ -42,11 +42,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SHRIVELED_HECTEYES_STALK) == false) then
-        ally:addKeyItem(SHRIVELED_HECTEYES_STALK);
-        ally:messageSpecial(6385, SHRIVELED_HECTEYES_STALK);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SHRIVELED_HECTEYES_STALK) == false) then
+        player:addKeyItem(SHRIVELED_HECTEYES_STALK);
+        player:messageSpecial(6385, SHRIVELED_HECTEYES_STALK);
     end
 end;
 

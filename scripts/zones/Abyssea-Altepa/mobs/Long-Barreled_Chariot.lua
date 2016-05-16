@@ -40,23 +40,23 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 20;
     local SPELL_ID = 713;
     local CHANCE = 25;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(RUSTED_CHARIOT_GEAR) == false) then
-        ally:addKeyItem(RUSTED_CHARIOT_GEAR);
-        ally:messageSpecial(6385, RUSTED_CHARIOT_GEAR);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(RUSTED_CHARIOT_GEAR) == false) then
+        player:addKeyItem(RUSTED_CHARIOT_GEAR);
+        player:messageSpecial(6385, RUSTED_CHARIOT_GEAR);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(EMERALD_ABYSSITE_OF_FORTUNE) == false) then
-        ally:addKeyItem(EMERALD_ABYSSITE_OF_FORTUNE);
-        ally:messageSpecial(6385, EMERALD_ABYSSITE_OF_FORTUNE);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(EMERALD_ABYSSITE_OF_FORTUNE) == false) then
+        player:addKeyItem(EMERALD_ABYSSITE_OF_FORTUNE);
+        player:messageSpecial(6385, EMERALD_ABYSSITE_OF_FORTUNE);
     end
 
-    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
-        ally:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+        player:addSpell(SPELL_ID);
     end
 end;

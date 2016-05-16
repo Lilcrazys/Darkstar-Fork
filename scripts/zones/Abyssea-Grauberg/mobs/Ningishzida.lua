@@ -71,18 +71,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(VENOMOUS_HYDRA_FANG) == false) then
-        ally:addKeyItem(VENOMOUS_HYDRA_FANG);
-        ally:messageSpecial(6385, VENOMOUS_HYDRA_FANG);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(VENOMOUS_HYDRA_FANG) == false) then
+        player:addKeyItem(VENOMOUS_HYDRA_FANG);
+        player:messageSpecial(6385, VENOMOUS_HYDRA_FANG);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_ENTWINED_SERPENTS) == false) then
-        ally:addKeyItem(ATMA_OF_ENTWINED_SERPENTS);
-        ally:messageSpecial(6385, ATMA_OF_ENTWINED_SERPENTS);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_ENTWINED_SERPENTS) == false) then
+        player:addKeyItem(ATMA_OF_ENTWINED_SERPENTS);
+        player:messageSpecial(6385, ATMA_OF_ENTWINED_SERPENTS);
     end
 end;
 

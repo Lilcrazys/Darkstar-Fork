@@ -140,20 +140,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 300);
-    ally:addExp(10000);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 300);
+    player:addExp(10000);
 
-    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_IV)) then -- Rw Nw Prt M Hrw Kill
-        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_IV"), 2) == false) then
-            ally:setMaskBit(ally:getVar("WHITE_STRATUM_IV"),"WHITE_STRATUM_IV",2,true);
+    if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_IV)) then -- Rw Nw Prt M Hrw Kill
+        if (player:getMaskBit(player:getVar("WHITE_STRATUM_IV"), 2) == false) then
+            player:setMaskBit(player:getVar("WHITE_STRATUM_IV"),"WHITE_STRATUM_IV",2,true);
         end
 
-        if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_IV"),3) == true) then
-            ally:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
-            ally:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
-            ally:setVar("WHITE_STRATUM_IV", 0);
-            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
+        if (player:isMaskFull(player:getVar("WHITE_STRATUM_IV"),3) == true) then
+            player:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
+            player:delKeyItem(WHITE_STRATUM_ABYSSITE_IV);
+            player:setVar("WHITE_STRATUM_IV", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
         end
     end;    
 end;

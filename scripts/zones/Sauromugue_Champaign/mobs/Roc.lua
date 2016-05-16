@@ -16,9 +16,9 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer,ally)
+function onMobDeath(mob, player, isKiller)
 
-    ally:addTitle(ROC_STAR);
+    player:addTitle(ROC_STAR);
 
     -- Set Roc's spawnpoint and respawn time (1-2 hours)
     UpdateNMSpawnPoint(mob:getID());

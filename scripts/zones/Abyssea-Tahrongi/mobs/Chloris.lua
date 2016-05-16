@@ -56,17 +56,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(OVERGROWN_MANDRAGORA_FLOWER) == false) then
-        ally:addKeyItem(OVERGROWN_MANDRAGORA_FLOWER);
-        ally:messageSpecial(6385, OVERGROWN_MANDRAGORA_FLOWER);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(OVERGROWN_MANDRAGORA_FLOWER) == false) then
+        player:addKeyItem(OVERGROWN_MANDRAGORA_FLOWER);
+        player:messageSpecial(6385, OVERGROWN_MANDRAGORA_FLOWER);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_HARVESTER) == false) then
-        ally:addKeyItem(ATMA_OF_THE_HARVESTER);
-        ally:messageSpecial(6385, ATMA_OF_THE_HARVESTER);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_HARVESTER) == false) then
+        player:addKeyItem(ATMA_OF_THE_HARVESTER);
+        player:messageSpecial(6385, ATMA_OF_THE_HARVESTER);
     end
 end;

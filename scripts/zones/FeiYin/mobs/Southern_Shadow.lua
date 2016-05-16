@@ -15,7 +15,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
     -- Set Southern Shadow's ToD
     SetServerVariable("[POP]Southern_Shadow", os.time(t) + 57600); -- 16 hours
@@ -28,7 +28,7 @@ function onMobDeath(mob, killer, ally)
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
 
     local CHANCE = 40;  
-    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(699) == false) then
-        ally:addSpell(699);
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(699) == false) then
+        player:addSpell(699);
     end
 end;

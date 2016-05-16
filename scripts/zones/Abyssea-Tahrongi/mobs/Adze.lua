@@ -42,17 +42,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 17;
     local KI = 60
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_CALAMITY) == false) then
-        ally:addKeyItem(ATMA_OF_CALAMITY);
-        ally:messageSpecial(6385, ATMA_OF_CALAMITY);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_CALAMITY) == false) then
+        player:addKeyItem(ATMA_OF_CALAMITY);
+        player:messageSpecial(6385, ATMA_OF_CALAMITY);
     end
 
-    if (math.random(0,99) < KI  and ally:hasKeyItem(STICKY_GNAT_WING) == false) then
-        ally:addKeyItem(STICKY_GNAT_WING);
-        ally:messageSpecial(6385, STICKY_GNAT_WING);
+    if (math.random(0,99) < KI  and player:hasKeyItem(STICKY_GNAT_WING) == false) then
+        player:addKeyItem(STICKY_GNAT_WING);
+        player:messageSpecial(6385, STICKY_GNAT_WING);
     end
 end;
 

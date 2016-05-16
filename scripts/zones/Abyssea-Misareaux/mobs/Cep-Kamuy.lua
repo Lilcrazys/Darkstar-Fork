@@ -46,11 +46,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(GLISTENING_OROBON_LIVER) == false) then
-        ally:addKeyItem(GLISTENING_OROBON_LIVER);
-        ally:messageSpecial(6385, GLISTENING_OROBON_LIVER);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(GLISTENING_OROBON_LIVER) == false) then
+        player:addKeyItem(GLISTENING_OROBON_LIVER);
+        player:messageSpecial(6385, GLISTENING_OROBON_LIVER);
     end
 end;
 

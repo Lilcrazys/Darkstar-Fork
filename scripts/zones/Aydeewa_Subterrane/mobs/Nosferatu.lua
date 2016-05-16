@@ -72,7 +72,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 	local MobID = mob:getID();
 	local petIDs1 = {MobID+1, MobID+2, MobID+3}; -- Nosferatu_Bats
 	local petIDs2 = {MobID+4, MobID+5, MobID+6}; -- Nosferatu_Wolf
@@ -84,7 +84,7 @@ function onMobDeath(mob, killer, ally)
 	end
 
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, MYTHIC, 3);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, MYTHIC, 3);
     end
 end;

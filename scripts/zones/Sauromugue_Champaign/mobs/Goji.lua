@@ -157,20 +157,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
-    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Goji Kill
-        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM"), 0) == false) then
-            ally:setMaskBit(ally:getVar("WHITE_STRATUM"),"WHITE_STRATUM",0,true);
+    if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Goji Kill
+        if (player:getMaskBit(player:getVar("WHITE_STRATUM"), 0) == false) then
+            player:setMaskBit(player:getVar("WHITE_STRATUM"),"WHITE_STRATUM",0,true);
         end
-        if (ally:isMaskFull(ally:getVar("WHITE_STRATUM"),6) == true) then
-            ally:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
-            ally:delKeyItem(WHITE_STRATUM_ABYSSITE);
-            ally:setVar("WHITE_STRATUM", 0);
-            ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
+        if (player:isMaskFull(player:getVar("WHITE_STRATUM"),6) == true) then
+            player:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
+            player:delKeyItem(WHITE_STRATUM_ABYSSITE);
+            player:setVar("WHITE_STRATUM", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
         end
     end;
 
-    ally:addCurrency("bayld", 100);
-    ally:addExp(10000);
+    player:addCurrency("bayld", 100);
+    player:addExp(10000);
 end;

@@ -19,15 +19,15 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(BEHEMOTHS_BANE);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(BEHEMOTHS_BANE);
 
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Behemoth_ToD", os.time());
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 2);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 2);
     end
 end;
 

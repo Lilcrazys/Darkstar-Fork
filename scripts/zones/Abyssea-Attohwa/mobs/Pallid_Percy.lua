@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(MUCID_WORM_SEGMENT) == false) then
-        ally:addKeyItem(MUCID_WORM_SEGMENT);
-        ally:messageSpecial(6385, MUCID_WORM_SEGMENT);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(MUCID_WORM_SEGMENT) == false) then
+        player:addKeyItem(MUCID_WORM_SEGMENT);
+        player:messageSpecial(6385, MUCID_WORM_SEGMENT);
     end
 end;
 

@@ -68,18 +68,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
-    ally:addTitle(KUKULKAN_DEFANGER);
+    player:addTitle(KUKULKAN_DEFANGER);
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(VENOMOUS_PEISTE_CLAW) == false) then
-        ally:addKeyItem(VENOMOUS_PEISTE_CLAW);
-        ally:messageSpecial(KEYITEM_OBTAINED, VENOMOUS_PEISTE_CLAW);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(VENOMOUS_PEISTE_CLAW) == false) then
+        player:addKeyItem(VENOMOUS_PEISTE_CLAW);
+        player:messageSpecial(KEYITEM_OBTAINED, VENOMOUS_PEISTE_CLAW);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_NOXIOUS_FANG) == false) then
-        ally:addKeyItem(ATMA_OF_THE_NOXIOUS_FANG);
-        ally:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_NOXIOUS_FANG);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_NOXIOUS_FANG) == false) then
+        player:addKeyItem(ATMA_OF_THE_NOXIOUS_FANG);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_NOXIOUS_FANG);
     end
 end;

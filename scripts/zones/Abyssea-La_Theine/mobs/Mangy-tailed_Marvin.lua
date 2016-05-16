@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 40;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SCARLET_ABYSSITE_OF_LENITY) == false) then
-        ally:addKeyItem(SCARLET_ABYSSITE_OF_LENITY);
-        ally:messageSpecial(6385, SCARLET_ABYSSITE_OF_LENITY);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SCARLET_ABYSSITE_OF_LENITY) == false) then
+        player:addKeyItem(SCARLET_ABYSSITE_OF_LENITY);
+        player:messageSpecial(6385, SCARLET_ABYSSITE_OF_LENITY);
     end
 end;
 

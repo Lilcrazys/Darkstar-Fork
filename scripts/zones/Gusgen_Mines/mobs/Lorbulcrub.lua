@@ -135,12 +135,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 50);
-    ally:addExp(10000);
-    if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE_II)) then -- Lorbulcrud Kill
-       ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_III);
-       ally:delKeyItem(INDIGO_STRATUM_ABYSSITE_II);
-       ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_III);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 50);
+    player:addExp(10000);
+    if (player:hasKeyItem(INDIGO_STRATUM_ABYSSITE_II)) then -- Lorbulcrud Kill
+       player:addKeyItem(INDIGO_STRATUM_ABYSSITE_III);
+       player:delKeyItem(INDIGO_STRATUM_ABYSSITE_II);
+       player:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_III);
     end
 end;

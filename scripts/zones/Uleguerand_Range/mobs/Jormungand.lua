@@ -181,7 +181,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(WORLD_SERPENT_SLAYER);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(WORLD_SERPENT_SLAYER);
     mob:setRespawnTime(math.random(75600,86400)); -- 21 to 24 hours, originally 3 to 5 days
 end;

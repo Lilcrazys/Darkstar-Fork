@@ -174,9 +174,9 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(741) == false) then
-        ally:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(741) == false) then
+        player:addSpell(SPELL_ID);
     end
 end;

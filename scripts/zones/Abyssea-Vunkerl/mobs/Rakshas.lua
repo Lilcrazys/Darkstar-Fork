@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(WARPED_SMILODON_CHOKER) == false) then
-        ally:addKeyItem(WARPED_SMILODON_CHOKER);
-        ally:messageSpecial(6385, WARPED_SMILODON_CHOKER);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(WARPED_SMILODON_CHOKER) == false) then
+        player:addKeyItem(WARPED_SMILODON_CHOKER);
+        player:messageSpecial(6385, WARPED_SMILODON_CHOKER);
     end
 end;
 

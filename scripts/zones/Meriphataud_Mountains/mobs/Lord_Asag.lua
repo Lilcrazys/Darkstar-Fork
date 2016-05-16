@@ -137,20 +137,20 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Lord Asag Kill
-        if (ally:getMaskBit(ally:getVar("JADE_STRATUM_III"), 0) == false) then
-            ally:setMaskBit(ally:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",0,true);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(JADE_STRATUM_ABYSSITE_III)) then -- Lord Asag Kill
+        if (player:getMaskBit(player:getVar("JADE_STRATUM_III"), 0) == false) then
+            player:setMaskBit(player:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",0,true);
         end
 
-        if (ally:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
-            ally:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
-            ally:delKeyItem(JADE_STRATUM_ABYSSITE_III);
-            ally:setVar("JADE_STRATUM_III", 0);
-            ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
+        if (player:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
+            player:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
+            player:delKeyItem(JADE_STRATUM_ABYSSITE_III);
+            player:setVar("JADE_STRATUM_III", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_IV);
         end
     end
 
-    ally:addCurrency("bayld", 75);
-    ally:addExp(10000);
+    player:addCurrency("bayld", 75);
+    player:addExp(10000);
 end;

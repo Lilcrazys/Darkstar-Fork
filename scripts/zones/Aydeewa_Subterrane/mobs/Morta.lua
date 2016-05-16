@@ -208,10 +208,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 1250);
-    ally:addExp(10000);
-    if (ally:hasKeyItem(AMBER_STRATUM_ABYSSITE_II)) then -- Morta Kill
-       ally:completeQuest(AHT_URHGAN, VW_OP_068_SUBTERRAINEAN_SKIRMISH);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 1250);
+    player:addExp(10000);
+    if (player:hasKeyItem(AMBER_STRATUM_ABYSSITE_II)) then -- Morta Kill
+       player:completeQuest(AHT_URHGAN, VW_OP_068_SUBTERRAINEAN_SKIRMISH);
     end    
 end;

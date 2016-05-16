@@ -46,17 +46,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 20;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE) == false) then
-        ally:addKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE);
-        ally:messageSpecial(6385, SCARLET_ABYSSITE_OF_FURTHERANCE);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE) == false) then
+        player:addKeyItem(SCARLET_ABYSSITE_OF_FURTHERANCE);
+        player:messageSpecial(6385, SCARLET_ABYSSITE_OF_FURTHERANCE);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_LION) == false) then
-        ally:addKeyItem(ATMA_OF_THE_LION);
-        ally:messageSpecial(6385, ATMA_OF_THE_LION);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_LION) == false) then
+        player:addKeyItem(ATMA_OF_THE_LION);
+        player:messageSpecial(6385, ATMA_OF_THE_LION);
     end
 end;

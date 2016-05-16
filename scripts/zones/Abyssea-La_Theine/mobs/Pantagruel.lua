@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(WARPED_GIGAS_ARMBAND) == false) then
-        ally:addKeyItem(WARPED_GIGAS_ARMBAND);
-        ally:messageSpecial(6385, WARPED_GIGAS_ARMBAND);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(WARPED_GIGAS_ARMBAND) == false) then
+        player:addKeyItem(WARPED_GIGAS_ARMBAND);
+        player:messageSpecial(6385, WARPED_GIGAS_ARMBAND);
     end
 end;
 

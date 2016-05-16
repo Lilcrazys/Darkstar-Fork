@@ -32,9 +32,9 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
-    ally:addTitle(ASPIDOCHELONE_SINKER);
+    player:addTitle(ASPIDOCHELONE_SINKER);
 
     -- Set Aspidochelone's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
@@ -67,8 +67,8 @@ function onMobDeath(mob, killer, ally)
     end
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 3);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 3);
     end
 
     ------------------------------------

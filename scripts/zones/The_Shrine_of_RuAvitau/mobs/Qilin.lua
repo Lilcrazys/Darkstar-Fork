@@ -166,23 +166,23 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 750);
-    ally:addExp(10000);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 750);
+    player:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
     DespawnMob(mob:getID()+3);
     DespawnMob(mob:getID()+4);
 
-    if (ally:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Qilin Kill
-        if (ally:getMaskBit(ally:getVar("ZILART_VW"), 1) == false) then
-            ally:setMaskBit(ally:getVar("ZILART_VW"),"ZILART_VW",1,true);
+    if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Qilin Kill
+        if (player:getMaskBit(player:getVar("ZILART_VW"), 1) == false) then
+            player:setMaskBit(player:getVar("ZILART_VW"),"ZILART_VW",1,true);
         end
 
-        if (ally:isMaskFull(ally:getVar("ZILART_VW"),3) == true) then
-            ally:completeQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
-            ally:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
-            ally:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+        if (player:isMaskFull(player:getVar("ZILART_VW"),3) == true) then
+            player:completeQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
+            player:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
+            player:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
         end
     end;    
 end;

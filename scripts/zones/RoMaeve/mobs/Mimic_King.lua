@@ -139,24 +139,24 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
-    if (ally:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Mimic King Kill
-        if (ally:getMaskBit(ally:getVar("ASHEN_STRATUM_II"), 2) == false) then
-            ally:setMaskBit(ally:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",2,true);
+    if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Mimic King Kill
+        if (player:getMaskBit(player:getVar("ASHEN_STRATUM_II"), 2) == false) then
+            player:setMaskBit(player:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",2,true);
         end
 
         if (player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING) == QUEST_COMPLETED) then
-            if (ally:isMaskFull(ally:getVar("ASHEN_STRATUM_II"),3) == true) then
-                ally:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
-                ally:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
-                ally:setVar("ASHEN_STRATUM_II", 0);
+            if (player:isMaskFull(player:getVar("ASHEN_STRATUM_II"),3) == true) then
+                player:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+                player:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+                player:setVar("ASHEN_STRATUM_II", 0);
             end
         end
     end;
 
-    ally:addCurrency("bayld", 650);
-    ally:addExp(10000);    
+    player:addCurrency("bayld", 650);
+    player:addExp(10000);    
 end;

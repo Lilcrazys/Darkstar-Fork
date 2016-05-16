@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SCARLET_ABYSSITE_OF_PERSPICACITY) == false) then
-        ally:addKeyItem(SCARLET_ABYSSITE_OF_PERSPICACITY);
-        ally:messageSpecial(6385, SCARLET_ABYSSITE_OF_PERSPICACITY);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SCARLET_ABYSSITE_OF_PERSPICACITY) == false) then
+        player:addKeyItem(SCARLET_ABYSSITE_OF_PERSPICACITY);
+        player:messageSpecial(6385, SCARLET_ABYSSITE_OF_PERSPICACITY);
     end
 end;
 

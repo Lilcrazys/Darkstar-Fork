@@ -41,10 +41,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SHIMMERING_PIXIE_PINION) == false) then
-        ally:addKeyItem(SHIMMERING_PIXIE_PINION);
-        ally:messageSpecial(KEYITEM_OBTAINED, SHIMMERING_PIXIE_PINION);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SHIMMERING_PIXIE_PINION) == false) then
+        player:addKeyItem(SHIMMERING_PIXIE_PINION);
+        player:messageSpecial(KEYITEM_OBTAINED, SHIMMERING_PIXIE_PINION);
     end
 end;

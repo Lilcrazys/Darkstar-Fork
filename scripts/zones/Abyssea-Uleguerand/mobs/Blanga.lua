@@ -40,10 +40,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 15;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_STONE_GOD) == false) then
-        ally:addKeyItem(ATMA_OF_THE_STONE_GOD);
-        ally:messageSpecial(6385, ATMA_OF_THE_STONE_GOD);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_STONE_GOD) == false) then
+        player:addKeyItem(ATMA_OF_THE_STONE_GOD);
+        player:messageSpecial(6385, ATMA_OF_THE_STONE_GOD);
     end
 end;

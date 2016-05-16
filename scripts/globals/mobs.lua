@@ -1,90 +1,89 @@
 -----------------------------------
---
---
---
+-- Global version of onMobDeath
 -----------------------------------
 package.loaded["scripts/globals/conquest"] = nil;
 -----------------------------------
-
-require("scripts/globals/quests");
-require("scripts/globals/missions");
 require("scripts/globals/conquest");
+require("scripts/globals/missions");
+require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/spoofchat");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
---
+-- onMobDeathEx
 -----------------------------------
 
--- function onMobDeathEx(mob, killer, ally, killType)
-function onMobDeathEx(mob, killer, ally, isWeaponSkillKill)
-    -- DRK quest - Blade Of Darkness
-    local BladeofDarkness = killer:getQuestStatus(BASTOK, BLADE_OF_DARKNESS);
-    local BladeofDeath = killer:getQuestStatus(BASTOK, BLADE_OF_DEATH);
-    local ChaosbringerKills = killer:getVar("ChaosbringerKills");
+function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
 
-    if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
-        if (killer:getEquipID(SLOT_MAIN) == 16607 and isWeaponSkillKill == false) then
-            if (ChaosbringerKills < 200) then
-                killer:setVar("ChaosbringerKills", ChaosbringerKills + 1);
-                if (ChaosbringerKills == 1) then
-                    killer:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
-                else
-                    killer:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+    -- Things that happen only to the person who landed killing blow
+    if (isKiller == true) then
+        -- DRK quest - Blade Of Darkness
+        local BladeofDarkness = player:getQuestStatus(BASTOK, BLADE_OF_DARKNESS);
+        local BladeofDeath = player:getQuestStatus(BASTOK, BLADE_OF_DEATH);
+        local ChaosbringerKills = player:getVar("ChaosbringerKills");
+        if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
+            if (player:getEquipID(SLOT_MAIN) == 16607 and isWeaponSkillKill == false) then
+                if (ChaosbringerKills < 200) then
+                    player:setVar("ChaosbringerKills", ChaosbringerKills + 1);
+                    if (ChaosbringerKills == 1) then
+                        player:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+                    else
+                        player:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+                    end
                 end
             end
         end
     end
 
-    if (ally:getCurrentMission(WINDURST) == A_TESTING_TIME) then
-        if (ally:hasCompletedMission(WINDURST,A_TESTING_TIME) and ally:getZoneID() == 118) then
-            ally:setVar("testingTime_crea_count",ally:getVar("testingTime_crea_count") + 1);
-        elseif (ally:hasCompletedMission(WINDURST,A_TESTING_TIME) == false and ally:getZoneID() == 117) then
-            ally:setVar("testingTime_crea_count",ally:getVar("testingTime_crea_count") + 1);
+    -- Things that happen to any player in the party/alliance
+    if (player:getCurrentMission(WINDURST) == A_TESTING_TIME) then
+        if (player:hasCompletedMission(WINDURST,A_TESTING_TIME) and player:getZoneID() == 118) then
+            player:setVar("testingTime_crea_count",player:getVar("testingTime_crea_count") + 1);
+        elseif (player:hasCompletedMission(WINDURST,A_TESTING_TIME) == false and player:getZoneID() == 117) then
+            player:setVar("testingTime_crea_count",player:getVar("testingTime_crea_count") + 1);
         end
     end
 
-    -- doMagiantTrialCheck(mob, killer, ally, killType);
 
     -----------------------------------
     -- Legion XI custom section
     -----------------------------------
 
     -- Custom trials
-    --[[if (ally:getVar("customtrial") ~= nil) then
-        -- doCustomTrial(mob, killer, ally, killType);
-        doCustomTrial(mob, killer, ally, isWeaponSkillKill);
+    --[[if (player:getVar("customtrial") ~= nil) then
+        -- doCustomTrial(mob, player, isKiller, killType);
+        doCustomTrial(mob, player, isKiller, isWeaponSkillKill);
     end]]
 
     -- Bonus points
     if (mob:getSystem() == SYSTEM_BEASTMEN) then
         -- Bonus Imperial Standing for ToAU beastmen
-        if (ally:hasStatusEffect(EFFECT_SANCTION) and ally:checkDistance(mob) < 100
-        and ally:getCurrentRegion() >= 28 and ally:getCurrentRegion() <= 32 ) then
+        if (player:hasStatusEffect(EFFECT_SANCTION) and player:checkDistance(mob) < 100
+        and player:getCurrentRegion() >= 28 and player:getCurrentRegion() <= 32 ) then
             if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
-                ally:addCurrency("imperial_standing", 1+mob:getMainLvl()*0.5);
+                player:addCurrency("imperial_standing", 1+mob:getMainLvl()*0.5);
             else -- Not an exp mob, no soup and only 1 point for you!
-                ally:addCurrency("imperial_standing", 1);
+                player:addCurrency("imperial_standing", 1);
             end
         -- Bonus Allied notes for WotG beastmen
-        elseif (ally:hasStatusEffect(EFFECT_SIGIL) and ally:checkDistance(mob) < 100
-        and ally:getCurrentRegion() >= 33 and ally:getCurrentRegion() <= 40 ) then
+        elseif (player:hasStatusEffect(EFFECT_SIGIL) and player:checkDistance(mob) < 100
+        and player:getCurrentRegion() >= 33 and player:getCurrentRegion() <= 40 ) then
             if (mob:checkBaseExp()) then -- mob must give exp to get full bonus
-                ally:addCurrency("allied_notes", 1+mob:getMainLvl()*0.5);
+                player:addCurrency("allied_notes", 1+mob:getMainLvl()*0.5);
             else -- Not an exp mob, no soup and only 1 point for you!
-                ally:addCurrency("allied_notes", 1);
+                player:addCurrency("allied_notes", 1);
             end
         end
     end
 
     -- Work around for effing limbus issues
-    if (ally:getCurrentRegion() == 27) then -- 27 = REGION_LIMBUS
-        bonusLimbusDrop(ally);
+    if (player:getCurrentRegion() == 27) then -- 27 = REGION_LIMBUS
+        bonusLimbusDrop(player);
     end
 end;
 
-function bonusLimbusDrop(ally)
+function bonusLimbusDrop(player)
     local itemRate = 25;
     local itemID = 0;
     local itemList =
@@ -109,15 +108,15 @@ function bonusLimbusDrop(ally)
     end
 
     if (itemID > 0) then
-        local TextIDs = "scripts/zones/" .. ally:getZoneName() .. "/TextIDs";
+        local TextIDs = "scripts/zones/" .. player:getZoneName() .. "/TextIDs";
         package.loaded[TextIDs] = nil;
         require(TextIDs);
 
-        if (ally:getFreeSlotsCount() > 0) then
-            ally:addItem(itemID);
-            ally:messageSpecial(ITEM_OBTAINED,itemID);
+        if (player:getFreeSlotsCount() > 0) then
+            player:addItem(itemID);
+            player:messageSpecial(ITEM_OBTAINED,itemID);
         else
-            ally:messageSpecial(ITEM_CANNOT_BE_OBTAINED,itemID);
+            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,itemID);
         end
     end
 end;

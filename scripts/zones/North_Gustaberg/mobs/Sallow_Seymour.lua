@@ -143,19 +143,19 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Sallow Seymour Kill
-        if (ally:getMaskBit(ally:getVar("INDIGO_STRATUM"), 0) == false) then
-            ally:setMaskBit(ally:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",0,true);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Sallow Seymour Kill
+        if (player:getMaskBit(player:getVar("INDIGO_STRATUM"), 0) == false) then
+            player:setMaskBit(player:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",0,true);
         end
 
-        if (ally:isMaskFull(ally:getVar("INDIGO_STRATUM"),2) == true) then
-            ally:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
-            ally:delKeyItem(INDIGO_STRATUM_ABYSSITE);
-            ally:setVar("INDIGO_STRATUM", 0);
-            ally:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_II);
+        if (player:isMaskFull(player:getVar("INDIGO_STRATUM"),2) == true) then
+            player:addKeyItem(INDIGO_STRATUM_ABYSSITE_II);
+            player:delKeyItem(INDIGO_STRATUM_ABYSSITE);
+            player:setVar("INDIGO_STRATUM", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, INDIGO_STRATUM_ABYSSITE_II);
         end
     end
 
-    ally:addExp(10000);
+    player:addExp(10000);
 end;

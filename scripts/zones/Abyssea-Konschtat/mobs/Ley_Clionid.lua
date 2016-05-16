@@ -41,13 +41,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
 	-- local result = DoCruor(killer,result);
 	-- DoExp(killer,bonus);
     -- DoLights(mob,killer);
 	-- PyxisSpawn(mob,killer,npc);
 
-	-- ally:messageSpecial(CRUOR_OBTAINED,result);
+	-- player:messageSpecial(CRUOR_OBTAINED,result);
 end;
 

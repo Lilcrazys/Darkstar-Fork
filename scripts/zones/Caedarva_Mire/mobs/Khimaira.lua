@@ -25,21 +25,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
-    ------------------------------------
-    -- Begin Custom Legion Code
-    ------------------------------------
-    
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(KHIMAIRA_CARVER);
-	mob:setRespawnTime(math.random((75600),(86400))); -- 21-24 hours
-
-    
     if (math.random(1,1000) <= 72) then
         SetDropRate(1893,20827,1000); -- Kerehcatl
         SetDropRate(1893,17738,0); -- Hauteclaire
@@ -56,14 +42,27 @@ function onMobDeath(mob, killer, ally)
         SetDropRate(1893,4023,1000); -- Snowsteel Ore
         SetDropRate(1893,4023,1000); -- Snowsteel Ore
     end
+
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(KHIMAIRA_CARVER);
+
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
     
     -- Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, MYTHIC, 3);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, MYTHIC, 3);
     end
 
     ------------------------------------
     -- End Custom Legion Code
     ------------------------------------
-    
+
 end;

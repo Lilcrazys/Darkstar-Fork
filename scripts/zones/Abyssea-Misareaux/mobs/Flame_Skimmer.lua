@@ -46,11 +46,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 10;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SAPPHIRE_ABYSSITE_OF_FURTHERANCE) == false) then
-        ally:addKeyItem(SAPPHIRE_ABYSSITE_OF_FURTHERANCE);
-        ally:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_FURTHERANCE);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SAPPHIRE_ABYSSITE_OF_FURTHERANCE) == false) then
+        player:addKeyItem(SAPPHIRE_ABYSSITE_OF_FURTHERANCE);
+        player:messageSpecial(6385, SAPPHIRE_ABYSSITE_OF_FURTHERANCE);
     end
 end;
 

@@ -287,7 +287,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("legion_point", 10);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("legion_point", 10);
     SpawnMob(mob:getID()+3) -- Spawns Lofty_Elasmoth    
 end;

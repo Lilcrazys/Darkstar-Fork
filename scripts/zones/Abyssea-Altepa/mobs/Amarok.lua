@@ -74,17 +74,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(STEAMING_CERBERUS_TONGUE) == false) then
-        ally:addKeyItem(STEAMING_CERBERUS_TONGUE);
-        ally:messageSpecial(6385, STEAMING_CERBERUS_TONGUE);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(STEAMING_CERBERUS_TONGUE) == false) then
+        player:addKeyItem(STEAMING_CERBERUS_TONGUE);
+        player:messageSpecial(6385, STEAMING_CERBERUS_TONGUE);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_LONE_WOLF) == false) then
-        ally:addKeyItem(ATMA_OF_THE_LONE_WOLF);
-        ally:messageSpecial(6385, ATMA_OF_THE_LONE_WOLF);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_LONE_WOLF) == false) then
+        player:addKeyItem(ATMA_OF_THE_LONE_WOLF);
+        player:messageSpecial(6385, ATMA_OF_THE_LONE_WOLF);
     end
 end;

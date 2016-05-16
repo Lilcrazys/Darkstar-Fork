@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(MOLTED_PEISTE_SKIN) == false) then
-        ally:addKeyItem(MOLTED_PEISTE_SKIN);
-        ally:messageSpecial(6385, MOLTED_PEISTE_SKIN);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(MOLTED_PEISTE_SKIN) == false) then
+        player:addKeyItem(MOLTED_PEISTE_SKIN);
+        player:messageSpecial(6385, MOLTED_PEISTE_SKIN);
     end
 end;
 

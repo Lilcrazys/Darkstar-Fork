@@ -169,16 +169,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 600);
-    ally:addExp(10000);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 600);
+    player:addExp(10000);
 
-    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Gaunab Kill
-        if (ally:getMaskBit(ally:getVar("JEUNO_VW"), 0) == false) then
-           ally:setMaskBit(ally:getVar("JEUNO_VW"),"JEUNO_VW",0,true);
+    if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Gaunab Kill
+        if (player:getMaskBit(player:getVar("JEUNO_VW"), 0) == false) then
+           player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",0,true);
         end
-        if (ally:isMaskFull(ally:getVar("JEUNO_VW"),5) == true) then
-           ally:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        if (player:isMaskFull(player:getVar("JEUNO_VW"),5) == true) then
+           player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end    
 end;

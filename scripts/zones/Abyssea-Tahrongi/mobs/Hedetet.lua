@@ -45,11 +45,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 55;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(GORY_SCORPION_CLAW) == false) then
-        ally:addKeyItem(GORY_SCORPION_CLAW);
-        ally:messageSpecial(6385, GORY_SCORPION_CLAW);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(GORY_SCORPION_CLAW) == false) then
+        player:addKeyItem(GORY_SCORPION_CLAW);
+        player:messageSpecial(6385, GORY_SCORPION_CLAW);
     end
 end;
 

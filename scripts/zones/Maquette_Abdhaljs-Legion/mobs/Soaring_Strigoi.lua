@@ -93,8 +93,8 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("legion_point", 75);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("legion_point", 75);
     local popBoss = true;
     local MobIDs = {17526819, 17526820, 17526821, 17526822, 17526823, 17526825};
     -- Soaring_Strigoi 17526824

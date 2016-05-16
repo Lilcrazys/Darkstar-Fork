@@ -151,13 +151,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_II)) then -- Krabimanjaro Kill
-        ally:addKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
-        ally:delKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
-        ally:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_III);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_II)) then -- Krabimanjaro Kill
+        player:addKeyItem(CRIMSON_STRATUM_ABYSSITE_III);
+        player:delKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
+        player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_III);
     end
 
-    ally:addCurrency("bayld", 50);
-    ally:addExp(10000);
+    player:addCurrency("bayld", 50);
+    player:addExp(10000);
 end;

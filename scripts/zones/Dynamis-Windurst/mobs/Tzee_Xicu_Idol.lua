@@ -32,23 +32,23 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer,ally)
-	if (ally:hasKeyItem(HYDRA_CORPS_LANTERN) == false)then
-		ally:setVar("DynaWindurst_Win",1);
-		ally:addKeyItem(HYDRA_CORPS_LANTERN);
-		ally:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_LANTERN);
-	end
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(HYDRA_CORPS_LANTERN) == false)then
+        player:setVar("DynaWindurst_Win",1);
+        player:addKeyItem(HYDRA_CORPS_LANTERN);
+        player:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_LANTERN);
+    end
 
-    if (alreadyReceived(ally,8) == false) then
-        addDynamisList(ally,128);
+    if (alreadyReceived(player,8) == false) then
+        addDynamisList(player,128);
 
-        ally:addTitle(DYNAMISWINDURST_INTERLOPER); -- Add title
+        player:addTitle(DYNAMISWINDURST_INTERLOPER); -- Add title
 
         local npc = GetNPCByID(17543480); -- Spawn ???
         npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
         npc:setStatus(0);
 
-        ally:launchDynamisSecondPart(); -- Spawn dynamis second part
+        player:launchDynamisSecondPart(); -- Spawn dynamis second part
     end
 
 end;

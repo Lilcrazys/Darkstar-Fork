@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(MALODOROUS_MARID_FUR) == false) then
-        ally:addKeyItem(MALODOROUS_MARID_FUR);
-        ally:messageSpecial(6385, MALODOROUS_MARID_FUR);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(MALODOROUS_MARID_FUR) == false) then
+        player:addKeyItem(MALODOROUS_MARID_FUR);
+        player:messageSpecial(6385, MALODOROUS_MARID_FUR);
     end
 end;
 

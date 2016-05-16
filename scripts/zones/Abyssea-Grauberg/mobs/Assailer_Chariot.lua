@@ -41,23 +41,23 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
     local SPELL_ID = 713;
     local CHANCE = 25;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(WARPED_CHARIOT_PLATE) == false) then
-        ally:addKeyItem(WARPED_CHARIOT_PLATE);
-        ally:messageSpecial(6385, WARPED_CHARIOT_PLATE);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(WARPED_CHARIOT_PLATE) == false) then
+        player:addKeyItem(WARPED_CHARIOT_PLATE);
+        player:messageSpecial(6385, WARPED_CHARIOT_PLATE);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(INDIGO_ABYSSITE_OF_SOJOURN) == false) then
-        ally:addKeyItem(INDIGO_ABYSSITE_OF_SOJOURN);
-        ally:messageSpecial(6385, INDIGO_ABYSSITE_OF_SOJOURN);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(INDIGO_ABYSSITE_OF_SOJOURN) == false) then
+        player:addKeyItem(INDIGO_ABYSSITE_OF_SOJOURN);
+        player:messageSpecial(6385, INDIGO_ABYSSITE_OF_SOJOURN);
     end
 
-    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
-        ally:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+        player:addSpell(SPELL_ID);
     end
 end;

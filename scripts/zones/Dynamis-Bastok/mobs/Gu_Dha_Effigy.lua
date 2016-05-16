@@ -25,25 +25,25 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer,ally)
-	if (ally:hasKeyItem(HYDRA_CORPS_EYEGLASS) == false) then
-		ally:setVar("DynaBastok_Win",1);
-		ally:addKeyItem(HYDRA_CORPS_EYEGLASS);
-		ally:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
-	end
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(HYDRA_CORPS_EYEGLASS) == false) then
+        player:setVar("DynaBastok_Win",1);
+        player:addKeyItem(HYDRA_CORPS_EYEGLASS);
+        player:messageSpecial(KEYITEM_OBTAINED,HYDRA_CORPS_EYEGLASS);
+    end
 
     if (mob:isInBattlefieldList() == false) then
         mob:addInBattlefieldList();
 
-        ally:addTimeToDynamis(30); -- Add + 30min
+        player:addTimeToDynamis(30); -- Add + 30min
 
-        ally:addTitle(DYNAMISBASTOK_INTERLOPER); -- Add title
+        player:addTitle(DYNAMISBASTOK_INTERLOPER); -- Add title
 
         local npc = GetNPCByID(17539323); -- Spawn ???
         npc:setPos(mob:getXPos(),mob:getYPos(),mob:getZPos());
         npc:setStatus(0);
 
-        ally:launchDynamisSecondPart(); -- Spawn dynamis second part
+        player:launchDynamisSecondPart(); -- Spawn dynamis second part
     end
 
 end;

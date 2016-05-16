@@ -97,8 +97,8 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("legion_point", 75);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("legion_point", 75);
     local popBoss = true;
     local MobIDs = {17526852, 17526851, 17526854, 17526856};
     -- Paramount_Mantis 17526853

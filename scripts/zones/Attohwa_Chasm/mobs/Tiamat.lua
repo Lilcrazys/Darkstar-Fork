@@ -201,7 +201,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(TIAMAT_TROUNCER);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(TIAMAT_TROUNCER);
     mob:setRespawnTime(math.random(75600,86400)); -- 21 to 24 hours, originally 3 to 5 days
 end;

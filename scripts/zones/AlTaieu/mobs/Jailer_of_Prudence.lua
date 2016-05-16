@@ -121,7 +121,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local firstPrudence     = GetMobByID(PrudenceOne);
     local secondPrudence    = GetMobByID(PrudenceTwo);
     if (mob:getID() == PrudenceOne) then

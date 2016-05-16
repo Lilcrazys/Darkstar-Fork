@@ -73,22 +73,22 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Kalos Kill
-        if (ally:getMaskBit(ally:getVar("WHITE_STRATUM_II"), 3) == false) then
-           ally:setMaskBit(ally:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",3,true);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Kalos Kill
+        if (player:getMaskBit(player:getVar("WHITE_STRATUM_II"), 3) == false) then
+           player:setMaskBit(player:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",3,true);
         end
 
-        if (ally:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
-            if (ally:isMaskFull(ally:getVar("WHITE_STRATUM_II"),6) == true) then
-                ally:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
-                ally:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
-                ally:setVar("WHITE_STRATUM_II", 0);
-                ally:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
+        if (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
+            if (player:isMaskFull(player:getVar("WHITE_STRATUM_II"),6) == true) then
+                player:addKeyItem(WHITE_STRATUM_ABYSSITE_III);
+                player:delKeyItem(WHITE_STRATUM_ABYSSITE_II);
+                player:setVar("WHITE_STRATUM_II", 0);
+                player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_III);
             end
         end
     end
 
-    ally:addCurrency("bayld", 200);
-    ally:addExp(10000);
+    player:addCurrency("bayld", 200);
+    player:addExp(10000);
 end;

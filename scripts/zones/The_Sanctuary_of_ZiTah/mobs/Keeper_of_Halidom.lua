@@ -9,10 +9,10 @@ require("scripts/globals/custom_trials");
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 6);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 6);
     end
 end;

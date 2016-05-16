@@ -109,7 +109,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local popBoss = true;
     local MobIDs = {17526833, 17526834, 17526835, 17526836, 17526838, 17526839};
     -- Veiled_Alicorn 17526837

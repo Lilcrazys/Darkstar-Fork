@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(GLOSSY_SEA_MONK_SUCKER) == false) then
-        ally:addKeyItem(GLOSSY_SEA_MONK_SUCKER);
-        ally:messageSpecial(6385, GLOSSY_SEA_MONK_SUCKER);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(GLOSSY_SEA_MONK_SUCKER) == false) then
+        player:addKeyItem(GLOSSY_SEA_MONK_SUCKER);
+        player:messageSpecial(6385, GLOSSY_SEA_MONK_SUCKER);
     end
 end;
 

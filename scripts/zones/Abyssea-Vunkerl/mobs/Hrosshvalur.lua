@@ -38,11 +38,11 @@ end;
 -----------------------------------
 -- onMobDeath
 -----------------------------------
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SHIMMERING_PUGIL_SCALE) == false) then
-        ally:addKeyItem(SHIMMERING_PUGIL_SCALE);
-        ally:messageSpecial(6385, SHIMMERING_PUGIL_SCALE);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SHIMMERING_PUGIL_SCALE) == false) then
+        player:addKeyItem(SHIMMERING_PUGIL_SCALE);
+        player:messageSpecial(6385, SHIMMERING_PUGIL_SCALE);
     end
 end;
 

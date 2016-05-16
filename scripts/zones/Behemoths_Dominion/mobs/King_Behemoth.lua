@@ -48,9 +48,9 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
 
-    ally:addTitle(BEHEMOTH_DETHRONER);
+    player:addTitle(BEHEMOTH_DETHRONER);
 
     -- Todo: move this to SQL after drop slots are a thing
     if (math.random(1,100) <= 5) then -- Hardcoded "this or this item" drop rate until implemented.
@@ -84,8 +84,8 @@ function onMobDeath(mob, killer, ally)
     ------------------------------------
     
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 4);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 4);
     end
 
     ------------------------------------

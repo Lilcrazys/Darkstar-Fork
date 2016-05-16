@@ -11,9 +11,9 @@ require("scripts/globals/groundsofvalor");
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob,killer,ally)
+function onMobDeath(mob, player, isKiller)
 
-    checkGoVregime(ally,mob,691,2);
+    checkGoVregime(player,mob,691,2);
 
     local mobID = mob:getID();
     if (Demonic_Tiphia_PH[mobID] ~= nil) then

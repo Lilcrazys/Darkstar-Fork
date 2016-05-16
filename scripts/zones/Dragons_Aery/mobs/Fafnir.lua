@@ -31,21 +31,21 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(FAFNIR_SLAYER);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(FAFNIR_SLAYER);
 
     local SPELL_ID = 738;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and ally:getMainJob() == JOB_BLU and ally:hasSpell(SPELL_ID) == false) then
-        ally:addSpell(SPELL_ID);
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+        player:addSpell(SPELL_ID);
     end
 
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Fafnir_ToD", os.time());
 
     -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(ally) == true) then
-        cTrialProgress(ally, RELIC, 3);
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 3);
     end
 end;
 

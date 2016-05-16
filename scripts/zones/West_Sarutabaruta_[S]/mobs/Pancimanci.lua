@@ -137,18 +137,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Pancimanci Kill
-        if (ally:getMaskBit(ally:getVar("JADE_STRATUM"), 1) == false) then
-            ally:setMaskBit(ally:getVar("JADE_STRATUM"),"JADE_STRATUM",1,true);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(JADE_STRATUM_ABYSSITE)) then -- Pancimanci Kill
+        if (player:getMaskBit(player:getVar("JADE_STRATUM"), 1) == false) then
+            player:setMaskBit(player:getVar("JADE_STRATUM"),"JADE_STRATUM",1,true);
         end
-        if (ally:isMaskFull(ally:getVar("JADE_STRATUM"),2) == true) then
-            ally:addKeyItem(JADE_STRATUM_ABYSSITE_II);
-            ally:delKeyItem(JADE_STRATUM_ABYSSITE);
-            ally:setVar("JADE_STRATUM", 0);
-            ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_II);
+        if (player:isMaskFull(player:getVar("JADE_STRATUM"),2) == true) then
+            player:addKeyItem(JADE_STRATUM_ABYSSITE_II);
+            player:delKeyItem(JADE_STRATUM_ABYSSITE);
+            player:setVar("JADE_STRATUM", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_II);
         end
     end
 
-    ally:addExp(10000);
+    player:addExp(10000);
 end;

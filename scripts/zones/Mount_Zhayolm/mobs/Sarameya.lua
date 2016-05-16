@@ -149,6 +149,6 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     mob:setLocalVar("RAGED", 0);
 end;

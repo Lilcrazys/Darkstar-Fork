@@ -147,13 +147,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    if (ally:hasKeyItem(JADE_STRATUM_ABYSSITE_II)) then -- Ogbunabali Kill
-        ally:addKeyItem(JADE_STRATUM_ABYSSITE_III);
-        ally:delKeyItem(JADE_STRATUM_ABYSSITE_II);
-        ally:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_III);
+function onMobDeath(mob, player, isKiller)
+    if (player:hasKeyItem(JADE_STRATUM_ABYSSITE_II)) then -- Ogbunabali Kill
+        player:addKeyItem(JADE_STRATUM_ABYSSITE_III);
+        player:delKeyItem(JADE_STRATUM_ABYSSITE_II);
+        player:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE_III);
     end
 
-    ally:addCurrency("bayld", 50);
-    ally:addExp(10000);
+    player:addCurrency("bayld", 50);
+    player:addExp(10000);
 end;

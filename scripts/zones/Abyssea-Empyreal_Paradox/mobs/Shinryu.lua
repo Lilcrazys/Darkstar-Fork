@@ -133,19 +133,19 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local ATMA = 30;
     local LUNAR = 40;
 
-    ally:addTitle(WYRM_GOD_DEFIER);
+    player:addTitle(WYRM_GOD_DEFIER);
 
-    if (math.random(0,99) < ATMA and ally:hasKeyItem(ATMA_OF_THE_APOCALYPSE) == false) then
-        ally:addKeyItem(ATMA_OF_THE_APOCALYPSE);
-        ally:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_APOCALYPSE);
+    if (math.random(0,99) < ATMA and player:hasKeyItem(ATMA_OF_THE_APOCALYPSE) == false) then
+        player:addKeyItem(ATMA_OF_THE_APOCALYPSE);
+        player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_APOCALYPSE);
     end
 
-    if (math.random(0,99) < LUNAR and ally:hasKeyItem(LUNAR_ABYSSITE3) == false) then
-        ally:addKeyItem(LUNAR_ABYSSITE3);
-        ally:messageSpecial(KEYITEM_OBTAINED, LUNAR_ABYSSITE3);
+    if (math.random(0,99) < LUNAR and player:hasKeyItem(LUNAR_ABYSSITE3) == false) then
+        player:addKeyItem(LUNAR_ABYSSITE3);
+        player:messageSpecial(KEYITEM_OBTAINED, LUNAR_ABYSSITE3);
     end
 end;

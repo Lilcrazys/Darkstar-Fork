@@ -58,6 +58,6 @@ end
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(MON_CHERRY);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(MON_CHERRY);
 end;

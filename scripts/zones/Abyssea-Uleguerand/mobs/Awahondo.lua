@@ -47,17 +47,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(DECAYING_DIREMITE_FANG) == false) then
-        ally:addKeyItem(DECAYING_DIREMITE_FANG);
-        ally:messageSpecial(6385, DECAYING_DIREMITE_FANG);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(DECAYING_DIREMITE_FANG) == false) then
+        player:addKeyItem(DECAYING_DIREMITE_FANG);
+        player:messageSpecial(6385, DECAYING_DIREMITE_FANG);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_PERSISTENT_PREDATOR) == false) then
-        ally:addKeyItem(ATMA_OF_THE_PERSISTENT_PREDATOR);
-        ally:messageSpecial(6385, ATMA_OF_THE_PERSISTENT_PREDATOR);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_PERSISTENT_PREDATOR) == false) then
+        player:addKeyItem(ATMA_OF_THE_PERSISTENT_PREDATOR);
+        player:messageSpecial(6385, ATMA_OF_THE_PERSISTENT_PREDATOR);
     end
 end;

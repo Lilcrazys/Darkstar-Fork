@@ -116,7 +116,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("legion_point", 400);
-    ally:addTitle(LEGENDARY_LEGIONNAIRE);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("legion_point", 400);
+    player:addTitle(LEGENDARY_LEGIONNAIRE);
 end;

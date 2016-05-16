@@ -40,11 +40,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(CLIPPED_BIRD_WING) == false) then
-        ally:addKeyItem(CLIPPED_BIRD_WING);
-        ally:messageSpecial(6385, CLIPPED_BIRD_WING);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(CLIPPED_BIRD_WING) == false) then
+        player:addKeyItem(CLIPPED_BIRD_WING);
+        player:messageSpecial(6385, CLIPPED_BIRD_WING);
     end
 end;
 

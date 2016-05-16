@@ -43,11 +43,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_FOE_FLAYER) == false) then
-        ally:addKeyItem(ATMA_OF_THE_FOE_FLAYER);
-        ally:messageSpecial(6385, ATMA_OF_THE_FOE_FLAYER);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_FOE_FLAYER) == false) then
+        player:addKeyItem(ATMA_OF_THE_FOE_FLAYER);
+        player:messageSpecial(6385, ATMA_OF_THE_FOE_FLAYER);
     end
 end;
 

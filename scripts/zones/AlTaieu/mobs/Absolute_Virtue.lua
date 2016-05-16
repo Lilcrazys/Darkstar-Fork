@@ -331,8 +331,8 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addTitle(VIRTUOUS_SAINT);
+function onMobDeath(mob, player, isKiller)
+    player:addTitle(VIRTUOUS_SAINT);
     SetServerVariable("AV_Regen_Reduction", 0);
     DespawnMob(16912877);
     DespawnMob(16912878);

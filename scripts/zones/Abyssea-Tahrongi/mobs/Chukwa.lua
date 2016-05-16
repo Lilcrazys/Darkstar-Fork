@@ -44,18 +44,18 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(MOSSY_ADAMANTOISE_SHELL) == false) then
-        ally:addKeyItem(MOSSY_ADAMANTOISE_SHELL);
-        ally:messageSpecial(6385, MOSSY_ADAMANTOISE_SHELL);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(MOSSY_ADAMANTOISE_SHELL) == false) then
+        player:addKeyItem(MOSSY_ADAMANTOISE_SHELL);
+        player:messageSpecial(6385, MOSSY_ADAMANTOISE_SHELL);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_ADAMANTINE) == false) then
-        ally:addKeyItem(ATMA_OF_THE_ADAMANTINE);
-        ally:messageSpecial(6385, ATMA_OF_THE_ADAMANTINE);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_ADAMANTINE) == false) then
+        player:addKeyItem(ATMA_OF_THE_ADAMANTINE);
+        player:messageSpecial(6385, ATMA_OF_THE_ADAMANTINE);
     end
 end;
 

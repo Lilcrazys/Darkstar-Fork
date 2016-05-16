@@ -39,11 +39,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(CRIMSON_ABYSSITE_OF_ACUMEN) == false) then
-        ally:addKeyItem(CRIMSON_ABYSSITE_OF_ACUMEN);
-        ally:messageSpecial(6385, CRIMSON_ABYSSITE_OF_ACUMEN);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(CRIMSON_ABYSSITE_OF_ACUMEN) == false) then
+        player:addKeyItem(CRIMSON_ABYSSITE_OF_ACUMEN);
+        player:messageSpecial(6385, CRIMSON_ABYSSITE_OF_ACUMEN);
     end
 end;
 

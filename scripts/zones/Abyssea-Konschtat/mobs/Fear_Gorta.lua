@@ -41,10 +41,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 30;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(AZURE_ABYSSITE_OF_THE_REAPER) == false) then
-        ally:addKeyItem(AZURE_ABYSSITE_OF_THE_REAPER);
-        ally:messageSpecial(6385, AZURE_ABYSSITE_OF_THE_REAPER);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(AZURE_ABYSSITE_OF_THE_REAPER) == false) then
+        player:addKeyItem(AZURE_ABYSSITE_OF_THE_REAPER);
+        player:messageSpecial(6385, AZURE_ABYSSITE_OF_THE_REAPER);
     end
 end;

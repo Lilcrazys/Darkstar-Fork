@@ -52,11 +52,11 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 60;
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(SCALDING_IRONCLAD_SPIKE) == false) then
-        ally:addKeyItem(SCALDING_IRONCLAD_SPIKE);
-        ally:messageSpecial(6385, SCALDING_IRONCLAD_SPIKE);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(SCALDING_IRONCLAD_SPIKE) == false) then
+        player:addKeyItem(SCALDING_IRONCLAD_SPIKE);
+        player:messageSpecial(6385, SCALDING_IRONCLAD_SPIKE);
     end
 end;
 

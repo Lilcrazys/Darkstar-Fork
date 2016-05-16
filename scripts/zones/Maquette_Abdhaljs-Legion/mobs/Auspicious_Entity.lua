@@ -70,10 +70,10 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:delStatusEffect(EFFECT_WEAKNESS);
-    ally:restoreHP(3000);
-    ally:messageBasic(024,(ally:getMaxHP()-ally:getHP()));
-    ally:restoreMP(3000);
-    ally:messageBasic(025,(ally:getMaxMP()-ally:getMP()));
+function onMobDeath(mob, player, isKiller)
+    player:delStatusEffect(EFFECT_WEAKNESS);
+    player:restoreHP(3000);
+    player:messageBasic(024,(player:getMaxHP()-player:getHP()));
+    player:restoreMP(3000);
+    player:messageBasic(025,(player:getMaxMP()-player:getMP()));
 end;

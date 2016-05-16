@@ -160,22 +160,22 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("bayld", 650);
-    ally:addExp(10000);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("bayld", 650);
+    player:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
-    if (ally:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Cath Palug Kill
-        if (ally:getMaskBit(ally:getVar("ASHEN_STRATUM_II"), 0) == false) then
-            ally:setMaskBit(ally:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",0,true);
+    if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE_II)) then -- Cath Palug Kill
+        if (player:getMaskBit(player:getVar("ASHEN_STRATUM_II"), 0) == false) then
+            player:setMaskBit(player:getVar("ASHEN_STRATUM_II"),"ASHEN_STRATUM_II",0,true);
         end
 
         if (player:getQuestStatus(OUTLANDS, VOIDWATCH_OPS_BORDER_CROSSING) == QUEST_COMPLETED) then
-            if (ally:isMaskFull(ally:getVar("ASHEN_STRATUM_II"),3) == true) then
-                ally:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
-                ally:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
-                ally:setVar("ASHEN_STRATUM_II", 0);
+            if (player:isMaskFull(player:getVar("ASHEN_STRATUM_II"),3) == true) then
+                player:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+                player:delKeyItem(ASHEN_STRATUM_ABYSSITE_II);
+                player:setVar("ASHEN_STRATUM_II", 0);
             end
         end
     end   

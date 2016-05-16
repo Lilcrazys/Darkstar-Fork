@@ -332,8 +332,8 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
-    ally:addCurrency("legion_point", 50);
+function onMobDeath(mob, player, isKiller)
+    player:addCurrency("legion_point", 50);
     local popBoss = true;
     local MobIDs = {17526785, 17526786, 17526787, 17526788, 17526790, 17526791};
     -- Lofty_Zilant 17526789

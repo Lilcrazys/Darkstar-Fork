@@ -58,17 +58,17 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 30;
 
-    if (KI_CHANCE > math.random(0,99) and ally:hasKeyItem(BROKEN_IRON_GIANT_SPIKE) == false) then
-        ally:addKeyItem(BROKEN_IRON_GIANT_SPIKE);
-        ally:messageSpecial(6385, BROKEN_IRON_GIANT_SPIKE);
+    if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(BROKEN_IRON_GIANT_SPIKE) == false) then
+        player:addKeyItem(BROKEN_IRON_GIANT_SPIKE);
+        player:messageSpecial(6385, BROKEN_IRON_GIANT_SPIKE);
     end
 
-    if (ATMA_CHANCE > math.random(0,99) and ally:hasKeyItem(ATMA_OF_THE_SMITING_BLOW) == false) then
-        ally:addKeyItem(ATMA_OF_THE_SMITING_BLOW);
-        ally:messageSpecial(6385, ATMA_OF_THE_SMITING_BLOW);
+    if (ATMA_CHANCE > math.random(0,99) and player:hasKeyItem(ATMA_OF_THE_SMITING_BLOW) == false) then
+        player:addKeyItem(ATMA_OF_THE_SMITING_BLOW);
+        player:messageSpecial(6385, ATMA_OF_THE_SMITING_BLOW);
     end
 end;

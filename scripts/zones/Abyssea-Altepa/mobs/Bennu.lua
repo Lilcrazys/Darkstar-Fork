@@ -97,12 +97,12 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
-    ally:addTitle(BENNU_DEPLUMER);
+    player:addTitle(BENNU_DEPLUMER);
   
-    if (math.random(0,99) < CHANCE  and ally:hasKeyItem(ATMA_OF_THE_ASCENDING_ONE) == false) then
-        ally:addKeyItem(ATMA_OF_THE_ASCENDING_ONE);
-        ally:messageSpecial(6385, ATMA_OF_THE_ASCENDING_ONE);
+    if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_ASCENDING_ONE) == false) then
+        player:addKeyItem(ATMA_OF_THE_ASCENDING_ONE);
+        player:messageSpecial(6385, ATMA_OF_THE_ASCENDING_ONE);
     end
 end;

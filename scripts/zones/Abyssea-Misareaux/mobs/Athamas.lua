@@ -44,16 +44,16 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, killer, ally)
+function onMobDeath(mob, player, isKiller)
     -- local keyId = KEYITEM_ID_HERE;
-    if (ally:getVar("RED_PROC") == 1) then
-        -- if (ally:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
-            -- ally:addKeyItem(keyId);
-            -- ally:messageSpecial( KEYITEM_OBTAINED, keyId );
+    if (player:getVar("RED_PROC") == 1) then
+        -- if (player:hasKeyItem(keyId) == false) then    --[[ Uncomment to use]]--
+            -- player:addKeyItem(keyId);
+            -- player:messageSpecial( KEYITEM_OBTAINED, keyId );
         -- end
     end
 
-    if (ally:getVar("BLUE_PROC") == 1) then
+    if (player:getVar("BLUE_PROC") == 1) then
         -- SetDropRate(dropID,itemID,newrate);
         -- SetDropRate(dropID,itemID,newrate);
         -- SetDropRate(dropID,itemID,newrate);  --[[ Uncomment to use]]--
@@ -61,7 +61,7 @@ function onMobDeath(mob, killer, ally)
         -- SetDropRate(dropID,itemID,newrate);
     end
 
-    if (ally:getVar("YELLOW_PROC") == 1) then
+    if (player:getVar("YELLOW_PROC") == 1) then
         -- SetDropRate(dropID,itemID,newrate);
         -- SetDropRate(dropID,itemID,newrate);
         -- SetDropRate(dropID,itemID,newrate);  --[[ Uncomment to use]]--
