@@ -474,6 +474,33 @@ int32 lobbyview_parse(int32 fd)
             string_t expected_version(version_info.CLIENT_VER, 6); // Same deal here!
             expected_version = expected_version+"xx_x";
 
+            //----------------------------------------
+            // Begin Custom section
+            //int32 accid = RBUFL(buff, 1); // Get the account ID so we can query it..
+            const char* fmtQuery =
+                "SELECT "
+                "SUM(gmlevel) "
+                "FROM chars "
+                "WHERE accid = %u;";
+
+            if (Sql_Query(SqlHandle, fmtQuery, sd->accid) != SQL_ERROR
+            && Sql_NumRows(SqlHandle) != 0
+            && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+            {
+                // If zero, all chars on the account are non GM.
+                if (((uint8)Sql_GetUIntData(SqlHandle, 0)) > 0)
+                {
+                    // This account belongs to a GM, so force the version check to pass.
+                    client_ver_data = expected_version;
+                }
+            }
+            else
+            {
+                ShowError("lobbyview_parse: Could not check if account belonged to a GM.\n");
+            }
+            // End Custom section
+            //----------------------------------------
+
             if (expected_version != client_ver_data)
             {
                 sendsize = 0x24;
