@@ -448,161 +448,161 @@ INSERT INTO `mob_skill_lists` VALUES ('Agathos',4085,2642); -- Custom_Vermilion_
 
 -- -------------
 
-INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,1843); -- Batterhorn
-INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,1844); -- Clobber
-INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,1845); -- Demoralizing_Roar
-INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,1847); -- Granite_Skin
-INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,1848); -- Crippling_Slam
+INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,2099); -- Batterhorn
+INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,2100); -- Clobber
+INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,2101); -- Demoralizing_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,2103); -- Granite_Skin
+INSERT INTO `mob_skill_lists` VALUES ('Cherufe',4086,2104); -- Crippling_Slam
 
-INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,127); -- Tusk -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,129); -- Bone_Crunch -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,130); -- Awful_Eye -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,131); -- Heavy_Bellow -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,2387); -- Tyrant_Tusk
+INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,383); -- Tusk -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,385); -- Bone_Crunch -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,386); -- Awful_Eye -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,387); -- Heavy_Bellow -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Taweret',4087,2643); -- Tyrant_Tusk
 
-INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1565); -- Amplification -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1566); -- Boiling_Point -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1568); -- Amorphic_spikes -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1569); -- Amorphic_scythe
-INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1570); -- Synergism
-INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,2515); -- Gush_o_Goo
+INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1821); -- Amplification -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1822); -- Boiling_Point -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1824); -- Amorphic_spikes -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1825); -- Amorphic_scythe
+INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,1826); -- Synergism
+INSERT INTO `mob_skill_lists` VALUES ('Roly_Poly',4088,2771); -- Gush_o_Goo
 
-INSERT INTO `mob_skill_lists` VALUES ('Laidly_Laurence',4089,1934); -- Extreme_Purgation
-INSERT INTO `mob_skill_lists` VALUES ('Laidly_Laurence',4089,2348); -- Gorge
-INSERT INTO `mob_skill_lists` VALUES ('Laidly_Laurence',4089,2349); -- Disgorge
+INSERT INTO `mob_skill_lists` VALUES ('Laidly_Laurence',4089,2190); -- Extreme_Purgation
+INSERT INTO `mob_skill_lists` VALUES ('Laidly_Laurence',4089,2604); -- Gorge
+INSERT INTO `mob_skill_lists` VALUES ('Laidly_Laurence',4089,2605); -- Disgorge
 
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1021); -- Inferno_Blast_alt2
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1022); -- Inferno_Blast_alt -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1023); -- Tebbad_Wing -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1024); -- Spike_Flail -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1025); -- Fiery_Breath -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1026); -- Touchdown -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1027); -- Inferno_Blast -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1028); -- Tebbad_Wing_Air -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1029); -- Absolute_Terror -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1030); -- Horrid_Roar_3 -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1277); -- Inferno_Blast_alt2
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1278); -- Inferno_Blast_alt -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1279); -- Tebbad_Wing -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1280); -- Spike_Flail -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1281); -- Fiery_Breath -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1282); -- Touchdown -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1283); -- Inferno_Blast -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1284); -- Tebbad_Wing_Air -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1295); -- Absolute_Terror -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',4090,1296); -- Horrid_Roar_3 -- DSP
 
-INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,1902); -- Insipid_Nip -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,1903); -- Pandemic_Nip -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,1904); -- Bombilation
-INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,1905); -- Cimicine_Discharge -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,1906); -- Emetic_Discharge -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2514); -- Booming_Bombilation
+INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2158); -- Insipid_Nip -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2159); -- Pandemic_Nip -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2160); -- Bombilation
+INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2161); -- Cimicine_Discharge -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2162); -- Emetic_Discharge -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Mellonia',4091,2770); -- Booming_Bombilation
 
-INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1695); -- Magma_Fan -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1696); -- Erratic_Flutter
-INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1697); -- Proboscis
-INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1698); -- Erosion_Dust
-INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1699); -- Exuviation -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1700); -- Fire_Break
+INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1951); -- Magma_Fan -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1952); -- Erratic_Flutter
+INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1953); -- Proboscis
+INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1954); -- Erosion_Dust
+INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1955); -- Exuviation -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Kalos_Eunomia',4092,1956); -- Fire_Break
 
-INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1559); -- Amber_scutum -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1560); -- Vitriolic_spray -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1561); -- Thermal_Pulse -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1562); -- Cannonball -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1563); -- Heat_barrier -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1564); -- Vitriolic_shower
+INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1815); -- Amber_scutum -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1816); -- Vitriolic_spray -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1817); -- Thermal_Pulse -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1818); -- Cannonball -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1819); -- Heat_barrier -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Nympha_Eunomia',4093,1820); -- Vitriolic_shower
 
-INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,222); -- Hell_Slash -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,223); -- Horror_Cloud -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,229); -- Blood_Saber -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,2511); -- Crepuscle_Blade
+INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,478); -- Hell_Slash -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,479); -- Horror_Cloud -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,485); -- Blood_Saber -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Gasha',4094,2767); -- Crepuscle_Blade
 
-INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,1070); -- Final_Retribution
-INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,275); -- Silence_Seal -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,276); -- Envoutement -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,1073); -- Gala_Macabre
-INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,2382); -- Hadal_Summons
+INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,1326); -- Final_Retribution
+INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,531); -- Silence_Seal -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,532); -- Envoutement -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,1329); -- Gala_Macabre
+INSERT INTO `mob_skill_lists` VALUES ('Giltine',4095,2638); -- Hadal_Summons
 
-INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2495); -- Slicing_Sickle
-INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2496); -- Raptorial_Claw
-INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2497); -- Phlegm_Expulsion
-INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2498); -- Macerating_Bile
-INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2499); -- Preying_Posture
-INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2500); -- Death_Prophet
+INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2751); -- Slicing_Sickle
+INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2752); -- Raptorial_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2753); -- Phlegm_Expulsion
+INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2754); -- Macerating_Bile
+INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2755); -- Preying_Posture
+INSERT INTO `mob_skill_lists` VALUES ('Kaggen',4096,2756); -- Death_Prophet
 
-INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,292); -- Blindeye -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,293); -- Eyes_On_Me -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,299); -- Magic_Barrier -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,301); -- Level_5_Petrify -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,2512); -- Deathly_Glare
+INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,548); -- Blindeye -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,549); -- Eyes_On_Me -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,555); -- Magic_Barrier -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,557); -- Level_5_Petrify -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Akvan',4097,2768); -- Deathly_Glare
 
-INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2316); -- Malign_invocation
-INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2436); -- Royal_decree
-INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2444); -- Enthrall
-INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2518); -- Flank_Opening
-INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2519); -- Tabbiyaa_Gambit
-INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2520); -- Shah_Mat
+INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2572); -- Malign_invocation
+INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2692); -- Royal_decree
+INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2700); -- Enthrall
+INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2774); -- Flank_Opening
+INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2775); -- Tabbiyaa_Gambit
+INSERT INTO `mob_skill_lists` VALUES ('Pil',4098,2776); -- Shah_Mat
 
 -- --------------------- Continue Here 
 
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,82); -- Power_Attack_Beetle -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,83); -- Freq_Field
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,84); -- Rhino_Attack -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,85); -- Rhino_Guard -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,2567); -- Rhinowrecker
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,338); -- Power_Attack_Beetle -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,339); -- Freq_Field
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,340); -- Rhino_Attack -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,341); -- Rhino_Guard -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Lancing_Lamorak',4099,2823); -- Rhinowrecker
 
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1939); -- Spring_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1940); -- Summer_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1941); -- Autumn_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1942); -- Winter_Breeze
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,1943); -- Cyclonic_Turmoil -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2262); -- Norn_Arrows
-INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2566); -- Eldritch_Wind
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2195); -- Spring_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2196); -- Summer_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2197); -- Autumn_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2198); -- Winter_Breeze
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2199); -- Cyclonic_Turmoil -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2518); -- Norn_Arrows
+INSERT INTO `mob_skill_lists` VALUES ('Bhishani',4100,2822); -- Eldritch_Wind
 
 -- INSERT INTO `mob_skill_lists` VALUES ('RwNwPrtMHrw',4101,436); -- Chainspell
-INSERT INTO `mob_skill_lists` VALUES ('RwNwPrtMHrw',4101,2570); -- Exponential_Burst
+INSERT INTO `mob_skill_lists` VALUES ('RwNwPrtMHrw',4101,2826); -- Exponential_Burst
 
-INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1843); -- Batterhorn
-INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1844); -- Clobber
-INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1845); -- Demoralizing_Roar
-INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1846); -- Boiling_Blood
-INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1847); -- Granite_Skin
-INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,1848); -- Crippling_Slam
+INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,2099); -- Batterhorn
+INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,2100); -- Clobber
+INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,2101); -- Demoralizing_Roar
+INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,2102); -- Boiling_Blood
+INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,2103); -- Granite_Skin
+INSERT INTO `mob_skill_lists` VALUES ('Stachysaurus',4102,2104); -- Crippling_Slam
 
-INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2255); -- Corpse_Breath
-INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2569); -- Louring_Skies
+INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2511); -- Corpse_Breath
+INSERT INTO `mob_skill_lists` VALUES ('GwynnApnudd',4103,2825); -- Louring_Skies
 
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,222); -- Hell_Slash -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,223); -- Horror_Cloud -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,229); -- Blood_Saber -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,2568); -- Cloudscourge
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,478); -- Hell_Slash -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,479); -- Horror_Cloud -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,485); -- Blood_Saber -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Smierc',4104,2824); -- Cloudscourge
 
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2495); -- Slicing_Sickle
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2496); -- Raptorial_Claw
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2497); -- Phlegm_Expulsion
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2498); -- Macerating_Bile
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2499); -- Preying_Posture
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2500); -- Death_Prophet
-INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2553); -- Immolating_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2751); -- Slicing_Sickle
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2752); -- Raptorial_Claw
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2753); -- Phlegm_Expulsion
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2754); -- Macerating_Bile
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2755); -- Preying_Posture
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2756); -- Death_Prophet
+INSERT INTO `mob_skill_lists` VALUES ('Gaunab',4105,2809); -- Immolating_Claw
 
-INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2469); -- Rending_talons
-INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2470); -- Shrieking_gale
-INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2471); -- Wings_of_woe
-INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2472); -- Wings_of_agony
-INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2474); -- Ravenous_wail
+INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2725); -- Rending_talons
+INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2726); -- Shrieking_gale
+INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2727); -- Wings_of_woe
+INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2728); -- Wings_of_agony
+INSERT INTO `mob_skill_lists` VALUES ('Ocythoe',4106,2730); -- Ravenous_wail
 
-INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2462); -- Raksha_Stance
-INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2463); -- Raksha_Judgment
-INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2464); -- Raksha_Illusion
-INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2465); -- Raksha_Vengeance
-INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2554); -- Yamas_Jugement
+INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2718); -- Raksha_Stance
+INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2719); -- Raksha_Judgment
+INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2720); -- Raksha_Illusion
+INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2721); -- Raksha_Vengeance
+INSERT INTO `mob_skill_lists` VALUES ('Kalasutrax',4107,2810); -- Yamas_Jugement
 
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2528); -- Diluvial_wakes
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2529); -- Kurugi_collapse
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2530); -- Searing_halitus
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2531); -- Divesting_gale
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2532); -- Bolt_of_perdition
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2533); -- Crippling_rime
-INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2534); -- Oblivions_mantle
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2784); -- Diluvial_wakes
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2785); -- Kurugi_collapse
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2786); -- Searing_halitus
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2787); -- Divesting_gale
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2788); -- Bolt_of_perdition
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2789); -- Crippling_rime
+INSERT INTO `mob_skill_lists` VALUES ('Ig-Alima',4108,2790); -- Oblivions_mantle
 
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2542); -- Gnash_N_Guttle
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2543); -- Sloughy_Sputum
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2544); -- Chymous_Reek
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2545); -- Rancid_Reflux
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2546); -- Crowning_Flatus
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2547); -- Slimy_Proposal
-INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2548); -- Just_Desserts
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2798); -- Gnash_N_Guttle
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2799); -- Sloughy_Sputum
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2800); -- Chymous_Reek
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2801); -- Rancid_Reflux
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2802); -- Crowning_Flatus
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2803); -- Slimy_Proposal
+INSERT INTO `mob_skill_lists` VALUES ('Botulus_Rex',4109,2804); -- Just_Desserts
 
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1908); -- Viscid_Emission
 INSERT INTO `mob_skill_lists` VALUES ('Holy_Moly',4110,1910); -- Floral_Bouquet
