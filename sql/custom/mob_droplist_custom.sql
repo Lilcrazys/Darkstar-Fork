@@ -96,6 +96,11 @@ DELETE FROM `mob_droplist` WHERE dropId=32 and type=0 and itemId=3127 and rate=5
 INSERT INTO `mob_droplist` VALUES (32,0,12094,137); -- Creed Sabatons
 
 -- -----------
+-- Air Elemental
+-- -----------
+INSERT INTO `mob_droplist` VALUES (41,0,1257,5); -- Wind Ore
+
+-- -----------
 -- Alfard
 -- -----------
 
@@ -576,6 +581,13 @@ INSERT INTO `mob_droplist` VALUES (535,0,14961,185); -- Ares' Gauntlets
 INSERT INTO `mob_droplist` VALUES (535,0,10500,108); -- Ogier's Gauntlets
 
 -- -----------
+-- Dark Elemental
+-- -----------
+INSERT INTO `mob_droplist` VALUES (639,0,1262,5); -- Dark Ore
+INSERT INTO `mob_droplist` VALUES (640,0,1262,5); -- Dark Ore
+INSERT INTO `mob_droplist` VALUES (642,0,1262,5); -- Dark Ore
+
+-- -----------
 -- Dea
 -- -----------
 
@@ -638,6 +650,12 @@ INSERT INTO `mob_droplist` VALUES (808,0,10502,181); -- Rubeus Gloves
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (816,0,3552,28);
+
+-- -----------
+-- Earth Elemental
+-- -----------
+INSERT INTO `mob_droplist` VALUES (829,0,1258,5); -- Earth Ore
+INSERT INTO `mob_droplist` VALUES (830,0,1258,5); -- Earth Ore
 
 -- -----------
 -- Ecentric Eve
@@ -708,6 +726,15 @@ INSERT INTO `mob_droplist` VALUES (918,0,1526,700); -- Wyrm Beard
 -- Gasher
 -- -----------
 INSERT INTO `mob_droplist` VALUES (1086,0,3940,35);
+
+-- -----------
+-- Fire Elemental
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (955,0,1255,5); -- Fire Ore
+INSERT INTO `mob_droplist` VALUES (957,0,1255,5); 
+INSERT INTO `mob_droplist` VALUES (958,0,1255,5); 
+INSERT INTO `mob_droplist` VALUES (959,0,1255,5); 
 
 -- -----------
 -- Fistule
@@ -870,6 +897,13 @@ INSERT INTO `mob_droplist` VALUES (1708,0,3198,102); --  Ferine Seal: Ft.
 INSERT INTO `mob_droplist` VALUES (1708,0,3200,145); --  Sylvan Seal: Ft.
 INSERT INTO `mob_droplist` VALUES (1708,0,3204,90); --  Caller's Seal: Ft.
 INSERT INTO `mob_droplist` VALUES (1708,0,3205,187); --  Mavi Seal: Ft.
+
+-- -----------
+-- Ice Elemental
+-- -----------
+INSERT INTO `mob_droplist` VALUES (1754,0,1256,5); -- Ice Ore
+INSERT INTO `mob_droplist` VALUES (1755,0,1256,5); -- Ice Ore
+INSERT INTO `mob_droplist` VALUES (1756,0,1256,5); -- Ice Ore
 
 -- -----------
 -- Iktomi
@@ -1186,6 +1220,12 @@ INSERT INTO `mob_droplist` VALUES (1972,0,20824,81); -- Faizzeer +1
 
 DELETE FROM `mob_droplist` WHERE dropId=2036 and type=0 and itemId=15351 and rate=70; -- Bounding Boots
 INSERT INTO `mob_droplist` VALUES (2036,0,13014,70); -- Leaping Boots
+
+-- -----------
+-- Light Elemental
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (2059,0,1261,5); -- Light Ore
 
 -- -----------
 -- Lil' Apkallu
@@ -1982,14 +2022,6 @@ INSERT INTO `mob_droplist` VALUES (4033,0,20721,136);
 INSERT INTO `mob_droplist` VALUES (4033,0,280,1000);
 
 -- -----------
--- Warbler
--- -----------
-
-DELETE FROM `mob_droplist` WHERE dropId=4071 and type=0 and itemId=3114 and rate=30; -- comment me
-DELETE FROM `mob_droplist` WHERE dropId=4071 and type=0 and itemId=3118 and rate=30; -- comment me
-INSERT INTO `mob_droplist` VALUES (4071,0,12107,108); --  Savant's Loafers
-
--- -----------
 -- Vulpange
 -- -----------
 
@@ -2003,6 +2035,22 @@ INSERT INTO `mob_droplist` VALUES (4035,0,10320,96); -- Enif Manopolas
 INSERT INTO `mob_droplist` VALUES (4035,0,10367,65); -- Enif Gambieras
 INSERT INTO `mob_droplist` VALUES (4035,0,10501,124); -- Athos's Gloves
 INSERT INTO `mob_droplist` VALUES (4035,0,10601,131); -- Athos's Boots
+
+-- -----------
+-- Warbler
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=4071 and type=0 and itemId=3114 and rate=30; -- comment me
+DELETE FROM `mob_droplist` WHERE dropId=4071 and type=0 and itemId=3118 and rate=30; -- comment me
+INSERT INTO `mob_droplist` VALUES (4071,0,12107,108); --  Savant's Loafers
+
+
+
+-- -----------
+-- Water Elemental
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (4098,0,1260,5); -- Water Ore
 
 -- -----------
 -- Yaanei
