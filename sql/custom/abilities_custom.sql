@@ -10,16 +10,16 @@
 -- INSERT INTO `abilities` VALUES (abilityId,name,job,level,validTarget,recastTime,recastId,message1,message2,animation,animationTime,castTime,actionType,range,isAOE,CE,VE,meritModID,addType,'expansion');
 -- Keeps keep it sorted by ID and use gaps in file to show gaps in IDs.
 
-REPLACE INTO `abilities` VALUES (100,'dancers_roll',17,61,1,60,193,420,0,116,PH,PH,PH,8.0,1,1,80,0,8,'WOTG');
-REPLACE INTO `abilities` VALUES (101,'scholars_roll',17,64,1,60,193,420,0,117,PH,PH,PH,8.0,1,1,80,0,8,'WOTG');
-INSERT INTO `abilities` VALUES (102,'bolters_roll',17,76,1,60,193,420,0,118,PH,PH,PH,8.0,1,1,80,0,8,'TOAU');
-INSERT INTO `abilities` VALUES (103,'casters_roll',17,79,1,60,193,420,0,119,PH,PH,PH,8.0,1,1,80,0,8,'TOAU');
-INSERT INTO `abilities` VALUES (104,'coursers_roll',17,81,1,60,193,420,0,120,PH,PH,PH,8.0,1,1,80,0,8,'TOAU');
-INSERT INTO `abilities` VALUES (105,'blitzers_roll',17,83,1,60,193,420,0,121,PH,PH,PH,8.0,1,1,80,0,8,'TOAU');
-INSERT INTO `abilities` VALUES (106,'tacticians_roll',17,86,1,60,193,420,0,122,PH,PH,PH,8.0,1,1,80,0,8,'TOAU');
+REPLACE INTO `abilities` VALUES (100,'dancers_roll',17,61,1,60,193,420,0,116,2000,0,6,8.0,1,1,80,0,8,'WOTG');
+REPLACE INTO `abilities` VALUES (101,'scholars_roll',17,64,1,60,193,420,0,117,2000,0,6,8.0,1,1,80,0,8,'WOTG');
+INSERT INTO `abilities` VALUES (102,'bolters_roll',17,76,1,60,193,420,0,118,2000,0,6,8.0,1,1,80,0,8,'TOAU');
+INSERT INTO `abilities` VALUES (103,'casters_roll',17,79,1,60,193,420,0,119,2000,0,6,8.0,1,1,80,0,8,'TOAU');
+INSERT INTO `abilities` VALUES (104,'coursers_roll',17,81,1,60,193,420,0,120,2000,0,6,8.0,1,1,80,0,8,'TOAU');
+INSERT INTO `abilities` VALUES (105,'blitzers_roll',17,83,1,60,193,420,0,121,2000,0,6,8.0,1,1,80,0,8,'TOAU');
+INSERT INTO `abilities` VALUES (106,'tacticians_roll',17,86,1,60,193,420,0,122,2000,0,6,8.0,1,1,80,0,8,'TOAU');
 
-REPLACE INTO `abilities` VALUES (115,'light_shot',17,40,4,60,195,110,0,123,PH,PH,PH,18.0,0,0,0,0,0,'TOAU');
-REPLACE INTO `abilities` VALUES (116,'dark_shot',17,40,4,60,195,110,0,124,PH,PH,PH,18.0,0,0,0,0,0,'TOAU');
+REPLACE INTO `abilities` VALUES (115,'light_shot',17,40,4,60,195,110,0,123,2000,0,6,18.0,0,0,0,0,0,'TOAU');
+REPLACE INTO `abilities` VALUES (116,'dark_shot',17,40,4,60,195,110,0,124,2000,0,6,18.0,0,0,0,0,0,'TOAU');
 
 INSERT INTO `abilities` VALUES (212,'despoil',6,77,4,300,61,125,0,232,PH,PH,PH,3.0,0,1,300,0,0,'WOTG');
 INSERT INTO `abilities` VALUES (234,'avatars_favor',15,55,1,300,176,0,0,220,PH,PH,PH,10.0,1,1,80,0,0,'WOTG');
