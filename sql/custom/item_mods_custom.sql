@@ -2027,175 +2027,181 @@ INSERT INTO `item_mods` VALUES (22064,12,50); -- INT
 INSERT INTO `item_mods` VALUES (22064,28,165); -- MAB
 INSERT INTO `item_mods` VALUES (22064,30,40); -- MACC
 
+
+
+
+
+
+-- no!
 -- ------------ Test Mods for Aeonic Weapons ----------------
 
 -- Godhands
-INSERT INTO `item_mods` VALUES (20515,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20515,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20515,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20515,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20515,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20515,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20515,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20515,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20515,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20515,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20515,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20515,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20515,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20515,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20515,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20515,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20515,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20515,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20515,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20515,175,100); -- Skill Chain DMG
 
 -- Aeneas
-INSERT INTO `item_mods` VALUES (20594,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20594,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20594,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20594,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20594,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20594,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20594,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20594,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20594,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20594,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20594,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20594,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20594,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20594,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20594,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20594,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20594,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20594,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20594,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20594,175,100); -- Skill Chain DMG
 
 -- Sequence 
-INSERT INTO `item_mods` VALUES (20695,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20695,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20695,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20695,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20695,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20695,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20695,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20695,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20695,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20695,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20695,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20695,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20695,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20695,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20695,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20695,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20695,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20695,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20695,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20695,175,100); -- Skill Chain DMG
 
 -- Tri edge
-INSERT INTO `item_mods` VALUES (21753,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21753,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21753,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21753,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21753,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21753,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21753,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21753,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21753,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21753,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (21753,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (21753,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (21753,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (21753,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (21753,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (21753,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (21753,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (21753,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (21753,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (21753,175,100); -- Skill Chain DMG
 
 -- Chango
-INSERT INTO `item_mods` VALUES (20843,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20843,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20843,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20843,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20843,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20843,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20843,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20843,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20843,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20843,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20843,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20843,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20843,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20843,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20843,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20843,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20843,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20843,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20843,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20843,175,100); -- Skill Chain DMG
 
 -- Anguta
-INSERT INTO `item_mods` VALUES (20890,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20890,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20890,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20890,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20890,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20890,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20890,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20890,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20890,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20890,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20890,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20890,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20890,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20890,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20890,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20890,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20890,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20890,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20890,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20890,175,100); -- Skill Chain DMG
 
 -- Trishula
-INSERT INTO `item_mods` VALUES (20935,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20935,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20935,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20935,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20935,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20935,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20935,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20935,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20935,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20935,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20935,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20935,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20935,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20935,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20935,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20935,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20935,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20935,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20935,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20935,175,100); -- Skill Chain DMG
 
 -- Heishi Shorinken 
-INSERT INTO `item_mods` VALUES (20977,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20977,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20977,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20977,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (20977,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20977,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20977,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20977,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20977,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20977,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (20977,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (20977,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (20977,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (20977,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (20977,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (20977,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (20977,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (20977,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (20977,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (20977,175,100); -- Skill Chain DMG
 
 -- Dojikiri Yasutsuna 
-INSERT INTO `item_mods` VALUES (21025,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21025,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21025,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21025,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21025,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21025,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21025,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21025,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21025,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21025,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (21025,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (21025,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (21025,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (21025,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (21025,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (21025,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (21025,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (21025,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (21025,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (21025,175,100); -- Skill Chain DMG
 
 -- Tishtrya
-INSERT INTO `item_mods` VALUES (21082,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21082,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21082,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21082,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21082,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21082,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21082,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21082,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21082,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21082,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (21082,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (21082,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (21082,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (21082,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (21082,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (21082,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (21082,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (21082,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (21082,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (21082,175,100); -- Skill Chain DMG
 
 -- Khatvanga
-INSERT INTO `item_mods` VALUES (21147,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21147,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21147,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21147,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21147,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21147,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21147,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21147,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21147,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21147,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (21147,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (21147,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (21147,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (21147,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (21147,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (21147,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (21147,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (21147,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (21147,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (21147,175,100); -- Skill Chain DMG
 
 -- Fail NOT
-INSERT INTO `item_mods` VALUES (22117,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (22117,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (22117,73,10); -- STP
-INSERT INTO `item_mods` VALUES (22117,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (22117,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (22117,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (22117,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (22117,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (22117,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (22117,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (22117,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (22117,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (22117,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (22117,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (22117,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (22117,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (22117,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (22117,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (22117,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (22117,175,100); -- Skill Chain DMG
 
 -- Fomalhaut
-INSERT INTO `item_mods` VALUES (21485,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21485,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21485,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21485,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21485,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21485,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21485,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21485,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21485,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21485,175,100); -- Skill Chain DMG
+-- INSERT INTO `item_mods` VALUES (21485,506,100); -- Extra DMG Chance 10%
+-- INSERT INTO `item_mods` VALUES (21485,507,250); -- Extra DMG X2.5
+-- INSERT INTO `item_mods` VALUES (21485,73,10); -- STP
+-- INSERT INTO `item_mods` VALUES (21485,345,500); -- TP Bonus
+-- INSERT INTO `item_mods` VALUES (21485,302,5); -- TRIP ATK
+-- INSERT INTO `item_mods` VALUES (21485,288,10); -- DBL ATK
+-- INSERT INTO `item_mods` VALUES (21485,165,5); -- Crit Rate
+-- INSERT INTO `item_mods` VALUES (21485,421,25); -- Crit DMG
+-- INSERT INTO `item_mods` VALUES (21485,174,100); -- Skill Chain Bonus
+-- INSERT INTO `item_mods` VALUES (21485,175,100); -- Skill Chain DMG
 
 -- Marsyas
-INSERT INTO `item_mods` VALUES (21398,454,50); -- Song Duration
+-- INSERT INTO `item_mods` VALUES (21398,454,50); -- Song Duration
 
 -- Srivatsa
-INSERT INTO `item_mods` VALUES (26403,2,150); -- HP
-INSERT INTO `item_mods` VALUES (26403,5,150); -- MP
-INSERT INTO `item_mods` VALUES (26403,27,15); -- ENM
-INSERT INTO `item_mods` VALUES (26403,109,129); -- Shield skill (Custom)
-INSERT INTO `item_mods` VALUES (26403,161,-8); -- DMG TKN
-INSERT INTO `item_mods` VALUES (26403,831,-25); -- MAGIC DMG TKN
-INSERT INTO `item_mods` VALUES (26403,416,10); -- Annuls DMG 
-INSERT INTO `item_mods` VALUES (26403,831,35); -- ACC
-INSERT INTO `item_mods` VALUES (26403,426,35); -- ATK
+-- INSERT INTO `item_mods` VALUES (26403,2,150); -- HP
+-- INSERT INTO `item_mods` VALUES (26403,5,150); -- MP
+-- INSERT INTO `item_mods` VALUES (26403,27,15); -- ENM
+-- INSERT INTO `item_mods` VALUES (26403,109,129); -- Shield skill (Custom)
+-- INSERT INTO `item_mods` VALUES (26403,161,-8); -- DMG TKN
+-- INSERT INTO `item_mods` VALUES (26403,831,-25); -- MAGIC DMG TKN
+-- INSERT INTO `item_mods` VALUES (26403,416,10); -- Annuls DMG 
+-- INSERT INTO `item_mods` VALUES (26403,831,35); -- ACC
+-- INSERT INTO `item_mods` VALUES (26403,426,35); -- ATK
 
