@@ -658,6 +658,12 @@ INSERT INTO `mob_droplist` VALUES (829,0,1258,5); -- Earth Ore
 INSERT INTO `mob_droplist` VALUES (830,0,1258,5); -- Earth Ore
 
 -- -----------
+-- Eastern Shadow
+-- -----------
+DELETE FROM `mob_droplist` WHERE dropId=835 and type=0 and itemId=18714 and rate=90;
+INSERT INTO `mob_droplist` VALUES (835,0,17187,65);
+
+-- -----------
 -- Ecentric Eve
 -- -----------
 
@@ -2051,6 +2057,13 @@ INSERT INTO `mob_droplist` VALUES (4071,0,12107,108); --  Savant's Loafers
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (4098,0,1260,5); -- Water Ore
+
+-- -----------
+-- Western Shadow
+-- -----------
+
+DELETE FROM `mob_droplist` WHERE dropId=4137 and type=0 and itemId=18752 and rate=170;
+INSERT INTO `mob_droplist` VALUES (4137,0,17472,76);
 
 -- -----------
 -- Yaanei
