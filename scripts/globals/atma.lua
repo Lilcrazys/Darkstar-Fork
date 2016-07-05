@@ -346,7 +346,7 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_FORCE_DARK_DWBONUS, 1);
     elseif (pwr == 94) then -- ATMA_OF_THE_SUNDERING_SLASH
         target:addMod(MOD_ATT, 20);
-        target:addMod(MOD_REGAIN, 3);
+        target:addMod(MOD_REGAIN, 30); -- Needs latent for 2hand weapon
     elseif (pwr == 95) then -- ATMA_OF_ENTWINED_SERPENTS
         target:addMod(MOD_ATT, 20);
         target:addMod(MOD_DOUBLE_ATTACK, 15);
@@ -752,7 +752,7 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_FORCE_DARK_DWBONUS, 1);
     elseif (pwr == 94) then -- ATMA_OF_THE_SUNDERING_SLASH
         target:delMod(MOD_ATT, 20);
-        target:delMod(MOD_REGAIN, 3);
+        target:delMod(MOD_REGAIN, 30); -- Needs latent for 2hand weapon
     elseif (pwr == 95) then -- ATMA_OF_ENTWINED_SERPENTS
         target:delMod(MOD_ATT, 20);
         target:delMod(MOD_DOUBLE_ATTACK, 15);
