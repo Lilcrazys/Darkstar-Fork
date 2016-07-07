@@ -14,6 +14,7 @@ function onTrigger(player, target, amount)
     -- Displaying commands this player can use, sorted by GM tier, 3 at a time.
     if (gmlvl >= 0) then -- Regular non GM players
         player:PrintToPlayer("Commands available to all players:");
+        player:PrintToPlayer("@ecv (displays the servers Expected Client Version)");
         player:PrintToPlayer("@where  @revision  @trial");
         player:PrintToPlayer("@shop  @ah  @atma  @grats");
         player:PrintToPlayer("@tele   @setmusic  @costume");
