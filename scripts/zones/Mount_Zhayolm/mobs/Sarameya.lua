@@ -22,7 +22,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID());
 
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_REGAIN,15);
     mob:setMod(MOD_UFASTCAST, 45);
 
@@ -95,7 +94,6 @@ function onMobFight(mob, target)
     if (useChainspell == true) then
         mob:useMobAbility(692); -- Chainspell
         mob:setMobMod(MOBMOD_GA_CHANCE, 100);
-
     end
 
     -- Spams TP moves and -ga spells
@@ -111,8 +109,8 @@ function onMobFight(mob, target)
     if (mob:hasStatusEffect(EFFECT_BLAZE_SPIKES) == true) then
         mob:setMod(MOD_REGEN, math.floor(mob:getMaxHP()/100));
     else
-        if (mob:getMod(MOD_REGEN) > 0) then
-            mob:setMod(MOD_REGEN, 0);
+        if (mob:getMod(MOD_REGEN) > 10) then
+            mob:setMod(MOD_REGEN, 10);
         end
     end
 
