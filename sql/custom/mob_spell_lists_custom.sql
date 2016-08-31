@@ -634,25 +634,25 @@ INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_50to100', 447, 177, 1, 255); -
 INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_50to100', 447, 204, 1, 255); -- Flare (Only used when over 50% HP)
 INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_50to100', 447, 259, 1, 255); -- Sleepga 2
 
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 163, 1, 255); -- Stone 5
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 168, 1, 255); -- Thunder 5
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 192, 1, 255); -- Stonega 4
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 197, 1, 255); -- Thundaga 4
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 255, 1, 255); -- Break
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 274, 1, 255); -- Sleepga 2
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 357, 1, 255); -- Slowga
-INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 448, 365, 1, 255); -- Breakga
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 448, 181, 1, 255); -- Blizzaga 3 (Only used when under 50% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 448, 182, 1, 255); -- Blizzaga 4 (Only used when under 50% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 448, 206, 1, 255); -- Freeze 2 (Only used when under 50% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 448, 259, 1, 255); -- Sleepga 2
 
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 449, 181, 1, 255); -- Blizzaga 3 (Only used when under 50% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 449, 182, 1, 255); -- Blizzaga 4 (Only used when under 50% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 449, 206, 1, 255); -- Freeze 2 (Only used when under 50% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_50', 449, 259, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 449, 181, 1, 255); -- Blizzaga 3 (Only used when under 50% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 449, 182, 1, 255); -- Blizzaga 4 (Only used when under 50% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 449, 206, 1, 255); -- Freeze 2 (Only used when under 50% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 449, 219, 1, 255); -- Comet (Only used when under 20% HP)
+INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 449, 259, 1, 255); -- Sleepga 2
 
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 450, 181, 1, 255); -- Blizzaga 3 (Only used when under 50% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 450, 182, 1, 255); -- Blizzaga 4 (Only used when under 50% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 450, 206, 1, 255); -- Freeze 2 (Only used when under 50% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 450, 219, 1, 255); -- Comet (Only used when under 20% HP)
-INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_under_20', 450, 259, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 163, 1, 255); -- Stone 5
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 192, 1, 255); -- Stonega 4
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 255, 1, 255); -- Break
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 274, 1, 255); -- Sleepga 2
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 357, 1, 255); -- Slowga
+INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 450, 365, 1, 255); -- Breakga
 
 INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 451, 147, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 451, 157, 1, 255); -- Aero 5
