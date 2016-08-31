@@ -9,11 +9,11 @@
 -- ---------------------------------------------------------------------------
 ALTER TABLE `weapon_skills` MODIFY `weaponskillid` smallint(4); -- Required because DSP stupidity
 -- REPLACE INTO `weapon_skills` VALUES (weaponskillid,'name',x'jobs',type,skilllevel,element,animation,animationtime,range,aoe,primary_sc,secondary_sc,tertiary_sc,main_only);
-REPLACE INTO `weapon_skills` VALUES (238,'uriel_blade',x'01000000010001010000000000000001010000000001',3,400,128,243,2000,6,1,13,10,0,0);
-REPLACE INTO `weapon_skills` VALUES (239,'glory_slash',x'02000000020202020202020202020002020002000002',3,400,0,242,2000,6,1,13,10,0,0);
-REPLACE INTO `weapon_skills` VALUES (240,'tartarus_torpor',x'01010101000001000001000000010100000000010000',12,400,0,149,2000,10,1,2,8,0,0);
+REPLACE INTO `weapon_skills` VALUES (238,'uriel_blade',0x01000000010001010000000000000001010000000001,3,400,128,243,2000,6,1,13,10,0,0);
+REPLACE INTO `weapon_skills` VALUES (239,'glory_slash',0x02000000020202020202020202020002020002000002,3,400,0,242,2000,6,1,13,10,0,0);
+REPLACE INTO `weapon_skills` VALUES (240,'tartarus_torpor',0x01010101000001000001000000010100000000010000,12,400,0,149,2000,10,1,2,8,0,0);
 
-INSERT INTO `weapon_skills` VALUES (227,'knights_of_rotund',x'00000000000000000000000000000000000000000000',3,0,0,52,2000,5,1,13,11,0,0); -- Job mask stays zeros! WS is provided by modifier on the item only!
+INSERT INTO `weapon_skills` VALUES (227,'knights_of_rotund',0x00000000000000000000000000000000000000000000,3,0,0,52,2000,5,1,13,11,0,0); -- Job mask stays zeros! WS is provided by modifier on the item only!00
 
 
 -- Teo's work in progress section, don't mess with it yet.
