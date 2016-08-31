@@ -673,12 +673,6 @@ function MobDrainAttribute(mob, target, typeEffect, power, tick, duration)
         positive = EFFECT_INT_BOOST;
     elseif (typeEffect == EFFECT_CHR_DOWN) then
         positive = EFFECT_CHR_BOOST;
-    elseif (effect == EFFECT_TERROR) then
-        effectres = MOD_TERRORRES;
-    --[[
-    elseif (effect == EFFECT_DOOM) then
-        effectres = MOD_DOOMRES;
-    --]]
     end
 
     if (positive ~= nil) then
