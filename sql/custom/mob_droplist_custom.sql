@@ -2469,7 +2469,7 @@ INSERT INTO `mob_droplist` VALUES (9040,0,740,73);
 
 INSERT INTO `mob_droplist` VALUES (9041,0,3925,352); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9041,0,3925,185); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (90410,0,740,63); 
+INSERT INTO `mob_droplist` VALUES (9041,0,740,63); 
 
 INSERT INTO `mob_droplist` VALUES (9042,0,3925,447); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9042,0,3925,143); -- Tanzanite Jewel

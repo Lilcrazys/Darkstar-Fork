@@ -15,11 +15,6 @@
 -- INSERT INTO `item_mods_pet` VALUES (itemId, modId, value); -- stats given
 
 -- -------------------------------------------------------
---  Sabong Earring - LVL 99
--- -------------------------------------------------------
-INSERT INTO `item_mods_pet` VALUES (10299, 288, 2); -- Pet: Double Attack +2%
-
--- -------------------------------------------------------
 -- Moepapa Stone - LVL 94
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (10817, 384, 51); --  Pet: Haste+5%
