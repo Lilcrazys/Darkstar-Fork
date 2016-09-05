@@ -12,8 +12,6 @@ require("scripts/globals/magic");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-
     -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
@@ -56,8 +54,9 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
+    --[[
     -- Set Harvesman's spawnpoint and respawn time (21-24 hours)
-    -- Set spawnpoint and respawn time (21-24 hours)
     UpdateNMSpawnPoint(mob:getID());
     mob:setRespawnTime(math.random(75600,86400));
+    ]]
 end;

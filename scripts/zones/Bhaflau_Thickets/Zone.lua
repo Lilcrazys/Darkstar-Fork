@@ -65,7 +65,9 @@ end;
 function onInitialize(zone)
 
     -- Harvestman
+    --[[
     SetRespawnTime(16990252, 900, 10800);
+    ]]
 
 end;
 
