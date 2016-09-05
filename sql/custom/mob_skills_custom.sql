@@ -1050,7 +1050,7 @@ INSERT INTO `mob_skills` VALUES (1020,721,'Meikyo_Shisui',0,7.0,2000,0,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (1021,722,'Mijin_Gakure',1,20.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1022,723,'Call_Wyvern',0,7.0,2000,0,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (1023,724,'Astral_Flow_Pet',0,7.0,2000,0,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (1024,725,'Warp_Out',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1024,725,'Custom_Warp_Out',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1025,726,'Warp_In',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1026,727,'Arbor_Storm',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1027,728,'Combo',0,7.0,2000,1500,4,0,0,0);

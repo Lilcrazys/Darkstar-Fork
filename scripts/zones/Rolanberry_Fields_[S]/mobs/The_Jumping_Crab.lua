@@ -110,13 +110,13 @@ function onMobFight(mob, target)
     elseif (BattleTime > 7200 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
         mob:setLocalVar("SuperDuperJump", 1);
-        mob:useMobAbility(768); -- SuperDuperJump
+        mob:useMobAbility(1024); -- SuperDuperJump
     elseif (BattleTime > 3600 and mob:getLocalVar("isBoard") == 0 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
         -- target:PrintToPlayer(string.format("Claim count: %u ", GetServerVariable("JumpingCrabClaim")))
         if (GetServerVariable("JumpingCrabClaim") == 3) then -- Strike 3, yer out (Lost claim too many times and fought past 1hr mark)!
             mob:setLocalVar("SuperDuperJump", 1);
-            mob:useMobAbility(768); -- SuperDuperJump
+            mob:useMobAbility(1024); -- SuperDuperJump
         else
             mob:SpoofChatParty("Is beginning to look disinterested in the battle.", MESSAGE_ECHO);
             mob:setLocalVar("isBoard", 1);
@@ -127,48 +127,48 @@ function onMobFight(mob, target)
     elseif (mob:getHPP() <= 9 and mob:getLocalVar("2hr") == 6) then
         mob:setLocalVar("2hr", 7);
         mob:addMod(MOD_HUMANOID_KILLER, 1);
-        mob:useMobAbility(1637); -- Do Spirit_Surge!
+        mob:useMobAbility(1893); -- Do Spirit_Surge!
     elseif (mob:getHPP() <= 33) then
         if (mob:getLocalVar("2hr") == 5) then
             mob:setLocalVar("2hr", 6);
-            mob:useMobAbility(1637); -- Do Spirit_Surge!
+            mob:useMobAbility(1893); -- Do Spirit_Surge!
         elseif (mob:getLocalVar("2hr") == 4) then
             mob:setLocalVar("2hr", 5);
             mob:addMod(MOD_HUMANOID_KILLER, 1);
-            mob:useMobAbility(3009); -- Do Elemental_Sforzo!
+            mob:useMobAbility(3265); -- Do Elemental_Sforzo!
         end
     elseif (mob:getHPP() <= 50 and mob:getLocalVar("2hr") == 3) then
         mob:setLocalVar("2hr", 4);
-        mob:useMobAbility(3009); -- Do Elemental_Sforzo!
+        mob:useMobAbility(3265); -- Do Elemental_Sforzo!
     elseif (mob:getHPP() <= 66 and mob:getLocalVar("2hr") == 2) then
         mob:setLocalVar("2hr", 3);
         mob:addMod(MOD_HUMANOID_KILLER, 1);
-        mob:useMobAbility(1637); -- Do Spirit_Surge!
+        mob:useMobAbility(1893); -- Do Spirit_Surge!
     elseif (mob:getHPP() <= 75) then
         if (mob:getLocalVar("2hr") == 1) then
             mob:setLocalVar("2hr", 2);
-            mob:useMobAbility(1637); -- Do Spirit_Surge!
+            mob:useMobAbility(1893); -- Do Spirit_Surge!
         elseif (mob:getLocalVar("2hr") == 0) then
             mob:setLocalVar("2hr", 1);
             mob:addMod(MOD_HUMANOID_KILLER, 1);
-            mob:useMobAbility(3009); -- Do Elemental_Sforzo!
+            mob:useMobAbility(3265); -- Do Elemental_Sforzo!
         end
 
     -- 2/3 chance of using extra jump attacks every 30/45/90 seconds.
     elseif (mob:getBattleTime() - J3 > 90) then
         mob:setLocalVar("J3", mob:getBattleTime());
         if (math.random(1,3) ~= 2) then
-            mob:useMobAbility(808); -- Crab_Jump_3
+            mob:useMobAbility(1064); -- Crab_Jump_3
         end
     elseif (mob:getBattleTime() - J2 > 45) then
         mob:setLocalVar("J2", mob:getBattleTime());
         if (math.random(1,3) ~= 2) then
-            mob:useMobAbility(477); -- Crab_Jump_2
+            mob:useMobAbility(733); -- Crab_Jump_2
         end
     elseif (mob:getBattleTime() - J1 > 30) then
         mob:setLocalVar("J1", mob:getBattleTime());
         if (math.random(1,3) ~= 2) then
-            mob:useMobAbility(462); -- Crab_Jump_1
+            mob:useMobAbility(718); -- Crab_Jump_1
         end
 
     -- Reactions to Merit ws, stun, and terror..
@@ -345,8 +345,8 @@ end;
 -----------------------------------
 
 function onCriticalHit(mob)
-    -- Get 5 extra TP and 1 hit duration Enwater every time a critical lands
-    mob:addTP(5); -- Bonus TP
+    -- Get 50 extra TP and 1 hit duration Enwater every time a critical lands
+    mob:addTP(50); -- Bonus TP
     mob:setLocalVar("Enwater", 1);
 end
 
