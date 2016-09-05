@@ -29,7 +29,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,90);
-    mob:SetMobSkillAttack(true);
+    -- mob:SetMobSkillAttack(LIST_ID_HERE);
 end;
 
 -----------------------------------
@@ -52,9 +52,9 @@ end;
 
 function onMobFight(mob, target)
     local Form_Change = mob:getLocalVar("PW_Form");
-    -- this should change twice once at 75% for 2 wing form and then again at 50% for 4 wing form.
-    -- Currently cant find animation sub for 2 wing mode, will add in once i can figure it out.
-    -- Also need to sort a check for fetters up to adjsut dmg taken.
+    -- This should change twice once at 75% for 2 wing form and then again at 50% for 4 wing form.
+    -- Currently cant find animation sub for 2 wing mode, will add in once I can figure it out.
+    -- Also need to sort a check for fetters up to adjust dmg taken.
     if (mob:getHPP() <= 50) then
         if (Form_Change == 0) then
             mob:AnimationSub(2);
@@ -84,8 +84,7 @@ end;
 -----------------------------------
 
 function onSpellCast(caster,target,spell)
--- Need to check for any spell landing then random chance fetter pop.  Hoping i dont have to array his whole fucking spell list....
--- bet I do...
+    -- Need to check for any spell landing then random chance fetter pop.
 end;
 
 

@@ -26,7 +26,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 15);
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,100);
-    mob:SetMobSkillAttack(true);
+    -- mob:SetMobSkillAttack(LIST_ID_HERE);
     mob:setMod(MOD_HUMANOID_KILLER,8);
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_STUNRES,70);
@@ -74,7 +74,7 @@ end;
 -----------------------------------
 
 function onMobDrawIn(mob, target)
-    mob:useMobAbility(2670); -- Beastruction
+    mob:useMobAbility(2926); -- Beastruction
 end;
 
 -----------------------------------

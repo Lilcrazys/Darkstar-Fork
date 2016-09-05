@@ -68,7 +68,7 @@ function onMobFight(mob,target)
         elseif (mob:AnimationSub() == 0 and mob:getBattleTime() - changeTime > 60) then
             mob:AnimationSub(1);
             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
+            -- mob:SetMobSkillAttack(LIST_ID_HERE);
             --and record the time and HP this phase was started
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
@@ -83,7 +83,7 @@ function onMobFight(mob,target)
                 mob:getBattleTime() - changeTime > 120)) then
             mob:AnimationSub(1);
             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
+            -- mob:SetMobSkillAttack(LIST_ID_HERE);
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
         end;

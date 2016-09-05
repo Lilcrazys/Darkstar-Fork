@@ -29,7 +29,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,100);
-    mob:SetMobSkillAttack(true);
+    -- mob:SetMobSkillAttack(LIST_ID_HERE);
     mob:setMod(MOD_DARK,600);
     mob:setMod(MOD_CRITHITRATE,25);
     

@@ -24,7 +24,7 @@ function onMobInitialize(mob)
     mob:addMod(MOD_STUNRES,500);
 
     -- Other
-    mob:SetMobSkillAttack(true);
+    mob:SetMobSkillAttack(4169);
 end;
 
 -----------------------------------

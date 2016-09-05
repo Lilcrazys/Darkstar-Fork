@@ -172,12 +172,13 @@ function onMobFight(mob, target)
         if (helperOne ~= ACTION_NONE or helperTwo ~= ACTION_NONE) then
             mob:AnimationSub(1); -- fly
             mob:addStatusEffectEx(EFFECT_ALL_MISS, 0, 1, 0, 0);
-            mob:SetMobSkillAttack(true);
+            -- mob:SetMobSkillAttack(LIST_ID_HERE);
         end
     else
         -- We are flying, see if we should land..
         if (animSub == 1 and helperOne == ACTION_NONE and helperTwo == ACTION_NONE) then
             mob:useMobAbility(1026); -- touchdown
+            -- mob:SetMobSkillAttack(0);
         end
     end
 end;

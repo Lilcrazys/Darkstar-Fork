@@ -48,7 +48,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_CURE_POTENCY_RCVD, 28);
 
     -- Other
-    -- mob:SetMobSkillAttack(true); -- Enable Special Animation for melee attacks.
+    -- mob:SetMobSkillAttack(LIST_ID_HERE); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -230,7 +230,7 @@ function onAdditionalEffect(mob,target,damage)
             return 0,0,0;
         end
     else
-        -- mob:SetMobSkillAttack(true); -- Re-enable Special Animation for melee attacks.
+        -- mob:SetMobSkillAttack(LIST_ID_HERE); -- Re-enable Special Animation for melee attacks.
         mob:setLocalVar("Minerva_Boost_from_Enspell", 0);
         return 0,0,0;
     end
