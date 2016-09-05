@@ -27,7 +27,7 @@ itemid_bcnmid_map = {6, {0, 0}, -- Bearclaw_Pinnacle
                    140, {1551, 34, 1552, 35, 1552, 36}, -- Ghelsba Outpost
                    144, {1166, 68, 1178, 81, 1553, 76, 1180, 82, 1130, 79, 1552, 73}, -- Waughroon Shrine
                    146, {1553, 107, 1551, 105, 1177, 100}, -- Balgas Dias
-                   163, {1130, 129}, -- Sacrificial Chamber
+                   163, {1130, 129, 1130, 130}, -- Sacrificial Chamber
                    168, {0, 0}, -- Chamber of Oracles
                    170, {0, 0}, -- Full Moon Fountain
                    180, {1550, 293}, -- LaLoff Amphitheater
@@ -64,7 +64,7 @@ bcnmid_param_map = {6, {640, 0},
                   140, {32, 0, 33, 1, 34, 2, 35, 3, 36, 4},
                   144, {65, 1, 73, 9, 64, 0, 67, 3, 68, 4, 70, 6, 71, 7, 72, 8, 81, 17, 76, 12, 82, 18, 79, 15},
                   146, {99, 3, 96, 0, 101, 5, 102, 6, 103, 7, 107, 11, 105, 9},
-                  163, {128, 0, 129, 1},
+                  163, {128, 0, 129, 1, 130, 2},
                   165, {160, 0, 161, 1},
                   168, {192, 0, 194, 2, 195, 3, 196, 4},
                   170, {224, 0, 225, 1},
@@ -86,7 +86,7 @@ function TradeBCNM(player,zone,trade,npc)
 	if (player:hasStatusEffect(EFFECT_BATTLEFIELD))then --cant start a new bc
 		player:messageBasic(94,0,0);
 		return false;
-	elseif (player:hasWornItem(trade:getItem())) then -- If already used orb or testimony
+    elseif (player:hasWornItem(trade:getItemId())) then -- If already used orb or testimony
 		player:messageBasic(56,0,0); -- i need correct dialog
 		return false;
 	end
@@ -251,7 +251,7 @@ function EventFinishBCNM(player,csid,option)
 		local id = player:getVar("trade_bcnmid");
 		local item = player:getVar("trade_itemid");
 
-		if (id == 68 or id == 418 or id == 450 or id == 482 or id == 545 or id == 578 or id == 609 or id == 293 or id == 1308) then
+        if (id == 68 or id == 418 or id == 450 or id == 482 or id == 545 or id == 578 or id == 609 or id == 293 or id == 1308) then
 			player:tradeComplete(); -- Removes the item
 		elseif ((item >= 1426 and item <= 1440) or item == 1130 or item == 1131 or item == 1175 or item == 1177 or item == 1180 or item == 1178 or item == 1551 or item == 1552 or item == 1553) then -- Orb and Testimony (one time item)
 			player:createWornItem(item);
@@ -268,7 +268,7 @@ function CheckMaatFights(player,zone,trade,npc)
 	--check for maat fights (one maat fight per zone in the db, but >1 mask entries depending on job, so we
 	--need to choose the right one depending on the players job, and make sure the right testimony is traded,
 	--and make sure the level is right!
-    local itemid = trade:getItem();
+    local itemid = trade:getItemId();
     local job = player:getMainJob();
     local lvl = player:getMainLvl();
 
@@ -335,8 +335,8 @@ function ItemToBCNMID(player,zone,trade)
 	for zoneindex = 1, table.getn(itemid_bcnmid_map), 2 do
 		if (zone==itemid_bcnmid_map[zoneindex])then --matched zone
 			for bcnmindex = 1, table.getn(itemid_bcnmid_map[zoneindex + 1]), 2 do --loop bcnms in this zone
-				if (trade:getItem()==itemid_bcnmid_map[zoneindex+1][bcnmindex])then
-                    local item = trade:getItem();
+                if (trade:getItemId()==itemid_bcnmid_map[zoneindex+1][bcnmindex]) then
+                    local item = trade:getItemId();
                     local questTimelineOK = 0;
 
 					-- Job/lvl condition for smn battle lvl20

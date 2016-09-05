@@ -49,8 +49,14 @@ end
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-
     checkGoVregime(player,mob,774,1);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
 
     ------------------------------------
     -- Begin Custom Legion Code

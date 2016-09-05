@@ -151,7 +151,12 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    SetServerVariable("JoL_Regen_Reduction", 0);
+    --[[
+    local AV_CHANCE = 25;
+    if (AV_CHANCE > math.random(0,99)) then
+        SpawnMob(16912876, 180);
+    end
+    ]]
 end;
 
 -----------------------------------
@@ -159,9 +164,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    local AV_CHANCE = 25;
-    if (AV_CHANCE > math.random(0,99)) then
-        SpawnMob(16912876, 180):updateEnmity(killer);
-    end
+
     SetServerVariable("JoL_Regen_Reduction", 0);
+
+    if (isKiller == true) then -- This check is to force this to only run once.
+        local AV_CHANCE = 25;
+        if (AV_CHANCE > math.random(0,99)) then
+            SpawnMob(16912876):updateEnmity(killer);
+        end
+    end
 end;

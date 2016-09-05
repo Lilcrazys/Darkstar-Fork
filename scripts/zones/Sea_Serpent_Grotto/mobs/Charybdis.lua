@@ -1,13 +1,23 @@
 ----------------------------------
--- Area: Valkurm Dunes
+-- Area: Sea Serpent Grotto
 --   NM: Charybdis
 -----------------------------------
 
 -----------------------------------
--- onMobDeath
+-- onMobInitialize
 -----------------------------------
 
-function onMobDeath(mob, player, isKiller)
+function onMobInitialize(mob)
+
+    mob:setMobMod(MOBMOD_MULTI_HIT, 5);
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
 
     -- Set Charybdis Window Open Time
     local wait = math.random(3600,5800) -- 1-2 hours

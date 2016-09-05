@@ -1,9 +1,8 @@
 ---------------------------------------------------------------------------------------------------
--- func: @send <player1> (<player2) or zone)
+-- func: send <player1> (<player2) or zone)
 -- desc: Teleport a player to:
 -- A) The given zone
 -- B) another player
---
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
@@ -288,10 +287,9 @@ function onTrigger(player, p1, zoneId)
     local zone  = zoneId;
     local targ1 = GetPlayerByName(p1);
 
-
     -- Not enough info..
     if (p1 == nil and zone == nil) then
-        player:PrintToPlayer( string.format("Must specify 2 players or zone: @zoneplayer <player to be sent> (<player to arrive at> or zone) ") );
+        player:PrintToPlayer( string.format("Must specify 2 players or zone: @send <player to be sent> (<player to arrive at> or zone) ") );
         return;
     end
 

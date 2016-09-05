@@ -28,6 +28,14 @@ function onMobSpawn(mob)
     mob:setMod(MOD_COUNTER, 15);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
 
+    -- Todo: move this to SQL after drop slots are a thing
+    if (math.random(1,100) <= 5) then -- Hardcoded "this or this item" drop rate until implemented.
+        SetDropRate(1936,13566,1000); -- Defending Ring
+        SetDropRate(1936,13415,0);
+    else
+        SetDropRate(1936,13566,0);
+        SetDropRate(1936,13415,1000); -- Pixie Earring
+    end
 end;
 
 -----------------------------------
@@ -49,9 +57,29 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-
     player:addTitle(BEHEMOTH_DETHRONER);
 
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 4);
+    end
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    --[[
     -- Todo: move this to SQL after drop slots are a thing
     if (math.random(1,100) <= 5) then -- Hardcoded "this or this item" drop rate until implemented.
         SetDropRate(1936,13566,1000); -- Defending Ring
@@ -60,6 +88,7 @@ function onMobDeath(mob, player, isKiller)
         SetDropRate(1936,13566,0);
         SetDropRate(1936,13415,1000); -- Pixie Earring
     end
+    ]]
 
     -- Set King_Behemoth's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
@@ -78,18 +107,4 @@ function onMobDeath(mob, player, isKiller)
         UpdateNMSpawnPoint(Behemoth);
         GetMobByID(Behemoth):setRespawnTime(math.random(21600,32400));
     end
-
-    ------------------------------------
-    -- Begin Custom Legion Code
-    ------------------------------------
-    
-    -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 4);
-    end
-
-    ------------------------------------
-    -- End Custom Legion Code
-    ------------------------------------
-    
 end;

@@ -46,9 +46,10 @@ ALL_MAPS = 1; -- Set to 1 to give starting characters all the maps.
 UNLOCK_OUTPOST_WARPS = 2; -- Set to 1 to give starting characters all outpost warps.  2 to add Tu'Lia and Tavnazia.
 
 SHOP_PRICE = 1.000; -- Multiplies prices in NPC shops.
-GIL_RATE   = 2.000; -- Multiplies gil earned from quests.  Won't always display in game.
-EXP_RATE   = 1.500; -- Multiplies exp earned from fov.
-TABS_RATE  = 2.000; -- Multiplies tabs earned from fov.
+GIL_RATE        = 2.000; -- Multiplies gil earned from quests.  Won't always display in game.
+BAYLD_RATE      = 1.000; -- Multiples bayld earned from quests.
+EXP_RATE        = 1.500; -- Multiplies exp earned from fov.
+TABS_RATE       = 2.000; -- Multiplies tabs earned from fov.
 CURE_POWER  = 1.000; -- Multiplies amount healed from Healing Magic, including the relevant Blue Magic.
 ELEMENTAL_POWER = 1.000; -- Multiplies damage dealt by Elemental and non-drain Dark Magic.
 DIVINE_POWER    = 1.000; -- Multiplies damage dealt by Divine Magic.
@@ -68,6 +69,8 @@ HARVESTING_RATE         = 0.50; -- % chance to recieve an item from haresting.  
 EXCAVATION_RATE         = 0.50; -- % chance to recieve an item from excavation.  Set between 0 and 1.
 LOGGING_RATE            = 0.50; -- % chance to recieve an item from logging.  Set between 0 and 1.
 MINING_RATE             = 50; -- % chance to recieve an item from mining.  Set between 0 and 100. 
+
+HEALING_TP_CHANGE       = -75; -- Change in TP for each healing tick. Default is -100
 
 -- SE implemented coffer/chest illusion time in order to prevent coffer farming. No-one in the same area can open a chest or coffer for loot (gil, gems & items)
 -- till a random time between MIN_ILLSION_TIME and MAX_ILLUSION_TIME. During this time players can loot keyitem and item related to quests (AF, maps... etc.)

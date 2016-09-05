@@ -57,11 +57,7 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(CERBERUS_MUZZLER);
-    --[[
-    mob:setRespawnTime((math.random(0,24)*3600)+172800); -- 48-72 hours proper 1 hour windows
-    ]]
-    mob:setRespawnTime((math.random(21,36)*3600)+0); -- 21-36 hours proper 1 hour windows
-    
+
     ------------------------------------
     -- Begin Custom Legion Code
     ------------------------------------   
@@ -73,6 +69,18 @@ function onMobDeath(mob, player, isKiller)
 
     ------------------------------------
     -- End Custom Legion Code
-    ------------------------------------    
- 
+    ------------------------------------
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    --[[
+    mob:setRespawnTime((math.random(0,24)*3600)+172800); -- 48-72 hours proper 1 hour windows
+    ]]
+    mob:setRespawnTime((math.random(21,36)*3600)+0); -- 21-36 hours proper 1 hour windows
+
 end;

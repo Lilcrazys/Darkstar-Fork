@@ -20,7 +20,7 @@ end;
 -----------------------------------
 
 function onZoneIn(player,prevZone)
-	local cs = -1;
+    local cs = -1;
 
 	player:setVar("HpTeleportMask1a", 0);
 	player:setVar("HpTeleportMask1b", 0);
@@ -35,7 +35,7 @@ function onZoneIn(player,prevZone)
 		player:setPos(500,72,-479,191);
 	end
 
-	return cs;
+    return cs;
 end;
 
 -----------------------------------
@@ -62,6 +62,4 @@ function onEventFinish(player,csid,option)
 --printf("CSID: %u",csid);
 --printf("RESULT: %u",option);
 end;
-
-
 

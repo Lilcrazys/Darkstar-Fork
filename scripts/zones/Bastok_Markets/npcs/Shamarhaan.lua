@@ -3,7 +3,7 @@
 --  NPC: Shamarhaan
 --  Type: Quest Starter
 --  Involved in quest: No Strings Attached
---  @zone: 235
+--  @zone 235
 --  @pos -285.382 -13.021 -84.743
 --
 --  Auto-Script: Requires Verification.  Verified standard dialog - thrydwolf 12/8/2011
@@ -27,7 +27,8 @@ end;
 
 function onTrigger(player,npc)
 	player:PrintToPlayer("PUP unlock quest is temp disabled. -The Staff");
---[[local NoStringsAttached = player:getQuestStatus(AHT_URHGAN,NO_STRINGS_ATTACHED);
+--[[
+local NoStringsAttached = player:getQuestStatus(AHT_URHGAN,NO_STRINGS_ATTACHED);
 local NoStringsAttachedProgress = player:getVar("NoStringsAttachedProgress");
 
 	if (player:getMainLvl() >= ADVANCED_JOB_LEVEL and NoStringsAttached == QUEST_AVAILABLE) then
@@ -36,7 +37,8 @@ local NoStringsAttachedProgress = player:getVar("NoStringsAttachedProgress");
 		player:startEvent(0x01b3); -- reminder to go see Iruki-Waraki at Whitegate
 	else
 		player:startEvent(0x01b1);
-	end;]]--
+	end;
+]]--
 end;
 
 -----------------------------------

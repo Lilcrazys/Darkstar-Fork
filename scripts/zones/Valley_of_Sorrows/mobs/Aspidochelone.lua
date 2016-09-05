@@ -6,7 +6,6 @@
 require("scripts/globals/settings");
 require("scripts/globals/titles");
 require("scripts/globals/status");
-require("scripts/globals/custom_trials");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -26,6 +25,20 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
+
+    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
+        SetDropRate(195,20618,1000); -- Sandung
+        SetDropRate(195,18828,0);
+    else
+        SetDropRate(195,20618,0);
+        SetDropRate(195,18828,1000); -- Oxossi Facon +1
+    end
+
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 3);
+    end
+
 end;
 
 -----------------------------------
@@ -33,8 +46,28 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-
     player:addTitle(ASPIDOCHELONE_SINKER);
+
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 3);
+    end
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
 
     -- Set Aspidochelone's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
@@ -53,26 +86,5 @@ function onMobDeath(mob, player, isKiller)
         UpdateNMSpawnPoint(Adamantoise);
         GetMobByID(Adamantoise):setRespawnTime(math.random(21600,32400));
     end
-
-    ------------------------------------
-    -- Begin Custom Legion Code
-    ------------------------------------
-
-    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
-        SetDropRate(195,20618,1000); -- Sandung
-        SetDropRate(195,18828,0);
-    else
-        SetDropRate(195,20618,0);
-        SetDropRate(195,18828,1000); -- Oxossi Facon +1
-    end
-
-    -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 3);
-    end
-
-    ------------------------------------
-    -- End Custom Legion Code
-    ------------------------------------
 
 end;

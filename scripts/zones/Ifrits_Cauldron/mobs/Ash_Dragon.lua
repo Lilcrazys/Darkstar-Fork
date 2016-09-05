@@ -35,13 +35,21 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(DRAGON_ASHER);
 
-    -- Set Ash Dragon's spawnpoint and respawn time (21-24 hours))
-    UpdateNMSpawnPoint(mob:getID());
-    mob:setRespawnTime(math.random(75600,86400));
-
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 2);
     end
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+
+    -- Set ASh Dragon's spawnpoint and respawn time (21-24 hours)
+    UpdateNMSpawnPoint(mob:getID());
+    mob:setRespawnTime(math.random(75600,86400));
 
 end;

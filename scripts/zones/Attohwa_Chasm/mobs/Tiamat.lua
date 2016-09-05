@@ -203,5 +203,12 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(TIAMAT_TROUNCER);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     mob:setRespawnTime(math.random(75600,86400)); -- 21 to 24 hours, originally 3 to 5 days
 end;

@@ -120,7 +120,7 @@ void CPlayerController::Ability(uint16 targid, uint16 abilityid)
 void CPlayerController::RangedAttack(uint16 targid)
 {
     auto PChar = static_cast<CCharEntity*>(POwner);
-    if (PChar->PAI->CanChangeState() && server_clock::now() > m_NextRangedTime)
+    if (PChar->PAI->CanChangeState())
     {
         PChar->PAI->Internal_RangedAttack(targid);
     }
@@ -152,7 +152,7 @@ void CPlayerController::WeaponSkill(uint16 targid, uint16 wsid)
             PChar->pushPacket(new CMessageBasicPacket(PChar, PChar, 0, 0, MSGBASIC_CANNOT_USE_WS));
             return;
         }
-        if (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_AMNESIA) || PChar->StatusEffectContainer->HasStatusEffect(EFFECT_IMPAIRMENT))
+        if (PChar->StatusEffectContainer->HasStatusEffect({EFFECT_AMNESIA, EFFECT_IMPAIRMENT}))
         {
             PChar->pushPacket(new CMessageBasicPacket(PChar, PChar, 0, 0, MSGBASIC_CANNOT_USE_ANY_WS));
             return;
@@ -205,11 +205,6 @@ void CPlayerController::WeaponSkill(uint16 targid, uint16 wsid)
 void CPlayerController::setLastAttackTime(time_point _LastAttackTime)
 {
     m_LastAttackTime = _LastAttackTime;
-}
-
-void CPlayerController::setNextRangedTime(time_point _NextRangedTime)
-{
-    m_NextRangedTime = _NextRangedTime;
 }
 
 void CPlayerController::setLastErrMsgTime(time_point _LastErrMsgTime)

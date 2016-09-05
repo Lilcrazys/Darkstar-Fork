@@ -20,8 +20,8 @@ function onTrade(player,npc,trade)
     if (GetMobAction(16912846) == 0 and GetMobAction(16912847) == 0 and trade:hasItemQty(1856,1) and trade:hasItemQty(1870,1) and 
     trade:hasItemQty(1871,1) and trade:getItemCount() == 3) then
         player:tradeComplete();
-        SpawnMob(PrudenceOne,900):updateClaim(player); -- Spawn Jailer of Prudence 1
-        SpawnMob(PrudenceTwo,900);                     -- Spawn Jailer of Prudence 2 unclaimed
+        SpawnMob(PrudenceOne):updateClaim(player); -- Spawn Jailer of Prudence 1
+        SpawnMob(PrudenceTwo);                     -- Spawn Jailer of Prudence 2 unclaimed
     end
     ]]
     if (trade:hasItemQty(1856,1) == false or trade:hasItemQty(1870,1) == false or trade:hasItemQty(1871,1) == false) then

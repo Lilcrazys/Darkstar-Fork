@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Al'Taieu
---  NPC:??? (Jailer of Hope Spawn)
+--  NPC: ??? (Jailer of Hope Spawn)
 -- Allows players to spawn the Jailer of Hope by trading the First Virtue, Deed of Placidity and HQ Phuabo Organ to a ???.
 -- @pos -693 -1 -62 33
 -----------------------------------
@@ -18,7 +18,7 @@ function onTrade(player,npc,trade)
     --[[
     if (GetMobAction(16912838) == 0 and trade:hasItemQty(1850,1) and trade:hasItemQty(1851,1) and trade:hasItemQty(1852,1) and trade:getItemCount() == 3) then
         player:tradeComplete();
-        SpawnMob(16912838,900):updateClaim(player); -- Spawn Jailer of Hope
+        SpawnMob(16912838):updateClaim(player); -- Spawn Jailer of Hope
     end
     ]]--
 

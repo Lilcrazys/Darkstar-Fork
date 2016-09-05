@@ -7,10 +7,10 @@
 require("scripts/zones/Riverne-Site_B01/MobIDs");
 
 -----------------------------------
--- onMobDeath
+-- onMobDespawn
 -----------------------------------
 
-function onMobDeath(mob, player, isKiller)
+function onMobDespawn(mob)
 
     -- Get Nimbus Hippogryph ID and check if it is a PH of Imdugud
     local mobID = mob:getID();
@@ -23,7 +23,6 @@ function onMobDeath(mob, player, isKiller)
 
         -- Check if Imdugud window is open, and there is not an Imdugud popped already(ACTION_NONE = 0)
         if (Imdugud_ToD <= os.time(t) and GetMobAction(Imdugud) == 0) then
-
             -- printf("Imdugud window open");
             -- Give Nimbus Hippogryph 10 percent chance to pop Imdugud
             if (math.random(1,10) == 5) then

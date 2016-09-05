@@ -6,10 +6,10 @@
 require("scripts/globals/custom_trials");
 
 -----------------------------------
--- onMobDeath
+-- onMobDespawn
 -----------------------------------
 
-function onMobDeath(mob, player, isKiller)
+function onMobDespawn(mob)
 
     -- Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then

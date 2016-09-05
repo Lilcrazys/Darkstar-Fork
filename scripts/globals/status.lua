@@ -60,14 +60,17 @@ STATUS_SHUTDOWN      = 20;
 SUBEFFECT_FIRE_DAMAGE       = 1;   -- 110000        3
 SUBEFFECT_ICE_DAMAGE        = 2;   -- 1-01000       5
 SUBEFFECT_WIND_DAMAGE       = 3;   -- 111000        7
+SUBEFFECT_CHOKE             = 3;   -- Shares subeffect
 SUBEFFECT_EARTH_DAMAGE      = 4;   -- 1-00100       9
 SUBEFFECT_LIGHTNING_DAMAGE  = 5;   -- 110100       11
 SUBEFFECT_WATER_DAMAGE      = 6;   -- 1-01100      13
 SUBEFFECT_LIGHT_DAMAGE      = 7;   -- 111100       15
 SUBEFFECT_DARKNESS_DAMAGE   = 8;   -- 1-00010      17
+SUBEFFECT_DISPEL            = 8;   -- Verified with video of Lockheart Greatsword proc.
 SUBEFFECT_SLEEP             = 9;   -- 110010       19
 SUBEFFECT_POISON            = 10;  -- 1-01010      21
 SUBEFFECT_PARALYSIS         = 11;
+SUBEFFECT_AMNESIA           = 11;  -- Verified uses same animation as para
 SUBEFFECT_BLIND             = 12;  -- 1-00110      25
 SUBEFFECT_SILENCE           = 13;
 SUBEFFECT_PETRIFY           = 14;
@@ -75,19 +78,15 @@ SUBEFFECT_PLAGUE            = 15;
 SUBEFFECT_STUN              = 16;
 SUBEFFECT_CURSE             = 17;
 SUBEFFECT_DEFENSE_DOWN      = 18;  -- 1-01001      37
-SUBEFFECT_EVASION_DOWN      = 18;  -- ID needs verification
-SUBEFFECT_ATTACK_DOWN       = 18;  -- ID needs verification
+SUBEFFECT_EVASION_DOWN      = 18;  -- Same subeffect as DEFENSE_DOWN
+SUBEFFECT_ATTACK_DOWN       = 18;  -- Same subeffect as DEFENSE_DOWN
 SUBEFFECT_DEATH             = 19;
 SUBEFFECT_SHIELD            = 20;
 SUBEFFECT_HP_DRAIN          = 21;  -- 1-10101      43
 SUBEFFECT_MP_DRAIN          = 22;  -- This is correct animation
 SUBEFFECT_TP_DRAIN          = 22;  -- Verified this should look exactly like Aspir Samba.
 SUBEFFECT_HASTE             = 23;
-SUBEFFECT_CHOKE             = 24;
--- Below are almost certain to be wrong: 
--- Someone needs to go on retail and verify the SubEffect IDs
-SUBEFFECT_AMNESIA           = 11; --
-SUBEFFECT_DISPEL            = 13; -- Correct ID possibly 20 ?
+-- There are no additional attack effect animations beyond 23. Some effects share subeffect/animations.
 
 -- SPIKES
 SUBEFFECT_BLAZE_SPIKES      = 1;   -- 01-1000       6
@@ -96,11 +95,13 @@ SUBEFFECT_DREAD_SPIKES      = 3;   -- 01-1100      14
 SUBEFFECT_CURSE_SPIKES      = 4;   -- 01-0010      18
 SUBEFFECT_SHOCK_SPIKES      = 5;   -- 01-1010      22
 SUBEFFECT_REPRISAL          = 6;   -- 01-0110      26
-SUBEFFECT_WIND_SPIKES       = 7;
+SUBEFFECT_GALE_SPIKES       = 7;   -- Used by enchantment "Cool Breeze" http://www.ffxiah.com/item/22018/
 SUBEFFECT_STONE_SPIKES      = 8;
 SUBEFFECT_DELUGE_SPIKES     = 9;
 SUBEFFECT_DEATH_SPIKES      = 10;  -- yes really: http://www.ffxiah.com/item/26944/
 SUBEFFECT_COUNTER           = 63;
+-- There are no spikes effect animations beyond 63. Some effects share subeffect/animations.
+-- "Damage Spikes" use the Blaze Spikes animation even though they are different status.
 
 -- SKILLCHAINS
 SUBEFFECT_NONE          = 0;
@@ -1816,6 +1817,8 @@ LOC_MOGCASE         = 7
 LOC_WARDROBE        = 8
 LOC_MOGSAFE2        = 9
 LOC_WARDROBE2       = 10
+LOC_WARDROBE3       = 11
+LOC_WARDROBE4       = 12
 
 ------------------------------------
 -- Message enum
@@ -1997,6 +2000,7 @@ MOBMOD_NO_STANDBACK   = 62
 MOBMOD_ATTACK_SKILL_LIST = 63
 MOBMOD_CHARMABLE      = 64
 MOBMOD_NO_MOVE        = 65
+MOBMOD_MULTI_HIT      = 66
 
 ------------------------------------
 -- Skills

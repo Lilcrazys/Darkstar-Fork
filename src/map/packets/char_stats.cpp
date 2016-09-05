@@ -76,7 +76,7 @@ CCharStatsPacket::CCharStatsPacket(CCharEntity * PChar)
 	WBUFW(data,(0x48)) = PChar->profile.rankpoints;
     WBUFW(data,(0x4A)) = PChar->profile.home_point.destination;
 	WBUFB(data,(0x50)) = PChar->profile.nation; 
-	WBUFB(data,(0x52)) = 2; // SU2
+    WBUFB(data,(0x52)) = 2; // SU2
     //0x52 = superior level (1 or 2)
     //0x54 = maximum item level
     //0x55 = itemlevel over 99

@@ -48,10 +48,10 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onMobDeath
+-- onMobDespawn
 -----------------------------------
 
-function onMobDeath(mob, player, isKiller)
+function onMobDespawn(mob)
     --[[
     local JoL = GetMobByID(16912848);
     local HPEMDES = JoL:getLocalVar("JoL_Qn_hpemde_Killed");

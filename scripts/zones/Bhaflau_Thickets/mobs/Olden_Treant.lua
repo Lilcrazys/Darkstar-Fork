@@ -7,10 +7,10 @@
 require("scripts/zones/Bhaflau_Thickets/MobIDs");
 
 -----------------------------------
--- onMobDeath
+-- onMobDespawn
 -----------------------------------
 
-function onMobDeath(mob, player, isKiller)
+function onMobDespawn(mob)
 
     -- Get Olden Treant ID and check if it is a PH of EE
     local mobID = mob:getID();
@@ -23,7 +23,6 @@ function onMobDeath(mob, player, isKiller)
 
         -- Check if EE window is open, and there is not an EE popped already(ACTION_NONE = 0)
         if (EE_ToD <= os.time(t) and GetMobAction(Emergent_Elm) == 0) then
-
             -- printf("EE window open");
             -- Give Olden Treant 5 percent chance to pop EE
             if (math.random(1,20) == 5) then

@@ -114,7 +114,7 @@ function onGameHour(npc, mob, player)
 	--[[
 	-- Ix'DRK spawn randomiser
 	if (VanadielHour % 6 == 0) then -- Change ??? position every 6 hours Vana'diel time (~15 mins)
-		local qm2p = math.random(1,4); -- random for next @pos. -- start in spawn pos 1.
+        local qm2p = math.random(1,4); -- random for next pos. -- start in spawn pos 1.
 			--print(qm2p) 
 			qm3:hideNPC(30);
 				if (qm2p == 1) then
@@ -148,8 +148,6 @@ function onConquestUpdate(zone, updatetype)
         conquestUpdate(zone, player, updatetype, CONQUEST_BASE);
     end
 end;
-
-
 -----------------------------------		
 -- onZoneIn		
 -----------------------------------		
@@ -237,8 +235,6 @@ function onRegionEnter(player,region)
 	}
  end
 end;	
-
-
 -----------------------------------	
 -- onRegionLeave	
 -----------------------------------	

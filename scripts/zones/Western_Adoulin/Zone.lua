@@ -1,6 +1,7 @@
 -----------------------------------
 -- 
 -- Zone: Western Adoulin
+-- @zone 256
 -- 
 -----------------------------------
 
@@ -20,7 +21,7 @@ end;
 -----------------------------------
 
 function onZoneIn(player,prevZone)
-	local cs = -1;
+    local cs = -1;
 
 	player:setVar("HpTeleportMask1a", 0);
 	player:setVar("HpTeleportMask1b", 0);
@@ -31,11 +32,16 @@ function onZoneIn(player,prevZone)
 	player:setVar("HpTeleportMask4a", 0);
 	player:setVar("HpTeleportMask4b", 0);
 
-	if ((player:getXPos() == 0) and (player:getYPos() == 0) and (player:getZPos() == 0)) then
-		player:setPos(-142,4,-18,4);
-	end
+    if ((player:getXPos() == 0) and (player:getYPos() == 0) and (player:getZPos() == 0)) then
+        player:setPos(-142, 4, -18, 4);
+    end
 
-	return cs;
+    if (player:getVar("Raptor_Rapture_Status") == 2) then
+        -- Resuming cutscene for Quest: 'Raptor Rapture', after Pagnelle warps you to Rala Waterways mid-CS, then back here.
+        cs = 0x13C0;
+    end
+
+    return cs;
 end;
 
 -----------------------------------
@@ -50,8 +56,6 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -59,9 +63,14 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    if (csid == 0x13C0) then
+        -- Successfully finished introduction CS event chain for Quest: 'Raptor Rapture'.
+        player:setVar("Raptor_Rapture_Status", 3); 
+
+        if (option == 1) then
+            -- Starts Quest: 'Raptor Rapture'
+            player:addQuest(ADOULIN, RAPTOR_RAPTURE);
+            player:setVar("Raptor_Rapture_Status", 4);
+        end
+    end
 end;
-
-
-

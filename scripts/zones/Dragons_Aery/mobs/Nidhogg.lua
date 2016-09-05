@@ -63,14 +63,34 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+    player:addTitle(NIDHOGG_SLAYER);
+
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
     local SPELL_ID = 738;
     local CHANCE = 25;
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
         player:addSpell(SPELL_ID);
     end
 
-    player:addTitle(NIDHOGG_SLAYER);
+    -- Custom (Relic) Trial Code
+    if (cTrialItemEquipped(player) == true) then
+        cTrialProgress(player, RELIC, 5);
+    end
 
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     -- Set Nidhogg's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
         local wait = 72 * 360;
@@ -89,17 +109,4 @@ function onMobDeath(mob, player, isKiller)
         GetMobByID(Fafnir):setRespawnTime(math.random(21600,32400));
     end
 
-    ------------------------------------
-    -- Begin Custom Legion Code
-    ------------------------------------
-    
-    -- Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 5);
-    end
-
-    ------------------------------------
-    -- End Custom Legion Code
-    ------------------------------------
-    
 end;
