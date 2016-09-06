@@ -13,9 +13,11 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1); -- Invincible
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+    
     -- addMod
     mob:addMod(MOD_EVA,-115);
 end;
@@ -278,22 +280,11 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Lofty_Adamantoise_2hr = 0;
-    if (mob:getLocalVar("Lofty_Adamantoise_2hr") ~= nil) then
-        Lofty_Adamantoise_2hr_Used = mob:getLocalVar("Lofty_Adamantoise_2hr");
-    end
+    local Lofty_Adamantoise_2hr = mob:getLocalVar("Lofty_Adamantoise_2hr");
 
     if (mob:getHPP() <= 10) then
         if (Lofty_Adamantoise_2hr_Used == 0) then
@@ -304,30 +295,17 @@ function onMobFight(mob, target)
 end;
 
 -----------------------------------
--- onAdditionalEffect Action
------------------------------------
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
-
------------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 10);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Lofty_Ferromantoise    
 end;
