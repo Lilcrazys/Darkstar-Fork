@@ -106,36 +106,36 @@ function onMobFight(mob, target)
     if (mob:getHPP() <= 11) then -- Tabula Rasa and Invincible together!
         if (Minerva_2hr_Used == 4) then
             mob:SpoofChatParty("No! I will not fall so close to the power I sought!", MESSAGE_SAY);
-            mob:useMobAbility(438); -- Do Invincible!
+            mob:useMobAbility(694); -- Do Invincible!
             mob:setLocalVar("Minerva_2hr", 5);
         elseif (Minerva_2hr_Used == 5 and Ambrosia == 0) then
             mob:SpoofChatParty("Olympus hear me! Grant me the last of our power for this task!", MESSAGE_SAY);
-            mob:useMobAbility(1231);
+            mob:useMobAbility(1487);
             mob:setLocalVar("Minerva_Ambrosia", 1);
         elseif (Minerva_2hr_Used == 5 and Ambrosia == 1) then
-            mob:useMobAbility(2102); -- Do Tabula Rasa! Single target nukes now AoE yet do full dmg to all targets.
+            mob:useMobAbility(2358); -- Do Tabula Rasa! Single target nukes now AoE yet do full dmg to all targets.
             mob:setLocalVar("Minerva_2hr", 6);
         end
     elseif (mob:getHPP() <= 40) then -- 3rd Chainspell time!
         if (Minerva_2hr_Used == 3) then
             mob:SpoofChatParty("Your dimension must collapse that mine may be spared!", MESSAGE_SAY);
-            mob:useMobAbility(436); -- Do 3rd Chainspell!
+            mob:useMobAbility(692); -- Do 3rd Chainspell!
             mob:setLocalVar("Minerva_2hr", 4);
         end
     elseif (mob:getHPP() <= 60) then -- Manafont and Chainspell together!
         if (Minerva_2hr_Used == 1) then
-            mob:useMobAbility(435); -- Do Manafont!
+            mob:useMobAbility(691); -- Do Manafont!
             mob:SpoofChatParty("You are the one who defeated Mars?", MESSAGE_SAY);
             mob:setLocalVar("Minerva_2hr", 2);
         elseif (Minerva_2hr_Used == 2) then
             mob:SpoofChatParty("He was but a brute, I am the goddess of wisdom and strategy!", MESSAGE_SAY);
-            mob:useMobAbility(436); -- Do 2nd Chainspell!
+            mob:useMobAbility(692); -- Do 2nd Chainspell!
             mob:setLocalVar("Minerva_2hr", 3);
         end
     elseif (mob:getHPP() <= 80) then -- 1st Chainspell time!
         if (Minerva_2hr_Used == 0) then
             mob:SpoofChatParty("For Olympus!", MESSAGE_SAY);
-            mob:useMobAbility(436); -- Do 1st Chainspell!
+            mob:useMobAbility(692); -- Do 1st Chainspell!
             mob:setLocalVar("Minerva_2hr", 1);
         end
     end
@@ -159,6 +159,8 @@ end
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
+    -- TODO: clean up this mess
+
     local dmg = math.random(3,11); -- Using "damage" resulted in insane values...
     local IntMndBonus = 0;
     -- target:PrintToPlayer( string.format( "Enspell base Dmg: '%u' ", dmg ) );
@@ -241,6 +243,8 @@ end;
 -----------------------------------
 
 function onSpikesDamage(mob,target,damage)
+    -- TODO: clean up this mess
+
     local dmg = math.random(3,11); -- Using "damage" resulted in insane values...
     -- target:PrintToPlayer( string.format( "Spikes base Dmg: '%u' ", dmg ) );
     local MND_diff = mob:getStat(MOD_MND) - target:getStat(MOD_MND);
@@ -293,23 +297,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    if (player:getParty() ~= nil) then
-        local targets = player:getParty(); -- local targets = mob:getEnmityList();
-        for hey, dude in pairs(targets) do
-            if (dude:isPC()) then
-                dude:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-                dude:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-                dude:ChangeMusic(2, 187); -- SoloBattle Music
-                dude:ChangeMusic(3, 187); -- Party Battle Music
-            end
-        end
-    elseif (player:isPC()) then
-        player:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-        player:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-        player:ChangeMusic(2, 187); -- SoloBattle Music
-        player:ChangeMusic(3, 187); -- Party Battle Music
-    end
-
     -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
+    player:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+    player:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+    player:ChangeMusic(2, 187); -- SoloBattle Music
+    player:ChangeMusic(3, 187); -- Party Battle Music
     -- mob:getBattlefield():win();
 end;

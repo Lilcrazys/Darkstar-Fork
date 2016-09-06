@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: ?
--- VWNM: Pil
+-- Area: Provenance
+-- VWNM: Crystal Fetter (Provenance Watcher pets)
 -----------------------------------
 
 require("scripts/globals/status");

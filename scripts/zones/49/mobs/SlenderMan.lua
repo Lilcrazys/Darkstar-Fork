@@ -62,18 +62,18 @@ function onMobFight(mob, target)
     -- local Proxies_Called = mob:getLocalVar("GetMyMinions");
 
     if (mob:getHPP() < 5 and Slendy_2hr_Used == 3) then
-        mob:useMobAbility(475); -- Do Mijin Gakure!
+        mob:useMobAbility(731); -- Do Mijin Gakure!
         mob:setLocalVar("Slendy_2hr", 0);
         mob:setHP(0); -- Auto Die
-    elseif (mob:getHPP() < 5 and Slendy_2hr_Used == 2) then
+    elseif (mob:getHPP() < 9 and Slendy_2hr_Used == 2) then
         mob:SpoofChatParty("You can't kill me!", MESSAGE_SAY);
-        mob:useMobAbility(475); -- Do Mijin Gakure!
+        mob:useMobAbility(731); -- Do Mijin Gakure!
         mob:setLocalVar("Slendy_2hr", 3);
     elseif (mob:getHPP() <= 25 and Slendy_2hr_Used == 1) then
-        mob:useMobAbility(437); -- Do Perfect Dodge!
+        mob:useMobAbility(693); -- Do Perfect Dodge!
         mob:setLocalVar("Slendy_2hr", 2);
     elseif (mob:getHPP() <= 50 and Slendy_2hr_Used == 0) then
-        mob:useMobAbility(439); -- Do Blood Weapon!
+        mob:useMobAbility(695); -- Do Blood Weapon!
         mob:setLocalVar("Slendy_2hr", 1);
     -- elseif (mob:getBattleTime() - Proxies_Called > 20) then
         -- if ( zombaru_1 not up ) then
@@ -119,20 +119,23 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-    local RAND = math.random(0,99);
-    -- target:PrintToPlayer(string.format(" '%u' ", RAND));
-    if (RAND >= 33) then
-        return 0,0,0;
-    else
-        local dmg = damage * 0.34;
+    local RAND = math.random(1,100);
+    if (RAND < 33) then -- 33% chance of AddEffect proc
+        local dmg = damage * 0.33; -- 33% of his damage taken becomes his base AddEffect power.
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20);
-        end
-        INT_diff = INT_diff * 0.25;
-        dmg = dmg + INT_diff;
-        dmg = utils.clamp(dmg, 5, 66);
+        dmg = dmg + (INT_diff * 0.25); -- 25% INT modifier
+        local params = {};
+        params.bonusmab = 0;
+        params.includemab = false;
+        dmg = addBonusesAbility(player, ELE_FIRE, target, dmg, params);
+        dmg = dmg*applyResistanceAddEffect(player, target, ELE_FIRE, 0);
+        dmg = adjustForTarget(target, damage, ele);
+        dmg = utils.clamp(dmg, 6, 66); -- minimum 6, maximum 66.
+        dmg = finalMagicNonSpellAdjustments(player, target, ELE_FIRE, damage);
+        
         return SUBEFFECT_FIRE_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+    else
+        return 0,0,0;
     end
 end;
 
@@ -141,13 +144,12 @@ end;
 -----------------------------------
 
 function onSpikesDamage(mob,target,damage)
-    local RAND = math.random(0,99);
-    -- target:PrintToPlayer(string.format(" '%u' ", RAND));
-    if (RAND >= 33) then
-        return 0,0,0;
-    else
+    local RAND = math.random(1,100);
+    if (RAND < 33) then -- 33% chance of Spikes proc
         local duration = 5;
         target:addStatusEffect(EFFECT_TERROR,1,0,duration);
-        return SUBEFFECT_CURSE_SPIKES,0,EFFECT_TERROR;
+        return SUBEFFECT_CURSE_SPIKES,0,EFFECT_TERROR; -- Intentionally incorrect animation with no message.
+    else
+        return 0,0,0;
     end
 end;

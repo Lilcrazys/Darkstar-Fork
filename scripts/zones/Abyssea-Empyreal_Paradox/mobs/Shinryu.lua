@@ -83,7 +83,7 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 10) then
         if (Shinryu_2hr_Used == 2) then
-            mob:useMobAbility(432); -- MS
+            mob:useMobAbility(688); -- MS
             mob:setLocalVar("Shinryu_2hr", 3);
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
             mob:setMod(MOD_REGAIN,40);
@@ -91,13 +91,13 @@ function onMobFight(mob, target)
         end
     elseif (mob:getHPP() <= 30) then
         if (Shinryu_2hr_Used == 1) then
-            mob:useMobAbility(432); -- MS
+            mob:useMobAbility(688); -- MS
             mob:setLocalVar("Shinryu_2hr", 2);
             mob:setMod(MOD_REGAIN,40);
         end
     elseif (mob:getHPP() <= 70) then
         if (Shinryu_2hr_Used == 0) then
-            mob:useMobAbility(432); -- MS
+            mob:useMobAbility(688); -- MS
             mob:setLocalVar("Shinryu_2hr", 1);
         end
     end

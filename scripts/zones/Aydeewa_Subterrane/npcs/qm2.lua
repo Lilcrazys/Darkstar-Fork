@@ -14,10 +14,13 @@ require("scripts/zones/Aydeewa_Subterrane/TextIDs");
 
 function onTrade(player,npc,trade)
     -- Pandemonium key
+    --[[
     if (trade:hasItemQty(2572,1) and trade:getItemCount() == 1 and GetMobAction(17056168) == 0) then
         SpawnMob(17056168):updateClaim(player); -- Pandemonium Warden
         player:tradeComplete();
     end
+    ]]
+    player:PrintToPlayer("Sorry, this is disabled until a crash bug is fixed.");
 end;
 
 -----------------------------------
@@ -26,6 +29,7 @@ end;
 
 function onTrigger(player,npc)
     player:messageSpecial(NOTHING_HAPPENS);
+    player:PrintToPlayer("Sorry, this is disabled until a crash bug is fixed.");
 end;
 
 -----------------------------------

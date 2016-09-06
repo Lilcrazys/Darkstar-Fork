@@ -76,7 +76,7 @@ end;
 function onMobEngaged(mob, target)
     local claims = GetServerVariable("JumpingCrabClaim");
     SetServerVariable("JumpingCrabClaim", claims +1);
-    mob:useMobAbility(462);
+    mob:useMobAbility(718);
 end;
 
 -----------------------------------

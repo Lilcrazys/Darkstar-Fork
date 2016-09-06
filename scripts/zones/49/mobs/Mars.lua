@@ -21,7 +21,7 @@ function onMobInitialize(mob)
 
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
-    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
+    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispelable.
 
     -- addMod
     mob:addMod(MOD_ACC, 25);
@@ -105,7 +105,7 @@ function onMobFight(mob, target)
     if (mob:getHPP() <= 9) then -- Time for BW(3rd use) and MS(2nd use) together!
         if (Mars_2hr_Used == 3) then
             mob:SpoofChatParty("That you should fight a god this far...Deplorable.", MESSAGE_SAY);
-            mob:useMobAbility(432); -- Do Mighty Strikes!
+            mob:useMobAbility(688); -- Do Mighty Strikes!
             mob:setMod(MOD_TRIPLE_ATTACK, 2);
             mob:setLocalVar("Mars_2hr", 4);
         elseif (Mars_2hr_Used == 4) then
@@ -114,7 +114,7 @@ function onMobFight(mob, target)
             mob:setLocalVar("MagicElement", 0);
             mob:setLocalVar("SpikesElement", 0);
             mob:setLocalVar("PhysicalElement", 0);
-            mob:useMobAbility(439); -- Do Blood Weapon!
+            mob:useMobAbility(695); -- Do Blood Weapon!
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
             mob:setLocalVar("Mars_2hr", 5);
         end
@@ -122,20 +122,20 @@ function onMobFight(mob, target)
         if (Mars_2hr_Used == 2) then
             mob:SpoofChatParty("It has been over 1000 years since I have been so...Entertained.", MESSAGE_SAY);
             mob:SpoofChatParty("Show me more, mortal! More! Bleed for the god of war!", MESSAGE_SAY);
-            mob:useMobAbility(439); -- Do Blood Weapon!
+            mob:useMobAbility(695); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 3);
         end
     elseif (mob:getHPP() <= 70) then -- 1st MS time!
         if (Mars_2hr_Used == 1) then
             mob:SpoofChatParty("Hmmph. You've managed to scratch me.", MESSAGE_SAY);
             mob:SpoofChatParty("Very well then, I shall show you my full might!", MESSAGE_SAY);
-            mob:useMobAbility(432); -- Do Mighty Strikes!
+            mob:useMobAbility(688); -- Do Mighty Strikes!
             mob:setLocalVar("Mars_2hr", 2);
         end
     elseif (mob:getHPP() <= 85) then -- 1st BW time!
         if (Mars_2hr_Used == 0) then
             mob:SpoofChatParty("Such hubris...You shall learn to show me the proper respect, mortal!", MESSAGE_SAY);
-            mob:useMobAbility(439); -- Do Blood Weapon!
+            mob:useMobAbility(695); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 1);
         end
     end
@@ -143,6 +143,7 @@ function onMobFight(mob, target)
     if (Mars_2hr_Used < 4) then -- After 4th use of 2hr, no more ele switching.
         local MARS_ELEMENT = mob:getLocalVar("MagicElement");
         -- target:PrintToPlayer( string.format( "Mars Weakness: '%u' ", MARS_ELEMENT) );
+        -- TODO: tables, not if/else trees...
         if (MARS_ELEMENT == 6) then -- Water
             mob:setMod(MOD_FIRE_ABSORB,50);
             mob:setMod(MOD_LTNG_NULL,200);
@@ -275,10 +276,10 @@ end;
 -----------------------------------
 
 function onWeaponskillHit(mob, attacker, weaponskill)
-    if (math.random(1,15) == 8) then
+    if (math.random(1,8) == 4) then
         -- 1 in 8 chance of reaction
         mob:useMobAbility(573); -- Great Wheel
-    -- elseif (math.random(1,15) == 8) then
+    -- elseif (math.random(1,8) == 4) then
        -- Add weakness hint maybe?
     end
 
@@ -289,6 +290,7 @@ end;
 -----------------------------------
 
 function onSpikesDamage(mob,target,damage)
+    -- TODO: recheck this...I think I did the proc check backwards
     local SPIKE_ELEMENT = mob:getLocalVar("SpikesElement");
     local dmg = math.random(6,12);
     -- target:PrintToPlayer( string.format( "Spike Ele: '%u' ", SPIKE_ELEMENT) );
@@ -341,7 +343,7 @@ function onSpikesDamage(mob,target,damage)
             end
             dmg = utils.clamp(dmg, 2, 240);
             -- Mar's retaliation bypasses shadows because TeoTwawki is just evil like that.
-            mob:addTP(10); -- Forget math, just straight 100/3000 per hit is good enough.
+            mob:addTP(100); -- Forget math, just straight 100/3000 per hit is good enough.
             return SUBEFFECT_COUNTER,536,dmg;
         else
             return 0, 0, 0;
@@ -354,24 +356,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    if (player:getParty() ~= nil) then
-        local targets = player:getParty(); -- local targets = mob:getEnmityList();
-        for hey, dude in pairs(targets) do
-            if (dude:isPC()) then
-                dude:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-                dude:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-                dude:ChangeMusic(2, 195); -- SoloBattle Music
-                dude:ChangeMusic(3, 195); -- Party Battle Music
-            end
-        end
-    elseif (player:isPC()) then
-        player:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
-        player:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
-        player:ChangeMusic(2, 195); -- SoloBattle Music
-        player:ChangeMusic(3, 195); -- Party Battle Music
-    end
     mob:SpoofChatParty("...I...Defeated...Content...At last...", MESSAGE_SAY)
     mob:SpoofChatParty("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO)
+    player:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
+    player:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
+    player:ChangeMusic(2, 195); -- SoloBattle Music
+    player:ChangeMusic(3, 195); -- Party Battle Music
     -- insert code to spawn lootbox here, move battlefield win stuff into exit portal.
     -- mob:getBattlefield():win();
 end;
