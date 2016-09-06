@@ -13,14 +13,16 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+    
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
-    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
+    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispelable.
 
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 10);
@@ -39,48 +41,22 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,35);
     mob:setMod(MOD_REGEN,35);
-
 end;
-
------------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Veiled_Ixion_2hr = 0;
-    if (mob:getLocalVar("Veiled_Ixion_2hr") ~= nil) then
-        Veiled_Ixion_2hr = mob:getLocalVar("Veiled_Ixion_2hr");
-    end
+    local Veiled_Ixion_2hr = mob:getLocalVar("Veiled_Ixion_2hr");
 
     if (mob:getHPP() <= 10) then
         if (Veiled_Ixion_2hr == 0) then
-            mob:useMobAbility(437); -- PD
+            mob:useMobAbility(693); -- PD
             mob:setLocalVar("Veiled_Ixion_2hr", 1);
         end
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
 
 -----------------------------------
 -- onSpikesDamage
@@ -93,8 +69,7 @@ function onSpikesDamage(mob,target,damage)
     if (INT_diff > 20) then
         INT_diff = 20 + (INT_diff - 20);
     end
-    INT_diff = INT_diff * 0.25;
-    dmg = dmg + INT_diff * 0.25;
+    dmg = dmg + (INT_diff * 0.25);
     dmg = utils.clamp(dmg, 1, 99);
     -- Shockspikes stun is handled in the C++ core.
     return SUBEFFECT_SHOCK_SPIKES,44,dmg;
@@ -105,6 +80,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    SpawnMob(17526837, 300);
     player:addCurrency("legion_point", 50);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    SpawnMob(17526837); -- WHY YOU NO COMMENT? Need to know what you are spawning, derp!
 end;

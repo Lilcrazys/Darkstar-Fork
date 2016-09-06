@@ -282,12 +282,11 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-
     local MightyStrikesCount = mob:getLocalVar("MSC");
 
     if (MightyStrikesCount == 3 and mob:getHPP() <= 20) then
         mob:setLocalVar("MSC", 4);
-        mob:useMobAbility(432); -- MS
+        mob:useMobAbility(688); -- MS
         mob:addMod(MOD_REGAIN, 10);
         mob:addMod(MOD_DOUBLE_ATTACK, 15);
         mob:addStatusEffect(EFFECT_HASTE,100,0,100);
@@ -296,13 +295,13 @@ function onMobFight(mob,target)
         mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
     elseif (MightyStrikesCount == 2 and mob:getHPP() <= 40) then
         mob:setLocalVar("MSC", 3);
-        mob:useMobAbility(432); -- MS
+        mob:useMobAbility(688); -- MS
     elseif (MightyStrikesCount == 1 and mob:getHPP() <= 60) then
         mob:setLocalVar("MSC", 2);
-        mob:useMobAbility(432); -- MS
+        mob:useMobAbility(688); -- MS
     elseif (MightyStrikesCount == 0 and mob:getHPP() <= 80) then
         mob:setLocalVar("MSC", 1);
-        mob:useMobAbility(432); -- MS
+        mob:useMobAbility(688); -- MS
     end
 end;
 
@@ -312,5 +311,12 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 10);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Lofty_Zilant
 end;

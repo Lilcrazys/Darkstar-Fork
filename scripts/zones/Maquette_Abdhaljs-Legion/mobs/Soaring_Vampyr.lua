@@ -13,9 +13,11 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+
     -- addMod
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);
@@ -33,54 +35,22 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,20);
     mob:setMod(MOD_REGEN,35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-
 end;
-
------------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Soaring_Vampyr_2hr = 0;
-    if (mob:getLocalVar("Soaring_Vampyr_2hr") ~= nil) then
-        Soaring_Vampyr_2hr = mob:getLocalVar("Soaring_Vampyr_2hr");
-    end
+    local Soaring_Vampyr_2hr = mob:getLocalVar("Soaring_Vampyr_2hr");
 
     if (mob:getHPP() <= 10) then
         if (Soaring_Vampyr_2hr == 0) then
-            mob:useMobAbility(439); -- BW
+            mob:useMobAbility(695); -- BW
             mob:setLocalVar("Soaring_Vampyr_2hr", 1);
         end
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath
@@ -88,5 +58,12 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 10);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Soaring_Strigoi
 end;

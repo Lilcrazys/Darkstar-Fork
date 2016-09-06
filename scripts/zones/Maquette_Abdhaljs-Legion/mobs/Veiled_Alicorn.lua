@@ -19,9 +19,10 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes
-    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispellable.
+    mob:getStatusEffect(EFFECT_DAMAGE_SPIKES):setFlag(32); -- Make spikes undispelable.
 
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 20);
@@ -42,16 +43,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,30);
     mob:setMod(MOD_REGEN,35);
     mob:setMod(MOD_HASTE_ABILITY, 10);
-
 end;
-
------------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
@@ -62,30 +54,16 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 15) then
         if (Veiled_Alicorn_2hr == 1) then
-            mob:useMobAbility(437); -- PD
+            mob:useMobAbility(693); -- PD
             mob:setLocalVar("Veiled_Alicorn_2hr", 2);
         end
     elseif (mob:getHPP() <= 60) then
         if (Veiled_Alicorn_2hr == 0) then
-            mob:useMobAbility(432); -- MS
+            mob:useMobAbility(688); -- MS
             mob:setLocalVar("Veiled_Alicorn_2hr", 1);
         end
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
 
 -----------------------------------
 -- onSpikesDamage
@@ -98,10 +76,9 @@ function onSpikesDamage(mob,target,damage)
     if (MND_diff > 20) then
         MND_diff = 20 + (MND_diff - 20);
     end
-    MND_diff = MND_diff * 0.25;
-    dmg = dmg + MND_diff * 0.25;
+    dmg = dmg + (MND_diff * 0.25);
     dmg = utils.clamp(dmg, 1, 99);
-    target:addTP(-dmg*0.5); -- Veiled Ixion got stun to slow down melee dmg..I figure Veiled Alicorn can -tp the melees instead.
+    target:addTP(-dmg*5); -- Veiled Ixion got stun to slow down melee dmg..I figure Veiled Alicorn can -tp the melees instead.
     return SUBEFFECT_REPRISAL,44,dmg; -- Mobs can do this without a shield, eat your heart out Paladins!
 end;
 
@@ -110,17 +87,24 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     local popBoss = true;
     local MobIDs = {17526833, 17526834, 17526835, 17526836, 17526838, 17526839};
     -- Veiled_Alicorn 17526837
 
-    for Veiled, ID in pairs(MobIDs) do
+    for deezNuts, ID in pairs(MobIDs) do
         if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
             popBoss = false;
         end
     end
 
     if (popBoss == true) then
-        SpawnMob(17526839, 300);
+        SpawnMob(17526839);
     end
 end;

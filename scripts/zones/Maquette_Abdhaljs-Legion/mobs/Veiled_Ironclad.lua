@@ -10,6 +10,7 @@ require("scripts/globals/titles");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
@@ -49,17 +50,17 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 10) then
         if (Veiled_Ironclad_2hr_Used == 2) then
-            mob:useMobAbility(434); -- HF
+            mob:useMobAbility(690); -- HF
             mob:setLocalVar("Veiled_Ironclad_2hr_Used", 3);
         end
     elseif (mob:getHPP() <= 30) then
         if (Veiled_Ironclad_2hr_Used == 1) then
-            mob:useMobAbility(432); -- MS
+            mob:useMobAbility(688); -- MS
             mob:setLocalVar("Veiled_Ironclad_2hr_Used", 2);
         end
     elseif (mob:getHPP() <= 70) then
         if (Veiled_Ironclad_2hr_Used == 0) then
-            mob:useMobAbility(434); -- HF
+            mob:useMobAbility(690); -- HF
             mob:setLocalVar("Veiled_Ironclad_2hr_Used", 1);
         end
     end

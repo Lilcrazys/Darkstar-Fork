@@ -13,10 +13,12 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+
     -- addMod
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);
@@ -32,16 +34,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REFRESH, 30);
     mob:setMod(MOD_HASTE_ABILITY, 15);
     mob:setMod(MOD_UFASTCAST, 25);
-
 end;
-
------------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
@@ -55,41 +48,21 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 15) then
         if (Paramount_Harpeia_2hr_Used == 2) then
-            mob:useMobAbility(436); -- CS
+            mob:useMobAbility(692); -- CS
             mob:setLocalVar("Paramount_Harpeia_2hr_Used", 3);
         end
     elseif (mob:getHPP() <= 40) then
         if (Paramount_Harpeia_2hr_Used == 1) then
-            mob:useMobAbility(436); -- CS
+            mob:useMobAbility(692); -- CS
             mob:setLocalVar("Paramount_Harpeia_2hr_Used", 2);
         end
     elseif (mob:getHPP() <= 60) then
         if (Paramount_Harpeia_2hr_Used == 0) then
-            mob:useMobAbility(433); -- Ben
+            mob:useMobAbility(689); -- Ben
             mob:setLocalVar("Paramount_Harpeia_2hr_Used", 1);
         end
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath
@@ -97,17 +70,24 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 75);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     local popBoss = true;
     local MobIDs = {17526853, 17526851, 17526854, 17526856};
     -- Paramount_Harpeia 17526852
 
-    for Veiled, ID in pairs(MobIDs) do
+    for deezNuts, ID in pairs(MobIDs) do
         if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
             popBoss = false;
         end
     end
 
     if (popBoss == true) then
-        SpawnMob(17526856, 300);
+        SpawnMob(17526856);
     end
 end;

@@ -14,6 +14,7 @@ require("scripts/globals/titles");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
@@ -41,14 +42,6 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
@@ -60,25 +53,25 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 10) then
         if (Paramount_Gallu_2hr_Used == 3) then
-            mob:useMobAbility(435);
+            mob:useMobAbility(691);
             mob:setLocalVar("Paramount_Gallu_2hr_Used", 4);
         elseif (Paramount_Gallu_2hr_Used == 4) then
-            mob:useMobAbility(439);
+            mob:useMobAbility(695);
             mob:setLocalVar("Paramount_Gallu_2hr_Used", 5);
         end
     elseif (mob:getHPP() <= 25) then
         if (Paramount_Gallu_2hr_Used == 2) then
-            mob:useMobAbility(439);
+            mob:useMobAbility(695);
             mob:setLocalVar("Paramount_Gallu_2hr_Used", 3);
         end
     elseif (mob:getHPP() <= 50) then
         if (Paramount_Gallu_2hr_Used == 1) then
-            mob:useMobAbility(439);
+            mob:useMobAbility(695);
             mob:setLocalVar("Paramount_Gallu_2hr_Used", 2);
         end
     elseif (mob:getHPP() <= 75) then
         if (Paramount_Gallu_2hr_Used == 0) then
-            mob:useMobAbility(439);
+            mob:useMobAbility(695);
             mob:setLocalVar("Paramount_Gallu_2hr_Used", 1);
         end
     end
@@ -97,20 +90,6 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_NONE,0,EFFECT_TERROR;
     end
 end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath

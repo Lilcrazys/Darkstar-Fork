@@ -13,6 +13,7 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
@@ -32,72 +33,40 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,125);
-
 end;
-
------------------------------------
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
 
 -----------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Paramount_Botulus_2hr_Used = 0;
-    if (mob:getLocalVar("Paramount_Botulus_2hr_Used") ~= nil) then
-        Paramount_Botulus_2hr_Used = mob:getLocalVar("Paramount_Botulus_2hr_Used");
-    end
+    local Paramount_Botulus_2hr_Used = mob:getLocalVar("Paramount_Botulus_2hr_Used");
 
     if (mob:getHPP() <= 10) then
         if (Paramount_Botulus_2hr_Used == 3) then
-            mob:useMobAbility(435);
+            mob:useMobAbility(691);
             mob:setLocalVar("Paramount_Botulus_2hr_Used", 4);
         elseif (Paramount_Botulus_2hr_Used == 4) then
-            mob:useMobAbility(436);
+            mob:useMobAbility(692);
             mob:setLocalVar("Paramount_Botulus_2hr_Used", 5);
         end
     elseif (mob:getHPP() <= 25) then
         if (Paramount_Botulus_2hr_Used == 2) then
-            mob:useMobAbility(436);
+            mob:useMobAbility(692);
             mob:setLocalVar("Paramount_Botulus_2hr_Used", 3);
         end
     elseif (mob:getHPP() <= 50) then
         if (Paramount_Botulus_2hr_Used == 1) then
-            mob:useMobAbility(436);
+            mob:useMobAbility(692);
             mob:setLocalVar("Paramount_Botulus_2hr_Used", 2);
         end
     elseif (mob:getHPP() <= 75) then
         if (Paramount_Botulus_2hr_Used == 0) then
-            mob:useMobAbility(436);
+            mob:useMobAbility(692);
             mob:setLocalVar("Paramount_Botulus_2hr_Used", 1);
         end
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath
@@ -105,5 +74,12 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 300);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     SpawnMob(mob:getID()-1) -- Spawns Paramount_Gallu
 end;

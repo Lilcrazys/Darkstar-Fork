@@ -279,14 +279,6 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
@@ -294,30 +286,10 @@ function onMobFight(mob, target)
     local Mired_Khimaira_2hr =  mob:getLocalVar("Mired_Khimaira_2hr");
 
     if (Mired_Khimaira_2hr == 0 and mob:getHPP() <= 10) then
-        mob:useMobAbility(438); -- Invicible
+        mob:useMobAbility(694); -- Invicible
         mob:setLocalVar("Mired_Khimaira_2hr", 1);
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath
@@ -325,5 +297,12 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 10);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Mired_Khrysokhimaira
 end;

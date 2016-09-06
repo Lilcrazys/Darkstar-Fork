@@ -30,14 +30,6 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
@@ -71,9 +63,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:delStatusEffect(EFFECT_WEAKNESS);
-    player:restoreHP(3000);
-    player:messageBasic(024,(player:getMaxHP()-player:getHP()));
-    player:restoreMP(3000);
-    player:messageBasic(025,(player:getMaxMP()-player:getMP()));
+    if (isKiller == true) then
+        player:delStatusEffect(EFFECT_WEAKNESS);
+        player:restoreHP(3000);
+        player:messageBasic(024,(player:getMaxHP()-player:getHP()));
+        player:restoreMP(3000);
+        player:messageBasic(025,(player:getMaxMP()-player:getMP()));
+    end
 end;

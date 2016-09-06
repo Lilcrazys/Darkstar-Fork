@@ -30,14 +30,6 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
@@ -47,6 +39,7 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
+
 -- function onAdditionalEffect(mob,target,damage)
     -- come back later and set added effect on ele type
 -- end;
@@ -71,6 +64,8 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:resetRecasts();
-    player:injectActionPacket( 6, 312 );
+    if (isKiller == true) then
+        player:resetRecasts();
+        player:injectActionPacket( 6, 312 );
+    end
 end;

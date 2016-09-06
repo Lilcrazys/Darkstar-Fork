@@ -13,6 +13,7 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
@@ -38,56 +39,32 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Veiled_Sandworm_2hr = 0;
-    if (mob:getLocalVar("Veiled_Sandworm_2hr") ~= nil) then
-        Veiled_Sandworm_2hr = mob:getLocalVar("Veiled_Sandworm_2hr");
-    end
+    local Veiled_Sandworm_2hr = mob:getLocalVar("Veiled_Sandworm_2hr");
 
     if (mob:getHPP() <= 10) then
         if (Veiled_Sandworm_2hr == 0) then
-            mob:useMobAbility(439); -- BW
+            mob:useMobAbility(695); -- BW
             mob:setLocalVar("Veiled_Sandworm_2hr", 1);
         end
     end
 end;
 
 -----------------------------------
--- onAdditionalEffect Action
------------------------------------
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
-
------------------------------------
 -- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    SpawnMob(17526838, 300);
     player:addCurrency("legion_point", 50);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    SpawnMob(17526838); -- WHY YOU NO COMMENT? Need to know what you are spawning, derp!
 end;

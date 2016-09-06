@@ -1,7 +1,6 @@
 -----------------------------------
 -- Area: Legion
 -- Lofty_Elasmoth
-
 -----------------------------------
 
 require("scripts/globals/status");
@@ -14,6 +13,7 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
@@ -278,57 +278,24 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
-
--- onMobEngaged Action
------------------------------------
-
--- function onMobEngaged(mob, target)
--- end;
-
------------------------------------
 -- onMobFight Action
 -----------------------------------
 
 function onMobFight(mob, target)
-    local BattleTime = mob:getBattleTime();
-    local Lofty_Elasmoth_2hr = 0;
-    if (mob:getLocalVar("Lofty_Elasmoth_2hr") ~= nil) then
-        Lofty_Elasmoth_2hr = mob:getLocalVar("Lofty_Elasmoth_2hr");
-    end
+    local Lofty_Elasmoth_2hr = mob:getLocalVar("Lofty_Elasmoth_2hr");
 
     if (mob:getHPP() <= 15) then
         if (Lofty_Elasmoth_2hr == 1) then
-            mob:useMobAbility(439); -- BW
+            mob:useMobAbility(695); -- BW
             mob:setLocalVar("Lofty_Elasmoth_2hr", 2);
         end
     elseif (mob:getHPP() <= 60) then
         if (Lofty_Elasmoth_2hr == 0) then
-            mob:useMobAbility(432); -- MS
+            mob:useMobAbility(688); -- MS
             mob:setLocalVar("Lofty_Elasmoth_2hr", 1);
         end
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
--- function onAdditionalEffect(mob,target,damage)
--- end;
-
------------------------------------
--- onMagicHit
------------------------------------
-
--- function onMagicHit(caster, target, spell)
--- end;
-
------------------------------------
--- onSpikesDamage
------------------------------------
-
--- function onSpikesDamage(mob,target,damage)
--- end;
 
 -----------------------------------
 -- onMobDeath
@@ -336,17 +303,24 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 50);
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
     local popBoss = true;
     local MobIDs = {17526785, 17526786, 17526787, 17526789, 17526790, 17526791};
     -- Lofty_Elasmoth 17526788
 
-    for Veiled, ID in pairs(MobIDs) do
+    for deezNuts, ID in pairs(MobIDs) do
         if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
             popBoss = false;
         end
     end
 
     if (popBoss == true) then
-        SpawnMob(17526791, 300);
+        SpawnMob(17526791);
     end  
 end;
