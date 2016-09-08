@@ -1377,45 +1377,39 @@ INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,1959); -- Water Bo
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,2513); -- Mega Scissors (Bigger than Big Scissors o.o;)
 -- INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,3265); -- Elemental Sforzo (RUN 2hr (Magic Immunity)
 /* stuff below is temp disabled
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,190);
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,200);
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,249);
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,332);
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,943);
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,1424);
--- INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,437);
--- INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,439);
--- INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,475);
-INSERT INTO `mob_skill_lists` VALUES ('SlenderMan'9666,72);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,253);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,567);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,568);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,569);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,570);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,571);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,572);
-INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,573);
--- INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,432);
--- INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,439);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1849);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,574);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,729);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1130);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1123);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1252);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1885);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1886);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1888);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1891);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2078);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2079);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2114);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2434);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2435);
--- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,435);
--- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,436);
--- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,438);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2102);
-INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1231);
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,241); -- Netherspikes
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,249); -- Netherspikes
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,255); -- Dimensional Death
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,456); -- Tentacle
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,332); -- Death Trap
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,943); -- Gate_of_Tartarus
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,1424); -- Predatory Glare
+INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,1002); -- Summon Proxies
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,243); -- Aegis_Schism
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,251); -- Aegis_Schism
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,823); -- Fire_Blade
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,824); -- Frost_Blade
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,825); -- Wind_Blade2
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,826); -- Earth_Blade
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,827); -- Lightning_Blade
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,828); -- Water_Blade
+INSERT INTO `mob_skill_lists` VALUES ('Mars',9760,829); -- Great_Wheel
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,830); -- Light_Blade (Grants/Restores EnLight)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,985); -- Stellar_burst
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1386); -- Medusa_Javelin
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1379); -- Auroral_Wind (Grants/Restores Light spikes)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1508); -- Luminous_Lance (Grants/Restores EnLight)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2141); -- Radiant_sacrament (Grants/Restores Light spikes)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2142); -- Mega_holy
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2144); -- Divine_spear (Grants/Restores EnLight)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2147); -- Divine_Jugement
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2334); -- Wrath_of_zeus (Grants/Restores Shock spikes and EnThunder)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2335); -- Lightning_spear
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2370); -- Grace_of_Hera (Grants/Restores Light spikes)
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2690); -- Dark_Moon
+INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2691); -- Dark_Sun
+-- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2358); -- Tabula_Rasa
+-- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1487); -- Ambrosia
+INSERT INTO `mob_skill_lists` VALUES ('Minerva_Melee',9778,2105); -- Melee_Special
  */
 -- Thinking of placing a new entry right here? DO NOT. Scroll your butt up past The Jumping Crab!

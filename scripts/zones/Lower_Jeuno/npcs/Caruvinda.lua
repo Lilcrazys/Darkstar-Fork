@@ -63,28 +63,28 @@ end;
 -- onTrigger Action
 -----------------------------------
 function onTrigger(player,npc)
-    -- Begind Temp Fix for broken AF quests
-    player:addKeyItem(654);
-    player:addKeyItem(655);
-    player:addKeyItem(656);
-    player:addKeyItem(657);
-    player:addKeyItem(658);
-    player:addKeyItem(659);
-    player:addKeyItem(660);
-    player:addKeyItem(661);
-    player:addKeyItem(662);
-    player:addKeyItem(663);
-    player:addKeyItem(664);
-    player:addKeyItem(665);
-    player:addKeyItem(666);
-    player:addKeyItem(667);
-    player:addKeyItem(668);
-    player:addKeyItem(1964);
-    player:addKeyItem(1965);
-    player:addKeyItem(1966);
-    player:addKeyItem(1967);
-    player:addKeyItem(1968);
-    player:addKeyItem(1969);
+    -- Begin Temp Fix for broken AF quests
+    player:addKeyItem(654); -- FIGHTERS_ARMOR_CLAIM_SLIP
+    player:addKeyItem(655); -- TEMPLE_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(656); -- HEALERS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(657); -- WIZARDS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(658); -- WARLOCKS_ARMOR_CLAIM_SLIP
+    player:addKeyItem(659); -- ROGUES_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(660); -- GALLANT_ARMOR_CLAIM_SLIP
+    player:addKeyItem(661); -- CHAOS_ARMOR_CLAIM_SLIP
+    player:addKeyItem(662); -- BEAST_ARMOR_CLAIM_SLIP
+    player:addKeyItem(663); -- CHORAL_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(664); -- HUNTERS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(665); -- MYOCHIN_ARMOR_CLAIM_SLIP
+    player:addKeyItem(666); -- NINJAS_GARB_CLAIM_SLIP
+    player:addKeyItem(667); -- DRACHEN_ARMOR_CLAIM_SLIP
+    player:addKeyItem(668); -- EVOKERS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(1964); -- MAGUS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(1965); -- CORSAIRS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(1966); -- PUPPETRY_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(1967); -- DANCERS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(1968); -- DANCERS_ATTIRE_CLAIM_SLIP
+    player:addKeyItem(1969); -- SCHOLARS_ATTIRE_CLAIM_SLIP
     -- End Temp Fix
    CurrGil = player:getGil();
    for KeyItem = 11,ArraySize,11 do
@@ -103,7 +103,7 @@ function onTrigger(player,npc)
       end;
    end;
    player:startEvent(Withdrawl,G1,G2,G3,G4,CurrGil,G5);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate
@@ -141,7 +141,7 @@ function onEventFinish(player,csid,option)
                end;
             end;
          end;
-      end;        
+      end;
    end;
    if (csid == Deposit) then
       player:tradeComplete();
