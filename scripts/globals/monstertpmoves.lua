@@ -714,7 +714,7 @@ function MobStatusEffectMove(mob, target, typeEffect, power, tick, duration)
         -------------------------
         -- begin custom
         if (math.random(1,1000) < customResCheck(target, typeEffect)) then
-            if (typeEffect == EFFECT_DOOM)
+            if (typeEffect == EFFECT_DOOM) then
                 return 359; -- "<name> narrowly escapes impending doom."
             end
             return 283; -- resist proc msg ID "No effect on <name>."
@@ -841,7 +841,7 @@ function customResCheck(target, effect)
     elseif (effect == EFFECT_BIND) then
         effectRes = target:getMod(MOD_BINDRES);
     elseif (effect == EFFECT_CURSE_I or effect == EFFECT_CURSE_II or effect == EFFECT_BANE) then
-        effectRes = target:getMod(MOD_CURSERES;
+        effectRes = target:getMod(MOD_CURSERES);
     elseif (effect == EFFECT_WEIGHT) then
         effectRes = target:getMod(MOD_GRAVITYRES);
     elseif (effect == EFFECT_SLOW or effect == EFFECT_ELEGY) then
