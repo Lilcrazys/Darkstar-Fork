@@ -251,7 +251,7 @@ function onTrade(player,npc,trade)
 
         -- SCH
         elseif (trade:hasItemQty(2821,20) and trade:hasItemQty(11477,1) and trade:getItemCount() == 21) then -- head
-            itemID = 27683);
+            itemID = 27683;
         elseif (trade:hasItemQty(2818,25) and trade:hasItemQty(11304,1) and trade:getItemCount() == 26) then -- Body
             itemID = 27827;
         elseif (trade:hasItemQty(2817,20) and trade:hasItemQty(15037,1) and trade:getItemCount() == 21) then -- hands
@@ -262,7 +262,7 @@ function onTrade(player,npc,trade)
             itemID = 28243;
         end
 
-        if (itemID ~= nil)
+        if (itemID ~= nil) then
             if (player:getFreeSlotsCount() == 0) then
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,itemID);
             else

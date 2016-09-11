@@ -23,9 +23,27 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    --[[
     if (player:sendGuild(5152,6,21,0)) then
         player:showText(npc,KUZAH_HPIROHPON_DIALOG);
     end
+    ]]
+        player:showText(npc,KUZAH_HPIROHPON_DIALOG);
+        local stock =
+        {
+        2128,   75,      -- Spindle
+        2145,   75,      -- Zephyr Thread
+        833,    20,      -- Moko Grass
+        834,    500,     -- Saruta Cotton
+        1845,   200,     -- Red Moko Grass
+        819,    150,     -- Linen Thread
+        820,    2800,    -- Wool Thread
+        2295,   800,     -- Mohbwa Grass
+        816,    1500,    -- Silk Thread
+        2315,   1400,    -- Karakul Wool
+        823,    14500    -- Gold Thread
+        };
+        showShop(player, STATIC, stock);
 end;
 
 -----------------------------------

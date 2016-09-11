@@ -23,9 +23,23 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    --[[
     if (player:sendGuild(534,5,22,0)) then
         player:showText(npc,BEUGUNGEL_SHOP_DIALOG);
     end
+    ]]
+        player:showText(npc, BEUGUNGEL_SHOP_DIALOG);
+        local stock =
+        {
+            688,     12,     -- Arrowwood Log
+            693,     640,    -- Walnut Log
+            695,     120,    -- Willow Log
+            696,     330,    -- Yew Log
+            698,     60,     -- Ash Log
+            1021,    312,    -- Hatchet
+            1657,    75      -- Bundling Twine
+        };
+        showShop(player, STATIC, stock);
 end;
 
 -----------------------------------

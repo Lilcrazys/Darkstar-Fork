@@ -5,8 +5,8 @@
 -----------------------------------
 package.loaded["scripts/zones/Tavnazian_Safehold/TextIDs"] = nil;
 -----------------------------------
-require("scripts/zones/Tavnazian_Safehold/TextIDs";
-require("scripts/globals/missions";
+require("scripts/zones/Tavnazian_Safehold/TextIDs");
+require("scripts/globals/missions");
 
 -----------------------------------
 -- onTrade Action
@@ -14,8 +14,8 @@ require("scripts/globals/missions";
 
 function onTrade(player,npc,trade)
     -- Relic Armor 109 Trials
-    local Zilart_clear = player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS;
-    local Chains_clear = player:hasCompletedMission(COP,GARDEN_OF_ANTIQUITY;
+    local Zilart_clear = player:hasCompletedMission(ZILART,THE_CELESTIAL_NEXUS);
+    local Chains_clear = player:hasCompletedMission(COP,GARDEN_OF_ANTIQUITY);
     local itemID;
 
     if (Zilart_clear == false or Chains_clear == false) then
@@ -250,7 +250,7 @@ function onTrade(player,npc,trade)
             itemID = 27366;
         end
 
-        if (itemID ~= nil)
+        if (itemID ~= nil) then
             if (player:getFreeSlotsCount() == 0) then
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,itemID);
             else

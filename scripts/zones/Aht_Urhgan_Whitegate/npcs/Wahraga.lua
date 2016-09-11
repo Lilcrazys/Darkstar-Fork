@@ -23,9 +23,34 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    --[[
     if (player:sendGuild(60425,8,23,5)) then
         player:showText(npc,WAHRAGA_SHOP_DIALOG);
     end
+    ]]
+        player:showText(npc,WAHRAGA_SHOP_DIALOG);
+        local stock =
+        {
+            621,      21,     -- Crying Mustard
+            622,      37,     -- Dried Marjoram
+            636,      106,    -- Chamomile
+            638,      138,    -- Sage
+            914,      1125,   -- Mercury
+            920,      1084,   -- Malboro Vine
+            933,      3392,   -- Glass Fiber
+            951,      90,     -- Wijnruit
+            1108,     573,    -- Sulfur
+            2131,     75,     -- Triturator
+            2229,     1080,   -- Chimera Blood
+            2309,     963,    -- Homunculus Nerves
+            2316,     6,      -- Polyflan Paper
+            4443,     153,    -- Cobalt Jellyfish
+            4509,     40,     -- Distilled Water
+            18228,    114,    -- Battery
+            18232,    114,    -- Hydro Pump
+            18326,    21      -- Wind Fan
+        };
+        showShop(player, STATIC, stock);
 end;
 
 -----------------------------------

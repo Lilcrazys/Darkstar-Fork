@@ -25,9 +25,31 @@ end;
 
 function onTrigger(player,npc)
     if (player:hasKeyItem(TENSHODO_MEMBERS_CARD)) then 
+        --[[
         if (player:sendGuild(60420, 1, 23, 4)) then 
             player:showText(npc,TENSHODO_SHOP_OPEN_DIALOG);
         end
+        ]]
+        player:showText(npc,TENSHODO_SHOP_OPEN_DIALOG);
+        local stock =
+        {
+            16896,    517,       -- Kunai
+            16919,    2728,      -- Shinobi-Gatana
+            16975,    11583,     -- Kanesada
+            16966,    1836,      -- Tachi
+            16988,    14676,     -- Kotetsu
+            12456,    552,       -- Hachimaki
+            12537,    3272,      -- Cotton Hachimaki
+            12584,    833,       -- Kenpogi
+            12585,    4931,      -- Cotton Dogi
+            12712,    458,       -- Tekko
+            12713,    2000,      -- Cotton Tekko
+            12840,    666,       -- Sitabaki
+            12841,    2000,      -- Cotton Sitabaki
+            12968,    424,       -- Kyahan
+            12969,    2528       -- Cotton Kyahan
+        };
+        showShop(player, STATIC, stock);
     else
         player:startEvent(0x0096,1)
     end
