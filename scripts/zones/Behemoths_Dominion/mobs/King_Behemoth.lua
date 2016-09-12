@@ -79,17 +79,6 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    --[[
-    -- Todo: move this to SQL after drop slots are a thing
-    if (math.random(1,100) <= 5) then -- Hardcoded "this or this item" drop rate until implemented.
-        SetDropRate(1936,13566,1000); -- Defending Ring
-        SetDropRate(1936,13415,0);
-    else
-        SetDropRate(1936,13566,0);
-        SetDropRate(1936,13415,1000); -- Pixie Earring
-    end
-    ]]
-
     -- Set King_Behemoth's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
         local wait = 72 * 360;
