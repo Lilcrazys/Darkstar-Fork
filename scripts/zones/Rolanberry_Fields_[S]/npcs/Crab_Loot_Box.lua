@@ -7,6 +7,8 @@ package.loaded["scripts/zones/Rolanberry_Fields_[S]/TextIDs"] = nil;
 
 require("scripts/zones/Rolanberry_Fields_[S]/TextIDs");
 
+local CrabLoot;
+
 -----------------------------------
 -- onTrade Action
 -----------------------------------
@@ -19,12 +21,16 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    local item = 20713;
-    if (player:getLocalVar("alreadyGotLoot") == 0) then
+    if (player:getLocalVar("gotCrabLoot") == 0) then
         if (player:hasItem(20713)) then
-            item = 17748;
+            CrabLoot = 17748; -- 49 in 50 chance of Ibushi Shinai if already have an Excalipoor.
+            if (math.random(1,50) == 5) then -- 1 in 50 chance of a 2nd Excalipoor.
+                CrabLoot = 20713;
+            end
+        else
+            CrabLoot = 20713; -- Always get an Excalipoor if don't have one already.
         end
-        player:startEvent(3000, item);
+        player:startEvent(3000, CrabLoot);
     else
         player:messageBasic(155);
     end
@@ -47,19 +53,19 @@ function onEventFinish(player,csid,option)
     -- print("CSID:",csid);
     -- print("RESULT:",option);
     if (csid == 3000 and option == 1) then
+        if (CrabLoot == nil) then
+            CrabLoot = 17748;
+        end
+
         if (player:getFreeSlotsCount() < 1) then
-            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 20713);
+            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, CrabLoot);
         else
-            local item = 20713;
-            if (math.random(1,9) == 3 or player:hasItem(20713)) then
-                item = 17748;
-            end
-            player:addItem(item, 1);
+            player:addItem(CrabLoot, 1);
             -- One goody per Box Per Person!
             player:setLocalVar("alreadyGotLoot", 1);
             --  Technically that can zone this var off, but box isn't up that long.
             player:SpoofChatPlayer("Found a legendary sword!..Or so you thought..", MESSAGE_EMOTION, nil)
-            player:messageSpecial(ITEM_OBTAINED, item);
+            player:messageSpecial(ITEM_OBTAINED, CrabLoot);
         end
     end
 end;

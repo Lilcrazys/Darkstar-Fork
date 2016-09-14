@@ -419,8 +419,10 @@ function onMobDespawn(mob)
     if (GetServerVariable("JumpingCrabClaim") == 3) then
         repop = math.random(3600, 10800); -- 1 to 3 hours because it wasn't killed.
     end
+
     SetServerVariable("JumpingCrabClaim",0);
     mob:setRespawnTime(repop);
+
     if (GetServerVariable("JumpingCrabPos") == 2) then
         -- Move from South to West
         SetServerVariable("JumpingCrabPos", 0);
@@ -444,28 +446,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
-    local npc = GetNPCByID(mob:getID()+1);
-    npc:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos(), mob:getRotPos());
-    npc:showNPC(30); -- Spawns "Crab Loot Box" for 30 seconds.
+    if (player:getLocalVar("gotCrabLoot") > 0) then
+        player:setLocalVar("gotCrabLoot",0);
+    end
 
-    SetServerVariable("JumpingCrabClaim",0);
-    mob:setRespawnTime(repop);
-
-    if (GetServerVariable("JumpingCrabPos") == 2) then
-        -- Move from South to West
-        SetServerVariable("JumpingCrabPos", 0);
-        mob:setSpawn(-724, -32, -362); -- West side of Zone
-        mob:setPos(-724, -32, -362); -- West side of Zone
-    elseif (GetServerVariable("JumpingCrabPos") == 0) then
-        -- Move from West to East
-        SetServerVariable("JumpingCrabPos", 1);
-        mob:setSpawn(275, -32, -270); -- East side of Zone
-        mob:setPos(275, -32, -270); -- East side of Zone
-    else
-        -- Move from East to South
-        SetServerVariable("JumpingCrabPos", 2);
-        mob:setSpawn(120, -15, -698); -- South side of Zone
-        mob:setPos(120, -15, -698); -- South side of Zone
+    if (isKiller == true) then
+        local npc = GetNPCByID(mob:getID()+1);
+        npc:setPos(mob:getXPos(), mob:getYPos(), mob:getZPos(), mob:getRotPos());
+        npc:showNPC(90); -- Spawns "Crab Loot Box" for 90 seconds.
     end
 end;
