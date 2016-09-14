@@ -420,6 +420,11 @@ int32 version_info_read(const char *fileName)
         {
             version_info.CLIENT_VER = aStrdup(w2);
         }
+
+        if (strcmp(w1, "ALT_VER") == 0)
+        {
+            version_info.ALT_VER = aStrdup(w2);
+        }
     }
     fclose(fp);
     return 0;
@@ -454,6 +459,7 @@ int32 login_config_default()
 int32 version_info_default()
 {
     version_info.CLIENT_VER = "99999999_9"; // xxYYMMDD_m = xx:MajorRelease YY:year MM:month DD:day _m:MinorRelease
+    version_info.ALT_VER = "99999999_9"; // xxYYMMDD_m = xx:MajorRelease YY:year MM:month DD:day _m:MinorRelease
     // version_info.DSP_VER = 0;
     return 0;
 }

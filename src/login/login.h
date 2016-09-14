@@ -68,7 +68,7 @@ struct login_config_t
 struct version_info_t
 {
     const char* CLIENT_VER;         // Expected Client version
-    std::string Max_Client_Ver; // Maximum Client version allowed to login to server.
+    const char* ALT_VER;            // Alternate Client version
 };
 
 extern login_config_t login_config;

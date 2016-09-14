@@ -475,7 +475,10 @@ int32 lobbyview_parse(int32 fd)
 
             //----------------------------------------
             // Begin Custom section
-            //int32 accid = RBUFL(buff, 1); // Get the account ID so we can query it..
+            string_t alt_version(version_info.ALT_VER, 6);
+            alt_version = alt_version+"xx_x";
+
+            // Get the account ID so we can query it..
             const char* fmtQuery =
                 "SELECT "
                 "SUM(gmlevel) "
@@ -500,7 +503,7 @@ int32 lobbyview_parse(int32 fd)
             // End Custom section
             //----------------------------------------
 
-            if (expected_version != client_ver_data)
+            if (expected_version != client_ver_data && alt_version != client_ver_data)
             {
                 sendsize = 0x24;
                 LOBBBY_ERROR_MESSAGE(ReservePacket);

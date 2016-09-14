@@ -1,22 +1,22 @@
 ﻿/*
 ===========================================================================
 
-  Copyright (c) 2010-2015 Darkstar Dev Teams
+Copyright (c) 2010-2015 Darkstar Dev Teams
 
-  This program is free software: you can redistribute it and/or modify
-  it under the terms of the GNU General Public License as published by
-  the Free Software Foundation, either version 3 of the License, or
-  (at your option) any later version.
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
 
-  This program is distributed in the hope that it will be useful,
-  but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-  GNU General Public License for more details.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-  You should have received a copy of the GNU General Public License
-  along with this program.  If not, see http://www.gnu.org/licenses/
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/
 
-  This file is part of DarkStar-server source code.
+This file is part of DarkStar-server source code.
 
 ===========================================================================
 */
@@ -70,7 +70,7 @@
 
 const int8* MAP_CONF_FILENAME = nullptr;
 
-int8*  g_PBuff   = nullptr;                // глобальный буфер обмена пакетами
+int8*  g_PBuff = nullptr;                // глобальный буфер обмена пакетами
 int8*  PTempBuff = nullptr;                // временный  буфер обмена пакетами
 
 thread_local Sql_t* SqlHandle = nullptr;
@@ -124,7 +124,7 @@ map_session_data_t* mapsession_createsession(uint32 ip, uint16 port)
 
     uint64 port64 = port;
     uint64 ipp = ip;
-    ipp |= port64<<32;
+    ipp |= port64 << 32;
     map_session_list[ipp] = map_session_data;
 
 	const int8* fmtQuery = "SELECT charid FROM accounts_sessions WHERE inet_ntoa(client_addr) = '%s' LIMIT 1;";
@@ -154,7 +154,7 @@ int32 do_init(int32 argc, int8** argv)
     for (int i = 1; i < argc; i++)
     {
         if (strcmp(argv[i], "--ip") == 0)
-            map_ip.s_addr = inet_addr(argv[i+1]);
+            map_ip.s_addr = inet_addr(argv[i + 1]);
         else if (strcmp(argv[i], "--port") == 0)
             map_port = std::stoi(argv[i + 1]);
     }
@@ -176,11 +176,11 @@ int32 do_init(int32 argc, int8** argv)
     SqlHandle = Sql_Malloc();
 
     ShowStatus("do_init: sqlhandle is allocating");
-    if (Sql_Connect(SqlHandle,map_config.mysql_login,
-                              map_config.mysql_password,
-                              map_config.mysql_host,
-                              map_config.mysql_port,
-                              map_config.mysql_database) == SQL_ERROR )
+    if (Sql_Connect(SqlHandle, map_config.mysql_login,
+        map_config.mysql_password,
+        map_config.mysql_host,
+        map_config.mysql_port,
+        map_config.mysql_database) == SQL_ERROR)
     {
         do_final(EXIT_FAILURE);
     }
@@ -188,7 +188,7 @@ int32 do_init(int32 argc, int8** argv)
 
     // отчищаем таблицу сессий при старте сервера (временное решение, т.к. в кластере это не будет работать)
     Sql_Query(SqlHandle, "DELETE FROM accounts_sessions WHERE IF(%u = 0 AND %u = 0, true, server_addr = %u AND server_port = %u);",
-                            map_ip, map_port, map_ip, map_port);
+        map_ip, map_port, map_ip, map_port);
 
     ShowMessage("\t\t - " CL_GREEN"[OK]" CL_RESET"\n");
     ShowStatus("do_init: zlib is reading");
@@ -228,7 +228,7 @@ int32 do_init(int32 argc, int8** argv)
 
     fishingutils::LoadFishingMessages();
 
-    ShowStatus("do_init: server is binding with port %u",map_port == 0 ? map_config.usMapPort : map_port);
+    ShowStatus("do_init: server is binding with port %u", map_port == 0 ? map_config.usMapPort : map_port);
     map_fd = makeBind_udp(map_config.uiMapIp, map_port == 0 ? map_config.usMapPort : map_port);
     ShowMessage("\t - " CL_GREEN"[OK]" CL_RESET"\n");
 
@@ -242,7 +242,7 @@ int32 do_init(int32 argc, int8** argv)
     CTaskMgr::getInstance()->AddTask("map_cleanup", server_clock::now(), nullptr, CTaskMgr::TASK_INTERVAL, map_cleanup, 5s);
     CTaskMgr::getInstance()->AddTask("garbage_collect", server_clock::now(), nullptr, CTaskMgr::TASK_INTERVAL, map_garbage_collect, 15min);
 
-    CREATE(g_PBuff,   int8, map_config.buffer_size + 20);
+    CREATE(g_PBuff, int8, map_config.buffer_size + 20);
     CREATE(PTempBuff, int8, map_config.buffer_size + 20);
 
     ShowStatus("The map-server is " CL_GREEN"ready" CL_RESET" to work...\n");
@@ -1187,7 +1187,7 @@ int32 map_config_read(const int8* cfgName)
         {
             map_config.engage_delay_mod = atoi(w2);
         }
-        else if (strcmp(w1,"speed_mod") == 0)
+        else if (strcmp(w1, "speed_mod") == 0)
         {
             map_config.speed_mod = atoi(w2);
         }
