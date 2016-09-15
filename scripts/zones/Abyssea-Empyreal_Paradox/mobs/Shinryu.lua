@@ -31,8 +31,8 @@ function onMobInitialize(mob)
     mob:setMod(MOD_STUNRES,1000);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_UFASTCAST, 65);
-    mob:setMod(MOD_MACC, 2500); -- this needs to becoem addMod of teh correct amount
-    mob:setMod(MOD_MATT, 125);  -- this needs to becoem addMod of teh correct amount
+    mob:setMod(MOD_MACC, 2500); -- this needs to become addMod of the correct amount
+    mob:setMod(MOD_MATT, 125);  -- this needs to become addMod of the correct amount
     mob:setMod(MOD_HUMANOID_KILLER, 7);
     mob:setMod(MOD_TERRORRES, 10000);
 
@@ -65,20 +65,23 @@ end;
 
 function onMobFight(mob, target)
     local Wings = mob:getLocalVar("Wings");
-    local Shinryu_2hr_Used = 0;
+    local Shinryu_2hr_Used = mob:getLocalVar("Shinryu_2hr");
 
-    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 180) then
+    -- This commented out stuff is for test purposes.
+    -- mob:castSpell(218); -- Force cast meteor
+    -- mob:setMP(0) -- Stop casting meathead
+    -- mob:addTP(500) -- Spam those TP skills for me meathead
+    -- mob:setMobMod(MOBMOD_SKILL_LIST,4223) -- Show me all "wings out" skills.
+    -- mob:setMobMod(MOBMOD_SKILL_LIST,4225) -- show me all "wings in" skills.
+
+    if (mob:getBattleTime() - mob:getLocalVar("Wings") > 60) then
         if (mob:AnimationSub() == 1) then
-             mob:AnimationSub(0);
-             mob:setLocalVar("Wings", mob:getBattleTime());
-         elseif (mob:AnimationSub() == 0) then
-             mob:AnimationSub(1);
-             mob:setLocalVar("Wings", mob:getBattleTime());
-         end
-    end
-
-    if (mob:getLocalVar("Shinryu_2hr") ~= nil) then
-        Shinryu_2hr_Used = mob:getLocalVar("Shinryu_2hr");
+            mob:AnimationSub(0);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        elseif (mob:AnimationSub() == 0) then
+            mob:AnimationSub(1);
+            mob:setLocalVar("Wings", mob:getBattleTime());
+        end
     end
 
     if (mob:getHPP() <= 10) then

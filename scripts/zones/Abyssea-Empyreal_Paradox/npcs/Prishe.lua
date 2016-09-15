@@ -1,15 +1,15 @@
 -----------------------------------
 -- Area: Abyssea-Empyreal_Paradox
--- NPC: Empy 109
---
+--  NPC: Prishe [A]
+-- Empy 109
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Empyreal_Paradox/TextIDs"] = nil;
 -----------------------------------
-require("scripts/globals/atma");
-require("scripts/globals/settings");
-require("scripts/globals/missions");
 require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
+require("scripts/globals/missions");
 require("scripts/globals/titles");
+require("scripts/globals/atma");
+
 -----------------------------------
 -- onTrade Action
 -----------------------------------
@@ -282,5 +282,5 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you reforge your Empyrian Armor", player:getName() )), MESSAGE_SAY, npc:getID() );
+    player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you reforge your Empyrean Armor", player:getName() )), MESSAGE_SAY, npc:getID() );
 end;

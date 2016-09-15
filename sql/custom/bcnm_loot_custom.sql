@@ -7,4 +7,4 @@
 -- REPLACE tells MySQL to delete the old line and insert the new one.
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
--- REPLACE INTO `bcnm_loot` VALUES ('LootDropId', 'itemId', 'rolls', 'lootGroupId'); -- BCNM, Item Name, grouping
+-- REPLACE INTO `bcnm_loot` VALUES (LootDropId,itemId,rolls,lootGroupId); -- BCNM, Item Name, grouping

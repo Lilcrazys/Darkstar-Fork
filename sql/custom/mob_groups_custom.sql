@@ -1471,7 +1471,7 @@ INSERT INTO `mob_groups` VALUES (90323,9123,65,10800,0,9323,80000,100000,110,112
 -- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
 
 -- Unity NMs start
-INSERT INTO `mob_groups` VALUES (96601,9601,107,0,128,9601,0,0,76,76,0); -- Bouncing Bertha
+INSERT INTO `mob_groups` VALUES (96601,9601,107,0,128,9601,0,0,76,76,0); -- Bounding Belinda
 INSERT INTO `mob_groups` VALUES (96602,9602,101,0,128,9602,0,0,76,76,0); -- Hugemaw Harold
 INSERT INTO `mob_groups` VALUES (96603,9603,116,0,128,9603,0,0,76,76,0); -- Prickly Pitriv
 INSERT INTO `mob_groups` VALUES (96604,9604,102,0,128,9604,0,0,99,99,0); -- Ironhorn Baldurno
@@ -1526,7 +1526,12 @@ INSERT INTO `mob_groups` VALUES (96665,9665,91,3600,0,9665,154000,75000,131,131,
 
 
 -- Super experimental z49 mobs, will not spawn without script or GM command.
+-- INSERT INTO `mob_groups` VALUES (96661,9661,49,0,128,dropid,HP,MP,lv,lv,0); -- Benkei
+-- INSERT INTO `mob_groups` VALUES (96662,9662,49,0,128,dropid,HP,MP,lv,lv,0); -- Druk
+-- INSERT INTO `mob_groups` VALUES (96663,9663,49,0,128,dropid,HP,MP,lv,lv,0); -- Zomok
+-- INSERT INTO `mob_groups` VALUES (96664,9664,49,0,128,dropid,HP,MP,lv,lv,0); -- Abzu
 INSERT INTO `mob_groups` VALUES (96666,9666,49,0,128,9666,136666,6666,106,106,0); -- SlenderMan
+-- INSERT INTO `mob_groups` VALUES (96667,9667,49,0,128,0,6666,3333,90,90,0); -- Zombaru
 INSERT INTO `mob_groups` VALUES (97600,9760,49,0,128,9777,185000,7600,128,128,0); -- Mars
 INSERT INTO `mob_groups` VALUES (97777,9777,49,0,128,9777,444000,7777,140,140,0); -- Minerva
 

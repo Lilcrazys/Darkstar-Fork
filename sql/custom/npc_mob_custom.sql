@@ -783,9 +783,13 @@ INSERT INTO `mob_spawn_points` VALUES (16977933,'Umagrhk','Umagrhk',90515,40,0,1
 INSERT INTO `mob_spawn_points` VALUES (16977950,'Shinryu','Shinryu',140870,-10,0,-10,0);
 
 -- Super experimental, will not spawn without script or GM command.
--- INSERT INTO `mob_spawn_points` VALUES (16978938,'Zombaru','Zombaru',96665,-24,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978939,'Zombaru','Zombaru',96665,-24,0,0,0);
-INSERT INTO `mob_spawn_points` VALUES (16978940,'SlenderMan','SlenderMan',96666,-24,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978934,'Benkei','Benkei',96661,-12,0,-8,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978935,'Druk','Druk',96662,0,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978936,'Zomok','Zomok',96663,0,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978937,'Abzu','Abzu',96664,0,0,0,0);
+INSERT INTO `mob_spawn_points` VALUES (16978938,'SlenderMan','SlenderMan',96666,-24,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978939,'Zombaru','Zombaru',96667,-24,0,0,0);
+-- INSERT INTO `mob_spawn_points` VALUES (16978940,'Zombaru','Zombaru',96667,-24,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978941,'Mars','Mars',97600,-5,0,0,0);
 INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,0,0);
 -- INSERT INTO `npc_list` VALUES (16978943,'Test_Box','Test Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1186,9 +1190,9 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 -- 17216511
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17216145,'Bouncing_Bertha','Bouncing Bertha',96601,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17216146,'Bouncing_Bertha','Bouncing Bertha',96601,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bouncing_Bertha','Bouncing Bertha',96601,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17216145,'Bounding_Belinda','Bounding Belinda',96601,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17216146,'Bounding_Belinda','Bounding Belinda',96601,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bounding_Belinda','Bounding Belinda',96601,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17216203,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17216204,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1227,7 +1231,9 @@ REPLACE INTO `npc_list` VALUES (17228395,'Legion_Moogle','Legion Moogle',128,244
 -- Beaucedine Glacier (Zone 111)
 -- 17232895
 -- ------------------------------------------------------------
-REPLACE INTO `npc_list` VALUES (17232238,'burning_circle','???',0,-280,-80,-81,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,NULL,0);
+
+REPLACE INTO `npc_list` VALUES (17232238,'Freezing_Circle','???',0,-280,-80,-81,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,NULL,0);
+
 INSERT INTO `mob_spawn_points` VALUES (17232894,'Umagrhk','Umagrhk',90515,-280,-80,-81,0);
 
 
@@ -2760,17 +2766,22 @@ REPLACE INTO `mob_spawn_points` VALUES (17818041,'Ironclad_Sunderer','Ironclad S
 -- 17822719
 -- ------------------------------------------------------------
 
-REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infusionist','Atma Infusionist',168,545,-500.5,-584,7,'50','50','0','0','0','0','3',0x0000150400000000000000000000000000000000,0,NULL,0);
+REPLACE INTO `npc_list` VALUES (17821707,'Atma_Infusionist','Atma Infusionist',168,545,-500.5,-584,7,50,50,0,0,0,0,3,0x0000150400000000000000000000000000000000,0,NULL,0);
 
-REPLACE INTO `npc_list` VALUES (17821710,'Transcendental_Radiance','Transcendental Radiance',0,540,-500,-599,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,NULL,0);
-REPLACE INTO `npc_list` VALUES (17821711,'Transcendental_Radiance','Transcendental Radiance',0,-480,0,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,NULL,0);
-REPLACE INTO `npc_list` VALUES (17821712,'Transcendental_Radiance','Transcendental Radiance',195,520,-500,480,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,NULL,0);
-INSERT INTO `npc_list` VALUES (17821713,'Transcendental_Radiance','Transcendental Radiance',195,-480,-1000,-515,1,'50','50','0','8','96','0','3',0x00006a0900000000000000000000000000000000,2,NULL,0);
+REPLACE INTO `npc_list` VALUES (17821710,'Transcendental_Radiance','Transcendental Radiance',0,540,-500,-599,1,50,50,0,8,96,0,3,0x00006a0900000000000000000000000000000000,2,NULL,0);
+REPLACE INTO `npc_list` VALUES (17821711,'Transcendental_Radiance','Transcendental Radiance',0,-480,0,480,1,50,50,0,8,96,0,3,0x00006a0900000000000000000000000000000000,2,NULL,0);
+REPLACE INTO `npc_list` VALUES (17821712,'Transcendental_Radiance','Transcendental Radiance',195,520,-500,480,1,50,50,0,8,96,0,3,0x00006a0900000000000000000000000000000000,2,NULL,0);
+INSERT INTO `npc_list` VALUES (17821713,'Transcendental_Radiance','Transcendental Radiance',195,-480,-1000,-515,1,50,50,0,8,96,0,3,0x00006a0900000000000000000000000000000000,2,NULL,0);
 
-INSERT INTO `npc_list` VALUES (17822710,'Loot_Box','Loot Box',0,-477.491,-0.5,515.33,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
-INSERT INTO `npc_list` VALUES (17822711,'Loot_Box','Loot Box',0,519,-500,519,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
-INSERT INTO `npc_list` VALUES (17822712,'Loot_Box','Loot Box',0,-479,-1000,-471,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
-
+-- INSERT INTO `npc_list` VALUES (17822710,'Shinryu_Treasure','Shinryu Treasure',0,-477.491,-0.5,515.33,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+-- INSERT INTO `npc_list` VALUES (17822711,'Shinryu_Treasure','Shinryu Treasure',0,519,-500,519,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+-- INSERT INTO `npc_list` VALUES (17822712,'Shinryu_Treasure','Shinryu Treasure',0,-479,-1000,-471,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+-- INSERT INTO `mob_spawn_points` VALUES (17822713,'Benkei','Benkei',GROUPID,X,Y,Z,ROT);
+-- INSERT INTO `mob_spawn_points` VALUES (17822714,'Benkei','Benkei',GROUPID,X,Y,Z,ROT);
+-- INSERT INTO `mob_spawn_points` VALUES (17822715,'Benkei','Benkei',GROUPID,X,Y,Z,ROT);
+-- INSERT INTO `npc_list` VALUES (17822716,'Epic_Treasure','Epic Treasure',0,-477.491,-0.5,515.33,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+-- INSERT INTO `npc_list` VALUES (17822717,'Epic_Treasure','Epic Treasure',0,519,-500,519,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+-- INSERT INTO `npc_list` VALUES (17822718,'Epic_Treasure','Epic Treasure',0,-479,-1000,-471,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
 -- ------------------------------------------------------------
 -- Western Adoulin (Zone 256)

@@ -78,7 +78,7 @@ bcnmid_param_map = {6, {640, 0},
                   207, {544, 0, 545, 1, 547, 3},
                   209, {576, 0, 577, 1, 578, 2, 580, 4},
                   211, {608, 0, 609, 1, 611, 3},
-                  255, {1308,0,1308,3,1308,5}}; -- Abyssea Empyreal Paradox (Retail Shinryu)
+                  255, {1308,0}}; -- Abyssea Empyreal Paradox (Retail Shinryu)
 
 -- Call this onTrade for burning circles
 function TradeBCNM(player,zone,trade,npc)

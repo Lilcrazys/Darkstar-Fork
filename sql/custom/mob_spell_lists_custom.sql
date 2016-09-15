@@ -33,7 +33,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 211, 1, 255); -- Quake 2
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 212, 1, 255); -- Burst
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 214, 1, 255); -- Flood
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 215, 1, 255); -- Flood 2
-INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 245, 1, 255); -- Drain
 INSERT INTO `mob_spell_lists` VALUES ('Shinryu', 400, 247, 1, 255); -- Aspir
@@ -78,7 +78,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 187, 1, 255); -- A
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 188, 1, 255); -- Aeroga 5
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 209, 1, 255); -- Tornado 2
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 359, 1, 255); -- silencega
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 360, 1, 255); -- dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 466, 1, 255); -- MAidens Virelai
@@ -281,7 +281,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 503, 1, 255); -- Impact
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 360, 1, 255); -- Dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 366, 1, 255); -- Graviga
-INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 148, 1, 255); -- Fire 5
 INSERT INTO `mob_spell_lists` VALUES ('Bahamut', 421, 178, 1, 255); -- Firega 5
@@ -433,7 +433,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 360, 1, 255); -- Dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 366, 1, 255); -- Graviga
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 274, 1, 255); -- Sleepga 2
-INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Smierc', 429, 503, 1, 255); -- Impact
 
@@ -443,7 +443,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 498, 1, 255); -- Stone
 INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 499, 1, 255); -- Aeroja
 INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 500, 1, 255); -- Thundaja
 INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 501, 1, 255); -- Waterja
-INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Botulus_Rex', 430, 218, 1, 255); -- Meteor
 
 INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 168, 1, 255); -- Thunder 5
 INSERT INTO `mob_spell_lists` VALUES ('Ocythoe', 431, 197, 1, 255); -- Thundaga 4
@@ -468,7 +468,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 501, 1, 255); -- Waterj
 INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 173, 1, 255); -- Water 5
 INSERT INTO `mob_spell_lists` VALUES ('Kalasutrax', 432, 367, 1, 255); -- death
 
-INSERT INTO `mob_spell_lists` VALUES ('Cath_Palug', 433, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Cath_Palug', 433, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Cath_Palug', 433, 219, 1, 255); -- Comet
 
 INSERT INTO `mob_spell_lists` VALUES ('Aello_Handmaiden', 434, 157, 1, 255); -- Aero 4
@@ -546,7 +546,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 421, 1, 255); -- Bettlefe
 INSERT INTO `mob_spell_lists` VALUES ('Yalungur', 442, 397, 1, 255); -- Valor minuet
 
 INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 22, 1, 255); -- Holy 2
-INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Predatory_Colibri', 443, 219, 1, 255); -- Comet
 
 INSERT INTO `mob_spell_lists` VALUES ('Morta', 444, 162, 1, 255); -- Stone 4
@@ -581,7 +581,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 173, 1, 255); -
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 21, 1, 255); -- Holy
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 22, 1, 255); -- Holy 2
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 176, 1, 255); -- Firga 3
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 177, 1, 255); -- Firga 4
 INSERT INTO `mob_spell_lists` VALUES ('Provenance_Watcher', 445, 178, 1, 255); -- Firga 5
@@ -626,7 +626,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 360, 1, 255); -- Dispelga
 INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 362, 1, 255); -- Bindga
 INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 366, 1, 255); -- Graviga
 INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Sarbaz', 446, 503, 1, 255); -- Impact
 
 INSERT INTO `mob_spell_lists` VALUES ('Iratham_HP_50to100', 447, 176, 1, 255); -- Firaga 3 (Only used when over 50% HP)
@@ -1007,7 +1007,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Mired_Khrysokhimaira', 610, 213, 1, 255);
 
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 277, 1, 255); -- Dread Spikes
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 503, 1, 255); -- Impact
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 148, 1, 255); -- Fire 4
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Corse', 611, 149, 1, 255); -- Fire 5
@@ -1057,7 +1057,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Soaring_Kumakatok', 614, 174, 1, 255); --
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Kumakatok', 614, 286, 1, 255); -- Addle
 
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 219, 1, 255); -- Comet
-INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 503, 1, 255); -- Impact
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 192, 1, 255); -- Stonega 4
 INSERT INTO `mob_spell_lists` VALUES ('Soaring_Dweorg', 615, 499, 1, 255); -- Stoneja
@@ -1140,7 +1140,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Veiled_Gigaworm', 621, 357, 1, 255); -- S
 INSERT INTO `mob_spell_lists` VALUES ('Veiled_Gigaworm', 621, 365, 1, 255); -- Breakga
 INSERT INTO `mob_spell_lists` VALUES ('Veiled_Gigaworm', 621, 366, 1, 255); -- Graviga
 
-INSERT INTO `mob_spell_lists` VALUES ('Paramout_Gallu', 622, 218, 1, 255); -- Meteor
+-- INSERT INTO `mob_spell_lists` VALUES ('Paramout_Gallu', 622, 218, 1, 255); -- Meteor
 INSERT INTO `mob_spell_lists` VALUES ('Paramout_Gallu', 622, 219, 1, 255); -- Comet
 INSERT INTO `mob_spell_lists` VALUES ('Paramout_Gallu', 622, 252, 1, 255); -- Stun
 INSERT INTO `mob_spell_lists` VALUES ('Paramout_Gallu', 622, 277, 1, 255); -- Dread Spik
