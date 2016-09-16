@@ -21,7 +21,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local dmgmod = 1;
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*6,ELE_DARK,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_LIGHT,MOBPARAM_IGNORE_SHADOWS);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
     MobStatusEffectMove(mob, target, EFFECT_PARALYSIS, 1, 0, 30);
     MobStatusEffectMove(mob, target, EFFECT_BIO, 20, 3, 30);
