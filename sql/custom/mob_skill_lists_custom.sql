@@ -37,7 +37,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Lofty_Behemoth',4002,2391); -- Amnesic_Bl
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,628); -- Wild_Horn
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,629); -- Thunderbolt
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,632); -- Flame_Armor
--- INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,2330); -- Ecliptic_Meteor
+INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,2586); -- Ecliptic_Meteor
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Elasmoth',4003,2391); -- Amnesic_Blast
 
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Ferromantoise',4004,804); -- Tortoise Song
@@ -311,7 +311,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Valkurm_Imperator',4048,1624); -- Debilit
 -- INSERT INTO `mob_skill_lists` VALUES ('Zomok',4062,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Abzu',4063,PLACEHOLDER); -- Unfinished
 
--- Beginning of incorrect block of list names...
+-- Beginning of block of incorrect list names...
 -- Correct format is: ('list_name', list_id, skill_id); -- skill name
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Sandspin',4064,426); -- SS_Sandspin
 INSERT INTO `mob_skill_lists` VALUES ('Tremors',4064,427); -- SS_Tremors
@@ -386,7 +386,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Thunderbolt',4076,629); -- Thunderbolt
 INSERT INTO `mob_skill_lists` VALUES ('Howl',4076,633); -- Howlacc
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Accursed_Armor',4076,2390); -- Accursed_Armor
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Amnesic_Blast',4076,2391); -- Amnesic_Blast
--- INSERT INTO `mob_skill_lists` VALUES ('Custom_Ecliptic_Meteor',4076,2586); -- Ecliptic_Meteor
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Ecliptic_Meteor',4076,2586); -- Ecliptic_Meteor
 
 INSERT INTO `mob_skill_lists` VALUES ('Bloodrake',4077,2106); -- Bloodrake
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Nosferatus_Kiss',4077,2108); -- Nosferatus_kiss

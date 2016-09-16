@@ -1,27 +1,25 @@
 ---------------------------------------------
---  Afflicting Gaze
---  Description: Petrifies opponents with a gaze attack.
---  Type: Gaze
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Single gaze
---  Notes: Nightmare Cockatrice extends this to a fan-shaped AOE.
+-- Afflicting Gaze
+-- Description: Plagues and Binds opponents with a gaze attack.
+-- Family: Caturae
+-- Type: Gaze
+-- Can be dispelled: N/A
+-- Utsusemi/Blink absorb: Ignores shadows
+-- Range: Single gaze
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
-function onMobSkillCheck(target,mob,skill)
-    if (target:getCurrentRegion() == 18) then
-        return 0;
-    end
-
-    return 1;
+function onMobSkillCheck(target,mob,skill)0
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local typeEffect = EFFECT_PLAGUE;
-    local typeEffect = EFFECT_BIND;
-    skill:setMsg(MobGazeMove(mob, target, typeEffect, 1, 0, 25));
-    return typeEffect;
+
+    MobGazeMove(mob, target, EFFECT_PLAGUE, 1, 0, 25);
+    skill:setMsg(MobGazeMove(mob, target, EFFECT_BIND, 1, 0, 25);
+
+    return EFFECT_BIND;
 end;
