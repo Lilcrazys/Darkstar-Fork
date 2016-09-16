@@ -37,7 +37,7 @@ function onSpellCast(caster,target,spell)
         --[[
         dmg = ((100+caster:getMod(MOD_MATT))/(100+target:getMod(MOD_MDEF))) * (caster:getStat(MOD_INT) + (caster:getMaxSkillLevel(caster:getMainLvl(), JOBS.BLM, ELEMENTAL_MAGIC_SKILL))/6) * 9.4;
         ]]
-        dmg = ((100+caster:getMod(MOD_MATT))/(100+target:getMod(MOD_MDEF))) * (caster:getStat(MOD_INT) + ((((caster:getMainLvl())*4.26)+1.74)/6)) * 9.4;
+        dmg = ((100+caster:getMod(MOD_MATT))/(100+target:getMod(MOD_MDEF))) * (caster:getStat(MOD_INT) + ((((caster:getMainLvl()-1)*4.266)+6))/6) * 9.4;
     end
 
     --add in target adjustment

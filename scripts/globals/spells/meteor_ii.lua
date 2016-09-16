@@ -27,7 +27,7 @@ function onSpellCast(caster,target,spell)
     if (caster:isPC()) then
         dmg = ((100+caster:getMod(MOD_MATT))/(100+target:getMod(MOD_MDEF))) * (caster:getStat(MOD_INT) + (caster:getMod(79+ELEMENTAL_MAGIC_SKILL)+caster:getSkillLevel(ELEMENTAL_MAGIC_SKILL))/6) * 5.5;
     else
-        dmg = ((100+caster:getMod(MOD_MATT))/(100+target:getMod(MOD_MDEF))) * (caster:getStat(MOD_INT) + ((((caster:getMainLvl())*4.26)+1.74)/6)) * 11.1;
+        dmg = ((100+caster:getMod(MOD_MATT))/(100+target:getMod(MOD_MDEF))) * (caster:getStat(MOD_INT) + ((((caster:getMainLvl()-1)*4.266)+6))/6) * 11.1;
     end
     --add in target adjustment
     dmg = adjustForTarget(target,dmg,spell:getElement());
