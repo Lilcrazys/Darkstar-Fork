@@ -58,20 +58,17 @@ end;
 
 function onMobFight(mob, target)
     local BattleTime = mob:getBattleTime();
-    local Kumhau_2hr_Used = 0;
-    if (mob:getLocalVar("Kumhau_2hr") ~= nil) then
-        Kumhau_2hr_Used = mob:getLocalVar("Kumhau_2hr");
-    end
+    local Kumhau_2hr_Used = mob:getLocalVar("Kumhau_2hr");
 
     if (mob:getHPP() <= 10 and Kamhau_2hr_Used == 2) then
-        mob:useMobAbility(438); -- Invincible
+        mob:useMobAbility(694); -- Invincible
         mob:setLocalVar("Kumhau_2hr", 3);
         mob:addStatusEffect(EFFECT_HASTE,200,0,200);
     elseif (mob:getHPP() <= 30 and Kamhau_2hr_Used == 1) then
-        mob:useMobAbility(438); -- Invincible
+        mob:useMobAbility(694); -- Invincible
         mob:setLocalVar("Kumhau_2hr", 2);
     elseif (mob:getHPP() <= 70 and Kamhau_2hr_Used == 0) then
-        mob:useMobAbility(438); -- Invincible
+        mob:useMobAbility(694); -- Invincible
         mob:setLocalVar("Kamhau_2hr", 1);
     elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
@@ -84,5 +81,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDespawn(mob)
     mob:setRespawnTime(math.random(18000,28800));   -- 5 to 8 hours
 end;
