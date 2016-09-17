@@ -55,26 +55,22 @@ end;
 
 function onMobFight(mob, target)
     local BattleTime = mob:getBattleTime();
-    local Colkhab_2hr_Used = 0;
-
-    if (mob:getLocalVar("Colkhab_2hr") ~= nil) then
-        Colkhab_2hr_Used = mob:getLocalVar("Colkhab_2hr");
-    end
+    local Colkhab_2hr_Used = mob:getLocalVar("Colkhab_2hr");
 
     if (mob:getHPP() <= 10) then
         if (Colkhab_2hr_Used == 2) then
-            mob:useMobAbility(474); -- SAM
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Colkhab_2hr", 3);
             mob:addStatusEffect(EFFECT_HASTE,200,0,200);
         end
     elseif (mob:getHPP() <= 30) then
         if (Colkhab_2hr_Used == 1) then
-            mob:useMobAbility(474); -- SAM
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Colkhab_2hr", 2);
         end
     elseif (mob:getHPP() <= 70) then
         if (Colkhab_2hr_Used == 0) then
-            mob:useMobAbility(474); -- SAM
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Colkhab_2hr", 1);
         end
     elseif (BattleTime - os.time() > 3600 and mob:getLocalVar("RAGED") == 0) then
@@ -92,5 +88,12 @@ function onMobDeath(mob, player, isKiller)
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(744) == false) then
         player:addSpell(744);
     end
-    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDespawn(mob)
+    mob:setRespawnTime(math.random(18000,28800));   -- 5 to 8 hours
 end;

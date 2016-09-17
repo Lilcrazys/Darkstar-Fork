@@ -57,7 +57,7 @@ function onMobFight(mob,target)
     elseif (delay < 2 and do2hr == 1 and has2hr == false) then
         mob:setLocalVar("delay", delay+1);
     elseif (delay >= 2 and do2hr == 1 and has2hr == false) then
-        mob:useMobAbility(474);
+        mob:useMobAbility(730); -- Meikyo_Shisui
         mob:setLocalVar("do2hr", 0);
         mob:setLocalVar("delay", 0);
     end
@@ -68,10 +68,9 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    local CHANCE = 15;
     player:addTitle(RESHEPH_ERADICATOR);
-
-    if (math.random(0,99) < CHANCE and player:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
+    local ATMA = 15;
+    if (math.random(0,99) < ATMA and player:hasKeyItem(ATMA_OF_THE_PLAGUEBRINGER) == false) then
         player:addKeyItem(ATMA_OF_THE_PLAGUEBRINGER);
         player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_PLAGUEBRINGER);
     end

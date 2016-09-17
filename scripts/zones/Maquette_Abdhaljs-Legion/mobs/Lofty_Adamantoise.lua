@@ -288,7 +288,7 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 10) then
         if (Lofty_Adamantoise_2hr_Used == 0) then
-            mob:useMobAbility(438); -- Invicible
+            mob:useMobAbility(694); -- Invincible
             mob:setLocalVar("Lofty_Adamantoise_2hr", 1);
         end
     end

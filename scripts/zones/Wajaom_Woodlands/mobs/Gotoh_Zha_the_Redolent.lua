@@ -47,10 +47,10 @@ function onMobFight(mob, target)
 
     if (mob:AnimationSub() == 0 and mob:getHPP() <= RHP1 and mob:getLocalVar("Manafont") == 0) then
         mob:setLocalVar("Manafont", 1)
-        mob:useMobAbility(435); -- Do Manafont!
+        mob:useMobAbility(691); -- Do Manafont!
     elseif (mob:AnimationSub() == 1 and mob:getHPP() <= RHP2 and mob:getLocalVar("Benediction") == 0) then
         mob:setLocalVar("Benediction", 1)
-        mob:useMobAbility(433); -- Do Benediction!
+        mob:useMobAbility(689); -- Do Benediction!
     end
 
     if (mob:AnimationSub() == 1 and mob:getLocalVar("jobChange") == 0) then

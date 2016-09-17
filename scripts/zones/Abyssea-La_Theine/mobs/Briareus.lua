@@ -51,22 +51,22 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 10) then
         if (Bria_2hr_Used == 3) then
-            mob:useMobAbility(474);
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Bria_2hr", 4);
         end
     elseif (mob:getHPP() <= 25) then
         if (Bria_2hr_Used == 2) then
-            mob:useMobAbility(474);
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Bria_2hr", 3);
         end
     elseif (mob:getHPP() <= 50) then
         if (Bria_2hr_Used == 1) then
-            mob:useMobAbility(474);
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Bria_2hr", 2);
         end
     elseif (mob:getHPP() <= 75) then
         if (Bria_2hr_Used == 0) then
-            mob:useMobAbility(474);
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Bria_2hr", 1);
         end
     end
@@ -80,7 +80,7 @@ function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 60;
     local ATMA_CHANCE = 15;
     player:addTitle(BRIAREUS_FELLER);
-    
+
 
     if (KI_CHANCE > math.random(0,99) and player:hasKeyItem(BLOOD_SMEARED_GIGAS_HELM) == false) then
         player:addKeyItem(BLOOD_SMEARED_GIGAS_HELM);

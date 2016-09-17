@@ -294,12 +294,12 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 15) then
         if (Mired_Khrysokhimaira_2hr == 1) then
-            mob:useMobAbility(694); -- Invinc
+            mob:useMobAbility(694); -- Invincible
             mob:setLocalVar("Mired_Khrysokhimaira_2hr", 2);
         end
     elseif (mob:getHPP() <= 60) then
         if (Mired_Khrysokhimaira_2hr == 0) then
-            mob:useMobAbility(695); -- BW
+            mob:useMobAbility(695); -- Blood Weapon
             mob:setLocalVar("Mired_Khrysokhimaira_2hr", 1);
         end
     end

@@ -177,7 +177,7 @@ function onMobFight(mob, target)
     else
         -- We are flying, see if we should land..
         if (animSub == 1 and helperOne == ACTION_NONE and helperTwo == ACTION_NONE) then
-            mob:useMobAbility(1026); -- touchdown
+            mob:useMobAbility(1282); -- touchdown
             -- mob:SetMobSkillAttack(0);
         end
     end
@@ -188,8 +188,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 550);
-    player:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
@@ -209,5 +207,8 @@ function onMobDeath(mob, player, isKiller)
                 player:setVar("ASHEN_STRATUM", 0);
             end
         end
-    end;
+    end
+
+    player:addCurrency("bayld", 550);
+    player:addExp(10000);
 end;

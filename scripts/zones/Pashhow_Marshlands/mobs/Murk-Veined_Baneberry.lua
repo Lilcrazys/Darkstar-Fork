@@ -37,7 +37,7 @@ function onMobSpawn(mob)
 
     -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9609,8919,50); -- Ifritear
@@ -111,8 +111,8 @@ function onMobSpawn(mob)
         SetDropRate(9609,8924,0); -- Shivatear
         SetDropRate(9609,8925,0); -- Carbutear
         SetDropRate(9609,8926,50); -- Fenritear
-    end    
-    
+    end
+
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -141,7 +141,7 @@ function onMobFight(mob, target)
                 mob:setPos(target:getXPos()+math.random(-0.2, 0.2), target:getYPos(), target:getZPos()+math.random(-0.2, 0.2), 0);
                 -- We should actually use a teleport skill prior to this,
                 -- but being lazy with setPos for now.
-                mob:useMobAbility(532);
+                mob:useMobAbility(788);
                 mob:setLocalVar("TripleStab", STABBINGS +1);
             end
             mob:setLocalVar("DELAY", 0);

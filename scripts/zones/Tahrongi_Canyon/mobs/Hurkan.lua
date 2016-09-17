@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Canyon
--- NPC:  Hurkan
+--  NM:  Hurkan
 -----------------------------------
 
 require("scripts/globals/titles");
@@ -57,29 +57,26 @@ end;
 
 function onMobFight(mob, target)
     local BattleStart = mob:getLocalVar("BattleStart");
-    local Hurkan_2hr_Used = 0;
-    if (mob:getLocalVar("Hurkan_2hr") ~= nil) then
-        Hurkan_2hr_Used = mob:getLocalVar("Hurkan_2hr");
-    end
+    local Hurkan_2hr_Used = mob:getLocalVar("Hurkan_2hr");
 
     if (mob:getHPP() <= 10) then
          if (Hurkan_2hr_Used == 3) then
-             mob:useMobAbility(436);
+             mob:useMobAbility(692); -- Chainspell
              mob:setLocalVar("Hurkan_2hr", 4);
         end
     elseif (mob:getHPP() <= 25) then
          if (Hurkan_2hr_Used == 2) then
-             mob:useMobAbility(439);
+             mob:useMobAbility(695); -- Blood_Weapon
              mob:setLocalVar("Hurkan_2hr", 3);
          end
     elseif (mob:getHPP() <= 50) then
          if (Hurkan_2hr_Used == 1) then
-             mob:useMobAbility(436);
+             mob:useMobAbility(692); -- Chainspell
              mob:setLocalVar("Hurkan_2hr", 2);
          end
     elseif (mob:getHPP() <= 75) then
          if (Hurkan_2hr_Used == 0) then
-             mob:useMobAbility(439);
+             mob:useMobAbility(695); -- Blood_Weapon
              mob:setLocalVar("Hurkan_2hr", 1);
          end
      elseif (os.time() -BattleStart > 3600 and mob:getLocalVar("RAGED") == 0) then
@@ -92,6 +89,13 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDeath(mob, player, isKiller)
-    mob:setRespawnTime(math.random((18000),(28800)));   -- 5 to 8 hours
+function onMobDespawn(mob, player, isKiller)
+end;
+
+-----------------------------------
+-- onMobDeath
+-----------------------------------
+
+function onMobDespawn(mob)
+    mob:setRespawnTime(math.random(18000,28800));   -- 5 to 8 hours
 end;

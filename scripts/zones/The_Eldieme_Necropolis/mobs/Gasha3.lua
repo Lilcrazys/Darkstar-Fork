@@ -39,82 +39,82 @@ function onMobSpawn(mob)
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9630,0,8919,50); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 2) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,50); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,50); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 3) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,50); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,50); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 4) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,50); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,50); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 5) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,50); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,50); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 6) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,50); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,50); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 7) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,50); -- Carbutear
         SetDropRate(9630,0,8926,0); -- Fenritear
     elseif (RND1 == 8) then
         SetDropRate(9630,0,8919,0); -- Ifritear
-        SetDropRate(9630,0,8920,0); -- Leviatear    
-        SetDropRate(9630,0,8921,0); -- Ramutear    
-        SetDropRate(9630,0,8922,0); -- Garutear    
-        SetDropRate(9630,0,8923,0); -- Titatear    
-        SetDropRate(9630,0,8924,0); -- Shivatear   
+        SetDropRate(9630,0,8920,0); -- Leviatear
+        SetDropRate(9630,0,8921,0); -- Ramutear
+        SetDropRate(9630,0,8922,0); -- Garutear
+        SetDropRate(9630,0,8923,0); -- Titatear
+        SetDropRate(9630,0,8924,0); -- Shivatear
         SetDropRate(9630,0,8925,0); -- Carbutear
-        SetDropRate(9630,0,8926,50); -- Fenritear       
-    end    
-    
+        SetDropRate(9630,0,8926,50); -- Fenritear
+    end
+
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -133,7 +133,7 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 40) then
         if (Gasha_2hr_Used == 0) then
-            mob:useMobAbility(474); -- SAM
+            mob:useMobAbility(730); -- Meikyo_Shisui
             mob:setLocalVar("Gasha_2hr", 1);
         end
     end

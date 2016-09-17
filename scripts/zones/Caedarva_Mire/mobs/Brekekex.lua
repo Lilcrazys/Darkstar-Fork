@@ -34,82 +34,82 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,75);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9671,0,8919,50); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 2) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,50); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,50); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 3) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,50); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,50); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 4) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,50); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,50); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 5) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,50); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,50); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 6) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,50); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,50); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 7) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,50); -- Carbutear
         SetDropRate(9671,0,8926,0); -- Fenritear
     elseif (RND1 == 8) then
         SetDropRate(9671,0,8919,0); -- Ifritear
-        SetDropRate(9671,0,8920,0); -- Leviatear    
-        SetDropRate(9671,0,8921,0); -- Ramutear    
-        SetDropRate(9671,0,8922,0); -- Garutear    
-        SetDropRate(9671,0,8923,0); -- Titatear    
-        SetDropRate(9671,0,8924,0); -- Shivatear   
+        SetDropRate(9671,0,8920,0); -- Leviatear
+        SetDropRate(9671,0,8921,0); -- Ramutear
+        SetDropRate(9671,0,8922,0); -- Garutear
+        SetDropRate(9671,0,8923,0); -- Titatear
+        SetDropRate(9671,0,8924,0); -- Shivatear
         SetDropRate(9671,0,8925,0); -- Carbutear
-        SetDropRate(9671,0,8926,50); -- Fenritear       
-    end    
-    
+        SetDropRate(9671,0,8926,50); -- Fenritear
+    end
+
 end;
 
 -----------------------------------
@@ -134,7 +134,7 @@ function onMobFight(mob, target)
     local Frog_2hr_Used = mob:getLocalVar("Frog_2hr")
     local popTimerDelay = 90; -- For easy adjustment.
     local popTime = mob:getLocalVar("nextPetPop");
-    local rndPos = math.random(0,2); -- So they aren't all unforgettably stacked..
+    local rndPos = math.random(0,2); -- So they aren't all stacked unable to target..
     if (rndPos == 2) then
         rdnPos = -1;
     end
@@ -165,7 +165,7 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 40) then
         if (Frog_2hr_Used == 0) then
-            mob:useMobAbility(436); -- Chainspell
+            mob:useMobAbility(692); -- Chainspell
             mob:setLocalVar("Frog_2hr", 1);
         end
     end
@@ -190,16 +190,17 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 900);
-    player:addExp(10000);
-
     if (player:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Brekekekex Kill
         if (player:getMaskBit(player:getVar("AMBER_STRATUM"), 1) == false) then
-           player:setMaskBit(player:getVar("AMBER_STRATUM"),"AMBER_STRATUM",1,true);
+            player:setMaskBit(player:getVar("AMBER_STRATUM"),"AMBER_STRATUM",1,true);
         end
+
         if (player:isMaskFull(player:getVar("AMBER_STRATUM"),4) == true) then
-           player:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
-           player:setVar("AMBER_STRATUM", 0);
+            player:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
+            player:setVar("AMBER_STRATUM", 0);
         end
-    end;    
+    end
+
+    player:addCurrency("bayld", 900);
+    player:addExp(10000);
 end;

@@ -141,7 +141,7 @@ function onMobFight(mob, target)
             mob:setLocalVar("changeTime", mob:getBattleTime());
         -- subanimation 1 is flight, so check if she should land
         elseif (mob:AnimationSub() == 1 and BT - CT > 180) then
-            mob:useMobAbility(1026);
+            mob:useMobAbility(1282);
             mob:setLocalVar("changeTime", mob:getBattleTime());
         -- subanimation 2 is grounded mode, so check if she should take off
         elseif (mob:AnimationSub() == 2 and BT - CT > 180) then
