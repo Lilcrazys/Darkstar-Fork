@@ -528,6 +528,7 @@ INSERT INTO `mob_droplist` VALUES (502,0,10954,30); -- Alchemist's Torque
 INSERT INTO `mob_droplist` VALUES (502,0,21228,66); -- Falubeza
 INSERT INTO `mob_droplist` VALUES (502,0,18385,904); -- Algol
 INSERT INTO `mob_droplist` VALUES (502,0,27779,67); -- Quauhpilli helm
+INSERT INTO `mob_droplist` VALUES (502,0,9062,12); -- Dark Matter
 
 -- -----------
 -- Chamrosh
@@ -1154,6 +1155,7 @@ INSERT INTO `mob_droplist` VALUES (1893,0,4023,186);
 INSERT INTO `mob_droplist` VALUES (1893,0,10953,30); -- Boneworker's Torque
 INSERT INTO `mob_droplist` VALUES (1893,0,20827,72); -- Kerehcatl
 INSERT INTO `mob_droplist` VALUES (1893,0,10285,86); -- Beguiler's jerkin
+INSERT INTO `mob_droplist` VALUES (1893,0,9062,12); -- Dark Matter
 
 -- -----------
 -- Khromasoul Bhurborlor
@@ -2653,7 +2655,7 @@ INSERT INTO `mob_droplist` VALUES (9091,0,28401,69); -- Eddy Necklace
 INSERT INTO `mob_droplist` VALUES (9091,0,28057,50); -- Mikinaak gauntlets
 INSERT INTO `mob_droplist` VALUES (9091,0,10289,167); -- Sublime breastplate
 INSERT INTO `mob_droplist` VALUES (9091,0,2877,35);
--- INSERT INTO `mob_droplist` VALUES (9091,0,9062,14); -- Chunk of Dark Matter
+INSERT INTO `mob_droplist` VALUES (9091,0,9062,14); -- Chunk of Dark Matter
 INSERT INTO `mob_droplist` VALUES (9091,0,4893,3); -- Scroll of Stoneja
 INSERT INTO `mob_droplist` VALUES (9091,0,2879,41); -- Igneous Barnacle
 
@@ -4332,7 +4334,7 @@ INSERT INTO `mob_droplist` VALUES (9639,0,28496,40); -- Zennaroi_Earring
 INSERT INTO `mob_droplist` VALUES (9639,0,21119,300); -- Eminent_Wand
 INSERT INTO `mob_droplist` VALUES (9639,0,27741,12); -- Espial_Cap
 INSERT INTO `mob_droplist` VALUES (9639,0,4049,1000); -- Rusted_Coin
--- INSERT INTO `mob_droplist` VALUES (9639,0,9062,12); -- Dark Matter
+INSERT INTO `mob_droplist` VALUES (9639,0,9062,12); -- Dark Matter
 INSERT INTO `mob_droplist` VALUES (9639,0,8919,50); -- Ifritear
 INSERT INTO `mob_droplist` VALUES (9639,0,8920,50); -- Leviatear
 INSERT INTO `mob_droplist` VALUES (9639,0,8921,50); -- Ramutear
@@ -4604,6 +4606,7 @@ INSERT INTO `mob_droplist` VALUES (9655,0,8926,50); -- Fenritear
 INSERT INTO `mob_droplist` VALUES (9656,0,20612,86); --  Sangarius +1
 INSERT INTO `mob_droplist` VALUES (9656,0,26873,25); -- Hime Domaru +1
 INSERT INTO `mob_droplist` VALUES (9656,0,4049,1000); -- Rusted_Coin
+INSERT INTO `mob_droplist` VALUES (9656,0,4692,15); -- Haste II
 INSERT INTO `mob_droplist` VALUES (9656,0,4066,1000); -- Rems 3
 INSERT INTO `mob_droplist` VALUES (9656,0,4066,1000); -- Rems 3
 INSERT INTO `mob_droplist` VALUES (9656,0,4066,1000); -- Rems 3
@@ -4696,6 +4699,7 @@ INSERT INTO `mob_droplist` VALUES (9662,0,26896,23); -- comment me
 INSERT INTO `mob_droplist` VALUES (9662,0,27220,132); -- comment me
 INSERT INTO `mob_droplist` VALUES (9662,0,27407,81); -- comment me
 INSERT INTO `mob_droplist` VALUES (9662,0,28617,78); -- comment me
+INSERT INTO `mob_droplist` VALUES (9662,0,4692,25); -- Haste II
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
 INSERT INTO `mob_droplist` VALUES (9662,0,4067,1000); -- Rems 4
@@ -4773,6 +4777,7 @@ INSERT INTO `mob_droplist` VALUES (9673,0,8926,50); -- Fenritear
 INSERT INTO `mob_droplist` VALUES (9674,0,26871,65); -- comment me
 INSERT INTO `mob_droplist` VALUES (9674,0,27221,91); -- comment me
 INSERT INTO `mob_droplist` VALUES (9674,0,26732,98); -- comment me
+INSERT INTO `mob_droplist` VALUES (9674,0,4692,35); -- Haste II
 INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
 INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
 INSERT INTO `mob_droplist` VALUES (9674,0,4068,1000); -- Rems 5
@@ -5046,6 +5051,8 @@ INSERT INTO `mob_droplist` VALUES (9730,0,28287,50); -- Durgai_Leggings
 INSERT INTO `mob_droplist` VALUES (9730,0,3925,300); -- Tanz
 INSERT INTO `mob_droplist` VALUES (9730,0,3925,300); -- Tanz
 INSERT INTO `mob_droplist` VALUES (9730,0,3925,300); -- Tanz
+INSERT INTO `mob_droplist` VALUES (9730,0,4692,30); -- Haste II
+INSERT INTO `mob_droplist` VALUES (9730,0,9062,50); -- Dark Matter
 
 -- -----------
 -- Hydra
@@ -5059,6 +5066,7 @@ INSERT INTO `mob_droplist` VALUES (9731,0,4023,1000); -- Snowsteel Ore
 INSERT INTO `mob_droplist` VALUES (9731,0,4023,250);
 INSERT INTO `mob_droplist` VALUES (9731,0,4023,50);
 INSERT INTO `mob_droplist` VALUES (9731,0,2876,36);
+INSERT INTO `mob_droplist` VALUES (9731,0,9062,12); -- Dark Matter
 
 
 -- -----------
