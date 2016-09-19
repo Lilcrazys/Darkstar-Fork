@@ -13,7 +13,7 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    if (mob:getPool() ~= 4081 and mob:getMobMod(MOBMOD_SKILL_LIST) == 4167) then
+    if (mob:getPool() ~= 9817 and mob:getMobMod(MOBMOD_SKILL_LIST) == 4167) then
         -- Ironclad's (Abyssea and Legion NMs)
         local numhits = 1;
         local accmod = 1;
@@ -34,7 +34,7 @@ function onMobWeaponSkill(target, mob, skill)
         mob:addTP(12);
 
         return dmg;
-    elseif (mob:getPool() == 4081) then
+    elseif (mob:getPool() == 9817) then
         -- Voidwrought (Voidwatch NM)
         local numhits = 1;
         local accmod = 1;
