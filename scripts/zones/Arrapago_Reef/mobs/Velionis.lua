@@ -38,8 +38,8 @@ end;
 
 function onMobDeath(mob, player, isKiller)
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 3);
-    end
+    end]]
 end;

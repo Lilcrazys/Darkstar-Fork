@@ -55,11 +55,11 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
     -- Begin Custom Legion Code
     ------------------------------------
-    
-    -- Custom (Mythic) Trial Code
+
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 3);
-    end
+    end]]
 
     ------------------------------------
     -- End Custom Legion Code

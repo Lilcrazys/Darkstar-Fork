@@ -76,9 +76,9 @@ function onMobDeath(mob, player, isKiller)
     player:addTitle(TROLL_SUBJUGATOR);
     mob:setRespawnTime(math.random(75600,86400));   -- 21 to 24 hours
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 5);
-    end
+    end]]
 
 end;

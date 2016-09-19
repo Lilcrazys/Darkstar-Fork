@@ -55,9 +55,9 @@ function onMobDeath(mob, player, isKiller)
     mob:setRespawnTime(math.random((75600),(86400)));
 
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 1);
-    end
+    end]]
 
 end;

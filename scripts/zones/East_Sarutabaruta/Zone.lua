@@ -61,7 +61,9 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
+    --[[
     SetRespawnTime(17252725, 3600, 4200);
+    ]]
 end;
 
 -----------------------------------

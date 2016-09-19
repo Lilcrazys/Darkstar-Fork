@@ -11,8 +11,8 @@ require("scripts/globals/custom_trials");
 
 function onMobDeath(mob, player, isKiller)
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 4);
-    end
+    end]]
 end;

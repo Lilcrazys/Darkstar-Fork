@@ -5,7 +5,7 @@
 
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
-    
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -26,7 +26,7 @@ end;
 
 function onMobFight(mob, target)
     local swapTimer = mob:getLocalVar("swapTime");
-    
+
     if (os.time() > swapTimer) then
         if (mob:AnimationSub() == 1) then -- swap from fists to second weapon
             mob:AnimationSub(2);
@@ -42,8 +42,8 @@ end;
 -- onCriticalHit
 -----------------------------------
 
-function onCriticalHit(mob)   
- 
+function onCriticalHit(mob)
+
     if (math.random(100) < 5) then  -- Wiki seems to imply that this thing's weapon is harder to break...
         if (mob:AnimationSub() == 0) then -- first weapon
             mob:AnimationSub(1);
@@ -60,8 +60,8 @@ end;
 
 function onMobDeath(mob, player, isKiller)
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 4);
-    end
+    end]]
 end;

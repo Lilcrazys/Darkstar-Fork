@@ -30,8 +30,8 @@ function onMobDeath(mob, player, isKiller)
         player:addSpell(712);
     end
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 2);
-    end
+    end]]
 end;

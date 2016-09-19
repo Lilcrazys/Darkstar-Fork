@@ -49,9 +49,9 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(SHINING_SCALE_RIFLER);
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(playerler, MYTHIC, 4);
-    end
+    end]]
 
 end;

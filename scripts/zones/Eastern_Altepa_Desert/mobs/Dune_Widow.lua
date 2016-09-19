@@ -18,10 +18,10 @@ end;
 
 function onMobDespawn(mob)
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 3);
-    end
+    end]]
 
     -- Set Dune_Widow's Window Open Time
     local wait = math.random(1,5) * 3600;

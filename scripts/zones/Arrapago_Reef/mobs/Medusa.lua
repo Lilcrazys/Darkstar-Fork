@@ -70,9 +70,9 @@ function onMobDeath(mob, player, isKiller)
     DespawnMob(mob:getID()+3);
     DespawnMob(mob:getID()+4);
 
-    -- Custom (Mythic) Trial Code
+    --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, MYTHIC, 6);
-    end
+    end]]
 
 end;
