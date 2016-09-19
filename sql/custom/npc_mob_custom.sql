@@ -3081,7 +3081,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17248625,'Virvatuli','Virvatuli',90404,1
 REPLACE INTO `mob_spawn_points` VALUES (17167113,'Pancimanci','Pancimanci',90405,120,-3.5,-440,183);
 REPLACE INTO `mob_spawn_points` VALUES (17580343,'Lorbulcrub','Lorbulcrud',90406,-115,-60,-100,178);
 REPLACE INTO `mob_spawn_points` VALUES (17568142,'Krabimanjaro','Krabimanjaro',90407,-112,0,230,78);
-REPLACE INTO `mob_spawn_points` VALUES (17588707,'Obgunabali','Ogbunabali',90408,-285,0,-114,0);
+REPLACE INTO `mob_spawn_points` VALUES (17588707,'Ogbunabali','Ogbunabali',90408,-285,0,-114,0);
 REPLACE INTO `mob_spawn_points` VALUES (17224185,'Murk-veined_Baneberry','Murk-veined Baneberry',90409,551,24.5,492,240);
 REPLACE INTO `mob_spawn_points` VALUES (17146510,'Melancholic_Moira','Melancholic Moira',90410,552,24.5,492,217);
 REPLACE INTO `mob_spawn_points` VALUES (17203697,'Belphoebe','Belphoebe',90411,78,0,118,233);
