@@ -12,6 +12,8 @@
 -- KEEP IT IN ORDER BY ID!!
 -- INSERT INTO `mob_skill_lists` VALUES ('list_name', list_id, skill_id); -- skill name
 
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580);
+
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',4000,2520); -- Sinister_Wing

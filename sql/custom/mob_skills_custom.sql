@@ -604,7 +604,7 @@ INSERT INTO `mob_skills` VALUES (576,910,'Back_Heel',0,7,2000,1500,4,0,0,2);
 -- INSERT INTO `mob_skills` VALUES (577,321,'Jettatura',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (578,912,'Nihility_Song',1,12.5,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (579,323,'Choke_Breath',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (580,324,'Fantod',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (580,324,'Custom_Fantod',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (581,325,'Blow',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (582,326,'Cacodemonia',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (583,327,'Beatdown',0,7.0,2000,1500,4,0,0,0);
@@ -2996,7 +2996,7 @@ INSERT INTO `mob_skills` VALUES (2966,2125,'Tail_Thwack',1,18.0,2000,1000,4,0,0,
 INSERT INTO `mob_skills` VALUES (2967,2126,'Embalming_Earth',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2968,2127,'Scalding_Breath',4,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2969,2128,'Debilitating_Spout',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2970,2185,'Paralysing_triad',0,7.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2970,2185,'Custom_Paralyzing_Triad',0,7.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2971,2186,'Crepuscular_Grasp',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2972,2187,'Necrotic_brume',4,15.0,2000,1000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2973,2717,'Terminal_Bloom',0,7.0,2000,1500,4,0,0,0);

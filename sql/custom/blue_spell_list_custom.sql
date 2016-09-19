@@ -13,18 +13,18 @@
 -- These will need pull requested to DSP eventually
 -- but first we need to catch up and then correct the IDs
 -- because the update will change the skill ID.
-INSERT INTO `blue_spell_list` VALUES (700,2689,6,16,8,0,0); -- Natures Meditation
-INSERT INTO `blue_spell_list` VALUES (701,2694,6,18,8,0,0); -- Tempestuous Upheaval
-INSERT INTO `blue_spell_list` VALUES (702,2702,6,13,8,0,0); -- Rending Deluge
-INSERT INTO `blue_spell_list` VALUES (703,2711,6,8,8,0,0); -- Embalming Earth
-INSERT INTO `blue_spell_list` VALUES (704,2714,6,23,8,3,0); -- Paralyzing Triad
-INSERT INTO `blue_spell_list` VALUES (705,2718,4,29,8,0,0); -- Foul Waters
-INSERT INTO `blue_spell_list` VALUES (706,2732,2,15,8,12,0); -- Glutinous Dart
-INSERT INTO `blue_spell_list` VALUES (707,2774,5,17,8,0,0); -- Retinal Glare
-INSERT INTO `blue_spell_list` VALUES (708,2674,6,24,8,0,0); -- Subduction
-INSERT INTO `blue_spell_list` VALUES (709,893,7,24,3,0,0); -- Thrashing Assault
-INSERT INTO `blue_spell_list` VALUES (710,1696,4,17,2,0,0); -- Erratic Flutter
-INSERT INTO `blue_spell_list` VALUES (711,1785,7,15,8,0,0); -- Restoral
-INSERT INTO `blue_spell_list` VALUES (712,1798,6,27,8,0,0); -- Rail Cannon
-INSERT INTO `blue_spell_list` VALUES (713,1798,6,20,8,0,0); -- Diffusion Ray
-INSERT INTO `blue_spell_list` VALUES (714,1817,6,8,8,2,0); -- Sinker Drill
+INSERT INTO `blue_spell_list` VALUES (700,2945,6,16,8,0,0); -- Natures Meditation
+INSERT INTO `blue_spell_list` VALUES (701,2950,6,18,8,0,0); -- Tempestuous Upheaval
+INSERT INTO `blue_spell_list` VALUES (702,2958,6,13,8,0,0); -- Rending Deluge
+INSERT INTO `blue_spell_list` VALUES (703,2967,6,8,8,0,0); -- Embalming Earth
+INSERT INTO `blue_spell_list` VALUES (704,2970,6,23,8,3,0); -- Paralyzing Triad
+INSERT INTO `blue_spell_list` VALUES (705,2974,4,29,8,0,0); -- Foul Waters
+INSERT INTO `blue_spell_list` VALUES (706,2988,2,15,8,12,0); -- Glutinous Dart
+INSERT INTO `blue_spell_list` VALUES (707,3030,5,17,8,0,0); -- Retinal Glare
+INSERT INTO `blue_spell_list` VALUES (708,2930,6,24,8,0,0); -- Subduction
+INSERT INTO `blue_spell_list` VALUES (709,2916,7,24,3,0,0); -- Thrashing Assault
+INSERT INTO `blue_spell_list` VALUES (710,1952,4,17,2,0,0); -- Erratic Flutter
+INSERT INTO `blue_spell_list` VALUES (711,2041,7,15,8,0,0); -- Restoral
+INSERT INTO `blue_spell_list` VALUES (712,2045,6,27,8,0,0); -- Rail Cannon
+INSERT INTO `blue_spell_list` VALUES (713,2054,6,20,8,0,0); -- Diffusion Ray
+INSERT INTO `blue_spell_list` VALUES (714,2073,6,8,8,2,0); -- Sinker Drill
