@@ -29,13 +29,19 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
 
-    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
+    if (math.random(1,1000) <= 66) then
         SetDropRate(195,20738,1000); -- Buramenk'ah
         SetDropRate(195,19799,0);
     else
         SetDropRate(195,20618,0);
         SetDropRate(195,19799,1000); -- Herja's Fork
     end
+
+    --[[
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17408033):setStatus(STATUS_DISAPPEAR);
+    end
+    ]]
 end;
 
 -----------------------------------
@@ -75,10 +81,10 @@ function onMobDeath(mob, player, isKiller)
         player:addSpell(SPELL_ID);
     end
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 5);
-    end
+    end]]
 
     ------------------------------------
     -- End Custom Legion Code
@@ -109,4 +115,10 @@ function onMobDespawn(mob)
         GetMobByID(Fafnir):setRespawnTime(math.random(21600,32400));
     end
 
+
+    --[[
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17408033):updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
+    end
+    ]]
 end;

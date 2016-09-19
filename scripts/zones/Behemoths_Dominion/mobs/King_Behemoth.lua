@@ -36,6 +36,10 @@ function onMobSpawn(mob)
         SetDropRate(1936,13566,0);
         SetDropRate(1936,13415,1000); -- Pixie Earring
     end
+
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17297459):setStatus(STATUS_DISAPPEAR);
+    end
 end;
 
 -----------------------------------
@@ -63,10 +67,10 @@ function onMobDeath(mob, player, isKiller)
     -- Begin Custom Legion Code
     ------------------------------------
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 4);
-    end
+    end]]
 
     ------------------------------------
     -- End Custom Legion Code
@@ -95,5 +99,9 @@ function onMobDespawn(mob)
         DeterMob(Behemoth, false);
         UpdateNMSpawnPoint(Behemoth);
         GetMobByID(Behemoth):setRespawnTime(math.random(21600,32400));
+    end
+
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17297459):updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
     end
 end;

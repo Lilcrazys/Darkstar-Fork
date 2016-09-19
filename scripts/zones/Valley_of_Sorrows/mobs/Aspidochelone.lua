@@ -34,11 +34,21 @@ function onMobSpawn(mob)
         SetDropRate(195,18828,1000); -- Oxossi Facon +1
     end
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 3);
-    end
+    end]]
 
+end;
+
+-----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17301567):setStatus(STATUS_DISAPPEAR);
+    end
 end;
 
 -----------------------------------
@@ -52,7 +62,7 @@ function onMobDeath(mob, player, isKiller)
     -- Begin Custom Legion Code
     ------------------------------------
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 3);
     end
@@ -87,4 +97,7 @@ function onMobDespawn(mob)
         GetMobByID(Adamantoise):setRespawnTime(math.random(21600,32400));
     end
 
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17301567):updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
+    end
 end;

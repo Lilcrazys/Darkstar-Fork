@@ -16,6 +16,16 @@ function onMobInitialize(mob)
 end;
 
 -----------------------------------
+-- onMobSpawn
+-----------------------------------
+
+function onMobSpawn(mob)
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17297459):setStatus(STATUS_DISAPPEAR);
+    end
+end;
+
+-----------------------------------
 -- onMobDeath
 -----------------------------------
 
@@ -25,10 +35,10 @@ function onMobDeath(mob, player, isKiller)
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Behemoth_ToD", os.time());
 
-    -- Custom (Relic) Trial Code
+    --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 2);
-    end
+    end]]
 end;
 
 -----------------------------------
@@ -57,5 +67,9 @@ function onMobDespawn(mob)
             mob:setRespawnTime(math.random(21600,32400));
             SetServerVariable("[PH]King_Behemoth", kills + 1);
         end
+    end
+
+    if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
+        GetNPCByID(17297459):updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
     end
 end;
