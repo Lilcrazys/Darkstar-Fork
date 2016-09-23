@@ -1,7 +1,7 @@
 -----------------------------------
---	Area: Ru'Lud Gardens
---	NPC:  Assai_Nybaen
---	Standard Info NPC
+-- Area: Ru'Lud Gardens
+-- NPC:  Assai_Nybaen
+-- Standard Info NPC
 -----------------------------------
 package.loaded["scripts/zones/RuLude_Gardens/TextIDs"] = nil;
 -----------------------------------
@@ -21,98 +21,99 @@ end;
 function Emperyian1(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Helm of Briareus x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian2(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Carabosses Gem x50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian3(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Fistule Discharge x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian4(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Kukulkan's Fang x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian5(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Ulhuadshi's Fang x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian6(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Itzapalotl's Scale x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian7(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Sobek Skin x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian8(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Cirein-croins Lantern x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian9(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Bukhis Wing x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian10(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Dragua's Scale x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian11(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Orthrus Claws x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian12(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Apademak's Horns x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian13(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Isgebinds Heart x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian14(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Alfards Fang x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian15(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Tanzanite Jewel x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian16(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Two-Leaf Chloris Bud x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian17(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Glavoid Shells x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian18(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Sedna's Tusk x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918), 0, 0, 0);
 end;
 function Emperyian19(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Azdaja Horn x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
+
 -----------------------------------
 -- onTrade Action
 -----------------------------------
@@ -126,8 +127,9 @@ function onTrade(player,npc,trade)
 		GetNPCByID(17772785):setPos(5,0,-86,166);
 		GetNPCByID(17772785):showNPC(100);
 		GetNPCByID(17772785):setStatus(STATUS_NORMAL);
-		player:injectActionPacket(6, 617);
+		player:injectActionPacket(6, 617, 0, 0, 0);
 	end
+
 	if (player:getVar("customtrial") >= 1) and (trade:hasItemQty(3925,50) == false) and (trade:hasItemQty(2184,1) == false) then
 		player:SpoofChatPlayer( "Sorry you already have a trial active", MESSAGE_SAY, npc:getID() );
 		player:SpoofChatPlayer( "If you wish to cancel the current trial, please trade a small fee of 1x imperial bronze piece to Venessa.", MESSAGE_SAY, npc:getID() );
@@ -830,7 +832,7 @@ function onTrigger(player,npc)
 		GetNPCByID(NPC):setPos(5,0,-86,166);
 		GetNPCByID(NPC):showNPC(100);
 		GetNPCByID(NPC):setStatus(STATUS_NORMAL);
-		player:injectActionPacket(6, 617);
+		player:injectActionPacket(6, 617, 0, 0, 0);
 	else
 		player:SpoofChatPlayer( "What you looking at?, Try brining me something of interest.", MESSAGE_SAY, npc:getID() );
 	end
@@ -841,8 +843,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -850,12 +852,9 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 	-- if (csid == 0x2750) then
 		-- npc:setAnimation(0);
 	-- end
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
 end;
-
-
-
