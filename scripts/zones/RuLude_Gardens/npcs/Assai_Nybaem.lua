@@ -824,6 +824,7 @@ end;
 -- onTrigger Action
 -----------------------------------
 function onTrigger(player,npc)
+    --[[
 	local NPC = 17772760;
 
 	if (player:getVar("TRIAL_COMPLETE") == 1) then
@@ -836,6 +837,7 @@ function onTrigger(player,npc)
 	else
 		player:SpoofChatPlayer( "What you looking at?, Try brining me something of interest.", MESSAGE_SAY, npc:getID() );
 	end
+    ]]
 end;
 
 -----------------------------------
