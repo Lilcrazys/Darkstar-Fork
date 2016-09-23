@@ -113,7 +113,7 @@ function onMobSpawn(mob)
         SetDropRate(9608,8925,0); -- Carbutear
         SetDropRate(9608,8926,50); -- Fenritear
     end
-    
+
 end;
 -----------------------------------
 -- onMobEngage Action
