@@ -24,7 +24,7 @@ function onTrigger(player, target)
         if (targ:getVar("inJail") == 0 and targ:getZoneID() ~= 131) then
             require("scripts/globals/status");
             require("scripts/globals/teleports");
-            targ:injectActionPacket(4, 261);
+            targ:injectActionPacket(4, 261, 0, 0, 0);
             targ:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
         else
             player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");

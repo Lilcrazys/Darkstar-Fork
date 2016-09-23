@@ -46,47 +46,47 @@ function onTrigger(player, tele, target)
         -- Parse the Teleports
         if (tele == "dem" or tele == "Dem") then
             if (targ:hasKeyItem(DEM_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, TELEPORT_DEM, 0, 1);
             end
         elseif (tele == "holla" or tele == "Holla" or tele == "hol" or tele == "Hol") then
             if (targ:hasKeyItem(HOLLA_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, TELEPORT_HOLLA, 0, 1);
             end
         elseif (tele == "mea" or tele == "Mea") then
             if (targ:hasKeyItem(MEA_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, TELEPORT_MEA, 0, 1);
             end
         elseif (tele == "vahzl" or tele == "Vahzl" or tele == "vahz" or tele == "Vahz" or tele == "vah" or tele == "Vah") then
             if (targ:hasKeyItem(VAHZL_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, TELEPORT_VAHZL, 0, 1);
             end
         elseif (tele == "yhoat" or tele == "Yhoat" or tele == "yho" or tele == "Yho") then
             if (targ:hasKeyItem(YHOATOR_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, TELEPORT_YHOAT, 0, 1);
             end
         elseif (tele == "altep" or tele == "Altep" or tele == "altepa" or tele == "Altepa" or tele == "alt" or tele == "Alt") then
             if (targ:hasKeyItem(ALTEPA_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, TELEPORT_ALTEP, 0, 1);
             end
         elseif (tele == "jugner" or tele == "Jugner") then
             if (targ:hasKeyItem(JUGNER_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, RECALL_JUGNER, 0, 1);
             end
         elseif (tele == "pashh" or tele == "Pashh" or tele == "pashow" or tele == "Pashow") then
             if (targ:hasKeyItem(PASHHOW_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, RECALL_PASHH, 0, 1);
             end
         elseif (tele == "meriph" or tele == "Meriph" or tele == "meriphataud" or tele == "Meriphataud") then
             if (targ:hasKeyItem(MERIPHATAUD_GATE_CRYSTAL) or gmlvl >= 1) then
-                targ:injectActionPacket(4, 122);
+                targ:injectActionPacket(4, 122, 0, 0, 0);
                 targ:addStatusEffectEx(EFFECT_TELEPORT, 0, RECALL_MERIPH, 0, 1);
             end
 

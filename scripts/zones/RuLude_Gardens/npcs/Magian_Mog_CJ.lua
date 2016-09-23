@@ -31,13 +31,13 @@ function onTrade(player,npc,trade)
             local MSG = string.format("Ok, Trial %d has begun, kupo! Use '@trial' to review your progress!", ITEM);
             cTrialCleanUp(player); -- If any previous trial var left dangling, kill them
             player:setVar("C_TRIAL_ITEM", ITEM); -- Sets new trial.
-            player:injectActionPacket(6, 203);
+            player:injectActionPacket(6, 203, 0, 0, 0);
             player:SpoofChatPlayer(MSG, MESSAGE_SAY, npc:getID());
         end
     elseif (STATUS == 1 and trade:hasItemQty(TRIAL, 1) and COUNT == 1) then
-        player:injectActionPacket(6, 206);
+        player:injectActionPacket(6, 206, 0, 0, 0);
         cTrialEnd(player);
-        player:injectActionPacket(6, 205);
+        player:injectActionPacket(6, 205, 0, 0, 0);
         player:SpoofChatPlayer("KUPOW!", MESSAGE_SAY, npc:getID());
     --[[ This is commented out because of Tanzenites stacking at 12
          and I do not currently have time to write code to check

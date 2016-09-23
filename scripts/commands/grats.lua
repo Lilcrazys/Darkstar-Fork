@@ -10,5 +10,5 @@ cmdprops =
 };
 
 function onTrigger(player)
-    player:injectActionPacket(5, 107);
+    player:injectActionPacket(5, 107, 0, 0, 0);
 end;

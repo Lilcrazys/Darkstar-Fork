@@ -88,7 +88,7 @@ function onMobDeath(mob, player, isKiller)
             player:messageBasic(025,(player:getMaxMP()-player:getMP()));
         elseif (mobID == 17526880) then -- Hall of Mul : 2hr reset
             player:resetRecasts();
-            player:injectActionPacket( 6, 312 );
+            player:injectActionPacket(6, 312, 0, 0, 0);
         end
     end
 end;

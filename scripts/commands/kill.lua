@@ -43,11 +43,11 @@ function onTrigger(player, victim)
             file:close();
 
             -- Begin Wrath of the Gods Animation
-            targ:injectActionPacket( 5, 271 );
-            targ:injectActionPacket( 5, 202 );
-            targ:injectActionPacket( 5, 207 );
-            targ:injectActionPacket( 5, 216 );
-            targ:injectActionPacket( 5, 270 );
+            targ:injectActionPacket(5, 271, 0, 0, 0);
+            targ:injectActionPacket(5, 202, 0, 0, 0);
+            targ:injectActionPacket(5, 207, 0, 0, 0);
+            targ:injectActionPacket(5, 216, 0, 0, 0);
+            targ:injectActionPacket(5, 270, 0, 0, 0);
             -- End Wrath of the Gods Animation
             targ:setHP(0);
             -- targ:delExp(exploss);

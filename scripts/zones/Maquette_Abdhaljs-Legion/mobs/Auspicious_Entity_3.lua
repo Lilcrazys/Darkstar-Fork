@@ -66,6 +66,6 @@ end;
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         player:resetRecasts();
-        player:injectActionPacket( 6, 312 );
+        player:injectActionPacket(6, 312, 0, 0, 0);
     end
 end;
