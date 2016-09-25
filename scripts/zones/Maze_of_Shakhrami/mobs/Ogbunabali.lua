@@ -38,7 +38,7 @@ function onMobSpawn(mob)
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9608,8919,50); -- Ifritear
@@ -127,8 +127,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local depopTime = mob:getLocalVar("depopTime");
-
 end;
 
 -----------------------------------
