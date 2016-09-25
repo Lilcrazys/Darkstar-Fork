@@ -2075,8 +2075,8 @@ INSERT INTO `mob_skills` VALUES (2045,1373,'PL_Rail_Cannon',1,15.0,2000,1500,4,0
 -- INSERT INTO `mob_skills` VALUES (2048,1792,'Rail_Cannon',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2049,1793,'Artificial_Gravity',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2050,1794,'Antigravity',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2051,1795,'Rail_Cannon',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2052,1796,'Restoral',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2051,1795,'Custom_Rail_Cannon',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2052,1796,'Custom_Restoral',0,7.0,2000,1500,1,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2053,1797,'Heavy_Armature',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2054,1407,'Diffusion_ray',4,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2055,1408,'Intertia_stream',1,10.0,2000,1000,4,0,0,0);

@@ -24,7 +24,7 @@ INSERT INTO `blue_spell_list` VALUES (707,3030,5,17,8,0,0); -- Retinal Glare
 INSERT INTO `blue_spell_list` VALUES (708,2930,6,24,8,0,0); -- Subduction
 INSERT INTO `blue_spell_list` VALUES (709,2916,7,24,3,0,0); -- Thrashing Assault
 INSERT INTO `blue_spell_list` VALUES (710,1952,4,17,2,0,0); -- Erratic Flutter
-INSERT INTO `blue_spell_list` VALUES (711,2041,7,15,8,0,0); -- Restoral
-INSERT INTO `blue_spell_list` VALUES (712,2045,6,27,8,0,0); -- Rail Cannon
+INSERT INTO `blue_spell_list` VALUES (711,2052,7,15,8,0,0); -- Restoral
+INSERT INTO `blue_spell_list` VALUES (712,2051,6,27,8,0,0); -- Rail Cannon
 INSERT INTO `blue_spell_list` VALUES (713,2054,6,20,8,0,0); -- Diffusion Ray
 INSERT INTO `blue_spell_list` VALUES (714,2073,6,8,8,2,0); -- Sinker Drill

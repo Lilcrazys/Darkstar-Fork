@@ -1,33 +1,21 @@
 ---------------------------------------------------
---  Catharsis
+--  Restoral (Custom version)
 --
 --  Description: Restores HP.
 --
 ---------------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
 
-    local potency = skill:getParam();
-    local mobhp = mob:getHPP();
-
-    if mobhp > 50 then
-        return 0;
-    else
-
-    if (potency == 0) then
-        potency = 10;
-    end
-
-    potency = potency - math.random(0, potency/1);
-
     skill:setMsg(MSG_SELF_HEAL);
 
-    return MobHealMove(mob, mob:getMaxHP() * potency / 10);
+    return MobHealMove(mob, mob:getMaxHP() * 0.10); -- 10% heal because retail formula unknown.
 end;
