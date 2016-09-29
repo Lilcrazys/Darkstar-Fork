@@ -10,10 +10,10 @@ require("scripts/globals/status");
 
 function onMobSkillCheck(target,mob,skill)
     if (target:isBehind(mob) == false) then
-        return 1;
+        return 0;
     else
         -- return 0;
-        return 1; -- this is temp.
+        return 0; -- this is temp.
     end
 end;
 

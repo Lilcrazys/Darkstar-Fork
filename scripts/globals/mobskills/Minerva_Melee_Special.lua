@@ -2,7 +2,7 @@
 -- Minerva_Melee_Special
 --
 -- Minerva's melee attacks count as non elemental magic damage and bypasses shadows.
--- While damage is magic, power is calculated by physical attack vs physical defense. 
+-- While damage is magic, power is calculated by physical attack vs physical defense.
 ---Steals 1 TP and has 1 in 10 chance to stun for 1 second.
 ---------------------------------------------
 require("scripts/globals/settings");
@@ -11,7 +11,7 @@ require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 1;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
