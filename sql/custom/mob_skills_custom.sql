@@ -3191,9 +3191,9 @@ INSERT INTO `mob_skills` VALUES (3161,2336,'Camaraderie_oft_the_crevasse',1,18.0
 INSERT INTO `mob_skills` VALUES (3162,2337,'Into_the_light',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (3163,2338,'Arduous_decision',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (3164,2339,'12_blades_of_remorse',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (3165,2320,'Darrcuiln_Charge',0,7.0,2000,0,4,16,0,0); -- Darrcuiln Melee Special
-INSERT INTO `mob_skills` VALUES (3166,2321,'Darrcuiln_Claw',0,7.0,2000,0,4,16,0,0);   -- Darrcuiln Melee Special
-INSERT INTO `mob_skills` VALUES (3167,2323,'Darrcuiln_Howl',0,7.0,2000,0,4,16,0,0);   -- Darrcuiln Melee Special
+INSERT INTO `mob_skills` VALUES (3165,2320,'Darrcuiln_Melee_Charge',0,7.0,2000,0,4,16,0,0); -- Darrcuiln Melee Special
+INSERT INTO `mob_skills` VALUES (3166,2321,'Darrcuiln_Melee_Claw',0,7.0,2000,0,4,16,0,0);   -- Darrcuiln Melee Special
+INSERT INTO `mob_skills` VALUES (3167,2323,'Darrcuiln_Melee_Howl',0,7.0,2000,0,4,16,0,0);   -- Darrcuiln Melee Special
 INSERT INTO `mob_skills` VALUES (3168,2323,'Aurous_charge',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (3169,2324,'Howling_gust',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (3170,2325,'Righteous_Rasp',1,18.0,2000,1000,4,0,0,0);
