@@ -1815,7 +1815,7 @@ INSERT INTO `mob_skills` VALUES (1787,1225,'Scorching_Lash',1,20.0,2000,1500,4,0
 INSERT INTO `mob_skills` VALUES (1788,1226,'Ululation',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1789,1227,'Magma_Hoplon',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (1790,1228,'Gates_of_Hades',1,20.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (1791,1217,'Incinerate',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1791,1217,'Custom_Incinerate',4,12.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1792,1536,'Nullsong',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1793,62,'Vampiric_Root',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1794,1538,'Perdition',0,7.0,2000,1500,4,0,0,0);
