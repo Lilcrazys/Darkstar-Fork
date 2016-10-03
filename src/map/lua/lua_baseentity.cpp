@@ -4402,7 +4402,16 @@ inline int32 CLuaBaseEntity::canUsePet(lua_State *L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
 
-    lua_pushboolean(L, m_PBaseEntity->loc.zone->CanUseMisc(MISC_PET));
+    if (m_PBaseEntity->objtype == TYPE_PC)
+    {
+        auto PChar = static_cast<CCharEntity*>(m_PBaseEntity);
+
+        lua_pushboolean(L, (PChar->loc.zone->CanUseMisc(MISC_PET) && !PChar->m_moghouseID));
+    }
+    else
+    {
+        lua_pushboolean(L, true);
+    }
     return 1;
 }
 
@@ -7758,7 +7767,7 @@ inline int32 CLuaBaseEntity::injectActionPacket(lua_State* L)
     uint16 anim = (uint16)lua_tointeger(L, 2);
     SPECEFFECT speceffect = (SPECEFFECT)lua_tointeger(L, 3);
     REACTION reaction = (REACTION)lua_tointeger(L, 4);
-    uint16 message = (REACTION)lua_tointeger(L, 5);
+    uint16 message = (uint16)lua_tointeger(L, 5);
 
     ACTIONTYPE actiontype = ACTION_MAGIC_FINISH;
     switch (action)
@@ -10825,7 +10834,7 @@ int32 CLuaBaseEntity::getEntity(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
     DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isnumber(L, 1));
-    
+
     auto PEntity {m_PBaseEntity->GetEntity(lua_tointeger(L,1))};
     if (PEntity)
     {
@@ -10840,6 +10849,13 @@ int32 CLuaBaseEntity::getEntity(lua_State* L)
     {
         lua_pushnil(L);
     }
+    return 1;
+}
+
+int32 CLuaBaseEntity::canChangeState(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    lua_pushboolean(L, m_PBaseEntity->PAI->CanChangeState());
     return 1;
 }
 
@@ -11515,6 +11531,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setDropID),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,resetAI),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getEntity),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,canChangeState),
 
 
     // Custom
