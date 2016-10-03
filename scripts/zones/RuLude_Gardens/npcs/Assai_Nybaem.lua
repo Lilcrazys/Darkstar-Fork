@@ -106,7 +106,7 @@ end;
 function Emperyian18(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Sedna's Tusk x 50", MESSAGE_SAY, npc:getID() );
 	player:SpoofChatPlayer( "On completion of your trial please ensure you have at least 1 space free in your inventory.", MESSAGE_SAY, npc:getID() );
-	player:injectActionPacket(4, 918), 0, 0, 0);
+	player:injectActionPacket(4, 918, 0, 0, 0);
 end;
 function Emperyian19(player,npc,trade)
 	player:SpoofChatPlayer( "Objective Collect:... \nCollect Azdaja Horn x 50", MESSAGE_SAY, npc:getID() );
