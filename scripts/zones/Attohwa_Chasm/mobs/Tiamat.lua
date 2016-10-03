@@ -193,7 +193,7 @@ end;
 
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
-    mob:useMobAbility(1023);
+    mob:useMobAbility(1279);
     mob:addTP(100);
 end;
 

@@ -89,7 +89,7 @@ end;
 -- onMobDeath
 -----------------------------------
 
-function onMobDespawn(mob, player, isKiller)
+function onMobDeath(mob, player, isKiller)
 end;
 
 -----------------------------------

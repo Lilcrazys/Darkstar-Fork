@@ -1,28 +1,30 @@
 ---------------------------------------------------
---  Incinerator 
---  Description: 
---  Type: Magical
---  additional effect : Burn
-
+-- Incinerator (custom version)
 ---------------------------------------------------
-
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
-
+---------------------------------------------
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
-
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_BURN;
-    MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 5, 3, 30);
-    local dmgmod = 2;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_LIGHT,dmgmod,TP_MAB_BONUS,1);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_LIGHT,MOBPARAM_IGNORE_SHADOWS);
-    target:delHP(dmg);
-    return dmg;
-end
+    if (mob:getPool() == 448) then -- Blazing Eruca
+        local dmgmod = 2;
+        -- punk has over 90k HP, which makes for some nasty math based damage. So we're going with "2" + "weaponDMG x3"..
+        local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_FIRE,dmgmod,TP_MAB_BONUS,1);
+        local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
+
+        MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_BURN, 5, 3, 30);
+
+        target:delHP(dmg);
+        return dmg;
+    else -- DSP version, properly set by mobs HP/MaxHP ratio.
+        local dmgmod = MobBreathMove(mob, target, 0.25, 0.75, ELE_FIRE);
+        local dmg = MobFinalAdjustments(dmgmod,mob,skill,target,MOBSKILL_BREATH,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
+
+        target:delHP(dmg);
+        return dmg;
+    end
+end;

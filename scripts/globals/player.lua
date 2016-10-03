@@ -345,8 +345,6 @@ function CharCreate(player)
 		player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
 	end
 
-    player:addKeyItem(PORTAL_CHARM); -- Because 3 mages gate is not fully implemented.
-
 	----- End of custom stuffs for new players -----
 end;
 
