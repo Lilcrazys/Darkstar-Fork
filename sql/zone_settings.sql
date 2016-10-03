@@ -323,22 +323,22 @@ INSERT INTO `zone_settings` VALUES (274,3,'127.0.0.1',54230,'Outer_RaKaznar',73,
 INSERT INTO `zone_settings` VALUES (275,0,'127.0.0.1',54230,'Outer_RaKaznar_U',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (276,0,'127.0.0.1',54230,'RaKaznar_Inner_Court',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (277,0,'127.0.0.1',54230,'RaKaznar_Turris',0,0,0,0,0,0.00,145);
-INSERT INTO `zone_settings` VALUES (278,0,'127.0.0.1',54230,'278',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (279,0,'127.0.0.1',54230,'279',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (278,0,'127.0.0.1',54130,'278',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (279,0,'127.0.0.1',54130,'279',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (280,1,'127.0.0.1',54230,'Mog_Garden',67,67,67,67,0,0.00,1056);
 INSERT INTO `zone_settings` VALUES (281,0,'127.0.0.1',54230,'Leafallia',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (282,0,'127.0.0.1',54230,'Mount_Kamihr',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (283,0,'127.0.0.1',54230,'Silver_Knife',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (283,0,'127.0.0.1',54130,'Silver_Knife',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (284,1,'127.0.0.1',54230,'Celennia_Memorial_Library',63,63,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (285,1,'127.0.0.1',54230,'Feretory',0,0,0,0,0,0.00,1056);
+INSERT INTO `zone_settings` VALUES (285,1,'127.0.0.1',54130,'Feretory',0,0,0,0,0,0.00,1056);
 INSERT INTO `zone_settings` VALUES (286,0,'127.0.0.1',54130,'286',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (287,0,'127.0.0.1',54130,'287',0,0,0,0,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (288,2,'127.0.0.1',54130,'Escha_ZiTah',80,80,80,80,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (289,2,'127.0.0.1',54230,'Escha_RuAun',80,80,80,80,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (290,0,'127.0.0.1',54230,'Desuetia_Empyreal_Paradox',0,0,0,0,0,0.00,128);
-INSERT INTO `zone_settings` VALUES (291,0,'127.0.0.1',54230,'Reisenjima',79,79,79,79,0,0.00,128);
-INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54230,'Reisenjima_Henge',0,0,0,0,0,0.00,0);
-INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54230,'Reisenjima_Sanctorium',0,0,0,0,0,0.00,128);
+INSERT INTO `zone_settings` VALUES (289,2,'127.0.0.1',54130,'Escha_RuAun',80,80,80,80,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (290,0,'127.0.0.1',54130,'Desuetia_Empyreal_Paradox',0,0,0,0,0,0.00,128);
+INSERT INTO `zone_settings` VALUES (291,0,'127.0.0.1',54130,'Reisenjima',79,79,79,79,0,0.00,128);
+INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54130,'Reisenjima_Henge',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54130,'Reisenjima_Sanctorium',0,0,0,0,0,0.00,128);
 
 -- Temp workaround for Legion battles because instancing there isn't ready, so its Dungeon for now
 REPLACE INTO `zone_settings` VALUES (183,3,'127.0.0.1',54230,'Maquette_Abdhaljs-Legion',143,143,143,143,0,0.00,145);
