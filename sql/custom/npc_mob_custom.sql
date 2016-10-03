@@ -1875,13 +1875,13 @@ REPLACE INTO `mob_spawn_points` VALUES (17506685,'XuanWu','Xuan Wu',90473,67.539
 -- 17527807
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17526785,'Lofty_Behemoth','Lofty Behemoth',90002,-221,12,260,4);
-INSERT INTO `mob_spawn_points` VALUES (17526786,'Lofty_Wyrm','Lofty Wyrm',90005,-222,12,240,252);
-INSERT INTO `mob_spawn_points` VALUES (17526787,'Lofty_Adamantoise','Lofty_Adamantoise',90006,-223,12,220,1);
-INSERT INTO `mob_spawn_points` VALUES (17526788,'Lofty_Elasmoth','Lofty Elasmoth',90003,-221,12,260,4);
-INSERT INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',90000,-222,12,240,252);
-INSERT INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
-INSERT INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
+REPLACE INTO `mob_spawn_points` VALUES (17526785,'Lofty_Behemoth','Lofty Behemoth',90002,-221,12,260,4);
+REPLACE INTO `mob_spawn_points` VALUES (17526786,'Lofty_Wyrm','Lofty Wyrm',90005,-222,12,240,252);
+REPLACE INTO `mob_spawn_points` VALUES (17526787,'Lofty_Adamantoise','Lofty_Adamantoise',90006,-223,12,220,1);
+REPLACE INTO `mob_spawn_points` VALUES (17526788,'Lofty_Elasmoth','Lofty Elasmoth',90003,-221,12,260,4);
+REPLACE INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',90000,-222,12,240,252);
+REPLACE INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
+REPLACE INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
 
 INSERT INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,-195.000,12.001,240.000,0); -- Hall of An : Restore
 INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,155.000,12.001,238.000,0); -- Hall of Ki : Restore

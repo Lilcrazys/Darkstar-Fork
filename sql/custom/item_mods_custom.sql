@@ -965,13 +965,13 @@ INSERT INTO `item_mods` VALUES (25707,296,2);
 -- Srivatsa
 INSERT INTO `item_mods` VALUES (26403,2,150); -- HP
 INSERT INTO `item_mods` VALUES (26403,5,150); -- MP
-INSERT INTO `item_mods` VALUES (26403,27,15); -- ENM
+INSERT INTO `item_mods` VALUES (26403,23,35); -- ATK
+INSERT INTO `item_mods` VALUES (26403,25,35); -- ACC
+INSERT INTO `item_mods` VALUES (26403,27,15); -- Enmity
 INSERT INTO `item_mods` VALUES (26403,109,129); -- Shield skill (Custom)
 INSERT INTO `item_mods` VALUES (26403,161,-8); -- DMG TKN
-INSERT INTO `item_mods` VALUES (26403,831,-25); -- MAGIC DMG TKN
+INSERT INTO `item_mods` VALUES (26403,163,-25); -- MAGIC DMG TKN
 INSERT INTO `item_mods` VALUES (26403,416,10); -- Annuls DMG 
-INSERT INTO `item_mods` VALUES (26403,831,35); -- ACC
-INSERT INTO `item_mods` VALUES (26403,426,35); -- ATK
 
 INSERT INTO `item_mods` VALUES (26406,127,3);
 INSERT INTO `item_mods` VALUES (26406,128,3);
@@ -2038,9 +2038,9 @@ INSERT INTO `item_mods` VALUES (28607,5,30);
 INSERT INTO `item_mods` VALUES (28621,274,6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621,311,6); -- Magic Damage
 
-------------------
--- Empyrean Weaponskill Mods
------------------
+-- ----------------------------------------
+-- Weaponskill Mods - MUST BE MOVED LATER
+-- ----------------------------------------
 
 -- Almace
 INSERT INTO `item_mods` VALUES (19458,355,225); -- chant_du_cygne
