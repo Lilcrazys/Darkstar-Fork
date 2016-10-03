@@ -2037,3 +2037,91 @@ INSERT INTO `item_mods` VALUES (28607,5,30);
 
 INSERT INTO `item_mods` VALUES (28621,274,6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621,311,6); -- Magic Damage
+
+------------------
+-- Empyrean Weaponskill Mods
+-----------------
+
+-- Almace
+INSERT INTO `item_mods` VALUES (19458,355,225); -- chant_du_cygne
+INSERT INTO `item_mods` VALUES (19634,355,225);
+INSERT INTO `item_mods` VALUES (19807,355,225);
+INSERT INTO `item_mods` VALUES (20654,355,225);
+
+-- Armaggeddon
+INSERT INTO `item_mods` VALUES (19469,355,220); -- wildfire
+INSERT INTO `item_mods` VALUES (19645,355,220);
+INSERT INTO `item_mods` VALUES (19818,355,220);
+INSERT INTO `item_mods` VALUES (21265,355,220);
+
+-- Caldabolg
+INSERT INTO `item_mods` VALUES (19459,355,59); -- torcleaver
+INSERT INTO `item_mods` VALUES (19635,355,59);
+INSERT INTO `item_mods` VALUES (19808,355,59);
+INSERT INTO `item_mods` VALUES (20748,355,59);
+
+-- Farsha
+INSERT INTO `item_mods` VALUES (19460,355,76); -- cloudsplitter
+INSERT INTO `item_mods` VALUES (19636,355,76);
+INSERT INTO `item_mods` VALUES (19809,355,76);
+INSERT INTO `item_mods` VALUES (20795,355,76);
+
+-- Gambanteinn
+INSERT INTO `item_mods` VALUES (19466,355,173); -- dagan
+INSERT INTO `item_mods` VALUES (19642,355,173);
+INSERT INTO `item_mods` VALUES (19815,355,173);
+INSERT INTO `item_mods` VALUES (21065,355,173);
+
+-- Gandiva
+INSERT INTO `item_mods` VALUES (19468,355,202); -- jishnus_radiance
+INSERT INTO `item_mods` VALUES (19644,355,202);
+INSERT INTO `item_mods` VALUES (19817,355,202);
+INSERT INTO `item_mods` VALUES (21213,355,202);
+
+-- Hvergelmir
+INSERT INTO `item_mods` VALUES (19467,355,190); -- myrkr
+INSERT INTO `item_mods` VALUES (19643,355,190); 
+INSERT INTO `item_mods` VALUES (19816,355,190); 
+INSERT INTO `item_mods` VALUES (21144,355,190);
+
+-- Kannagi
+INSERT INTO `item_mods` VALUES (19464,355,140); -- blade_hi
+INSERT INTO `item_mods` VALUES (19640,355,140);
+INSERT INTO `item_mods` VALUES (19813,355,140);
+INSERT INTO `item_mods` VALUES (20975,355,140);
+
+-- Masamune
+INSERT INTO `item_mods` VALUES (19465,355,156); -- tachi_fudo
+INSERT INTO `item_mods` VALUES (19641,355,156);
+INSERT INTO `item_mods` VALUES (19814,355,156);
+INSERT INTO `item_mods` VALUES (21020,355,156);
+
+-- Redemption
+INSERT INTO `item_mods` VALUES (19462,355,108); -- Quietus
+INSERT INTO `item_mods` VALUES (19638,355,108); 
+INSERT INTO `item_mods` VALUES (19811,355,108); 
+INSERT INTO `item_mods` VALUES (20885,355,108); 
+
+-- Rhongomiant
+INSERT INTO `item_mods` VALUES (19463,355,124); -- camlanns_torment
+INSERT INTO `item_mods` VALUES (19639,355,124);
+INSERT INTO `item_mods` VALUES (19812,355,124);
+INSERT INTO `item_mods` VALUES (20930,355,124);
+
+-- Twashtar
+INSERT INTO `item_mods` VALUES (19457,355,31); -- rudras_storm
+INSERT INTO `item_mods` VALUES (19633,355,31);
+INSERT INTO `item_mods` VALUES (19806,355,31);
+INSERT INTO `item_mods` VALUES (20564,355,31);
+
+-- Ukonvasara
+INSERT INTO `item_mods` VALUES (19461,355,92); -- ukkos_fury
+INSERT INTO `item_mods` VALUES (19637,355,92); 
+INSERT INTO `item_mods` VALUES (19810,355,92); 
+INSERT INTO `item_mods` VALUES (20840,355,92); 
+
+-- Verethragna
+INSERT INTO `item_mods` VALUES (19456,355,14); --victory_smite
+INSERT INTO `item_mods` VALUES (19632,355,14);
+INSERT INTO `item_mods` VALUES (19805,355,14);
+INSERT INTO `item_mods` VALUES (20487,355,14);
