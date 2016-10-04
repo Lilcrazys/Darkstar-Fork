@@ -5,7 +5,7 @@
 
 cmdprops =
 {
-    permission = 0,
+    permission = 2,
     parameters = "s"
 };
 function onTrigger(player, hall)
