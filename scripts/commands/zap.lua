@@ -38,8 +38,8 @@ function onTrigger(player)
         );
         file:close();
         -- Begin Wrath of the Gods Animation
-        victim:injectActionPacket(5, 207);
-        victim:injectActionPacket(5, 270);
+        victim:injectActionPacket(5, 207, 0, 0, 0);
+        victim:injectActionPacket(5, 270, 0, 0, 0);
         -- End Wrath of the Gods Animation
         victim:addHP(-1);
         victim:messageBasic(264,0,1);
