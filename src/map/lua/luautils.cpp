@@ -1656,7 +1656,7 @@ namespace luautils
         lua_getglobal(LuaHandle, "onEventFinish");
         if (lua_isnil(LuaHandle, -1))
         {
-            ShowError("luautils::onEventFinish: undefined procedure onEventFinish\n");
+            ShowError("luautils::onEventFinish (%s): undefined procedure onEventFinish\n", PChar->m_event.Script.c_str());
             lua_pop(LuaHandle, 1);
             return -1;
         }
