@@ -1021,10 +1021,23 @@ REPLACE INTO `mob_spawn_points` VALUES (17056193,'Ravishing_Rafflesia','Ravishin
 -- 17097727
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17097270,'Odin','Odin',2766,379,-215,66,62);
-INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426,-215,20,104);
-
 REPLACE INTO `npc_list` VALUES (17096710,'qm1','???',0,379.00,-215.00,40.00,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Odin
+INSERT INTO `mob_spawn_points` VALUES (17097270,'Odin','Odin',2766,379,-215,66,62);
+-- 17097271  Brunhilde     (mob)
+-- 17097272  Siegrune      (mob)
+-- 17097273  Rossweisse    (mob)
+-- 17097274  Gerhilde      (mob)
+-- 17097275  Schwertleite  (mob)
+-- 17097276  Helmwige      (mob)
+-- 17097277  Ortlinde      (mob)
+-- 17097278  Grimgerde     (mob)
+-- 17097279  Waltraute     (mob)
+-- 17097280 ~ 17097297    Armoury Crates (NPC)
+-- INSERT INTO `mob_spawn_points` VALUES (17097298,'Odin_Prime','Odin_Prime',2766,379,-215,66,62);
+-- INSERT INTO `mob_spawn_points` VALUES (17097299,'Odin_Image','Odin Image',2766,379,-215,66,62);
+-- INSERT INTO `mob_spawn_points` VALUES (17097300,'Odin_Image','Odin Image',2766,379,-215,66,62);
+-- INSERT INTO `mob_spawn_points` VALUES (17097301,'Odin_Image','Odin Image',2766,379,-215,66,62);
+INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426,-215,20,104);
 
 -- INSERT INTO `npc_list` VALUES (17097727,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 

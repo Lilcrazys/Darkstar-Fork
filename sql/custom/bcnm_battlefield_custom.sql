@@ -10,6 +10,12 @@
 -- ---------------------------------------------------------------------------
 
 -- INSERT INTO `bcnm_battlefield` VALUES (bcnmId,battlefieldNumber,monsterId,conditions);
-INSERT INTO `bcnm_battlefield` VALUES (1308,1,17821697,3);
-INSERT INTO `bcnm_battlefield` VALUES (1308,2,17821698,3);
-INSERT INTO `bcnm_battlefield` VALUES (1308,3,17821699,3);
+
+-- INSERT INTO `bcnm_battlefield` VALUES (1184,1,17097298,3); -- Odin Prime
+-- INSERT INTO `bcnm_battlefield` VALUES (1184,1,17097299,0); -- Odin Image
+-- INSERT INTO `bcnm_battlefield` VALUES (1184,1,17097300,0); -- Odin Image
+-- INSERT INTO `bcnm_battlefield` VALUES (1184,1,17097301,0); -- Odin Image
+
+INSERT INTO `bcnm_battlefield` VALUES (1308,1,17821697,3); -- Shinryu
+INSERT INTO `bcnm_battlefield` VALUES (1308,2,17821698,3); -- Shinryu
+INSERT INTO `bcnm_battlefield` VALUES (1308,3,17821699,3); -- Shinryu
