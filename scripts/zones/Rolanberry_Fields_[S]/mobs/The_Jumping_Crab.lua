@@ -262,7 +262,7 @@ function onMagicHit(caster, target, spell)
         mob:castSpell(260);
     elseif (math.random(1,15) == 5) then
         -- 1/15 chance your tank takes a Crab_Head_Butt instead.
-        mob:useMobAbility(44); 
+        mob:useMobAbility(44);
     end
 
     -- Get 1 hit duration of enhanced Deluge Spikes every time a spell lands (goes back to normal after).
