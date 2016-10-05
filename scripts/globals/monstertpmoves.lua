@@ -151,7 +151,7 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
 
     ratio = ratio + lvldiff * 0.05;
     ratio = utils.clamp(ratio, 0, 4);
-    
+
     --work out hit rate for mobs (bias towards them)
     local hitrate = (acc*accmod) - eva + (lvldiff*2) + 75;
 
@@ -173,7 +173,7 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
     --work out min and max cRatio
     local maxRatio = 1;
     local minRatio = 0;
-    
+
     if (ratio < 0.5) then
         maxRatio = ratio + 0.5;
     elseif ((0.5 <= ratio) and (ratio <= 0.7)) then
@@ -186,10 +186,10 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
         maxRatio = ratio + 0.375;
     elseif ((2.625 < ratio) and (ratio <= 3.25)) then
         maxRatio = 3;
-    else 
+    else
         maxRatio = ratio;
     end
-    
+
 
     if (ratio < 0.38) then
         minRatio =  0;
@@ -299,7 +299,7 @@ function MobMagicalMove(mob,target,skill,damage,element,dmgmod,tpeffect,tpvalue)
     end
     -- plus 100 forces it to be a number
     mab = (100 + mob:getMod(MOD_MATT)) / (100 + target:getMod(MOD_MDEF) + mdefBarBonus);
-    
+
     if (mab > 1.3) then
         mab = 1.3;
     end
@@ -827,7 +827,7 @@ function customResCheck(target, effect)
     elseif(effect == EFFECT_LULLABY) then
         effectRes = target:getMod(MOD_LULLABYRES);
     elseif (effect == EFFECT_POISON) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_POISON) then
+        if (player:hasStatusEffect(EFFECT_NEGATE_POISON)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_POISONRES);
@@ -856,16 +856,16 @@ function customResCheck(target, effect)
         effectRes = target:getMod(MOD_CHARMRES);
     elseif (effect == EFFECT_AMNESIA) then
         effectRes = target:getMod(MOD_AMNESIARES);
-        if (player:hasStatusEffectEFFECT_NEGATE_AMNESIA) then
+        if (player:hasStatusEffectEFFECT_NEGATE_AMNESIA)) then
             return 1000;
         end
     elseif (effect == EFFECT_TERROR) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_TERROR) then
+        if (player:hasStatusEffect(EFFECT_NEGATE_TERROR)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_TERRORRES);
     elseif (effect == EFFECT_DOOM) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_DOOM) then
+        if (player:hasStatusEffect(EFFECT_NEGATE_DOOM)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_DOOMRES);
