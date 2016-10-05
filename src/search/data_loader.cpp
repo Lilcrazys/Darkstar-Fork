@@ -401,6 +401,9 @@ std::list<SearchEntity*> CDataLoader::GetPartyList(uint16 PartyID, uint16 Allian
 
 std::list<SearchEntity*> CDataLoader::GetLinkshellList(uint32 LinkshellID)
 {
+    std::vector<unsigned int> hiddenPlayers;
+    this->GetHiddenPlayers(&hiddenPlayers);
+
     std::list<SearchEntity*> LinkshellList;
     const int8* fmtQuery = "SELECT charid, partyid, charname, pos_zone, nation, rank_sandoria, rank_bastok, rank_windurst, race, nameflags, mjob, sjob, "
         "mlvl, slvl, linkshellid1, linkshellid2, "
@@ -421,12 +424,16 @@ std::list<SearchEntity*> CDataLoader::GetLinkshellList(uint32 LinkshellID)
     {
         while (Sql_NextRow(SqlHandle) == SQL_SUCCESS)
         {
+            auto charid = (uint32)Sql_GetUIntData(SqlHandle, 0);
+            if (this->HasHiddenPlayer(hiddenPlayers, charid))
+                continue;
+
             SearchEntity* PPlayer = new SearchEntity;
             memset(PPlayer, 0, sizeof(SearchEntity));
 
             memcpy(PPlayer->name, Sql_GetData(SqlHandle, 2), 15);
 
-            PPlayer->id = (uint32)Sql_GetUIntData(SqlHandle, 0);
+            PPlayer->id = charid;
             PPlayer->zone = (uint16)Sql_GetIntData(SqlHandle, 3);
             PPlayer->nation = (uint8)Sql_GetIntData(SqlHandle, 4);
             PPlayer->mjob = (uint8)Sql_GetIntData(SqlHandle, 10);
@@ -499,3 +506,32 @@ void CDataLoader::ExpireAHItems()
 	ShowMessage("Sent %u expired auction house items back to sellers\n", expiredAuctions);
 	Sql_Free(sqlH2);
 }
+
+/**
+ * Begin Custom Patch (c) 2016 [atom0s]
+ * DO NOT REMOVE THIS COPYRIGHT
+ * THE EDITS TO THIS FILE ARE FOR LEGIONDARK SERVER ONLY!
+ */
+
+void CDataLoader::GetHiddenPlayers(std::vector<unsigned int> *ids)
+{
+    auto fmtQuery = "SELECT charid FROM char_vars WHERE value = 1 AND varname = 'GMHidden';";
+    auto ret = Sql_Query(SqlHandle, fmtQuery);
+    if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0)
+    {
+        while (Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+        {
+            ids->push_back(Sql_GetUIntData(SqlHandle, 0));
+        }
+    }
+}
+bool CDataLoader::HasHiddenPlayer(const std::vector<unsigned int>& ids, unsigned int charid)
+{
+    return std::find(ids.begin(), ids.end(), charid) != ids.end();
+}
+
+/**
+ * End Custom Patch (c) 2016 [atom0s]
+ * DO NOT REMOVE THIS COPYRIGHT
+ * THE EDITS TO THIS FILE ARE FOR LEGIONDARK SERVER ONLY!
+ */

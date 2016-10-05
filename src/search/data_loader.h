@@ -94,6 +94,8 @@ public:
     std::vector<ahItem*>     GetAHItemsToCategory(uint8 AHCategoryID, int8* OrderByString);
     void					 ExpireAHItems();
 
+    void                     GetHiddenPlayers(std::vector<unsigned int> *ids);
+    bool                     HasHiddenPlayer(const std::vector<unsigned int>& ids, unsigned int charid);
 private:
 
     Sql_t* SqlHandle;
