@@ -135,3 +135,16 @@ function SetRespawnTime(id, minTime, maxTime)
         mob:setRespawnTime(math.random((minTime),(maxTime)));
     end
 end
+
+-----------------------------------
+-- SetRifts
+----------------------------------
+
+function SetRifts(rifts)
+    for i,id in ipairs(rifts) do
+        local npc = GetNPCByID(id);
+        if (npc ~= nil) then
+            npc:setStatus(0);
+        end
+    end
+end;
