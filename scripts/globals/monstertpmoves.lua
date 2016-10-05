@@ -827,7 +827,7 @@ function customResCheck(target, effect)
     elseif(effect == EFFECT_LULLABY) then
         effectRes = target:getMod(MOD_LULLABYRES);
     elseif (effect == EFFECT_POISON) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_POISON)) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_POISON)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_POISONRES);
@@ -840,7 +840,7 @@ function customResCheck(target, effect)
     elseif (effect == EFFECT_PLAGUE or effect == EFFECT_DISEASE) then
         effectRes = target:getMod(MOD_VIRUSRES);
     elseif (effect == EFFECT_PETRIFICATION) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_PETRIFY)) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_PETRIFY)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_PETRIFYRES);
@@ -857,17 +857,17 @@ function customResCheck(target, effect)
     elseif (effect == EFFECT_CHARM) then
         effectRes = target:getMod(MOD_CHARMRES);
     elseif (effect == EFFECT_AMNESIA) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_AMNESIA)) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_AMNESIA)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_AMNESIARES);
     elseif (effect == EFFECT_TERROR) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_TERROR)) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_TERROR)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_TERRORRES);
     elseif (effect == EFFECT_DOOM) then
-        if (player:hasStatusEffect(EFFECT_NEGATE_DOOM)) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_DOOM)) then
             return 1000;
         end
         effectRes = target:getMod(MOD_DOOMRES);
