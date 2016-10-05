@@ -22,6 +22,38 @@ function onGameIn(player, firstlogin, zoning)
         if (firstlogin) then
             CharCreate(player);
         end
+
+        -- Begin Custom
+        if (player:getVar("FreshlyImported") == 1) then
+            if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >= 1) then -- Make sure LS exists and player has at least 1 free space
+                player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
+                player:setVar("FreshlyImported", 0);
+            end
+        end
+
+        if (ALL_MAPS == 1) then
+            for mapKIs = 385,447 do
+                if (player:hasKeyItem(mapKIs) == false) then;
+                    player:addKeyItem(mapKIs);
+                end
+            end
+            for mapKIs = 1856,1917 do
+                if (player:hasKeyItem(mapKIs) == false) then;
+                    player:addKeyItem(mapKIs);
+                end
+            end
+            for mapKIs = 2302,2305 do
+                if (player:hasKeyItem(mapKIs) == false) then;
+                    player:addKeyItem(mapKIs);
+                end
+            end
+            for mapKIs = 2307,2309 do
+                if (player:hasKeyItem(mapKIs) == false) then;
+                    player:addKeyItem(mapKIs);
+                end
+            end
+        end
+        -- End Custom
     end
 
     if (zoning) then -- Things checked ONLY during zone in go here.
