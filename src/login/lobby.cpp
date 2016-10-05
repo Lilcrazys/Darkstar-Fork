@@ -524,18 +524,7 @@ int32 lobbyview_parse(int32 fd)
             {
                 LOBBY_026_RESERVEPACKET(ReservePacket);
                 WBUFW(ReservePacket, 32) = login_config.expansions; // BitMask for expansions;
-                //----------------------------------------------------------------------------
-                // Wardrobe 3/4 Enable (found by atom0s)
-                //
-                // This is for use on Legion ONLY!
-                // Do not share this or commit it back to DSP!
-                //----------------------------------------------------------------------------
-                // Data is a bit array that holds the following flags:
-                //     0x01 = Security Token Enabled
-                //     0x04 = Wardrobe 3 Enabled
-                //     0x08 = Wardrobe 4 Enabled
-                WBUFB(ReservePacket, 36) = 0x0D;
-                //----------------------------------------------------------------------------
+                WBUFW(ReservePacket, 36) = login_config.features; // Bitmask for account features
                 memcpy(MainReservePacket, ReservePacket, sendsize);
             }
             //Хеширование пакета, и запись значения Хеш функции в пакет
