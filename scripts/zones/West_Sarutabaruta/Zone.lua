@@ -58,6 +58,10 @@ function onInitialize(zone)
     SetFieldManual(manuals);
 
     SetRegionalConquestOverseers(zone:getRegionID())
+
+    local rifts = {17248903,17248904,17248905};
+    SetRifts(rifts);
+
 end;
 
 -----------------------------------

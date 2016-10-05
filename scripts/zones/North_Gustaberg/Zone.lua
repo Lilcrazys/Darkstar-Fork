@@ -60,6 +60,10 @@ function onInitialize(zone)
     SetFieldManual(manuals);
 
     SetRegionalConquestOverseers(zone:getRegionID())
+
+    local rifts = {17212112,17212113,17212114};
+    SetRifts(rifts);
+
 end;
 
 -----------------------------------
@@ -75,7 +79,7 @@ function onZoneIn( player, prevZone)
 
     if (triggerLightCutscene(player)) then -- Quest: I Can Hear A Rainbow
         cs = 0x00f4;
-    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then    
+    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then
         cs = 0x00f6;
     end
 
