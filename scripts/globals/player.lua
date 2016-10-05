@@ -33,22 +33,22 @@ function onGameIn(player, firstlogin, zoning)
 
         if (ALL_MAPS == 1) then
             for mapKIs = 385,447 do
-                if (player:hasKeyItem(mapKIs) == false) then;
+                if (player:hasKeyItem(mapKIs) == false) then
                     player:addKeyItem(mapKIs);
                 end
             end
             for mapKIs = 1856,1917 do
-                if (player:hasKeyItem(mapKIs) == false) then;
+                if (player:hasKeyItem(mapKIs) == false) then
                     player:addKeyItem(mapKIs);
                 end
             end
             for mapKIs = 2302,2305 do
-                if (player:hasKeyItem(mapKIs) == false) then;
+                if (player:hasKeyItem(mapKIs) == false) then
                     player:addKeyItem(mapKIs);
                 end
             end
             for mapKIs = 2307,2309 do
-                if (player:hasKeyItem(mapKIs) == false) then;
+                if (player:hasKeyItem(mapKIs) == false) then
                     player:addKeyItem(mapKIs);
                 end
             end
