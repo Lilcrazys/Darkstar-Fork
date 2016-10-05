@@ -34,6 +34,10 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
+    -- Begin Temp
+    mob:hideName(false);
+    mob:untargetable(false);
+    -- End temp
 end;
 
 -----------------------------------
@@ -41,6 +45,10 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
+    -- Begin Temp
+    mob:hideName(false);
+    mob:untargetable(false);
+    -- End temp
 end;
 
 -----------------------------------

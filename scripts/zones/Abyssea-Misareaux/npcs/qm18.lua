@@ -42,6 +42,10 @@ function onEventFinish(player,csid,option)
     -- printf("RESULT: %u",option);
     if (csid == 1021 and option == 1) then
         SpawnMob(17662477):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+        -- Begin temp
+        GetMobByID(17662477):hideName(false);
+        GetMobByID(17662477):untargetable(false);
+        -- End temp
         player:delKeyItem(JAGGED_APKALLU_BEAK);
         player:delKeyItem(CLIPPED_BIRD_WING);
         player:delKeyItem(BLOODIED_BAT_FUR);
