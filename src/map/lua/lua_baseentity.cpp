@@ -11055,6 +11055,48 @@ inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
     return 1;
 }
 
+/**
+ * Knockback Implementation (c) 2016 atom0s
+ * Used for player based knockbacks.
+ * Needs some tweaks to work with all entities but nothing major.
+ */
+int32 CLuaBaseEntity::knockback(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    auto PChar = (CCharEntity*)m_PBaseEntity;
+    auto id = (uint32)lua_tointeger(L, 1);
+    auto animation = (uint16)lua_tointeger(L, 2);
+    auto knockback = (uint16)lua_tointeger(L, 3);
+    auto messageID = (uint16)lua_tointeger(L, 4);
+    auto paramID = (uint16)lua_tointeger(L, 5);
+
+    if (PChar == nullptr)
+        return 0;
+
+    action_t Action;
+    Action.id = id;
+    Action.actionid = 1;
+    Action.actiontype = ACTION_MOBABILITY_FINISH;
+    Action.recast = 0;
+    Action.spellgroup = SPELLGROUP_NONE;
+
+    auto& list = Action.getNewActionList();
+    list.ActionTargetID = PChar->id;
+
+    auto& target = list.getNewActionTarget();
+    target.animation = animation;
+    target.messageID = messageID;
+    target.param = paramID;
+    target.reaction = REACTION_HIT;
+    target.speceffect = SPECEFFECT_RECOIL;
+    target.knockback = knockback;
+
+    PChar->loc.zone->PushPacket(PChar, CHAR_INRANGE_SELF, new CActionPacket(Action));
+    return 0;
+}
+
 //==========================================================//
 
 const int8 CLuaBaseEntity::className[] = "CBaseEntity";
@@ -11540,5 +11582,8 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatServer),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
+
+    // Knockback Implementation (c) 2016 atom0s
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity, knockback),
     {nullptr,nullptr}
 };

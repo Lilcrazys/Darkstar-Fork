@@ -617,6 +617,9 @@ public:
     int32 getEntity(lua_State* L);
 
     int32 canChangeState(lua_State* L);
+
+    // Knockback Implementation (c) 2016 atom0s
+    int32 knockback(lua_State* L);
 };
 
 #endif
