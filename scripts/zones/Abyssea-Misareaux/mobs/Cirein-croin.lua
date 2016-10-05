@@ -2,17 +2,17 @@
 -- Area: Abyssea - Misareaux (216)
 --  NM:  Cirein-croin
 -----------------------------------
-package.loaded["scripts/zones/Abyssea-Misareaux/TextIDs"] = nil;
-require("scripts/zones/Abyssea-Misareaux/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/titles");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
@@ -27,16 +27,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
     mob:setMod(MOD_MACC,1700);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_MDEF,50);
-end;
-
------------------------------------
--- onMobEngaged
------------------------------------
-
-function onMobEngaged(mob,target)
-    WeaknessTriggerSet(mob,target,ws,spell);
 
     local RND1 = math.random(1,15);
     if (RND1 == 1) then
@@ -51,7 +41,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -67,7 +57,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -83,7 +73,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -99,7 +89,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -115,7 +105,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -131,7 +121,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -147,7 +137,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -163,7 +153,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -179,7 +169,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,81); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -195,7 +185,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,81); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -211,7 +201,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,81); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -227,7 +217,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,208781); -- Iclamar +1
+        SetDropRate(529,20878,81); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -243,7 +233,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,81); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -259,7 +249,7 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,81); -- Kannakiri +1
         SetDropRate(529,20824,0); -- Faizzeer +1
@@ -275,11 +265,18 @@ function onMobEngaged(mob,target)
         SetDropRate(529,21236,0); -- Bocluamni +1
         SetDropRate(529,20775,0); -- Crobaci +1
         SetDropRate(529,21195,0); -- Uffrat +1
-        SetDropRate(529,20870); -- Iclamar +1
+        SetDropRate(529,20870,0); -- Iclamar +1
         SetDropRate(529,21194,0); -- Lehbrailg +1
         SetDropRate(529,21004,0); -- Kannakiri +1
         SetDropRate(529,20824,81); -- Faizzeer +1
     end
+end;
+
+-----------------------------------
+-- onMobEngaged
+-----------------------------------
+
+function onMobEngaged(mob,target)
 end;
 
 -----------------------------------
