@@ -2121,7 +2121,7 @@ INSERT INTO `item_mods` VALUES (19810,355,92);
 INSERT INTO `item_mods` VALUES (20840,355,92); 
 
 -- Verethragna
-INSERT INTO `item_mods` VALUES (19456,355,14); --victory_smite
+INSERT INTO `item_mods` VALUES (19456,355,14); -- victory_smite
 INSERT INTO `item_mods` VALUES (19632,355,14);
 INSERT INTO `item_mods` VALUES (19805,355,14);
 INSERT INTO `item_mods` VALUES (20487,355,14);
