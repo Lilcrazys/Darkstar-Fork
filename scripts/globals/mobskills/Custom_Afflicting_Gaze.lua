@@ -19,7 +19,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 
     MobGazeMove(mob, target, EFFECT_PLAGUE, 1, 0, 25);
-    skill:setMsg(MobGazeMove(mob, target, EFFECT_BIND, 1, 0, 25);
+    skill:setMsg(MobGazeMove(mob, target, EFFECT_BIND, 1, 0, 25));
 
     return EFFECT_BIND;
 end;
