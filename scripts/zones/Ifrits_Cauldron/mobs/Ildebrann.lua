@@ -155,12 +155,12 @@ function onMobFight(mob, target)
     -- Pop an add after 4 minutes..
     if (os.time() > popTime) then
         if (helperOne == ACTION_NONE) then
-            SpawnMob(helperOne):updateEnmity(target);
-            helperOne:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            SpawnMob(mob:getID()+1):updateEnmity(target);
+            GetMobByID(mob:getID()+1):setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
             mob:setLocalVar("nextPetPop", os.time()+360);
         elseif (helperTwo == ACTION_NONE) then
-            SpawnMob(helperTwo):updateEnmity(target);
-            helperTwo:setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
+            SpawnMob(mob:getID()+2):updateEnmity(target);
+            GetMobByID(mob:getID()+2):setPos(mob:getXpos(), mob:getYPos(), mob:getYPos());
             mob:setLocalVar("nextPetPop", os.time()+360);
         end
     end
