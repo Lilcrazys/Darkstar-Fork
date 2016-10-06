@@ -576,7 +576,7 @@ void CalculateStats(CMobEntity * PMob)
 
     if (PMob->SpellContainer->HasSpells() && PMob->getMobMod(MOBMOD_MAGIC_COOL) == 0)
     {
-        ShowError("Mobutils::CalculateStats Mob (%s, %d) with magic but no cool down set!\n", PMob->GetName(), PMob->id);
+        PMob->defaultMobMod(MOBMOD_MAGIC_COOL, 40); // ShowError("Mobutils::CalculateStats Mob (%s, %d) with magic but no cool down set!\n", PMob->GetName(), PMob->id);
     }
 
     if (PMob->m_Detects == 0)
