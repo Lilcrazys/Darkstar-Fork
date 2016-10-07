@@ -60,6 +60,9 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
+    local rifts = {17228383,17228384,17228385};
+    SetRifts(rifts);
+
     -- Simurgh
     SetRespawnTime(17228242, 900, 10800);
 
@@ -71,15 +74,15 @@ end;
 
 function onZoneIn( player, prevZone)
     local cs = -1;
-    
+
     if ( player:getXPos() == 0 and player:getYPos() == 0 and player:getZPos() == 0) then
         player:setPos( -381.747, -31.068, -788.092, 211);
     end
 
     if ( triggerLightCutscene( player)) then -- Quest: I Can Hear A Rainbow
         cs = 0x0002;
-    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then    
-        cs = 0x0004; 
+    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then
+        cs = 0x0004;
     end
 
     return cs;
@@ -104,9 +107,9 @@ end;
 function onRegionEnter( player, region)
 end;
 
------------------------------------        
--- onGameHour        
------------------------------------    
+-----------------------------------
+-- onGameHour
+-----------------------------------
 
 function onGameHour()
 
@@ -118,7 +121,7 @@ function onGameHour()
         -- Despawn set to 210 seconds (3.5 minutes, approx when the Jeuno-Bastok airship is flying back over to Bastok).
         SpawnMob(silkCaterpillarId, 210);
     end
- 
+
 end;
 
 -----------------------------------

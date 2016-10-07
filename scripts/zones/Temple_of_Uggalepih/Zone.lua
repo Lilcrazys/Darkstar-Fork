@@ -21,6 +21,9 @@ function onInitialize(zone)
 
     UpdateTreasureSpawnPoint(17429003);
 
+    local rifts = {17429018,17429019,17429020};
+    SetRifts(rifts);
+
     -- Colkhab
     GetMobByID(17429502):setRespawnTime(math.random((900),(10800)));
 end;
