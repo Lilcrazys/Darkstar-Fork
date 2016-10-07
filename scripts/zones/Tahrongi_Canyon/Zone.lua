@@ -66,6 +66,9 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
+    local rifts = {17257084,17257085,17257086};
+    SetRifts(rifts);
+
     -- HURKAN
     GetMobByID(17257470):setRespawnTime(math.random((900),(10800)));
 end;
@@ -84,7 +87,7 @@ function onZoneIn( player, prevZone)
     if (triggerLightCutscene(player)) then -- Quest: I Can Hear A Rainbow
         cs = 0x0023;
     elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then
-        cs = 0x0025; 
+        cs = 0x0025;
     end
 
     return cs;
