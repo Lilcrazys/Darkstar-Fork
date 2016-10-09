@@ -20,10 +20,6 @@ function onInitialize(zone)
     SetGroundsTome(tomes);
 
     UpdateTreasureSpawnPoint(17572286);
-
-    local rifts = {17572299,17572300,17572301};
-    SetRifts(rifts);
-
 end;
 
 -----------------------------------

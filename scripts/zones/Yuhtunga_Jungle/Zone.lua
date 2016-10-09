@@ -64,9 +64,6 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
-    local rifts = {17281663,17281664,17281665};
-    SetRifts(rifts);
-
     local Rose_Garden = 17281357;
     GetMobByID(Rose_Garden):setLocalVar("1",os.time() + math.random((36000), (37800)));
 

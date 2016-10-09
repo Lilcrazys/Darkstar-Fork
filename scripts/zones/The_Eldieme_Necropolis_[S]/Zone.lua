@@ -14,10 +14,6 @@ require("scripts/zones/The_Eldieme_Necropolis_[S]/TextIDs");
 -----------------------------------
 
 function onInitialize(zone)
-
-    local rifts = {17494778,17494779,17494780};
-    SetRifts(rifts);
-
 end;
 
 -----------------------------------

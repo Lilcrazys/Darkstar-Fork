@@ -70,10 +70,6 @@ function onInitialize(zone)
 
     -- Ravenous_Cracklaw
     GetMobByID(16794622):setRespawnTime(math.random((900),(10800)));
-
-    local rifts = {16793963,16793964,16793965};
-    SetRifts(rifts);
-
 end;
 
 -----------------------------------

@@ -63,9 +63,6 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
-    local rifts = {17273425,17273426,17273427};
-    SetRifts(rifts);
-
     local Noble_Mold = 17273278;
     GetMobByID(Noble_Mold):setLocalVar("ToD",os.time() + math.random((43200), (57600)));
 

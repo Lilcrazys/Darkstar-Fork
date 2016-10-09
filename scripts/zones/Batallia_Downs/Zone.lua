@@ -60,9 +60,6 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
-    local rifts = {17207926,17207927,17207928};
-    SetRifts(rifts);
-
     -- Ahtu
     SetRespawnTime(17207657, 900, 10800);
 end;
@@ -80,8 +77,8 @@ function onZoneIn( player, prevZone)
 
     if (triggerLightCutscene(player)) then -- Quest: I Can Hear A Rainbow
         cs = 0x0385;
-    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then
-        cs = 0x0387;
+    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then    
+        cs = 0x0387; 
     end
 
     return cs;

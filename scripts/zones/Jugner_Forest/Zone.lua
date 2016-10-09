@@ -61,9 +61,6 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
-    local rifts = {17203933,17203934,17203935};
-    SetRifts(rifts);
-
     -- Fraelissa
     SetRespawnTime(17203447, 900, 10800);
 

@@ -128,10 +128,7 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
-    local rifts = {17195686,17195687,17195688};
-    SetRifts(rifts);
-
-    local fallenEgg = GetNPCByID(17195583);
+    local fallenEgg = GetNPCByID(17195583); 
     local newPosition = npcUtil.pickNewPosition(fallenEgg:getID(), fallenEggPositions);
 
     fallenEgg:setPos(newPosition.x, newPosition.y, newPosition.z);
@@ -153,7 +150,7 @@ function onZoneIn( player, prevZone)
         cs = 0x007b;
     elseif ( prevZone == 193 and player:getVar( "darkPuppetCS") == 5 and player:getFreeSlotsCount() >= 1) then
         cs = 0x007a;
-    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then
+    elseif (player:getCurrentMission(WINDURST) == VAIN and player:getVar("MissionStatus") ==1) then    
         cs = 0x007d;
     end
 

@@ -61,9 +61,6 @@ function onInitialize(zone)
 
     SetFieldManual(manuals);
 
-    local rifts = {17253081,17253082,17253083};
-    SetRifts(rifts);
-
     --[[
     SetRespawnTime(17252725, 3600, 4200);
     ]]
