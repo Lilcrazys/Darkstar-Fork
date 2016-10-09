@@ -24,14 +24,12 @@ end;
 function onTrigger(player,npc)
     -- NOTE: Deliberately left out the Walk of Echoes requirement retail has.
     if (player:getMainLvl() < 75) then
-        player:showText(npc, AT_LEAST_75, 75)
-        -- player:SpoofChatPlayer("You must be at least level 75 to participate in Voidwatch.", MESSAGE_ECHO, nil);
+        player:SpoofChatPlayer("You must be at least level 75 to participate in Voidwatch.", MESSAGE_ECHO, nil);
     else
         local VW_SANDORIA_ABYSSITE = {CRIMSON_STRATUM_ABYSSITE,CRIMSON_STRATUM_ABYSSITE_II,CRIMSON_STRATUM_ABYSSITE_III,CRIMSON_STRATUM_ABYSSITE_IV}
         local VW_BASTOK_ABYSSITE = {INDIGO_STRATUM_ABYSSITE,INDIGO_STRATUM_ABYSSITE_II,INDIGO_STRATUM_ABYSSITE_III,INDIGO_STRATUM_ABYSSITE_IV}
         local VW_WINDURST_ABYSSITE = {JADE_STRATUM_ABYSSITE,JADE_STRATUM_ABYSSITE_II,JADE_STRATUM_ABYSSITE_III,JADE_STRATUM_ABYSSITE_IV}
         local STATUS = player:getVar("VW_STATUS");
-        -- local VW_OP_WINDURST = player:getVar("VW_OP_WINDURST");
         local CRIMSON = false;
         local INDIGO = false;
         local JADE = false;
@@ -55,26 +53,20 @@ function onTrigger(player,npc)
         end
 
         if (CRIMSON == false and INDIGO == false and JADE == false and STATUS == 0) then
-            player:showText(npc, I_AM_A_VOIDWATCH_OFFICER);
-            player:showText(npc, I_BESEECH_YOU);
-            -- player:SpoofChatPlayer("I am a Voidwatch officer dispatched here by the Grand Duchy of Jeuno.", MESSAGE_SYS_SAY, nil);
-            -- player:SpoofChatPlayer("My duty is to recruit able-bodied soldiers to assist in repelling the Voidwalker threat.", MESSAGE_SYS_SAY, nil);
+            player:SpoofChatPlayer("Voidwatch Officer: I am a Voidwatch officer dispatched here to recruit soldiers to repel the Voidwalker threat.", MESSAGE_SYS_SAY, nil);
+            player:SpoofChatPlayer("Voidwatch Officer: I beseech you, friend. Lend your aid to our cause!", MESSAGE_SYS_SAY, nil);
             player:setVar("VW_STATUS", 1);
         elseif (JADE == false) then
             player:PrintToPlayer("DEBUG: Initial Abysite check started.");
             if (player:hasKeyItem(ADVENTURERS_CERTIFICATE) == false) then
-                player:showText(npc, COMMEND_YOUR_ENTHUSIASM, ADVENTURERS_CERTIFICATE)
-                player:showText(npc, PROOF_OF_ONES_VALOR, ADVENTURERS_CERTIFICATE)
-                -- player:SpoofChatPlayer("Voidwatch Officer : I'm sorry, but only certified adventurers may participate in Voidwatch Ops.", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Voidwatch Officer: I'm sorry, but only certified adventurers may participate in Voidwatch Ops.", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Voidwatch Officer: Serve your country well, and your rank is sure to improve.", MESSAGE_SYS_SAY, nil);
             elseif (player:getCampaignAllegiance() == 0) then
-                player:showText(npc, ENLISTED, player:getNation())
-                player:showText(npc, MILITARY_AFFILIATION);
-                -- player:SpoofChatPlayer("Voidwatch Officer : I'm sorry, but only those with military affiliation may participate in Voidwatch Ops.", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Voidwatch Officer: Hmm? I can't seem to find any military record..", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Voidwatch Officer: I'm sorry, but only those with military affiliation may participate in Voidwatch Ops.", MESSAGE_SYS_SAY, nil);
             else
-                player:showText(npc, STRATUM_ABYSSITE);
-                player:showText(npc, EACH_STONE_IS_ATTUNED);
-                player:showText(npc, VOIDWATCH_OPERATION);
-                player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
+                player:SpoofChatPlayer("Voidwatch Officer: Stratum abyssite for each region is needed to battle a Voidwalker at the many planar rifts that have manifested across the land.", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Voidwatch Officer: You will also need a Voidstone to see the beast. Their powers can only be tapped when used in conjunction with a Stratum abyssite.", MESSAGE_SYS_SAY, nil);
                 player:addKeyItem(JADE_STRATUM_ABYSSITE);
                 player:messageSpecial(KEYITEM_OBTAINED, JADE_STRATUM_ABYSSITE);
                 if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
@@ -113,18 +105,9 @@ function onTrigger(player,npc)
         ]]
         else
             player:PrintToPlayer("DEBUG: VOIDSTONE CHECK");
-            --[[
-            if (VW_OP_WINDURST < 9) then
-                -- 0:North Gustaberg 1:North Gustaberg 2:the Gusgen Mines
-                -- 3:the Pashhow Marshlands 4:the Pashhow Marshlands 5:Dangruf Wadi
-                -- 6:South Gustaberg 7:the Konschtat Highlands 8:Grauberg
-                -- After 8, cycle back to zero - DO NOT PROCEED TO 9!
-                player:messageSpecial(OPERATIONS3, VW_OP_WINDURST);
-                player:messageSpecial(REQUEST3, VW_OP_WINDURST);
-            elseif (player:getVar("VOIDSTONE_TIMER") < os.time()) then
-            ]]
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
-                player:showText(npc, THESE_STONES_ARE_CAPABLE, VOIDSTONE1);
+                player:SpoofChatPlayer("Voidwatch Officer: While these stones are capable of rendering Voidwalkers visible to their bearers..", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Voidwatch Officer: ..Their powers can only be tapped when used in conjunction with a Stratum Abyssite.", MESSAGE_SYS_SAY, nil);
                 player:addCurrency("voidstones", 1);
                 player:addKeyItem(VOIDSTONE1); -- so morons stop showing us their KI screenshots..
                 player:setVar("VOIDSTONE_TIMER", os.time()+72000);
@@ -132,7 +115,7 @@ function onTrigger(player,npc)
                 -- so that player can do VW once a day at aprox same time of day.
                 player:messageSpecial(KEYITEM_OBTAINED,VOIDSTONE1);
             else
-                player:SpoofChatPlayer("Voidstones are issued once per Earth day.");
+                player:SpoofChatPlayer("Voidstones are issued once per Earth day.", MESSAGE_ECHO, nil);
             end
         end
     end
