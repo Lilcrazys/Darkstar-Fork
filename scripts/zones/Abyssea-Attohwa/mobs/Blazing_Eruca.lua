@@ -12,6 +12,22 @@ require("scripts/globals/keyitems");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_MATT, 20);
+    mob:addMod(MOD_MACC, 500);
+    mob:addMod(MOD_MDEF, 20);
+    mob:addMod(MOD_SLASHRES, 20);
+    mob:addMod(MOD_PIERCERES, -25);
+    mob:addMod(MOD_IMPACTRES, 25);
+    mob:addMod(MOD_HTHRES, -10);
+    mob:addMod(MOD_FIRERES, 80); -- You can't fire me, I quit!
+    mob:addMod(MOD_ICERES, 5);
+    mob:addMod(MOD_WINDRES, 33);
+    mob:addMod(MOD_EARTHRES, 33);
+    mob:addMod(MOD_THUNDERRES, 33);
+    mob:addMod(MOD_WATERRES, -80);
+    mob:addMod(MOD_LIGHTRES, 33);
+    mob:addMod(MOD_DARKRES, 33);
 end;
 
 -----------------------------------
@@ -20,12 +36,7 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGAIN,33);
-
-    -- addMod
-    mob:addMod(MOD_MATT,10);
-    mob:addMod(MOD_MACC,500);
-    --mob:addMod(MOD_EVA,-100);
+    mob:setMod(MOD_REGAIN, 33);
 end;
 
 -----------------------------------
