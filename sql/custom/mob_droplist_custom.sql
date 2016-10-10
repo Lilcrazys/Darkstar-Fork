@@ -1,5 +1,4 @@
 -- ---------------------------------------------------------------------------
--- ---------------------------------------------------------------------------
 -- This file adds onto, modifies, or removes portions of the table "mob_droplist"
 -- created by the file mob_droplist.sql and must be imported/executed AFTER that file.
 --

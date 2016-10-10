@@ -3155,7 +3155,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17662455,'Jala','Jala',90235,515,-15,257
 REPLACE INTO `mob_spawn_points` VALUES (17662464,'Minax_Bugard','Minax Bugard',90238,520,15,-268,37);
 REPLACE INTO `mob_spawn_points` VALUES (17662467,'Manohra','Manohra',90237,121,-8,-120,166);
 REPLACE INTO `mob_spawn_points` VALUES (17662468,'Cep-Kamuy','Cep-Kamuy',90230,-160,-15,638,240);
-REPLACE INTO `mob_spawn_points` VALUES (17662469,'Ironclad_Observer','Ironclad Observer',90232,-197,-32,80,213);
+REPLACE INTO `mob_spawn_points` VALUES (17662469,'Ironclad_Observer','Ironclad Observer',10278,-197,-32,80,213);
 REPLACE INTO `mob_spawn_points` VALUES (17662470,'Nehebkau','Nehebkau',90239,321,23,-355,116);
 REPLACE INTO `mob_spawn_points` VALUES (17662471,'Avalerion','Avalerion',90229,41,-16,81,51);
 REPLACE INTO `mob_spawn_points` VALUES (17662472,'Karkatakam','Karkatakam',90236,200,-15,519,80);
