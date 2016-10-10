@@ -312,7 +312,7 @@ end;
 -- The factor to multiply down duration (1/2 1/4 1/8 1/16)
 
 function applyResistanceEffect(player,spell,target,diff,skill,bonus,effect)
-
+    if (math.random(1,1000) <= customResCheck(target, typeEffect)) then return 0;
     -- If Stymie is active, as long as the mob is not immune then the effect is not resisted
     if (effect ~= nil) then -- Dispel's script doesn't have an "effect" to send here, nor should it.
         if (skill == ENFEEBLING_MAGIC_SKILL and player:hasStatusEffect(EFFECT_STYMIE) and target:canGainStatusEffect(effect)) then
@@ -1263,3 +1263,80 @@ function outputMagicHitRateInfo()
 end;
 
 -- outputMagicHitRateInfo();
+
+
+-- Had to create this because DSP treats status resist traits like additional magic evasion..
+function customResCheck(target, effect)
+    local effectRes = 0;
+
+    if (effect == EFFECT_SLEEP_I or effect == EFFECT_SLEEP_II) then
+        effectRes = target:getMod(MOD_SLEEPRES);
+    elseif(effect == EFFECT_LULLABY) then
+        effectRes = target:getMod(MOD_LULLABYRES);
+    elseif (effect == EFFECT_POISON) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_POISON)) then
+            return 1000;
+        end
+        effectRes = target:getMod(MOD_POISONRES);
+    elseif (effect == EFFECT_PARALYZE) then
+        effectRes = target:getMod(MOD_PARALYZERES);
+    elseif (effect == EFFECT_BLINDNESS) then
+        effectRes = target:getMod(MOD_BLINDRES)
+    elseif (effect == EFFECT_SILENCE) then
+        effectRes = target:getMod(MOD_SILENCERES);
+    elseif (effect == EFFECT_PLAGUE or effect == EFFECT_DISEASE) then
+        effectRes = target:getMod(MOD_VIRUSRES);
+    elseif (effect == EFFECT_PETRIFICATION) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_PETRIFY)) then
+            return 1000;
+        end
+        effectRes = target:getMod(MOD_PETRIFYRES);
+    elseif (effect == EFFECT_BIND) then
+        effectRes = target:getMod(MOD_BINDRES);
+    elseif (effect == EFFECT_CURSE_I or effect == EFFECT_CURSE_II or effect == EFFECT_BANE) then
+        effectRes = target:getMod(MOD_CURSERES);
+    elseif (effect == EFFECT_WEIGHT) then
+        effectRes = target:getMod(MOD_GRAVITYRES);
+    elseif (effect == EFFECT_SLOW or effect == EFFECT_ELEGY) then
+        effectRes = target:getMod(MOD_SLOWRES);
+    elseif (effect == EFFECT_STUN) then
+        effectRes = target:getMod(MOD_STUNRES);
+    elseif (effect == EFFECT_CHARM) then
+        effectRes = target:getMod(MOD_CHARMRES);
+    elseif (effect == EFFECT_AMNESIA) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_AMNESIA)) then
+            return 1000;
+        end
+        effectRes = target:getMod(MOD_AMNESIARES);
+    elseif (effect == EFFECT_TERROR) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_TERROR)) then
+            return 1000;
+        end
+        effectRes = target:getMod(MOD_TERRORRES);
+    elseif (effect == EFFECT_DOOM) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_DOOM)) then
+            return 1000;
+        end
+        effectRes = target:getMod(MOD_DOOMRES);
+    end
+
+    -- Temp! DSP seems to be using x/100 where data suggests x/1000ths or possibly x/1024ths
+    effectRes = effectRes*10;
+    -- just going to fudge it for now because actually raising the modifier total
+    -- would effect DSP's garbage magic evasion calculations.
+
+    if (effectRes > 400) then
+        -- I pulled this threshold number outa my ass, because there
+        -- is zero data for very high values of status resist trait.
+        effectRes = (400+((effectRes -400)*0.5));
+        -- modifier amount above 400 worth half as much, because I say so..
+    end
+
+    if (effectRes > 950) then
+        effectRes = 950; -- 95% cap!
+        -- I don't think it would even be possible to reach this on retail..
+        -- In theory LegionDS might stack augments later though.
+    end
+
+    return effectRes;
+end;
