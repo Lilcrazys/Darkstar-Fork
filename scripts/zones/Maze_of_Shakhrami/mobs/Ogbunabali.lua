@@ -8,6 +8,7 @@ require("scripts/zones/Maze_of_Shakhrami/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/keyitems");
+mixins = {require("scripts/mixins/families/antlion_ambush")}
 
 -----------------------------------
 -- onMobInitialize Action
