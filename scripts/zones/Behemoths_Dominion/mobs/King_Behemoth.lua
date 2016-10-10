@@ -13,11 +13,18 @@ require("scripts/globals/custom_trials");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMod
+    mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_COUNTER, 15);
+
     -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 10)
     mob:addMod(MOD_STUNRES, 50);
     mob:addMod(MOD_TERRORRES, 80);
 
     -- setMobMod
+    mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 60);
 end;
 
@@ -26,13 +33,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMobMod(MOBMOD_DRAW_IN, 2);
-    mob:setMod(MOD_REGEN, 50);
-    mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_COUNTER, 15);
-    mob:addMod(MOD_DOUBLE_ATTACK, 10)
-
     -- Todo: move this to SQL after drop slots are a thing
     if (math.random(1,100) <= 5) then -- Hardcoded "this or this item" drop rate until implemented.
         SetDropRate(1936,13566,1000); -- Defending Ring
