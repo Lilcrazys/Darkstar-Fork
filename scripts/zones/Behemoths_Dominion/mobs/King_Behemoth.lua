@@ -13,6 +13,11 @@ require("scripts/globals/custom_trials");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- addMod
+    mob:addMod(MOD_STUNRES, 50);
+    mob:addMod(MOD_TERRORRES, 80);
+
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 60);
 end;
 
