@@ -312,7 +312,7 @@ end;
 -- The factor to multiply down duration (1/2 1/4 1/8 1/16)
 
 function applyResistanceEffect(player,spell,target,diff,skill,bonus,effect)
-    if (math.random(1,1000) <= customResCheck(target, typeEffect)) then return 0;
+    if (math.random(1,1000) <= customResCheck(target, typeEffect)) then return 0; end
     -- If Stymie is active, as long as the mob is not immune then the effect is not resisted
     if (effect ~= nil) then -- Dispel's script doesn't have an "effect" to send here, nor should it.
         if (skill == ENFEEBLING_MAGIC_SKILL and player:hasStatusEffect(EFFECT_STYMIE) and target:canGainStatusEffect(effect)) then
