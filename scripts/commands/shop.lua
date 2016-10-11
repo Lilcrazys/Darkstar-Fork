@@ -24,14 +24,14 @@ function onTrigger(player,page)
     elseif (page == 1) then
         local stock_1 =
         {
-            4238,   5000,    -- HQ Fire Crystal
-            4239,   5000,    -- HQ Ice Crystal
-            4240,   5000,    -- HQ Wind Crystal
-            4241,   5000,    -- HQ Earth Crystal
-            4242,   5000,    -- HQ Lightning Crystal
-            4243,   5000,    -- HQ Water Crystal
-            4244,   5000,    -- HQ Light Crystal
-            4245,   5000,    -- HQ Dark Crystal
+            4238,   3000,    -- HQ Fire Crystal
+            4239,   3000,    -- HQ Ice Crystal
+            4240,   3000,    -- HQ Wind Crystal
+            4241,   3000,    -- HQ Earth Crystal
+            4242,   3000,    -- HQ Lightning Crystal
+            4243,   3000,    -- HQ Water Crystal
+            4244,   3000,    -- HQ Light Crystal
+            4245,   3000,    -- HQ Dark Crystal
         };
         showShop(player, STATIC, stock_1);
 
@@ -46,7 +46,6 @@ function onTrigger(player,page)
         };
         showShop(player, STATIC, stock_2);
 
-
     elseif (page == 3) then -- Medicine chest.
         local stock_3 =
         {
@@ -55,16 +54,21 @@ function onTrigger(player,page)
             4151,   800,     -- Echo drops
             4112,   910,     -- Potion
             4128,   4832,    -- Ether
-            21335,   1000,   -- Titanium Bullet
-            21305,   1000,   -- Tulfaire Arrow
-            21336,   5000,   -- Adlivun Bullet
-            21306,   5000,   -- Adlivun Arrow
+            -- Temp duplciates, will remove later
+            21335,  1000,    -- Titanium Bullet
+            21305,  1000,    -- Tulfaire Arrow
+            21336,  5000,    -- Adlivun Bullet
+            21306,  5000,    -- Adlivun Arrow
         };
         showShop(player, STATIC, stock_3);
 
     elseif (page == 4) then -- Tools and gears.
         local stock_4 =
         {
+            21335,    1000,  -- Titanium Bullet
+            21305,    1000,  -- Tulfaire Arrow
+            21336,    5000,  -- Adlivun Bullet
+            21306,    5000,  -- Adlivun Arrow
             16368,    80000, -- Herder's Subligar
             18762,    80000, -- Custodes
             18503,    80000, -- Mammut

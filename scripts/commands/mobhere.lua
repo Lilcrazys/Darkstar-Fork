@@ -6,8 +6,8 @@
 
 cmdprops =
 {
-    permission = 1,
-    parameters = "ii"
+    permission = 2,
+    parameters = "is"
 };
 
 function onTrigger(player, mobId, noDepop)
@@ -32,4 +32,20 @@ function onTrigger(player, mobId, noDepop)
         end
         player:PrintToPlayer("Mob could not be moved to current pos - you are probably in the wrong zone.");
     end
+
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/mobhere.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Mob ID: ".. mobId,
+    "\n", "Position: ".. player:getXPos().." ".. player:getYPos().." ".. player:getZPos(),
+    "\n", "Zone ID: ".. GetMobByID(mobId):getZoneID(),
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end;

@@ -5,8 +5,8 @@
 
 cmdprops =
 {
-    permission = 1,
-    parameters = "i"
+    permission = 2,
+    parameters = "is"
 };
 
 function onTrigger(player, spellId, target)
@@ -21,6 +21,21 @@ function onTrigger(player, spellId, target)
     else
         local targ = GetPlayerByName(target);
         if (targ ~= nil) then
+            local dateStamp = os.date("%d/%m/%Y");
+            local timeStamp = os.date("%I:%M:%S %p");
+            local file = io.open("log/commands/delspell.log", "a");
+            file:write(
+            "\n", "----------------------------------------",
+            "\n", "Date: ".. dateStamp,
+            "\n", "Time: ".. timeStamp,
+            "\n", "User: ".. player:getName(),
+            "\n", "Target: ".. target,
+            "\n", "ID of spell taken: ".. spellId,
+            "\n", "----------------------------------------",
+            "\n" -- This MUST be final line.
+            );
+            file:close();
+
             targ:delSpell(spellId);
         else
             player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );

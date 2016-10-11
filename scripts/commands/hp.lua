@@ -26,6 +26,21 @@ function onTrigger(player, hp, target)
             if (targ:getHP() > 0) then
                 targ:setHP(hp);
             end
+
+            local dateStamp = os.date("%d/%m/%Y");
+            local timeStamp = os.date("%I:%M:%S %p");
+            local file = io.open("log/commands/hp.log", "a");
+            file:write(
+            "\n", "----------------------------------------",
+            "\n", "Date: ".. dateStamp,
+            "\n", "Time: ".. timeStamp,
+            "\n", "User: ".. player:getName(),
+            "\n", "Target: ".. target,
+            "\n", "HP set to: ".. hp,
+            "\n", "----------------------------------------",
+            "\n" -- This MUST be final line.
+            );
+            file:close();
         else
             player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
             player:PrintToPlayer( "@hp <amount> <player>" );

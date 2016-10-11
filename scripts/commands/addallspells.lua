@@ -5,7 +5,7 @@
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "s"
 };
 
@@ -54,7 +54,7 @@ local function AddAllSpells(player)
     local silent = true;    -- prevent packet spam
 
     for i = 1, #ValidSpells do
-        
+
         if i == #ValidSpells then
             silent = false;
         end
@@ -74,4 +74,24 @@ function onTrigger(player, target)
             AddAllSpells(targ);
         end
     end
+
+    local targName;
+    if (target ~= nil and targ ~= nil) then
+        targName = target;
+    else
+        targName = player:getName();
+    end
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/addallspells.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. targName,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end

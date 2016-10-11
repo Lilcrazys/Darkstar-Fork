@@ -6,8 +6,8 @@
 
 cmdprops =
 {
-    permission = 1,
-    parameters = "i"
+    permission = 2,
+    parameters = "is"
 };
 
 function onTrigger(player, npcId, noDepop)
@@ -34,4 +34,20 @@ function onTrigger(player, npcId, noDepop)
         end
         player:PrintToPlayer("NPC could not be moved to current pos - you are probably in the wrong zone.");
     end
+
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/npchere.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "NPC ID: ".. npcId,
+    "\n", "Position: ".. player:getXPos().." ".. player:getYPos().." ".. player:getZPos(),
+    "\n", "Zone ID: ".. GetNPCByID(npcId):getZoneID(),
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end;

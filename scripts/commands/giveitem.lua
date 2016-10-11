@@ -34,5 +34,39 @@ function onTrigger(player, target, itemId, amount, aug0, aug0val, aug1, aug1val,
         targ:addItem( itemId, amount, aug0, aug0val, aug1, aug1val, aug2, aug2val, aug3, aug3val );
         targ:messageSpecial( ITEM_OBTAINED, itemId );
         player:PrintToPlayer( string.format( "Gave player '%s' Item with ID of '%u' ", target, itemId ) );
+
+        -- Log it
+        local a_var = amount or 1;
+        local b_var = aug0 or 0;
+        local c_var = aug0val or 0;
+        local d_var = aug1 or 0;
+        local e_var = aug1val or 0;
+        local f_var = aug2 or 0;
+        local g_var = aug2val or 0;
+        local h_var = aug3 or 0;
+        local i_var = aug3val or 0;
+        local dateStamp = os.date("%d/%m/%Y");
+        local timeStamp = os.date("%I:%M:%S %p");
+        local file = io.open("log/commands/giveitem.log", "a");
+        file:write(
+        "\n", "----------------------------------------",
+        "\n", "Date: ".. dateStamp,
+        "\n", "Time: ".. timeStamp,
+        "\n", "User: ".. player:getName(),
+        "\n", "Target: ".. target,
+        "\n", "ID of item given: ".. itemId,
+        "\n", "Amount given:     ".. a_var,
+        "\n", "Augment ID 1:     ".. b_var,
+        "\n", "Augment Tier 1:   ".. c_var,
+        "\n", "Augment ID 2:     ".. d_var,
+        "\n", "Augment Tier 2:   ".. e_var,
+        "\n", "Augment ID 3:     ".. f_var,
+        "\n", "Augment Tier 3:   ".. g_var,
+        "\n", "Augment ID 4:     ".. h_var,
+        "\n", "Augment Tier 4:   ".. i_var,
+        "\n", "----------------------------------------",
+        "\n" -- This MUST be final line.
+        );
+        file:close();
     end
 end;
