@@ -47,7 +47,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_SLEEPRES, 100);
     mob:setMod(MOD_SILENCERES, 100);
     mob:setMod(MOD_PARALYZERES, 30);
-    mob:setMod(MOD_STUNRES, 500);
+    mob:setMod(MOD_STUNRES, 50);
     mob:setMod(MOD_TERRORRES, 100);
 end;
 
@@ -187,7 +187,7 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    
+
     -- Set Vrtra's spawnpoint and respawn time (3-5 days)
     UpdateNMSpawnPoint(mob:getID());
     mob:setRespawnTime(math.random(75600,86400));
