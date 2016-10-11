@@ -57,7 +57,7 @@ function onMobDeath(mob, player, isKiller)
         player:messageSpecial(KEYITEM_OBTAINED, INDIGO_ABYSSITE_OF_SOJOURN);
     end
 
-    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(SPELL_ID) == false) then
         player:addSpell(SPELL_ID);
     end
 end;

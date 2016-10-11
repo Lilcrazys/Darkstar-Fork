@@ -34,7 +34,7 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
 
     local damage, tpHits, extraHits = doMagicWeaponskill(player, target, wsID, tp, primary, action, params);
 
-    if (player:getMainJob() == JOB_COR) then
+    if (player:getMainJob() == JOBS.COR) then
         if (damage > 0) then
         -- AFTERMATH LEVEL 1
         if ((player:getTP() >= 100) and (player:getTP() <= 110)) then

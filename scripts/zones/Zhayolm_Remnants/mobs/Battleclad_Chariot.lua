@@ -4,6 +4,7 @@
 -----------------------------------
 
 require("scripts/globals/titles");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobSpawn Action
@@ -20,7 +21,7 @@ function onMobDeath(mob, player, isKiller)
     player:addTitle(STAR_CHARIOTEER);
     local SPELL_ID = 713;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(SPELL_ID) == false) then
         player:addSpell(SPELL_ID);
     end
 end;

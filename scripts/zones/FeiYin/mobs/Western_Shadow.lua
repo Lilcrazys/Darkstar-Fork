@@ -34,8 +34,8 @@ function onMobDespawn(mob)
     DeterMob(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
 
-    local CHANCE = 40;  
-    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(699) == false) then
+    local CHANCE = 40;
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(699) == false) then
         player:addSpell(699);
     end
 end;

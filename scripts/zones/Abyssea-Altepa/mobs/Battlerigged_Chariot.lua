@@ -3,7 +3,7 @@
 --   Mob: Battlerigged_Chariot
 -----------------------------------
 
--- require("scripts/zones/Abyssea-Altepa/MobIDs");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
@@ -51,7 +51,7 @@ end;
 function onMobDeath(mob, player, isKiller)
     local SPELL_ID = 713;
     local CHANCE = 25;
-    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(SPELL_ID) == false) then
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(SPELL_ID) == false) then
         player:addSpell(SPELL_ID);
     end
 end;

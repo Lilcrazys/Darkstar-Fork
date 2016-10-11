@@ -31,7 +31,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1700);
     mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_MDEF,50);
-    
+
     local RND1 = math.random(1,15);
     if (RND1 == 1) then
         SetDropRate(3106,20736,76); -- Iztaasu +1
@@ -257,7 +257,7 @@ function onMobSpawn(mob)
         SetDropRate(3106,21194,0); -- Lehbrailg +1
         SetDropRate(3106,21004,76); -- Kannakiri +1
         SetDropRate(3106,20824,0); -- Faizzeer +1
-    elseif (RND1 == 15) then        
+    elseif (RND1 == 15) then
         SetDropRate(3106,20736,0); -- Iztaasu +1
         SetDropRate(3106,21126,0); -- Aedold +1
         SetDropRate(3106,20546,0); -- Ninzas +1
@@ -273,7 +273,7 @@ function onMobSpawn(mob)
         SetDropRate(3106,21194,0); -- Lehbrailg +1
         SetDropRate(3106,21004,0); -- Kannakiri +1
         SetDropRate(3106,20824,76); -- Faizzeer +1
-    end    
+    end
 end;
 
 -----------------------------------
@@ -304,8 +304,8 @@ function onMobDeath(mob, player, isKiller)
         player:addKeyItem(ATMA_OF_THE_TUSKED_TERROR);
         player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_TUSKED_TERROR);
     end
-    if (math.random(0,99) < SPELL_CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(654) == false) then
+    if (math.random(0,99) < SPELL_CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(654) == false) then
         player:addSpell(654);
     end
-    
+
 end;

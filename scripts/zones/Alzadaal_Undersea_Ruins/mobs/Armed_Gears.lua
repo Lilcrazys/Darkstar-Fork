@@ -2,8 +2,8 @@
 -- Area: Alzadaal Undersea Ruins
 --  ZNM: Armed Gears
 -----------------------------------
-
 require("scripts/globals/custom_trials");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobSpawn Action
@@ -20,7 +20,7 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 25;
     local HAS_RESTORAL = player:hasSpell(711);
     local HAS_RAIL_CANNON = player:hasSpell(712);
-    local isBLU = (player:getMainJob() == JOB_BLU);
+    local isBLU = (player:getMainJob() == JOBS.BLU);
 
     if (math.random(0,99) < CHANCE and isBLU and HAS_RESTORAL == false) then
         player:addSpell(711);

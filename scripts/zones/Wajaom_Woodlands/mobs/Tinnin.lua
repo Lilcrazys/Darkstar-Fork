@@ -176,7 +176,7 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     local CHANCE = 20;
-    if (math.random(0,99) < CHANCE and player:getMainJob() == JOB_BLU and player:hasSpell(741) == false) then
+    if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(741) == false) then
         player:addSpell(SPELL_ID);
     end
 end;
