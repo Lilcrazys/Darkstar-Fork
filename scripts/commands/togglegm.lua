@@ -55,7 +55,7 @@ function onTrigger(player)
             player:setFlag(FLAG_GM_LEAD);
         elseif (gmlvl >= MINLVL_GM_SENIOR) then
             player:setFlag(FLAG_GM_SENIOR);
-        elseif (gmlvl >= MINLVL_GM or MINLVL_GM_FULL) then
+        elseif (gmlvl >= MINLVL_GM) then
             player:setFlag(FLAG_GM);
         elseif (gmlvl >= MINLVL_GM_POL) then
             player:setFlag(FLAG_GM_POL);
