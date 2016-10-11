@@ -21,7 +21,7 @@ function onMobInitialize(mob)
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
     mob:addMod(MOD_STUNRES, 50);
-    mob:addMod(MOD_TERRORRES, 80);
+    mob:addMod(MOD_TERRORRES, 100);
 
     -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
