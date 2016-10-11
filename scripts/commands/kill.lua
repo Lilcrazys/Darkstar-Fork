@@ -7,7 +7,7 @@
 
 cmdprops =
 {
-    permission = 5,
+    permission = 6,
     parameters = "s"
     -- parameters = "si"
 };

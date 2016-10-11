@@ -8,16 +8,11 @@ require("scripts/globals/custom_trials");
 
 cmdprops =
 {
-    permission = 0,
+    permission = 1,
     parameters = "s"
 };
 
 function onTrigger(player, target)
-    if (player:getGMLevel() == 0 and player:getVar("AssistantGM") == 0) then
-        -- No message so reg plays can't even tell it exists!
-        return;
-    end
-
     if (target == nil) then
         player:PrintToPlayer("You must specify the player to check, while on the same map server.");
         return;

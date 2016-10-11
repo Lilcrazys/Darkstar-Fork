@@ -50,4 +50,21 @@ function onTrigger(player, target, cellId, reason)
     local dest = jailCells[ cellId ];
     targ:setVar( "inJail", cellId );
     targ:setPos( dest[1], dest[2], dest[3], dest[4], 131 );
+
+    -- Log it
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/jail.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. target,
+    "\n", "Jail cell: ".. cellId,
+    "\n", "Reason: ".. reason,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end

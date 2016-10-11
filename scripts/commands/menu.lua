@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 -- func: menu test
--- desc: Sets the players shop.
+-- desc: used to test menu's
 ---------------------------------------------------------------------------------------------------
 
 require("scripts/globals/settings");
@@ -10,10 +10,10 @@ require("scripts/globals/conquest");
 
 cmdprops =
 {
-    permission = 1,
+    permission = 6,
     parameters = "i"
 };
 
-function onTrigger(player)
-    player:sendMenu(3);
+function onTrigger(player,menu)
+    player:sendMenu(menu);
 end;

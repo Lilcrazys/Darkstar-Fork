@@ -13,6 +13,8 @@ cmdprops =
 };
 
 function onTrigger(player)
+    player:PrintToPlayer("This feature temporarily disabled.");
+    --[[
     require("scripts/globals/custom_trials");
 
     local TRIAL = player:getVar("C_TRIAL_ITEM");
@@ -68,4 +70,5 @@ function onTrigger(player)
             player:PrintToPlayer("You have an Trial active, but it is one not handled by this command.");
         end
     end
+    ]]
 end;

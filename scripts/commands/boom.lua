@@ -10,7 +10,7 @@ cmdprops =
 };
 
 function onTrigger(player)
-    player:PrintToPlayer("STOP THAT. Yes YOU there, typing @boom. Stop.");
+    player:PrintToPlayer("STOP THAT. Yes YOU there, typing @boom or $boom. Stop.");
     --[[
     -- Begin Wrath of the Gods Animation
     player:injectActionPacket(5, 271, 0, 0, 0);

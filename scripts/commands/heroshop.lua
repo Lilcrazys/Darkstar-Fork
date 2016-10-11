@@ -10,7 +10,7 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/npcs/Prishe");
 --------------------------------------------------------------
 cmdprops =
 {
-    permission = 4,
+    permission = 6,
     parameters = "i"
 }; -- unfinished, will remove this comment and change permission when done
 

@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 -- func: despawnmob <mobid-optional>
--- desc: Despawns the given mob <t> or mobID)
+-- desc: Despawns the given mob <t> or mobID
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "i"
 };
 

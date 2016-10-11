@@ -40,8 +40,8 @@ function onTrigger(player, toggle)
         player:addStatusEffect(EFFECT_NEGATE_POISON,1,0,0);
 
         -- Heal the player from the new buffs..
-        player:addHP( 9999 );
-        player:setMP( 9999 );
+        player:addHP(9999);
+        player:setMP(9999);
     else
         player:PrintToPlayer("Invalid parameters.");
     end
