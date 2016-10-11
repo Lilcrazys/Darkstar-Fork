@@ -25,6 +25,8 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
+    mob:setMod(MOD_STUNRES, 25);
+    mob:setMod(MOD_TERRORRES, 100);
 
     if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
         SetDropRate(195,20618,1000); -- Sandung

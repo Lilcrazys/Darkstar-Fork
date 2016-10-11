@@ -26,6 +26,8 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
+    mob:setMod(MOD_STUNRES, 25);
+    mob:setMod(MOD_TERRORRES, 100);
 end;
 
 -----------------------------------
