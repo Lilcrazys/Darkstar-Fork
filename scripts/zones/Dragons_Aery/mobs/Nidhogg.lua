@@ -28,6 +28,8 @@ end;
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_STUNRES, 50);
+    mob:setMod(MOD_TERRORRES, 100);
 
     if (math.random(1,1000) <= 66) then
         SetDropRate(195,20738,1000); -- Buramenk'ah
