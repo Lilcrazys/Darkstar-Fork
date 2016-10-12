@@ -32,7 +32,7 @@ ENABLE_ROV     = 0;
 -- This feature correlates to the required_expansion column in the SQL files
 RESTRICT_BY_EXPANSION = 0;
 
-ENABLE_VOIDWATCH = 0; -- Not an expansion, but has its own storyline.
+ENABLE_VOIDWATCH = 1; -- Not an expansion, but has its own storyline.
 
 -- CHARACTER CONFIG
 INITIAL_LEVEL_CAP = 70; -- The initial level cap for new players.  There seems to be a hardcap of 255.
