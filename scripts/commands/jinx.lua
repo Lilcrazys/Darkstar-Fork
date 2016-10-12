@@ -36,6 +36,22 @@ function onTrigger(player, victim, jinx, power)
                 jinx = "agro";
             end
 
+            local dateStamp = os.date("%d/%m/%Y");
+            local timeStamp = os.date("%I:%M:%S %p");
+            local user = player:getName();
+            local file = io.open("log/commands/jinx.log", "a");
+            file:write(
+            "\n", "----------------------------------------",
+            "\n", "Date: ".. dateStamp,
+            "\n", "Time: ".. timeStamp,
+            "\n", "User: ".. user,
+            "\n", "Target: ".. victim,
+            "\n", "Jinx: ".. jinx,
+            "\n", "----------------------------------------",
+            "\n" -- This MUST be final line.
+            );
+            file:close();
+
             if (jinx == "all") then
                 if (power == nil or power == 0) then
                     power = 10;

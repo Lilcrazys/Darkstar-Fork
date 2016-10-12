@@ -34,6 +34,28 @@ function onTrigger(player,currency,amount,target)
     -- Making sure currency type valid before adding.
     if (targ:getCurrency(currency) ~= nil) then
         targ:addCurrency(currency,amount);
+
+        local targName;
+        if (target ~= nil and targ ~= nil) then
+            targName = target;
+        else
+            targName = player:getName();
+        end
+        local dateStamp = os.date("%d/%m/%Y");
+        local timeStamp = os.date("%I:%M:%S %p");
+        local file = io.open("log/commands/addcurrency.log", "a");
+        file:write(
+        "\n", "----------------------------------------",
+        "\n", "Date: ".. dateStamp,
+        "\n", "Time: ".. timeStamp,
+        "\n", "User: ".. player:getName(),
+        "\n", "Target: ".. targName,
+        "\n", "Currency type: ".. currency,
+        "\n", "Amount given: ".. amount,
+        "\n", "----------------------------------------",
+        "\n" -- This MUST be final line.
+        );
+        file:close();
     else
         player:PrintToPlayer( string.format( "Currency of type '%s' not found!", currency ) );
     end

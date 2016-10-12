@@ -5,7 +5,7 @@
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "ssi"
 };
 
@@ -27,4 +27,20 @@ function onTrigger(player, target, variable, value)
     else
         player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
     end
+
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/setplayervar.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. target,
+    "\n", "VarName: ".. variable,
+    "\n", "VarValue: ".. value,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end

@@ -7,15 +7,15 @@ require("scripts/globals/quests");
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "sss"
 };
 
 function onTrigger(player, logId, questId, target)
-    
+
     logId = tonumber(logId) or _G[logId];
     questId = tonumber(questId) or _G[questId];
-    
+
     if (questId == nil or logId == nil) then
         player:PrintToPlayer( "You must enter a valid log id and quest id!" );
         player:PrintToPlayer( "@delquest <logID> <questID> <player>" );
@@ -28,6 +28,22 @@ function onTrigger(player, logId, questId, target)
 
     local targ = GetPlayerByName(target);
     if (targ ~= nil) then
+        local dateStamp = os.date("%d/%m/%Y");
+        local timeStamp = os.date("%I:%M:%S %p");
+        local file = io.open("log/commands/delquest.log", "a");
+        file:write(
+        "\n", "----------------------------------------",
+        "\n", "Date: ".. dateStamp,
+        "\n", "Time: ".. timeStamp,
+        "\n", "User: ".. player:getName(),
+        "\n", "Target: ".. targ:getName(),
+        "\n", "Log ID: ".. logId,
+        "\n", "Quest ID: ".. questId,
+        "\n", "----------------------------------------",
+        "\n" -- This MUST be final line.
+        );
+        file:close();
+
         targ:delQuest( logId, questId );
         player:PrintToPlayer( string.format( "Deleted Quest for log %u with ID %u from %s", logId, questId, target ) );
     else

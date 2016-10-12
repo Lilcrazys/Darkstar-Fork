@@ -28,6 +28,21 @@ function onTrigger(player, itemId, target)
     if (targ ~= nil) then
         for i = LOC_INVENTORY, LOC_WARDROBE4 do -- inventory locations enums
             if (targ:hasItem(itemId, i)) then
+                local dateStamp = os.date("%d/%m/%Y");
+                local timeStamp = os.date("%I:%M:%S %p");
+                local file = io.open("log/commands/delitem.log", "a");
+                file:write(
+                "\n", "----------------------------------------",
+                "\n", "Date: ".. dateStamp,
+                "\n", "Time: ".. timeStamp,
+                "\n", "User: ".. player:getName(),
+                "\n", "Target: ".. targ:getName(),
+                "\n", "Item ID: ".. itemId,
+                "\n", "----------------------------------------",
+                "\n" -- This MUST be final line.
+                );
+                file:close();
+
                 targ:delItem(itemId, 1, i);
                 player:PrintToPlayer(string.format("Item with ID %u deleted from player '%s'.", itemId, target));
                 break;
