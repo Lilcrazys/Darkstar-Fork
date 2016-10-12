@@ -73,7 +73,7 @@ function onTrigger(player)
         player:PrintToPlayer("@exec  @kill  @menu  @message2server  @nm");
         player:PrintToPlayer("@addallkeyitems (don't..its problematic)");
         player:PrintToPlayer("@shoptest  @heroshop  @adddynatime (crashy)");
-        player:PrintToPlayer("@slap, @inject  @addeffect, @entityvisual");
+        player:PrintToPlayer("@slap  @inject  @addeffect  @entityvisual");
         player:PrintToPlayer("@promote  @setflag  @setminion");
         player:PrintToPlayer("@takexp  @takegil  @setplayernation");
     end
