@@ -40,7 +40,7 @@ function onMobSpawn(mob)
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
         SetDropRate(9613,8919,50); -- Ifritear
@@ -114,8 +114,8 @@ function onMobSpawn(mob)
         SetDropRate(9613,8924,0); -- Shivatear
         SetDropRate(9613,8925,0); -- Carbutear
         SetDropRate(9613,8926,50); -- Fenritear
-    end    
-    
+    end
+
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -143,7 +143,7 @@ function onMobDeath(mob, player, isKiller)
             player:setMaskBit(player:getVar("JADE_STRATUM_III"),"JADE_STRATUM_III",0,true);
         end
 
-        if (player:isMaskFull(kill:getVar("JADE_STRATUM_III"),2) == true) then
+        if (player:isMaskFull(player:getVar("JADE_STRATUM_III"),2) == true) then
             player:addKeyItem(JADE_STRATUM_ABYSSITE_IV);
             player:delKeyItem(JADE_STRATUM_ABYSSITE_III);
             player:setVar("JADE_STRATUM_III", 0);
