@@ -288,7 +288,6 @@ INSERT INTO `item_mods` VALUES (20487, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20509,23,60); -- Spharai iLvL 119 AG - ATT +60
 INSERT INTO `item_mods` VALUES (20509,291,14); -- Counter +14
-INSERT INTO `item_mods` VALUES (20509,355,10); -- Final Heaven
 INSERT INTO `item_mods` VALUES (20509,506,130); -- Extra DMG Chance 13%
 INSERT INTO `item_mods` VALUES (20509,507,300); -- Extra DMG X3
 INSERT INTO `item_mods` VALUES (20509,580,40);  -- Final Heaven DMG +40%
@@ -332,7 +331,6 @@ INSERT INTO `item_mods` VALUES (20564, 165, 25); --
 INSERT INTO `item_mods` VALUES (20564, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20583,23,60); -- Mandau iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (20583,355,26); -- Mercy Stroke
 INSERT INTO `item_mods` VALUES (20583,431,1); -- Additional Effect - scripts\globals\items\mandau.lua
 INSERT INTO `item_mods` VALUES (20583,506,130); -- Extra DMG Chance 13%
 INSERT INTO `item_mods` VALUES (20583,507,300); -- Extra DMG X3
@@ -396,7 +394,6 @@ INSERT INTO `item_mods` VALUES (20654, 165, 25); --
 INSERT INTO `item_mods` VALUES (20654, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20685,23,60); -- Excalibur iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (20685,355,43); -- Knights of the Round
 INSERT INTO `item_mods` VALUES (20685,431,1); -- Additional Effect - scripts\globals\items\excalibur.lua
 INSERT INTO `item_mods` VALUES (20685,506,130); -- Extra DMG Chance 13%
 INSERT INTO `item_mods` VALUES (20685,507,300); -- Extra DMG X3
@@ -636,7 +633,6 @@ INSERT INTO `item_mods` VALUES (21052, 73, 25); -- Should be Save TP +250   adde
 REPLACE INTO `item_mods` VALUES (21062, 28, 65); --
 
 INSERT INTO `item_mods` VALUES (21077,23,60); -- Mjollnir iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (21077,355,170); -- Randgrith
 INSERT INTO `item_mods` VALUES (21077,431,1); -- Additional Effect - scripts\globals\items\mjollnir.lua
 INSERT INTO `item_mods` VALUES (21077,506,130); -- Extra DMG Chance 13%
 INSERT INTO `item_mods` VALUES (21077,507,300); -- Extra DMG X3
@@ -738,7 +734,6 @@ INSERT INTO `item_mods` VALUES (21265, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (21267,24,45); -- Annihilator iLvL 119 AG - RNG ATT +45
 INSERT INTO `item_mods` VALUES (21267,26,60); -- RNG ACC +60
-INSERT INTO `item_mods` VALUES (21267,355,216); -- Coronach
 INSERT INTO `item_mods` VALUES (21267,506,130); -- Extra DMG Chance 13%
 INSERT INTO `item_mods` VALUES (21267,507,300); -- Extra DMG X3
 INSERT INTO `item_mods` VALUES (21267,786,40); -- Coronach DMG +40%
@@ -785,7 +780,6 @@ INSERT INTO `item_mods` VALUES (21485,175,100); -- Skill Chain DMG
 
 INSERT INTO `item_mods` VALUES (21683,25,60); -- Ragnarok iLvL 119 AG - ACC +60
 INSERT INTO `item_mods` VALUES (21683,165,14); -- Crit Rate +14%
-INSERT INTO `item_mods` VALUES (21683,355,57); -- Scourge
 INSERT INTO `item_mods` VALUES (21683,506,160); -- Extra DMG Chance 16%
 INSERT INTO `item_mods` VALUES (21683,507,250); -- Extra DMG X2.5
 INSERT INTO `item_mods` VALUES (21683,627,40); -- Scourge DMG +40%
@@ -795,7 +789,6 @@ INSERT INTO `item_mods` VALUES (21684,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21684,10,50); -- VIT
 
 INSERT INTO `item_mods` VALUES (21750,23,60); -- Guttler iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (21750,355,73); -- Onslaught
 INSERT INTO `item_mods` VALUES (21750,431,1); -- Additional Effect - scripts\globals\items\guttler.lua
 INSERT INTO `item_mods` VALUES (21750,506,130); -- Extra DMG Chance 13%
 INSERT INTO `item_mods` VALUES (21750,507,250); -- Extra DMG X2.5
@@ -822,7 +815,6 @@ INSERT INTO `item_mods` VALUES (21753,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (21753,175,100); -- Skill Chain DMG
 
 INSERT INTO `item_mods` VALUES (21756,25,60); -- Bravura iLvL 119 AG - ACC +60
-INSERT INTO `item_mods` VALUES (21756,355,89); -- Metatron Torment
 INSERT INTO `item_mods` VALUES (21756,431,1); -- Additional Effect - scripts\globals\items\bravura.lua
 INSERT INTO `item_mods` VALUES (21756,506,200); -- Extra DMG Chance 20%
 INSERT INTO `item_mods` VALUES (21756,507,200); -- Extra DMG X2
@@ -838,7 +830,6 @@ INSERT INTO `item_mods` VALUES (21758,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21758,8,50); -- STR
 
 INSERT INTO `item_mods` VALUES (21808,25,60); -- Apocalypse iLvL 119 AG - ACC +60
-INSERT INTO `item_mods` VALUES (21808,355,105); -- Catastrophe
 INSERT INTO `item_mods` VALUES (21808,431,1); -- Additional Effect - scripts\gobals\items\apocalypse.lua
 INSERT INTO `item_mods` VALUES (21808,506,200); -- Extra DMG Chance 20%
 INSERT INTO `item_mods` VALUES (21808,507,200); -- Extra DMG X2
@@ -854,7 +845,6 @@ INSERT INTO `item_mods` VALUES (21810,8,35); -- STR
 INSERT INTO `item_mods` VALUES (21810,13,35); -- MND
 
 INSERT INTO `item_mods` VALUES (21857,25,60); -- Gungnir iLvL 119 AG - ACC +60
-INSERT INTO `item_mods` VALUES (21857,355,121); -- Geirskogul
 INSERT INTO `item_mods` VALUES (21857,431,1); -- Additional Effect - scripts\globals\items\gungnir.lua
 INSERT INTO `item_mods` VALUES (21857,506,200); -- Extra DMG Chance %20
 INSERT INTO `item_mods` VALUES (21857,507,200); -- Extra DMG X2
@@ -870,7 +860,6 @@ INSERT INTO `item_mods` VALUES (21859,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21859,10,50); -- VIT
 
 INSERT INTO `item_mods` VALUES (21906,23,60); -- Kikoku iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (21906,355,137); -- Blade: Metsu
 INSERT INTO `item_mods` VALUES (21906,431,1); -- Additional Effect - scripts\globals\items\kikoku.lua
 INSERT INTO `item_mods` VALUES (21906,506,180); -- Extra DMG Chance 18%
 INSERT INTO `item_mods` VALUES (21906,507,300); -- Extra DMG X3
@@ -886,7 +875,6 @@ INSERT INTO `item_mods` VALUES (21908,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21908,11,50); -- AGI
 
 INSERT INTO `item_mods` VALUES (21954,25,60); -- Amanomurakumo ILvL 119 AG - ACC +60
-INSERT INTO `item_mods` VALUES (21954,355,153); -- Tachi: Kaiten
 INSERT INTO `item_mods` VALUES (21954,431,1); -- Additional Effect - scripts\globals\items\amanomurakumo.lua
 INSERT INTO `item_mods` VALUES (21954,506,180); -- Extra DMG Chance 18%
 INSERT INTO `item_mods` VALUES (21954,507,250); -- Extra DMG X2.5
@@ -903,7 +891,6 @@ INSERT INTO `item_mods` VALUES (21956,8,50); -- STR
 
 INSERT INTO `item_mods` VALUES (22115,24,45); -- Yoichinoyumi iLvL 119 AG - RNG ATT +45
 INSERT INTO `item_mods` VALUES (22115,26,80); -- RNG ACC +80
-INSERT INTO `item_mods` VALUES (22115,355,200); -- Namas Arrow
 INSERT INTO `item_mods` VALUES (22115,506,180); -- Extra DMG Chance 18%
 INSERT INTO `item_mods` VALUES (22115,507,300); -- Extra DMG X3
 INSERT INTO `item_mods` VALUES (22115,770,40); -- Namas Arrow DMG +40%
@@ -913,7 +900,6 @@ INSERT INTO `item_mods` VALUES (22116,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (22116,9,50); -- DEX
 
 INSERT INTO `item_mods` VALUES (22060,25,60); -- Claustrum iLvL 119 AG - ACC +60
-INSERT INTO `item_mods` VALUES (22060,355,185); -- Gate of Tartarus
 INSERT INTO `item_mods` VALUES (22060,431,1); -- Additional Effect - scripts\globals\items\claustrum.lua
 INSERT INTO `item_mods` VALUES (22060,506,180); -- Extra DMG Chance 18%
 INSERT INTO `item_mods` VALUES (22060,507,250); -- Extra DMG X2.5
@@ -2065,91 +2051,3 @@ INSERT INTO `item_mods` VALUES (28607,5,30);
 
 INSERT INTO `item_mods` VALUES (28621,274,6); --  Cure Potency +6%
 INSERT INTO `item_mods` VALUES (28621,311,6); -- Magic Damage
-
--- ----------------------------------------
--- Weaponskill Mods - MUST BE MOVED LATER
--- ----------------------------------------
-
--- Almace
-INSERT INTO `item_mods` VALUES (19458,355,225); -- chant_du_cygne
-INSERT INTO `item_mods` VALUES (19634,355,225);
-INSERT INTO `item_mods` VALUES (19807,355,225);
-INSERT INTO `item_mods` VALUES (20654,355,225);
-
--- Armaggeddon
-INSERT INTO `item_mods` VALUES (19469,355,220); -- wildfire
-INSERT INTO `item_mods` VALUES (19645,355,220);
-INSERT INTO `item_mods` VALUES (19818,355,220);
-INSERT INTO `item_mods` VALUES (21265,355,220);
-
--- Caldabolg
-INSERT INTO `item_mods` VALUES (19459,355,59); -- torcleaver
-INSERT INTO `item_mods` VALUES (19635,355,59);
-INSERT INTO `item_mods` VALUES (19808,355,59);
-INSERT INTO `item_mods` VALUES (20748,355,59);
-
--- Farsha
-INSERT INTO `item_mods` VALUES (19460,355,76); -- cloudsplitter
-INSERT INTO `item_mods` VALUES (19636,355,76);
-INSERT INTO `item_mods` VALUES (19809,355,76);
-INSERT INTO `item_mods` VALUES (20795,355,76);
-
--- Gambanteinn
-INSERT INTO `item_mods` VALUES (19466,355,173); -- dagan
-INSERT INTO `item_mods` VALUES (19642,355,173);
-INSERT INTO `item_mods` VALUES (19815,355,173);
-INSERT INTO `item_mods` VALUES (21065,355,173);
-
--- Gandiva
-INSERT INTO `item_mods` VALUES (19468,355,202); -- jishnus_radiance
-INSERT INTO `item_mods` VALUES (19644,355,202);
-INSERT INTO `item_mods` VALUES (19817,355,202);
-INSERT INTO `item_mods` VALUES (21213,355,202);
-
--- Hvergelmir
-INSERT INTO `item_mods` VALUES (19467,355,190); -- myrkr
-INSERT INTO `item_mods` VALUES (19643,355,190); 
-INSERT INTO `item_mods` VALUES (19816,355,190); 
-INSERT INTO `item_mods` VALUES (21144,355,190);
-
--- Kannagi
-INSERT INTO `item_mods` VALUES (19464,355,140); -- blade_hi
-INSERT INTO `item_mods` VALUES (19640,355,140);
-INSERT INTO `item_mods` VALUES (19813,355,140);
-INSERT INTO `item_mods` VALUES (20975,355,140);
-
--- Masamune
-INSERT INTO `item_mods` VALUES (19465,355,156); -- tachi_fudo
-INSERT INTO `item_mods` VALUES (19641,355,156);
-INSERT INTO `item_mods` VALUES (19814,355,156);
-INSERT INTO `item_mods` VALUES (21020,355,156);
-
--- Redemption
-INSERT INTO `item_mods` VALUES (19462,355,108); -- Quietus
-INSERT INTO `item_mods` VALUES (19638,355,108); 
-INSERT INTO `item_mods` VALUES (19811,355,108); 
-INSERT INTO `item_mods` VALUES (20885,355,108); 
-
--- Rhongomiant
-INSERT INTO `item_mods` VALUES (19463,355,124); -- camlanns_torment
-INSERT INTO `item_mods` VALUES (19639,355,124);
-INSERT INTO `item_mods` VALUES (19812,355,124);
-INSERT INTO `item_mods` VALUES (20930,355,124);
-
--- Twashtar
-INSERT INTO `item_mods` VALUES (19457,355,31); -- rudras_storm
-INSERT INTO `item_mods` VALUES (19633,355,31);
-INSERT INTO `item_mods` VALUES (19806,355,31);
-INSERT INTO `item_mods` VALUES (20564,355,31);
-
--- Ukonvasara
-INSERT INTO `item_mods` VALUES (19461,355,92); -- ukkos_fury
-INSERT INTO `item_mods` VALUES (19637,355,92); 
-INSERT INTO `item_mods` VALUES (19810,355,92); 
-INSERT INTO `item_mods` VALUES (20840,355,92); 
-
--- Verethragna
-INSERT INTO `item_mods` VALUES (19456,355,14); -- victory_smite
-INSERT INTO `item_mods` VALUES (19632,355,14);
-INSERT INTO `item_mods` VALUES (19805,355,14);
-INSERT INTO `item_mods` VALUES (20487,355,14);
