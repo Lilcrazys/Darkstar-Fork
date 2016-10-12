@@ -15,6 +15,7 @@ function onTrade(player,npc,trade)
     if (trade:hasItemQty(2918,1) and trade:getItemCount() == 1) then -- Player has all the required items.
         if (GetMobAction(16961920) == ACTION_NONE) then -- Mob not already spawned from this
             SpawnMob(16961920):updateClaim(player); -- Spawn NM, Despawn after inactive for 5 minutes (pt has to reclaim within 5 of a wipe)
+            GetMobByID(16961920):setPos(-352,6,249); -- DSP's navmesh prevents it from moving from its correct pos, we we had to move it a bit..
             player:tradeComplete();
         end
     end
