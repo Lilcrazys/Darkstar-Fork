@@ -76,7 +76,9 @@ function onTrigger(player)
         player:PrintToPlayer("@slap, @inject  @addeffect, @entityvisual");
         player:PrintToPlayer("@promote  @setflag  @setminion");
         player:PrintToPlayer("@takexp  @takegil  @setplayernation");
-        player:PrintToPlayer("NOTE YOU CAN EASILY CRASH SERVER MISUSING SOME OF THESE!");
     end
     -- Although it IS technically possibly to create tiers as high as 255...
+    if (gmlvl >= 1) then
+        player:PrintToPlayer("NOTE YOU CAN EASILY CRASH SERVER MISUSING SOME OF THESE!");
+    end
 end;
