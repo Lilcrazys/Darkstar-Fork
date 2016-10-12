@@ -29,5 +29,7 @@ function onTrigger(player)
         player:SpoofChatPlayer(string.format("Magic Defense bonus: %s", target:getMod(MOD_MDEF)), MESSAGE_ECHO);
         player:SpoofChatPlayer(string.format("Magic Accuracy bonus: %s", target:getMod(MOD_MACC)), MESSAGE_ECHO);
         player:PrintToPlayer("Cannot accurately get Magic Evasion yet..Darkstar does it stupidly.");
+    else
+        player:PrintToPlayer("Target something first.");
     end
 end;
