@@ -12,7 +12,7 @@ cmdprops =
 function onTrigger(player)
     local gmlvl = player:getGMLevel();
     -- Displaying commands this player can use, sorted by GM tier, 3 at a time.
-    if (player:getVar("_isMinion_" == 350) then -- Minions only
+    if (player:getVar("_isMinion_") == 350) then -- Minions only
         player:PrintToPlayer("$minion <subcommand> <parameters>");
     end
 
