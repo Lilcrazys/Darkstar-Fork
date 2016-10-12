@@ -7,14 +7,14 @@ require("scripts/globals/titles");
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "ss"
 };
 
 function onTrigger(player, titleId, target)
-    
+
     titleId = tonumber(titleId) or _G[titleId];
-    
+
     if (titleId == nil) then
         player:PrintToPlayer("You must enter a valid title id.");
         return

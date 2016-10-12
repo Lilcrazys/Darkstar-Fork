@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
--- func: !hp <amount> <player>
+-- func: hp <amount> <player>
 -- desc: Sets the GM or target players health.
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
-    permission = 2,
+    permission = 3,
     parameters = "is"
 };
 

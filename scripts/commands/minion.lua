@@ -10,7 +10,7 @@ cmdprops =
 };
 
 function onTrigger(player, subcommand, param, param2)
-    if (player:getName() == "Beaker") then
+    if (player:getVar("_isMinion_" == 350) then
         if (subcommand == nil or subcommand == "help") then
             player:PrintToPlayer("warp - jump to hompoint")
             player:PrintToPlayer("zone number name - jump a player to zone number")

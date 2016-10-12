@@ -7,14 +7,14 @@ require("scripts/globals/status");
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "ss"
 };
 
 function onTrigger(player, target, animationId)
-    
+
     animationId = tonumber(animationId) or _G[animationId];
-    
+
     local mob = GetMobByID( target );
     if (mob ~= nil and animationId ~= nil) then
         mob:AnimationSub( animationId );

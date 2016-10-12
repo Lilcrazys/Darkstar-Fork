@@ -7,15 +7,15 @@ require("scripts/globals/status");
 
 cmdprops =
 {
-    permission = 1,
+    permission = 2,
     parameters = "ss"
 };
 
 function onTrigger(player, npcId, animationId)
-    
+
     npcId = tonumber(npcId) or npcId;
     animationId = tonumber(animationId) or _G[animationId];
-    
+
     if (npcId ~= nil and animationId ~= nil) then
         local npc = GetNPCByID( npcId, player );
         if (npc == nil) then return; end
