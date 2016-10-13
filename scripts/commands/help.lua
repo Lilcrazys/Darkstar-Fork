@@ -25,11 +25,11 @@ function onTrigger(player)
 
     -- Previous tiers are already displayed, don't duplicate!
     if (gmlvl >= 1) then -- POL icon GM (reduced powers)
-        player:PrintToPlayer("@togglegm  @hide  @givels  @posfix  @hasitem");
+        player:PrintToPlayer("@togglegm  @hide  @givels  @posfix  @setmodel");
         player:PrintToPlayer("@zap  @jail  @pardon  @logoff  @speed  @chocobo");
         player:PrintToPlayer("@addallmaps  @batfix  @release  @reloadglobal");
+        player:PrintToPlayer("@hasitem  @checkvar  @checkmission  @checkquest  @checktrial");
         player:PrintToPlayer("@stats  @getstats  @getid  @getmobaction  @getmobname");
-        player:PrintToPlayer("@checkvar  @checkmission  @checkquest  @checktrial");
         player:PrintToPlayer("@49  @goto  @op  @zone  @homepoint  @return  @pos");
         player:PrintToPlayer("@message2self  @messagebasic  @messagespecial  @injectaction");
     end
@@ -45,11 +45,11 @@ function onTrigger(player)
         player:PrintToPlayer("@spawnmob  @despawnmob  @mobhere  @npchere  @despawnnpc");
         player:PrintToPlayer("@raise  @deleffect  @dynareset  @checkrepop");
         player:PrintToPlayer("@changejob  @changesjob  @setplayerlevel  @setmerits");
-        player:PrintToPlayer("@setmobflags  @setmobmodel  @setmodel  @setplayermodel");
+        player:PrintToPlayer("@setmobflags  @setmobmodel  @setplayermodel");
         player:PrintToPlayer("@mobsub  @animation  @animatenpc  @animatesubnpc");
         player:PrintToPlayer("@monstrosity  @setweather  @setmentor");
         player:PrintToPlayer("@sjboost  @wallhack  @up  @down  @door");
-        player:PrintToPlayer("@legionhall  @legionlaunch @mamool1  @mamool2  @mamool3");
+        player:PrintToPlayer("@legionhall  @legionlaunch  @mamool1  @mamool2  @mamool3");
         player:PrintToPlayer("@troll1  @troll2  @troll3 @undead1  @undead2  @undead3");
     end
 
