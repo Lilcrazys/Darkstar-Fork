@@ -35,8 +35,8 @@ function onMobInitialize(mob)
     mob:addMod(MOD_EARTHDEF,20);
     mob:addMod(MOD_THUNDERDEF,20);
     mob:addMod(MOD_EARTHACC,33);
-    mob:addMod(MOD_STUNRES,50);   -- These don't seem to be working..
-    mob:addMod(MOD_TERRORRES,50); -- These don't seem to be working..
+    mob:addMod(MOD_STUNRES,50);
+    mob:addMod(MOD_TERRORRES,50);
 
     -- setMobMod
     mob:setMobMod(MOBMOD_HP_STANDBACK,-1);

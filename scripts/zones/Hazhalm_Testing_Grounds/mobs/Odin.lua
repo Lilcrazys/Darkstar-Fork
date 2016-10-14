@@ -36,8 +36,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_ACC,2500);
-    mob:setMod(MOD_TERRORRES,500);
-    mob:setMod(MOD_STUNRES,5000);
+    mob:setMod(MOD_TERRORRES,100);
+    mob:setMod(MOD_STUNRES,99);
 end;
 -----------------------------------
 -- onMobEngage Action

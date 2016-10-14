@@ -127,12 +127,12 @@ function onAdditionalEffect(mob,target,damage)
         local params = {};
         params.bonusmab = 0;
         params.includemab = false;
-        dmg = addBonusesAbility(player, ELE_FIRE, target, dmg, params);
-        dmg = dmg*applyResistanceAddEffect(player, target, ELE_FIRE, 0);
+        dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
+        dmg = dmg*applyResistanceAddEffect(mob, target, ELE_FIRE, 0);
         dmg = adjustForTarget(target, damage, ele);
         dmg = utils.clamp(dmg, 6, 66); -- minimum 6, maximum 66.
-        dmg = finalMagicNonSpellAdjustments(player, target, ELE_FIRE, damage);
-        
+        dmg = finalMagicNonSpellAdjustments(mob, target, ELE_FIRE, damage);
+
         return SUBEFFECT_FIRE_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
     else
         return 0,0,0;

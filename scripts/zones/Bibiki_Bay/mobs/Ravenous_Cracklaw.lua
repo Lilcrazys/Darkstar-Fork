@@ -33,7 +33,7 @@ function onMobInitialize(mob)
     mob:setMod(MOD_DOUBLE_ATTACK,20);
     mob:setMod(MOD_MACC, 1900);
     mob:setMod(MOD_MATT, 110);
-    mob:setMod(MOD_STUNRES, 500);
+    mob:setMod(MOD_STUNRES, 50);
 
 end;
 

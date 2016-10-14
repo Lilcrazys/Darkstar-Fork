@@ -31,7 +31,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_STUNRES,30);
     mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_TERRORRES, 10000);
+    mob:setMod(MOD_TERRORRES, 100);
 
     mob:addMod(MOD_DMGMAGIC, 64);
 
