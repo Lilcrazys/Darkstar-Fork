@@ -28,13 +28,13 @@ function onMobInitialize(mob)
     mob:setMod(MOD_HASTE_ABILITY, 30);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
-    mob:setMod(MOD_STUNRES,1000);
+    mob:setMod(MOD_STUNRES,44);
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 2500); -- this needs to become addMod of the correct amount
     mob:setMod(MOD_MATT, 125);  -- this needs to become addMod of the correct amount
     mob:setMod(MOD_HUMANOID_KILLER, 7);
-    mob:setMod(MOD_TERRORRES, 10000);
+    mob:setMod(MOD_TERRORRES, 99);
 
     -- addMod
     mob:addMod(MOD_DMGRANGE, -50);
