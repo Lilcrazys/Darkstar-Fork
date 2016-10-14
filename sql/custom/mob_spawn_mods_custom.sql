@@ -1,0 +1,15 @@
+-- ---------------------------------------------------------------------------
+-- This file adds onto, or modifies portions of the table "mob_spawn_mods" created
+-- by the file mob_spawn_mods.sql and must be imported/executed AFTER that file.
+--
+-- For new entries DarkStar does not have, use "INSERT INTO"
+-- For changing entries that already exist use "REPLACE INTO"
+-- REPLACE tells MySQL to delete the old line and insert the new one.
+-- Using the wrong 1 of these 2 commands will result in errors.
+--
+-- IF THE MOB HAS A UNIQUE POOL ID, DO NOT USE THIS FILE!
+-- IN THAT CASE USE mob_pool_mods_custom.sql INSTEAD!
+-- IF IT CAN BE SCRFIPED, DO NOT USE EITHER FILE, SCRIPT INSTEAD!
+-- THESE SQL FILES ARE ONLY FOR MODS THAT CANNOT BE SCRIPED.
+-- ---------------------------------------------------------------------------
+-- INSERT INTO `mob_spawn_mods` VALUES (mobid,modid,value,is_mob_mod); 
