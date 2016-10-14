@@ -908,6 +908,8 @@ MOD_CLUB              = 90
 MOD_STAFF             = 91
 MOD_RAMPART_DURATION  = 92  -- Rampart duration bonus from gear
 MOD_FLEE_DURATION     = 93  -- Flee duration bonus from gear
+MOD_MEDITATE_DURATION       = 94  -- Meditate duration from gear
+MOD_WARDING_CIRCLE_DURATION = 95  -- Warding Circle duration from gear
 MOD_AUTO_MELEE_SKILL  = 101
 MOD_AUTO_RANGED_SKILL = 102
 MOD_AUTO_MAGIC_SKILL  = 103
@@ -1304,12 +1306,12 @@ MOD_AQUAVEIL_COUNT            = 832 -- Modifies the amount of hits that Aquaveil
 MOD_SONG_RECAST_DELAY         = 833 -- Reduces song recast time (in milliseconds).
 
 -- Mythic Weapon Mods
-MOD_AUGMENTS_ABSORB    = 521 -- Direct Absorb spell increase while Liberator is equipped (percentage based)
-MOD_AOE_NA             = 524 -- Set to 1 to make -na spells/erase always AoE w/ Divine Veil
-MOD_AUGMENTS_CONVERT   = 525 -- Convert HP to MP Ratio Multiplier. Value = MP multiplier rate.
-MOD_AUGMENTS_SA        = 526 -- Adds Critical Attack Bonus to Sneak Attack, percentage based.
-MOD_AUGMENTS_TA        = 527 -- Adds Critical Attack Bonus to Trick Attack, percentage based.
-MOD_JUG_LEVEL_RANGE    = 564 -- Decreases the level range of spawned jug pets. Maxes out at 2.
+MOD_AUGMENTS_ABSORB           = 521 -- Direct Absorb spell increase while Liberator is equipped (percentage based)
+MOD_AOE_NA                    = 524 -- Set to 1 to make -na spells/erase always AoE w/ Divine Veil
+MOD_AUGMENTS_CONVERT          = 525 -- Convert HP to MP Ratio Multiplier. Value = MP multiplier rate.
+MOD_AUGMENTS_SA               = 526 -- Adds Critical Attack Bonus to Sneak Attack, percentage based.
+MOD_AUGMENTS_TA               = 527 -- Adds Critical Attack Bonus to Trick Attack, percentage based.
+MOD_JUG_LEVEL_RANGE           = 564 -- Decreases the level range of spawned jug pets. Maxes out at 2.
 MOD_FORCE_JUMP_CRIT           = 828 -- Critical hit rate bonus for jump and high jump
 MOD_QUICK_DRAW_DMG_PERCENT    = 831 -- Percentage increase to QD damage
 
@@ -1318,13 +1320,17 @@ MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
 -- The entire mod list is in desperate need of kind of some organizing.
 -- The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
 
--- MOD_SPARE = 94 -- stuff
--- MOD_SPARE = 95 -- stuff
+-- MOD_SPARE = 64 -- stuff
+-- MOD_SPARE = 65 -- stuff
+-- MOD_SPARE = 67 -- stuff
 -- MOD_SPARE = 96 -- stuff
 -- MOD_SPARE = 97 -- stuff
 -- MOD_SPARE = 98 -- stuff
 -- MOD_SPARE = 99 -- stuff
 -- MOD_SPARE = 100 -- stuff
+-- MOD_SPARE = 543 -- stuff
+-- MOD_SPARE = 552 -- stuff
+-- MOD_SPARE = 561 -- stuff
 -- MOD_SPARE = 834 -- stuff
 -- MOD_SPARE = 835 -- stuff
 

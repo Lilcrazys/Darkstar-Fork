@@ -350,14 +350,14 @@ function applyResistanceEffect(player,spell,target,diff,skill,bonus,effect)
     return getMagicResist(p);
 end;
 
---Applies resistance for things that may not be spells - ie. Quick Draw
+-- Applies resistance for things that may not be spells - ie. Quick Draw
 function applyResistanceAbility(player,target,element,skill,bonus)
     local p = getMagicHitRate(player, target, skill, element, 0, bonus);
 
     return getMagicResist(p);
 end;
 
---Applies resistance for additional effects
+-- Applies resistance for additional effects
 function applyResistanceAddEffect(player,target,element,bonus)
 
     local p = getMagicHitRate(player, target, 0, element, 0, bonus);
@@ -493,10 +493,7 @@ function getEffectResistance(target, effect)
         effectres = MOD_AMNESIARES;
     elseif (effect == EFFECT_TERROR) then
         effectres = MOD_TERRORRES;
-    --[[
-    elseif (effect == EFFECT_DOOM) then
-        effectres = MOD_DOOMRES;
-    ]]
+    -- Don't put MOD_DOOMRES here.
     end
 
     if (effectres ~= 0) then

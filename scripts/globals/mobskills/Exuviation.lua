@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
     local statusHeal = 300;
     local effectCount = 0;
     local dispel = mob:eraseStatusEffect();
-
+    
     while (dispel ~= EFFECT_NONE)
     do
         effectCount = effectCount + 1;

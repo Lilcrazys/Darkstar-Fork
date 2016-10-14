@@ -21,7 +21,10 @@ require("scripts/globals/weaponskills");
 
 function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
     local params = {};
-    params.ftp100 = 8.5; params.ftp200 = 9.0; params.ftp300 = 9.5;
+    --[[ Commented out DSP code...
+    params.ftp100 = 5.5; params.ftp200 = 5.5; params.ftp300 = 5.5;
+    ]]
+    params.ftp100 = 8.4; params.ftp200 = 8.6; params.ftp300 = 8.8; -- Custom
     params.str_wsc = 0.0; params.dex_wsc = 0.0; params.vit_wsc = 0.0;
     params.agi_wsc = 0.6; params.int_wsc = 0.0; params.mnd_wsc = 0.0;
     params.chr_wsc = 0.0;
@@ -34,6 +37,7 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
 
     local damage, tpHits, extraHits = doMagicWeaponskill(player, target, wsID, tp, primary, action, params);
 
+    -- This aftermath block doesn't exist in DSP
     if (player:getMainJob() == JOBS.COR) then
         if (damage > 0) then
         -- AFTERMATH LEVEL 1

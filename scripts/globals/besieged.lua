@@ -245,15 +245,15 @@ end;
 -----------------------------------------------------------------------------------
 
 function getImperialDefenseStats()
-	local TOTAL = GetServerVariable("Besieged_Count");
-	local WIN = GetServerVariable("Besieged_Wins");
-	local LOSS = GetServerVariable("Besieged_Losses");
-	local DEF = GetServerVariable("Imperial_Defense");
-	if (Total == 0) then
-		return 5,8,100,90;
-	else
-		return TOTAL,DEF,WIN,LOSS;
-	end
+    local TOTAL = GetServerVariable("Besieged_Count");
+    local WIN = GetServerVariable("Besieged_Wins");
+    local LOSS = GetServerVariable("Besieged_Losses");
+    local DEF = GetServerVariable("Imperial_Defense");
+    if (Total == 0) then
+        return 5,8,100,90;
+    else
+        return TOTAL,DEF,WIN,LOSS;
+    end
 end;
 
 ------------------------------------------------------------------------------

@@ -229,7 +229,6 @@ function unionRepresentativeTriggerFinish(player, option, target, guildID, curre
         else
             player:messageSpecial(GUILD_TERMINATE_CONTRACT, guildID, oldGuild);
             player:setVar('[GUILD]daily_points',-1);
-            player:setVar('[GUILD]daily_points',-1);
         end
     elseif (bit.band(option, 32) > 0) then -- keyitem
         local ki = keyitems[bit.band(option, 31)];

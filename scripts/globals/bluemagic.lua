@@ -227,14 +227,14 @@ function BlueMagicalSpell(caster, target, spell, params, statMod)
 end;
 
 function BlueFinalAdjustments(caster, target, spell, dmg, params)
-    if (dmg<0) then
+    if (dmg < 0) then
         dmg = 0;
     end
 
     dmg = dmg * BLUE_POWER;
 
     dmg = dmg - target:getMod(MOD_PHALANX);
-    if (dmg<0) then
+    if (dmg < 0) then
         dmg = 0;
     end
 
