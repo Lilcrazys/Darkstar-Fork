@@ -1,6 +1,6 @@
 -----------------------------------
--- 	Gate: Chocobo Circuit
--- 	Basic Chat Text
+-- Gate: Chocobo Circuit
+-- Basic Chat Text
 -----------------------------------
 
 -----------------------------------
@@ -9,7 +9,7 @@
 require("scripts/globals/settings");
 
 function onTrigger(player,npc)
-	player:startEvent(0x0084);
+    player:startEvent(0x0084);
 end;
 
 
@@ -24,6 +24,6 @@ end;
 -- onEventFinish Action
 -----------------------------------
 function onEventFinish(player,csid,option)
---print("CSID:",csid);
---print("RESULT:",option);
+    -- print("CSID:",csid);
+    -- print("RESULT:",option);
 end;

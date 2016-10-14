@@ -27,7 +27,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_SLOWRES, 100);
     target:addMod(MOD_STUNRES, 100);
     target:addMod(MOD_CHARMRES, 100);
-    -- target:addMod(MOD_AMNESIARES, 100); -- Doesn't exist yet
+    target:addMod(MOD_AMNESIARES, 100);
     -- target:addMod(MOD_?_RES, 100); -- Doesn't exist yet
     target:addMod(MOD_DEATHRES, 100);
 end;
@@ -58,7 +58,7 @@ function onEffectLose(target,effect)
     target:delMod(MOD_SLOWRES, 100);
     target:delMod(MOD_STUNRES, 100);
     target:delMod(MOD_CHARMRES, 100);
-    -- target:delMod(MOD_AMNESIARES, 100); -- Doesn't exist yet
+    target:delMod(MOD_AMNESIARES, 100);
     -- target:delMod(MOD_?_RES, 100); -- Doesn't exist yet
     target:delMod(MOD_DEATHRES, 100);
 end;

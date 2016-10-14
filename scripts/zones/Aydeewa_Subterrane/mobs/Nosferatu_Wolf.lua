@@ -17,7 +17,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	mob:setMod(MOD_REGAIN,50);
+    mob:setMod(MOD_REGAIN,50);
 end;
 
 -----------------------------------

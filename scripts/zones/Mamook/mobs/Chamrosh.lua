@@ -11,9 +11,9 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:addMod(MOD_ACC,75);
-	mob:addMod(MOD_MACC,500);
-	mob:addMod(MOD_REGAIN,33);
+    mob:addMod(MOD_ACC,75);
+    mob:addMod(MOD_MACC,500);
+    mob:addMod(MOD_REGAIN,33);
 end;
 
 -----------------------------------
@@ -21,7 +21,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob,target)
-	
 end;
 
 -----------------------------------

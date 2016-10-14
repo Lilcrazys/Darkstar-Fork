@@ -17,9 +17,7 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 -----------------------------------
 
 function onEffectGain(target,effect)
-
     target:addStatusEffectEx(EFFECT_VISITANT,EFFECT_VISITANT,0,0,5000);
-	
 end;
 
 -----------------------------------
