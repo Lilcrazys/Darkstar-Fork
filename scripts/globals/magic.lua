@@ -1282,6 +1282,9 @@ function customResCheck(target, effect)
     elseif (effect == EFFECT_SILENCE) then
         effectRes = target:getMod(MOD_SILENCERES);
     elseif (effect == EFFECT_PLAGUE or effect == EFFECT_DISEASE) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_VIRUS)) then
+            return 1000;
+        end
         effectRes = target:getMod(MOD_VIRUSRES);
     elseif (effect == EFFECT_PETRIFICATION) then
         if (target:hasStatusEffect(EFFECT_NEGATE_PETRIFY)) then
@@ -1291,6 +1294,9 @@ function customResCheck(target, effect)
     elseif (effect == EFFECT_BIND) then
         effectRes = target:getMod(MOD_BINDRES);
     elseif (effect == EFFECT_CURSE_I or effect == EFFECT_CURSE_II or effect == EFFECT_BANE) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_CURSE)) then
+            return 1000;
+        end
         effectRes = target:getMod(MOD_CURSERES);
     elseif (effect == EFFECT_WEIGHT) then
         effectRes = target:getMod(MOD_GRAVITYRES);
@@ -1299,6 +1305,9 @@ function customResCheck(target, effect)
     elseif (effect == EFFECT_STUN) then
         effectRes = target:getMod(MOD_STUNRES);
     elseif (effect == EFFECT_CHARM) then
+        if (target:hasStatusEffect(EFFECT_NEGATE_CHARM)) then
+            return 1000;
+        end
         effectRes = target:getMod(MOD_CHARMRES);
     elseif (effect == EFFECT_AMNESIA) then
         if (target:hasStatusEffect(EFFECT_NEGATE_AMNESIA)) then

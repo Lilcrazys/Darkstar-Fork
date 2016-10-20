@@ -723,8 +723,8 @@ enum EFFECT
     // EFFECT_PLACEHOLDER              = 1014, // Description
     EFFECT_CURSE_SPIKES             = 1015, // Curse Spikes
     EFFECT_CUSTOM_ENSPELL           = 1016, // Description
-    EFFECT_WIND_SPIKES              = 1017,
-    EFFECT_STONE_SPIKES             = 1018,
+    // EFFECT_PLACEHOLDER              = 1017,
+    // EFFECT_PLACEHOLDER              = 1018,
     EFFECT_DARK_SPIKES              = 1019,
     EFFECT_SJCAP_BOOST              = 1020,
     EFFECT_RAGE                     = 1021, // NM CRUSH PUNY PLAYER WHO TAKE TOO LONG!
