@@ -34,18 +34,8 @@ REPLACE INTO `item_mods` VALUES (19001, 420, 10); -- Barrage accuracy
 
 REPLACE INTO `item_mods` VALUES (19090, 420, 20); -- Barrage accuracy
 
-INSERT INTO `item_mods` VALUES (19177,12,5);
-
-INSERT INTO `item_mods` VALUES (19178,12,6);
-
-INSERT INTO `item_mods` VALUES (19299,11,3);
-INSERT INTO `item_mods` VALUES (19299,30,2);
-
-INSERT INTO `item_mods` VALUES (19300,11,4);
-INSERT INTO `item_mods` VALUES (19300,30,3);
-
-INSERT INTO `item_mods` VALUES (19456, 165, 10); --
-INSERT INTO `item_mods` VALUES (19456, 421, 20); --
+INSERT INTO `item_mods` VALUES (19456, 165, 10); -- LEGION CUSTOM Crit hit rate
+INSERT INTO `item_mods` VALUES (19456, 421, 20); -- LEGION CUSTOM CRIT DMG
 
 INSERT INTO `item_mods` VALUES (19457, 165, 10); --
 INSERT INTO `item_mods` VALUES (19457, 421, 20); --
@@ -116,28 +106,8 @@ INSERT INTO `item_mods` VALUES (19644, 421, 30); --
 INSERT INTO `item_mods` VALUES (19645, 165, 15); --
 INSERT INTO `item_mods` VALUES (19645, 421, 30); --
 
-INSERT INTO `item_mods` VALUES (19743,24,9);
-INSERT INTO `item_mods` VALUES (19743,26,6);
-INSERT INTO `item_mods` VALUES (19743,27,-3);
-
-INSERT INTO `item_mods` VALUES (19744,24,10);
-INSERT INTO `item_mods` VALUES (19744,26,7);
-INSERT INTO `item_mods` VALUES (19744,27,-4);
-
-INSERT INTO `item_mods` VALUES (19786,24,6);
-INSERT INTO `item_mods` VALUES (19786,26,9);
-
-INSERT INTO `item_mods` VALUES (19787,24,7);
-INSERT INTO `item_mods` VALUES (19787,26,10);
-
-INSERT INTO `item_mods` VALUES (19796,11,4);
-INSERT INTO `item_mods` VALUES (19796,9,4);
-
-INSERT INTO `item_mods` VALUES (19797,11,5);
-INSERT INTO `item_mods` VALUES (19797,9,5);
-
-INSERT INTO `item_mods` VALUES (19805, 165, 20); --
-INSERT INTO `item_mods` VALUES (19805, 421, 40); --
+INSERT INTO `item_mods` VALUES (19805, 165, 20); -- LEGION CUSTOM Crit hit rate
+INSERT INTO `item_mods` VALUES (19805, 421, 40); -- LEGION CUSTOM CRIT DMG
 
 INSERT INTO `item_mods` VALUES (19806, 165, 20); --
 INSERT INTO `item_mods` VALUES (19806, 421, 40); --
@@ -181,14 +151,6 @@ INSERT INTO `item_mods` VALUES (20486, 421, 50); --
 INSERT INTO `item_mods` VALUES (20487, 165, 25); --
 INSERT INTO `item_mods` VALUES (20487, 421, 50); --
 
-INSERT INTO `item_mods` VALUES (20509,23,60); -- Spharai iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (20509,291,14); -- Counter +14
-INSERT INTO `item_mods` VALUES (20509,506,130); -- Extra DMG Chance 13%
-INSERT INTO `item_mods` VALUES (20509,507,300); -- Extra DMG X3
-INSERT INTO `item_mods` VALUES (20509,580,40);  -- Final Heaven DMG +40%
-INSERT INTO `item_mods` VALUES (20509,292,15);  -- Kick attacks
-INSERT INTO `item_mods` VALUES (20509,289,10);  -- Subtle Blow
-
 INSERT INTO `item_mods` VALUES (20510,302,10); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20510,288,15); -- DBL ATK
 
@@ -225,14 +187,6 @@ INSERT INTO `item_mods` VALUES (20563, 421, 50); --
 INSERT INTO `item_mods` VALUES (20564, 165, 25); --
 INSERT INTO `item_mods` VALUES (20564, 421, 50); --
 
-INSERT INTO `item_mods` VALUES (20583,23,60); -- Mandau iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (20583,431,1); -- Additional Effect - scripts\globals\items\mandau.lua
-INSERT INTO `item_mods` VALUES (20583,506,130); -- Extra DMG Chance 13%
-INSERT INTO `item_mods` VALUES (20583,507,300); -- Extra DMG X3
-INSERT INTO `item_mods` VALUES (20583,596,40); -- Mercy Stroke DMG +40%
-INSERT INTO `item_mods` VALUES (20583,165,5); -- Crit Rate 
-INSERT INTO `item_mods` VALUES (20583,421,5); -- Crit DMG
-
 INSERT INTO `item_mods` VALUES (20584,302,10); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20584,288,15); -- DBL ATK
 
@@ -259,12 +213,7 @@ INSERT INTO `item_mods` VALUES (20594,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20594,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20594,175,100); -- Skill Chain DMG
 
-INSERT INTO `item_mods` VALUES (20609,17,20);
-INSERT INTO `item_mods` VALUES (20609,68,22);
-INSERT INTO `item_mods` VALUES (20609,30,21);
-INSERT INTO `item_mods` VALUES (20609,302,3);
-INSERT INTO `item_mods` VALUES (20609,34, 1);
-INSERT INTO `item_mods` VALUES (20609,11,15);
+INSERT INTO `item_mods` VALUES (20609,11,15); -- LEGION CUSTOM AGI
 
 INSERT INTO `item_mods` VALUES (20616, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20616, 506, 200); -- occ
@@ -274,34 +223,16 @@ INSERT INTO `item_mods` VALUES (20620, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20620, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20620, 507, 200); -- occ
 
-INSERT INTO `item_mods` VALUES (20621,389,3);
-INSERT INTO `item_mods` VALUES (20621,68,19);
-INSERT INTO `item_mods` VALUES (20621,9,5);
-INSERT INTO `item_mods` VALUES (20622,389,4);
-INSERT INTO `item_mods` VALUES (20622,68,20);
-
-INSERT INTO `item_mods` VALUES (20622,9,6);
-
 INSERT INTO `item_mods` VALUES (20653, 165, 25); --
 INSERT INTO `item_mods` VALUES (20653, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20654, 165, 25); --
 INSERT INTO `item_mods` VALUES (20654, 421, 50); --
 
-INSERT INTO `item_mods` VALUES (20685,23,60); -- Excalibur iLvL 119 AG - ATT +60
-INSERT INTO `item_mods` VALUES (20685,431,1); -- Additional Effect - scripts\globals\items\excalibur.lua
-INSERT INTO `item_mods` VALUES (20685,506,130); -- Extra DMG Chance 13%
-INSERT INTO `item_mods` VALUES (20685,507,300); -- Extra DMG X3
-INSERT INTO `item_mods` VALUES (20685,613,40); -- Knights of the Round DMG +40%
-INSERT INTO `item_mods` VALUES (20685,370,3); -- Regen
-INSERT INTO `item_mods` VALUES (20685,369,1); -- REFRESH
-
 INSERT INTO `item_mods` VALUES (20686,302,10); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20686,288,15); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20686,30,40); -- MACC
 
-INSERT INTO `item_mods` VALUES (20687,27,23); -- ENM
-INSERT INTO `item_mods` VALUES (20687,161,-18); -- DMG Taken
 INSERT INTO `item_mods` VALUES (20687,302,10); -- TRP ATK
 INSERT INTO `item_mods` VALUES (20687,288,15); -- DBL ATK
 
@@ -317,8 +248,6 @@ INSERT INTO `item_mods` VALUES (20695,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20695,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20695,175,100); -- Skill Chain DMG
 
-INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
-
 INSERT INTO `item_mods` VALUES (20718, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20718, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20718, 507, 200); -- occ
@@ -327,25 +256,11 @@ INSERT INTO `item_mods` VALUES (20721, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20721, 506, 300); -- occ
 INSERT INTO `item_mods` VALUES (20721, 507, 200); -- occ
 
-INSERT INTO `item_mods` VALUES (20723,23,23);
-INSERT INTO `item_mods` VALUES (20723,25,5);
-
-INSERT INTO `item_mods` VALUES (20724,23,25);
-INSERT INTO `item_mods` VALUES (20724,25,6);
-
 INSERT INTO `item_mods` VALUES (20747, 165, 25); --
 INSERT INTO `item_mods` VALUES (20747, 421, 50); --
 
 INSERT INTO `item_mods` VALUES (20748, 165, 25); --
 INSERT INTO `item_mods` VALUES (20748, 421, 50); --
-
-INSERT INTO `item_mods` VALUES (20754,23,40);
-INSERT INTO `item_mods` VALUES (20754,255,15);
-INSERT INTO `item_mods` VALUES (20754,39,15);
-
-INSERT INTO `item_mods` VALUES (20755,23,41);
-INSERT INTO `item_mods` VALUES (20755,255,16);
-INSERT INTO `item_mods` VALUES (20755,39,16);
 
 INSERT INTO `item_mods` VALUES (20758, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20758, 506, 200); -- occ
@@ -354,12 +269,6 @@ INSERT INTO `item_mods` VALUES (20758, 507, 200); -- occ
 INSERT INTO `item_mods` VALUES (20759, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20759, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20759, 507, 200); -- occ
-
-INSERT INTO `item_mods` VALUES (20779,2,40);
-INSERT INTO `item_mods` VALUES (20779,8,7);
-
-INSERT INTO `item_mods` VALUES (20780,2,45);
-INSERT INTO `item_mods` VALUES (20780,8,8);
 
 INSERT INTO `item_mods` VALUES (20794, 165, 25); --
 INSERT INTO `item_mods` VALUES (20794, 421, 50); --
@@ -370,10 +279,6 @@ INSERT INTO `item_mods` VALUES (20795, 421, 50); --
 INSERT INTO `item_mods` VALUES (20809, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20809, 506, 200); -- occ
 
-INSERT INTO `item_mods` VALUES (20814,8,7);
-
-INSERT INTO `item_mods` VALUES (20815,8,8);
-
 INSERT INTO `item_mods` VALUES (20839, 165, 25); --
 INSERT INTO `item_mods` VALUES (20839, 421, 50); --
 
@@ -383,12 +288,6 @@ INSERT INTO `item_mods` VALUES (20840, 421, 50); --
 INSERT INTO `item_mods` VALUES (20857, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20857, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20857, 507, 200); -- occ
-
-INSERT INTO `item_mods` VALUES (20874,10,7);
-INSERT INTO `item_mods` VALUES (20874,8,7);
-
-INSERT INTO `item_mods` VALUES (20875,10,8);
-INSERT INTO `item_mods` VALUES (20875,8,8);
 
 INSERT INTO `item_mods` VALUES (20884, 165, 25); --
 INSERT INTO `item_mods` VALUES (20884, 421, 50); --
@@ -450,10 +349,6 @@ INSERT INTO `item_mods` VALUES (20946, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20946, 506, 200); -- occ
 INSERT INTO `item_mods` VALUES (20946, 507, 200); -- occ
 
-INSERT INTO `item_mods` VALUES (20950,23,12);
-
-INSERT INTO `item_mods` VALUES (20951,23,13);
-
 INSERT INTO `item_mods` VALUES (20974, 165, 25); --
 INSERT INTO `item_mods` VALUES (20974, 421, 50); --
 
@@ -471,18 +366,6 @@ INSERT INTO `item_mods` VALUES (20977,165,5); -- Crit Rate
 INSERT INTO `item_mods` VALUES (20977,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20977,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20977,175,100); -- Skill Chain DMG
-
-
-INSERT INTO `item_mods` VALUES (20984,25,15);
-
-INSERT INTO `item_mods` VALUES (20985,25,20);
-
-INSERT INTO `item_mods` VALUES (20988,25,20);
-INSERT INTO `item_mods` VALUES (20988,26,20);
-INSERT INTO `item_mods` VALUES (20988,168,35);
-INSERT INTO `item_mods` VALUES (20988,68,22);
-INSERT INTO `item_mods` VALUES (20988,9,10);
-INSERT INTO `item_mods` VALUES (20988,11,10);
 
 INSERT INTO `item_mods` VALUES (20989, 345, 1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20989, 506, 200); -- occ
