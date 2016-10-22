@@ -47,7 +47,6 @@ public:
     }
 
     int32 ChangeMusic(lua_State* L);        // Sets the specified music Track for specified music block.
-    int32 addLSpearl(lua_State* L);         // Adds LS to player
 
     int32 warp(lua_State*);                 // Returns Character to home point
     int32 leavegame(lua_State*);            // Character leaving game
@@ -194,7 +193,6 @@ public:
     int32 levelCap(lua_State*);             // genkai
     int32 levelRestriction(lua_State*);     // Establish/return current level restriction
     int32 sjRestriction(lua_State*);        // Establish/return subjob restriction
-    int32 sjBoost(lua_State*);              // Enhances a player's max subjob level temporarily
 
     int32 showText(lua_State*);             // Displays Dialog for npc
     int32 messageSpecial(lua_State*);       // Sends Special Message
@@ -505,10 +503,6 @@ public:
     int32 getGMHidden(lua_State* L);
     int32 setGMHidden(lua_State* L);
     int32 PrintToPlayer(lua_State* L);    // for sending debugging messages/command confirmations to the player's client
-    int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
-    int32 SpoofChatParty(lua_State* L);   // Sends a faked chat packet from a Mob to a party/alliance in battle.
-    int32 SpoofChatServer(lua_State* L);  // Sends a faked chat packet to the entire server.
-
     // == Pathfind Methods ==
     int32 pathThrough(lua_State* L);      // walk at normal speed through the given points
     // int32 WarpTo(lua_State* L);        // warp to the given point
@@ -617,6 +611,13 @@ public:
     int32 getEntity(lua_State* L);
 
     int32 canChangeState(lua_State* L);
+
+    // Custom
+    int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
+    int32 SpoofChatParty(lua_State* L);   // Sends a faked chat packet from a Mob to a party/alliance in battle.
+    int32 SpoofChatServer(lua_State* L);  // Sends a faked chat packet to the entire server.
+    int32 sjBoost(lua_State*);            // Enhances a player's max subjob level temporarily
+    int32 addLSpearl(lua_State* L);       // Adds LS to player
 
     // Knockback Implementation (c) 2016 atom0s
     int32 knockback(lua_State* L);

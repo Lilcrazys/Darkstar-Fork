@@ -192,6 +192,13 @@ inline int32 CLuaBaseEntity::warp(lua_State *L)
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
 
+    if (charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail")) // (jailutils::InPrison((CCharEntity*)m_PBaseEntity))
+    {
+        uint16 messageID = luautils::GetTextIDVariable(131, "NO_ESCAPE");
+        ((CCharEntity*)m_PBaseEntity)->pushPacket(new CMessageSpecialPacket(m_PBaseEntity,messageID,0,0,0,0,0));
+        return 0;
+    }
+
     ((CCharEntity*)m_PBaseEntity)->loc.boundary = 0;
     ((CCharEntity*)m_PBaseEntity)->loc.p = ((CCharEntity*)m_PBaseEntity)->profile.home_point.p;
     ((CCharEntity*)m_PBaseEntity)->loc.destination = ((CCharEntity*)m_PBaseEntity)->profile.home_point.destination;
@@ -601,6 +608,13 @@ inline int32 CLuaBaseEntity::setPos(lua_State *L)
 
     if (m_PBaseEntity->objtype == TYPE_PC)
     {
+        if (charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail")) // (jailutils::InPrison((CCharEntity*)m_PBaseEntity))
+        {
+            uint16 messageID = luautils::GetTextIDVariable(131, "NO_ESCAPE");
+            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CMessageSpecialPacket(m_PBaseEntity,messageID,0,0,0,0,0));
+            return 0;
+        }
+
         if (!lua_isnil(L, 5) && lua_isnumber(L, 5) && ((CCharEntity*)m_PBaseEntity)->status == STATUS_DISAPPEAR)
         {
             // do not modify zone/position if the character is already zoning
@@ -11042,15 +11056,6 @@ inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
             ((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
             ((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
             uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem, 1);
-
-            // auto-equip it //
-            /* if (invSlotID != ERROR_SLOTID)
-            {
-                PItem->setSubType(ITEM_LOCKED);
-                PChar->equip[SLOT_LINK] = invSlotID;
-                PChar->equipLoc[SLOT_LINK] = LOC_INVENTORY;
-                linkshell::AddOnlineMember(PChar, (CItemLinkshell*)PItem);
-            } */
         }
     }
 
@@ -11582,8 +11587,8 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatPlayer),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatParty),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatServer),
-    LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),
 
     // Knockback Implementation (c) 2016 atom0s
     LUNAR_DECLARE_METHOD(CLuaBaseEntity, knockback),

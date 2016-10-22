@@ -46,11 +46,6 @@ function onTrigger(player, target, cellId, reason)
     local message = string.format( '%s jailed %s(%d) into cell %d. Reason: %s', player:getName(), target, targ:getID(), cellId, reason );
     printf( message );
 
-    -- Send the target to jail..
-    local dest = jailCells[ cellId ];
-    targ:setVar( "inJail", cellId );
-    targ:setPos( dest[1], dest[2], dest[3], dest[4], 131 );
-
     -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
@@ -67,4 +62,9 @@ function onTrigger(player, target, cellId, reason)
     "\n" -- This MUST be final line.
     );
     file:close();
+
+    -- Send the target to jail..
+    local dest = jailCells[ cellId ];
+    targ:setVar( "inJail", cellId );
+    targ:setPos( dest[1], dest[2], dest[3], dest[4], 131 );
 end
