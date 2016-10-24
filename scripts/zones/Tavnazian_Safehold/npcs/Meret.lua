@@ -143,11 +143,11 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    local item = player:getLocalVar("Meret_Item");
+    local reward = player:getLocalVar("Meret_Item");
     if (csid == 0x024A) then
         if (player:getFreeSlotsCount()==0 or (option ~= VIRTUE_STONE_POUCH and player:hasItem(option)==true)) then
             player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,option);
-        elseif (option ~= item) then
+        elseif (option ~= reward) then
             -- Cs hack detection
             player:PrintToPlayer("Hack detected. AUTO JAIL ENACTED.");
 
@@ -161,8 +161,9 @@ function onEventFinish(player,csid,option)
             "\n", "Time: ".. timeStamp,
             "\n", "User: ".. "NPC Meret",
             "\n", "Target: ".. player:getName(),
-            "\n", "Jail cell: ".. cellId,
-            "\n", "Reason: ".. "CS_event_hack_detected",
+            "\n", "Jail cell: 6",
+            "\n", "Reason: CS_event_hack_detected",
+            "\n", "item ID: ".. reward,
             "\n", "----------------------------------------",
             "\n" -- This MUST be final line.
             );

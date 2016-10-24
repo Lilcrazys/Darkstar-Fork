@@ -92,8 +92,9 @@ function onEventFinish(player,csid,option)
         "\n", "Time: ".. timeStamp,
         "\n", "User: ".. "NPC Wilhelm",
         "\n", "Target: ".. player:getName(),
-        "\n", "Jail cell: ".. cellId,
-        "\n", "Reason: ".. "CS_event_hack_detected",
+        "\n", "Jail cell: 6",
+        "\n", "Reason: CS_event_hack_detected",
+        "\n", "item ID: ".. item,
         "\n", "----------------------------------------",
         "\n" -- This MUST be final line.
         );
