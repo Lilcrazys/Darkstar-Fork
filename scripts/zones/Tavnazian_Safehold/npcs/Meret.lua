@@ -11,30 +11,30 @@ require("scripts/zones/Tavnazian_Safehold/TextIDs");
 --Meret     24A 586 recompense
 local Sin_of_Indulgence=1915;
 local FUTSUNO_MITAMA=17810;
-local Sin_of_Indolence=1914;       
+local Sin_of_Indolence=1914;
 local AUREOLE=18245;
-local Sin_of_Invidiousness=1916;       
+local Sin_of_Invidiousness=1916;
 local RAPHAEL_ROD=18398;
-local Sin_of_Indignation=1913;       
+local Sin_of_Indignation=1913;
 local NINURTA_SASH=15458;
-local Sin_of_Insolence=1917;       
+local Sin_of_Insolence=1917;
 local MARS_RING=15548;
-local Sin_of_Infatuation=1918;       
+local Sin_of_Infatuation=1918;
 local BELLONA_RING=15549;
-local Sin_of_Intemperance=1919;       
+local Sin_of_Intemperance=1919;
 local MINERVA_RING =15550;
-local Aura_of_Adulation=1911;        
+local Aura_of_Adulation=1911;
 local NOVIO_EARRING=14808;
-local Aura_of_Voracity=1912;       
+local Aura_of_Voracity=1912;
 local NOVIA_EARRING =14809;
-local Vice_of_Antipathy=1901;       
-local MERCIFUL_CAPE=15471; 
-local Vice_of_Avarice=1902;       
+local Vice_of_Antipathy=1901;
+local MERCIFUL_CAPE=15471;
+local Vice_of_Avarice=1902;
 local ALTRUISTIC_CAPE=15472;
-local Vice_of_Aspersion=1903;        
-local ASTUTE_CAPE=15473; 
-    
---------------------------------------  
+local Vice_of_Aspersion=1903;
+local ASTUTE_CAPE=15473;
+
+--------------------------------------
 local AERN_ORGAN=1786;
 local EUVHI_ORGAN=1818;
 local HPEMDE_ORGAN=1787;
@@ -56,30 +56,30 @@ function onTrade(player,npc,trade)
     if (NameOfScience == QUEST_COMPLETED and trade:getItemCount()==1) then
         if (trade:hasItemQty(Sin_of_Indulgence,1)) then
             item = Sin_of_Indulgence; reward = FUTSUNO_MITAMA;
-        elseif (trade:hasItemQty(Sin_of_Indolence,1)) then       
+        elseif (trade:hasItemQty(Sin_of_Indolence,1)) then
             item = Sin_of_Indolence; reward = AUREOLE;
-        elseif (trade:hasItemQty(Sin_of_Invidiousness,1)) then  
+        elseif (trade:hasItemQty(Sin_of_Invidiousness,1)) then
             item = Sin_of_Invidiousness;reward = RAPHAEL_ROD;
-        elseif (trade:hasItemQty(Sin_of_Indignation,1)) then       
+        elseif (trade:hasItemQty(Sin_of_Indignation,1)) then
             item = Sin_of_Indignation;reward = NINURTA_SASH;
-        elseif (trade:hasItemQty(Sin_of_Insolence,1)) then  
+        elseif (trade:hasItemQty(Sin_of_Insolence,1)) then
             item = Sin_of_Insolence;reward = MARS_RING;
-        elseif (trade:hasItemQty(Sin_of_Infatuation,1)) then       
+        elseif (trade:hasItemQty(Sin_of_Infatuation,1)) then
             item = Sin_of_Infatuation; reward = BELLONA_RING;
-        elseif (trade:hasItemQty(Sin_of_Intemperance,1)) then       
+        elseif (trade:hasItemQty(Sin_of_Intemperance,1)) then
             item = Sin_of_Intemperance; reward = MINERVA_RING;
-        elseif (trade:hasItemQty(Aura_of_Adulation,1)) then       
+        elseif (trade:hasItemQty(Aura_of_Adulation,1)) then
             item = Aura_of_Adulation;reward = NOVIO_EARRING;
-        elseif (trade:hasItemQty(Aura_of_Voracity,1)) then  
-            item = Aura_of_Voracity;reward = NOVIA_EARRING; 
-        elseif (trade:hasItemQty(Vice_of_Antipathy,1)) then  
-            item = Vice_of_Antipathy;reward = MERCIFUL_CAPE; 
-        elseif (trade:hasItemQty(Vice_of_Avarice,1)) then       
+        elseif (trade:hasItemQty(Aura_of_Voracity,1)) then
+            item = Aura_of_Voracity;reward = NOVIA_EARRING;
+        elseif (trade:hasItemQty(Vice_of_Antipathy,1)) then
+            item = Vice_of_Antipathy;reward = MERCIFUL_CAPE;
+        elseif (trade:hasItemQty(Vice_of_Avarice,1)) then
             item = Vice_of_Avarice;reward = ALTRUISTIC_CAPE;
-        elseif (trade:hasItemQty(Vice_of_Aspersion,1)) then       
+        elseif (trade:hasItemQty(Vice_of_Aspersion,1)) then
             item = Vice_of_Aspersio;reward = ASTUTE_CAPE;
-    
-  --------------virtue stones------------------------  
+
+  --------------virtue stones------------------------
         elseif (trade:hasItemQty(AERN_ORGAN,1)) then
             item =AERN_ORGAN; reward = VIRTUE_STONE_POUCH;
         elseif (trade:hasItemQty(EUVHI_ORGAN,1)) then
@@ -97,12 +97,13 @@ function onTrade(player,npc,trade)
         elseif (trade:hasItemQty(LUMINIAN_Tissue,1)) then
             item =LUMINIAN_Tissue; reward = VIRTUE_STONE_POUCH;
         end
-    
+
         if (reward > 0) then
+            player:setLocalVar("Meret_Item",reward);
             player:startEvent(0x024A,item,reward);
         end
     end
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
@@ -120,11 +121,11 @@ function onTrigger(player,npc)
             end
         else
             player:startEvent(0x0249);
-        end       
+        end
     else
         player:startEvent(0x0248);
     end
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate
@@ -142,13 +143,37 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
+    local item = player:getLocalVar("Meret_Item");
     if (csid == 0x024A) then
         if (player:getFreeSlotsCount()==0 or (option ~= VIRTUE_STONE_POUCH and player:hasItem(option)==true)) then
-            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,option); 
+            player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,option);
+        elseif (option ~= item) then
+            -- Cs hack detection
+            player:PrintToPlayer("Hack detected. AUTO JAIL ENACTED.");
+
+            -- Log it
+            local dateStamp = os.date("%d/%m/%Y");
+            local timeStamp = os.date("%I:%M:%S %p");
+            local file = io.open("log/commands/AUTO_jail.log", "a");
+            file:write(
+            "\n", "----------------------------------------",
+            "\n", "Date: ".. dateStamp,
+            "\n", "Time: ".. timeStamp,
+            "\n", "User: ".. "NPC Meret",
+            "\n", "Target: ".. player:getName(),
+            "\n", "Jail cell: ".. cellId,
+            "\n", "Reason: ".. "CS_event_hack_detected",
+            "\n", "----------------------------------------",
+            "\n" -- This MUST be final line.
+            );
+            file:close();
+
+            player:setVar( "inJail", 6 );
+            player:setPos( -180, 11,  220, 0, 131 );
         else
-        player:tradeComplete();
-        player:addItem(option);
-        player:messageSpecial(ITEM_OBTAINED,option); -- Item 
+            player:tradeComplete();
+            player:addItem(option);
+            player:messageSpecial(ITEM_OBTAINED,option); -- Item
         end
     end
 end;

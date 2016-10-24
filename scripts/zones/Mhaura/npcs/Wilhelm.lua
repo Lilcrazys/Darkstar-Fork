@@ -81,8 +81,6 @@ function onEventFinish(player,csid,option)
     elseif ((csid== 0x0148 or csid == 0x014A) and item ~= option) then
         -- Cs hack detection
         player:PrintToPlayer("Hack detected. AUTO JAIL ENACTED.");
-        player:setVar( "inJail", 6 );
-        player:setPos( -180, 11,  220, 0, 131 );
 
         -- Log it
         local dateStamp = os.date("%d/%m/%Y");
@@ -101,5 +99,7 @@ function onEventFinish(player,csid,option)
         );
         file:close();
 
+        player:setVar( "inJail", 6 );
+        player:setPos( -180, 11,  220, 0, 131 );
      end
 end;
