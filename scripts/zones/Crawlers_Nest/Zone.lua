@@ -19,7 +19,7 @@ function onInitialize(zone)
     local tomes = {17584492,17584493};
     SetGroundsTome(tomes);
 
-    local vwnpc = {17478158,17478159,17478160};
+    local vwnpc = {17584494,17584495,17584496};
     SetVoidwatchNPC(vwnpc);
 
     UpdateTreasureSpawnPoint(17584471);
