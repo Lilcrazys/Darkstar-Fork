@@ -899,7 +899,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassi
 -- 17028095
 -- ------------------------------------------------------------
 REPLACE INTO `npc_list` VALUES (17027609,'Planar_Rift','Planar Rift',98,902,-15,336,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as yagu8 in DSP 9/24/2016
-REPLACE INTO `mob_spawn_points` VALUES (17027486,'Vanasarvik','Vanasarvik',90498,902,-15.729,333.408,41); 
+REPLACE INTO `mob_spawn_points` VALUES (17027486,'Vanasarvik','Vanasarvik',90498,902,-15.729,333.408,41);
 INSERT INTO `mob_spawn_points` VALUES (17027487,'Elder_Imp','Elder Imp',90499,901,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027488,'Elder_Imp','Elder Imp',90499,902,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027489,'Elder_Imp','Elder Imp',90499,903,-15,336,41);
@@ -1894,14 +1894,14 @@ REPLACE INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',9
 REPLACE INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
 REPLACE INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
 
-INSERT INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,-195.000,12.001,240.000,0); -- Hall of An : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,155.000,12.001,238.000,0); -- Hall of Ki : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526875,'Auspicious_Entity','Auspicious Entity',90009,159.000,12.001,-155.000,0); -- Hall of Im : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526876,'Auspicious_Entity','Auspicious Entity',90010,-197.000,12.001,-159.000,0); -- Hall of Muru : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity_2','Auspicious Entity',90011,0.000,0.001,0.000,0); -- Hall of Muru : TE
-INSERT INTO `mob_spawn_points` VALUES (17526878,'Auspicious_Entity_2','Auspicious Entity',90012,0.000,0.001,0.000,0); -- Hall of Mul : TE
-INSERT INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity','Auspicious Entity',90013,-20.000,12.001,20.000,0); -- Hall of Mul : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity_3','Auspicious Entity',90014,12.000,9.001,-12.000,0); -- Hall of Mul : 2hr reset
+INSERT INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,-195.000,12.001,240.000,0); -- (Air) Hall of An : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,155.000,12.001,238.000,0); -- (Dark) Hall of Ki : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526875,'Auspicious_Entity','Auspicious Entity',90009,159.000,12.001,-155.000,0); -- (Earth) Hall of Im : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526876,'Auspicious_Entity','Auspicious Entity',90010,-197.000,12.001,-159.000,0); -- (Fire) Hall of Muru : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity_2','Auspicious Entity',90011,0.000,0.001,0.000,0); -- (Ice) Hall of Muru : TE
+INSERT INTO `mob_spawn_points` VALUES (17526878,'Auspicious_Entity_2','Auspicious Entity',90012,0.000,0.001,0.000,0); -- (Light) Hall of Mul : TE
+INSERT INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity','Auspicious Entity',90013,-20.000,12.001,20.000,0); -- (Lighting) Hall of Mul : Restore
+INSERT INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity_3','Auspicious Entity',90014,12.000,9.001,-12.000,0); -- (Water) Hall of Mul : 2hr reset
 
 INSERT INTO `mob_spawn_points` VALUES (17526805,'Mired_Cerberus','Mired Cerberus',90020,182,12,219,116);
 INSERT INTO `mob_spawn_points` VALUES (17526806,'Mired_Khimaira','Mired Khimaira',90021,181,12,239,130);
