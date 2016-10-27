@@ -19,11 +19,11 @@ function onTrade(player,npc,trade)
     -- local HALL = 0;
 
     print('Player trading to enter Legion: ' .. player:getName());
-    print('gil:   ' .. trade:getGil(1000000));
+    print('gil:   ' .. trade:getGil());
     print('qty:   ' .. tostring(trade:hasItemQty(4104,1)));
     print('total: ' .. trade:getItemCount());
     
-    if (trade:getGil(1000000) == 1000000) then
+    if (trade:getGil() == 1000000) then
         if (trade:hasItemQty(4104,1) and trade:getItemCount() == 2) then -- gil + fire cluster to pop legion hall An
             SpawnMob(17526785); -- Lofty_Behemoth
             SpawnMob(17526786); -- Lofty_Wyrm
