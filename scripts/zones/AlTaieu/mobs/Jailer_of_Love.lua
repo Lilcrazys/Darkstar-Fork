@@ -175,7 +175,7 @@ function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then -- This check is to force this to only run once.
         local AV_CHANCE = 25;
         if (AV_CHANCE > math.random(0,99)) then
-            SpawnMob(16912876):updateEnmity(killer);
+            SpawnMob(16912876):updateEnmity(player);
         end
     end
 end;
