@@ -163,11 +163,12 @@ end;
 function onMobDeath(mob, player, isKiller)
     if (player:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then
         if (player:getMaskBit(player:getVar("HYACINTH_STRATUM"), 2) == false) then
-           player:setMaskBit(player:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",2,true);
+            player:setMaskBit(player:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",2,true);
         end
+
         if (player:isMaskFull(player:getVar("HYACINTH_STRATUM"),4) == true) then
-           player:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
-           player:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
+            player:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
+            player:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
         end
     end
 

@@ -2,7 +2,7 @@
 -- Area: The Garden of Ru'Hmet
 --  MOB: Aw_aern PH (Ix'Aern DRK and DRG)
 -----------------------------------
---[[ Fuck all this shit
+
 package.loaded["scripts/zones/The_Garden_of_RuHmet/TextIDs"] = nil;
 
 -----------------------------------
@@ -56,4 +56,4 @@ function onMobDespawn(mob)
         SpawnMob(IxAernDRG);
         SetServerVariable("[SEA]IxAernDRG_PH", 0); -- Clear the variable because it is spawned!
     end;
-end;]]
+end;
