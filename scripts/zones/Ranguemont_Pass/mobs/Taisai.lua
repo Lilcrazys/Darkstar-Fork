@@ -5,6 +5,7 @@
 
 function onMobRoam(mob)
 
+    --[[
     local Taisaijin = 17457216;
     local Taisaijin_PH = 0;
     local Taisaijin_PH_Table =
@@ -27,6 +28,7 @@ function onMobRoam(mob)
             end
         end
     end
+    ]]
 
 end;
 
@@ -52,6 +54,7 @@ function onMobDespawn(mob)
         17457215
     };
 
+    --[[
     for i = 1, table.getn(Taisaijin_PH_Table), 1 do
         if (Taisaijin_PH_Table[i] ~= nil) then
             if (Taisai == Taisaijin_PH_Table[i]) then
@@ -59,5 +62,18 @@ function onMobDespawn(mob)
             end
         end
     end
+    ]]
 
+    if (Taisaijin_PH_Table[Taisai] ~= nil) then
+        local Taisaijin_ToD = GetServerVariable("Taisaijin[POP]");
+        if (Taisaijin_ToD <= os.time(t) and GetMobAction(Taisaijin_ToD) == 0) then
+            if (math.random(1,15) == 5) then
+                DeterMob(Taisai, true);
+                DeterMob(Taisaijin, false);
+                UpdateNMSpawnPoint(Taisaijin);
+                GetMobByID(Taisaijin):setRespawnTime(GetMobRespawnTime(mob:getID()));
+                SetServerVariable("Taisaijin[PH]", Taisai);
+            end
+        end
+    end
 end;
