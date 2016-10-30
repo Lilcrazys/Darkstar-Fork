@@ -77,6 +77,7 @@ This file is part of DarkStar-server source code.
 #include "packets/bazaar_item.h"
 #include "packets/bazaar_message.h"
 #include "packets/bazaar_purchase.h"
+#include "packets/bazaar_sale.h"
 #include "packets/blacklist.h"
 #include "packets/campaing_map.h"
 #include "packets/char.h"
@@ -5349,8 +5350,7 @@ void SmallPacket0x106(map_session_data_t* session, CCharEntity* PChar, CBasicPac
         charutils::UpdateItem(PTarget, LOC_INVENTORY, 0, Price1);
 
         PChar->pushPacket(new CBazaarPurchasePacket(PTarget, true));
-
-        PTarget->pushPacket(new CBazaarConfirmationPacket(PChar, SlotID, Quantity));
+        PTarget->pushPacket(new CBazaarSalePacket(PTarget, PChar, PItem->getID(), Quantity));
 
         charutils::UpdateItem(PTarget, LOC_INVENTORY, SlotID, -Quantity);
 
