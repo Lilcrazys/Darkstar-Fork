@@ -19,6 +19,7 @@ end;
 
 function onMobDespawn(mob)
 
+    --[[
     local Taisaijin = 17457216;
     local Taisaijin_PH = GetServerVariable("Taisaijin_PH");
 
@@ -27,5 +28,11 @@ function onMobDespawn(mob)
     DeterMob(Taisaijin, true);
     DeterMob(Taisaijin_PH, false);
     SpawnMob(Taisaijin_PH, "", GetMobRespawnTime(Taisaijin_PH));
+    ]]
 
+    local Taisaijin_PH = GetServerVariable("Taisaijin_PH");
+    SetServerVariable("Taisaijin[POP]", os.time() + math.random(900, 2700));
+    SetServerVariable("Taisaijin[PH]", 0);
+    DeterMob(mob:getID(), true);
+    DeterMob(Taisaijin_PH, false);
 end;
