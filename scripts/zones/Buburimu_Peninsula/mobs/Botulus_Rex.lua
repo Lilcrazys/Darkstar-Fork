@@ -5,9 +5,9 @@
 package.loaded["scripts/zones/Buburimu_Peninsula/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Buburimu_Peninsula/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/status");
 require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -45,77 +45,77 @@ function onMobSpawn(mob)
 
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
-        SetDropRate(9645,0,8919,50); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,50); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 2) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,50); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,50); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 3) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,50); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,50); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 4) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,50); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,50); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 5) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,50); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,50); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 6) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,50); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,50); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 7) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,50); -- Carbutear
-        SetDropRate(9645,0,8926,0); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,50); -- Carbutear
+        SetDropRate(9645,8926,0); -- Fenritear
     elseif (RND1 == 8) then
-        SetDropRate(9645,0,8919,0); -- Ifritear
-        SetDropRate(9645,0,8920,0); -- Leviatear
-        SetDropRate(9645,0,8921,0); -- Ramutear
-        SetDropRate(9645,0,8922,0); -- Garutear
-        SetDropRate(9645,0,8923,0); -- Titatear
-        SetDropRate(9645,0,8924,0); -- Shivatear
-        SetDropRate(9645,0,8925,0); -- Carbutear
-        SetDropRate(9645,0,8926,50); -- Fenritear
+        SetDropRate(9645,8919,0); -- Ifritear
+        SetDropRate(9645,8920,0); -- Leviatear
+        SetDropRate(9645,8921,0); -- Ramutear
+        SetDropRate(9645,8922,0); -- Garutear
+        SetDropRate(9645,8923,0); -- Titatear
+        SetDropRate(9645,8924,0); -- Shivatear
+        SetDropRate(9645,8925,0); -- Carbutear
+        SetDropRate(9645,8926,50); -- Fenritear
     end
 
 end;

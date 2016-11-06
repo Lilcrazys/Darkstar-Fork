@@ -1,14 +1,14 @@
 -----------------------------------
--- Area: ?
+-- Area: Behemoths Dominion
 -- VWNM: Pil
 -----------------------------------
 package.loaded["scripts/zones/Behemoths_Dominion/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Behemoths_Dominion/TextIDs");
-require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/quests");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+require("scripts/globals/quests");
+require("scripts/globals/magic");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -16,7 +16,6 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     -- setMobMod
-    -- mob:setMobMod(MOBMOD_IDLE_DESPAWN, 180);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 35);
 
     -- addMod
@@ -41,82 +40,82 @@ function onMobSpawn(mob)
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
-        SetDropRate(9634,0,8919,50); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,50); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 2) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,50); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,50); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 3) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,50); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,50); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 4) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,50); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,50); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 5) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,50); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,50); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 6) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,50); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,50); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 7) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,50); -- Carbutear
-        SetDropRate(9634,0,8926,0); -- Fenritear
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,50); -- Carbutear
+        SetDropRate(9634,8926,0); -- Fenritear
     elseif (RND1 == 8) then
-        SetDropRate(9634,0,8919,0); -- Ifritear
-        SetDropRate(9634,0,8920,0); -- Leviatear    
-        SetDropRate(9634,0,8921,0); -- Ramutear    
-        SetDropRate(9634,0,8922,0); -- Garutear    
-        SetDropRate(9634,0,8923,0); -- Titatear    
-        SetDropRate(9634,0,8924,0); -- Shivatear   
-        SetDropRate(9634,0,8925,0); -- Carbutear
-        SetDropRate(9634,0,8926,50); -- Fenritear       
-    end    
-    
+        SetDropRate(9634,8919,0); -- Ifritear
+        SetDropRate(9634,8920,0); -- Leviatear
+        SetDropRate(9634,8921,0); -- Ramutear
+        SetDropRate(9634,8922,0); -- Garutear
+        SetDropRate(9634,8923,0); -- Titatear
+        SetDropRate(9634,8924,0); -- Shivatear
+        SetDropRate(9634,8925,0); -- Carbutear
+        SetDropRate(9634,8926,50); -- Fenritear
+    end
+
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -185,9 +184,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 450);
-    player:addExp(10000);
-
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_III)) then -- Pil Kill
         if (player:getMaskBit(player:getVar("WHITE_STRATUM_III"), 2) == false) then
             player:setMaskBit(player:getVar("WHITE_STRATUM_III"),"WHITE_STRATUM_III",2,true);
@@ -201,5 +197,8 @@ function onMobDeath(mob, player, isKiller)
                 player:setVar("WHITE_STRATUM_III", 0);
             end
         end
-    end    
+    end
+
+    player:addCurrency("bayld", 450);
+    player:addExp(10000);
 end;
