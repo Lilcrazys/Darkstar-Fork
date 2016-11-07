@@ -32,8 +32,8 @@ function onMobSpawn(mob)
     mob:addMod(MOD_EVA, -100);
     mob:addMod(MOD_ACC, 100);
     mob:addMod(MOD_DOUBLE_ATTACK, 10)
-    mob:addMod(MOD_DMGMAGIC, 50);
-    mob:addMod(MOD_DMGRANGE, 50);
+    mob:addMod(MOD_DMGMAGIC, 20);
+    mob:addMod(MOD_DMGRANGE, 20);
 end;
 
 -----------------------------------

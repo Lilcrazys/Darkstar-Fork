@@ -33,7 +33,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_PARALYZERES,30);
     mob:setMod(MOD_TERRORRES, 100);
 
-    mob:addMod(MOD_DMGMAGIC, 64);
+    mob:addMod(MOD_DMGMAGIC, 15);
 
 end;
 
