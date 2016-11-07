@@ -1155,69 +1155,33 @@ INSERT INTO `item_mods` VALUES (27579,5,55);
 
 INSERT INTO `item_mods` VALUES (27594,1,13);
 
-REPLACE INTO `item_mods` VALUES (27676, 1, 82); -- DEF:82
-REPLACE INTO `item_mods` VALUES (27676, 10, 19); -- VIT+19
-REPLACE INTO `item_mods` VALUES (27676, 11, 14); -- AGI+14
-REPLACE INTO `item_mods` VALUES (27676, 13, 16); -- MND+16
-REPLACE INTO `item_mods` VALUES (27676, 14, 13); -- CHR+13
-REPLACE INTO `item_mods` VALUES (27676, 2, 18); -- HP+18
-REPLACE INTO `item_mods` VALUES (27676, 23, 17); -- Attack+17
-REPLACE INTO `item_mods` VALUES (27676, 31, 29); -- Magic Evasion+29
-REPLACE INTO `item_mods` VALUES (27676, 384, 61); -- Haste+6%
-REPLACE INTO `item_mods` VALUES (27676, 5, 19); -- MP+19
-REPLACE INTO `item_mods` VALUES (27676, 65, 15); -- Evasion+15
-REPLACE INTO `item_mods` VALUES (27676, 8, 20); -- STR+20
-REPLACE INTO `item_mods` VALUES (27676, 9, 14); -- DEX+14
+INSERT INTO `item_mods` VALUES (27676, 1, 82); -- DEF:82
+INSERT INTO `item_mods` VALUES (27676, 10, 19); -- VIT+19
+INSERT INTO `item_mods` VALUES (27676, 11, 14); -- AGI+14
+INSERT INTO `item_mods` VALUES (27676, 13, 16); -- MND+16
+INSERT INTO `item_mods` VALUES (27676, 14, 13); -- CHR+13
+INSERT INTO `item_mods` VALUES (27676, 2, 18); -- HP+18
+INSERT INTO `item_mods` VALUES (27676, 23, 17); -- Attack+17
+INSERT INTO `item_mods` VALUES (27676, 31, 29); -- Magic Evasion+29
+INSERT INTO `item_mods` VALUES (27676, 384, 61); -- Haste+6%
+INSERT INTO `item_mods` VALUES (27676, 5, 19); -- MP+19
+INSERT INTO `item_mods` VALUES (27676, 65, 15); -- Evasion+15
+INSERT INTO `item_mods` VALUES (27676, 8, 20); -- STR+20
+INSERT INTO `item_mods` VALUES (27676, 9, 14); -- DEX+14
 
-INSERT INTO `item_mods` VALUES (27677, 1, 69);
-INSERT INTO `item_mods` VALUES (27677, 2, 17);
-INSERT INTO `item_mods` VALUES (27677, 5, 26);
-INSERT INTO `item_mods` VALUES (27677, 8, 13);
-INSERT INTO `item_mods` VALUES (27677, 9, 13);
-INSERT INTO `item_mods` VALUES (27677, 10, 13);
-INSERT INTO `item_mods` VALUES (27677, 11, 13);
-INSERT INTO `item_mods` VALUES (27677, 12, 20);
-INSERT INTO `item_mods` VALUES (27677, 13, 20);
-INSERT INTO `item_mods` VALUES (27677, 14, 17);
-INSERT INTO `item_mods` VALUES (27677, 30, 15);
-INSERT INTO `item_mods` VALUES (27677, 65, 16);
-INSERT INTO `item_mods` VALUES (27677, 31, 51);
-INSERT INTO `item_mods` VALUES (27677, 29, 2);
-INSERT INTO `item_mods` VALUES (27677, 115, 13);
-INSERT INTO `item_mods` VALUES (27677, 384, 51);
--- INSERT INTO `item_mods` VALUES (27677, 170, 12); -- Enhances "Fast Cast" effect not coded
-
-INSERT INTO `item_mods` VALUES (27688, 1, 96);
-INSERT INTO `item_mods` VALUES (27688, 2, 36);
-INSERT INTO `item_mods` VALUES (27688, 5, 35);
-INSERT INTO `item_mods` VALUES (27688, 8, 19);
-INSERT INTO `item_mods` VALUES (27688, 9, 19);
-INSERT INTO `item_mods` VALUES (27688, 10, 19);
-INSERT INTO `item_mods` VALUES (27688, 11, 19);
-INSERT INTO `item_mods` VALUES (27688, 12, 27);
-INSERT INTO `item_mods` VALUES (27688, 13, 27);
-INSERT INTO `item_mods` VALUES (27688, 14, 24);
-INSERT INTO `item_mods` VALUES (27688, 30, 15);
-INSERT INTO `item_mods` VALUES (27688, 65, 36);
-INSERT INTO `item_mods` VALUES (27688, 31, 75);
-INSERT INTO `item_mods` VALUES (27688, 29, 5);
-INSERT INTO `item_mods` VALUES (27688, 115, 13);
-INSERT INTO `item_mods` VALUES (27688, 384, 61);
-INSERT INTO `item_mods` VALUES (27688, 170, 12);
-
-REPLACE INTO `item_mods` VALUES (27697, 1, 109); -- DEF:82
-REPLACE INTO `item_mods` VALUES (27697, 10, 25); -- VIT+19
-REPLACE INTO `item_mods` VALUES (27697, 11, 20); -- AGI+14
-REPLACE INTO `item_mods` VALUES (27697, 13, 22); -- MND+16
-REPLACE INTO `item_mods` VALUES (27697, 14, 19); -- CHR+13
-REPLACE INTO `item_mods` VALUES (27697, 2, 38); -- HP+18
-REPLACE INTO `item_mods` VALUES (27697, 23, 22); -- Attack+17
-REPLACE INTO `item_mods` VALUES (27697, 31, 43); -- Magic Evasion+29
-REPLACE INTO `item_mods` VALUES (27697, 384, 61); -- Haste+6%
-REPLACE INTO `item_mods` VALUES (27697, 5, 23); -- MP+19
-REPLACE INTO `item_mods` VALUES (27697, 65, 33); -- Evasion+15
-REPLACE INTO `item_mods` VALUES (27697, 8, 27); -- STR+20
-REPLACE INTO `item_mods` VALUES (27697, 9, 20); -- DEX+14
+INSERT INTO `item_mods` VALUES (27697, 1, 109); -- DEF:82
+INSERT INTO `item_mods` VALUES (27697, 10, 25); -- VIT+19
+INSERT INTO `item_mods` VALUES (27697, 11, 20); -- AGI+14
+INSERT INTO `item_mods` VALUES (27697, 13, 22); -- MND+16
+INSERT INTO `item_mods` VALUES (27697, 14, 19); -- CHR+13
+INSERT INTO `item_mods` VALUES (27697, 2, 38); -- HP+18
+INSERT INTO `item_mods` VALUES (27697, 23, 22); -- Attack+17
+INSERT INTO `item_mods` VALUES (27697, 31, 43); -- Magic Evasion+29
+INSERT INTO `item_mods` VALUES (27697, 384, 61); -- Haste+6%
+INSERT INTO `item_mods` VALUES (27697, 5, 23); -- MP+19
+INSERT INTO `item_mods` VALUES (27697, 65, 33); -- Evasion+15
+INSERT INTO `item_mods` VALUES (27697, 8, 27); -- STR+20
+INSERT INTO `item_mods` VALUES (27697, 9, 20); -- DEX+14
 
 INSERT INTO `item_mods` VALUES (27746,1,87);
 INSERT INTO `item_mods` VALUES (27746,2,26);
@@ -1785,11 +1749,6 @@ INSERT INTO `item_mods` VALUES (28319,31,93);
 INSERT INTO `item_mods` VALUES (28319,29,4);
 INSERT INTO `item_mods` VALUES (28319,384,30);
 INSERT INTO `item_mods` VALUES (28319,27,-4);
-
-INSERT INTO `item_mods` VALUES (28354,5,20);
-INSERT INTO `item_mods` VALUES (28354,25,5);
-INSERT INTO `item_mods` VALUES (28354,30,7);
-INSERT INTO `item_mods` VALUES (28354,170,4);
 
 INSERT INTO `item_mods` VALUES (28374,1,10);
 INSERT INTO `item_mods` VALUES (28374,25,3);
