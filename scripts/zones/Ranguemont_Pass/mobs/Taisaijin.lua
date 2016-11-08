@@ -11,6 +11,15 @@ require("scripts/globals/titles");
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(BYEBYE_TAISAI);
+    --[[
+    if (isKiller == true) then
+        if (math.random(1,100) < 90) then
+            player:addTreasure(4717); -- Refresh
+        else
+            player:addTreasure(4850); -- Refresh II
+        end
+    end
+    ]]
 end;
 
 -----------------------------------
@@ -30,7 +39,7 @@ function onMobDespawn(mob)
     SpawnMob(Taisaijin_PH, "", GetMobRespawnTime(Taisaijin_PH));
     ]]
 
-    local Taisaijin_PH = GetServerVariable("Taisaijin_PH");
+    local Taisaijin_PH = GetServerVariable("Taisaijin[PH]");
     SetServerVariable("Taisaijin[POP]", os.time() + math.random(900, 2700));
     SetServerVariable("Taisaijin[PH]", 0);
     DeterMob(mob:getID(), true);

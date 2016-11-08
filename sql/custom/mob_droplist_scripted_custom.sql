@@ -12,3 +12,7 @@ CREATE TABLE `mob_droplist_scripted` (
   KEY `dropId` (`dropId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=9;
 -- INSERT INTO `mob_droplist_scripted` VALUES (dropId,type,itemId,rate); -- Item Name [Mob Name]
+
+-- Taisaijin
+-- INSERT INTO `mob_droplist` VALUES (3430,0,4717,500); -- Refresh
+-- INSERT INTO `mob_droplist` VALUES (3430,0,4850,500); -- Refresh II

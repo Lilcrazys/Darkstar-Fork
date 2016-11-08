@@ -1776,6 +1776,9 @@ DELETE FROM `mob_droplist` WHERE dropId=3241 and type=0 and itemId=1313 and rate
 DELETE FROM `mob_droplist` WHERE dropId=3241 and type=0 and itemId=1740 and rate=140; -- comment me
 INSERT INTO `mob_droplist` VALUES (3241,0,19410,105); --  Armageddon
 
+-- Taisaijin (moved refresh 1&2 to scripted drops)
+-- DELETE FROM `mob_droplist` WHERE dropId=3430 and type=0 and itemId=4717 and rate=1000; -- Refresh
+
 -- -----------
 -- Taxim
 -- -----------
