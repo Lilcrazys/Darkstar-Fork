@@ -36,7 +36,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2250);
     mob:setMod(MOD_ACC,2250);
     mob:setMod(MOD_MATT,80);
-    mob:setMod(MOD_DMGMAGIC, -32);
+    mob:setMod(MOD_DMGMAGIC, -10);
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min

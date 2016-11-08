@@ -23,7 +23,8 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 
     -- addMod
-    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_DMGMAGIC, -50);
+    mob:addMod(MOD_DMGRANGE, -20);
 end;
 
 -----------------------------------

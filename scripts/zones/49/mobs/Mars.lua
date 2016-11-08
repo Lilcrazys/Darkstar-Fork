@@ -314,7 +314,7 @@ function onSpikesDamage(mob,target,damage)
         if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_RASP, dmg*0.5, 3, 90, FLAG_ERASBLE);
         end
-        return SUBEFFECT_STONE_SPIKES,44,dmg;
+        return SUBEFFECT_CLOD_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 3) then -- Wind
         if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_CHOKE, dmg*0.5, 3, 90, FLAG_ERASBLE);
@@ -322,7 +322,7 @@ function onSpikesDamage(mob,target,damage)
         if (math.random(0,99) <= 20) then
             target:addStatusEffect(EFFECT_DEFENSE_DOWN, 10, 0, 60);
         end
-        return SUBEFFECT_WIND_SPIKES,44,dmg;
+        return SUBEFFECT_GALE_SPIKES,44,dmg;
     elseif (SPIKE_ELEMENT == 2) then -- Ice
         if (math.random(0,99) <= 66) then
             target:addStatusEffect(EFFECT_FROST, dmg*0.5, 3, 90, FLAG_ERASBLE);

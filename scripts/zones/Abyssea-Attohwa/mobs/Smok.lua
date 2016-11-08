@@ -15,8 +15,8 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     -- addMod
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_DMGMAGIC, -20);
+    mob:addMod(MOD_DMGRANGE, -20);
     mob:addMod(MOD_MACC,500);
     mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;

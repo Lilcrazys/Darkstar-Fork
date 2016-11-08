@@ -26,7 +26,7 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 60);
     mob:setMod(MOD_REGAIN,20);
-    mob:addMod(MOD_DMGRANGE, -50);
+    mob:addMod(MOD_DMGRANGE, -20);
     -- addMod
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,30)

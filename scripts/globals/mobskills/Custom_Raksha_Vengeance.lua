@@ -2,16 +2,14 @@
 -- Raksha Vengence
 -- Naraka
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    if (mob:getLocalVar("stance") == 1) then
-        if (mob:getHPP() <= 50) then
-            return 0;
-        end
+    if (mob:getLocalVar("stance") == 1 and mob:getHPP() <= 50) then
+        return 0;
     else
         return 1;
     end

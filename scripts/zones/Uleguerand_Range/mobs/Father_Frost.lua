@@ -22,7 +22,7 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MATT,400);
     mob:addMod(MOD_MACC,400);
     mob:addMod(MOD_DEX,77);
-    mob:addMod(MOD_DMGPHYS,77);
+    mob:addMod(MOD_DMGPHYS, 30);
     mob:addMod(MOD_ATT,412);
     mob:addMod(MOD_ACC,400);
     mob:addMod(MOD_EVA,132);

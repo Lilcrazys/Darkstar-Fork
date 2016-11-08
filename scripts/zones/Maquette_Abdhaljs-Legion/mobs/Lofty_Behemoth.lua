@@ -14,6 +14,12 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+
+    -- setMod
+    mob:setMod(MOD_REGAIN,15);
+    mob:setMod(MOD_REGEN,25);
+    mob:setMod(MOD_MACC,1425); -- Rebalance with addMod instead later...
+    mob:setMod(MOD_MATT,100);  -- Rebalance with addMod instead later...
 end;
 
 -----------------------------------
@@ -21,12 +27,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN,15);
-    mob:setMod(MOD_REGEN,25);
-    mob:setMod(MOD_MACC,1425);
-    mob:setMod(MOD_MATT,120);
-
     local RND1 = math.random(1,15);
     if (RND1 == 1) then
         SetDropRate(9002,21294,75); -- Hgafircian

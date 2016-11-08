@@ -1776,6 +1776,9 @@ DELETE FROM `mob_droplist` WHERE dropId=3241 and type=0 and itemId=1313 and rate
 DELETE FROM `mob_droplist` WHERE dropId=3241 and type=0 and itemId=1740 and rate=140; -- comment me
 INSERT INTO `mob_droplist` VALUES (3241,0,19410,105); --  Armageddon
 
+-- Taisaijin (moved refresh 1&2 to scripted drops)
+-- DELETE FROM `mob_droplist` WHERE dropId=3430 and type=0 and itemId=4717 and rate=1000; -- Refresh
+
 -- -----------
 -- Taxim
 -- -----------
@@ -2206,7 +2209,7 @@ INSERT INTO `mob_droplist` VALUES (8999,0,2198,155);
 
 
 INSERT INTO `mob_droplist` VALUES (9000,0,3925,119); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9000,0,2496,88); --
+INSERT INTO `mob_droplist` VALUES (9000,0,2496,88); -- Ancient Beast Horn ? Dunno if intended
 INSERT INTO `mob_droplist` VALUES (9000,0,21294,75); -- Hgafircian
 INSERT INTO `mob_droplist` VALUES (9000,0,21132,75); -- Aedold
 INSERT INTO `mob_droplist` VALUES (9000,0,20924,75); -- Iizamal
@@ -2224,7 +2227,7 @@ INSERT INTO `mob_droplist` VALUES (9000,0,20553,75); -- Ninzas
 INSERT INTO `mob_droplist` VALUES (9000,0,20967,75); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,145); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9006,0,2486,91);
+INSERT INTO `mob_droplist` VALUES (9006,0,2496,88); -- Ancient Beast Horn ? Dunno if intended
 INSERT INTO `mob_droplist` VALUES (9006,0,21294,75); -- Hgafircian
 INSERT INTO `mob_droplist` VALUES (9006,0,21132,75); -- Aedold
 INSERT INTO `mob_droplist` VALUES (9006,0,20924,75); -- Iizamal
@@ -2242,7 +2245,7 @@ INSERT INTO `mob_droplist` VALUES (9006,0,20553,75); -- Ninzas
 INSERT INTO `mob_droplist` VALUES (9006,0,20967,75); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9002,0,3925,82); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9002,0,2486,89);
+INSERT INTO `mob_droplist` VALUES (9002,0,2496,88); -- Ancient Beast Horn ? Dunno if intended
 INSERT INTO `mob_droplist` VALUES (9002,0,21294,75); -- Hgafircian
 INSERT INTO `mob_droplist` VALUES (9002,0,21132,75); -- Aedold
 INSERT INTO `mob_droplist` VALUES (9002,0,20924,75); -- Iizamal
@@ -2260,7 +2263,7 @@ INSERT INTO `mob_droplist` VALUES (9002,0,20553,75); -- Ninzas
 INSERT INTO `mob_droplist` VALUES (9002,0,20967,75); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9003,0,3925,76); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9003,0,2486,97);
+INSERT INTO `mob_droplist` VALUES (9003,0,2496,88); -- Ancient Beast Horn ? Dunno if intended
 INSERT INTO `mob_droplist` VALUES (9003,0,21294,75); -- Hgafircian
 INSERT INTO `mob_droplist` VALUES (9003,0,21132,75); -- Aedold
 INSERT INTO `mob_droplist` VALUES (9003,0,20924,75); -- Iizamal
@@ -2278,7 +2281,7 @@ INSERT INTO `mob_droplist` VALUES (9003,0,20553,75); -- Ninzas
 INSERT INTO `mob_droplist` VALUES (9003,0,20967,75); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9004,0,3925,76); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9004,0,2486,77);
+INSERT INTO `mob_droplist` VALUES (9004,0,2496,88); -- Ancient Beast Horn ? Dunno if intended
 INSERT INTO `mob_droplist` VALUES (9004,0,21294,75); -- Hgafircian
 INSERT INTO `mob_droplist` VALUES (9004,0,21132,75); -- Aedold
 INSERT INTO `mob_droplist` VALUES (9004,0,20924,75); -- Iizamal
@@ -2296,7 +2299,7 @@ INSERT INTO `mob_droplist` VALUES (9004,0,20553,75); -- Ninzas
 INSERT INTO `mob_droplist` VALUES (9004,0,20967,75); -- Qatsunoci
 
 INSERT INTO `mob_droplist` VALUES (9005,0,3925,103); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9005,0,2486,83);
+INSERT INTO `mob_droplist` VALUES (9005,0,2496,88); -- Ancient Beast Horn ? Dunno if intended
 INSERT INTO `mob_droplist` VALUES (9005,0,21294,75); -- Hgafircian
 INSERT INTO `mob_droplist` VALUES (9005,0,21132,75); -- Aedold
 INSERT INTO `mob_droplist` VALUES (9005,0,20924,75); -- Iizamal

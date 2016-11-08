@@ -37,8 +37,8 @@ function onMobInitialize(mob)
     mob:setMod(MOD_TERRORRES, 99);
 
     -- addMod
-    mob:addMod(MOD_DMGRANGE, -50);
-    mob:addMod(MOD_DMGMAGIC, -128);
+    mob:addMod(MOD_DMGRANGE, -20);
+    mob:addMod(MOD_DMGMAGIC, -50);
     mob:addMod(MOD_MDEF, 25);
 
     -- Other
