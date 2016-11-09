@@ -161,19 +161,15 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    if (player:hasKeyItem(HYACINTH_STRATUM_ABYSSITE)) then -- Isarukitsck Kill
+    if (player:getQuestStatus(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS) == QUEST_ACCEPTED) then
         if (player:getMaskBit(player:getVar("HYACINTH_STRATUM"), 3) == false) then
             player:setMaskBit(player:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",3,true);
         end
 
         if (player:isMaskFull(player:getVar("HYACINTH_STRATUM"),4) == true) then
-            local bombardment = player:getQuestStatus(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
-            if (bombardment == QUEST_ACCEPTED) then
-                player:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
-                player:addQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
-            end
+            player:completeQuest(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS);
+            player:addQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
             player:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
-            player:delKeyItem(HYACINTH_STRATUM_ABYSSITE);
             player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE_II);
         end
     end

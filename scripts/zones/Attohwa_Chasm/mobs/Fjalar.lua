@@ -169,7 +169,6 @@ function onMobDeath(mob, player, isKiller)
             player:addQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
             player:addKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
             player:messageSpecial(KEYITEM_OBTAINED, HYACINTH_STRATUM_ABYSSITE_II);
-            end
         end
     end
 
