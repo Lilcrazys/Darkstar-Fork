@@ -520,14 +520,14 @@ INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 187, 1, 255); -- Aeroga 4
 INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 157, 1, 255); -- Aero 4
 INSERT INTO `mob_spell_lists` VALUES ('Uptala', 439, 158, 1, 255); -- Aero 5
 
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 168, 1, 255); -- Thunder 5
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 197, 1, 255); -- Thundaga 4
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 500, 1, 255); -- thundaja
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 211, 1, 255); -- burst_2
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 213, 1, 255); -- flood_2
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 202, 1, 255); -- Waterga 4
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 501, 1, 255); -- Waterja
-INSERT INTO `mob_spell_lists` VALUES ('Bismark', 440, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 168, 1, 255); -- Thunder 5
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 173, 1, 255); -- Water 5
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 197, 1, 255); -- Thundaga 4
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 202, 1, 255); -- Waterga 4
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 211, 1, 255); -- Burst_2
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 213, 1, 255); -- Flood_2
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 500, 1, 255); -- Thundaja
+INSERT INTO `mob_spell_lists` VALUES ('Bismarck', 440, 501, 1, 255); -- Waterja
 
 INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 202, 1, 255); -- waterga 4
 INSERT INTO `mob_spell_lists` VALUES ('Brekekekex', 441, 501, 1, 255); -- waterja

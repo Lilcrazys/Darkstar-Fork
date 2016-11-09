@@ -812,15 +812,16 @@ INSERT INTO `mob_skill_lists` VALUES ('Isarukitsck',4147,2819); -- Whiteout
 INSERT INTO `mob_skill_lists` VALUES ('Little_Wingman',4148,1713); -- Yawn
 INSERT INTO `mob_skill_lists` VALUES ('Little_Wingman',4148,1715); -- Beak_Lunge
 
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2868); -- Echolocation
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2869); -- Deep_Sea_Dirge
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2870); -- Caudal_Capacitor
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2871); -- Baleen_Gurge
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2872); -- Depht_Charge
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2873); -- Blowhole_Blast
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2874); -- Angry_Seas
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2875); -- Waterspout
-INSERT INTO `mob_skill_lists` VALUES ('Bismark',4149,2876); -- Thar_She_Blows
+-- List 4149 in LegionDark is identical to list 451 in Darkstar..
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2868); -- Echolocation
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2869); -- Deep_Sea_Dirge
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2870); -- Caudal_Capacitor
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2871); -- Baleen_Gurge
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2872); -- Depht_Charge
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2873); -- Blowhole_Blast
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2874); -- Angry_Seas
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2875); -- Waterspout
+-- INSERT INTO `mob_skill_lists` VALUES ('Bismarck',4149,2876); -- Thar_She_Blows
 
 INSERT INTO `mob_skill_lists` VALUES ('Primordial_Pugil',4150,641); -- Recoil_Dive
 

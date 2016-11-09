@@ -1,11 +1,10 @@
 -----------------------------------
 -- Area: Bibiki Bay
--- VWNM: Bismark
+-- VWNM: Bismarck
 -----------------------------------
-
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/quests");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -34,82 +33,82 @@ function onMobSpawn(mob)
 
     -- Other
     -- mob:SetMobSkillAttack(LIST_ID_HERE);
-    
+
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
-        SetDropRate(9662,0,8919,50); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,50); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 2) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,50); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,50); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 3) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,50); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,50); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 4) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,50); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,50); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 5) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,50); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,50); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 6) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,50); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,50); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 7) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,50); -- Carbutear
-        SetDropRate(9662,0,8926,0); -- Fenritear
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,50); -- Carbutear
+        SetDropRate(9662,8926,0); -- Fenritear
     elseif (RND1 == 8) then
-        SetDropRate(9662,0,8919,0); -- Ifritear
-        SetDropRate(9662,0,8920,0); -- Leviatear    
-        SetDropRate(9662,0,8921,0); -- Ramutear    
-        SetDropRate(9662,0,8922,0); -- Garutear    
-        SetDropRate(9662,0,8923,0); -- Titatear    
-        SetDropRate(9662,0,8924,0); -- Shivatear   
-        SetDropRate(9662,0,8925,0); -- Carbutear
-        SetDropRate(9662,0,8926,50); -- Fenritear       
-    end    
-    
+        SetDropRate(9662,8919,0); -- Ifritear
+        SetDropRate(9662,8920,0); -- Leviatear
+        SetDropRate(9662,8921,0); -- Ramutear
+        SetDropRate(9662,8922,0); -- Garutear
+        SetDropRate(9662,8923,0); -- Titatear
+        SetDropRate(9662,8924,0); -- Shivatear
+        SetDropRate(9662,8925,0); -- Carbutear
+        SetDropRate(9662,8926,50); -- Fenritear
+    end
+
 end;
 
 -----------------------------------
@@ -134,7 +133,7 @@ function onMobFight(mob, target)
 
     local popTimerDelay = 60; -- For easy adjustment.
     local popTime = mob:getLocalVar("nextPetPop");
-    local rndPos = math.random(0,2); -- So they aren't all unforgettably stacked..
+    local rndPos = math.random(0,2); -- So they aren't all untargetable stacked..
     if (rndPos == 2) then
         rdnPos = -1;
     end
@@ -189,7 +188,7 @@ end;
 -----------------------------------
 
 function onSpellPrecast(mob, spell)
-    local power = math.random(75,150); -- Them be some strong spikes!
+    local power = math.random(60,90); -- Them be some strong spikes!
     mob:addStatusEffect(EFFECT_SHOCK_SPIKES,power,0,30);
     mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
 end;
@@ -199,10 +198,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+    if (player:getQuestStatus(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT) == QUEST_ACCEPTED) then
+        player:setVar("VW_STATUS[Tavnazia]", 3);
+    end
+
     player:addCurrency("bayld", 1000);
     player:addExp(10000);
-    if (player:hasKeyItem(HYACINTH_STRATUM_ABYSSITE_II)) then -- Bismark Kill
-        player:completeQuest(OTHER_AREAS, VW_OP_004_BIBIKI_BOMBARDMENT);
-        player:delKeyItem(HYACINTH_STRATUM_ABYSSITE_II);
-    end    
 end;
