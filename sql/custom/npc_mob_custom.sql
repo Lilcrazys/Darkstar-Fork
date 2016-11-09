@@ -951,7 +951,7 @@ INSERT INTO `mob_spawn_points` VALUES (17043898,'Predatory_Colibri','Predatory C
 -- 17056767
 -- ------------------------------------------------------------
 INSERT INTO `npc_list` VALUES (17056310,'Planar_Rift','Planar Rift',0,280,1,396,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- currently does not exist in DSP 9/24/2016
-REPLACE INTO `mob_spawn_points` VALUES (17056187,'Morta','Morta',90505,280,1,396,64);
+REPLACE INTO `mob_spawn_points` VALUES (17056187,'Morta','Morta',13651,280,1,396,64);
 REPLACE INTO `mob_spawn_points` VALUES (17056188,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,277,1,396,205);
 REPLACE INTO `mob_spawn_points` VALUES (17056189,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,278,1,396,195);
 REPLACE INTO `mob_spawn_points` VALUES (17056190,'Ravishing_Rafflesia','Ravishing Rafflesia',90506,279,1,396,199);
