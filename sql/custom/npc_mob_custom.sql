@@ -3173,18 +3173,6 @@ REPLACE INTO `mob_spawn_points` VALUES (17662485,'Ironclad_Pulverizer','Ironclad
 REPLACE INTO `mob_spawn_points` VALUES (17662489,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-211,-31,166,61);
 REPLACE INTO `mob_spawn_points` VALUES (17662490,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-216,-31,156,43);
 
-
-
-
-
-
-
-
-
-REPLACE INTO `mob_spawn_points` VALUES (16838946,'Clingy_Clare','Clingy Clare',90204,370,1,9,151);
-
-
-
 -- ------------------------------------------------------------
 -- Aptant NM's to be sorted
 REPLACE INTO `mob_spawn_points` VALUES (17469632,'Konjac','Konjac',90300,60,22,132,94);
