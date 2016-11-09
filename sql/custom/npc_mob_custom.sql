@@ -77,13 +77,12 @@ INSERT INTO `mob_spawn_points` VALUES (16794622,'Ravenous_Cracklaw','Ravenous_Cr
 -- Uleguerand Range (Zone 5)
 -- 16798719
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (16797738,'Frost_Flambeau','Frost Flambeau',90315,-283,-19,-365,29);
+REPLACE INTO `mob_spawn_points` VALUES (16797770,'Skvader','Skvader',90316,173,0,-283,19);
 REPLACE INTO `mob_spawn_points` VALUES (16798081,'Isarukitsck','Isarukitsck',90488,-141,-19,-325,0);
 REPLACE INTO `mob_spawn_points` VALUES (16798082,'Little Wingman','Little Wingman',90489,-140,-19,-325,0);
 REPLACE INTO `mob_spawn_points` VALUES (16798083,'Little Wingman','Little Wingman',90489,-141,-19,-325,0);
 REPLACE INTO `mob_spawn_points` VALUES (16798084,'Little Wingman','Little Wingman',90489,-142,-19,-325,0);
-
-
 INSERT INTO `mob_spawn_points` VALUES (16798718,'Kumhau','Kumhau',90085,-22,-175,50,118);
 -- INSERT INTO `npc_list` VALUES (16798719,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
@@ -100,6 +99,8 @@ INSERT INTO `mob_spawn_points` VALUES (16798718,'Kumhau','Kumhau',90085,-22,-175
 
 INSERT INTO `mob_spawn_points` VALUES (16806910,'Achuka','Achuka',90089,324,-25,-52,187);
 -- INSERT INTO `npc_list` VALUES (16806911,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+
+REPLACE INTO `mob_spawn_points` VALUES (16806117,'Sargas','Sargas',14174,-247,2.750,-128,190); -- Pos data needs correction
 
 REPLACE INTO `mob_spawn_points` VALUES (16806250,'Fjalar','Fjalar',90481,40,-4,-119,0);
 REPLACE INTO `mob_spawn_points` VALUES (16806251,'Bloody_Skull','Bloody Skull',90482,39,-4,-119,0);
@@ -134,7 +135,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16806253,'Bloody_Skull','Bloody Skull',9
 -- Newton Movalpolos (Zone 12)
 -- 16827391
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (16826474,'Sword_Sorcerer_Solisoq','Sword Sorcerer Solisoq',90306,6,15,-179,125);
 
 -- ------------------------------------------------------------
 -- Mine Shaft #2716 (Zone 13)
@@ -835,13 +836,13 @@ INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,
 -- Wajaom Woodlands (Zone 51)
 -- 16987135
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (16986188,'Chelicerata','Chelicerata',90307,415,-18,-44,141);
 
 -- ------------------------------------------------------------
 -- Bhaflau Thickets (Zone 52)
 -- 16991231
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (16990252,'Harvestman','Harvestman',11190,398.130,-10.675,179.169,0);
 
 -- ------------------------------------------------------------
 -- Nashmau (Zone 53)
@@ -898,12 +899,14 @@ REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassi
 -- Mount Zhayolm (Zone 61)
 -- 17028095
 -- ------------------------------------------------------------
-REPLACE INTO `npc_list` VALUES (17027609,'Planar_Rift','Planar Rift',98,902,-15,336,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as yagu8 in DSP 9/24/2016
+REPLACE INTO `mob_spawn_points` VALUES (17027228,'Chary_Apkallu','Chary_Apkallu',13829,641,-13,-60,186);
 REPLACE INTO `mob_spawn_points` VALUES (17027486,'Vanasarvik','Vanasarvik',90498,902,-15.729,333.408,41);
 INSERT INTO `mob_spawn_points` VALUES (17027487,'Elder_Imp','Elder Imp',90499,901,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027488,'Elder_Imp','Elder Imp',90499,902,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027489,'Elder_Imp','Elder Imp',90499,903,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027490,'Elder_Imp','Elder Imp',90499,904,-15,336,41);
+
+REPLACE INTO `npc_list` VALUES (17027609,'Planar_Rift','Planar Rift',98,902,-15,336,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as yagu8 in DSP 9/24/2016
 
 -- ------------------------------------------------------------
 -- Halvung (Zone 62)
@@ -927,6 +930,7 @@ INSERT INTO `mob_spawn_points` VALUES (17027490,'Elder_Imp','Elder Imp',90499,90
 -- Mamook (Zone 65)
 -- 17044479
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17043466,'Venomfang','Venomfang',90323,310,-2,-214,57);
 INSERT INTO `mob_spawn_points` VALUES (17043893,'Yalungur','Yalungur',90496,319,-3,-183,64);
 INSERT INTO `mob_spawn_points` VALUES (17043894,'Predatory_Colibri','Predatory Colibri',90497,316,-3,-183,205);
 INSERT INTO `mob_spawn_points` VALUES (17043895,'Predatory_Colibri','Predatory Colibri',90497,317,-3,-183,195);
@@ -1076,6 +1080,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17113826,'Kholomodumo','Kholomodumo',904
 -- Vunkerl Inlet [S] (Zone 83)
 -- 17118207
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17117295,'Warabouc','Warabouc',13813,75.93,-40.153,-108.196,196);
 REPLACE INTO `mob_spawn_points` VALUES (17117893,'Gaunab','Gaunab',90442,-277,-40.5,-726,181);
 
 -- ------------------------------------------------------------
@@ -1165,6 +1170,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17171004,'Kalasutrax','Kalasutrax',90444
 -- Meriphataud Mountains [S] (Zone 97)
 -- 17175551
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17174561,'Muq_Shabeel','Muq Shabeel',5162,585,-31,603,107);
 REPLACE INTO `mob_spawn_points` VALUES (17175251,'Akupara','Akupara',90414,-282,16,602,16);
 
 -- ------------------------------------------------------------
@@ -1301,6 +1307,7 @@ INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',96
 -- 17224703
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17224185,'Murk-veined_Baneberry','Murk-veined Baneberry',90409,551,24.5,492,240);
+REPLACE INTO `mob_spawn_points` VALUES (17145965,'Croque-mitaine','Croque-mitaine',13726,240.094,24.242,-28.877,181);
 
 -- ------------------------------------------------------------
 -- Rolanberry Fields (Zone 110)
@@ -1332,12 +1339,15 @@ INSERT INTO `mob_spawn_points` VALUES (17232894,'Umagrhk','Umagrhk',90515,-280,-
 -- Cape Teriggan (Zone 113)
 -- 17241087
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (17240232,'Tegmine','Tegmine',14175,11,-0.999,-134,0); -- Pos data needs correction
+INSERT INTO `mob_spawn_points` VALUES (17240315,'Zmey_Gorynych','Zmey_Gorynych',90312,-203,0,243,27);
 
 -- ------------------------------------------------------------
 -- Eastern Altepa Desert (Zone 114)
 -- 17245183
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17244350,'Sabotender_Corrido','Sabotender_Corrido',90321,44,8,-386,191);
 
 -- INSERT INTO `mob_spawn_points` VALUES (17244582,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (17244583,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Force pop
@@ -1428,6 +1438,8 @@ REPLACE INTO `mob_spawn_points` VALUES (17273320,'Grwan','Grwnan',90465,-90.599,
 -- Ro'Maeve (Zone 122)
 -- 17277951
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17277011,'Martinet','Martinet',14176,-196,-8,-48,32); -- Pos data needs correction
+INSERT INTO `mob_spawn_points` VALUES (17277103,'Nargun','Nargun',90304,-107,4,114,115);
 REPLACE INTO `mob_spawn_points` VALUES (17277138,'Mimic_King','Mimic King',90470,114,-8,47,254);
 REPLACE INTO `mob_spawn_points` VALUES (17277139,'Mimic_Jester','Mimic Jester',90469,113,-8,47,254);
 REPLACE INTO `mob_spawn_points` VALUES (17277140,'Mimic_Mage','Mimic Mage',90468,115,-8,47,254);
@@ -1482,7 +1494,7 @@ INSERT INTO `mob_spawn_points` VALUES (17289662,'Sabotender_Mercenario','Saboten
 -- 17294335
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17293648,'Kaggen','Kaggen',90433,150,-20.5,150,0);
-
+INSERT INTO `mob_spawn_points` VALUES (17293485,'Atkorkamuy','Atkorkamuy',90313,-266,-2,20,68);
 INSERT INTO `mob_spawn_points` VALUES (17293663,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Force pop
 INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Force pop
 -- INSERT INTO `mob_spawn_points` VALUES (17293665,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Timed pop
@@ -1530,8 +1542,21 @@ REPLACE INTO `mob_spawn_points` VALUES (17309996,'Aellos_Handmaiden','Aello\'s H
 -- 17318911
 -- ------------------------------------------------------------
 
+REPLACE INTO `mob_spawn_points` VALUES (17317889,'Sentinel_Crab','Sentinel Crab',6995,-11,17,150,242);
+REPLACE INTO `mob_spawn_points` VALUES (17317890,'Sentinel_Crab','Sentinel Crab',6995,-4,16,161,89);
+REPLACE INTO `mob_spawn_points` VALUES (17317891,'Sentinel_Crab','Sentinel Crab',6995,0,17,154,41);
+REPLACE INTO `mob_spawn_points` VALUES (17317892,'Sentinel_Crab','Sentinel Crab',6995,9,16,159,239);
+REPLACE INTO `mob_spawn_points` VALUES (17317893,'Sentinel_Crab','Sentinel Crab',6995,20,17,159,87);
+REPLACE INTO `mob_spawn_points` VALUES (17317894,'Sentinel_Crab','Sentinel Crab',6995,28,16,155,1);
+REPLACE INTO `mob_spawn_points` VALUES (17317895,'Sentinel_Crab','Sentinel Crab',6995,37,16,158,187);
+REPLACE INTO `mob_spawn_points` VALUES (17317896,'Sentinel_Crab','Sentinel Crab',6995,42,16,154,142);
+REPLACE INTO `mob_spawn_points` VALUES (17317897,'Nahn','Nahn',6982,31,19,146,207);
+REPLACE INTO `mob_spawn_points` VALUES (17317898,'Karkinos','Karkinos',6973,1,20,144,183);
+REPLACE INTO `mob_spawn_points` VALUES (17318440,'La-Theine_Liege','La Theine Liege',6975,80,15,199,69);
 REPLACE INTO `mob_spawn_points` VALUES (17318443,'Poroggo_DomJuan','Poroggo Dom Juan',6990,406,26,-544,231);
+REPLACE INTO `mob_spawn_points` VALUES (17318444,'Toppling_Tuber','Toppling Tuber',6997,-325,38,201,79);
 REPLACE INTO `mob_spawn_points` VALUES (17318456,'Briareus','Briareus',6951,-180,7,260,165);
+
 REPLACE INTO `npc_list` VALUES (17318474,'qm1','???',0,696.896,40.844,283.068,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Dozing Dorian
 REPLACE INTO `npc_list` VALUES (17318475,'qm2','???',0,279.338,23.999,-81.762,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Trudging Thomas
 REPLACE INTO `npc_list` VALUES (17318476,'qm3','???',0,-764.448,-8.233,121.184,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Meganteron
@@ -1762,6 +1787,7 @@ INSERT INTO `mob_spawn_points` VALUES (17428824,'Neiths_Bobbin','Neith\'s Bobbin
 -- 17449983
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Laurence','Laidly Laurence',90427,-260,-0.579,-20,9);
+REPLACE INTO `mob_spawn_points` VALUES (17448990,'Citadel_Pipistrelles','Citadel Pipistrelles',90310,4.522,5.623,56.314,46);
 
 -- ------------------------------------------------------------
 -- Throne Room (Zone 165)
@@ -1791,7 +1817,8 @@ REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Laurence','Laidly Laure
 -- Toraimarai Canal (Zone 169)
 -- 17470463
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (17469632,'Konjac','Konjac',90300,60,22,132,94);
+REPLACE INTO `mob_spawn_points` VALUES (17469578,'Canal_Moocher','Canal Moocher',90317,164,11,-103,43);
 
 -- ------------------------------------------------------------
 -- Full Moon Fountain (Zone 170)
@@ -1803,6 +1830,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Laurence','Laidly Laure
 -- Crawlers' Nest [S] (Zone 171)
 -- 17478655
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17477675,'Abatwa','Abatwa',13761,52.2,-1.02,261.861,97);
 REPLACE INTO `mob_spawn_points` VALUES (17478057,'Nympha_Eunomia','Nympha Eunomia',90430,55,-0.445,260,138);
 REPLACE INTO `mob_spawn_points` VALUES (17478058,'Kalos_Eunomia','Kalos Eunomia',90429,55,-0.445,260,34);
 
@@ -1831,6 +1859,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17490247,'Moki','Moki',90463,128.642,-0.
 -- The Eldieme Necropolis [S] (Zone 175)
 -- 17495039
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17494135,'Laelaps','Laelaps',13817,300.484,-15.887,-224.944,50);
 REPLACE INTO `mob_spawn_points` VALUES (17494610,'Giltine','Giltine',90432,-2,1,43,0);
 
 -- ------------------------------------------------------------
@@ -2048,6 +2077,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17580343,'Lorbulcrub','Lorbulcrud',90406
 -- Crawlers' Nest (Zone 197)
 -- 17585151
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17584416,'Aqrabuamelu','Aqrabuamelu',13753,-184.195,-1.719,248.295,33);
 REPLACE INTO `mob_spawn_points` VALUES (17584428,'Mellonia','Mellonia',90428,55,-0.445,260,110);
 
 -- ------------------------------------------------------------
@@ -2090,7 +2120,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17596732,'Roly_Poly','Roly-Poly',90426,-
 -- Fei'Yin (Zone 204)
 -- 17613823
 -- ------------------------------------------------------------
-
+REPLACE INTO `mob_spawn_points` VALUES (17612840,'Jenglot','Jenglot',14097,12.975,-16.50,46.5909,164);
 
 -- ------------------------------------------------------------
 -- Ifrit's Cauldron (Zone 205)
@@ -2445,6 +2475,11 @@ REPLACE INTO `npc_list` VALUES (17658373,'qm22','???',0,-396.937,-3.000,259.001,
 REPLACE INTO `npc_list` VALUES (17658374,'qm23','???',0,340.193,20.005,220.340,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); --
 REPLACE INTO `npc_list` VALUES (17658375,'qm24','???',0,439.940,21.020,-179.227,1,40,40,0,0,0,2,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); --
 
+REPLACE INTO `mob_spawn_points` VALUES (17658248,'Tejas','Tejas',10230,-544,-3,114,12);
+REPLACE INTO `mob_spawn_points` VALUES (17658249,'Tejas','Tejas',10230,-477,-4,194,59);
+REPLACE INTO `mob_spawn_points` VALUES (17658250,'Tejas','Tejas',10230,-397,-4,117,57);
+REPLACE INTO `mob_spawn_points` VALUES (17658251,'Tejas','Tejas',10230,-395,-3,10,1);
+REPLACE INTO `mob_spawn_points` VALUES (17658252,'Tejas','Tejas',10230,-358,-4,-83,190);
 REPLACE INTO `mob_spawn_points` VALUES (17658263,'Pallid_Percy','Pallid Percy',10216,281,20,174,200);
 REPLACE INTO `mob_spawn_points` VALUES (17658264,'Gaizkin','Gaizkin',10196,-130,0,2,2);
 REPLACE INTO `mob_spawn_points` VALUES (17658288,'Gieremund','Gieremund',10197,-396,-3,315,76);
@@ -2458,10 +2493,16 @@ INSERT INTO `npc_list` VALUES (17658877,'MOUNTAIN_WARP','MOUNTAIN_WARP',0,212.00
 -- 17662975
 -- ------------------------------------------------------------
 
+REPLACE INTO `mob_spawn_points` VALUES (17662451,'Jala','Jala',10281,88,-16,-7,176);
+REPLACE INTO `mob_spawn_points` VALUES (17662452,'Jala','Jala',10281,305,24,-368,33);
+REPLACE INTO `mob_spawn_points` VALUES (17662453,'Jala','Jala',10281,713,0,-471,157);
+REPLACE INTO `mob_spawn_points` VALUES (17662454,'Jala','Jala',10281,425,-7,57,254);
+REPLACE INTO `mob_spawn_points` VALUES (17662455,'Jala','Jala',10281,515,-15,257,201);
 REPLACE INTO `mob_spawn_points` VALUES (17662464,'Minax_Bugard','Minax Bugard',10287,520,15,-268,37);
 REPLACE INTO `mob_spawn_points` VALUES (17662466,'Funereal_Apkallu','Funereal Apkallu',10272,209,-23,321,231);
 REPLACE INTO `mob_spawn_points` VALUES (17662467,'Manohra','Manohra',10285,121,-8,-120,166);
 REPLACE INTO `mob_spawn_points` VALUES (17662468,'Cep-Kamuy','Cep-Kamuy',10255,-160,-15,638,240);
+REPLACE INTO `mob_spawn_points` VALUES (17662469,'Ironclad_Observer','Ironclad Observer',10278,-197,-32,80,213);
 REPLACE INTO `mob_spawn_points` VALUES (17662470,'Nehebkau','Nehebkau',10290,321,23,-355,116);
 REPLACE INTO `mob_spawn_points` VALUES (17662471,'Avalerion','Avalerion',10249,41,-16,81,51);
 REPLACE INTO `mob_spawn_points` VALUES (17662472,'Karkatakam','Karkatakam',10282,200,-15,519,80);
@@ -2472,15 +2513,16 @@ REPLACE INTO `mob_spawn_points` VALUES (17662476,'Cirein-croin','Cirein-croin',1
 REPLACE INTO `mob_spawn_points` VALUES (17662478,'Sobek','Sobek',10306,544,16,-364,115);
 REPLACE INTO `mob_spawn_points` VALUES (17662481,'Cirein-croin','Cirein-croin',10256,39,-15,520,178);
 REPLACE INTO `mob_spawn_points` VALUES (17662483,'Sobek','Sobek',10306,0,0,0,0);
+REPLACE INTO `mob_spawn_points` VALUES (17662484,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-198,-32,159,81);
+REPLACE INTO `mob_spawn_points` VALUES (17662485,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-192,-31,145,110);
 REPLACE INTO `mob_spawn_points` VALUES (17662486,'Cirein-croin','Cirein-croin',10256,40,-15,520,178);
 REPLACE INTO `mob_spawn_points` VALUES (17662488,'Sobek','Sobek',10306,0,0,0,0);
+REPLACE INTO `mob_spawn_points` VALUES (17662489,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-211,-31,166,61);
+REPLACE INTO `mob_spawn_points` VALUES (17662490,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-216,-31,156,43);
 REPLACE INTO `mob_spawn_points` VALUES (17662491,'Gukumatz','Gukumatz',10275,443,23,-369,112);
 REPLACE INTO `mob_spawn_points` VALUES (17662494,'Abyssic_Cluster','Abyssic Cluster',10242,-268,-31,188,245);
 REPLACE INTO `mob_spawn_points` VALUES (17662495,'Flame_Skimmer','Flame Skimmer',10270,-56.623,-24.161,544.796,95);
 REPLACE INTO `mob_spawn_points` VALUES (17662498,'Ironclad_Severer','Ironclad Severer',10280,-171,-31,113,162);
-
-
-
 
 REPLACE INTO `npc_list` VALUES (17662556,'qm1','???',0,521.284,15.978,-270.679,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Minax Bugard
 REPLACE INTO `npc_list` VALUES (17662557,'qm2','???',0,544,16,-364,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Sobek
@@ -2517,6 +2559,11 @@ REPLACE INTO `npc_list` VALUES (17662741,'Dilapidated_Gate3','Dilapidated Gate',
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (17667070,'Armillaria ','Armillaria ',10315,-396.886,-31.991,196.054,128);
+REPLACE INTO `mob_spawn_points` VALUES (17666474,'Fulmotondro','Fulmotondro',10336,-417,-47,-438,115);
+REPLACE INTO `mob_spawn_points` VALUES (17666475,'Fulmotondro','Fulmotondro',10336,-313,-39,-691,155);
+REPLACE INTO `mob_spawn_points` VALUES (17666476,'Fulmotondro','Fulmotondro',10336,-271,-39,-602,3);
+REPLACE INTO `mob_spawn_points` VALUES (17666477,'Fulmotondro','Fulmotondro',10336,-76,-39,-462,214);
+REPLACE INTO `mob_spawn_points` VALUES (17666478,'Fulmotondro','Fulmotondro',10336,144,-39,-505,158);
 REPLACE INTO `mob_spawn_points` VALUES (17666487,'Khalkotaur','Khalkotaur',10351,-240,-39,-166,132);
 REPLACE INTO `mob_spawn_points` VALUES (17666488,'Quasimodo','Quasimodo',10361,-278,-40,-367,181);
 REPLACE INTO `mob_spawn_points` VALUES (17666489,'Iku-Turso','Iku-Turso',10344,244,-32,240,129);
@@ -2538,7 +2585,6 @@ REPLACE INTO `mob_spawn_points` VALUES (17666508,'Sedna','Sedna',10368,403,-31,3
 REPLACE INTO `mob_spawn_points` VALUES (17666510,'Karkadann','Karkadann',10349,-156,-31,89,112);
 REPLACE INTO `mob_spawn_points` VALUES (17666515,'Div-e_Sepid','Div-e Sepid',10329,-491,-39,-486,253);
 REPLACE INTO `mob_spawn_points` VALUES (17666493,'Seps','Seps',10369,-238,-39,-717,140);
-
 
 REPLACE INTO `npc_list` VALUES (17666576,'qm1','???',0,-367,-31,301,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- chhir batti
 REPLACE INTO `npc_list` VALUES (17666577,'qm2','???',0,-278.701,-40.573,-366.852,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Quasimodo
@@ -2874,6 +2920,10 @@ INSERT INTO `npc_list` VALUES (17785850,'Limbus_Mog','Moogle',190,-9.000,-0.025,
 -- 17814527
 -- ------------------------------------------------------------
 
+REPLACE INTO `mob_spawn_points` VALUES (17813917,'Resheph','Resheph',10672,421,-51,156,223);
+REPLACE INTO `mob_spawn_points` VALUES (17813921,'Resheph','Resheph',10672,457,-52,125,239);
+REPLACE INTO `mob_spawn_points` VALUES (17813926,'Impervious_Chariot','Impervious Chariot',10659,-308,-175,-13,13);
+
 REPLACE INTO `npc_list` VALUES (17813949,'qm1','???',0,-15.356,-175.000,55.533,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Ironclad Triturator
 REPLACE INTO `npc_list` VALUES (17813950,'qm2','???',0,-281.412,-155.573,267.682,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Dhrome Khimaira
 REPLACE INTO `npc_list` VALUES (17813951,'qm3','???',0,-342,-156,346,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Apademak
@@ -3131,72 +3181,3 @@ INSERT INTO `npc_list` VALUES (17821713,'Transcendental_Radiance','Transcendenta
 -- Feretory (Zone 285)
 -- 17945599
 -- ------------------------------------------------------------
-
-
-
--- ------------------------------------------------------------
--- Abyssea to be sorted
-REPLACE INTO `mob_spawn_points` VALUES (17317889,'Sentinel_Crab','Sentinel Crab',6995,-11,17,150,242);
-REPLACE INTO `mob_spawn_points` VALUES (17317890,'Sentinel_Crab','Sentinel Crab',6995,-4,16,161,89);
-REPLACE INTO `mob_spawn_points` VALUES (17317891,'Sentinel_Crab','Sentinel Crab',6995,0,17,154,41);
-REPLACE INTO `mob_spawn_points` VALUES (17317892,'Sentinel_Crab','Sentinel Crab',6995,9,16,159,239);
-REPLACE INTO `mob_spawn_points` VALUES (17317893,'Sentinel_Crab','Sentinel Crab',6995,20,17,159,87);
-REPLACE INTO `mob_spawn_points` VALUES (17317894,'Sentinel_Crab','Sentinel Crab',6995,28,16,155,1);
-REPLACE INTO `mob_spawn_points` VALUES (17317895,'Sentinel_Crab','Sentinel Crab',6995,37,16,158,187);
-REPLACE INTO `mob_spawn_points` VALUES (17317896,'Sentinel_Crab','Sentinel Crab',6995,42,16,154,142);
-REPLACE INTO `mob_spawn_points` VALUES (17317897,'Nahn','Nahn',6982,31,19,146,207);
-REPLACE INTO `mob_spawn_points` VALUES (17317898,'Karkinos','Karkinos',6973,1,20,144,183);
-REPLACE INTO `mob_spawn_points` VALUES (17318440,'La-Theine_Liege','La Theine Liege',6975,80,15,199,69);
-REPLACE INTO `mob_spawn_points` VALUES (17318444,'Toppling_Tuber','Toppling Tuber',6997,-325,38,201,79);
-REPLACE INTO `mob_spawn_points` VALUES (17813917,'Resheph','Resheph',10672,421,-51,156,223);
-REPLACE INTO `mob_spawn_points` VALUES (17813921,'Resheph','Resheph',10672,457,-52,125,239);
-REPLACE INTO `mob_spawn_points` VALUES (17813926,'Impervious_Chariot','Impervious Chariot',10659,-308,-175,-13,13);
-REPLACE INTO `mob_spawn_points` VALUES (17658248,'Tejas','Tejas',10230,-544,-3,114,12);
-REPLACE INTO `mob_spawn_points` VALUES (17658249,'Tejas','Tejas',10230,-477,-4,194,59);
-REPLACE INTO `mob_spawn_points` VALUES (17658250,'Tejas','Tejas',10230,-397,-4,117,57);
-REPLACE INTO `mob_spawn_points` VALUES (17658251,'Tejas','Tejas',10230,-395,-3,10,1);
-REPLACE INTO `mob_spawn_points` VALUES (17658252,'Tejas','Tejas',10230,-358,-4,-83,190);
-REPLACE INTO `mob_spawn_points` VALUES (17658263,'Pallid_Percy','Pallid Percy',10216,328,19,169,137);
-REPLACE INTO `mob_spawn_points` VALUES (17666474,'Fulmotondro','Fulmotondro',10336,-417,-47,-438,115);
-REPLACE INTO `mob_spawn_points` VALUES (17666475,'Fulmotondro','Fulmotondro',10336,-313,-39,-691,155);
-REPLACE INTO `mob_spawn_points` VALUES (17666476,'Fulmotondro','Fulmotondro',10336,-271,-39,-602,3);
-REPLACE INTO `mob_spawn_points` VALUES (17666477,'Fulmotondro','Fulmotondro',10336,-76,-39,-462,214);
-REPLACE INTO `mob_spawn_points` VALUES (17666478,'Fulmotondro','Fulmotondro',10336,144,-39,-505,158);
-REPLACE INTO `mob_spawn_points` VALUES (17662451,'Jala','Jala',10281,88,-16,-7,176);
-REPLACE INTO `mob_spawn_points` VALUES (17662452,'Jala','Jala',10281,305,24,-368,33);
-REPLACE INTO `mob_spawn_points` VALUES (17662453,'Jala','Jala',10281,713,0,-471,157);
-REPLACE INTO `mob_spawn_points` VALUES (17662454,'Jala','Jala',10281,425,-7,57,254);
-REPLACE INTO `mob_spawn_points` VALUES (17662455,'Jala','Jala',10281,515,-15,257,201);
-REPLACE INTO `mob_spawn_points` VALUES (17662469,'Ironclad_Observer','Ironclad Observer',10278,-197,-32,80,213);
-REPLACE INTO `mob_spawn_points` VALUES (17662484,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-198,-32,159,81);
-REPLACE INTO `mob_spawn_points` VALUES (17662485,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-192,-31,145,110);
-REPLACE INTO `mob_spawn_points` VALUES (17662489,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-211,-31,166,61);
-REPLACE INTO `mob_spawn_points` VALUES (17662490,'Ironclad_Pulverizer','Ironclad Pulverizer',10279,-216,-31,156,43);
-
--- ------------------------------------------------------------
--- Aptant NM's to be sorted
-REPLACE INTO `mob_spawn_points` VALUES (17469632,'Konjac','Konjac',90300,60,22,132,94);
-REPLACE INTO `mob_spawn_points` VALUES (17277011,'Martinet','Martinet',90301,-196,-8,-48,32); -- Pos data needs correction
-REPLACE INTO `mob_spawn_points` VALUES (17117295,'Warabouc','Warabouc',90302,75.93,-40.153,-108.196,196);
-REPLACE INTO `mob_spawn_points` VALUES (16806117,'Sargas','Sargas',90303,-247,2.750,-128,190); -- Pos data needs correction
-INSERT INTO `mob_spawn_points` VALUES (17277103,'Nargun','Nargun',90304,-107,4,114,115);
-REPLACE INTO `mob_spawn_points` VALUES (17027228,'Chary_Apkallu','Chary_Apkallu',90305,641,-13,-60,186);
-REPLACE INTO `mob_spawn_points` VALUES (16826474,'Sword_Sorcerer_Solisoq','Sword Sorcerer Solisoq',90306,6,15,-179,125);
-REPLACE INTO `mob_spawn_points` VALUES (16986188,'Chelicerata','Chelicerata',90307,415,-18,-44,141);
-REPLACE INTO `mob_spawn_points` VALUES (17240232,'Tegmine','Tegmine',90308,11,-0.999,-134,0); -- Pos data needs correction
-REPLACE INTO `mob_spawn_points` VALUES (16990252,'Harvestman','Harvestman',90309,398.130,-10.675,179.169,0);
-REPLACE INTO `mob_spawn_points` VALUES (17448990,'Citadel_Pipistrelles','Citadel Pipistrelles',90310,4.522,5.623,56.314,46);
-REPLACE INTO `mob_spawn_points` VALUES (17494135,'Laelaps','Laelaps',90311,300.484,-15.887,-224.944,50);
-INSERT INTO `mob_spawn_points` VALUES (17240315,'Zmey_Gorynych','Zmey_Gorynych',90312,-203,0,243,27);
-INSERT INTO `mob_spawn_points` VALUES (17293485,'Atkorkamuy','Atkorkamuy',90313,-266,-2,20,68);
-REPLACE INTO `mob_spawn_points` VALUES (17174561,'Muq_Shabeel','Muq Shabeel',90314,585,-31,603,107);
-REPLACE INTO `mob_spawn_points` VALUES (16797738,'Frost_Flambeau','Frost Flambeau',90315,-283,-19,-365,29);
-REPLACE INTO `mob_spawn_points` VALUES (16797770,'Skvader','Skvader',90316,173,0,-283,19);
-REPLACE INTO `mob_spawn_points` VALUES (17469578,'Canal_Moocher','Canal Moocher',90317,164,11,-103,43);
-REPLACE INTO `mob_spawn_points` VALUES (17612840,'Jenglot','Jenglot',90318,12.975,-16.50,46.5909,164);
-REPLACE INTO `mob_spawn_points` VALUES (17145965,'Croque-mitaine','Croque-mitaine',90319,240.094,24.242,-28.877,181);
-REPLACE INTO `mob_spawn_points` VALUES (17584416,'Aqrabuamelu','Aqrabuamelu',90320,-184.195,-1.719,248.295,33);
-INSERT INTO `mob_spawn_points` VALUES (17244350,'Sabotender_Corrido','Sabotender_Corrido',90321,44,8,-386,191);
-REPLACE INTO `mob_spawn_points` VALUES (17477675,'Abatwa','Abatwa',90322,52.2,-1.02,261.861,97);
-REPLACE INTO `mob_spawn_points` VALUES (17043466,'Venomfang','Venomfang',90323,310,-2,-214,57);
-
