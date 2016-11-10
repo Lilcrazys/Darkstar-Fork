@@ -31,7 +31,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
-    mob:setMod(MOD_DMG,100);
+    mob:setMod(MOD_DMG,1000);
 
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
