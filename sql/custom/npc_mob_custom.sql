@@ -1430,9 +1430,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17269127,'Goji','Goji',13779,-245,7.425,
 -- The Sanctuary of Zi'Tah (Zone 121)
 -- 17273855
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17273318,'Cath_palug','Cath Palug',90464,-89.08,-0.211,-312.308,45);
-REPLACE INTO `mob_spawn_points` VALUES (17273319,'Grwan','Grwnan',90465,-90.164,-0.518,-313.011,251);
-REPLACE INTO `mob_spawn_points` VALUES (17273320,'Grwan','Grwnan',90465,-90.599,-0.508,-311.7,251);
+REPLACE INTO `mob_spawn_points` VALUES (17273318,'Cath_palug','Cath Palug',13732,-89.08,-0.211,-312.308,45);
+REPLACE INTO `mob_spawn_points` VALUES (17273319,'Grwan','Grwnan',13733,-90.164,-0.518,-313.011,251);
+REPLACE INTO `mob_spawn_points` VALUES (17273320,'Grwan','Grwnan',13733,-90.599,-0.508,-311.7,251);
 
 -- ------------------------------------------------------------
 -- Ro'Maeve (Zone 122)
@@ -1440,9 +1440,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17273320,'Grwan','Grwnan',90465,-90.599,
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17277011,'Martinet','Martinet',14176,-196,-8,-48,32); -- Pos data needs correction
 INSERT INTO `mob_spawn_points` VALUES (17277103,'Nargun','Nargun',90304,-107,4,114,115);
-REPLACE INTO `mob_spawn_points` VALUES (17277138,'Mimic_King','Mimic King',90470,114,-8,47,254);
-REPLACE INTO `mob_spawn_points` VALUES (17277139,'Mimic_Jester','Mimic Jester',90469,113,-8,47,254);
-REPLACE INTO `mob_spawn_points` VALUES (17277140,'Mimic_Mage','Mimic Mage',90468,115,-8,47,254);
+REPLACE INTO `mob_spawn_points` VALUES (17277138,'Mimic_King','Mimic King',13736,114,-8,47,254);
+REPLACE INTO `mob_spawn_points` VALUES (17277139,'Mimic_Jester','Mimic Jester',13735,113,-8,47,254);
+REPLACE INTO `mob_spawn_points` VALUES (17277140,'Mimic_Mage','Mimic Mage',13734,115,-8,47,254);
 
 -- ------------------------------------------------------------
 -- Yuhtunga Jungle (Zone 123)
@@ -1526,10 +1526,10 @@ REPLACE INTO `mob_spawn_points` VALUES (17297452,'Pil','Pil',13763,-210,-20.835,
 -- Ru'Aun Gardens (Zone 130)
 -- 17310719
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17309993,'Aello','Aello',90471,77,-40.7,-460.042,196);
-REPLACE INTO `mob_spawn_points` VALUES (17309994,'Aellos_Handmaiden','Aello\'s Handmaiden',90472,75.755,-40.7,-462.634,106);
-REPLACE INTO `mob_spawn_points` VALUES (17309995,'Aellos_Handmaiden','Aello\'s Handmaiden',90472,75.716,-40.7,-463.924,127);
-REPLACE INTO `mob_spawn_points` VALUES (17309996,'Aellos_Handmaiden','Aello\'s Handmaiden',90472,76.129,-40.7,-463.25,117);
+REPLACE INTO `mob_spawn_points` VALUES (17309993,'Aello','Aello',13737,77,-40.7,-460.042,196);
+REPLACE INTO `mob_spawn_points` VALUES (17309994,'Aellos_Handmaiden','Aello\'s Handmaiden',13738,75.755,-40.7,-462.634,106);
+REPLACE INTO `mob_spawn_points` VALUES (17309995,'Aellos_Handmaiden','Aello\'s Handmaiden',13738,75.716,-40.7,-463.924,127);
+REPLACE INTO `mob_spawn_points` VALUES (17309996,'Aellos_Handmaiden','Aello\'s Handmaiden',13738,76.129,-40.7,-463.25,117);
 
 -- ------------------------------------------------------------
 -- Mordion Gaol (Zone 131)
@@ -1708,9 +1708,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17396141,'Odontotyrannus','Odontotyrannu
 -- 17404927
 -- ------------------------------------------------------------
 REPLACE INTO `npc_list` VALUES (17404397,'Planar_Rift','Planar Rift',0,318,9,-26,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as blank in DSP 9/24/2016
-INSERT INTO `mob_spawn_points` VALUES (17404339,'Modron','Modron',90466,318,9,-26,254);
-INSERT INTO `mob_spawn_points` VALUES (17404340,'Modrons_Druid','Modron\'s Druid',90467,319,9,-26,254);
-INSERT INTO `mob_spawn_points` VALUES (17404341,'Modrons_Druid','Modron\'s Druid',90467,317,9,-26,254);
+INSERT INTO `mob_spawn_points` VALUES (17404339,'Modron','Modron',13800,318,9,-26,254);
+INSERT INTO `mob_spawn_points` VALUES (17404340,'Modrons_Druid','Modron\'s Druid',13801,319,9,-26,254);
+INSERT INTO `mob_spawn_points` VALUES (17404341,'Modrons_Druid','Modron\'s Druid',13801,317,9,-26,254);
 
 -- ------------------------------------------------------------
 -- Dragon's Aery (Zone 154)
@@ -1850,10 +1850,10 @@ REPLACE INTO `mob_spawn_points` VALUES (17478058,'Kalos_Eunomia','Kalos Eunomia'
 -- Kuftal Tunnel (Zone 174)
 -- 17490943
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17490244,'Tangaroa','Tangaroa',90460,127.792,-0.52,5,215);
-REPLACE INTO `mob_spawn_points` VALUES (17490245,'Koura','Koura',90461,129.292,-0.017,6,59);
-REPLACE INTO `mob_spawn_points` VALUES (17490246,'PekaPeka','Pekapeka',90462,127.949,0.10,7,40);
-REPLACE INTO `mob_spawn_points` VALUES (17490247,'Moki','Moki',90463,128.642,-0.003,8,54);
+REPLACE INTO `mob_spawn_points` VALUES (17490244,'Tangaroa','Tangaroa',13820,127.792,-0.52,5,215);
+REPLACE INTO `mob_spawn_points` VALUES (17490245,'Koura','Koura',13821,129.292,-0.017,6,59);
+REPLACE INTO `mob_spawn_points` VALUES (17490246,'PekaPeka','Pekapeka',13822,127.949,0.10,7,40);
+REPLACE INTO `mob_spawn_points` VALUES (17490247,'Moki','Moki',13823,128.642,-0.003,8,54);
 
 -- ------------------------------------------------------------
 -- The Eldieme Necropolis [S] (Zone 175)
@@ -1872,19 +1872,19 @@ REPLACE INTO `mob_spawn_points` VALUES (17494610,'Giltine','Giltine',13818,-2,1,
 -- Ve'Lugannon Palace (Zone 177)
 -- 17503231
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17502571,'Uptala','Uptala',90480,-120.352,0.035,-384.774,131);
-REPLACE INTO `mob_spawn_points` VALUES (17502572,'Bisa','Bisa',90479,-121.754,-0.113,-384.136,236);
+REPLACE INTO `mob_spawn_points` VALUES (17502571,'Uptala','Uptala',13739,-120.352,0.035,-384.774,131);
+REPLACE INTO `mob_spawn_points` VALUES (17502572,'Bisa','Bisa',13740,-121.754,-0.113,-384.136,236);
 INSERT INTO `mob_spawn_points` VALUES (17502573,'Trna','Trna',90478,-122.754,-0.113,-384.136,236);
 
 -- ------------------------------------------------------------
 -- The Shrine of Ru'Avitau (Zone 178)
 -- 17507327
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17506681,'Qilin','Qilin',90477,69.649,-15.924,69.738,56);
-REPLACE INTO `mob_spawn_points` VALUES (17506682,'BaiHu','Bai Hu',90476,67.72,-15.924,68.997,205);
-REPLACE INTO `mob_spawn_points` VALUES (17506683,'QingLong','Qing Long',90475,70.563,-15.924,68.785,64);
-REPLACE INTO `mob_spawn_points` VALUES (17506684,'ZhuQue','Zhu Que',90474,70.364,-15.924,65.639,37);
-REPLACE INTO `mob_spawn_points` VALUES (17506685,'XuanWu','Xuan Wu',90473,67.539,-15.924,67.72,31);
+REPLACE INTO `mob_spawn_points` VALUES (17506681,'Qilin','Qilin',13746,69.649,-15.924,69.738,56);
+REPLACE INTO `mob_spawn_points` VALUES (17506682,'BaiHu','Bai Hu',13745,67.72,-15.924,68.997,205);
+REPLACE INTO `mob_spawn_points` VALUES (17506683,'QingLong','Qing Long',13744,70.563,-15.924,68.785,64);
+REPLACE INTO `mob_spawn_points` VALUES (17506684,'ZhuQue','Zhu Que',13743,70.364,-15.924,65.639,37);
+REPLACE INTO `mob_spawn_points` VALUES (17506685,'XuanWu','Xuan Wu',13742,67.539,-15.924,67.72,31);
 
 -- ------------------------------------------------------------
 -- Stellar Fulcrum (Zone 179)
@@ -2126,7 +2126,7 @@ REPLACE INTO `mob_spawn_points` VALUES (17612840,'Jenglot','Jenglot',14097,12.97
 -- Ifrit's Cauldron (Zone 205)
 -- 17617919
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17617172,'Ildebrann','Ildebrann',90454,8.217,3.526,293.694,254);
+REPLACE INTO `mob_spawn_points` VALUES (17617172,'Ildebrann','Ildebrann',13815,8.217,3.526,293.694,254);
 REPLACE INTO `mob_spawn_points` VALUES (17617173,'Hraun_Dragon','Hraun Dragon',90455,8.217,3.526,293.694,254);
 REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',90455,9.217,3.526,293.694,254);
 
