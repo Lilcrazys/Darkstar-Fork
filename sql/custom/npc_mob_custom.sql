@@ -836,7 +836,7 @@ INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,
 -- Wajaom Woodlands (Zone 51)
 -- 16987135
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (16986188,'Chelicerata','Chelicerata',90307,415,-18,-44,141);
+REPLACE INTO `mob_spawn_points` VALUES (16986188,'Chelicerata','Chelicerata',1624,415,-18,-44,141);
 
 -- ------------------------------------------------------------
 -- Bhaflau Thickets (Zone 52)
@@ -906,7 +906,7 @@ INSERT INTO `mob_spawn_points` VALUES (17027488,'Elder_Imp','Elder Imp',90499,90
 INSERT INTO `mob_spawn_points` VALUES (17027489,'Elder_Imp','Elder Imp',90499,903,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027490,'Elder_Imp','Elder Imp',90499,904,-15,336,41);
 
-REPLACE INTO `npc_list` VALUES (17027609,'Planar_Rift','Planar Rift',98,902,-15,336,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as yagu8 in DSP 9/24/2016
+-- REPLACE INTO `npc_list` VALUES (17027609,'Planar_Rift','Planar Rift',98,902,-15,336,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as yagu8 in DSP 9/24/2016
 
 -- ------------------------------------------------------------
 -- Halvung (Zone 62)
@@ -1787,7 +1787,7 @@ INSERT INTO `mob_spawn_points` VALUES (17428824,'Neiths_Bobbin','Neith\'s Bobbin
 -- 17449983
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17449375,'Laidly_Laurence','Laidly Laurence',13776,-260,-0.579,-20,9);
-REPLACE INTO `mob_spawn_points` VALUES (17448990,'Citadel_Pipistrelles','Citadel Pipistrelles',90310,4.522,5.623,56.314,46);
+REPLACE INTO `mob_spawn_points` VALUES (17448990,'Citadel_Pipistrelles','Citadel Pipistrelles',13775,4.522,5.623,56.314,46);
 
 -- ------------------------------------------------------------
 -- Throne Room (Zone 165)
@@ -1817,8 +1817,8 @@ REPLACE INTO `mob_spawn_points` VALUES (17448990,'Citadel_Pipistrelles','Citadel
 -- Toraimarai Canal (Zone 169)
 -- 17470463
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17469632,'Konjac','Konjac',90300,60,22,132,94);
-REPLACE INTO `mob_spawn_points` VALUES (17469578,'Canal_Moocher','Canal Moocher',90317,164,11,-103,43);
+REPLACE INTO `mob_spawn_points` VALUES (17469632,'Konjac','Konjac',8819,60,22,132,94);
+REPLACE INTO `mob_spawn_points` VALUES (17469578,'Canal_Moocher','Canal Moocher',8833,164,11,-103,43);
 
 -- ------------------------------------------------------------
 -- Full Moon Fountain (Zone 170)
