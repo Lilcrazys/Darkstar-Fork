@@ -252,7 +252,7 @@ INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',96
 -- INSERT INTO `npc_list` VALUES (16875885,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
 REPLACE INTO `npc_list` VALUES (16875876,'Planar_Rift','Planar Rift',0,-406,-8,44,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as Ramblix in DSP 9/24/2016
-REPLACE INTO `mob_spawn_points` VALUES (16875780,'Abununnu','Abununnu',90483,-406,-8,44,0);
+REPLACE INTO `mob_spawn_points` VALUES (16875780,'Abununnu','Abununnu',13767,-406,-8,44,0);
 REPLACE INTO `mob_spawn_points` VALUES (16875781,'Gloam_Servitor_Melee','Gloam Servitor',90484,-405,-8,44,241);
 REPLACE INTO `mob_spawn_points` VALUES (16875782,'Gloam_Servitor_Mage','Gloam Servitor',90485,-407,-8,44,16);
 
@@ -854,9 +854,9 @@ REPLACE INTO `mob_spawn_points` VALUES (16990252,'Harvestman','Harvestman',11190
 -- Arrapago Reef (Zone 54)
 -- 16999423
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (16998875,'Dimgruzub','Dimgruzub',90492,544.49,-7.480,80,0);
-REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',90493,549,-7,80,50);
-REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',90493,547,-7,80,21);
+REPLACE INTO `mob_spawn_points` VALUES (16998875,'Dimgruzub','Dimgruzub',13837,544.49,-7.480,80,0);
+REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',13838,549,-7,80,50);
+REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',13838,547,-7,80,21);
 
 
 -- ------------------------------------------------------------
@@ -900,7 +900,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassi
 -- 17028095
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17027228,'Chary_Apkallu','Chary_Apkallu',13829,641,-13,-60,186);
-REPLACE INTO `mob_spawn_points` VALUES (17027486,'Vanasarvik','Vanasarvik',90498,902,-15.729,333.408,41);
+REPLACE INTO `mob_spawn_points` VALUES (17027486,'Vanasarvik','Vanasarvik',13380,902,-15.729,333.408,41);
 INSERT INTO `mob_spawn_points` VALUES (17027487,'Elder_Imp','Elder Imp',90499,901,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027488,'Elder_Imp','Elder Imp',90499,902,-15,336,41);
 INSERT INTO `mob_spawn_points` VALUES (17027489,'Elder_Imp','Elder Imp',90499,903,-15,336,41);
@@ -1049,13 +1049,13 @@ INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426
 -- 17101823
 -- ------------------------------------------------------------
 REPLACE INTO `npc_list` VALUES (17101339,'Planar_Rift','Planar Rift',150,269,-4,-732,1,50,50,0,5,100,0,3,0x00006F0900000000000000000000000000000000,2,'ABYSSEA',0); -- listed as Basweema in DSP 9/24/2016
-REPLACE INTO `mob_spawn_points` VALUES (17101218,'Brekekex','Brekekekex',90494,259,-4,-732,152);
-REPLACE INTO `mob_spawn_points` VALUES (17101219,'Chorus_toad','Chorus Toad',90495,259,-4,-732,254);
-REPLACE INTO `mob_spawn_points` VALUES (17101220,'Chorus_toad','Chorus Toad',90495,260,-4,-732,50);
-REPLACE INTO `mob_spawn_points` VALUES (17101221,'Chorus_toad','Chorus Toad',90495,261,-4,-732,226);
-REPLACE INTO `mob_spawn_points` VALUES (17101222,'Chorus_toad','Chorus Toad',90495,258,-4,-732,70);
-REPLACE INTO `mob_spawn_points` VALUES (17101223,'Chorus_toad','Chorus Toad',90495,257,-4,-732,196);
-REPLACE INTO `mob_spawn_points` VALUES (17101224,'Chorus_toad','Chorus Toad',90495,256,-4,-732,30);
+REPLACE INTO `mob_spawn_points` VALUES (17101218,'Brekekex','Brekekekex',13852,259,-4,-732,152);
+REPLACE INTO `mob_spawn_points` VALUES (17101219,'Chorus_toad','Chorus Toad',13853,259,-4,-732,254);
+REPLACE INTO `mob_spawn_points` VALUES (17101220,'Chorus_toad','Chorus Toad',13853,260,-4,-732,50);
+REPLACE INTO `mob_spawn_points` VALUES (17101221,'Chorus_toad','Chorus Toad',13853,261,-4,-732,226);
+REPLACE INTO `mob_spawn_points` VALUES (17101222,'Chorus_toad','Chorus Toad',13853,258,-4,-732,70);
+REPLACE INTO `mob_spawn_points` VALUES (17101223,'Chorus_toad','Chorus Toad',13853,257,-4,-732,196);
+REPLACE INTO `mob_spawn_points` VALUES (17101224,'Chorus_toad','Chorus Toad',13853,256,-4,-732,30);
 
 
 -- ------------------------------------------------------------
