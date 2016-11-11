@@ -854,8 +854,8 @@ INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,
 -- 16999423
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (16998875,'Dimgruzub','Dimgruzub',90492,544.49,-7.480,80,0);
-REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',90493,549,-7,80,50);
-REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',90493,547,-7,80,21);
+REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',90493,546.44,-7.76,85.097,50);
+REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',90493,545.09,-7.684,85.097,21);
 
 
 -- ------------------------------------------------------------

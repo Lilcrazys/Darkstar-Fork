@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: ?
--- VWNM:
+-- Area: Arrapago Reef
+-- VWNM: Dimgruzub
 -----------------------------------
 
 require("scripts/globals/status");
@@ -31,7 +31,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
-    mob:setMod(MOD_DMG,1000);
+    mob:setMod(MOD_UDMGPHYS,1000); -- Dimgruzub takes 10x normal dmg where normal Qutrub take 2x
+    mob:setMod(MOD_UDMGBREATH,500);
+    mob:setMod(MOD_UDMGMAGIC,1000);
+    mob:setMod(MOD_UDMGRANGE,500);
 
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
@@ -131,10 +134,7 @@ end;
 function onMobFight(mob, target)
     local popTimerDelay = 120; -- For easy adjustment.
     local popTime = mob:getLocalVar("nextPetPop");
-    local rndPos = math.random(0,2); -- So they aren't all unforgettably stacked..
-    if (rndPos == 2) then
-        rdnPos = -1;
-    end
+    local rndPos = math.random(1,2); -- So they aren't all stacked on Dimgruzub..
 
     if (os.time(t) > popTime) then
         if (GetMobAction(mob:getID()+1) == ACTION_NONE) then

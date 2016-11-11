@@ -2,11 +2,7 @@
 -- Area: ?
 -- VWNM:
 -----------------------------------
-
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -33,7 +29,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,90);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
-    mob:setMod(MOD_DMG,100);
+    mob:setMod(MOD_UDMGPHYS,100); -- 2x normal dmg
+    mob:setMod(MOD_UDMGBREATH,50);
+    mob:setMod(MOD_UDMGMAGIC,100);
+    mob:setMod(MOD_UDMGRANGE,50);
 end;
 
 -----------------------------------
@@ -68,7 +67,7 @@ function onAdditionalEffect(mob,target,damage)
         target:addStatusEffect(EFFECT_STUN,1,0,2);
     end
 
-    return SUBEFFECT_STUN,163,EFFECT_STUN;
+    return SUBEFFECT_STUN,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_STUN;
 end;
 -----------------------------------
 -- onMobDeath
