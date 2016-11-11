@@ -855,8 +855,8 @@ REPLACE INTO `mob_spawn_points` VALUES (16990252,'Harvestman','Harvestman',11190
 -- 16999423
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (16998875,'Dimgruzub','Dimgruzub',13837,544.49,-7.480,80,0);
-REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',13838,549,-7,80,50);
-REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',13838,547,-7,80,21);
+REPLACE INTO `mob_spawn_points` VALUES (16998876,'Assassins_Apprentice','Assassin\'s Apprentice',13838,546.44,-7.76,85.097,50);
+REPLACE INTO `mob_spawn_points` VALUES (16998877,'Assassins_Apprentice','Assassin\'s Apprentice',13838,545.09,-7.684,85.097,21);
 
 
 -- ------------------------------------------------------------
