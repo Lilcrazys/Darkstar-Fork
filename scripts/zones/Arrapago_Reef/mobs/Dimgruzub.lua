@@ -14,11 +14,16 @@ require("scripts/globals/quests");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
+    -- setMod
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_DOUBLE_ATTACK,25);
+
     -- addMod
-    mob:addMod(MOD_MDEF,50);
-    mob:addMod(MOD_ATT,150);
+    mob:addMod(MOD_MACC,200);
+    mob:addMod(MOD_MATT,50);
 end;
 
 -----------------------------------
@@ -26,15 +31,16 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    -- setMod
-    mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,90);
-    mob:setMod(MOD_DOUBLE_ATTACK,25);
-    mob:setMod(MOD_UDMGPHYS,1000); -- Dimgruzub takes 10x normal dmg where normal Qutrub take 2x
-    mob:setMod(MOD_UDMGBREATH,500);
-    mob:setMod(MOD_UDMGMAGIC,1000);
-    mob:setMod(MOD_UDMGRANGE,500);
+    -- Dimgruzub takes 10x normal dmg where normal Qutrub take 2x on retail..
+    -- ..But the base damage being mutlipled is so low, we're instead multiplying by far more than 10.
+    mob:setMod(MOD_UDMGPHYS,1500);
+    mob:setMod(MOD_UDMGBREATH,1500);
+    mob:setMod(MOD_UDMGMAGIC,1500);
+    mob:setMod(MOD_UDMGRANGE,1500);
+    -- Its base stats were so stupid high that multiplying dmg was leading to massive variance.
+    -- By cutting them we can us less dmg multiplier anyways..
+    mob:addMod(MOD_DEF,-100);
+    mob:addMod(MOD_VIT,-70);
 
     local RND1 = math.random(1,8);
     if (RND1 == 1) then
@@ -135,7 +141,7 @@ function onMobFight(mob, target)
     local popTimerDelay = 120; -- For easy adjustment.
     local popTime = mob:getLocalVar("nextPetPop");
     local rndPos = math.random(1,2); -- So they aren't all stacked on Dimgruzub..
-
+--[[
     if (os.time(t) > popTime) then
         if (GetMobAction(mob:getID()+1) == ACTION_NONE) then
             SpawnMob(mob:getID()+1):updateEnmity(target);
@@ -146,7 +152,7 @@ function onMobFight(mob, target)
             GetMobByID(mob:getID()+2):setPos(mob:getXPos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
             mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
         end
-    end
+    end]]
 end;
 
 -----------------------------------
