@@ -6,7 +6,7 @@
 ALTER TABLE `mob_spell_lists` MODIFY `spell_list_name` varchar(40); -- Required because DSP stupidity
 -- INSERT INTO `mob_spell_lists` VALUES ('spell_list_name', spell_list_id, spell_id, min_level, max_level);
 
---Abyssea List to be deleted once DSP merges
+-- Abyssea List to be deleted once DSP merges
 
 -- Arimaspi
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,257,1,255); -- curse
@@ -20,7 +20,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,153,1,255); -- blizzard v
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,158,1,255); -- aero v
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,157,1,255); -- aero iv
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,163,1,255); -- stone v
-INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,152,1,255); -- stone iv
+INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,162,1,255); -- stone iv
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,173,1,255); -- water v
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,172,1,255); -- water iv
 INSERT INTO `mob_spell_lists` VALUES ('Arimaspi',153,252,1,255); -- stun
@@ -248,7 +248,7 @@ INSERT INTO `mob_spell_lists` VALUES ('Lacovie',178,255,1,255); -- break
 INSERT INTO `mob_spell_lists` VALUES ('Manananggal',179,267,1,255); -- absorb-dex
 INSERT INTO `mob_spell_lists` VALUES ('Manananggal',179,268,1,255); -- absorb vit
 INSERT INTO `mob_spell_lists` VALUES ('Manananggal',179,275,1,255); -- absorb tp
-INSERT INTO `DSP merges ll_lists` VALUES ('Manananggal',179,231,1,255); -- bio ii
+INSERT INTO `mob_spell_lists` VALUES ('Manananggal',179,231,1,255); -- bio ii
 INSERT INTO `mob_spell_lists` VALUES ('Manananggal',179,150,1,255); -- blizzard ii
 
 -- Mictlantecuhtli

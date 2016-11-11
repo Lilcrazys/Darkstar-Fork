@@ -43,7 +43,16 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
-end
+    -- Uncertain of threshold. Going with 50% for now.
+    -- (possibly varies, perhaps is simply lower HP = greater cast chance?)
+    if (mob:getHPP <=50) then
+        mob:setMobMod(MOBMOD_SKILL_LIST, 904);
+    else
+        -- I'm assuming that if it heals up, it goes back to the other spell list.
+        mob:setMobMod(MOBMOD_SKILL_LIST, 905);
+        -- This 'else' can be removed if that isn't the case, and a localVar added so it only execs once.
+    end
+end;
 
 -----------------------------------
 -- onMobDeath

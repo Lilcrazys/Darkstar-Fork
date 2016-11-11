@@ -40,6 +40,16 @@ end;
 -----------------------------------
 
 function onMobFight(mob,target)
+    -- First Meteor Spell cast at 20%.
+    if (mob:getHPP() <=20 and mob:getLocalVar("meteorCount") == 0) then
+        mob:setLocalVar("meteorCount", 1);
+    -- https://www.youtube.com/results?search_query=Hadhayosh+ffxi
+        mob:castSpell(218);
+    -- Second Meteor Spell cast at 5%
+    elseif (mob:getHPP() <= 5 and mob:getLocalVar("meteorCount") == 1) then
+        mob:setLocalVar("meteorCount", 2);
+        mob:castSpell(218);
+    end;
 end;
 
 -----------------------------------
