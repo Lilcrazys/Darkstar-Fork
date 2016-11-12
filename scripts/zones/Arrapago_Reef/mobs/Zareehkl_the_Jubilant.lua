@@ -18,6 +18,11 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- setMod
+    mob:setMod(MOD_UDMGPHYS,100); -- 2x normal dmg
+    mob:setMod(MOD_UDMGBREATH,50);
+    mob:setMod(MOD_UDMGMAGIC,100);
+    mob:setMod(MOD_UDMGRANGE,50);
 end;
 
 -----------------------------------
