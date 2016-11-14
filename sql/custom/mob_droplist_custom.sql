@@ -694,8 +694,8 @@ DELETE FROM `mob_droplist` WHERE dropId=838 and type=0 and itemId=2359 and rate=
 DELETE FROM `mob_droplist` WHERE dropId=838 and type=0 and itemId=2824 and rate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=838 and type=0 and itemId=3210 and rate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=838 and type=0 and itemId=3213 and rate=100; -- comment me
-INSERT INTO `mob_droplist` VALUES (9702,0,12091,340); -- Goetia Sabots
-INSERT INTO `mob_droplist` VALUES (9702,0,19407,340); --  Gambanteinn
+INSERT INTO `mob_droplist` VALUES (838,0,12091,340); -- Goetia Sabots
+INSERT INTO `mob_droplist` VALUES (838,0,19407,340); --  Gambanteinn
 INSERT INTO `mob_droplist` VALUES (838,0,2361,264); -- comment me
 INSERT INTO `mob_droplist` VALUES (838,0,3926,224);
 INSERT INTO `mob_droplist` VALUES (838,0,3920,172);
@@ -1451,9 +1451,9 @@ DELETE FROM `mob_droplist` WHERE dropId=2487 and type=0 and itemId=15021 and rat
 DELETE FROM `mob_droplist` WHERE dropId=2487 and type=0 and itemId=17960 and rate=150; -- comment me
 INSERT INTO `mob_droplist` VALUES (2487,0,14546,154); -- Ares Cuirass
 INSERT INTO `mob_droplist` VALUES (2487,0,10450,99); --  Ogier's Surcoat
--- INSERT INTO `mob_droplist` VALUES (2487,0,18989,100); -- Terpsichore
--- INSERT INTO `mob_droplist` VALUES (2487,0,19001,100); --  Gastraphetes
--- INSERT INTO `mob_droplist` VALUES (2487,0,19003,100); --  Nagi
+INSERT INTO `mob_droplist` VALUES (2487,0,18989,100); -- Terpsichore
+INSERT INTO `mob_droplist` VALUES (2487,0,19001,100); --  Gastraphetes
+INSERT INTO `mob_droplist` VALUES (2487,0,19003,100); --  Nagi
 INSERT INTO `mob_droplist` VALUES (2487,0,28440,74); -- Windbuffet Belt +1
 
 -- -----------

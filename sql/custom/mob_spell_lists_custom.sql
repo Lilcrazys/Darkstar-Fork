@@ -399,6 +399,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 199, 274, 1, 255); -- Sleepga 2
 INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 199, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 199, 365, 1, 255); -- Breakga
 
+-- Abyssic_Cluster
+
 -- Abyssea List to be deleted once DSP merges
 
 INSERT INTO `mob_spell_lists` VALUES ('Tegmine', 399, 322, 1, 255); -- Katon: San
