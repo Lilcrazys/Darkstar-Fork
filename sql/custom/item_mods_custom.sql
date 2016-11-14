@@ -829,6 +829,8 @@ INSERT INTO `item_mods` VALUES (26406,135,3);
 REPLACE INTO `item_mods` VALUES (26710,11,34);
 REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
 
+INSERT INTO `item_mods` VALUES (26874,311,20); -- Supay Weskit magic damage added, already pushed to DSP
+
 INSERT INTO `item_mods` VALUES (26877,1,133);
 INSERT INTO `item_mods` VALUES (26877,10,29);
 INSERT INTO `item_mods` VALUES (26877,11,36);
