@@ -111,6 +111,8 @@ REPLACE INTO `mob_pools` VALUES (4400,'Yaanei',450,0x0000A3080000000000000000000
 
 -- ABOVE to be deleted once DSP merges Abyssea changes
 
+-- Gorger Fix to be sent into DSP once TOAU lock lifts
+REPLACE INTO `mob_pools` VALUES (1768,'Gorger',138,0x00006B0400000000000000000000000000000000,8,8,3,240,100,0,1,1,1,1,0,0,238,131,0,0,5,1,0,137);
 
 REPLACE INTO `mob_pools` VALUES (21,'Absolute_Virtue',329,0x0000620500000000000000000000000000000000,4,14,8,180,125,0,0,0,0,2,23,32,0,15,0,0,403,1,0,329); -- replaced flag of "6" and "flags" of 1183 in attempt to track down the no-casting bug.
 REPLACE INTO `mob_pools` VALUES (26,'Abyssobugard',58,0x0000480500000000000000000000000000000000,1,1,3,240,100,0,1,0,0,0,0,0,0,0,0,0,0,1,0,58);
