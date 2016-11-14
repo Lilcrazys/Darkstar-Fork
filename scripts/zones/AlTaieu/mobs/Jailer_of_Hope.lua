@@ -12,11 +12,7 @@ require("scripts/globals/magic");
 
 function onMobInitialize(mob)
     -- setMobMod
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    -- mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
 
     -- addMod
     mob:addMod(MOD_MDEF,100);
@@ -109,25 +105,14 @@ end;
 -----------------------------------
 -- onAdditionalEffect Action
 -----------------------------------
-
 function onAdditionalEffect(mob,target,damage)
-    --[[
     -- Guestimating 2 in 3 chance to stun on melee.
     if ((math.random(1,100) >= 66) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
         return 0,0,0;
     else
-        local duration = math.random(4,8);
+        local duration = math.random(4,6);
         target:addStatusEffect(EFFECT_STUN,5,0,duration);
         return SUBEFFECT_STUN,0,EFFECT_STUN;
-    end
-    DSP CODE ABOVE THIS LINE, LEGION CUSTOM BELOW]]--
-
-    if (math.random(1,15) ~= 5 or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
-        return 0,0,0;
-    else
-        local duration = 5;
-        target:addStatusEffect(EFFECT_TERROR,1,0,duration);
-        return SUBEFFECT_NONE,0,EFFECT_TERROR;
     end
 end;
 

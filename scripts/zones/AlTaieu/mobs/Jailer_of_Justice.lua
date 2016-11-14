@@ -12,8 +12,13 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+
+    -- addMod
+    mob:addMod(MOD_MDEF,30);
+    mob:addMod(MOD_DEF,130);
 end;
 
 -----------------------------------
@@ -27,10 +32,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_HASTE_ABILITY, 20);
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
-
-    -- addMod
-    mob:addMod(MOD_MDEF,30);
-    mob:addMod(MOD_DEF,130);
 end;
 
 -----------------------------------

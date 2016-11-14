@@ -1,12 +1,15 @@
 -----------------------------------
---  Area: Abyssea - Altepa (218)
---   NM:  Rani
+-- Area: Abyssea - Altepa (218)
+--  Mob: Rani
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Altepa/TextIDs");
 require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+require("scripts/globals/titles");
+
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
@@ -295,12 +298,12 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+    player:addTitle(RANI_DECROWNER);
+
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_MERCILESS_MATRIARCH) == false) then
         player:addKeyItem(ATMA_OF_THE_MERCILESS_MATRIARCH);
         player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_MERCILESS_MATRIARCH);
     end
-
-
 
 end;

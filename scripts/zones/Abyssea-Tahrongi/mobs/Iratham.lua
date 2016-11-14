@@ -1,12 +1,14 @@
 -----------------------------------
---  Area: Abyssea - Tahrongi (45)
---   Mob: Hedetet
+-- Area: Abyssea - Tahrongi (45)
+--  Mob: Iratham
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Tahrongi/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Tahrongi/TextIDs");
 require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+require("scripts/globals/titles");
 
 -----------------------------------
 -- onMobInitialize
@@ -46,10 +48,13 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+    player:addTitle(IRATHAM_CAPTURER);
+
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_COSMOS) == false) then
         player:addKeyItem(ATMA_OF_THE_COSMOS);
         player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_COSMOS);
     end
+
 end;
 

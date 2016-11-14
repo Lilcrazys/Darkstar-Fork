@@ -13,8 +13,8 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     --[[
+    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
     ]]
     -- Only 1 JoP will drop loot. Mod will be removed at death.
@@ -121,6 +121,21 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+    if (isKiller == true) then
+        local firstPrudence     = GetMobByID(PrudenceOne);
+        local secondPrudence    = GetMobByID(PrudenceTwo);
+        if (mob:getID() == PrudenceOne) then
+            secondPrudence:setMobMod(MOBMOD_NO_DROPS, 0);
+            secondPrudence:AnimationSub(3); -- Mouth Open
+            secondPrudence:addMod(MOD_ATTP, 100);
+            secondPrudence:delMod(MOD_DEFP, -50);
+        else
+            firstPrudence:setMobMod(MOBMOD_NO_DROPS, 0);
+            firstPrudence:AnimationSub(3); -- Mouth Open
+            firstPrudence:addMod(MOD_ATTP, 100);
+            firstPrudence:delMod(MOD_DEFP, -50);
+        end
+    end
 end;
 
 -----------------------------------
@@ -128,6 +143,7 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
+    --[[
     local firstPrudence     = GetMobByID(PrudenceOne);
     local secondPrudence    = GetMobByID(PrudenceTwo);
     if (mob:getID() == PrudenceOne) then
@@ -141,4 +157,5 @@ function onMobDespawn(mob)
         firstPrudence:addMod(MOD_ATTP, 100);
         firstPrudence:delMod(MOD_DEFP, -50);
     end;
+    ]]
 end;
