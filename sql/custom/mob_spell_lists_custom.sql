@@ -400,6 +400,52 @@ INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 199, 357, 1, 255); -- Slowga
 INSERT INTO `mob_spell_lists` VALUES ('Yaanei', 199, 365, 1, 255); -- Breakga
 
 -- Abyssic_Cluster
+INSERT INTO `mob_spell_lists` VALUES ('Abyssic_Cluster', 200, 148, 1, 255); -- fire_v
+INSERT INTO `mob_spell_lists` VALUES ('Abyssic_Cluster', 200, 177, 1, 255); -- firaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Abyssic_Cluster', 200, 205, 1, 255); -- flare_ii
+INSERT INTO `mob_spell_lists` VALUES ('Abyssic_Cluster', 200, 249, 1, 255); -- blaze_spikes
+
+-- Amhuluk
+INSERT INTO `mob_spell_lists` VALUES ('Amhuluk', 201, 187, 1, 255); -- aeroga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Amhuluk', 201, 208, 1, 255); -- tornado
+INSERT INTO `mob_spell_lists` VALUES ('Amhuluk', 201, 245, 1, 255); -- drain
+INSERT INTO `mob_spell_lists` VALUES ('Amhuluk', 201, 359, 1, 255); -- silencga
+INSERT INTO `mob_spell_lists` VALUES ('Amhuluk', 201, 366, 1, 255); -- graviga
+
+-- Athamas
+INSERT INTO `mob_spell_lists` VALUES ('Athamas', 202, 286, 1, 255); -- addle
+INSERT INTO `mob_spell_lists` VALUES ('Athamas', 202, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Athamas', 202, 366, 1, 255); -- graviga
+
+-- Heqet
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 56, 1, 255); -- slow
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 199, 1, 255); -- waterga
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 200, 1, 255); -- waterga_ii
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 202, 1, 255); -- waterga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 286, 1, 255); -- addle
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 357, 1, 255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Heqet', 203, 501, 1, 255); -- waterja
+
+-- Karkatakam
+INSERT INTO `mob_spell_lists` VALUES ('Karkatakam', 204, 200, 1, 255); -- waterga_ii
+INSERT INTO `mob_spell_lists` VALUES ('Karkatakam', 204, 214, 1, 255); -- flood
+
+-- Kutharei
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 148, 1, 255); -- fire_v
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 158, 1, 255); -- aero_v
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 177, 1, 255); -- firaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 187, 1, 255); -- aeroga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 286, 1, 255); -- addle
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 359, 1, 255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 360, 1, 255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Kutharei', 205, 366, 1, 255); -- graviga
+
+-- Sobek
+INSERT INTO `mob_spell_lists` VALUES ('Sobek', 206, 182, 1, 255); -- blizzaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Sobek', 206, 274, 1, 255); -- sleepga_ii
+INSERT INTO `mob_spell_lists` VALUES ('Sobek', 206, 356, 1, 255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Sobek', 206, 360, 1, 255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Sobek', 206, 362, 1, 255); -- bindga
 
 -- Abyssea List to be deleted once DSP merges
 

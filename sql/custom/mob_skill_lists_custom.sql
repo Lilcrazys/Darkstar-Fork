@@ -609,9 +609,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Gukumatz',1005,2154); -- delta_thrust
 INSERT INTO `mob_skill_lists` VALUES ('Gukumatz',1005,2156); -- grim_glower
 
 -- Heqet
-INSERT INTO `mob_skill_lists` VALUES ('Gukumatz',1006,1959); -- water_bomb
-INSERT INTO `mob_skill_lists` VALUES ('Gukumatz',1006,1960); -- frog_cheer
--- INSERT INTO `mob_skill_lists` VALUES ('Gukumatz',1006,1961); -- providence
+INSERT INTO `mob_skill_lists` VALUES ('Heqet',1006,1959); -- water_bomb
+INSERT INTO `mob_skill_lists` VALUES ('Heqet',1006,1960); -- frog_cheer
+-- INSERT INTO `mob_skill_lists` VALUES ('Heqet',1006,1961); -- providence
 
 -- Ironclad_Observer
 INSERT INTO `mob_skill_lists` VALUES ('Ironclad_Observer',1007,2626); -- Auger_Smash
@@ -669,7 +669,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Nonno',1015,301); -- dream flower
 INSERT INTO `mob_skill_lists` VALUES ('Nonno',1015,306); -- scream
 
 -- Npfundlwa
-INSERT INTO `mob_skill_lists` VALUES ('Nonno',1016,258); -- dust_cloud
+INSERT INTO `mob_skill_lists` VALUES ('Npfundlwa',1016,258); -- dust_cloud
 
 -- Sirrush
 INSERT INTO `mob_skill_lists` VALUES ('Sirrush',1017,367); -- fireball
