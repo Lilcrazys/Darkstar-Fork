@@ -156,9 +156,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Megamaw_Mikey',1168,163,1,255); -- stone 
 INSERT INTO `mob_spell_lists` VALUES ('Megamaw_Mikey',1168,210,1,255); -- quake
 INSERT INTO `mob_spell_lists` VALUES ('Megamaw_Mikey',1168,191,1,255); -- stonega iii
 
--- Piasa
-INSERT INTO `mob_spell_lists` VALUES ('Piasa',1169,102,1,255); -- enaero
-
 -- Poroggo_Dom_Juan
 INSERT INTO `mob_spell_lists` VALUES ('Poroggo_Dom_Juan',1170,201,1,255); -- waterga iii
 INSERT INTO `mob_spell_lists` VALUES ('Poroggo_Dom_Juan',1170,226,1,255); -- poisonga ii 
