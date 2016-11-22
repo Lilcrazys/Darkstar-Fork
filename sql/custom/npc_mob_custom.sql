@@ -2765,6 +2765,8 @@ REPLACE INTO `mob_spawn_points` VALUES (17686540,'CrystalFetter','Crystal Fetter
 -- 17720319
 -- ------------------------------------------------------------
 
+INSERT INTO `npc_list` VALUES (17720318,'Anniversary_Mog','Anniversary_Mog',176,60,2,-28,32769,40,40,0,0,0,0,3,0x0000D50300000000000000000000000000000000,0,NULL,0);
+
 
 -- ------------------------------------------------------------
 -- Northern San d'Oria (Zone 231)
@@ -2789,6 +2791,8 @@ REPLACE INTO `mob_spawn_points` VALUES (17686540,'CrystalFetter','Crystal Fetter
 -- 17736703
 -- ------------------------------------------------------------
 
+INSERT INTO `npc_list` VALUES (17736702,'Anniversary_Mog','Anniversary_Mog',24,-257.5,-12,-78.5,32769,40,40,0,0,0,0,3,0x0000D50300000000000000000000000000000000,0,NULL,0);
+
 
 -- ------------------------------------------------------------
 -- Bastok Markets (Zone 235)
@@ -2812,6 +2816,8 @@ REPLACE INTO `mob_spawn_points` VALUES (17686540,'CrystalFetter','Crystal Fetter
 -- Windurst Waters (Zone 238)
 -- 17753087
 -- ------------------------------------------------------------
+
+INSERT INTO `npc_list` VALUES (17753086,'Anniversary_Mog','Anniversary_Mog',224,-52,-5,216,32769,40,40,0,0,0,0,3,0x0000D50300000000000000000000000000000000,0,NULL,0);
 
 
 -- ------------------------------------------------------------
