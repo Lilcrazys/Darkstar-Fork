@@ -133,7 +133,7 @@ int32 lobbydata_parse(int32 fd)
             CharList[0] = 0xE0; CharList[1] = 0x08;
             CharList[4] = 0x49; CharList[5] = 0x58; CharList[6] = 0x46; CharList[7] = 0x46; CharList[8] = 0x20;
 
-            CharList[28] = 16; // количество ячеек, доступных для создания персонажей (0-16)
+            CharList[28] = 3; // количество ячеек, доступных для создания персонажей (0-16)
 
             const char *pfmtQuery = "SELECT charid, charname, pos_zone, pos_prevzone, mjob,\
 												 race, face, head, body, hands, legs, feet, main, sub,\
