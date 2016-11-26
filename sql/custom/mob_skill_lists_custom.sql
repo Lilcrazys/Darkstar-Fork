@@ -1029,7 +1029,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Sand_Blast',4072,275); -- Sand_Blast
 INSERT INTO `mob_skill_lists` VALUES ('Venom_Spray',4072,277); -- Venom_Spray
 INSERT INTO `mob_skill_lists` VALUES ('Mandibular_Bite',4072,279); -- Mandibular_Bite
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Quake_Blast',4072,2517); -- Quake_Blast -- need correct animation
-INSERT INTO `mob_skill_lists` VALUES ('Custom_Gravitic_Horn',4072,2518); -- Gravitic_Horn -- need correct animation
+INSERT INTO `mob_skill_lists` VALUES ('Custom_Gravitic_Horn',4072,2516); -- Gravitic_Horn -- need correct animation
 
 INSERT INTO `mob_skill_lists` VALUES ('Custom_Words_of_Bane',4073,783); -- Words_of_Bane
 INSERT INTO `mob_skill_lists` VALUES ('Light_of_Penance',4073,785); -- Light_of_Penance
