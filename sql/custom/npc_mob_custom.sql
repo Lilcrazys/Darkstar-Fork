@@ -1992,49 +1992,49 @@ REPLACE INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',9
 REPLACE INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
 REPLACE INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
 
-INSERT INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,-195.000,12.001,240.000,0); -- (Air) Hall of An : Restore
+REPLACE INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,-195.000,12.001,240.000,0); -- (Air) Hall of An : Restore
 INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,155.000,12.001,238.000,0); -- (Dark) Hall of Ki : Restore
 INSERT INTO `mob_spawn_points` VALUES (17526875,'Auspicious_Entity','Auspicious Entity',90009,159.000,12.001,-155.000,0); -- (Earth) Hall of Im : Restore
 INSERT INTO `mob_spawn_points` VALUES (17526876,'Auspicious_Entity','Auspicious Entity',90010,-197.000,12.001,-159.000,0); -- (Fire) Hall of Muru : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity_2','Auspicious Entity',90011,0.000,0.001,0.000,0); -- (Ice) Hall of Muru : TE
+REPLACE INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity_2','Auspicious Entity',90011,0.000,0.001,0.000,0); -- (Ice) Hall of Muru : TE
 INSERT INTO `mob_spawn_points` VALUES (17526878,'Auspicious_Entity_2','Auspicious Entity',90012,0.000,0.001,0.000,0); -- (Light) Hall of Mul : TE
-INSERT INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity','Auspicious Entity',90013,-20.000,12.001,20.000,0); -- (Lighting) Hall of Mul : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity_3','Auspicious Entity',90014,12.000,9.001,-12.000,0); -- (Water) Hall of Mul : 2hr reset
+REPLACE INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity','Auspicious Entity',90013,-20.000,12.001,20.000,0); -- (Lighting) Hall of Mul : Restore
+REPLACE INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity_3','Auspicious Entity',90014,12.000,9.001,-12.000,0); -- (Water) Hall of Mul : 2hr reset
 
 INSERT INTO `mob_spawn_points` VALUES (17526805,'Mired_Cerberus','Mired Cerberus',90020,182,12,219,116);
-INSERT INTO `mob_spawn_points` VALUES (17526806,'Mired_Khimaira','Mired Khimaira',90021,181,12,239,130);
-INSERT INTO `mob_spawn_points` VALUES (17526807,'Mired_Hydra','Mired Hydra',90022,181,12,259,128);
-INSERT INTO `mob_spawn_points` VALUES (17526808,'Mired_Orthrus','Mired Orthrus',90023,182,12,219,116);
-INSERT INTO `mob_spawn_points` VALUES (17526809,'Mired_Khrysokhimaira','Mired Khrysokhimaira',90024,181,12,239,130);
-INSERT INTO `mob_spawn_points` VALUES (17526810,'Mired_Alfard','Mired Alfard',90025,181,12,259,128);
-INSERT INTO `mob_spawn_points` VALUES (17526811,'Mired_Mantis','Mired Mantis',90026,181,12,239,130);
+REPLACE INTO `mob_spawn_points` VALUES (17526806,'Mired_Khimaira','Mired Khimaira',90021,181,12,239,130);
+REPLACE INTO `mob_spawn_points` VALUES (17526807,'Mired_Hydra','Mired Hydra',90022,181,12,259,128);
+REPLACE INTO `mob_spawn_points` VALUES (17526808,'Mired_Orthrus','Mired Orthrus',90023,182,12,219,116);
+REPLACE INTO `mob_spawn_points` VALUES (17526809,'Mired_Khrysokhimaira','Mired Khrysokhimaira',90024,181,12,239,130);
+REPLACE INTO `mob_spawn_points` VALUES (17526810,'Mired_Alfard','Mired Alfard',90025,181,12,259,128);
+REPLACE INTO `mob_spawn_points` VALUES (17526811,'Mired_Mantis','Mired Mantis',90026,181,12,239,130);
 
-INSERT INTO `mob_spawn_points` VALUES (17526819,'Soaring_Corse','Soaring Corse',90030,180,12,-181,186);
-INSERT INTO `mob_spawn_points` VALUES (17526820,'Soaring_Dvergr','Soaring Dvergr',90031,139,12,-181,179);
-INSERT INTO `mob_spawn_points` VALUES (17526821,'Soaring_Vampyr','Soaring Vampyr',90032,159,12,-180,188);
-INSERT INTO `mob_spawn_points` VALUES (17526822,'Soaring_Kumakatok','Soaring Kumakatok',90033,180,12,-181,186);
-INSERT INTO `mob_spawn_points` VALUES (17526823,'Soaring_Dweorg','Soaring Dweorg',90034,139,12,-181,179);
-INSERT INTO `mob_spawn_points` VALUES (17526824,'Soaring_Strigoi','Soaring Strigoi',90035,159,12,-180,188);
-INSERT INTO `mob_spawn_points` VALUES (17526825,'Soaring_Naraka','Soaring Naraka',90036,159,12,-180,188);
+REPLACE INTO `mob_spawn_points` VALUES (17526819,'Soaring_Corse','Soaring Corse',90030,180,12,-181,186);
+REPLACE INTO `mob_spawn_points` VALUES (17526820,'Soaring_Dvergr','Soaring Dvergr',90031,139,12,-181,179);
+REPLACE INTO `mob_spawn_points` VALUES (17526821,'Soaring_Vampyr','Soaring Vampyr',90032,159,12,-180,188);
+REPLACE INTO `mob_spawn_points` VALUES (17526822,'Soaring_Kumakatok','Soaring Kumakatok',90033,180,12,-181,186);
+REPLACE INTO `mob_spawn_points` VALUES (17526823,'Soaring_Dweorg','Soaring Dweorg',90034,139,12,-181,179);
+REPLACE INTO `mob_spawn_points` VALUES (17526824,'Soaring_Strigoi','Soaring Strigoi',90035,159,12,-180,188);
+REPLACE INTO `mob_spawn_points` VALUES (17526825,'Soaring_Naraka','Soaring Naraka',90036,159,12,-180,188);
 
 INSERT INTO `mob_spawn_points` VALUES (17526833,'Veiled_Amphiptere','Veiled Amphiptere',90040,-220,12,-155,5);
 INSERT INTO `mob_spawn_points` VALUES (17526834,'Veiled_Ixion','Veiled Ixion',90041,-220,12,-180,255);
-INSERT INTO `mob_spawn_points` VALUES (17526835,'Veiled_Sandworm','Veiled Sandworm',90042,-220,12,-139,248);
-INSERT INTO `mob_spawn_points` VALUES (17526836,'Veiled_Sanguiptere','Veiled Sanguiptere',90043,-220,12,-155,5);
-INSERT INTO `mob_spawn_points` VALUES (17526837,'Veiled_Alicorn','Veiled Alicorn',90044,-220,12,-180,255);
-INSERT INTO `mob_spawn_points` VALUES (17526838,'Veiled_Gigaworm','Veiled Gigaworm',90045,-220,12,-139,248);
-INSERT INTO `mob_spawn_points` VALUES (17526839,'Veiled_Ironclad','Veiled Ironclad',90046,-220,12,-155,5);
+REPLACE INTO `mob_spawn_points` VALUES (17526835,'Veiled_Sandworm','Veiled Sandworm',90042,-220,12,-139,248);
+REPLACE INTO `mob_spawn_points` VALUES (17526836,'Veiled_Sanguiptere','Veiled Sanguiptere',90043,-220,12,-155,5);
+REPLACE INTO `mob_spawn_points` VALUES (17526837,'Veiled_Alicorn','Veiled Alicorn',90044,-220,12,-180,255);
+REPLACE INTO `mob_spawn_points` VALUES (17526838,'Veiled_Gigaworm','Veiled Gigaworm',90045,-220,12,-139,248);
+REPLACE INTO `mob_spawn_points` VALUES (17526839,'Veiled_Ironclad','Veiled Ironclad',90046,-220,12,-155,5);
 
-INSERT INTO `mob_spawn_points` VALUES (17526847,'Lofty_Harpeia','Lofty_Harpeia',90050,-19,10,41,190);
-INSERT INTO `mob_spawn_points` VALUES (17526848,'Mired_Mantis','Mired_Mantis',90051,12,10,52,94);
-INSERT INTO `mob_spawn_points` VALUES (17526849,'Soaring_Naraka','Soaring_Naraka',90052,-52,10,52,18);
-INSERT INTO `mob_spawn_points` VALUES (17526850,'Veiled_Ironclad','Veiled_Ironclad',90053,-52,9,-12,255);
-INSERT INTO `mob_spawn_points` VALUES (17526855,'Paramount_Gallu','Paramount_Gallu',90054,-19,10,-2,199);
-INSERT INTO `mob_spawn_points` VALUES (17526856,'Paramount_Botulus','Paramount_Botulus',90055,-19,10,-2,199);
-INSERT INTO `mob_spawn_points` VALUES (17526852,'Paramount_Harpeia','Paramount_Harpeia',90056,-19,10,41,190);
-INSERT INTO `mob_spawn_points` VALUES (17526853,'Paramount_Mantis','Paramount_Mantis',90057,12,10,52,94);
-INSERT INTO `mob_spawn_points` VALUES (17526851,'Paramount_Naraka','Paramount_Naraka',90058,-52,10,52,18);
-INSERT INTO `mob_spawn_points` VALUES (17526854,'Paramount_Ironclad','Paramount_Ironclad',90059,-52,9,-12,255);
+REPLACE INTO `mob_spawn_points` VALUES (17526847,'Lofty_Harpeia','Lofty_Harpeia',90050,-19,10,41,190);
+REPLACE INTO `mob_spawn_points` VALUES (17526848,'Mired_Mantis','Mired_Mantis',90051,12,10,52,94);
+REPLACE INTO `mob_spawn_points` VALUES (17526849,'Soaring_Naraka','Soaring_Naraka',90052,-52,10,52,18);
+REPLACE INTO `mob_spawn_points` VALUES (17526850,'Veiled_Ironclad','Veiled_Ironclad',90053,-52,9,-12,255);
+REPLACE INTO `mob_spawn_points` VALUES (17526851,'Paramount_Naraka','Paramount_Naraka',90058,-52,10,52,18);
+REPLACE INTO `mob_spawn_points` VALUES (17526852,'Paramount_Harpeia','Paramount_Harpeia',90056,-19,10,41,190);
+REPLACE INTO `mob_spawn_points` VALUES (17526853,'Paramount_Mantis','Paramount_Mantis',90057,12,10,52,94);
+REPLACE INTO `mob_spawn_points` VALUES (17526854,'Paramount_Ironclad','Paramount_Ironclad',90059,-52,9,-12,255);
+REPLACE INTO `mob_spawn_points` VALUES (17526855,'Paramount_Gallu','Paramount_Gallu',90054,-19,10,-2,199);
+REPLACE INTO `mob_spawn_points` VALUES (17526856,'Paramount_Botulus','Paramount_Botulus',90055,-19,10,-2,199);
 
 INSERT INTO `npc_list` VALUES (17526884,'Achieve_Master','Achieve Master',0,0.000,0.000,0.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,NULL,0);
 INSERT INTO `npc_list` VALUES (17526885,'EXIT_AN','Gap',0,0.000,0.001,0.000,6,40,40,0,12,100,2,3,0x0000F20800000000000000000000000000000000,0,NULL,0);
