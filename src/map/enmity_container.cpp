@@ -134,8 +134,8 @@ void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int16 CE, int16 VE, 
         int newVE = enmity_obj->second.VE + ((VE > 0) ? VE * bonus : VE);
 
         //Check for cap limit
-        enmity_obj->second.CE = dsp_cap(newCE, 0, 10000);
-        enmity_obj->second.VE = dsp_cap(newVE, 0, 10000);
+        enmity_obj->second.CE = dsp_cap(newCE, 0, 20000);
+        enmity_obj->second.VE = dsp_cap(newVE, 0, 20000);
         enmity_obj->second.active = true;
 
         if (CE + VE > 0 && PEntity->getMod(MOD_TREASURE_HUNTER) > enmity_obj->second.maxTH)
@@ -155,8 +155,8 @@ void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int16 CE, int16 VE, 
         if (initial) CE += 200;
         float bonus = CalculateEnmityBonus(PEntity);
 
-        CE = dsp_cap(CE * bonus, 0, 10000);
-        VE = dsp_cap(VE * bonus, 0, 10000);
+        CE = dsp_cap(CE * bonus, 0, 20000);
+        VE = dsp_cap(VE * bonus, 0, 20000);
         auto maxTH = 0;
         if (CE + VE > 0)
             maxTH = (uint8)(PEntity->getMod(MOD_TREASURE_HUNTER));
@@ -198,7 +198,7 @@ void CEnmityContainer::UpdateEnmityFromCure(CBattleEntity* PEntity, uint16 level
     int16 VE;
     float bonus = CalculateEnmityBonus(PEntity);
     float tranquilHeartReduction = 1.f - battleutils::HandleTranquilHeart(PEntity);
-    
+
     if (isCureV)
     {
         CE = 400 * bonus * tranquilHeartReduction;

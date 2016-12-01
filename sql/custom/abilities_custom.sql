@@ -10,6 +10,21 @@
 -- INSERT INTO `abilities` VALUES (abilityId,name,job,level,validTarget,recastTime,recastId,message1,message2,animation,animationTime,castTime,actionType,range,isAOE,CE,VE,meritModID,addType,'expansion');
 -- Keeps keep it sorted by ID and use gaps in file to show gaps in IDs.
 
+REPLACE INTO `abilities` VALUES (6,'invincible',7,0,1,3600,0,0,0,18,2000,0,6,20.0,0,3,19999,0,0,null);
+REPLACE INTO `abilities` VALUES (17,'defender',1,25,1,180,3,117,0,1,2000,0,6,20.0,0,1,500,386,0,null);
+
+REPLACE INTO `abilities` VALUES (19,'provoke',1,5,4,30,5,0,0,3,2000,0,6,18.0,0,2,2400,0,0,null);
+
+REPLACE INTO `abilities` VALUES (23,'boost',2,5,1,15,16,116,0,7,2000,0,6,20.0,0,1,999,0,0,null);
+
+REPLACE INTO `abilities` VALUES (30,'shield_bash',7,15,4,180,73,0,0,185,2000,0,3,4.4,0,1,1050,768,0,null);
+REPLACE INTO `abilities` VALUES (31,'holy_circle',7,5,1,600,74,0,0,29,2000,0,6,20.0,1,1,200,770,0,null);
+REPLACE INTO `abilities` VALUES (32,'sentinel',7,30,1,300,75,0,0,11,2000,0,6,20.0,0,2,2400,772,0,null);
+
+REPLACE INTO `abilities` VALUES (61,'weapon_bash',8,20,4,180,88,0,0,201,2000,0,3,4.4,0,1,999,0,0,null);
+
+REPLACE INTO `abilities` VALUES (76,'rampart',7,62,1,300,77,0,0,91,2000,0,6,20.0,1,1,1450,776,0,null);
+
 REPLACE INTO `abilities` VALUES (100,'dancers_roll',17,61,1,60,193,420,0,116,2000,0,6,8.0,1,1,80,0,8,'WOTG');
 REPLACE INTO `abilities` VALUES (101,'scholars_roll',17,64,1,60,193,420,0,117,2000,0,6,8.0,1,1,80,0,8,'WOTG');
 INSERT INTO `abilities` VALUES (102,'bolters_roll',17,76,1,60,193,420,0,118,2000,0,6,8.0,1,1,80,0,8,'TOAU');
@@ -21,7 +36,16 @@ INSERT INTO `abilities` VALUES (106,'tacticians_roll',17,86,1,60,193,420,0,122,2
 REPLACE INTO `abilities` VALUES (115,'light_shot',17,40,4,60,195,110,0,123,2000,0,6,18.0,0,0,0,0,0,'TOAU');
 REPLACE INTO `abilities` VALUES (116,'dark_shot',17,40,4,60,195,110,0,124,2000,0,6,18.0,0,0,0,0,0,'TOAU');
 
+REPLACE INTO `abilities` VALUES (158,'seigan',12,35,1,60,139,0,0,164,2000,0,6,20.0,0,1,999,0,0,'TOAU');
+
+REPLACE INTO `abilities` VALUES (188,'animated_flourish',19,20,4,30,221,119,0,181,2000,0,6,17.6,0,2,2000,0,0,'WOTG');
+
+REPLACE INTO `abilities` VALUES (210,'retaliation',1,60,1,180,8,0,0,185,2000,0,6,20.0,0,1,800,0,0,'WOTG');
+
 INSERT INTO `abilities` VALUES (212,'despoil',6,77,4,300,61,125,0,232,2000,0,6,3.0,0,1,300,0,0,'WOTG');
+
+REPLACE INTO `abilities` VALUES (232,'yonin',13,40,1,180,146,0,0,218,2000,0,6,20.0,0,1,999,0,4,'WOTG');
+
 INSERT INTO `abilities` VALUES (234,'avatars_favor',15,55,1,300,176,0,0,220,2000,0,6,10.0,1,1,80,0,0,'WOTG');
 REPLACE INTO `abilities` VALUES (235,'ready',9,25,4,60,232,0,0,255,2000,0,6,18.0,0,0,0,0,0,'WOTG');
 INSERT INTO `abilities` VALUES (236,'restraint',1,77,1,600,9,0,0,232,2000,0,6,20.0,0,1,300,0,0,'WOTG');
@@ -48,9 +72,9 @@ INSERT INTO `abilities` VALUES (257,'manawell',4,95,1,600,35,0,0,232,2000,0,6,20
 REPLACE INTO `abilities` VALUES (258,'saboteur',5,83,1,300,36,0,0,232,2000,0,6,20.0,0,1,80,0,0,'ABYSSEA');
 REPLACE INTO `abilities` VALUES (259,'spontaneity',5,95,1,600,37,0,0,232,2000,0,6,20.0,0,1,0,0,0,'ABYSSEA');
 INSERT INTO `abilities` VALUES (260,'conspirator',6,87,1,300,40,0,0,232,2000,0,6,14.0,1,1,80,0,0,null);
-INSERT INTO `abilities` VALUES (261,'sepulcher',7,87,4,300,41,0,0,232,2000,0,6,12.0,0,1,80,0,0,null);
-INSERT INTO `abilities` VALUES (262,'palisade',7,95,1,300,42,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
-INSERT INTO `abilities` VALUES (263,'arcane_crest',8,87,4,300,43,0,0,232,2000,0,6,12.0,0,1,80,0,0,null);
+INSERT INTO `abilities` VALUES (261,'sepulcher',7,87,4,300,41,0,0,232,2000,0,6,12.0,0,1,400,0,0,null);
+INSERT INTO `abilities` VALUES (262,'palisade',7,95,1,300,42,0,0,232,2000,0,6,20.0,0,1,800,0,0,null);
+INSERT INTO `abilities` VALUES (263,'arcane_crest',8,87,4,300,43,0,0,232,2000,0,6,12.0,0,1,400,0,0,null);
 INSERT INTO `abilities` VALUES (264,'scarlet_delirium',8,95,1,180,44,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
 INSERT INTO `abilities` VALUES (265,'spur',9,83,1,180,45,0,0,232,2000,0,6,20.0,0,0,0,0,0,null);
 INSERT INTO `abilities` VALUES (266,'run_wild',9,93,1,900,46,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
@@ -61,7 +85,7 @@ INSERT INTO `abilities` VALUES (270,'decoy_shot',11,95,1,300,52,0,0,232,2000,0,6
 INSERT INTO `abilities` VALUES (271,'hamanoha',12,87,4,300,53,0,0,232,2000,0,6,12.0,0,1,80,0,0,null);
 INSERT INTO `abilities` VALUES (272,'hagakure',12,95,1,180,54,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
 
-REPLACE INTO `abilities` VALUES (275,'issekigan',13,95,1,300,57,0,0,232,2000,0,6,20.0,0,1,0,0,0,'ABYSSEA');
+REPLACE INTO `abilities` VALUES (275,'issekigan',13,95,1,300,57,0,0,232,2000,0,6,20.0,0,1,999,0,0,'ABYSSEA');
 INSERT INTO `abilities` VALUES (276,'dragon_breaker',14,87,4,300,58,0,0,232,2000,0,6,12.0,0,1,80,0,0,null);
 INSERT INTO `abilities` VALUES (277,'soul_jump',14,85,4,120,159,110,0,232,2000,0,3,12.0,0,1,0,1220,0,null);
 
