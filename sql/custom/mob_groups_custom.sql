@@ -1458,7 +1458,21 @@ INSERT INTO `mob_groups` VALUES (90321,9121,114,10800,0,9321,80000,100000,110,11
 INSERT INTO `mob_groups` VALUES (90323,9123,65,10800,0,9323,80000,100000,110,112,0); -- Venomfang
 
 
--- Pool IDs 90324 to 96600 currently unused
+-- Pool IDs 90324 to 96588 currently unused
+
+-- Xmas Event
+INSERT INTO `mob_groups` VALUES (96589,8998,100,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (West Ron)
+INSERT INTO `mob_groups` VALUES (96590,8999,100,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (West Ron)
+INSERT INTO `mob_groups` VALUES (96591,8998,101,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (East Ron)
+INSERT INTO `mob_groups` VALUES (96592,8999,101,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (East Ron)
+INSERT INTO `mob_groups` VALUES (96593,8998,106,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (North Gusta)
+INSERT INTO `mob_groups` VALUES (96594,8999,106,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (North Gusta)
+INSERT INTO `mob_groups` VALUES (96595,8998,107,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (South Gusta)
+INSERT INTO `mob_groups` VALUES (96596,8999,107,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (South Gusta)
+INSERT INTO `mob_groups` VALUES (96597,8998,115,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (West Saruta)
+INSERT INTO `mob_groups` VALUES (96598,8999,115,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (West Saruta)
+INSERT INTO `mob_groups` VALUES (96599,8998,116,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (East Saruta)
+INSERT INTO `mob_groups` VALUES (96600,8999,116,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (East Saruta)
 
 -- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
 

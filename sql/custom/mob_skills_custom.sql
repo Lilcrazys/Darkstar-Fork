@@ -280,7 +280,7 @@ INSERT INTO `mob_skills` VALUES (252,252,'Custom_Dancing_Chains',1,10.0,2000,0,4
 INSERT INTO `mob_skills` VALUES (253,253,'Custom_Barbed_Crescent',0,7.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (254,254,'Custom_Vulcan_Shot',0,15.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (255,190,'Custom_Dimensional_Death',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (256,0,'#0',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (256,0,'#0',0,7.0,2000,0,4,0,0,0); -- Used to prevent mob action
 INSERT INTO `mob_skills` VALUES (257,1,'Foot_Kick',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (258,2,'Dust_Cloud',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (259,3,'Whirl_Claws',1,5.0,2000,1500,4,0,0,0);

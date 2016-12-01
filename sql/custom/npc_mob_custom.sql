@@ -1191,6 +1191,17 @@ REPLACE INTO `mob_spawn_points` VALUES (17179265,'Gugalanna','Gugalanna',13780,-
 -- ------------------------------------------------------------
 REPLACE INTO `mob_spawn_points` VALUES (17187289,'Lancing_Lamorak','Lancing Lamorak',13807,-360,-50.5,270,33);
 
+REPLACE INTO `mob_spawn_points` VALUES (17187829,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187830,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187831,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187832,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187833,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187834,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187835,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187836,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187837,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187838,'Twinkling_Treant','Twinkling_Treant',96590,-157,-50,163,0);
+
 -- ------------------------------------------------------------
 -- East Ronfaure (Zone 101)
 -- 17191935
@@ -1205,6 +1216,17 @@ INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold
 -- INSERT INTO `npc_list` VALUES (17191538,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17191539,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17191540,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+
+REPLACE INTO `mob_spawn_points` VALUES (17191925,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191926,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191927,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191928,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191929,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191930,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191931,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191932,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191933,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191934,'Twinkling_Treant','Twinkling_Treant',96592,96,-47,100,0);
 
 
 -- ------------------------------------------------------------
@@ -1268,7 +1290,20 @@ REPLACE INTO `mob_spawn_points` VALUES (17207723,'Cherufe','Cherufe',13825,80,8,
 -- North Gustaberg (Zone 106)
 -- 17212415
 -- ------------------------------------------------------------
+
 REPLACE INTO `mob_spawn_points` VALUES (17211882,'Sallow_Seymour','Sallow Seymour',90400,798,0,439,147);
+
+REPLACE INTO `mob_spawn_points` VALUES (17212405,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212406,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212407,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212408,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212409,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212410,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212411,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212412,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212413,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212414,'Twinkling_Treant','Twinkling_Treant',96594,741,-3,461,0);
+
 
 -- ------------------------------------------------------------
 -- South Gustaberg (Zone 107)
@@ -1284,6 +1319,17 @@ INSERT INTO `mob_spawn_points` VALUES (17216146,'Bounding_Belinda','Bounding Bel
 -- INSERT INTO `npc_list` VALUES (17216203,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17216204,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17216205,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+
+REPLACE INTO `mob_spawn_points` VALUES (17216501,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216502,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216503,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216504,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216505,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216506,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216507,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216508,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216509,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216510,'Twinkling_Treant','Twinkling_Treant',96596,397,0,-422,0);
 
 
 -- ------------------------------------------------------------
@@ -1362,7 +1408,19 @@ INSERT INTO `mob_spawn_points` VALUES (17244350,'Sabotender_Corrido','Sabotender
 -- West Sarutabaruta (Zone 115)
 -- 17249279
 -- ------------------------------------------------------------
+
 REPLACE INTO `mob_spawn_points` VALUES (17248625,'Virvatuli','Virvatuli',13778,120,4,-440,44);
+
+REPLACE INTO `mob_spawn_points` VALUES (17249269,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249270,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249271,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249272,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249273,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249274,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249275,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249276,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249277,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249278,'Twinkling_Treant','Twinkling_Treant',96598,326,-4,46,0);
 
 -- ------------------------------------------------------------
 -- East Sarutabaruta (Zone 116)
@@ -1378,6 +1436,17 @@ INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv
 -- INSERT INTO `npc_list` VALUES (17253068,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17253069,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17253070,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
+
+REPLACE INTO `mob_spawn_points` VALUES (17253365,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253366,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253367,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253368,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253369,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253370,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253371,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253372,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253373,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253374,'Twinkling_Treant','Twinkling_Treant',96600,-40,2,-662,0);
 
 
 -- ------------------------------------------------------------

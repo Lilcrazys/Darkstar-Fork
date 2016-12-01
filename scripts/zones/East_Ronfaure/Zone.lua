@@ -64,6 +64,31 @@ function onInitialize(zone)
 end;
 
 -----------------------------------
+-- onGameHour
+-----------------------------------
+
+function onGameHour()
+    local TwinkleTreantID = 17191934;
+    local month = tonumber(os.date("%m"));
+    local day = tonumber(os.date("%d"));
+    -- Dec 5th through Jan 5th.
+    if ((month == 12 and day >= 5) or (month == 1 and day <= 5)) then
+        DeterMob(TwinkleTreantID, false);
+    else
+        DeterMob(TwinkleTreantID, true);
+        if (GetMobAction(TwinkleTreantID) == ACTION_ROAMING) then
+            DespawnMob(TwinkleTreantID);
+        end
+
+        for boxes = (TwinkleTreantID -9), (TwinkleTreantID -1) do
+            if (GetMobAction(boxes) == ACTION_ROAMING) then
+                DespawnMob(boxes);
+            end
+        end
+    end
+end;
+
+-----------------------------------
 -- onZoneIn
 -----------------------------------
 

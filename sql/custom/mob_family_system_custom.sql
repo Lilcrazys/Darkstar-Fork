@@ -13,3 +13,4 @@ REPLACE INTO `mob_family_system` VALUES (117,'Gargouille',9,'Demon',0,40,110,120
 REPLACE INTO `mob_family_system` VALUES (452,'Rockfin',2,'Aquan',2,40,120,140,6,5,4,5,3,3,4,4,4,2,2,1,1,1,1,1,1.25,1,1,1.25,0.75,1,1,6,2,0); -- Tchakka needs DETECT_HEARING
 
 INSERT INTO `mob_family_system` VALUES (4000,'Tome',18,'Unclassified',0,40,100,120,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,0,41,0);
+INSERT INTO `mob_family_system` VALUES (4001,'Astral_Box',18,'Unclassified',0,0,1,1,6,6,6,6,6,6,6,6,6,6,6,1,1,1,1,1,1,1,1,1,1,1,1,0,256,0);

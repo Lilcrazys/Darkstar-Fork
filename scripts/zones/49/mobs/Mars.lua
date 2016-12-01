@@ -285,6 +285,7 @@ function onWeaponskillHit(mob, attacker, weaponskill)
 
     return 1;
 end;
+
 -----------------------------------
 -- onSpikesDamage
 -----------------------------------
