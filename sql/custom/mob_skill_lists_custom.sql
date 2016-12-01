@@ -2051,4 +2051,5 @@ INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2691); -- Dark_Sun
 -- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1487); -- Ambrosia
 INSERT INTO `mob_skill_lists` VALUES ('Minerva_Melee',9778,2105); -- Melee_Special
  */
+INSERT INTO `mob_skill_lists` VALUES ('No_Melee',9999,256); -- Used to prevent mob action
 -- Thinking of placing a new entry right here? DO NOT. Scroll your butt up past The Jumping Crab!

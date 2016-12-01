@@ -18,7 +18,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    mob:SetMobSkillAttack(256); -- Used to prevent mob action
+    mob:SetMobSkillAttack(9999); -- Used to prevent mob action
 end;
 
 -----------------------------------
