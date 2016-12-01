@@ -36,6 +36,7 @@ This file is part of DarkStar-server source code.
 #include "../../entities/mobentity.h"
 #include "../../utils/battleutils.h"
 #include "../../../common/utils.h"
+#include "../../utils/petutils.h"
 
 CMobController::CMobController(CMobEntity* PEntity) :
     CController(PEntity),
@@ -52,7 +53,7 @@ void CMobController::Tick(time_point tick)
         {
             DoCombatTick(tick);
         }
-        else if (PMob->PAI->IsSpawned())
+        else if (!PMob->isDead())
         {
             DoRoamTick(tick);
         }
@@ -135,7 +136,7 @@ void CMobController::TryLink()
     {
         if (PTarget->PPet->objtype == TYPE_PET && ((CPetEntity*)PTarget->PPet)->getPetType() == PETTYPE_AVATAR)
         {
-            PTarget->PPet->PAI->Engage(PMob->id);
+            petutils::AttackTarget(PTarget, PMob);
         }
     }
 
@@ -160,7 +161,7 @@ void CMobController::TryLink()
                 {
                     // force into attack action
                     //#TODO
-                    PPartyMember->PAI->Engage(PTarget->id);
+                    PPartyMember->PAI->Engage(PTarget->targid);
                 }
             }
         }
@@ -889,7 +890,7 @@ void CMobController::Despawn()
 {
     if (PMob)
     {
-        PMob->PAI->Internal_Despawn(std::chrono::milliseconds(PMob->m_RespawnTime));
+        PMob->PAI->Internal_Despawn();
     }
 }
 

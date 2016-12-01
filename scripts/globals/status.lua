@@ -1176,7 +1176,7 @@ MOD_LIGHT_ARTS_EFFECT   = 334
 MOD_DARK_ARTS_EFFECT    = 335
 MOD_LIGHT_ARTS_SKILL    = 336
 MOD_DARK_ARTS_SKILL     = 337
-MOD_REGEN_EFFECT        = 338
+MOD_LIGHT_ARTS_REGEN    = 338 -- Regen bonus HP from Light Arts and Tabula Rasa
 MOD_REGEN_DURATION      = 339
 MOD_HELIX_EFFECT        = 478
 MOD_HELIX_DURATION      = 477
@@ -1198,7 +1198,7 @@ MOD_ABSORB_DMG_CHANCE        = 480 -- Chance to absorb damage %
 MOD_EXTRA_DUAL_WIELD_ATTACK  = 481 -- Chance to land an extra attack when dual wielding
 MOD_EXTRA_KICK_ATTACK        = 482 -- Occasionally allows a second Kick Attack during an attack round without the use of Footwork.
 MOD_SAMBA_DOUBLE_DAMAGE      = 415 -- Double damage chance when samba is up.
-MOD_NULL_PHYSICAL_DAMAGE     = 416 -- Chance to null physical damage.
+MOD_NULL_PHYSICAL_DAMAGE     = 416 -- Occasionally annuls damage from physical attacks, in percents
 MOD_QUICK_DRAW_TRIPLE_DAMAGE = 417 -- Chance to do triple damage with quick draw.
 MOD_BAR_ELEMENT_NULL_CHANCE  = 418 -- Bar Elemental spells will occasionally nullify damage of the same element.
 MOD_GRIMOIRE_INSTANT_CAST    = 419 -- Spells that match your current Arts will occasionally cast instantly, without recast.
@@ -1208,6 +1208,7 @@ MOD_FOCUS_EFFECT             = 561 -- Focus effect in percents
 MOD_MUG_EFFECT               = 835 -- Mug effect as multiplier
 MOD_REVERSE_FLOURISH_EFFECT  = 836 -- Reverse Flourish effect in tenths of squared term multiplier
 MOD_SENTINEL_EFFECT          = 837 -- Sentinel effect in percents
+MOD_REGEN_MULTIPLIER         = 838 -- Regen base multiplier
 
 MOD_DOUBLE_SHOT_RATE          = 422 -- The rate that double shot can proc
 MOD_VELOCITY_SNAPSHOT_BONUS   = 423 -- Increases Snapshot whilst Velocity Shot is up.
@@ -1248,14 +1249,14 @@ MOD_QUAD_ATTACK               = 430 -- Quadruple attack chance.
 MOD_ADDITIONAL_EFFECT         = 431 -- All additional effects
 MOD_ENSPELL_DMG_BONUS         = 432
 
-MOD_FIRE_ABSORB  = 459 --
-MOD_EARTH_ABSORB = 460 --
-MOD_WATER_ABSORB = 461 --
-MOD_WIND_ABSORB  = 462 --
-MOD_ICE_ABSORB   = 463 --
-MOD_LTNG_ABSORB  = 464 --
-MOD_LIGHT_ABSORB = 465 --
-MOD_DARK_ABSORB  = 466 --
+MOD_FIRE_ABSORB  = 459 -- Occasionally absorbs fire elemental damage, in percents
+MOD_EARTH_ABSORB = 460 -- Occasionally absorbs earth elemental damage, in percents
+MOD_WATER_ABSORB = 461 -- Occasionally absorbs water elemental damage, in percents
+MOD_WIND_ABSORB  = 462 -- Occasionally absorbs wind elemental damage, in percents
+MOD_ICE_ABSORB   = 463 -- Occasionally absorbs ice elemental damage, in percents
+MOD_LTNG_ABSORB  = 464 -- Occasionally absorbs thunder elemental damage, in percents
+MOD_LIGHT_ABSORB = 465 -- Occasionally absorbs light elemental damage, in percents
+MOD_DARK_ABSORB  = 466 -- Occasionally absorbs dark elemental damage, in percents
 
 MOD_FIRE_NULL  = 467 --
 MOD_EARTH_NULL = 468 --
@@ -1266,9 +1267,9 @@ MOD_LTNG_NULL  = 472 --
 MOD_LIGHT_NULL = 473 --
 MOD_DARK_NULL  = 474 --
 
-MOD_MAGIC_ABSORB     = 475 --
-MOD_MAGIC_NULL       = 476 --
-MOD_PHYS_ABSORB      = 512 --
+MOD_MAGIC_ABSORB     = 475 -- Occasionally absorbs magic damage taken, in percents
+MOD_MAGIC_NULL       = 476 -- Occasionally annuls magic damage taken, in percents
+MOD_PHYS_ABSORB      = 512 -- Occasionally absorbs physical damage taken, in percents
 MOD_ABSORB_DMG_TO_MP = 516 -- Unlike PLD gear mod, works on all damage types (Ethereal Earring)
 
 MOD_WARCRY_DURATION = 483 -- Warcy duration bonus from gear
@@ -1298,14 +1299,15 @@ MOD_EAT_RAW_FISH       = 412 --
 MOD_EAT_RAW_MEAT       = 413 --
 MOD_ENHANCES_CURSNA    = 310 -- Raises success rate of Cursna when removing effect (like Doom) that are not 100% chance to remove
 MOD_RETALIATION        = 414 -- Increases damage of Retaliation hits
-MOD_AUGMENTS_THIRD_EYE = 508 -- Adds counter to 3rd eye anticipates & if using Seigan counter rate is increased by 15%
+MOD_THIRD_EYE_COUNTER_RATE    = 508 -- Adds counter to 3rd eye anticipates & if using Seigan counter rate is increased by 15%
+MOD_THIRD_EYE_ANTICIPATE_RATE = 839 -- Adds anticipate rate in percents
 
 MOD_CLAMMING_IMPROVED_RESULTS  = 509 --
 MOD_CLAMMING_REDUCED_INCIDENTS = 510 --
 MOD_CHOCOBO_RIDING_TIME = 511 -- Increases chocobo riding time
 MOD_HARVESTING_RESULT   = 513 -- Improves harvesting results
 MOD_LOGGING_RESULT      = 514 -- Improves logging results
-MOD_MINNING_RESULT      = 515 -- Improves mining results
+MOD_MINING_RESULT       = 515 -- Improves mining results
 MOD_EGGHELM             = 517 -- Egg Helm (Chocobo Digging)
 
 MOD_SHIELDBLOCKRATE           = 518 -- Affects shield block rate, percent based
@@ -1340,7 +1342,7 @@ MOD_RAPTURE_AMOUNT            = 568 -- Bonus amount added to Rapture effect
 MOD_EBULLIENCE_AMOUNT         = 569 -- Bonus amount added to Ebullience effect
 MOD_WYVERN_EFFECTIVE_BREATH   = 829 -- Increases the threshold for triggering healing breath
 MOD_AQUAVEIL_COUNT            = 832 -- Modifies the amount of hits that Aquaveil absorbs before being removed
-MOD_SONG_RECAST_DELAY         = 833 -- Reduces song recast time (in milliseconds).
+MOD_SONG_RECAST_DELAY         = 833 -- Reduces song recast time in seconds.
 
 -- Mythic Weapon Mods
 MOD_AUGMENTS_ABSORB           = 521 -- Direct Absorb spell increase while Liberator is equipped (percentage based)
@@ -1351,6 +1353,10 @@ MOD_AUGMENTS_TA               = 527 -- Adds Critical Attack Bonus to Trick Attac
 MOD_JUG_LEVEL_RANGE           = 564 -- Decreases the level range of spawned jug pets. Maxes out at 2.
 MOD_FORCE_JUMP_CRIT           = 828 -- Critical hit rate bonus for jump and high jump
 MOD_QUICK_DRAW_DMG_PERCENT    = 834 -- Percentage increase to QD damage
+
+-- Crafting food effects
+MOD_SYNTH_SUCCESS    = 851 -- Rate of synthesis success
+MOD_SYNTH_SKILL_GAIN = 852 -- Synthesis skill gain rate
 
 MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
 
@@ -1364,9 +1370,17 @@ MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
 -- MOD_SPARE = 99 -- stuff
 -- MOD_SPARE = 100 -- stuff
 -- 570 - 825 used by WS DMG mods these are not spares.
--- MOD_SPARE = 839 -- stuff
--- MOD_SPARE = 838 -- stuff
 -- MOD_SPARE = 840 -- stuff
+-- MOD_SPARE = 841 -- stuff
+-- MOD_SPARE = 842 -- stuff
+-- MOD_SPARE = 843 -- stuff
+-- MOD_SPARE = 844 -- stuff
+-- MOD_SPARE = 845 -- stuff
+-- MOD_SPARE = 846 -- stuff
+-- MOD_SPARE = 847 -- stuff
+-- MOD_SPARE = 848 -- stuff
+-- MOD_SPARE = 849 -- stuff
+-- MOD_SPARE = 850 -- stuff
 
 
 -- Start of LegionDS Custom MOD

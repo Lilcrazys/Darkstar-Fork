@@ -10,7 +10,7 @@
 function onMobSpawn(mob,target)
     local DayofWeek = VanadielDayElement();
 
-    mob:setSpellList(1208 + DayofWeek);
+    mob:setSpellList(188 + DayofWeek);
 
 end;
 
