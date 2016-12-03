@@ -28,8 +28,8 @@ function onTrigger(player)
         player:PrintToPlayer("@togglegm  @hide  @givels  @posfix  @setmodel");
         player:PrintToPlayer("@zap  @jail  @pardon  @logoff  @speed  @chocobo");
         player:PrintToPlayer("@addallmaps  @batfix  @release  @reloadglobal");
-        player:PrintToPlayer("@hasitem  @checkvar  @checkmission  @checkquest  @checktrial");
-        player:PrintToPlayer("@stats  @getstats  @getid  @getmobaction  @getmobname");
+        player:PrintToPlayer("@checkvar  @checkmission  @checkquest  @checktrial  @checknexus");
+        player:PrintToPlayer("@hasitem  @stats  @getstats  @getid  @getmobaction  @getmobname");
         player:PrintToPlayer("@49  @goto  @op  @zone  @homepoint  @return  @pos");
         player:PrintToPlayer("@message2self  @messagebasic  @messagespecial  @injectaction");
     end

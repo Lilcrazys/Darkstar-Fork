@@ -51,5 +51,9 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
+    local timeCheck = os.date("*t")
+    print(target:getName().." used Nexus Cape");
+    target:setVar("NexusCapeHOUR", timeCheck.hour);
+    target:setVar("NexusCapeMINUTE", timeCheck.min);
     target:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_TO_LEADER,0,1);
 end;
