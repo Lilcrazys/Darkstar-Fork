@@ -4,9 +4,8 @@
 -----------------------------------
 package.loaded["scripts/zones/Windurst_Waters/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/globals/status");
 require("scripts/zones/Windurst_Waters/TextIDs");
+require("scripts/globals/status");
 require("scripts/globals/spoofchat");
 
 -----------------------------------
@@ -14,8 +13,8 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onTrigger(player,npc)
-	local month = tonumber(os.date("%m"));
-	local day = tonumber(os.date("%d"));
+    local month = tonumber(os.date("%m"));
+    local day = tonumber(os.date("%d"));
 
     if ((month == 12 and day >= 1 and day <= 8) ) then
 
@@ -35,7 +34,7 @@ function onTrigger(player,npc)
 
         if (player:getVar("ANNIBUFF_TIMER") < os.time()) then
             if (annibuff == 1) then
-                player:addStatusEffect(EFFECT_FLEE,5,0,1800);
+                player:addStatusEffect(EFFECT_FLEE,50,0,1800);
                 player:addStatusEffect(EFFECT_COSTUME,2414,0,1800);
                 player:setVar("ANNIBUFF_TIMER", os.time()+3600);
                 -- add costume of something....??
