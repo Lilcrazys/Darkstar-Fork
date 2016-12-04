@@ -23,6 +23,8 @@ REPLACE INTO `abilities` VALUES (32,'sentinel',7,30,1,300,75,0,0,11,2000,0,6,20.
 
 REPLACE INTO `abilities` VALUES (61,'weapon_bash',8,20,4,180,88,0,0,201,2000,0,3,4.4,0,1,999,0,0,null);
 
+REPLACE INTO `abilities` VALUES (63,'cover',7,35,2,180,76,0,0,86,2000,0,6,20.0,0,10,2400,0,0,null);
+
 REPLACE INTO `abilities` VALUES (76,'rampart',7,62,1,300,77,0,0,91,2000,0,6,20.0,1,1,1450,776,0,null);
 
 REPLACE INTO `abilities` VALUES (100,'dancers_roll',17,61,1,60,193,420,0,116,2000,0,6,8.0,1,1,80,0,8,'WOTG');
