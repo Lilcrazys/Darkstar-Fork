@@ -40,7 +40,7 @@ function onSpellCast(caster,target,spell)
     local macc = (caster:getMod(MOD_MACC) - target:getMod(MOD_MEVA));
     local resist = applyResistance(caster,spell,target,macc,BLUE_SKILL);
 
-    if (damage > 0 and resist > 0.125;) then
+    if (damage > 0 and resist > 0.125) then
         target:addStatusEffect(EFFECT_DEFENSE_DOWN,10,0,60*resist);
         target:addStatusEffect(EFFECT_MAGIC_DEF_DOWN,10,0,60*resist);
     end
