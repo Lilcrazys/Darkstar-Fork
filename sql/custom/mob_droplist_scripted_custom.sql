@@ -14,5 +14,5 @@ CREATE TABLE `mob_droplist_scripted` (
 -- INSERT INTO `mob_droplist_scripted` VALUES (dropId,type,itemId,rate); -- Item Name [Mob Name]
 
 -- Taisaijin
--- INSERT INTO `mob_droplist` VALUES (3430,0,4717,500); -- Refresh
--- INSERT INTO `mob_droplist` VALUES (3430,0,4850,500); -- Refresh II
+-- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,4717,500); -- Refresh
+-- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,4850,500); -- Refresh II
