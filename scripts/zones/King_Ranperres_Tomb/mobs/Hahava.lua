@@ -41,27 +41,6 @@ function onMobSpawn(mob)
 
     -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-
-    if (isKiller == true) then
-        local RND1 = math.random(1,8);
-        if (RND1 == 1) then
-            player:addTreasure(8919); -- Ifritear
-        elseif (RND1 == 2) then
-            player:addTreasure(8920); -- Leviatear
-        elseif (RND1 == 3) then
-            player:addTreasure(8921); -- Ramutear
-        elseif (RND1 == 4) then
-            player:addTreasure(8922); -- Garutear
-        elseif (RND1 == 5) then
-            player:addTreasure(8923); -- Titatear
-        elseif (RND1 == 6) then
-            player:addTreasure(8924); -- Shivatear
-        elseif (RND1 == 7) then
-            player:addTreasure(8925); -- Carbutear
-        elseif (RND1 == 8) then
-            player:addTreasure(8926); -- Fenritear
-        end
-    end
 end;
 
 -----------------------------------
@@ -99,6 +78,28 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+
+    if (isKiller == true) then
+        local RND1 = math.random(1,8);
+        if (RND1 == 1) then
+            player:addTreasure(8919); -- Ifritear
+        elseif (RND1 == 2) then
+            player:addTreasure(8920); -- Leviatear
+        elseif (RND1 == 3) then
+            player:addTreasure(8921); -- Ramutear
+        elseif (RND1 == 4) then
+            player:addTreasure(8922); -- Garutear
+        elseif (RND1 == 5) then
+            player:addTreasure(8923); -- Titatear
+        elseif (RND1 == 6) then
+            player:addTreasure(8924); -- Shivatear
+        elseif (RND1 == 7) then
+            player:addTreasure(8925); -- Carbutear
+        elseif (RND1 == 8) then
+            player:addTreasure(8926); -- Fenritear
+        end
+    end
+
     if (player:hasKeyItem(CRIMSON_STRATUM_ABYSSITE_IV)) then
         if (player:getQuestStatus(CRYSTAL_WAR, GUARDIAN_OF_THE_VOID) == QUEST_AVAILABLE) then
             if (player:getMaskBit(player:getVar("VW_3_NATIONS"), 2) == false) then

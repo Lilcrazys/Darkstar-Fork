@@ -36,26 +36,6 @@ function onMobSpawn(mob)
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 
-    if (isKiller == true) then
-        local RND1 = math.random(1,8);
-        if (RND1 == 1) then
-            player:addTreasure(8919); -- Ifritear
-        elseif (RND1 == 2) then
-            player:addTreasure(8920); -- Leviatear
-        elseif (RND1 == 3) then
-            player:addTreasure(8921); -- Ramutear
-        elseif (RND1 == 4) then
-            player:addTreasure(8922); -- Garutear
-        elseif (RND1 == 5) then
-            player:addTreasure(8923); -- Titatear
-        elseif (RND1 == 6) then
-            player:addTreasure(8924); -- Shivatear
-        elseif (RND1 == 7) then
-            player:addTreasure(8925); -- Carbutear
-        elseif (RND1 == 8) then
-            player:addTreasure(8926); -- Fenritear
-        end
-    end
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -92,6 +72,28 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+
+    if (isKiller == true) then
+        local RND1 = math.random(1,8);
+        if (RND1 == 1) then
+            player:addTreasure(8919); -- Ifritear
+        elseif (RND1 == 2) then
+            player:addTreasure(8920); -- Leviatear
+        elseif (RND1 == 3) then
+            player:addTreasure(8921); -- Ramutear
+        elseif (RND1 == 4) then
+            player:addTreasure(8922); -- Garutear
+        elseif (RND1 == 5) then
+            player:addTreasure(8923); -- Titatear
+        elseif (RND1 == 6) then
+            player:addTreasure(8924); -- Shivatear
+        elseif (RND1 == 7) then
+            player:addTreasure(8925); -- Carbutear
+        elseif (RND1 == 8) then
+            player:addTreasure(8926); -- Fenritear
+        end
+    end
+
     if (player:hasKeyItem(INDIGO_STRATUM_ABYSSITE)) then -- Ushumgal Kill
         if (player:getMaskBit(player:getVar("INDIGO_STRATUM"), 1) == false) then
             player:setMaskBit(player:getVar("INDIGO_STRATUM"),"INDIGO_STRATUM",1,true);
