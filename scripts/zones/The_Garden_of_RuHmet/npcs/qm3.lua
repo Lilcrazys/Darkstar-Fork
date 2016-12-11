@@ -26,17 +26,17 @@ function onTrade(player,npc,trade)
         -- Change MobSpawn to ???'s @pos.
         GetMobByID(Jailer_of_Faith):setSpawn(qm3:getXPos(),qm3:getYPos(),qm3:getZPos());
         -- Spawn Jailer of Faith
-        SpawnMob(Jailer_of_Faith):updateClaim(player); 
+        SpawnMob(Jailer_of_Faith):updateClaim(player);
     end
     ]]
 
      --Trade 1 High-Quality Euvhi Organ
     if (GetMobAction(16921021) == 0 and trade:hasItemQty(1899,1) and trade:getItemCount() == 1) then
-        GetMobByID(16921021):setSpawn(qm3:getXPos(),qm3:getYPos(),qm3:getZPos());
+        GetMobByID(16921021):setSpawn(npc:getXPos(),npc:getYPos(),npc:getZPos());
         SpawnMob(16921021):updateClaim(player); -- Spawn Jailer of Faith
         player:tradeComplete();
     end
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
@@ -56,7 +56,7 @@ function onEventUpdate(player,csid,option)
 end;
 
 -----------------------------------
--- onEventFinish Action 
+-- onEventFinish Action
 -----------------------------------
 
 function onEventFinish(player,csid,option)
