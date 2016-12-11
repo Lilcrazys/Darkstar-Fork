@@ -106,6 +106,7 @@ end;
 -- onMobDeath
 -----------------------------------
 function onMobDeath(mob, player, isKiller)
+    --[[
     SetServerVariable("[SEA]Jailer_of_Temperance_POP", os.time(t) + 900); -- 15 mins
     DeterMob(mob:getID(), true);
 
@@ -114,4 +115,18 @@ function onMobDeath(mob, player, isKiller)
     SetServerVariable("[SEA]Jailer_of_Temperance_PH", 0);
     DeterMob(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
+    ]]
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+function onMobDespawn(mob, isKiller)
+    -- Set PH back to normal, then set respawn time
+    local PH = GetServerVariable("[SEA]Jailer_of_Temperance_PH");
+    DeterMob(mob:getID(), true);
+    DeterMob(PH, false);
+    SetServerVariable("[SEA]Jailer_of_Temperance_POP", os.time(t) + 900); -- 15 mins
+    GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
+    SetServerVariable("[SEA]Jailer_of_Temperance_PH", 0);
 end;
