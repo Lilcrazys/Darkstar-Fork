@@ -33,7 +33,7 @@ function onTrigger(player,npc)
             2143,    75,      -- Mandrel
             642,     200,     -- Zinc Ore
             640,     12,      -- Copper Ore
-            1231,    40,      -- Brass Nugget
+            1231,    1000,    -- Brass Nugget
             661,     3000,    -- Brass Sheet
             736,     450,     -- Silver Ore
             1233,    200,     -- Silver Nugget

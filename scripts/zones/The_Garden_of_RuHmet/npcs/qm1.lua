@@ -22,26 +22,29 @@ require("scripts/globals/status");
 
 function onTrade(player,npc,trade)
     -- Trade 12 Ghrah M Chips
-	--[[
-	if (GetMobAction(Jailer_of_Fortitude) == 0 and trade:hasItemQty(1872,12) and trade:getItemCount() == 12) then
+    --[[
+    if (GetMobAction(Jailer_of_Fortitude) == 0 and trade:hasItemQty(1872,12) and trade:getItemCount() == 12) then
         local qm1 = GetNPCByID(Jailer_of_Fortitude_QM);
-		-- Complete the trade
-		player:tradeComplete();
+        -- Complete the trade
+        player:tradeComplete();
         -- Hide the NPC, will become unhidden after Jailer of Fortitude despawns
         qm1:setStatus(STATUS_DISAPPEAR);
-        -- Change MobSpawn to ???'s pos. 
+        -- Change MobSpawn to ???'s @pos. 
         GetMobByID(Jailer_of_Fortitude):setSpawn(qm1:getXPos(),qm1:getYPos(),qm1:getZPos()); 
         -- Change spawn point of pets to be at the ???'s pos as well
         GetMobByID(Kf_Ghrah_WHM):setSpawn(qm1:getXPos(),qm1:getYPos(),qm1:getZPos());
         GetMobByID(Kf_Ghrah_BLM):setSpawn(qm1:getXPos(),qm1:getYPos(),qm1:getZPos());
-		-- Spawn Jailer of Fortitude
+        -- Spawn Jailer of Fortitude
         SpawnMob(Jailer_of_Fortitude):updateClaim(player); 
         SpawnMob(Kf_Ghrah_WHM):updateClaim(player); 
         SpawnMob(Kf_Ghrah_BLM):updateClaim(player); 
-	]]
+    ]]
 
     if (GetMobAction(16921015) == ACTION_NONE) then
         if (trade:hasItemQty(1872,12) and trade:getItemCount() == 12) then
+            GetMobByID(16921015):setSpawn(npc:getXPos(),npc:getYPos(),npc:getZPos());
+            GetMobByID(16921016):setSpawn(npc:getXPos(),npc:getYPos(),npc:getZPos());
+            GetMobByID(16921017):setSpawn(npc:getXPos(),npc:getYPos(),npc:getZPos());
             SpawnMob(16921015):updateClaim(player);
             SpawnMob(16921016):updateEnmity(player);
             SpawnMob(16921017):updateEnmity(player);
