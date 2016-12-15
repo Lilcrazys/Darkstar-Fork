@@ -28,14 +28,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 25);
     mob:setMod(MOD_TERRORRES, 100);
 
-    if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
-        SetDropRate(195,20618,1000); -- Sandung
-        SetDropRate(195,18828,0);
-    else
-        SetDropRate(195,20618,0);
-        SetDropRate(195,18828,1000); -- Oxossi Facon +1
-    end
-
     --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 3);
@@ -63,6 +55,15 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
     -- Begin Custom Legion Code
     ------------------------------------
+
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
+            player:addTreasure(20618); -- Sandung
+        else
+            player:addTreasure(18828); -- Oxossi Facon +1
+        end
+    end
+
 
     --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then

@@ -31,14 +31,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 50);
     mob:setMod(MOD_TERRORRES, 100);
 
-    if (math.random(1,1000) <= 66) then
-        SetDropRate(195,20738,1000); -- Buramenk'ah
-        SetDropRate(195,19799,0);
-    else
-        SetDropRate(195,20618,0);
-        SetDropRate(195,19799,1000); -- Herja's Fork
-    end
-
     --[[
     if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
         GetNPCByID(17408033):setStatus(STATUS_DISAPPEAR);
@@ -81,6 +73,14 @@ function onMobDeath(mob, player, isKiller)
     local CHANCE = 25;
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(SPELL_ID) == false) then
         player:addSpell(SPELL_ID);
+    end
+
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 66) then
+            player:addTreasure(20738); -- Buramenk'ah
+        else
+            player:addTreasure(19799); -- Herja's Fork
+        end
     end
 
     --[[ Custom (Relic) Trial Code

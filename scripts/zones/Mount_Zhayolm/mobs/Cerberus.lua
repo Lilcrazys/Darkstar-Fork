@@ -24,19 +24,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-    if (math.random(1,100) <= 3) then
-        SetDropRate(502,10954,1000); -- Alchemist's Torque
-        SetDropRate(502,21228,0); -- Falubeza
-        SetDropRate(502,18385,0); -- Algol
-    elseif (math.random(1,1000) <= 66) then -- this is 6.6 %
-        SetDropRate(502,10950,0); -- Alchemist's Torque
-        SetDropRate(502,21228,1000); -- Falubeza
-        SetDropRate(502,8727,0); -- Algol
-    else
-        SetDropRate(502,10950,0); -- Alchemist's Torque
-        SetDropRate(502,21228,0); -- Falubeza
-        SetDropRate(502,8727,1000); -- Algol
-    end
 end;
 
 -----------------------------------
@@ -61,6 +48,16 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
     -- Begin Custom Legion Code
     ------------------------------------
+
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 33) then
+            player:addTreasure(10954); -- Alchemist's Torque
+        elseif (math.random(1,1000) <= 66) then
+            player:addTreasure(21228); -- Falubeza
+        else
+            player:addTreasure(8727); -- Algol
+        end
+    end
 
     --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then

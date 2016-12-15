@@ -25,24 +25,6 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-
-    if (math.random(1,1000) <= 72) then
-        SetDropRate(1893,20827,1000); -- Kerehcatl
-        SetDropRate(1893,17738,0); -- Hauteclaire
-        SetDropRate(1893,4023,0); -- Snowsteel Ore
-        SetDropRate(1893,4023,0); -- Snowsteel Ore
-    elseif (math.random(1,100) <= 30) then
-        SetDropRate(1893,20827,0); -- Kerehcatl
-        SetDropRate(1893,17738,1000); -- Hauteclaire
-        SetDropRate(1893,4023,0); -- Snowsteel Ore
-        SetDropRate(1893,4023,0); -- Snowsteel Ore
-    else
-        SetDropRate(1893,18852,0); -- Kerehcatl
-        SetDropRate(1893,17440,0); -- Hauteclaire
-        SetDropRate(1893,4023,1000); -- Snowsteel Ore
-        SetDropRate(1893,4023,1000); -- Snowsteel Ore
-    end
-
 end;
 
 -----------------------------------
@@ -55,6 +37,17 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
     -- Begin Custom Legion Code
     ------------------------------------
+
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 72) then
+            player:addTreasure(20827); -- Kerehcatl
+        elseif (math.random(1,1000) <= 156) then
+            player:addTreasure(17738); -- Hauteclaire
+        else
+            player:addTreasure(4023); -- Snowsteel Ore
+            player:addTreasure(4023); -- Snowsteel Ore
+        end
+    end
 
     --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then
