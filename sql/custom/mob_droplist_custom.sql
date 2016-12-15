@@ -259,15 +259,12 @@ DELETE FROM `mob_droplist` WHERE dropId=195 and type=0 and itemId=646 and rate=3
 DELETE FROM `mob_droplist` WHERE dropId=195 and type=0 and itemId=646 and rate=220; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=195 and type=0 and itemId=908 and rate=370; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=195 and type=0 and itemId=1335 and rate=130; -- comment me
-INSERT INTO `mob_droplist` VALUES (195,0,10489,198); -- Huginn Haubert
 INSERT INTO `mob_droplist` VALUES (195,0,10489,87); -- Huginn Haubert
-INSERT INTO `mob_droplist` VALUES (195,0,10571,175); -- Tenryu Hakama +1
 INSERT INTO `mob_droplist` VALUES (195,0,10571,81); -- Tenryu Hakama +1
 INSERT INTO `mob_droplist` VALUES (195,0,10541,37); -- Khepri Wristbands
 INSERT INTO `mob_droplist` VALUES (195,0,10639,143); -- Spurrina Nails
 INSERT INTO `mob_droplist` VALUES (195,0,10409,62); -- Iaso Mitra
-INSERT INTO `mob_droplist` VALUES (195,0,20618,66); -- Sandung
-INSERT INTO `mob_droplist` VALUES (195,0,18828,934); -- Oxossi Facon +1
+
 
 -- -----------
 -- Athamas
@@ -523,9 +520,6 @@ INSERT INTO `mob_droplist` VALUES (502,0,15808,107); -- Ulthalam's Ring
 INSERT INTO `mob_droplist` VALUES (502,0,4023,1000); -- Snowsteel Ore
 INSERT INTO `mob_droplist` VALUES (502,0,4023,152);
 INSERT INTO `mob_droplist` VALUES (502,0,4023,181);
-INSERT INTO `mob_droplist` VALUES (502,0,10954,30); -- Alchemist's Torque
-INSERT INTO `mob_droplist` VALUES (502,0,21228,66); -- Falubeza
-INSERT INTO `mob_droplist` VALUES (502,0,18385,904); -- Algol
 INSERT INTO `mob_droplist` VALUES (502,0,27779,67); -- Quauhpilli helm
 INSERT INTO `mob_droplist` VALUES (502,0,9062,12); -- Dark Matter
 
@@ -1202,7 +1196,7 @@ INSERT INTO `mob_droplist` VALUES (1936,0,10407,160); -- Khepri Bonnet
 INSERT INTO `mob_droplist` VALUES (1936,0,10490,94);
 INSERT INTO `mob_droplist` VALUES (1936,0,10542,176); -- Spurrina Gages
 INSERT INTO `mob_droplist` VALUES (1936,0,10574,112); -- Iaso Tights
-INSERT INTO `mob_droplist` VALUES (1936,0,20963,66); -- Falubeza
+
 
 -- -----------
 -- Kukulkan
@@ -1296,17 +1290,15 @@ DELETE FROM `mob_droplist` WHERE dropId=2079 and type=0 and itemId=4484 and rate
 DELETE FROM `mob_droplist` WHERE dropId=2079 and type=0 and itemId=4484 and rate=500; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=2079 and type=0 and itemId=4484 and rate=330; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=2079 and type=0 and itemId=18852 and rate=80; -- comment me
-INSERT INTO `mob_droplist` VALUES (2079,0,17440,95); -- Kraken Club
 -- INSERT INTO `mob_droplist` VALUES (2079,0,10570,330);
 INSERT INTO `mob_droplist` VALUES (2079,0,10570,175);
-INSERT INTO `mob_droplist` VALUES (2079,0,18852,30); -- Octave Club
 INSERT INTO `mob_droplist` VALUES (2079,0,10638,154);
 -- INSERT INTO `mob_droplist` VALUES (2079,0,10406,310);
 INSERT INTO `mob_droplist` VALUES (2079,0,10406,155);
 -- INSERT INTO `mob_droplist` VALUES (2079,0,10492,333);
 INSERT INTO `mob_droplist` VALUES (2079,0,10492,161);
 INSERT INTO `mob_droplist` VALUES (2079,0,10543,97);
-INSERT INTO `mob_droplist` VALUES (2079,0,17030,200); -- Great Club
+
 
 -- -----------
 -- Lord Varney
@@ -1415,7 +1407,7 @@ DELETE FROM `mob_droplist` WHERE dropId=2425 and type=0 and itemId=1133 and rate
 DELETE FROM `mob_droplist` WHERE dropId=2425 and type=0 and itemId=1133 and rate=500; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=2425 and type=0 and itemId=4272 and rate=130; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=2425 and type=0 and itemId=4486 and rate=1000; -- comment me
-INSERT INTO `mob_droplist` VALUES (2425,0,19799,934); --  Herja's Fork
+
 -- INSERT INTO `mob_droplist` VALUES (2425,0,10405,53); -- Huginn Coronet
 INSERT INTO `mob_droplist` VALUES (2425,0,10405,96);
 INSERT INTO `mob_droplist` VALUES (2425,0,10491,137); --  Khepri Jacket
@@ -1425,7 +1417,7 @@ INSERT INTO `mob_droplist` VALUES (2425,0,10540,91);
 -- INSERT INTO `mob_droplist` VALUES (2425,0,10573,174); --     Spurrina Slops
 INSERT INTO `mob_droplist` VALUES (2425,0,10573,85);
 INSERT INTO `mob_droplist` VALUES (2425,0,10640,83); --  Iaso Boots
-INSERT INTO `mob_droplist` VALUES (2425,0,20738,66); --  Buramenk'ah
+
 
 -- -----------
 -- Ningishzida
@@ -4526,12 +4518,9 @@ INSERT INTO `mob_droplist` VALUES (9730,0,9062,50); -- Dark Matter
 -- Hydra
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (9731,0,10952,30); -- Tanner's Torque
-INSERT INTO `mob_droplist` VALUES (9731,0,20548,69); -- Oatixur
+
 INSERT INTO `mob_droplist` VALUES (9731,0,28663,115); -- Steadfast shield
 INSERT INTO `mob_droplist` VALUES (9731,0,15807,140); -- Balrahn's Ring
-INSERT INTO `mob_droplist` VALUES (9731,0,4023,1000); -- Snowsteel Ore
-INSERT INTO `mob_droplist` VALUES (9731,0,4023,250);
 INSERT INTO `mob_droplist` VALUES (9731,0,4023,50);
 INSERT INTO `mob_droplist` VALUES (9731,0,2876,36);
 INSERT INTO `mob_droplist` VALUES (9731,0,9062,12); -- Dark Matter

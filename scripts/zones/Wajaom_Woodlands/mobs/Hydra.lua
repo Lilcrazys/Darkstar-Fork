@@ -66,6 +66,16 @@ function onMobDeath(mob, player, isKiller)
 
     player:addTitle(HYDRA_HEADHUNTER);
 
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 33) then
+            player:addTreasure(10952, mob); -- Tanner's Torque
+        elseif (math.random(1,1000) <= 66) then
+            player:addTreasure(20548, mob); -- Oatixur
+        else
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+        end
+    end
 
     --[[ Custom (Mythic) Trial Code
     if (cTrialItemEquipped(player) == true) then

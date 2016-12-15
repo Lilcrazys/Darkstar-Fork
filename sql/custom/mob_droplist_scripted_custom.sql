@@ -13,7 +13,47 @@ CREATE TABLE `mob_droplist_scripted` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=9;
 -- INSERT INTO `mob_droplist_scripted` VALUES (dropId,type,itemId,rate); -- Item Name [Mob Name]
 
+-- -----------
+-- Aspidochelone
+-- -----------
+
+INSERT INTO `mob_droplist_scripted` VALUES (195,0,20618,66); -- Sandung
+INSERT INTO `mob_droplist_scripted` VALUES (195,0,18828,934); -- Oxossi Facon +1
+
+-- -----------
+-- Cerberus
+-- ----------
+INSERT INTO `mob_droplist_scripted` VALUES (502,0,10954,30); -- Alchemist's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (502,0,21228,66); -- Falubeza
+INSERT INTO `mob_droplist_scripted` VALUES (502,0,18385,904); -- Algol
+
+-- -----------
+-- King Behemoth
+-- -----------
+
+INSERT INTO `mob_droplist` VALUES (1936,0,860,934); -- Behemoth Hide
+INSERT INTO `mob_droplist` VALUES (1936,0,860,934); -- Behemoth Hide
+INSERT INTO `mob_droplist` VALUES (1936,0,883,934); -- Behemoth Horn
+INSERT INTO `mob_droplist` VALUES (1936,0,20963,66); -- Falubeza
+
+-- -----------
+-- Lord of Onzozo
+-- -----------
+
+INSERT INTO `mob_droplist_scripted` VALUES (2079,0,17440,100); -- Kraken Club
+INSERT INTO `mob_droplist_scripted` VALUES (2079,0,18852,30); -- Octave Club
+INSERT INTO `mob_droplist_scripted` VALUES (2079,0,17030,870); -- Great Club
+
+-- -----------
+-- Nidhogg
+-- -----------
+INSERT INTO `mob_droplist_scripted` VALUES (2425,0,20738,66); --  Buramenk'ah
+INSERT INTO `mob_droplist_scripted` VALUES (2425,0,19799,934); --  Herja's Fork
+
+-- -----------
 -- Taisaijin
+-- -----------
+
 -- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,4717,500); -- Refresh
 -- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,4850,500); -- Refresh II
 
@@ -801,3 +841,12 @@ INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8923,125); -- Titatear
 INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8924,125); -- Shivatear
 INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8925,125); -- Carbutear
 INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8926,125); -- Fenritear
+
+-- -----------
+-- Hydra
+-- -----------
+
+INSERT INTO `mob_droplist_scripted` VALUES (9731,0,10952,33); -- Tanner's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (9731,0,20548,66); -- Oatixur
+INSERT INTO `mob_droplist_scripted` VALUES (9731,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (9731,0,4023,901);

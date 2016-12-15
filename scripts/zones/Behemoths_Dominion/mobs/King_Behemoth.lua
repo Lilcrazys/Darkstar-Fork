@@ -72,6 +72,16 @@ function onMobDeath(mob, player, isKiller)
     -- Begin Custom Legion Code
     ------------------------------------
 
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 66) then
+            player:addTreasure(20963, mob); -- Falubeza
+        else
+            player:addTreasure(860, mob); -- Behemoth Hide
+            player:addTreasure(860, mob); -- Behemoth Hide
+            player:addTreasure(883, mob); -- Behemoth Horn
+        end
+    end
+
     --[[ Custom (Relic) Trial Code
     if (cTrialItemEquipped(player) == true) then
         cTrialProgress(player, RELIC, 4);
