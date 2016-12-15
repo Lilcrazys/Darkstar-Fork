@@ -254,33 +254,33 @@ function onMobDeath(mob, player, isKiller)
 
         if (Chance1 <= 5) then
             if (Ring1 == 1) then
-                player:addTreasure(27590); -- Shneddick Ring
+                player:addTreasure(27590, mob); -- Shneddick Ring
             elseif (Ring1 == 2) then
-                player:addTreasure(27581); -- Woltaris Ring
+                player:addTreasure(27581, mob); -- Woltaris Ring
             elseif (Ring1 == 3) then
-                player:addTreasure(27583); -- Janniston Ring
+                player:addTreasure(27583, mob); -- Janniston Ring
             elseif (Ring1 == 4) then
-                player:addTreasure(27585); -- Gorney Ring
+                player:addTreasure(27585, mob); -- Gorney Ring
             elseif (Ring1 == 5) then
-                player:addTreasure(27587); -- Karieyh Ring
+                player:addTreasure(27587, mob); -- Karieyh Ring
             elseif (Ring1 == 6) then
-                player:addTreasure(27589); -- Thurandaut Ring
+                player:addTreasure(27589, mob); -- Thurandaut Ring
             elseif (Ring1 == 7) then
-                player:addTreasure(27589); -- Orvail Ring
+                player:addTreasure(27589, mob); -- Orvail Ring
             end
         end
 
         if (Chance2 <= 7) then
             if (Ring2 == 1) then
-                player:addTreasure(27580); -- Adoulin Ring
+                player:addTreasure(27580, mob); -- Adoulin Ring
             elseif (Ring2 == 2) then
-                player:addTreasure(27582); -- Weather Ring
+                player:addTreasure(27582, mob); -- Weather Ring
             elseif (Ring2 == 3) then
-                player:addTreasure(27584); -- Renaye Ring
+                player:addTreasure(27584, mob); -- Renaye Ring
             elseif (Ring2 == 4) then
-                player:addTreasure(27586); -- Haverton Ring
+                player:addTreasure(27586, mob); -- Haverton Ring
             elseif (Ring2 == 5) then
-                player:addTreasure(27588); -- Vocane Ring
+                player:addTreasure(27588, mob); -- Vocane Ring
             end
         end
     end

@@ -133,9 +133,9 @@ end;
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         if (math.random(1,100) > 50) then
-            player:addTreasure(28540); -- Warp Ring
+            player:addTreasure(28540, mob); -- Warp Ring
         else
-            player:addTreasure(3596);  -- Ornament Case
+            player:addTreasure(3596, mob);  -- Ornament Case
         end
         -- 2 of Kingdom Stables Collar/Republic Stables Medal/Federation Stables Scarf
         -- This random only works because these 3 items have sequential IDs - don't try to copy it.

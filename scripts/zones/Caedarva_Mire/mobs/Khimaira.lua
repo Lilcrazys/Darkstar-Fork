@@ -40,12 +40,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         if (math.random(1,1000) <= 72) then
-            player:addTreasure(20827); -- Kerehcatl
+            player:addTreasure(20827, mob); -- Kerehcatl
         elseif (math.random(1,1000) <= 156) then
-            player:addTreasure(17738); -- Hauteclaire
+            player:addTreasure(17738, mob); -- Hauteclaire
         else
-            player:addTreasure(4023); -- Snowsteel Ore
-            player:addTreasure(4023); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
         end
     end
 

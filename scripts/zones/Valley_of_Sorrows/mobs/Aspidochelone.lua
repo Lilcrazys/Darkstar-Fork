@@ -58,9 +58,9 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         if (math.random(1,1000) <= 66) then -- Hardcoded "this or this item" drop rate until implemented.
-            player:addTreasure(20618); -- Sandung
+            player:addTreasure(20618, mob); -- Sandung
         else
-            player:addTreasure(18828); -- Oxossi Facon +1
+            player:addTreasure(18828, mob); -- Oxossi Facon +1
         end
     end
 

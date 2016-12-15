@@ -14,9 +14,9 @@ function onMobDeath(mob, player, isKiller)
     --[[
     if (isKiller == true) then
         if (math.random(1,100) < 90) then
-            player:addTreasure(4717); -- Refresh
+            player:addTreasure(4717, mob); -- Refresh
         else
-            player:addTreasure(4850); -- Refresh II
+            player:addTreasure(4850, mob); -- Refresh II
         end
     end
     ]]

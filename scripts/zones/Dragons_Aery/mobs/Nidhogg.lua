@@ -77,9 +77,9 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         if (math.random(1,1000) <= 66) then
-            player:addTreasure(20738); -- Buramenk'ah
+            player:addTreasure(20738, mob); -- Buramenk'ah
         else
-            player:addTreasure(19799); -- Herja's Fork
+            player:addTreasure(19799, mob); -- Herja's Fork
         end
     end
 

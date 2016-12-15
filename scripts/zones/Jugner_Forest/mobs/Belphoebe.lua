@@ -79,21 +79,21 @@ function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         local RND1 = math.random(1,8);
         if (RND1 == 1) then
-            player:addTreasure(8919); -- Ifritear
+            player:addTreasure(8919, mob); -- Ifritear
         elseif (RND1 == 2) then
-            player:addTreasure(8920); -- Leviatear
+            player:addTreasure(8920, mob); -- Leviatear
         elseif (RND1 == 3) then
-            player:addTreasure(8921); -- Ramutear
+            player:addTreasure(8921, mob); -- Ramutear
         elseif (RND1 == 4) then
-            player:addTreasure(8922); -- Garutear
+            player:addTreasure(8922, mob); -- Garutear
         elseif (RND1 == 5) then
-            player:addTreasure(8923); -- Titatear
+            player:addTreasure(8923, mob); -- Titatear
         elseif (RND1 == 6) then
-            player:addTreasure(8924); -- Shivatear
+            player:addTreasure(8924, mob); -- Shivatear
         elseif (RND1 == 7) then
-            player:addTreasure(8925); -- Carbutear
+            player:addTreasure(8925, mob); -- Carbutear
         elseif (RND1 == 8) then
-            player:addTreasure(8926); -- Fenritear
+            player:addTreasure(8926, mob); -- Fenritear
         end
     end
 
