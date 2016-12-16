@@ -108,7 +108,7 @@ function onTrigger(player,npc)
 	-- player:startEvent(0x30B);
 	local month = tonumber(os.date("%m"));
 	local day = tonumber(os.date("%d"));
-	if ((month == 12 and day >= 10 and day <= 27) ) then -- Starlight Celebration ~ Dec 10 - Dec 27
+	if ((month == 12 and day >= 5 and day <= 27)) then -- Starlight Celebration ~ Dec 5 - Dec 27
 		local stock_1 =
 		{
 			15179,   7500,    -- Dream Hat +1
@@ -213,7 +213,7 @@ function onTrigger(player,npc)
 			11355,   7500,    -- Dinner Jacket
 			16378,   7500,    -- Dinner Hose
 			11853,   7500,    -- Novennial Coat
-			11854,   7500,    -- Novennial Dress 
+			11854,   7500,    -- Novennial Dress
 			11956,   7500,    -- Novennial Hose
 			11957,   7500,    -- Novennial Boots
 			13216,   7500,    -- Gold Moogle Belt
