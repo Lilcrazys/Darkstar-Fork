@@ -16,6 +16,9 @@ cmdprops =
 
 
 function onTrigger(player,page)
+    if (player:getVar("inJail") > 0 and player:getZoneID() == 131) then
+        return;
+    end
     if (page == 0 or page == nil) then
         player:PrintToPlayer("1: Crystal Depot, 2: MogDonalds, 3: Meds, 4: Tools and gears");
         player:PrintToPlayer("@shop <page>");

@@ -9,6 +9,9 @@ cmdprops =
     parameters = ""
 };
 
-function onTrigger(player,npc)
+function onTrigger(player)
+    if (player:getVar("inJail") > 0 and player:getZoneID() == 131) then
+        return;
+    end
     player:sendMenu(3);
 end;

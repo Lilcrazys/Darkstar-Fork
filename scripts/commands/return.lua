@@ -10,7 +10,7 @@ cmdprops =
 };
 
 function onTrigger(player, target)
-    local ZoneID = 0
+    local ZoneID;
     if (target == nil or player:getGMLevel() == 0) then
         target = player:getName();
     end
@@ -23,15 +23,15 @@ function onTrigger(player, target)
             return;
         end
 
-        if (targ:getVar("inJail") == 0 and targ:getZoneID() ~= 131) then
+        if (targ:getVar("inJail") > 0 and targ:getZoneID() == 131) then
+            player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
+        else
             ZoneID = targ:getPreviousZone();
-        if (ZoneID == nil or ZoneID == 0 or ZoneID == 214) then
+            if (ZoneID == nil or ZoneID == 0 or ZoneID == 214 or ZoneID == 131) then
                 player:PrintToPlayer("Previous Zone was a Mog House or there was a problem fetching the ID.");
             else
                 targ:setPos(0, 0, 0, 0, ZoneID);
             end
-        else
-            player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
         end
     else
         player:PrintToPlayer(string.format("Player named '%s' not found!", target));
