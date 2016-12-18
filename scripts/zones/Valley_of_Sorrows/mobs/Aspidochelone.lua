@@ -28,11 +28,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 25);
     mob:setMod(MOD_TERRORRES, 100);
 
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 3);
-    end]]
-
 end;
 
 -----------------------------------
@@ -64,11 +59,8 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 
-
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 3);
-    end]]
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "relic");
 
     ------------------------------------
     -- End Custom Legion Code

@@ -49,9 +49,23 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(SHINING_SCALE_RIFLER);
 
-    --[[ Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(playerler, MYTHIC, 4);
-    end]]
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
 
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "mythic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    mob:setRespawnTime(math.random(75600,86400));   -- 21 to 24 hours
 end;

@@ -10,6 +10,18 @@ require("scripts/globals/custom_trials");
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+    -- Custom Trial Check
+    cTrialProgress(player, 1, "relic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
 end;
 
 -----------------------------------
@@ -17,11 +29,6 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 3);
-    end]]
 
     -- Set Dune_Widow's Window Open Time
     local wait = math.random(1,5) * 3600;

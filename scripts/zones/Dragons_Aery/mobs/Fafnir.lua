@@ -46,6 +46,10 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(FAFNIR_SLAYER);
 
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
     local SPELL_ID = 738;
     local CHANCE = 25;
     if (math.random(0,99) < CHANCE and player:getMainJob() == JOBS.BLU and player:hasSpell(SPELL_ID) == false) then
@@ -55,10 +59,13 @@ function onMobDeath(mob, player, isKiller)
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Fafnir_ToD", os.time());
 
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 3);
-    end]]
+    -- Custom Trial Check
+    cTrialProgress(player, 2, "relic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
 end;
 
 -----------------------------------

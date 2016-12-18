@@ -47,13 +47,20 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(TORTOISE_TORTURER);
 
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Adamantoise_ToD", os.time());
 
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 1);
-    end]]
+    -- Custom Trial Check
+    cTrialProgress(player, 2, "relic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
 end;
 
 -----------------------------------

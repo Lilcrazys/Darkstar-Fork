@@ -82,10 +82,8 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 4);
-    end]]
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "relic");
 
     ------------------------------------
     -- End Custom Legion Code

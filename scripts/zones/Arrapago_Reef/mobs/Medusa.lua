@@ -4,10 +4,11 @@
 -- @pos -458 -20 458
 -- TODO: resists, attack/def boosts
 -----------------------------------
-
-require("scripts/globals/titles");
+package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Arrapago_Reef/TextIDs");
 require("scripts/globals/status");
+require("scripts/globals/titles");
 require("scripts/globals/custom_trials");
 
 -----------------------------------
@@ -36,7 +37,7 @@ end;
 
 function onMobEngaged(mob, target)
     local mobID = mob:getID();
-    target:showText(mob, MEDUSA_ENGAGE);
+    mob:showText(mob, MEDUSA_ENGAGE);
     SpawnMob(mobID+1):updateEnmity(target);
     SpawnMob(mobID+2):updateEnmity(target);
     SpawnMob(mobID+3):updateEnmity(target);
@@ -62,17 +63,27 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:showText(mob, MEDUSA_DEATH);
+    mob:showText(mob, MEDUSA_DEATH);
     player:addTitle(GORGONSTONE_SUNDERER);
 
-    DespawnMob(mob:getID()+1);
-    DespawnMob(mob:getID()+2);
-    DespawnMob(mob:getID()+3);
-    DespawnMob(mob:getID()+4);
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
 
-    --[[ Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, MYTHIC, 6);
-    end]]
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "mythic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
 
 end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    mob:setRespawnTime(math.random(75600,86400));   -- 21 to 24 hours
+end;
+
