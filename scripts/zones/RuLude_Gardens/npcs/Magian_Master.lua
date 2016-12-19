@@ -14,6 +14,12 @@ require("scripts/globals/spoofchat");
 
 function onTrade(player,npc,trade)
     player:SpoofChatPlayer("Are you trying to give me gifts? I WILL NOT SUCCUMB TO BRIBERY! ", MESSAGE_SAY, npc:getID());
+    if (player:getLocalVar("magianMasterBribery") >= 3) then
+        player:setLocalVar("magianMasterBribery", 0);
+        player:costume(2239);
+    else
+        player:setLocalVar("magianMasterBribery", player:getLocalVar("magianMasterBribery")+1);
+    end
 end;
 
 
