@@ -52,10 +52,11 @@ function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         if (math.random(1,1000) <= 33) then
             player:addTreasure(10954, mob); -- Alchemist's Torque
-        elseif (math.random(1,1000) <= 66) then
-            player:addTreasure(21228, mob); -- Falubeza
+        elseif (RND <= 66) then
+            player:addTreasure(20905, mob); -- Qalgwer
         else
-            player:addTreasure(8727, mob); -- Algol
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
         end
     end
 

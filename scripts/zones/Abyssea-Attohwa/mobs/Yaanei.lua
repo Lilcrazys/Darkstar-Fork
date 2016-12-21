@@ -48,248 +48,6 @@ end;
 
 function onMobSpawn(mob)
 
-    local RND1 = math.random(1,15);
-    if (RND1 == 1) then
-        SetDropRate(4207,20736,81); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 2) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,81); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 3) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,81); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 4) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,81); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 5) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,81); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 6) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,81); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 7) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,81); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 8) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,81); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 9) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,81); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 10) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,81); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 11) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,81); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 12) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,81); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 13) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,81); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 14) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,81); -- Kannakiri +1
-        SetDropRate(4207,20824,0); -- Faizzeer +1
-    elseif (RND1 == 15) then
-        SetDropRate(4207,20736,0); -- Iztaasu +1
-        SetDropRate(4207,21126,0); -- Aedold +1
-        SetDropRate(4207,20546,0); -- Ninzas +1
-        SetDropRate(4207,21286,0); -- Hgafircian +1
-        SetDropRate(4207,21051,0); -- Shichishito +1
-        SetDropRate(4207,20634,0); -- Leisilonu +1
-        SetDropRate(4207,20961,0); -- Qatsunoci +1
-        SetDropRate(4207,20915,0); -- Iizamal +1
-        SetDropRate(4207,21236,0); -- Bocluamni +1
-        SetDropRate(4207,20775,0); -- Crobaci +1
-        SetDropRate(4207,21195,0); -- Uffrat +1
-        SetDropRate(4207,20870,0); -- Iclamar +1
-        SetDropRate(4207,21194,0); -- Lehbrailg +1
-        SetDropRate(4207,21004,0); -- Kannakiri +1
-        SetDropRate(4207,20824,81); -- Faizzeer +1
-    end
 end;
 
 -----------------------------------
@@ -311,6 +69,25 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+
+    if (isKiller == true) then
+        local Chance = math.random(1,100); -- Weapon should be 50% chance
+        local Weapon = math.random(1,5);
+
+            if (Chance <= 50) then
+                if (Weapon == 1) then
+                    player:addTreasure(21236, mob); -- Bocluamni +1
+                elseif (Weapon == 2) then              
+                    player:addTreasure(20775, mob); -- Crobaci +1
+                elseif (Weapon == 3) then              
+                    player:addTreasure(21195, mob); -- Uffrat +1
+                elseif (Weapon == 4) then
+                    player:addTreasure(20870, mob); -- Iclamar +1
+                elseif (Weapon == 5) then
+                    player:addTreasure(21194, mob); -- Lehbrailg +1
+                end
+            end
+
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_IMPREGNABLE_TOWER) == false) then
         player:addKeyItem(ATMA_OF_THE_IMPREGNABLE_TOWER);

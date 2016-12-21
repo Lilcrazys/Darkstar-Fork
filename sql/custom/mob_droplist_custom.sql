@@ -236,7 +236,7 @@ INSERT INTO `mob_droplist` VALUES (191,0,10457,63); -- Avant Mail +1
 INSERT INTO `mob_droplist` VALUES (191,0,10513,128); -- Mustela Gloves
 INSERT INTO `mob_droplist` VALUES (191,0,11982,67); -- Magavan Slops
 INSERT INTO `mob_droplist` VALUES (191,0,10602,50); -- Rubeus Boots
-INSERT INTO `mob_droplist` VALUES (191,0,10948,30); -- Carver's Torque
+
 INSERT INTO `mob_droplist` VALUES (191,0,21052,66); -- Tsurumaru
 
 -- -----------
@@ -517,8 +517,6 @@ DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=2169 and rate=
 DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=5565 and rate=1000;
 DELETE FROM `mob_droplist` WHERE dropId=502 and type=0 and itemId=18385 and rate=450;
 INSERT INTO `mob_droplist` VALUES (502,0,15808,107); -- Ulthalam's Ring
-INSERT INTO `mob_droplist` VALUES (502,0,4023,1000); -- Snowsteel Ore
-INSERT INTO `mob_droplist` VALUES (502,0,4023,152);
 INSERT INTO `mob_droplist` VALUES (502,0,4023,181);
 INSERT INTO `mob_droplist` VALUES (502,0,27779,67); -- Quauhpilli helm
 INSERT INTO `mob_droplist` VALUES (502,0,9062,12); -- Dark Matter
@@ -563,21 +561,6 @@ INSERT INTO `mob_droplist` VALUES (525,0,18948,666); -- Enforcer
 
 INSERT INTO `mob_droplist` VALUES (529,0,2965,1000); -- Cirein. Lantern
 INSERT INTO `mob_droplist` VALUES (529,0,19406,113); -- Masamune
-INSERT INTO `mob_droplist` VALUES (529,0,20736,81); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (529,0,21126,81); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (529,0,20546,81); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (529,0,21286,81); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (529,0,21051,81); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (529,0,20634,81); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (529,0,20961,81); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (529,0,20915,81); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (529,0,21236,81); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (529,0,20775,81); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (529,0,21195,81); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (529,0,20870,81); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (529,0,21194,81); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (529,0,21004,81); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (529,0,20824,81); -- Faizzeer +1
 
 -- -----------
 -- Claret
@@ -847,22 +830,14 @@ INSERT INTO `mob_droplist` VALUES (1602,0,10493,53); -- Iaso Bliaut
 -- Gulool Ja Ja
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (1607,0,10955,30); -- Culinarian's Torque
-INSERT INTO `mob_droplist` VALUES (1607,0,20861,73); -- Qalgwer
 INSERT INTO `mob_droplist` VALUES (1607,0,28535,84); -- Supershear ring
-INSERT INTO `mob_droplist` VALUES (1607,0,4023,1000); -- Snowsteel Ore
-INSERT INTO `mob_droplist` VALUES (1607,0,4023,116);
 INSERT INTO `mob_droplist` VALUES (1607,0,4023,105);
 
 -- -----------
 -- Gurfurlur the Menacing
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (1609,0,10950,30); -- Culinarian's Torque
-INSERT INTO `mob_droplist` VALUES (1609,0,21256,75); -- illapa
-INSERT INTO `mob_droplist` VALUES (1609,0,27766,70); -- Supershear ring
-INSERT INTO `mob_droplist` VALUES (1609,0,4023,1000); -- Snowsteel Ore
-INSERT INTO `mob_droplist` VALUES (1609,0,4023,100);
+INSERT INTO `mob_droplist` VALUES (1609,0,27766,70); -- Uk'uxkaj cap
 INSERT INTO `mob_droplist` VALUES (1609,0,4023,157);
 
 -- -----------
@@ -1020,21 +995,6 @@ DELETE FROM `mob_droplist` WHERE dropId=1812 and type=0 and itemId=2962 and rate
 DELETE FROM `mob_droplist` WHERE dropId=1812 and type=0 and itemId=2962 and rate=680; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1812 and type=0 and itemId=3210 and rate=50; -- Vision Stone
 DELETE FROM `mob_droplist` WHERE dropId=1812 and type=0 and itemId=11432 and rate=1000; -- Ace's Leggings
-INSERT INTO `mob_droplist` VALUES (1812,0,20736,81); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21126,81); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20546,81); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21286,81); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21051,81); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20634,81); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20961,81); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20915,81); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21236,81); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20775,81); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21195,81); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20870,81); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21194,81); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (1812,0,21004,81); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (1812,0,20824,81); -- Faizzeer +1
 INSERT INTO `mob_droplist` VALUES (1812,0,2962,1000); -- Itzpapa. Scale
 INSERT INTO `mob_droplist` VALUES (1812,0,2962,52); -- comment me
 INSERT INTO `mob_droplist` VALUES (1812,0,19400,83); -- Caladbolg
@@ -1129,7 +1089,7 @@ INSERT INTO `mob_droplist` VALUES (1861,0,10885,161); -- Avant Helm +1
 INSERT INTO `mob_droplist` VALUES (1861,0,10463,190); -- Mustela Harness
 INSERT INTO `mob_droplist` VALUES (1861,0,10514,127); --  Magavan Mitts
 INSERT INTO `mob_droplist` VALUES (1861,0,11971,174); --  Rubeus Spats
-INSERT INTO `mob_droplist` VALUES (1861,0,10949,30); --  Smithy's Torque
+
 INSERT INTO `mob_droplist` VALUES (1861,0,21176,66); --  Ngqoqwanb
 INSERT INTO `mob_droplist` VALUES (1861,0,27781,66); --  Xux hat
 
@@ -1143,10 +1103,7 @@ DELETE FROM `mob_droplist` WHERE dropId=1893 and type=0 and itemId=2372 and rate
 DELETE FROM `mob_droplist` WHERE dropId=1893 and type=0 and itemId=2373 and rate=1000;
 INSERT INTO `mob_droplist` VALUES (1893,0,15809,140); -- Jalzahn's Ring
 INSERT INTO `mob_droplist` VALUES (1893,0,4023,1000); -- Snowsteel Ore
-INSERT INTO `mob_droplist` VALUES (1893,0,4023,116);
-INSERT INTO `mob_droplist` VALUES (1893,0,4023,186);
-INSERT INTO `mob_droplist` VALUES (1893,0,10953,30); -- Boneworker's Torque
-INSERT INTO `mob_droplist` VALUES (1893,0,20827,72); -- Kerehcatl
+
 INSERT INTO `mob_droplist` VALUES (1893,0,10285,86); -- Beguiler's jerkin
 INSERT INTO `mob_droplist` VALUES (1893,0,9062,12); -- Dark Matter
 
@@ -1223,21 +1180,6 @@ DELETE FROM `mob_droplist` WHERE dropId=1972 and type=0 and itemId=1302 and rate
 DELETE FROM `mob_droplist` WHERE dropId=1972 and type=0 and itemId=1305 and rate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1972 and type=0 and itemId=1306 and rate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=1972 and type=0 and itemId=747 and rate=270; -- comment me
-INSERT INTO `mob_droplist` VALUES (1972,0,20736,81); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21126,81); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20546,81); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21286,81); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21051,81); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20634,81); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20961,81); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20915,81); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21236,81); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20775,81); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21195,81); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20870,81); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21194,81); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (1972,0,21004,81); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (1972,0,20824,81); -- Faizzeer +1
 
 -- -----------
 -- Leaping Lizzy
@@ -1543,11 +1485,8 @@ INSERT INTO `mob_droplist` VALUES (2728,0,14985,156); -- Goliard Cuffs
 -- -----------
 -- Medusa
 -- -----------
-INSERT INTO `mob_droplist` VALUES (2237,0,10951,30); -- Weaver's Torque
-INSERT INTO `mob_droplist` VALUES (2237,0,20905,71); -- Tajabit
+
 INSERT INTO `mob_droplist` VALUES (2237,0,27780,93); -- Chocaliztli mask
-INSERT INTO `mob_droplist` VALUES (2237,0,4023,1000); -- Snowsteel Ore
-INSERT INTO `mob_droplist` VALUES (2237,0,4023,116);
 INSERT INTO `mob_droplist` VALUES (2237,0,4023,186);
 
 -- -----------
@@ -1601,21 +1540,6 @@ INSERT INTO `mob_droplist` VALUES (2916,0,13054,77); -- Fuma Kyahan
 DELETE FROM `mob_droplist` WHERE dropId=2925 and type=0 and itemId=11698 and rate=1000; -- comment me
 INSERT INTO `mob_droplist` VALUES (2925,0,11651,38); -- Eponas Ring
 INSERT INTO `mob_droplist` VALUES (2925,0,11698,94); -- Hecates Earring
-INSERT INTO `mob_droplist` VALUES (2925,0,20736,76); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21126,76); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20546,76); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21286,76); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21051,76); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20634,76); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20961,76); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20915,76); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21236,76); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20775,76); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21195,76); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20870,76); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21194,76); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (2925,0,21004,76); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (2925,0,20824,76); -- Faizzeer +1
 
 -- -----------
 -- Reaction
@@ -1704,21 +1628,6 @@ DELETE FROM `mob_droplist` WHERE dropId=3106 and type=0 and itemId=3227 and rate
 -- INSERT INTO `mob_droplist` VALUES (3106,0,21051,84); --  Shichishito +1 162 Skill
 INSERT INTO `mob_droplist` VALUES (3106,0,2967,1000); -- Sedna's Tusk
 INSERT INTO `mob_droplist` VALUES (3106,0,19398,192); -- twashtar
-INSERT INTO `mob_droplist` VALUES (3106,0,20736,76); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21126,76); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20546,76); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21286,76); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21051,76); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20634,76); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20961,76); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20915,76); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21236,76); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20775,76); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21195,76); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20870,76); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21194,76); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (3106,0,21004,76); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (3106,0,20824,76); -- Faizzeer +1
 
 -- -----------
 -- Simurgh
@@ -1738,23 +1647,6 @@ DELETE FROM `mob_droplist` WHERE dropId=3210 and type=0 and itemId=863 and rate=
 DELETE FROM `mob_droplist` WHERE dropId=3210 and type=0 and itemId=1299 and rate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=3210 and type=0 and itemId=1303 and rate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=3210 and type=0 and itemId=1313 and rate=670; -- comment me
-INSERT INTO `mob_droplist` VALUES (3210,0,20736,76); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21126,76); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20546,76); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21286,76); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21051,76); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20634,76); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20961,76); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20915,76); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21236,76); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20775,76); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21195,76); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20870,76); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21194,76); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (3210,0,21004,76); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (3210,0,20824,76); -- Faizzeer +1
-
-
 
 -- -----------
 -- Smok
@@ -2089,22 +1981,6 @@ INSERT INTO `mob_droplist` VALUES (4137,0,17472,76);
 -- Yaanei
 -- -----------
 
-INSERT INTO `mob_droplist` VALUES (4207,0,20736,76); -- Iztaasu +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21126,76); -- Aedold +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20546,76); -- Ninzas +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21286,76); -- Hgafircian +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21051,76); -- Shichishito +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20634,76); -- Leisilonu +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20961,76); -- Qatsunoci +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20915,76); -- Iizamal +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21236,76); -- Bocluamni +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20775,76); -- Crobaci +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21195,76); -- Uffrat +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20870,76); -- Iclamar +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21194,76); -- Lehbrailg +1
-INSERT INTO `mob_droplist` VALUES (4207,0,21004,76); -- Kannakiri +1
-INSERT INTO `mob_droplist` VALUES (4207,0,20824,76); -- Faizzeer +1
-
 -- -----------
 -- Zareehkl the Jubilant
 -- -----------
@@ -2135,12 +2011,6 @@ DELETE FROM `mob_droplist` WHERE dropId=4372 and type=0 and itemId=4748 and rate
 DELETE FROM `mob_droplist` WHERE dropId=4372 and type=0 and itemId=4818 and rate=170; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=4372 and type=0 and itemId=4748 and rate=150; -- comment me
 INSERT INTO `mob_droplist` VALUES (4372,0,3924,94); -- Scholar Stone
-INSERT INTO `mob_droplist` VALUES (4372,0,28612,193); -- Buquwik Cape
-INSERT INTO `mob_droplist` VALUES (4372,0,28610,158); -- Ik Cape
-INSERT INTO `mob_droplist` VALUES (4372,0,28613,131); -- Kayapa Cape
-INSERT INTO `mob_droplist` VALUES (4372,0,28611,153); --  Tuilha Cape
-INSERT INTO `mob_droplist` VALUES (4372,0,28615,73); --  Toro Cape
-INSERT INTO `mob_droplist` VALUES (4372,0,28614,124); -- Iximulew Cape
 INSERT INTO `mob_droplist` VALUES (4372,0,271,196); --  Alexander Statue
 
 -- -----------
@@ -2660,7 +2530,7 @@ INSERT INTO `mob_droplist` VALUES (9093,0,28201,72); -- Xux trousers
 INSERT INTO `mob_droplist` VALUES (9093,0,28354,150); -- Voltsurge torque
 INSERT INTO `mob_droplist` VALUES (9093,0,27776,50); -- Mikinaak helm
 INSERT INTO `mob_droplist` VALUES (9093,0,10283,172); -- Vara Brigandine armor
-INSERT INTO `mob_droplist` VALUES (9093,0,20616,13); -- Ipetam
+
 INSERT INTO `mob_droplist` VALUES (9093,0,4717,6); -- Phalanx
 INSERT INTO `mob_droplist` VALUES (9093,0,2875,53);
 

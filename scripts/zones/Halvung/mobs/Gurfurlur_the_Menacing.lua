@@ -79,6 +79,17 @@ function onMobDeath(mob, player, isKiller)
     -- Begin Custom Legion Code
     ------------------------------------
 
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 33) then
+            player:addTreasure(10950, mob); -- Goldsmith's Torque
+        elseif (RND <= 66) then
+            player:addTreasure(21256, mob); -- Illapa
+        else
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+        end
+    end
+
     -- Custom Trial Check
     cTrialProgress(player, 3, "mythic");
 

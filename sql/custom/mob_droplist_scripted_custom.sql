@@ -18,31 +18,104 @@ CREATE TABLE `mob_droplist_scripted` (
 
 -- Aspidochelone
 INSERT INTO `mob_droplist_scripted` VALUES (195,0,20618,66); -- Sandung
-INSERT INTO `mob_droplist_scripted` VALUES (195,0,18828,934); -- Oxossi Facon +1
+INSERT INTO `mob_droplist_scripted` VALUES (195,0,10948,33); -- Carver's Torque
 
 -- Cerberus
-INSERT INTO `mob_droplist_scripted` VALUES (502,0,10954,30); -- Alchemist's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (502,0,10954,33); -- Alchemist's Torque
 INSERT INTO `mob_droplist_scripted` VALUES (502,0,21228,66); -- Falubeza
-INSERT INTO `mob_droplist_scripted` VALUES (502,0,18385,904); -- Algol
+INSERT INTO `mob_droplist_scripted` VALUES (502,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (502,0,4023,901); -- Snowsteel Ore
+
+-- Gulool Ja Ja
+INSERT INTO `mob_droplist_scripted` VALUES (1607,0,10955,33); -- Culinarian's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (1607,0,20861,66); -- Qalgwer
+INSERT INTO `mob_droplist_scripted` VALUES (1607,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (1607,0,4023,901); -- Snowsteel Ore
+
+-- Gurfurlur the Menacing
+INSERT INTO `mob_droplist_scripted` VALUES (1609,0,10950,33); -- Culinarian's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (1609,0,21256,66); -- illapa
+INSERT INTO `mob_droplist_scripted` VALUES (1609,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (1609,0,4023,901); -- Snowsteel Ore
+
+-- Khimaira
+INSERT INTO `mob_droplist_scripted` VALUES (1893,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (1893,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (1893,0,10953,33); -- Boneworker's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (1893,0,20827,66); -- Kerehcatl
 
 -- King Behemoth
-INSERT INTO `mob_droplist` VALUES (1936,0,860,934); -- Behemoth Hide
-INSERT INTO `mob_droplist` VALUES (1936,0,860,934); -- Behemoth Hide
-INSERT INTO `mob_droplist` VALUES (1936,0,883,934); -- Behemoth Horn
-INSERT INTO `mob_droplist` VALUES (1936,0,20963,66); -- Falubeza
+INSERT INTO `mob_droplist_scripted` VALUES (1936,0,860,934); -- Behemoth Hide
+INSERT INTO `mob_droplist_scripted` VALUES (1936,0,860,934); -- Behemoth Hide
+INSERT INTO `mob_droplist_scripted` VALUES (1936,0,883,934); -- Behemoth Horn
+INSERT INTO `mob_droplist_scripted` VALUES (1936,0,20963,66); -- Falubeza
+
+-- Kutharei
+INSERT INTO `mob_droplist_scripted` VALUES (1972,0,21051,100); -- Shichishito +1
+INSERT INTO `mob_droplist_scripted` VALUES (1972,0,20634,100); -- Leisilonu +1
+INSERT INTO `mob_droplist_scripted` VALUES (1972,0,20961,100); -- Qatsunoci +1
+INSERT INTO `mob_droplist_scripted` VALUES (1972,0,20915,100); -- Iizamal +1
+INSERT INTO `mob_droplist_scripted` VALUES (1972,0,21236,100); -- Bocluamni +1
 
 -- Lord of Onzozo
 INSERT INTO `mob_droplist_scripted` VALUES (2079,0,17440,100); -- Kraken Club
 INSERT INTO `mob_droplist_scripted` VALUES (2079,0,18852,30); -- Octave Club
 INSERT INTO `mob_droplist_scripted` VALUES (2079,0,17030,870); -- Great Club
 
+-- Medusa
+INSERT INTO `mob_droplist_scripted` VALUES (2237,0,10951,33); -- Weaver's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (2237,0,4023,901); -- Snowsteel Ore
+INSERT INTO `mob_droplist_scripted` VALUES (2237,0,4023,901);
+INSERT INTO `mob_droplist_scripted` VALUES (2237,0,20905,66); -- Tajabit
+
 -- Nidhogg
 INSERT INTO `mob_droplist_scripted` VALUES (2425,0,20738,66); --  Buramenk'ah
-INSERT INTO `mob_droplist_scripted` VALUES (2425,0,19799,934); --  Herja's Fork
+INSERT INTO `mob_droplist_scripted` VALUES (2425,0,10949,33); --  Smithy's Torque
+
+-- Raja
+INSERT INTO `mob_droplist_scripted` VALUES (2920,0,21195,100); -- Uffrat +1
+INSERT INTO `mob_droplist_scripted` VALUES (2920,0,20870,100); -- Iclamar +1
+INSERT INTO `mob_droplist_scripted` VALUES (2920,0,21194,100); -- Lehbrailg +1
+INSERT INTO `mob_droplist_scripted` VALUES (2920,0,21004,100); -- Kannakiri +1
+INSERT INTO `mob_droplist_scripted` VALUES (2920,0,20824,100); -- Faizzeer +1
+
+-- Rani
+INSERT INTO `mob_droplist_scripted` VALUES (2925,0,20736,100); -- Iztaasu +1
+INSERT INTO `mob_droplist_scripted` VALUES (2925,0,21126,100); -- Aedold +1
+INSERT INTO `mob_droplist_scripted` VALUES (2925,0,20546,100); -- Ninzas +1
+INSERT INTO `mob_droplist_scripted` VALUES (2925,0,21286,100); -- Hgafircian +1
+INSERT INTO `mob_droplist_scripted` VALUES (2925,0,21051,100); -- Shichishito +1
+
+-- Sippoy
+INSERT INTO `mob_droplist_scripted` VALUES (3210,0,20961,100); -- Qatsunoci +1
+INSERT INTO `mob_droplist_scripted` VALUES (3210,0,20915,100); -- Iizamal +1
+INSERT INTO `mob_droplist_scripted` VALUES (3210,0,21236,100); -- Bocluamni +1
+INSERT INTO `mob_droplist_scripted` VALUES (3210,0,20775,100); -- Crobaci +1
+INSERT INTO `mob_droplist_scripted` VALUES (3210,0,21195,100); -- Uffrat +1
 
 -- Taisaijin
 -- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,4717,500); -- Refresh
 -- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,4850,500); -- Refresh II
+
+-- Yaanei
+INSERT INTO `mob_droplist_scripted` VALUES (4207,0,21236,76); -- Bocluamni +1
+INSERT INTO `mob_droplist_scripted` VALUES (4207,0,20775,76); -- Crobaci +1
+INSERT INTO `mob_droplist_scripted` VALUES (4207,0,21195,76); -- Uffrat +1
+INSERT INTO `mob_droplist_scripted` VALUES (4207,0,20870,76); -- Iclamar +1
+INSERT INTO `mob_droplist_scripted` VALUES (4207,0,21194,76); -- Lehbrailg +1
+
+-- Kirin
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,21176,100); -- Ngqoqwanb
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,21052,100); -- Tsurumaru
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,20997,100); -- Raimitsukane
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,20762,100); -- Ukudyoni 
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,20616,100); -- Ipetam
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28612,100); -- Buquwik Cape
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28610,100); -- Ik Cape
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28613,100); -- Kayapa Cape
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28611,100); -- Tuilha Cape
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28615,100); -- Toro Cape
+INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28614,100); -- Iximulew Cape
 
 -- Sallow Seymour
 INSERT INTO `mob_droplist_scripted` VALUES (9600,0,8919,125); -- Ifritear
@@ -693,8 +766,15 @@ INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8924,125); -- Shivatear
 INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8925,125); -- Carbutear
 INSERT INTO `mob_droplist_scripted` VALUES (9674,0,8926,125); -- Fenritear
 
+-- Iratham
+INSERT INTO `mob_droplist_scripted` VALUES (9706,0,20634,100); -- Leisilonu +1
+INSERT INTO `mob_droplist_scripted` VALUES (9706,0,20961,100); -- Qatsunoci +1
+INSERT INTO `mob_droplist_scripted` VALUES (9706,0,20546,100); -- Ninzas +1
+INSERT INTO `mob_droplist_scripted` VALUES (9706,0,21286,100); -- Hgafircian +1
+INSERT INTO `mob_droplist_scripted` VALUES (9706,0,21051,100); -- Shichishito +1
+
 -- Hydra
 INSERT INTO `mob_droplist_scripted` VALUES (9731,0,10952,33); -- Tanner's Torque
 INSERT INTO `mob_droplist_scripted` VALUES (9731,0,20548,66); -- Oatixur
 INSERT INTO `mob_droplist_scripted` VALUES (9731,0,4023,901); -- Snowsteel Ore
-INSERT INTO `mob_droplist_scripted` VALUES (9731,0,4023,901);
+INSERT INTO `mob_droplist_scripted` VALUES (9731,0,4023,901); -- Snowsteel Ore
