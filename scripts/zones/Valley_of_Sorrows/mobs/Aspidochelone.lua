@@ -57,8 +57,8 @@ function onMobDeath(mob, player, isKiller)
         elseif (RND <= 66) then
             player:addTreasure(20618, mob); -- Illapa
         else
-            player:addTreasure(4023, mob); -- Snowsteel Ore
-            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(1525, mob); -- Adamantoise Egg
+            player:addTreasure(908, mob); -- Adamantoise Shell
         end
     end
 

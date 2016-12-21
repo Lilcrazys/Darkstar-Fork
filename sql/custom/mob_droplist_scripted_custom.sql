@@ -19,6 +19,8 @@ CREATE TABLE `mob_droplist_scripted` (
 -- Aspidochelone
 INSERT INTO `mob_droplist_scripted` VALUES (195,0,20618,66); -- Sandung
 INSERT INTO `mob_droplist_scripted` VALUES (195,0,10948,33); -- Carver's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (195,0,1525,901); -- Adamantoise Shell 
+INSERT INTO `mob_droplist_scripted` VALUES (195,0,908,901); -- Adamantoise Egg 
 
 -- Cerberus
 INSERT INTO `mob_droplist_scripted` VALUES (502,0,10954,33); -- Alchemist's Torque
@@ -71,6 +73,9 @@ INSERT INTO `mob_droplist_scripted` VALUES (2237,0,20905,66); -- Tajabit
 -- Nidhogg
 INSERT INTO `mob_droplist_scripted` VALUES (2425,0,20738,66); --  Buramenk'ah
 INSERT INTO `mob_droplist_scripted` VALUES (2425,0,10949,33); --  Smithy's Torque
+INSERT INTO `mob_droplist_scripted` VALUES (2425,0,4486,901); --  Dragon Heart
+INSERT INTO `mob_droplist_scripted` VALUES (2425,0,4272,901); --  Dragon Meat
+INSERT INTO `mob_droplist_scripted` VALUES (2425,0,903,901); --  Dragon Talon
 
 -- Raja
 INSERT INTO `mob_droplist_scripted` VALUES (2920,0,21195,100); -- Uffrat +1

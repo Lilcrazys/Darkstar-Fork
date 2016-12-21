@@ -81,8 +81,9 @@ function onMobDeath(mob, player, isKiller)
         elseif (RND <= 66) then
             player:addTreasure(20738, mob); -- Buramenk'ah
         else
-            player:addTreasure(4023, mob); -- Snowsteel Ore
-            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4486, mob); -- Dragon Heart
+            player:addTreasure(4272, mob); -- Dragon Meat
+            player:addTreasure(903, mob); -- Dragon Meat
         end
     end
 
