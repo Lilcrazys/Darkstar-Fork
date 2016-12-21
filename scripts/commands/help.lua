@@ -43,10 +43,10 @@ function onTrigger(player)
         player:PrintToPlayer("@addspell  @addallspells  @delspell  @setgil  @givegil");
         player:PrintToPlayer("@setskill  @capskill  @capallskills  @title");
         player:PrintToPlayer("@spawnmob  @despawnmob  @mobhere  @npchere  @despawnnpc");
-        player:PrintToPlayer("@raise  @deleffect  @dynareset  @checkrepop");
+        player:PrintToPlayer("@raise  @dynareset  @checkrepop");
         player:PrintToPlayer("@changejob  @changesjob  @setplayerlevel  @setmerits");
         player:PrintToPlayer("@setmobflags  @setmobmodel  @setplayermodel");
-        player:PrintToPlayer("@mobsub  @animation  @animatenpc  @animatesubnpc");
+        player:PrintToPlayer("@mobsub  @animatenpc  @animatesubnpc");
         player:PrintToPlayer("@monstrosity  @setweather  @setmentor");
         player:PrintToPlayer("@sjboost  @wallhack  @up  @down  @door");
         player:PrintToPlayer("@legionhall  @legionlaunch  @mamool1  @mamool2  @mamool3");
@@ -54,10 +54,9 @@ function onTrigger(player)
     end
 
     if (gmlvl >= 3) then -- Full GM
-        player:PrintToPlayer("@reset  @hp  @mp  @tp  @pettp");
         player:PrintToPlayer("@addtempitem  @cnation  @cp");
         player:PrintToPlayer("@testmode  @godmode  @setmobstats");
-        player:PrintToPlayer("@updateservermessage");
+        player:PrintToPlayer("@reset  @updateservermessage");
     end
 
     if (gmlvl >= 4) then -- Senior GM
@@ -73,9 +72,10 @@ function onTrigger(player)
         player:PrintToPlayer("@exec  @kill  @menu  @message2server  @nm");
         player:PrintToPlayer("@addallkeyitems (don't..its problematic)");
         player:PrintToPlayer("@shoptest  @heroshop  @adddynatime (crashy)");
-        player:PrintToPlayer("@slap  @inject  @addeffect  @entityvisual");
+        player:PrintToPlayer("@slap  @inject  @animation  @entityvisual");
         player:PrintToPlayer("@promote  @setflag  @setminion");
         player:PrintToPlayer("@takexp  @takegil  @setplayernation");
+        player:PrintToPlayer("@hp  @mp  @tp  @pettp  @addeffect  @deleffect");
     end
     -- Although it IS technically possibly to create tiers as high as 255...
     if (gmlvl >= 1) then
