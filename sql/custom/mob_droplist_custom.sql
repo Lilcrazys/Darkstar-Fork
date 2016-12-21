@@ -1678,6 +1678,19 @@ INSERT INTO `mob_droplist` VALUES (3441,0,5504,100);
 INSERT INTO `mob_droplist` VALUES (3441,0,6061,100);
 
 -- -----------
+-- Thunder Elemental
+-- -----------
+INSERT INTO `mob_droplist` VALUES (3482,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3483,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3503,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3507,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3508,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3510,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3511,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3514,0,1259,5); -- Lightning Ore
+INSERT INTO `mob_droplist` VALUES (3518,0,1259,5); -- Lightning Ore
+
+-- -----------
 -- Tiamat
 -- -----------
 
@@ -1969,6 +1982,11 @@ INSERT INTO `mob_droplist` VALUES (4071,0,12107,108); --  Savant's Loafers
 -- -----------
 
 INSERT INTO `mob_droplist` VALUES (4098,0,1260,5); -- Water Ore
+INSERT INTO `mob_droplist` VALUES (4088,0,1260,5); -- Water Ore
+INSERT INTO `mob_droplist` VALUES (4102,0,1260,5); -- Water Ore
+INSERT INTO `mob_droplist` VALUES (4109,0,1260,5); -- Water Ore
+INSERT INTO `mob_droplist` VALUES (4115,0,1260,5); -- Water Ore
+
 
 -- -----------
 -- Western Shadow
