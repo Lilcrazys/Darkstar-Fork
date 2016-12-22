@@ -49,9 +49,35 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(SHINING_SCALE_RIFLER);
 
-    --[[ Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(playerler, MYTHIC, 4);
-    end]]
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
 
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 33) then
+            player:addTreasure(10955, mob); -- Cuilinarian's Torque
+        elseif (RND <= 66) then
+            player:addTreasure(20861, mob); -- Qalgwer
+        else
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+        end
+    end
+
+
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "mythic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    mob:setRespawnTime(math.random(75600,86400));   -- 21 to 24 hours
 end;

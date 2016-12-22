@@ -76,17 +76,20 @@ function onCriticalHit(mob)
         mob:addMod(MOD_UDMGBREATH, 2);
     end
 
-    -- AoE buff nearby players
-    local peopleNear = mob:getZone():getPlayers();
-    for buff, sponges in pairs(peopleNear) do
-        local distance = sponges:checkDistance(mob);
-        if (sponges:isPC() and distance < 32) then
-            sponges:addStatusEffect(EFFECT_HASTE,224,0,90);
-            sponges:addHP(sponges:getMaxHP() * 0.11);
-            sponges:addMP(sponges:getMaxMP() * 0.11);
-            sponges:addTP(525);
-            sponges:injectActionPacket(6, 599, 0, 0, 0);
-            sponges:SpoofChatPlayer("Twinkling Starlights scatter as the Twinkling Treant shakes!", MESSAGE_ECHO, nil);
+    if (math.random(1,3) == 2 and os.time() > mob:getLocalVar("nextBuff")) then
+        -- AoE buff nearby players
+        local peopleNear = mob:getZone():getPlayers();
+        mob:setLocalVar("nextBuff", os.time()+11);
+        for buff, sponges in pairs(peopleNear) do
+            local distance = sponges:checkDistance(mob);
+            if (sponges:isPC() and distance < 32) then
+                sponges:addStatusEffect(EFFECT_HASTE,224,0,90);
+                sponges:addHP(sponges:getMaxHP() * 0.11);
+                sponges:addMP(sponges:getMaxMP() * 0.11);
+                sponges:addTP(255);
+                sponges:injectActionPacket(6, 599, 0, 0, 0);
+                sponges:SpoofChatPlayer("Twinkling Starlights scatter as the Twinkling Treant shakes!", MESSAGE_ECHO, nil);
+            end
         end
     end
 end;
@@ -130,9 +133,9 @@ end;
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         if (math.random(1,100) > 50) then
-            player:addTreasure(28540); -- Warp Ring
+            player:addTreasure(28540, mob); -- Warp Ring
         else
-            player:addTreasure(3596);  -- Ornament Case
+            player:addTreasure(3596, mob);  -- Ornament Case
         end
         -- 2 of Kingdom Stables Collar/Republic Stables Medal/Federation Stables Scarf
         -- This random only works because these 3 items have sequential IDs - don't try to copy it.

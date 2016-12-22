@@ -35,10 +35,16 @@ end;
 function onMobDeath(mob, player, isKiller)
     player:addTitle(DRAGON_ASHER);
 
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 2);
-    end]]
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "relic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
 
 end;
 

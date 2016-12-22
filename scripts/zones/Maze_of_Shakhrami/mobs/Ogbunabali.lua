@@ -39,82 +39,6 @@ function onMobSpawn(mob)
 
     -- Vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-
-    local RND1 = math.random(1,8);
-    if (RND1 == 1) then
-        SetDropRate(9608,8919,50); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 2) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,50); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 3) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,50); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 4) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,50); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 5) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,50); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 6) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,50); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 7) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,50); -- Carbutear
-        SetDropRate(9608,8926,0); -- Fenritear
-    elseif (RND1 == 8) then
-        SetDropRate(9608,8919,0); -- Ifritear
-        SetDropRate(9608,8920,0); -- Leviatear
-        SetDropRate(9608,8921,0); -- Ramutear
-        SetDropRate(9608,8922,0); -- Garutear
-        SetDropRate(9608,8923,0); -- Titatear
-        SetDropRate(9608,8924,0); -- Shivatear
-        SetDropRate(9608,8925,0); -- Carbutear
-        SetDropRate(9608,8926,50); -- Fenritear
-    end
-
 end;
 -----------------------------------
 -- onMobEngage Action
@@ -147,6 +71,28 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+
+    if (isKiller == true) then
+        local RND1 = math.random(1,8);
+        if (RND1 == 1) then
+            player:addTreasure(8919, mob); -- Ifritear
+        elseif (RND1 == 2) then
+            player:addTreasure(8920, mob); -- Leviatear
+        elseif (RND1 == 3) then
+            player:addTreasure(8921, mob); -- Ramutear
+        elseif (RND1 == 4) then
+            player:addTreasure(8922, mob); -- Garutear
+        elseif (RND1 == 5) then
+            player:addTreasure(8923, mob); -- Titatear
+        elseif (RND1 == 6) then
+            player:addTreasure(8924, mob); -- Shivatear
+        elseif (RND1 == 7) then
+            player:addTreasure(8925, mob); -- Carbutear
+        elseif (RND1 == 8) then
+            player:addTreasure(8926, mob); -- Fenritear
+        end
+    end
+
     if (player:hasKeyItem(JADE_STRATUM_ABYSSITE_II)) then -- Ogbunabali Kill
         player:addKeyItem(JADE_STRATUM_ABYSSITE_III);
         player:delKeyItem(JADE_STRATUM_ABYSSITE_II);

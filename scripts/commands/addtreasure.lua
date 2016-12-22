@@ -6,10 +6,10 @@
 cmdprops =
 {
     permission = 2,
-    parameters = "is"
+    parameters = "isi"
 };
 
-function onTrigger(player, itemId, target)
+function onTrigger(player, itemId, target, dropper)
     local targ;
     if (target == nil) then
         targ = player;
@@ -27,6 +27,10 @@ function onTrigger(player, itemId, target)
         return;
     end
 
+    if (dropper ~= nil) then
+        dropper = GetNPCByID(dropper);
+    end
+
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addtreasure.log", "a");
@@ -42,6 +46,6 @@ function onTrigger(player, itemId, target)
     );
     file:close();
 
-    targ:addTreasure(itemId);
+    targ:addTreasure(itemId, dropper);
     player:PrintToPlayer(string.format("Item of ID %d was added to the treasure pool of %s or their party/alliance.", itemId, targ:getName()));
 end

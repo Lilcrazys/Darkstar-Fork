@@ -31,14 +31,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 50);
     mob:setMod(MOD_TERRORRES, 100);
 
-    if (math.random(1,1000) <= 66) then
-        SetDropRate(195,20738,1000); -- Buramenk'ah
-        SetDropRate(195,19799,0);
-    else
-        SetDropRate(195,20618,0);
-        SetDropRate(195,19799,1000); -- Herja's Fork
-    end
-
     --[[
     if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
         GetNPCByID(17408033):setStatus(STATUS_DISAPPEAR);
@@ -83,10 +75,20 @@ function onMobDeath(mob, player, isKiller)
         player:addSpell(SPELL_ID);
     end
 
-    --[[ Custom (Relic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, RELIC, 5);
-    end]]
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 33) then
+            player:addTreasure(10949, mob); -- Smithy's Torque
+        elseif (RND <= 66) then
+            player:addTreasure(20738, mob); -- Buramenk'ah
+        else
+            player:addTreasure(4486, mob); -- Dragon Heart
+            player:addTreasure(4272, mob); -- Dragon Meat
+            player:addTreasure(903, mob); -- Dragon Meat
+        end
+    end
+
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "relic");
 
     ------------------------------------
     -- End Custom Legion Code

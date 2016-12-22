@@ -66,10 +66,26 @@ function onMobDeath(mob, player, isKiller)
 
     player:addTitle(HYDRA_HEADHUNTER);
 
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
 
-    --[[ Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, MYTHIC, 1);
-    end]]
+    if (isKiller == true) then
+        if (math.random(1,1000) <= 33) then
+            player:addTreasure(10952, mob); -- Tanner's Torque
+        elseif (RND <= 66) then
+            player:addTreasure(20548, mob); -- Oatixur
+        else
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+            player:addTreasure(4023, mob); -- Snowsteel Ore
+        end
+    end
+
+    -- Custom Trial Check
+    cTrialProgress(player, 3, "mythic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
 
 end;

@@ -83,8 +83,15 @@ function onMobDeath(mob, player, isKiller)
 		DespawnMob(petIDs3[i]);
 	end
 
-    --[[ Custom (Mythic) Trial Code
-    if (cTrialItemEquipped(player) == true) then
-        cTrialProgress(player, MYTHIC, 3);
-    end]]
+    ------------------------------------
+    -- Begin Custom Legion Code
+    ------------------------------------
+
+    -- Custom Trial Check
+    cTrialProgress(player, 2, "mythic");
+
+    ------------------------------------
+    -- End Custom Legion Code
+    ------------------------------------
+
 end;

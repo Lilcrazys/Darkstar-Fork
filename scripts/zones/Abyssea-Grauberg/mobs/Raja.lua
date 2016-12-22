@@ -47,6 +47,25 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+
+    if (isKiller == true) then
+        local Chance = math.random(1,100); -- Weapon should be 50% chance
+        local Weapon = math.random(1,5);
+
+            if (Chance <= 50) then
+                if (Weapon == 1) then
+                    player:addTreasure(21195, mob); -- Uffrat +1
+                elseif (Weapon == 2) then
+                    player:addTreasure(20870, mob); -- Iclamar +1
+                elseif (Weapon == 3) then
+                    player:addTreasure(21194, mob); -- Lehbrailg +1
+                elseif (Weapon == 4) then
+                    player:addTreasure(21004, mob); -- Kannakiri +1
+                elseif (Weapon == 5) then
+                    player:addTreasure(20824, mob); -- Faizzeer +1
+                end
+            end
+
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_DESPOT) == false) then
         player:addKeyItem(ATMA_OF_THE_DESPOT);
