@@ -192,7 +192,7 @@ inline int32 CLuaBaseEntity::warp(lua_State *L)
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
 
-    if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 ||
+    if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 &&
         charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail"))) // jailutils::InPrison((CCharEntity*)m_PBaseEntity)
     {
         uint16 messageID = luautils::GetTextIDVariable(131, "NO_ESCAPE");
@@ -609,7 +609,7 @@ inline int32 CLuaBaseEntity::setPos(lua_State *L)
 
     if (m_PBaseEntity->objtype == TYPE_PC)
     {
-        if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 ||
+        if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 &&
             charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail"))) // jailutils::InPrison((CCharEntity*)m_PBaseEntity)
         {
             uint16 messageID = luautils::GetTextIDVariable(131, "NO_ESCAPE");
