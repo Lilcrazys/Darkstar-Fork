@@ -38,10 +38,9 @@ function onMobDeath(mob, player, isKiller)
     checkGoVregime(player,mob,774,1);
 
     if (isKiller == true) then
-        local RND = math.random(1,1000);
-        if (RND <= 30) then
+        if (math.random(1,100) <= 3) then
             player:addTreasure(18852, mob); -- Ocatave Club
-        elseif RND <= 100) then
+        elseif (math.random(1,100) <= 10) then
             player:addTreasure(17440, mob); -- Kraken Club
         else
             player:addTreasure(17030, mob); -- Great Club
