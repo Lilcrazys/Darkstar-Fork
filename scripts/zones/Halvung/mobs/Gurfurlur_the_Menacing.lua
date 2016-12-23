@@ -80,7 +80,8 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
 
     if (isKiller == true) then
-        if (math.random(1,1000) <= 33) then
+        local RND = math.random(1,1000);
+        if (RND <= 33) then
             player:addTreasure(10950, mob); -- Goldsmith's Torque
         elseif (RND <= 66) then
             player:addTreasure(21256, mob); -- Illapa

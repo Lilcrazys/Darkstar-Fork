@@ -76,7 +76,8 @@ function onMobDeath(mob, player, isKiller)
     end
 
     if (isKiller == true) then
-        if (math.random(1,1000) <= 33) then
+        local RND = math.random(1,1000);
+        if (RND <= 33) then
             player:addTreasure(10949, mob); -- Smithy's Torque
         elseif (RND <= 66) then
             player:addTreasure(20738, mob); -- Buramenk'ah
