@@ -88,7 +88,7 @@ end;
 
 function onTrigger(player,npc)
     local cTrial = player:getVar("cTrialItem[relic]");
-    local status = player:getVar("cTrialComplete[relic]");
+    local cStatus = player:getVar("cTrialComplete[relic]");
     if (cTrial == 0) then
         player:SpoofChatPlayer("Hand me a RELIC weapon to begin a trial, Kupo!", MESSAGE_SAY, npc:getID() );
     elseif (cStatus > 0 and cTrial > 0) then
