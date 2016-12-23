@@ -37,7 +37,7 @@ function onTrade(player,npc,trade)
                     player:PrintToPlayer("Achamoth, Armed Gears, Nosferatu, Experimental Lamia..");
                 elseif (itemInfo.s == 3) then
                     player:PrintToPlayer("Defeat any of these foes 9 times total..");
-                    player:PrintToPlayer("Hydra, Cerberus, Khimara, Gulool Ja Ja, Gurfurlur the Menacing, Medusa..");
+                    player:PrintToPlayer("Hydra, Cerberus, Khimaira, Gulool Ja Ja, Gurfurlur the Menacing, Medusa..");
                 elseif (itemInfo.s == 4) then
                     player:PrintToPlayer("Deliver 50 Tanzenite Jewels to Magian Mog C.J.");
                 end
