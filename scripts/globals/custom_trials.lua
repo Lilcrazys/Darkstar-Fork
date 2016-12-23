@@ -303,27 +303,27 @@ function cTrialProgress(player,trialStage,trialType)
         local cTrialCount = player:getVar("cTrialCount["..trialType.."]");
         local info = custom_trials[cTrialItem];
         -- info.r, info.s, info.t, info.trade, info.count;
-print("------------------")
-        print(string.format("[DEBUG] Player %s trial %d progress check..", player:getName(), cTrialItem));
-        print("[DEBUG] info.t : ".. info.s);
-        print("[DEBUG] trialStage : ".. trialStage);
-        print("[DEBUG] info.t : ".. info.t);
-        print("[DEBUG] trialType : ".. trialType);
+
+        -- print(string.format("[DEBUG] Player %s trial %d progress check..", player:getName(), cTrialItem));
+        -- print("[DEBUG] info.t : ".. info.s);
+        -- print("[DEBUG] trialStage : ".. trialStage);
+        -- print("[DEBUG] info.t : ".. info.t);
+        -- print("[DEBUG] trialType : ".. trialType);
 
         if (trialStage == info.s and trialType == info.t) then
             cTrialCount = cTrialCount+1; -- Update count.
             player:setVar("cTrialCount["..trialType.."]", cTrialCount); -- Set var to the updated count.
             player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
-            print("[DEBUG] cTrialCount : ".. cTrialCount);
+            -- print("[DEBUG] cTrialCount : ".. cTrialCount);
 
             if (cTrialCount >= info.count) then
                 player:setVar("cTrialComplete["..trialType.."]", 1);
-                print("[DEBUG] Custom trial ".. cTrialItem.." completed!");
+                -- print("[DEBUG] Custom trial ".. cTrialItem.." completed!");
                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
             end
         end
+        -- print("------------------")
     end
-print("------------------")
 end;
 
 -----------------------------------
