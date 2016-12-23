@@ -58,7 +58,7 @@ function onMobDeath(mob, player, isKiller)
         local selectWeapon = math.random(1,5);
 
         if (itemRate <= 50) then
-            if (selectWeaponapon == 1) then
+            if (selectWeapon == 1) then
                 player:addTreasure(20961, mob); -- Qatsunoci +1
             elseif (selectWeapon == 2) then
                 player:addTreasure(20915, mob); -- Iizamal +1

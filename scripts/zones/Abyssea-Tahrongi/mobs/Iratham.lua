@@ -60,19 +60,19 @@ function onMobDeath(mob, player, isKiller)
     player:addTitle(IRATHAM_CAPTURER);
 
     if (isKiller == true) then
-        local Chance = math.random(1,100); -- Weapon should be 50% chance
-        local Weapon = math.random(1,5);
+        local itemRate = math.random(1,100); -- Weapon should be 50% chance
+        local selectWeapon = math.random(1,5);
 
-            if (Chance <= 50) then
-                if (Weapon == 1) then
+            if (itemRate <= 50) then
+                if (selectWeapon == 1) then
                     player:addTreasure(20634, mob); -- Leisilonu +1
-                elseif (Weapon == 2) then
+                elseif (selectWeapon == 2) then
                     player:addTreasure(20961, mob); -- Qatsunoci +1
-                elseif (Weapon == 3) then
+                elseif (selectWeapon == 3) then
                     player:addTreasure(20546, mob); -- Ninzas +1
-                elseif (Weapon == 4) then
+                elseif (selectWeapon == 4) then
                     player:addTreasure(21286, mob); -- Hgafircian +1
-                elseif (Weapon == 5) then
+                elseif (selectWeapon == 5) then
                     player:addTreasure(21051, mob); -- Shichishito +1
                 end
             end
