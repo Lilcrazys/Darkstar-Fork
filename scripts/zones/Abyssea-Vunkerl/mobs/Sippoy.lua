@@ -54,22 +54,23 @@ function onMobDeath(mob, player, isKiller)
     player:addTitle(SIPPOY_CAPTURER);
 
     if (isKiller == true) then
-        local Chance = math.random(1,100); -- Weapon should be 50% chance
-        local Weapon = math.random(1,5);
+        local itemRate = math.random(1,100); -- Weapon should be 50% chance
+        local selectWeapon = math.random(1,5);
 
-            if (Chance <= 50) then
-                if (Weapon == 1) then
-                    player:addTreasure(20961, mob); -- Qatsunoci +1
-                elseif (Weapon == 2) then
-                    player:addTreasure(20915, mob); -- Iizamal +1
-                elseif (Weapon == 3) then
-                    player:addTreasure(21236, mob); -- Bocluamni +1
-                elseif (Weapon == 4) then
-                    player:addTreasure(20775, mob); -- Crobaci +1
-                elseif (Weapon == 5) then
-                    player:addTreasure(21195, mob); -- Uffrat +1
-                end
+        if (itemRate <= 50) then
+            if (selectWeaponapon == 1) then
+                player:addTreasure(20961, mob); -- Qatsunoci +1
+            elseif (selectWeapon == 2) then
+                player:addTreasure(20915, mob); -- Iizamal +1
+            elseif (selectWeapon == 3) then
+                player:addTreasure(21236, mob); -- Bocluamni +1
+            elseif (selectWeapon == 4) then
+                player:addTreasure(20775, mob); -- Crobaci +1
+            elseif (selectWeapon == 5) then
+                player:addTreasure(21195, mob); -- Uffrat +1
             end
+        end
+    end
 
     local CHANCE = 15;
     if (math.random(0,99) < CHANCE  and player:hasKeyItem(ATMA_OF_THE_WOULD_BE_KING) == false) then
