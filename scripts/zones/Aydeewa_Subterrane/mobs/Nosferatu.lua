@@ -18,7 +18,7 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
-	mob:setMod(MOD_REGAIN,20);
+    mob:setMod(MOD_REGAIN,20);
 end;
 
 -----------------------------------
@@ -33,37 +33,23 @@ end;
 -- onMobFight
 -----------------------------------
 function onMobFight(mob,target)
-	local mobHP = mob:getHPP();
-	local MobID = mob:getID();
-	local petIDs1 = {MobID+1, MobID+2, MobID+3}; -- Nosferatu_Bats
-	local petIDs2 = {MobID+4, MobID+5, MobID+6}; -- Nosferatu_Wolf
-	local petIDs3 = {MobID+7, MobID+8, MobID+9}; -- Nosferatu_Murk
-
-	if (target:getAnimation() == 0) then
-		mob:resetEnmity(target);
-		mob:ActionDisengage(true);
-	end
-
-    local Nos_SMN_Used = 0;
-    if (mob:getLocalVar("Nos_SMN") ~= nil) then
-        Nos_SMN_Used = mob:getLocalVar("Nos_SMN");
-    end
-
-
-    if (mobHP <= 25) then
-        if (Nos_SMN_Used == 2) then
-            SpawnMob(petIDs3[i],800):updateEnmity(target);
-            mob:setLocalVar("Nos_SMN", 3);
+    local mobHP = mob:getHPP();
+    local MobID = mob:getID();
+    local Nos_SMN_Used = mob:getLocalVar("Nos_SMN");
+    if (mobHP <= 25 and Nos_SMN_Used == 2) then
+        mob:setLocalVar("Nos_SMN", 3); -- Nosferatu_Murk
+        for Murks = MobID+7, MobID+9 do
+            SpawnMob(Murks):updateEnmity(target);
         end
-    elseif (mobHP <= 50) then
-        if (Nos_SMN_Used == 1) then
-            SpawnMob(petIDs2[i],800):updateEnmity(target);
-            mob:setLocalVar("Nos_SMN", 2);
+    elseif (mobHP <= 50 and Nos_SMN_Used == 1) then
+        mob:setLocalVar("Nos_SMN", 2); -- Nosferatu_Wolf
+        for Wolfs = MobID+4, MobID+6 do
+            SpawnMob(Wolfs):updateEnmity(target);
         end
-    elseif (mobHP <= 75) then
-        if (Nos_SMN_Used == 0) then
-            SpawnMob(petIDs3[i],800):updateEnmity(target);
-            mob:setLocalVar("Nos_SMN", 1);
+    elseif (mobHP <= 75 and Nos_SMN_Used == 0) then
+        mob:setLocalVar("Nos_SMN", 1); -- Nosferatu_Bats
+        for Bats = MobID+1, MobID+3 do
+            SpawnMob(Bats):updateEnmity(target);
         end
     end
 end;
@@ -73,15 +59,10 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-	local MobID = mob:getID();
-	local petIDs1 = {MobID+1, MobID+2, MobID+3}; -- Nosferatu_Bats
-	local petIDs2 = {MobID+4, MobID+5, MobID+6}; -- Nosferatu_Wolf
-	local petIDs3 = {MobID+7, MobID+8, MobID+9}; -- Nosferatu_Murk
-	for i = 1, 3 do
-		DespawnMob(petIDs1[i]);
-		DespawnMob(petIDs2[i]);
-		DespawnMob(petIDs3[i]);
-	end
+    local MobID = mob:getID();
+    for pets = MobID+1, MobID+9 do
+        DespawnMob(pets);
+    end
 
     ------------------------------------
     -- Begin Custom Legion Code
