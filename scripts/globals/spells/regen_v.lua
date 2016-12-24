@@ -10,7 +10,7 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 -----------------------------------------
@@ -18,29 +18,25 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
-	local hp = 40;
-	local duration = 60;
-	local head = caster:getEquipID(SLOT_HEAD);
-	local body = caster:getEquipID(SLOT_BODY);
+    local hp = math.ceil(40 * (1 + 0.01 * caster:getMod(MOD_REGEN_MULTIPLIER))); -- spell base times gear multipliers
+    hp = hp + caster:getMerit(MERIT_REGEN_EFFECT); -- bonus hp from merits
+    hp = hp + caster:getMod(MOD_LIGHT_ARTS_REGEN); -- bonus hp from light arts
 
-	if (caster:hasStatusEffect(EFFECT_LIGHT_ARTS) then
-		hp = 64;
-		duration = 105;
-		-- This is probably not retail accurate.
-	end
+    local duration = 60;
 
-	hp = hp + caster:getMod(MOD_REGEN_EFFECT); --Savant's Bonnet +2 adds 5
-	duration = duration + caster:getMod(MOD_REGEN_DURATION);
+    duration = duration + caster:getMod(MOD_REGEN_DURATION);
 
-	if (target:getMainLvl() < 21) then
-		duration = duration * target:getMainLvl() / 21;
-	end
+    duration = calculateDurationForLvl(duration, 99, target:getMainLvl());
 
-	if (target:addStatusEffect(EFFECT_REGEN,hp,3,duration)) then
-		spell:setMsg(230);
-	else
-		spell:setMsg(75); -- no effect
-	end
+    if (target:hasStatusEffect(EFFECT_REGEN) and target:getStatusEffect(EFFECT_REGEN):getTier() == 1) then
+        target:delStatusEffect(EFFECT_REGEN);
+    end
 
-	return EFFECT_REGEN;
+    if (target:addStatusEffect(EFFECT_REGEN,hp,3,duration,0,0,0)) then
+        spell:setMsg(230);
+    else
+        spell:setMsg(75); -- no effect
+    end
+
+    return EFFECT_REGEN;
 end;
