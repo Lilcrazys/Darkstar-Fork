@@ -728,7 +728,7 @@ function MobStatusEffectMove(mob, target, typeEffect, power, tick, duration)
 
         if (resist >= 0.25) then
             local totalDuration = utils.clamp(duration * resist, 1);
-            if (typeEffect == EFFECT_DOOM) then totalDuration = duration); end
+            if (typeEffect == EFFECT_DOOM) then totalDuration = duration; end
             target:addStatusEffect(typeEffect, power, tick, totalDuration);
 
             return MSG_ENFEEB_IS;
