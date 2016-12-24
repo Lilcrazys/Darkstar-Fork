@@ -102,7 +102,7 @@ function onMobFight(mob,target)
             mob:addMod(MOD_REGAIN, 10);
             mob:addMod(MOD_DOUBLE_ATTACK, 15);
             mob:addStatusEffect(EFFECT_HASTE,100,0,100);
-            mob:getStatusEffect(EFFECT_HASTE):setFlag(32);
+            mob:getStatusEffect(EFFECT_HASTE):setFlag(32); -- sometimes nil, needs edit
             mob:addStatusEffect(EFFECT_ATTACK_BOOST,75,0,0);
             mob:getStatusEffect(EFFECT_ATTACK_BOOST):setFlag(32);
         end

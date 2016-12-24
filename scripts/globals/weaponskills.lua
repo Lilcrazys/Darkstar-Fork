@@ -886,6 +886,11 @@ function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, sl
         defender:addEnmity(enmityEntity, params.overrideCE, params.overrideVE)
     else
         local enmityMult = params.enmityMult or 1
+        if (enmityMult > 1) then
+            enmityMult = enmityMult*1.2;
+        else
+            enmityMult = enmityMult*0.8;
+        end
         defender:updateEnmityFromDamage(enmityEntity, finaldmg * enmityMult)
     end
 
