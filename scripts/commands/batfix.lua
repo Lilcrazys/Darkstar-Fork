@@ -14,8 +14,7 @@ cmdprops =
 function onTrigger(player, fix, target)
     if (fix == nil) then
         player:PrintToPlayer("You didn't specify the fix!");
-        player:PrintToPlayer("use '@batfix fixtrialkills name' to force a recount of custom trial kills");
-        player:PrintToPlayer("use '@batfix finishtrial name' to force set the custom trials completion variable");
+        player:PrintToPlayer("use '@batfix blunlock name' to fix broken blue mage unlock quest");
         player:PrintToPlayer("use '@batfix 99cap name' to fix someone who's cap is 75 and should be 99");
         return;
     end
@@ -31,22 +30,7 @@ function onTrigger(player, fix, target)
         return;
     end
 
-    if (fix == "fixtrialkills") then
-        require("scripts/globals/custom_trials");
-        doCustomTrial(0, targ, true, false)
-        player:PrintToPlayer("If the target player had their trial item equipped, ");
-        player:PrintToPlayer("their kill counts and completion status should now be accurate");
-    elseif (fix == "BLU" or fix == "blu") then
-        targ:setVar("EmptyVesselStone",0);
-        targ:addKeyItem(MARK_OF_ZAHAK);
-        targ:unlockJob(16);
-        targ:addTitle(BEARER_OF_THE_MARK_OF_ZAHAK);
-        targ:completeQuest(AHT_URHGAN,AN_EMPTY_VESSEL);
-        targ:setPos(148,-2,0,130,50);
-    elseif (fix == "finishtrial") then
-        targ:setVar("TRIAL_COMPLETE", 1);
-        player:PrintToPlayer("The target players custom trial NPCs should now see the trial requirements have been met.");
-    elseif (fix == "99cap") then
+    if (fix == "99cap") then
         require("scripts/globals/titles");
         require("scripts/globals/quests");
         if (targ:levelCap() == 75) then
@@ -70,6 +54,13 @@ function onTrigger(player, fix, target)
         else
             player:PrintToPlayer("Cap was not 75...Doesn't seem to have beaten Maat yet...");
         end
+    elseif (fix == "blunlock") then
+        targ:setVar("EmptyVesselStone",0);
+        targ:addKeyItem(MARK_OF_ZAHAK);
+        targ:unlockJob(16);
+        targ:addTitle(BEARER_OF_THE_MARK_OF_ZAHAK);
+        targ:completeQuest(AHT_URHGAN,AN_EMPTY_VESSEL);
+        targ:setPos(148,-2,0,130,50);
     else
         player:PrintToPlayer("Unrecognized batfix.");
         player:PrintToPlayer("use '@batfix 99cap name' to fix someone who's cap is 75 and should be 99");
