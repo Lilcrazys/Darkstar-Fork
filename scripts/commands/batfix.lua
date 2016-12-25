@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 -- func: batfix <fix> <target player>
--- auth: GM Batman!
 -- desc: This file will change pretty much everything I have to fix something.
--- Currently available fixes: fixtrialkills, finishtrial, 99cap
 ---------------------------------------------------------------------------------------------------
+require("scripts/globals/keyitems");
+require("scripts/globals/titles");
+require("scripts/globals/quests");
 
 cmdprops =
 {
@@ -31,8 +32,6 @@ function onTrigger(player, fix, target)
     end
 
     if (fix == "99cap") then
-        require("scripts/globals/titles");
-        require("scripts/globals/quests");
         if (targ:levelCap() == 75) then
             targ:addTitle(STAR_BREAKER);
             targ:addTitle(BUSHIN_ASPIRANT);
