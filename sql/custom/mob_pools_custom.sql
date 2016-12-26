@@ -13,6 +13,9 @@
 -- New info below this line Sorted by Pool ID
 -- Next skill_list_id : 4167 UPDATE THIS LINE WHEN YOU ADD NEW ONES!
 
+REPLACE INTO `mob_pools` VALUES (595,'Cactrot_Rapido',212,0x0000750100000000000000000000000000000000,2,2,7,360,100,0,0,0,1,34,15,32,2925,157,0,0,0,1,0,212); -- Fix Rapido not defending itself -_- DSP idiocy.
+
+
 -- Abyssea Mobs to be removed after DSP merges
 REPLACE INTO `mob_pools` VALUES (86,'Alkonost',140,0x0000550500000000000000000000000000000000,6,8,2,240,100,0,0,0,0,2,0,0,0,0,0,0,0,1,0,4000);
 REPLACE INTO `mob_pools` VALUES (232,'Arimaspi',4,0x0000090100000000000000000000000000000000,4,4,12,240,100,0,0,0,0,2,0,0,0,0,0,0,1153,1,0,4);
