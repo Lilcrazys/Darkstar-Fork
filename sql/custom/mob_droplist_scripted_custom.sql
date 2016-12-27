@@ -16,6 +16,20 @@ CREATE TABLE `mob_droplist_scripted` (
 -- Name_of_MOB
 -- INSERT INTO `mob_droplist_scripted` VALUES (dropId,type,itemId,rate); -- Item Name
 
+-- Absolute Virtue
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27580,70); -- Adoulin Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27582,70); -- Weather Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27584,70); -- Renaye Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27586,70); -- Haverton Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27588,70); -- Vocane Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27590,50); -- Shneddick Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27581,50); -- Woltaris Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27583,50); -- Janniston Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27585,50); -- Gorney Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27587,50); -- Karieyh Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27589,50); -- Thurandaut Ring
+INSERT INTO `mob_droplist_scripted` VALUES (4,0,27591,50); -- Orvail Ring
+
 -- Aspidochelone
 INSERT INTO `mob_droplist_scripted` VALUES (195,0,20618,66); -- Sandung
 INSERT INTO `mob_droplist_scripted` VALUES (195,0,10948,33); -- Carver's Torque
