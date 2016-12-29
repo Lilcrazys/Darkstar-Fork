@@ -15,8 +15,28 @@ require("scripts/zones/Dragons_Aery/TextIDs");
 -----------------------------------
 
 function onInitialize(zone)
+    --[[
     if (LandKingSystem_NQ ~= 1) then
         SetRespawnTime(17408018, 900, 10800); -- Fafnir
+    end
+    ]]
+    -- 0 = timed spawn, 1 = force pop only, 2 = BOTH
+    if (LandKingSystem_HQ ~= 1
+    and GetServerVariable("[POP]Nidhogg") <= os.time(t)
+    and GetServerVariable("[PH]Nidhogg") > 6) then
+        DeterMob(17408019, false);
+        SetRespawnTime(17408019, 900, 10800); -- Nidhogg
+        if (LandKingSystem_NQ == 0) then
+            DeterMob(17408018, true);
+        end
+    else
+        if (LandKingSystem_NQ ~= 1) then
+            DeterMob(17408018, false);
+            SetRespawnTime(17408018, 900, 10800); -- Fafnir
+            if (LandKingSystem_HQ == 0) then
+                DeterMob(17408019, true);
+            end
+        end
     end
 end;
 
