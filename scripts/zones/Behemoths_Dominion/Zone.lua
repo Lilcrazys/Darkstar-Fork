@@ -21,8 +21,28 @@ function onInitialize(zone)
     local vwnpc = {17297501,17297502,17297503};
     SetVoidwatchNPC(vwnpc);
 
+    --[[
     if (LandKingSystem_NQ ~= 1) then
         SetRespawnTime(17297440, 900, 10800); -- Behemoth
+    end
+    ]]
+    -- 0 = timed spawn, 1 = force pop only, 2 = BOTH
+    if (LandKingSystem_HQ ~= 1
+    and GetServerVariable("[POP]King_Behemoth") <= os.time(t)
+    and GetServerVariable("[PH]King_Behemoth") > 6) then
+        DeterMob(17297441, false);
+        SetRespawnTime(17297441, 900, 10800); -- King Behemoth
+        if (LandKingSystem_NQ == 0) then
+            DeterMob(17297440, true);
+        end
+    else
+        if (LandKingSystem_NQ ~= 1) then
+            DeterMob(17297440, false);
+            SetRespawnTime(17297440, 900, 10800); -- Behemoth
+            if (LandKingSystem_HQ == 0) then
+                DeterMob(17297441, true);
+            end
+        end
     end
 end;
 
