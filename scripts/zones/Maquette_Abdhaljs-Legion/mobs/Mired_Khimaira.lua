@@ -22,7 +22,7 @@ function onMobInitialize(mob)
     mob:setMod(MOD_MACC,1425);
     mob:setMod(MOD_MATT,120);
     mob:addMod(MOD_DEF,95);
- 
+
 end;
 
 -----------------------------------
@@ -40,11 +40,11 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Mired_Khimaira_2hr =  mob:getLocalVar("Mired_Khimaira_2hr");
+    local did2hr =  mob:getLocalVar("did2hr");
 
-    if (Mired_Khimaira_2hr == 0 and mob:getHPP() <= 10) then
-        mob:useMobAbility(694); -- Invicible
-        mob:setLocalVar("Mired_Khimaira_2hr", 1);
+    if (did2hr == 0 and mob:getHPP() <= 10) then
+        mob:useMobAbility(694); -- Invincible
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -61,5 +61,5 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    SpawnMob(mob:getID()+3) -- Spawns Mired_Khrysokhimaira
+    SpawnMob(mob:getID()+3) -- Spawns Mired Khrysokhimaira
 end;

@@ -41,26 +41,17 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Paramount_Harpeia_2hr_Used = 0;
-    if (mob:getLocalVar("Paramount_Harpeia_2hr_Used") ~= nil) then
-        Paramount_Harpeia_2hr_Used = mob:getLocalVar("Paramount_Harpeia_2hr_Used");
-    end
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 15) then
-        if (Paramount_Harpeia_2hr_Used == 2) then
-            mob:useMobAbility(692); -- CS
-            mob:setLocalVar("Paramount_Harpeia_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 40) then
-        if (Paramount_Harpeia_2hr_Used == 1) then
-            mob:useMobAbility(692); -- CS
-            mob:setLocalVar("Paramount_Harpeia_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 60) then
-        if (Paramount_Harpeia_2hr_Used == 0) then
-            mob:useMobAbility(689); -- Ben
-            mob:setLocalVar("Paramount_Harpeia_2hr_Used", 1);
-        end
+    if (mob:getHPP() <= 15 and did2hr == 2) then
+        mob:useMobAbility(692); -- CS
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 40 and did2hr == 1) then
+        mob:useMobAbility(692); -- CS
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 60 and did2hr == 0) then
+        mob:useMobAbility(689); -- Ben
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -88,6 +79,6 @@ function onMobDespawn(mob)
     end
 
     if (popBoss == true) then
-        SpawnMob(17526856);
+        SpawnMob(17526856); -- Paramount Botulus
     end
 end;

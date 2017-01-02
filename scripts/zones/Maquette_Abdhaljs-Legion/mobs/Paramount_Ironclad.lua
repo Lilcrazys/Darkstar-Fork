@@ -53,6 +53,6 @@ function onMobDeath(mob, player, isKiller)
     end
 
     if (popBoss == true) then
-        SpawnMob(17526856);
+        SpawnMob(17526856); -- Paramount Botulus
     end
 end;

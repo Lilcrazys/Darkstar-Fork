@@ -40,31 +40,25 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Paramount_Botulus_2hr_Used = mob:getLocalVar("Paramount_Botulus_2hr_Used");
+    local did2hr = mob:getLocalVar("did2hr");
+    local Chainspell = 692;
+    local Manafont = 691;
 
-    if (mob:getHPP() <= 10) then
-        if (Paramount_Botulus_2hr_Used == 3) then
-            mob:useMobAbility(691);
-            mob:setLocalVar("Paramount_Botulus_2hr_Used", 4);
-        elseif (Paramount_Botulus_2hr_Used == 4) then
-            mob:useMobAbility(692);
-            mob:setLocalVar("Paramount_Botulus_2hr_Used", 5);
-        end
-    elseif (mob:getHPP() <= 25) then
-        if (Paramount_Botulus_2hr_Used == 2) then
-            mob:useMobAbility(692);
-            mob:setLocalVar("Paramount_Botulus_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 50) then
-        if (Paramount_Botulus_2hr_Used == 1) then
-            mob:useMobAbility(692);
-            mob:setLocalVar("Paramount_Botulus_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 75) then
-        if (Paramount_Botulus_2hr_Used == 0) then
-            mob:useMobAbility(692);
-            mob:setLocalVar("Paramount_Botulus_2hr_Used", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 4) then
+        mob:useMobAbility(Chainspell);
+        mob:setLocalVar("did2hr", 5);
+    elseif (mob:getHPP() <= 10 and did2hr == 3) then
+        mob:useMobAbility(Manafont);
+        mob:setLocalVar("did2hr", 4);
+    elseif (mob:getHPP() <= 25 and did2hr == 2) then
+        mob:useMobAbility(Chainspell);
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 50 and did2hr == 1) then
+        mob:useMobAbility(Chainspell);
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 75 and did2hr == 0) then
+        mob:useMobAbility(Chainspell);
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 

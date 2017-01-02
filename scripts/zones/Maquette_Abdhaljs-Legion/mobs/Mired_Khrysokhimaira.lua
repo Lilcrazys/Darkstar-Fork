@@ -44,21 +44,14 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Mired_Khrysokhimaira_2hr = 0;
-    if (mob:getLocalVar("Mired_Khrysokhimaira_2hr") ~= nil) then
-        Mired_Khrysokhimaira_2hr = mob:getLocalVar("Mired_Khrysokhimaira_2hr");
-    end
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 15) then
-        if (Mired_Khrysokhimaira_2hr == 1) then
-            mob:useMobAbility(694); -- Invincible
-            mob:setLocalVar("Mired_Khrysokhimaira_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 60) then
-        if (Mired_Khrysokhimaira_2hr == 0) then
-            mob:useMobAbility(695); -- Blood Weapon
-            mob:setLocalVar("Mired_Khrysokhimaira_2hr", 1);
-        end
+    if (mob:getHPP() <= 15 and did2hr == 1) then
+        mob:useMobAbility(694); -- Invincible
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 60 and did2hr == 0) then
+        mob:useMobAbility(695); -- Blood Weapon
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -86,6 +79,6 @@ function onMobDespawn(mob)
     end
 
     if (popBoss == true) then
-        SpawnMob(17526811);
+        SpawnMob(17526811); -- Mired Mantis
     end
 end;

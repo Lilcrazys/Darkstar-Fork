@@ -35,11 +35,11 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Lofty_Behemoth_2hr = mob:getLocalVar("Lofty_Behemoth_2hr");
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 10 and Lofty_Behemoth_2hr == 0) then
+    if (mob:getHPP() <= 10 and did2hr == 0) then
         mob:useMobAbility(688); -- MS
-        mob:setLocalVar("Lofty_Behemoth_2hr", 1);
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 

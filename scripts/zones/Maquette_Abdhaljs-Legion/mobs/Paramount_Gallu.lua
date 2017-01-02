@@ -46,34 +46,25 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Paramount_Gallu_2hr_Used = 0;
-    if (mob:getLocalVar("Paramount_Gallu_2hr_Used") ~= nil) then
-        Paramount_Gallu_2hr_Used = mob:getLocalVar("Paramount_Gallu_2hr_Used");
-    end
+    local did2hr = mob:getLocalVar("did2hr");
+    local Blood_Weapon = 695;
+    local Manafont = 691;
 
-    if (mob:getHPP() <= 10) then
-        if (Paramount_Gallu_2hr_Used == 3) then
-            mob:useMobAbility(691);
-            mob:setLocalVar("Paramount_Gallu_2hr_Used", 4);
-        elseif (Paramount_Gallu_2hr_Used == 4) then
-            mob:useMobAbility(695);
-            mob:setLocalVar("Paramount_Gallu_2hr_Used", 5);
-        end
-    elseif (mob:getHPP() <= 25) then
-        if (Paramount_Gallu_2hr_Used == 2) then
-            mob:useMobAbility(695);
-            mob:setLocalVar("Paramount_Gallu_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 50) then
-        if (Paramount_Gallu_2hr_Used == 1) then
-            mob:useMobAbility(695);
-            mob:setLocalVar("Paramount_Gallu_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 75) then
-        if (Paramount_Gallu_2hr_Used == 0) then
-            mob:useMobAbility(695);
-            mob:setLocalVar("Paramount_Gallu_2hr_Used", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 4) then
+        mob:useMobAbility(Blood_Weapon);
+        mob:setLocalVar("did2hr", 5);
+    elseif (mob:getHPP() <= 10 and did2hr == 3) then
+        mob:useMobAbility(Manafont);
+        mob:setLocalVar("did2hr", 4);
+    elseif (mob:getHPP() <= 25 and did2hr == 2) then
+        mob:useMobAbility(Blood_Weapon);
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 50 and did2hr == 1) then
+        mob:useMobAbility(Blood_Weapon);
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 75 and did2hr == 0) then
+        mob:useMobAbility(Blood_Weapon);
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -81,11 +72,11 @@ end;
 -- onAdditionalEffect Action
 -----------------------------------
 function onAdditionalEffect(mob,target,damage)
-    if ((math.random(1,15) ~= 5) or (target:hasStatusEffect(EFFECT_TERROR) == true)) then
+    local resist = customResCheck(target, EFFECT_TERROR);
+    if (resist >= math.random(1,1000) or math.random(1,15) ~= 5) then
         return 0,0,0;
     else
-        local duration = 5;
-        target:addStatusEffect(EFFECT_TERROR,1,0,duration);
+        target:addStatusEffect(EFFECT_TERROR,1,0,5);
         mob:resetEnmity(target);
         return SUBEFFECT_NONE,0,EFFECT_TERROR;
     end

@@ -50,18 +50,14 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Veiled_Alicorn_2hr = mob:getLocalVar("Veiled_Alicorn_2hr");
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 15) then
-        if (Veiled_Alicorn_2hr == 1) then
-            mob:useMobAbility(693); -- PD
-            mob:setLocalVar("Veiled_Alicorn_2hr", 2);
-        end
-    elseif (mob:getHPP() <= 60) then
-        if (Veiled_Alicorn_2hr == 0) then
-            mob:useMobAbility(688); -- MS
-            mob:setLocalVar("Veiled_Alicorn_2hr", 1);
-        end
+    if (mob:getHPP() <= 15 and did2hr == 1) then
+        mob:useMobAbility(693); -- PD
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 60 and did2hr == 0) then
+        mob:useMobAbility(688); -- MS
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -105,6 +101,6 @@ function onMobDespawn(mob)
     end
 
     if (popBoss == true) then
-        SpawnMob(17526839);
+        SpawnMob(17526839); -- Veiled Ironclad
     end
 end;

@@ -44,23 +44,17 @@ end;
 
 function onMobFight(mob, target)
     -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
-    local Paramount_Naraka_2hr_Used = mob:getLocalVar("Paramount_Naraka_2hr_Used");
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 10) then
-        if (Paramount_Naraka_2hr_Used == 2) then
-            mob:useMobAbility(730); -- MK
-            mob:setLocalVar("Paramount_Naraka_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 30) then
-        if (Paramount_Naraka_2hr_Used == 1) then
-            mob:useMobAbility(730); -- MK
-            mob:setLocalVar("Paramount_Naraka_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 70) then
-        if (Paramount_Naraka_2hr_Used == 0) then
-            mob:useMobAbility(730); -- MK
-            mob:setLocalVar("Paramount_Naraka_2hr_Used", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 2) then
+        mob:useMobAbility(730); -- MK
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 30 and did2hr == 1) then
+        mob:useMobAbility(730); -- MK
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 70 and did2hr == 0) then
+        mob:useMobAbility(730); -- MK
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -88,6 +82,6 @@ function onMobDespawn(mob)
     end
 
     if (popBoss == true) then
-        SpawnMob(17526856);
+        SpawnMob(17526856); -- Paramount Botulus
     end
 end;

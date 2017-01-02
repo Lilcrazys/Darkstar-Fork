@@ -47,17 +47,17 @@ end;
 
 function onMobFight(mob, target)
     -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
-    local SN_2hr = mob:getLocalVar("Soaring_Naraka_2hr_Used");
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 10 and SN_2hr == 2) then
+    if (mob:getHPP() <= 10 and did2hr == 2) then
         mob:useMobAbility(730); -- Meikyo Shisui
-        mob:setLocalVar("Soaring_Naraka_2hr_Used", 3);
-    elseif (mob:getHPP() <= 30 and SN_2hr == 1) then
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 30 and did2hr == 1) then
         mob:useMobAbility(691); -- Manafont
-        mob:setLocalVar("Soaring_Naraka_2hr_Used", 2);
-    elseif (mob:getHPP() <= 70 and SN_2hr == 0) then
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 70 and did2hr == 0) then
         mob:useMobAbility(730); -- Meikyo Shisui
-        mob:setLocalVar("Soaring_Naraka_2hr_Used", 1);
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 

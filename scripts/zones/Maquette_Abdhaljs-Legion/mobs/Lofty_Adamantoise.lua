@@ -39,13 +39,11 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Lofty_Adamantoise_2hr = mob:getLocalVar("Lofty_Adamantoise_2hr");
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 10) then
-        if (Lofty_Adamantoise_2hr_Used == 0) then
-            mob:useMobAbility(694); -- Invincible
-            mob:setLocalVar("Lofty_Adamantoise_2hr", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 0) then
+        mob:useMobAbility(694); -- Invincible
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 

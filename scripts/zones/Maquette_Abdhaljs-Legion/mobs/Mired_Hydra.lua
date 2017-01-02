@@ -40,16 +40,11 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Mired_Hydra_2hr = 0;
-    if (mob:getLocalVar("Mired_Hydra_2hr") ~= nil) then
-        Mired_Hydra_2hr = mob:getLocalVar("Mired_Hydra_2hr");
-    end
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 10) then
-        if (Mired_Hydra_2hr == 0) then
-            mob:useMobAbility(688); -- MS
-            mob:setLocalVar("Mired_Hydra_2hr", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 0) then
+        mob:useMobAbility(688); -- MS
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -66,5 +61,5 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    SpawnMob(mob:getID() + 3) -- Spawns Mired_Alfard
+    SpawnMob(mob:getID() + 3) -- Spawns Mired Alfard
 end;

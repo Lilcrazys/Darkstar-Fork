@@ -38,14 +38,12 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Mired_Cerberus_2hr = mob:getLocalVar("Mired_Cerberus_2hr");
+    local did2hr = mob:getLocalVar("did2hr");
 
 
-    if (mob:getHPP() <= 10) then
-        if (Mired_Cerberus_2hr == 0) then
-            mob:useMobAbility(695); -- BW
-            mob:setLocalVar("Mired_Cerberus_2hr", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 0) then
+        mob:useMobAbility(695); -- BW
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
@@ -62,5 +60,5 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    SpawnMob(mob:getID()+3) -- Spawns Mired_Orthrus
+    SpawnMob(mob:getID()+3) -- Spawns Mired Orthrus
 end;

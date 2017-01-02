@@ -44,23 +44,17 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local Lofty_Harpeia_2hr_Used = mob:getLocalVar("Lofty_Harpeia_2hr_Used");
+    local did2hr = mob:getLocalVar("did2hr");
 
-    if (mob:getHPP() <= 10) then
-        if (Lofty_Harpeia_2hr_Used == 2) then
-            mob:useMobAbility(692); -- CS
-            mob:setLocalVar("Lofty_Harpeia_2hr_Used", 3);
-        end
-    elseif (mob:getHPP() <= 30) then
-        if (Lofty_Harpeia_2hr_Used == 1) then
-            mob:useMobAbility(691); -- MF
-            mob:setLocalVar("Lofty_Harpeia_2hr_Used", 2);
-        end
-    elseif (mob:getHPP() <= 70) then
-        if (Lofty_Harpeia_2hr_Used == 0) then
-            mob:useMobAbility(692); -- CS
-            mob:setLocalVar("Lofty_Harpeia_2hr_Used", 1);
-        end
+    if (mob:getHPP() <= 10 and did2hr == 2) then
+        mob:useMobAbility(692); -- CS
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 30 and did2hr == 1) then
+        mob:useMobAbility(691); -- MF
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 70 and did2hr == 0) then
+        mob:useMobAbility(692); -- CS
+        mob:setLocalVar("did2hr", 1);
     end
 end;
 
