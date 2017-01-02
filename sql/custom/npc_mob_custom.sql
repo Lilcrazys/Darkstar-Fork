@@ -1486,6 +1486,7 @@ INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',96607,
 -- Meriphataud Mountains (Zone 119)
 -- 17265663
 -- ------------------------------------------------------------
+REPLACE INTO `mob_spawn_points` VALUES (17264722,'Chonchon','Chonchon',14526,-129,24.310,-188,60); -- Chonchon Quick fix needs to be sent into DSP group ID wrong in DSP Mob spawn points
 REPLACE INTO `mob_spawn_points` VALUES (17265130,'Lord_Asag','Lord Asag',13828,-282,16,602,0);
 
 -- ------------------------------------------------------------

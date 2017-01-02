@@ -1345,6 +1345,40 @@ INSERT INTO `item_mods` VALUES (27751,68,28);
 INSERT INTO `item_mods` VALUES (27751,8,17);
 INSERT INTO `item_mods` VALUES (27751,9,17);
 
+INSERT INTO `item_mods` VALUES (27768,1,94);     -- Cizin Helm : DEF 94
+INSERT INTO `item_mods` VALUES (27768,2,28);      -- HP +28
+INSERT INTO `item_mods` VALUES (27768,5,21);      -- MP +21
+INSERT INTO `item_mods` VALUES (27768,8,21);      -- STR +21
+INSERT INTO `item_mods` VALUES (27768,9,16);      -- DEX +16
+INSERT INTO `item_mods` VALUES (27768,10,21);     -- VIT +21
+INSERT INTO `item_mods` VALUES (27768,11,16);     -- AGI +16
+INSERT INTO `item_mods` VALUES (27768,12,15);     -- INT +15
+INSERT INTO `item_mods` VALUES (27768,13,15);     -- MND +15
+INSERT INTO `item_mods` VALUES (27768,14,15);     -- CHR +15
+INSERT INTO `item_mods` VALUES (27768,27,5);      -- Enmity +5
+INSERT INTO `item_mods` VALUES (27768,29,1);      -- Magic Def. Bonus +1
+INSERT INTO `item_mods` VALUES (27768,31,26);     -- Magic Evasion +26
+INSERT INTO `item_mods` VALUES (27768,68,22);     -- Evasion +22
+INSERT INTO `item_mods` VALUES (27768,170,5);     -- Fast Cast +5%
+INSERT INTO `item_mods` VALUES (27768,384,71);    -- Haste +7%
+
+INSERT INTO `item_mods` VALUES (27771,1,79);
+INSERT INTO `item_mods` VALUES (27771,2,24);
+INSERT INTO `item_mods` VALUES (27771,5,29);
+INSERT INTO `item_mods` VALUES (27771,8,16);
+INSERT INTO `item_mods` VALUES (27771,9,16);
+INSERT INTO `item_mods` VALUES (27771,10,16);
+INSERT INTO `item_mods` VALUES (27771,11,16);
+INSERT INTO `item_mods` VALUES (27771,12,20);
+INSERT INTO `item_mods` VALUES (27771,13,20);
+INSERT INTO `item_mods` VALUES (27771,14,20);
+INSERT INTO `item_mods` VALUES (27771,27,-8);
+INSERT INTO `item_mods` VALUES (27771,29,3);
+INSERT INTO `item_mods` VALUES (27771,31,60);
+INSERT INTO `item_mods` VALUES (27771,68,24);
+INSERT INTO `item_mods` VALUES (27771,374,101);
+INSERT INTO `item_mods` VALUES (27771,384,51);
+
 REPLACE INTO `item_mods` VALUES (27777,1,72); -- DEF
 REPLACE INTO `item_mods` VALUES (27777,10,10); -- VIT
 REPLACE INTO `item_mods` VALUES (27777,11,13); -- AGI
@@ -1359,6 +1393,9 @@ REPLACE INTO `item_mods` VALUES (27777,65,22); -- Evasion
 REPLACE INTO `item_mods` VALUES (27777,8,10); -- STR
 REPLACE INTO `item_mods` VALUES (27777,9,13); -- DEX
 
+INSERT INTO `item_mods` VALUES (27874,2,142); -- Cizin Mail +1 Defense
+
+INSERT INTO `item_mods` VALUES (27868,1,127); 
 INSERT INTO `item_mods` VALUES (27868,2,54); --  Hit Points +54
 INSERT INTO `item_mods` VALUES (27868,5,59); --  Mana Points +59
 INSERT INTO `item_mods` VALUES (27868,8,21); --  Strength +21
@@ -1459,6 +1496,22 @@ INSERT INTO `item_mods` VALUES (27988,384,40);
 INSERT INTO `item_mods` VALUES (27988,68,22);
 INSERT INTO `item_mods` VALUES (27988,8,6);
 INSERT INTO `item_mods` VALUES (27988,9,36);
+
+INSERT INTO `item_mods` VALUES (27912,1,118);
+INSERT INTO `item_mods` VALUES (27912,2,43);
+INSERT INTO `item_mods` VALUES (27912,5,31);
+INSERT INTO `item_mods` VALUES (27912,8,25);
+INSERT INTO `item_mods` VALUES (27912,9,17);
+INSERT INTO `item_mods` VALUES (27912,10,25);
+INSERT INTO `item_mods` VALUES (27912,11,17);
+INSERT INTO `item_mods` VALUES (27912,12,17);
+INSERT INTO `item_mods` VALUES (27912,13,17);
+INSERT INTO `item_mods` VALUES (27912,14,17);
+INSERT INTO `item_mods` VALUES (27912,54,10);
+INSERT INTO `item_mods` VALUES (27912,29,2);
+INSERT INTO `item_mods` VALUES (27912,31,39);
+INSERT INTO `item_mods` VALUES (27912,68,28);
+INSERT INTO `item_mods` VALUES (27912,384,31);
 
 INSERT INTO `item_mods` VALUES (28005,1,88);
 INSERT INTO `item_mods` VALUES (28005,10,31);
@@ -1572,7 +1625,24 @@ INSERT INTO `item_mods` VALUES (28041,68,17);
 INSERT INTO `item_mods` VALUES (28041,8,4);
 INSERT INTO `item_mods` VALUES (28041,9,23);
 
+INSERT INTO `item_mods` VALUES (28051,1,84);
+INSERT INTO `item_mods` VALUES (28051,2,20);
+INSERT INTO `item_mods` VALUES (28051,8,8);
+INSERT INTO `item_mods` VALUES (28051,9,23);
+INSERT INTO `item_mods` VALUES (28051,10,26);
+INSERT INTO `item_mods` VALUES (28051,12,7);
+INSERT INTO `item_mods` VALUES (28051,13,23);
+INSERT INTO `item_mods` VALUES (28051,14,17);
+INSERT INTO `item_mods` VALUES (28051,23,8);
+INSERT INTO `item_mods` VALUES (28051,27,3);
+INSERT INTO `item_mods` VALUES (28051,31,21);
+INSERT INTO `item_mods` VALUES (28051,68,15);
+INSERT INTO `item_mods` VALUES (28051,73,5);
+INSERT INTO `item_mods` VALUES (28051,384,31);
+
 INSERT INTO `item_mods` VALUES (28135,369,2); -- Didn't include Unity refresh
+
+INSERT INTO `item_mods` VALUES (28192,288,2); -- Cizin Breeches +1 Dbl Atk not in DSP
 
 INSERT INTO `item_mods` VALUES (28176,1,97);
 INSERT INTO `item_mods` VALUES (28176,2,35);
@@ -1662,6 +1732,21 @@ INSERT INTO `item_mods` VALUES (28181,5,27);
 INSERT INTO `item_mods` VALUES (28181,68,21);
 INSERT INTO `item_mods` VALUES (28181,8,21);
 
+INSERT INTO `item_mods` VALUES (28192,1,103);
+INSERT INTO `item_mods` VALUES (28192,2,35);
+INSERT INTO `item_mods` VALUES (28192,8,28);
+INSERT INTO `item_mods` VALUES (28192,10,17);
+INSERT INTO `item_mods` VALUES (28192,11,13);
+INSERT INTO `item_mods` VALUES (28192,12,20);
+INSERT INTO `item_mods` VALUES (28192,13,10);
+INSERT INTO `item_mods` VALUES (28192,14,8);
+INSERT INTO `item_mods` VALUES (28192,23,10);
+INSERT INTO `item_mods` VALUES (28192,29,2);
+INSERT INTO `item_mods` VALUES (28192,31,52);
+INSERT INTO `item_mods` VALUES (28192,68,15);
+INSERT INTO `item_mods` VALUES (28192,288,20);
+INSERT INTO `item_mods` VALUES (28192,384,51);
+
 -- Manibozho Brais (ID: 28199)
 INSERT INTO `item_mods` VALUES (28199,2,25); --  Hit Points +25
 INSERT INTO `item_mods` VALUES (28199,8,13); --  Strength +13
@@ -1701,6 +1786,8 @@ INSERT INTO `item_mods` VALUES (28275,68,65); -- 10 Evasion added to total of 55
 INSERT INTO `item_mods` VALUES (28275,169,12);
 INSERT INTO `item_mods` VALUES (28275,249,15);
 INSERT INTO `item_mods` VALUES (28275,384,30);
+
+DELETE FROM `item_mods` WHERE itemId=28297 and modId=288 and value=30; -- Removing bad MOD DSP inserted into Cizin Greaves +1 MOD should be Jump: "Double Attack"+3%
 
 INSERT INTO `item_mods` VALUES (28314,1,61);
 INSERT INTO `item_mods` VALUES (28314,2,10);
@@ -1793,6 +1880,21 @@ INSERT INTO `item_mods` VALUES (28319,31,93);
 INSERT INTO `item_mods` VALUES (28319,29,4);
 INSERT INTO `item_mods` VALUES (28319,384,30);
 INSERT INTO `item_mods` VALUES (28319,27,-4);
+
+INSERT INTO `item_mods` VALUES (28332,1,69);
+INSERT INTO `item_mods` VALUES (28332,2,12);
+INSERT INTO `item_mods` VALUES (28332,8,13);
+INSERT INTO `item_mods` VALUES (28332,9,10);
+INSERT INTO `item_mods` VALUES (28332,10,14);
+INSERT INTO `item_mods` VALUES (28332,11,23);
+INSERT INTO `item_mods` VALUES (28332,13,8);
+INSERT INTO `item_mods` VALUES (28332,14,21);
+INSERT INTO `item_mods` VALUES (28332,25,8);
+INSERT INTO `item_mods` VALUES (28332,29,1);
+INSERT INTO `item_mods` VALUES (28332,31,52);
+INSERT INTO `item_mods` VALUES (28332,68,33);
+-- INSERT INTO `item_mods` VALUES (28332,0,30); Mod Jump: DBL ATK does not exist in DSP
+INSERT INTO `item_mods` VALUES (28332,384,41);
 
 INSERT INTO `item_mods` VALUES (28374,1,10);
 INSERT INTO `item_mods` VALUES (28374,25,3);

@@ -1077,8 +1077,6 @@ INSERT INTO `mob_droplist` VALUES (1861,0,10885,161); -- Avant Helm +1
 INSERT INTO `mob_droplist` VALUES (1861,0,10463,190); -- Mustela Harness
 INSERT INTO `mob_droplist` VALUES (1861,0,10514,127); --  Magavan Mitts
 INSERT INTO `mob_droplist` VALUES (1861,0,11971,174); --  Rubeus Spats
-
-INSERT INTO `mob_droplist` VALUES (1861,0,21176,66); --  Ngqoqwanb
 INSERT INTO `mob_droplist` VALUES (1861,0,27781,66); --  Xux hat
 
 -- -----------

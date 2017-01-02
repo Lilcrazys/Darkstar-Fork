@@ -683,6 +683,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Sobek',4115,387); -- heavy_bellow
 -- Tuskertrap
 -- Uses SkillID 114
 
+-- Armillaria
+INSERT INTO `mob_skill_lists` VALUES ('Armillaria',4116,386); --
+
 -- Abyssea Skills above this line only
 
 INSERT INTO `mob_skill_lists` VALUES ('Lofty_Zilant',5000,2520); -- Sinister_Wing
