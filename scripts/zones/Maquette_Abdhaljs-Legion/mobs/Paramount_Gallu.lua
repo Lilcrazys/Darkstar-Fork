@@ -73,7 +73,7 @@ end;
 -----------------------------------
 function onAdditionalEffect(mob,target,damage)
     local resist = customResCheck(target, EFFECT_TERROR);
-    if (resist >= math.random(1,1000) or math.random(1,15) ~= 5) then
+    if (resist >= math.random(1,1000) or math.random(1,9) ~= 5) then
         return 0,0,0;
     else
         target:addStatusEffect(EFFECT_TERROR,1,0,5);
@@ -87,6 +87,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("legion_point", 400);
+    player:addCurrency("legion_point", 350);
     player:addTitle(LEGENDARY_LEGIONNAIRE);
 end;

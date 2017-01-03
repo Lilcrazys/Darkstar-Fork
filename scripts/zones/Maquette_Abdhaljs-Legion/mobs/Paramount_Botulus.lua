@@ -67,13 +67,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("legion_point", 300);
-end;
-
------------------------------------
--- onMobDespawn
------------------------------------
-
-function onMobDespawn(mob)
-    SpawnMob(mob:getID()-1) -- Spawns Paramount_Gallu
+    player:addCurrency("legion_point", 350);
+    player:addTitle(LEGENDARY_LEGIONNAIRE);
 end;

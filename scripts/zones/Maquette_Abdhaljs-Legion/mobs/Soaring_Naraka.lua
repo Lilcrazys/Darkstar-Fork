@@ -67,5 +67,37 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addCurrency("legion_point", 250);
-    player:addTitle(SUBJUGATOR_OF_THE_SOARING);
+    if (mob:getID() == 17526825) then
+        player:addTitle(SUBJUGATOR_OF_THE_SOARING);
+    end
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
+    if (mob:getID() == 17526849) then
+        local popWave2 = true;
+        local MobIDs =
+        {
+            17526847, -- Lofty Harpeia
+            17526848, -- Mired Mantis
+            -- 17526849, -- Soaring Naraka
+            17526850  -- Veiled Ironclad
+        };
+
+        for deezNuts, ID in pairs(MobIDs) do
+            if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
+                popBoss = false;
+            end
+        end
+
+        if (popWave2 == true) then
+            SpawnMob(17526851); -- Paramount Harpeia
+            SpawnMob(17526852); -- Paramount Mantis
+            SpawnMob(17526853); -- Paramount Naraka
+            SpawnMob(17526854); -- Paramount Ironclad
+        end
+    end
 end;

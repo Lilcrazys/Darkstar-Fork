@@ -72,8 +72,13 @@ end;
 
 function onMobDespawn(mob)
     local popBoss = true;
-    local MobIDs = {17526852, 17526853, 17526854, 17526856};
-    -- Paramount_Naraka 17526851
+    local MobIDs =
+    {
+        17526851, -- Paramount Harpeia
+        17526852, -- Paramount Mantis
+        -- 17526853, -- Paramount Naraka
+        17526854  -- Paramount Ironclad
+    };
 
     for deezNuts, ID in pairs(MobIDs) do
         if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
@@ -82,6 +87,7 @@ function onMobDespawn(mob)
     end
 
     if (popBoss == true) then
+        SpawnMob(17526855); -- Paramount Gallu
         SpawnMob(17526856); -- Paramount Botulus
     end
 end;
