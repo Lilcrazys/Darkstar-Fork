@@ -89,7 +89,7 @@ function onMobDespawn(mob)
 
         for deezNuts, ID in pairs(MobIDs) do
             if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
-                popBoss = false;
+                popWave2 = false;
             end
         end
 
