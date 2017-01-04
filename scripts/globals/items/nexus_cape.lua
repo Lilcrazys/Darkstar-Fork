@@ -52,7 +52,12 @@ end;
 
 function onItemUse(target)
     local timeCheck = os.date("*t")
+    local month = timeCheck.month;
+    if (month < 10) then month = tostring("0"..month); end
+    local day = timeCheck.day;
+    if (day < 10) then day = tostring("0"..day); end
     print(target:getName().." used Nexus Cape");
+    target:setVar("NexusCapeDATE", timeCheck.year .. month .. day);
     target:setVar("NexusCapeHOUR", timeCheck.hour);
     target:setVar("NexusCapeMINUTE", timeCheck.min);
     target:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_TO_LEADER,0,1);
