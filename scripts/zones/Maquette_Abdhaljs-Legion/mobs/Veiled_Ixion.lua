@@ -87,4 +87,5 @@ end;
 
 function onMobDespawn(mob)
     SpawnMob(17526837); -- Veiled Alicorn
+    SpawnMob(17527790); -- Auspicious_Entity : Restore
 end;

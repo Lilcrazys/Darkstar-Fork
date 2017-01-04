@@ -1984,67 +1984,98 @@ REPLACE INTO `mob_spawn_points` VALUES (17506685,'XuanWu','Xuan Wu',13742,67.539
 -- 17527807
 -- ------------------------------------------------------------
 
-REPLACE INTO `mob_spawn_points` VALUES (17526785,'Lofty_Behemoth','Lofty Behemoth',90002,-221,12,260,4);
-REPLACE INTO `mob_spawn_points` VALUES (17526786,'Lofty_Wyrm','Lofty Wyrm',90005,-222,12,240,252);
-REPLACE INTO `mob_spawn_points` VALUES (17526787,'Lofty_Adamantoise','Lofty_Adamantoise',90006,-223,12,220,1);
-REPLACE INTO `mob_spawn_points` VALUES (17526788,'Lofty_Elasmoth','Lofty Elasmoth',90003,-221,12,260,4);
-REPLACE INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',90000,-222,12,240,252);
-REPLACE INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90004,-223,12,220,1);
-REPLACE INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90001,-222,12,240,252);
+-- Hall of An: Wave 1
+REPLACE INTO `mob_spawn_points` VALUES (17526785,'Lofty_Behemoth','Lofty Behemoth',90000,-194,12,222,192);
+REPLACE INTO `mob_spawn_points` VALUES (17526786,'Lofty_Wyrm','Lofty Wyrm',90001,-175,12,215,158);
+REPLACE INTO `mob_spawn_points` VALUES (17526787,'Lofty_Adamantoise','Lofty_Adamantoise',90002,-182,12,234,128);
 
-REPLACE INTO `mob_spawn_points` VALUES (17526873,'Auspicious_Entity','Auspicious Entity',90007,-195.000,12.001,240.000,0); -- (Air) Hall of An : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526874,'Auspicious_Entity','Auspicious Entity',90008,155.000,12.001,238.000,0); -- (Dark) Hall of Ki : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526875,'Auspicious_Entity','Auspicious Entity',90009,159.000,12.001,-155.000,0); -- (Earth) Hall of Im : Restore
-INSERT INTO `mob_spawn_points` VALUES (17526876,'Auspicious_Entity','Auspicious Entity',90010,-197.000,12.001,-159.000,0); -- (Fire) Hall of Muru : Restore
-REPLACE INTO `mob_spawn_points` VALUES (17526877,'Auspicious_Entity_2','Auspicious Entity',90011,0.000,0.001,0.000,0); -- (Ice) Hall of Muru : TE
-INSERT INTO `mob_spawn_points` VALUES (17526878,'Auspicious_Entity_2','Auspicious Entity',90012,0.000,0.001,0.000,0); -- (Light) Hall of Mul : TE
-REPLACE INTO `mob_spawn_points` VALUES (17526879,'Auspicious_Entity','Auspicious Entity',90013,-20.000,12.001,20.000,0); -- (Lighting) Hall of Mul : Restore
-REPLACE INTO `mob_spawn_points` VALUES (17526880,'Auspicious_Entity_3','Auspicious Entity',90014,12.000,9.001,-12.000,0); -- (Water) Hall of Mul : 2hr reset
+-- Hall of An: Wave 2
+REPLACE INTO `mob_spawn_points` VALUES (17526788,'Lofty_Elasmoth','Lofty Elasmoth',90003,-194,12,222,192);
+REPLACE INTO `mob_spawn_points` VALUES (17526789,'Lofty_Zilant','Lofty Zilant',90004,-175,12,215,158);
+REPLACE INTO `mob_spawn_points` VALUES (17526790,'Lofty_Ferromantoise','Lofty Ferromantoise',90005,-182,12,234,128);
 
-INSERT INTO `mob_spawn_points` VALUES (17526805,'Mired_Cerberus','Mired Cerberus',90020,182,12,219,116);
-REPLACE INTO `mob_spawn_points` VALUES (17526806,'Mired_Khimaira','Mired Khimaira',90021,181,12,239,130);
-REPLACE INTO `mob_spawn_points` VALUES (17526807,'Mired_Hydra','Mired Hydra',90022,181,12,259,128);
-REPLACE INTO `mob_spawn_points` VALUES (17526808,'Mired_Orthrus','Mired Orthrus',90023,182,12,219,116);
-REPLACE INTO `mob_spawn_points` VALUES (17526809,'Mired_Khrysokhimaira','Mired Khrysokhimaira',90024,181,12,239,130);
-REPLACE INTO `mob_spawn_points` VALUES (17526810,'Mired_Alfard','Mired Alfard',90025,181,12,259,128);
-REPLACE INTO `mob_spawn_points` VALUES (17526811,'Mired_Mantis','Mired Mantis',90026,181,12,239,130);
+-- Hall of An: Wave 3 (Boss)
+REPLACE INTO `mob_spawn_points` VALUES (17526791,'Lofty_Harpeia','Lofty Harpeia',90006,-180,12,220,158);
 
-REPLACE INTO `mob_spawn_points` VALUES (17526819,'Soaring_Corse','Soaring Corse',90030,180,12,-181,186);
-REPLACE INTO `mob_spawn_points` VALUES (17526820,'Soaring_Dvergr','Soaring Dvergr',90031,139,12,-181,179);
-REPLACE INTO `mob_spawn_points` VALUES (17526821,'Soaring_Vampyr','Soaring Vampyr',90032,159,12,-180,188);
-REPLACE INTO `mob_spawn_points` VALUES (17526822,'Soaring_Kumakatok','Soaring Kumakatok',90033,180,12,-181,186);
-REPLACE INTO `mob_spawn_points` VALUES (17526823,'Soaring_Dweorg','Soaring Dweorg',90034,139,12,-181,179);
-REPLACE INTO `mob_spawn_points` VALUES (17526824,'Soaring_Strigoi','Soaring Strigoi',90035,159,12,-180,188);
-REPLACE INTO `mob_spawn_points` VALUES (17526825,'Soaring_Naraka','Soaring Naraka',90036,159,12,-180,188);
+-- Hall of Ki: Wave 1
+INSERT INTO `mob_spawn_points` VALUES (17526805,'Mired_Cerberus','Mired Cerberus',90007,141,12,234,0);
+REPLACE INTO `mob_spawn_points` VALUES (17526806,'Mired_Khimaira','Mired Khimaira',90008,137,12,216,222);
+REPLACE INTO `mob_spawn_points` VALUES (17526807,'Mired_Hydra','Mired Hydra',90009,154,12,222,192);
 
-INSERT INTO `mob_spawn_points` VALUES (17526833,'Veiled_Amphiptere','Veiled Amphiptere',90040,-220,12,-155,5);
-INSERT INTO `mob_spawn_points` VALUES (17526834,'Veiled_Ixion','Veiled Ixion',90041,-220,12,-180,255);
-REPLACE INTO `mob_spawn_points` VALUES (17526835,'Veiled_Sandworm','Veiled Sandworm',90042,-220,12,-139,248);
-REPLACE INTO `mob_spawn_points` VALUES (17526836,'Veiled_Sanguiptere','Veiled Sanguiptere',90043,-220,12,-155,5);
-REPLACE INTO `mob_spawn_points` VALUES (17526837,'Veiled_Alicorn','Veiled Alicorn',90044,-220,12,-180,255);
-REPLACE INTO `mob_spawn_points` VALUES (17526838,'Veiled_Gigaworm','Veiled Gigaworm',90045,-220,12,-139,248);
-REPLACE INTO `mob_spawn_points` VALUES (17526839,'Veiled_Ironclad','Veiled Ironclad',90046,-220,12,-155,5);
+-- Hall of Ki: Wave 2
+REPLACE INTO `mob_spawn_points` VALUES (17526808,'Mired_Orthrus','Mired Orthrus',90010,141,12,234,0);
+REPLACE INTO `mob_spawn_points` VALUES (17526809,'Mired_Khrysokhimaira','Mired Khrysokhimaira',90011,137,12,216,222);
+REPLACE INTO `mob_spawn_points` VALUES (17526810,'Mired_Alfard','Mired Alfard',90012,154,12,222,192);
 
-REPLACE INTO `mob_spawn_points` VALUES (17526847,'Lofty_Harpeia','Lofty_Harpeia',90050,-19,10,41,190);
-REPLACE INTO `mob_spawn_points` VALUES (17526848,'Mired_Mantis','Mired_Mantis',90051,12,10,52,94);
-REPLACE INTO `mob_spawn_points` VALUES (17526849,'Soaring_Naraka','Soaring_Naraka',90052,-52,10,52,18);
-REPLACE INTO `mob_spawn_points` VALUES (17526850,'Veiled_Ironclad','Veiled_Ironclad',90053,-52,9,-12,255);
-REPLACE INTO `mob_spawn_points` VALUES (17526851,'Paramount_Naraka','Paramount_Naraka',90058,-52,10,52,18);
-REPLACE INTO `mob_spawn_points` VALUES (17526852,'Paramount_Harpeia','Paramount_Harpeia',90056,-19,10,41,190);
-REPLACE INTO `mob_spawn_points` VALUES (17526853,'Paramount_Mantis','Paramount_Mantis',90057,12,10,52,94);
-REPLACE INTO `mob_spawn_points` VALUES (17526854,'Paramount_Ironclad','Paramount_Ironclad',90059,-52,9,-12,255);
-REPLACE INTO `mob_spawn_points` VALUES (17526855,'Paramount_Gallu','Paramount_Gallu',90054,-19,10,-2,199);
-REPLACE INTO `mob_spawn_points` VALUES (17526856,'Paramount_Botulus','Paramount_Botulus',90055,-19,10,-2,199);
+-- Hall of Ki: Wave 3 (Boss)
+REPLACE INTO `mob_spawn_points` VALUES (17526811,'Mired_Mantis','Mired Mantis',90013,142,12,222,222);
 
+-- Hall of Im: Wave 1
+REPLACE INTO `mob_spawn_points` VALUES (17526819,'Soaring_Corse','Soaring Corse',90014,-181,12,-154,128);
+REPLACE INTO `mob_spawn_points` VALUES (17526820,'Soaring_Dvergr','Soaring Dvergr',90015,-177,12,-138,95);
+REPLACE INTO `mob_spawn_points` VALUES (17526821,'Soaring_Vampyr','Soaring Vampyr',90016,-194,12,-141,64);
+
+-- Hall of Im: Wave 2
+REPLACE INTO `mob_spawn_points` VALUES (17526822,'Soaring_Kumakatok','Soaring Kumakatok',90017,-181,12,-154,128);
+REPLACE INTO `mob_spawn_points` VALUES (17526823,'Soaring_Dweorg','Soaring Dweorg',90018,-177,12,-138,95);
+REPLACE INTO `mob_spawn_points` VALUES (17526824,'Soaring_Strigoi','Soaring Strigoi',90019,-194,12,-141,64);
+
+-- Hall of Im: Wave 3 (Boss)
+REPLACE INTO `mob_spawn_points` VALUES (17526825,'Soaring_Naraka','Soaring Naraka',90020,-182,12,-143,95);
+
+-- Hall of Muru: Wave 1
+INSERT INTO `mob_spawn_points` VALUES (17526833,'Veiled_Amphiptere','Veiled Amphiptere',90021,154,12,-142,64);
+INSERT INTO `mob_spawn_points` VALUES (17526834,'Veiled_Ixion','Veiled Ixion',90022,138,12,-137,28);
+REPLACE INTO `mob_spawn_points` VALUES (17526835,'Veiled_Sandworm','Veiled Sandworm',90023,142,12,-154,0);
+
+-- Hall of Muru: Wave 2
+REPLACE INTO `mob_spawn_points` VALUES (17526836,'Veiled_Sanguiptere','Veiled Sanguiptere',90024,154,12,-142,64);
+REPLACE INTO `mob_spawn_points` VALUES (17526837,'Veiled_Alicorn','Veiled Alicorn',90025,138,12,-137,28);
+REPLACE INTO `mob_spawn_points` VALUES (17526838,'Veiled_Gigaworm','Veiled Gigaworm',90026,142,12,-154,0);
+
+-- Hall of Muru: Wave 3 (Boss)
+REPLACE INTO `mob_spawn_points` VALUES (17526839,'Veiled_Ironclad','Veiled Ironclad',90027,143,12,-142,28);
+
+-- Hall of Mul: wave 1
+REPLACE INTO `mob_spawn_points` VALUES (17526847,'Lofty_Harpeia','Lofty Harpeia',90028,12.5,9.95,52.5,95); -- SW Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526848,'Mired_Mantis','Mired Mantis',90029,-52.5,9.95,52.5,31); -- SE Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526849,'Soaring_Naraka','Soaring Naraka',90030,-20,9.95,41,192); -- South Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526850,'Veiled_Ironclad','Veiled Ironclad',90031,-20,9.95,-1.5,64); -- North Platform
+
+-- Hall of Mul: wave 2
+REPLACE INTO `mob_spawn_points` VALUES (17526851,'Paramount_Naraka','Paramount Naraka',90032,-20,9.95,-1.5,64); -- North Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526852,'Paramount_Harpeia','Paramount Harpeia',90033,-52.5,9.95,-12.5,222); -- NE Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526853,'Paramount_Mantis','Paramount Mantis',90034,12.5,9.95,-12.5,160); -- NW Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526854,'Paramount_Ironclad','Paramount Ironclad',90035,-20,9.95,41,192); -- South Platform
+
+-- Hall of Mul: Wave 3 (Boss)
+REPLACE INTO `mob_spawn_points` VALUES (17526855,'Paramount_Gallu','Paramount Gallu',90036,-20,9.95,41,192); -- North Platform
+REPLACE INTO `mob_spawn_points` VALUES (17526856,'Paramount_Botulus','Paramount Botulus',90037,-20,9.95,-1.5,192); -- South Platform (backward facing)
+
+-- Custom'd Buff Elementals
+INSERT INTO `mob_spawn_points` VALUES (17527787,'Auspicious_Entity','Auspicious Entity',90038,-200.000,12,240.000,160); -- (Air) Hall of An : Restore
+INSERT INTO `mob_spawn_points` VALUES (17527788,'Auspicious_Entity','Auspicious Entity',90039,156,12,235,222); -- (Dark) Hall of Ki : 17527788
+INSERT INTO `mob_spawn_points` VALUES (17527789,'Auspicious_Entity','Auspicious Entity',90040,-196,12,-156,95); -- (Earth) Hall of Im : Restore
+INSERT INTO `mob_spawn_points` VALUES (17527790,'Auspicious_Entity','Auspicious Entity',90041,156,12,-158,31); -- (Fire) Hall of Muru : Restore
+INSERT INTO `mob_spawn_points` VALUES (17527791,'Auspicious_Entity_2','Auspicious Entity',90042,158,12,-156,31); -- (Ice) Hall of Muru : Time Extension
+INSERT INTO `mob_spawn_points` VALUES (17527792,'Auspicious_Entity_2','Auspicious Entity',90043,-20,12,20,64); -- (Light) Hall of Mul : Time Extension
+INSERT INTO `mob_spawn_points` VALUES (17527793,'Auspicious_Entity','Auspicious Entity',90044,-19,12,21,64); -- (Lighting) Hall of Mul : Restore
+INSERT INTO `mob_spawn_points` VALUES (17527794,'Auspicious_Entity_3','Auspicious Entity',90045,-21,12,19,64); -- (Water) Hall of Mul : 2hr reset
+
+-- Other Custom / Nawt Retail Stuffs
 INSERT INTO `npc_list` VALUES (17527795,'Exit','Exit(An)',63,-220,12,265,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
 INSERT INTO `npc_list` VALUES (17527796,'Exit','Exit(Ki)',63,180,12,265,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
-INSERT INTO `npc_list` VALUES (17527797,'Exit','Exit(Im)',191,220,12,-185,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
+INSERT INTO `npc_list` VALUES (17527797,'Exit','Exit(Im)',191,-220,12,-185,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
 INSERT INTO `npc_list` VALUES (17527798,'Exit','Exit(Muru)',128,180,12,-180,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
 INSERT INTO `npc_list` VALUES (17527799,'Exit','Exit(Mul)',63,-20,12,68,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
--- INSERT INTO `npc_list` VALUES (17527800,'Exit','Exit(Mars)',63,-20,12,68,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
--- 17527800-17527805 reserved
--- INSERT INTO `mob_spawn_points` VALUES (17527806,'Mars','Mars',97600,64,180.000,12.000,-252.525); -- Temp Pos for lack of instancing.
--- INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,180.000,12.000,-251.000,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,NULL,0);
+-- INSERT INTO `npc_list` VALUES (17527800,'Exit','Exit(Frog)',63,180,12,333,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
+-- INSERT INTO `npc_list` VALUES (17527801,'Exit','Exit(Goku)',63,-220,12,-255,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
+-- INSERT INTO `npc_list` VALUES (17527802,'Exit','Exit(Mars)',63,180,12,-255,7,50,50,0,0,32,0,3,0x0000160900000000000000000000000000000000,0,null,1);
+-- INSERT INTO `mob_spawn_points` VALUES (17527803,'Frog_Lady','Frog Lady',90046,180,12,333,192); -- Temp Pos for lack of instancing.
+-- INSERT INTO `mob_spawn_points` VALUES (17527804,'Frog','Frog',90047,-220,12,-255,192); -- Temp Pos for lack of instancing.
+-- INSERT INTO `mob_spawn_points` VALUES (17527805,'Son_Goku','Son Goku',90048,180,12,-255,192); -- Temp Pos for lack of instancing.
+-- INSERT INTO `mob_spawn_points` VALUES (17527806,'Mars','Mars',97600,180,12,-275,192); -- Temp Pos for lack of instancing.
+-- INSERT INTO `npc_list` VALUES (17527807,'Mars_Loot_Box','Mars Loot Box',192,180,12,-278.5,6,40,40,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,NULL,0);
 
 
 -- ------------------------------------------------------------

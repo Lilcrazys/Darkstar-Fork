@@ -58,6 +58,7 @@ function onMobDeath(mob, player, isKiller)
     end
 
     if (popBoss == true) then
+        SpawnMob(17527794); -- Auspicious_Entity : 2hr reset
         SpawnMob(17526855); -- Paramount Gallu
         SpawnMob(17526856); -- Paramount Botulus
     end

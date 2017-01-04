@@ -62,4 +62,5 @@ end;
 
 function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Mired Khrysokhimaira
+    SpawnMob(17527788); -- Auspicious_Entity : Restore
 end;

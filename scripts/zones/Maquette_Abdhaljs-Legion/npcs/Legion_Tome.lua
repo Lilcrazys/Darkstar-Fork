@@ -4,69 +4,48 @@
 -- Legion NPC
 -- @pos 180 12 -251 183
 -----------------------------------
--- package.loaded["scripts/zones/Maquette_Abdhaljs-Legion/TextIDs"] = nil;
+package.loaded["scripts/zones/Maquette_Abdhaljs-Legion/TextIDs"] = nil;
 -----------------------------------
--- require("scripts/zones/Maquette_Abdhaljs-Legion/TextIDs");
+require("scripts/zones/Maquette_Abdhaljs-Legion/TextIDs");
 -- require("scripts/globals/keyitems");
 -- require("scripts/globals/status");
 -- require("scripts/globals/bcnm");
+require("scripts/globals/spoofchat");
+
+local price = 60000; -- It's up here so it can be seen by both functions
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    -- local HALL = 0;
+    print('[DEBUG] Player trading to enter Legion : '..player:getName());
+    print('[DEBUG] Gil total        : '..trade:getGil()..' ('..tostring(trade:getGil() == price)..')');
+    print('[DEBUG] Fire Cluster     : '..tostring(trade:hasItemQty(4104,1)));
+    print('[DEBUG] Lofty Trophy     : '..tostring(trade:hasItemQty(3529,1)));
+    print('[DEBUG] Mired Trophy     : '..tostring(trade:hasItemQty(3530,1)));
+    print('[DEBUG] Soaring Trophy   : '..tostring(trade:hasItemQty(3531,1)));
+    print('[DEBUG] Veiled Trophy    : '..tostring(trade:hasItemQty(3532,1)));
+    print('[DEBUG] Total item count : '..trade:getItemCount());
 
-    if (trade:getGil(1000000) == 1000000) then
-        if (trade:hasItemQty(4104,1) and trade:getItemCount() == 2) then -- gil + fire cluster to pop legion hall An
-            SpawnMob(17526785); -- Lofty_Behemoth
-            SpawnMob(17526786); -- Lofty_Wyrm
-            SpawnMob(17526787); -- Lofty_Adamantoise
-            -- player:PrintToPlayer( "You will now be transported to Legion" ); -- needs to be spoof saying....
-            player:delGil(1000000);
-            player:tradeComplete();
-            player:setPos(-180, 12, 212, 192);
-            -- HALL = 1;
-        elseif (trade:hasItemQty(3529,1) and trade:getItemCount() == 2) then -- gil + lofty trophy to pop legion hall Ki
-            SpawnMob(17526805); -- Mired_Cerberus
-            SpawnMob(17526806); -- Mired_Khimaira
-            SpawnMob(17526807); -- Mired_Hydra
-            -- player:PrintToPlayer( "You will now be transported to Legion" ); -- needs to be spoof saying....
-            player:delGil(1000000);
-            player:tradeComplete();
-            player:setPos(130, 12, 220, 0);
-            -- HALL = 2;
-        elseif (trade:hasItemQty(3530,1) and trade:getItemCount() == 2) then -- gil + mired trophy to pop legion hall Im
-            SpawnMob(17526819); -- Soaring_Corse
-            SpawnMob(17526820); -- Soaring_Dvergr
-            SpawnMob(17526821); -- Soaring_Vampyr
-            -- player:PrintToPlayer( "You will now be transported to Legion" ); -- needs to be spoof saying....
-            player:delGil(1000000);
-            player:tradeComplete();
-            player:setPos(140, 12, -132, 64);
-            -- HALL = 3;
-        elseif (trade:hasItemQty(3531,1) and trade:getItemCount() == 2) then -- gil + soaring trophy to pop legion hall Muru
-            SpawnMob(17526833); -- Veiled_Amphiptere
-            SpawnMob(17526834); -- Veiled_Ixion
-            SpawnMob(17526835); -- Veiled_Sandworm
-            -- player:PrintToPlayer( "You will now be transported to Legion" ); -- needs to be spoof saying....
-            player:delGil(1000000);
-            player:tradeComplete();
-            player:setPos(-170, 12, -140, 128);
-            -- HALL = 4;
-        elseif (trade:hasItemQty(3532,1) and trade:getItemCount() == 2) then -- gil + veiled trophy to pop legion hall Mul
-            SpawnMob(17526851); -- Paramount_Naraka
-            SpawnMob(17526852); -- Paramount_Harpeia
-            SpawnMob(17526853); -- Paramount_Mantis
-            SpawnMob(17526854); -- Paramount_Ironclad
-            SpawnMob(17526880); -- 2 hour ele
-            -- player:PrintToPlayer( "You will now be transported to Legion" ); -- needs to be spoof saying....
-            player:delGil(1000000);
-            player:tradeComplete();
-            player:setPos(-20, 12, 68, 64);
-            -- HALL = 5;
-        end
+    local gil = trade:getGil();
+    local itemCount = trade:getItemCount();
+
+    if (trade:hasItemQty(4104,1) and gil == price and itemCount == 2) then -- gil + fire cluster to pop legion hall An
+        player:setLocalVar("Legion_Hall_ID", 1);
+        player:startEvent(10002,0);
+    elseif (trade:hasItemQty(3529,1) and gil == price and itemCount == 2) then -- gil + lofty trophy to pop legion hall Ki
+        player:setLocalVar("Legion_Hall_ID", 2);
+        player:startEvent(10002,1);
+    elseif (trade:hasItemQty(3530,1) and gil == price and itemCount == 2) then -- gil + mired trophy to pop legion hall Im
+        player:setLocalVar("Legion_Hall_ID", 3);
+        player:startEvent(10002,2);
+    elseif (trade:hasItemQty(3531,1) and gil == price and itemCount == 2) then -- gil + soaring trophy to pop legion hall Muru
+        player:setLocalVar("Legion_Hall_ID", 4);
+        player:startEvent(10002,3);
+    elseif (trade:hasItemQty(3532,1) and gil == price and itemCount == 2) then -- gil + veiled trophy to pop legion hall Mul
+        player:setLocalVar("Legion_Hall_ID", 5);
+        player:startEvent(10002,4);
     else
         player:PrintToPlayer( "You do not meet the requirements to launch Legion!" );
     end
@@ -77,18 +56,15 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
---[[
-    if (player:getPartySize() < 3) then
-        player:messageSpecial(PARTY_TOO_SMALL);
-    else
-        local HALL_ID = player:getVar("Legion_Hall_ID");
-        if (HALL_ID > 0) then
-            -- player:addStatusEffectEx(EFFECT_LEGION, EFFECT_BATTLEFIELD, HALL_ID, 0, 0, 0, 0, 0);
-            HALL_ID = HALL_ID -1;
-            player:startEvent(10002, HALL_ID)
-        end
-    end
-]]
+    local AN = "\n Hall of An : Fire Cluster ";
+    local IM = "\n Hall of Im : Lofty Trophy ";
+    local KI = "\n Hall of Ki : Mired Trophy ";
+    local MURU = "\n Hall of Muru : Soaring Trophy ";
+    local MULL = "\n Hall of Mull : Veiled Trophy ";
+    local msg = AN..IM..KI..MURU..MULL;
+    player:SpoofChatPlayer("Entry requires "..price.." gil and an item. ", MESSAGE_ECHO, npc:getID());
+    player:SpoofChatPlayer(msg, MESSAGE_ECHO, npc:getID());
+    -- player:SpoofChatPlayer("\n Hall(s) of SECRETS : Can you discover it? ", MESSAGE_ECHO, npc:getID());
 end;
 
 -----------------------------------
@@ -107,27 +83,82 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("onFinish CSID: %u", csid);
     -- printf("onFinish RESULT: %u", option);
---[[
-    local party = player:getParty();
-    if (csid == 10000) then
-        -- ?
-    elseif (csid == 10001) then
-        -- ?
-    elseif (csid == 10002 and option == 1) then
-        if (player:getVar("Legion_Hall_ID") == 1) then -- An
-        elseif (player:getVar("Legion_Hall_ID") == 2) then -- Ki
-        elseif (player:getVar("Legion_Hall_ID") == 3) then -- Im
-        elseif (player:getVar("Legion_Hall_ID") == 4) then -- Muru
-        elseif (player:getVar("Legion_Hall_ID") == 5) then -- Mul
-        -- elseif (player:getVar("Legion_Hall_ID") == 127) then -- Mars
-            -- Mars needs instance code.
+
+    local alliance = player:getAlliance();
+    local legionHall = player:getLocalVar("Legion_Hall_ID");
+    local tele2Hall = 10009+(legionHall);
+    --[[
+        Event    Place            (   x    y    z  )
+        10010    Hall of An       ( -220, 12,  265 )
+        10011    Hall of Im       (  180, 12,  265 )
+        10012    Hall of Ki       (  220, 12, -185 )
+        10013    Hall of Muru     (  180, 12, -180 )
+        10014    Hall of Mull     (  -20, 12,   68 )
+        10015    Lobby A          ( -220, 12,  332 )
+        10016    Lobby B          (  180, 12,  333 )
+        10017    Lobby C          ( -220, 12, -255 )
+        10018    Lobby D          (  180, 12, -255 )
+        10019    Lobby A ..again..( -220, 12,  332 )
+    ]]
+    if (csid == 10002 and option == 1) then
+        print('[DEBUG] Hall ID: ' .. legionHall);
+        if (legionHall > 0 and legionHall <= 5) then
+            local alliance = player:getAlliance();
+            if (alliance ~= nil) then
+                for _,member in pairs(alliance) do
+                    if (player:getZoneID() == member:getZoneID()) then
+                        member:startEvent(tele2Hall);
+                    end
+                end
+            end
         end
-    elseif (csid == 10003 and option == 1) then -- Victory
-        player:setVar("Legion_Hall_ID", 0);
-        player:setPos(237.5, 24.5, 466.4, 192, 110);
-    elseif (csid == 10004 and option == 999) then -- Failure
-        player:setVar("Legion_Hall_ID", 0);
-        player:setPos(237.5, 24.5, 466.4, 192, 110);
+    elseif (csid == 10010 and csid == tele2Hall) then -- An
+        SpawnMob(17526785); -- Lofty Behemoth
+        SpawnMob(17526786); -- Lofty Wyrm
+        SpawnMob(17526787); -- Lofty Adamantoise
+        player:tradeComplete();
+        -- player:setPos(-220, 12, 265, 63, 183); -- Right
+        -- player:setPos(-180, 12, 212, 192, 183); -- Wrong
+    elseif (csid == 10011 and csid == tele2Hall) then -- Ki
+        SpawnMob(17526805); -- Mired Cerberus
+        SpawnMob(17526806); -- Mired Khimaira
+        SpawnMob(17526807); -- Mired Hydra
+        player:tradeComplete();
+        -- player:setPos(180, 12, 265, 63, 183); -- Right
+        -- player:setPos(130, 12, 220, 0, 183); -- Wrong
+    elseif (csid == 10012 and csid == tele2Hall) then -- Im
+        SpawnMob(17526819); -- Soaring Corse
+        SpawnMob(17526820); -- Soaring Dvergr
+        SpawnMob(17526821); -- Soaring Vampyr
+        player:tradeComplete();
+        -- player:setPos(220, 12, -185, 191, 183); -- Right
+        -- player:setPos(140, 12, -132, 64, 183); -- Wrong
+    elseif (csid == 10013 and csid == tele2Hall) then -- Muru
+        SpawnMob(17526833); -- Veiled Amphiptere
+        SpawnMob(17526834); -- Veiled Ixion
+        SpawnMob(17526835); -- Veiled Sandworm
+        player:tradeComplete();
+        -- player:setPos(180, 12, -180, 128, 183); -- Right
+        -- player:setPos(-170, 12, -140, 128, 183); -- Wrong
+    elseif (csid == 10014 and csid == tele2Hall) then -- Mul
+        SpawnMob(17526847); -- Lofty Harpeia (Alt)
+        SpawnMob(17526848); -- Mired Mantis (Alt)
+        SpawnMob(17526849); -- Soaring Naraka (Alt)
+        SpawnMob(17526850); -- Veiled Ironclad (Alt)
+        player:tradeComplete();
+        -- player:setPos(-20, 12, 68, 63, 183); -- Exactly right
+        -- player:setPos(-20, 12, 68, 64, 183); -- Almost!
+    --[[
+    elseif (csid == 10015) then -- Lobby A
+        -- player:setPos(-220, 12, 332, 191, 183);
+    elseif (csid == 10016) then -- Lobby B
+        -- player:setPos(180, 12, 333, 191, 183);
+    elseif (csid == 10017) then -- Lobby C
+        -- player:setPos(-220, 12, -255, 63, 183);
+    elseif (csid == 10018) then -- Lobby D
+        -- player:setPos(180, 12, -255, 63, 183);
+    elseif (csid == 10019) then -- Lobby A (again)
+        -- player:setPos(-220, 12, 332, 191, 183);
+    ]]
     end
-]]
 end;

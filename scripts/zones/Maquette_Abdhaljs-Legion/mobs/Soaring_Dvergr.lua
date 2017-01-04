@@ -66,4 +66,5 @@ end;
 
 function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Soaring Dweorg
+    SpawnMob(17527789); -- Auspicious_Entity : Restore
 end;

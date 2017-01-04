@@ -76,4 +76,5 @@ end;
 
 function onMobDespawn(mob)
     SpawnMob(mob:getID()+3) -- Spawns Lofty_Zilant
+    SpawnMob(17527787); -- Auspicious_Entity : Restore
 end;

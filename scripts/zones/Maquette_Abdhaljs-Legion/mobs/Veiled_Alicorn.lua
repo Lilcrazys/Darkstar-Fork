@@ -102,5 +102,6 @@ function onMobDespawn(mob)
 
     if (popBoss == true) then
         SpawnMob(17526839); -- Veiled Ironclad
+        SpawnMob(17527791); -- Auspicious_Entity : Extension
     end
 end;

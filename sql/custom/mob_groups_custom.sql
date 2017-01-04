@@ -523,7 +523,7 @@ REPLACE INTO `mob_groups` VALUES (6848,2255,127,0,128,1936,100000,0,128,128,0); 
 
 REPLACE INTO `mob_groups` VALUES (6857,44,128,18000,128,24,70000,0,98,100,0); -- OST 86400
 
-REPLACE INTO `mob_groups` VALUES (6859,268,128,0,128,195,93000,0,128,128,0); -- Aspidochelone 
+REPLACE INTO `mob_groups` VALUES (6859,268,128,0,128,195,93000,0,128,128,0); -- Aspidochelone
 
 REPLACE INTO `mob_groups` VALUES (6909,4416,129,0,0,0,0,0,0,0,0);
 
@@ -1220,62 +1220,87 @@ REPLACE INTO `mob_groups` VALUES (9140,3039,175,1056,0,2692,0,0,91,96,0); -- Orc
 -- --------------------
 -- Legion
 
--- Hall of An
-INSERT INTO `mob_groups` VALUES (90000,9000,183,0,128,9000,70000,10000,95,97,0); -- Lofty_Zilant
-INSERT INTO `mob_groups` VALUES (90001,9001,183,0,128,9001,70000,10000,100,102,0); -- Lofty_Harpeia
-INSERT INTO `mob_groups` VALUES (90002,9002,183,0,128,9002,60000,10000,90,92,0); -- Lofty_Behemoth
+-- Hall of An Wave 1
+INSERT INTO `mob_groups` VALUES (90000,9000,183,0,128,9000,60000,10000,90,92,0); -- Lofty_Behemoth
+INSERT INTO `mob_groups` VALUES (90001,9001,183,0,128,9001,70000,10000,95,97,0); -- Lofty_Zilant
+INSERT INTO `mob_groups` VALUES (90002,9002,183,0,128,9002,60000,10000,90,92,0); -- Lofty_Adamantoise
+                                                      
+-- Hall of An Wave 2                                  
 INSERT INTO `mob_groups` VALUES (90003,9003,183,0,128,9003,70000,10000,95,97,0); -- Lofty_Elasmoth
-INSERT INTO `mob_groups` VALUES (90004,9004,183,0,128,9004,70000,10000,95,97,0); -- Lofty_Ferromantoise
-INSERT INTO `mob_groups` VALUES (90005,9005,183,0,128,9005,60000,10000,90,92,0); -- Lofty_Wyrm
-INSERT INTO `mob_groups` VALUES (90006,9006,183,0,128,9006,60000,10000,90,92,0); -- Lofty_Adamantoise
-
-INSERT INTO `mob_groups` VALUES (90007,9007,183,600,0,9007,20000,20000,90,95,0); -- Auspicious Entity Air
-INSERT INTO `mob_groups` VALUES (90008,9008,183,600,0,9008,20000,20000,90,95,0); -- Auspicious Entity Dark
-INSERT INTO `mob_groups` VALUES (90009,9009,183,600,0,9009,20000,20000,90,95,0); -- Auspicious Entity Earth
-INSERT INTO `mob_groups` VALUES (90010,9010,183,600,0,9010,20000,20000,90,95,0); -- Auspicious Entity Fire
-INSERT INTO `mob_groups` VALUES (90011,9011,183,0,128,9011,20000,20000,90,95,0); -- Auspicious Entity Ice
-INSERT INTO `mob_groups` VALUES (90012,9012,183,0,128,9012,20000,20000,90,95,0); -- Auspicious Entity Light
-INSERT INTO `mob_groups` VALUES (90013,9013,183,600,0,9013,20000,20000,90,95,0); -- Auspicious Entity Lighting
-INSERT INTO `mob_groups` VALUES (90014,9014,183,0,128,9014,20000,20000,90,95,0); -- Auspicious Entity Water
-
--- Hall of Ki
-INSERT INTO `mob_groups` VALUES (90020,9020,183,0,128,9020,60000,10000,95,97,0); -- Mired_Cerberus
-INSERT INTO `mob_groups` VALUES (90021,9021,183,0,128,9021,60000,10000,95,97,0); -- Mired_Khim
-INSERT INTO `mob_groups` VALUES (90022,9022,183,0,128,9022,60000,10000,95,97,0); -- Mired_Hydra
-INSERT INTO `mob_groups` VALUES (90023,9023,183,0,128,9023,80000,10000,100,102,0); -- Mired_Orthrus
-INSERT INTO `mob_groups` VALUES (90024,9024,183,0,128,9024,80000,10000,100,102,0); -- Mired_Khrysokhimaira
-INSERT INTO `mob_groups` VALUES (90025,9025,183,0,128,9025,80000,10000,100,102,0); -- Mired_Alfard
-INSERT INTO `mob_groups` VALUES (90026,9026,183,0,128,9026,80000,10000,105,107,0); -- Mired_Mantis
-
--- Hall of Im
-INSERT INTO `mob_groups` VALUES (90030,9030,183,0,128,9030,60000,10000,100,102,0); -- Soaring_Corse
-INSERT INTO `mob_groups` VALUES (90031,9031,183,0,128,9031,60000,10000,100,102,0); -- Soaring_Dvergr
-INSERT INTO `mob_groups` VALUES (90032,9032,183,0,128,9032,60000,10000,100,102,0); -- Soaring_Vampyr
-INSERT INTO `mob_groups` VALUES (90033,9033,183,0,128,9033,80000,10000,105,107,0); -- Soaring_Kumakatok
-INSERT INTO `mob_groups` VALUES (90034,9034,183,0,128,9034,80000,10000,105,107,0); -- Soaring_Dweorg
-INSERT INTO `mob_groups` VALUES (90035,9035,183,0,128,9035,80000,10000,105,107,0); -- Soaring_Strigoi
-INSERT INTO `mob_groups` VALUES (90036,9036,183,0,128,9036,80000,10000,110,112,0); -- Soaring_Naraka
-
--- Hall of Muru
-INSERT INTO `mob_groups` VALUES (90040,9040,183,0,128,9040,60000,10000,105,107,0); -- Veiled_Amphiptere
-INSERT INTO `mob_groups` VALUES (90041,9041,183,0,128,9041,60000,10000,105,107,0); -- Veiled_Ixion
-INSERT INTO `mob_groups` VALUES (90042,9042,183,0,128,9042,60000,10000,105,107,0); -- Veiled_Sandworm
-INSERT INTO `mob_groups` VALUES (90043,9043,183,0,128,9043,80000,10000,110,112,0); -- Veiled_Sanguiptere
-INSERT INTO `mob_groups` VALUES (90044,9044,183,0,128,9044,80000,10000,110,112,0); -- Veiled_Alicorn
-INSERT INTO `mob_groups` VALUES (90045,9045,183,0,128,9045,80000,10000,110,112,0); -- Veiled_Gigaworm
-INSERT INTO `mob_groups` VALUES (90046,9046,183,0,128,9046,80000,10000,115,117,0); -- Veiled_Ironclad
-
--- Hall of Mul
-INSERT INTO `mob_groups` VALUES (90050,9050,183,0,128,9050,70000,100000,115,120,0); -- Lofty_Harpeia
-INSERT INTO `mob_groups` VALUES (90051,9051,183,0,128,9051,70000,100000,115,120,0); -- Mired_Mantis
-INSERT INTO `mob_groups` VALUES (90052,9052,183,0,128,9052,70000,100000,115,120,0); -- Soaring_Naraka
-INSERT INTO `mob_groups` VALUES (90053,9053,183,0,128,9053,70000,100000,115,120,0); -- Veiled_Ironclad
-INSERT INTO `mob_groups` VALUES (90054,9054,183,0,128,9054,90000,100000,134,136,0); -- Paramount_Gallu
-INSERT INTO `mob_groups` VALUES (90055,9055,183,0,128,9055,90000,100000,132,134,0); -- Paramount_Botulus
-INSERT INTO `mob_groups` VALUES (90056,9056,183,0,128,9056,70000,100000,130,132,0); -- Paramount_Harpeia
-INSERT INTO `mob_groups` VALUES (90057,9057,183,0,128,9057,70000,100000,124,126,0); -- Paramount_Mantis
-INSERT INTO `mob_groups` VALUES (90058,9058,183,0,128,9058,70000,100000,122,124,0); -- Paramount_Naraka
-INSERT INTO `mob_groups` VALUES (90059,9059,183,0,128,9059,70000,100000,120,122,0); -- Paramount_Ironclad
+INSERT INTO `mob_groups` VALUES (90004,9004,183,0,128,9004,60000,10000,90,92,0); -- Lofty_Wyrm
+INSERT INTO `mob_groups` VALUES (90005,9005,183,0,128,9005,70000,10000,95,97,0); -- Lofty_Ferromantoise
+                                                      
+-- Hall of An Wave 3 (Boss)                           
+INSERT INTO `mob_groups` VALUES (90006,9006,183,0,128,9006,70000,10000,100,102,0); -- Lofty_Harpeia
+                                                      
+-- Hall of Ki: Wave 1                                 
+INSERT INTO `mob_groups` VALUES (90007,9007,183,0,128,9007,60000,10000,95,97,0); -- Mired_Cerberus
+INSERT INTO `mob_groups` VALUES (90008,9008,183,0,128,9008,60000,10000,95,97,0); -- Mired_Khim
+INSERT INTO `mob_groups` VALUES (90009,9009,183,0,128,9009,60000,10000,95,97,0); -- Mired_Hydra
+                                                      
+-- Hall of Ki: Wave 2                                 
+INSERT INTO `mob_groups` VALUES (90010,9010,183,0,128,9010,80000,10000,100,102,0); -- Mired_Orthrus
+INSERT INTO `mob_groups` VALUES (90011,9011,183,0,128,9011,80000,10000,100,102,0); -- Mired_Khrysokhimaira
+INSERT INTO `mob_groups` VALUES (90012,9012,183,0,128,9012,80000,10000,100,102,0); -- Mired_Alfard
+                                                      
+-- Hall of Ki: Wave 3 (Boss)                          
+INSERT INTO `mob_groups` VALUES (90013,9013,183,0,128,9013,80000,10000,105,107,0); -- Mired_Mantis
+                                                      
+-- Hall of Im: Wave 1                                 
+INSERT INTO `mob_groups` VALUES (90014,9014,183,0,128,9014,60000,10000,100,102,0); -- Soaring_Corse
+INSERT INTO `mob_groups` VALUES (90015,9015,183,0,128,9015,60000,10000,100,102,0); -- Soaring_Dvergr
+INSERT INTO `mob_groups` VALUES (90016,9016,183,0,128,9016,60000,10000,100,102,0); -- Soaring_Vampyr
+                                                      
+-- Hall of Im: Wave 2                                 
+INSERT INTO `mob_groups` VALUES (90017,9017,183,0,128,9017,80000,10000,105,107,0); -- Soaring_Kumakatok
+INSERT INTO `mob_groups` VALUES (90018,9018,183,0,128,9018,80000,10000,105,107,0); -- Soaring_Dweorg
+INSERT INTO `mob_groups` VALUES (90019,9019,183,0,128,9019,80000,10000,105,107,0); -- Soaring_Strigoi
+                                                      
+-- Hall of Im: Wave 3 (Boss)                          
+INSERT INTO `mob_groups` VALUES (90020,9020,183,0,128,9020,80000,10000,110,112,0); -- Soaring_Naraka
+                                                      
+-- Hall of Muru: Wave 1                               
+INSERT INTO `mob_groups` VALUES (90021,9021,183,0,128,9021,60000,10000,105,107,0); -- Veiled_Amphiptere
+INSERT INTO `mob_groups` VALUES (90022,9022,183,0,128,9022,60000,10000,105,107,0); -- Veiled_Ixion
+INSERT INTO `mob_groups` VALUES (90023,9023,183,0,128,9023,60000,10000,105,107,0); -- Veiled_Sandworm
+                                                      
+-- Hall of Muru: Wave 2                               
+INSERT INTO `mob_groups` VALUES (90024,9024,183,0,128,9024,80000,10000,110,112,0); -- Veiled_Sanguiptere
+INSERT INTO `mob_groups` VALUES (90025,9025,183,0,128,9025,80000,10000,110,112,0); -- Veiled_Alicorn
+INSERT INTO `mob_groups` VALUES (90026,9026,183,0,128,9026,80000,10000,110,112,0); -- Veiled_Gigaworm
+                                                      
+-- Hall of Muru: Wave 3 (Boss)                        
+INSERT INTO `mob_groups` VALUES (90027,9027,183,0,128,9027,80000,10000,115,117,0); -- Veiled_Ironclad
+                                                      
+-- Hall of Mul: Wave 1                                
+INSERT INTO `mob_groups` VALUES (90028,9028,183,0,128,9028,70000,100000,115,120,0); -- Lofty Harpeia Alt
+INSERT INTO `mob_groups` VALUES (90029,9029,183,0,128,9029,70000,100000,115,120,0); -- Mired Mantis Alt
+INSERT INTO `mob_groups` VALUES (90030,9030,183,0,128,9030,70000,100000,115,120,0); -- Soaring Naraka Alt
+INSERT INTO `mob_groups` VALUES (90031,9031,183,0,128,9031,70000,100000,115,120,0); -- Veiled Ironclad Alt
+                                                      
+-- Hall of Mul: Wave 2                                
+INSERT INTO `mob_groups` VALUES (90032,9032,183,0,128,9034,70000,100000,122,124,0); -- Paramount Naraka
+INSERT INTO `mob_groups` VALUES (90033,9033,183,0,128,9032,70000,100000,130,132,0); -- Paramount Harpeia
+INSERT INTO `mob_groups` VALUES (90034,9034,183,0,128,9033,70000,100000,124,126,0); -- Paramount Mantis
+INSERT INTO `mob_groups` VALUES (90035,9035,183,0,128,9035,70000,100000,120,122,0); -- Paramount Ironclad
+                                                      
+-- Hall of Mul: Wave 3 (Boss)                         
+INSERT INTO `mob_groups` VALUES (90036,9036,183,0,128,9036,90000,100000,134,136,0); -- Paramount Gallu
+INSERT INTO `mob_groups` VALUES (90037,9037,183,0,128,9037,90000,100000,132,134,0); -- Paramount Botulus
+                                                      
+-- Misc (multiple halls)                              
+INSERT INTO `mob_groups` VALUES (90038,9038,183,0,128,9038,20000,20000,90,95,0); -- Auspicious Entity Air
+INSERT INTO `mob_groups` VALUES (90039,9039,183,0,128,9039,20000,20000,90,95,0); -- Auspicious Entity Dark
+INSERT INTO `mob_groups` VALUES (90040,9040,183,0,128,9040,20000,20000,90,95,0); -- Auspicious Entity Earth
+INSERT INTO `mob_groups` VALUES (90041,9041,183,0,128,9041,20000,20000,90,95,0); -- Auspicious Entity Fire
+INSERT INTO `mob_groups` VALUES (90042,9042,183,0,128,9042,20000,20000,90,95,0); -- Auspicious Entity Ice
+INSERT INTO `mob_groups` VALUES (90043,9043,183,0,128,9043,20000,20000,90,95,0); -- Auspicious Entity Light
+INSERT INTO `mob_groups` VALUES (90044,9044,183,0,128,9044,20000,20000,90,95,0); -- Auspicious Entity Lighting
+INSERT INTO `mob_groups` VALUES (90045,9045,183,0,128,9045,20000,20000,90,95,0); -- Auspicious Entity Water
+-- 90046 reserved! Frog_Lady
+-- 90048 reserved! Frog
+-- 90049 reserved! Son_Goku
+-- 90050 reserved!
 
 -- --------------------
 -- Test Zone Custom Section

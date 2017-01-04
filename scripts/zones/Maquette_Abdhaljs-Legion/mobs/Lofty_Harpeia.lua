@@ -91,6 +91,8 @@ function onMobDespawn(mob)
         end
 
         if (popWave2 == true) then
+            SpawnMob(17527792); -- Auspicious_Entity : Time Extension
+            SpawnMob(17527793); -- Auspicious_Entity : Restore
             SpawnMob(17526851); -- Paramount Harpeia
             SpawnMob(17526852); -- Paramount Mantis
             SpawnMob(17526853); -- Paramount Naraka
