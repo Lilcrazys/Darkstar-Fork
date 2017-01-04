@@ -164,10 +164,10 @@ function BluePhysicalSpell(caster, target, spell, params)
 
         hitsdone = hitsdone + 1;
     end
-
+    local physBuff = 1.4+(caster:getStat(MOD_ATT)*0.0005)+(caster:getWeaponDmg()*0.0001);
     -- print("Hits landed "..hitslanded.."/"..hitsdone.." for total damage: "..finaldmg);
-
-    return finaldmg;
+    -- print("physBuff: "..physBuff)
+    return finaldmg*physBuff;
 end;
 
 -- Blue Magical type spells
@@ -242,7 +242,7 @@ function BlueFinalAdjustments(caster, target, spell, dmg, params)
     dmg = utils.stoneskin(target, dmg);
 
     target:delHP(dmg);
-    target:updateEnmityFromDamage(caster,dmg);
+    target:updateEnmityFromDamage(caster,dmg*customEnmityAdjust(caster,spell,params));
     target:handleAfflatusMiseryDamage(dmg);
     -- TP has already been dealt with.
     return dmg;

@@ -638,7 +638,7 @@ end;
     else
         target:delHP(dmg);
         target:handleAfflatusMiseryDamage(dmg);
-        target:updateEnmityFromDamage(caster,dmg);
+        target:updateEnmityFromDamage(caster,dmg*customEnmityAdjust(caster,spell));
         -- Only add TP if the target is a mob
         if (target:getObjType() ~= TYPE_PC) then
             target:addTP(100);
@@ -1345,4 +1345,51 @@ function customResCheck(target, effect)
     end
 
     return effectRes;
+end;
+
+-- This is used to modify enmity for damage type spells ONLY!
+function customEnmityAdjust(caster,spell,params)
+    local multiplier = 1;
+    -- Don't even check all this if not a player..
+    if (caster:getObjType() == TYPE_PC) then
+        -- Spell specific adjustments..
+        if (spell:getID() == 21) then     -- Holy
+            multiplier = multiplier*1.2;
+        elseif (spell:getID() == 22) then -- Holy 2
+            multiplier = multiplier*1.2;
+        end
+
+        -- Main Job specific adjustments..
+        local mJob = caster:getMainJob();
+        if (mJob == JOBS.PLD) then
+            multiplier = multiplier*1.11;
+        end
+
+        -- Sub Job specific adjustments..
+        local sJob = caster:getSubJob();
+        if (sJob == JOBS.DRK) then
+            multiplier = multiplier*1.11;
+        end
+
+        -- Skill specific adjustments..
+        local skill = spell:getSkillType();
+        if (skill == ELEMENTAL_MAGIC_SKILL) then
+            multiplier = multiplier*0.9;
+        elseif (skill == NINJUTSU_SKILL) then
+            multiplier = multiplier*1.11;
+        elseif (skill == BLUE_SKILL and params ~= nil) then
+            if (params.dmgtype == nil) then -- This will be nil unless physical type
+                multiplier = multiplier*1.25;
+            elseif (params.dmgtype == DMGTYPE_BLUNT or params.dmgtype == DMGTYPE_PIERCE
+            or params.dmgtype == DMGTYPE_SLASH or params.dmgtype == DMGTYPE_H2H) then
+                multiplier = multiplier*1.11;
+            end
+        end
+    end
+
+    -- Remember multiple conditions can be tripped and stacked,
+    -- but if it doesn't do damage it doesn't get adjusted!
+    -- Other spells are handled in the database table instead.
+    -- print(multiplier)
+    return multiplier;
 end;
