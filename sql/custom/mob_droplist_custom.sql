@@ -2093,7 +2093,7 @@ INSERT INTO `mob_droplist` VALUES (9004,0,3925,68); -- Tanzanite Jewel
 -- Lofty_Ferromantoise
 INSERT INTO `mob_droplist` VALUES (9005,0,3925,65); -- Tanzanite Jewel
 
--- Lofty Harpeia
+-- Lofty Harpeia (Boss)
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,1000); -- Harpia - Feet -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9006,0,3529,1000); -- Lofty Trophy
 INSERT INTO `mob_droplist` VALUES (9006,0,3925,62); -- Tanzanite Jewel
@@ -2116,7 +2116,7 @@ INSERT INTO `mob_droplist` VALUES (9011,0,3925,75); -- Tanzanite Jewel
 -- Mired_Alfard
 INSERT INTO `mob_droplist` VALUES (9012,0,3925,72); -- Tanzanite Jewel
 
--- Mired_Mantis
+-- Mired_Mantis (Boss)
 INSERT INTO `mob_droplist` VALUES (9013,0,3925,1000); -- Mantis - Legs -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9013,0,3530,1000); -- Mired Trophy
 INSERT INTO `mob_droplist` VALUES (9013,0,3925,74); -- Tanzanite Jewel
@@ -2145,7 +2145,7 @@ INSERT INTO `mob_droplist` VALUES (9018,0,3925,105);
 INSERT INTO `mob_droplist` VALUES (9019,0,3925,109); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9019,0,3925,119);
 
--- Soaring_Naraka
+-- Soaring_Naraka (Boss)
 INSERT INTO `mob_droplist` VALUES (9020,0,3925,1000); -- Nakara - Hands -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9020,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9020,0,3531,1000); -- Soaring Trophy
@@ -2175,35 +2175,35 @@ INSERT INTO `mob_droplist` VALUES (9025,0,3925,173); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9026,0,3925,323); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9026,0,3925,187); -- Tanzanite Jewel
 
--- Veiled_Ironclad
+-- Veiled_Ironclad (Boss)
 INSERT INTO `mob_droplist` VALUES (9027,0,3925,1000); -- Iron Clad - Heads
 INSERT INTO `mob_droplist` VALUES (9027,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9027,0,3532,1000); -- Veiled Trophy
 INSERT INTO `mob_droplist` VALUES (9027,0,3925,82); -- Tanzanite Jewel
 
--- Lofty_Harpeia
+-- Lofty_Harpeia (Alt for Hall of Mul)
 INSERT INTO `mob_droplist` VALUES (9028,0,3925,1000); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9028,0,3925,1000); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9028,0,3925,500); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9028,0,3925,134); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9028,0,3529,200); -- Lofty Trophy
+INSERT INTO `mob_droplist` VALUES (9028,0,3529,100); -- Lofty Trophy
 
--- Mired_Mantis
+-- Mired_Mantis (Alt for Hall of Mul)
 INSERT INTO `mob_droplist` VALUES (9029,0,3925,1000); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9029,0,3925,1000); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9029,0,3925,500); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9029,0,3925,192); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9029,0,3530,200); -- Mired Trophy
+INSERT INTO `mob_droplist` VALUES (9029,0,3530,100); -- Mired Trophy
 
--- Soaring_Naraka
+-- Soaring_Naraka (Alt for Hall of Mul)
 INSERT INTO `mob_droplist` VALUES (9030,0,3925,1000); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9030,0,3925,1000); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9030,0,3925,500); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9030,0,3925,155); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9030,0,3531,200); -- Soaring Trophy
+INSERT INTO `mob_droplist` VALUES (9030,0,3531,100); -- Soaring Trophy
 
--- Veiled_Ironclad
+-- Veiled_Ironclad (Alt for Hall of Mul)
 INSERT INTO `mob_droplist` VALUES (9031,0,3925,1000); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9031,0,3925,1000); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (9031,0,3925,500); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9031,0,3925,122); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (9031,0,3532,200); -- Veiled Trophy
+INSERT INTO `mob_droplist` VALUES (9031,0,3532,100); -- Veiled Trophy
 
 -- Paramount_Harpeia
 INSERT INTO `mob_droplist` VALUES (9032,0,3925,1000); -- Harpia -- Tanzanite Jewel
@@ -2229,13 +2229,13 @@ INSERT INTO `mob_droplist` VALUES (9035,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9035,0,3925,200); -- Tanzanite Jewel
 -- INSERT INTO `mob_droplist` VALUES (9035,0,4851,100); -- Meteor
 
--- Paramount_Gallu
+-- Paramount_Gallu (Boss)
 INSERT INTO `mob_droplist` VALUES (9036,0,3925,1000); -- Gallu - Bodies -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9036,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9036,0,3925,200); -- Tanzanite Jewel
 -- INSERT INTO `mob_droplist` VALUES (9036,0,4851,141); -- Meteor
 
--- Paramount_Botulus
+-- Paramount_Botulus (Boss)
 INSERT INTO `mob_droplist` VALUES (9037,0,3925,1000); -- Botulus -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9037,0,3925,1000); -- Tanzanite Jewel
 INSERT INTO `mob_droplist` VALUES (9037,0,3925,153); -- Tanzanite Jewel
