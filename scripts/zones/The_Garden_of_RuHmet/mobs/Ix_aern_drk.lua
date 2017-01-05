@@ -40,14 +40,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    -- CAN NOT handle Aern reraise in this function (or naywhere in script). At all.
-end;
-
------------------------------------
--- onMobDespawn
------------------------------------
-
-function onMobDespawn(mob)
 end;
 
 -----------------------------------
@@ -57,4 +49,11 @@ end;
 function onMobDeath(mob, player, isKiller)
     --SetServerVariable("[PH]Ix_aern_drk", 0);
 
+end;
+
+-----------------------------------
+-- onMobDespawn
+-----------------------------------
+
+function onMobDespawn(mob)
 end;

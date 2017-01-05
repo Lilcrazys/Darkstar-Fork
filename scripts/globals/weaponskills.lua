@@ -32,7 +32,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
 
     if (weaponType == SKILL_H2H or weaponType == SKILL_NON) then
         local h2hSkill = ((attacker:getSkillLevel(1) * 0.11) + 3);
-        
+
         if (params.kick and attacker:hasStatusEffect(EFFECT_FOOTWORK)) then
             weaponDamage = attacker:getMod(MOD_KICK_DMG) + 18; -- footwork formerly added 18 base dmg to all kicks, its effect on weaponskills was unchanged by update
         else
@@ -76,7 +76,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
 
     local critrate = 0;
     local nativecrit = 0;
-    
+
     if (params.canCrit) then -- work out critical hit ratios, by +1ing
         critrate = fTP(tp,params.crit100,params.crit200,params.crit300);
         -- add on native crit hit rate (guesstimated, it actually follows an exponential curve)
@@ -142,7 +142,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
     end
 
     if not multiHitfTP then dmg = base end
-    
+
     if ((attacker:getOffhandDmg() ~= 0) and (attacker:getOffhandDmg() > 0 or weaponType==SKILL_H2H)) then
 
         local chance = math.random();
@@ -202,7 +202,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
     -- print("Landed " .. hitslanded .. "/" .. numHits .. " hits with hitrate " .. hitrate .. "!");
 
     finaldmg = target:physicalDmgTaken(finaldmg);
-    
+
     if (weaponType == SKILL_H2H) then
         finaldmg = finaldmg * target:getMod(MOD_HTHRES) / 1000;
     elseif (weaponType == SKILL_DAG or weaponType == SKILL_POL) then
@@ -212,7 +212,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
     else
         finaldmg = finaldmg * target:getMod(MOD_SLASHRES) / 1000;
     end
-    
+
     if (attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
         finaldmg = finaldmg * (100 + attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
     end
@@ -239,17 +239,17 @@ function doMagicWeaponskill(attacker, target, wsID, tp, primary, action, params)
          attacker:getStat(MOD_VIT) * params.vit_wsc + attacker:getStat(MOD_AGI) * params.agi_wsc +
          attacker:getStat(MOD_INT) * params.int_wsc + attacker:getStat(MOD_MND) * params.mnd_wsc +
          attacker:getStat(MOD_CHR) * params.chr_wsc) + fint;
-    
+
     -- Applying fTP multiplier
     local ftp = fTP(tp,params.ftp100,params.ftp200,params.ftp300) + bonusfTP;
-    
+
     dmg = dmg * ftp;
-    
+
     dmg = addBonusesAbility(attacker, params.ele, target, dmg, params);
     dmg = dmg * applyResistanceAbility(attacker,target,params.ele,params.skill, bonusacc);
     dmg = target:magicDmgTaken(dmg);
     dmg = adjustForTarget(target,dmg,params.ele);
-    
+
     if (attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
         dmg = dmg * (100 + attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
     end
@@ -318,7 +318,7 @@ function getHitRate(attacker,target,capHitRate,bonus)
     end
 
     acc = acc + bonus;
-    
+
     if (attacker:getMainLvl() > target:getMainLvl()) then -- acc bonus!
         acc = acc + ((attacker:getMainLvl()-target:getMainLvl())*4);
     elseif (attacker:getMainLvl() < target:getMainLvl()) then -- acc penalty :(
@@ -513,7 +513,7 @@ function cMeleeRatio(attacker, defender, params, ignoredDef)
     critbonus = utils.clamp(critbonus, 0, 100);
     pdifcrit[1] = pdifmin * ((100 + critbonus)/100);
     pdifcrit[2] = pdifmax * ((100 + critbonus)/100);
-    
+
     return pdif, pdifcrit;
 end;
 
@@ -849,7 +849,7 @@ function getStepAnimation(skill)
         return 23;
     else
         return 0;
-    end    
+    end
 end
 
 function getFlourishAnimation(skill)
@@ -875,7 +875,7 @@ function getFlourishAnimation(skill)
         return 33;
     else
         return 0;
-    end    
+    end
 end
 
 function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, slot, tpHitsLanded, bonusTP, taChar)
@@ -891,6 +891,7 @@ function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, sl
         else
             enmityMult = enmityMult*0.8;
         end
+        debugWeaponskillDamageEnmity(enmityEntity,defender,finaldmg,enmityMult)
         defender:updateEnmityFromDamage(enmityEntity, finaldmg * enmityMult)
     end
 
@@ -919,7 +920,7 @@ function applyAftermathEffect(player, tp, params)
 
     local apply_power = 0
     if (tp == 3000) then
-        player:addStatusEffect(EFFECT_AFTERMATH_LV3, params.power.lv3, 0, 
+        player:addStatusEffect(EFFECT_AFTERMATH_LV3, params.power.lv3, 0,
             params.duration.lv3, 0, params.subpower.lv3)
     elseif (tp >= 2000) then
         apply_power = params.power.lv2 + ((tp - 2000) / (100 / params.power.lv2_inc))
@@ -988,4 +989,20 @@ function handleWSGorgetBelt(attacker)
         end
     end
     return ftpBonus, accBonus;
+end;
+
+-- Big huge pile of debug code, replicating a lot of core shit to be less spammy than a core print..
+function debugWeaponskillDamageEnmity(player,mob,dmg,multiplier)
+    local levelMod;
+    if (mob == nil) then
+        levelMod = utils.clamp(player:getMainLvl(), 0, 99); -- same as "default fallback" in core
+    else
+        levelMod = utils.clamp(mob:getMainLvl(), 0, 99); -- core says "correct mod value"
+    end
+    levelMod = ((31*levelMod)/50)+6; -- And this is the math core does to it..
+
+    local CE = (80 / levelMod) * (dmg * multiplier);
+    local VE = (240 / levelMod) * (dmg * multiplier);
+
+    print("[EnmityFromDamage-WS]\n Player: "..player:getName().."\t Mob: "..mob:getName().."\n CE: "..CE.."\t VE: "..VE.."\n WeaponSkill ".."\t\t Dmg: "..dmg.."\n levelMod: "..levelMod.."\t\t multiplier: "..multiplier);
 end;

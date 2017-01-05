@@ -644,7 +644,7 @@ end;
             target:addTP(100);
         end
     end
-
+    debugSpellDamageEnmity(caster,target,dmg,customEnmityAdjust(caster,spell),spell);
     return dmg;
  end;
 
@@ -1390,6 +1390,23 @@ function customEnmityAdjust(caster,spell,params)
     -- Remember multiple conditions can be tripped and stacked,
     -- but if it doesn't do damage it doesn't get adjusted!
     -- Other spells are handled in the database table instead.
+
     -- print(multiplier)
     return multiplier;
+end;
+
+-- Big huge pile of debug code, replicating a lot of core shit to be less spammy than a core print..
+function debugSpellDamageEnmity(caster,target,dmg,multiplier,spell)
+    local levelMod;
+    if (target == nil) then
+        levelMod = utils.clamp(caster:getMainLvl(), 0, 99); -- same as "default fallback" in core
+    else
+        levelMod = utils.clamp(target:getMainLvl(), 0, 99); -- core says "correct mod value"
+    end
+    levelMod = ((31*levelMod)/50)+6; -- And this is the math core does to it..
+
+    local CE = (80 / levelMod) * (dmg * multiplier);
+    local VE = (240 / levelMod) * (dmg * multiplier);
+
+    print("[EnmityFromDamage-Spell]\n Caster: "..caster:getName().."\t Target: "..target:getName().."\n CE: "..CE.."\t VE: "..VE.."\n Spell ID: "..spell:getID().."\t\t Dmg: "..dmg.."\n levelMod: "..levelMod.."\t\t multiplier: "..multiplier);
 end;
