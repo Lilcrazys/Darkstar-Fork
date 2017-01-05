@@ -1,5 +1,5 @@
 -----------------------------------------
--- ID: 5708
+-- ID: 5709
 -- Item: Cotton Candy
 -- Food Effect: 5 Min, All Races
 -----------------------------------------
@@ -14,11 +14,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
+    local result = 0;
     if (target:hasStatusEffect(EFFECT_FOOD)) then
         result = 246;
     end
-return result;
+    return result;
 end;
 
 -----------------------------------------
@@ -26,7 +26,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:addStatusEffect(EFFECT_FOOD,0,0,300,5708);
+    target:addStatusEffect(EFFECT_FOOD,0,0,300,5709);
 end;
 
 -----------------------------------------

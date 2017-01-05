@@ -1,14 +1,11 @@
 -----------------------------------------
--- ID: 4266
--- Item: Fum-Long Salmon Sub
--- Food Effect: 60Min, All Races
+-- ID: 5728
+-- Item: serving_of_zaru_soba_+1
+-- Food Effect: 60min, All Races
 -----------------------------------------
--- Agility 1
--- Vitality 1
--- Dexterity 2
--- Intelligence 2
--- Mind -2
--- Ranged Accuracy 3
+-- Agility 4
+-- HP % 12 (cap 185)
+-- Resist Sleep +10
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -18,11 +15,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
+    local result = 0;
     if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
         result = 246;
     end
-return result;
+    return result;
 end;
 
 -----------------------------------------
@@ -30,7 +27,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:addStatusEffect(EFFECT_FOOD,0,0,3600,4266);
+    target:addStatusEffect(EFFECT_FOOD,0,0,3600,5728);
 end;
 
 -----------------------------------------
@@ -38,12 +35,10 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_AGI, 1);
-    target:addMod(MOD_VIT, 1);
-    target:addMod(MOD_DEX, 2);
-    target:addMod(MOD_INT, 1);
-    target:addMod(MOD_MND, -2);
-    target:addMod(MOD_RACC, 3);
+    target:addMod(MOD_AGI, 4);
+    target:addMod(MOD_FOOD_HPP, 12);
+    target:addMod(MOD_FOOD_HP_CAP, 185);
+    target:addMod(MOD_SLEEPRES, 10);
 end;
 
 -----------------------------------------
@@ -51,10 +46,8 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_AGI, 1);
-    target:delMod(MOD_VIT, 1);
-    target:delMod(MOD_DEX, 2);
-    target:delMod(MOD_INT, 1);
-    target:delMod(MOD_MND, -2);
-    target:delMod(MOD_RACC, 3);
+    target:delMod(MOD_AGI, 4);
+    target:delMod(MOD_FOOD_HPP, 12);
+    target:delMod(MOD_FOOD_HP_CAP, 185);
+    target:delMod(MOD_SLEEPRES, 10);
 end;

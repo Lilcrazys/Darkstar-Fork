@@ -1,10 +1,12 @@
 -----------------------------------------
--- ID: 5652
--- Item: Anchovy
--- Food Effect: 3Min, All Races
+-- ID: 5713
+-- Item: orange_snow_cone
+-- Food Effect: 5 Min, All Races
 -----------------------------------------
--- Dexterity +1
--- Mind -3
+-- MP +20% (cap 20)
+-- AGI -1
+-- INT +1
+-- Wind resistance +5
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -14,11 +16,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-local result = 0;
-    if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
+    local result = 0;
+    if (target:hasStatusEffect(EFFECT_FOOD)) then
         result = 246;
     end
-return result;
+    return result;
 end;
 
 -----------------------------------------
@@ -26,7 +28,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:addStatusEffect(EFFECT_FOOD,0,0,180,5652);
+    target:addStatusEffect(EFFECT_FOOD,0,0,300,5713);
 end;
 
 -----------------------------------------
@@ -34,8 +36,11 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_DEX, 1);
-    target:addMod(MOD_MND,-3);
+    target:addMod(MOD_FOOD_MPP, 20);
+    target:addMod(MOD_FOOD_MP_CAP, 20);
+    target:addMod(MOD_AGI, -1);
+    target:addMod(MOD_INT, 1);
+    target:addMod(MOD_WINDRES, 5);
 end;
 
 -----------------------------------------
@@ -43,6 +48,9 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_DEX, 1);
-    target:delMod(MOD_MND,-3);
+    target:delMod(MOD_FOOD_MPP, 20);
+    target:delMod(MOD_FOOD_MP_CAP, 20);
+    target:delMod(MOD_AGI, -1);
+    target:delMod(MOD_INT, 1);
+    target:delMod(MOD_WINDRES, 5);
 end;
