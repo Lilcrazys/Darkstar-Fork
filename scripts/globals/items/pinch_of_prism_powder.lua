@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 4164
---	Prism Powder
---	When applied, it makes things invisible.
+--    ID: 4164
+--    Prism Powder
+--    When applied, it makes things invisible.
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -11,7 +11,7 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	return 0;
+    return 0;
 end;
 
 -----------------------------------------
@@ -19,8 +19,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	local duration = math.random(60, 180);
-	if (not target:hasStatusEffect(EFFECT_INVISIBLE)) then
-		target:addStatusEffect(EFFECT_INVISIBLE,0,10,(math.floor(duration) * SNEAK_INVIS_DURATION_MULTIPLIER));
-	end
+    if (not target:hasStatusEffect(EFFECT_INVISIBLE)) then
+        target:addStatusEffect(EFFECT_INVISIBLE,0,10,math.random(60, 180));
+    end
 end;

@@ -47,7 +47,7 @@ function onItemUse(target)
     elseif (bane ~= nil) then
         target:delStatusEffect(EFFECT_BANE);
         final = EFFECT_BANE;
-    elseif (target:hasStatusEffect(EFFECT_DOOM) and math.random() <= 0.7) then
+    elseif (target:hasStatusEffect(EFFECT_DOOM) and math.random() <= 0.5) then
         -- remove doom
         target:delStatusEffect(EFFECT_DOOM);
         target:messageBasic(359);

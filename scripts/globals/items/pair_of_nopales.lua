@@ -1,10 +1,10 @@
 -----------------------------------------
 -- ID: 5650
--- Item: Pair of Nopales
--- Food Effect: 5Min, All Races
+-- Item: pair_of_nopales
+-- Food Effect: 5min, All Races
 -----------------------------------------
--- Agility 2
--- Vitality -4 
+-- VIT -4
+-- AGI +2
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -14,11 +14,11 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemCheck(target)
-	result = 0
-	if (target:hasStatusEffect(EFFECT_FOOD) == true) then
-		result = 246;
-	end
-	return result;
+    local result = 0;
+    if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
+        result = 246;
+    end
+    return result;
 end;
 
 -----------------------------------------
@@ -26,7 +26,7 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addStatusEffect(EFFECT_FOOD,0,0,300,5650);
+    target:addStatusEffect(EFFECT_FOOD,0,0,300,5650);
 end;
 
 -----------------------------------
@@ -34,8 +34,8 @@ end;
 -----------------------------------
 
 function onEffectGain(target,effect)
-	target:addMod(MOD_AGI, 2);
-	target:addMod(MOD_VIT, -4);
+    target:addMod(MOD_VIT, -4);
+    target:addMod(MOD_AGI, 2);
 end;
 
 -----------------------------------------
@@ -43,6 +43,6 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-	target:delMod(MOD_AGI, 2);
-	target:delMod(MOD_VIT, -4);
+    target:delMod(MOD_VIT, -4);
+    target:delMod(MOD_AGI, 2);
 end;
