@@ -256,8 +256,6 @@ INSERT INTO `mob_spell_lists` VALUES ('Halimede',1183,206,1,255); -- freeze
 INSERT INTO `mob_spell_lists` VALUES ('Halimede',1183,201,1,255); -- waterga iii
 INSERT INTO `mob_spell_lists` VALUES ('Halimede',1183,181,1,255); -- blizzaga iii
 
--- BELOW TO BE ADDED TO DSP ONCE TOAU LOCK LIFTS
-
 -- Amun
 INSERT INTO `mob_spell_lists` VALUES ('Amun',1184,148,1,255); -- fire_v
 INSERT INTO `mob_spell_lists` VALUES ('Amun',1184,158,1,255); -- aero_v
@@ -463,6 +461,106 @@ INSERT INTO `mob_spell_lists` VALUES ('Lachrymater_Lightday',1215,21,1,255); -- 
 INSERT INTO `mob_spell_lists` VALUES ('Lachrymater_Lightday',1215,25,1,255); -- Dia III
 INSERT INTO `mob_spell_lists` VALUES ('Lachrymater_Lightday',1215,31,1,255); -- Banish IV
 INSERT INTO `mob_spell_lists` VALUES ('Lachrymater_Lightday',1215,40,1,255); -- Banishga III
+
+-- Bukhis
+INSERT INTO `mob_spell_lists` VALUES ('Bukhis',1216,153,1,255); -- blizzard_v
+INSERT INTO `mob_spell_lists` VALUES ('Bukhis',1216,182,1,255); -- blizzaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Bukhis',1216,356,1,255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Bukhis',1216,362,1,255); -- bindga
+
+-- Chhir_Batti
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,53,1,255); -- blink
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,54,1,255); -- stoneskin
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,57,1,255); -- haste
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,118,1,255); -- voidstorm
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,356,1,255); -- paralyaga
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,357,1,255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,359,1,255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Chhir_Batti',1217,362,1,255); -- bindga
+
+-- Durinn
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,177,1,255); -- firaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,182,1,255); -- blizzaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,187,1,255); -- aeroaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,192,1,255); -- stonega_iv
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,197,1,255); -- thundaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,202,1,255); -- waterga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,204,1,255); -- flare
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,206,1,255); -- freeze
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,208,1,255); -- tornado
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,210,1,255); -- quake
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,212,1,255); -- burst
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,214,1,255); -- flood
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,356,1,255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Durinn',1218,359,1,255); -- silencega
+
+-- Dvalinn
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,176,1,255); -- firaga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,181,1,255); -- blizzaga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,186,1,255); -- aeroaga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,191,1,255); -- stonmega_iii
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,196,1,255); -- thundaga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,201,1,255); -- waterga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,356,1,255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,357,1,255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,359,1,255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,362,1,255); -- bindga
+INSERT INTO `mob_spell_lists` VALUES ('Dvalinn',1219,366,1,255); -- graviga
+
+-- Hanuman
+INSERT INTO `mob_spell_lists` VALUES ('Hanuman',1220,186,1,255); -- aeroga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Hanuman',1220,274,1,255); -- sleepga_ii
+INSERT INTO `mob_spell_lists` VALUES ('Hanuman',1220,359,1,255); -- silencega
+INSERT INTO `mob_spell_lists` VALUES ('Hanuman',1220,366,1,255); -- graviga
+
+-- Hrosshvalur
+INSERT INTO `mob_spell_lists` VALUES ('Hrosshvalur',1221,501,1,255); -- waterja
+
+-- Iku-Turso
+INSERT INTO `mob_spell_lists` VALUES ('Iku-Turso',1222,173,1,255); -- water_v
+INSERT INTO `mob_spell_lists` VALUES ('Iku-Turso',1222,202,1,255); -- waterga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Iku-Turso',1222,501,1,255); -- waterja
+
+-- Kadraeth_the_Hatespawn
+INSERT INTO `mob_spell_lists` VALUES ('Kadraeth_the_Hatespawn',1223,197,1,255); -- thundaga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Kadraeth_the_Hatespawn',1223,252,1,255); -- stun
+
+-- Lord_Varney
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,53,1,255); -- blink
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,57,1,255); -- haste
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,157,1,255); -- aero_iv
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,158,1,255); -- aero_v
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,187,1,255); -- aeroga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,366,1,255); -- graviga
+INSERT INTO `mob_spell_lists` VALUES ('Lord_Varney',1224,359,1,255); -- silencega
+
+-- Pascerpot
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,21,1,255); -- holy
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,22,1,255); -- holy_ii
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,40,1,255); -- banishga_iii
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,58,1,255); -- paralyze
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,59,1,255); -- silence
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,356,1,255); -- paralyga
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,357,1,255); -- slowga
+INSERT INTO `mob_spell_lists` VALUES ('Pascerpot',1225,359,1,255); -- silencega
+
+-- Rakshas
+INSERT INTO `mob_spell_lists` VALUES ('Rakshas',1226,176,1,255); -- firega_iii
+INSERT INTO `mob_spell_lists` VALUES ('Rakshas',1226,191,1,255); -- stonega_iii
+INSERT INTO `mob_spell_lists` VALUES ('Rakshas',1226,255,1,255); -- break
+INSERT INTO `mob_spell_lists` VALUES ('Rakshas',1226,286,1,255); -- addle
+INSERT INTO `mob_spell_lists` VALUES ('Rakshas',1226,357,1,255); -- slowga
+
+-- Sedna
+INSERT INTO `mob_spell_lists` VALUES ('Sedna',1227,55,1,255); -- aquaveil
+INSERT INTO `mob_spell_lists` VALUES ('Sedna',1227,173,1,255); -- water_v
+INSERT INTO `mob_spell_lists` VALUES ('Sedna',1227,202,1,255); -- waterga_iv
+INSERT INTO `mob_spell_lists` VALUES ('Sedna',1227,214,1,255); -- flood
+INSERT INTO `mob_spell_lists` VALUES ('Sedna',1227,360,1,255); -- dispelga
+INSERT INTO `mob_spell_lists` VALUES ('Sedna',1227,501,1,255); -- waterja
+
+-- Karkadann
+INSERT INTO `mob_spell_lists` VALUES ('Karkadann',1228,197,1,255); -- thundaga_iv
 
 -- Abyssea List to be deleted once DSP merges
 

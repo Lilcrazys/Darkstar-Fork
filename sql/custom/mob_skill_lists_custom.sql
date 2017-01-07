@@ -713,12 +713,12 @@ INSERT INTO `mob_skill_lists` VALUES ('Dvalinn',4121,2115); -- Cackle
 INSERT INTO `mob_skill_lists` VALUES ('Dvalinn',4121,2118); -- Bilgestorm
 
 -- Fulmotondro
-INSERT INTO `mob_skill_lists` VALUES ('Dvalinn',4122,890); -- Thunder_IV
-INSERT INTO `mob_skill_lists` VALUES ('Dvalinn',4122,891); -- chaotic_strike
-INSERT INTO `mob_skill_lists` VALUES ('Dvalinn',4122,892); -- thunderstorm
-INSERT INTO `mob_skill_lists` VALUES ('Dvalinn',4122,893); -- Judgment Bolt
+INSERT INTO `mob_skill_lists` VALUES ('Fulmotondro',4122,890); -- Thunder_IV
+INSERT INTO `mob_skill_lists` VALUES ('Fulmotondro',4122,891); -- chaotic_strike
+INSERT INTO `mob_skill_lists` VALUES ('Fulmotondro',4122,892); -- thunderstorm
+INSERT INTO `mob_skill_lists` VALUES ('Fulmotondro',4122,893); -- Judgment Bolt
 
--- Gnawtooth Gary 4123 if needed
+-- Gnawtooth Gary 4123 if needed currently 206
 
 -- Hanuman
 INSERT INTO `mob_skill_lists` VALUES ('Hanuman',4124,290); -- Spinning Claw
@@ -730,7 +730,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Hanuman',4124,295); -- Magic Fruit
 INSERT INTO `mob_skill_lists` VALUES ('Hrosshvalur',4125,450); -- Aqua Ball
 INSERT INTO `mob_skill_lists` VALUES ('Hrosshvalur',4125,641); -- Recoil Dive
 
--- Iktomi 4126 if needed
+-- Iktomi 4126 if needed currently 235
 
 -- Iku-Turso 
 INSERT INTO `mob_skill_lists` VALUES ('Iku-Turso',4127,462); -- Maelstrom
@@ -755,7 +755,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Lord_Varney',4131,2107); -- Decollation
 INSERT INTO `mob_skill_lists` VALUES ('Lord_Varney',4131,2109); -- Heliovoid
 INSERT INTO `mob_skill_lists` VALUES ('Lord_Varney',4131,2110); -- Wings of Gehenna
 
--- Pascerpot 4132 if needed
+-- Pascerpot 4132 if needed currently 79
 
 -- Quasimodo
 INSERT INTO `mob_skill_lists` VALUES ('Quasimodo',4133,2424); -- Terror Eye
@@ -780,6 +780,15 @@ INSERT INTO `mob_skill_lists` VALUES ('Seps',4136,1720); -- Wind Shear
 INSERT INTO `mob_skill_lists` VALUES ('Seps',4136,1721); -- Obfuscate
 INSERT INTO `mob_skill_lists` VALUES ('Seps',4136,1723); -- Ill Wind
 -- INSERT INTO `mob_skill_lists` VALUES ('Seps',4136,2644); -- Somnial Durance
+
+-- Durinn
+INSERT INTO `mob_skill_lists` VALUES ('Durinn',4137,2113); -- Hellsnap
+INSERT INTO `mob_skill_lists` VALUES ('Durinn',4137,2114); -- Hellclap
+INSERT INTO `mob_skill_lists` VALUES ('Durinn',4137,2115); -- Cackle
+INSERT INTO `mob_skill_lists` VALUES ('Durinn',4137,2116); -- Necrobane
+INSERT INTO `mob_skill_lists` VALUES ('Durinn',4137,2117); -- Necropurge
+INSERT INTO `mob_skill_lists` VALUES ('Durinn',4137,2118); -- Bilgestorm
+
 
 -- Abyssea Skills above this line only
 
