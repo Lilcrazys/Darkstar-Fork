@@ -1001,8 +1001,8 @@ function debugWeaponskillDamageEnmity(player,mob,dmg,multiplier)
     end
     levelMod = ((31*levelMod)/50)+6; -- And this is the math core does to it..
 
-    local CE = (80 / levelMod) * dmg);
-    local VE = (240 / levelMod) * dmg);
+    local CE = (80 / levelMod * dmg);
+    local VE = (240 / levelMod * dmg);
 
     print("[EnmityFromDamage-WS]\n Player: "..player:getName().."\t Mob: "..mob:getName().."\n CE: "..CE.."\t VE: "..VE.."\n WeaponSkill ".."\t\t Dmg: "..dmg.."\n levelMod: "..levelMod.."\t\t multiplier: "..multiplier);
 end;

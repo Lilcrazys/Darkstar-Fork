@@ -1405,8 +1405,8 @@ function debugSpellDamageEnmity(caster,target,dmg,multiplier,spell)
     end
     levelMod = ((31*levelMod)/50)+6; -- And this is the math core does to it..
 
-    local CE = (80 / levelMod) * dmg);
-    local VE = (240 / levelMod) * dmg);
+    local CE = (80 / levelMod * dmg);
+    local VE = (240 / levelMod * dmg);
 
     print("[EnmityFromDamage-Spell]\n Caster: "..caster:getName().."\t Target: "..target:getName().."\n CE: "..CE.."\t VE: "..VE.."\n Spell ID: "..spell:getID().."\t\t Dmg: "..dmg.."\n levelMod: "..levelMod.."\t\t multiplier: "..multiplier);
 end;
