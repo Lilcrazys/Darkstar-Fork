@@ -330,29 +330,9 @@ INSERT INTO `item_mods_pet` VALUES (28518, 289, 9); -- Pet: Subtle Blow +9
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (28625, 23, 20); -- Pet: Attack +20
 
--- Glyphic Horn (Head)
-INSERT INTO `item_mods_pet` VALUES (26652, 28, 20); -- Avatar: "Magic Atk. Bonus"+20
-
--- Glyphic Doublet (Body)
-INSERT INTO `item_mods_pet` VALUES (26828, 165, 8); -- Avatar: Critical hit rate +8%
-
--- Glyphic Bracers (Hands)
-INSERT INTO `item_mods_pet` VALUES (27004, 25, 20); -- Avatar: Accuracy+20
-
--- Glyphic Spats (Legs)
-INSERT INTO `item_mods_pet` VALUES (27180, 30, 10); -- Avatar: Magic Accuracy+10
-
--- Glyphic Pigaches (Feet)
-INSERT INTO `item_mods_pet` VALUES (27356, 0, 7); -- Avatar: Magic critical hit rate +7%
-INSERT INTO `item_mods_pet` VALUES (27356, 23, 25); -- Avatar: Attack+25
-
 -- keraunos
 INSERT INTO `item_mods_pet` VALUES (21169, 30, 228); -- Pet macc
 INSERT INTO `item_mods_pet` VALUES (21169, 28, 100); -- Pet Matt
-
--- samanisi_cape (28605)
-INSERT INTO `item_mods_pet` VALUES (28605, 25, 7); -- Avatar Acc
-INSERT INTO `item_mods_pet` VALUES (28605, 30, 7); -- Avatar Macc
 
 -- argocham_mantle (27595)
 INSERT INTO `item_mods_pet` VALUES (27595, 23, 12); -- Pet: Att
@@ -373,5 +353,5 @@ INSERT INTO `item_mods_pet` VALUES (11038, 161, -2); -- Wyvern: PDT
 
 INSERT INTO `item_mods_pet` VALUES (21183, 28, 114); --  Avatar Magic Attack Bonus +114
 
+-- Shomonjijoe +1
 INSERT INTO `item_mods_pet` VALUES (26888, 28, 30); --  Avatar Magic Attack Bonus +30
-INSERT INTO `item_mods_pet` VALUES (26888, 27, 14); -- Pet: Enmity +14
