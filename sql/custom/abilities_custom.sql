@@ -10,7 +10,7 @@
 -- INSERT INTO `abilities` VALUES (abilityId,name,job,level,validTarget,recastTime,recastId,message1,message2,animation,animationTime,castTime,actionType,range,isAOE,CE,VE,meritModID,addType,'expansion');
 -- Keeps keep it sorted by ID and use gaps in file to show gaps in IDs.
 
-REPLACE INTO `abilities` VALUES (6,'invincible',7,0,1,3600,0,0,0,18,2000,0,6,20.0,0,3,19999,0,0,null);
+REPLACE INTO `abilities` VALUES (6,'invincible',7,0,1,3600,0,0,0,18,2000,0,6,20.0,0,30000,30000,0,0,null);
 REPLACE INTO `abilities` VALUES (17,'defender',1,25,1,180,3,117,0,1,2000,0,6,20.0,0,1,500,386,0,null);
 
 REPLACE INTO `abilities` VALUES (19,'provoke',1,5,4,30,5,0,0,3,2000,0,6,18.0,0,2,2400,0,0,null);
