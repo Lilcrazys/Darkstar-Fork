@@ -32,7 +32,7 @@ enum MODIFIER
     MOD_ACCP              = 3964, // DSP removed these, I am
     MOD_EVAP              = 3965, // placing them here in case Legion
     MOD_RACCP             = 3967, // used them for custom things.. ~Teo
-    // MOD_PLACEHOLDER       = 4000, // Stuff
+    MOD_WS_PWR_BONUS      = 4000, // Adds extra power to ws
     MOD_TERRORRES                 = 4092, // Resist Terror
     MOD_DOOMRES                   = 4093, // Resist Doom
     // MOD_EFFECTIVE_LV              = 4094, // Only highest mod value item applies: Treat players LV as this number instead of actual LV
