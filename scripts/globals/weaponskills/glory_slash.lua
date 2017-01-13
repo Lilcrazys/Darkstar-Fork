@@ -49,6 +49,6 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
     local damage, tpHits, extraHits = doPhysicalWeaponskill(player, target, wsID, tp, primary, action, taChar, params);
     return tpHits, extraHits, damage;
     ]]
-    local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, wsID, params, tp, primary);
+    local damage, criticalHit, tpHits, extraHits = doPhysicalWeaponskill(player, target, wsID, tp, primary, action, taChar, params);
     return tpHits, extraHits, criticalHit, damage;
 end
