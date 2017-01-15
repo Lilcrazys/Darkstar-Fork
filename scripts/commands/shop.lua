@@ -1,5 +1,5 @@
 --------------------------------------------------------------
--- func: @shop <page>
+-- func: shop <page>
 -- desc: opens a custom shop anywhere in the world
 --------------------------------------------------------------
 
@@ -9,11 +9,8 @@ cmdprops =
     parameters = "i"
 };
 
-
 -- Notes:
---
 -- ALWAYS comment your additions!
-
 
 function onTrigger(player,page)
     if (player:getVar("inJail") > 0 and player:getZoneID() == 131) then
@@ -21,9 +18,9 @@ function onTrigger(player,page)
     end
     if (page == 0 or page == nil) then
         player:PrintToPlayer("1: Crystal Depot, 2: MogDonalds, 3: Meds, 4: Tools and gears");
-        player:PrintToPlayer("@shop <page>");
         -- Edit and uncomment next line if you want more pages.
         -- player:PrintToPlayer( "5: ??, 6: ??, 7: ??, 8: ??");
+        player:PrintToPlayer("$shop <page>");
     elseif (page == 1) then
         local stock_1 =
         {
@@ -37,10 +34,22 @@ function onTrigger(player,page)
             4245,   3000,    -- HQ Dark Crystal
         };
         showShop(player, STATIC, stock_1);
+        player:PrintToPlayer("At Crystal Depot, we stock only the highest quality..");
 
-    elseif (page == 2) then -- Would you like fries with that?
+    elseif (page == 2) then
         local stock_2 =
         {
+            -- Non Custom "for low lv noobs in exp party" food, same price as AH so non exploitable.
+            4376,     108,   -- Meat Jerky
+            -- Retail:  STR3 INT-1 ATT23% (Cap:30)
+            5721,     500,   -- Crab Sushi
+            -- Retail:  VIT+1 Def+10 ACC+13% (Cap:64) "Resist Sleep"+1
+            4271,    2000,   -- Rice Dumpling
+            -- Retail:  HP+17 STR+3 VIT+2 AGI+1 ACC+5 ATT+20% (Caps:45) RATT+30% (Caps:45) HP/MP Healing +2 "Resist Paralyze"+4
+            4536,    3133,   -- Blackened Frog
+            -- Retail:  DEX+2 AGI+2 MND-2 ATT+14% (Cap:75) RATT+14% (Cap:75) EVA+5
+            --------------------------------------------------
+            -- Custom food items
             5610,   60000,   -- Hellsteak +1
             5163,   60000,   -- Plate of Sole Sushi +1
             5765,   60000,   -- Red Curry Bun +1
@@ -48,8 +57,9 @@ function onTrigger(player,page)
             5718,   60000,   -- Cream Puff
         };
         showShop(player, STATIC, stock_2);
+        player:PrintToPlayer("Welcome to MogDonalds, Would you like fries with that?");
 
-    elseif (page == 3) then -- Medicine chest.
+    elseif (page == 3) then
         local stock_3 =
         {
             4148,   316,     -- Antidote
@@ -57,15 +67,11 @@ function onTrigger(player,page)
             4151,   800,     -- Echo drops
             4112,   910,     -- Potion
             4128,   4832,    -- Ether
-            -- Temp duplciates, will remove later
-            21335,  1000,    -- Titanium Bullet
-            21305,  1000,    -- Tulfaire Arrow
-            21336,  5000,    -- Adlivun Bullet
-            21306,  5000,    -- Adlivun Arrow
         };
         showShop(player, STATIC, stock_3);
+        player:PrintToPlayer("Step right up folks! Cures blindness, sore throat, and various poisons!");
 
-    elseif (page == 4) then -- Tools and gears.
+    elseif (page == 4) then
         local stock_4 =
         {
             21335,    1000,  -- Titanium Bullet
@@ -87,6 +93,7 @@ function onTrigger(player,page)
             16279,    40000, -- Pile Chain
         };
         showShop(player, STATIC, stock_4);
+        player:PrintToPlayer("Gear Shack, we've got your back.");
 
     else
         player:PrintToPlayer( string.format( "Page %i not found.", page ) );
