@@ -1829,8 +1829,8 @@ INSERT INTO `mob_droplist` VALUES (3273,0,3922,124);
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=3387 and type=0 and itemId=15551 and rate=20; -- Shikaree Ring
-INSERT INTO `mob_droplist` VALUES (3387,0,3925,85); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (3387,0,13514,60); -- Archer Ring
+INSERT INTO `mob_droplist` VALUES (3387,0,3925,45); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (3387,0,13514,35); -- Archer Ring
 
 -- -----------
 -- Titlacauan
