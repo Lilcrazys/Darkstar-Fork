@@ -31,7 +31,7 @@ function onTrigger(player,page)
             4242,   3000,    -- HQ Lightning Crystal
             4243,   3000,    -- HQ Water Crystal
             4244,   3000,    -- HQ Light Crystal
-            4245,   3000,    -- HQ Dark Crystal
+            4245,   3000     -- HQ Dark Crystal
         };
         showShop(player, STATIC, stock_1);
         player:PrintToPlayer("At Crystal Depot, we stock only the highest quality..");
@@ -40,21 +40,24 @@ function onTrigger(player,page)
         local stock_2 =
         {
             -- Non Custom "for low lv noobs in exp party" food, same price as AH so non exploitable.
-            4376,     108,   -- Meat Jerky
-            -- Retail:  STR3 INT-1 ATT23% (Cap:30)
-            5721,     500,   -- Crab Sushi
+            4376,     108,  -- Meat Jerky
+            -- Retail:  STR+3 INT-1 ATT23% (Cap:30)
+            5721,     500,  -- Crab Sushi
             -- Retail:  VIT+1 Def+10 ACC+13% (Cap:64) "Resist Sleep"+1
-            4271,    2000,   -- Rice Dumpling
-            -- Retail:  HP+17 STR+3 VIT+2 AGI+1 ACC+5 ATT+20% (Caps:45) RATT+30% (Caps:45) HP/MP Healing +2 "Resist Paralyze"+4
-            4536,    3133,   -- Blackened Frog
+            4271,    2000,  -- Rice Dumpling
+            -- Retail:  HP+17 STR+3 VIT+2 AGI+1 ACC+5 ATT+20% (Cap:45) RATT+30% (Cap:45) HP/MP Healing +2 "Resist Paralyze"+4
+            4536,    3133,  -- Blackened Frog
             -- Retail:  DEX+2 AGI+2 MND-2 ATT+14% (Cap:75) RATT+14% (Cap:75) EVA+5
             --------------------------------------------------
             -- Custom food items
-            5610,   60000,   -- Hellsteak +1
-            5163,   60000,   -- Plate of Sole Sushi +1
-            5765,   60000,   -- Red Curry Bun +1
-            5764,   60000,   -- Black Curry Bun +1
-            5718,   60000,   -- Cream Puff
+            4258,   40000,  -- Red Drop
+            4259,   40000,  -- Clear Drop
+            4260,   40000,  -- Green Drop
+            4261,   40000,  -- Yellow Drop
+            4262,   40000,  -- Purple Drop
+            4263,   40000,  -- Blue Drop
+            4264,   40000,  -- White Drop
+            4265,   40000   -- Black Drop
         };
         showShop(player, STATIC, stock_2);
         player:PrintToPlayer("Welcome to MogDonalds, Would you like fries with that?");
@@ -67,6 +70,7 @@ function onTrigger(player,page)
             4151,   800,     -- Echo drops
             4112,   910,     -- Potion
             4128,   4832,    -- Ether
+            4153,   6000     -- Antacid
         };
         showShop(player, STATIC, stock_3);
         player:PrintToPlayer("Step right up folks! Cures blindness, sore throat, and various poisons!");
@@ -90,7 +94,7 @@ function onTrigger(player,page)
             15926,    50000, -- Bronze Bandolier
             19221,    50000, -- Firefly
             15834,    50000, -- Bind Ring
-            16279,    40000, -- Pile Chain
+            16279,    40000  -- Pile Chain
         };
         showShop(player, STATIC, stock_4);
         player:PrintToPlayer("Gear Shack, we've got your back.");
