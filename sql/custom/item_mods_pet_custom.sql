@@ -129,12 +129,6 @@ INSERT INTO `item_mods_pet` VALUES (20812, 160, -5); -- Pet: Damage taken -5%
 INSERT INTO `item_mods_pet` VALUES (20813, 65, 15); -- Pet: Evasion +15
 
 -- -------------------------------------------------------
---  Anahera Tabar - LVL 99
--- -------------------------------------------------------
-INSERT INTO `item_mods_pet` VALUES (20822, 65, 40); -- Pet: Evasion +40
-INSERT INTO `item_mods_pet` VALUES (20822, 27, 6); -- Pet: Enmity +6
-
--- -------------------------------------------------------
 --  Hunahpu - LVL 99
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (20826, 25, 30); -- Pet: Accuracy +30
@@ -150,16 +144,6 @@ INSERT INTO `item_mods_pet` VALUES (20827, 23, 28); -- Pet: Attack+28
 --  Brethren Axe - LVL 99
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (20828, 25, 20); -- Pet: Accuracy +20
-
--- -------------------------------------------------------
---  Aalak' Axe - LVL 99
--- -------------------------------------------------------
-INSERT INTO `item_mods_pet` VALUES (20831, 288, 2); -- Pet: Double Attack +2%
-
--- -------------------------------------------------------
---  Aalak' Axe +1 - LVL 99
--- -------------------------------------------------------
-INSERT INTO `item_mods_pet` VALUES (20832, 288, 3); -- Pet: Double Attack +3%
 
 -- -------------------------------------------------------
 --  Ankusa Helm - LVL 99
@@ -350,8 +334,6 @@ INSERT INTO `item_mods_pet` VALUES (28630, 2, 1000); -- Wyvern: HP
 INSERT INTO `item_mods_pet` VALUES (28630, 32, 20); -- Wyvern: Att
 
 INSERT INTO `item_mods_pet` VALUES (11038, 161, -2); -- Wyvern: PDT
-
-INSERT INTO `item_mods_pet` VALUES (21183, 28, 114); --  Avatar Magic Attack Bonus +114
 
 -- Shomonjijoe +1
 INSERT INTO `item_mods_pet` VALUES (26888, 28, 30); --  Avatar Magic Attack Bonus +30

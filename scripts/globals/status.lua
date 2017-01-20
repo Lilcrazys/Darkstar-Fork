@@ -1387,7 +1387,7 @@ MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
 MOD_ACCP              = 3964 -- DSP removed these, I am
 MOD_EVAP              = 3965 -- placing them here in case Legion
 MOD_RACCP             = 3967 -- used them for custom things.. ~Teo
--- MOD_PLACEHOLDER       = 4000 -- Stuff
+MOD_WS_PWR_BONUS      = 4000 -- Adds extra power to ws
 -- 4001-4091 available to use
 MOD_TERRORRES                 = 4092 -- Resist Terror
 MOD_DOOMRES                   = 4093 -- Resist Doom

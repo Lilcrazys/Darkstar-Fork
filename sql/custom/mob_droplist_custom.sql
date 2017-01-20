@@ -1407,16 +1407,6 @@ INSERT INTO `mob_droplist` VALUES (2496,0,10600,161); --  Ogier's Leggings
 -- Ophion
 -- -----------
 
-DELETE FROM `mob_droplist` WHERE dropId=2554 and type=0 and itemId=497 and rate=450; -- comment me
-DELETE FROM `mob_droplist` WHERE dropId=2554 and type=0 and itemId=499 and rate=320; -- comment me
-DELETE FROM `mob_droplist` WHERE dropId=2554 and type=0 and itemId=12290 and rate=30; -- comment me
-DELETE FROM `mob_droplist` WHERE dropId=2554 and type=0 and itemId=14018 and rate=100; -- comment me
-INSERT INTO `mob_droplist` VALUES (2554,0,10512,139); --  Calma Gauntlets
-INSERT INTO `mob_droplist` VALUES (2554,0,11975,156); -- Avant Cuisses +1
-INSERT INTO `mob_droplist` VALUES (2554,0,10611,162); --   Mustela Boots
-INSERT INTO `mob_droplist` VALUES (2554,0,10892,134); --  Magavan Beret
-INSERT INTO `mob_droplist` VALUES (2554,0,10452,85); -- Rubeus Jacket
-
 -- -----------
 -- Orthrus
 -- -----------
@@ -1839,8 +1829,8 @@ INSERT INTO `mob_droplist` VALUES (3273,0,3922,124);
 -- -----------
 
 DELETE FROM `mob_droplist` WHERE dropId=3387 and type=0 and itemId=15551 and rate=20; -- Shikaree Ring
-INSERT INTO `mob_droplist` VALUES (3387,0,3925,85); -- Tanzanite Jewel
-INSERT INTO `mob_droplist` VALUES (3387,0,13514,60); -- Archer Ring
+INSERT INTO `mob_droplist` VALUES (3387,0,3925,45); -- Tanzanite Jewel
+INSERT INTO `mob_droplist` VALUES (3387,0,13514,35); -- Archer Ring
 
 -- -----------
 -- Titlacauan

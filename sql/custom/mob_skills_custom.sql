@@ -2189,13 +2189,13 @@ INSERT INTO `mob_skills` VALUES (2159,1568,'Pandemic_Nip',0,7.0,2000,1500,4,0,0,
 INSERT INTO `mob_skills` VALUES (2160,1569,'Custom_Bombilation',1,25.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2161,1570,'Cimicine_Discharge',0,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2162,1571,'Emetic_Discharge',1,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2163,1907,'Custom_Seedspray',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2164,1908,'Custom_Viscid_Emission',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2165,1909,'Custom_Rotten_Stench',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2166,1910,'Custom_Floral_Bouquet',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2167,1911,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- Has alt ID, right here
-INSERT INTO `mob_skills` VALUES (2168,1912,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- Has alt ID, right here
-INSERT INTO `mob_skills` VALUES (2169,1913,'Soothing_Aroma',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2163,1572,'Custom_Seedspray',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2164,1573,'Custom_Viscid_Emission',4,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2165,1574,'Custom_Rotten_Stench',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2166,1575,'Custom_Floral_Bouquet',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skills` VALUES (2167,1577,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- Has alt ID, right here
+INSERT INTO `mob_skills` VALUES (2168,1577,'Bloody_Caress',0,7.0,2000,1500,4,0,0,0); -- Has alt ID, right here
+INSERT INTO `mob_skills` VALUES (2169,1577,'Soothing_Aroma',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2170,1589,'Fevered_Pitch',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2171,1590,'Call_of_the_Moon_up',1,25.0,2000,1500,4,0,0,0); -- standing up
 INSERT INTO `mob_skills` VALUES (2172,1591,'Call_of_the_Moon_down',1,25.0,2000,1500,4,0,0,0); -- on 4 legs
