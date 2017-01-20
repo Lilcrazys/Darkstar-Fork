@@ -63,7 +63,10 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
             dmg = math.floor(target:getCE(player) * ceMod) + math.floor(target:getVE(player) * veMod);
         end
 
+        --[[ yeah lets not do that..
         dmg = utils.clamp(dmg, 0, player:getMainLvl() * 10); -- Damage is capped to player's level * 10, before WS damage mods
+        ]]
+        dmg = utils.clamp(dmg, 0, 1+(player:getMainLvl()) * 400); -- Damage is capped to player's level+1 * 400, before WS damage mods
         damage = target:breathDmgTaken(dmg);
         if (player:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
             damage = damage * (100 + player:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
