@@ -47,6 +47,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_FOOD_DEF_CAP, 175);
     target:addMod(MOD_FOOD_ACCP, 5);
     target:addMod(MOD_FOOD_ACC_CAP, 50);
+    target:addMod(MOD_FASTCAST, 1);
     target:addMod(MOD_ENMITY, 10);
     target:addMod(MOD_CURE_POTENCY_RCVD, 3);
     target:addMod(MOD_HPHEAL, 5);
@@ -66,6 +67,7 @@ function onEffectLose(target,effect)
     target:delMod(MOD_FOOD_DEF_CAP, 175);
     target:delMod(MOD_FOOD_ACCP, 5);
     target:delMod(MOD_FOOD_ACC_CAP, 50);
+    target:delMod(MOD_FASTCAST, 1);
     target:delMod(MOD_ENMITY, 10);
     target:delMod(MOD_CURE_POTENCY_RCVD, 3);
     target:delMod(MOD_HPHEAL, 5);
