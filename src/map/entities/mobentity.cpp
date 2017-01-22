@@ -807,7 +807,7 @@ void CMobEntity::DropItems()
                     uint8 maxTries = 1 + (m_THLvl > 2 ? 2 : m_THLvl);
                     uint8 bonus = (m_THLvl > 2 ? (m_THLvl - 2) * 10 : 0);
                     while (tries < maxTries)
-                    {
+                    {   if (bonus > 130) { bonus = 130; } // Max TH set to 15 for now. 15-2*10=130, for a 13% rate bonus.
                         if (DropList->at(i).DropRate > 0 && dsprand::GetRandomNumber(1000) < DropList->at(i).DropRate * map_config.drop_rate_multiplier + bonus)
                         {
                             PChar->PTreasurePool->AddItem(DropList->at(i).ItemID, this);
