@@ -43,7 +43,7 @@ CWideScanPacket::CWideScanPacket(CCharEntity * PChar, CBaseEntity * PEntity)
 	this->size = 0x0E;
 
 	WBUFW(data,(0x04)) = PEntity->targid;
-    WBUFB(data,(0x06)) = PEntity->GetMLevel();
+    WBUFB(data,(0x06)) = ((CMobEntity*)PEntity)->GetMLevel();
 
 	// 0 - черная точка (? Char ?)
 	// 1 - зеленая точка (NPC)
