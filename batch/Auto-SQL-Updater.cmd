@@ -14,6 +14,7 @@ FOR %%X IN (status_effects.sql) DO ECHO Importing %%X & mysql dspdb -h localhost
 FOR %%X IN (synth_recipes.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 FOR %%X IN (zone_settings.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 FOR %%X IN (treasure_spawn_points.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+FOR %%X IN (transport.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
 ECHO Importing ability/trait/ws/merit tables...
 FOR %%X IN (abilities.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
