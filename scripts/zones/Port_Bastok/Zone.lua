@@ -16,9 +16,6 @@ require("scripts/zones/Port_Bastok/TextIDs");
 -----------------------------------
 
 function onInitialize(zone)
-    local vwnpc = {17744056};
-    SetVoidwatchNPC(vwnpc);
-
     zone:registerRegion(1,-112,-3,-17,-96,3,-3);--event COP
     zone:registerRegion(2, 60, 5, -169, 0,0,0); -- bridge workaround, South side
     zone:registerRegion(3, 60, 5, -70, 0,0,0); -- bridge workaround, North Side

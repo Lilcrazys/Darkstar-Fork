@@ -16,16 +16,11 @@ require("scripts/globals/missions");
 -----------------------------------
 
 function onInitialize(zone)
-
-    local vwnpc = {16798144,16798145,16798146};
-    SetVoidwatchNPC(vwnpc);
-
     -- Jormungand
     SetRespawnTime(16797969, 900, 10800);
 
     -- Kumhau
     GetMobByID(16798718):setRespawnTime(math.random((900),(10800)));
-
 end;
 
 -----------------------------------

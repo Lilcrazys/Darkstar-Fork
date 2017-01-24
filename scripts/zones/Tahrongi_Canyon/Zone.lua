@@ -62,12 +62,6 @@ end;
 -----------------------------------
 
 function onInitialize(zone)
-    local manuals = {17257079,17257080,17257081};
-    SetFieldManual(manuals);
-
-    local vwnpc = {17257088,17257089,17257090};
-    SetVoidwatchNPC(vwnpc);
-
 
     -- HURKAN
     GetMobByID(17257470):setRespawnTime(math.random((900),(10800)));

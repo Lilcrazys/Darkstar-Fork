@@ -5632,6 +5632,15 @@ inline int32 CLuaBaseEntity::isJailed(lua_State *L)
     return 1;
 }
 
+inline int32 CLuaBaseEntity::jail(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    jailutils::Add(static_cast<CCharEntity*>(m_PBaseEntity));
+    return 0;
+}
+
 /************************************************************************
 *                                                                       *
 *  GM command @changeJOB !!! FOR DEBUG ONLY !!!                         *
@@ -11508,6 +11517,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,removePartyEffect),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,hasPartyEffect),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,isJailed),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,jail),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setLevel),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,setsLevel),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,changeJob),

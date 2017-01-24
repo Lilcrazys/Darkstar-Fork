@@ -1,12 +1,10 @@
 -----------------------------------------
--- ID: 5774
--- Item: crepe_forestiere
--- Food Effect: 60Min, All Races
+-- ID: 5892
+-- Item: b.e.w._pitaru
+-- Food Effect: 30 Min, All Races
 -----------------------------------------
--- Mind 2
--- MP % 10 (cap 35)
--- Magic Accuracy +15
--- Magic Def. Bonus +6
+-- MP +9% (cap 130)
+-- Increases rate of magic skill gains by 80%
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -28,19 +26,16 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:addStatusEffect(EFFECT_FOOD,0,0,3600,5774);
+    target:addStatusEffect(EFFECT_FOOD,0,0,1800,5892);
 end;
 
------------------------------------------
+-----------------------------------
 -- onEffectGain Action
------------------------------------------
+-----------------------------------
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_MND, 2);
-    target:addMod(MOD_FOOD_MPP, 10);
-    target:addMod(MOD_FOOD_MP_CAP, 35);
-    target:addMod(MOD_MACC, 15);
-    target:addMod(MOD_MDEF, 6);
+    target:addMod(MOD_FOOD_MPP, 9);
+    target:addMod(MOD_FOOD_MP_CAP, 130);
 end;
 
 -----------------------------------------
@@ -48,9 +43,6 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_MND, 2);
-    target:delMod(MOD_FOOD_MPP, 10);
-    target:delMod(MOD_FOOD_MP_CAP, 35);
-    target:delMod(MOD_MACC, 15);
-    target:delMod(MOD_MDEF, 6);
+    target:delMod(MOD_FOOD_MPP, 9);
+    target:delMod(MOD_FOOD_MP_CAP, 130);
 end;
