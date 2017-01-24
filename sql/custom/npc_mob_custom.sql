@@ -2216,9 +2216,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17612840,'Jenglot','Jenglot',14097,12.97
 -- Ifrit's Cauldron (Zone 205)
 -- 17617919
 -- ------------------------------------------------------------
-REPLACE INTO `mob_spawn_points` VALUES (17617172,'Ildebrann','Ildebrann',13815,8.217,3.526,293.694,254);
-REPLACE INTO `mob_spawn_points` VALUES (17617173,'Hraun_Dragon','Hraun Dragon',90455,8.217,3.526,293.694,254);
-REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',90455,9.217,3.526,293.694,254);
+REPLACE INTO `mob_spawn_points` VALUES (17617172,'Ildebrann','Ildebrann',13815,4.000,3.526,284.000,0);
+REPLACE INTO `mob_spawn_points` VALUES (17617173,'Hraun_Dragon','Hraun Dragon',90455,5.500,3.526,276.000,0);
+REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',90455,2.500,3.526,284.000,0);
 
 -- ------------------------------------------------------------
 -- Qu'Bia Arena (Zone 206)

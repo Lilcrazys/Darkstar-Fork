@@ -1192,8 +1192,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1281); -- Fiery_Breath --
 INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1282); -- Touchdown -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1283); -- Inferno_Blast -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1284); -- Tebbad_Wing_Air -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1295); -- Absolute_Terror -- DSP
-INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1296); -- Horrid_Roar_3 -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1285); -- Absolute_Terror -- DSP
+INSERT INTO `mob_skill_lists` VALUES ('Ildebrann',5060,1286); -- Horrid_Roar_3 -- DSP
 
 INSERT INTO `mob_skill_lists` VALUES ('Mellonia',5061,2158); -- Insipid_Nip -- DSP
 INSERT INTO `mob_skill_lists` VALUES ('Mellonia',5061,2159); -- Pandemic_Nip -- DSP
