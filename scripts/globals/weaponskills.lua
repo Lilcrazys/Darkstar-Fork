@@ -212,7 +212,7 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
     else
         finaldmg = finaldmg * target:getMod(MOD_SLASHRES) / 1000;
     end
-
+    finaldmg = finaldmg * (100 + attacker:getMod(MOD_WS_PWR_BONUS))/100
     if (attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
         finaldmg = finaldmg * (100 + attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
     end
@@ -249,7 +249,7 @@ function doMagicWeaponskill(attacker, target, wsID, tp, primary, action, params)
     dmg = dmg * applyResistanceAbility(attacker,target,params.ele,params.skill, bonusacc);
     dmg = target:magicDmgTaken(dmg);
     dmg = adjustForTarget(target,dmg,params.ele);
-
+    finaldmg = finaldmg * (100 + attacker:getMod(MOD_WS_PWR_BONUS))/100
     if (attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
         dmg = dmg * (100 + attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
     end
@@ -768,7 +768,7 @@ end;
 
     finaldmg = target:rangedDmgTaken(finaldmg);
     finaldmg = finaldmg * target:getMod(MOD_PIERCERES) / 1000;
-
+    finaldmg = finaldmg * (100 + attacker:getMod(MOD_WS_PWR_BONUS))/100
     if (attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
         finaldmg = finaldmg * (100 + attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
     end
@@ -880,7 +880,6 @@ end
 
 function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, slot, tpHitsLanded, bonusTP, taChar)
     local targetTPMult = params.targetTPMult or 1
-    finaldmg = finaldmg + (finaldmg*(attacker:getMod(MOD_WS_PWR_BONUS) / 100));
     finaldmg = defender:takeWeaponskillDamage(attacker, finaldmg, slot, primary, tpHitsLanded, bonusTP, targetTPMult)
     local enmityEntity = taChar or attacker;
     if (params.overrideCE and params.overrideVE) then
