@@ -267,12 +267,6 @@ INSERT INTO `item_mods_pet` VALUES (28231, 25, 10); -- Pet: Accuracy +10
 INSERT INTO `item_mods_pet` VALUES (28231, 23, 10); -- Pet: Attack +10
 
 -- -------------------------------------------------------
---  Tot. Gaiters +1 - LVL 99
--- -------------------------------------------------------
-INSERT INTO `item_mods_pet` VALUES (28252, 25, 10); -- Pet: Accuracy +10
-INSERT INTO `item_mods_pet` VALUES (28252, 23, 10); -- Pet: Attack +10
-
--- -------------------------------------------------------
 --  Durgai Leggings - LVL 99
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (28287, 25, 15); -- Pet: Accuracy +15

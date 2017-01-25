@@ -1745,23 +1745,6 @@ INSERT INTO `item_mods` VALUES (28235,169,25); -- Dusk to dawn: Movement speed +
 
 REPLACE INTO `item_mods` VALUES (28247,384,41); -- Haste +4%
 
-INSERT INTO `item_mods` VALUES (28275,1,63);
-INSERT INTO `item_mods` VALUES (28275,2,13);
-INSERT INTO `item_mods` VALUES (28275,5,14);
-INSERT INTO `item_mods` VALUES (28275,8,10);
-INSERT INTO `item_mods` VALUES (28275,9,11);
-INSERT INTO `item_mods` VALUES (28275,10,10);
-INSERT INTO `item_mods` VALUES (28275,11,36);
-INSERT INTO `item_mods` VALUES (28275,12,17);
-INSERT INTO `item_mods` VALUES (28275,13,19);
-INSERT INTO `item_mods` VALUES (28275,14,34);
-INSERT INTO `item_mods` VALUES (28275,29,5);
-INSERT INTO `item_mods` VALUES (28275,31,107);
-INSERT INTO `item_mods` VALUES (28275,68,65); -- 10 Evasion added to total of 55 to accommodate for lack of unity ranking.
-INSERT INTO `item_mods` VALUES (28275,169,12);
-INSERT INTO `item_mods` VALUES (28275,249,15);
-INSERT INTO `item_mods` VALUES (28275,384,30);
-
 DELETE FROM `item_mods` WHERE itemId=28297 and modId=288 and value=30; -- Removing bad MOD DSP inserted into Cizin Greaves +1 MOD should be Jump: "Double Attack"+3%
 
 INSERT INTO `item_mods` VALUES (28479,66,7);
