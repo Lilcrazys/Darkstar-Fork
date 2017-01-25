@@ -90,8 +90,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 900);
-    player:addExp(10000);
 
     if (isKiller == true) then
         local RND1 = math.random(1,8);
@@ -116,11 +114,15 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(AMBER_STRATUM_ABYSSITE)) then -- Vanasarvik Kill
         if (player:getMaskBit(player:getVar("AMBER_STRATUM"), 3) == false) then
-           player:setMaskBit(player:getVar("AMBER_STRATUM"),"AMBER_STRATUM",3,true);
+            player:setMaskBit(player:getVar("AMBER_STRATUM"),"AMBER_STRATUM",3,true);
         end
+
         if (player:isMaskFull(player:getVar("AMBER_STRATUM"),4) == true) then
-           player:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
-           player:setVar("AMBER_STRATUM", 0);
+            player:completeQuest(AHT_URHGAN, VW_OP_050_AHT_URGAN_ASSAULT);
+            player:setVar("AMBER_STRATUM", 0);
         end
-    end;
+    end
+
+    player:addCurrency("bayld", 900);
+    player:addExp(3000);
 end;

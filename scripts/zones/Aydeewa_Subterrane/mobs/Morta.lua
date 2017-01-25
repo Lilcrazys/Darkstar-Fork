@@ -161,5 +161,5 @@ function onMobDeath(mob, player, isKiller)
     end
 
     player:addCurrency("bayld", 1250);
-    player:addExp(10000);
+    player:addExp(3000);
 end;

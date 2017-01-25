@@ -86,8 +86,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 650);
-    player:addExp(10000);
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 
@@ -125,4 +123,7 @@ function onMobDeath(mob, player, isKiller)
             end
         end
     end
+
+    player:addCurrency("bayld", 650);
+    player:addExp(3000);
 end;

@@ -33,6 +33,7 @@ function onMobSpawn(mob)
     -- vars
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -65,6 +66,7 @@ function onAdditionalEffect(mob,target,damage)
         return 0, 0, 0;
     end
 end;
+
 -----------------------------------
 -- onMobDeath
 -----------------------------------
@@ -92,18 +94,19 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 
-    player:addCurrency("bayld", 100);
-    player:addExp(10000);
-
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Cherufe Kill
         if (player:getMaskBit(player:getVar("WHITE_STRATUM"), 4) == false) then
            player:setMaskBit(player:getVar("WHITE_STRATUM"),"WHITE_STRATUM",4,true);
         end
+
         if (player:isMaskFull(player:getVar("WHITE_STRATUM"),6) == true) then
            player:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
            player:delKeyItem(WHITE_STRATUM_ABYSSITE);
            player:setVar("WHITE_STRATUM", 0);
            player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
         end
-    end;
+    end
+
+    player:addCurrency("bayld", 100);
+    player:addExp(3000);
 end;

@@ -57,8 +57,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 400);
-    player:addExp(10000);
 
     if (isKiller == true) then
         local RND1 = math.random(1,8);
@@ -83,13 +81,17 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_V)) then -- Gwynn Ap Nudd Kill
         if (player:getMaskBit(player:getVar("WHITE_STRATUM_V"), 1) == false) then
-           player:setMaskBit(player:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",1,true);
+            player:setMaskBit(player:getVar("WHITE_STRATUM_V"),"WHITE_STRATUM_V",1,true);
         end
+
         if (player:isMaskFull(player:getVar("WHITE_STRATUM_V"),3) == true) then
-           player:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
-           player:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
-           player:setVar("WHITE_STRATUM_V", 0);
-           player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
+            player:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            player:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
+            player:setVar("WHITE_STRATUM_V", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_V);
         end
-    end;
+    end
+
+    player:addCurrency("bayld", 400);
+    player:addExp(3000);
 end;

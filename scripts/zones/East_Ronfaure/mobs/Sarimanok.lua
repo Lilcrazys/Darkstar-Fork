@@ -100,6 +100,7 @@ function onMobDeath(mob, player, isKiller)
         if (player:getMaskBit(player:getVar("CRIMSON_STRATUM"), 0) == false) then
             player:setMaskBit(player:getVar("CRIMSON_STRATUM"),"CRIMSON_STRATUM",0,true);
         end
+
         if (player:isMaskFull(player:getVar("CRIMSON_STRATUM"), 2) == true) then
             player:addKeyItem(CRIMSON_STRATUM_ABYSSITE_II);
             player:delKeyItem(CRIMSON_STRATUM_ABYSSITE);
@@ -107,5 +108,6 @@ function onMobDeath(mob, player, isKiller)
             player:messageSpecial(KEYITEM_OBTAINED, CRIMSON_STRATUM_ABYSSITE_II);
         end
     end
-    player:addExp(10000);
+
+    player:addExp(3000);
 end;

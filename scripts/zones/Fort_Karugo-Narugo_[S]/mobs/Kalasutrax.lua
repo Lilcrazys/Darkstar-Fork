@@ -52,8 +52,8 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
-    local depopTime = mob:getLocalVar("depopTime");
+    -- local stance = mob:getLocalVar("stance");  -- Stance 1 = Raksha, Stance 0 = Yaksha
+    -- local depopTime = mob:getLocalVar("depopTime");
 
 end;
 
@@ -62,8 +62,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 600);
-    player:addExp(10000);
 
     if (isKiller == true) then
         local RND1 = math.random(1,8);
@@ -90,8 +88,12 @@ function onMobDeath(mob, player, isKiller)
         if (player:getMaskBit(player:getVar("JEUNO_VW"), 2) == false) then
             player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",2,true);
         end
+
         if (player:isMaskFull(player:getVar("JEUNO_VW"),5) == true) then
             player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
+
+    player:addCurrency("bayld", 600);
+    player:addExp(3000);
 end;

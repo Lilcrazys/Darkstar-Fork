@@ -2,7 +2,6 @@
 -- Area: EDIT ME
 -- VWNM: Taweret
 -----------------------------------
-
 package.loaded["scripts/zones/Batallia_Downs_[S]/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Batallia_Downs_[S]/TextIDs");
@@ -33,6 +32,7 @@ function onMobSpawn(mob)
     -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -45,7 +45,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-
 end;
 
 -----------------------------------
@@ -53,8 +52,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 100);
-    player:addExp(10000);
 
     if (isKiller == true) then
         local RND1 = math.random(1,8);
@@ -79,13 +76,17 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE)) then -- Taweret Kill
         if (player:getMaskBit(player:getVar("WHITE_STRATUM"), 5) == false) then
-           player:setMaskBit(player:getVar("WHITE_STRATUM"),"WHITE_STRATUM",5,true);
+            player:setMaskBit(player:getVar("WHITE_STRATUM"),"WHITE_STRATUM",5,true);
         end
+
         if (player:isMaskFull(player:getVar("WHITE_STRATUM"),6) == true) then
-           player:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
-           player:delKeyItem(WHITE_STRATUM_ABYSSITE);
-           player:setVar("WHITE_STRATUM", 0);
-           player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
+            player:addKeyItem(WHITE_STRATUM_ABYSSITE_II);
+            player:delKeyItem(WHITE_STRATUM_ABYSSITE);
+            player:setVar("WHITE_STRATUM", 0);
+            player:messageSpecial(KEYITEM_OBTAINED, WHITE_STRATUM_ABYSSITE_II);
         end
-    end;
+    end
+
+    player:addCurrency("bayld", 100);
+    player:addExp(3000);
 end;

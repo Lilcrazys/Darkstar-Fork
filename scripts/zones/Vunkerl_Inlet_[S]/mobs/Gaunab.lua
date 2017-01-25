@@ -123,13 +123,13 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then
         if (player:getMaskBit(player:getVar("JEUNO_VW"), 0) == false) then
-           player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",0,true);
+            player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",0,true);
         end
         if (player:isMaskFull(player:getVar("JEUNO_VW"),5) == true) then
-           player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
 
     player:addCurrency("bayld", 600);
-    player:addExp(10000);
+    player:addExp(3000);
 end;

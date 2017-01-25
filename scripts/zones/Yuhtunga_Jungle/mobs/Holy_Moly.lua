@@ -81,6 +81,8 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
+    DespawnMob(mob:getID()+1);
+    DespawnMob(mob:getID()+2);
 
     if (isKiller == true) then
         local RND1 = math.random(1,8);
@@ -103,11 +105,6 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 
-    player:addCurrency("bayld", 550);
-    player:addExp(10000);
-    DespawnMob(mob:getID()+1);
-    DespawnMob(mob:getID()+2);
-
     if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Holy Moly Kill
         if (player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
             if (player:getMaskBit(player:getVar("VW_OP_054"), 0) == false) then
@@ -125,4 +122,7 @@ function onMobDeath(mob, player, isKiller)
             end
         end
     end
+
+    player:addCurrency("bayld", 550);
+    player:addExp(3000);
 end;

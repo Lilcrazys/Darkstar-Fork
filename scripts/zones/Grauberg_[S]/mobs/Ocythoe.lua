@@ -85,8 +85,6 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("bayld", 600);
-    player:addExp(10000);
 
     if (isKiller == true) then
         local RND1 = math.random(1,8);
@@ -113,8 +111,12 @@ function onMobDeath(mob, player, isKiller)
         if (player:getMaskBit(player:getVar("JEUNO_VW"), 1) == false) then
            player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
         end
+
         if (player:isMaskFull(player:getVar("JEUNO_VW"),5) == true) then
            player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         end
     end
+
+    player:addCurrency("bayld", 600);
+    player:addExp(3000);
 end;

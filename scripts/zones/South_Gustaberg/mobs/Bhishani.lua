@@ -167,5 +167,5 @@ function onMobDeath(mob, player, isKiller)
     -- Function will die before reaching here if syntax error occurs.
     -- So if exp is awarded, the syntax is at least correct.
     player:addCurrency("bayld", 300);
-    player:addExp(10000);
+    player:addExp(3000);
 end;

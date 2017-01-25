@@ -98,7 +98,7 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_II)) then -- Kalos Kill
         if (player:getMaskBit(player:getVar("WHITE_STRATUM_II"), 3) == false) then
-           player:setMaskBit(player:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",3,true);
+            player:setMaskBit(player:getVar("WHITE_STRATUM_II"),"WHITE_STRATUM_II",3,true);
         end
 
         if (player:getQuestStatus(CRYSTAL_WAR, BATTLE_ON_A_NEW_FRONT) == QUEST_COMPLETED) then
@@ -112,5 +112,5 @@ function onMobDeath(mob, player, isKiller)
     end
 
     player:addCurrency("bayld", 200);
-    player:addExp(10000);
+    player:addExp(3000);
 end;
