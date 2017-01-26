@@ -1,12 +1,12 @@
 -----------------------------------
 -- Area: Riverne B-01
--- NPC:  ??? Bahamut
+-- NPC:  Dragon Scat
+-- Spawn Custom Bahamut
 -----------------------------------
 package.loaded["scripts/zones/Riverne-Site_B01/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/globals/settings");
 require("scripts/zones/Riverne-Site_B01/TextIDs");
+require("scripts/globals/settings");
 
 -----------------------------------
 -- onTrade Action
@@ -28,7 +28,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
+    player:PrintToPlayer("It looks like perhaps the King of Dragons took a dump here recently..");
+    player:PrintToPlayer("(This custom content is disabled until it can be recoded)");
 end;
 
 -----------------------------------
@@ -36,15 +37,15 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
---printf("onUpdate CSID: %u",csid);
---printf("onUpdate RESULT: %u",option);
-    end;
+    -- printf("onUpdate CSID: %u",csid);
+    -- printf("onUpdate RESULT: %u",option);
+end;
 
 -----------------------------------
 -- onEventFinish Action
 -----------------------------------
 
 function onEventFinish(player,csid,option)
---printf("onFinish CSID: %u",csid);
---printf("onFinish RESULT: %u",option);
-    end;
+    -- printf("onFinish CSID: %u",csid);
+    -- printf("onFinish RESULT: %u",option);
+end;
