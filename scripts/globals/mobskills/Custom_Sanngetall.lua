@@ -2,20 +2,19 @@
 -- Sanngetall
 -- Dispels all buffs including food. Lowers Enmity.
 ---------------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 1;
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    local dispel = target:dispelAllStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
 
-    local dispel =  target:dispelAllStatusEffect(bit.bor(EFFECTFLAG_DISPELABLE, EFFECTFLAG_FOOD));
-
-    if (dispel == 0) then
+    if (dispel == EFFECT_NONE) then
         -- no effect
         skill:setMsg(MSG_NO_EFFECT); -- no effect
     else
@@ -25,4 +24,4 @@ function onMobWeaponSkill(target, mob, skill)
     mob:lowerEnmity(target, 70);
 
     return dispel;
-end
+end;

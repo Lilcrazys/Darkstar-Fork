@@ -13,11 +13,11 @@ require("scripts/globals/status");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    local ODIN_ACTION = GetMobAction(17097270);
+    local ODIN_ACTION = GetMobAction(17097716);
     local ALEX_ACTION = GetMobAction(17097717);
     if (trade:hasItemQty(270,1) and trade:getItemCount() == 1) then
         if (ODIN_ACTION == ACTION_NONE or ODIN_ACTION == ACTION_SPAWN) then
-            SpawnMob(17097270, 300):updateClaim(player);
+            SpawnMob(17097716, 300):updateClaim(player);
             player:tradeComplete();
         end
     elseif (trade:hasItemQty(271,1) and trade:getItemCount() == 1) then

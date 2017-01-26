@@ -2150,9 +2150,9 @@ INSERT INTO `mob_skills` VALUES (2119,1459,'Thundris_shriek',1,15.0,2000,1000,4,
 -- INSERT INTO `mob_skills` VALUES (2121,1865,'Valfodr',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2122,1866,'Yggr',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2123,1867,'Gagnrath',0,7.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2124,1868,'Sanngetall',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2125,1869,'Geirrothr',0,7.0,2000,1500,4,0,0,0); -- Fix me
-INSERT INTO `mob_skills` VALUES (2126,151,'Zantetsuken',4,10.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2124,1868,'Custom_Sanngetall',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2125,1869,'Custom_Geirrothr',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2126,151,'Custom_Zantetsuken',4,10.0,2000,1000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2127,1871,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2128,1872,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2129,1873,'.',0,7.0,2000,1500,4,0,0,0);

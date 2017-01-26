@@ -1024,23 +1024,25 @@ REPLACE INTO `mob_spawn_points` VALUES (17056193,'Ravishing_Rafflesia','Ravishin
 -- 17097727
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (17097270,'Odin','Odin',2766,379,-215,66,62);
--- 17097271  Brunhilde     (mob)
--- 17097272  Siegrune      (mob)
--- 17097273  Rossweisse    (mob)
--- 17097274  Gerhilde      (mob)
--- 17097275  Schwertleite  (mob)
--- 17097276  Helmwige      (mob)
--- 17097277  Ortlinde      (mob)
--- 17097278  Grimgerde     (mob)
--- 17097279  Waltraute     (mob)
+-- 17097270  Odin          (Einherjar mob)
+-- 17097271  Brunhilde     (Einherjar mob)
+-- 17097272  Siegrune      (Einherjar mob)
+-- 17097273  Rossweisse    (Einherjar mob)
+-- 17097274  Gerhilde      (Einherjar mob)
+-- 17097275  Schwertleite  (Einherjar mob)
+-- 17097276  Helmwige      (Einherjar mob)
+-- 17097277  Ortlinde      (Einherjar mob)
+-- 17097278  Grimgerde     (Einherjar mob)
+-- 17097279  Waltraute     (Einherjar mob)
 -- 17097280 ~ 17097297    Armoury Crates (NPC)
--- INSERT INTO `mob_spawn_points` VALUES (17097298,'Odin_Prime','Odin_Prime',2766,379,-215,66,62);
--- INSERT INTO `mob_spawn_points` VALUES (17097299,'Odin_Image','Odin Image',2766,379,-215,66,62);
--- INSERT INTO `mob_spawn_points` VALUES (17097300,'Odin_Image','Odin Image',2766,379,-215,66,62);
--- INSERT INTO `mob_spawn_points` VALUES (17097301,'Odin_Image','Odin Image',2766,379,-215,66,62);
-INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426,-215,20,104);
-REPLACE INTO `npc_list` VALUES (17097718,'Dark_Rift','???',0,379.00,-215.00,40.00,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Odin
+-- INSERT INTO `mob_spawn_points` VALUES (17097298,'Odin_Prime','Odin_Prime',2766,379,-215,66,62); -- Avatar BCNM for SMN spell
+-- INSERT INTO `mob_spawn_points` VALUES (17097299,'Odin_Image','Odin Image',2766,379,-215,66,62); -- Avatar BCNM for SMN spell
+-- INSERT INTO `mob_spawn_points` VALUES (17097300,'Odin_Image','Odin Image',2766,379,-215,66,62); -- Avatar BCNM for SMN spell
+-- INSERT INTO `mob_spawn_points` VALUES (17097301,'Odin_Image','Odin Image',2766,379,-215,66,62); -- Avatar BCNM for SMN spell
+
+INSERT INTO `mob_spawn_points` VALUES (17097716,'Odin','Odin',2766,379,-215,66,62); -- Custom
+INSERT INTO `mob_spawn_points` VALUES (17097717,'Alexander','Alexander',2767,426,-215,20,104); -- Custom
+REPLACE INTO `npc_list` VALUES (17097718,'Ragnarok_Rift','???',0,379.00,-215.00,40.00,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,'ABYSSEA',0); -- Custom
 
 -- INSERT INTO `npc_list` VALUES (17097727,'Loot_Box','Loot Box',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
@@ -1400,7 +1402,7 @@ REPLACE INTO `npc_list` VALUES (17228790,'Legion_Moogle','Legion Moogle',128,244
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (17232891,'Umagrhk','Umagrhk',90515,-280,-80,-81,0);
-REPLACE INTO `npc_list` VALUES (17232892,'Freezing_Circle','???',0,-280,-80,-81,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,NULL,0);
+INSERT INTO `npc_list` VALUES (17232892,'Freezing_Circle','???',0,-280,-80,-81,1,40,40,0,0,0,0,3,0x0000340000000000000000000000000000000000,0,NULL,0);
 
 
 -- ------------------------------------------------------------
