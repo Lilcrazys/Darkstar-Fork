@@ -30,26 +30,20 @@ FOR %%X IN (blue_spell_mods.sql) DO ECHO Importing %%X & mysql dspdb -h localhos
 FOR %%X IN (blue_traits.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
 ECHO Importing bcnm and instance tables...
-FOR %%X IN (bcnm_battlefield.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (bcnm_info.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (bcnm_loot.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (bcnm_treasure_chests.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (instance_entities.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (instance_list.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+FOR %%X IN (bcnm*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+FOR %%X IN (instance*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
 ECHO Importing guild tables...
-FOR %%X IN (guild_item_points.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (guild_shops.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-FOR %%X IN (guilds.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
+FOR %%X IN (guild*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ------------------------------------------------------------------
-ECHO importing item tables
+ECHO Importing item tables...
 FOR %%X IN (item*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
-ECHO importing mob tables
+ECHO importing mob and npc tables...
 FOR %%X IN (mob*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
-ECHO ---------------------------------
 FOR %%X IN (npc*.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 ECHO ---------------------------------
+ECHO Importing custom tables...
 cd custom
 FOR %%X IN (*_custom.sql) DO ECHO Importing %%X & mysql dspdb -h localhost -u root -pIr0nd00r < %%X
 cd ..
