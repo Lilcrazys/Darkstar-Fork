@@ -392,10 +392,10 @@ namespace petutils
         PMob->health.hp = PMob->GetMaxHP();
         PMob->health.mp = PMob->GetMaxMP();
 
-        PMob->setModifier(MOD_DEF, GetJugBase(PMob, petStats->defRank)+floor(((CCharEntity*)PMob->PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-        PMob->setModifier(MOD_EVA, GetJugBase(PMob, petStats->evaRank)+floor(((CCharEntity*)PMob->PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
-        PMob->setModifier(MOD_ATT, GetJugBase(PMob, petStats->attRank)+floor(((CCharEntity*)PMob->PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-        PMob->setModifier(MOD_ACC, GetJugBase(PMob, petStats->accRank)+floor(((CCharEntity*)PMob->PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+        PMob->setModifier(MOD_DEF, GetJugBase(PMob, petStats->defRank));
+        PMob->setModifier(MOD_EVA, GetJugBase(PMob, petStats->evaRank));
+        PMob->setModifier(MOD_ATT, GetJugBase(PMob, petStats->attRank));
+        PMob->setModifier(MOD_ACC, GetJugBase(PMob, petStats->accRank));
 
         PMob->m_Weapons[SLOT_MAIN]->setDamage(GetJugWeaponDamage(PMob));
 
@@ -1298,16 +1298,16 @@ namespace petutils
                 }
             }
 
+
             if (PMaster->objtype == TYPE_PC)
-            {   // Added temp hacks so avatars can suck less on iLV content.. Retail doesn't even give MATT, but compensating for lv here..
+            {
                 CCharEntity* PChar = (CCharEntity*)PMaster;
-                PPet->addModifier(MOD_MATT, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_MAGICAL_ATTACK, PChar)+PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_ATT, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_PHYSICAL_ATTACK, PChar)+PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_MACC, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_MAGICAL_ACCURACY, PChar)+PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_ACC, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_PHYSICAL_ACCURACY, PChar)+PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_EVA, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_DEF, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_MATT, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_MAGICAL_ATTACK, PChar));
+                PPet->addModifier(MOD_ATT, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_PHYSICAL_ATTACK, PChar));
+                PPet->addModifier(MOD_MACC, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_MAGICAL_ACCURACY, PChar));
+                PPet->addModifier(MOD_ACC, PChar->PMeritPoints->GetMeritValue(MERIT_AVATAR_PHYSICAL_ACCURACY, PChar));
             }
+
             PMaster->addModifier(MOD_AVATAR_PERPETUATION, PerpetuationCost(PetID, PPet->GetMLevel()));
         }
         else if (PPet->getPetType() == PETTYPE_JUG_PET){
@@ -1382,12 +1382,12 @@ namespace petutils
 		LoadAvatarStats(PPet); //follows PC calcs (w/o SJ)
 		PPet->m_Weapons[SLOT_MAIN]->setDelay(floor(1000.0f*(320.0f / 60.0f))); //320 delay
 		PPet->m_Weapons[SLOT_MAIN]->setDamage(1 + floor(PPet->GetMLevel()*0.9f));
-		//Set A+ weapon skill                                                                     // Temp hacks to make wyvern suck less on iLV content
-		PPet->setModifier(MOD_ATT, battleutils::GetMaxSkill(SKILL_GAX, JOB_WAR, PPet->GetMLevel())+((CCharEntity*)PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill());
-		PPet->setModifier(MOD_ACC, battleutils::GetMaxSkill(SKILL_GAX, JOB_WAR, PPet->GetMLevel())+((CCharEntity*)PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill());
+		//Set A+ weapon skill
+		PPet->setModifier(MOD_ATT, battleutils::GetMaxSkill(SKILL_GAX, JOB_WAR, PPet->GetMLevel()));
+		PPet->setModifier(MOD_ACC, battleutils::GetMaxSkill(SKILL_GAX, JOB_WAR, PPet->GetMLevel()));
 		//Set D evasion and def
-		PPet->setModifier(MOD_EVA, battleutils::GetMaxSkill(SKILL_H2H, JOB_WAR, PPet->GetMLevel())+((CCharEntity*)PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill());
-		PPet->setModifier(MOD_DEF, battleutils::GetMaxSkill(SKILL_H2H, JOB_WAR, PPet->GetMLevel())+((CCharEntity*)PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill());
+		PPet->setModifier(MOD_EVA, battleutils::GetMaxSkill(SKILL_H2H, JOB_WAR, PPet->GetMLevel()));
+		PPet->setModifier(MOD_DEF, battleutils::GetMaxSkill(SKILL_H2H, JOB_WAR, PPet->GetMLevel()));
 
 		if (finalize) {
 			FinalizePetStatistics(PMaster, PPet);
@@ -1398,12 +1398,39 @@ namespace petutils
 		//set C magic evasion
 		PPet->setModifier(MOD_MEVA, battleutils::GetMaxSkill(SKILL_ELE, JOB_RDM, PPet->GetMLevel()));
 		PPet->health.tp = 0;
-        if (PMaster->objtype == TYPE_PC && ((CCharEntity*)PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill() > 0)
-        {   // Temp till pets get retail iLV adjustments
-            PPet->addModifier(MOD_MEVA, floor(((CCharEntity*)PMaster)->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+
+        // Begin custom block: This is temp till pets get retail iLV adjustments
+        CCharEntity* PChar = (CCharEntity*)PMaster;
+        if (PMaster->objtype == TYPE_PC && PChar->m_Weapons[SLOT_MAIN]->getILvlSkill() > 0)
+        {
+            // ShowDebug("Buffing Pet's MaxHP.. \n");
             PPet->health.maxhp = (int16)(PPet->health.maxhp * 1.25);
             PPet->health.hp = PPet->health.maxhp;
+            if (PPet->getPetType() == PETTYPE_JUG_PET)
+            {
+                // ShowDebug("Buffing Jug Pet.. \n");
+                PPet->addModifier(MOD_ATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(MOD_ACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(MOD_MATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(MOD_MACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(MOD_DEF, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(MOD_EVA, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
+                PPet->addModifier(MOD_MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
+            }
+            else if (PPet->getPetType() != PETTYPE_AUTOMATON)
+            {
+                // ShowDebug("Buffing Avatar or Wyvern.. \n");
+                PPet->addModifier(MOD_ATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_ACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_MATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_MACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_DEF, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_EVA, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(MOD_MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+            }
         }
+        // End custom block
+
 		PPet->UpdateHealth();
         PMaster->applyPetModifiers(PPet);
 	}
