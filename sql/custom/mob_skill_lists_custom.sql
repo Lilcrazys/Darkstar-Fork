@@ -17,7 +17,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580);
 
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
-------------------------------------------------
+-- ----------------------------------------------
 -- Abyssea Mobs to be deleted once DSP merges
 
 -- Alkonost
