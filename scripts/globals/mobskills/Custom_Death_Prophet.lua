@@ -2,11 +2,10 @@
 --
 -- Dead Prophet
 --
---
 ---------------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -29,4 +28,4 @@ function onMobWeaponSkill(target, mob, skill)
     end
 
     return typeEffect;
-end
+end;
