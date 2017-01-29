@@ -3152,7 +3152,7 @@ namespace charutils
                 if (PMember->getZone() == PMob->getZone())
                 {
                     if (map_config.exp_party_gap_penalties == 1)
-                    {
+                    {   if ((PMob->m_HiPCLvl - PMember->GetMLevel()) > 10) {baseexp=1;}
                         if (maxlevel > 50 || maxlevel > (PMember->GetMLevel() + 7))
                         {
                             exp = (float)baseexp*(float)((float)(PMember->GetMLevel()) / (float)(maxlevel));
