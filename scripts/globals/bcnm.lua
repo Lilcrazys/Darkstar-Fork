@@ -71,13 +71,13 @@ bcnmid_param_map = {6, {640, 0, 643, 3},
                   179, {256, 0},
                   180, {293, 5, 288, 0, 289, 1, 290, 2, 291, 3, 292, 4},
                   181, {320, 0},
-                  201, {416, 0, 417, 1, 418, 2, 420, 4},
-                  202, {448, 0, 449, 1, 450, 2, 452, 4},
-                  203, {480, 0, 481, 1, 482, 2, 484, 4},
+                  201, {416, 0, 417, 1, 418, 2, 420, 4, 421, 5},
+                  202, {448, 0, 449, 1, 450, 2, 452, 4, 453, 5},
+                  203, {480, 0, 481, 1, 482, 2, 484, 4, 485, 5},
                   206, {512, 0, 516, 4, 517, 5, 518, 6, 519, 7, 532, 20},
-                  207, {544, 0, 545, 1, 547, 3},
-                  209, {576, 0, 577, 1, 578, 2, 580, 4},
-                  211, {608, 0, 609, 1, 611, 3},
+                  207, {544, 0, 545, 1, 547, 3, 548, 4},
+                  209, {576, 0, 577, 1, 578, 2, 580, 4, 581, 5},
+                  211, {608, 0, 609, 1, 611, 3, 612, 4},
                   255, {1308,0}}; -- Abyssea Empyreal Paradox (Retail Shinryu)
 
 -- Call this onTrade for burning circles
@@ -313,7 +313,7 @@ function GetBattleBitmask(id, zone, mode)
     -- normal sweep for NON MAAT FIGHTS
     local ret = -1;
     local mask = 0;
-    
+
     for zoneindex = 1, #bcnmid_param_map, 2 do
         if (zone==bcnmid_param_map[zoneindex]) then -- matched zone
             for bcnmindex = 1, #bcnmid_param_map[zoneindex + 1], 2 do -- loop bcnms in this zone
@@ -327,7 +327,7 @@ function GetBattleBitmask(id, zone, mode)
             end
         end
     end
-    
+
     return ret;
 end;
 
@@ -404,7 +404,7 @@ function checkNonTradeBCNM(player, npc)
              player:setVar("trade_bcnmid", 640);
 	    elseif (player:hasKeyItem(ZEPHYR_FAN)) then -- Brothers ENM
             mask = GetBattleBitmask(643, Zone, 1);
-            player:setVar("trade_bcnmid", 643);		 
+            player:setVar("trade_bcnmid", 643);
         end
     elseif (Zone == 8) then -- Boneyard_Gully
            if (player:getCurrentMission(COP) == THREE_PATHS  and  player:getVar("COP_Ulmia_s_Path") == 5) then -- head_wind
@@ -590,6 +590,9 @@ function checkNonTradeBCNM(player, npc)
         elseif (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_EMERALD_SEAL)) then
             mask = GetBattleBitmask(420, Zone, 1);
             player:setVar("trade_bcnmid", 420);
+        elseif (player:hasKeyItem(AVATAR_PHANTOM_GEM)) then -- HTB Trial by Wind
+            mask = GetBattleBitmask(421, Zone, 1);
+            player:setVar("trade_bcnmid", 421);
         end
     elseif (Zone == 202) then -- Cloister of Storms
         if (player:hasKeyItem(TUNING_FORK_OF_LIGHTNING)) then -- Trial by Lightning
@@ -598,6 +601,9 @@ function checkNonTradeBCNM(player, npc)
         elseif (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_VIOLET_SEAL)) then
             mask = GetBattleBitmask(452, Zone, 1);
             player:setVar("trade_bcnmid", 452);
+        elseif (player:hasKeyItem(AVATAR_PHANTOM_GEM)) then -- HTB Trial by Lightning
+            mask = GetBattleBitmask(453, Zone, 1);
+            player:setVar("trade_bcnmid", 453);
         end
     elseif (Zone == 203) then -- Cloister of Frost
         if (player:hasKeyItem(TUNING_FORK_OF_ICE)) then -- Trial by Ice
@@ -606,6 +612,9 @@ function checkNonTradeBCNM(player, npc)
         elseif (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_AZURE_SEAL)) then
             mask = GetBattleBitmask(484, Zone, 1);
             player:setVar("trade_bcnmid", 484);
+        elseif (player:hasKeyItem(AVATAR_PHANTOM_GEM)) then -- HTB Trial by Ice
+            mask = GetBattleBitmask(485, Zone, 1);
+            player:setVar("trade_bcnmid", 485);
         end
     elseif (Zone == 206) then -- Qu'Bia Arena
         if (player:getCurrentMission(player:getNation()) == 14 and player:getVar("MissionStatus") == 11) then -- Mission 5-1
@@ -627,6 +636,9 @@ function checkNonTradeBCNM(player, npc)
         elseif (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_SCARLET_SEAL)) then
             mask = GetBattleBitmask(547, Zone, 1);
             player:setVar("trade_bcnmid", 547);
+        elseif (player:hasKeyItem(AVATAR_PHANTOM_GEM)) then -- HTB Trial by Fire
+            mask = GetBattleBitmask(548, Zone, 1);
+            player:setVar("trade_bcnmid", 548);
         end
     elseif (Zone == 209) then -- Cloister of Tremors
         if (player:hasKeyItem(TUNING_FORK_OF_EARTH)) then -- Trial by Earth
@@ -635,6 +647,9 @@ function checkNonTradeBCNM(player, npc)
         elseif (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_AMBER_SEAL)) then
             mask = GetBattleBitmask(580, Zone, 1);
             player:setVar("trade_bcnmid", 580);
+        elseif (player:hasKeyItem(AVATAR_PHANTOM_GEM)) then -- HTB Trial by Earth
+            mask = GetBattleBitmask(581, Zone, 1);
+            player:setVar("trade_bcnmid", 581);
         end
     elseif (Zone == 211) then -- Cloister of Tides
         if (player:hasKeyItem(TUNING_FORK_OF_WATER)) then -- Trial by Water
@@ -643,6 +658,9 @@ function checkNonTradeBCNM(player, npc)
         elseif (player:getCurrentMission(ASA) == SUGAR_COATED_DIRECTIVE and player:hasKeyItem(DOMINAS_CERULEAN_SEAL)) then
             mask = GetBattleBitmask(611, Zone, 1);
             player:setVar("trade_bcnmid", 611);
+        elseif (player:hasKeyItem(AVATAR_PHANTOM_GEM)) then -- HTB Trial by Water
+            mask = GetBattleBitmask(612, Zone, 1);
+            player:setVar("trade_bcnmid", 612);
         end
     end
 

@@ -28,9 +28,9 @@
 -- 16786431
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16785724,'Orcfeltrap','Orcfeltrap',96612,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',96612,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (16785726,'Orcfeltrap','Orcfeltrap',96612,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (16785724,'Orcfeltrap','Orcfeltrap',96611,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16785725,'Orcfeltrap','Orcfeltrap',96611,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16785726,'Orcfeltrap','Orcfeltrap',96611,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (16785781,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (16785782,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -60,9 +60,9 @@ REPLACE INTO `mob_spawn_points` VALUES (16793870,'Primordial_Pugil','Primordial 
 REPLACE INTO `mob_spawn_points` VALUES (16793871,'Primordial_Pugil','Primordial Pugil',90491,-644,0.3,-655,0);
 REPLACE INTO `mob_spawn_points` VALUES (16793872,'Primordial_Pugil','Primordial Pugil',90491,-644.5,0.3,-655,0);
 
-INSERT INTO `mob_spawn_points` VALUES (16793895,'Intuila','Intuila',96609,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (16793896,'Intuila','Intuila',96609,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (16793897,'Intuila','Intuila',96609,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (16793895,'Intuila','Intuila',96608,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16793896,'Intuila','Intuila',96608,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16793897,'Intuila','Intuila',96608,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (16793969,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (16793970,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -243,9 +243,9 @@ REPLACE INTO `npc_list` VALUES (16839098,'qm21','???',0,-166.000,-7.000,-83.000,
 -- 16876543
 -- ------------------------------------------------------------
 
-INSERT INTO `mob_spawn_points` VALUES (16875789,'Immanibugard','Immanibugard',96608,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',96608,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (16875791,'Immanibugard','Immanibugard',96608,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (16875789,'Immanibugard','Immanibugard',96607,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (16875790,'Immanibugard','Immanibugard',96607,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (16875791,'Immanibugard','Immanibugard',96607,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (16875883,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (16875884,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1195,16 +1195,16 @@ REPLACE INTO `mob_spawn_points` VALUES (17179265,'Gugalanna','Gugalanna',13780,-
 
 REPLACE INTO `mob_spawn_points` VALUES (17187289,'Lancing_Lamorak','Lancing Lamorak',13807,-360,-50.5,270,33);
 
-REPLACE INTO `mob_spawn_points` VALUES (17187829,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187830,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187831,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187832,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187833,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187834,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187835,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187836,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187837,'Holiday_Gift_Box','Holiday_Gift_Box',96589,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17187838,'Twinkling_Treant','Twinkling_Treant',96590,-157,-50,163,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187829,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187830,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187831,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187832,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187833,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187834,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187835,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187836,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187837,'Holiday_Gift_Box','Holiday_Gift_Box',96588,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17187838,'Twinkling_Treant','Twinkling_Treant',96589,-157,-50,163,0);
 
 
 -- ------------------------------------------------------------
@@ -1214,24 +1214,24 @@ REPLACE INTO `mob_spawn_points` VALUES (17187838,'Twinkling_Treant','Twinkling_T
 
 REPLACE INTO `mob_spawn_points` VALUES (17191335,'Sarimanok','Sarimanok',13806,288,-61,368,32);
 
-INSERT INTO `mob_spawn_points` VALUES (17191471,'Hugemaw_Harold','Hugemaw Harold',96602,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold',96602,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17191473,'Hugemaw_Harold','Hugemaw Harold',96602,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17191471,'Hugemaw_Harold','Hugemaw Harold',96601,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17191472,'Hugemaw_Harold','Hugemaw Harold',96601,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17191473,'Hugemaw_Harold','Hugemaw Harold',96601,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17191538,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17191539,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17191540,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
-REPLACE INTO `mob_spawn_points` VALUES (17191925,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191926,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191927,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191928,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191929,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191930,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191931,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191932,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191933,'Holiday_Gift_Box','Holiday_Gift_Box',96591,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17191934,'Twinkling_Treant','Twinkling_Treant',96592,96,-47,100,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191925,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191926,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191927,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191928,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191929,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191930,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191931,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191932,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191933,'Holiday_Gift_Box','Holiday_Gift_Box',96590,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17191934,'Twinkling_Treant','Twinkling_Treant',96591,96,-47,100,0);
 
 
 -- ------------------------------------------------------------
@@ -1241,9 +1241,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17191934,'Twinkling_Treant','Twinkling_T
 
 REPLACE INTO `mob_spawn_points` VALUES (17195494,'Stachysaurus','Stachysaurus',13808,640.149,32,1,213);
 
-INSERT INTO `mob_spawn_points` VALUES (17195570,'Ironhorn_Baldurno','Ironhorn Baldurno',96604,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Baldurno',96604,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17195572,'Ironhorn_Baldurno','Ironhorn Baldurno',96604,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17195570,'Ironhorn_Baldurno','Ironhorn Baldurno',96603,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Baldurno',96603,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17195572,'Ironhorn_Baldurno','Ironhorn Baldurno',96603,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17195681,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17195682,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1257,9 +1257,9 @@ INSERT INTO `mob_spawn_points` VALUES (17195571,'Ironhorn_Baldurno','Ironhorn Ba
 
 REPLACE INTO `mob_spawn_points` VALUES (17199612,'Ig-Alima','Ig-Alima',13766,720,-8.078,195,0);
 
-INSERT INTO `mob_spawn_points` VALUES (17199659,'Valkurm_Imperator','Valkurm Imperator',96616,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17199660,'Valkurm_Imperator','Valkurm Imperator',96616,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17199661,'Valkurm_Imperator','Valkurm Imperator',96616,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17199659,'Valkurm_Imperator','Valkurm Imperator',96615,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17199660,'Valkurm_Imperator','Valkurm Imperator',96615,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17199661,'Valkurm_Imperator','Valkurm Imperator',96615,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17199755,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17199756,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1276,9 +1276,9 @@ INSERT INTO `mob_spawn_points` VALUES (17200126,'Tchakka','Tchakka',90084,-786,-
 
 REPLACE INTO `mob_spawn_points` VALUES (17203697,'Belphoebe','Belphoebe',13782,78,0,118,233);
 
--- INSERT INTO `mob_spawn_points` VALUES (17203699,'Emperor_Arthro','Emperor Arthro',96618,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17203700,'Emperor_Arthro','Emperor Arthro',96618,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17203701,'Emperor_Arthro','Emperor Arthro',96618,0.000,0.001,0.000,0); -- Timed pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203699,'Emperor_Arthro','Emperor Arthro',96617,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203700,'Emperor_Arthro','Emperor Arthro',96617,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17203701,'Emperor_Arthro','Emperor Arthro',96617,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17203892,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17203893,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1300,16 +1300,16 @@ REPLACE INTO `mob_spawn_points` VALUES (17207723,'Cherufe','Cherufe',13825,80,8,
 
 REPLACE INTO `mob_spawn_points` VALUES (17211882,'Sallow_Seymour','Sallow Seymour',90400,798,0,439,147);
 
-REPLACE INTO `mob_spawn_points` VALUES (17212405,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212406,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212407,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212408,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212409,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212410,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212411,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212412,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212413,'Holiday_Gift_Box','Holiday_Gift_Box',96593,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17212414,'Twinkling_Treant','Twinkling_Treant',96594,741,-3,461,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212405,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212406,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212407,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212408,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212409,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212410,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212411,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212412,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212413,'Holiday_Gift_Box','Holiday_Gift_Box',96592,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17212414,'Twinkling_Treant','Twinkling_Treant',96593,741,-3,461,0);
 
 
 -- ------------------------------------------------------------
@@ -1319,24 +1319,24 @@ REPLACE INTO `mob_spawn_points` VALUES (17212414,'Twinkling_Treant','Twinkling_T
 
 REPLACE INTO `mob_spawn_points` VALUES (17215956,'Bhishani','Bhishani',90437,605,-0.471,-519.283,112);
 
-INSERT INTO `mob_spawn_points` VALUES (17216145,'Bounding_Belinda','Bounding Belinda',96601,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17216146,'Bounding_Belinda','Bounding Belinda',96601,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bounding_Belinda','Bounding Belinda',96601,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17216145,'Bounding_Belinda','Bounding Belinda',96600,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17216146,'Bounding_Belinda','Bounding Belinda',96600,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17216147,'Bounding_Belinda','Bounding Belinda',96600,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17216203,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17216204,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17216205,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
-REPLACE INTO `mob_spawn_points` VALUES (17216501,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216502,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216503,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216504,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216505,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216506,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216507,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216508,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216509,'Holiday_Gift_Box','Holiday_Gift_Box',96595,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17216510,'Twinkling_Treant','Twinkling_Treant',96596,397,0,-422,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216501,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216502,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216503,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216504,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216505,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216506,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216507,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216508,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216509,'Holiday_Gift_Box','Holiday_Gift_Box',96594,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17216510,'Twinkling_Treant','Twinkling_Treant',96594,397,0,-422,0);
 
 
 -- ------------------------------------------------------------
@@ -1346,9 +1346,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17216510,'Twinkling_Treant','Twinkling_T
 
 REPLACE INTO `mob_spawn_points` VALUES (17220021,'GwynnapNudd','Gwynn ap Nudd',13804,-125,72,720,107);
 
-INSERT INTO `mob_spawn_points` VALUES (17220096,'Sleepy_Mabel','Sleepy Mabel',96605,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',96605,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17220098,'Sleepy_Mabel','Sleepy Mabel',96605,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17220096,'Sleepy_Mabel','Sleepy Mabel',96604,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',96604,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17220098,'Sleepy_Mabel','Sleepy Mabel',96604,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17220169,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17220170,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1405,9 +1405,9 @@ INSERT INTO `mob_spawn_points` VALUES (17240315,'Zmey_Gorynych','Zmey_Gorynych',
 
 INSERT INTO `mob_spawn_points` VALUES (17244350,'Sabotender_Corrido','Sabotender_Corrido',90321,44,8,-386,191);
 
--- INSERT INTO `mob_spawn_points` VALUES (17244582,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17244583,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17244584,'Cactrot_Veloz','Cactrot Veloz',96617,0.000,0.001,0.000,0); -- Timed pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244582,'Cactrot_Veloz','Cactrot Veloz',96616,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244583,'Cactrot_Veloz','Cactrot Veloz',96616,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17244584,'Cactrot_Veloz','Cactrot Veloz',96616,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17244657,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17244658,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1421,16 +1421,16 @@ INSERT INTO `mob_spawn_points` VALUES (17244350,'Sabotender_Corrido','Sabotender
 
 REPLACE INTO `mob_spawn_points` VALUES (17248625,'Virvatuli','Virvatuli',13778,120,4,-440,44);
 
-REPLACE INTO `mob_spawn_points` VALUES (17249269,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249270,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249271,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249272,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249273,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249274,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249275,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249276,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249277,'Holiday_Gift_Box','Holiday_Gift_Box',96597,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17249278,'Twinkling_Treant','Twinkling_Treant',96598,326,-4,46,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249269,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249270,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249271,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249272,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249273,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249274,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249275,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249276,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249277,'Holiday_Gift_Box','Holiday_Gift_Box',96596,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17249278,'Twinkling_Treant','Twinkling_Treant',96597,326,-4,46,0);
 
 
 -- ------------------------------------------------------------
@@ -1440,24 +1440,24 @@ REPLACE INTO `mob_spawn_points` VALUES (17249278,'Twinkling_Treant','Twinkling_T
 
 REPLACE INTO `mob_spawn_points` VALUES (17252816,'RwNwPrtMHrw','Rw Nw Prt M Hrw',13749,-120,-5,-415,166);
 
-INSERT INTO `mob_spawn_points` VALUES (17252988,'Prickly_Pitriv','Prickly Pitriv',96603,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv',96603,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17252990,'Prickly_Pitriv','Prickly Pitriv',96603,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17252988,'Prickly_Pitriv','Prickly Pitriv',96602,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17252989,'Prickly_Pitriv','Prickly Pitriv',96602,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17252990,'Prickly_Pitriv','Prickly Pitriv',96602,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17253068,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17253069,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17253070,'Ethereal_Junction_3','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
-REPLACE INTO `mob_spawn_points` VALUES (17253365,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253366,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253367,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253368,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253369,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253370,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253371,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253372,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253373,'Holiday_Gift_Box','Holiday_Gift_Box',96599,0.01,0.01,0.01,0);
-REPLACE INTO `mob_spawn_points` VALUES (17253374,'Twinkling_Treant','Twinkling_Treant',96600,-40,2,-662,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253365,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253366,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253367,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253368,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253369,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253370,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253371,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253372,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253373,'Holiday_Gift_Box','Holiday_Gift_Box',96598,0.01,0.01,0.01,0);
+REPLACE INTO `mob_spawn_points` VALUES (17253374,'Twinkling_Treant','Twinkling_Treant',96599,-40,2,-662,0);
 
 
 -- ------------------------------------------------------------
@@ -1467,9 +1467,9 @@ REPLACE INTO `mob_spawn_points` VALUES (17253374,'Twinkling_Treant','Twinkling_T
 
 REPLACE INTO `mob_spawn_points` VALUES (17256921,'Smierc','Smierc',13730,205,15.746,-680,127);
 
-INSERT INTO `mob_spawn_points` VALUES (17256995,'Serpopard_Ninlil','Serpopard Ninlil',96606,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17256996,'Serpopard_Ninlil','Serpopard Ninlil',96606,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17256997,'Serpopard_Ninlil','Serpopard Ninlil',96606,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17256995,'Serpopard_Ninlil','Serpopard Ninlil',96605,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17256996,'Serpopard_Ninlil','Serpopard Ninlil',96605,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17256997,'Serpopard_Ninlil','Serpopard Ninlil',96605,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17257079,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17257080,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1486,9 +1486,9 @@ INSERT INTO `mob_spawn_points` VALUES (17257470,'Hurkan','Hurkan',90090,79,16,11
 
 REPLACE INTO `mob_spawn_points` VALUES (17261049,'Botulus_rex','Botulus Rex',13731,80,0.049,-195,0);
 
-INSERT INTO `mob_spawn_points` VALUES (17261050,'Abyssdiver','Abyssdiver',96607,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',96607,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17261052,'Abyssdiver','Abyssdiver',96607,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17261050,'Abyssdiver','Abyssdiver',96606,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17261051,'Abyssdiver','Abyssdiver',96606,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17261052,'Abyssdiver','Abyssdiver',96606,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17261202,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17261203,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1545,15 +1545,15 @@ INSERT INTO `mob_spawn_points` VALUES (17281499,'Moly','Moly',90451,-244,0,405,2
 INSERT INTO `mob_spawn_points` VALUES (17281500,'Moly','Moly',90451,-245,0,405,254);
 INSERT INTO `mob_spawn_points` VALUES (17281501,'Moly','Moly',90451,-245,0,405,254);
 
-INSERT INTO `mob_spawn_points` VALUES (17281506,'Steamy Samantha','Steamy Samantha',96613,0.000,0.001,0.000,0); -- Force pop (phase 1)
-INSERT INTO `mob_spawn_points` VALUES (17281507,'Steamy Samantha','Steamy Samantha',96613,0.000,0.001,0.000,0); -- Force pop (phase 1)
--- INSERT INTO `mob_spawn_points` VALUES (17281508,'Steamy Samantha','Steamy Samantha',96613,0.000,0.001,0.000,0); -- Timed pop (phase 1)
-INSERT INTO `mob_spawn_points` VALUES (17281509,'Sultry Samantha','Sultry Samantha',96614,0.000,0.001,0.000,0); -- Force pop (phase 2)
-INSERT INTO `mob_spawn_points` VALUES (17281510,'Sultry Samantha','Sultry Samantha',96614,0.000,0.001,0.000,0); -- Force pop (phase 2)
--- INSERT INTO `mob_spawn_points` VALUES (17281511,'Sultry Samantha','Sultry Samantha',96614,0.000,0.001,0.000,0); -- Timed pop (phase 2)
-INSERT INTO `mob_spawn_points` VALUES (17281512,'Sybaritic_Samantha','Sybaritic Samantha',96615,0.000,0.001,0.000,0); -- Force pop (phase 3)
-INSERT INTO `mob_spawn_points` VALUES (17281513,'Sybaritic_Samantha','Sybaritic Samantha',96615,0.000,0.001,0.000,0); -- Force pop (phase 3)
--- INSERT INTO `mob_spawn_points` VALUES (17281514,'Sybaritic_Samantha','Sybaritic Samantha',96615,0.000,0.001,0.000,0); -- Timed pop (phase 3)
+INSERT INTO `mob_spawn_points` VALUES (17281506,'Steamy Samantha','Steamy Samantha',96612,0.000,0.001,0.000,0); -- Force pop (phase 1)
+INSERT INTO `mob_spawn_points` VALUES (17281507,'Steamy Samantha','Steamy Samantha',96612,0.000,0.001,0.000,0); -- Force pop (phase 1)
+-- INSERT INTO `mob_spawn_points` VALUES (17281508,'Steamy Samantha','Steamy Samantha',96612,0.000,0.001,0.000,0); -- Timed pop (phase 1)
+INSERT INTO `mob_spawn_points` VALUES (17281509,'Sultry Samantha','Sultry Samantha',96613,0.000,0.001,0.000,0); -- Force pop (phase 2)
+INSERT INTO `mob_spawn_points` VALUES (17281510,'Sultry Samantha','Sultry Samantha',96613,0.000,0.001,0.000,0); -- Force pop (phase 2)
+-- INSERT INTO `mob_spawn_points` VALUES (17281511,'Sultry Samantha','Sultry Samantha',96613,0.000,0.001,0.000,0); -- Timed pop (phase 2)
+INSERT INTO `mob_spawn_points` VALUES (17281512,'Sybaritic_Samantha','Sybaritic Samantha',96614,0.000,0.001,0.000,0); -- Force pop (phase 3)
+INSERT INTO `mob_spawn_points` VALUES (17281513,'Sybaritic_Samantha','Sybaritic Samantha',96614,0.000,0.001,0.000,0); -- Force pop (phase 3)
+-- INSERT INTO `mob_spawn_points` VALUES (17281514,'Sybaritic_Samantha','Sybaritic Samantha',96614,0.000,0.001,0.000,0); -- Timed pop (phase 3)
 
 -- INSERT INTO `npc_list` VALUES (17281657,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17281658,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -1586,9 +1586,9 @@ INSERT INTO `mob_spawn_points` VALUES (17289662,'Sabotender_Mercenario','Saboten
 
 REPLACE INTO `mob_spawn_points` VALUES (17293648,'Kaggen','Kaggen',13764,150,-20.5,150,0);
 INSERT INTO `mob_spawn_points` VALUES (17293485,'Atkorkamuy','Atkorkamuy',90313,-266,-2,20,68);
-INSERT INTO `mob_spawn_points` VALUES (17293663,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Force pop
-INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Force pop
--- INSERT INTO `mob_spawn_points` VALUES (17293665,'Jester_Malatrix','Jester Malatrix',96611,0.000,0.001,0.000,0); -- Timed pop
+INSERT INTO `mob_spawn_points` VALUES (17293663,'Jester_Malatrix','Jester Malatrix',96610,0.000,0.001,0.000,0); -- Force pop
+INSERT INTO `mob_spawn_points` VALUES (17293664,'Jester_Malatrix','Jester Malatrix',96610,0.000,0.001,0.000,0); -- Force pop
+-- INSERT INTO `mob_spawn_points` VALUES (17293665,'Jester_Malatrix','Jester Malatrix',96610,0.000,0.001,0.000,0); -- Timed pop
 
 -- INSERT INTO `npc_list` VALUES (17293779,'Ethereal_Junction_1','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17293780,'Ethereal_Junction_2','Ethereal Junction',192,0.000,0.000,0.000,6,40,40,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
@@ -2230,17 +2230,29 @@ REPLACE INTO `mob_spawn_points` VALUES (17596732,'Roly_Poly','Roly-Poly',13777,-
 -- 17601535
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17600552,'HTB_Garuda_Prime','Garuda Prime',90324,503,41,-367,105);
+INSERT INTO `mob_spawn_points` VALUES (17600553,'HTB_Garuda_Prime','Garuda Prime',90324,21,-18,29,100);
+INSERT INTO `mob_spawn_points` VALUES (17600554,'HTB_Garuda_Prime','Garuda Prime',90324,-377,-78,510,95);
+
 
 -- ------------------------------------------------------------
 -- Cloister of Storms (Zone 202)
 -- 17605631
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17604651,'HTB_Ramuh_Prime','Ramuh Prime',90325,503,41,-367,105);
+INSERT INTO `mob_spawn_points` VALUES (17604652,'HTB_Ramuh_Prime','Ramuh Prime',90325,21,-18,29,100);
+INSERT INTO `mob_spawn_points` VALUES (17604653,'HTB_Ramuh_Prime','Ramuh Prime',90325,-377,-78,510,95);
+
 
 -- ------------------------------------------------------------
 -- Cloister of Frost (Zone 203)
 -- 17609727
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17608759,'HTB_Shiva_Prime','Shiva Prime',90326,503,41,-367,105);
+INSERT INTO `mob_spawn_points` VALUES (17608760,'HTB_Shiva_Prime','Shiva Prime',90326,21,-18,29,100);
+INSERT INTO `mob_spawn_points` VALUES (17608761,'HTB_Shiva_Prime','Shiva Prime',90326,-377,-78,510,95);
 
 
 -- ------------------------------------------------------------
@@ -2272,6 +2284,10 @@ REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',9
 -- 17626111
 -- ------------------------------------------------------------
 
+INSERT INTO `mob_spawn_points` VALUES (17625125,'HTB_Ifrit_Prime','Ifrit Prime',90327,503,41,-367,105);
+INSERT INTO `mob_spawn_points` VALUES (17625126,'HTB_Ifrit_Prime','Ifrit Prime',90327,21,-18,29,100);
+INSERT INTO `mob_spawn_points` VALUES (17625127,'HTB_Ifrit_Prime','Ifrit Prime',90327,-377,-78,510,95);
+
 
 -- ------------------------------------------------------------
 -- Quicksand Caves (Zone 208)
@@ -2287,6 +2303,10 @@ INSERT INTO `mob_spawn_points` VALUES (17629648,'Peon_Pounder','Peon Pounder',90
 -- Cloister of Tremors (Zone 209)
 -- 17634303
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17633320,'HTB_Titan_Prime','Titan Prime',90328,503,41,-367,105);
+INSERT INTO `mob_spawn_points` VALUES (17633321,'HTB_Titan_Prime','Titan Prime',90328,21,-18,29,100);
+INSERT INTO `mob_spawn_points` VALUES (17633322,'HTB_Titan_Prime','Titan Prime',90328,-377,-78,510,95);
 
 
 -- ------------------------------------------------------------
@@ -2558,6 +2578,10 @@ INSERT INTO `npc_list` VALUES (17638399,'Blank','Blank',0,0.000,0.000,-5.000,0,5
 -- Cloister of Tides (Zone 211)
 -- 17642495
 -- ------------------------------------------------------------
+
+INSERT INTO `mob_spawn_points` VALUES (17641509,'HTB_Leviathan_Prime','Leviathan Prime',90329,503,41,-367,105);
+INSERT INTO `mob_spawn_points` VALUES (17641510,'HTB_Leviathan_Prime','Leviathan Prime',90329,21,-18,29,100);
+INSERT INTO `mob_spawn_points` VALUES (17641511,'HTB_Leviathan_Prime','Leviathan Prime',90329,-377,-78,510,95);
 
 
 -- ------------------------------------------------------------

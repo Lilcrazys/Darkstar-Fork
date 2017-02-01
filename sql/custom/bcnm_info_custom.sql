@@ -9,6 +9,13 @@
 -- ---------------------------------------------------------------------------
 -- REPLACE INTO `bcnm_info` VALUES (bcnmId,zoneId,'name','fastestName',fastestTime,timeLimit,levelCap,partySize,lootDropId,rules);
 
+INSERT INTO `bcnm_info` VALUES (421,201,'htb_trial_by_wind',NULL,NULL,1800,0,6,0,5);      -- HTB Avatars: Garuda
+INSERT INTO `bcnm_info` VALUES (453,202,'htb_trial_by_lightning',NULL,NULL,1800,0,6,0,5); -- HTB Avatars: Ramuh
+INSERT INTO `bcnm_info` VALUES (485,203,'htb_trial_by_Ice',NULL,NULL,1800,0,6,0,5);       -- HTB Avatars: Shiva
+INSERT INTO `bcnm_info` VALUES (548,207,'htb_trial_by_fire',NULL,NULL,1800,0,6,0,5);      -- HTB Avatars: Ifrit
+INSERT INTO `bcnm_info` VALUES (581,209,'htb_trial_by_earth',NULL,NULL,1800,0,6,0,5);     -- HTB Avatars: Titan
+INSERT INTO `bcnm_info` VALUES (612,211,'htb_trial_by_water',NULL,NULL,1800,0,6,0,5);     -- HTB Avatars: Leviathan
+
 -- REPLACE INTO `bcnm_info` VALUES (1184,78,'The_Rider_Cometh',null,null,900,0,6,0,5);
 
 INSERT INTO `bcnm_info` VALUES (1308,255,'The_Wyrm_God',null,null,1800,0,18,0,7);

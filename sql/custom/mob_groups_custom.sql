@@ -1482,87 +1482,103 @@ INSERT INTO `mob_groups` VALUES (90316,9116,5,10800,0,9316,80000,100000,110,112,
 INSERT INTO `mob_groups` VALUES (90321,9121,114,10800,0,9321,80000,100000,110,112,0); -- Sabotender_Corrido
 INSERT INTO `mob_groups` VALUES (90323,9123,65,10800,0,9323,80000,100000,110,112,0); -- Venomfang
 
+INSERT INTO `mob_groups` VALUES (90324,9911,201,0,128,9733,0,0,120,120,0); -- HTB Avatars: Garuda
+INSERT INTO `mob_groups` VALUES (90325,9912,202,0,128,9734,0,0,120,120,0); -- HTB Avatars: Ramuh
+INSERT INTO `mob_groups` VALUES (90326,9913,203,0,128,9735,0,0,120,120,0); -- HTB Avatars: Shiva
+INSERT INTO `mob_groups` VALUES (90327,9914,207,0,128,9736,0,0,120,120,0); -- HTB Avatars: Ifrit
+INSERT INTO `mob_groups` VALUES (90328,9915,209,0,128,9737,0,0,120,120,0); -- HTB Avatars: Titan
+INSERT INTO `mob_groups` VALUES (90329,9916,211,0,128,9738,0,0,120,120,0); -- HTB Avatars: Leviathan
 
--- Pool IDs 90324 to 96588 currently unused
-
--- Xmas Event
-INSERT INTO `mob_groups` VALUES (96589,8998,100,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (West Ron)
-INSERT INTO `mob_groups` VALUES (96590,8999,100,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (West Ron)
-INSERT INTO `mob_groups` VALUES (96591,8998,101,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (East Ron)
-INSERT INTO `mob_groups` VALUES (96592,8999,101,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (East Ron)
-INSERT INTO `mob_groups` VALUES (96593,8998,106,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (North Gusta)
-INSERT INTO `mob_groups` VALUES (96594,8999,106,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (North Gusta)
-INSERT INTO `mob_groups` VALUES (96595,8998,107,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (South Gusta)
-INSERT INTO `mob_groups` VALUES (96596,8999,107,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (South Gusta)
-INSERT INTO `mob_groups` VALUES (96597,8998,115,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (West Saruta)
-INSERT INTO `mob_groups` VALUES (96598,8999,115,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (West Saruta)
-INSERT INTO `mob_groups` VALUES (96599,8998,116,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (East Saruta)
-INSERT INTO `mob_groups` VALUES (96600,8999,116,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (East Saruta)
-
+-- Group IDs 90330 to 96587 currently unused
+-- New info above this line sorted by Group ID
+-- place nothing below this line ---------------
 -- REPLACE INTO `mob_groups` VALUES (groupid,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance);
 
+-- Xmas Event
+INSERT INTO `mob_groups` VALUES (96588,16599,100,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (West Ron)
+INSERT INTO `mob_groups` VALUES (96589,16600,100,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (West Ron)
+INSERT INTO `mob_groups` VALUES (96590,16599,101,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (East Ron)
+INSERT INTO `mob_groups` VALUES (96591,16600,101,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (East Ron)
+INSERT INTO `mob_groups` VALUES (96592,16599,106,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (North Gusta)
+INSERT INTO `mob_groups` VALUES (96593,16600,106,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (North Gusta)
+INSERT INTO `mob_groups` VALUES (96594,16599,107,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (South Gusta)
+INSERT INTO `mob_groups` VALUES (96595,16600,107,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (South Gusta)
+INSERT INTO `mob_groups` VALUES (96596,16599,115,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (West Saruta)
+INSERT INTO `mob_groups` VALUES (96597,16600,115,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (West Saruta)
+INSERT INTO `mob_groups` VALUES (96598,16599,116,0,128,0,11,11,1,1,0); -- Holiday_Gift_Box (East Saruta)
+INSERT INTO `mob_groups` VALUES (96599,16600,116,15,128,0,500000,500000,1,1,0); -- Twinkling Treant (East Saruta)
+
 -- Unity NMs start
-INSERT INTO `mob_groups` VALUES (96601,9601,107,0,128,9601,0,0,76,76,0); -- Bounding Belinda
-INSERT INTO `mob_groups` VALUES (96602,9602,101,0,128,9602,0,0,76,76,0); -- Hugemaw Harold
-INSERT INTO `mob_groups` VALUES (96603,9603,116,0,128,9603,0,0,76,76,0); -- Prickly Pitriv
-INSERT INTO `mob_groups` VALUES (96604,9604,102,0,128,9604,0,0,99,99,0); -- Ironhorn Baldurno
-INSERT INTO `mob_groups` VALUES (96605,9605,108,0,128,9605,0,0,99,99,0); -- Sleepy Mabel
-INSERT INTO `mob_groups` VALUES (96606,9606,117,0,128,9606,0,0,119,119,0); -- Serpopard Ninlil
-INSERT INTO `mob_groups` VALUES (96607,9607,118,0,128,9607,0,0,119,119,0); -- Abyssdiver
-INSERT INTO `mob_groups` VALUES (96608,9608,24,0,128,9608,0,0,119,119,0); -- Immanibugard
-INSERT INTO `mob_groups` VALUES (96609,9609,4,0,128,9609,0,0,119,119,0); -- Intuila
-INSERT INTO `mob_groups` VALUES (96611,9611,126,0,128,9611,0,0,119,119,0); -- Jester Malatrix
-INSERT INTO `mob_groups` VALUES (96612,9612,2,0,128,9612,0,0,119,119,0); -- Orcfeltrap
-INSERT INTO `mob_groups` VALUES (96613,9613,123,0,128,9613,0,0,111,111,0); -- Steamy Samantha (phase 1)
-INSERT INTO `mob_groups` VALUES (96614,9614,123,0,128,9614,0,0,115,115,0); -- Sultry Samantha (phase 2)
-INSERT INTO `mob_groups` VALUES (96615,9615,123,0,128,9615,0,0,119,119,0); -- Sybaritic Samantha (phase 3)
-INSERT INTO `mob_groups` VALUES (96616,9616,103,0,128,9616,0,0,119,119,0); -- Valkurm Imperator
--- INSERT INTO `mob_groups` VALUES (96617,9617,zoneid,0,128,dropid,HP,MP,122,122,0); -- Cactrot Veloz
--- INSERT INTO `mob_groups` VALUES (96618,9618,zoneid,0,128,dropid,HP,MP,122,122,0); -- Emperor Arthro
--- INSERT INTO `mob_groups` VALUES (96619,9619,zoneid,0,128,dropid,HP,MP,122,122,0); -- Joyous Green
--- INSERT INTO `mob_groups` VALUES (96620,9620,zoneid,0,128,dropid,HP,MP,122,122,0); -- Keeper of Heiligtum
--- INSERT INTO `mob_groups` VALUES (96621,9621,zoneid,0,128,dropid,HP,MP,122,122,0); -- Tiyanak
--- INSERT INTO `mob_groups` VALUES (96622,9622,zoneid,0,128,dropid,HP,MP,122,122,0); -- Voso
--- INSERT INTO `mob_groups` VALUES (96623,9623,zoneid,0,128,dropid,HP,MP,122,122,0); -- Warblade Beak
--- INSERT INTO `mob_groups` VALUES (96624,9624,zoneid,0,128,dropid,HP,MP,122,122,0); -- Woodland Mender
--- INSERT INTO `mob_groups` VALUES (96625,9625,zoneid,0,128,dropid,HP,MP,125,125,0); -- Arke
--- INSERT INTO `mob_groups` VALUES (96626,9626,zoneid,0,128,dropid,HP,MP,125,125,0); -- Ayapec
--- INSERT INTO `mob_groups` VALUES (96627,9627,zoneid,0,128,dropid,HP,MP,125,125,0); -- Beist
--- INSERT INTO `mob_groups` VALUES (96628,9628,zoneid,0,128,dropid,HP,MP,125,125,0); -- Coca
--- INSERT INTO `mob_groups` VALUES (96629,9629,zoneid,0,128,dropid,HP,MP,125,125,0); -- Douma Weapon
--- INSERT INTO `mob_groups` VALUES (96630,9630,zoneid,0,128,dropid,HP,MP,125,125,0); -- Katashiro weapon
--- INSERT INTO `mob_groups` VALUES (96631,9631,zoneid,0,128,dropid,HP,MP,125,125,0); -- King_Uropygid
--- INSERT INTO `mob_groups` VALUES (96632,9632,zoneid,0,128,dropid,HP,MP,125,125,0); -- Largantua
--- INSERT INTO `mob_groups` VALUES (96633,9633,zoneid,0,128,dropid,HP,MP,125,125,0); -- Lumber Jill
--- INSERT INTO `mob_groups` VALUES (96634,9634,zoneid,0,128,dropid,HP,MP,125,125,0); -- Mephitas
--- INSERT INTO `mob_groups` VALUES (96635,9635,zoneid,0,128,dropid,HP,MP,125,125,0); -- Muut
--- INSERT INTO `mob_groups` VALUES (96636,9636,zoneid,0,128,dropid,HP,MP,100,100,0); -- Muut's Sacrifice
--- INSERT INTO `mob_groups` VALUES (96637,9637,zoneid,0,128,dropid,HP,MP,100,100,0); -- Muut's Hound Warrior
--- INSERT INTO `mob_groups` VALUES (96638,9638,zoneid,0,128,dropid,HP,MP,125,125,0); -- Specter Worm
--- INSERT INTO `mob_groups` VALUES (96639,9639,zoneid,0,128,dropid,HP,MP,125,125,0); -- Strix
--- INSERT INTO `mob_groups` VALUES (96640,9640,zoneid,0,128,dropid,HP,MP,128,128,0); -- Azrael
--- INSERT INTO `mob_groups` VALUES (96641,9641,zoneid,0,128,dropid,HP,MP,128,128,0); -- Borealis Shadow
--- INSERT INTO `mob_groups` VALUES (96642,9642,zoneid,0,128,dropid,HP,MP,104,104,0); -- Orientalis Shadow
--- INSERT INTO `mob_groups` VALUES (96643,9643,zoneid,0,128,dropid,HP,MP,104,104,0); -- Australis Shadow
--- INSERT INTO `mob_groups` VALUES (96644,9644,zoneid,0,128,dropid,HP,MP,104,104,0); -- Occidentalis Shadow
--- INSERT INTO `mob_groups` VALUES (96645,9645,zoneid,0,128,dropid,HP,MP,128,128,0); -- Camahueto
--- INSERT INTO `mob_groups` VALUES (96646,9646,zoneid,0,128,dropid,HP,MP,128,128,0); -- Vedrfolnir
+INSERT INTO `mob_groups` VALUES (96600,16601,107,0,128,16601,0,0,76,76,0); -- Bounding Belinda
+INSERT INTO `mob_groups` VALUES (96601,16602,101,0,128,16602,0,0,76,76,0); -- Hugemaw Harold
+INSERT INTO `mob_groups` VALUES (96602,16603,116,0,128,16603,0,0,76,76,0); -- Prickly Pitriv
+INSERT INTO `mob_groups` VALUES (96603,16604,102,0,128,16604,0,0,99,99,0); -- Ironhorn Baldurno
+INSERT INTO `mob_groups` VALUES (96604,16605,108,0,128,16605,0,0,99,99,0); -- Sleepy Mabel
+INSERT INTO `mob_groups` VALUES (96605,16606,117,0,128,16606,0,0,119,119,0); -- Serpopard Ninlil
+INSERT INTO `mob_groups` VALUES (96606,16607,118,0,128,16607,0,0,119,119,0); -- Abyssdiver
+INSERT INTO `mob_groups` VALUES (96607,16608,24,0,128,16608,0,0,119,119,0); -- Immanibugard
+INSERT INTO `mob_groups` VALUES (96608,16609,4,0,128,16609,0,0,119,119,0); -- Intuila
+INSERT INTO `mob_groups` VALUES (96609,16611,126,0,128,16611,0,0,119,119,0); -- Jester Malatrix
+INSERT INTO `mob_groups` VALUES (96611,16612,2,0,128,16612,0,0,119,119,0); -- Orcfeltrap
+INSERT INTO `mob_groups` VALUES (96612,16613,123,0,128,16613,0,0,111,111,0); -- Steamy Samantha (phase 1)
+INSERT INTO `mob_groups` VALUES (96613,16614,123,0,128,16614,0,0,115,115,0); -- Sultry Samantha (phase 2)
+INSERT INTO `mob_groups` VALUES (96614,16615,123,0,128,16615,0,0,119,119,0); -- Sybaritic Samantha (phase 3)
+INSERT INTO `mob_groups` VALUES (96615,16616,103,0,128,16616,0,0,119,119,0); -- Valkurm Imperator
+-- INSERT INTO `mob_groups` VALUES (96616,16617,zoneid,0,128,dropid,HP,MP,122,122,0); -- Cactrot Veloz
+-- INSERT INTO `mob_groups` VALUES (96617,16618,zoneid,0,128,dropid,HP,MP,122,122,0); -- Emperor Arthro
+-- INSERT INTO `mob_groups` VALUES (96618,16619,zoneid,0,128,dropid,HP,MP,122,122,0); -- Joyous Green
+-- INSERT INTO `mob_groups` VALUES (96619,16620,zoneid,0,128,dropid,HP,MP,122,122,0); -- Keeper of Heiligtum
+-- INSERT INTO `mob_groups` VALUES (96620,16621,zoneid,0,128,dropid,HP,MP,122,122,0); -- Tiyanak
+-- INSERT INTO `mob_groups` VALUES (96621,16622,zoneid,0,128,dropid,HP,MP,122,122,0); -- Voso
+-- INSERT INTO `mob_groups` VALUES (96622,16623,zoneid,0,128,dropid,HP,MP,122,122,0); -- Warblade Beak
+-- INSERT INTO `mob_groups` VALUES (96623,16624,zoneid,0,128,dropid,HP,MP,122,122,0); -- Woodland Mender
+-- INSERT INTO `mob_groups` VALUES (96624,16625,zoneid,0,128,dropid,HP,MP,125,125,0); -- Arke
+-- INSERT INTO `mob_groups` VALUES (96625,16626,zoneid,0,128,dropid,HP,MP,125,125,0); -- Ayapec
+-- INSERT INTO `mob_groups` VALUES (96626,16627,zoneid,0,128,dropid,HP,MP,125,125,0); -- Beist
+-- INSERT INTO `mob_groups` VALUES (96627,16628,zoneid,0,128,dropid,HP,MP,125,125,0); -- Coca
+-- INSERT INTO `mob_groups` VALUES (96628,16629,zoneid,0,128,dropid,HP,MP,125,125,0); -- Douma Weapon
+-- INSERT INTO `mob_groups` VALUES (96629,16630,zoneid,0,128,dropid,HP,MP,125,125,0); -- Katashiro weapon
+-- INSERT INTO `mob_groups` VALUES (96630,16631,zoneid,0,128,dropid,HP,MP,125,125,0); -- King_Uropygid
+-- INSERT INTO `mob_groups` VALUES (96631,16632,zoneid,0,128,dropid,HP,MP,125,125,0); -- Largantua
+-- INSERT INTO `mob_groups` VALUES (96632,16633,zoneid,0,128,dropid,HP,MP,125,125,0); -- Lumber Jill
+-- INSERT INTO `mob_groups` VALUES (96633,16634,zoneid,0,128,dropid,HP,MP,125,125,0); -- Mephitas
+-- INSERT INTO `mob_groups` VALUES (96634,16635,zoneid,0,128,dropid,HP,MP,125,125,0); -- Muut
+-- INSERT INTO `mob_groups` VALUES (96635,16636,zoneid,0,128,dropid,HP,MP,100,100,0); -- Muut's Sacrifice
+-- INSERT INTO `mob_groups` VALUES (96636,16637,zoneid,0,128,dropid,HP,MP,100,100,0); -- Muut's Hound Warrior
+-- INSERT INTO `mob_groups` VALUES (96637,16638,zoneid,0,128,dropid,HP,MP,125,125,0); -- Specter Worm
+-- INSERT INTO `mob_groups` VALUES (96638,16639,zoneid,0,128,dropid,HP,MP,125,125,0); -- Strix
+-- INSERT INTO `mob_groups` VALUES (96639,16640,zoneid,0,128,dropid,HP,MP,128,128,0); -- Azrael
+-- INSERT INTO `mob_groups` VALUES (96640,16641,zoneid,0,128,dropid,HP,MP,128,128,0); -- Borealis Shadow
+-- INSERT INTO `mob_groups` VALUES (96641,16642,zoneid,0,128,dropid,HP,MP,104,104,0); -- Orientalis Shadow
+-- INSERT INTO `mob_groups` VALUES (96642,16643,zoneid,0,128,dropid,HP,MP,104,104,0); -- Australis Shadow
+-- INSERT INTO `mob_groups` VALUES (96643,16644,zoneid,0,128,dropid,HP,MP,104,104,0); -- Occidentalis Shadow
+-- INSERT INTO `mob_groups` VALUES (96644,16645,zoneid,0,128,dropid,HP,MP,128,128,0); -- Camahueto
+-- INSERT INTO `mob_groups` VALUES (96645,16646,zoneid,0,128,dropid,HP,MP,128,128,0); -- Vedrfolnir
 -- Unity NMs End
 
--- Group IDs 96647 to 96664 currently unused
--- ---------------------------------------------------------------------------
--- Add nothing below this line please
-
-INSERT INTO `mob_groups` VALUES (96665,9665,91,3600,0,9665,154000,75000,131,131,0); -- The Jumping Crab
-
+-- INSERT INTO `mob_groups` VALUES (96646,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Tatenashi_Armor (Hume)
+-- INSERT INTO `mob_groups` VALUES (96647,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Tatenashi_Armor (Hume)
+-- INSERT INTO `mob_groups` VALUES (96648,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Tatenashi_Armor (Hume)
+-- INSERT INTO `mob_groups` VALUES (96649,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Hachiryu_Armor (Galka)
+-- INSERT INTO `mob_groups` VALUES (96650,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Hachiryu_Armor (Galka)
+-- INSERT INTO `mob_groups` VALUES (96651,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Hachiryu_Armor (Galka)
+-- INSERT INTO `mob_groups` VALUES (96652,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Hizamaru_Armor (Elvaan)
+-- INSERT INTO `mob_groups` VALUES (96653,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Hizamaru_Armor (Elvaan)
+-- INSERT INTO `mob_groups` VALUES (96654,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Hizamaru_Armor (Elvaan)
+-- INSERT INTO `mob_groups` VALUES (96655,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Ubuginu_Armor (Tarutaru)
+-- INSERT INTO `mob_groups` VALUES (96656,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Ubuginu_Armor (Tarutaru)
+-- INSERT INTO `mob_groups` VALUES (96657,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Ubuginu_Armor (Tarutaru)
+-- INSERT INTO `mob_groups` VALUES (96658,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Omodaka_Armor (Mithra)
+-- INSERT INTO `mob_groups` VALUES (96659,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Omodaka_Armor (Mithra)
+-- INSERT INTO `mob_groups` VALUES (96660,poolid,zoneid,respawntime,spawntype,dropid,HP,MP,minLevel,maxLevel,allegiance); -- Omodaka_Armor (Mithra)
 
 -- Super experimental z49 mobs, will not spawn without script or GM command.
--- INSERT INTO `mob_groups` VALUES (96661,9661,49,0,128,dropid,HP,MP,lv,lv,0); -- Benkei
--- INSERT INTO `mob_groups` VALUES (96662,9662,49,0,128,dropid,HP,MP,lv,lv,0); -- Druk
--- INSERT INTO `mob_groups` VALUES (96663,9663,49,0,128,dropid,HP,MP,lv,lv,0); -- Zomok
--- INSERT INTO `mob_groups` VALUES (96664,9664,49,0,128,dropid,HP,MP,lv,lv,0); -- Abzu
-INSERT INTO `mob_groups` VALUES (96666,9666,49,0,128,9666,136666,6666,106,106,0); -- SlenderMan
--- INSERT INTO `mob_groups` VALUES (96667,9667,49,0,128,0,6666,3333,90,90,0); -- Zombaru
-INSERT INTO `mob_groups` VALUES (97600,9760,49,0,128,9777,185000,7600,128,128,0); -- Mars
-INSERT INTO `mob_groups` VALUES (97777,9777,49,0,128,9777,444000,7777,140,140,0); -- Minerva
-
+-- INSERT INTO `mob_groups` VALUES (96661,16661,49,0,128,dropid,HP,MP,lv,lv,0); -- Benkei
+-- INSERT INTO `mob_groups` VALUES (96662,16662,49,0,128,dropid,HP,MP,lv,lv,0); -- Druk
+-- INSERT INTO `mob_groups` VALUES (96663,16663,49,0,128,dropid,HP,MP,lv,lv,0); -- Zomok
+-- INSERT INTO `mob_groups` VALUES (96664,16664,49,0,128,dropid,HP,MP,lv,lv,0); -- Abzu
+INSERT INTO `mob_groups` VALUES (96665,16665,91,3600,0,16665,154000,75000,131,131,0); -- The Jumping Crab
+INSERT INTO `mob_groups` VALUES (96666,16666,49,0,128,16666,136666,6666,106,106,0); -- SlenderMan
+-- INSERT INTO `mob_groups` VALUES (96667,16667,49,0,128,0,6666,3333,90,90,0); -- Zombaru
+INSERT INTO `mob_groups` VALUES (97600,16760,49,0,128,16760,185000,7600,128,128,0); -- Mars
+INSERT INTO `mob_groups` VALUES (97777,16777,49,0,128,16777,444000,7777,140,140,0); -- Minerva
