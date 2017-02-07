@@ -1,12 +1,12 @@
 -----------------------------------
--- Area: Northern San d'Oria
---  NPC: Trisvain
--- @pos 28.5 0 85 231
+-- Area: Port Bastok
+--  NPC: Raving Oppossum
+-- @pos 42.141 7.5 -183.762 236
 -- High Tier Battlefield entry KI assistant
 -----------------------------------
-package.loaded["scripts/zones/Northern_San_dOria/TextIDs"] = nil;
+package.loaded["scripts/zones/Port_Bastok/TextIDs"] = nil;
 -----------------------------------
-require("scripts/zones/Northern_San_dOria/TextIDs");
+require("scripts/zones/Port_Bastok/TextIDs");
 require("scripts/globals/keyitems")
 require("scripts/globals/settings");
 require("scripts/globals/spoofchat")
@@ -57,7 +57,7 @@ function onTrigger(player,npc)
         local unknown2 = 0; -- Dummied until understood
         local unknown3 = 0; -- Dummied until understood
         local unknown4 = 0; -- Dummied until understood
-        player:startEvent(892, A, phantomGems, MERITS, finished, honors, unknown2, unknown3, unknown4);
+        player:startEvent(429, A, phantomGems, MERITS, finished, honors, unknown2, unknown3, unknown4);
     end
 end;
 
@@ -71,7 +71,7 @@ function onEventUpdate(player,csid,option)
         player:PrintToPlayer(string.format("onEventUpdate option: %u", option));
     end
 
-    if (csid == 892 and (option == 1 or option == 3 or option == 259)) then
+    if (csid == 429 and (option == 1 or option == 3 or option == 259)) then
         local MERITS = player:getMeritCount();
         local unknown1 = 0; -- Dummied until understood
         local phantomGems = 0x000FFFFF;
@@ -95,7 +95,7 @@ function onEventFinish(player,csid,option)
         player:PrintToPlayer(string.format("onEventUpdate option: %u", option));
     end
 
-    if (csid == 892) then
+    if (csid == 429) then
         local keyItem;
         local cost;
 
@@ -163,12 +163,12 @@ function onEventFinish(player,csid,option)
             keyItem = DAWN_PHANTOM_GEM;
             cost = 15;
         elseif (option ~= 1073741824) then
-            print("Invalid onEventFinish result in Trisvain.lua (Northern San d'Oria) csid: "..csid.."option: "..option);
+            print("Invalid onEventFinish result in Raving_Opossum.lua (Northern San d'Oria) csid: "..csid.."option: "..option);
         end
 
         if (keyItem ~= nil and cost ~= nil) then
             if (player:hasKeyItem(keyItem)) then
-                player:SpoofChatPlayer("Trisvain : You already posses that Phantom Gem. ", MESSAGE_SYS_SAY, nil);
+                player:SpoofChatPlayer("Raving Opossum : You already posses that Phantom Gem. ", MESSAGE_SYS_SAY, nil);
             else
                 local meritCount = player:getMeritCount();
                 if (meritCount >= cost) then
@@ -176,7 +176,7 @@ function onEventFinish(player,csid,option)
                     player:addKeyItem(keyItem);
                     player:messageSpecial(KEYITEM_OBTAINED, keyItem);
                 else
-                    player:SpoofChatPlayer("Trisvain : You haven't enough. I can do nothing with that amount. ", MESSAGE_SYS_SAY, nil);
+                    player:SpoofChatPlayer("Raving Opossum : You haven't enough. I can do nothing with that amount. ", MESSAGE_SYS_SAY, nil);
                 end
             end
         end
