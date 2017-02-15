@@ -315,7 +315,7 @@ function MobMagicalMove(mob,target,skill,damage,element,dmgmod,tpeffect,tpvalue)
     -- printf("power: %f, bonus: %f", damage, mab);
     -- resistence is added last
     finaldmg = damage * mab * dmgmod;
-
+    if (dmgmod == nil) then print("nil dmgmod in skillID: " .. skill:getID()); end
     -- get resistence
     local avatarAccBonus = 0;
     if (mob:isPet() and mob:getMaster() ~= nil) then

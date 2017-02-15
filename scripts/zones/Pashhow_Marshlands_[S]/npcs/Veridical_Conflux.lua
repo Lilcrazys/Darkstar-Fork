@@ -1,6 +1,7 @@
 -----------------------------------
 -- Area: Pashhow Marshlands [S]
 --  NPC: Veridical Conflux
+-- @pos 342.749 24.999 -161.469
 -----------------------------------
 package.loaded["scripts/zones/Pashhow_Marshlands_[S]/TextIDs"] = nil;
 -----------------------------------

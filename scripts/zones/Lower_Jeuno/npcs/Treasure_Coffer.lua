@@ -23,7 +23,18 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:startEvent(0x2773,0,0,0,0,0,0,0,0);
+    local arg4 = 0;
+
+    -- if (arg4 == 0) then
+        if (player:getVar("gotNexusCape") > 0) then
+            arg4 = arg4+16;
+        else
+            arg4 = arg4+32;
+        end
+    -- else
+        -- arg4 = arg4+48;
+    -- end
+    player:startEvent(0x2773,0,0,0,arg4,0,0,0,0);
 end; 
 
 -----------------------------------
@@ -62,6 +73,7 @@ function onEventFinish(player,csid,option)
         if (option == 16777216) then
             if (player:getFreeSlotsCount() >= 1) then
                 player:addItem(11538);
+                player:setVar("gotNexusCape", os.time());
                 player:messageSpecial(ITEM_OBTAINED,11538);
             else
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,11538);
@@ -70,11 +82,14 @@ function onEventFinish(player,csid,option)
         elseif (option == 33554432) then
             if (player:hasItem(11538) == false) then
                 if (player:getFreeSlotsCount() >= 1) then
-                    player:addItem(11538);
+                    player:addUsedItem(11538);
+                    player:setVar("gotNexusCape", os.time());
                     player:messageSpecial(ITEM_OBTAINED,11538);
                 else
-                    player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,277);
+                    player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,11538);
                 end
+            else
+                player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,11538);
             end
 
         elseif (option == 1) then

@@ -53,10 +53,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         local RND = math.random(1,1000);
-        if (RND <= 33) then
+        if (RND <= 100) then -- 10%
             player:addTreasure(10948, mob); -- Carver's Torque
-        elseif (RND <= 66) then
-            player:addTreasure(20618, mob); -- Illapa
+            SetServerVariable("Carvers_Torque_dropped",GetServerVariable("Carvers_Torque_dropped")+1);
+        elseif (RND <= 300) then -- 20%
+            player:addTreasure(20618, mob); -- Sandung
+            SetServerVariable("Sandung_dropped",GetServerVariable("Sandung_dropped")+1);
         else
             player:addTreasure(1525, mob); -- Adamantoise Egg
             player:addTreasure(908, mob); -- Adamantoise Shell

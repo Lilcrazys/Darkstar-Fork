@@ -12,6 +12,8 @@ require("scripts/globals/status");
 
 function onEffectGain(target,effect)
     if (effect:getPower() == 3) then -- arcane stomp
+        target:addMod(MOD_UDMGMAGIC, -101); -- temp
+        --[[ broken
         target:addMod(MOD_FIRE_ABSORB, 100);
         target:addMod(MOD_EARTH_ABSORB, 100);
         target:addMod(MOD_WATER_ABSORB, 100);
@@ -20,12 +22,16 @@ function onEffectGain(target,effect)
         target:addMod(MOD_LTNG_ABSORB, 100);
         target:addMod(MOD_LIGHT_ABSORB, 100);
         target:addMod(MOD_DARK_ABSORB, 100);
+        ]]
     elseif (effect:getPower() < 2) then
         target:addMod(MOD_UDMGMAGIC, -101);
     elseif (effect:getPower() == 100) then
         target:addMod(MOD_UDMGMAGIC, -64); -- damned blue spell
     else
+        target:addMod(MOD_UDMGMAGIC, -101); -- temp
+        --[[ broken
         target:addMod(MOD_MAGIC_ABSORB, 100);
+        ]]
     end;
 end;
 
@@ -42,6 +48,8 @@ end;
 
 function onEffectLose(target,effect)
     if (effect:getPower() == 3) then -- arcane stomp
+        target:delMod(MOD_UDMGMAGIC, -101); -- temp
+        --[[ broken
         target:delMod(MOD_FIRE_ABSORB, 100);
         target:delMod(MOD_EARTH_ABSORB, 100);
         target:delMod(MOD_WATER_ABSORB, 100);
@@ -50,11 +58,15 @@ function onEffectLose(target,effect)
         target:delMod(MOD_LTNG_ABSORB, 100);
         target:delMod(MOD_LIGHT_ABSORB, 100);
         target:delMod(MOD_DARK_ABSORB, 100);
+        ]]
     elseif (effect:getPower() < 2) then
         target:delMod(MOD_UDMGMAGIC, -101);
     elseif (effect:getPower() == 100) then
         target:delMod(MOD_UDMGMAGIC, -64); -- damned blue spell
     else
+        target:delMod(MOD_UDMGMAGIC, -101); -- temp
+        --[[ broken
         target:delMod(MOD_MAGIC_ABSORB, 100);
+        ]]
     end;
 end;

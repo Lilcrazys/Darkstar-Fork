@@ -16,7 +16,7 @@ require("scripts/globals/magicburst");
 
 -- params contains: ftp100, ftp200, ftp300, str_wsc, dex_wsc, vit_wsc, int_wsc, mnd_wsc, canCrit, crit100, crit200, crit300, acc100, acc200, acc300, ignoresDef, ignore100, ignore200, ignore300, atkmulti, kick
 function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taChar, params)
-
+  if (params == nil) then print("nil params!") elseif (params.bonusTP == nil) then params.bonusTP = 0 end
     local criticalHit = false;
     local bonusTP = params.bonusTP or 0
     local multiHitfTP = params.multiHitfTP or false
@@ -249,7 +249,7 @@ function doMagicWeaponskill(attacker, target, wsID, tp, primary, action, params)
     dmg = dmg * applyResistanceAbility(attacker,target,params.ele,params.skill, bonusacc);
     dmg = target:magicDmgTaken(dmg);
     dmg = adjustForTarget(target,dmg,params.ele);
-    finaldmg = finaldmg * (100 + attacker:getMod(MOD_WS_PWR_BONUS))/100
+    dmg = dmg * (100 + attacker:getMod(MOD_WS_PWR_BONUS))/100
     if (attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
         dmg = dmg * (100 + attacker:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100
     end
@@ -890,6 +890,9 @@ function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, sl
             enmityMult = enmityMult*1.2;
         else
             enmityMult = enmityMult*0.8;
+        end
+        if (enmityEntity:getMainJob() == JOBS.PLD) then
+            enmityMult = enmityMult*2.0;
         end
         debugWeaponskillDamageEnmity(enmityEntity,defender,finaldmg,enmityMult)
         defender:updateEnmityFromDamage(enmityEntity, finaldmg * enmityMult)

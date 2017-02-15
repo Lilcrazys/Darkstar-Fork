@@ -101,6 +101,7 @@ function onMobFight(mob,target)
             mob:useMobAbility(1282);
             mob:setLocalVar("changeTime", mob:getBattleTime());
             mob:setLocalVar("changeHP", mob:getHP()/1000);
+            mob:AnimationSub(2);
         -- subanimation 2 is grounded mode, so check if she should take off
         elseif (mob:AnimationSub() == 2 and (mob:getHP()/1000 <= changeHP - 10 or
                 mob:getBattleTime() - changeTime > 120)) then
@@ -112,8 +113,9 @@ function onMobFight(mob,target)
         end;
     -----------------------------
     -- Begin Legion Custom Block
+--[[
     elseif (mob:getLocalVar("Tia_Boosted") == 0) then
-        if (mob:getHPP() <= 20 and mob:hasStatusEffect(EFFECT_BLOOD_WEAPON)) then
+        if (mob:getHPP() <= 20 and mob:hasStatusEffect(EFFECT_MIGHTY_STRIKES)) then
             mob:setLocalVar("Tia_Boosted", 1);
             mob:addMod(MOD_REGAIN, 10);
             mob:addMod(MOD_DOUBLE_ATTACK, 15);
@@ -129,6 +131,7 @@ function onMobFight(mob,target)
     if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
         mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
         mob:setLocalVar("RAGED", 1);
+]]
     end;
 
 end;

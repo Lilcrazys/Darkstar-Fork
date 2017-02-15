@@ -40,7 +40,7 @@ APPOLLYON_SE_NE_BCNM_LIST =
 APPOLLYON_NW_SW_BCNM_LIST =
 {
     1290, {false, true, false, 2, NW_Apollyon}, --  'NW_Apollyon'    -439  0 -89
-    1291, {false, true, false, 1, SW_Apollyon}, --  'SW_Apollyon'    -468  0 -626
+    -- 1291, {false, true, false, 1, SW_Apollyon}, --  'SW_Apollyon'    -468  0 -626
     1294, {false, false, false, 32, CS_Apollyon}, --  'CS_Apollyon'    0   0 -210
     1295, {false, false, false, 64, CS_Apollyon}, --  'CS_Apollyon_II'    0   0 -133
     1296, {false, false, false, 16, Central_Apollyon}, --  'Central_Apollyon'    0   0 210

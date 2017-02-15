@@ -481,7 +481,8 @@ void CMobController::CastSpell(uint16 spellid)
         {
             PCastTarget = PTarget;
         }
-        Cast(PCastTarget->targid, spellid);
+        if (PCastTarget != nullptr)
+            Cast(PCastTarget->targid, spellid);
     }
 }
 
