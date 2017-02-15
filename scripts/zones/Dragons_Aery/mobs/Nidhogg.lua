@@ -77,10 +77,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         local RND = math.random(1,1000);
-        if (RND <= 33) then
+        if (RND <= 100) then -- 10%
             player:addTreasure(10949, mob); -- Smithy's Torque
-        elseif (RND <= 66) then
+            SetServerVariable("Smithys_Torque_dropped",GetServerVariable("Smithys_Torque_dropped")+1);
+        elseif (RND <= 300) then -- 20%
             player:addTreasure(20738, mob); -- Buramenk'ah
+            SetServerVariable("Buramenkah_dropped",GetServerVariable("Buramenkah_dropped")+1);
         else
             player:addTreasure(4486, mob); -- Dragon Heart
             player:addTreasure(4272, mob); -- Dragon Meat

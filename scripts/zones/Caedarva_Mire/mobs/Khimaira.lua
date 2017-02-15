@@ -40,9 +40,9 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         local RND = math.random(1,1000);
-        if (RND <= 33) then
+        if (RND <= 100) then -- 10%
             player:addTreasure(10953, mob); -- Boneworker's Torque
-        elseif (RND <= 66) then
+        elseif (RND <= 300) then -- 20%
             player:addTreasure(20827, mob); -- Kerehcatl
         else
             player:addTreasure(4023, mob); -- Snowsteel Ore

@@ -74,8 +74,9 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         local RND = math.random(1,1000);
-        if (RND <= 66) then
+        if (RND <= 200) then -- 20%
             player:addTreasure(20963, mob); -- Falubeza
+            SetServerVariable("Falubeza_dropped",GetServerVariable("Falubeza_dropped")+1);
         else
             player:addTreasure(860, mob); -- Behemoth Hide
             player:addTreasure(860, mob); -- Behemoth Hide

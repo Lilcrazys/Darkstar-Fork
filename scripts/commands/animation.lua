@@ -20,5 +20,8 @@ function onTrigger(player, animationId)
         return;
     end
 
+    if (animationId == 2 or animationId == 3) then
+        player:PrintToPlayer("Do not use death animations..They glitch the game.");
+    end
     player:setAnimation( animationId );
 end

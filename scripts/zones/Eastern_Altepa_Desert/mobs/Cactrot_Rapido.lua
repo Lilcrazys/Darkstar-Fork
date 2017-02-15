@@ -5,6 +5,7 @@
 require("scripts/globals/pathfind");
 require("scripts/globals/titles");
 
+--[[
 local path =
 {
     -45.214237, 0.059482, -204.244873,
@@ -320,13 +321,16 @@ local path =
     -39.119324, 0.000000, -203.037552,
     -40.370975, 0.000000, -203.569611
 };
+]]
 
 -----------------------------------
 -- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
-    onMobRoam(mob);
+--[[
+    onPath(mob);
+]]
 end;
 
 -----------------------------------
@@ -334,7 +338,9 @@ end;
 -----------------------------------
 
 function onPath(mob)
+--[[
     pathfind.patrol(mob, path, PATHFLAG_RUN);
+]]
 end;
 
 -----------------------------------
@@ -342,10 +348,12 @@ end;
 -----------------------------------
 
 function onMobRoam(mob)
-    -- move to start position if not moving
+--[[
+    -- Move to start position if not moving
     if (mob:isFollowingPath() == false) then
         mob:pathThrough(pathfind.first(path), PATHFLAG_RUN);
     end
+]]
 end;
 
 -----------------------------------

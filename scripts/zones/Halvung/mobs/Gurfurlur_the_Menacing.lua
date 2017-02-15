@@ -81,9 +81,9 @@ function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
         local RND = math.random(1,1000);
-        if (RND <= 33) then
+        if (RND <= 100) then -- 10%
             player:addTreasure(10950, mob); -- Goldsmith's Torque
-        elseif (RND <= 66) then
+        elseif (RND <= 300) then -- 20%
             player:addTreasure(21256, mob); -- Illapa
         else
             player:addTreasure(4023, mob); -- Snowsteel Ore
