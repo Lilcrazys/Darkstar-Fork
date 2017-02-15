@@ -1830,7 +1830,7 @@ INSERT INTO `mob_skills` VALUES (1802,1351,'Sledgehammer',4,12,2000,0,4,0,0,3);
 INSERT INTO `mob_skills` VALUES (1803,1352,'Head_Snatch',0,7,2000,0,4,0,0,3);
 INSERT INTO `mob_skills` VALUES (1804,1353,'Haymaker',4,12,2000,0,4,0,0,3);
 INSERT INTO `mob_skills` VALUES (1805,1354,'Incessant_Fists',0,7,2000,0,4,0,0,3);
-INSERT INTO `mob_skills` VALUES (1806,1355,'Custom_Arcane_Stomp',1,25,2000,0,1,0,0,3); -- corected ? to 1
+INSERT INTO `mob_skills` VALUES (1806,1355,'Arcane_Stomp',1,25,2000,0,1,0,0,3); -- corected ? to 1
 INSERT INTO `mob_skills` VALUES (1807,1356,'Pleiades_Ray',1,10,2000,0,4,0,0,3);
 INSERT INTO `mob_skills` VALUES (1808,1334,'Petrifaction',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1809,1335,'PW_Shadow_Thrust',0,10,2000,2000,4,0,0,0);
