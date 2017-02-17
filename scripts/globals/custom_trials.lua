@@ -37,9 +37,9 @@ custom_trials =
     [18639] = {r=18667, s=2, t="relic",    trade=0,    count=9},  -- Excalibur T2>T3
     [18667] = {r=19748, s=3, t="relic",    trade=0,    count=9},  -- Excalibur T3>T4
     [19748] = {r=20646, s=4, t="relic",    trade=3925, count=50}, -- Excalibur T4>T5
-    [18342] = {r=18578, s=1, t="relic",    trade=0,    count=4},  -- Gjallarhorn T1>T2
-    [18578] = {r=18580, s=2, t="relic",    trade=0,    count=7},  -- Gjallarhorn T2>T3
-    [18580] = {r=18572, s=3, t="relic",    trade=0,    count=4},  -- Gjallarhorn T3>T4
+    [18342] = {r=18578, s=1, t="relic",    trade=0,    count=9},  -- Gjallarhorn T1>T2
+    [18578] = {r=18580, s=2, t="relic",    trade=0,    count=9},  -- Gjallarhorn T2>T3
+    [18580] = {r=18572, s=3, t="relic",    trade=0,    count=9},  -- Gjallarhorn T3>T4
     [18572] = {r=18840, s=4, t="relic",    trade=3925, count=50}, -- Gjallarhorn T4>T5
     [18300] = {r=18643, s=1, t="relic",    trade=0,    count=9},  -- Gungnir T1>T2
     [18643] = {r=18671, s=2, t="relic",    trade=0,    count=9},  -- Gungnir T2>T3
