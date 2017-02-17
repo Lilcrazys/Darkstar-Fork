@@ -779,10 +779,59 @@ INSERT INTO `mob_pools` VALUES (9913,'HTB_Shiva_Prime',44,0x00001D03000000000000
 INSERT INTO `mob_pools` VALUES (9914,'HTB_Ifrit_Prime',38,0x0000190300000000000000000000000000000000,1,4,5,240,100,0,1,1,0,18,0,0,0,3,0,0,0,1,0,38);
 INSERT INTO `mob_pools` VALUES (9915,'HTB_Titan_Prime',45,0x00001A0300000000000000000000000000000000,1,4,6,240,100,0,1,1,1,18,0,0,0,3,0,0,0,1,0,45);
 INSERT INTO `mob_pools` VALUES (9916,'HTB_Leviathan_Prime',40,0x00001B0300000000000000000000000000000000,1,4,8,240,100,0,1,1,1,18,0,0,0,3,0,0,0,1,0,40);
+-- INSERT INTO `mob_pools` VALUES (9917,'HTB_Fenrir_Prime',familyid,modelid,1,4,8,240,100,0,1,1,1,18,0,0,0,3,0,0,0,1,0,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9918,'HTB_Carbuncle_Prime',familyid,modelid,1,4,11,240,100,0,1,1,1,18,0,0,0,3,0,0,0,1,0,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9919,'HTB_Diabolos_Prime',familyid,modelid,1,4,11,240,100,0,1,1,1,18,0,0,0,3,0,0,0,1,0,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9920,'HTB_Kamlanaut',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9921,'HTB_Ealdnarche',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9922,'HTB_Shadow_Lord',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9923,'HTB_Ouryu',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9924,'HTB_Tenzen',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9925,'HTB_Shikaree_X',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9926,'HTB_Shikaree_Y',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9927,'HTB_Shikaree_Z',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9928,'HTB_Omega',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9929,'HTB_Ultima',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9930,'HTB_Promathia',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9931,'HTB_Lancelord_Gaheel_Ja',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9932,'HTB_Gessho',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9933,'HTB_Ark_Angel_Hume',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9934,'HTB_Ark_Angel_Tarutaru',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9935,'HTB_Ark_Angel_Mithra',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9936,'HTB_Ark_Angel_Elvaan',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- INSERT INTO `mob_pools` VALUES (9937,'HTB_Ark_Angel_Galka',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,true_detection,links,mobType,immunity,name_prefix,flag,flags,animationsub,hasSpellScript,spellList,namevis,roamflag,skill_list_id);
+-- PoolID 9938 Reserved
+-- PoolID 9939 Reserved
+-- PoolID 9940 Reserved
+-- PoolID 9941 Reserved
+-- PoolID 9942 Reserved
+INSERT INTO `mob_pools` VALUES (9943,'Ultimate_Zilant',470,0x00007E0800000000000000000000000000000000,1,4,7,240,124,1040,1,1,0,2,0,32,46,155,0,0,spellList,1,0,263);
+INSERT INTO `mob_pools` VALUES (9944,'Ultimate_Behemoth',479,0x0000940100000000000000000000000000000000,1,4,6,360,124,1024,1,1,0,2,25,0,6713,131,0,0,126,1,0,479);
+INSERT INTO `mob_pools` VALUES (9945,'Ultimate_Adamantoise',2,0x0000910100000000000000000000000000000000,7,5,7,380,126,0,1,1,0,2,1,0,363,1155,0,0,spellList,1,0,2);
+INSERT INTO `mob_pools` VALUES (9946,'Augustus',25,0x0000EB0400000000000000000000000000000000,1,5,11,240,100,0,1,1,1,2,0,0,2646,1159,0,0,spellList,1,0,25);
+INSERT INTO `mob_pools` VALUES (9947,'Sekolah',213,0x0000330500000000000000000000000000000000,2,3,11,240,100,0,1,1,1,2,0,0,185,1157,0,0,spellList,1,0,213);
+INSERT INTO `mob_pools` VALUES (9948,'Uggalepihs_Hand',243,0x0000C50400000000000000000000000000000000,13,4,11,240,100,0,1,1,1,2,0,0,7,133,0,0,spellList,1,0,243);
+INSERT INTO `mob_pools` VALUES (9949,'Air_Horror',218,0x0000600100000000000000000000000000000000,1,5,11,240,100,0,1,0,0,2,0,0,193,135,0,0,spellList,1,0,218);
+INSERT INTO `mob_pools` VALUES (9950,'Cthulhu',233,0x0000BE0600000000000000000000000000000000,5,1,11,240,100,0,1,1,0,16,0,0,0,3,0,0,spellList,1,0,233);
+INSERT INTO `mob_pools` VALUES (9951,'Woodward',49,0x0000990100000000000000000000000000000000,1,7,7,220,100,0,1,0,0,2,0,32,244,157,0,0,56,1,0,49);
+INSERT INTO `mob_pools` VALUES (9952,'Slapping Sapling',216,0x0000880100000000000000000000000000000000,6,1,11,240,100,0,1,0,1,0,0,0,3727,133,0,0,0,1,0,216);
+INSERT INTO `mob_pools` VALUES (9953,'Whomping Willow',245,0x0000840100000000000000000000000000000000,2,1,11,240,100,0,1,0,0,2,0,0,7960,133,0,0,0,1,0,245);
+INSERT INTO `mob_pools` VALUES (9954,'Sir_Mordred',77,0x0000650100000000000000000000000000000000,8,5,12,240,100,0,1,0,0,2,20,32,514,157,0,1,spellList,1,0,77);
+INSERT INTO `mob_pools` VALUES (9955,'Mordreds_Knight',77,0x0000650100000000000000000000000000000000,8,1,12,240,100,0,1,0,0,2,20,32,514,157,0,1,0,1,0,77);
 
--- Pool IDs 9917 to 16598 currently unused
+-- Pool IDs 9955 to 16592 currently unused
 -- New info above this line sorted by Pool ID
 -- place nothing below this line ---------------
+
+-- April Fools Event
+INSERT INTO `mob_pools` VALUES (16593,'Flying Pig',195,0x0000700B00000000000000000000000000000000,1,2,11,240,100,0,0,0,1,0,0,0,1,131,0,0,0,1,0,195);
+
+-- Feast of Swords summer Event
+-- INSERT INTO `mob_pools` VALUES (16594,'Tatenashi_Armor',149,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Hume
+-- INSERT INTO `mob_pools` VALUES (16595,'Hachiryu_Armor',147,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Galka
+-- INSERT INTO `mob_pools` VALUES (16596,'Hizamaru_Armor',145,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Elvaan
+-- INSERT INTO `mob_pools` VALUES (16597,'Ubuginu_Armor',153,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Tarutaru
+-- INSERT INTO `mob_pools` VALUES (16598,'Omodaka_Armor',151,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Mithra
 
 -- Xmas Event
 INSERT INTO `mob_pools` VALUES (16599,'Holiday_Gift_Box',4001,0x00001B0900000000000000000000000000000000,1,1,7,999,1,1024,0,0,0,0,2047,64,0,0,0,0,0,1,0,0);
@@ -790,21 +839,21 @@ INSERT INTO `mob_pools` VALUES (16600,'Twinkling_Treant',245,0x00008501000000000
 
 -- Unity NMs start
 -- REPLACE INTO `mob_pools` VALUES (poolid,'name',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,links,mobType,immunity,name_prefix,flag,flags,5,4,3,2,1,SKILL_LIST_ID_HERE); -- MARKED for recheck later
-INSERT INTO `mob_pools` VALUES (16601,'Bounding_Belinda',174,0x0000480100000000000000000000000000000000,1,1,7,240,100,0,0,0,1,2,0,0,0,7,0,0,0,1,0,174);
-INSERT INTO `mob_pools` VALUES (16602,'Hugemaw_Harold',258,0x0000A80100000000000000000000000000000000,4,5,7,240,100,0,0,0,1,2,0,32,825,157,0,0,9,1,64,258); -- Need custom spell list
-INSERT INTO `mob_pools` VALUES (16603,'Prickly_Pitriv',79,0x00008C0100000000000000000000000000000000,1,1,11,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,79);
-INSERT INTO `mob_pools` VALUES (16604,'Ironhorn_Baldurno',208,0x0000580100000000000000000000000000000000,1,1,7,320,100,0,1,0,0,2,0,0,0,7,0,0,0,1,0,208);
-INSERT INTO `mob_pools` VALUES (16605,'Sleepy_Mabel',226,0x0000540100000000000000000000000000000000,1,1,7,240,100,0,0,0,1,2,0,0,0,3,0,0,0,1,0,226);
-INSERT INTO `mob_pools` VALUES (16606,'Serpopard_Ninlil',80,0x00004C0100000000000000000000000000000000,1,1,12,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,80);
-INSERT INTO `mob_pools` VALUES (16607,'Abyssdiver',55,0x0000BD0100000000000000000000000000000000,1,1,5,240,100,0,0,0,1,2,0,0,0,7,0,0,0,1,0,55);
-INSERT INTO `mob_pools` VALUES (16608,'Immanibugard',58,0x0000470500000000000000000000000000000000,1,1,5,300,100,0,1,0,0,2,0,0,6251,133,0,0,0,1,0,58);
-INSERT INTO `mob_pools` VALUES (16609,'Intuila',98,0x0000450500000000000000000000000000000000,1,1,8,210,100,0,0,0,1,2,0,32,1203,1181,0,0,0,1,0,98);
-INSERT INTO `mob_pools` VALUES (16611,'Jester_Malatrix',110,0x0000C30100000000000000000000000000000000,1,1,3,240,100,0,1,0,0,2,0,0,0,7,0,0,0,1,0,110);
-INSERT INTO `mob_pools` VALUES (16612,'Orcfeltrap',114,0x0000410500000000000000000000000000000000,1,1,8,200,100,0,1,0,0,2,0,0,563,1157,0,0,0,1,0,114);
-INSERT INTO `mob_pools` VALUES (16613,'Steamy_Samantha',186,0x00007D0100000000000000000000000000000000,12,12,7,200,100,0,1,0,0,2,0,32,5074,671,0,0,0,1,0,186);  -- Phase 1 (Green)
-INSERT INTO `mob_pools` VALUES (16614,'Sultry_Samantha',186,0x00007F0100000000000000000000000000000000,12,12,7,200,100,0,1,0,0,2,0,32,5074,671,0,0,0,1,0,186);  -- Phase 2 (Blue/Black)
-INSERT INTO `mob_pools` VALUES (16615,'Sybaritic_Samantha',186,0x00007E0100000000000000000000000000000000,12,12,7,200,100,0,1,0,0,2,0,32,5074,671,0,0,0,1,0,186);  -- Phase 3 (Red)
-INSERT INTO `mob_pools` VALUES (16616,'Valkurm_Imperator',113,0x0000C00100000000000000000000000000000000,1,1,8,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,4048);
+-- INSERT INTO `mob_pools` VALUES (16601,'Bounding_Belinda',174,0x0000480100000000000000000000000000000000,1,1,7,240,100,0,0,0,1,2,0,0,0,7,0,0,0,1,0,174);
+-- INSERT INTO `mob_pools` VALUES (16602,'Hugemaw_Harold',258,0x0000A80100000000000000000000000000000000,4,5,7,240,100,0,0,0,1,2,0,32,825,157,0,0,9,1,64,258); -- Need custom spell list
+-- INSERT INTO `mob_pools` VALUES (16603,'Prickly_Pitriv',79,0x00008C0100000000000000000000000000000000,1,1,11,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,79);
+-- INSERT INTO `mob_pools` VALUES (16604,'Ironhorn_Baldurno',208,0x0000580100000000000000000000000000000000,1,1,7,320,100,0,1,0,0,2,0,0,0,7,0,0,0,1,0,208);
+-- INSERT INTO `mob_pools` VALUES (16605,'Sleepy_Mabel',226,0x0000540100000000000000000000000000000000,1,1,7,240,100,0,0,0,1,2,0,0,0,3,0,0,0,1,0,226);
+-- INSERT INTO `mob_pools` VALUES (16606,'Serpopard_Ninlil',80,0x00004C0100000000000000000000000000000000,1,1,12,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,80);
+-- INSERT INTO `mob_pools` VALUES (16607,'Abyssdiver',55,0x0000BD0100000000000000000000000000000000,1,1,5,240,100,0,0,0,1,2,0,0,0,7,0,0,0,1,0,55);
+-- INSERT INTO `mob_pools` VALUES (16608,'Immanibugard',58,0x0000470500000000000000000000000000000000,1,1,5,300,100,0,1,0,0,2,0,0,6251,133,0,0,0,1,0,58);
+-- INSERT INTO `mob_pools` VALUES (16609,'Intuila',98,0x0000450500000000000000000000000000000000,1,1,8,210,100,0,0,0,1,2,0,32,1203,1181,0,0,0,1,0,98);
+-- INSERT INTO `mob_pools` VALUES (16611,'Jester_Malatrix',110,0x0000C30100000000000000000000000000000000,1,1,3,240,100,0,1,0,0,2,0,0,0,7,0,0,0,1,0,110);
+-- INSERT INTO `mob_pools` VALUES (16612,'Orcfeltrap',114,0x0000410500000000000000000000000000000000,1,1,8,200,100,0,1,0,0,2,0,0,563,1157,0,0,0,1,0,114);
+-- INSERT INTO `mob_pools` VALUES (16613,'Steamy_Samantha',186,0x00007D0100000000000000000000000000000000,12,12,7,200,100,0,1,0,0,2,0,32,5074,671,0,0,0,1,0,186);  -- Phase 1 (Green)
+-- INSERT INTO `mob_pools` VALUES (16614,'Sultry_Samantha',186,0x00007F0100000000000000000000000000000000,12,12,7,200,100,0,1,0,0,2,0,32,5074,671,0,0,0,1,0,186);  -- Phase 2 (Blue/Black)
+-- INSERT INTO `mob_pools` VALUES (16615,'Sybaritic_Samantha',186,0x00007E0100000000000000000000000000000000,12,12,7,200,100,0,1,0,0,2,0,32,5074,671,0,0,0,1,0,186);  -- Phase 3 (Red)
+-- INSERT INTO `mob_pools` VALUES (16616,'Valkurm_Imperator',113,0x0000C00100000000000000000000000000000000,1,1,8,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,4048);
 -- INSERT INTO `mob_pools` VALUES (16617,'Cactrot_Veloz',212,0x0000750100000000000000000000000000000000,2,2,7,360,100,0,0,1,34,15,32,2925,157,0,0,0,1,512,SKILL_LIST_ID_HERE);
 -- INSERT INTO `mob_pools` VALUES (16618,'Emperor_Arthro',77,0x0000650100000000000000000000000000000000,4,5,12,240,100,0,1,0,2,20,32,514,157,0,1,79,1,0,SKILL_LIST_ID_HERE); -- Need custom spell list-- INSERT INTO `mob_pools` VALUES (9619,'Joyous_Green
 -- INSERT INTO `mob_pools` VALUES (16620,'Keeper_of_Heiligtum
@@ -835,13 +884,8 @@ INSERT INTO `mob_pools` VALUES (16616,'Valkurm_Imperator',113,0x0000C00100000000
 -- INSERT INTO `mob_pools` VALUES (16645,'Camahueto
 -- INSERT INTO `mob_pools` VALUES (16646,'Vedrfolnir
 -- Unity NMs End
--- Pool IDs 16647 to 16655 reserved
+-- Pool IDs 16647 to 16660 reserved
 
--- INSERT INTO `mob_pools` VALUES (16656,'Tatenashi_Armor',149,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Hume
--- INSERT INTO `mob_pools` VALUES (16657,'Hachiryu_Armor',147,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Galka
--- INSERT INTO `mob_pools` VALUES (16658,'Hizamaru_Armor',145,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Elvaan
--- INSERT INTO `mob_pools` VALUES (16659,'Ubuginu_Armor',153,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Tarutaru
--- INSERT INTO `mob_pools` VALUES (16660,'Omodaka_Armor',151,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4059); -- Mithra
 -- INSERT INTO `mob_pools` VALUES (16661,'Benkei',150,0x0100110311100920093009400950006000700000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4060);
 -- INSERT INTO `mob_pools` VALUES (16662,'Druk',TEO_FIX,0x0000620200000000000000000000000000000000                       4061);
 -- INSERT INTO `mob_pools` VALUES (16663,'Zomok',TEO_FIX,0x00000F0300000000000000000000000000000000                      4062);

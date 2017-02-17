@@ -3523,7 +3523,187 @@ INSERT INTO `mob_droplist` VALUES (9732,0,1767,118);
 -- INSERT INTO `mob_droplist` VALUES (9738,0,itemID,rate);
 -- INSERT INTO `mob_droplist` VALUES (9738,0,itemID,rate);
 
--- Group IDs 9739 to 16600 currently unused
+-- HTB Avatars: Fenrir Prime
+-- INSERT INTO `mob_droplist` VALUES (9739,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9739,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9739,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9739,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9739,0,itemID,rate);
+
+-- HTB Avatars: Carbuncle Prime
+-- INSERT INTO `mob_droplist` VALUES (9740,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9740,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9740,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9740,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9740,0,itemID,rate);
+
+-- HTB Avatars: Diabolos Prime
+-- INSERT INTO `mob_droplist` VALUES (9741,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9741,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9741,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9741,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9741,0,itemID,rate);
+
+-- HTB Kam'lanaut
+-- INSERT INTO `mob_droplist` VALUES (9742,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9742,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9742,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9742,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9742,0,itemID,rate);
+
+-- HTB Eald'narche
+-- INSERT INTO `mob_droplist` VALUES (9743,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9743,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9743,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9743,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9743,0,itemID,rate);
+
+-- HTB Shadow Lord
+-- INSERT INTO `mob_droplist` VALUES (9744,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9744,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9744,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9744,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9744,0,itemID,rate);
+
+-- HTB Ouryu
+-- INSERT INTO `mob_droplist` VALUES (9745,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9745,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9745,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9745,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9745,0,itemID,rate);
+
+-- HTB Tenzen
+-- INSERT INTO `mob_droplist` VALUES (9746,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9746,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9746,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9746,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9746,0,itemID,rate);
+
+-- HTB Shikaree X
+-- INSERT INTO `mob_droplist` VALUES (9747,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9747,0,itemID,rate);
+
+-- HTB Shikaree Y
+-- INSERT INTO `mob_droplist` VALUES (9748,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9748,0,itemID,rate);
+
+-- HTB Shikaree Z
+-- INSERT INTO `mob_droplist` VALUES (9749,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9749,0,itemID,rate);
+
+-- HTB Omega
+-- INSERT INTO `mob_droplist` VALUES (9750,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9750,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9750,0,itemID,rate);
+
+-- HTB Ultima
+-- INSERT INTO `mob_droplist` VALUES (9751,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9751,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9751,0,itemID,rate);
+
+-- HTB Promathia
+-- INSERT INTO `mob_droplist` VALUES (9752,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9752,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9752,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9752,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9752,0,itemID,rate);
+
+-- HTB Lancelord Gaheel Ja
+-- INSERT INTO `mob_droplist` VALUES (9753,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9753,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9753,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9753,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9753,0,itemID,rate);
+
+-- HTB Gessho
+-- INSERT INTO `mob_droplist` VALUES (9754,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9754,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9754,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9754,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9754,0,itemID,rate);
+
+-- DropID 9755 Reserved (HTB Ark Angel Hume)
+-- DropID 9756 Reserved (HTB Ark Angel Tarutaru)
+-- DropID 9757 Reserved (HTB Ark Angel Mithra)
+-- DropID 9758 Reserved (HTB Ark Angel Elvaan)
+-- DropID 9759 Reserved (HTB Ark Angel Galka)
+-- DropID 9760 Reserved (HTB Divine Might)
+-- DropID 9761 Reserved (HTB Divine Might)
+-- DropID 9762 Reserved (HTB Divine Might)
+-- DropID 9763 Reserved (HTB Divine Might)
+-- DropID 9764 Reserved (HTB Divine Might)
+
+-- Ultimate Zilant
+-- INSERT INTO `mob_droplist` VALUES (9765,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9765,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9765,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9765,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9765,0,itemID,rate);
+
+-- Ultimate Behemoth
+-- INSERT INTO `mob_droplist` VALUES (9766,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9766,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9766,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9766,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9766,0,itemID,rate);
+
+-- Ultimate Adamantoise
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+
+-- Augustus
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9767,0,itemID,rate);
+
+-- Sekolah
+-- INSERT INTO `mob_droplist` VALUES (9769,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9769,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9769,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9769,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9769,0,itemID,rate);
+
+-- Uggalepih's Hand
+-- INSERT INTO `mob_droplist` VALUES (9770,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9770,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9770,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9770,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9770,0,itemID,rate);
+
+-- Air Horror
+-- INSERT INTO `mob_droplist` VALUES (9771,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9771,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9771,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9771,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9771,0,itemID,rate);
+
+-- Cthulhu
+-- INSERT INTO `mob_droplist` VALUES (9772,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9772,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9772,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9772,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9772,0,itemID,rate);
+
+-- Whomping Willow
+-- INSERT INTO `mob_droplist` VALUES (9773,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9773,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9773,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9773,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9773,0,itemID,rate);
+
+-- Sir Mordred
+-- INSERT INTO `mob_droplist` VALUES (9774,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9774,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9774,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9774,0,itemID,rate);
+-- INSERT INTO `mob_droplist` VALUES (9774,0,itemID,rate);
+
+-- Group IDs 9775 to 16600 currently unused
 -- New info above this line sorted by Group ID
 -- place nothing below this line ---------------
 
@@ -3539,11 +3719,35 @@ INSERT INTO `mob_droplist` VALUES (9732,0,1767,118);
 -- INSERT INTO `mob_droplist` VALUES (16609,0,6320,1000); -- Intuila's Coffer
 -- INSERT INTO `mob_droplist` VALUES (16611,0,6330,1000); -- Malatrix's Coffer
 -- INSERT INTO `mob_droplist` VALUES (16612,0,6322,1000); -- Orcfeltrap's Coffer
--- INSERT INTO `mob_droplist` VALUES (16615,0,6350,1000); -- Saman. Coffer
--- INSERT INTO `mob_droplist` VALUES (16616,0,6317,1000); -- Imperator's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16613,0,6350,1000); -- Saman. Coffer
+-- INSERT INTO `mob_droplist` VALUES (16614,0,6317,1000); -- Imperator's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16615,0,6331,1000); -- Cactrot Veloz's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16616,0,6321,1000); -- Emperor Arthro's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16617,0,6324,1000); -- Joyous Green's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16618,0,6351,1000); -- Keeper of Heiligtum's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16619,0,6356,1000); -- Tiyanak's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16620,0,6360,1000); -- Voso's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16621,0,6326,1000); -- Warblade Beak's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16622,0,6332,1000); -- Woodland Mender's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16623,0,6327,1000); -- Arke's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16624,0,6363,1000); -- Ayapec's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16625,0,6329,1000); -- Beist's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16626,0,6362,1000); -- Coca's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16627,0,6352,1000); -- Douma Weapon's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16628,0,6353,1000); -- King Uropygid's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16629,0,6328,1000); -- Largantua's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16630,0,6323,1000); -- Lumber Jill's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16631,0,6361,1000); -- Mephitas's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16632,0,6358,1000); -- Muut's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16633,0,6364,1000); -- Specter Worm's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16634,0,6325,1000); -- Strix's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16635,0,6365,1000); -- Azrael's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16636,0,6366,1000); -- Borealis Shadow's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16637,0,6359,1000); -- Camahueto's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16638,0,6354,1000); -- Vedrfolnir's Coffer
 -- End Unity NM drops
 
--- Drop IDs 16617 to 16664 reserved
+-- Drop IDs 16639 to 16664 reserved
 
 -- The Jumping Crab (please do not add anything to this crab without consulting Teo)
 INSERT INTO `mob_droplist` VALUES (16665,0,3925,1000); -- Single Tanzenite Jewel 100%

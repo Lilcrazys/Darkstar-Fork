@@ -67,7 +67,7 @@ end;
 -----------------------------------
 
 function onGameHour()
-    local TwinkleTreantID = 17253374;
+    local TwinkleTreantID = 17253364;
     local month = tonumber(os.date("%m"));
     local day = tonumber(os.date("%d"));
     -- Dec 5th through Jan 5th.

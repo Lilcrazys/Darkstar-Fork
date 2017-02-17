@@ -65,8 +65,8 @@ function onInitialize(zone)
 
     SetRegionalConquestOverseers(zone:getRegionID())
 
-    -- DARRCUILN
-    GetMobByID(17282046):setRespawnTime(math.random(900,10800));
+    -- Darrcuiln
+    GetMobByID(17282036):setRespawnTime(math.random(900,10800));
 end;
 
 -----------------------------------

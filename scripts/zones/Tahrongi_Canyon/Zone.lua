@@ -63,8 +63,8 @@ end;
 
 function onInitialize(zone)
 
-    -- HURKAN
-    GetMobByID(17257470):setRespawnTime(math.random((900),(10800)));
+    -- Hurkan
+    GetMobByID(17257460):setRespawnTime(math.random(900,10800));
 end;
 
 -----------------------------------

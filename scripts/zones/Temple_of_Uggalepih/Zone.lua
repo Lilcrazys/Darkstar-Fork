@@ -18,7 +18,7 @@ function onInitialize(zone)
     UpdateTreasureSpawnPoint(17429007);
 
     -- Colkhab
-    GetMobByID(17429502):setRespawnTime(math.random((900),(10800)));
+    GetMobByID(17429492):setRespawnTime(math.random(900,10800));
 end;
 
 -----------------------------------
