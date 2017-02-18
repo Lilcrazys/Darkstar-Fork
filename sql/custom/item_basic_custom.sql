@@ -19,11 +19,9 @@ REPLACE INTO `item_basic` VALUES (734,0,'chunk_of_thokcha_ore','thokcha_ore',12,
 REPLACE INTO `item_basic` VALUES (735,0,'thokcha_ingot','thokcha_ingot',12,0,38,1,0);
 REPLACE INTO `item_basic` VALUES (766,0,'ormolu_ingot','ormolu_ingot',12,0,38,0,1);
 
-REPLACE INTO `item_basic` VALUES (3449,0,'celaenos_cloth','celaenos_cloth',1,0,44,0,1);
 REPLACE INTO `item_basic` VALUES (3549,0,'vial_of_belladonna_sap','belladonna_sap',12,0,44,1,0);
 REPLACE INTO `item_basic` VALUES (3936,0,'jar_of_acuex_poison','acuex_poison',12,0,44,1,0);
 
-REPLACE INTO `item_basic` VALUES (4012,0,'waktza_rostrum','waktza_rostrum',1,0,42,0,1);
 REPLACE INTO `item_basic` VALUES (4013,0,'waktza_crest','waktza_crest',12,0,40,0,1);
 REPLACE INTO `item_basic` VALUES (4014,0,'yggdreant_bole','yggdreant_bole',1,0,43,0,1);
 REPLACE INTO `item_basic` VALUES (4015,0,'yggdreant_root','yggdreant_root',12,0,44,0,1);
