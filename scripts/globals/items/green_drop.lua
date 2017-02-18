@@ -55,7 +55,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_QUICK_DRAW_DMG, 5);
     target:addMod(MOD_MATT, 2);
     target:addMod(MOD_MACC, 4);
-    target:addMod(MOD_WS_PWR_BONUS, 8);
+    target:addMod(MOD_ALL_WSDMG_FIRST_HIT, 8);
 end;
 
 -----------------------------------------
@@ -77,5 +77,5 @@ function onEffectLose(target,effect)
     target:delMod(MOD_QUICK_DRAW_DMG, 5);
     target:delMod(MOD_MATT, 2);
     target:delMod(MOD_MACC, 4);
-    target:delMod(MOD_WS_PWR_BONUS, 8);
+    target:delMod(MOD_ALL_WSDMG_FIRST_HIT, 8);
 end;

@@ -82,7 +82,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_TERRORRES, 7);
     target:addMod(MOD_DOOMRES, 7);;
     target:addMod(MOD_WSACC, 7);
-    target:addMod(MOD_WS_PWR_BONUS, 7)
+    target:addMod(MOD_ALL_WSDMG_FIRST_HIT, 7)
     -- End custom
 end;
 
@@ -124,6 +124,6 @@ function onEffectLose(target,effect)
     target:delMod(MOD_TERRORRES, 7);
     target:delMod(MOD_DOOMRES, 7);
     target:delMod(MOD_WSACC, 7);
-    target:delMod(MOD_WS_PWR_BONUS, 7);
+    target:delMod(MOD_ALL_WSDMG_FIRST_HIT, 7);
     -- End custom
 end;

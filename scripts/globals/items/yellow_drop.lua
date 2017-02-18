@@ -53,7 +53,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_HPHEAL, 5);
     target:addMod(MOD_MINNE_EFFECT, 2);
     target:addMod(MOD_ELEGY_EFFECT, 2);
-    target:addMod(MOD_WS_PWR_BONUS, 6);
+    target:addMod(MOD_ALL_WSDMG_FIRST_HIT, 6);
 end;
 
 -----------------------------------------
@@ -73,5 +73,5 @@ function onEffectLose(target,effect)
     target:delMod(MOD_HPHEAL, 5);
     target:delMod(MOD_MINNE_EFFECT, 2);
     target:delMod(MOD_ELEGY_EFFECT, 2);
-    target:delMod(MOD_WS_PWR_BONUS, 6);
+    target:delMod(MOD_ALL_WSDMG_FIRST_HIT, 6);
 end;
