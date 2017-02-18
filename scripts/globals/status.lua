@@ -1360,7 +1360,10 @@ MOD_QUICK_DRAW_DMG_PERCENT    = 834 -- Percentage increase to QD damage
 MOD_SYNTH_SUCCESS    = 851 -- Rate of synthesis success
 MOD_SYNTH_SKILL_GAIN = 852 -- Synthesis skill gain rate
 
-MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
+MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- Specific to 1 Weaponskill: See modifier.h for how this is used
+MOD_ALL_WSDMG_ALL_HITS      = 840 -- Generic (all Weaponskills) damage, on all hits.
+-- Per https://www.bg-wiki.com/bg/Weapon_Skill_Damage we need all 3..
+MOD_ALL_WSDMG_FIRST_HIT     = 841 -- Generic (all Weaponskills) damage, first hit only.
 
 -- The entire mod list is in desperate need of kind of some organizing.
 -- The spares take care of finding the next ID to use so long as we don't forget to list IDs that have been freed up by refactoring.
@@ -1370,8 +1373,6 @@ MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
 -- MOD_SPARE = 67 -- stuff
 -- MOD_SPARE = 98 -- stuff
 -- 570 - 825 used by WS DMG mods these are not spares.
--- MOD_SPARE = 840 -- stuff
--- MOD_SPARE = 841 -- stuff
 -- MOD_SPARE = 842 -- stuff
 -- MOD_SPARE = 843 -- stuff
 -- MOD_SPARE = 844 -- stuff
@@ -1387,7 +1388,7 @@ MOD_WEAPONSKILL_DAMAGE_BASE = 570 -- See modifier.h for how this is used
 MOD_ACCP              = 3964 -- DSP removed these, I am
 MOD_EVAP              = 3965 -- placing them here in case Legion
 MOD_RACCP             = 3967 -- used them for custom things.. ~Teo
-MOD_WS_PWR_BONUS      = 4000 -- Adds extra power to ws
+-- MOD_PLACEHOLDER       = 4000 -- placeholder
 -- 4001-4091 available to use
 MOD_TERRORRES                 = 4092 -- Resist Terror
 MOD_DOOMRES                   = 4093 -- Resist Doom

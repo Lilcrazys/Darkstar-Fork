@@ -9,13 +9,13 @@
 -- PLD custom trains, these piggy back off Undead Killer's ID.
 -- Since Undead killer is granted at lv5 and these later, player will not notice any change to the list.
 INSERT INTO `traits` VALUES (39,'PLD Enmity Bonus',7,30,1,27,5,null);  -- same as enmity (+5) gear         
-INSERT INTO `traits` VALUES (39,'PLD Enmity Bonus',7,60,2,27,12,null); -- same as enmity (+12) gear       
-INSERT INTO `traits` VALUES (39,'PLD Enmity Bonus',7,90,3,27,20,null); -- same as enmity (+20) gear       
+INSERT INTO `traits` VALUES (39,'PLD Enmity Bonus',7,60,2,27,10,null); -- same as enmity (+10) gear       
+INSERT INTO `traits` VALUES (39,'PLD Enmity Bonus',7,90,3,27,15,null); -- same as enmity (+15) gear       
 INSERT INTO `traits` VALUES (39,'PLD Enmity Loss Reduction',7,30,1,502,4,null);  -- 4% reduction in hate lost from taking dmg
-INSERT INTO `traits` VALUES (39,'PLD Enmity Loss Reduction',7,60,2,502,8,null);  -- 8% reduction in hate lost from taking dmg
-INSERT INTO `traits` VALUES (39,'PLD Enmity Loss Reduction',7,90,3,502,12,null); -- 12% reduction in hate lost from taking dmg
-INSERT INTO `traits` VALUES (39,'PLD WS power Bonus',7,20,3,4000,4,null); -- Adds 4% to all ws
-INSERT INTO `traits` VALUES (39,'PLD WS power Bonus',7,50,3,4000,5,null); -- Adds 5% to all ws
+INSERT INTO `traits` VALUES (39,'PLD Enmity Loss Reduction',7,60,2,502,6,null);  -- 6% reduction in hate lost from taking dmg
+INSERT INTO `traits` VALUES (39,'PLD Enmity Loss Reduction',7,90,3,502,10,null); -- 10% reduction in hate lost from taking dmg
+INSERT INTO `traits` VALUES (39,'PLD WS power Bonus',7,20,3,840,2,null); -- Adds 2% to all ws
+INSERT INTO `traits` VALUES (39,'PLD WS power Bonus',7,50,3,840,3,null); -- Adds 3% to all ws
 
 -- No edits below this line!
 -- ID   Name

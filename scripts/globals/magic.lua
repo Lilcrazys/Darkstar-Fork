@@ -1381,6 +1381,7 @@ function customEnmityAdjust(caster,spell,params)
             multiplier = multiplier*0.9;
         elseif (skill == NINJUTSU_SKILL) then
             multiplier = multiplier*1.11;
+        --[[ Rethinking blue magic enmity.. People are tanking intentionally with blue spells.
         elseif (skill == BLUE_SKILL and params ~= nil) then
             if (params.dmgtype == nil) then -- This will be nil unless physical type
                 multiplier = multiplier*1.25;
@@ -1388,6 +1389,7 @@ function customEnmityAdjust(caster,spell,params)
             or params.dmgtype == DMGTYPE_SLASH or params.dmgtype == DMGTYPE_H2H) then
                 multiplier = multiplier*1.11;
             end
+        ]]
         end
     end
 

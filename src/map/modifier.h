@@ -32,13 +32,13 @@ enum MODIFIER
     MOD_ACCP              = 3964, // DSP removed these, I am
     MOD_EVAP              = 3965, // placing them here in case Legion
     MOD_RACCP             = 3967, // used them for custom things.. ~Teo
-    MOD_WS_PWR_BONUS      = 4000, // Adds extra power to ws
+    // MOD_PLACEHOLDER       = 4000, // placeholder
+    // 4001-4091 available to use
     MOD_TERRORRES                 = 4092, // Resist Terror
     MOD_DOOMRES                   = 4093, // Resist Doom
     // MOD_EFFECTIVE_LV              = 4094, // Only highest mod value item applies: Treat players LV as this number instead of actual LV
     // MOD_REQUIRED_LV               = 4095, // Apply to item, not player: Increase the items LV requirement by this much
     // End of LegionDS Custom MOD
-
     MOD_NONE                      = 0, // Essential, but does nothing :)
     // MOD_ NAME                  = ID, // Comment
     MOD_DEF                       = 1, // Target's Defense
@@ -651,12 +651,14 @@ enum MODIFIER
     // For example, +10% damage to Chant du Cygne would be ID 570 + 225 (795)
     MOD_WEAPONSKILL_DAMAGE_BASE   = 570,
 
+    MOD_ALL_WSDMG_ALL_HITS        = 840, // Generic (all Weaponskills) damage, on all hits.
+    // Per https://www.bg-wiki.com/bg/Weapon_Skill_Damage we need all 3..
+    MOD_ALL_WSDMG_FIRST_HIT       = 841 // Generic (all Weaponskills) damage, first hit only.
+
     // MOD_SPARE = 64, // stuff
     // MOD_SPARE = 65, // stuff
     // MOD_SPARE = 67, // stuff
     // 570 through 825 used by WS DMG mods these are not spares.
-    // MOD_SPARE = 840, // stuff
-    // MOD_SPARE = 841, // stuff
     // MOD_SPARE = 842, // stuff
     // MOD_SPARE = 843, // stuff
     // MOD_SPARE = 844, // stuff
