@@ -1,5 +1,5 @@
 ---------------------------------------------
--- Cyclonic_Turmoil
+-- Cyclonic Turmoil
 --
 -- Deals Wind damage in an area of effect. Additional effect: Knockback & Dispel
 -- Notes: Dispels multiple buffs. Wipes shadows.
@@ -14,8 +14,8 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local dmgmod = 1.5;
-    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_WIND,dmgmod,TP_NO_EFFECT);
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*2.8,ELE_WIND,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WIND,MOBPARAM_WIPE_SHADOWS);
     local dispel1 = target:dispelStatusEffect();
     local dispel2 = target:dispelStatusEffect();

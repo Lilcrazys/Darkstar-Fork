@@ -169,7 +169,6 @@ function doPhysicalWeaponskill(attacker, target, wsID, tp, primary, action, taCh
     local firstHitBonus = ((finaldmg * attacker:getMod(MOD_ALL_WSDMG_FIRST_HIT))/100);
 
     local numHits = getMultiAttacks(attacker, params.numHits);
-
     local extraHitsLanded = 0;
 
     if (numHits > 1) then
@@ -406,7 +405,6 @@ function getRangedHitRate(attacker,target,capHitRate,bonus)
 
     hitrate = hitrate+hitdiff;
     hitrate = hitrate/100;
-
 
     -- Applying hitrate caps
     if (capHitRate) then -- this isn't capped for when acc varies with tp, as more penalties are due

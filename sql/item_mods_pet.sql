@@ -96,6 +96,26 @@ INSERT INTO `item_mods_pet` VALUES (10744,23,10);  -- Avatar: Attack +10
 INSERT INTO `item_mods_pet` VALUES (10744,562,5); -- Avatar: Magic critical hit rate +5%
 
 -- -------------------------------------------------------
+-- Moepapa Stone
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (10817,384,51); -- Pet: Haste+5%
+
+-- -------------------------------------------------------
+-- Muzzling Collar
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (10914,27,-2); -- Pet: Enmity-2
+
+-- -------------------------------------------------------
+-- Muzzling Collar +1 
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (10915,27,-3); -- Pet: Enmity-3
+
+-- -------------------------------------------------------
+-- Oneiros Cappa  
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (10972,161,-3); -- Pet: Physical damage taken -3%
+
+-- -------------------------------------------------------
 -- Caller's Doublet +2
 -- -------------------------------------------------------
 -- INSERT INTO `item_mods_pet` VALUES (11098,???,10);      -- Increases Blood Pact damage +10%
@@ -152,6 +172,11 @@ INSERT INTO `item_mods_pet` VALUES (11497, 384, 51); -- Pet: Haste+5% (Gear)
 INSERT INTO `item_mods_pet` VALUES (11531, 73, 3); -- Pet: Store TP +3
 
 -- -------------------------------------------------------
+-- Ferine Mantle  
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (11555, 25, 10); -- Pet: Accuracy+10
+
+-- -------------------------------------------------------
 -- Tiresias' Cape
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (11564,28,1);      -- Magic Atk. Bonus +1
@@ -162,9 +187,19 @@ INSERT INTO `item_mods_pet` VALUES (11564,28,1);      -- Magic Atk. Bonus +1
 INSERT INTO `item_mods_pet` VALUES (11612, 28, 2); -- Pet: MAB +2
 
 -- -------------------------------------------------------
+-- Ferine Necklace  
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (11617, 288, 2); -- Pet: "Double Attack"+2%
+
+-- -------------------------------------------------------
 -- Caller's Pendant
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (11619,368,25);    -- Regain + 25
+
+-- -------------------------------------------------------
+-- Ferine Earring  
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (11711,25,3);    -- Pet: Accuracy+3
 
 -- -------------------------------------------------------
 -- Caller's Sash
@@ -306,6 +341,12 @@ INSERT INTO `item_mods_pet` VALUES (15679,27,2);      -- Enmity +2
 -- -------------------------------------------------------
 -- Selemnus Belt - LVL 70
 -- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (15910, 1, 5); -- Pet: DEF+5 Enmity+3
+INSERT INTO `item_mods_pet` VALUES (15910, 27, 3);
+
+-- -------------------------------------------------------
+-- Selemnus Belt - LVL 70
+-- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (15944, 163, -7); -- Pet: Magic Damage taken -3%
 
 -- -------------------------------------------------------
@@ -322,6 +363,11 @@ INSERT INTO `item_mods_pet` VALUES (16297, 161, -2); -- Pet: Damage taken -2%
 -- Herder's Subligar - LVL 25
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (16368, 25, 10); -- Pet: accuracy +10
+
+-- -------------------------------------------------------
+-- Glyph Axe
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (16654, 368, 10); -- Pet: "Regain"+10
 
 -- -------------------------------------------------------
 -- Lion Tamer - LVL 74
@@ -364,6 +410,16 @@ INSERT INTO `item_mods_pet` VALUES (21183,28,108);    -- Magic Atk. Bonus +108
 -- Esper Stone + 1 - LVL 99
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (21361, 28, 6); -- Pet: MAB +6
+
+-- -------------------------------------------------------
+-- Thur. Ring +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (26201,23,23); -- Attack+23
+INSERT INTO `item_mods_pet` VALUES (26201,24,23); -- Ranged Attack+23
+INSERT INTO `item_mods_pet` VALUES (26201,25,22); -- Accuracy+22
+INSERT INTO `item_mods_pet` VALUES (26201,26,22); -- Ranged Accuract+22
+INSERT INTO `item_mods_pet` VALUES (26201,384,40); -- Haste+4%
+INSERT INTO `item_mods_pet` VALUES (26201,160,-4); -- Damage Taken-4%
 
 -- -------------------------------------------------------
 -- Glyphic Horn
@@ -472,6 +528,33 @@ INSERT INTO `item_mods_pet` VALUES (28119, 65, 2); -- Pet: Evasion +2
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (28125,25,20);     -- Accuracy +20
 INSERT INTO `item_mods_pet` VALUES (28125,27,4);      -- Enmity +4
+
+-- -------------------------------------------------------
+-- Marduk's Crackows +1
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (28211,23,15);     -- Attack +15
+INSERT INTO `item_mods_pet` VALUES (28211,384,2);     -- Haste +2%
+
+-- -------------------------------------------------------
+-- Ker's Sollerets
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (28213,23,13);     -- Attack +13
+
+-- -------------------------------------------------------
+-- Sigyn's Jambeaux
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (28214,68,5);      -- Evasion +5
+
+-- -------------------------------------------------------
+-- Idi's Ledelsens
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (28219,68,2);      -- Evasion +2
+
+-- -------------------------------------------------------
+-- Totemic Gaiters
+-- -------------------------------------------------------
+INSERT INTO `item_mods_pet` VALUES (28231,23,10);     -- Attack +10
+INSERT INTO `item_mods_pet` VALUES (28231,25,10);     -- Accuracy +10
 
 -- -------------------------------------------------------
 -- Convoker's Pigaches

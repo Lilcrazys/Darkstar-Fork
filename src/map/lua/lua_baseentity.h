@@ -228,6 +228,7 @@ public:
     int32 getBCNMloot(lua_State*);                   //triggers if the player opens the chest inside bcnm
     int32 addPlayerToSpecialBattlefield(lua_State*); //for limbus
 
+    int32 isSpawned(lua_State*);
     int32 setSpawn(lua_State*);                // Sets spawn point
     int32 setRespawnTime(lua_State*);          // set respawn time
     int32 getDynamisUniqueID(lua_State*);      //Get unique Dynamis ID
@@ -464,6 +465,7 @@ public:
     int32 isNPC(lua_State*);
     int32 isMob(lua_State*);
     int32 isPet(lua_State*);
+    int32 isAlly(lua_State*);
 
     int32 injectActionPacket(lua_State*);   // ONLY FOR DEBUGGING. Injects an action packet with the specified params.
     int32 setMobFlags(lua_State*);          // Used to manipulate the mob's flags for testing.
@@ -613,6 +615,12 @@ public:
     int32 getEntity(lua_State* L);
 
     int32 canChangeState(lua_State* L);
+
+    int32 isAlive(lua_State* L);
+    int32 isDead(lua_State* L);
+
+    int32 engage(lua_State* L);
+    int32 disengage(lua_State* L);
 
     // Custom
     int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
