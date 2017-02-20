@@ -66,6 +66,24 @@ function onEffectGain(target,effect)
     target:addMod(MOD_MPHEAL, 7);
     target:addMod(MOD_DEF, 7);
     target:addMod(MOD_EVA, 7);
+
+    -- Begin custom
+    target:addMod(MOD_REGAIN, 7);
+    target:addMod(MOD_REFRESH, 7);
+    target:addMod(MOD_REGEN, 7);
+    target:addMod(MOD_MATT, 7);
+    target:addMod(MOD_MDEF, 7);
+    target:addMod(MOD_MACC, 7);
+    target:addMod(MOD_MEVA, 7);
+    target:addMod(MOD_FOOD_HPP, 7);
+    target:addMod(MOD_FOOD_HP_CAP, 210);
+    target:addMod(MOD_FOOD_MPP, 7);
+    target:addMod(MOD_FOOD_MP_CAP, 210);
+    target:addMod(MOD_TERRORRES, 7);
+    target:addMod(MOD_DOOMRES, 7);;
+    target:addMod(MOD_WSACC, 7);
+    target:addMod(MOD_ALL_WSDMG_FIRST_HIT, 7)
+    -- End custom
 end;
 
 -----------------------------------------
@@ -90,4 +108,22 @@ function onEffectLose(target,effect)
     target:delMod(MOD_MPHEAL, 7);
     target:delMod(MOD_DEF, 7);
     target:delMod(MOD_EVA, 7);
+
+    -- Begin custom
+    target:delMod(MOD_REGAIN, 7);
+    target:delMod(MOD_REFRESH, 7);
+    target:delMod(MOD_REGEN, 7);
+    target:delMod(MOD_MATT, 7);
+    target:delMod(MOD_MDEF, 7);
+    target:delMod(MOD_MACC, 7);
+    target:delMod(MOD_MEVA, 7);
+    target:delMod(MOD_FOOD_HPP, 7);
+    target:delMod(MOD_FOOD_HP_CAP, 210);
+    target:delMod(MOD_FOOD_MPP, 7);
+    target:delMod(MOD_FOOD_MP_CAP, 210);
+    target:delMod(MOD_TERRORRES, 7);
+    target:delMod(MOD_DOOMRES, 7);
+    target:delMod(MOD_WSACC, 7);
+    target:delMod(MOD_ALL_WSDMG_FIRST_HIT, 7);
+    -- End custom
 end;
