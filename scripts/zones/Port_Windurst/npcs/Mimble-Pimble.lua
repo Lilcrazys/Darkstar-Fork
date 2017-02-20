@@ -94,7 +94,7 @@ function onEventFinish(player,csid,option)
     if (player:getVar("DebugMode") == 1) then
         player:PrintToPlayer(string.format("onEventUpdate option: %u", option));
     end
-
+--[[
     if (csid == 895) then
         local keyItem;
         local cost;
@@ -180,5 +180,5 @@ function onEventFinish(player,csid,option)
                 end
             end
         end
-    end
+    end]]
 end;
