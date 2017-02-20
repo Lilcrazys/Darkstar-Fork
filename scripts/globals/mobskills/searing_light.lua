@@ -2,7 +2,7 @@
 --  Searing light
 --
 --  Description: Carbuncle deals Light damage to all enemy.
---  
+--
 ---------------------------------------------
 
 require("scripts/globals/settings");
