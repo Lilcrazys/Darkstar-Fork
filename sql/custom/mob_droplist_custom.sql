@@ -1553,6 +1553,10 @@ DELETE FROM `mob_droplist` WHERE dropId=4372 and type=0 and itemId=4748 and rate
 INSERT INTO `mob_droplist` VALUES (4372,0,3924,94); -- Scholar Stone
 INSERT INTO `mob_droplist` VALUES (4372,0,271,196); --  Alexander Statue
 
+-- Ix'Aern (DRK)
+DELETE FROM `mob_droplist` WHERE dropId=4397 and type=0 and itemId=1854 and rate=810; -- Zero out SQL based drop, scripted drop is in onMobDeath()
+DELETE FROM `mob_droplist` WHERE dropId=4397 and type=0 and itemId=1902 and rate=190; -- Zero out SQL based drop, scripted drop is in onMobDeath()
+
 -- Wulgaru
 DELETE FROM `mob_droplist` WHERE dropId=4381 and type=0 and itemId=16174 and rate=340; -- comment me
 INSERT INTO `mob_droplist` VALUES (4381,0,16157,540); -- Enkidu's Cap

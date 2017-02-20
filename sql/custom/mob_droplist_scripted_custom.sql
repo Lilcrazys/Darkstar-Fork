@@ -136,6 +136,10 @@ INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28611,100); -- Tuilha Cape
 INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28615,100); -- Toro Cape
 INSERT INTO `mob_droplist_scripted` VALUES (4372,0,28614,100); -- Iximulew Cape
 
+-- Ix'Aern (DRK)
+INSERT INTO `mob_droplist_scripted` VALUES (4397,0,1854,800); -- Deed of Moderation
+INSERT INTO `mob_droplist_scripted` VALUES (4397,0,1902,200); -- Vice of Avarice (Altruistic Cape)
+
 -- Sallow Seymour
 INSERT INTO `mob_droplist_scripted` VALUES (9600,0,8919,125); -- Ifritear
 INSERT INTO `mob_droplist_scripted` VALUES (9600,0,8920,125); -- Leviatear
