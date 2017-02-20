@@ -34,8 +34,8 @@ class CCharEntity;
 struct EnmityObject_t
 {
     CBattleEntity* PEnmityOwner;
-	int16 CE;						// Cumulative Enmity
-	int16 VE;						// Volatile Enmity
+	int32 CE;						// Cumulative Enmity
+	int32 VE;						// Volatile Enmity
     bool active;
 	uint8 maxTH;                    // Maximum Treasure Hunter level of this Enmity Owner
 };
@@ -55,14 +55,14 @@ public:
     void    Clear(uint32 EntityID = 0);			// Removes Entries from list
     void    LogoutReset(uint32 EntityID);		// Sets entry to inactive
     void    AddBaseEnmity(CBattleEntity* PEntity);
-    void    UpdateEnmity(CBattleEntity* PEntity, int16 CE, int16 VE, bool withMaster = true);
+    void    UpdateEnmity(CBattleEntity* PEntity, int32 CE, int32 VE, bool withMaster = true);
     void    UpdateEnmityFromDamage(CBattleEntity* PEntity, uint16 Damage);
     void    UpdateEnmityFromCure(CBattleEntity* PEntity, uint16 level, uint16 CureAmount, bool isCureV);
     void    UpdateEnmityFromAttack(CBattleEntity* PEntity,uint16 Damage);
     bool    HasID(uint32 ID); //true if ID is in the container with non-zero enmity level
     void    LowerEnmityByPercent(CBattleEntity* PEntity, uint8 percent, CBattleEntity* HateReceiver); // lower % of hate or transfer it
-    uint16  GetCE(CBattleEntity* PEntity);
-    uint16  GetVE(CBattleEntity* PEntity);
+    uint32  GetCE(CBattleEntity* PEntity);
+    uint32  GetVE(CBattleEntity* PEntity);
     void    DecayEnmity();
     bool    IsWithinEnmityRange(CBattleEntity* PEntity);
     uint8   GetHighestTH();

@@ -691,8 +691,8 @@ public:
     void        setMessage(uint16 message);
     void        setRecastTime(uint16 recastTime);
     void        setRecastId(uint16 recastId);
-    void        setCE(uint16 CE);
-    void        setVE(uint16 VE);
+    void        setCE(uint32 CE);
+    void        setVE(uint32 VE);
     void        setMeritModID(uint16 value);
     void        setActionType(ACTIONTYPE type);
 

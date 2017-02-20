@@ -3542,7 +3542,7 @@ namespace battleutils
 
     //Generate enmity for all targets in range
 
-    void GenerateInRangeEnmity(CBattleEntity* PSource, int16 CE, int16 VE)
+    void GenerateInRangeEnmity(CBattleEntity* PSource, int32 CE, int32 VE)
     {
         DSP_DEBUG_BREAK_IF(PSource == nullptr);
 

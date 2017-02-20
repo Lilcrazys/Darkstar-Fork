@@ -138,8 +138,8 @@ public:
     void        setMultiplier(float multiplier);
     void        setMessage(uint16 message);
     void        setMagicBurstMessage(uint16 message);
-    void        setCE(uint16 ce);
-    void        setVE(uint16 ve);
+    void        setCE(uint32 ce);
+    void        setVE(uint32 ve);
     void        setRequirements(uint8 requirements);
     void        setMeritId(uint16 meritId);
     void        setModifiedRecast(uint32 mrec);

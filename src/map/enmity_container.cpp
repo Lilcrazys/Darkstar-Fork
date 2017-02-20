@@ -115,7 +115,7 @@ float CEnmityContainer::CalculateEnmityBonus(CBattleEntity* PEntity){
 *                                                                       *
 ************************************************************************/
 
-void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int16 CE, int16 VE, bool withMaster)
+void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int32 CE, int32 VE, bool withMaster)
 {
     // you're too far away so i'm ignoring you
     if (!IsWithinEnmityRange(PEntity))
@@ -194,8 +194,8 @@ void CEnmityContainer::UpdateEnmityFromCure(CBattleEntity* PEntity, uint16 level
     if (!IsWithinEnmityRange(PEntity))
         return;
 
-    int16 CE;
-    int16 VE;
+    int32 CE;
+    int32 VE;
     float bonus = CalculateEnmityBonus(PEntity);
     float tranquilHeartReduction = 1.f - battleutils::HandleTranquilHeart(PEntity);
     
@@ -262,13 +262,13 @@ void CEnmityContainer::LowerEnmityByPercent(CBattleEntity* PEntity, uint8 percen
 *                                                                       *
 ************************************************************************/
 
-uint16 CEnmityContainer::GetCE(CBattleEntity* PEntity)
+uint32 CEnmityContainer::GetCE(CBattleEntity* PEntity)
 {
     auto PEnmity = m_EnmityList.find(PEntity->id);
     return PEnmity != m_EnmityList.end() ? PEnmity->second.CE : 0;
 }
 
-uint16 CEnmityContainer::GetVE(CBattleEntity* PEntity)
+uint32 CEnmityContainer::GetVE(CBattleEntity* PEntity)
 {
     auto PEnmity = m_EnmityList.find(PEntity->id);
     return PEnmity != m_EnmityList.end() ? PEnmity->second.VE : 0;
@@ -290,8 +290,8 @@ void CEnmityContainer::UpdateEnmityFromDamage(CBattleEntity* PEntity, uint16 Dam
         mod = battleutils::GetEnmityModDamage(m_EnmityHolder->GetMLevel());
     }
 
-    uint16 CE = (80.0f / mod) * Damage;
-    uint16 VE = (240.0f / mod) * Damage;
+    uint32 CE = (80.0f / mod) * Damage;
+    uint32 VE = (240.0f / mod) * Damage;
 
     UpdateEnmity(PEntity, CE, VE);
 
@@ -312,7 +312,7 @@ void CEnmityContainer::UpdateEnmityFromAttack(CBattleEntity* PEntity, uint16 Dam
         return;
     }
     float reduction = (100.f - dsp_min(PEntity->getMod(Mod::ENMITY_LOSS_REDUCTION), 100)) / 100.0f;
-    int16 CE = -(1800 * Damage / PEntity->GetMaxHP()) * reduction;
+    int32 CE = -(1800 * Damage / PEntity->GetMaxHP()) * reduction;
 
     auto enmity_obj = m_EnmityList.find(PEntity->id);
 
