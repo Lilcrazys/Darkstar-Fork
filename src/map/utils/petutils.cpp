@@ -1409,24 +1409,24 @@ namespace petutils
             if (PPet->getPetType() == PETTYPE_JUG_PET)
             {
                 // ShowDebug("Buffing Jug Pet.. \n");
-                PPet->addModifier(MOD_ATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-                PPet->addModifier(MOD_ACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-                PPet->addModifier(MOD_MATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-                PPet->addModifier(MOD_MACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-                PPet->addModifier(MOD_DEF, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
-                PPet->addModifier(MOD_EVA, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
-                PPet->addModifier(MOD_MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
+                PPet->addModifier(Mod::ATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::ACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::MATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::MACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::DEF, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::EVA, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
+                PPet->addModifier(Mod::MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
             }
             else if (PPet->getPetType() != PETTYPE_AUTOMATON)
             {
                 // ShowDebug("Buffing Avatar or Wyvern.. \n");
-                PPet->addModifier(MOD_ATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_ACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_MATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_MACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_DEF, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_EVA, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(MOD_MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::ATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::ACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::MATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::MACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::DEF, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::EVA, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
             }
         }
         // End custom block
