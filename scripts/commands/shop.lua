@@ -50,13 +50,13 @@ function onTrigger(player,page)
             -- Retail:  DEX+2 AGI+2 MND-2 ATT+14% (Cap:75) RATT+14% (Cap:75) EVA+5
             --------------------------------------------------
             -- Custom food items
-            4258,   40000,  -- Red Drop
-            4259,   40000,  -- Clear Drop
-            4260,   40000,  -- Green Drop
-            4261,   40000,  -- Yellow Drop
-            4262,   40000,  -- Purple Drop
-            4263,   40000,  -- Blue Drop
-            4264,   40000,  -- White Drop
+            4258,   20000,  -- Red Drop
+            4259,   20000,  -- Clear Drop
+            4260,   20000,  -- Green Drop
+            4261,   20000,  -- Yellow Drop
+            4262,   20000,  -- Purple Drop
+            4263,   20000,  -- Blue Drop
+            4264,   20000,  -- White Drop
             4265,   4000   -- Black Drop
         };
         showShop(player, STATIC, stock_2);
