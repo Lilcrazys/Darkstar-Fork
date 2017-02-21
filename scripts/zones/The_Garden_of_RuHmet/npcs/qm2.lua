@@ -50,7 +50,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
+    player:PrintToPlayer("Debug: Ix'aern (Dark Knight) (qm2.lua)");
     Kills = GetServerVariable("[PH]Ix_aern_drk");
         --print(Kills)
     moba = GetMobByID(16921018);

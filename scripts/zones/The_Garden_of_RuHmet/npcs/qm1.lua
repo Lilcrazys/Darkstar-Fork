@@ -57,7 +57,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
+    player:PrintToPlayer("Debug: Jailer of Fortitude (qm1.lua)");
 end;
 
 -----------------------------------

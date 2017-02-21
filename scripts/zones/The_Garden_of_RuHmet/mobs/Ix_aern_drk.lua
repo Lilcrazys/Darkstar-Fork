@@ -49,7 +49,7 @@ end;
 function onMobDeath(mob, player, isKiller)
     --SetServerVariable("[PH]Ix_aern_drk", 0);
     if (isKiller == true) then
-        if (math.random(1,100) <= 80)
+        if (math.random(1,100) <= 80) then
             player:addTreasure(1854, mob); -- Deed of Moderation
         else
             player:addTreasure(1902, mob); -- Vice of Avarice (Altruistic Cape)

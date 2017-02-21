@@ -43,7 +43,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
+    player:PrintToPlayer("Debug: Jailer of Faith (qm3.lua)");
 end;
 
 -----------------------------------
