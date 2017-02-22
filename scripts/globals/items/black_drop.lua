@@ -33,5 +33,5 @@ function onItemUse(target)
     target:warp();
     target:addStatusEffect(EFFECT_MEDICINE,0,0,3600);
     ]]
-    toHomeNation(player);
+    toHomeNation(target);
 end;
