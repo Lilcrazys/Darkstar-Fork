@@ -24,15 +24,16 @@ end;
 -- onTrigger Action
 -----------------------------------
 
-function onTrigger(player,npc) 
+function onTrigger(player,npc)
+    player:setVar("dynaWaitxDay", 0); -- Temp
     player:PrintToPlayer("Dual Boxing here will crash the server!");
-    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!"); 
+    player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
     if (player:hasCompletedMission(COP,DARKNESS_NAMED) or FREE_COP_DYNAMIS == 1) then
         local firstDyna = 0;
         local realDay = os.time();
         local dynaWaitxDay = player:getVar("dynaWaitxDay");
 
-        if (checkFirstDyna(player,7)) then 
+        if (checkFirstDyna(player,7)) then
              player:startEvent(0x0021);
         elseif (player:getMainLvl() < DYNA_LEVEL_MIN) then
             player:messageSpecial(PLAYERS_HAVE_NOT_REACHED_LEVEL,DYNA_LEVEL_MIN);
@@ -63,7 +64,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("finishRESULT: %u",option);
-    
+
     if (csid == 0x0021) then
         if (checkFirstDyna(player,7)) then
             player:setVar("Dynamis_Status",bit.bor(player:getVar("Dynamis_Status"),128));
@@ -72,5 +73,5 @@ function onEventFinish(player,csid,option)
         player:setVar("enteringDynamis",1);
         player:setPos(100,-8,131,47,0x27);
     end
-    
+
 end;

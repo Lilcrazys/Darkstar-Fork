@@ -17,27 +17,28 @@ require("scripts/zones/Xarcabard/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
+    player:setVar("dynaWaitxDay", 0); -- Temp
     player:PrintToPlayer("Dual Boxing here will crash the server!");
     player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
-    
+
     if (player:getVar("DynaXarcabard_Win") == 1) then
         player:startEvent(0x0020,HYDRA_CORPS_BATTLE_STANDARD); -- Win CS
     elseif (player:hasKeyItem(HYDRA_CORPS_INSIGNIA)) then
         local firstDyna = 0;
         local realDay = os.time();
         local dynaWaitxDay = player:getVar("dynaWaitxDay");
-        
+
         if (checkFirstDyna(player,6)) then  -- First Dyna-Xarcabard => CS
             firstDyna = 1;
         end
-        
+
         if (player:getMainLvl() < DYNA_LEVEL_MIN) then
             player:messageSpecial(PLAYERS_HAVE_NOT_REACHED_LEVEL,DYNA_LEVEL_MIN);
         elseif dynaWaitxDay + (BETWEEN_2DYNA_WAIT_TIME * 24 * 60 * 60) < realDay then
@@ -49,7 +50,7 @@ function onTrigger(player,npc)
     else
         player:messageSpecial(UNUSUAL_ARRANGEMENT_OF_PEBBLES);
     end
-    
+
 end;
 
 -----------------------------------

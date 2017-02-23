@@ -17,16 +17,17 @@ require("scripts/zones/Bastok_Mines/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
+    player:setVar("dynaWaitxDay", 0); -- Temp
     player:PrintToPlayer("Dual Boxing here will crash the server!");
     player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
-    
+
     if bit.band(player:getVar("Dynamis_Status"),1) == 1 then
         player:startEvent(0x00CB); -- cs with Cornelia
     elseif (player:getVar("DynaBastok_Win") == 1) then
@@ -35,11 +36,11 @@ function onTrigger(player,npc)
         local firstDyna = 0;
         local realDay = os.time();
         local dynaWaitxDay = player:getVar("dynaWaitxDay");
-        
+
         if (checkFirstDyna(player,2)) then  -- First Dyna-Bastok => CS
             firstDyna = 1;
         end
-        
+
         if (player:getMainLvl() < DYNA_LEVEL_MIN) then
             player:messageSpecial(PLAYERS_HAVE_NOT_REACHED_LEVEL,DYNA_LEVEL_MIN);
         elseif dynaWaitxDay + (BETWEEN_2DYNA_WAIT_TIME * 24 * 60 * 60) < realDay then
@@ -51,7 +52,7 @@ function onTrigger(player,npc)
     else
         player:messageSpecial(UNUSUAL_ARRANGEMENT_PEBBLES);
     end
-    
+
 end;
 
 -----------------------------------
@@ -70,7 +71,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("finishRESULT: %u",option);
-    
+
     if (csid == 0x00CB) then
         player:addKeyItem(VIAL_OF_SHROUDED_SAND);
         player:messageSpecial(KEYITEM_OBTAINED,VIAL_OF_SHROUDED_SAND);
