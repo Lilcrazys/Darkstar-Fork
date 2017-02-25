@@ -33,7 +33,7 @@ function onItemUse(target)
     target:addStatusEffect(EFFECT_STR_BOOST,5,0,900);
     target:addStatusEffect(EFFECT_MEDICINE,0,0,3600);
     ]]
-    target:addStatusEffect(EFFECT_FOOD,0,0,1800,4258);
+    target:addStatusEffect(EFFECT_FOOD,0,0,2700,4258);
 end;
 
 ----------------------------------------

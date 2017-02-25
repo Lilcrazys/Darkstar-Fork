@@ -50,13 +50,13 @@ function onTrigger(player,page)
             -- Retail:  DEX+2 AGI+2 MND-2 ATT+14% (Cap:75) RATT+14% (Cap:75) EVA+5
             --------------------------------------------------
             -- Custom food items
-            4258,   20000,  -- Red Drop
-            4259,   20000,  -- Clear Drop
-            4260,   20000,  -- Green Drop
-            4261,   20000,  -- Yellow Drop
-            4262,   20000,  -- Purple Drop
-            4263,   20000,  -- Blue Drop
-            4264,   20000,  -- White Drop
+            4258,   32500,  -- Red Drop
+            4259,   32500,  -- Clear Drop
+            4260,   32500,  -- Green Drop
+            4261,   32500,  -- Yellow Drop
+            4262,   32500,  -- Purple Drop
+            4263,   32500,  -- Blue Drop
+            4264,   32500,  -- White Drop
             4265,   4000    -- Black Drop
         };
         showShop(player, STATIC, stock_2);
@@ -82,19 +82,19 @@ function onTrigger(player,page)
             21305,    100,   -- Tulfaire Arrow
             21336,    190,   -- Adlivun Bullet
             21306,    190,   -- Adlivun Arrow
-            16368,    80000, -- Herder's Subligar
-            18762,    80000, -- Custodes
-            18503,    80000, -- Mammut
-            19222,    80000, -- Wurger
-            15880,    80000, -- Key Ring Belt
-            19223,    60000, -- Attar of Roses
-            16007,    60000, -- Protect Earing
-            15835,    50000, -- Desperado Ring
-            19157,    50000, -- Surviver
-            15926,    50000, -- Bronze Bandolier
-            19221,    50000, -- Firefly
-            15834,    50000, -- Bind Ring
-            16279,    40000  -- Pile Chain
+            16368,    32000, -- Herder's Subligar
+            18762,    32000, -- Custodes
+            18503,    32000, -- Mammut
+            19222,    32000, -- Wurger
+            15880,    32000, -- Key Ring Belt
+            19223,    24000, -- Attar of Roses
+            16007,    24000, -- Protect Earing
+            15835,    20000, -- Desperado Ring
+            19157,    20000, -- Surviver
+            15926,    20000, -- Bronze Bandolier
+            19221,    20000, -- Firefly
+            15834,    20000, -- Bind Ring
+            16279,    20000  -- Pile Chain
         };
         showShop(player, STATIC, stock_4);
         player:PrintToPlayer("Gear Shack, we've got your back.");

@@ -33,7 +33,7 @@ function onItemUse(target)
     target:addStatusEffect(EFFECT_MND_BOOST,5,0,900);
     target:addStatusEffect(EFFECT_MEDICINE,0,0,3600);
     ]]
-    target:addStatusEffect(EFFECT_FOOD,0,0,1800,4263);
+    target:addStatusEffect(EFFECT_FOOD,0,0,2700,4263);
 end;
 
 ----------------------------------------
@@ -44,7 +44,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_MP, 40);
     target:addMod(MOD_MATT, 12);
     target:addMod(MOD_MDEF, 10);
-    target:addMod(MOD_MACC, 7);
+    target:addMod(MOD_MACC, 8);
     target:addMod(MOD_MEVA, 5);
     target:addMod(MOD_FASTCAST, 5);
     target:addMod(MOD_WHITE_MAGIC_CAST, -4);

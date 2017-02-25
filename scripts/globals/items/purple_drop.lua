@@ -33,7 +33,7 @@ function onItemUse(target)
     target:addStatusEffect(EFFECT_DEX_BOOST,5,0,900);
     target:addStatusEffect(EFFECT_MEDICINE,0,0,3600);
     ]]
-    target:addStatusEffect(EFFECT_FOOD,0,0,1800,4262);
+    target:addStatusEffect(EFFECT_FOOD,0,0,2700,4262);
 end;
 
 ----------------------------------------
@@ -48,7 +48,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_FOOD_ACCP, 13);
     target:addMod(MOD_FOOD_ACC_CAP, 88);
     target:addMod(MOD_FOOD_RACCP, 6);
-    target:addMod(MOD_FOOD_RACC_CAP, 55);
+    target:addMod(MOD_FOOD_RACC_CAP, 66);
     target:addMod(MOD_MADRIGAL_EFFECT, 2);
     target:addMod(MOD_PRELUDE_EFFECT, 2);
     target:addMod(MOD_QUICK_DRAW_DMG, 10);

@@ -33,7 +33,7 @@ function onItemUse(target)
     target:addStatusEffect(EFFECT_VIT_BOOST,5,0,900);
     target:addStatusEffect(EFFECT_MEDICINE,0,0,3600);
     ]]
-    target:addStatusEffect(EFFECT_FOOD,0,0,1800,4261);
+    target:addStatusEffect(EFFECT_FOOD,0,0,2700,4261);
 end;
 
 ----------------------------------------
@@ -41,16 +41,17 @@ end;
 ----------------------------------------
 function onEffectGain(target,effect)
     target:addMod(MOD_VIT, 6);
+    target:addMod(MOD_HP, 40);
+    target:addMod(MOD_FOOD_HPP, 10);
+    target:addMod(MOD_FOOD_HP_CAP, 125);
     target:addMod(MOD_FOOD_ATTP, 20);
     target:addMod(MOD_FOOD_ATT_CAP, 150);
     target:addMod(MOD_FOOD_DEFP, 20);
     target:addMod(MOD_FOOD_DEF_CAP, 175);
     target:addMod(MOD_FOOD_ACCP, 5);
     target:addMod(MOD_FOOD_ACC_CAP, 50);
-    target:addMod(MOD_FASTCAST, 1);
     target:addMod(MOD_ENMITY, 10);
     target:addMod(MOD_CURE_POTENCY_RCVD, 3);
-    target:addMod(MOD_HPHEAL, 5);
     target:addMod(MOD_MINNE_EFFECT, 2);
     target:addMod(MOD_ELEGY_EFFECT, 2);
     target:addMod(MOD_ALL_WSDMG_FIRST_HIT, 6);
@@ -61,16 +62,17 @@ end;
 -----------------------------------------
 function onEffectLose(target,effect)
     target:delMod(MOD_VIT, 6);
+    target:delMod(MOD_HP, 40);
+    target:delMod(MOD_FOOD_HPP, 10);
+    target:delMod(MOD_FOOD_HP_CAP, 125);
     target:delMod(MOD_FOOD_ATTP, 20);
     target:delMod(MOD_FOOD_ATT_CAP, 150);
-    target:delMod(MOD_FOOD_DEFP, 20);
+    target:delMod(MOD_FOOD_DEFP, 21);
     target:delMod(MOD_FOOD_DEF_CAP, 175);
     target:delMod(MOD_FOOD_ACCP, 5);
     target:delMod(MOD_FOOD_ACC_CAP, 50);
-    target:delMod(MOD_FASTCAST, 1);
     target:delMod(MOD_ENMITY, 10);
     target:delMod(MOD_CURE_POTENCY_RCVD, 3);
-    target:delMod(MOD_HPHEAL, 5);
     target:delMod(MOD_MINNE_EFFECT, 2);
     target:delMod(MOD_ELEGY_EFFECT, 2);
     target:delMod(MOD_ALL_WSDMG_FIRST_HIT, 6);
