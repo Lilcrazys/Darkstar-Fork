@@ -69,7 +69,7 @@ function onEffectLose(target,effect)
     target:delMod(MOD_FOOD_ACCP, 13);
     target:delMod(MOD_FOOD_ACC_CAP, 88);
     target:delMod(MOD_FOOD_RACCP, 6);
-    target:delMod(MOD_FOOD_RACC_CAP, 55);
+    target:delMod(MOD_FOOD_RACC_CAP, 66);
     target:delMod(MOD_MADRIGAL_EFFECT, 2);
     target:delMod(MOD_PRELUDE_EFFECT, 2);
     target:delMod(MOD_QUICK_DRAW_DMG, 10);

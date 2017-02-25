@@ -57,7 +57,7 @@ function onTrigger(player,page)
             4262,   20000,  -- Purple Drop
             4263,   20000,  -- Blue Drop
             4264,   20000,  -- White Drop
-            4265,   4000   -- Black Drop
+            4265,   4000    -- Black Drop
         };
         showShop(player, STATIC, stock_2);
         player:PrintToPlayer("Welcome to MogDonalds, Would you like fries with that?");

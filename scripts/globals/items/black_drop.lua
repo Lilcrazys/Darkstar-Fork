@@ -18,9 +18,6 @@ function onItemCheck(target)
         result = 111;
     end
     ]]
-    if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
-        result = 246;
-    end
     return result;
 end;
 

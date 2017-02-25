@@ -47,7 +47,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_FOOD_RATTP, 5);
     target:addMod(MOD_FOOD_RATT_CAP, 50);
     target:addMod(MOD_FOOD_ACCP, 6);
-    target:addMod(MOD_FOOD_ACC_CAP, 55);
+    target:addMod(MOD_FOOD_ACC_CAP, 66);
     target:addMod(MOD_FOOD_RACCP, 13);
     target:addMod(MOD_FOOD_RACC_CAP, 88);
     target:addMod(MOD_MADRIGAL_EFFECT, 2);
