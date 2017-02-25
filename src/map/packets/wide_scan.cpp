@@ -27,7 +27,7 @@
 
 #include "wide_scan.h"
 #include "../entities/charentity.h"
-#include "../entities/mobentity.h"
+
 
 CWideScanPacket::CWideScanPacket(WIDESCAN_STATUS status) 
 {
@@ -44,14 +44,9 @@ CWideScanPacket::CWideScanPacket(CCharEntity * PChar, CBaseEntity * PEntity)
 
 	WBUFW(data,(0x04)) = PEntity->targid;
     // Is it a MOB?
-    if (PEntity->objtype != TYPE_MOB)
+    if (PEntity->objtype == TYPE_MOB)
     {
-        WBUFB(data,(0x06)) = 0;
-    }
-    else
-    {
-        CMobEntity* PMob = (CMobEntity*)PEntity;
-        WBUFB(data,(0x06)) = PMob->GetMLevel();
+        WBUFB(data,(0x06)) = ((CBattleEntity*)PEntity)->GetMLevel();
     }
   //WBUFB(data,(0x06)) = PEntity->GetMLevel();
 
