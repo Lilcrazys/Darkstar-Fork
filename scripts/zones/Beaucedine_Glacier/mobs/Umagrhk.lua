@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Someplace
--- VWNM: Umagrhk
+-- CNM : Umagrhk
 -----------------------------------
 
 require("scripts/globals/status");
