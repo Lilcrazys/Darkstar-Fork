@@ -648,7 +648,7 @@ end;
             target:addTP(100);
         end
     end
-    debugSpellDamageEnmity(caster,target,dmg,customEnmityAdjust(caster,spell),spell);
+    -- debugSpellDamageEnmity(caster,target,dmg,customEnmityAdjust(caster,spell),spell);
     return dmg;
  end;
 

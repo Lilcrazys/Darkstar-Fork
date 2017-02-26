@@ -80,7 +80,7 @@ function onEffectGain(target,effect)
     target:addMod(MOD_FOOD_MPP, 7);
     target:addMod(MOD_FOOD_MP_CAP, 210);
     target:addMod(MOD_TERRORRES, 7);
-    target:addMod(MOD_DOOMRES, 7);;
+    target:addMod(MOD_DOOMRES, 7);
     target:addMod(MOD_WSACC, 7);
     target:addMod(MOD_ALL_WSDMG_FIRST_HIT, 7)
     -- End custom

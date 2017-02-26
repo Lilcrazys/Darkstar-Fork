@@ -1,18 +1,20 @@
 -----------------------------------
---  Area: Abyssea - La Theine (132)
---   Mob: Ovni
+-- Area: Abyssea - La Theine (132)
+--  Mob: Ovni
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-La_Theine/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-La_Theine/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    mob:setMobMod(MOBMOD_ALWAYS_AGGRO, 1);
 end;
 
 -----------------------------------
@@ -36,6 +38,16 @@ function onMobEngaged(mob,target)
     mob:hideName(false);
     mob:untargetable(false);
     mob:AnimationSub(6);
+end;
+
+-----------------------------------
+-- onMobDisengage
+-----------------------------------
+
+function onMobDisengage(mob)
+    mob:hideName(true);
+    mob:untargetable(true);
+    mob:AnimationSub(5);
 end;
 
 -----------------------------------

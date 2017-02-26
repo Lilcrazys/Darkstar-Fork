@@ -930,7 +930,7 @@ function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, sl
         if (enmityEntity:getMainJob() == JOBS.PLD) then
             enmityMult = enmityMult*1.8;
         end
-        debugWeaponskillDamageEnmity(enmityEntity,defender,finaldmg,enmityMult)
+        -- debugWeaponskillDamageEnmity(enmityEntity,defender,finaldmg,enmityMult)
         defender:updateEnmityFromDamage(enmityEntity, finaldmg * enmityMult)
     end
 
