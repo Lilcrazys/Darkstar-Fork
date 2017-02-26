@@ -240,7 +240,7 @@ function BlueFinalAdjustments(caster, target, spell, dmg, params)
 
     -- handling stoneskin
     dmg = utils.stoneskin(target, dmg);
-    debugSpellDamageEnmity(caster,target,dmg,customEnmityAdjust(caster,spell),spell);
+    -- debugSpellDamageEnmity(caster,target,dmg,customEnmityAdjust(caster,spell),spell);
     target:delHP(dmg);
     target:updateEnmityFromDamage(caster,dmg*customEnmityAdjust(caster,spell,params));
     target:handleAfflatusMiseryDamage(dmg);
