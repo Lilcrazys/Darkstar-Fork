@@ -1720,7 +1720,7 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                 }
                 else if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) == 0)
                     orphan = true;
-                
+
                 if (!commit || !Sql_TransactionCommit(SqlHandle))
                 {
                     Sql_TransactionRollback(SqlHandle);
@@ -1863,7 +1863,7 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     {
         uint8 received_items = 0;
         uint8 slotID = 0;
-        
+
         int32 ret = Sql_Query(SqlHandle, "SELECT slot FROM delivery_box WHERE charid = %u AND received = 1 AND box = 2 ORDER BY slot ASC;", PChar->id);
 
         if (ret != SQL_ERROR)
@@ -2337,13 +2337,13 @@ void SmallPacket0x04E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                 }
                 else
                     ShowError("Failed to return item id %u stack %u to char... \n", canceledItem.itemid, canceledItem.stack);
-                
+
                 Sql_TransactionRollback(SqlHandle);
                 Sql_SetAutoCommit(SqlHandle, isAutoCommitOn);
             }
         }
         // Let client know something went wrong
-        PChar->pushPacket(new CAuctionHousePacket(action, 0xE5, PChar, slotid, true)); // Inventory full, unable to remove msg        
+        PChar->pushPacket(new CAuctionHousePacket(action, 0xE5, PChar, slotid, true)); // Inventory full, unable to remove msg
     }
     break;
     case 0x0D:
@@ -3448,7 +3448,7 @@ void SmallPacket0x083(map_session_data_t* session, CCharEntity* PChar, CBasicPac
             if (SlotID != ERROR_SLOTID)
             {
                 charutils::UpdateItem(PChar, LOC_INVENTORY, 0, -(int32)(price * quantity));
-
+                ShowNotice(CL_YELLOW"User '%s' purchased %d of item of ID %d \n" CL_RESET, PChar->GetName(), quantity, itemID);
                 PChar->pushPacket(new CShopBuyPacket(shopSlotID, quantity));
                 PChar->pushPacket(new CInventoryFinishPacket());
             }
@@ -3504,7 +3504,7 @@ void SmallPacket0x085(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     {
         charutils::UpdateItem(PChar, LOC_INVENTORY, 0, quantity * PItem->getBasePrice());
         charutils::UpdateItem(PChar, LOC_INVENTORY, slotID, -(int32)quantity);
-
+        ShowNotice(CL_YELLOW"User '%s' sold %d of item of ID %d \n" CL_RESET, PChar->GetName(), quantity, itemID);
         PChar->pushPacket(new CMessageStandardPacket(0, itemID, quantity, 232));
         PChar->pushPacket(new CInventoryFinishPacket());
     }
