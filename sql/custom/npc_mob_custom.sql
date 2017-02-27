@@ -852,8 +852,6 @@ REPLACE INTO `mob_spawn_points` VALUES (16986188,'Chelicerata','Chelicerata',162
 -- 16991231
 -- ------------------------------------------------------------
 
-REPLACE INTO `mob_spawn_points` VALUES (16990252,'Harvestman','Harvestman',11190,398.130,-10.675,179.169,0);
-
 
 -- ------------------------------------------------------------
 -- Nashmau (Zone 53)
