@@ -13,11 +13,6 @@ require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- addMod
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -20);
-    mob:addMod(MOD_DEF,-50);
-
     -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());

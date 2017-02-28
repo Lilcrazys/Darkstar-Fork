@@ -18,8 +18,6 @@ function onMobInibahamutlize(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
 
     -- addMod
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -20);
     mob:addMod(MOD_STUNRES,33);
     mob:addMod(MOD_THUNDERRES,33);
 end;

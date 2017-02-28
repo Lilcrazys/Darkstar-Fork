@@ -21,10 +21,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-
-    -- addMod
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -20);
 end;
 
 -----------------------------------

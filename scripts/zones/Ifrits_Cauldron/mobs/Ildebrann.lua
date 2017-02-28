@@ -2,10 +2,9 @@
 -- Area: Ifrits Cauldron
 -- VWNM: Ildebrann
 -----------------------------------
-
-require("scripts/globals/status");
-require("scripts/globals/quests");
 require("scripts/globals/keyitems");
+require("scripts/globals/quests");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -18,8 +17,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
 
     -- addMod
-    mob:addMod(MOD_DMGMAGIC, -50);
-    mob:addMod(MOD_DMGRANGE, -20);
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,50);
     mob:addMod(MOD_ATT,150);
@@ -51,7 +48,6 @@ function onMobSpawn(mob)
     -- Temp
     mob:AnimationSub(0); -- reset
     mob:delStatusEffect(EFFECT_ALL_MISS);
-
 end;
 
 -----------------------------------
@@ -137,7 +133,7 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 
-    if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Ildebran Kill
+    if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE)) then -- Ildebrann Kill
         if (player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST) == QUEST_ACCEPTED) then
             if (player:getMaskBit(player:getVar("VW_OP_054"), 2) == false) then
                 player:setMaskBit(player:getVar("VW_OP_054"),"VW_OP_054",2,true);

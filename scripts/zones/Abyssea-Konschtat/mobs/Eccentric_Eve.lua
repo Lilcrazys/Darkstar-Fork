@@ -1,14 +1,14 @@
 -----------------------------------
---  Area: Abyssea - Konschtat (15)
---   Mob: Eccentric_Eve
------------------------------------
-
+-- Area: Abyssea - Konschtat (15)
+--  Mob: Eccentric_Eve
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Konschtat/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
-require("scripts/globals/keyitems");
+
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
@@ -26,7 +26,7 @@ function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 60);
     mob:setMod(MOD_REGAIN,20);
-    mob:addMod(MOD_DMGRANGE, -20);
+
     -- addMod
     mob:addMod(MOD_ACC,150);
     mob:addMod(MOD_DOUBLE_ATTACK,30)
@@ -49,10 +49,7 @@ end;
 
 function onMobFight(mob, target)
     local BattleTime = mob:getBattleTime();
-    local EE_2hr_Used = 0;
-    if (mob:getLocalVar("EE_2hr") ~= nil) then
-        EE_2hr_Used = mob:getLocalVar("EE_2hr");
-    end
+    local EE_2hr_Used = mob:getLocalVar("EE_2hr");
 
     if (mob:getHPP() <= 10) then
         if (EE_2hr_Used == 2) then

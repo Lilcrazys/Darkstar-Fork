@@ -58,15 +58,19 @@ function onUseWeaponSkill(player, target, wsID, tp, primary, action, taChar)
         else
             local effectiveTP = tp + handleWSGorgetBelt(player) * 1000;
             effectiveTP = utils.clamp(effectiveTP, 0, 3000); -- necessary because of Gorget/Belt bonus
+            --[[ DSP code
             local ceMod = fTP(effectiveTP, 0.09, 0.11, 0.20); -- CE portion of Atonement
             local veMod = fTP(effectiveTP, 0.11, 0.14, 0.25); -- VE portion of Atonement
+            ]]
+            local ceMod = fTP(effectiveTP, 0.08, 0.10, 0.165); -- CE portion of Atonement
+            local veMod = fTP(effectiveTP, 0.10, 0.13, 0.215); -- VE portion of Atonement
             dmg = math.floor(target:getCE(player) * ceMod) + math.floor(target:getVE(player) * veMod);
         end
 
         --[[ yeah lets not do that..
         dmg = utils.clamp(dmg, 0, player:getMainLvl() * 10); -- Damage is capped to player's level * 10, before WS damage mods
         ]]
-        dmg = utils.clamp(dmg, 0, 1+(player:getMainLvl()) * 400); -- Damage is capped to player's level+1 * 400, before WS damage mods
+        dmg = utils.clamp(dmg, 0, 1+(player:getMainLvl()) * 100); -- Damage is capped to player's level+1 * 100, before WS damage mods
         damage = target:breathDmgTaken(dmg);
         if (player:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID) > 0) then
             damage = damage * (100 + player:getMod(MOD_WEAPONSKILL_DAMAGE_BASE + wsID))/100

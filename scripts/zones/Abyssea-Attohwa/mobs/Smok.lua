@@ -5,9 +5,9 @@
 package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Abyssea-Attohwa/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize
@@ -15,8 +15,6 @@ require("scripts/globals/keyitems");
 
 function onMobInitialize(mob)
     -- addMod
-    mob:addMod(MOD_DMGMAGIC, -20);
-    mob:addMod(MOD_DMGRANGE, -20);
     mob:addMod(MOD_MACC,500);
     mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
