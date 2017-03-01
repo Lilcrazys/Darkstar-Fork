@@ -2853,7 +2853,9 @@ void SmallPacket0x066(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     uint8  action = RBUFB(data, (0x0E));
     uint8 special = RBUFW(data, (0x10));
 
-    fishingutils::FishingAction(PChar, (FISHACTION)action, stamina, special);
+    if ((FISHACTION)action != FISHACTION_FINISH || PChar->animation == ANIMATION_FISHING_FISH)
+        fishingutils::FishingAction(PChar, (FISHACTION)action, stamina, special);
+    
     return;
 }
 
@@ -5520,6 +5522,8 @@ void SmallPacket0x10F(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 void SmallPacket0x110(map_session_data_t* session, CCharEntity* PChar, CBasicPacket data)
 {
     //PrintPacket(data);
+    if (PChar->animation != ANIMATION_FISHING_START)
+        return;
 
     uint32 charid = RBUFL(data, (0x04));
     uint16 stamina = RBUFW(data, (0x08));
