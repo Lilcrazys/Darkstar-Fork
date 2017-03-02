@@ -2321,8 +2321,39 @@ INSERT INTO `augments` VALUES (2042, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (2043, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (2044, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (2045, 0, 0, 0, 0, 0);
-INSERT INTO `augments` VALUES (2046, 0, 0, 0, 0, 0);
--- End unused block
+
+-- --------------------------------------------------------
+-- Custom!
+-- Pair with Augment 2047 !!
+-- --------------------------------------------------------
+-- Aug 2046 April fools event 2016 reward (granted with aug power of 2, so double what you see here):
+INSERT INTO `augments` VALUES (2046, 0, 4093, 15, 0, 0); -- (Hidden) Resist Doom+15
+INSERT INTO `augments` VALUES (2046, 0, 4092, 16, 0, 0); -- (Hidden) Resist Terror+16
+INSERT INTO `augments` VALUES (2046, 0, 255, 12, 0, 0);  -- (Hidden) Resist Death+12
+INSERT INTO `augments` VALUES (2046, 0, 254, 12, 0, 0);  -- (Hidden) Resist Lullaby+12
+INSERT INTO `augments` VALUES (2046, 0, 253, 12, 0, 0);  -- (Hidden) Resist Amnesia+12
+INSERT INTO `augments` VALUES (2046, 0, 252, 12, 0, 0);  -- (Hidden) Resist Charm+12
+INSERT INTO `augments` VALUES (2046, 0, 251, 12, 0, 0);  -- (Hidden) Resist Slow+12
+INSERT INTO `augments` VALUES (2046, 0, 250, 12, 0, 0);  -- (Hidden) Resist Gravity+12
+INSERT INTO `augments` VALUES (2046, 0, 249, 12, 0, 0);  -- (Hidden) Resist Bind+12
+INSERT INTO `augments` VALUES (2046, 0, 248, 12, 0, 0);  -- (Hidden) Resist Stun+12
+INSERT INTO `augments` VALUES (2046, 0, 247, 12, 0, 0);  -- (Hidden) Resist Curse+12
+INSERT INTO `augments` VALUES (2046, 0, 246, 12, 0, 0);  -- (Hidden) Resist Virus+12
+INSERT INTO `augments` VALUES (2046, 0, 245, 12, 0, 0);  -- (Hidden) Resist Petrify+12
+INSERT INTO `augments` VALUES (2046, 0, 244, 12, 0, 0);  -- (Hidden) Resist Silence+12
+INSERT INTO `augments` VALUES (2046, 0, 243, 12, 0, 0);  -- (Hidden) Resist Blind+12
+INSERT INTO `augments` VALUES (2046, 0, 242, 12, 0, 0);  -- (Hidden) Resist Paralyze+12
+INSERT INTO `augments` VALUES (2046, 0, 241, 12, 0, 0);  -- (Hidden) Resist Poison+12
+INSERT INTO `augments` VALUES (2046, 0, 240, 12, 0, 0);  -- (Hidden) Resist Sleep+12
+INSERT INTO `augments` VALUES (2046, 0, 31, 12, 0, 0);   -- (Hidden) Mag. Evasion+12
+INSERT INTO `augments` VALUES (2046, 0, 31, 12, 1, 0);   -- (Hidden) Pet: Mag. Evasion+12
+INSERT INTO `augments` VALUES (2046, 0, 166, -12, 0, 0); -- (Hidden) Enemy crit. hit rate-12
+INSERT INTO `augments` VALUES (2046, 0, 296, 13, 0, 0);  -- (Hidden) Conserve MP+13
+INSERT INTO `augments` VALUES (2046, 0, 375, 1, 0, 0);   -- (Hidden) Potency of Cure received+1% 
+INSERT INTO `augments` VALUES (2046, 0, 311, 1, 0, 0);   -- (Hidden) Magic Damage+1
+INSERT INTO `augments` VALUES (2046, 0, 306, 1, 0, 0);   -- (Hidden) Zanshin+1
+-- End Custom block
+-- --------------------------------------------------------
 
 INSERT INTO `augments` VALUES (2047, 0, 0, 0, 0, 0); -- ??? (it literally just says "???")
 
