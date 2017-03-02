@@ -3154,7 +3154,7 @@ namespace luautils
 
             if (lua_pcall(LuaHandle, 3, LUA_MULTRET, 0))
             {
-                ShowError("luautils::onMobWeaponSkill: %s\n", lua_tostring(LuaHandle, -1));
+                ShowError("luautils::onMobWeaponSkill[Skill ID: %u]: %s\n", PMobSkill->getID(), lua_tostring(LuaHandle, -1));
                 lua_pop(LuaHandle, 1);
             }
             else
@@ -3186,7 +3186,7 @@ namespace luautils
 
         if (lua_pcall(LuaHandle, 3, LUA_MULTRET, 0))
         {
-            ShowError("luautils::onMobWeaponSkill: %s\n", lua_tostring(LuaHandle, -1));
+            ShowError("luautils::onMobWeaponSkill[Skill ID: %u]: %s\n", PMobSkill->getID(), lua_tostring(LuaHandle, -1));
             lua_pop(LuaHandle, 1);
             return 0;
         }
