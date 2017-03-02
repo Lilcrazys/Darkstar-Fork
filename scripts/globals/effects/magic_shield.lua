@@ -26,7 +26,7 @@ function onEffectGain(target,effect)
     elseif (effect:getPower() < 2) then
         target:addMod(MOD_UDMGMAGIC, -101);
     elseif (effect:getPower() == 100) then
-        target:addMod(MOD_UDMGMAGIC, -64); -- damned blue spell
+        target:addMod(MOD_UDMGMAGIC, -25); -- damned blue spell
     else
         target:addMod(MOD_UDMGMAGIC, -101); -- temp
         --[[ broken

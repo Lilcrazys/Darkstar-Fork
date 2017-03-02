@@ -367,8 +367,15 @@ end;
 
 function getMagicHitRate(caster, target, skillType, element, percentBonus, bonusAcc)
     -- resist everything if magic shield is active
+    --[[
     if (target:hasStatusEffect(EFFECT_MAGIC_SHIELD, 0)) then
         return 0;
+    end
+    ]]
+    if (target:hasStatusEffect(EFFECT_MAGIC_SHIELD)) then
+        if (target:getStatsuEffect(EFFECT_MAGIC_SHIELD):getPower() ~= 100) then
+            return 0;
+        end
     end
 
     local magiceva = 0;
