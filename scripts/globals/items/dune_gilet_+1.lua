@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 10271
---	Dune Gilet +1
---	When used, you will obtain 1 Berry Snowcone
+-- ID: 10271
+-- Dune Gilet +1
+-- Dispense: Berry Snowcone
 -----------------------------------------
 
 -----------------------------------------
@@ -9,11 +9,11 @@
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
-	if (target:getFreeSlotsCount() == 0) then
-		result = 308;
-	end
-return result;
+    local result = 0;
+    if (target:getFreeSlotsCount() == 0) then
+        result = 308;
+    end
+    return result;
 end;
 
 -----------------------------------------
@@ -21,5 +21,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addItem(5710,1);
+    target:addItem(5710,1);
 end;

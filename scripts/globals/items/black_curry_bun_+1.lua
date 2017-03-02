@@ -1,12 +1,21 @@
 -----------------------------------------
 -- ID: 5764
 -- Item: black_curry_bun+1
--- Food Effect: 60 minutes, All Races
+-- Food Effect: 60 min, All Races
 -----------------------------------------
--- Intelligence +1
--- Vitality +4
--- Dexterity +2
--- Defense +~16%
+-- TODO: Group effects
+-- Dexterity +4
+-- Vitality +6
+-- Intelligence +3
+-- Mind +1
+-- Accuracy +7
+-- Ranged Accuracy +7
+-- Evasion +7
+-- Defense +25% (cap 200)
+-- Resist Sleep +5
+-- hHP +6
+-- hMP +3
+-----------------------------------------
 
 require("scripts/globals/status");
 
@@ -35,7 +44,6 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-  --[[
     target:addMod(MOD_DEX, 4);
     target:addMod(MOD_VIT, 6);
     target:addMod(MOD_INT, 3);
@@ -48,13 +56,6 @@ function onEffectGain(target,effect)
     target:addMod(MOD_SLEEPRES, 5);
     target:addMod(MOD_HPHEAL, 6);
     target:addMod(MOD_MPHEAL, 3);
-  ]]
-    target:addMod(MOD_HPP, 40);
-    target:addMod(MOD_VIT, 20);
-    target:addMod(MOD_ACC, 15);
-    target:addMod(MOD_ENMITY, 20);
-    target:addMod(MOD_FOOD_DEFP, 25);
-    target:addMod(MOD_FOOD_DEF_CAP, 250);
 end;
 
 -----------------------------------------
@@ -62,7 +63,6 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-  --[[
     target:delMod(MOD_DEX, 4);
     target:delMod(MOD_VIT, 6);
     target:delMod(MOD_INT, 3);
@@ -75,11 +75,4 @@ function onEffectLose(target,effect)
     target:delMod(MOD_SLEEPRES, 5);
     target:delMod(MOD_HPHEAL, 6);
     target:delMod(MOD_MPHEAL, 3);
-  ]]
-    target:delMod(MOD_HPP, 40);
-    target:delMod(MOD_VIT, 20);
-    target:delMod(MOD_ACC, 15);
-    target:delMod(MOD_ENMITY, 20);
-    target:delMod(MOD_FOOD_DEFP, 25);
-    target:delMod(MOD_FOOD_DEF_CAP, 250);
 end;

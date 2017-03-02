@@ -3,14 +3,16 @@
 -- Item: red_curry_bun_+1
 -- Food Effect: 60 Min, All Races
 -----------------------------------------
+-- TODO: Group effects
 -- Health 35
 -- Strength 7
 -- Agility 3
--- Attack % 24.7
--- Attack Cap 150
--- Ranged ATT % 24.7
--- Ranged ATT Cap 150
-
+-- Attack % 25 (cap 150)
+-- Ranged Atk % 25 (cap 150)
+-- Demon Killer 6
+-- Resist Sleep +5
+-- HP recovered when healing +6
+-- MP recovered when healing +3
 -----------------------------------------
 
 require("scripts/globals/status");
@@ -40,7 +42,6 @@ end;
 -----------------------------------------
 
 function onEffectGain(target,effect)
-  --[[
     target:addMod(MOD_HP, 35);
     target:addMod(MOD_STR, 7);
     target:addMod(MOD_AGI, 3);
@@ -52,16 +53,6 @@ function onEffectGain(target,effect)
     target:addMod(MOD_SLEEPRES, 5);
     target:addMod(MOD_HPHEAL, 6);
     target:addMod(MOD_MPHEAL, 3);
-  ]]
-    target:addMod(MOD_HPP, 25);
-    target:addMod(MOD_AGI, 20);
-    target:addMod(MOD_DEX, 20);
-    target:addMod(MOD_FOOD_ACCP, 10);
-    target:addMod(MOD_FOOD_ACC_CAP, 150);
-    target:addMod(MOD_FOOD_RATTP, 50);
-    target:addMod(MOD_FOOD_RATT_CAP, 500);
-    target:addMod(MOD_FOOD_RACCP, 20);
-    target:addMod(MOD_FOOD_RACC_CAP, 250);
 end;
 
 -----------------------------------------
@@ -69,7 +60,6 @@ end;
 -----------------------------------------
 
 function onEffectLose(target,effect)
-  --[[
     target:delMod(MOD_HP, 35);
     target:delMod(MOD_STR, 7);
     target:delMod(MOD_AGI, 3);
@@ -81,14 +71,4 @@ function onEffectLose(target,effect)
     target:delMod(MOD_SLEEPRES, 5);
     target:delMod(MOD_HPHEAL, 6);
     target:delMod(MOD_MPHEAL, 3);
-  ]]
-    target:delMod(MOD_HPP, 25);
-    target:delMod(MOD_AGI, 20);
-    target:delMod(MOD_DEX, 20);
-    target:delMod(MOD_FOOD_ACCP, 10);
-    target:delMod(MOD_FOOD_ACC_CAP, 150);
-    target:delMod(MOD_FOOD_RATTP, 50);
-    target:delMod(MOD_FOOD_RATT_CAP, 500);
-    target:delMod(MOD_FOOD_RACCP, 20);
-    target:delMod(MOD_FOOD_RACC_CAP, 250);
 end;
