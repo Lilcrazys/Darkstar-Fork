@@ -373,7 +373,7 @@ function getMagicHitRate(caster, target, skillType, element, percentBonus, bonus
     end
     ]]
     if (target:hasStatusEffect(EFFECT_MAGIC_SHIELD)) then
-        if (target:getStatsuEffect(EFFECT_MAGIC_SHIELD):getPower() ~= 100) then
+        if (target:getStatusEffect(EFFECT_MAGIC_SHIELD):getPower() ~= 100) then
             return 0;
         end
     end
