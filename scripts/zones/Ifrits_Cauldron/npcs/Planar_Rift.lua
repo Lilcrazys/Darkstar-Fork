@@ -24,7 +24,7 @@ end;
 function onTrigger(player,npc)
     local QUEST = player:getQuestStatus(OUTLANDS, VW_OP_054_ELSHIMO_LIST);
     local STRATUM = player:hasKeyItem(ASHEN_STRATUM_ABYSSITE);
-    local mobID = 17617172, 17617174;
+    local mobID = 17617172; -- need update to handle 17617174
     local mobNotUp = false
     local correctNPC = false
 

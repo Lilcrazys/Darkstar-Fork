@@ -337,7 +337,7 @@ INSERT INTO `zone_settings` VALUES (288,2,'127.0.0.1',54130,'Escha_ZiTah',80,80,
 INSERT INTO `zone_settings` VALUES (289,2,'127.0.0.1',54130,'Escha_RuAun',80,80,80,80,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (290,0,'127.0.0.1',54130,'Desuetia_Empyreal_Paradox',0,0,0,0,0,0.00,128);
 INSERT INTO `zone_settings` VALUES (291,0,'127.0.0.1',54130,'Reisenjima',79,79,79,79,0,0.00,128);
-INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54130,'Reisenjima_Henge',0,0,0,0,0,0.00,0);
+INSERT INTO `zone_settings` VALUES (292,0,'127.0.0.1',54130,'Reisenjima_Henge',87,87,87,87,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (293,0,'127.0.0.1',54130,'Reisenjima_Sanctorium',0,0,0,0,0,0.00,128);
 
 -- Temp workaround for Legion battles because instancing there isn't ready, so its Dungeon for now

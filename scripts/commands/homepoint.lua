@@ -16,7 +16,7 @@ function onTrigger(player, target)
 
     local targ = GetPlayerByName(target);
     if (targ ~= nil) then
-        if (targ:getHPP() ~= 100) then
+        if (targ:getHPP() ~= 100 and player:getGMLevel() == 0) then
             player:PrintToPlayer("To prevent abuse, the target must have full HP.");
             return;
         end

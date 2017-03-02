@@ -13,8 +13,7 @@ require("scripts/globals/status");
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_DRAW_IN, 1);
+    -- mob:setMobMod(MOBMOD_DRAW_IN, 1);
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
@@ -69,6 +68,8 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
+    -- Being rewritten.
+    --[[
     local popTime = mob:getLocalVar("nextPetPop");
     local helperOne = GetMobAction(mob:getID()+1);
     local helperTwo = GetMobAction(mob:getID()+2);
@@ -102,6 +103,7 @@ function onMobFight(mob, target)
             -- mob:SetMobSkillAttack(0);
         end
     end
+    ]]
 end;
 
 -----------------------------------
