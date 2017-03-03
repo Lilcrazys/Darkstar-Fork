@@ -910,7 +910,7 @@ DELETE FROM `mob_droplist` WHERE dropId=2065 and dropType=0 and itemId=920 and i
 DELETE FROM `mob_droplist` WHERE dropId=2065 and dropType=0 and itemId=16153 and itemRate=400; -- comment me
 INSERT INTO `mob_droplist` VALUES (2065,0,0,1000,2614,1000); -- Amoosh.'s Tendril
 INSERT INTO `mob_droplist` VALUES (2065,0,0,1000,11367,151); -- Nobushi Kyahan
-INSERT INTO `mob_droplist` VALUES (2065,2,11284,176); -- Enkidu's Harness
+INSERT INTO `mob_droplist` VALUES (2065,0,0,1000,11284,176); -- Enkidu's Harness
 INSERT INTO `mob_droplist` VALUES (2065,0,0,1000,15629,171); -- Skadi's Chausses
 INSERT INTO `mob_droplist` VALUES (2065,0,0,1000,15633,167); -- Usukane Hizayoroi
 INSERT INTO `mob_droplist` VALUES (2065,0,0,1000,10326,70); --  Enif Cosciales
