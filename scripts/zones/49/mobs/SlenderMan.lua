@@ -120,17 +120,15 @@ end;
 
 function onAdditionalEffect(mob,target,damage)
     local RAND = math.random(1,100);
-    if (RAND < 33) then -- 33% chance of AddEffect proc
-        local dmg = damage * 0.33; -- 33% of his damage taken becomes his base AddEffect power.
+    if (RAND <= 33) then -- 33% chance of AddEffect proc
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
-        dmg = dmg + (INT_diff * 0.25); -- 25% INT modifier
+        local dmg = 6 + utils.clamp(INT_diff, 0, 99);
         local params = {};
         params.bonusmab = 0;
         params.includemab = false;
         dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
         dmg = dmg*applyResistanceAddEffect(mob, target, ELE_FIRE, 0);
         dmg = adjustForTarget(target, damage, ele);
-        dmg = utils.clamp(dmg, 6, 66); -- minimum 6, maximum 66.
         dmg = finalMagicNonSpellAdjustments(mob, target, ELE_FIRE, damage);
 
         return SUBEFFECT_FIRE_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
@@ -145,7 +143,7 @@ end;
 
 function onSpikesDamage(mob,target,damage)
     local RAND = math.random(1,100);
-    if (RAND < 33) then -- 33% chance of Spikes proc
+    if (RAND <= 18) then -- 18% chance of Spikes proc
         local duration = 5;
         target:addStatusEffect(EFFECT_TERROR,1,0,duration);
         return SUBEFFECT_CURSE_SPIKES,0,EFFECT_TERROR; -- Intentionally incorrect animation with no message.

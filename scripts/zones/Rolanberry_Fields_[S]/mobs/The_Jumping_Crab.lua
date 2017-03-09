@@ -280,7 +280,6 @@ end;
 function onWeaponskillHit(mob, attacker, weaponskill)
     local QUEST_WS_TABLE = {9, 25, 42, 56, 72, 88, 104, 120, 136, 152, 169, 184, 199, 215}
     local MERIT_WS_TABLE = {15, 60, 77, 93, 109, 125, 141, 157, 174, 191, 221, 224, 226, 203}
-    local TP = 0;
 
     if (attacker:isPC()) then
         if (isInTable(QUEST_WS_TABLE, weaponskill)) then
@@ -290,8 +289,7 @@ function onWeaponskillHit(mob, attacker, weaponskill)
                 mob:setLocalVar("J2", 0);
                 mob:setLocalVar("J3", 0);
             else
-                TP = mob:getTP() *0.1; -- 10% Bonus TP
-                mob:addTP(TP);
+                mob:addTP(mob:getTP() *0.1); -- 10% Bonus TP
             end
         elseif (isInTable(MERIT_WS_TABLE, weaponskill)) then
             if (math.random(0,99) > 19) then
@@ -304,14 +302,12 @@ function onWeaponskillHit(mob, attacker, weaponskill)
             end
         else
             if (math.random(0,99) > 32) then
-                TP = mob:getTP() *0.25; -- 25% Bonus TP
-                mob:addTP(TP);
+                mob:addTP(mob:getTP() *0.25); -- 25% Bonus TP
             end
         end
     elseif (attacker:isPet()) then
         if (math.random(0,99) > 24) then
-            TP = mob:getTP() *0.33; -- 25% Bonus TP
-            mob:addTP(TP);
+            mob:addTP(mob:getTP() *0.33); -- 25% Bonus TP
         end
     end
 
@@ -363,13 +359,9 @@ function onAdditionalEffect(mob, target, damage)
         dmg = dmg * applyResistanceAddEffect(mob, target, ELE_WATER, 0);
         dmg = adjustForTarget(target, dmg, ELE_WATER);
         dmg = finalMagicNonSpellAdjustments(mob, target, ELE_WATER, dmg);
-        dmg = utils.clamp(dmg, -250, 250);
-        local message = 163;
-        if (dmg < 0) then
-            message = 167;
-        end
+        dmg = utils.clamp(dmg, 0, 250);
         mob:setLocalVar("Enwater", 0);
-        return SUBEFFECT_WATER_DAMAGE, message, dmg;
+        return SUBEFFECT_WATER_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
     else -- No additional effect.
         return 0, 0, 0;
     end
@@ -388,15 +380,11 @@ function onSpikesDamage(mob, target, damage)
         dmg = dmg * applyResistanceAddEffect(mob, target, ELE_WATER, 0);
         dmg = adjustForTarget(target, dmg, ELE_WATER);
         dmg = finalMagicNonSpellAdjustments(mob, target, ELE_WATER, dmg);
-        dmg = utils.clamp(dmg, -250, 250);
-        local message = 44;
-        if (dmg < 0) then
-            message = 383;
-        end
+        dmg = utils.clamp(dmg, 0, 250);
         mob:setLocalVar("DelugeSpikes", 0);
         return SUBEFFECT_DELUGE_SPIKES, message, dmg;
     else -- Use normal spike dmg/effect from status
-        return SUBEFFECT_DELUGE_SPIKES, 44, damage;
+        return SUBEFFECT_DELUGE_SPIKES, MSGBASIC_SPIKES_EFFECT_DMG, damage;
     end
 end;
 

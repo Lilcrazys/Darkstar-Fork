@@ -9,12 +9,12 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 require("scripts/globals/missions");
 require("scripts/globals/titles");
 require("scripts/globals/atma");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
-    -------------------------------AF 109 Trials----------------------------------------------------
 function onTrade(player,npc,trade)
     local title = 0;
     local PRIZE = 0;
@@ -50,9 +50,9 @@ function onTrade(player,npc,trade)
         title = title+1;
     end
 
+    -- Empyrean Armor iLv 109 upgrade item turn in
     if (countLunars(player) == 3 and title == 10) then
-
-----------------------------THF-------------------------------------
+        -- THF
         if (trade:hasItemQty(2967, 30) and trade:hasItemQty(11069,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26750
         elseif (trade:hasItemQty(3292, 30) and trade:hasItemQty(11089,1) and trade:getItemCount() == 31) then --  body
@@ -63,7 +63,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27247
         elseif (trade:hasItemQty(2966, 30) and trade:hasItemQty(11149,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27421
-    ----------------------------WAR-------------------------------------
+
+        -- WAR
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11064,1) and trade:getItemCount() == 31) then -- head.
             PRIZE = 26740
         elseif (trade:hasItemQty(3287, 30) and trade:hasItemQty(11084,1) and trade:getItemCount() == 31) then -- body
@@ -74,7 +75,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27237
         elseif (trade:hasItemQty(2931, 30) and trade:hasItemQty(11144,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27411
-    ----------------------------MNK-------------------------------------
+
+        -- MNK
         elseif (trade:hasItemQty(2964, 30) and trade:hasItemQty(11065,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26742
         elseif (trade:hasItemQty(3288, 30) and trade:hasItemQty(11085,1) and trade:getItemCount() == 31) then -- body
@@ -85,7 +87,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27239
         elseif (trade:hasItemQty(2928, 30) and trade:hasItemQty(11145,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27413
-    ----------------------------WHM-------------------------------------
+
+        -- WHM
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11066,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26744
         elseif (trade:hasItemQty(3290, 30) and trade:hasItemQty(11086,1) and trade:getItemCount() == 31) then -- body
@@ -96,7 +99,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27241
         elseif (trade:hasItemQty(2932, 30) and trade:hasItemQty(11146,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27415
-    ----------------------------RDM-------------------------------------
+
+        -- RDM
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11068,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26748
         elseif (trade:hasItemQty(3291, 30) and trade:hasItemQty(11088,1) and trade:getItemCount() == 31) then -- body
@@ -107,7 +111,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27245
         elseif (trade:hasItemQty(2928, 30) and trade:hasItemQty(11148,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27419
-    ----------------------------BLM-------------------------------------
+
+        -- BLM
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11067,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26746
          elseif (trade:hasItemQty(3287, 30) and trade:hasItemQty(11087,1) and trade:getItemCount() == 31) then  --body
@@ -118,7 +123,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27243
         elseif (trade:hasItemQty(2928, 30) and trade:hasItemQty(11147,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27417
-    ----------------------------PLD-------------------------------------
+
+        -- PLD
         elseif (trade:hasItemQty(2966, 30) and trade:hasItemQty(11070,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26752
          elseif (trade:hasItemQty(3288, 30) and trade:hasItemQty(11090,1) and trade:getItemCount() == 31) then  --body
@@ -129,7 +135,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27249
         elseif (trade:hasItemQty(2932, 30) and trade:hasItemQty(11150,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27423
-    ----------------------------DRK-------------------------------------
+
+        -- DRK
         elseif (trade:hasItemQty(3289, 30) and trade:hasItemQty(11071,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26754
         elseif (trade:hasItemQty(3287, 30) and trade:hasItemQty(11091,1) and trade:getItemCount() == 31) then  --body
@@ -140,7 +147,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27251
         elseif (trade:hasItemQty(2929, 30) and trade:hasItemQty(11151,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27425
-    ----------------------------BST-------------------------------------
+
+        -- BST
         elseif (trade:hasItemQty(3290, 30) and trade:hasItemQty(11072,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26756
         elseif (trade:hasItemQty(3291, 30) and trade:hasItemQty(11092,1) and trade:getItemCount() == 31) then -- body
@@ -151,7 +159,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27253
         elseif (trade:hasItemQty(2931, 30) and trade:hasItemQty(11152,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27427
-    ----------------------------BRD-------------------------------------
+
+        -- BRD
         elseif (trade:hasItemQty(2964, 30) and trade:hasItemQty(11073,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26758
         elseif (trade:hasItemQty(3289, 30) and trade:hasItemQty(11093,1) and trade:getItemCount() == 31) then -- body
@@ -162,7 +171,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27255
         elseif (trade:hasItemQty(2928, 30) and trade:hasItemQty(11153,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27429
-    ----------------------------RNG-------------------------------------
+
+        -- RNG
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11074,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26760
         elseif (trade:hasItemQty(3292, 30) and trade:hasItemQty(11094,1) and trade:getItemCount() == 31) then  --body
@@ -173,7 +183,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27257
         elseif (trade:hasItemQty(2930, 30) and trade:hasItemQty(11154,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27431
-    ----------------------------SAM-------------------------------------
+
+        -- SAM
         elseif (trade:hasItemQty(2963, 30) and trade:hasItemQty(11075,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26762
         elseif (trade:hasItemQty(3290, 30) and trade:hasItemQty(11095,1) and trade:getItemCount() == 31) then  --body
@@ -184,7 +195,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27259
         elseif (trade:hasItemQty(2930, 30) and trade:hasItemQty(11155,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27433
-    ----------------------------NIN-------------------------------------
+
+        -- NIN
         elseif (trade:hasItemQty(2965, 30) and trade:hasItemQty(11076,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26764
         elseif (trade:hasItemQty(3288, 30) and trade:hasItemQty(11096,1) and trade:getItemCount() == 31) then  --body
@@ -195,7 +207,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27261
         elseif (trade:hasItemQty(3289, 30) and trade:hasItemQty(11156,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27435
-    ----------------------------DRG-------------------------------------
+
+        -- DRG
         elseif (trade:hasItemQty(2930, 30) and trade:hasItemQty(11077,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26766
         elseif (trade:hasItemQty(3290, 30) and trade:hasItemQty(11097,1) and trade:getItemCount() == 31) then -- body
@@ -206,7 +219,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27263
         elseif (trade:hasItemQty(2929, 30) and trade:hasItemQty(11157,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27437
-    ----------------------------SMN-------------------------------------
+
+        -- SMN
         elseif (trade:hasItemQty(3289, 30) and trade:hasItemQty(11078,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26768
         elseif (trade:hasItemQty(3287, 30) and trade:hasItemQty(11098,1) and trade:getItemCount() == 31) then -- body
@@ -217,7 +231,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27265
         elseif (trade:hasItemQty(2931, 30) and trade:hasItemQty(11158,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27439
-    ----------------------------BLU-------------------------------------
+
+        -- BLU
         elseif (trade:hasItemQty(2965, 30) and trade:hasItemQty(11079,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26770
         elseif (trade:hasItemQty(3290, 30) and trade:hasItemQty(11099,1) and trade:getItemCount() == 31) then -- body
@@ -228,7 +243,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27267
         elseif (trade:hasItemQty(2932, 30) and trade:hasItemQty(11159,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27441
-    ----------------------------COR-------------------------------------
+
+        -- COR
         elseif (trade:hasItemQty(3289, 30) and trade:hasItemQty(11080,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26772
         elseif (trade:hasItemQty(3288, 30) and trade:hasItemQty(11100,1) and trade:getItemCount() == 31) then -- body
@@ -239,7 +255,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27269
         elseif (trade:hasItemQty(2927, 30) and trade:hasItemQty(11160,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27443
-    ----------------------------DNC-------------------------------------
+
+        -- DNC
         elseif (trade:hasItemQty(3289, 30) and trade:hasItemQty(11082,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26776
         elseif (trade:hasItemQty(3287, 30) and trade:hasItemQty(11102,1) and trade:getItemCount() == 31) then -- body
@@ -250,7 +267,8 @@ function onTrade(player,npc,trade)
             PRIZE = 27273
         elseif (trade:hasItemQty(2932, 30) and trade:hasItemQty(11162,1) and trade:getItemCount() == 31) then -- feet
             PRIZE = 27447
-    ----------------------------SCH-------------------------------------
+
+        -- SCH
         elseif (trade:hasItemQty(2965, 30) and trade:hasItemQty(11083,1) and trade:getItemCount() == 31) then -- head
             PRIZE = 26778
         elseif (trade:hasItemQty(3290, 30) and trade:hasItemQty(11103,1) and trade:getItemCount() == 31) then -- body
@@ -273,7 +291,7 @@ function onTrade(player,npc,trade)
             end
         end
     else
-        player:PrintToPlayer( "Not so fast... All 10 Titles and All 3 Lunars are required!" );
+        player:PrintToPlayer("Not so fast... All 10 Titles and All 3 Lunars are required!");
     end
 end;
 
