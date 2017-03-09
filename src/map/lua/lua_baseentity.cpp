@@ -11104,97 +11104,128 @@ int32 CLuaBaseEntity::disengage(lua_State* L)
 *                                                                       *
 ************************************************************************/
 
-inline int32 CLuaBaseEntity::SpoofChatPlayer(lua_State* L)
+inline int32 CLuaBaseEntity::SpoofMsg(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
     DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
 
-    uint32 ObjectID = (uint32)lua_tointeger(L, 3);
-    CBaseEntity* Object = (CBaseEntity*)zoneutils::GetEntity(ObjectID, TYPE_MOB | TYPE_NPC);
+    char* messageText = (char*)lua_tostring(L, 1);
 
     if (m_PBaseEntity->objtype == TYPE_PC)
     {
-        if (Object != NULL)
+        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 3) && lua_isnumber(L, 3) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 3) : MESSAGE_SAY);
+        // ShowDebug(CL_CYAN"Lua::SpoofMsg: L3 = %u \n" CL_RESET, messageType);
+
+        if (!lua_isnil(L, 2) && lua_isuserdata(L, 2)) // Script specified a speaker..
         {
-            int8* ObjectName = (int8*)Object->GetObjectName();
-            CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
-            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CSpoofMessagePacket((CCharEntity*)m_PBaseEntity, ObjectName, messageType, (char*)lua_tostring(L, 1)));
-        }
-        else
-        {
-            CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
-            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
-        }
-    }
-    else
-    {
-        ShowError(CL_RED"Lua::SpoofChatPlayer: Tried to send message packets to a non player entity! \n" CL_RESET);
-    }
+            CLuaBaseEntity* PLuaBaseEntity = Lunar<CLuaBaseEntity>::check(L, 2);
+            // Note: later we'll still send this as a CharEntity, even when it isn't.
+            // It's harmless, and DSP doesn't play nice with other entity types there.
+            CBaseEntity* SpeakerEntity = PLuaBaseEntity->GetBaseEntity();
 
-    return 0;
-}
-
-/************************************************************************
-*                                                                       *
-*  Spoofs a chat message to the targets entire party/alliance           *
-*                                                                       *
-************************************************************************/
-
-inline int32 CLuaBaseEntity::SpoofChatParty(lua_State* L)
-{
-    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
-    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
-
-    CMobEntity* PMob = (CMobEntity*)m_PBaseEntity;
-    CBaseEntity* Object = (CBaseEntity*)zoneutils::GetEntity(m_PBaseEntity->id, TYPE_MOB | TYPE_NPC);
-    CCharEntity* PChar = (CCharEntity*)PMob->GetEntity(PMob->m_OwnerID.targid, TYPE_PC);
-
-    if (PMob->objtype == TYPE_MOB)
-    {
-        if (PChar)
-        {
-            PChar->ForAlliance([Object, L](CBattleEntity* PPartyMember)
+            if (SpeakerEntity == nullptr) // Houston we have a problem!
             {
-                CCharEntity* PMember = (CCharEntity*)PPartyMember;
-                if (PMember->objtype == TYPE_PC)
+                ShowError(CL_RED"Lua::SpoofMsg: Couldn't find entity to send message from! (Bad L2 value?)\n" CL_RESET);
+            }
+            else
+            {
+                // Make NPC's turn to face the player they are talking to.
+                if (SpeakerEntity->objtype == TYPE_NPC)
                 {
-                    int8* ObjectName = (int8*)Object->GetObjectName();
-                    CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) && lua_isnumber(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_ECHO);
-                    PMember->pushPacket(new CSpoofMessagePacket(PMember, ObjectName, messageType, (char*)lua_tostring(L, 1)));
+                    SpeakerEntity->m_TargID = m_PBaseEntity->targid;
+                    SpeakerEntity->loc.p.rotation = getangle(SpeakerEntity->loc.p, m_PBaseEntity->loc.p);
+
+                    SpeakerEntity->loc.zone->PushPacket(
+                        SpeakerEntity, CHAR_INRANGE, new CEntityUpdatePacket(
+                            SpeakerEntity, ENTITY_UPDATE, UPDATE_POS
+                        )
+                    );
                 }
-            } );
+
+                if (!lua_isnil(L, 4) && lua_isnumber(L, 4))
+                {
+                    uint8 messageRange = (uint8)lua_tointeger(L, 4);
+                    // ShowDebug(CL_CYAN"Lua::SpoofMsg: L4 = %u \n" CL_RESET, messageRange);
+
+                    if (messageRange == 0x01 || messageRange == 0x0E) // "/shout" range
+                    {
+                        SpeakerEntity->loc.zone->PushPacket(SpeakerEntity, CHAR_INSHOUT, new CSpoofMessagePacket(
+                            (CCharEntity*)SpeakerEntity,
+                            messageType,
+                            messageText
+                        ));
+                    }
+                    else if (messageRange == 0x1A) // Display msg in any place "/yell" would be displayed
+                    {
+                        message::send(MSG_CHAT_YELL, 0, 0, new CSpoofMessagePacket(
+                            (CCharEntity*)SpeakerEntity,
+                            messageType,
+                            messageText
+                        ));
+                    }
+                    else if (messageRange == 0x06 || messageRange == 0x07) // Display msg server wide
+                    {
+                        message::send(MSG_CHAT_SERVMES, 0, 0, new CSpoofMessagePacket(
+                            (CCharEntity*)SpeakerEntity,
+                            messageType,
+                            messageText
+                        ));
+                    }
+                    else if (messageRange == 0x21) // Display msg in unity chat, server wide
+                    {
+                        // Not properly implemented yet
+                        message::send(MSG_CHAT_SERVMES, 0, 0, new CSpoofMessagePacket(
+                            (CCharEntity*)SpeakerEntity,
+                            messageType,
+                            messageText
+                        ));
+                    }
+                    else if (messageRange == 0x04 || messageRange == 0x0F) // Display message to Party/Alliance
+                    {
+                        ((CCharEntity*)m_PBaseEntity)->ForAlliance([SpeakerEntity, messageType, messageText](CBattleEntity* PPartyMember)
+                        {
+                            CCharEntity* PMember = (CCharEntity*)PPartyMember;
+                            if (PMember->objtype == TYPE_PC)
+                            {
+                                PMember->pushPacket(new CSpoofMessagePacket(
+                                    (CCharEntity*)SpeakerEntity,
+                                    messageType,
+                                    messageText
+                                ));
+                            }
+                        } );
+                    }
+                    else // "/say" range (default used for unrecognized values)
+                    {
+                        SpeakerEntity->loc.zone->PushPacket(SpeakerEntity, CHAR_INRANGE, new CSpoofMessagePacket(
+                            (CCharEntity*)SpeakerEntity,
+                            messageType,
+                            messageText
+                        ));
+                    }
+                }
+                else // No range specified so just send to one player (default)
+                {
+                    ((CCharEntity*)m_PBaseEntity)->pushPacket(new CSpoofMessagePacket(
+                        (CCharEntity*)SpeakerEntity,
+                        messageType,
+                        messageText
+                    ));
+                }
+            }
         }
-        else
+        else // No speaker object included in script, use normal packet with player as the speaker..
         {
-            ShowError(CL_RED"Lua::SpoofChatParty: Couldn't find a player target to send message to! \n" CL_RESET);
+            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket(
+                (CCharEntity*)m_PBaseEntity,
+                messageType,
+                messageText
+            ));
         }
     }
-    else
+    else // Somebody dun derped that script!
     {
-        ShowError(CL_RED"Lua::SpoofChatParty: Tried to send message from null or invalid entity type! \n" CL_RESET);
-    }
-    return 0;
-}
-
-/************************************************************************
-*                                                                       *
-*  Sends the specified type of chat packet to the entire server         *
-*                                                                       *
-************************************************************************/
-
-inline int32 CLuaBaseEntity::SpoofChatServer(lua_State* L)
-{
-    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
-    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
-
-    if (m_PBaseEntity->objtype == TYPE_PC)
-    {
-        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 2) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 2) : MESSAGE_SYSTEM_1);
-        message::send(MSG_CHAT_SERVMES, 0, 0, new CChatMessagePacket((CCharEntity*)m_PBaseEntity, messageType, (char*)lua_tostring(L, 1)));
-    }
-    else
-    {
-        ShowError(CL_RED"Lua::SpoofChatServer: Tried to send message packets to a non player entity! \n" CL_RESET);
+        ShowError(CL_RED"Lua::SpoofMsg: Base entity wasn't a player!\n" CL_RESET);
     }
     return 0;
 }
@@ -11214,28 +11245,33 @@ inline int32 CLuaBaseEntity::sjBoost(lua_State *L)
 
     PChar->SetSLevel(PChar->jobs.job[PChar->GetSJob()]);
 
-    blueutils::ValidateBlueSpells(PChar);
+    charutils::RemoveAllEquipMods(PChar);
+    PChar->SetSLevel(PChar->jobs.job[PChar->GetSJob()]);
+    charutils::ApplyAllEquipMods(PChar);
 
-    charutils::CalculateStats(PChar);
-    charutils::CheckValidEquipment(PChar);
-    charutils::BuildingCharSkillsTable(PChar);
-    charutils::BuildingCharAbilityTable(PChar);
-    charutils::BuildingCharTraitsTable(PChar);
-    charutils::BuildingCharWeaponSkills(PChar);
+    if (PChar->status != STATUS_DISAPPEAR)
+    {
+        blueutils::ValidateBlueSpells(PChar);
+        charutils::CalculateStats(PChar);
+        charutils::CheckValidEquipment(PChar);
+        charutils::BuildingCharSkillsTable(PChar);
+        charutils::BuildingCharAbilityTable(PChar);
+        charutils::BuildingCharTraitsTable(PChar);
+        charutils::BuildingCharWeaponSkills(PChar);
 
-    PChar->UpdateHealth();
-    PChar->health.hp = PChar->GetMaxHP();
-    PChar->health.mp = PChar->GetMaxMP();
+        PChar->UpdateHealth();
+        PChar->health.hp = PChar->GetMaxHP();
+        PChar->health.mp = PChar->GetMaxMP();
 
-    charutils::SaveCharStats(PChar);
+        PChar->pushPacket(new CCharJobsPacket(PChar));
+        PChar->pushPacket(new CCharStatsPacket(PChar));
+        PChar->pushPacket(new CCharSkillsPacket(PChar));
+        PChar->pushPacket(new CCharAbilitiesPacket(PChar));
+        PChar->pushPacket(new CCharUpdatePacket(PChar));
+        PChar->pushPacket(new CMenuMeritPacket(PChar));
+        PChar->pushPacket(new CCharSyncPacket(PChar));
+    }
 
-    PChar->pushPacket(new CCharJobsPacket(PChar));
-    PChar->pushPacket(new CCharStatsPacket(PChar));
-    PChar->pushPacket(new CCharSkillsPacket(PChar));
-    PChar->pushPacket(new CCharAbilitiesPacket(PChar));
-    PChar->pushPacket(new CCharUpdatePacket(PChar));
-    PChar->pushPacket(new CMenuMeritPacket(PChar));
-    PChar->pushPacket(new CCharSyncPacket(PChar));
     return 0;
 }
 
@@ -11813,9 +11849,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
 
 
     // Custom
-    LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatPlayer),
-    LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatParty),
-    LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofChatServer),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofMsg),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),
 

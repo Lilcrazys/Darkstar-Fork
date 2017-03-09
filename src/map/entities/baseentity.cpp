@@ -76,18 +76,6 @@ const int8* CBaseEntity::GetName()
 	return name.c_str();
 }
 
-const int8* CBaseEntity::GetObjectName()
-{
-	// Strip out the _ in names
-	ObjectName = name;
-	size_t start_pos = ObjectName.find("_");
-	if (start_pos < name.size())
-	{
-		ObjectName.replace(start_pos, 1, " ");
-	}
-	return ObjectName.c_str();
-}
-
 uint16 CBaseEntity::getZone()
 {
     return loc.zone != nullptr ? loc.zone->GetID() : loc.destination;
@@ -170,4 +158,19 @@ void CBaseEntity::SetModelId(uint16 modelid)
 uint16 CBaseEntity::GetModelId()
 {
     return look.modelid;
+}
+
+const int8* CBaseEntity::GetCleanedName()
+{
+    // Strip out the _ in names
+    CleanName = name;
+
+    size_t string_pos = CleanName.find("_");
+    while (string_pos < name.size())
+    {
+        CleanName.replace(string_pos, 1, " ");
+        string_pos = CleanName.find("_");
+    }
+
+    return CleanName.c_str();
 }

@@ -83,6 +83,7 @@ public:
 class CSpoofMessagePacket : public CBasicPacket
 {
 public:
-	CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_MESSAGE_TYPE MessageType, int8* buff);
+    CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE MessageType, int8* buff);
 };
+
 #endif
