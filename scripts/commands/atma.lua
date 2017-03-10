@@ -9,6 +9,11 @@ cmdprops =
     parameters = "s"
 };
 
+require("scripts/globals/settings");
+require("scripts/globals/status");
+require("scripts/globals/keyitems");
+require("scripts/globals/abyssea");
+
 function onTrigger(player, option)
     if (player:getCurrentRegion() ~= 41) then
         player:PrintToPlayer("Cannot use this command outside of Abyssea!");
@@ -38,6 +43,20 @@ function onTrigger(player, option)
                 if (player:getVar("PREV_ATMA_3") > 0) then
                     applyATMA(player, player:getVar("PREV_ATMA_3"))
                 end
+                
+                -- atom0s - Hackin - Until  Abyssea crashes are fixed this should just be applied automatically cause
+                -- this is stupid having to run back for this shit every 5 mins when you crash.
+                player:addStatusEffectEx(EFFECT_ABYSSEA_HP,EFFECT_MAX_HP_BOOST,20+(getAbyssiteTotal(player,"MERIT") *10),0,0);
+                player:addHP(20+(getAbyssiteTotal(player,"MERIT") *10) *10);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_MP,EFFECT_MAX_MP_BOOST,10+(getAbyssiteTotal(player,"MERIT") *5),0,0);
+                player:addMP(10+(getAbyssiteTotal(player,"MERIT") *5) *10);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_STR,EFFECT_STR_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_DEX,EFFECT_DEX_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_VIT,EFFECT_VIT_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_AGI,EFFECT_AGI_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_INT,EFFECT_INT_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_MND,EFFECT_MND_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
+                player:addStatusEffectEx(EFFECT_ABYSSEA_CHR,EFFECT_CHR_BOOST,10+(getAbyssiteTotal(player,"FURTHERANCE") *10),0,0);
             end
         end
     elseif (option == "save") then

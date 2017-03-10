@@ -78,8 +78,10 @@ function onTrigger(player,page)
     elseif (page == 4) then
         local stock_4 =
         {
+            21319,    100,   -- Titanium Bolt
             21335,    100,   -- Titanium Bullet
             21305,    100,   -- Tulfaire Arrow
+            21320,    190,   -- Adlivun Bolt
             21336,    190,   -- Adlivun Bullet
             21306,    190,   -- Adlivun Arrow
             16368,    32000, -- Herder's Subligar
