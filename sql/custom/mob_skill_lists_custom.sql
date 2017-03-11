@@ -1782,6 +1782,12 @@ INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Temp',4222,2671); -- Supernova
 -- INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4225,2669); -- Darkmatter
 -- INSERT INTO `mob_skill_lists` VALUES ('Shinryu_Wings_In',4225,2671); -- 
 
+INSERT INTO `mob_skill_lists` VALUES ('Umagrhk',4226,2922); -- Soulshattering Roar
+INSERT INTO `mob_skill_lists` VALUES ('Umagrhk',4226,2923); -- Calcifying Claw
+INSERT INTO `mob_skill_lists` VALUES ('Umagrhk',4226,2924); -- Divesting Stampede
+INSERT INTO `mob_skill_lists` VALUES ('Umagrhk',4226,2925); -- Bonebreaking Barrage
+INSERT INTO `mob_skill_lists` VALUES ('Umagrhk',4226,2926); -- Beastruction
+
 -- INSERT INTO `mob_skill_lists` VALUES ('Stroper Chyme',LIST,SKILL); -- Skill Name
 -- 175,1587,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
 -- 176,1587,176,'Fluid_Toss',0,15.0,2000,1000,4,0,0,0);
