@@ -91,8 +91,8 @@ function onMobEngaged(mob, target)
         target:ChangeMusic(2, 195); -- SoloBattle Music
         target:ChangeMusic(3, 195); -- Party Battle Music
     end
-    mob:SpoofChatParty("I am Mars, god of war. Have you entered this hall to challenge me mortal?", MESSAGE_SAY)
-    mob:SpoofChatParty("Do you think yourself fit to battle a god?", MESSAGE_SAY)
+    target:SpoofMsg("I am Mars, god of war. Have you entered this hall to challenge me mortal? ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+    target:SpoofMsg("Do you think yourself fit to battle a god? ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
 end;
 
 -----------------------------------
@@ -104,12 +104,12 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 9) then -- Time for BW(3rd use) and MS(2nd use) together!
         if (Mars_2hr_Used == 3) then
-            mob:SpoofChatParty("That you should fight a god this far...Deplorable.", MESSAGE_SAY);
+            target:SpoofMsg("That you should fight a god this far...Deplorable. ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(688); -- Do Mighty Strikes!
             mob:setMod(MOD_TRIPLE_ATTACK, 2);
             mob:setLocalVar("Mars_2hr", 4);
         elseif (Mars_2hr_Used == 4) then
-            mob:SpoofChatParty("You shall not survive this day, I AM THE GOD OF WAR!!!", MESSAGE_SAY);
+            target:SpoofMsg("You shall not survive this day, I AM THE GOD OF WAR!!! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
             mob:setMod(MOD_UFASTCAST, 80);
             mob:setLocalVar("MagicElement", 0);
             mob:setLocalVar("SpikesElement", 0);
@@ -120,21 +120,21 @@ function onMobFight(mob, target)
         end
     elseif (mob:getHPP() <= 25) then -- 2nd BW time!
         if (Mars_2hr_Used == 2) then
-            mob:SpoofChatParty("It has been over 1000 years since I have been so...Entertained.", MESSAGE_SAY);
-            mob:SpoofChatParty("Show me more, mortal! More! Bleed for the god of war!", MESSAGE_SAY);
+            target:SpoofMsg("It has been over 1000 years since I have been so...Entertained. ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+            target:SpoofMsg("Show me more, mortal! More! Bleed for the god of war! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
             mob:useMobAbility(695); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 3);
         end
     elseif (mob:getHPP() <= 70) then -- 1st MS time!
         if (Mars_2hr_Used == 1) then
-            mob:SpoofChatParty("Hmmph. You've managed to scratch me.", MESSAGE_SAY);
-            mob:SpoofChatParty("Very well then, I shall show you my full might!", MESSAGE_SAY);
+            target:SpoofMsg("Hmmph. You've managed to scratch me. ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+            target:SpoofMsg("Very well then, I shall show you my full might! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(688); -- Do Mighty Strikes!
             mob:setLocalVar("Mars_2hr", 2);
         end
     elseif (mob:getHPP() <= 85) then -- 1st BW time!
         if (Mars_2hr_Used == 0) then
-            mob:SpoofChatParty("Such hubris...You shall learn to show me the proper respect, mortal!", MESSAGE_SAY);
+            target:SpoofMsg("Such hubris...You shall learn to show me the proper respect, mortal! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(695); -- Do Blood Weapon!
             mob:setLocalVar("Mars_2hr", 1);
         end
@@ -357,8 +357,8 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    mob:SpoofChatParty("...I...Defeated...Content...At last...", MESSAGE_SAY)
-    mob:SpoofChatParty("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated.", MESSAGE_ECHO)
+    player:SpoofMsg("...I...Defeated...Content...At last... ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+    player:SpoofMsg("As you watch the gods form dissolve you see it smile, its hunger for battle finally sated. ", mob, MESSAGE_ECHO, MESSAGE_SHOUT);
     player:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
     player:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
     player:ChangeMusic(2, 195); -- SoloBattle Music

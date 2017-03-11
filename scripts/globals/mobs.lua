@@ -27,9 +27,9 @@ function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
                 if (ChaosbringerKills < 200) then
                     player:setVar("ChaosbringerKills", ChaosbringerKills + 1);
                     if (ChaosbringerKills == 1) then
-                        player:SpoofChatPlayer( string.format( "has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+                        player:SpoofMsg(string.format("has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), nil, MESSAGE_EMOTION, nil);
                     else
-                        player:SpoofChatPlayer( string.format( "has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), MESSAGE_EMOTION, nil );
+                        player:SpoofMsg(string.format("has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), nil, MESSAGE_EMOTION, nil);
                     end
                 end
             end

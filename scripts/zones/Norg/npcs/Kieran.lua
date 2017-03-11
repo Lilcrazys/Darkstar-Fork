@@ -30,12 +30,12 @@ function onTrigger(player,npc)
     local status = player:getVar("NORG_VW_STATUS");
 
     if (elshimoList == QUEST_ACCEPTED and player:isMaskFull(player:getVar("VW_OP_054"),3)) then
-        player:PrintToPlayer("VW_OP_054_ELSHIMO_LIST not finished dumbass!");
+        player:PrintToPlayer("VW_OP_054_ELSHIMO_LIST not finished!");
         player:PrintToPlayer("Go back to Kazham and talk to Hildegard!");
     end
 
     if (zepwellDetour == QUEST_ACCEPTED and player:isMaskFull(player:getVar("VW_OP_101"),3)) then
-        player:PrintToPlayer("VW_OP_101_DETOUR_TO_ZEPWELL not finished dumbass!");
+        player:PrintToPlayer("VW_OP_101_DETOUR_TO_ZEPWELL not finished!");
         player:PrintToPlayer("Go back to Rabao and talk to Gushing spring!");
     end
 
@@ -105,7 +105,7 @@ function onEventFinish(player,csid,option)
             -- so that player can do VW once a day at aprox same time of day.
             player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
         else
-            player:SpoofChatPlayer("Voidstones are issued once per Earth day.");
+            player:SpoofMsg("Voidstones are issued once per Earth day.");
         end
     elseif (csid == 260) then
         player:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);

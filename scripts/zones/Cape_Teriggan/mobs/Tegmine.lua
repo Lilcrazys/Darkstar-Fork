@@ -13,7 +13,6 @@ require("scripts/globals/magic");
 
 function onMobInitialize(mob)
     -- setMobMod
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 
     -- addMod
@@ -30,7 +29,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC, 950);
     mob:setMod(MOD_MACC, 500); -- My mad ninja skills do not miss/resist!
     mob:setMod(MOD_MATT, 50); -- They don't hit very hard either though..
     -- Adjust MOD_MATT as needed, Tegmine's nin nuke should not land zero but not land over 50 dmg on an average lv99 either.
@@ -44,7 +42,7 @@ function onMobFight(mob)
     if (mob:getLocalVar("GO_BOOM") == 0 and mob:getHPP() <= 20) then
         mob:setLocalVar("MagicAttackBonus", mob:getMod(MOD_MATT)); -- Store original amount of Magic Attack in a localVar
         mob:setMod(MOD_MATT, 99); -- Set new amount of Magic Attack
-        mob:useMobAbility(475); -- I GOES BOOM NOW! (This may need tweaking, should land for a little under half players max hp).
+        mob:useMobAbility(475); -- I GOES BOOM NOW! (This may need tweaking, should land for around half players MaxHP).
         mob:setLocalVar("GO_BOOM", 1);
         mob:setMod(MOD_MATT, mob:getLocalVar("MagicAttackBonus")); -- Restore old amount of Magic Attack
     end
@@ -54,13 +52,13 @@ end;
 -- onMonsterMagicPrepare
 -----------------------------------
 function onMonsterMagicPrepare(mob,target)
-    local sumDumVar = math.random(0,99);
+    local sumDumVar = math.random(1,100);
 
-    if (mob:getHPP() > 25) then -- Lets make Tegmine choose Katon more often above 25% and Hyoton more below 25%
+    if (mob:getHPP() >= 25) then -- Lets make Tegmine choose Katon more often above 25% and Hyoton more below 25%
         sumDumVar = sumDumVar + 20;
     end
 
-    if (sumDumVar > 33) then
+    if (sumDumVar >= 33) then
         return 322; -- Katon: San, make target weak vs water.
     else
         return 325; -- Hyoton: San, make target weak vs fire.
@@ -86,18 +84,17 @@ function onAdditionalEffect(mob,target,damage)
         return 0,0,0;
     else
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
-
-        if (INT_diff > 20) then
-            INT_diff = 20 + (INT_diff - 20) / 2;
-        end
-
-        local dmg = INT_diff+LV_diff+damage/2;
+        local dmg = (INT_diff+LV_diff)*0.5;
         local params = {};
         params.bonusmab = 0;
         params.includemab = false;
         dmg = addBonusesAbility(mob, ELE_WATER, target, dmg, params);
         dmg = dmg * applyResistanceAddEffect(mob,target,ELE_WATER,0);
         dmg = adjustForTarget(target,dmg,ELE_WATER);
+
+        if (dmg < 0) then
+            dmg = 0;
+        end
 
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_WATER,dmg);
 

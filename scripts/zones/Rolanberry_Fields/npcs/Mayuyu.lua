@@ -40,7 +40,7 @@ function onTrigger(player,npc)
     end
 
     -- player:startEvent(8008, 0, LEGENDARY, CAPACITY);
-    player:SpoofChatPlayer("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees!", MESSAGE_SAY, npc:getID() );
+    player:SpoofMsg("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees! ", npc, MESSAGE_SAY, nil);
 end;
 
 -----------------------------------

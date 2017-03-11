@@ -37,9 +37,9 @@ function onTrigger(player,npc)
     if (countLunars(player) == 0) then
         player:startEvent(2003);
     elseif ((player:getVar("ACTIVE_ATMA_COUNT") >= countLunars(player))) then
-        local MSG = string.format("You have the maximum ATMA effects your %i Lunar Abyssite will allow.", countLunars(player));
-        player:SpoofChatPlayer( MSG, MESSAGE_SAY, npc:getID() );
-        player:SpoofChatPlayer( "To have all ATMA effects removed, trade me 1 gil.", MESSAGE_SAY, npc:getID() );
+        local msgText = string.format("You have the maximum ATMA effects your %i Lunar Abyssite will allow.", countLunars(player));
+        player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("To have all ATMA effects removed, trade me 1 gil. ", npc, MESSAGE_SAY, nil);
     else
         player:PrintToPlayer("Parts of this menu are not yet functional!")
         player:PrintToPlayer("ATMA will be shown even if you do not have it yet!")

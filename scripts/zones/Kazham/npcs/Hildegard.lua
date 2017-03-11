@@ -70,7 +70,7 @@ function onEventFinish(player,csid,option)
             -- so that player can do VW once a day at aprox same time of day.
             player:messageSpecial(KEYITEM_OBTAINED,VOIDSTONE1);
         else
-            player:SpoofChatPlayer("Voidstones are issued once per Earth day.");
+            player:SpoofMsg("Voidstones are issued once per Earth day. ", nil, MESSAGE_ECHO, nil);
         end
     elseif (csid == 315) then
         player:completeQuest(OUTLANDS, VW_OP_054_ELSHIMO_LIST);

@@ -300,5 +300,6 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you reforge your Empyrean Armor", player:getName() )), MESSAGE_SAY, npc:getID() );
+    local msgText = string.format("Hello %s!, I'm here to help you reforge your Empyrean Armor", player:getName());
+    player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
 end;

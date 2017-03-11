@@ -1,7 +1,7 @@
 -----------------------------------
 --
 -- Defines chat types for use with
--- SpoofChatPlayer and SpoofChatServer
+-- SpoofMsg()
 --
 -----------------------------------
 

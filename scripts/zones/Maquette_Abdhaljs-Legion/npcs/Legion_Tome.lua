@@ -61,10 +61,10 @@ function onTrigger(player,npc)
     local KI = "\n Hall of Ki : Mired Trophy ";
     local MURU = "\n Hall of Muru : Soaring Trophy ";
     local MULL = "\n Hall of Mull : Veiled Trophy ";
-    local msg = AN..IM..KI..MURU..MULL;
-    player:SpoofChatPlayer("Entry requires "..price.." gil and an item. ", MESSAGE_ECHO, npc:getID());
-    player:SpoofChatPlayer(msg, MESSAGE_ECHO, npc:getID());
-    -- player:SpoofChatPlayer("\n Hall(s) of SECRETS : Can you discover it? ", MESSAGE_ECHO, npc:getID());
+    local msgText = AN..IM..KI..MURU..MULL;
+    player:SpoofMsg("Entry requires "..price.." gil and an item. ", npc, MESSAGE_ECHO, nil);
+    player:SpoofMsg(msgText, npc, MESSAGE_ECHO, nil);
+    -- player:SpoofMsg("\n Hall(s) of SECRETS : Can you discover it? ", npc, MESSAGE_ECHO, nil);
 end;
 
 -----------------------------------

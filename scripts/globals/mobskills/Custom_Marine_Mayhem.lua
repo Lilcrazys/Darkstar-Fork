@@ -19,7 +19,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_KO;
     if (math.random(0,99) > target:getMod(MOD_DEATHRES)) then
-        -- mob:SpoofMsg("Most are smart enough to run..", MESSAGE_SAY)
+        -- target:SpoofMsg("Most are smart enough to run.. ", mob, MESSAGE_SAY, MESSAGE_SAY);
         skill:setMsg(243); -- Effect of KO
         target:setHP(0);
     else

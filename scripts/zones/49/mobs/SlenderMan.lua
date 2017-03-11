@@ -50,7 +50,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    mob:SpoofChatParty("I'll swallow your soul!", MESSAGE_SAY)
+    target:SpoofMsg("I'll swallow your soul! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
 end;
 
 -----------------------------------
@@ -66,7 +66,7 @@ function onMobFight(mob, target)
         mob:setLocalVar("Slendy_2hr", 0);
         mob:setHP(0); -- Auto Die
     elseif (mob:getHPP() < 9 and Slendy_2hr_Used == 2) then
-        mob:SpoofChatParty("You can't kill me!", MESSAGE_SAY);
+        target:SpoofMsg("You can't kill me! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
         mob:useMobAbility(731); -- Do Mijin Gakure!
         mob:setLocalVar("Slendy_2hr", 3);
     elseif (mob:getHPP() <= 25 and Slendy_2hr_Used == 1) then
@@ -111,7 +111,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
+    -- player:SpoofMsg("victory message here ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
 end;
 
 -----------------------------------

@@ -26,7 +26,7 @@ function onTrigger(player,npc)
                 player:addItem(15793, 1);
                 player:setVar("ANNIRING_TIMER", os.time()+86400);
             else
-                player:SpoofChatPlayer("Check back later. Rings are issued once a day.");
+                player:SpoofMsg("Check back later. Rings are issued once a day.");
             end
         else
             player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 15793);
@@ -86,10 +86,10 @@ function onTrigger(player,npc)
                 player:setVar("ANNIBUFF_TIMER", os.time()+3600);
             end
         else
-            player:SpoofChatPlayer("Check back later. Buffs are issued once an hour.");
+            player:PrintToPlayer("Check back later. Buffs are issued once an hour.");
         end
     else
-        player:SpoofChatPlayer("The Anniversary Event does not begin until December 1.");
+        player:PrintToPlayer("The Anniversary Event does not begin until December 1.");
     end
 end;
 

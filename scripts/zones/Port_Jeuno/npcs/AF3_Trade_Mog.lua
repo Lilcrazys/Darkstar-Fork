@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Port Jeuno
--- NPC: Haubijoux
--- Standard Info NPC
+--  NPC: AF3 Trade Moogle
+-- Abyssea AF3 trade handler
 -----------------------------------
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
 -----------------------------------
@@ -1903,7 +1903,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", player:getName() )), MESSAGE_SAY, npc:getID() );
+    local msgText = string.format("Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", player:getName());
+    player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
 end;
 
 -----------------------------------

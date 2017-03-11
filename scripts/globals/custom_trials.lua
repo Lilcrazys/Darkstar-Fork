@@ -313,13 +313,13 @@ function cTrialProgress(player,trialStage,trialType)
             if (trialStage == info.s and trialType == info.t) then
                 cTrialCount = cTrialCount+1; -- Update count.
                 player:setVar("cTrialCount["..trialType.."]", cTrialCount); -- Set var to the updated count.
-                player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+                player:SpoofMsg("You completed a trial objective. ", nil, MESSAGE_ECHO, nil);
                 -- print("[DEBUG] cTrialCount : ".. cTrialCount);
 
                 if (cTrialCount >= info.count) then
                     player:setVar("cTrialComplete["..trialType.."]", 1);
                     -- print("[DEBUG] Custom trial ".. cTrialItem.." completed!");
-                    player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+                    player:SpoofMsg("All Trial objectives complete! ", nil, MESSAGE_ECHO, nil);
                 end
             end
             -- print("------------------")
@@ -517,9 +517,9 @@ end;
 --             and player:getVar("C_TRIAL_OBJ_5") >= 4
 --             and player:getVar("C_TRIAL_OBJ_6") >= 4) then
 --                 player:setVar("C_TRIAL_COMPLETE", 1);
---                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("All Trial objectives complete!", MESSAGE_ECHO, nil);
 --             else
---                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("You completed a trial objective.", MESSAGE_ECHO, nil);
 --             end
 --         elseif (getCurrentStage(RELIC, TRIAL) == 2) then
 --             incrementTrialVariable(player, var)
@@ -527,9 +527,9 @@ end;
 --             and player:getVar("C_TRIAL_OBJ_2") >= 7
 --             and player:getVar("C_TRIAL_OBJ_3") >= 7) then
 --                 player:setVar("C_TRIAL_COMPLETE", 1);
---                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("All Trial objectives complete!", nil, MESSAGE_ECHO, nil);
 --             else
---                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("You completed a trial objective. ", nil, MESSAGE_ECHO, nil);
 --             end
 --         elseif (getCurrentStage(RELIC, TRIAL) == 3) then
 --             incrementTrialVariable(player, var)
@@ -539,9 +539,9 @@ end;
 --             and player:getVar("C_TRIAL_OBJ_4") >= 4
 --             and player:getVar("C_TRIAL_OBJ_5") >= 4) then
 --                 player:setVar("C_TRIAL_COMPLETE", 1);
---                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("All Trial objectives complete! ", nil, MESSAGE_ECHO, nil);
 --             else
---                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("You completed a trial objective. ", nil, MESSAGE_ECHO, nil);
 --             end
 --             -- Tier4 is handled in Magian_Mog_CJ.lua
 --         end
@@ -558,9 +558,9 @@ end;
 --             and player:getVar("C_TRIAL_OBJ_5") >= 5
 --             and player:getVar("C_TRIAL_OBJ_6") >= 5) then
 --                 player:setVar("C_TRIAL_COMPLETE", 1);
---                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("All Trial objectives complete! ", nil, MESSAGE_ECHO, nil);
 --             else
---                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("You completed a trial objective. ", nil, MESSAGE_ECHO, nil);
 --             end
 --         elseif (getCurrentStage(MYTHIC, TRIAL) == 2) then
 --             incrementTrialVariable(player, var)
@@ -569,9 +569,9 @@ end;
 --             and player:getVar("C_TRIAL_OBJ_3") >= 4
 --             and player:getVar("C_TRIAL_OBJ_4") >= 4) then
 --                 player:setVar("C_TRIAL_COMPLETE", 1);
---                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("All Trial objectives complete! ", nil, MESSAGE_ECHO, nil);
 --             else
---                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("You completed a trial objective. ", nil, MESSAGE_ECHO, nil);
 --             end
 --         elseif (getCurrentStage(MYTHIC, TRIAL) == 3) then
 --             incrementTrialVariable(player, var)
@@ -582,9 +582,9 @@ end;
 --             and player:getVar("C_TRIAL_OBJ_5") >= 3
 --             and player:getVar("C_TRIAL_OBJ_6") >= 3) then
 --                 player:setVar("C_TRIAL_COMPLETE", 1);
---                 player:SpoofChatPlayer("All Trial objectives complete!", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("All Trial objectives complete! ", nil, MESSAGE_ECHO, nil);
 --             else
---                 player:SpoofChatPlayer("You completed a trial objective.", MESSAGE_ECHO, nil);
+--                 player:SpoofMsg("You completed a trial objective. ", nil, MESSAGE_ECHO, nil);
 --             end
 --             -- Tier4 is handled in Magian_Mog_CJ.lua
 --         end

@@ -13,8 +13,8 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    player:SpoofChatPlayer("Sorry but I'm still in training, kupo.. ", MESSAGE_SAY, npc:getID());
-    player:SpoofChatPlayer("If neither TJ or CJ can help you, try the guys down in Port Jeuno. ", MESSAGE_SAY, npc:getID());
+    player:SpoofMsg("Sorry but I'm still in training, kupo.. ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("If neither TJ or CJ can help you, try the guys down in Port Jeuno. ", npc, MESSAGE_SAY, nil);
 end;
 
 
@@ -23,8 +23,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer("I'm Magian Mog A.J. kupo! I'm in training to someday handle Empyrean weapon trials. ", MESSAGE_SAY, npc:getID() );
-    player:SpoofChatPlayer("If neither TJ or CJ can help you, try the guys down in Port Jeuno. ", MESSAGE_SAY, npc:getID());
+    player:SpoofMsg("I'm Magian Mog A.J. kupo! I'm in training to someday handle Empyrean weapon trials. ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("If neither TJ or CJ can help you, try the guys down in Port Jeuno. ", npc, MESSAGE_SAY, nil);
 end;
 
 -----------------------------------
