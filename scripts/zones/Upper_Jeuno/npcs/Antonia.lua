@@ -39,8 +39,9 @@ function onTrigger(player,npc)
         21392, 100100, -- Animator Z
         21393, 100100  -- Arasy Sachet
     }
-    player:showText(npc,ANTONIA_SHOP_DIALOG);
-    showShop(player, STATIC, stock);
+--    player:showText(npc,ANTONIA_SHOP_DIALOG);
+--   showShop(player, STATIC, stock);
+        player:PrintToPlayer("Really 119 gear... This NPC is disabled due to moogle molestation at night!");
 end;
 
 -----------------------------------
