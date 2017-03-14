@@ -798,8 +798,8 @@ namespace charutils
         PChar->StatusEffectContainer->LoadStatusEffects();
 
         charutils::LoadEquip(PChar);
-        PChar->health.hp = PChar->loc.destination == ZONE_RESIDENTIAL_AREA ? PChar->GetMaxHP() : HP;
-        PChar->health.mp = PChar->loc.destination == ZONE_RESIDENTIAL_AREA ? PChar->GetMaxMP() : MP;
+        PChar->health.hp = zoneutils::IsResidentialArea(PChar->loc.destination) ? PChar->GetMaxHP() : HP;
+        PChar->health.mp = zoneutils::IsResidentialArea(PChar->loc.destination) ? PChar->GetMaxMP() : MP;
         PChar->UpdateHealth();
         luautils::OnGameIn(PChar, zoning == 1);
     }
@@ -4802,6 +4802,27 @@ namespace charutils
         }
 
         PChar->pushPacket(new CServerIPPacket(PChar, type, ipp));
+    }
+
+    void HomePoint(CCharEntity* PChar)
+    {
+        // remove weakness on homepoint
+        PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_WEAKNESS);
+        PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_LEVEL_SYNC);
+
+        PChar->health.hp = PChar->GetMaxHP();
+        PChar->health.mp = PChar->GetMaxMP();
+
+        PChar->loc.boundary = 0;
+        PChar->loc.p = PChar->profile.home_point.p;
+        PChar->loc.destination = PChar->profile.home_point.destination;
+
+        PChar->status = STATUS_DISAPPEAR;
+        PChar->animation = ANIMATION_NONE;
+        PChar->updatemask |= UPDATE_HP;
+
+        PChar->clearPacketList();
+        SendToZone(PChar, 2, zoneutils::GetZoneIPP(PChar->loc.destination));
     }
 
     void AddWeaponSkillPoints(CCharEntity* PChar, SLOTTYPE slotid, int wspoints)

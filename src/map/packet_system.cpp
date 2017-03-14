@@ -251,8 +251,7 @@ void SmallPacket0x00A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
             PChar->loc.destination = destination = ZONE_RESIDENTIAL_AREA;
         }
 
-        if (destination == ZONE_RESIDENTIAL_AREA ||
-            destination == ZONE_214 && PChar->m_moghouseID == 0)
+        if (zoneutils::IsResidentialArea(destination) && PChar->m_moghouseID == 0)
         {
             PChar->m_moghouseID = PChar->id;
             destination = PChar->loc.prevzone;
@@ -696,23 +695,7 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     {
         if (!PChar->isDead())
             return;
-        // remove weakness on homepoint
-        PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_WEAKNESS);
-        PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_LEVEL_SYNC);
-
-        PChar->health.hp = PChar->GetMaxHP();
-        PChar->health.mp = PChar->GetMaxMP();
-
-        PChar->loc.boundary = 0;
-        PChar->loc.p = PChar->profile.home_point.p;
-        PChar->loc.destination = PChar->profile.home_point.destination;
-
-        PChar->status = STATUS_DISAPPEAR;
-        PChar->animation = ANIMATION_NONE;
-        PChar->updatemask |= UPDATE_HP;
-
-        PChar->clearPacketList();
-        charutils::SendToZone(PChar, 2, zoneutils::GetZoneIPP(PChar->loc.destination));
+        charutils::HomePoint(PChar);
     }
     break;
     case 0x0C: // assist
