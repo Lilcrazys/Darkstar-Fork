@@ -22,6 +22,11 @@ end;
 function onZoneIn(player,prevZone)
     local cs = -1;
 
+    if (prevZone ~= 182) then
+        -- Player left WoE, wipe score..
+        player:setVar("WoE_Score", 0);
+    end
+
     return cs;
 end;
 
