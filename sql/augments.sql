@@ -2317,15 +2317,17 @@ INSERT INTO `augments` VALUES (2038, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (2039, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (2040, 0, 0, 0, 0, 0);
 INSERT INTO `augments` VALUES (2041, 0, 0, 0, 0, 0);
-INSERT INTO `augments` VALUES (2042, 0, 0, 0, 0, 0);
-INSERT INTO `augments` VALUES (2043, 0, 0, 0, 0, 0);
-INSERT INTO `augments` VALUES (2044, 0, 0, 0, 0, 0);
-INSERT INTO `augments` VALUES (2045, 0, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 -- Custom!
 -- Pair with Augment 2047 !!
 -- --------------------------------------------------------
+
+INSERT INTO `augments` VALUES (2042, 0, 4094, 1, 0, 0); -- EFFECTIVE_ILV: Set ItemLevel of item to this Mod Value
+INSERT INTO `augments` VALUES (2043, 0, 4094, 2, 0, 0); -- EFFECTIVE_ILV: Set ItemLevel of item to this Mod Value (count by 2)
+INSERT INTO `augments` VALUES (2044, 0, 4095, 1, 0, 0); -- REQUIRED_LV: Increase the items LV requirement by this much
+INSERT INTO `augments` VALUES (2045, 0, 4095, 2, 0, 0); -- REQUIRED_LV: Increase the items LV requirement by this much (count by 2)
+
 -- Aug 2046 April fools event 2016 reward (granted with aug power of 2, so double what you see here):
 INSERT INTO `augments` VALUES (2046, 0, 4093, 15, 0, 0); -- (Hidden) Resist Doom+15
 INSERT INTO `augments` VALUES (2046, 0, 4092, 16, 0, 0); -- (Hidden) Resist Terror+16
