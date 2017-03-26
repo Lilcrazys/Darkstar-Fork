@@ -44,8 +44,7 @@ REPLACE INTO `item_armor` VALUES (20802,'blurred_axe',99,119,2098561,76,0,0,3,0)
 REPLACE INTO `item_armor` VALUES (20803,'blurred_axe_+1',99,119,2098561,76,0,0,3,0);
 REPLACE INTO `item_armor` VALUES (20815,'budliqa_+1',99,118,2097537,90,0,0,3,0);
 REPLACE INTO `item_armor` VALUES (20817,'eminent_axe',99,117,2098561,82,0,0,3,0);
-REPLACE INTO `item_armor` VALUES (20849,'blurred_cleaver',99,119,2097281,94,0,0,1,0);
-REPLACE INTO `item_armor` VALUES (20850,'blurred_cleaver_+1',99,119,2097281,94,0,0,1,0);
+
 REPLACE INTO `item_armor` VALUES (20865,'eminent_voulge',99,117,2097281,365,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (20896,'blurred_scythe',99,119,385,194,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (20897,'blurred_scythe_+1',99,119,385,194,0,0,1,0);
@@ -54,8 +53,7 @@ REPLACE INTO `item_armor` VALUES (20919,'lacryma_sickle',99,117,128,366,0,0,1,0)
 REPLACE INTO `item_armor` VALUES (20920,'lacryma_sickle_+1',99,118,128,366,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (20950,'terebrokath',99,117,8192,210,0,0,1,0);
 REPLACE INTO `item_armor` VALUES (20951,'terebrokath_+1',99,118,8192,210,0,0,1,0);
-REPLACE INTO `item_armor` VALUES (20984,'kujaku',99,119,4096,367,0,0,3,0);
-REPLACE INTO `item_armor` VALUES (20985,'kujaku_+1',99,119,4096,367,0,0,3,0);
+
 REPLACE INTO `item_armor` VALUES (20986,'achiuchikapu',99,119,4096,727,0,0,3,0);
 REPLACE INTO `item_armor` VALUES (20998,'kaitsuburi',99,117,4096,394,0,0,3,0);
 
