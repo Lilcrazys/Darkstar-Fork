@@ -10,8 +10,6 @@ require("scripts/globals/utils");
 -- onMobInitialize
 ----------------------------------
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_2HOUR_MULTI, 1);
-
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,100);
