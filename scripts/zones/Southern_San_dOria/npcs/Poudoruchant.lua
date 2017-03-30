@@ -96,7 +96,7 @@ function onTrade(player,npc,trade)
 		};
 		showShop(player, STATIC, stock_Swimsuits);
 	else
-		player:SpoofChatPlayer( "I don't have special deals to show you right now.", MESSAGE_SAY, npc:getID() );
+		player:SpoofMsg("I don't have special deals to show you right now. ", npc, MESSAGE_SAY, nil);
 	end
 end;
 
@@ -229,7 +229,7 @@ function onTrigger(player,npc)
 			-- 28563,  25000,    -- Vocation Ring
 		};
 		showShop(player, STATIC, stock_7);
-		player:SpoofChatPlayer( "For a small deposit of a 1 gil trade, I can show you our fine selection of hand crafted statues.", MESSAGE_SAY, npc:getID() );
+		player:SpoofMsg("For a small deposit of a 1 gil trade, I can show you our fine selection of hand crafted statues. ", npc, MESSAGE_SAY, nil);
 	elseif ((month == 6 and day >= 29) or (month == 7 and day <= 13)) then -- Celestial Nights ~ Jun 29 - Jul 13
 		local stock_8 =
 		{
@@ -265,7 +265,7 @@ function onTrigger(player,npc)
 			3676,    9999,    -- Celestial Globe
 		};
 		showShop(player, STATIC, stock_9);
-		player:SpoofChatPlayer( "For a small deposit of a 1 gil trade, I can show you our fine selection of summer swim-wear.", MESSAGE_SAY, npc:getID() );
+		player:SpoofMsg("For a small deposit of a 1 gil trade, I can show you our fine selection of summer swim-wear. ", npc, MESSAGE_SAY, nil);
 	elseif ((month == 9 and day >= 28) or (month == 10 and day <= 12)) then -- Blazing Buffaloes ~ Sep 28 - Oct 12
 		local stock_10 =
 		{
@@ -307,7 +307,7 @@ function onTrigger(player,npc)
 		};
 		showShop(player, STATIC, stock_11);
 	else
-		player:SpoofChatPlayer( "Sorry, I have no wares at this time. We are currently preparing new stock for the next holiday's festivities.", MESSAGE_SAY, npc:getID() );
+		player:SpoofMsg("Sorry, I have no wares at this time. We are currently preparing new stock for the next holiday's festivities. ", npc, MESSAGE_SAY, nil);
 	end
 end;
 

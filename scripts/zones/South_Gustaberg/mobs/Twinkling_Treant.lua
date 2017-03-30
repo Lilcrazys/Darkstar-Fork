@@ -57,7 +57,7 @@ function onMobFight(mob, target)
         for hey, dude in pairs(letsPartaaaay) do
             local distance = dude:checkDistance(mob);
             if (distance <= 30 and dude:isPC()) then
-                dude:SpoofChatPlayer("Gifts and decorations scatter as the Twinkling Treant shakes!", MESSAGE_ECHO, nil);
+                dude:SpoofMsg("Gifts and decorations scatter as the Twinkling Treant shakes! ", mob, MESSAGE_ECHO, nil);
             end
         end
     end
@@ -88,7 +88,7 @@ function onCriticalHit(mob)
                 sponges:addMP(sponges:getMaxMP() * 0.11);
                 sponges:addTP(255);
                 sponges:injectActionPacket(6, 599, 0, 0, 0);
-                sponges:SpoofChatPlayer("Twinkling Starlights scatter as the Twinkling Treant shakes!", MESSAGE_ECHO, nil);
+                sponges:SpoofMsg("Twinkling Starlights scatter as the Twinkling Treant shakes! ", mob, MESSAGE_ECHO, nil);
             end
         end
     end

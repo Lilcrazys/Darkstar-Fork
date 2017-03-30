@@ -4,8 +4,8 @@
 -----------------------------------
 package.loaded["scripts/zones/Rolanberry_Fields_[S]/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Rolanberry_Fields_[S]/TextIDs");
+require("scripts/globals/spoofchat");
 
 local CrabLoot;
 
@@ -23,8 +23,8 @@ end;
 function onTrigger(player,npc)
     if (player:getLocalVar("gotCrabLoot") == 0) then
         if (player:hasItem(20713)) then
-            CrabLoot = 17748; -- 49 in 50 chance of Ibushi Shinai if already have an Excalipoor.
-            if (math.random(1,50) == 5) then -- 1 in 50 chance of a 2nd Excalipoor.
+            CrabLoot = 17748; -- 39 in 40 chance of Ibushi Shinai if already have an Excalipoor.
+            if (math.random(1,40) == 5) then -- 1 in 40  (2.5%) chance of a 2nd Excalipoor.
                 CrabLoot = 20713;
             end
         else
@@ -63,8 +63,8 @@ function onEventFinish(player,csid,option)
             player:addItem(CrabLoot, 1);
             -- One goody per Box Per Person!
             player:setLocalVar("alreadyGotLoot", 1);
-            --  Technically that can zone this var off, but box isn't up that long.
-            player:SpoofChatPlayer("Found a legendary sword!..Or so you thought..", MESSAGE_EMOTION, nil)
+            --  Technically they can zone this var off, but box isn't up that long.
+            player:SpoofMsg("Found a legendary sword!..Or so you thought.. ", nil, MESSAGE_EMOTION, nil)
             player:messageSpecial(ITEM_OBTAINED, CrabLoot);
         end
     end

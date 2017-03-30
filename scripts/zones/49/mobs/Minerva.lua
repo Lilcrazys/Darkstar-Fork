@@ -73,8 +73,8 @@ function onMobEngaged(mob, target)
         target:ChangeMusic(3, 187); -- Party Battle Music
     end
 
-    mob:SpoofChatParty("The heart of the crystal..This power can sustain even gods..", MESSAGE_SAY);
-    mob:SpoofChatParty("It is a pity, but I must end your world for the good of mine.", MESSAGE_SAY);
+    target:SpoofMsg("The heart of the crystal..This power can sustain even gods.. ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+    target:SpoofMsg("It is a pity, but I must end your world for the good of mine. ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
 end;
 
 -----------------------------------
@@ -105,11 +105,11 @@ function onMobFight(mob, target)
 
     if (mob:getHPP() <= 11) then -- Tabula Rasa and Invincible together!
         if (Minerva_2hr_Used == 4) then
-            mob:SpoofChatParty("No! I will not fall so close to the power I sought!", MESSAGE_SAY);
+            target:SpoofMsg("No! I will not fall so close to the power I sought! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(694); -- Do Invincible!
             mob:setLocalVar("Minerva_2hr", 5);
         elseif (Minerva_2hr_Used == 5 and Ambrosia == 0) then
-            mob:SpoofChatParty("Olympus hear me! Grant me the last of our power for this task!", MESSAGE_SAY);
+            target:SpoofMsg("Olympus hear me! Grant me the last of our power for this task! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(1487);
             mob:setLocalVar("Minerva_Ambrosia", 1);
         elseif (Minerva_2hr_Used == 5 and Ambrosia == 1) then
@@ -118,23 +118,23 @@ function onMobFight(mob, target)
         end
     elseif (mob:getHPP() <= 40) then -- 3rd Chainspell time!
         if (Minerva_2hr_Used == 3) then
-            mob:SpoofChatParty("Your dimension must collapse that mine may be spared!", MESSAGE_SAY);
+            target:SpoofMsg("Your dimension must collapse that mine may be spared! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(692); -- Do 3rd Chainspell!
             mob:setLocalVar("Minerva_2hr", 4);
         end
     elseif (mob:getHPP() <= 60) then -- Manafont and Chainspell together!
         if (Minerva_2hr_Used == 1) then
             mob:useMobAbility(691); -- Do Manafont!
-            mob:SpoofChatParty("You are the one who defeated Mars?", MESSAGE_SAY);
+            target:SpoofMsg("You are the one who defeated Mars? ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:setLocalVar("Minerva_2hr", 2);
         elseif (Minerva_2hr_Used == 2) then
-            mob:SpoofChatParty("He was but a brute, I am the goddess of wisdom and strategy!", MESSAGE_SAY);
+            target:SpoofMsg("He was but a brute, I am the goddess of wisdom and strategy! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
             mob:useMobAbility(692); -- Do 2nd Chainspell!
             mob:setLocalVar("Minerva_2hr", 3);
         end
     elseif (mob:getHPP() <= 80) then -- 1st Chainspell time!
         if (Minerva_2hr_Used == 0) then
-            mob:SpoofChatParty("For Olympus!", MESSAGE_SAY);
+            target:SpoofMsg("For Olympus! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
             mob:useMobAbility(692); -- Do 1st Chainspell!
             mob:setLocalVar("Minerva_2hr", 1);
         end
@@ -297,7 +297,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
+    -- player:SpoofMsg("victory message here ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
     player:ChangeMusic(0, 0); -- Background Music (Day time, 7:00 -> 18:00)
     player:ChangeMusic(1, 0); -- Background Music (Night time, 18:00 -> 7:00)
     player:ChangeMusic(2, 187); -- SoloBattle Music

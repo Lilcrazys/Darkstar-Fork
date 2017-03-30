@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Port Jeuno
--- NPC:  Custom Limbus Mog
+--  NPC: Custom Limbus Mog
 -----------------------------------
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
 -----------------------------------
@@ -20,8 +20,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer("The dev team forgot me kupo.. ", MESSAGE_SAY, npc:getID());
-    player:SpoofChatPlayer("Whats a Mog to do now? <Sigh> ", MESSAGE_SAY, npc:getID());
+    player:SpoofMsg("The dev team forgot me kupo.. ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("Whats a Mog to do now? <Sigh> ", npc, MESSAGE_SAY, nil);
 end;
 
 -----------------------------------

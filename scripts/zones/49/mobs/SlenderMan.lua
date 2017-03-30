@@ -50,7 +50,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    mob:SpoofChatParty("I'll swallow your soul!", MESSAGE_SAY)
+    target:SpoofMsg("I'll swallow your soul! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
 end;
 
 -----------------------------------
@@ -66,7 +66,7 @@ function onMobFight(mob, target)
         mob:setLocalVar("Slendy_2hr", 0);
         mob:setHP(0); -- Auto Die
     elseif (mob:getHPP() < 9 and Slendy_2hr_Used == 2) then
-        mob:SpoofChatParty("You can't kill me!", MESSAGE_SAY);
+        target:SpoofMsg("You can't kill me! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
         mob:useMobAbility(731); -- Do Mijin Gakure!
         mob:setLocalVar("Slendy_2hr", 3);
     elseif (mob:getHPP() <= 25 and Slendy_2hr_Used == 1) then
@@ -111,7 +111,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    -- mob:SpoofChatParty("victory message here", MESSAGE_SAY)
+    -- player:SpoofMsg("victory message here ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
 end;
 
 -----------------------------------
@@ -120,17 +120,15 @@ end;
 
 function onAdditionalEffect(mob,target,damage)
     local RAND = math.random(1,100);
-    if (RAND < 33) then -- 33% chance of AddEffect proc
-        local dmg = damage * 0.33; -- 33% of his damage taken becomes his base AddEffect power.
+    if (RAND <= 33) then -- 33% chance of AddEffect proc
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
-        dmg = dmg + (INT_diff * 0.25); -- 25% INT modifier
+        local dmg = 6 + utils.clamp(INT_diff, 0, 99);
         local params = {};
         params.bonusmab = 0;
         params.includemab = false;
         dmg = addBonusesAbility(mob, ELE_FIRE, target, dmg, params);
         dmg = dmg*applyResistanceAddEffect(mob, target, ELE_FIRE, 0);
         dmg = adjustForTarget(target, damage, ele);
-        dmg = utils.clamp(dmg, 6, 66); -- minimum 6, maximum 66.
         dmg = finalMagicNonSpellAdjustments(mob, target, ELE_FIRE, damage);
 
         return SUBEFFECT_FIRE_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
@@ -145,7 +143,7 @@ end;
 
 function onSpikesDamage(mob,target,damage)
     local RAND = math.random(1,100);
-    if (RAND < 33) then -- 33% chance of Spikes proc
+    if (RAND <= 18) then -- 18% chance of Spikes proc
         local duration = 5;
         target:addStatusEffect(EFFECT_TERROR,1,0,duration);
         return SUBEFFECT_CURSE_SPIKES,0,EFFECT_TERROR; -- Intentionally incorrect animation with no message.

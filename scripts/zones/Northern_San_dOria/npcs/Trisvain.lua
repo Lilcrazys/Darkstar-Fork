@@ -45,9 +45,9 @@ end;
 -----------------------------------
 function onTrigger(player,npc)
     if (player:getMainLvl() < 75) then
-        player:SpoofChatPlayer("This is no place for the weak. Leave at once. ", MESSAGE_SAY, npc:getID());
+        player:SpoofMsg("This is no place for the weak. Leave at once. ", npc, MESSAGE_SAY, nil);
     elseif (player:getMainLvl() < 90) then
-        player:SpoofChatPlayer("Strength is not everything. I find your lack of experience disturbing. ", MESSAGE_SAY, npc:getID());
+        player:SpoofMsg("Strength is not everything. I find your lack of experience disturbing. ", npc, MESSAGE_SAY, nil);
     else
         local MERITS = player:getMeritCount();
         local unknown1 = 0; -- Dummied until understood
@@ -168,7 +168,7 @@ function onEventFinish(player,csid,option)
 
         if (keyItem ~= nil and cost ~= nil) then
             if (player:hasKeyItem(keyItem)) then
-                player:SpoofChatPlayer("Trisvain : You already posses that Phantom Gem. ", MESSAGE_SYS_SAY, nil);
+                player:SpoofMsg("Trisvain : You already posses that Phantom Gem. ", nil, MESSAGE_SYS_SAY, nil);
             else
                 local meritCount = player:getMeritCount();
                 if (meritCount >= cost) then
@@ -176,7 +176,7 @@ function onEventFinish(player,csid,option)
                     player:addKeyItem(keyItem);
                     player:messageSpecial(KEYITEM_OBTAINED, keyItem);
                 else
-                    player:SpoofChatPlayer("Trisvain : You haven't enough. I can do nothing with that amount. ", MESSAGE_SYS_SAY, nil);
+                    player:SpoofMsg("Trisvain : You haven't enough. I can do nothing with that amount. ", nil, MESSAGE_SYS_SAY, nil);
                 end
             end
         end

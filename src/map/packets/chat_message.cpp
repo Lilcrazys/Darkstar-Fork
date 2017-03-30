@@ -53,7 +53,7 @@ CChatMessagePacket::CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE Mes
     memcpy(data + (0x18), buff, buffSize);
 }
 
-CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_MESSAGE_TYPE MessageType, int8* buff)
+CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE MessageType, int8* buff)
 {
     int32 buffSize = (strlen(buff) > 236) ? 236 : strlen(buff);
     this->type = 0x17;
@@ -61,8 +61,10 @@ CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PChar, int8* name, CHAT_ME
     //this->size = dsp_min((32 + (buffSize + 1) + ((4 - ((buffSize + 1) % 4)) % 4)) / 2, 128);
 
     ref<uint8>(0x04) = MessageType;
-    ref<uint16>(0x06) = PChar->getZone();
+    ref<uint16>(0x06) = PEntity->getZone();
 
-    memcpy(data + (0x08), name, size);
+    auto speakerName = (PEntity->objtype != TYPE_PC ? PEntity->GetCleanedName() : PEntity->GetName());
+
+    memcpy(data + (0x08), speakerName, PEntity->name.size());
     memcpy(data + (0x18), buff, buffSize);
 }

@@ -54,6 +54,11 @@ function onMobInitialize(mob)
             mob:AnimationSub(1);
         end)
     end)
+
+    -- addMod
+    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_DEF,100);
+    mob:addMod(MOD_ATT,75);
 end;
 
 -----------------------------------
@@ -62,6 +67,7 @@ end;
 
 function onMobSpawn(mob)
     mob:AnimationSub(1);
+    --[[
     mob:setMobMod(MOBMOD_SCRIPTED_2HOUR,1);
     
     -- drops either vice or deed
@@ -72,6 +78,17 @@ function onMobSpawn(mob)
         SetDropRate(4397,1902,0);
         SetDropRate(4397,1854,1000); -- Deed of Moderation
     end
+    ]]
+
+    -- setMod
+    mob:setMod(MOD_REGEN, 150);
+    mob:setMod(MOD_REFRESH, 100);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_HASTE_ABILITY, 20);
+    mob:setMod(MOD_UFASTCAST, 75);
+    mob:setMod(MOD_MACC,925);
+    mob:setMod(MOD_MATT,100);
+    mob:setMod(MOD_DOUBLE_ATTACK, 15);
 end;
  
 -----------------------------------
@@ -87,7 +104,7 @@ end;
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob)
+function onMobFight(mob, target)
 
     -- blood weapon (uses every 2 minutes, lasts 30 seconds)
     if (os.time() > mob:getLocalVar("bloodTime")) then
@@ -110,6 +127,13 @@ end;
 -----------------------------------
  
 function onMobDeath(mob, player, isKiller)
+    if (isKiller == true) then
+        if (math.random(1,100) <= 80) then
+            player:addTreasure(1854, mob); -- Deed of Moderation
+        else
+            player:addTreasure(1902, mob); -- Vice of Avarice (Altruistic Cape)
+        end
+    end
 end;
 
 -----------------------------------

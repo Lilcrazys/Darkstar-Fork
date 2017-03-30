@@ -13,7 +13,8 @@ require("scripts/globals/spoofchat");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    player:SpoofChatPlayer("Are you trying to give me gifts? I WILL NOT SUCCUMB TO BRIBERY! ", MESSAGE_SAY, npc:getID());
+    local msgText = string.format("Are you trying to give me gifts %s? I WILL NOT SUCCUMB TO BRIBERY! ", player:getName());
+    player:SpoofMsg(msgText, npc, MESSAGE_SAY, MESSAGE_SAY);
     if (player:getLocalVar("magianMasterBribery") >= 3) then
         player:setLocalVar("magianMasterBribery", 0);
         player:costume(2239);
@@ -28,7 +29,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofChatPlayer("I have to keep an eye on these 3, especially CJ! He's always slacking off! ", MESSAGE_SAY, npc:getID());
+    player:SpoofMsg("I have to keep an eye on these 3, especially CJ! He's always slacking off! ", npc, MESSAGE_SAY, nil);
 end;
 
 -----------------------------------

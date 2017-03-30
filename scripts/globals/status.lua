@@ -1392,8 +1392,8 @@ MOD_RACCP             = 3967 -- used them for custom things.. ~Teo
 -- 4001-4091 available to use
 MOD_TERRORRES                 = 4092 -- Resist Terror
 MOD_DOOMRES                   = 4093 -- Resist Doom
--- MOD_EFFECTIVE_LV              = 4094 -- Only highest mod value item applies: Treat players LV as this number instead of actual LV
--- MOD_REQUIRED_LV               = 4095 -- Apply to item, not player: Increase the items LV requirement by this much
+MOD_ITEM_LEVEL                = 4094 -- Apply to item (via augment), not player: Set ItemLevel of item to this Mod Value
+MOD_REQUIRED_LV               = 4095 -- Apply to item (via augment), not player: Increase the items LV requirement by this much
 -- End of LegionDS Custom MOD
 
 ------------------------------------

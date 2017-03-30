@@ -18,7 +18,7 @@ function onTrade(player,npc,trade)
         player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
     else
         if (player:getCurrency("bayld") < 5000) then
-            player:SpoofChatPlayer("Not enough Bayld. 5000 is required.", MESSAGE_ECHO, nil);
+            player:SpoofMsg("Not enough Bayld. 5000 is required. ", npc, MESSAGE_ECHO, nil);
         else
             local PRIZE = 0;
     ---------------------------------------Empy 119----------------------------------------------------------
@@ -68,13 +68,13 @@ function onTrade(player,npc,trade)
                 PRIZE = 27416
     ----    ------------------------RDM-------------------------------------
             elseif (trade:hasItemQty(4067, 5) and trade:hasItemQty(26748,1) and trade:getItemCount() == 6) then -- head
-                PRIZE = 26749                                                                                   
+                PRIZE = 26749
             elseif (trade:hasItemQty(4068, 5) and trade:hasItemQty(26906,1) and trade:getItemCount() == 6) then -- body
-                PRIZE = 26907                                                                                   
+                PRIZE = 26907
             elseif (trade:hasItemQty(4066, 5) and trade:hasItemQty(27060,1) and trade:getItemCount() == 6) then -- hands
-                PRIZE = 27061                                                                                   
+                PRIZE = 27061
             elseif (trade:hasItemQty(4065, 5) and trade:hasItemQty(27245,1) and trade:getItemCount() == 6) then -- legs
-                PRIZE = 27246                                                                                   
+                PRIZE = 27246
             elseif (trade:hasItemQty(4064, 5) and trade:hasItemQty(27419,1) and trade:getItemCount() == 6) then -- feet
                 PRIZE = 27420
     ----    ------------------------BLM-------------------------------------
@@ -715,7 +715,7 @@ function onTrade(player,npc,trade)
                 player:messageSpecial(ITEM_OBTAINED, PRIZE);
             end
         end
-    end    
+    end
 end;
 
 -----------------------------------
@@ -728,7 +728,7 @@ function onTrigger(player,npc)
 		player:startEvent(10086);
 	else
 		-- player:startEvent(0x00A8);
-        player:SpoofChatPlayer( (string.format( "Hello %s!, I'm here to help you reforge your Empyrian Armor", player:getName() )), MESSAGE_SAY, npc:getID() );
+        player:SpoofMsg((string.format( "Hello %s!, I'm here to help you reforge your Empyrian Armor", player:getName() )), npc, MESSAGE_SAY, nil);
 	end
 end;
 

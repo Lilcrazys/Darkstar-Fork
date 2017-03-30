@@ -623,11 +623,9 @@ public:
     int32 disengage(lua_State* L);
 
     // Custom
-    int32 SpoofChatPlayer(lua_State* L);  // Sends a faked chat packet from any object to the players chat log.
-    int32 SpoofChatParty(lua_State* L);   // Sends a faked chat packet from a Mob to a party/alliance in battle.
-    int32 SpoofChatServer(lua_State* L);  // Sends a faked chat packet to the entire server.
-    int32 sjBoost(lua_State*);            // Enhances a player's max subjob level temporarily
-    int32 addLSpearl(lua_State* L);       // Adds LS to player
+    int32 SpoofMsg(lua_State* L);       // Sends a faked chat packet
+    int32 sjBoost(lua_State*);          // Enhances a player's max subjob level temporarily
+    int32 addLSpearl(lua_State* L);     // Adds LS to player
 
     // Knockback Implementation (c) 2016 atom0s
     int32 knockback(lua_State* L);
