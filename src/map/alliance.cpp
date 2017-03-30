@@ -160,6 +160,11 @@ void CAlliance::delParty(CParty* party)
             party->m_PAlliance->partyList.erase(partyList.begin() + i);
     }
 
+    for (uint8 i = 0; i < party->m_PAlliance->partyList.size(); ++i)
+    {
+        party->m_PAlliance->partyList.at(i)->ReloadParty();
+    }
+
     party->m_PAlliance = nullptr;
     party->SetPartyNumber(0);
 
@@ -256,8 +261,9 @@ void CAlliance::addParty(uint32 partyid)
         }
     }
     Sql_Query(SqlHandle, "UPDATE accounts_parties SET allianceid = %u, partyflag = partyflag | %d WHERE partyid = %u;", m_AllianceID, newparty, partyid);
-    uint8 data[4] {};
+    uint8 data[8] {};
 	WBUFL(data, 0) = m_AllianceID;
+    WBUFL(data, 4) = partyid;
     message::send(MSG_PT_RELOAD, data, sizeof data, nullptr);
 }
 

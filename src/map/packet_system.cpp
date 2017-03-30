@@ -798,10 +798,32 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     break;
     case 0x15: break; // ballista - quarry
     case 0x16: break; // ballista - sprint
-    case 0x18: // /blockaid
+    case 0x18: // blockaid
     {
-        // Blockaid is currently inactive
-        PChar->pushPacket(new CMessageSystemPacket(0, 0, 224));
+        if (!PChar->StatusEffectContainer->HasStatusEffect(EFFECT_ALLIED_TAGS))
+        {
+            uint8 type = RBUFB(data, (0x0C));
+
+            if (type == 0x00 && PChar->getBlockingAid()) // /blockaid off
+            {
+                // Blockaid canceled
+                PChar->pushPacket(new CMessageSystemPacket(0, 0, 222));
+                PChar->setBlockingAid(false);
+            }
+            else if (type == 0x01 && !PChar->getBlockingAid()) // /blockaid on
+            {
+                // Blockaid activated
+                PChar->pushPacket(new CMessageSystemPacket(0, 0, 221));
+                PChar->setBlockingAid(true);
+            }
+            else if (type == 0x02) // /blockaid
+            {
+                // Blockaid is currently active/inactive
+                PChar->pushPacket(new CMessageSystemPacket(0, 0, PChar->getBlockingAid() ? 223 : 224));
+            }
+        }
+        else
+            PChar->pushPacket(new CMessageSystemPacket(0, 0, 142));
     }
     break;
     default:
@@ -1000,6 +1022,18 @@ void SmallPacket0x032(map_session_data_t* session, CCharEntity* PChar, CBasicPac
         {
             // If either player is in prison don't allow the trade.
             PChar->pushPacket(new CMessageBasicPacket(PChar, PChar, 0, 0, 316));
+            return;
+        }
+
+        // check /blockaid
+        if (charutils::IsAidBlocked(PChar, PTarget))
+        {
+            ShowDebug(CL_CYAN"%s is blocking trades\n" CL_RESET, PTarget->GetName());
+            // Target is blocking assistance
+            PChar->pushPacket(new CMessageSystemPacket(0, 0, 225));
+            // Interaction was blocked
+            PTarget->pushPacket(new CMessageSystemPacket(0, 0, 226));
+            PChar->pushPacket(new CTradeActionPacket(PTarget, 0x01));
             return;
         }
 
@@ -2880,7 +2914,13 @@ void SmallPacket0x06E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
             CCharEntity* PInvitee = nullptr;
             if (targid != 0)
             {
-                PInvitee = zoneutils::GetCharFromWorld(charid, targid);
+                CBaseEntity* PEntity = PChar->GetEntity(targid, TYPE_PC);
+                if (PEntity && PEntity->id == charid)
+                    PInvitee = (CCharEntity*)PEntity;
+            }
+            else
+            {
+                PInvitee = zoneutils::GetChar(charid);
             }
             if (PInvitee)
             {
@@ -2890,6 +2930,18 @@ void SmallPacket0x06E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                 {
                     ShowDebug(CL_CYAN"%s is dead, in jail, has a pending invite, or is already in a party\n" CL_RESET, PInvitee->GetName());
                     PChar->pushPacket(new CMessageStandardPacket(PChar, 0, 0, 23));
+                    break;
+                }
+                // check /blockaid
+                if (PInvitee->getBlockingAid())
+                {
+                    ShowDebug(CL_CYAN"%s is blocking party invites\n" CL_RESET, PInvitee->GetName());
+                    // Target is blocking assistance
+                    PChar->pushPacket(new CMessageSystemPacket(0, 0, 225));
+                    // Interaction was blocked
+                    PInvitee->pushPacket(new CMessageSystemPacket(0, 0, 226));
+                    // You cannot invite that person at this time.
+                    PChar->pushPacket(new CMessageSystemPacket(0, 0, 23));
                     break;
                 }
                 if (PInvitee->StatusEffectContainer->HasStatusEffect(EFFECT_LEVEL_SYNC))
@@ -2935,7 +2987,13 @@ void SmallPacket0x06E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
             CCharEntity* PInvitee = nullptr;
             if (targid != 0)
             {
-                PInvitee = zoneutils::GetCharFromWorld(charid, targid);
+                CBaseEntity* PEntity = PChar->GetEntity(targid, TYPE_PC);
+                if (PEntity && PEntity->id == charid)
+                    PInvitee = (CCharEntity*)PEntity;
+            }
+            else
+            {
+                PInvitee = zoneutils::GetChar(charid);
             }
             if (PInvitee)
             {
@@ -3089,7 +3147,7 @@ void SmallPacket0x071(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     switch (RBUFB(data, (0x0A)))
     {
     case 0: // party - party leader may remove member of his own party
-        if (PChar->PParty)
+        if (PChar->PParty && PChar->PParty->GetLeader() == PChar)
         {
             CCharEntity* PVictim = (CCharEntity*)(PChar->PParty->GetMemberByName(data[0x0C]));
             if (PVictim)
@@ -3113,11 +3171,27 @@ void SmallPacket0x071(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                         }
                     }
                 }
-                else if (PChar->PParty->GetLeader() != PChar) // not leader, cannot kick others
-                    break;
 
                 PChar->PParty->RemoveMember(PVictim);
                 ShowDebug(CL_CYAN"%s has removed %s from party\n" CL_RESET, PChar->GetName(), PVictim->GetName());
+            }
+            else
+            {
+                char victimName[31]{};
+                Sql_EscapeStringLen(SqlHandle, victimName, data[0x0C], dsp_min(strlen(data[0x0C]), 15));
+                int32 ret = Sql_Query(SqlHandle, "SELECT charid FROM chars WHERE charname = '%s';", victimName);
+                if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) == 1 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+                {
+                    uint32 id = Sql_GetUIntData(SqlHandle, 0);
+                    if (Sql_Query(SqlHandle, "DELETE FROM accounts_parties WHERE partyid = %u AND charid = %u;", PChar->id, id) == SQL_SUCCESS && Sql_AffectedRows(SqlHandle))
+                    {
+                        ShowDebug(CL_CYAN"%s has removed %s from party\n" CL_RESET, PChar->GetName(), data[0x0C]);
+                        uint8 data[8]{};
+                        WBUFL(data, 0) = PChar->PParty->GetPartyID();
+                        WBUFL(data, 4) = id;
+                        message::send(MSG_PT_RELOAD, data, sizeof data, nullptr);
+                    }
+                }
             }
         }
         break;
@@ -3178,6 +3252,29 @@ void SmallPacket0x071(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                         }
                     }
                     break; // we're done, break the for
+                }
+            }
+            if (!PVictim && PChar->PParty->m_PAlliance->getMainParty() == PChar->PParty)
+            {
+                char victimName[31]{};
+                Sql_EscapeStringLen(SqlHandle, victimName, data[0x0C], dsp_min(strlen(data[0x0C]), 15));
+                int32 ret = Sql_Query(SqlHandle, "SELECT charid FROM chars WHERE charname = '%s';", victimName);
+                if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) == 1 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+                {
+                    uint32 id = Sql_GetUIntData(SqlHandle, 0);
+                    ret = Sql_Query(SqlHandle, "SELECT partyid FROM accounts_parties WHERE charid = %u AND allianceid = %u AND partyflag & %d AND partyflag & %d", id, PChar->PParty->m_PAlliance->m_AllianceID, PARTY_LEADER, PARTY_SECOND | PARTY_THIRD);
+                    if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) == 1 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+                    {
+                        if (Sql_Query(SqlHandle, "UPDATE accounts_parties SET allianceid = 0, partyflag = partyflag & ~%d WHERE partyid = %u;", PARTY_SECOND | PARTY_THIRD, id) == SQL_SUCCESS && Sql_AffectedRows(SqlHandle))
+                        {
+                            ShowDebug(CL_CYAN"%s has removed %s party from alliance\n" CL_RESET, PChar->GetName(), data[0x0C]);
+                            uint8 data[8]{};
+                            WBUFL(data, 0) = PChar->PParty->GetPartyID();
+                            WBUFL(data, 4) = id;
+                            message::send(MSG_PT_RELOAD, data, sizeof data, nullptr);
+                        }
+                        
+                    }
                 }
             }
         }

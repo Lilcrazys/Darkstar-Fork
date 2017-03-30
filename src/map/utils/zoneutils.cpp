@@ -247,6 +247,35 @@ CCharEntity* GetChar(uint32 charid)
     return nullptr;
 }
 
+
+CCharEntity* GetCharToUpdate(uint32 primary, uint32 ternary)
+{
+    CCharEntity* PPrimary = nullptr;
+    CCharEntity* PSecondary = nullptr;
+    CCharEntity* PTernary = nullptr;
+    
+    for (auto PZone : g_PZoneList)
+    {
+        PZone.second->ForEachChar([primary, ternary, &PPrimary, &PSecondary, &PTernary](CCharEntity* PChar)
+        {
+            if (!PPrimary)
+            {
+                if (PChar->id == primary)
+                    PPrimary = PChar;
+                else if (PChar->PParty && PChar->PParty->GetPartyID() == primary)
+                    PSecondary = PChar;
+                else if (PChar->id == ternary)
+                    PTernary = PChar;
+            }
+        });
+        if (PPrimary)
+            return PPrimary;
+    }
+    if (PSecondary)
+        return PSecondary;
+            
+    return PTernary;
+}
 /************************************************************************
 *                                                                       *
 *  Загружаем список NPC в указанную зону                                *
@@ -419,7 +448,7 @@ void LoadMOBList()
                 PMob->m_Type = (uint8)Sql_GetIntData(SqlHandle, 22);
                 PMob->m_Immunity = (IMMUNITY)Sql_GetIntData(SqlHandle, 23);
                 PMob->m_EcoSystem = (ECOSYSTEM)Sql_GetIntData(SqlHandle, 24);
-                PMob->m_ModelSize += (uint8)Sql_GetIntData(SqlHandle, 25);
+                PMob->m_ModelSize = (uint8)Sql_GetIntData(SqlHandle, 25);
 
                 PMob->speed = (uint8)Sql_GetIntData(SqlHandle, 26);
                 PMob->speedsub = (uint8)Sql_GetIntData(SqlHandle, 26);

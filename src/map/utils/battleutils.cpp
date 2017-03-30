@@ -3426,9 +3426,9 @@ namespace battleutils
 
             float xoffset = cos(angle) / 2;
             float zoffset = sin(angle) / 2;
-            float maxXpoint = taUserX + xoffset;
+            float maxXpoint = taUserX - xoffset;
             float maxZpoint = taUserZ + zoffset;
-            float minXpoint = taUserX - xoffset;
+            float minXpoint = taUserX + xoffset;
             float minZpoint = taUserZ - zoffset;
             maxSlope = (maxZpoint - mobZ) / (maxXpoint - mobX);
             minSlope = (minZpoint - mobZ) / (minXpoint - mobX);
@@ -3444,31 +3444,23 @@ namespace battleutils
                         CBattleEntity* member = taUser->PParty->m_PAlliance->partyList.at(a)->members.at(i);
                         if (taUser->id != member->id && distance(member->loc.p, PMob->loc.p) <= distance(taUser->loc.p, PMob->loc.p))
                         {
+                            float memberXdif = member->loc.p.x - mobX;
+                            float memberZdif = member->loc.p.z - mobZ;
                             if (zDependent)
                             {
-                                //is member between taUser and PMob on x line?
-                                if ((member->loc.p.x <= taUserX && member->loc.p.x >= mobX) ||
-                                    (member->loc.p.x >= taUserX && member->loc.p.x <= mobX))
+                                if ((memberZdif <= memberXdif * maxSlope) &&
+                                    (memberZdif >= memberXdif * minSlope))
                                 {
-                                    if ((member->loc.p.z - mobZ <= (member->loc.p.x - mobX)*maxSlope) &&
-                                        (member->loc.p.z - mobZ >= (member->loc.p.x - mobX)*minSlope))
-                                    {
-                                        //finally found a TA partner
-                                        return member;
-                                    }
+                                    //finally found a TA partner
+                                    return member;
                                 }
                             }
                             else {
-                                //is member between taUser and PMob on z line?
-                                if ((member->loc.p.z <= taUserZ && member->loc.p.z >= mobZ) ||
-                                    (member->loc.p.z >= taUserZ && member->loc.p.z <= mobZ))
+                                if ((memberXdif <= memberZdif * maxSlope) &&
+                                    (memberXdif >= memberZdif * minSlope))
                                 {
-                                    if ((member->loc.p.x - mobX <= (member->loc.p.z - mobZ)*maxSlope) &&
-                                        (member->loc.p.x - mobX >= (member->loc.p.z - mobZ)*minSlope))
-                                    {
-                                        //finally found a TA partner
-                                        return member;
-                                    }
+                                    //finally found a TA partner
+                                    return member;
                                 }
                             }
                         }
@@ -3481,31 +3473,23 @@ namespace battleutils
                     CBattleEntity* member = taUser->PParty->members.at(i);
                     if (member->id != taUser->id && distance(member->loc.p, PMob->loc.p) <= distance(taUser->loc.p, PMob->loc.p))
                     {
+                        float memberXdif = member->loc.p.x - mobX;
+                        float memberZdif = member->loc.p.z - mobZ;
                         if (zDependent)
                         {
-                            //is member between taUser and PMob on x line?
-                            if ((member->loc.p.x <= taUserX && member->loc.p.x >= mobX) ||
-                                (member->loc.p.x >= taUserX && member->loc.p.x <= mobX))
+                            if ((memberZdif <= memberXdif * maxSlope) &&
+                                (memberZdif >= memberXdif * minSlope))
                             {
-                                if ((member->loc.p.z - mobZ <= (member->loc.p.x - mobX)*maxSlope) &&
-                                    (member->loc.p.z - mobZ >= (member->loc.p.x - mobX)*minSlope))
-                                {
-                                    //finally found a TA partner
-                                    return member;
-                                }
+                                //finally found a TA partner
+                                return member;
                             }
                         }
                         else {
-                            //is member between taUser and PMob on z line?
-                            if ((member->loc.p.z <= taUserZ && member->loc.p.z >= mobZ) ||
-                                (member->loc.p.z >= taUserZ && member->loc.p.z <= mobZ))
+                            if ((memberXdif <= memberZdif * maxSlope) &&
+                                (memberXdif >= memberZdif * minSlope))
                             {
-                                if ((member->loc.p.x - mobX <= (member->loc.p.z - mobZ)*maxSlope) &&
-                                    (member->loc.p.x - mobX >= (member->loc.p.z - mobZ)*minSlope))
-                                {
-                                    //finally found a TA partner
-                                    return member;
-                                }
+                                //finally found a TA partner
+                                return member;
                             }
                         }
                     }
@@ -4535,8 +4519,7 @@ namespace battleutils
             else if (PlayerToAssist->GetBattleTargetID() != 0)
             {
                 // lock on to the new target!
-                auto PTarget {static_cast<CBattleEntity*>(PChar->GetEntity(TargID))};
-                PChar->pushPacket(new CLockOnPacket(PChar, PTarget));
+                PChar->pushPacket(new CLockOnPacket(PChar, PlayerToAssist->GetBattleTarget()));
             }
         }
     }
@@ -4713,7 +4696,7 @@ namespace battleutils
             return false;
         }
 
-        float drawInDistance = (PMob->getMobMod(MOBMOD_DRAW_IN) > 1 ? PMob->getMobMod(MOBMOD_DRAW_IN) : PMob->m_ModelSize * 2);
+        float drawInDistance = (PMob->getMobMod(MOBMOD_DRAW_IN) > 1 ? PMob->getMobMod(MOBMOD_DRAW_IN) : PMob->GetMeleeRange() * 2);
 
         std::function <void(CBattleEntity*)> drawInFunc = [PMob, drawInDistance, nearEntity](CBattleEntity* PMember)
         {
