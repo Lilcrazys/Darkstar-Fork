@@ -1903,7 +1903,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    local msgText = string.format("Hello %s!, I'm here to help you upgrade your AF3, Salvage, Relic, and Empyrean Weapons", player:getName());
+    local msgText = string.format("Hello %s!, I'm here to help you upgrade a selection of Artifact, Relic, Salvage, and Empyrean armor", player:getName());
     player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
 end;
 

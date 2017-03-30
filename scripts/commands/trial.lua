@@ -28,6 +28,13 @@ function onTrigger(player,trialType)
         return;
     end
 
+    // Handle case sensitivity and any possible nil comparisons..
+    if (trialType == nil) then
+        trialType = "all";
+    else
+        trialType = string.lower(trialType);
+    end
+
     if (relicTrial > 0 and (trialType ~= "mythic" and trialType ~= "empyrean")) then
         player:PrintToPlayer(string.format("Relic trial ID : %d", relicTrial));
         player:PrintToPlayer(string.format("Completion status : %d", player:getVar("cTrialComplete[relic]")));
