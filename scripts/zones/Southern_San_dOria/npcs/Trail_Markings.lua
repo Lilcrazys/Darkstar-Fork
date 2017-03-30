@@ -17,7 +17,7 @@ require("scripts/zones/Southern_San_dOria/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end;
+end; 
 
 -----------------------------------
 -- onTrigger Action
@@ -41,7 +41,7 @@ function onTrigger(player,npc)
         if (checkFirstDyna(player,1)) then  -- First Dyna-San d'oria => CS
             firstDyna = 1;
         end
-
+        
         if (player:getMainLvl() < DYNA_LEVEL_MIN) then
             player:messageSpecial(PLAYERS_HAVE_NOT_REACHED_LEVEL,DYNA_LEVEL_MIN);
         elseif ((dynaWaitxDay + (BETWEEN_2DYNA_WAIT_TIME * 24 * 60 * 60)) < realDay or (player:getVar("DynamisID") == dynaUniqueID and dynaUniqueID > 0)) then
@@ -53,7 +53,7 @@ function onTrigger(player,npc)
     else
         player:messageSpecial(UNUSUAL_ARRANGEMENT_BRANCHES);
     end
-
+    
 end;
 
 -----------------------------------
@@ -72,7 +72,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("finishRESULT: %u",option);
-
+    
     if (csid == 0x02AE) then
         player:addKeyItem(VIAL_OF_SHROUDED_SAND);
         player:messageSpecial(KEYITEM_OBTAINED,VIAL_OF_SHROUDED_SAND);

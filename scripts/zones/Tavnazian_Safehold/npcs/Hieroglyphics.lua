@@ -18,7 +18,7 @@ require("scripts/zones/Tavnazian_Safehold/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end;
+end; 
 
 -----------------------------------
 -- onTrigger Action
@@ -46,9 +46,9 @@ function onTrigger(player,npc)
             player:messageSpecial(YOU_CANNOT_ENTER_DYNAMIS,dayRemaining,10);
         end
     else
-        player:messageSpecial(MYSTERIOUS_VOICE);
+        player:messageSpecial(MYSTERIOUS_VOICE); 
     end
-
+    
 end;
 
 -----------------------------------
@@ -67,7 +67,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("finishRESULT: %u",option);
-
+    
     if (csid == 0x0266) then
         if (checkFirstDyna(player,10)) then
             player:setVar("Dynamis_Status",bit.bor(player:getVar("Dynamis_Status"),1024));

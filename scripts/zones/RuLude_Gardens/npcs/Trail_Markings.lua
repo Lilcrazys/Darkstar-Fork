@@ -17,7 +17,7 @@ require("scripts/zones/RuLude_Gardens/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end;
+end; 
 
 -----------------------------------
 -- onTrigger Action
@@ -27,7 +27,7 @@ function onTrigger(player,npc)
     player:setVar("dynaWaitxDay", 0); -- Temp
     player:PrintToPlayer("Dual Boxing here will crash the server!");
     player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
-
+    
     if bit.band(player:getVar("Dynamis_Status"),1) == 1 then
         player:startEvent(0x2720); -- cs with Cornelia
     elseif (player:getVar("DynaJeuno_Win") == 1) then
@@ -41,7 +41,7 @@ function onTrigger(player,npc)
         if (checkFirstDyna(player,4)) then  -- First Dyna-Jeuno => CS
             firstDyna = 1;
         end
-
+        
         if (player:getMainLvl() < DYNA_LEVEL_MIN) then
             player:messageSpecial(PLAYERS_HAVE_NOT_REACHED_LEVEL,DYNA_LEVEL_MIN);
         elseif ((dynaWaitxDay + (BETWEEN_2DYNA_WAIT_TIME * 24 * 60 * 60)) < realDay or (player:getVar("DynamisID") == dynaUniqueID and dynaUniqueID > 0)) then
@@ -53,7 +53,7 @@ function onTrigger(player,npc)
     else
         player:messageSpecial(UNUSUAL_ARRANGEMENT_LEAVES);
     end
-
+    
 end;
 
 -----------------------------------
