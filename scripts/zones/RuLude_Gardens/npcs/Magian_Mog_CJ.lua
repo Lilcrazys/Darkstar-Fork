@@ -81,7 +81,6 @@ function onTrade(player,npc,trade)
     end
 end;
 
-
 -----------------------------------
 -- onTrigger Action
 -----------------------------------

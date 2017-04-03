@@ -64,7 +64,7 @@ function onTrade(player,npc,trade)
         cTrialEnd(player, "relic");
 
     -- Cancel a trial
-    elseif (trade:hasItemQty(2184,1) and COUNT == 1 and cTrial > 0) then
+    elseif (trade:hasItemQty(2184,1) and itemCount == 1 and cTrial > 0) then
         player:setVar("cTrialItem[relic]", 0);
         player:setVar("cTrialCount[relic]", 0);
         player:tradeComplete();
@@ -80,7 +80,6 @@ function onTrade(player,npc,trade)
         end
     end
 end;
-
 
 -----------------------------------
 -- onTrigger Action
