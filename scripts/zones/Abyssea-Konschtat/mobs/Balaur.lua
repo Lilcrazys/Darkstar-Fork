@@ -1,14 +1,14 @@
 -----------------------------------
 --  Area: Abyssea - Konschtat (15)
 --   Mob: Balaur
+-- TODO: When its HP is under 50%, Balaur has a chance to gain
+-- a spikes effect after using Breath attacks (matches element of breath)
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Abyssea-Konschtat/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize
@@ -35,21 +35,20 @@ end;
 -- onMobEngaged
 -----------------------------------
 
-function onMobEngaged(mob,target)
+function onMobEngaged(mob, target)
 end;
 
 -----------------------------------
 -- onMobFight
 -----------------------------------
 
-function onMobFight(mob,target)
-    -- Uncertain of threshold. Going with 50% for now.
-    -- (possibly varies, perhaps is simply lower HP = greater cast chance?)
-    if (mob:getHPP() <=50) then
-        mob:setMobMod(MOBMOD_SKILL_LIST, 4003);
+function onMobFight(mob, target)
+    -- Uses different upgraded breath attack starting at 50% hp.
+    if (mob:getHPP() <= 50) then
+        mob:setMobMod(MOBMOD_SKILL_LIST, 790);
     else
-        -- I'm assuming that if it heals up, it goes back to the other spell list.
-        mob:setMobMod(MOBMOD_SKILL_LIST, 4004);
+        -- I'm assuming that if it heals up, it goes back to the other skill list.
+        mob:setMobMod(MOBMOD_SKILL_LIST, 791);
         -- This 'else' can be removed if that isn't the case, and a localVar added so it only execs once.
     end
 end;
