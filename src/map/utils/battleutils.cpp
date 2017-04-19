@@ -1086,6 +1086,10 @@ namespace battleutils
         else if (PAttacker->objtype == TYPE_MOB && ((CMobEntity*)PAttacker)->getMobMod(MOBMOD_ADD_EFFECT) > 0)
         {
             luautils::OnAdditionalEffect(PAttacker, PDefender, weapon, Action, finaldamage);
+            if (Action->addEffectMessage == 163 && Action->addEffectParam < 0)
+            {
+                Action->addEffectMessage = 384;
+            }
         }
         else
         {
