@@ -16,8 +16,6 @@
 REPLACE INTO `mob_pools` VALUES (595,'Cactrot_Rapido','Cactrot_Rapido',212,0x0000750100000000000000000000000000000000,2,2,7,360,100,0,0,0,1,34,15,32,2925,157,0,0,0,1,0,212); -- Fix Rapido not defending itself -_- DSP idiocy.
 
 
--- ABOVE to be deleted once DSP merges Abyssea changes
-
 -- Gorger Fix to be sent into DSP once TOAU lock lifts
 REPLACE INTO `mob_pools` VALUES (1768,'Gorger','Gorger',138,0x00006B0400000000000000000000000000000000,8,8,3,240,100,0,1,1,1,1,0,0,238,131,0,0,5,1,0,137);
 
