@@ -1,15 +1,14 @@
 ---------------------------------------------
---  4000 Needles
+-- 4000 Needles
 --
---  Description: Shoots multiple needles at enemies within range.
---  Type: Magical (Light)
---
+-- Description: Shoots multiple needles at enemies within range.
 --
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
     if (mob:getHPP() <= 75) then
         return 0;
@@ -19,11 +18,18 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
+    --[[
     local needles = 4000 / skill:getTotalTargets();
+    ]]
+    local div = 1;
+    if (skill:getTotalTargets() > 1) then
+        div = skill:getTotalTargets() * 1.75;
+    end
+    local needles = 4000 / div;
 
-	local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
+    local dmg = MobFinalAdjustments(needles,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_LIGHT,MOBPARAM_WIPE_SHADOWS);
 
-	target:delHP(dmg);
+    target:delHP(dmg);
 
-	return dmg;
+    return dmg;
 end;

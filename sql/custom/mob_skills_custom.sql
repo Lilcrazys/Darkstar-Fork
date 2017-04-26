@@ -56,16 +56,16 @@ CREATE TABLE IF NOT EXISTS `mob_skills` (
 -- INSERT INTO `mob_skills` VALUES (29,0,'Pyrrhic_Kleos',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (30,0,'Aeolian_Edge',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (31,0,'Rudra's_Storm',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (32,0,'Fast_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (33,0,'Burning_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (34,0,'Red_Lotus_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (35,0,'Flat_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (36,0,'Shining_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (37,0,'Seraph_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (38,0,'Circle_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (32,1,'Fast_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (33,2,'Burning_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (34,3,'Red_Lotus_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (35,6,'Flat_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (36,4,'Shining_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (37,5,'Seraph_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (38,7,'Circle_Blade',1,5.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (39,0,'Spirits_Within',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (40,0,'Vorpal_Blade',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (41,0,'Swift_Blade',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (41,10,'Swift_Blade',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (42,0,'Savage_Blade',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (43,0,'Knights_of_Round',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (44,0,'Death_Blossom',0,7.0,2000,0,4,0,0,0);
@@ -189,11 +189,11 @@ CREATE TABLE IF NOT EXISTS `mob_skills` (
 -- INSERT INTO `mob_skills` VALUES (162,0,'Brainshaker',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (163,0,'Starlight',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (164,0,'Moonlight',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (165,0,'Skullbreaker',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (166,0,'True_Strike',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (165,81,'Skullbreaker',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (166,82,'True_Strike',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (167,0,'Judgment',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (168,0,'Hexa_Strike',0,7.0,2000,0,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (169,0,'Black_Halo',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (168,84,'Hexa_Strike',0,7.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (169,85,'Black_Halo',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (170,0,'Randgrith',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (171,0,'Mystic_Boon',0,7.0,2000,0,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (172,0,'Flash_Nova',0,7.0,2000,0,4,0,0,0);
@@ -272,13 +272,13 @@ INSERT INTO `mob_skills` VALUES (244,244,'Custom_Dancing_Chains',1,10.0,2000,0,4
 INSERT INTO `mob_skills` VALUES (245,245,'Custom_Barbed_Crescent',0,7.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (246,246,'Custom_Shackled_Fists',0,7.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (247,247,'Custom_Foxfire',4,10.0,2000,0,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (248,248,'Custom_Grim_Halo',1,10.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (248,248,'Custom_Grim_Halo',1,10.0,2000,0,4,0,0,2);
 INSERT INTO `mob_skills` VALUES (249,249,'Custom_Netherspikes',4,10.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (250,250,'Custom_Carnal_Nightmare',1,10.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (251,251,'Custom_Aegis_Schism',0,7.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (252,252,'Custom_Dancing_Chains',1,10.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (253,253,'Custom_Barbed_Crescent',0,7.0,2000,0,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (254,254,'Custom_Vulcan_Shot',0,15.0,2000,0,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (254,254,'Custom_Vulcan_Shot',1,14.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (255,190,'Custom_Dimensional_Death',0,7.0,2000,0,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (256,0,'#0',0,7.0,2000,0,4,0,0,0); -- Used to prevent mob action
 INSERT INTO `mob_skills` VALUES (257,1,'Foot_Kick',0,7.0,2000,1500,4,0,0,0);
@@ -3893,7 +3893,7 @@ INSERT INTO `mob_skills` VALUES (3479,3223,'Elemental_Sforzo',0,7.0,2000,0,1,2,0
 -- INSERT INTO `mob_skills` VALUES (3864,3608,'Scissor_Guard',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3865,3609,'Metallic_Body',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3866,3610,'Needleshot',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (3867,3611,'???_Needles',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (3867,3611,'Custom_QuestionMarks_Needles',1,10.0,2000,1500,4,0,0,0); -- ???_Needles.lua isn't a valid filename
 -- INSERT INTO `mob_skills` VALUES (3868,3612,'Frogkick',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3869,3613,'Spore',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (3870,3614,'Queasyshroom',0,7.0,2000,1500,4,0,0,0);
