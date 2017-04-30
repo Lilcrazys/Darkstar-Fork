@@ -1562,7 +1562,7 @@ INSERT INTO `npc_list` VALUES (17236990,'Augment_Box','Loot Box',192,0.000,0.001
 -- 17241087
 -- ------------------------------------------------------------
 
--- REPLACE INTO `mob_spawn_points` VALUES (17240232,'Tegmine','Tegmine',14175,11,-0.999,-134,0); -- Pos data needs correction
+REPLACE INTO `mob_spawn_points` VALUES (17240232,'Tegmine','Tegmine',14175,11,-0.999,-134,0); -- Pos data needs correction
 INSERT INTO `mob_spawn_points` VALUES (17240315,'Zmey_Gorynych','Zmey_Gorynych',90312,-203,0,243,27);
 
 INSERT INTO `npc_list` VALUES (17241077,'Tempitem_Box','Loot Box',192,0.000,0.001,0.000,0,50,50,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,NULL,0);

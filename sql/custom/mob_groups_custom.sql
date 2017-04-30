@@ -1002,11 +1002,11 @@ REPLACE INTO `mob_groups` VALUES (14547,4662,215,0,128,9246,90000,20999,118,120,
 REPLACE INTO `mob_groups` VALUES (15107,3909,48,0,128,9106,60000,60000,122,127,0); -- Thunderbolt_Piraal_Ja
 REPLACE INTO `mob_groups` VALUES (15117,4269,48,0,128,9106,60000,60000,128,130,0); -- Vyurvarjur_the_Nimble
 
--- Begin Corrections on Mob Groups Custom.SQL
-
+-- Temp to be re-ID'd by Teo later
 INSERT INTO `mob_groups` VALUES (89997,24998,169,10800,0,9317,80000,100000,110,112,0); -- Canal_Moocher -- DSP fuck up, overlapping group id 8833
 INSERT INTO `mob_groups` VALUES (89998,24999,51,10800,0,9307,80000,100000,110,112,0); -- Chelicerata -- DSP fuck up, overlapping group id 1624
 INSERT INTO `mob_groups` VALUES (89999,25000,169,10800,0,9300,80000,100000,110,112,0); -- Konjac -- DSP fuck up, overlapping group id 8819
+
 
 -- --------------------
 -- Legion
