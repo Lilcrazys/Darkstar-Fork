@@ -18,10 +18,10 @@ INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580);
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
 -- Aggressor_Antlion
-INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',4067,2517); -- quake blast -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- quake blast -- disable in DSP commit
 
 -- Blazing_Eruca
-INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',4070,1791); -- incinerate -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',858,1791); -- incinerate -- disable in DSP commit
 
 -- Abyssea Skills above this line only
 
