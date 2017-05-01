@@ -127,6 +127,7 @@ function onMobDeath(mob, player, isKiller)
         end
         if (player:isMaskFull(player:getVar("JEUNO_VW"),5) == true) then
             player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            player:addKeyItem(WHITE_STRATUM_ABYSSITE);
         end
     end
 

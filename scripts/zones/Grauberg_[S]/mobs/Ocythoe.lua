@@ -109,11 +109,12 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(WHITE_STRATUM_ABYSSITE_VI)) then -- Ocythoe Kill
         if (player:getMaskBit(player:getVar("JEUNO_VW"), 1) == false) then
-           player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
+            player:setMaskBit(player:getVar("JEUNO_VW"),"JEUNO_VW",1,true);
         end
 
         if (player:isMaskFull(player:getVar("JEUNO_VW"),5) == true) then
-           player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+            player:addKeyItem(WHITE_STRATUM_ABYSSITE);
         end
     end
 

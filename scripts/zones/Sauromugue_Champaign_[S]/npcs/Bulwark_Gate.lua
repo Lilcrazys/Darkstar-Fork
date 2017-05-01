@@ -85,8 +85,8 @@ function onEventFinish(player,csid,option)
         player:addGil(30000 * GIL_RATE);
         player:messageSpecial(GIL_OBTAINED, 30000 * GIL_RATE);
     elseif (csid == 22) then
-        player:addKeyItem(WHITE_STRATUM_ABYSSITE_V);
-        player:delKeyItem(WHITE_STRATUM_ABYSSITE_VI);
+        player:delKeyItem(WHITE_STRATUM_ABYSSITE_V);
+        player:addKeyItem(WHITE_STRATUM_ABYSSITE_VI);
         player:setVar("BattleNewFrontGil", 0);
         player:completeQuest(CRYSTAL_WAR, NO_REST_FOR_THE_WEARY);
         player:addQuest(CRYSTAL_WAR, A_WORLD_IN_FLUX);

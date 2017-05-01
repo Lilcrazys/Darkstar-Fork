@@ -4,10 +4,9 @@
 -----------------------------------
 package.loaded["scripts/zones/Bastok_Markets/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/globals/quests");
-require("scripts/globals/keyitems");
 require("scripts/zones/Bastok_Markets/TextIDs");
+require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 require("scripts/globals/spoofchat");
 
 -----------------------------------
@@ -57,7 +56,7 @@ function onTrigger(player,npc)
             player:SpoofMsg("Voidwatch Officer: I beseech you, friend. Lend your aid to our cause! ", npc, MESSAGE_SYS_SAY, nil);
             player:setVar("VW_STATUS", 1);
         elseif (JADE == false) then
-            player:PrintToPlayer("DEBUG: Initial Abysite check started.");
+            player:PrintToPlayer("DEBUG: Initial Abyssite check started.");
             if (player:hasKeyItem(ADVENTURERS_CERTIFICATE) == false) then
                 player:SpoofMsg("Voidwatch Officer: I'm sorry, but only certified adventurers may participate in Voidwatch Ops. ", npc, MESSAGE_SYS_SAY, nil);
                 player:SpoofMsg("Voidwatch Officer: Serve your country well, and your rank is sure to improve. ", npc, MESSAGE_SYS_SAY, nil);
