@@ -1,6 +1,6 @@
 ---------------------------------------------
 -- Apocalyptic Ray
--- Buhkis
+--
 ---------------------------------------------
 
 require("scripts/globals/settings");
@@ -18,7 +18,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     skill:setMsg(MobGazeMove(mob, target, typeEffect, 10, 3, 5));
 
-    local dmg = 3
+    local dmgmod = 3;
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3.5,ELE_DARK,dmgmod,TP_MAB_BONUS);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);

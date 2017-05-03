@@ -69,10 +69,10 @@ function onEventFinish(player,csid,option)
             -- 20 hours till next voidstone. Slightly less than 1 day,
             -- so that player can do VW once a day at aprox same time of day.
             player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
-            player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones"), nil, MESSAGE_ECHO, nil);
+            player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones")), nil, MESSAGE_ECHO, nil);
         else
             player:SpoofMsg("Voidstones are issued once per Earth day. ", nil, MESSAGE_ECHO, nil);
-            player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones"), nil, MESSAGE_ECHO, nil);
+            player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones")), nil, MESSAGE_ECHO, nil);
         end
     elseif (csid == 15) then
         player:completeQuest(OUTLANDS, VW_OP_101_DETOUR_TO_ZEPWELL);
