@@ -113,9 +113,11 @@ function onTrigger(player,npc)
                 player:setVar("VOIDSTONE_TIMER", os.time()+72000);
                 -- 20 hours till next voidstone. Slightly less than 1 day,
                 -- so that player can do VW once a day at aprox same time of day.
-                player:messageSpecial(KEYITEM_OBTAINED,VOIDSTONE1);
+                player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
+                player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones"), nil, MESSAGE_ECHO, nil);
             else
                 player:SpoofMsg("Voidstones are issued once per Earth day. ", nil, MESSAGE_ECHO, nil);
+                player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones"), nil, MESSAGE_ECHO, nil);
             end
         end
     end
