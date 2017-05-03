@@ -103,8 +103,8 @@ function onTrigger(player,npc)
             player:startEvent(21);
         ]]
         else
-            player:PrintToPlayer("DEBUG: VOIDSTONE CHECK");
             if (player:getVar("VOIDSTONE_TIMER") < os.time()) then
+                player:PrintToPlayer("DEBUG: VOIDSTONE CHECK (SUCCESS)");
                 player:SpoofMsg("Voidwatch Officer: While these stones are capable of rendering Voidwalkers visible to their bearers.. ", npc, MESSAGE_SYS_SAY, nil);
                 player:SpoofMsg("Voidwatch Officer: ..Their powers can only be tapped when used in conjunction with a Stratum Abyssite. ", npc, MESSAGE_SYS_SAY, nil);
                 player:addCurrency("voidstones", 1);
@@ -113,10 +113,11 @@ function onTrigger(player,npc)
                 -- 20 hours till next voidstone. Slightly less than 1 day,
                 -- so that player can do VW once a day at aprox same time of day.
                 player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
-                player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones")), nil, MESSAGE_ECHO, nil);
+                player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones")), npc, MESSAGE_ECHO, nil);
             else
+                player:PrintToPlayer("DEBUG: VOIDSTONE CHECK (FAIL)");
                 player:SpoofMsg("Voidstones are issued once per Earth day. ", nil, MESSAGE_ECHO, nil);
-                player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones")), nil, MESSAGE_ECHO, nil);
+                player:SpoofMsg(string.format("You now posses %d Voidstones in total. ", player:getCurrency("voidstones")), npc, MESSAGE_ECHO, nil);
             end
         end
     end
