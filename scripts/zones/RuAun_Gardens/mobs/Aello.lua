@@ -114,7 +114,7 @@ function onMobDeath(mob, player, isKiller)
 
     if (player:hasKeyItem(ASHEN_STRATUM_ABYSSITE_III)) then -- Aello Kill
         if (player:getMaskBit(player:getVar("ZILART_VW"), 0) == false) then
-            player:setMaskBit(player:getVar("ZILART_VW"),"ZILART_VW",true);
+            player:setMaskBit(player:getVar("ZILART_VW"),"ZILART_VW",0,true);
         end
 
         if (player:isMaskFull(player:getVar("ZILART_VW"),3) == true) then
