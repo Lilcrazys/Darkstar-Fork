@@ -28,7 +28,7 @@ function onTrigger(player,trialType)
         return;
     end
 
-    // Handle case sensitivity and any possible nil comparisons..
+    -- Handle case sensitivity and any possible nil comparisons..
     if (trialType == nil) then
         trialType = "all";
     else
