@@ -468,7 +468,7 @@ int32 lobbyview_parse(int32 fd)
 
             //----------------------------------------
             // Begin Custom section
-            string_t alt_version(version_info.ALT_VER, 6);
+            string_t alt_version(version_info.ALT_VER, 0, 6);
             alt_version = alt_version+"xx_x";
 
             // Get the account ID so we can query it..
