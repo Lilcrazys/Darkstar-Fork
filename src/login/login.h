@@ -69,7 +69,7 @@ struct login_config_t
 struct version_info_t
 {
     std::string CLIENT_VER;         // Expected Client version
-    std::string CLIENT_VER;         // Alternate Client version
+    std::string ALT_VER;         // Alternate Client version
 };
 
 extern login_config_t login_config;
