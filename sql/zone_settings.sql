@@ -109,7 +109,7 @@ INSERT INTO `zone_settings` VALUES (60,6,'127.0.0.1',54230,'The_Ashu_Talif',172,
 INSERT INTO `zone_settings` VALUES (61,2,'127.0.0.1',54230,'Mount_Zhayolm',0,0,101,138,0,0.00,1178);
 INSERT INTO `zone_settings` VALUES (62,3,'127.0.0.1',54230,'Halvung',0,0,115,139,0,0.00,1169);
 INSERT INTO `zone_settings` VALUES (63,6,'127.0.0.1',54530,'Lebros_Cavern',0,0,144,144,0,0.00,145);
-INSERT INTO `zone_settings` VALUES (64,4,'127.0.0.1',54530,'Navukgo_Execution_Chamber',0,0,143,143,0,0.00,145);
+INSERT INTO `zone_settings` VALUES (64,4,'127.0.0.1',54230,'Navukgo_Execution_Chamber',0,0,143,143,0,0.00,145);
 INSERT INTO `zone_settings` VALUES (65,3,'127.0.0.1',54230,'Mamook',0,0,115,139,0,0.00,1169);
 INSERT INTO `zone_settings` VALUES (66,6,'127.0.0.1',54530,'Mamool_Ja_Training_Grounds',0,0,144,144,0,0.00,145);
 INSERT INTO `zone_settings` VALUES (67,4,'127.0.0.1',54230,'Jade_Sepulcher',0,0,143,143,0,0.00,145);
