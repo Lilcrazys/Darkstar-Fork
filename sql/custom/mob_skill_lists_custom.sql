@@ -61,15 +61,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Hadhayosh',817,2390); -- Accursed_Armor_C
 
 INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
-DELETE FROM `mob_skill_lists` WHERE skill_list_id = 888 and mob_skill_id = 1695; -- Remove Hypnic_Lamp_Custom
-INSERT INTO `mob_skill_lists` VALUES ('Cep-Kamuy',888,1696); -- seismec_tail (DSP lists as 1695 should be 1696)
-
-DELETE FROM `mob_skill_lists` WHERE skill_list_id = 889 and mob_skill_id = 1695; -- Remove Hypnic_Lamp_Custom
-INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,1696); -- sesmec_tail (DSP lists as 1695 should be 1696)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,1978); -- Abominable_Belch_Custom (has no DSP script)
 
-DELETE FROM `mob_skill_lists` WHERE skill_list_id = 889 and mob_skill_id = 1695; -- Remove Hypnic_Lamp_Custom
-INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1696); -- sesmec_tail (DSP lists as 1695 should be 1696)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1978); -- Abominable_Belch_Custom (has no DSP script)
 
