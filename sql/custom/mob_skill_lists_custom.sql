@@ -22,7 +22,17 @@ INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom -
 
 INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
 
+INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom -- disabled in DSP commit
+
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom -- disable in dsp commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom -- disable in DSP commit
+
+-- remove 1332 and 319 from EE need DELETE FROM Statement
+INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,727); -- bad breath -- moved custom to 727 retail 319
+INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,1610); -- EE_Extremely_Bad_Breath_Custom -- -- disable in DSP commit
 
 INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
 
@@ -30,6 +40,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathg
 
 INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash- -- disable in DSP commit
 INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom -- disable in DSP commit
 
 INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom -- disable in DSP commit
 
