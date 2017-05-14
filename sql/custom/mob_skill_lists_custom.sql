@@ -12,8 +12,15 @@
 -- KEEP IT IN ORDER BY ID!!
 -- INSERT INTO `mob_skill_lists` VALUES ('list_name', list_id, skill_id); -- skill name
 
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580);
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580);
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod
+
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,579); -- Custom_Choke_Breath -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod
+
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash
+
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash
 
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
