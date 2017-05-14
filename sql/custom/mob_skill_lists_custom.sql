@@ -22,9 +22,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod (h
 
 INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Poroggo',196,1962); -- Frog_Chorus_Custom (has no DSP script)
+
 INSERT INTO `mob_skill_lists` VALUES ('Rafflesia',207,2167); -- Bloody Caress_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('IrizIma',295,1962); -- Frog_Chorus_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (has no DSP script)
 
@@ -65,6 +69,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (h
 INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Bomblix_Flamefinger',980,1119); -- Frag_Bomb_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom (has no DSP script)
 
