@@ -83,7 +83,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Veri_Selen',973,2222); -- Hurricane_Breat
 
 INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Azdaja',979,2697); -- Infinite_Terror_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Bomblix_Flamefinger',980,1119); -- Frag_Bomb_Custom (has no DSP script)
 
@@ -990,7 +992,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,3005); -- Droning_Whirlwind
 INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,3006); -- Incisive_Denouement
 INSERT INTO `mob_skill_lists` VALUES ('Colkhab',4203,3007); -- Incisive_Apotheosis
 
-INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2957); -- mpenetrable_carapace
+INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2957); -- Impenetrable_Carapace_Custom
 INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2958); -- ending_Deluge
 INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2959); -- undering_Snip
 INSERT INTO `mob_skill_lists` VALUES ('Ravenous_Cracklaw',4204,2960); -- iscid_Spindrift
