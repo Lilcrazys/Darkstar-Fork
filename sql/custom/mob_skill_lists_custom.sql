@@ -6,58 +6,62 @@
 -- For changing entries that already exist use "REPLACE INTO"
 -- REPLACE tells MySQL to delete the old line and insert the new one.
 -- Using the wrong 1 of these 2 commands will result in errors.
+-- To remove a DSP entry:
+-- DELETE FROM `mob_skill_lists` WHERE skill_list_id = LIST_ID and mob_skill_id = SKILL_ID; -- Skill Name
 -- ---------------------------------------------------------------------------
 -- NOTE: Any skill like Mighty Strikes being forced in script does not need to be in the mobs skill list to work.
 -- PRIMARY KEY (`skill_list_id`,`mob_skill_id`)
 -- KEEP IT IN ORDER BY ID!!
 -- INSERT INTO `mob_skill_lists` VALUES ('list_name', list_id, skill_id); -- skill name
 
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath -- disable in DSP commit
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,579); -- Custom_Choke_Breath -- disable in DSP commit
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,579); -- Custom_Choke_Breath (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom -- disabled in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom -- disable in dsp commit
+INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom (disable in DSP commit)
 
--- remove 1332 and 319 from EE need DELETE FROM Statement
-INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,727); -- bad breath -- moved custom to 727 retail 319
-INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,1610); -- EE_Extremely_Bad_Breath_Custom -- -- disable in DSP commit
+DELETE FROM `mob_skill_lists` WHERE skill_list_id = 796 and mob_skill_id = 1332; -- Remove Bad_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,727); -- Bad_Breath_Custom
+DELETE FROM `mob_skill_lists` WHERE skill_list_id = 796 and mob_skill_id = 1332; -- Remove Extremely_Bad_Breath
+INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,1610); -- EE_Extremely_Bad_Breath_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
 
-INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom -- disable in dsp commit
+INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash- -- disable in DSP commit
-INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
 
-INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom -- disable in dsp commit
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- (disable in DSP commit)
+
+INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom (disable in DSP commit)
 
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
 -- Aggressor_Antlion
-INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- quake blast -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- quake blast (disable in DSP commit)
 
 -- Blazing_Eruca
-INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',858,1791); -- incinerate -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',858,1791); -- incinerate (disable in DSP commit)
 
 -- Abyssea Skills above this line only
 
