@@ -32,14 +32,23 @@ INSERT INTO `mob_skill_lists` VALUES ('IrizIma',295,1962); -- Frog_Chorus_Custom
 
 INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2109); -- Heliovoid_Custom_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom (has no DSP script)
 
+-- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1693);
+-- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1694);
+INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1695); --Hypnic_Lamp_Custom (has no DSP script)
+-- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1696);
+-- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1697);
+-- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1698);
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1978); -- Abominable_Belch_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Alkonost',786,579); -- Choke_Breath_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Balaur_Post_50',791,2222); -- Hurricane_Breath_Custom (has no DSP script)
 
 DELETE FROM `mob_skill_lists` WHERE skill_list_id = 796 and mob_skill_id = 1332; -- Remove Bad_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,727); -- Bad_Breath_Custom
@@ -52,27 +61,41 @@ INSERT INTO `mob_skill_lists` VALUES ('Hadhayosh',817,2390); -- Accursed_Armor_C
 
 INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
+DELETE FROM `mob_skill_lists` WHERE skill_list_id = 888 and mob_skill_id = 1695; -- Remove Hypnic_Lamp_Custom
+INSERT INTO `mob_skill_lists` VALUES ('Cep-Kamuy',888,1696); -- seismec_tail (DSP lists as 1695 should be 1696)
+
+DELETE FROM `mob_skill_lists` WHERE skill_list_id = 889 and mob_skill_id = 1695; -- Remove Hypnic_Lamp_Custom
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,1696); -- sesmec_tail (DSP lists as 1695 should be 1696)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,1978); -- Abominable_Belch_Custom (has no DSP script)
 
+DELETE FROM `mob_skill_lists` WHERE skill_list_id = 889 and mob_skill_id = 1695; -- Remove Hypnic_Lamp_Custom
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1696); -- sesmec_tail (DSP lists as 1695 should be 1696)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1978); -- Abominable_Belch_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Hedjedjet',941,2221); -- Hell_Scissors_Custom (has no DSP script)
+
 INSERT INTO `mob_skill_lists` VALUES ('Orthrus_post_50',945,2701); -- Acheron_Flame_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (has no DSP script)
-
 INSERT INTO `mob_skill_lists` VALUES ('Chillwing_Hwitti_Post_50',959,2003); -- Grating_Tantara_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Veri_Selen',973,2222); -- Hurricane_Breath_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Bomblix_Flamefinger',980,1119); -- Frag_Bomb_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Minaruja',990,819); -- Blizzard_Breath (has DSP script but seems disabled)
+INSERT INTO `mob_skill_lists` VALUES ('Minaruja',990,2222); -- Hurricane_Breath_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom (has no DSP script)
 
