@@ -13,14 +13,31 @@
 -- INSERT INTO `mob_skill_lists` VALUES ('list_name', list_id, skill_id); -- skill name
 
 INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath -- disable in DSP commit
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod -- disable in DSP commit
 
 INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,579); -- Custom_Choke_Breath -- disable in DSP commit
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod -- disable in DSP commit
 
-INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash
+INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom -- disable in DSP commit
 
-INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash
+INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom -- disable in dsp commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom -- disable in dsp commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash- -- disable in DSP commit
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- -- disable in DSP commit
+
+INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom -- disable in dsp commit
 
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
