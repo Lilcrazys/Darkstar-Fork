@@ -14,54 +14,67 @@
 -- KEEP IT IN ORDER BY ID!!
 -- INSERT INTO `mob_skill_lists` VALUES ('list_name', list_id, skill_id); -- skill name
 
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath (disable in DSP commit)
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,579); -- Custom_Choke_Breath (disable in DSP commit)
-INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,579); -- Custom_Choke_Breath (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',141,580); -- Custom_Fantod (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Lamiae',171,1754); -- Dukkeripen_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Rafflesia',207,2167); -- Bloody Caress_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1978); -- Abominable_Belch_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Alkonost',786,579); -- Choke_Breath_Custom (has no DSP script)
 
 DELETE FROM `mob_skill_lists` WHERE skill_list_id = 796 and mob_skill_id = 1332; -- Remove Bad_Breath
 INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,727); -- Bad_Breath_Custom
 DELETE FROM `mob_skill_lists` WHERE skill_list_id = 796 and mob_skill_id = 1332; -- Remove Extremely_Bad_Breath
-INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,1610); -- EE_Extremely_Bad_Breath_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Eccentric_Eve',796,1610); -- EE_Extremely_Bad_Breath_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Kirtimukha',806,2167); -- Bloody Caress_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Hadhayosh',817,2390); -- Accursed_Armor_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash (disable in DSP commit)
-INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,1978); -- Abominable_Belch_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathgnash_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1978); -- Abominable_Belch_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Orthrus_post_50',945,2701); -- Acheron_Flame_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_1',974,2207); -- Disorienting_Waul_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Yaguarogui_group_2',975,1340); -- Crossthrash -- (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
 
 -- Aggressor_Antlion
-INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- quake blast (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- quake blast (has no DSP script)
 
 -- Blazing_Eruca
-INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',858,1791); -- incinerate (disable in DSP commit)
+INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',858,1791); -- incinerate (has no DSP script)
 
 -- Abyssea Skills above this line only
 
