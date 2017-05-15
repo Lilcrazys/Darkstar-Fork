@@ -26,6 +26,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Poroggo',196,1962); -- Frog_Chorus_Custom
 
 INSERT INTO `mob_skill_lists` VALUES ('Rafflesia',207,2167); -- Bloody Caress_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Rampart',209,2034,); -- reinforcement_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Vampyr',252,2112); -- Nocturnal_Servitude_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Vampyr',252,2534); -- Minax_Glare_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom (has no DSP script)
@@ -38,6 +41,7 @@ INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Ba
 
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2109); -- Heliovoid_Custom_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2112); -- Nocturnal_Servitude_Custom (has no DSP script)
 
 -- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1693);
 -- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1694);
@@ -68,6 +72,10 @@ INSERT INTO `mob_skill_lists` VALUES ('Kirtimukha',806,2167); -- Bloody Caress_C
 INSERT INTO `mob_skill_lists` VALUES ('Hadhayosh',817,2390); -- Accursed_Armor_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- Quake_Blast_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Amun',856,439); -- Petro Gaze (Has DSP Script was disabled)
 
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,1978); -- Abominable_Belch_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_pre50',889,2639); -- Mayhem_Lantern_Custom (has no DSP script)
