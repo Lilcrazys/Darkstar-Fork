@@ -14,6 +14,8 @@
 -- KEEP IT IN ORDER BY ID!!
 -- INSERT INTO `mob_skill_lists` VALUES ('list_name', list_id, skill_id); -- skill name
 
+INSERT INTO `mob_skill_lists` VALUES ('Flan',112,1826); -- Synergism_Custom (has no DSP script)
+
 INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,579); -- Custom_Choke_Breath (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Hippogryph',140,580); -- Custom_Fantod (has no DSP script)
 
@@ -39,6 +41,10 @@ INSERT INTO `mob_skill_lists` VALUES ('IrizIma',295,1962); -- Frog_Chorus_Custom
 
 INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Dextrose',299,1826); -- Synergism_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('GotohZhaTheRe',305,1925); -- Stave_Toss_Custom (has no DSP script)
+
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2109); -- Heliovoid_Custom_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2111); -- Eternal_Damnation_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2112); -- Nocturnal_Servitude_Custom (has no DSP script)
@@ -46,8 +52,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2112); -- Nocturnal_Servit
 -- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1693);
 -- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1694);
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1695); --Hypnic_Lamp_Custom (has no DSP script)
--- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1696);
--- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1697);
+-- INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1696); -- Seismic_Tail_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1697); -- Seaspray_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1698); -- Leeching_Current_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1977); -- Deathgnash_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nuhn',312,1978); -- Abominable_Belch_Custom (has no DSP script)
@@ -72,6 +78,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Kirtimukha',806,2167); -- Bloody Caress_C
 INSERT INTO `mob_skill_lists` VALUES ('Hadhayosh',817,2390); -- Accursed_Armor_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Treble_Noctules',850,1157); -- Slipstream_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- Quake_Blast_Custom (has no DSP script)
 
@@ -98,6 +106,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Rani',947,2700); -- Enthrall_Custom (has 
 INSERT INTO `mob_skill_lists` VALUES ('Audumbla',955,1364); -- Mighty_Snort_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Chillwing_Hwitti_Post_50',959,2003); -- Grating_Tantara_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Chillwing_Hwitti_Post_50',959,2004); -- Stifling_Tantra_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Veri_Selen',973,2222); -- Hurricane_Breath_Custom (has no DSP script)
 
