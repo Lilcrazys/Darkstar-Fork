@@ -115,8 +115,8 @@ end;
 function onTrigger(player,npc)
     local MSG1 = string.format("Hello %s! I'm here to help you upgrade your Legion Armor. ", player:getName());
     local MSG2 = string.format("This service will cost %s Legion points and some Tanzanite Jewels, Kupo! ", LegionPointPrice);
-    player:SpoofMsg(msgText1, npc, MESSAGE_SAY, nil);
-    player:SpoofMsg(msgText2, npc, MESSAGE_SAY, nil);
+    player:SpoofMsg(MSG1, npc, MESSAGE_SAY, nil);
+    player:SpoofMsg(MSG2, npc, MESSAGE_SAY, nil);
 end;
 
 -----------------------------------
