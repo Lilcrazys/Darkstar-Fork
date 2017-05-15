@@ -79,6 +79,8 @@ INSERT INTO `mob_skill_lists` VALUES ('Hadhayosh',817,2390); -- Accursed_Armor_C
 
 INSERT INTO `mob_skill_lists` VALUES ('Megantereon',822,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Ovni',824,1374); -- Torrential_Torment_Custom (has no DSP script)
+
 INSERT INTO `mob_skill_lists` VALUES ('Treble_Noctules',850,1157); -- Slipstream_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- Quake_Blast_Custom (has no DSP script)
@@ -92,10 +94,14 @@ INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1977); -- Deathg
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,1978); -- Abominable_Belch_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Cirein-croin_post50',890,2639); -- Mayhem_Lantern_Custom (has no DSP script)
 
+INSERT INTO `mob_skill_lists` VALUES ('Minax_Bugard',901,2643); -- Tyrant_Tusk_Custom (has no DSP script)
+
 INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,1340); -- Crossthrash (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Rakshas',926,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Bennu',933,2703); -- Dread_Wind_Custom (has no DSP script)
+
+INSERT INTO `mob_skill_lists` VALUES ('Dragua',938,2702); -- Terra_Wing_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Hedjedjet',941,2221); -- Hell_Scissors_Custom (has no DSP script)
 
