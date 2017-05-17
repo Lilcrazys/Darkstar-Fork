@@ -388,12 +388,12 @@ INSERT INTO `mob_skills` VALUES (360,828,'Flying_Hip_Press',1,7.0,2000,1500,4,0,
 INSERT INTO `mob_skills` VALUES (361,829,'Earth_Shock',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (362,830,'Double_Claw',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (363,831,'Grapple',4,12.5,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (364,832,'Filamented_Hold_Custom',4,12.5,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (364,832,'Filamented_Hold',4,12.5,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (365,833,'Spinning_Top',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (366,110,'Tail_Blow',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (367,111,'Fireball',2,11.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (367,111,'Fireball_Custom',2,11.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (368,112,'Blockhead_Custom',0,7.0,2000,1500,4,0,0,1);
-INSERT INTO `mob_skills` VALUES (369,113,'Brain_Crush_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (369,113,'Brain_Crush',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (370,114,'Baleful_Gaze',0,10.0,2000,2000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (371,115,'Plague_Breath',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (372,116,'Infrasonics',4,10.0,2000,1500,4,0,0,0);
@@ -403,7 +403,7 @@ INSERT INTO `mob_skills` VALUES (374,118,'Ripper_Fang',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (376,120,'Foul_Breath',4,15.0,2000,1500,4,0,0,0); -- only used in dry desert/mountainous areas
 INSERT INTO `mob_skills` VALUES (377,121,'Frost_Breath',4,15.0,2000,1500,4,0,0,0); -- only the raptors in Uleguerand Range will use this move
 INSERT INTO `mob_skills` VALUES (378,122,'Thunderbolt_Breath',4,15.0,2000,1500,4,0,0,0); -- only used by raptors in stormy areas (S. Champagn,???)
-INSERT INTO `mob_skills` VALUES (379,123,'Chomp_Rush_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (379,123,'Chomp_Rush',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (380,124,'Scythe_Tail',0,7.0,2000,1500,4,0,0,1);
 -- INSERT INTO `mob_skills` VALUES (381,125,'Chameleon_Skin',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (382,819,'Tail_Roll',0,7.0,2000,1500,4,0,0,0);
@@ -415,7 +415,7 @@ INSERT INTO `mob_skills` VALUES (387,824,'Heavy_Bellow',4,10.0,2000,1500,4,0,0,0
 INSERT INTO `mob_skills` VALUES (388,857,'Vanity_Dive',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (389,858,'Empty_Beleaguer',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (390,859,'Mirage',0,7.0,2000,1500,1,0,0,0);
-INSERT INTO `mob_skills` VALUES (391,860,'Aura_Of_Persistence_Custom',0,7.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (391,860,'Aura_Of_Persistence',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (392,136,'Ultrasonics',1,16.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (393,137,'Sonic_Boom',1,12.5,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (394,138,'Blood_Drain_Custom',0,7.0,2000,1500,4,0,0,0);
@@ -435,32 +435,32 @@ INSERT INTO `mob_skills` VALUES (407,151,'Poison_Pick',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (408,152,'Sound_Vacuum',4,10.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (409,153,'Tail_Rod',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (410,154,'Sound_Blast',1,16.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (411,155,'Baleful_Gaze_Custom',0,10.0,2000,2000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (411,155,'Baleful_Gaze',0,10.0,2000,2000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (412,156,'Ranged_Attack',0,7.0,2000,1500,4,4,0,0);
 -- INSERT INTO `mob_skills` VALUES (413,157,'Eagle_Eye_Shot',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (414,158,'Suction',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (415,159,'Acid_Mist_Custom',1,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (415,159,'Acid_Mist',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (416,160,'Sand_Breath',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (417,161,'Drainkiss',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (417,161,'Drainkiss_Custom',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (418,162,'Regeneration',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (419,890,'Scission_Thrust',4,7.0,2000,1500,4,0,0,0); -- Sword Form Only
-INSERT INTO `mob_skills` VALUES (420,164,'TP_Drainkiss',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (421,165,'MP_Drainkiss',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (420,164,'TP_Drainkiss_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (421,165,'MP_Drainkiss_Custom',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (422,891,'Sonic_Blade',1,5.0,2000,1500,4,0,0,0); -- Sword Form Only
-INSERT INTO `mob_skills` VALUES (423,167,'Brain_Drain_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (423,167,'Brain_Drain',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (424,168,'Full-Force_Blow',0,7.0,2000,1500,4,0,0,1);
 INSERT INTO `mob_skills` VALUES (425,169,'Gastric_Bomb',0,18.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (426,170,'Sandspin_Custom',1,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (426,170,'Sandspin',1,12.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (427,171,'Tremors',1,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (428,172,'MP_Absorption',0,15.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (428,172,'MP_Absorption_Custom',0,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (429,173,'Sound_Vacuum',0,15.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (430,174,'Buff_Drain',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (431,175,'Fluid_Spread',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (432,176,'Fluid_Toss',0,15.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (433,177,'Digest_Custom',4,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (433,177,'Digest',4,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (434,806,'Soporific',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (435,807,'Palsy_Pollen',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (436,808,'Gloeosuccus',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (436,808,'Gloeosuccus_Custom',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (437,181,'Death_Ray',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (438,182,'Hex_Eye',4,10.0,2000,500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (439,183,'Petro_Gaze',0,7.0,2000,1500,4,0,0,0);
@@ -474,13 +474,13 @@ INSERT INTO `mob_skills` VALUES (445,189,'Scissor_Guard',0,7.0,2000,1500,1,0,0,0
 INSERT INTO `mob_skills` VALUES (447,893,'Percussive_Foin',4,10.0,2000,1500,4,0,0,0); -- Polearm Form Only
 INSERT INTO `mob_skills` VALUES (448,192,'Metallic_Body',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (449,193,'Intimidate',4,10.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (450,194,'Aqua_Ball_Custom',2,12.0,2000,1500,4,0,0,0); -- Has alt ID
-INSERT INTO `mob_skills` VALUES (451,195,'Splash_Breath_Custom',4,12.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (452,196,'Screwdriver',0,9.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (450,194,'Aqua_Ball',2,12.0,2000,1500,4,0,0,0); -- Has alt ID
+INSERT INTO `mob_skills` VALUES (451,195,'Splash_Breath',4,12.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (452,196,'Screwdriver_Custom',0,9.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (453,197,'Water_Wall',0,7.0,2000,1500,1,0,0,0); -- Has alt ID
 INSERT INTO `mob_skills` VALUES (454,198,'Water_Shield',0,7.0,2000,1500,1,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (455,199,'Aqua_Lens',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (456,200,'Tentacle_Custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (456,200,'Tentacle',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (457,894,'Gravity_Wheel',1,7.0,2000,1500,4,0,0,0); -- Polearm Form Only
 INSERT INTO `mob_skills` VALUES (458,202,'Ink_Jet',4,12.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (459,203,'Hard_Membrane',0,7.0,2000,1500,1,0,0,0);
