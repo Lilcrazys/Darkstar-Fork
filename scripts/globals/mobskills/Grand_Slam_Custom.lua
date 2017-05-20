@@ -1,13 +1,11 @@
 ---------------------------------------------------
--- Grand Slam
+-- Grand Slam (Custom Version for NM)
 -- Deals damage based off TP.
 -- 100% TP: ??? / 250% TP: ??? / 300% TP: ???
 ---------------------------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -16,7 +14,7 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
 	local numhits = 1;
-	local accmod = 1;
+	local accmod = 4;
 	local dmgmod = 2.0;
 	local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_DMG_VARIES,1,2,3);
 	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_3_SHADOW);
