@@ -1,12 +1,12 @@
 -----------------------------------
--- Area: ?
+-- Area: West Sarutabaruta
 -- VWNM: Pancimanci
 -----------------------------------
 package.loaded["scripts/zones/West_Sarutabaruta_[S]/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/West_Sarutabaruta_[S]/TextIDs");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -37,11 +37,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_TRIPLE_ATTACK, 20);
     mob:setMod(MOD_DEF,1400);
     mob:setMod(MOD_ACC,1400);
-
-    -- Vars
-    -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
-
 end;
+
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
@@ -54,8 +51,6 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local depopTime = mob:getLocalVar("depopTime");
-
 end;
 
 -----------------------------------
