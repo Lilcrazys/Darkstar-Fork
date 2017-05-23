@@ -23,14 +23,17 @@ function onGameIn(player, firstlogin, zoning)
             CharCreate(player);
         end
 
+        --------------------
         -- Begin Custom
         if (player:getVar("FreshlyImported") == 1) then
-            if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >= 1) then -- Make sure LS exists and player has at least 1 free space
+            -- Make sure LS exists and player has at least 1 free space
+            if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() > 0) then
                 player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
                 player:setVar("FreshlyImported", 0);
             end
         end
 
+        -- Update free maps
         if (ALL_MAPS == 1) then
             for mapKIs = 385,447 do
                 if (player:hasKeyItem(mapKIs) == false) then
@@ -53,7 +56,27 @@ function onGameIn(player, firstlogin, zoning)
                 end
             end
         end
+
+        -- Dailies check..
+        local TodaysDate = os.date("*t");
+        local month = TodaysDate.month;
+        if (month < 10) then month = tostring("0"..month); end
+        local day = TodaysDate.day;
+        if (day < 10) then day = tostring("0"..day); end
+        if (GIVE_DAILY_TALLY > 0) then
+            if (player:getVar("DailyTallyDate") < (TodaysDate.year .. month .. day) then
+                player:setVar("DailyTallyDate", TodaysDate.year .. month .. day);
+                player:setVar("DailyTallyTotal", player:getVar("DailyTallyTotal")+GIVE_DAILY_TALLY);
+            end
+        end
+        if (GIVE_DAILY_POINTS > 0) then
+            if (player:getVar("DailyPointsDate") < (TodaysDate.year .. month .. day) then
+                player:setVar("DailyPointsDate", TodaysDate.year .. month .. day);
+                player:setVar("DailyPointsTotal", player:getVar("DailyPointsTotal")+GIVE_DAILY_TALLY);
+            end
+        end
         -- End Custom
+        --------------------
     end
 
     if (zoning) then -- Things checked ONLY during zone in go here.
@@ -106,192 +129,192 @@ end;
 -----------------------------------
 
 function CharCreate(player)
-	local race = player:getRace();
-	local body = nil;
-	local leg = nil;
-	local hand = nil;
-	local feet = nil;
+    local race = player:getRace();
+    local body = nil;
+    local leg = nil;
+    local hand = nil;
+    local feet = nil;
 
-	-- ADD RACE SPECIFIC STARTGEAR
-	switch(race) : caseof
-	{
-		-- HUME MALE
-		[1] = function (x)
-			body = 0x3157;
-			hand = 0x31D2;
-			leg = 0x3253;
-			feet = 0x32CD;
-		end,
+    -- ADD RACE SPECIFIC STARTGEAR
+    switch(race) : caseof
+    {
+        -- HUME MALE
+        [1] = function (x)
+            body = 0x3157;
+            hand = 0x31D2;
+            leg = 0x3253;
+            feet = 0x32CD;
+        end,
 
-		-- HUME FEMALE
-		[2] = function (x)
-			body = 0x3158;
-			hand = 0x31D8;
-			leg = 0x3254;
-			feet = 0x32D2;
-		end,
+        -- HUME FEMALE
+        [2] = function (x)
+            body = 0x3158;
+            hand = 0x31D8;
+            leg = 0x3254;
+            feet = 0x32D2;
+        end,
 
-		-- ELVAAN MALE
-		[3] = function (x)
-			body = 0x3159;
-			hand = 0x31D3;
-			leg = 0x3255;
-			feet = 0x32CE;
-		end,
+        -- ELVAAN MALE
+        [3] = function (x)
+            body = 0x3159;
+            hand = 0x31D3;
+            leg = 0x3255;
+            feet = 0x32CE;
+        end,
 
-		-- ELVAAN FEMALE
-		[4] = function (x)
-			body = 0x315A;
-			hand = 0x31D7;
-			leg = 0x3259;
-			feet = 0x32D3;
-		end,
+        -- ELVAAN FEMALE
+        [4] = function (x)
+            body = 0x315A;
+            hand = 0x31D7;
+            leg = 0x3259;
+            feet = 0x32D3;
+        end,
 
-		-- TARU MALE
-		[5] = function (x)
-			body = 0x315B;
-			hand = 0x31D4;
-			leg = 0x3256;
-			feet = 0x32CF;
-		end,
+        -- TARU MALE
+        [5] = function (x)
+            body = 0x315B;
+            hand = 0x31D4;
+            leg = 0x3256;
+            feet = 0x32CF;
+        end,
 
-		-- TARU FEMALE
-		[6] = function (x)
-			body = 0x315B;
-			hand = 0x31D4;
-			leg = 0x3256;
-			feet = 0x32CF;
-		end,
+        -- TARU FEMALE
+        [6] = function (x)
+            body = 0x315B;
+            hand = 0x31D4;
+            leg = 0x3256;
+            feet = 0x32CF;
+        end,
 
-		-- MITHRA
-		[7] = function (x)
-			body = 0x315C;
-			hand = 0x31D5;
-			leg = 0x3257;
-			feet = 0x32D0;
-		end,
+        -- MITHRA
+        [7] = function (x)
+            body = 0x315C;
+            hand = 0x31D5;
+            leg = 0x3257;
+            feet = 0x32D0;
+        end,
 
-		-- GALKA
-		[8] = function (x)
-			body = 0x315D;
-			hand = 0x31D6;
-			leg = 0x3258;
-			feet = 0x32D1;
-		end,
+        -- GALKA
+        [8] = function (x)
+            body = 0x315D;
+            hand = 0x31D6;
+            leg = 0x3258;
+            feet = 0x32D1;
+        end,
 
-		default = function (x) end,
-	}
+        default = function (x) end,
+    }
 
-	-- Add starting gear
-	if not(player:hasItem(body)) then
-		player:addItem(body);
-		player:equipItem(body);
-	end
+    -- Add starting gear
+    if not(player:hasItem(body)) then
+        player:addItem(body);
+        player:equipItem(body);
+    end
 
-	if not(player:hasItem(hand)) then
-		player:addItem(hand);
-		player:equipItem(hand);
-	end
+    if not(player:hasItem(hand)) then
+        player:addItem(hand);
+        player:equipItem(hand);
+    end
 
-	if not(player:hasItem(leg)) then
-		player:addItem(leg);
-		player:equipItem(leg);
-	end
+    if not(player:hasItem(leg)) then
+        player:addItem(leg);
+        player:equipItem(leg);
+    end
 
-	if not(player:hasItem(feet)) then
-		player:addItem(feet);
-		player:equipItem(feet);
-	end
+    if not(player:hasItem(feet)) then
+        player:addItem(feet);
+        player:equipItem(feet);
+    end
 
-	-- ADD JOB SPECIFIC STARTGEAR
-	switch(player:getMainJob()) : caseof
-	{
-		-- WARRIOR JOB
-		[0x01]= function (x)
-			if not(player:hasItem(0x4096)) then
-				player:addItem(0x4096);
-			end
-		end,
+    -- ADD JOB SPECIFIC STARTGEAR
+    switch(player:getMainJob()) : caseof
+    {
+        -- WARRIOR JOB
+        [0x01]= function (x)
+            if not(player:hasItem(0x4096)) then
+                player:addItem(0x4096);
+            end
+        end,
 
-		-- MONK JOB
-		[0x02]= function (x)
-			if not(player:hasItem(0x3380)) then
-				player:addItem(0x3380);
-			end
-		end,
+        -- MONK JOB
+        [0x02]= function (x)
+            if not(player:hasItem(0x3380)) then
+                player:addItem(0x3380);
+            end
+        end,
 
-		-- WHITE MAGE
-		[0x03]= function(x)
-			if not(player:hasItem(0x42AC)) then
-				player:addItem(0x42AC);
-			end
+        -- WHITE MAGE
+        [0x03]= function(x)
+            if not(player:hasItem(0x42AC)) then
+                player:addItem(0x42AC);
+            end
 
-			if not(player:hasItem(0x1200)) then
-			player:addItem(0x1200);
-			end
-		end,
+            if not(player:hasItem(0x1200)) then
+            player:addItem(0x1200);
+            end
+        end,
 
-		-- BLACK MAGE
-		[0x04] = function(x)
+        -- BLACK MAGE
+        [0x04] = function(x)
 
-			if not(player:hasItem(0x42D0)) then
-				player:addItem(0x42D0);
-			end
+            if not(player:hasItem(0x42D0)) then
+                player:addItem(0x42D0);
+            end
 
-			if not(player:hasItem(0x11FF)) then
-				player:addItem(0x11FF);
-			end
-		end,
+            if not(player:hasItem(0x11FF)) then
+                player:addItem(0x11FF);
+            end
+        end,
 
-		-- RED MAGE
-		[0x05]= function (x)
-			if not(player:hasItem(0x4062)) then
-				player:addItem(0x4062);
-			end
-			if not(player:hasItem(0x11FE)) then
-				player:addItem(0x11FE);
-			end
-		end,
+        -- RED MAGE
+        [0x05]= function (x)
+            if not(player:hasItem(0x4062)) then
+                player:addItem(0x4062);
+            end
+            if not(player:hasItem(0x11FE)) then
+                player:addItem(0x11FE);
+            end
+        end,
 
-		-- THIEF
-		[0x06]= function (x)
-			if not(player:hasItem(0x4063)) then
-				player:addItem(0x4063);
-			end
-		end,
+        -- THIEF
+        [0x06]= function (x)
+            if not(player:hasItem(0x4063)) then
+                player:addItem(0x4063);
+            end
+        end,
 
-		default = function (x) end,
-	}
+        default = function (x) end,
+    }
 
-	-- ADD NATION SPECIFIC STARTGEAR
-	switch (player:getNation()) : caseof
-	{
-		-- SANDY CITIZEN
-		[0] = function (x)
-			if ((race == 3) or (race == 4))
-				then player:addItem(0x34B7);
-			end;
-			player:addKeyItem(MAP_OF_THE_SAN_DORIA_AREA);
-		end,
+    -- ADD NATION SPECIFIC STARTGEAR
+    switch (player:getNation()) : caseof
+    {
+        -- SANDY CITIZEN
+        [0] = function (x)
+            if ((race == 3) or (race == 4))
+                then player:addItem(0x34B7);
+            end;
+            player:addKeyItem(MAP_OF_THE_SAN_DORIA_AREA);
+        end,
 
-		-- BASTOK CITIZEN
-		[1] = function (x)
-			if (((race == 1) or (race == 2) or (race == 8)))
-				then player:addItem(0x34B9);
-			end;
-			player:addKeyItem(MAP_OF_THE_BASTOK_AREA);
-		end,
+        -- BASTOK CITIZEN
+        [1] = function (x)
+            if (((race == 1) or (race == 2) or (race == 8)))
+                then player:addItem(0x34B9);
+            end;
+            player:addKeyItem(MAP_OF_THE_BASTOK_AREA);
+        end,
 
-		-- WINDY CITIZEN
-		[2] = function(x)
-			if (((race == 5) or (race == 6) or (race == 7)))
-				then player:addItem(0x34B8);
-			end;
-			player:addKeyItem(MAP_OF_THE_WINDURST_AREA);
-		end,
+        -- WINDY CITIZEN
+        [2] = function(x)
+            if (((race == 5) or (race == 6) or (race == 7)))
+                then player:addItem(0x34B8);
+            end;
+            player:addKeyItem(MAP_OF_THE_WINDURST_AREA);
+        end,
 
-		default = function (x) end,
-	}
+        default = function (x) end,
+    }
 
    ----- settings.lua Perks -----
     if (ADVANCED_JOB_LEVEL == 0) then
@@ -338,21 +361,9 @@ function CharCreate(player)
           player:addNationTeleport(2,10485760);
        end
     end
-
-    if (ALL_CONFLUX) then
-      player:setVar("ConfluxMask[Konschtat]",255);
-      player:setVar("ConfluxMask[Tahrongi]",255);
-      player:setVar("ConfluxMask[LaTheine]",255);
-      player:setVar("ConfluxMask[Attohwa]",511);
-      player:setVar("ConfluxMask[Misareaux]",511);
-      player:setVar("ConfluxMask[Vunkerl]",511);
-      player:setVar("ConfluxMask[Altepa]",255);
-      player:setVar("ConfluxMask[Uleguerand]",255);
-      player:setVar("ConfluxMask[Grauberg]",255);
-    end
     ----- End settings.lua Perks -----
 
-	-- SET START GIL
+    -- SET START GIL
     --[[For some intermittent reason m_ZoneList ends up empty on characters, which is
     possibly also why they lose key items.  When that happens, CharCreate will be run and
     they end up losing their gil to the code below.  Added a conditional to hopefully
@@ -362,22 +373,20 @@ function CharCreate(player)
        player:setGil(START_GIL);
     end
 
-	-- ADD ADVENTURER COUPON
-	player:addItem(0x218);
+    -- ADD ADVENTURER COUPON
+    player:addItem(0x218);
 
-	--SET TITLE
-	player:addTitle(NEW_ADVENTURER);
+    --SET TITLE
+    player:addTitle(NEW_ADVENTURER);
 
-	-- Needs Moghouse Intro
-	player:setVar("MoghouseExplication",1);
+    -- Needs Moghouse Intro
+    player:setVar("MoghouseExplication",1);
 
-	-- Start of custom stuffs for new players
-
-	if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
-		player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
-	end
-
-	----- End of custom stuffs for new players -----
+    -- Start of custom stuffs for new players
+    if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
+        player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
+    end
+    -- End of custom stuffs for new players
 end;
 
 function onPlayerLevelUp(player)

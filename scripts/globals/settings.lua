@@ -40,6 +40,14 @@ LOW_LEVEL_REGIME = 0; -- Allow people to kill regime targets even if they give n
 -- This feature correlates to the content_tag column in the SQL files
 RESTRICT_CONTENT = 0;
 
+-- Dailies
+GIVE_DAILY_TALLY      = 0; -- (Retail:  10) Give players this much tally per day to spend at Goblin Mystery Box.
+GIVE_DAILY_POINTS     = 0; -- (Retail: 100) Give players this many "logon points" per day to spend at greeter moogle.
+GIVE_MOG_PELL_RED     = nil; --
+GIVE_MOG_PELL_GREEN   = nil; --
+GIVE_MOG_PELL_SILVER  = nil; --
+GIVE_MOG_PELL_GOLD    = nil; -- There are also rainbow, ochre, and marble..but those aren't auto-given at logon
+
 -- CHARACTER CONFIG
 INITIAL_LEVEL_CAP = 70; -- The initial level cap for new players.  There seems to be a hardcap of 255.
 MAX_LEVEL = 99; -- Level max of the server, works by disabling Maat quests.
