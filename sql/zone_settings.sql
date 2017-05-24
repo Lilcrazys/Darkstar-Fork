@@ -346,7 +346,7 @@ REPLACE INTO `zone_settings` VALUES (183,3,'127.0.0.1',54230,'Maquette_Abdhaljs-
 -- -------------------------------------------------------
 -- This Sets zone IP on all of the above without causing
 -- edit conflicts every time DarkStar changes the table.
-UPDATE zone_settings SET zoneip = '24.192.160.140';
+UPDATE zone_settings SET zoneip = '69.14.82.66';
 -- Usually people just save a query and run it as needed
 -- instead of storing IP in zone_settings.sql like this.
 -- -------------------------------------------------------
