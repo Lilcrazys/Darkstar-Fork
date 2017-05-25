@@ -1,5 +1,10 @@
 ---------------------------------------------
---  Infernal Deliverance
+--  Cursed Sphere
+--
+--  Description: Deals water damage to enemies within area of effect.
+--  Type: Magical Water (Element)
+--
+--
 ---------------------------------------------
 require("scripts/globals/settings");
 require("scripts/globals/status");
@@ -10,16 +15,10 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-
-	local typeEffect = EFFECT_STUN;
-
-	MobStatusEffectMove(mob, target, typeEffect, 0, 0, 10);
-
-    local numhits = 1;
+    local dmgmod = 1;
     local accmod = 1;
-    local dmgmod = 2.5;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,info.hitslanded);
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*2.6,ELE_WATER,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WATER,MOBPARAM_IGNORE_SHADOWS);
     target:delHP(dmg);
     return dmg;
 end;
