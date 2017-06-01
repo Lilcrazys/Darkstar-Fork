@@ -2086,7 +2086,7 @@ INSERT INTO `mob_skills` VALUES (2058,1400,'PW_Homing_Missle',2,20.0,2000,1000,4
 INSERT INTO `mob_skills` VALUES (2059,1402,'PW_Discoid',4,10.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2060,1403,'PW_Brainjack',0,10.0,2000,1000,4,0,0,0);
 -- for long armed chariot charm brainjack right one is 1410 (probably 1407-1409 for his other moves)
-INSERT INTO `mob_skills` VALUES (2060,1410,'Brainjack_Custom',0,10.0,2000,1000,4,0,0,0);
+-- INSERT INTO `mob_skills` VALUES (2060,1410,'Brainjack_Custom',0,10.0,2000,1000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2061,1805,'Restoral',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2062,1806,'Restoral',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2063,1807,'Heavy_Armature',0,7.0,2000,1500,4,0,0,0);
