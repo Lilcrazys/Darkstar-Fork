@@ -1,17 +1,17 @@
 -----------------------------------------
 -- Spell: Jester's Opperetta
--- Increases Silence Resistance to 
+-- Increases Silence Resistance to
 -- Party Members within target AoE
 -----------------------------------------
 
--- NOTE: THIS SCRIPT IS CURRENTLY IGNORED.  See battleutils:SingSong()
+require("scripts/globals/status");
 
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 1;
 end;
 
 function onSpellCast(caster,target,spell)
