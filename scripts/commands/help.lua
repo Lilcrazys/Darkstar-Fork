@@ -21,6 +21,7 @@ function onTrigger(player)
         player:PrintToPlayer("$ecv (displays the servers Expected Client Version)");
         player:PrintToPlayer("$where  $revision  $setmusic  $costume  $grats  $trial");
         player:PrintToPlayer("$shop  $ah  $tele  $atma  $regen (pre 75 only)");
+        player:PrintToPlayer("$cshop (unreleased beta state, source of much confusion)");
     end
 
     -- Previous tiers are already displayed, don't duplicate!
