@@ -64,13 +64,13 @@ function onGameIn(player, firstlogin, zoning)
         local day = TodaysDate.day;
         if (day < 10) then day = tostring("0"..day); end
         if (GIVE_DAILY_TALLY > 0) then
-            if (player:getVar("DailyTallyDate") < (TodaysDate.year .. month .. day) then
+            if (player:getVar("DailyTallyDate") < (TodaysDate.year .. month .. day)) then
                 player:setVar("DailyTallyDate", TodaysDate.year .. month .. day);
                 player:setVar("DailyTallyTotal", player:getVar("DailyTallyTotal")+GIVE_DAILY_TALLY);
             end
         end
         if (GIVE_DAILY_POINTS > 0) then
-            if (player:getVar("DailyPointsDate") < (TodaysDate.year .. month .. day) then
+            if (player:getVar("DailyPointsDate") < (TodaysDate.year .. month .. day)) then
                 player:setVar("DailyPointsDate", TodaysDate.year .. month .. day);
                 player:setVar("DailyPointsTotal", player:getVar("DailyPointsTotal")+GIVE_DAILY_TALLY);
             end
