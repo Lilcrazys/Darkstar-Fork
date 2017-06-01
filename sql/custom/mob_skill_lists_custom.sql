@@ -28,7 +28,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Poroggo',196,1962); -- Frog_Chorus_Custom
 
 INSERT INTO `mob_skill_lists` VALUES ('Rafflesia',207,2167); -- Bloody Caress_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Rampart',209,2034,); -- reinforcement_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Rampart',209,2034); -- reinforcement_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Tiger',242,2207); -- Disorienting_Waul_Custom (has no DSP script)
 
@@ -70,7 +70,7 @@ INSERT INTO `mob_skill_lists` VALUES ('ArmedGears',304,2047); -- Antigravity_Cus
 
 INSERT INTO `mob_skill_lists` VALUES ('GotohZhaTheRe',305,1920); -- Rushing_Drub (Has DSP Script was disabled)
 INSERT INTO `mob_skill_lists` VALUES ('GotohZhaTheRe',305,1925); -- Stave_Toss_Custom (has no DSP script)
-INSERT INTO `mob_skill_lists` VALUES ('GotohZhaTheRe',305,1925); -- Groundburst (Has DSP Script was disabled)
+INSERT INTO `mob_skill_lists` VALUES ('GotohZhaTheRe',305,1926); -- Groundburst (Has DSP Script was disabled)
 
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2101); -- Decollation_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Nosferatu',309,2109); -- Heliovoid_Custom_Custom (has no DSP script)
@@ -96,7 +96,7 @@ INSERT INTO `mob_skill_lists` VALUES ('Caturae',450,2700); -- Enthrall_Custom (h
 
 INSERT INTO `mob_skill_lists` VALUES ('Harpeia',471,2758); -- Kaleidoscopic_Fury_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Gessho_II',778,2269) -- Kamaitachi_Custom (has no DSP script)
+INSERT INTO `mob_skill_lists` VALUES ('Gessho_II',778,2269); -- Kamaitachi_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Alkonost',786,579); -- Choke_Breath_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('Alkonost',786,580); -- Fantod_Custom (has no DSP script)
@@ -189,15 +189,9 @@ INSERT INTO `mob_skill_lists` VALUES ('Bomblix_Flamefinger',980,1119); -- Frag_B
 INSERT INTO `mob_skill_lists` VALUES ('Minaruja',990,819); -- Blizzard_Breath (has DSP script but seems disabled)
 INSERT INTO `mob_skill_lists` VALUES ('Minaruja',990,2222); -- Hurricane_Breath_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,318); -- somersault
-INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,659); -- cursed_sphere
-INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,660); -- venom
 INSERT INTO `mob_skill_lists` VALUES ('Flame_Skimmer',997,1624); -- Debilitating_Drone_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('JormungandWyrm',392,1287);
-
--- Aggressor_Antlion
-INSERT INTO `mob_skill_lists` VALUES ('Aggressor_Antlion',855,2517); -- quake blast (has no DSP script)
 
 -- Blazing_Eruca
 INSERT INTO `mob_skill_lists` VALUES ('Blazing_Eruca',858,1791); -- incinerate (has no DSP script)
@@ -1538,6 +1532,7 @@ INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,1437); -- Jump (Ao
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,1959); -- Water Bomb (AoE Silence)
 INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,2513); -- Mega Scissors (Bigger than Big Scissors o.o;)
 -- INSERT INTO `mob_skill_lists` VALUES ('The Jumping Crab',9665,3265); -- Elemental Sforzo (RUN 2hr (Magic Immunity)
+
 /* stuff below is temp disabled
 INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,241); -- Netherspikes
 INSERT INTO `mob_skill_lists` VALUES ('SlenderMan',9666,249); -- Netherspikes
@@ -1574,5 +1569,6 @@ INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,2691); -- Dark_Sun
 -- INSERT INTO `mob_skill_lists` VALUES ('Minerva',9777,1487); -- Ambrosia
 INSERT INTO `mob_skill_lists` VALUES ('Minerva_Melee',9778,2105); -- Melee_Special
 */
+
 INSERT INTO `mob_skill_lists` VALUES ('No_Melee',9999,256); -- Used to prevent mob action
 -- Thinking of placing a new entry right here? DO NOT. Scroll your butt up past The Jumping Crab!
