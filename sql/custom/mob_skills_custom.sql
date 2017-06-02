@@ -1649,8 +1649,8 @@ INSERT INTO `mob_skills` VALUES (1619,1363,'Attractant_Custom',0,7.0,2000,1500,4
 -- INSERT INTO `mob_skills` VALUES (1622,1366,'Cursed_Sphere',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1623,1367,'Venom',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1624,1368,'Debilitating_Drone_Custom',0,7.0,2000,1500,4,0,0,0); -- Fix me
-INSERT INTO `mob_skills` VALUES (1625,1369,'2000_Needles_Custom',0,7.0,2000,1500,4,0,0,0); -- Fix me
-INSERT INTO `mob_skills` VALUES (1626,1370,'4000_Needles_Custom',0,7.0,2000,1500,4,0,0,0); -- Fix me
+INSERT INTO `mob_skills` VALUES (1625,1369,'2000_Needles_Custom',1,10.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1626,1370,'4000_Needles_Custom',1,10.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1627,1371,'Needleshot',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1628,1372,'Heat_Breath',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1629,1373,'Riddle',0,7.0,2000,1500,4,0,0,0);
@@ -2730,7 +2730,7 @@ INSERT INTO `mob_skills` VALUES (2700,2444,'Enthrall_Custom',1,10.0,2000,1000,4,
 INSERT INTO `mob_skills` VALUES (2701,2445,'Acheron_Flame_Custom',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2702,2446,'Terra_Wing_Custom',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2703,2447,'Dread_Wind_Custom',1,20.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2704,2448,'???_Needles',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2704,2448,'QuestionMarks_Needles_Custom',1,10.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2705,2449,'White_Wind',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2706,2450,'Smokebomb',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2707,2451,'Paralysis_Shower',0,7.0,2000,1500,4,0,0,0);
