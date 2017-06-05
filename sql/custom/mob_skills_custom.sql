@@ -2223,7 +2223,7 @@ INSERT INTO `mob_skills` VALUES (2193,1581,'Zephyr_Arrow',0,15.0,2000,1500,4,0,0
 INSERT INTO `mob_skills` VALUES (2194,1582,'Lethe_Arrows',0,15.0,2000,1500,4,0,0,3);
 INSERT INTO `mob_skills` VALUES (2195,1583,'Spring_Breeze',1,15.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2196,1584,'Summer_Breeze',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2197,1585,'Autumn_Breeze_Custom',1,15.0,2000,1500,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (2197,1585,'Autumn_Breeze',1,15.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (2198,1586,'Winter_Breeze',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2199,1587,'Cyclonic_Turmoil',1,15.0,2000,1500,4,0,0,5);
 INSERT INTO `mob_skills` VALUES (2200,1588,'Cyclonic_Torrent',1,15.0,2000,1500,4,0,0,0);
