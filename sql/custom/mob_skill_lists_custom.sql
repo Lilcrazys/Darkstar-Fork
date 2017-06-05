@@ -63,7 +63,7 @@ INSERT INTO `mob_skill_lists` VALUES ('IririSamariri',297,1960); -- Frog_Cheer (
 INSERT INTO `mob_skill_lists` VALUES ('Dextrose',299,1824); -- Amorphic_spikes (Has DSP Script was disabled)
 INSERT INTO `mob_skill_lists` VALUES ('Dextrose',299,1826); -- Synergism_Custom (has no DSP script)
 
-INSERT INTO `mob_skill_lists` VALUES ('ArmedGears',304,2041); -- PL_Restoral (Has DSP Script was disabled)
+INSERT INTO `mob_skill_lists` VALUES ('ArmedGears',304,2041); -- Restoral
 INSERT INTO `mob_skill_lists` VALUES ('ArmedGears',304,2043); -- Artificial_Gravity_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('ArmedGears',304,2045); -- PL_Rail_Cannon (Has DSP Script was disabled)
 INSERT INTO `mob_skill_lists` VALUES ('ArmedGears',304,2047); -- Antigravity_Custom (has no DSP script)
