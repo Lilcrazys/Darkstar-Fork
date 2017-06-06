@@ -53,12 +53,11 @@ INSERT INTO `mob_skill_lists` VALUES ('Velionis',292,1795); -- Malediction_Custo
 
 INSERT INTO `mob_skill_lists` VALUES ('LilApkallu',294,1716); -- Frigid_Shuffle (Has DSP Script was disabled)
 
-INSERT INTO `mob_skill_lists` VALUES ('IrizIma',295,1962); -- Frog_Chorus_Custom (has no DSP script)
-
 INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,318); -- Somersault_Custom (has no DSP script)
 INSERT INTO `mob_skill_lists` VALUES ('LividrootAmoo',296,1332); -- Extremely_Bad_Breath_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('IririSamariri',297,1960); -- Frog_Cheer (Has DSP Script was disabled)
+INSERT INTO `mob_skill_lists` VALUES ('IririSamariri',297,1962); -- Frog_Chorus_Custom (has no DSP script)
 
 INSERT INTO `mob_skill_lists` VALUES ('Dextrose',299,1824); -- Amorphic_spikes (Has DSP Script was disabled)
 INSERT INTO `mob_skill_lists` VALUES ('Dextrose',299,1826); -- Synergism_Custom (has no DSP script)
