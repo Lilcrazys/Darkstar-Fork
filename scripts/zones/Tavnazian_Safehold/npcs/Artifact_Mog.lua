@@ -67,7 +67,7 @@ function onTrade(player,npc,trade)
         elseif (trade:hasItemQty(2821,20) and trade:hasItemQty(15565,1) and trade:getItemCount() == 21) then -- legs 2821
             itemID = 28094;
         elseif (trade:hasItemQty(2818,20) and trade:hasItemQty(15356,1) and trade:getItemCount() == 21) then -- legs 2818
-            itemID = 27336;
+            itemID = 28227;
 
         -- THF
         elseif (trade:hasItemQty(2817,20) and trade:hasItemQty(15230,1) and trade:getItemCount() == 21) then -- head 2817
