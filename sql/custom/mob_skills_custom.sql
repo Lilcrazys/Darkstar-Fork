@@ -2950,7 +2950,7 @@ INSERT INTO `mob_skills` VALUES (2907,2651,'frog_song_custom',0,7.0,2000,1500,4,
 -- INSERT INTO `mob_skills` VALUES (2921,2665,'.',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2922,2094,'soulshattering_roar_custom',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2923,2095,'calcifying_claw_custom',1,18.0,2000,1000,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (2924,2096,'divesting_stampede_custom',1,18.0,2000,1000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (2924,2096,'divesting_stampede_custom',1,18.0,2000,1000,4,0,0,1);
 INSERT INTO `mob_skills` VALUES (2925,2097,'bonebreaking_barrage_custom',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2926,2098,'beastruction_custom',1,18.0,2000,1000,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2927,2086,'metamorphic_blast',4,12.0,2000,1000,4,0,0,0);
