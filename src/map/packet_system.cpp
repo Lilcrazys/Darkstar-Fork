@@ -2225,6 +2225,8 @@ void SmallPacket0x04E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                 auctionFee = map_config.ah_base_fee_single+(price*map_config.ah_tax_rate_single/100);
             }
 
+            auctionFee = dsp_cap(auctionFee, 0, map_config.ah_max_fee);
+
             if (PChar->getStorage(LOC_INVENTORY)->GetItem(0)->getQuantity() < auctionFee)
             {
                 // ShowDebug(CL_CYAN"%s Can't afford the AH fee\n" CL_RESET,PChar->GetName());
@@ -2873,7 +2875,7 @@ void SmallPacket0x066(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
     if ((FISHACTION)action != FISHACTION_FINISH || PChar->animation == ANIMATION_FISHING_FISH)
         fishingutils::FishingAction(PChar, (FISHACTION)action, stamina, special);
-    
+
     return;
 }
 
@@ -3270,7 +3272,7 @@ void SmallPacket0x071(map_session_data_t* session, CCharEntity* PChar, CBasicPac
                             WBUFL(data, 4) = id;
                             message::send(MSG_PT_RELOAD, data, sizeof data, nullptr);
                         }
-                        
+
                     }
                 }
             }
