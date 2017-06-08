@@ -985,6 +985,13 @@ INSERT INTO `mob_skill_lists` VALUES ('Morta',5128,2883); -- Full_bloom
 INSERT INTO `mob_skill_lists` VALUES ('Morta',5128,2884); -- Deracinator
 INSERT INTO `mob_skill_lists` VALUES ('Morta',5128,2885); -- Beautiful_death
 
+INSERT INTO `mob_skill_lists` VALUES ('Celaeno',5129,2725); -- rending_talons_custom
+INSERT INTO `mob_skill_lists` VALUES ('Celaeno',5129,2726); -- shrieking_gale_custom
+INSERT INTO `mob_skill_lists` VALUES ('Celaeno',5129,2727); -- wings_of_woe_custom
+INSERT INTO `mob_skill_lists` VALUES ('Celaeno',5129,2728); -- wings_of_agony_custom
+INSERT INTO `mob_skill_lists` VALUES ('Celaeno',5129,2729); -- typhoean_rage_custom
+INSERT INTO `mob_skill_lists` VALUES ('Celaeno',5129,2730); -- ravenous_wail_custom
+
 -- INSERT INTO `mob_skill_lists` VALUES ('Pil',4160,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Rukh',4161,PLACEHOLDER); -- Unfinished
 -- INSERT INTO `mob_skill_lists` VALUES ('Asb',4162,PLACEHOLDER); -- Unfinished
