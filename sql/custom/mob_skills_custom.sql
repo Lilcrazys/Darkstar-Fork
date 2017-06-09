@@ -1783,7 +1783,7 @@ INSERT INTO `mob_skills` VALUES (1754,1498,'dukkeripen_custom',0,7.0,2000,1500,4
 -- INSERT INTO `mob_skills` VALUES (1756,1500,'dukkeripen',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1757,1501,'dukkeripen',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1758,1190,'tail_slap',4,10.0,2000,1500,4,0,0,3);
-INSERT INTO `mob_skills` VALUES (1759,1191,'hypnotic_sway_custom',0,10,2000,2000,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1759,1191,'hypnotic_sway',0,10,2000,2000,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1760,1192,'swift_shot',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1761,1505,'arrow_deluge',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1762,1193,'belly_dance',0,7.0,2000,1500,4,0,0,0);
