@@ -30,5 +30,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-    target:messageBasic(25,0,target:addHP(600);
+    target:messageBasic(25,0,target:addHP(600));
 end;
