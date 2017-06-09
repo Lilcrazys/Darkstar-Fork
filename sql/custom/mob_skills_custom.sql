@@ -1748,7 +1748,7 @@ INSERT INTO `mob_skills` VALUES (1720,1195,'wind_shear',1,10.0,2000,1500,4,0,0,7
 INSERT INTO `mob_skills` VALUES (1721,1196,'obfuscate',1,10.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1722,1197,'zephyr_mantle',0,7.0,2000,1500,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (1723,1198,'ill_wind',1,15.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (1724,1468,'white_wind_custom',0,7.0,2000,1500,4,0,0,0); -- has alt id
+INSERT INTO `mob_skills` VALUES (1724,1468,'white_wind_custom',0,7.0,2000,1500,1,0,0,0); -- has alt id
 INSERT INTO `mob_skills` VALUES (1725,1200,'kibosh',0,7,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1726,1470,'cutpurse',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1727,1202,'sandspray',4,7,2000,1500,4,0,0,0);
@@ -2731,7 +2731,7 @@ INSERT INTO `mob_skills` VALUES (2701,2445,'acheron_flame_custom',1,20.0,2000,15
 INSERT INTO `mob_skills` VALUES (2702,2446,'terra_wing_custom',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2703,2447,'dread_wind_custom',1,20.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2704,2448,'questionmarks_needles_custom',1,10.0,2000,1500,4,0,0,0);
--- INSERT INTO `mob_skills` VALUES (2705,2449,'white_wind',0,7.0,2000,1500,4,0,0,0);
+-- INSERT INTO `mob_skills` VALUES (2705,2449,'white_wind',0,7.0,2000,1500,1,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2706,2450,'smokebomb',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2707,2451,'paralysis_shower',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (2708,1880,'cosmic_breath_custom',4,15.0,4000,1500,4,0,0,0);
