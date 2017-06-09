@@ -127,6 +127,7 @@ function onMobDeath(mob, player, isKiller)
             player:completeQuest(OUTLANDS, SKYWARD_HO_VOIDWATCHER);
             player:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
             player:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
+            player:setVar("ZILART_VW",0);
         end
     end
 
