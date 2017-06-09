@@ -114,6 +114,7 @@ function onMobDeath(mob, player, isKiller)
             player:addKeyItem(ASHEN_STRATUM_ABYSSITE); -- Cycle back to T1, add questCompleted check here later.
             player:delKeyItem(ASHEN_STRATUM_ABYSSITE_III);
             player:setVar("ZILART_VW",0);
+            player:messageSpecial(KEYITEM_OBTAINED, ASHEN_STRATUM_ABYSSITE);
         end
     end
 
