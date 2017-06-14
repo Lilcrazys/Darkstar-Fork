@@ -1778,7 +1778,7 @@ INSERT INTO `mob_skills` VALUES (1746,1235,'quake_stomp',0,7.0,2000,1500,1,0,0,0
 -- INSERT INTO `mob_skills` VALUES (1751,1495,'.',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1752,1496,'gusting_gouge',0,7.0,2000,1500,4,0,0,0);
 INSERT INTO `mob_skills` VALUES (1753,1185,'hysteric_barrage',0,7.0,2000,1500,4,0,0,0);
-INSERT INTO `mob_skills` VALUES (1754,1498,'dukkeripen_custom',0,7.0,2000,1500,4,0,0,0);
+INSERT INTO `mob_skills` VALUES (1754,1498,'dukkeripen',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1755,1499,'dukkeripen',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1756,1500,'dukkeripen',0,7.0,2000,1500,4,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (1757,1501,'dukkeripen',0,7.0,2000,1500,4,0,0,0);
