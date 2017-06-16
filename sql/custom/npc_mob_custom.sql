@@ -2891,9 +2891,10 @@ INSERT INTO `npc_list` VALUES (17613822,'Augment_Box','Loot Box',192,0.000,0.001
 -- 17617919
 -- ------------------------------------------------------------
 
+-- DSP position puts NM inside the wall...
 REPLACE INTO `mob_spawn_points` VALUES (17617172,'Ildebrann','Ildebrann',13815,4.000,3.526,284.000,0);
-REPLACE INTO `mob_spawn_points` VALUES (17617173,'Hraun_Dragon','Hraun Dragon',90455,5.500,3.526,276.000,0);
-REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',90455,2.500,3.526,284.000,0);
+REPLACE INTO `mob_spawn_points` VALUES (17617173,'Hraun_Dragon','Hraun Dragon',13816,5.500,3.526,276.000,0);
+REPLACE INTO `mob_spawn_points` VALUES (17617174,'Hraun_Dragon','Hraun Dragon',13816,2.500,3.526,284.000,0);
 
 INSERT INTO `npc_list` VALUES (17617909,'Tempitem_Box','Loot Box',192,0.000,0.001,0.000,0,50,50,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,NULL,0);
 INSERT INTO `npc_list` VALUES (17617910,'Tempitem_Box','Loot Box',192,0.000,0.001,0.000,0,50,50,0,12,100,2,3,0x0000020100000000000000000000000000000000,0,NULL,0);
