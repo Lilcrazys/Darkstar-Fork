@@ -64,7 +64,7 @@ function onTrade(player,npc,trade)
         cTrialEnd(player, "mythic");
 
     -- Cancel a trial
-    elseif (trade:hasItemQty(2184,1) and itemCount == 1 and cTrial > 0) then
+    elseif (trade:hasItemQty(2184,1) and cStatus == 0 and itemCount == 1 and cTrial > 0) then
         player:setVar("cTrialItem[mythic]", 0);
         player:setVar("cTrialCount[mythic]", 0);
         player:tradeComplete();
