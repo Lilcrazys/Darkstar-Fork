@@ -53,8 +53,8 @@ function onTrade(player,npc,trade)
         -- player:setVar("cTrialCount[relic]", player:getVar("cTrialCount[mythic]")+1);
         player:tradeComplete(trade);
         player:setVar("cTrialComplete[relic]", 1);
-        player:SpoofMsg("The lady mogs love Cool James. ", npc, MESSAGE_SAY, nil);
-        player:SpoofMsg("Oh! It looks like you finished! Hand it over, kupo. ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("C.J. thinks he's so cool.. ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("Oh, you finished your trial? Show me the weapon, kupo. ", npc, MESSAGE_SAY, nil);
 
     -- Completed trial, trade for upgrade
     elseif (trade:hasItemQty(cTrial, 1) and cStatus == 1 and itemCount == 1) then

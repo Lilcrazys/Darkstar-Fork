@@ -44,7 +44,7 @@ custom_trials =
     [18300] = {r=18643, s=1, t="relic",    trade=0,    count=9},  -- Gungnir T1>T2
     [18643] = {r=18671, s=2, t="relic",    trade=0,    count=9},  -- Gungnir T2>T3
     [18671] = {r=19752, s=3, t="relic",    trade=0,    count=9},  -- Gungnir T3>T4
-    [19752] = {r=20962, s=4, t="relic",    trade=3925, count=50}, -- Gungnir T4>T5
+    [19752] = {r=20926, s=4, t="relic",    trade=3925, count=50}, -- Gungnir T4>T5
     [18288] = {r=18641, s=1, t="relic",    trade=0,    count=9},  -- Guttler T1>T2
     [18641] = {r=18669, s=2, t="relic",    trade=0,    count=9},  -- Guttler T2>T3
     [18669] = {r=19750, s=3, t="relic",    trade=0,    count=9},  -- Guttler T3>T4
