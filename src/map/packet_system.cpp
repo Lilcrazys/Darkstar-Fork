@@ -614,7 +614,7 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     {
     case 0x00: // trigger
     {
-        if(PChar->StatusEffectContainer->HasPreventActionEffect())
+        if (PChar->StatusEffectContainer->HasPreventActionEffect())
             return;
 
         if (PChar->m_Costum != 0 || PChar->animation == ANIMATION_SYNTH)
@@ -622,14 +622,15 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
             PChar->pushPacket(new CReleasePacket(PChar, RELEASE_STANDARD));
             return;
         }
-        CBaseEntity* PNpc = nullptr;
 
+        CBaseEntity* PNpc = nullptr;
         PNpc = PChar->GetEntity(TargID, TYPE_NPC);
 
         if (PNpc != nullptr && distance(PNpc->loc.p, PChar->loc.p) <= 10)
         {
             PNpc->PAI->Trigger(PChar->targid);
         }
+
         if (PChar->m_event.EventID == -1)
         {
             PChar->m_event.reset();
@@ -761,7 +762,7 @@ void SmallPacket0x01A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     {
         PChar->animation = ANIMATION_NONE;
         PChar->updatemask |= UPDATE_HP;
-        PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_CHOCOBO);
+        PChar->StatusEffectContainer->DelStatusEffectSilent(EFFECT_MOUNTED);
     }
     break;
     case 0x13: // tractor menu
@@ -3329,10 +3330,10 @@ void SmallPacket0x074(map_session_data_t* session, CCharEntity* PChar, CBasicPac
             {
                 ShowDebug(CL_CYAN"%s invited %s to an alliance\n" CL_RESET, PInviter->GetName(), PChar->GetName());
                 //the inviter already has an alliance and wants to add another party - only add if they have room for another party
-                if (PInviter->PParty->m_PAlliance && PInviter->PParty->m_PAlliance->getMainParty() == PInviter->PParty)
+                if (PInviter->PParty->m_PAlliance)
                 {
-                    //break if alliance is full
-                    if (PInviter->PParty->m_PAlliance->partyCount() == 3)
+                    //break if alliance is full or the inviter is not the leader
+                    if (PInviter->PParty->m_PAlliance->partyCount() == 3 || PInviter->PParty->m_PAlliance->getMainParty() != PInviter->PParty)
                     {
                         ShowDebug(CL_CYAN"Alliance is full, invite to %s cancelled\n" CL_RESET, PChar->GetName());
                         PChar->pushPacket(new CMessageStandardPacket(PChar, 0, 0, 14));

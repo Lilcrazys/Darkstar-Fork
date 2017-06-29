@@ -61,7 +61,7 @@ function onMobDespawn(mob)
 
     -- Set LoO's Window Open Time
     local wait = math.random(18000,28800);
-    SetServerVariable("[POP]Lord_of_Onzozo", os.time(t) + wait); -- 5-8 Hours
+    SetServerVariable("[POP]Lord_of_Onzozo", os.time() + wait); -- 5-8 Hours
     DeterMob(mob:getID(), true);
 
     ------------------------------------
