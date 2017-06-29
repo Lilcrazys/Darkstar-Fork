@@ -50,7 +50,7 @@ function onTrigger(player,npc)
             12713,    2713,     -- Cotton Tekko
             1475,     579,      -- Curry Powder
             17322,    81,       -- Fire Arrow
-            17304,    57960,    -- Fuma Shuriken
+            17304,    1472,     -- Fuma Shuriken
             1472,     369,      -- Gardenia Seed
             5164,     1945,     -- Ground Wasabi
             12456,    552,      -- Hachimaki
