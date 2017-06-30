@@ -62,7 +62,7 @@ end;
 
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
-    mob:useMobAbility(2389); -- Mud_Stream
+    mob:useMobAbility(2645); -- Mud Stream
 end;
 
 -----------------------------------
