@@ -41,8 +41,9 @@ function onTrigger(player)
         victim:injectActionPacket(5, 207, 0, 0, 0);
         victim:injectActionPacket(5, 270, 0, 0, 0);
         -- End Wrath of the Gods Animation
-        victim:addHP(-1);
-        victim:messageBasic(264,0,1);
+        -- Removed damage because this is not needed..
+        -- victim:addHP(-1);
+        -- victim:messageBasic(264,0,1);
         victim:PrintToPlayer("Some tyrant GM just zapped you. o_O; ");
     else
         player:PrintToPlayer("Too soon to zap again.");

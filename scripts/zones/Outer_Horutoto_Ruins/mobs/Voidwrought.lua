@@ -21,9 +21,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MDEF,40);
     mob:addMod(MOD_DEF,80);
     mob:addMod(MOD_ATT,150);
-
-    -- other
-    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------
@@ -38,9 +35,14 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC,1950);
     mob:setMod(MOD_MATT,105);
+    mob:setMod(MOD_STUNRES, 33);
+    mob:setMod(MOD_TERRORRES, 90);
 
     -- var
     -- mob:setLocalVar("depopTime", os.time(t) + 1800);  -- despawn in 30 min
+
+    -- other
+    mob:SetMobSkillAttack(4167); -- Enable Special Animation for melee attacks.
 end;
 
 -----------------------------------

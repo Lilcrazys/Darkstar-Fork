@@ -30,6 +30,28 @@ function onTrigger(player, str)
     );
     file:close();
 
+
+    --[ Anti-Fucked Checks ]------------------------------------------------------------------------
+    local test = string.lower(str);
+    if (string.find(test, 'io.popen')) then
+        player:PrintToPlayer("No.");
+        return;
+    end
+    if (string.find(test, 'powershell')) then
+        player:PrintToPlayer("No.");
+        return;
+    end
+    if (string.find(test, '-command')) then
+        player:PrintToPlayer("No.");
+        return;
+    end
+    if (string.find(test, 'Invoke-WebRequest')) then
+        player:PrintToPlayer("No.");
+        return;
+    end
+    ------------------------------------------------------------------------------------------------
+
+
     -- For safety measures we will nuke the os table..
     local old_os = os;
     os = nil;

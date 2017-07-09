@@ -20,6 +20,8 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    mob:setMod(MOD_STUNRES, 33);
+    mob:setMod(MOD_TERRORRES, 90);
 end;
 
 -----------------------------------
