@@ -8,12 +8,24 @@
 package.loaded["scripts/zones/Bibiki_Bay/TextIDs"] = nil;
 
 require("scripts/zones/Bibiki_Bay/TextIDs");
+require("scripts/globals/teleports");
+require("scripts/globals/settings");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    if (TRAVEL_SKIP >= 1) then
+        if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
+            player:SpoofMsg(string.format("smiles and takes the %d gil.. ", TRAVEL_SKIP), npc, MESSAGE_EMOTION, nil);
+            player:SpoofMsg("Ha! Somebody told you about the 'special ticket'! Alright, get on board. ", npc, MESSAGE_SAY, nil);
+            player:delGil(TRAVEL_SKIP);
+            -- player:setPos(-393.5,-3,-387,64,4);
+            player:addStatusEffectEx(EFFECT_COMMUTE,0,COMMUTE.FERRY_PURGONORGO,0,2);
+        end
+    end
 end;
 
 -----------------------------------
@@ -26,31 +38,31 @@ function onTrigger(player,npc)
     local vHour = VanadielHour();
     local vMin  = VanadielMinute();
 
-    if (     vHour ==  0 and vMin <= 10) then    --    Schedule                        
-        --Do nothing.                --    0: A -  0:10 - Dhalmel Rock     
-    elseif ( vHour ==  0 and vMin <= 50) then    --    1: D -  0:50 - Dhalmel Rock     
-        schedule = 1;                --    2: A -  4:50 - Purgonorgo Isle  
-    elseif ( vHour <=  3) then            --    3: D -  5:30 - Purgonorgo Isle  
+    if (     vHour ==  0 and vMin <= 10) then    --    Schedule
+        --Do nothing.                --    0: A -  0:10 - Dhalmel Rock
+    elseif ( vHour ==  0 and vMin <= 50) then    --    1: D -  0:50 - Dhalmel Rock
+        schedule = 1;                --    2: A -  4:50 - Purgonorgo Isle
+    elseif ( vHour <=  3) then            --    3: D -  5:30 - Purgonorgo Isle
         schedule = 2;                --    4: A - 12:10 - Maliyakaleya Reef
     elseif ( vHour ==  4 and vMin <= 50) then    --    5: D - 12:50 - Maliyakaleya Reef
-        schedule = 2;                --    6: A - 16:50 - Purgonorgo Isle  
+        schedule = 2;                --    6: A - 16:50 - Purgonorgo Isle
     elseif ( vHour <=  4) then            --    7: D - 17:30 - Purgonorgo Isle
         schedule = 3;
-    elseif ( vHour ==  5 and vMin <= 30) then      
+    elseif ( vHour ==  5 and vMin <= 30) then
         schedule = 3;
-    elseif ( vHour <= 11) then            
+    elseif ( vHour <= 11) then
         schedule = 4;
-    elseif ( vHour == 12 and vMin <= 10) then    
+    elseif ( vHour == 12 and vMin <= 10) then
         schedule = 4;
-    elseif ( vHour == 12 and vMin <= 50) then    
+    elseif ( vHour == 12 and vMin <= 50) then
         schedule = 5;
-    elseif ( vHour <= 15) then            
+    elseif ( vHour <= 15) then
         schedule = 6;
-    elseif ( vHour == 16 and vMin <= 50) then    
+    elseif ( vHour == 16 and vMin <= 50) then
         schedule = 6;
-    elseif ( vHour <= 16) then            
+    elseif ( vHour <= 16) then
         schedule = 7;
-    elseif ( vHour == 17 and vMin <= 30) then    
+    elseif ( vHour == 17 and vMin <= 30) then
         schedule = 7;
     end
 
@@ -106,7 +118,7 @@ function onTrigger(player,npc)
         seconds = math.floor(2.4 * (vHour * 60 - vMin + 30));
 
     elseif ( schedule == 4) then -- Arrival, bound for Maliyakaleya Reef
-        
+
         arrive = 1;
         description = 1; -- Maliyakaleya Reef
 

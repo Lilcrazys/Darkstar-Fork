@@ -3,6 +3,70 @@
 -- by ReaperX
 -- Coordinates marked {R} have been obtained by packet capture from retail. Don't change them.
 -----------------------------------
+----------------------------
+-- Begin custom
+COMMUTE =
+{
+    ERROR                   = 0,
+    OP_SANDORIA             = 1,
+    OP_BASTOK               = 2,
+    OP_WINDURST             = 3,
+    -- unknown ?            = 4,
+    OP_RONFAURE             = 5,
+    OP_ZULKHEIM             = 6,
+    OP_NORVALLEN            = 7,
+    OP_GUSTABERG            = 8,
+    OP_DERFLAND             = 9,
+    OP_SARUTABARUTA         = 10,
+    OP_KOLSHUSHU            = 11,
+    OP_ARAGONEU             = 12,
+    OP_FAUREGANDI           = 13,
+    OP_VALDEAUNIA           = 14,
+    OP_QUFIM                = 15,
+    OP_LITELOR              = 16,
+    OP_KUZOTZ               = 17,
+    OP_VOLLBOW              = 18,
+    OP_ELSHIMO_LOWLANDS     = 19,
+    OP_ELSHIMO_UPLANDS      = 20,
+    OP_SKY                  = 21,
+    -- OP_MOVOPOLIS ?       = 22,
+    OP_TAVNAZIA             = 23,
+    AISHIP_TO_SANDORIA      = 24,
+    AISHIP_TO_BASTOK        = 25,
+    AISHIP_TO_WINDURST      = 26,
+    AISHIP_TO_JEUNO_S       = 27,
+    AISHIP_TO_JEUNO_B       = 28,
+    AISHIP_TO_JEUNO_W       = 29,
+    AISHIP_TO_JEUNO_K       = 30,
+    AISHIP_TO_KAZHAM        = 31,
+    SHIP_TO_SELBINA         = 32,
+    SHIP_TO_MHAURA          = 33,
+    --[[
+    SHIP_TO_PIRATES_SELBINA = 34,
+    SHIP_TO_PIRATES_MHAURA  = 35,
+    ]]
+    SHIP_TO_WHITEGATE_M     = 36,
+    SHIP_TO_WHITEGATE_N     = 37,
+    SHIP_TO_NASHMAU         = 38,
+    SHIP_TO_NORG            = 39,
+    --[[
+    SHIP_TO_JEUNO           = 40,
+    ]]
+    FERRY_PURGONORGO        = 41,
+    FERRY_BIBIKIBAY         = 42,
+    BCNM_GHELSBA_OUTPOST    = 43,
+    BCNM_HORLOISE_PEAK      = 44,
+    BCNM_WAUGHROON_SHRINE   = 45,
+    BCNM_BALGAS_DIAS        = 46,
+    BCNM_CHAMBER_OF_ORACLES = 47,
+    BCNM_QUBIA_ARENA        = 48,
+    TELE_KAZHAM             = 49,
+    TELE_JEUNO              = 50,
+    TELE_LAYPOINT           = 51,
+    GM_TO_KIRIN             = 255
+};
+-- End custom
+----------------------------
 
 -----------------------------------
 -- TELEPORT NAMES

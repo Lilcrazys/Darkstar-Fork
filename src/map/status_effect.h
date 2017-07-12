@@ -720,7 +720,7 @@ enum EFFECT
     // 804-1013
 //==========================================================//
     // Start of LegionXI custom section
-    // EFFECT_PLACEHOLDER              = 1014, // Description
+    EFFECT_COMMUTE                  = 1014, // Transports player after a slight delay
     EFFECT_CURSE_SPIKES             = 1015, // Curse Spikes
     EFFECT_CUSTOM_ENSPELL           = 1016, // Description
     // EFFECT_PLACEHOLDER              = 1017,

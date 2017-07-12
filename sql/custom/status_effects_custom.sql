@@ -24,6 +24,7 @@ REPLACE INTO `status_effects` VALUES (803,'atma',256,0,0,0,0,0,0,0); -- 3rd ATMA
 -- Effects above this line are bugfixed or otherwise modified from darkstar.
 -- Effects below this line created specifically for custom content
 -- INSERT INTO `status_effects` VALUES (id,'name',flags,type,negative_id,overwrite,block_id,remove_id,element,min_duration);
+INSERT INTO `status_effects` VALUES (1014,'commute',32,0,0,0,0,0,0,1);
 INSERT INTO `status_effects` VALUES (1015,'curse_spikes',33,34,0,0,0,0,8,0);
 INSERT INTO `status_effects` VALUES (1016,'custom_enspell',33,94,51,0,0,0,0,0);
 -- INSERT INTO `status_effects` VALUES (1017,

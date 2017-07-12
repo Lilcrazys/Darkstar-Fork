@@ -8,12 +8,31 @@ package.loaded["scripts/zones/Mhaura/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/zones/Mhaura/TextIDs");
+require("scripts/globals/teleports");
+require("scripts/globals/keyitems");
+require("scripts/globals/settings");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    if (TRAVEL_SKIP >= 1) then
+        if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
+            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, MESSAGE_EMOTION, nil);
+            player:SpoofMsg("Well..I guess I can let you aboard the express freight Vessel.. ", npc, MESSAGE_SAY, nil);
+            if (player:hasKeyItem(BOARDING_PERMIT) and (1152 - ((os.time() - 1009810802)%1152) >= 576)) then
+                player:delGil(TRAVEL_SKIP);
+                -- player:setPos(-11,2,-142,192,50);
+                player:addStatusEffectEx(EFFECT_COMMUTE,0,COMMUTE.SHIP_TO_WHITEGATE_M,0,2);
+            else
+                player:delGil(TRAVEL_SKIP);
+                -- player:setPos(22,-2,-47,194,248);
+                player:addStatusEffectEx(EFFECT_COMMUTE,0,COMMUTE.SHIP_TO_SELBINA,0,2);
+            end
+        end
+    end
 end;
 
 -----------------------------------
@@ -48,7 +67,7 @@ function onTrigger(player,npc)
    --[[Other cutscenes:
    233 "This ship is headed for Selbina."
    234 "The Selbina ferry will deparrrt soon!  Passengers are to board the ship immediately!"
-   
+
    Can't find a way to toggle the destination on 233 or 234, so they are not used.
    Users knowing which ferry is which > using all CSs.]]
 
