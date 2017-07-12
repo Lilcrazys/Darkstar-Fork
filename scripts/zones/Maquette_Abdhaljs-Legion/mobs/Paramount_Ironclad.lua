@@ -47,13 +47,13 @@ function onMobDeath(mob, player, isKiller)
     local popBoss = true;
     local MobIDs =
     {
-        17526851, -- Paramount Harpeia
-        17526852, -- Paramount Mantis
-        17526853, -- Paramount Naraka
+        17526851, -- Paramount Naraka
+        17526852, -- Paramount Harpeia
+        17526853 -- Paramount Mantis
         -- 17526854  -- Paramount Ironclad
     };
 
-    for Veiled, ID in pairs(MobIDs) do
+    for deezNuts, ID in pairs(MobIDs) do
         if (GetMobAction(ID) ~= ACTION_NONE and GetMobAction(ID) ~= ACTION_SPAWN) then
             popBoss = false;
         end

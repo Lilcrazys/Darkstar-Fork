@@ -74,9 +74,9 @@ function onMobDespawn(mob)
     local popBoss = true;
     local MobIDs =
     {
-        17526851, -- Paramount Harpeia
-        -- 17526852, -- Paramount Mantis
-        17526853, -- Paramount Naraka
+        17526851, -- Paramount Naraka
+        17526852, -- Paramount Harpeia
+        -- 17526853, -- Paramount Mantis
         17526854  -- Paramount Ironclad
     };
 
