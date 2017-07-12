@@ -1,6 +1,6 @@
 -----------------------------------
--- Area: EDIT ME
--- VWNM: GwynnApnudd
+-- Area: Konschtat Highlands
+-- VWNM: Gwynn_ap_Nudd
 -----------------------------------
 package.loaded["scripts/zones/Konschtat_Highlands/TextIDs"] = nil;
 -----------------------------------

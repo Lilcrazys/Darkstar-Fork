@@ -1437,7 +1437,7 @@ INSERT INTO `npc_list` VALUES (17216510,'Augment_Box','Loot Box',192,0.000,0.001
 -- 17220607
 -- ------------------------------------------------------------
 
-REPLACE INTO `mob_spawn_points` VALUES (17220021,'GwynnapNudd','Gwynn ap Nudd',13804,-125,72,720,107);
+REPLACE INTO `mob_spawn_points` VALUES (17220021,'Gwynn_ap_Nudd','Gwynn ap Nudd',13804,-125,72,720,107);
 
 INSERT INTO `mob_spawn_points` VALUES (17220096,'Sleepy_Mabel','Sleepy Mabel',96604,0.000,0.001,0.000,0); -- Force pop
 INSERT INTO `mob_spawn_points` VALUES (17220097,'Sleepy_Mabel','Sleepy Mabel',96604,0.000,0.001,0.000,0); -- Force pop
