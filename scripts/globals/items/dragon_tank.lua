@@ -1,7 +1,7 @@
 -----------------------------------------
---	ID: 11002
---	Dragon Tank
---	When used, you will obtain one Dragon Fruit au Lait
+-- ID: 11002
+-- Dragon Tank
+-- Dispense: Dragon Fruit au Lait
 -----------------------------------------
 
 -----------------------------------------
@@ -9,11 +9,11 @@
 -----------------------------------------
 
 function onItemCheck(target)
-result = 0;
-	if (target:getFreeSlotsCount() == 0) then
-		result = 308;
-	end
-return result;
+    local result = 0;
+    if (target:getFreeSlotsCount() == 0) then
+        result = 308;
+    end
+    return result;
 end;
 
 -----------------------------------------
@@ -21,5 +21,5 @@ end;
 -----------------------------------------
 
 function onItemUse(target)
-	target:addItem(5933,1);
+    target:addItem(5933,1);
 end;
