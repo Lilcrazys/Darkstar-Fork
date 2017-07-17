@@ -14,11 +14,10 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     -- setMobMod
-    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Needed for auto spikes
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
     mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+    mob:setMobMod(MOBMOD_HP_STANDBACK, 0);
+    mob:setMobMod(MOBMOD_AUTO_SPIKES, 1); -- Needed for auto spikes
 
     -- Effects
     mob:addStatusEffect(EFFECT_DAMAGE_SPIKES,5,0,0); -- Needed for auto spikes

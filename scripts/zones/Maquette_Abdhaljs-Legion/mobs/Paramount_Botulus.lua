@@ -14,8 +14,9 @@ require("scripts/globals/spoofchat");
 
 function onMobInitialize(mob)
     -- setMobMod
-    mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
-    mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+    mob:setMobMod(MOBMOD_SIGHT_RANGE, 20);
+    mob:setMobMod(MOBMOD_SOUND_RANGE, 20);
+    mob:setMobMod(MOBMOD_HP_STANDBACK, 0);
 end;
 
 -----------------------------------

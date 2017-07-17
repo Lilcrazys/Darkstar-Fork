@@ -15,12 +15,11 @@ require("scripts/globals/titles");
 
 function onMobInitialize(mob)
     -- setMobMod
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-    mob:setMobMod(MOBMOD_SUB_2HOUR, 1);
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
-    mob:setMobMod(MOBMOD_SIGHT_RANGE,20);
-    mob:setMobMod(MOBMOD_SOUND_RANGE,20);
+    mob:setMobMod(MOBMOD_SIGHT_RANGE, 20);
+    mob:setMobMod(MOBMOD_SOUND_RANGE, 20);
+    mob:setMobMod(MOBMOD_HP_STANDBACK, 0);
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 end;
 
 -----------------------------------
