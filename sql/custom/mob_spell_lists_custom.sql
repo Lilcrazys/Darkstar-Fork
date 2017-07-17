@@ -1154,7 +1154,12 @@ INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 274, 1, 255); -- 
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 359, 1, 255); -- Silencega
 INSERT INTO `mob_spell_lists` VALUES ('Paramount_Naraka', 626, 503, 1, 255); -- Impact
 
--- List ID's 627 - 664 available for use (likely use for WoE boss mobs).
+INSERT INTO `mob_spell_lists` VALUES ('Mired_Mantis', 627, 226, 1, 255); -- Poisonga II
+INSERT INTO `mob_spell_lists` VALUES ('Mired_Mantis', 627, 273, 1, 255); -- Sleepga
+INSERT INTO `mob_spell_lists` VALUES ('Mired_Mantis', 627, 366, 1, 255); -- Graviga
+INSERT INTO `mob_spell_lists` VALUES ('Mired_Mantis', 627, 498, 1, 255); -- Aeroja 
+
+-- List ID's 628 - 664 available for use (likely use for WoE boss mobs).
 
 -- -----------------------------------
 -- "The Jumping Crab" custom HNM

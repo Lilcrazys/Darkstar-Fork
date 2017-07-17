@@ -54,7 +54,7 @@ function onMobFight(mob, target)
         mob:useMobAbility(690); -- HUNDRED FISTS
         mob:setLocalVar("did2hr", 3);
     elseif (mob:getHPP() <= 30 and did2hr == 1) then
-        mob:useMobAbility(688); -- MIGHT STRIKES
+        mob:useMobAbility(688); -- MIGHTY STRIKES
         mob:setLocalVar("did2hr", 2);
     elseif (mob:getHPP() <= 70 and did2hr == 0) then
         mob:useMobAbility(690); -- HUNDRED FISTS

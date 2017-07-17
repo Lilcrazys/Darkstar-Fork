@@ -1,13 +1,10 @@
 -----------------------------------
 -- Area: Legion
--- Mired_Mantis
+--  MOB: Mired Mantis
 -----------------------------------
-
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -47,13 +44,13 @@ function onMobFight(mob, target)
     local did2hr = mob:getLocalVar("did2hr");
 
     if (mob:getHPP() <= 10 and did2hr == 2) then
-        mob:useMobAbility(690); -- HF
+        mob:useMobAbility(690); -- HUNDRED FISTS
         mob:setLocalVar("did2hr", 3);
-    elseif (mob:getHPP() <= 30 and did2hr == 1) then
-        mob:useMobAbility(688); -- MS
+    elseif (mob:getHPP() <= 40 and did2hr == 1) then
+        mob:useMobAbility(691); -- MANAFONT
         mob:setLocalVar("did2hr", 2);
-    elseif (mob:getHPP() <= 70 and did2hr == 0) then
-        mob:useMobAbility(690); -- HF
+    elseif (mob:getHPP() <= 75 and did2hr == 0) then
+        mob:useMobAbility(688); -- MIGHTY STRIKES
         mob:setLocalVar("did2hr", 1);
     end
 end;

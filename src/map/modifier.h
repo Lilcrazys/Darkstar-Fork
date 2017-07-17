@@ -40,7 +40,7 @@ enum class Mod
     REQUIRED_LV               = 4095, // Apply to item (via augment), not player: Increase the items LV requirement by this much
     // End of LegionDS Custom MOD
     NONE                      = 0, // Essential, but does nothing :)
-    // MOD_ NAME                  = ID, // Comment
+    // NAME                   = ID, // Comment
     DEF                       = 1, // Target's Defense
     HP                        = 2, // Target's HP
     HPP                       = 3, // HP Percentage

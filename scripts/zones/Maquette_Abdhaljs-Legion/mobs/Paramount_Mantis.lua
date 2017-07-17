@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Legion
--- Paramount_Mantis
+--  MOB: Paramount_Mantis
 -----------------------------------
 require("scripts/globals/status");
 
@@ -47,13 +47,13 @@ function onMobFight(mob, target)
     local mgTrigger = mob:getLocalVar("mgTrigger");
 
     if (mob:getHPP() <= mgTrigger and didMG == 0) then
-        mob:useMobAbility(731); -- mijin_gakure
+        mob:useMobAbility(731); -- MIJIN GAKURE
         mob:setLocalVar("didMG", 1);
     elseif (mob:getHPP() <= 40 and didHF == 1) then
-        mob:useMobAbility(690); -- hundred_fists
+        mob:useMobAbility(690); -- HUNDRED FISTS
         mob:setLocalVar("didHF", 2);
     elseif (mob:getHPP() <= 75 and didHF == 0) then
-        mob:useMobAbility(690); -- hundred_fists
+        mob:useMobAbility(690); -- HUNDRED FISTS
         mob:setLocalVar("didHF", 1);
     end
 end;
