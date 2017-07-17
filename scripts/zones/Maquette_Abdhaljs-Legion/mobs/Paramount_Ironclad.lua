@@ -38,6 +38,31 @@ function onMobSpawn(mob)
 end;
 
 -----------------------------------
+-- onMobFight Action
+-----------------------------------
+
+function onMobFight(mob, target)
+    local did2hr = mob:getLocalVar("did2hr");
+
+    if (mob:hasStatusEffect(EFFECT_HUNDRED_FISTS)) then
+        mob:SetMobSkillAttack(0); -- Can't Hundred Fists w/special melee
+    else
+        mob:SetMobSkillAttack(4167); -- Can't Hundred Fists w/special melee
+    end
+
+    if (mob:getHPP() <= 10 and did2hr == 2) then
+        mob:useMobAbility(690); -- HUNDRED FISTS
+        mob:setLocalVar("did2hr", 3);
+    elseif (mob:getHPP() <= 30 and did2hr == 1) then
+        mob:useMobAbility(688); -- MIGHT STRIKES
+        mob:setLocalVar("did2hr", 2);
+    elseif (mob:getHPP() <= 70 and did2hr == 0) then
+        mob:useMobAbility(690); -- HUNDRED FISTS
+        mob:setLocalVar("did2hr", 1);
+    end
+end;
+
+-----------------------------------
 -- onMobDeath
 -----------------------------------
 
