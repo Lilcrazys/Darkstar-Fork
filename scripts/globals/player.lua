@@ -12,6 +12,7 @@ require("scripts/globals/shop");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/gear_sets");
+require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onGameIn
@@ -25,6 +26,22 @@ function onGameIn(player, firstlogin, zoning)
 
         --------------------
         -- Begin Custom
+
+        -- Torture SoftBanned player
+        if (player:getVar("SoftBan") > 0) then
+            player:setMod(MOD_STEALTH, -200);
+            player:setMod(MOD_SPELLINTERRUPT, -200);
+            player:setMod(MOD_ENEMYCRITRATE, 50);
+            player:setMod(MOD_CRITHITRATE, -50);
+            player:setMod(MOD_MOVE, -12);
+            player:setMod(MOD_TREASURE_HUNTER, -9);
+            if (math.random(0,5) ~= 3) then
+                -- Crash client with bad MSG packet
+                player:SpoofMsg("/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n", nil, MESSAGE_EMOTION, nil);
+            end
+        end
+
+        -- Check if import char
         if (player:getVar("FreshlyImported") == 1) then
             -- Make sure LS exists and player has at least 1 free space
             if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() > 0) then

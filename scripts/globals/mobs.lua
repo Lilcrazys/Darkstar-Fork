@@ -81,6 +81,14 @@ function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
     if (player:getCurrentRegion() == 27) then -- 27 = REGION_LIMBUS
         bonusLimbusDrop(player);
     end
+
+    -- Torture SoftBanned player
+    if (player:getVar("SoftBan") > 0) then
+        if (mob:isNM()) then
+            -- Crash player with bad MSG packet client whenever they kill an NM
+            player:SpoofMsg("/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n", nil, MESSAGE_EMOTION, nil);
+        end
+    end
 end;
 
 function bonusLimbusDrop(player)
