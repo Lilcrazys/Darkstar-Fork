@@ -302,14 +302,11 @@ function cTrialProgress(player,trialStage,trialType)
     local cTrialCount = player:getVar("cTrialCount["..trialType.."]");
     local info = custom_trials[cTrialItem];
         -- info.r, info.s, info.t, info.trade, info.count;
+    local isEquipped = false;
+    local preCount = cTrialCount;
     if (info ~= nil) then
         if (cTrialItemEquipped(player, trialType) == true) then
-            -- print(string.format("[DEBUG] Player %s trial %d progress check..", player:getName(), cTrialItem));
-            -- print("[DEBUG] info.t : ".. info.s);
-            -- print("[DEBUG] trialStage : ".. trialStage);
-            -- print("[DEBUG] info.t : ".. info.t);
-            -- print("[DEBUG] trialType : ".. trialType);
-
+            isEquipped = true;
             if (trialStage == info.s and trialType == info.t) then
                 cTrialCount = cTrialCount+1; -- Update count.
                 player:setVar("cTrialCount["..trialType.."]", cTrialCount); -- Set var to the updated count.
@@ -322,8 +319,29 @@ function cTrialProgress(player,trialStage,trialType)
                     player:SpoofMsg("All Trial objectives complete! ", nil, MESSAGE_ECHO, nil);
                 end
             end
-            -- print("------------------")
         end
+
+        -- Begin logging
+        local dateStamp = os.date("%d/%m/%Y");
+        local timeStamp = os.date("%I:%M:%S %p");
+        local file = io.open("log/custom_trials/".. player:getName().. ".log", "a");
+        file:write(
+        "\n", "----------------------------------------",
+        "\n", "Trial Item: ".. cTrialItem,
+        "\n", "Equipped: ".. tostring(isEquipped),
+        "\n", "Date: ".. dateStamp,
+        "\n", "Time: ".. timeStamp,
+        "\n", "Trial type: ".. info.t,
+        "\n", "Type Var: ".. trialType,
+        "\n", "Trial Stage: ".. info.s,
+        "\n", "Stage Var: ".. trialStage,
+        "\n", "Required count: ".. info.count,
+        "\n", "Pre-kill Count: ".. preCount,
+        "\n", "Post-kill Count: ".. cTrialCount,
+        "\n" -- This MUST be final line.
+        );
+        file:close();
+        -- End logging
     end
 end;
 
