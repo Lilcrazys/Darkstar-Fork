@@ -13,7 +13,7 @@ cmdprops =
 
 function onTrigger(player, animationId)
 
-    animationId = tonumber(animationId) or _G[animationId];
+    animationId = tonumber(animationId) or _G[string.upper(animationId)];
 
     if (animationId == nil) then
         player:PrintToPlayer( string.format( "Current player animation: %d", player:getAnimation() ) );

@@ -12,9 +12,9 @@ cmdprops =
 };
 
 function onTrigger(player, skill)
-    
-    skill = tonumber(skill) or _G[skill];
-    
+
+    skill = tonumber(skill) or _G[string.upper(skill)];
+
     if (skill == nil) then
         player:PrintToPlayer( "You must enter a valid skill enum." );
         return;

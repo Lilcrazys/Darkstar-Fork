@@ -13,7 +13,7 @@ cmdprops =
 
 function onTrigger(player, titleId, target)
 
-    titleId = tonumber(titleId) or _G[titleId];
+    titleId = tonumber(titleId) or _G[string.upper(titleId)];
 
     if (titleId == nil) then
         player:PrintToPlayer("You must enter a valid title id.");

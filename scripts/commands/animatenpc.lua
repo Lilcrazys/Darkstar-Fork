@@ -14,7 +14,7 @@ cmdprops =
 function onTrigger(player, npcId, animationId)
 
     npcId = tonumber(npcId) or npcId;
-    animationId = tonumber(animationId) or _G[animationId];
+    animationId = tonumber(animationId) or _G[string.upper(animationId)];
 
     if (npcId ~= nil and animationId ~= nil) then
         local npc = GetNPCByID( npcId, player );

@@ -30,7 +30,7 @@ function onTrigger(player, target, id)
         if (pc ~= nil) then
             effectTarget = pc;
         else
-            id = _G[target];
+            id = _G[string.upper(target)];
         end
 
         if (id == 0 or id == nil) then

@@ -11,7 +11,7 @@ cmdprops =
 
 function onTrigger(player, target, nation)
 
-    nation = tonumber(nation) or _G[nation];
+    nation = tonumber(nation) or _G[string.upper(nation)];
 
     if (target == nil) then
         target = player:getName();
