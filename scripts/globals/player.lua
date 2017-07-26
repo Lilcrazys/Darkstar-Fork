@@ -12,7 +12,6 @@ require("scripts/globals/shop");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/gear_sets");
-require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onGameIn
@@ -26,20 +25,6 @@ function onGameIn(player, firstlogin, zoning)
 
         --------------------
         -- Begin Custom
-
-        -- Torture SoftBanned player
-        if (player:getVar("SoftBan") > 0) then
-            player:setMod(MOD_STEALTH, -200);
-            player:setMod(MOD_SPELLINTERRUPT, -200);
-            player:setMod(MOD_ENEMYCRITRATE, 50);
-            player:setMod(MOD_CRITHITRATE, -50);
-            player:setMod(MOD_MOVE, -12);
-            player:setMod(MOD_TREASURE_HUNTER, -9);
-            if (math.random(0,5) ~= 3) then
-                -- Crash client with bad MSG packet
-                player:SpoofMsg("/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n", nil, MESSAGE_EMOTION, nil);
-            end
-        end
 
         -- Check if import char
         if (player:getVar("FreshlyImported") == 1) then
@@ -97,7 +82,16 @@ function onGameIn(player, firstlogin, zoning)
     end
 
     if (zoning) then -- Things checked ONLY during zone in go here.
-        -- Nothing here yet :P
+        -- Torture SoftBanned player
+        if (player:getVar("SoftBan") > 0) then
+            local magnitude = 1+player:getVar("SoftBan");
+            player:setMod(MOD_STEALTH, -20 *magnitude);
+            player:setMod(MOD_SPELLINTERRUPT, -20 *magnitude);
+            player:setMod(MOD_ENEMYCRITRATE, 20 *magnitude);
+            player:setMod(MOD_CRITHITRATE, -20 *magnitude);
+            player:setMod(MOD_MOVE, -magnitude *2);
+            player:setMod(MOD_TREASURE_HUNTER, -magnitude);
+        end
     end
 
     -- Things checked BOTH during logon AND zone in below this line.

@@ -84,9 +84,10 @@ function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
 
     -- Torture SoftBanned player
     if (player:getVar("SoftBan") > 0) then
-        if (mob:isNM()) then
-            -- Crash player with bad MSG packet client whenever they kill an NM
-            player:SpoofMsg("/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n/n", nil, MESSAGE_EMOTION, nil);
+        local magnitude = 1+player:getVar("SoftBan");
+        if (mob:isNM() and math.random(1,10) <= magnitude) then
+            -- Crash client here using bad menu packet
+            player:sendMenu(2);
         end
     end
 end;

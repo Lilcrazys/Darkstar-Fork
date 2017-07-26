@@ -3,11 +3,6 @@
 -- desc: used to test menu's
 ---------------------------------------------------------------------------------------------------
 
-require("scripts/globals/settings");
-require("scripts/globals/conquest");
-
-
-
 cmdprops =
 {
     permission = 6,

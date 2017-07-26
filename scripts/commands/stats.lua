@@ -1,6 +1,5 @@
 ---------------------------------------------------------------------------------------------------
 -- func: @stats
--- auth: Omni, fixed by Teo
 -- desc: Prints current Player stats to the in game chatlog.
 ---------------------------------------------------------------------------------------------------
 
@@ -11,6 +10,11 @@ cmdprops =
 };
 
 function onTrigger(player)
+    if (player:getVar("SoftBan") > 0) then
+        player:PrintToPlayer("Error.");
+        return;
+    end
+
     require("scripts/globals/status");
     require("scripts/globals/spoofchat");
     player:SpoofMsg(string.format("Treasure Hunter base bonus: %s", player:getMod(MOD_TREASURE_HUNTER)), nil, MESSAGE_ECHO, nil);
