@@ -44,6 +44,27 @@ function onTrade(player,npc,trade)
                 player:setVar("cTrialItem[relic]", itemID); -- Sets new trial.
                 player:injectActionPacket(6, 203, 0, 0, 0);
                 player:SpoofMsg("Use '$trial' to review your progress! ", npc, MESSAGE_SAY, nil);
+
+                -- Log it..
+                local logNfo = custom_trials[itemID];
+                local dateStamp = os.date("%d/%m/%Y");
+                local timeStamp = os.date("%I:%M:%S %p");
+                local file = io.open("log/custom_trials/".. player:getName().. ".log", "a");
+                file:write(
+                "\n", "----------------------------------------",
+                "\n", "** Trial started **",
+                "\n", "Trial: ".. cTrial,
+                "\n", "Date: ".. dateStamp,
+                "\n", "Time: ".. timeStamp,
+                "\n", "Traded item: ".. itemID,
+                "\n", "Traded item count: ".. itemCount,
+                "\n", "Trial reward item: ".. logNfo.r,
+                "\n", "Trial type: ".. logNfo.t,
+                "\n", "Trial Stage: ".. logNfo.s,
+                "\n" -- This MUST be final line.
+                );
+                file:close();
+                -- End logging
             end
         end
 
@@ -62,6 +83,26 @@ function onTrade(player,npc,trade)
         player:SpoofMsg("This ought to put some spark into it..KUPOW! ", npc, MESSAGE_SAY, nil);
         player:injectActionPacket(6, 205, 0, 0, 0);
         cTrialEnd(player, "relic");
+
+        -- Log it..
+        local dateStamp = os.date("%d/%m/%Y");
+        local timeStamp = os.date("%I:%M:%S %p");
+        local file = io.open("log/custom_trials/".. player:getName().. ".log", "a");
+        file:write(
+        "\n", "----------------------------------------",
+        "\n", "** Trial completed **",
+        "\n", "Trial: ".. cTrial,
+        "\n", "Date: ".. dateStamp,
+        "\n", "Time: ".. timeStamp,
+        "\n", "Traded item: ".. itemID,
+        "\n", "Traded item count: ".. itemCount,
+        "\n", "Trial reward item: ".. trialInfo.r,
+        "\n", "Trial type: ".. trialInfo.t,
+        "\n", "Trial Stage: ".. trialInfo.s,
+        "\n" -- This MUST be final line.
+        );
+        file:close();
+        -- End logging
 
     -- Cancel a trial
     elseif (trade:hasItemQty(2184,1) and cStatus == 0 and itemCount == 1 and cTrial > 0) then

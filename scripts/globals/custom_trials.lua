@@ -327,6 +327,7 @@ function cTrialProgress(player,trialStage,trialType)
         local file = io.open("log/custom_trials/".. player:getName().. ".log", "a");
         file:write(
         "\n", "----------------------------------------",
+        "\n", "** Trial Progress check **",
         "\n", "Trial Item: ".. cTrialItem,
         "\n", "Equipped: ".. tostring(isEquipped),
         "\n", "Date: ".. dateStamp,
