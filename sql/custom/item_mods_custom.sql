@@ -259,6 +259,9 @@ INSERT INTO `item_mods` VALUES (20695,175,100); -- Skill Chain DMG
 INSERT INTO `item_mods` VALUES (20711,25,15); -- Blurred Sword - 15 Acc
 INSERT INTO `item_mods` VALUES (20712,25,20); -- Blurred Sword +1 - 20 Acc
 
+-- Excalipoor II (DO NOT REMOVE UNTIL THE WS EXISTS IN DSP)
+INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
+
 REPLACE INTO `item_mods` VALUES (20715,311,96); -- Acclimator +96 M.Dmg
 
 INSERT INTO `item_mods` VALUES (20718,345,1000); -- tp bonus
