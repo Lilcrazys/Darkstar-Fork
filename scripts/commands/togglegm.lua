@@ -11,7 +11,6 @@ cmdprops =
 
 function onTrigger(player)
     -- GM Flag Definitions
-    local FLAG_GM_POL           = 0x00010000;
     local FLAG_GM               = 0x04000000;
     local FLAG_GM_SENIOR        = 0x05000000;
     local FLAG_GM_LEAD          = 0x06000000;
@@ -27,7 +26,7 @@ function onTrigger(player)
     local MINLVL_GM_PRODUCER    = 4;
     ]]
     -- Customized tiers
-    local MINLVL_GM_POL         = 1; -- POL icon
+    local MINLVL_GM_JUNIOR      = 1; -- Normal GM icon
     local MINLVL_GM             = 2; -- Normal GM icon, uses same flags as T3
     local MINLVL_GM_FULL        = 3; -- Normal GM icon, uses same flags as T2
     local MINLVL_GM_SENIOR      = 4; -- Normal GM icon
@@ -35,9 +34,6 @@ function onTrigger(player)
     local MINLVL_GM_PRODUCER    = 6; -- Dev Icon
 
     if (player:checkNameFlags(FLAG_GM)) then
-        if (player:checkNameFlags(FLAG_GM_POL)) then
-            player:setFlag(FLAG_GM_POL);
-        end
         if (player:checkNameFlags(FLAG_GM)) then
             player:setFlag(FLAG_GM);
         end
@@ -55,10 +51,11 @@ function onTrigger(player)
             player:setFlag(FLAG_GM_LEAD);
         elseif (gmlvl >= MINLVL_GM_SENIOR) then
             player:setFlag(FLAG_GM_SENIOR);
+        elseif (gmlvl >= MINLVL_GM_FULL) then
+            player:setFlag(FLAG_GM);
         elseif (gmlvl >= MINLVL_GM) then
             player:setFlag(FLAG_GM);
-        elseif (gmlvl >= MINLVL_GM_POL) then
-            player:setFlag(FLAG_GM_POL);
+        elseif (gmlvl >= MINLVL_GM_JUNIOR) then
             player:setFlag(FLAG_GM);
         end
     end

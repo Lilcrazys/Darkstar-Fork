@@ -12,8 +12,8 @@ cmdprops =
 function onTrigger(player)
     local gmlvl = player:getGMLevel();
     -- Displaying commands this player can use, sorted by GM tier, 3 at a time.
-    if (player:getVar("_isMinion_") == 350) then -- Minions only
-        player:PrintToPlayer("$minion <subcommand> <parameters>");
+    if (player:getVar("_isMinion_") > 0) then -- Minions only
+        player:PrintToPlayer("$minion <subcommand> <parameters, parameters, parameters>");
     end
 
     if (gmlvl >= 0) then -- Regular non GM players
@@ -25,13 +25,13 @@ function onTrigger(player)
     end
 
     -- Previous tiers are already displayed, don't duplicate!
-    if (gmlvl >= 1) then -- POL icon GM (reduced powers)
+    if (gmlvl >= 1) then --Junior GM (reduced powers)
         player:PrintToPlayer("@togglegm  @hide  @givels  @posfix  @setmodel");
         player:PrintToPlayer("@zap  @jail  @pardon  @logoff  @speed  @chocobo");
-        player:PrintToPlayer("@addallmaps  @batfix  @release  @reloadglobal");
+        player:PrintToPlayer("@hasitem  @haskeyitem  @release  @reloadglobal");
         player:PrintToPlayer("@checkvar  @checkmission  @checkquest  @checktrial  @checknexus");
-        player:PrintToPlayer("@hasitem  @stats  @getstats  @getid  @getmobaction  @getmobname");
-        player:PrintToPlayer("@49  @goto  @op  @zone  @homepoint  @return  @pos");
+        player:PrintToPlayer("@stats  @getstats  @getid  @getmobaction  @getmobname");
+        player:PrintToPlayer("@addallmaps  @goto  @49  @op  @zone  @homepoint  @return  @pos");
         player:PrintToPlayer("@message2self  @messagebasic  @messagespecial  @injectaction");
     end
 
@@ -69,7 +69,7 @@ function onTrigger(player)
     end
 
     -- Since each prints until reaching a gmlvl the player doesn't have, this tier sees ALL.
-    if (gmlvl >= 6) then -- Developer
+    if (gmlvl >= 6) then -- Admin/Developer
         player:PrintToPlayer("@exec  @kill  @menu  @message2server  @nm");
         player:PrintToPlayer("@addallkeyitems (don't..its problematic)");
         player:PrintToPlayer("@shoptest  @heroshop  @adddynatime (crashy)");
@@ -77,6 +77,7 @@ function onTrigger(player)
         player:PrintToPlayer("@promote  @setflag  @setminion");
         player:PrintToPlayer("@takexp  @takegil  @setplayernation");
         player:PrintToPlayer("@hp  @mp  @tp  @pettp  @addeffect  @deleffect");
+        player:PrintToPlayer("@softban");
     end
     -- Although it IS technically possibly to create tiers as high as 255...
     if (gmlvl >= 1) then
