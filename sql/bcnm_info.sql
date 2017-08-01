@@ -64,7 +64,7 @@ INSERT INTO `bcnm_info` VALUES (69,144,'3_2_1',NULL,NULL,1800,50,6,0,15);
 INSERT INTO `bcnm_info` VALUES (70,144,'shattering_stars',NULL,NULL,600,99,1,0,22);
 INSERT INTO `bcnm_info` VALUES (71,144,'shattering_stars',NULL,NULL,600,99,1,0,22);
 INSERT INTO `bcnm_info` VALUES (72,144,'shattering_stars',NULL,NULL,600,99,1,0,22);
-INSERT INTO `bcnm_info` VALUES (73,144,'birds_of_a_feather',NULL,NULL,900,30,3,73,15);
+-- INSERT INTO `bcnm_info` VALUES (73,144,'birds_of_a_feather',NULL,NULL,900,30,3,73,15);
 INSERT INTO `bcnm_info` VALUES (74,144,'crustacean_conundrum',NULL,NULL,900,20,3,0,15);
 INSERT INTO `bcnm_info` VALUES (75,144,'grove_guardians',NULL,NULL,1800,30,6,0,15);
 INSERT INTO `bcnm_info` VALUES (76,144,'hills_are_alive',NULL,NULL,1800,0,18,76,15);
@@ -81,7 +81,7 @@ INSERT INTO `bcnm_info` VALUES (96,146,'rank_2_mission',NULL,NULL,1800,25,6,0,5)
 INSERT INTO `bcnm_info` VALUES (97,146,'steamed_sprouts',NULL,NULL,1800,40,6,0,15);
 INSERT INTO `bcnm_info` VALUES (98,146,'divine_punishers',NULL,NULL,1800,60,6,0,15);
 INSERT INTO `bcnm_info` VALUES (99,146,'saintly_invitation',NULL,NULL,1800,99,6,0,5);
-INSERT INTO `bcnm_info` VALUES (100,146,'treasures_and_tribulations',NULL,NULL,1800,50,6,100,15);
+-- INSERT INTO `bcnm_info` VALUES (100,146,'treasures_and_tribulations',NULL,NULL,1800,50,6,100,15);
 INSERT INTO `bcnm_info` VALUES (101,146,'shattering_stars',NULL,NULL,600,99,1,0,22);
 INSERT INTO `bcnm_info` VALUES (102,146,'shattering_stars',NULL,NULL,600,99,1,0,22);
 INSERT INTO `bcnm_info` VALUES (103,146,'shattering_stars',NULL,NULL,600,99,1,0,22);
