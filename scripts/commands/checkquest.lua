@@ -1,34 +1,77 @@
 ---------------------------------------------------------------------------------------------------
--- func: @checkquest <Log ID> <Player>
--- desc: Prints status value for the specified quest.
+-- func: @checkquest <logID> <questID> {player}
+-- desc: Prints status of the quest to the in game chatlog
 ---------------------------------------------------------------------------------------------------
+
+require("scripts/globals/quests");
 
 cmdprops =
 {
     permission = 1,
-    parameters = "iis"
+    parameters = "sss"
 };
 
+function error(player, msg)
+    player:PrintToPlayer(msg);
+    player:PrintToPlayer("@checkquest <logID> <questID> {player}");
+end;
+
 function onTrigger(player,logId,questId,target)
-    if (logId == nil or questId == nil) then
-        player:PrintToPlayer( "You must enter a valid LogID and Quest ID!" );
-        player:PrintToPlayer( "NUMBERS ONLY! See quests.lua global" );
-        player:PrintToPlayer( "@checkquest <Log ID> <Quest ID> <Player>" );
+    
+    -- validate logId
+    local logName;
+    if (logId == nil) then
+        error(player, "You must provide a logID.");
+        return;
+    elseif (tonumber(logId) ~= nil) then
+        logId = tonumber(logId);
+        logId = QUEST_LOGS[logId];
+    end
+    if (logId ~= nil) then
+        logId = _G[string.upper(logId)];
+    end
+    if ((type(logId) == "table") and logId.quest_log ~= nil) then
+        logName = logId.full_name;
+        logId = logId.quest_log;
+    else
+        error(player, "Invalid logID.");
         return;
     end
 
-    if (target ~= nil) then
-        local targ = GetPlayerByName(target);
-        if (targ ~= nil) then
-            local targetQuestStatus = targ:getQuestStatus(logId, questId);
-            player:PrintToPlayer("0 = Available (not active), 1 = Accepted (flagged), 2 = Completed." );
-            player:PrintToPlayer(string.format("Status of Log %d Quest %d for player %s is: %d", logId, questId, target, targetQuestStatus));
-        else
-            player:PrintToPlayer(string.format("Player named '%s' not found!", target));
+    -- validate questId
+    if (questId ~= nil) then
+        questId = tonumber(questId) or _G[string.upper(questId)];
+    end
+    if (questId == nil or questId < 0) then
+        error(player, "Invalid questID.");
+        return;
+    end
+
+    -- validate target
+    local targ;
+    if (target == nil) then
+        targ = player:getCursorTarget();
+        if (targ == nil or not targ:isPC()) then
+            targ = player;
         end
     else
-        local playerQuestStatus = player:getQuestStatus(logId, questId);
-        player:PrintToPlayer("0 = Available (not active), 1 = Accepted (flagged), 2 = Completed." );
-        player:PrintToPlayer(string.format("Status of Log %d Quest %d is: %d", logId, QuestId, playerQuestStatus));
+        targ = GetPlayerByName(target);
+        if (targ == nil) then
+            error(player, string.format("Player named '%s' not found!", target));
+            return;
+        end
     end
+
+    -- get quest status
+    local status = targ:getQuestStatus(logId,questId);
+    switch (status): caseof
+    {
+        [0] = function (x) status = "AVAILABLE"; end,
+        [1] = function (x) status = "ACCEPTED"; end,
+        [2] = function (x) status = "COMPLETED"; end,
+    }
+    
+    -- show quest status
+    player:PrintToPlayer( string.format( "%s's status for %s quest ID %i is: %s", targ:getName(), logName, questId, status ) );
+
 end;

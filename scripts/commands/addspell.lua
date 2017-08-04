@@ -9,37 +9,46 @@ cmdprops =
     parameters = "is"
 };
 
+function error(player, msg)
+    player:PrintToPlayer(msg);
+    player:PrintToPlayer("@addspell <spellID> {player}");
+end;
+
 function onTrigger(player, spellId, target)
+    -- validate spellId
     if (spellId == nil) then
-        player:PrintToPlayer( "You must enter a valid spell ID." );
-        player:PrintToPlayer( "@addSpell <spellID> <player>" );
+        error(player, "Invalid spellID.");
         return;
     end
 
+    -- validate target
+    local targ;
     if (target == nil) then
-        player:addSpell(spellId);
+        targ = player;
     else
-        local targ = GetPlayerByName(target);
-        if (targ ~= nil) then
-            local dateStamp = os.date("%d/%m/%Y");
-            local timeStamp = os.date("%I:%M:%S %p");
-            local file = io.open("log/commands/addspell.log", "a");
-            file:write(
-            "\n", "----------------------------------------",
-            "\n", "Date: ".. dateStamp,
-            "\n", "Time: ".. timeStamp,
-            "\n", "User: ".. player:getName(),
-            "\n", "Target: ".. target,
-            "\n", "ID of spell given: ".. spellId,
-            "\n", "----------------------------------------",
-            "\n" -- This MUST be final line.
-            );
-            file:close();
-
-            targ:addSpell(spellId);
-        else
-            player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
-            player:PrintToPlayer( "@addSpell <spellID> <player>" );
+        targ = GetPlayerByName(target);
+        if (targ == nil) then
+            error(player, string.format("Player named '%s' not found!", target));
+            return;
         end
     end
+
+    -- add spell
+    targ:addSpell(spellId);
+    player:PrintToPlayer(string.format("Added spellId %i to player %s.",spellId,targ:getName()));
+
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/addspell.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. targ:getName(),
+    "\n", "ID of spell given: ".. spellId,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end;

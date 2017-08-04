@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 -- func: deleffect
--- desc: removes the specified effect from the given player.
+-- desc: Removes the given effect from the given player.
 ---------------------------------------------------------------------------------------------------
 
 require("scripts/globals/status");
@@ -42,26 +42,19 @@ function onTrigger(player, target, id)
         return;
     end
 
-    if (effectTarget:delStatusEffect(id)) then
-        local targName;
-        if (target ~= nil and pc ~= nil) then
-            targName = target;
-        else
-            targName = player:getName();
-        end
-        local dateStamp = os.date("%d/%m/%Y");
-        local timeStamp = os.date("%I:%M:%S %p");
-        local file = io.open("log/commands/deleffect.log", "a");
-        file:write(
-        "\n", "----------------------------------------",
-        "\n", "Date: ".. dateStamp,
-        "\n", "Time: ".. timeStamp,
-        "\n", "User: ".. player:getName(),
-        "\n", "Target: ".. targName,
-        "\n", "Effect ID: ".. id,
-        "\n", "----------------------------------------",
-        "\n" -- This MUST be final line.
-        );
-        file:close();
-    end
+    effectTarget:delStatusEffect(id)
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/deleffect.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. targName,
+    "\n", "Effect ID: ".. id,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end
