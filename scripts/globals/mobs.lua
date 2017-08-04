@@ -58,18 +58,17 @@ function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
 
     -- Bonus points
     if (mob:getSystem() == SYSTEM_BEASTMEN) then
+        local curReg = player:getCurrentRegion();
         -- Bonus Imperial Standing for ToAU beastmen
-        if (player:hasStatusEffect(EFFECT_SANCTION) and player:checkDistance(mob) < 100
-        and player:getCurrentRegion() >= 28 and player:getCurrentRegion() <= 32 ) then
-            if (mob:getBaseExp() > 0) then -- mob must give exp to get full bonus
+        if (player:hasStatusEffect(EFFECT_SANCTION) and curReg >= 28 and curReg <= 32 ) then
+            if (player:checkValorCredit(mob) == true) then -- mob must give exp to get full bonus
                 player:addCurrency("imperial_standing", 1+mob:getMainLvl()*0.5);
             else -- Not an exp mob, no soup and only 1 point for you!
                 player:addCurrency("imperial_standing", 1);
             end
         -- Bonus Allied notes for WotG beastmen
-        elseif (player:hasStatusEffect(EFFECT_SIGIL) and player:checkDistance(mob) < 100
-        and player:getCurrentRegion() >= 33 and player:getCurrentRegion() <= 40 ) then
-            if (mob:getBaseExp() > 0) then -- mob must give exp to get full bonus
+        elseif (player:hasStatusEffect(EFFECT_SIGIL) and curReg >= 33 and curReg <= 40 ) then
+            if (player:checkValorCredit(mob) == true) then -- mob must give exp to get full bonus
                 player:addCurrency("allied_notes", 1+mob:getMainLvl()*0.5);
             else -- Not an exp mob, no soup and only 1 point for you!
                 player:addCurrency("allied_notes", 1);
