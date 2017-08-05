@@ -55,6 +55,17 @@ function onSpellCast(caster,target,spell)
     else
         dmg = BlueMagicalSpell(caster, target, spell, params, MND_BASED);
         dmg = BlueFinalAdjustments(caster, target, spell, dmg, params);
+
+        --------------------------
+        -- Begin custom nerfage
+        if (target:isMob()) then
+            if (target:isNM()) then
+                dmg = dmg*0.2;
+            end
+        end
+        -- End custom nerfage
+        --------------------------
+
         if (target:getMP() > 0) then
             if (target:getMP() < dmg) then
                 dmg = target:getMP();
