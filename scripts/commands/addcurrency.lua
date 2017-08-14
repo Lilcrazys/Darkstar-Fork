@@ -42,8 +42,10 @@ function onTrigger(player,currency,amount,target)
     
     -- add currency
     targ:addCurrency(currency,amount);
-    player:PrintToPlayer(string.format("%s was given %i %s.",targ:getName(),amount,currency));
+    local newAmount = targ:getCurrency(currency);
+    player:PrintToPlayer(string.format("%s was given %i %s, for a total of %i.",targ:getName(),amount,currency,newAmount));
 
+    -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addcurrency.log", "a");

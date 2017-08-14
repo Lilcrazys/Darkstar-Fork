@@ -9,27 +9,34 @@ cmdprops =
     parameters = "s"
 };
 
-function onTrigger(player, target)
-    if (target == nil or player:getGMLevel() == 0) then
-        target = player:getName();
-    end
+function error(player, msg)
+    player:PrintToPlayer(msg);
+    player:PrintToPlayer("@homepoint {player}");
+end;
 
-    local targ = GetPlayerByName(target);
-    if (targ ~= nil) then
-        if (targ:getHPP() ~= 100 and player:getGMLevel() == 0) then
-            player:PrintToPlayer("To prevent abuse, the target must have full HP.");
+function onTrigger(player, target)
+    -- validate target
+    local targ;
+    if (target == nil or player:getGMLevel() < 2) then
+        targ = player;
+    else
+        targ = GetPlayerByName( target );
+        if (targ == nil) then
+            error(player, string.format( "Player named '%s' not found!", target ) );
             return;
         end
-
-        if (targ:getVar("inJail") > 0 and targ:getZoneID() == 131) then
-            player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
-        else
-            require("scripts/globals/status");
-            require("scripts/globals/teleports");
-            targ:injectActionPacket(4, 261, 0, 0, 0);
-            targ:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
-        end
-    else
-        player:PrintToPlayer(string.format("Player named '%s' not found!", target));
     end
-end;
+
+    -- homepoint target
+    --[[
+    targ:warp();
+    ]]
+    require("scripts/globals/status");
+    require("scripts/globals/teleports");
+    targ:injectActionPacket(4, 261, 0, 0, 0);
+    targ:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
+
+    if (targ:getID() ~= player:getID()) then
+        player:PrintToPlayer(string.format("Sent %s to their homepoint.",targ:getName()));
+    end
+end

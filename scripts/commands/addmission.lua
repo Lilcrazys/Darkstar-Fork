@@ -61,8 +61,9 @@ function onTrigger(player, logId, missionId, target)
 
     -- add mission
     targ:addMission(logId, missionId);
-    player:PrintToPlayer(string.format("Added %s Mission with ID %u for %s", logName, missionId, targ:getName()));
+    player:PrintToPlayer(string.format("Added %s mission %i to %s.", logName, missionId, targ:getName()));
 
+    -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addmission.log", "a");

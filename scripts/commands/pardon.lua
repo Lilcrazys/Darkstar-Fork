@@ -31,7 +31,7 @@ function onTrigger(player, target)
         "\n", "Date: ".. dateStamp,
         "\n", "Time: ".. timeStamp,
         "\n", "User: ".. player:getName(),
-        "\n", "Target: ".. target,
+        "\n", "Target: ".. targ:getName(),
         "\n", "----------------------------------------",
         "\n" -- This MUST be final line.
         );

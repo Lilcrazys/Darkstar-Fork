@@ -78,6 +78,7 @@ function onTrigger(player, target)
     end
     player:PrintToPlayer(string.format("%s now has all spells.",targ:getName()));
 
+    -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addallspells.log", "a");

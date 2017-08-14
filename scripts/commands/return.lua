@@ -9,31 +9,59 @@ cmdprops =
     parameters = "s"
 };
 
+function error(player, msg)
+    player:PrintToPlayer(msg);
+    player:PrintToPlayer("@return {player}");
+end;
+
 function onTrigger(player, target)
-    local ZoneID;
-    if (target == nil or player:getGMLevel() == 0) then
-        target = player:getName();
-    end
 
-    local targ = GetPlayerByName(target);
-
-    if (targ ~= nil) then
-        if (targ:getHPP() ~= 100) then
-            player:PrintToPlayer("To prevent abuse, the target must have full HP.");
+    -- validate target
+    local targ;
+    if (target == nil) then
+        targ = player;
+    else
+        targ = GetPlayerByName(target);
+        if (targ == nil) then
+            error(player, string.format( "Player named '%s' not found!", target ) );
             return;
         end
+    end    
 
-        if (targ:getVar("inJail") > 0 and targ:getZoneID() == 131) then
-            player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
-        else
-            ZoneID = targ:getPreviousZone();
-            if (ZoneID == nil or ZoneID == 0 or ZoneID == 214 or ZoneID == 131) then
-                player:PrintToPlayer("Previous Zone was a Mog House or there was a problem fetching the ID.");
-            else
-                targ:setPos(0, 0, 0, 0, ZoneID);
-            end
-        end
-    else
-        player:PrintToPlayer(string.format("Player named '%s' not found!", target));
+    -- get previous zone
+    zoneId = targ:getPreviousZone();
+    if (zoneId == nil or zoneId == 0 or zoneId == 214) then
+        error(player, "Previous zone was a Mog House or there was a problem fetching the ID.");
+        return;
     end
-end;
+    
+    if (targ:getVar("inJail") > 0 and targ:getZoneID() == 131) then
+        player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
+        return;
+    end
+
+    -- Log it
+    if (targ:getID() ~= player:getID()) then
+        local dateStamp = os.date("%d/%m/%Y");
+        local timeStamp = os.date("%I:%M:%S %p");
+        local file = io.open("log/commands/return.log", "a");
+        file:write(
+        "\n", "----------------------------------------",
+        "\n", "Date: ".. dateStamp,
+        "\n", "Time: ".. timeStamp,
+        "\n", "User: ".. player:getName(),
+        "\n", "Target: ".. targ:getName(),
+        "\n", "Sent from Zone: ".. targ:getZoneID(),
+        "\n", "Sent to Zone: ".. zoneId,
+        "\n", "----------------------------------------",
+        "\n" -- This MUST be final line.
+        );
+        file:close();
+    end
+
+    -- zone target
+    targ:setPos( 0, 0, 0, 0, zoneId );
+    if (targ:getID() ~= player:getID()) then
+        player:PrintToPlayer( string.format( "%s was returned to zone %i.", targ:getName(), zoneId ) );
+    end
+end

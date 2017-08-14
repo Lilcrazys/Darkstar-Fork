@@ -49,6 +49,7 @@ function onTrigger(player, itemId, target, dropper)
     targ:addTreasure(itemId, dropper);
     player:PrintToPlayer(string.format("Item of ID %d was added to the treasure pool of %s or their party/alliance.", itemId, targ:getName()));
 
+    -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addtreasure.log", "a");

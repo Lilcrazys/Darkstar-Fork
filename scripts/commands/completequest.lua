@@ -63,6 +63,7 @@ function onTrigger(player, logId, questId, target)
     targ:completeQuest( logId, questId );
     player:PrintToPlayer( string.format( "Completed %s Quest with ID %u for %s", logName, questId, targ:getName() ) );
 
+    -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/completequest.log", "a");

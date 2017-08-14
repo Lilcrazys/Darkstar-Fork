@@ -63,6 +63,7 @@ function onTrigger(player, logId, missionId, target)
     targ:completeMission( logId, missionId );
     player:PrintToPlayer( string.format( "Completed %s Mission with ID %u for %s", logName, missionId, targ:getName() ) );
 
+    -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/completemission.log", "a");

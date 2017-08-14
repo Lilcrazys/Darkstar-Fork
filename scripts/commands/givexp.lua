@@ -9,41 +9,48 @@ cmdprops =
     parameters = "is"
 };
 
+function error(player, msg)
+    player:PrintToPlayer(msg);
+    player:PrintToPlayer("@givexp <amount> {player}");
+end;
+
 function onTrigger(player, amount, target)
-    if (amount == nil or amount <= 0) then
-        player:PrintToPlayer("You must enter a valid amount.");
-        player:PrintToPlayer( "@givexp <amount> <player>" );
+
+    -- validate target
+    local targ;
+    if (target == nil) then
+        targ = player;
+    else
+        targ = GetPlayerByName(target);
+        if (targ == nil) then
+            error(player, string.format("Player named '%s' not found!", target));
+            return;
+        end
+    end
+
+    -- validate amount
+    if (amount == nil or amount < 1) then
+        error(player, "Invalid amount.");
         return;
     end
 
-    if (target == nil) then
-        player:addExp(amount);
-        -- print( 'Exp amount: ' .. tostring( amount ) );
-    else
-        local targ = GetPlayerByName(target);
-        if (targ ~= nil) then
-            -- Only care to log when GM gives EXP to others..
-            local dateStamp = os.date("%d/%m/%Y");
-            local timeStamp = os.date("%I:%M:%S %p");
-            local file = io.open("log/commands/givexp.log", "a");
-            file:write(
-            "\n", "----------------------------------------",
-            "\n", "Date: ".. dateStamp,
-            "\n", "Time: ".. timeStamp,
-            "\n", "User: ".. player:getName(),
-            "\n", "Target: ".. target,
-            "\n", "XP given: ".. amount.."(value given is before map config setting is applied)",
-            "\n", "----------------------------------------",
-            "\n" -- This MUST be final line.
-            );
-            file:close();
+    -- give XP to target
+    targ:addExp(amount);
+    player:PrintToPlayer( string.format( "Gave %i exp to %s. They are now level %i.", amount, targ:getName(), targ:getMainLvl() ));
 
-            targ:addExp(amount);
-            -- print( 'Exp amount: ' .. tostring( amount ) );
-            player:PrintToPlayer( string.format( "Gave %i exp to player '%s' \n(value given is before map config setting is applied)", amount, target ) );
-        else
-            player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
-            player:PrintToPlayer( "@givexp <amount> <player>" );
-        end
-    end
+    -- Log it
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/givexp.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. targ:getName(),
+    "\n", "XP given: ".. amount.."(value given is before map config setting is applied)",
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end;

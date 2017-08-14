@@ -6,38 +6,56 @@
 cmdprops =
 {
     permission = 2,
-    parameters = "si"
+    parameters = "ss"
 };
 
-function onTrigger(player, target, level)
-    if (target == nil) then
-        target = player:getName();
+function error(player, msg)
+    player:PrintToPlayer(msg);
+    player:PrintToPlayer("@setplayerlevel {player} <level>");
+end;
+
+function onTrigger(player, arg1, arg2)
+    local targ;
+    local level;
+
+    -- validate target
+    if (arg2 ~= nil) then
+        targ = GetPlayerByName(arg1);
+        if (targ == nil) then
+            error(player, string.format( "Player named '%s' not found!", arg1 ) );
+            return;
+        end
+        level = tonumber(arg2);        
+    elseif (arg1 ~= nil) then
+        targ = player;
+        level = tonumber(arg1);
     end
 
+    -- validate level
     if (level == nil or level < 1 or level > 99) then
-        player:PrintToPlayer("You must enter a valid level between 1 and 99.");
+        error(player, "Invalid level.  Must be between 1 and 99.");
         return;
     end
 
-    local targ = GetPlayerByName( target );
-    if (targ ~= nil) then
-        local dateStamp = os.date("%d/%m/%Y");
-        local timeStamp = os.date("%I:%M:%S %p");
-        local file = io.open("log/commands/setplayerlevel.log", "a");
-        file:write(
-        "\n", "----------------------------------------",
-        "\n", "Date: ".. dateStamp,
-        "\n", "Time: ".. timeStamp,
-        "\n", "User: ".. player:getName(),
-        "\n", "Target: ".. target,
-        "\n", "Level: ".. level,
-        "\n", "----------------------------------------",
-        "\n" -- This MUST be final line.
-        );
-        file:close();
-
-        targ:setLevel( level );
-    else
-        player:PrintToPlayer( string.format( "Player named '%s' not found!", target ) );
+    -- set level
+    targ:setLevel( level );
+    if (targ:getID() ~= player:getID()) then
+        player:PrintToPlayer( string.format("Set %s's level to %i.", targ:getName(), level) );
     end
+
+    -- Log it
+    local dateStamp = os.date("%d/%m/%Y");
+    local timeStamp = os.date("%I:%M:%S %p");
+    local file = io.open("log/commands/setplayerlevel.log", "a");
+    file:write(
+    "\n", "----------------------------------------",
+    "\n", "Date: ".. dateStamp,
+    "\n", "Time: ".. timeStamp,
+    "\n", "User: ".. player:getName(),
+    "\n", "Target: ".. targ:getName(),
+    "\n", "Level: ".. level,
+    "\n", "----------------------------------------",
+    "\n" -- This MUST be final line.
+    );
+    file:close();
 end
