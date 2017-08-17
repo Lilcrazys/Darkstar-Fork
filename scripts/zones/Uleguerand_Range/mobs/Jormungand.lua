@@ -15,7 +15,7 @@ require("scripts/globals/utils");
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 end;
 
 -----------------------------------
@@ -168,8 +168,8 @@ end;
 
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
-    mob:useMobAbility(1280);
-    mob:addTP(100);
+    mob:useMobAbility(1290);
+    mob:addTP(1000);
 end;
 
 -----------------------------------
