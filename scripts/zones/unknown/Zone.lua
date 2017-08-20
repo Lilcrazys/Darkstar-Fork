@@ -1,13 +1,14 @@
 -----------------------------------
--- 
--- Zone: Demonstration_Area
--- 
+--
+-- Zone: unknown
+--
+-- This zone is the pre-release technical demonstration area.
+--
 -----------------------------------
-package.loaded["scripts/zones/Demonstration_Area/TextIDs"] = nil;
+package.loaded["scripts/zones/unknown/TextIDs"] = nil;
 -----------------------------------
-
+require("scripts/zones/unknown/TextIDs");
 require("scripts/globals/settings");
-require("scripts/zones/Demonstration_Area/TextIDs");
 
 -----------------------------------
 --  onInitialize
@@ -32,13 +33,13 @@ end;
 
 function afterZoneIn(player)
     if (player:getGMLevel() == 0) then
-        player:PrintToPlayer("Dear player, the LegionDS devs would very much like to know HOW you landed here.");
+        player:PrintToPlayer("Dear player, the LegionDark devs would very much like to know HOW you landed here.");
         player:PrintToPlayer("Please report any information you have as soon as possible.");
     end
 end;
 
 -----------------------------------
--- onRegionEnter          
+-- onRegionEnter
 -----------------------------------
 
 function onRegionEnter(player,region)
