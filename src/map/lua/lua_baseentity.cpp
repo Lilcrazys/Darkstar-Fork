@@ -201,6 +201,7 @@ inline int32 CLuaBaseEntity::warp(lua_State *L)
     }
 
     ((CCharEntity*)m_PBaseEntity)->loc.boundary = 0;
+    ((CCharEntity*)m_PBaseEntity)->m_moghouseID = 0;
     ((CCharEntity*)m_PBaseEntity)->loc.p = ((CCharEntity*)m_PBaseEntity)->profile.home_point.p;
     ((CCharEntity*)m_PBaseEntity)->loc.destination = ((CCharEntity*)m_PBaseEntity)->profile.home_point.destination;
 
@@ -666,6 +667,7 @@ inline int32 CLuaBaseEntity::setPos(lua_State *L)
             ((CCharEntity*)m_PBaseEntity)->loc.destination = (uint16)lua_tointeger(L, 5);
             ((CCharEntity*)m_PBaseEntity)->status = STATUS_DISAPPEAR;
             ((CCharEntity*)m_PBaseEntity)->loc.boundary = 0;
+            ((CCharEntity*)m_PBaseEntity)->m_moghouseID = 0;
             ((CCharEntity*)m_PBaseEntity)->clearPacketList();
             charutils::SendToZone((CCharEntity*)m_PBaseEntity, 2, zoneutils::GetZoneIPP(m_PBaseEntity->loc.destination));
             //((CCharEntity*)m_PBaseEntity)->loc.zone->DecreaseZoneCounter(((CCharEntity*)m_PBaseEntity));
@@ -1012,7 +1014,8 @@ inline int32 CLuaBaseEntity::resetPlayer(lua_State *L)
         "pos_x = %.3f,"
         "pos_y = %.3f,"
         "pos_z = %.3f,"
-        "boundary = %u "
+        "boundary = %u,"
+        "moghouse = %u "
         "WHERE charid = %u;";
 
     Sql_Query(SqlHandle, Query,
@@ -1023,6 +1026,7 @@ inline int32 CLuaBaseEntity::resetPlayer(lua_State *L)
         -5.000f,    // y
         69.162f,    // z
         0,          //boundary,
+        0,          //moghouse,
         id);
 
     ShowDebug("Player reset was successful.\n");
