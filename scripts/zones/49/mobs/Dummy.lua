@@ -7,6 +7,21 @@ require("scripts/globals/spoofchat");
 require("scripts/globals/status");
 
 -----------------------------------
+-- onMobInitialize Action
+-----------------------------------
+
+function onMobInitialize(mob)
+end;
+
+-----------------------------------
+-- onMobSpawn Action
+-----------------------------------
+
+function onMobSpawn(mob)
+    mob:SetMobSkillAttack(9999); -- Disables melee
+end;
+
+-----------------------------------
 -- onMobFight Action
 -----------------------------------
 
@@ -21,7 +36,7 @@ end;
 -----------------------------------
 
 function onMagicHit(caster, target, spell)
-    player:SpoofMsg("Magic DMG Debug: placeholder", mob, MESSAGE_SAY, MESSAGE_SAY);
+    -- player:SpoofMsg("Magic DMG Debug: placeholder", mob, MESSAGE_SAY, MESSAGE_SAY);
 
     return 1;
 end;
@@ -31,7 +46,7 @@ end;
 -----------------------------------
 
 function onWeaponskillHit(mob, attacker, weaponskill)
-    player:SpoofMsg("WS DMG Debug: placeholder", mob, MESSAGE_SAY, MESSAGE_SAY);
+    attacker:SpoofMsg("WS DMG Debug: placeholder", mob, MESSAGE_SAY, MESSAGE_SAY);
 
     return 1;
 end;
