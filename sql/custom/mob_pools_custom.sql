@@ -674,7 +674,7 @@ INSERT INTO `mob_pools` VALUES (16599,'Holiday_Gift_Box','Holiday_Gift_Box',4001
 INSERT INTO `mob_pools` VALUES (16600,'Twinkling_Treant','Twinkling_Treant',245,0x0000850100000000000000000000000000000000,1,2,7,340,100,0,0,0,0,2,2047,64,0,0,0,0,0,1,0,245);
 
 -- Unity NMs start
--- REPLACE INTO `mob_pools` VALUES (poolid,'name','name',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,links,mobType,immunity,name_prefix,flag,flags,5,4,3,2,1,SKILL_LIST_ID_HERE); -- MARKED for recheck later
+-- REPLACE INTO `mob_pools` VALUES (poolid,'name','name',familyid,modelid,mJob,sJob,cmbSkill,cmbDelay,cmbDmgMult,behavior,aggro,links,mobType,immunity,name_prefix,flag,flags,5,4,3,2,1,SKILL_LIST_ID_HERE);
 -- INSERT INTO `mob_pools` VALUES (16601,'Bounding_Belinda','Bounding_Belinda',174,0x0000480100000000000000000000000000000000,1,1,7,240,100,0,0,0,1,2,0,0,0,7,0,0,0,1,0,174);
 -- INSERT INTO `mob_pools` VALUES (16602,'Hugemaw_Harold','Hugemaw_Harold',258,0x0000A80100000000000000000000000000000000,4,5,7,240,100,0,0,0,1,2,0,32,825,157,0,0,9,1,64,258); -- Need custom spell list
 -- INSERT INTO `mob_pools` VALUES (16603,'Prickly_Pitriv','Prickly_Pitriv',79,0x00008C0100000000000000000000000000000000,1,1,11,240,100,0,1,0,1,2,0,0,0,7,0,0,0,1,0,79);
@@ -745,8 +745,9 @@ INSERT INTO `mob_pools` VALUES (24999,'Chelicerata','Chelicerata',64,0x0000D4060
 INSERT INTO `mob_pools` VALUES (24997,'Canal_Moocher','Canal_Moocher',172,0x0000140100000000000000000000000000000000,1,1,7,240,100,0,1,0,0,2,23,0,0,3,0,0,0,1,0,172);
 INSERT INTO `mob_pools` VALUES (24996,'Atkorkamuy','Atkorkamuy',218,0x0000600100000000000000000000000000000000,2,4,7,360,100,0,1,0,0,2,2,23,1089,135,0,0,0,1,0,218);
 
-
-
+-- Dummy, never dies and never fights back.
+INSERT INTO `mob_pools` VALUES (99999,'Dummy','Dummy',133,0x0000670500000000000000000000000000000000,2,2,2,240,100,0,0,0,0,2,0,0,0,0,0,0,0,0,0,9999);
+-- Thinking of placing a new entry right here (or below)? DO NOT.
 -- Below this line are bug workarounds that MUST be at the very end of the file!
 -- DO NOT PUT ANYTHING BELOW THEM!
 UPDATE mob_pools SET cmbSkill = 3 WHERE cmbSkill = 1 and mJob = 1; -- Fix non monk mobs mistakenly set to H2H in DSP..
