@@ -27,7 +27,9 @@ end;
 
 function onMobFight(mob, target)
     if (mob:getHP() < mob:getMaxHP()/2) then
+        target:SpoofMsg("is crying..", mob, MESSAGE_EMOTION, MESSAGE_PARTY);
         mob:setHP(mob:getMaxHP());
+        target:SpoofMsg("Why you hitting me? What I ever do to you? ", mob, MESSAGE_SAY, MESSAGE_PARTY);
     end
 end;
 
@@ -36,7 +38,7 @@ end;
 -----------------------------------
 
 function onMagicHit(caster, target, spell)
-    -- player:SpoofMsg("Magic DMG Debug: placeholder", mob, MESSAGE_SAY, MESSAGE_SAY);
+    -- player:SpoofMsg("[Magic DMG Debug] placeholder", mob, MESSAGE_ECHO, MESSAGE_PARTY);
 
     return 1;
 end;
@@ -46,7 +48,7 @@ end;
 -----------------------------------
 
 function onWeaponskillHit(mob, attacker, weaponskill)
-    attacker:SpoofMsg("WS DMG Debug: placeholder", mob, MESSAGE_SAY, MESSAGE_SAY);
+    attacker:SpoofMsg("[WS DMG Debug] placeholder", mob, MESSAGE_ECHO, MESSAGE_PARTY);
 
     return 1;
 end;
