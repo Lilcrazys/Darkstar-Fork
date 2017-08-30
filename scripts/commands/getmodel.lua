@@ -1,21 +1,21 @@
 ---------------------------------------------------------------------------------------------------
--- func: !setmodel <model ID>
--- desc: set appearance of targeted entity
+-- func: !getmodel
+-- desc: gets appearance of targeted entity
 ---------------------------------------------------------------------------------------------------
 
 cmdprops =
 {
     permission = 1,
-    parameters = "i"
+    parameters = ""
 };
 
-function onTrigger(player, model)
+function onTrigger(player)
   if (player:getzoneID() == 49) then
     local target == player:getCursorTarget();
     if (target == nil) then
         player:PrintToPlayer("Must target with cursor first!");
         return;
     end
-    target:setModelId(model);
+    player:PrintToPlayer("Model ID is: %d", target:getModelId());
   end
 end;
