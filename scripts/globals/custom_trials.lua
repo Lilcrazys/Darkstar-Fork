@@ -149,6 +149,10 @@ custom_trials =
     [19082] = {r=19712, s=2, t="mythic",   trade=0,    count=9},  -- Yagrush T2>T3
     [19712] = {r=19821, s=3, t="mythic",   trade=0,    count=9},  -- Yagrush T3>T4
     [19821] = {r=21063, s=4, t="mythic",   trade=3925, count=50}, -- Yagrush T4>T5
+    [19008] = {r=19097, s=1, t="mythic",   trade=0,    count=9},  -- Kenkonken T1>T2
+    [19097] = {r=19727, s=2, t="mythic",   trade=0,    count=9},  -- Kenkonken T2>T3
+    [19727] = {r=19836, s=3, t="mythic",   trade=0,    count=9},  -- Kenkonken T3>T4
+    [19836] = {r=20485, s=4, t="mythic",   trade=3925, count=50}, -- Kenkonken T4>T5
 
     --[[ retail info below this line
     [19339] = {r=19399, s=1, t="empyrean", trade=2929, count=50}, -- Nobilis [DMG+8] >> Almace (80)
