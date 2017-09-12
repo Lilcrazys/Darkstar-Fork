@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Selbina
 -- NPC:  Gibol
--- Guild Merchant NPC: Clothcrafting Guild 
--- @pos 13.591 -7.287 8.569 248
+-- Guild Merchant NPC: Clothcrafting Guild
+-- !pos 13.591 -7.287 8.569 248
 -----------------------------------
 package.loaded["scripts/zones/Selbina/TextIDs"] = nil;
 -----------------------------------
@@ -16,7 +16,7 @@ require("scripts/zones/Selbina/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
@@ -44,7 +44,7 @@ function onTrigger(player,npc)
         835,     187     -- Flax Flower
         };
         showShop(player, STATIC, stock);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate

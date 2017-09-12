@@ -2,7 +2,7 @@
 --  Area: Mhaura
 --  NPC:  Wilhelm
 --  Type: Standard NPC
--- @pos -22.746 -5 17.157 249
+-- !pos -22.746 -5 17.157 249
 -----------------------------------
 package.loaded["scripts/zones/Mhaura/TextIDs"] = nil;
 -----------------------------------
@@ -73,6 +73,8 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
+
+    if (csid== 0x0148 or csid == 0x014A) then
     local item = player:getLocalVar("Wilhelm_Item");
     if ((csid== 0x0148 or csid == 0x014A) and item == option) then
         player:addItem(option);
@@ -104,3 +106,4 @@ function onEventFinish(player,csid,option)
         player:setPos( -180, 11,  220, 0, 131 );
      end
 end;
+

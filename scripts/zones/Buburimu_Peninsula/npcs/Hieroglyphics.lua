@@ -2,7 +2,7 @@
 -- Area: Buburimu_Peninsula
 -- NPC:  Hieroglyphics
 -- Dynamis Buburimu Enter
--- @pos 163 0 -174 118
+-- !pos 163 0 -174 118
 -----------------------------------
 package.loaded["scripts/zones/Buburimu_Peninsula/TextIDs"] = nil;
 -----------------------------------
@@ -24,7 +24,7 @@ end;
 -- onTrigger Action
 -----------------------------------
 
-function onTrigger(player,npc)  
+function onTrigger(player,npc)
     player:setVar("dynaWaitxDay", 0); -- Temp
     player:PrintToPlayer("Dual Boxing here will crash the server!");
     player:PrintToPlayer("First log out ALL characters, then log in ONLY ONE for Dynamis!");
@@ -33,7 +33,7 @@ function onTrigger(player,npc)
         local realDay = os.time();
         local dynaWaitxDay = player:getVar("dynaWaitxDay");
         local dynaUniqueID = GetServerVariable("[DynaBuburimu]UniqueID");
-        
+
         if (checkFirstDyna(player,8)) then
              player:startEvent(0x0028);
         elseif (player:getMainLvl() < DYNA_LEVEL_MIN) then
@@ -47,7 +47,7 @@ function onTrigger(player,npc)
     else
         player:messageSpecial(MYSTERIOUS_VOICE);
     end
-    
+
 end;
 
 -----------------------------------
@@ -66,7 +66,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("finishRESULT: %u",option);
-    
+
     if (csid == 0x0028) then
         if (checkFirstDyna(player,8)) then
             player:setVar("Dynamis_Status",bit.bor(player:getVar("Dynamis_Status"),256));

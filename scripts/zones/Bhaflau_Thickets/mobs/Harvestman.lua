@@ -1,9 +1,8 @@
 -----------------------------------
 -- Area: Bhaflau Thickets
 --  NM:  Harvestman
--- @pos 398.130 -10.675 179.169 52
+-- !pos 398.130 -10.675 179.169 52
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
 
@@ -38,7 +37,6 @@ end;
 -----------------------------------
 
 function onAdditionalEffect(mob,target,damage)
-
     -- Guesstimating 1 in 4 chance to poison on melee.
     if ((math.random(1,100) >= 25) or (target:hasStatusEffect(EFFECT_POISON) == true)) then
         return 0,0,0;

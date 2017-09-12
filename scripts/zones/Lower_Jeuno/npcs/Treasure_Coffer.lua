@@ -2,7 +2,7 @@
 -- Area: Lower Jeuno
 --  NPC: Treasure Coffer
 -- Type: Add-on NPC
--- @pos 41.169 3.899 -51.005 245
+-- !pos 41.169 3.899 -51.005 245
 -----------------------------------
 package.loaded["scripts/zones/Lower_Jeuno/TextIDs"] = nil;
 -----------------------------------
@@ -16,13 +16,16 @@ require("scripts/zones/Lower_Jeuno/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
 -----------------------------------
 
 function onTrigger(player,npc)
+    --[[
+    player:startEvent(0x2773,0,0,0,0,0,0,0,0);
+    ]]
     local arg4 = 0;
 
     -- if (arg4 == 0) then
@@ -35,7 +38,7 @@ function onTrigger(player,npc)
         -- arg4 = arg4+48;
     -- end
     player:startEvent(0x2773,0,0,0,arg4,0,0,0,0);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate
@@ -560,7 +563,7 @@ function onEventFinish(player,csid,option)
 
                 elseif (random >= 352 and random <= 460) then -- Wolf Mantle
                     prize = 13571;
-                    
+
                     aug1 = math.random(0,5);
                     if (aug1 == 1) then
                         a1 = 1;

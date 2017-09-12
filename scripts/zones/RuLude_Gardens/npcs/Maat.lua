@@ -4,7 +4,7 @@
 -- Starts and Finishes Quest: Limit Break Quest 1-5
 -- Involved in Quests: Beat Around the Bushin
 -- @zone 243
--- @pos 8 3 118
+-- !pos 8 3 118
 -----------------------------------
 package.loaded["scripts/zones/RuLude_Gardens/TextIDs"] = nil;
 -----------------------------------
@@ -58,6 +58,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+
     local LvL = player:getMainLvl();
     local mJob = player:getMainJob();
     local inDefiantChallenge = player:getQuestStatus(JEUNO,IN_DEFIANT_CHALLENGE);
@@ -83,6 +84,9 @@ function onTrigger(player,npc)
 
     if (player:getVar("BeatAroundTheBushin") == 5) then
         player:startEvent(0x0075);
+    --[[
+    elseif (inDefiantChallenge == QUEST_AVAILABLE and LvL >= 50 and player:levelCap() == 50 and MAX_LEVEL >= 55) then
+    ]]
     elseif (shatteringStars == QUEST_AVAILABLE and LvL >= 66 and mJob <= 15 and player:levelCap() == 70 and MAX_LEVEL >= 75) then
         player:startEvent(0x005c,player:getMainJob()); -- Start Quest "Shattering Stars"
     elseif (shatteringStars == QUEST_ACCEPTED and LvL >= 66 and mJob <= 15 and player:getVar("maatDefeated") >= 1) then
@@ -91,6 +95,9 @@ function onTrigger(player,npc)
         player:startEvent(0x004f); -- Start Quest "In Defiant Challenge"
     elseif (inDefiantChallenge == QUEST_ACCEPTED) then
         player:startEvent(0x0050); -- During Quest "In Defiant Challenge"
+    --[[
+    elseif (atopTheHighestMountains == QUEST_AVAILABLE and LvL >= 51 and player:levelCap() == 55 and MAX_LEVEL >= 60) then
+    ]]
     elseif (atopTheHighestMountains == QUEST_AVAILABLE and LvL >= 51) then --  and player:levelCap() == 55 and MAX_LEVEL >= 60) then
         player:startEvent(0x0052); -- Start Quest "Atop the Highest Mountains"
     elseif (atopTheHighestMountains == QUEST_ACCEPTED) then
@@ -99,6 +106,9 @@ function onTrigger(player,npc)
         else
             player:startEvent(0x0053); -- During Quest "Atop the Highest Mountains"
         end
+    --[[
+    elseif (whenceBlowsTheWind == QUEST_AVAILABLE and LvL >= 56 and player:levelCap() == 60 and MAX_LEVEL >= 65) then
+    ]]
     elseif (whenceBlowsTheWind == QUEST_AVAILABLE and LvL >= 56) then --  and player:levelCap() == 60 and MAX_LEVEL >= 65) then
         player:startEvent(0x0055); -- Start Quest "Whence Blows the Wind"
     elseif (whenceBlowsTheWind == QUEST_ACCEPTED) then
@@ -107,6 +117,9 @@ function onTrigger(player,npc)
         else
             player:startEvent(0x0056); -- During Quest "Whence Blows the Wind"
         end
+    --[[
+    elseif (ridingOnTheClouds == QUEST_AVAILABLE and LvL >= 61 and player:levelCap() == 65 and MAX_LEVEL >= 70) then
+    ]]
     elseif (ridingOnTheClouds == QUEST_AVAILABLE and LvL >= 61) then --  and player:levelCap() == 65 and MAX_LEVEL >= 70) then
         rand1 = math.random(0,7); rand2 = math.random(0,7);
         rand3 = math.random(0,7); rand4 = math.random(0,7);
@@ -125,8 +138,16 @@ function onTrigger(player,npc)
 
             player:startEvent(0x0059,rand1,rand2,rand4,rand3,180); -- During Quest "Riding on the Clouds"
         end
+    --[[
+    elseif (shatteringStars == QUEST_AVAILABLE and LvL >= 66 and mJob <= 15 and player:levelCap() == 70 and MAX_LEVEL >= 75) then
+        player:startEvent(0x005c,player:getMainJob()); -- Start Quest "Shattering Stars"
+    ]]
     elseif (shatteringStars == QUEST_ACCEPTED and LvL >= 66 and mJob <= 15 and player:getVar("maatDefeated") == 0) then
         player:startEvent(0x005b,player:getMainJob()); -- During Quest "Shattering Stars"
+    --[[
+    elseif (shatteringStars == QUEST_ACCEPTED and LvL >= 66 and mJob <= 15 and player:getVar("maatDefeated") >= 1) then
+        player:startEvent(0x005d); -- Finish Quest "Shattering Stars"
+    ]]
     elseif (player:getQuestStatus(JEUNO,BEYOND_THE_SUN) == QUEST_AVAILABLE and mJob <= 15 and player:getVar("maatsCap") == 32767) then
         player:startEvent(0x004a); -- Finish Quest "Beyond The Sun"
     else
@@ -162,8 +183,11 @@ function onEventFinish(player,csid,option)
     elseif (csid == 0x0051) then
         player:tradeComplete();
         player:addTitle(HORIZON_BREAKER);
-        -- player:levelCap(55);
-        -- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_55);
+        --[[
+        player:levelCap(55);
+        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_55);
+        ]]
+
         doLimitBreakReward(player, 1, 0); -- Augmented Fiend Torque for clearing G1
         player:completeQuest(JEUNO,IN_DEFIANT_CHALLENGE);
         player:addFame(JEUNO, 30);
@@ -175,8 +199,10 @@ function onEventFinish(player,csid,option)
         player:delKeyItem(ROUND_FRIGICITE);
         player:delKeyItem(SQUARE_FRIGICITE);
         player:delKeyItem(TRIANGULAR_FRIGICITE);
-        -- player:levelCap(60);
-        -- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_60);
+        --[[
+        player:levelCap(60);
+        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_60);
+        ]]
         doLimitBreakReward(player, 2, 0); -- Augmented Goblin Cest (belt slot) for clearing G2
         player:completeQuest(JEUNO,ATOP_THE_HIGHEST_MOUNTAINS);
         player:addFame(JEUNO, 40);
@@ -188,8 +214,10 @@ function onEventFinish(player,csid,option)
         player:delKeyItem(ORCISH_CREST);
         player:delKeyItem(QUADAV_CREST);
         player:delKeyItem(YAGUDO_CREST);
-        -- player:levelCap(65);
-        -- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_65);
+        --[[
+        player:levelCap(65);
+        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_65);
+        ]]
         doLimitBreakReward(player, 3, 0); -- Augmented Krousis Ring for clearing G3
         player:completeQuest(JEUNO,WHENCE_BLOWS_THE_WIND);
         player:addFame(JEUNO, 50);
@@ -208,8 +236,10 @@ function onEventFinish(player,csid,option)
         player:delKeyItem(SCOWLING_STONE);
         player:delKeyItem(SOMBER_STONE);
         player:delKeyItem(SPIRITED_STONE);
-        -- player:levelCap(70);
-        -- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_70);
+        --[[
+        player:levelCap(70);
+        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_70);
+        ]]
         doLimitBreakReward(player, 4, 0); -- Augmented Iwatsube or Viator Cape for clearing G4
         player:completeQuest(JEUNO,RIDING_ON_THE_CLOUDS);
         player:addFame(JEUNO, 60);
@@ -224,7 +254,9 @@ function onEventFinish(player,csid,option)
         elseif (mJob == 12 or mJob == 13 or mJob == 14) then player:setPos(-220.084,-0.645,4.442,191,168); end
     elseif (csid == 0x005d) then
         player:addTitle(STAR_BREAKER);
-        -- player:levelCap(75);
+        --[[
+        player:levelCap(75);
+        ]]
 
         -- Begin custom jump to 99 cap...
         player:addTitle(BUSHIN_ASPIRANT);
@@ -246,7 +278,9 @@ function onEventFinish(player,csid,option)
         -- End custom jump to 99 cap...
 
         player:setVar("maatDefeated",0);
-        -- player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_75);
+        --[[
+        player:messageSpecial(YOUR_LEVEL_LIMIT_IS_NOW_75);
+        ]]
         player:completeQuest(JEUNO,SHATTERING_STARS);
         player:addFame(JEUNO, 80);
     elseif (csid==0x004a) then

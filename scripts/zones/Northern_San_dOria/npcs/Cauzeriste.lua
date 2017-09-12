@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Northern San d'Oria
 -- NPC: Cauzeriste
--- Guild Merchant NPC: Woodworking Guild 
--- @pos -175.946 3.999 280.301 231
+-- Guild Merchant NPC: Woodworking Guild
+-- !pos -175.946 3.999 280.301 231
 -----------------------------------
 package.loaded["scripts/zones/Northern_San_dOria/TextIDs"] = nil;
 -----------------------------------
@@ -50,7 +50,7 @@ function onTrigger(player,npc)
             2761,   5500       -- Feyweald Log
         };
         showShop(player, STATIC, stock);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate

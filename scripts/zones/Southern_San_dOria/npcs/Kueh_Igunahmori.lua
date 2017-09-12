@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Southern San d'Oria
 -- NPC: Kueh Igunahmori
--- Guild Merchant NPC: Leathercrafting Guild 
--- @pos -194.791 -8.800 13.130 230
+-- Guild Merchant NPC: Leathercrafting Guild
+-- !pos -194.791 -8.800 13.130 230
 -----------------------------------
 package.loaded["scripts/zones/Southern_San_dOria/TextIDs"] = nil;
 -----------------------------------
@@ -48,7 +48,7 @@ function onTrigger(player,npc)
         13594,   132      -- Rabbit Mantle
         };
         showShop(player, STATIC, stock);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate

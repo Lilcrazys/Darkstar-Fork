@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Ship bound for Selbina
 -- NPC: Rajmonda
--- Type: Guild Merchant: Fishing Guild 
--- @pos 1.841 -2.101 -9.000 220
+-- Type: Guild Merchant: Fishing Guild
+-- !pos 1.841 -2.101 -9.000 220
 -----------------------------------
 package.loaded["scripts/zones/Ship_bound_for_Selbina/TextIDs"] = nil;
 -----------------------------------
@@ -16,7 +16,7 @@ require("scripts/zones/Ship_bound_for_Selbina/TextIDs");
 -----------------------------------
 
 function onTrade(player,npc,trade)
-end; 
+end;
 
 -----------------------------------
 -- onTrigger Action
@@ -43,7 +43,7 @@ function onTrigger(player,npc)
             17407,    270     -- Minnow
         };
         showShop(player, STATIC, stock);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate

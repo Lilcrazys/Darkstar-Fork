@@ -1,7 +1,8 @@
 -----------------------------------
 -- Area: Mount Zhayolm
+--  MOB: Sarameya
 --  ZNM: Sarameya
--- @pos 322 -14 -581 61
+-- !pos 322 -14 -581 61
 -- Spawned with Buffalo Corpse: @additem 2583
 -- Wiki: http://ffxiclopedia.wikia.com/wiki/Sarameya
 -- TODO: PostAIRewrite: Code the Howl effect and gradual resists.
@@ -94,6 +95,7 @@ function onMobFight(mob, target)
     if (useChainspell == true) then
         mob:useMobAbility(692); -- Chainspell
         mob:setMobMod(MOBMOD_GA_CHANCE, 100);
+
     end
 
     -- Spams TP moves and -ga spells
@@ -109,6 +111,10 @@ function onMobFight(mob, target)
     if (mob:hasStatusEffect(EFFECT_BLAZE_SPIKES) == true) then
         mob:setMod(MOD_REGEN, math.floor(mob:getMaxHP()/100));
     else
+        --[[
+        if (mob:getMod(MOD_REGEN) > 0) then
+            mob:setMod(MOD_REGEN, 0);
+        ]]
         if (mob:getMod(MOD_REGEN) > 10) then
             mob:setMod(MOD_REGEN, 10);
         end

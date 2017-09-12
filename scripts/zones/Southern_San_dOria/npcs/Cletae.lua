@@ -1,8 +1,8 @@
 -----------------------------------
 -- Area: Southern San d'Oria
 -- NPC: Cletae
--- Guild Merchant NPC: Leathercrafting Guild 
--- @pos -189.142 -8.800 14.449 230
+-- Guild Merchant NPC: Leathercrafting Guild
+-- !pos -189.142 -8.800 14.449 230
 -----------------------------------
 package.loaded["scripts/zones/Southern_San_dOria/TextIDs"] = nil;
 -----------------------------------
@@ -24,7 +24,7 @@ function onTrade(player,npc,trade)
             player:messageSpecial(FLYER_REFUSED);
         end
     end
-    
+
 
 end;
 
@@ -57,7 +57,7 @@ function onTrigger(player,npc)
             854,     3000      -- Cocatrice Skin
         };
         showShop(player, STATIC, stock);
-end; 
+end;
 
 -----------------------------------
 -- onEventUpdate

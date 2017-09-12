@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Appolyon
 -- NPC:  Radiant_Aureole
--- @pos 
+-- !pos
 -----------------------------------
 require("scripts/globals/limbus");
 require("scripts/globals/keyitems");

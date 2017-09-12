@@ -3,7 +3,7 @@
 -- NPC:  Garnev
 -- Starts and Finishes Quest: Deal with Tenshodo
 -- @zone 245
--- @pos 30 4 -36
+-- !pos 30 4 -36
 -----------------------------------
 package.loaded["scripts/zones/Lower_Jeuno/TextIDs"] = nil;
 package.loaded["scripts/globals/settings"] = nil;

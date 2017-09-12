@@ -1,11 +1,12 @@
 -----------------------------------
--- Area: Nashmau
---  NPC: Nabihwah
--- Type: Standard NPC
--- @pos 9.988 -7 68.585 53
+--  Area: Nashmau
+--  NPC:  Nabihwah
+--  Type: Standard NPC
+-- !pos 9.988 -7 68.585 53
 -----------------------------------
 package.loaded["scripts/zones/Nashmau/TextIDs"] = nil;
 -----------------------------------
+
 require("scripts/zones/Nashmau/TextIDs");
 
 -----------------------------------
@@ -20,6 +21,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    player:startEvent(0x00fd, npc);
     local merc_rank = getMercenaryRank(player)
 
     if (merc_rank == 0) then
@@ -60,7 +62,6 @@ function onEventFinish(player,csid,option)
             if (option ~= 0) then
                 player:delCurrency("imperial_standing", 100);
             end
-
             player:delStatusEffect(EFFECT_SIGIL);
             player:delStatusEffect(EFFECT_SANCTION);
             player:delStatusEffect(EFFECT_SIGNET);
@@ -68,7 +69,6 @@ function onEventFinish(player,csid,option)
             local subPower = 0; -- getImperialDefenseStats()
             player:addStatusEffect(EFFECT_SANCTION,option / 16,0,duration,subPower); -- effect size 1 = regen, 2 = refresh, 3 = food.
             player:messageSpecial(SANCTION);
-
         elseif (option % 256 == 17) then -- player bought one of the maps
             id = 1862 + (option - 17) / 256;
             player:addKeyItem(id);

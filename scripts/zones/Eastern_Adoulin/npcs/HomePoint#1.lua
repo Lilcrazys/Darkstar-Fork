@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Eastern_Adoulin
 -- NPC:  HomePoint#1
--- @pos
+-- !pos
 -----------------------------------
 
 package.loaded["scripts/zones/Eastern_Adoulin/TextIDs"] = nil;
@@ -22,9 +22,9 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	player:PrintToPlayer("SoA is closed - you should not be here.");
-	--homepointMenu( player, 0x21fc, 45);
-	player:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
+    player:PrintToPlayer("SoA is closed - you should not be here.");
+    --homepointMenu( player, 0x21fc, 45);
+    player:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
 end; 
 
 -----------------------------------
@@ -32,8 +32,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-	--printf("CSID: %u",csid);
-	--printf("RESULT: %u",option);
+    --printf("CSID: %u",csid);
+    --printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -41,16 +41,16 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-	--printf("CSID: %u",csid);
-	--printf("RESULT: %u",option);
+    --printf("CSID: %u",csid);
+    --printf("RESULT: %u",option);
 
-	if (csid == 0x21fc) then
+    if (csid == 0x21fc) then
 
-		if (option == 1) then	
-			player:setHomePoint();
-			player:messageSpecial(HOMEPOINT_SET);
-		else
-			hpTeleport( player, option);
-		end
-	end
+        if (option == 1) then
+            player:setHomePoint();
+            player:messageSpecial(HOMEPOINT_SET);
+        else
+            hpTeleport( player, option);
+        end
+    end
 end;

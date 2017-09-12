@@ -1,7 +1,7 @@
 -----------------------------------
 -- Area: Arrapago Reef
 --  NM:  Medusa
--- @pos -458 -20 458
+-- !pos -458 -20 458
 -- TODO: resists, attack/def boosts
 -----------------------------------
 package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
