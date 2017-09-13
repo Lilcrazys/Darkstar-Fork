@@ -854,6 +854,9 @@
     <ClInclude Include="..\..\src\map\ai\states\respawn_state.h">
       <Filter>Header Files\ai\states</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\map\char_recast_container.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\map\packets\bazaar_sale.h">
       <Filter>Header Files\packets</Filter>
     </ClInclude>
@@ -1566,6 +1569,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\map\ai\states\respawn_state.cpp">
       <Filter>Source Files\ai\states</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\map\char_recast_container.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\map\packets\bazaar_sale.cpp">
       <Filter>Source Files\packets</Filter>
