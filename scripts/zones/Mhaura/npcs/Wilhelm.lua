@@ -74,7 +74,9 @@ function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 
+    --[[
     if (csid== 0x0148 or csid == 0x014A) then
+    ]]
     local item = player:getLocalVar("Wilhelm_Item");
     if ((csid== 0x0148 or csid == 0x014A) and item == option) then
         player:addItem(option);
