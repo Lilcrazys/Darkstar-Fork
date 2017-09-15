@@ -195,14 +195,6 @@ INSERT INTO `item_mods_pet` VALUES (27972, 384, 31 ,0); -- Pet: Haste +3%
 INSERT INTO `item_mods_pet` VALUES (28017, 160, -4 ,0); -- Pet: Damage taken -4%
 
 -- -------------------------------------------------------
---  Regimen Mittens - LVL 99
--- -------------------------------------------------------
-INSERT INTO `item_mods_pet` VALUES (28025, 25, 20 ,0); -- Pet: Accuracy+20
-INSERT INTO `item_mods_pet` VALUES (28025, 26, 20 ,0); -- Pet: Ranged Accuracy+20
-INSERT INTO `item_mods_pet` VALUES (28025, 30, 20 ,0); -- Pet: Magic Accuracy+20
-INSERT INTO `item_mods_pet` VALUES (28025, 384, 61 ,0); -- Pet: Haste+6%
-
--- -------------------------------------------------------
 --  Totemic Trousers - LVL 99
 -- -------------------------------------------------------
 INSERT INTO `item_mods_pet` VALUES (28098, 23, 20 ,0); -- Pet: Attack +20

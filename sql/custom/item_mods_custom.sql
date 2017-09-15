@@ -789,12 +789,6 @@ INSERT INTO `item_mods` VALUES (22117,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (22117,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (22117,175,100); -- Skill Chain DMG
 
-
-INSERT INTO `item_mods` VALUES (25707,25,5);
-INSERT INTO `item_mods` VALUES (25707,28,10);
-INSERT INTO `item_mods` VALUES (25707,27,-5);
-INSERT INTO `item_mods` VALUES (25707,296,2);
-
 -- Srivatsa
 INSERT INTO `item_mods` VALUES (26403,2,150); -- HP
 INSERT INTO `item_mods` VALUES (26403,5,150); -- MP
