@@ -103,7 +103,6 @@ INSERT INTO `abilities` VALUES (288,'companions_roll',17,95,1,60,193,420,0,265,2
 INSERT INTO `abilities` VALUES (289,'avengers_roll',17,97,1,60,193,420,0,266,2000,0,6,8.0,1,1,80,0,8,null);
 
 INSERT INTO `abilities` VALUES (293,'cooldown',18,95,1,300,114,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
-INSERT INTO `abilities` VALUES (294,'deus_ex_automata',18,5,1,60,115,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
 INSERT INTO `abilities` VALUES (295,'curing_waltz_v',19,87,27,17,217,306,0,9,2000,0,6,20.0,0,3,3,0,0,null);
 INSERT INTO `abilities` VALUES (296,'feather_step',19,83,4,15,220,0,0,220,2000,0,6,20.0,0,1,0,0,0,null);
 INSERT INTO `abilities` VALUES (297,'striking_flourish',19,89,1,120,226,0,0,232,2000,0,14,20.0,0,1,80,0,0,null);
@@ -115,7 +114,6 @@ INSERT INTO `abilities` VALUES (302,'smiting_breath',14,90,1,60,238,0,0,232,2000
 INSERT INTO `abilities` VALUES (303,'restoring_breath',14,90,1,60,239,0,0,232,2000,1500,13,20.0,0,1,80,0,0,null);
 
 INSERT INTO `abilities` VALUES (305,'bully',6,93,4,180,240,0,0,232,2000,0,6,12.0,0,1,80,0,0,null);
-INSERT INTO `abilities` VALUES (306,'maintenance',18,30,1,60,214,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
 
 INSERT INTO `abilities` VALUES (329,'full_circle',21,5,1,10,243,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
 INSERT INTO `abilities` VALUES (330,'lasting_emanation',21,25,1,300,244,0,0,232,2000,0,6,20.0,0,1,80,0,0,null);
