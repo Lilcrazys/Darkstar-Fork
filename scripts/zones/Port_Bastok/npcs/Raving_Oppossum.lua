@@ -67,7 +67,7 @@ end;
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    if (player:getVar("DebugMode") == 1) then
+    if (player:getVar("DebugMode") > 0) then
         player:PrintToPlayer(string.format("onEventUpdate option: %u", option));
     end
 
