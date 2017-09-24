@@ -1445,33 +1445,80 @@ namespace petutils
         PPet->health.tp = 0;
 
         // Begin custom block: This is temp till pets get retail iLV adjustments
-        CCharEntity* PChar = (CCharEntity*)PMaster;
-        if (PMaster->objtype == TYPE_PC && PChar->m_Weapons[SLOT_MAIN]->getILvlSkill() > 0)
+        // This whole thing is crap but I just don't care to waste time making it better as long as ppl shaddap 'bout their pets..
+        if (PMaster->objtype == TYPE_PC)
         {
-            // ShowDebug("Buffing Pet's MaxHP.. \n");
-            PPet->health.maxhp = (int16)(PPet->health.maxhp * 1.25);
-            PPet->health.hp = PPet->health.maxhp;
-            if (PPet->getPetType() == PETTYPE_JUG_PET)
+            // Check for Jug pet we should buff
+            if (PPet->getPetType() == PETTYPE_JUG_PET && PMaster->m_Weapons[SLOT_MAIN]->getILvl() > 0)
             {
-                // ShowDebug("Buffing Jug Pet.. \n");
                 PPet->addModifier(Mod::ATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
                 PPet->addModifier(Mod::ACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
                 PPet->addModifier(Mod::MATT, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
                 PPet->addModifier(Mod::MACC, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
                 PPet->addModifier(Mod::DEF, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
                 PPet->addModifier(Mod::EVA, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
-                PPet->addModifier(Mod::MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
+                PPet->addModifier(Mod::MEVA, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.50));
+                // Hardcode a 25% max hp/mp buff for now..
+                PPet->health.maxhp = (int16)(PPet->health.maxhp * 1.25);
+                PPet->health.maxmp = (int16)(PPet->health.maxmp * 1.25);
+                // ShowDebug("Jug pet MaxHP: %d \n", PPet->health.maxhp);
+                // ShowDebug("Jug pet MaxMP: %d \n", PPet->health.maxmp);
             }
-            else if (PPet->getPetType() != PETTYPE_AUTOMATON)
+            // Check for Avatar or Wyvern we should buff
+            else if (PPet->getPetType() != PETTYPE_AUTOMATON && PMaster->m_Weapons[SLOT_MAIN]->getILvl() > 0)
             {
-                // ShowDebug("Buffing Avatar or Wyvern.. \n");
-                PPet->addModifier(Mod::ATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(Mod::ACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(Mod::MATT, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(Mod::MACC, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(Mod::DEF, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(Mod::EVA, PChar->m_Weapons[SLOT_MAIN]->getILvlSkill());
-                PPet->addModifier(Mod::MEVA, floor(PChar->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                PPet->addModifier(Mod::ATT, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::ACC, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::MATT, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::MACC, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::DEF, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::EVA, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
+                PPet->addModifier(Mod::MEVA, floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75));
+                // Hardcode a 25% max hp/mp buff for now..
+                PPet->health.maxhp = (int16)(PPet->health.maxhp * 1.25);
+                PPet->health.maxmp = (int16)(PPet->health.maxmp * 1.25);
+                // ShowDebug("Avatar / Wyvern MaxHP: %d \n", PPet->health.maxhp);
+                // ShowDebug("Avatar / Wyvern MaxMP: %d \n", PPet->health.maxmp);
+            }
+            // Check for Automaton we should buff
+            else if (PPet->getPetType() == PETTYPE_AUTOMATON && PMaster->GetMJob() == JOB_PUP && PMaster->m_Weapons[SLOT_RANGED]->getILvl() > 0)
+            {
+                if (PMaster->m_Weapons[SLOT_RANGED]->getILvl() > 115) // ilevel 116+
+                {
+                    PPet->addModifier(Mod::ATT, PMaster->m_Weapons[SLOT_RANGED]->getILvl()+2);
+                    PPet->addModifier(Mod::ACC, PMaster->m_Weapons[SLOT_RANGED]->getILvl()+2);
+                    PPet->addModifier(Mod::MATT, PMaster->m_Weapons[SLOT_RANGED]->getILvl()+2);
+                    PPet->addModifier(Mod::MACC, PMaster->m_Weapons[SLOT_RANGED]->getILvl()+2);
+                    PPet->addModifier(Mod::DEF, PMaster->m_Weapons[SLOT_RANGED]->getILvl()+2);
+                    PPet->addModifier(Mod::EVA, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                    PPet->addModifier(Mod::MEVA, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                }
+                else if (PMaster->m_Weapons[SLOT_RANGED]->getILvl() > 109) // ilevel 110-115
+                {
+                    PPet->addModifier(Mod::ATT, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                    PPet->addModifier(Mod::ACC, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                    PPet->addModifier(Mod::MATT, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                    PPet->addModifier(Mod::MACC, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                    PPet->addModifier(Mod::DEF, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.75));
+                    PPet->addModifier(Mod::EVA, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.66));
+                    PPet->addModifier(Mod::MEVA, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.66));
+                }
+                else // ilevel 100-109
+                {
+                    PPet->addModifier(Mod::ATT, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.5));
+                    PPet->addModifier(Mod::ACC, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.5));
+                    PPet->addModifier(Mod::MATT, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.5));
+                    PPet->addModifier(Mod::MACC, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.5));
+                    PPet->addModifier(Mod::DEF, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.5));
+                    PPet->addModifier(Mod::EVA, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.4));
+                    PPet->addModifier(Mod::MEVA, floor(PMaster->m_Weapons[SLOT_RANGED]->getILvl()*0.4));
+                }
+
+                // Hardcode a 25% max hp/mp buff for now..
+                PPet->health.maxhp = (int16)(PPet->health.maxhp * 1.25);
+                PPet->health.maxmp = (int16)(PPet->health.maxmp * 1.25);
+                // ShowDebug("AutomatonMaxHP: %d \n", PPet->health.maxhp);
+                // ShowDebug("AutomatonMaxMP: %d \n", PPet->health.maxmp);
             }
         }
         // End custom block
