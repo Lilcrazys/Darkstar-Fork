@@ -441,9 +441,10 @@ INSERT INTO `mob_droplist` VALUES (652,0,0,1000,18992,198); -- Glanzfaust
 INSERT INTO `mob_droplist` VALUES (652,0,0,1000,19004,155); -- Ryunohige
 
 -- Dextrose
-INSERT INTO `mob_droplist` VALUES (725,0,0,1000,11283,171); -- Oracle's Robe
-INSERT INTO `mob_droplist` VALUES (725,0,0,1000,15625,191); -- Ares' Flanchard
-INSERT INTO `mob_droplist` VALUES (725,0,0,1000,11969,152); -- Ogier's Breeches
+INSERT INTO `mob_droplist` VALUES (725,0,0,1000,11283,340); -- Oracle's Robe
+INSERT INTO `mob_droplist` VALUES (725,0,0,1000,15625,216); -- Ares' Flanchard
+INSERT INTO `mob_droplist` VALUES (725,0,0,1000,11969,304); -- Ogier's Breeches
+INSERT INTO `mob_droplist` VALUES (725,0,0,1000,27782,141); -- Orvail Corona
 
 -- Dhorme Khimaira
 INSERT INTO `mob_droplist` VALUES (727,0,0,1000,28402,91); -- Asperity Necklace
@@ -539,8 +540,8 @@ INSERT INTO `mob_droplist` VALUES (918,0,0,1000,1330,370); -- M.Abjuration: Bd.
 INSERT INTO `mob_droplist` VALUES (918,0,0,1000,1342,260); -- N.Abjuration: Lg.
 INSERT INTO `mob_droplist` VALUES (918,0,0,1000,1526,700); -- Wyrm Beard
 
--- Gasher
-INSERT INTO `mob_droplist` VALUES (1086,0,0,1000,3940,35);
+-- Fear Gorta
+INSERT INTO `mob_droplist` VALUES (938,0,0,1000,27762,122); -- Shneddick Chapeau
 
 -- Fire Elemental
 INSERT INTO `mob_droplist` VALUES (955,0,0,1000,1255,5); -- Fire Ore
@@ -566,6 +567,9 @@ INSERT INTO `mob_droplist` VALUES (1049,0,0,1000,28065,134); -- Karieyh Moufles
 
 -- Glen Crab
 INSERT INTO `mob_droplist` VALUES (1185,0,0,1000,3940,47);
+
+-- Gasher
+INSERT INTO `mob_droplist` VALUES (1086,0,0,1000,3940,35);
 
 -- Goblin Meatgrinder
 INSERT INTO `mob_droplist` VALUES (1370,0,0,1000,20772,43);
@@ -715,6 +719,9 @@ DELETE FROM `mob_droplist` WHERE dropId=1794 and dropType=0 and itemId=2703 and 
 DELETE FROM `mob_droplist` WHERE dropId=1794 and dropType=0 and itemId=2951 and itemRate=100; -- Malachite
 DELETE FROM `mob_droplist` WHERE dropId=1794 and dropType=0 and itemId=4387 and itemRate=140; -- Wild Onion
 INSERT INTO `mob_droplist` VALUES (1794,0,0,1000,12092,150); -- Estq. Houseaux
+
+-- Irrlicht
+INSERT INTO `mob_droplist` VALUES (1809,0,0,1000,27924,145); -- Thurandaut Tabard
 
 -- Isgebind
 DELETE FROM `mob_droplist` WHERE dropId=1810 and dropType=0 and itemId=646 and itemRate=10; -- Adaman Ore
@@ -875,6 +882,9 @@ DELETE FROM `mob_droplist` WHERE dropId=1972 and dropType=0 and itemId=747 and i
 DELETE FROM `mob_droplist` WHERE dropId=2036 and dropType=0 and itemId=15351 and itemRate=70; -- Bounding Boots
 INSERT INTO `mob_droplist` VALUES (2036,0,0,1000,13014,70); -- Leaping Boots
 
+-- Lentor
+INSERT INTO `mob_droplist` VALUES (2041,0,0,1000,27761,108); -- Gorney Morion
+
 -- Light Elemental
 INSERT INTO `mob_droplist` VALUES (2059,0,0,1000,1261,5); -- Light Ore
 
@@ -969,6 +979,9 @@ DELETE FROM `mob_droplist` WHERE dropId=2240 and dropType=0 and itemId=1415 and 
 INSERT INTO `mob_droplist` VALUES (2240,0,0,1000,741,125); -- P. Brass Ore
 INSERT INTO `mob_droplist` VALUES (2240,0,0,1000,741,71);
 
+-- Megantereon
+INSERT INTO `mob_droplist` VALUES (2241,0,0,1000,27922,143); -- Orvail Robe
+
 -- Morboling
 INSERT INTO `mob_droplist` VALUES (2351,0,0,1000,2361,29);
 
@@ -978,6 +991,9 @@ INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,11866,86); -- Toci's Harness
 INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,19175,128); -- Hoarfrost Blade
 INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,20877,154); -- Iclamar
 INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,28203,139); -- Orvail Pants
+
+-- Nguruvilu
+INSERT INTO `mob_droplist` VALUES (2423,0,0,1000,27907,124); -- Gorney Haubert
 
 -- Nidhogg
 DELETE FROM `mob_droplist` WHERE dropId=2425 and dropType=0 and itemId=865 and itemRate=700; -- comment me
@@ -1050,9 +1066,10 @@ INSERT INTO `mob_droplist` VALUES (2491,0,0,1000,18999,153); -- Aymur
 INSERT INTO `mob_droplist` VALUES (2491,0,0,1000,19002,211); --  Kogarasumaru
 
 -- Ob
-INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,15711,199); -- Ares' Sollerets
-INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,10600,161); --  Ogier's Leggings
-
+DELETE FROM `mob_droplist` WHERE dropId=2496 
+INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,15711,250); -- Ares' Sollerets
+INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,10600,371); -- Ogier's Leggings
+INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,28047,145); -- Shneddick Gloves
 
 -- Ophion
 
@@ -1092,6 +1109,9 @@ INSERT INTO `mob_droplist` VALUES (2732,0,0,1000,1279,113);
 INSERT INTO `mob_droplist` VALUES (2732,0,0,1000,8990,214);
 INSERT INTO `mob_droplist` VALUES (2732,0,0,1000,9063,225);
 
+-- Poroggo Dom Juan
+INSERT INTO `mob_droplist` VALUES (2819,0,0,1000,27908,121); -- Shneddick Tabard
+
 -- Quadav Guard/Transporter Fix
 DELETE FROM `mob_droplist` WHERE dropId=2907 and dropType=0 and itemId=3192 and itemRate=100; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=2907 and dropType=0 and itemId=3192 and itemRate=50; -- comment me
@@ -1121,9 +1141,10 @@ INSERT INTO `mob_droplist` VALUES (2925,0,0,1000,11698,94); -- Hecates Earring
 
 -- Reaction
 DELETE FROM `mob_droplist` WHERE dropId=2936 and dropType=0 and itemId=17316 and itemRate=0; -- comment me
-INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,16156,550); -- Oracle's Cap
-INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,16084,152); -- Ares' MaskAres' Mask
-INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,10876,147); -- Ogier's Helm
+INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,16156,282); -- Oracle's Cap
+INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,16084,308); -- Ares' Mask
+INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,10876,231); -- Ogier's Helm
+INSERT INTO `mob_droplist` VALUES (2936,0,0,1000,27784,135); -- Thurandaut Chapeau
 
 -- Refitted Chariot
 DELETE FROM `mob_droplist` WHERE dropId=2946 and dropType=0 and itemId=4890 and itemRate=100; -- comment me
@@ -1260,6 +1281,9 @@ INSERT INTO `mob_droplist` VALUES (3525,0,0,1000,27798,82); --  Ate's Cuirass
 INSERT INTO `mob_droplist` VALUES (3525,0,0,1000,28082,86); --  Idi's Trousers
 INSERT INTO `mob_droplist` VALUES (3525,0,0,1000,28220,96); -- Genta Sune-Ate
 
+-- Toppling Tuber
+INSERT INTO `mob_droplist` VALUES (3565,0,0,1000,27909,121); -- Weatherspoon Robe
+
 -- Triarius X-XV
 INSERT INTO `mob_droplist` VALUES (3588,0,0,1000,18904,347); -- Ephemeron
 INSERT INTO `mob_droplist` VALUES (3588,0,0,1000,11872,308); -- Ace's Mail
@@ -1347,7 +1371,6 @@ INSERT INTO `mob_droplist` VALUES (3648,0,0,1000,2963,1000); -- comment me
 INSERT INTO `mob_droplist` VALUES (3648,0,0,1000,19399,94); -- Almace
 
 -- Unut
--- ----------
 INSERT INTO `mob_droplist` VALUES (3663,0,0,1000,19302,142); -- Uguisu
 INSERT INTO `mob_droplist` VALUES (3663,0,0,1000,4766,100);
 INSERT INTO `mob_droplist` VALUES (3663,0,0,1000,5080,100);
@@ -1356,15 +1379,14 @@ INSERT INTO `mob_droplist` VALUES (3663,0,0,1000,5498,100);
 INSERT INTO `mob_droplist` VALUES (3663,0,0,1000,4707,100);
 
 -- Valkrum Emperor
--- ----------
 DELETE FROM `mob_droplist` WHERE dropId=3678 and dropType=0 and itemId=15224 and itemRate=160; -- comment me
 INSERT INTO `mob_droplist` VALUES (3678,0,0,1000,12486,72); -- Emperor Hairpin
 
 -- Velionis
--- ----------
-INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,15727,191); -- Morrigan's Pgch.
-INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,15723,178); -- Marduk's Crackows
-INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,10368,77); -- Adhara Crackows
+INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,15727,371); -- Morrigan's Pgch.
+INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,15723,377); -- Marduk's Crackows
+INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,10368,296); -- Adhara Crackows
+INSERT INTO `mob_droplist` VALUES (4000,0,0,1000,28048,133); -- Weather. Cuffs
 
 -- Verdelet
 INSERT INTO `mob_droplist` VALUES (4007,0,0,1000,11282,580); -- Aurum Cuirass
@@ -1433,9 +1455,10 @@ INSERT INTO `mob_droplist` VALUES (4137,0,0,1000,17472,76);
 -- Yaanei
 
 -- Zareehkl the Jubilant
-INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,16100,184); -- Morrigan's Coron.
-INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,16096,129); -- Marduk's Tiara
-INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,10439,81); -- Adhara Turban
+INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,16100,388); -- Morrigan's Coron.
+INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,16096,395); -- Marduk's Tiara
+INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,10439,298); -- Adhara Turban
+INSERT INTO `mob_droplist` VALUES (4340,0,0,1000,27763,91); -- Weather. Corona
 
 -- Kirin
 DELETE FROM `mob_droplist` WHERE dropId=4372 and dropType=0 and itemId=658 and itemRate=390; -- comment me
@@ -1856,7 +1879,8 @@ INSERT INTO `mob_droplist` VALUES (9208,0,0,1000,942,45); -- Philosopher's Stone
 
 -- ------------------Siranpa Kamuy ------------------------------
 INSERT INTO `mob_droplist` VALUES (9209,0,0,1000,11639,129); -- Blason Ring
-INSERT INTO `mob_droplist` VALUES (9209,0,0,1000,4377,28); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9209,0,0,1000,4377,246); -- Coeurl Meat
+INSERT INTO `mob_droplist` VALUES (9209,0,0,1000,27925,120); -- Karieyh Haubert
 
 -- ------------------Ironclad Sunderer ------------------------------
 INSERT INTO `mob_droplist` VALUES (9210,0,0,1000,19732,147); -- Miramar Gun
