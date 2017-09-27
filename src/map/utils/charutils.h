@@ -182,6 +182,9 @@ namespace charutils
     void    AddWeaponSkillPoints(CCharEntity*, SLOTTYPE, int);
 
     int32   GetVar(CCharEntity* PChar, const char* var);
+
+    // Custom
+    uint32  calcGilBonus(CCharEntity* PChar, CMobEntity* PMob);
 };
 
 #endif

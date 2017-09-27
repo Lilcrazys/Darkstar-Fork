@@ -3087,17 +3087,17 @@ namespace charutils
     ************************************************************************/
 
     // TODO: REALISATION MUST BE IN TREASUREPOOL
-
     void DistributeGil(CCharEntity* PChar, CMobEntity* PMob)
     {
         //work out the amount of gil to give (guessed; replace with testing)
         uint32 gil = PMob->GetRandomGil();
         uint32 gBonus = 0;
-
         if (map_config.all_mobs_gil_bonus > 0)
         {
+            /*
             gBonus = map_config.all_mobs_gil_bonus*PMob->GetMLevel();
             gil += dsp_cap(gBonus, 1, map_config.max_gil_bonus);
+            */  gil += calcGilBonus(PChar, PMob);
         }
 
         // Distribute gil to player/party/alliance
@@ -4898,6 +4898,37 @@ namespace charutils
             return Sql_GetIntData(SqlHandle, 0);
         }
         return 0;
+    }
+
+    /*******************************************/
+    // Custom
+    uint32 calcGilBonus(CCharEntity* PChar, CMobEntity* PMob)
+    {
+        uint32 gilTotal = PMob->GetRandomGil();
+        uint32 gilBonus = 0;
+
+        if (map_config.all_mobs_gil_bonus > 0)
+        {
+            uint32 gaveXP = GetRealExp(PChar->GetMLevel(), PMob->GetMLevel());
+            gilBonus = map_config.all_mobs_gil_bonus*PMob->GetMLevel();
+
+            if (gaveXP > 0)
+            {
+                if (PMob->GetMLevel() < 70)
+                {
+                    gilTotal += dsp_cap(gilBonus, 1, map_config.max_gil_bonus);
+                }
+                else
+                {
+                    gilTotal += dsp_cap(gilBonus, 1, map_config.max_gil_bonus*2); // LV 70+  and gave XP so double the cap.
+                }
+            }
+            else
+            {
+                gilTotal += dsprand::GetRandomNumber(9,20);
+            }
+        }
+        return gilTotal;
     }
 
 }; // namespace charutils
