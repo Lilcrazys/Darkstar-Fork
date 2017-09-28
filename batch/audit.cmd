@@ -1,6 +1,6 @@
 @echo off
 set dumpExe="C:\Program Files\MariaDB 10.1\bin\mysqldump.exe"
-set %mysqlExe%="C:\Program Files\MariaDB 10.1\bin\mysql.exe"
+set mysqlExe="C:\Program Files\MariaDB 10.1\bin\mysql.exe"
 set mysqlhost=localhost
 set mysqluser=root
 set mysqlpass=Ir0nd00r
