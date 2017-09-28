@@ -5,12 +5,11 @@
 
 cmdprops =
 {
-    permission = 1,
+    permission = 6,
     parameters = "ss"
 };
 
 function onTrigger(player,ls,target)
-
     if (ls == nil) then
         player:PrintToPlayer("You must specify the LS to be given.");
         player:PrintToPlayer("@givels <linkshell name> <player>");
@@ -48,5 +47,4 @@ function onTrigger(player,ls,target)
         player:PrintToPlayer( string.format( "LS named '%s' not found!", ls ) );
         player:PrintToPlayer("@givels <linkshell name> <player>");
     end
-
 end;
