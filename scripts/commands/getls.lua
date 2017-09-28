@@ -15,7 +15,7 @@ function onTrigger(player)
     require(TextIDs);
 
     if (player:getFreeSlotsCount() >= 1) then
-        player:addLSpearl(ls);
+        player:addLSpearl("LegionDS");
         player:messageSpecial(ITEM_OBTAINED, 515);
         player:PrintToPlayer("Welcome to our community! Don't forget to equip your LinkPearl :) ");
     else
