@@ -25,7 +25,7 @@ function onTrigger(player, arg1, arg2)
             error(player, string.format( "Player named '%s' not found!", arg1 ) );
             return;
         end
-        level = tonumber(arg2);        
+        level = tonumber(arg2);
     elseif (arg1 ~= nil) then
         targ = player;
         level = tonumber(arg1);
@@ -48,13 +48,13 @@ function onTrigger(player, arg1, arg2)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/setplayerlevel.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Level: ".. level,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

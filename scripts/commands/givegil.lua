@@ -37,19 +37,19 @@ function onTrigger(player, amount, target)
     -- give gil to target
     targ:addGil(amount);
     player:PrintToPlayer(string.format("Gave %i gil to %s.  They now have %i gil.", amount, targ:getName(), targ:getGil()));
-    
+
     -- Log it
     local dateStamp = os.date("%d/%m/%Y");
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/givegil.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Gil given: ".. amount,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

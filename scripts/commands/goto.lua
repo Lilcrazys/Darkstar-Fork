@@ -32,13 +32,13 @@ function onTrigger(player, target, forceZone)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/goto.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Went to: ".. target,
     "\n", "pos: ".. targ:getXPos().." ".. targ:getYPos().." ".. targ:getZPos().." ".. targ:getZoneID(),
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();
@@ -52,7 +52,7 @@ function onTrigger(player, target, forceZone)
     else
         forceZone = 1;
     end
-    
+
     -- goto target
     if (targ:getZoneID() ~= player:getZoneID() or forceZone == 1) then
         player:setPos( targ:getXPos(), targ:getYPos(), targ:getZPos(), targ:getRotPos(), targ:getZoneID() );

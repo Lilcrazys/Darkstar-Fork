@@ -16,7 +16,7 @@ function onTrigger(player)
         local timeStamp = os.date("%I:%M:%S %p");
         local file = io.open("log/commands/bring.log", "a");
         file:write(
-        "\n", "----------------------------------------",
+        "----------------------------------------",
         "\n", "Date: ".. dateStamp,
         "\n", "Time: ".. timeStamp,
         "\n", "User: ".. player:getName()
@@ -30,9 +30,11 @@ function onTrigger(player)
         end
 
         file:write(
+        "----------------------------------------",
+        "\n", "(Multi-bring)",
         "\n", "Position: ".. player:getXPos().." ".. player:getYPos().." ".. player:getZPos(),
         "\n", "Zone ID: ".. player:getZoneID(),
-        "\n", "----------------------------------------",
+        "\n",
         "\n" -- This MUST be final line.
         );
         file:close();

@@ -49,7 +49,7 @@ function onTrigger(player, target, itemId, amount, aug0, aug0val, aug1, aug1val,
         local timeStamp = os.date("%I:%M:%S %p");
         local file = io.open("log/commands/giveitem.log", "a");
         file:write(
-        "\n", "----------------------------------------",
+        "----------------------------------------",
         "\n", "Date: ".. dateStamp,
         "\n", "Time: ".. timeStamp,
         "\n", "User: ".. player:getName(),
@@ -64,7 +64,7 @@ function onTrigger(player, target, itemId, amount, aug0, aug0val, aug1, aug1val,
         "\n", "Augment Tier 3:   ".. g_var,
         "\n", "Augment ID 4:     ".. h_var,
         "\n", "Augment Tier 4:   ".. i_var,
-        "\n", "----------------------------------------",
+        "\n",
         "\n" -- This MUST be final line.
         );
         file:close();

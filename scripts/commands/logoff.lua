@@ -38,12 +38,12 @@ function onTrigger(player, target)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/logoff.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

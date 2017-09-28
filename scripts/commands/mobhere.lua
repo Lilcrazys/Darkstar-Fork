@@ -50,14 +50,14 @@ function onTrigger(player, mobId, noDepop)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/mobhere.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Mob ID: ".. targ:getID(),
     "\n", "Position: ".. player:getXPos().." ".. player:getYPos().." ".. player:getZPos(),
     "\n", "Zone ID: ".. targ:getZoneID(),
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

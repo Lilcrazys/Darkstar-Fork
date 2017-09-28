@@ -26,7 +26,7 @@ function onTrigger(player, mobId, despawntime, respawntime)
         error(player, "Invalid mob ID.");
         return;
     end
-    
+
     -- validate despawntime
     if (despawntime ~= nil and despawntime < 0) then
         error(player, "Invalid despawn time.");
@@ -47,12 +47,12 @@ function onTrigger(player, mobId, despawntime, respawntime)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/spawnmob.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Mob ID: ".. mobId,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

@@ -41,13 +41,13 @@ function onTrigger(player, victim, jinx, power)
             local user = player:getName();
             local file = io.open("log/commands/jinx.log", "a");
             file:write(
-            "\n", "----------------------------------------",
+            "----------------------------------------",
             "\n", "Date: ".. dateStamp,
             "\n", "Time: ".. timeStamp,
             "\n", "User: ".. user,
             "\n", "Target: ".. victim,
             "\n", "Jinx: ".. jinx,
-            "\n", "----------------------------------------",
+            "\n",
             "\n" -- This MUST be final line.
             );
             file:close();

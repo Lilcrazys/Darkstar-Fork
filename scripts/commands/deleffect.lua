@@ -31,7 +31,7 @@ function onTrigger(player, arg1, arg2)
         id = arg2;
     end
 
-    -- validate target    
+    -- validate target
     if (targ == nil) then
         error(player, string.format("Player named '%s' not found!", arg1));
         return;
@@ -57,13 +57,13 @@ function onTrigger(player, arg1, arg2)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/deleffect.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Effect ID: ".. id,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

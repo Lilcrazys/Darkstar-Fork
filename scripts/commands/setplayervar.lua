@@ -28,13 +28,13 @@ function onTrigger(player, target, variable, value)
             return;
         end
     end
-    
+
     -- validate var
     if (variable == nil) then
         error(player, "You must provide a variable name.");
         return;
     end
-    
+
     -- validate value
     if (value == nil) then
         error(player, "You must provide a value.");
@@ -49,14 +49,14 @@ function onTrigger(player, target, variable, value)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/setplayervar.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "VarName: ".. variable,
     "\n", "VarValue: ".. value,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

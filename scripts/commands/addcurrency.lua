@@ -39,7 +39,7 @@ function onTrigger(player,currency,amount,target)
         error(player, "Invalid amount.");
         return;
     end
-    
+
     -- add currency
     targ:addCurrency(currency,amount);
     local newAmount = targ:getCurrency(currency);
@@ -50,14 +50,14 @@ function onTrigger(player,currency,amount,target)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addcurrency.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Currency type: ".. currency,
     "\n", "Amount given: ".. amount,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

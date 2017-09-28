@@ -27,7 +27,7 @@ function onTrigger(player,target)
             return;
         end
     end
-    
+
     -- reset target recasts
     targ:resetRecasts();
     if (targ:getID() ~= player:getID()) then
@@ -39,12 +39,12 @@ function onTrigger(player,target)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/reset.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

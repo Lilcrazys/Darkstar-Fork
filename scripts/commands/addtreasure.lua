@@ -23,7 +23,7 @@ function onTrigger(player, itemId, target, dropper)
         error(player, "Invalid itemID.");
         return;
     end
-    
+
     -- validate target
     local targ;
     if (target == nil) then
@@ -54,13 +54,13 @@ function onTrigger(player, itemId, target, dropper)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addtreasure.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Item ID: ".. itemId,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

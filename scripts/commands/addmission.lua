@@ -37,7 +37,7 @@ function onTrigger(player, logId, missionId, target)
         error(player, "Invalid logID.");
         return;
     end
-    
+
     -- validate missionId
     if (missionId ~= nil) then
         missionId = tonumber(missionId) or _G[string.upper(missionId)];
@@ -68,14 +68,14 @@ function onTrigger(player, logId, missionId, target)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/addmission.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Log ID: ".. logId,
     "\n", "Mission ID: ".. missionId,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

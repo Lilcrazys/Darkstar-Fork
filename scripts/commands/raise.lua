@@ -30,7 +30,7 @@ function onTrigger(player, arg1, arg2)
             target = arg1;
         end
     end
-    
+
     -- validate power
     if (power == nil or power > 3) then
         power = 3;
@@ -64,13 +64,13 @@ function onTrigger(player, arg1, arg2)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/raise.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "power: ".. power,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

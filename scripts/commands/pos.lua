@@ -45,7 +45,7 @@ function onTrigger(player, arg1, arg2, arg3, arg4, arg5)
     elseif (arg1 ~= nil) then
         target = arg1;
     end
-    
+
     -- validate target
     if (target == nil) then
         targ = player;
@@ -56,7 +56,7 @@ function onTrigger(player, arg1, arg2, arg3, arg4, arg5)
             return;
         end
     end
-    
+
     -- validate zone
     if (zoneId ~= nil) then
         zoneId = tonumber(zoneId);
@@ -77,13 +77,13 @@ function onTrigger(player, arg1, arg2, arg3, arg4, arg5)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/pos.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "pos: ".. posVar,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

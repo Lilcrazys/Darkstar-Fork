@@ -285,7 +285,7 @@ end;
 function getBytePos(s,needle)
     local i;
     local b;
-    for i=1,string.len(s),1 do 
+    for i=1,string.len(s),1 do
         if (string.byte(s, i) == needle) then
             return i;
         end
@@ -326,7 +326,7 @@ function onTrigger(player, bytes)
             return;
         end
     end
-    
+
     -- validate destination
     if (atpos ~= nil) then
         -- destination is an auto-translate phrase
@@ -380,7 +380,7 @@ function onTrigger(player, bytes)
             zone = dest:getZoneID();
         end
     end
-    
+
     -- send target to destination
     targ:setPos(x, y, z, rot, zone);
     if (targ:getID() ~= player:getID()) then
@@ -392,13 +392,13 @@ function onTrigger(player, bytes)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/send.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Sent to: ".. x.. " ".. y.. " ".. z.. " ".. rot.. " ".. zone,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

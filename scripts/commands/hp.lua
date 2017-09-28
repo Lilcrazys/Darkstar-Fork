@@ -35,7 +35,7 @@ function onTrigger(player, hp, target)
             return;
         end
     end
-    
+
     -- set hp
     if (targ:getHP() > 0) then
         targ:setHP(hp);
@@ -51,13 +51,13 @@ function onTrigger(player, hp, target)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/hp.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "HP value used: ".. hp,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

@@ -68,14 +68,14 @@ function onTrigger(player, logId, questId, target)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/completequest.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "Target: ".. targ:getName(),
     "\n", "Log ID: ".. logId,
     "\n", "Quest ID: ".. questId,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();

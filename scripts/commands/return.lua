@@ -26,7 +26,7 @@ function onTrigger(player, target)
             error(player, string.format( "Player named '%s' not found!", target ) );
             return;
         end
-    end    
+    end
 
     -- get previous zone
     zoneId = targ:getPreviousZone();
@@ -34,7 +34,7 @@ function onTrigger(player, target)
         error(player, "Previous zone was a Mog House or there was a problem fetching the ID.");
         return;
     end
-    
+
     if (targ:getVar("inJail") > 0 and targ:getZoneID() == 131) then
         player:PrintToPlayer("CANNOT TELEPORT JAILED CHARACTER!");
         return;
@@ -46,14 +46,14 @@ function onTrigger(player, target)
         local timeStamp = os.date("%I:%M:%S %p");
         local file = io.open("log/commands/return.log", "a");
         file:write(
-        "\n", "----------------------------------------",
+        "----------------------------------------",
         "\n", "Date: ".. dateStamp,
         "\n", "Time: ".. timeStamp,
         "\n", "User: ".. player:getName(),
         "\n", "Target: ".. targ:getName(),
         "\n", "Sent from Zone: ".. targ:getZoneID(),
         "\n", "Sent to Zone: ".. zoneId,
-        "\n", "----------------------------------------",
+        "\n",
         "\n" -- This MUST be final line.
         );
         file:close();

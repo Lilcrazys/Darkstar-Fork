@@ -62,14 +62,14 @@ function onTrigger(player, target, level)
     local timeStamp = os.date("%I:%M:%S %p");
     local file = io.open("log/commands/promote.log", "a");
     file:write(
-    "\n", "----------------------------------------",
+    "----------------------------------------",
     "\n", "Date: ".. dateStamp,
     "\n", "Time: ".. timeStamp,
     "\n", "User: ".. player:getName(),
     "\n", "User's GM tier: ".. player:getGMLevel(),
     "\n", "Target: ".. targ:getName(),
     "\n", "GM tier applied: ".. level,
-    "\n", "----------------------------------------",
+    "\n",
     "\n" -- This MUST be final line.
     );
     file:close();
