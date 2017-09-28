@@ -626,6 +626,7 @@ public:
 
     // Custom
     int32 SpoofMsg(lua_State* L);       // Sends a faked chat packet
+    int32 offlineJail(lua_State* L);    // Send offline player to jail
     int32 sjBoost(lua_State*);          // Enhances a player's max subjob level temporarily
     int32 addLSpearl(lua_State* L);     // Adds LS to player
 

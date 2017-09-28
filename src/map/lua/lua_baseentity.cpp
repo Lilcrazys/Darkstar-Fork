@@ -11254,6 +11254,81 @@ inline int32 CLuaBaseEntity::SpoofMsg(lua_State* L)
 
 /************************************************************************
 *                                                                       *
+*  Jail an offline character                                            *
+*                                                                       *
+************************************************************************/
+
+inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
+
+    if (lua_isnil(L, 1))
+    {
+        lua_pushboolean(L, false);
+        return 1;
+    }
+
+    const int8* charName = lua_tostring(L, 1);
+    auto jailCell = (!lua_isnil(L, 3) ? (int32)lua_tointeger(L, 2) : 1);
+    auto xPos = (!lua_isnil(L, 3) ? (float)lua_tointeger(L, 3) : 0);
+    auto yPos = (!lua_isnil(L, 3) ? (float)lua_tointeger(L, 4) : 0);
+    auto zPos = (!lua_isnil(L, 3) ? (float)lua_tointeger(L, 5) : 0);
+    uint32 charId = 0;
+
+    // char will not be logged in so get the id manually
+    const int8* Query = "SELECT charid FROM chars WHERE charname = '%s';";
+    int32 ret = Sql_Query(SqlHandle, Query, charName);
+
+    if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
+    {
+        charId = (int32)Sql_GetIntData(SqlHandle, 0);
+    }
+
+    // could not get player from database
+    if (charId == 0)
+    {
+        ((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket((CCharEntity*)m_PBaseEntity, MESSAGE_SYSTEM_1, "Could not get the character from database.\n"));
+        lua_pushboolean(L, false);
+        return 1;
+    }
+
+    // Set the var to match holding cell..
+    const int8* varname = "inJail";
+    Query = "INSERT INTO char_vars SET charid = %u, varname = '%s', value = %i ON DUPLICATE KEY UPDATE value = %i;";
+    Sql_Query(SqlHandle, Query, charId, varname, jailCell, jailCell);
+
+    // Send the player to JAIL
+    Query =
+        "UPDATE chars "
+        "SET "
+        "pos_zone = %u,"
+        "pos_prevzone = %u,"
+        "pos_rot = %u,"
+        "pos_x = %.3f,"
+        "pos_y = %.3f,"
+        "pos_z = %.3f,"
+        "boundary = %u,"
+        "moghouse = %u "
+        "WHERE charid = %u;";
+
+    Sql_Query(SqlHandle, Query,
+        131,   // ZONE: Mordion Gaol
+        131,   // prev zone: ALSO Mordion Gaol
+        0,     // Rotation
+        xPos,  // X
+        yPos,  // Y
+        zPos,  // Z
+        0,     // boundary,
+        0,     // moghouse,
+        charId);
+
+    lua_pushboolean(L, true);
+    return 1;
+}
+
+/************************************************************************
+*                                                                       *
 *  Enhances a player's max subjob level temporarily                     *
 *                                                                       *
 ************************************************************************/
@@ -11264,8 +11339,6 @@ inline int32 CLuaBaseEntity::sjBoost(lua_State *L)
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
 
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
-
-    PChar->SetSLevel(PChar->jobs.job[PChar->GetSJob()]);
 
     charutils::RemoveAllEquipMods(PChar);
     PChar->SetSLevel(PChar->jobs.job[PChar->GetSJob()]);
@@ -11876,6 +11949,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
 
     // Custom
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofMsg),
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,offlineJail), // Temp till DSP gets its shit together
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),
 

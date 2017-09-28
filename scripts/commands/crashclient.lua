@@ -21,7 +21,7 @@ function onTrigger(player, target)
         player:PrintToPlayer(string.format("Player %s not found online in this map server. ", target));
     else
         -- Crash client here using bad menu packet
-        player:sendMenu(2);
+        targ:sendMenu(2);
 
         -- Log it
         local dateStamp = os.date("%d/%m/%Y");
