@@ -16,10 +16,23 @@ function onMobWeaponSkill(target, mob, skill)
     local dmgmod = 3;
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
+    local effect = nil;
 
-    MobStatusEffectMove(mob, target, EFFECT_SLEEP_II, 10, 0, 60);
-    MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 50, 0, 60);
+    if (MobStatusEffectMove(mob, target, EFFECT_SLEEP_II, 10, 0, 60) == MSG_ENFEEB_IS) then
+        effect = EFFECT_SLEEP_II;
+        skill:setMsg(MSG_ENFEEB_IS);
+    end
+
+    if (MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 50, 0, 60) == MSG_ENFEEB_IS) then
+        effect = EFFECT_CURSE_I;
+        skill:setMsg(MSG_ENFEEB_IS);
+    end
 
     target:delHP(dmg);
+
+    if (effect ~= nil) then
+        return effect;
+    end
+
     return dmg;
 end;
