@@ -17,6 +17,11 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
     mob:setMobMod(MOBMOD_DRAW_IN, 2); -- Alliance Draw In
     mob:setMobMod(MOBMOD_MAGIC_COOL, 25);
+
+    -- addMod
+    mob:addMod(MOD_DOUBLE_ATTACK, 5);
+    mob:addMod(MOD_TRIPLE_ATTACK, 3);
+    mob:addMod(MOD_MDEF,80);
 end;
 
 -----------------------------------
@@ -24,21 +29,22 @@ end;
 -----------------------------------
 
 function onMobSpawn(mob)
+    -- Set localVars for 2hr triggers
+    mob:setLocalVar("combo1", math.random(50,66));
+    mob:setLocalVar("combo2", math.random(33,45));
+    mob:setLocalVar("combo3", math.random(15,25));
+    mob:setLocalVar("combo4", math.random(6,12));
+
     -- setMod
     mob:setMod(MOD_REGEN, 500);
-    mob:setMod(MOD_REFRESH, 250);
+    mob:setMod(MOD_REFRESH, 50);
     mob:setMod(MOD_UFASTCAST, 75);
     mob:setMod(MOD_COUNTER, 20);
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_MATT,120);
-    mob:setMod(MOD_DOUBLE_ATTACK, 10);
-    mob:setMod(MOD_TRIPLE_ATTACK, 15);
     mob:setMod(MOD_STUNRES, 75);
     mob:setMod(MOD_PARALYZERES, 100);
 
-    -- addMod
-    mob:addMod(MOD_MDEF,100);
---[[[
     local JoL = GetMobByID(16912848);
     -- Special check for regen modification by JoL pets killed
     if (JoL:getLocalVar("JoL_Qn_xzomit_Killed") == 9) then
@@ -48,24 +54,12 @@ function onMobSpawn(mob)
         mob:addMod(MOD_REGEN, -130)
     end
 end;
-]]
-
-    -- Special check for regen modification by JoL pets killed
-    if (GetServerVariable("JoL_Qn_xzomit_Killed") == 9) then
-        mob:addMod(MOD_REGEN, -130)
-    end
-    if (GetServerVariable("JoL_Qn_hpemde_Killed") == 9) then
-        mob:addMod(MOD_REGEN, -130)
-    end
-
-end;
 
 -----------------------------------
 -- onMobEngage Action
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    mob:delStatusEffect(EFFECT_RAGE);
 end;
 
 -----------------------------------
@@ -180,14 +174,29 @@ end;
 ------------------------------------
 
 function onMonsterMagicPrepare(caster, target)
-    if (caster:hasStatusEffect(EFFECT_MANAFONT)) then
-        if (math.random(1,3) ~= 2) then
-            return 218; -- Meteor
+    local spellList =
+    {
+        [1] = 158, -- Aero 5
+        [2] = 187, -- Aeroga 4
+        [3] = 188, -- Aeroga 5
+        [4] = 209, -- Tornado 2
+        [5] = 219, -- Comet
+        [6] = 218, -- Meteor
+        [7] = 359, -- Silencega
+        [8] = 360, -- Dispelga
+        [9] = 466  -- Maidens Virelai
+    }
+    local spell = spellList[math.random(1,9)];
+    if (caster:hasStatusEffect(EFFECT_Manafont)) then
+        if (math.random(1,5) ~= 3) then
+            return 218; -- Almost always Meteor
         else
-            return 219; -- Comet
+            return 219; -- 1 in 5 chance of Comet
         end
     elseif (caster:hasStatusEffect(EFFECT_SOUL_VOICE)) then
-        return 466; -- Virelai
+        return 466; -- Always Virelai
+    else
+        return spell;
     end
 end;
 
@@ -227,11 +236,6 @@ end;
 -----------------------------------
 
 function onMobDespawn(mob)
-    SetServerVariable("AV_Regen_Reduction", 0);
-    DespawnMob(16912877);
-    DespawnMob(16912878);
-    DespawnMob(16912879);
-    DespawnMob(16912880);
 end;
 
 -----------------------------------
@@ -240,50 +244,75 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(VIRTUOUS_SAINT);
-    SetServerVariable("AV_Regen_Reduction", 0);
-    DespawnMob(16912877);
-    DespawnMob(16912878);
-    DespawnMob(16912879);
-    DespawnMob(16912880);
 
     if (isKiller == true) then
-        local Chance1 = math.random(1,100); -- RND1 should be 5% chance
-        local Chance2 = math.random(1,100); -- RND2 should be 7% chance
-        local Ring1 = math.random(1,7); -- selects 1 of 7 diff rings
-        local Ring2 = math.random(1,5); -- selects 1 of 5 diff rings
-
-        if (Chance1 <= 5) then
-            if (Ring1 == 1) then
-                player:addTreasure(27590, mob); -- Shneddick Ring
-            elseif (Ring1 == 2) then
-                player:addTreasure(27581, mob); -- Woltaris Ring
-            elseif (Ring1 == 3) then
-                player:addTreasure(27583, mob); -- Janniston Ring
-            elseif (Ring1 == 4) then
-                player:addTreasure(27585, mob); -- Gorney Ring
-            elseif (Ring1 == 5) then
-                player:addTreasure(27587, mob); -- Karieyh Ring
-            elseif (Ring1 == 6) then
-                player:addTreasure(27589, mob); -- Thurandaut Ring
-            elseif (Ring1 == 7) then
-                player:addTreasure(27589, mob); -- Orvail Ring
-            end
+        -- Get rid of AV's WynavID's
+        for WynavID = mob:getID()+1, mob:getID()+4 do
+            GetMobByID(WynavID):setHP(0); -- Just die already!
+            -- DespawnMob(WynavID);
         end
 
-        if (Chance2 <= 7) then
-            if (Ring2 == 1) then
-                player:addTreasure(27580, mob); -- Adoulin Ring
-            elseif (Ring2 == 2) then
-                player:addTreasure(27582, mob); -- Weather Ring
-            elseif (Ring2 == 3) then
-                player:addTreasure(27584, mob); -- Renaye Ring
-            elseif (Ring2 == 4) then
-                player:addTreasure(27586, mob); -- Haverton Ring
-            elseif (Ring2 == 5) then
-                player:addTreasure(27588, mob); -- Vocane Ring
-            end
+        -- Begin huge section for custom loot..
+        local abjurs =
+        {
+            [1] = 1315,  -- Dryadic Abjuration Body
+            [2] = 1317,  -- Dryadic Abjuration Legs
+            [3] = 1320,  -- Earthen Abjuration Body
+            [4] = 1322,  -- Earthen Abjuration Legs
+            [5] = 1325,  -- Aquarian Abjuration Body
+            [6] = 1327,  -- Aquarian Abjuration Legs
+            [7] = 1330,  -- Martial Abjuration Body
+            [8] = 1332,  -- Martial Abjuration Legs
+            [9] = 1335,  -- Wyrmal Abjuration Body
+            [10] = 1337, -- Wyrmal Abjuration Legs
+            [11] = 1340, -- Neptunal Abjuration Body
+            [12] = 1342, -- Neptunal Abjuration Legs
+        }
+        player:addTreasure(abjurs[math.random(1,12)], mob); -- 100% chance of random body/leg abjuration
+        player:addTreasure(28519, mob); -- 100% chance of Tripudio Earring
+
+        local rings = nil;
+        rings =
+        {
+            [1] = 27580,  -- Adoulin Ring
+            [2] = 27581,  -- Woltaris Ring
+            [3] = 27582,  -- Weather Ring
+            [4] = 27583,  -- Janniston Ring
+            [5] = 27584,  -- Renaye Ring
+            [6] = 27585,  -- Gorney Ring
+            [7] = 27586,  -- Haverton Ring
+            [8] = 27587,  -- Karieyh Ring
+            [9] = 27588,  -- Vocane Ring
+            [10] = 27589, -- Thurandaut Ring
+            [11] = 27590, -- Shneddick Ring
+            [12] = 27591  -- Orvail Ring
+        }
+
+        -- Random for ring 1 of 4.
+        local ringDrop = math.random(1, #rings); -- Select one
+        if (math.random(1,100) > 85) then -- 15 in 100
+            player:addTreasure(rings[ringDrop], mob);
+            table.remove(rings, ringDrop); -- Remove this ring from result list before next roll.
+        end
+
+        -- Random for ring 2 of 4
+        ringDrop = math.random(1, #rings); -- Select one
+        if (math.random(1,100) > 88) then -- 12 in 100
+            player:addTreasure(rings[ringDrop], mob);
+            table.remove(rings, ringDrop); -- Remove this ring from result list before next roll.
+        end
+
+        -- Random for ring 3 of 4
+        ringDrop = math.random(1, #rings); -- Select one
+        if (math.random(1,100) > 90) then -- 9 in 100
+            player:addTreasure(rings[ringDrop], mob);
+            table.remove(rings, ringDrop); -- Remove this ring from result list before next roll.
+        end
+
+        -- Random for ring 4 of 4
+        ringDrop = math.random(1, #rings); -- Select one
+        if (math.random(1,100) > 94) then -- 6 in 100
+            player:addTreasure(rings[ringDrop], mob);
         end
     end
-
 end;
-

@@ -73,6 +73,8 @@ INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_WHM', 402, 59, 1, 255);  -- Sil
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_WHM', 402, 61, 1, 255);  -- Barblizzard
 INSERT INTO `mob_spell_lists` VALUES ('Gotoh_Zha_WHM', 402, 112, 1, 255);  -- Flash
 
+-- These belong in script, nee dto set AV to scripted spell use and then free up list 403.
+-- (use list 403 for the wynavs? I think retail ones cast.)
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 158, 1, 255); -- Aero 5
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 187, 1, 255); -- Aeroga 4
 INSERT INTO `mob_spell_lists` VALUES ('Absolute_Virtue', 403, 188, 1, 255); -- Aeroga 5

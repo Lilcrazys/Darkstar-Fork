@@ -8,28 +8,25 @@
 package.loaded["scripts/zones/AlTaieu/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/AlTaieu/TextIDs");
-require("scripts/globals/status");
 
 -----------------------------------
 -- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    -- Trade the Fourth Virtue, Fifth Virtue and Sixth Virtue
     --[[
-    if (GetMobAction(16912848) == 0 and GetMobAction(16912876) == 0 and trade:hasItemQty(1848,1) and trade:hasItemQty(1847,1) and 
+    -- Trade the Fourth Virtue, Fifth Virtue and Sixth Virtue
+    if (GetMobAction(16912848) == 0 and GetMobAction(16912876) == 0 and trade:hasItemQty(1848,1) and trade:hasItemQty(1847,1) and
     trade:hasItemQty(1849,1) and trade:getItemCount() == 3) then
         player:tradeComplete();
         SpawnMob(16912848):updateClaim(player); -- Spawn Jailer of Love
     end
     ]]
-    if (trade:hasItemQty(1848,1) == false or trade:hasItemQty(1847,1) == false or trade:hasItemQty(1849,1) == false) then
-        player:startEvent(1010, 1848 ,1847 ,1849);
-    elseif (GetMobAction(16912848) == ACTION_NONE) then
-        if (trade:hasItemQty(1848,1) and trade:hasItemQty(1847,1) and trade:hasItemQty(1849,1) and trade:getItemCount() == 3) then
-            SpawnMob(16912848):updateClaim(player);
-            player:tradeComplete();
-        end
+    -- Make sure neither JoL or AV are up and correct items traded..
+    if (GetMobByID(16912848):isDead() and GetMobByID(16912876):isDead() and trade:hasItemQty(1847,1) and
+    trade:hasItemQty(1848,1) and trade:hasItemQty(1849,1) and trade:getItemCount() == 3 ) then
+        SpawnMob(16912848):updateClaim(player); -- Spawn Jailer of Love
+        player:tradeComplete();
     end
 end;
 
@@ -38,6 +35,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
+    -- player:startEvent(1010, 1848 ,1847 ,1849);
 end;
 
 -----------------------------------
