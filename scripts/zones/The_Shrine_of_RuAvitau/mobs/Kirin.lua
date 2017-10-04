@@ -101,43 +101,47 @@ function onMobDeath(mob, player, isKiller)
     DespawnMob( 17506674 );
 
     if (isKiller == true) then
-        local Chance1 = math.random(1,100); -- Weapon should be 50% chance
-        local Chance2 = math.random(1,1000); -- Cape should be 50% Chance
-        local Weapon = math.random(1,5); -- Selects 1 of 5 different 252 skill weapons
-        local Cape = math.random(1,6); -- Selects 1 of 6 capes
-
-            if (Chance1 <= 50) then
-                if (Weapon == 1) then
-                    player:addTreasure(21176, mob); -- Ngqoqwanb
-                elseif (Weapon == 2) then
-                    player:addTreasure(21052, mob); -- Tsurumaru
-                elseif (Weapon == 3) then
-                    player:addTreasure(20997, mob); -- Raimitsukane
-                elseif (Weapon == 4) then
-                    player:addTreasure(20762, mob); -- Ukudyoni  
-                elseif (Weapon == 5) then
-                    player:addTreasure(20616, mob); -- Ipetam
-                end
-            end
-
-        if (Chance2 <= 450) then
-            if (Cape == 1) then
-                player:addTreasure(28614, mob); -- Iximulew Cape
-            elseif (Cape == 2) then
-                player:addTreasure(28615, mob); -- Toro Cape
-            elseif (Cape == 3) then
-                player:addTreasure(28611, mob); -- Tuilha Cape
-            elseif (Cape == 4) then
-                player:addTreasure(28613, mob); -- Kayapa Cape
-            elseif (Cape == 5) then
-                player:addTreasure(28610, mob); -- Ik Cape
-            elseif (Cape == 6) then
-                player:addTreasure(28612, mob); -- Buquwik Cape
-            end
+      --[[ How to not screw up when you random number generate:
+        When math.random() is called with no argument it generates a value between 0 and 1, for example: 0.0012512588885159
+        When called with 2 arguments such as math.random(arg1,arg2) it will generate from arg1 to arg2 and can be exactly the value of either arg.
+        Note that in DSP this is not the normal lua random it is the C++ Dimensionally Equidistributed Uniform Pseudorandom Number Generator
+        std::mt19937 aka mersenne twister https://en.wikipedia.org/wiki/Mersenne_twister
+        Downside: mt19937 can't work miracles, needs given a good see. Low quality seed can result in things like not ever resulting in a specific number.
+        But it is normally "good enough". Doesn't need to be perfect. The code below has been tested: every item is has a fair enough rate.
+        Remember that putting math.random(1,100) < 7 DOES NOT mean that whatever items you place here has exactly 7% chance of dropping.
+        Even if your 1st check is 7 out of 100, if you have additional checks after it you are lowering that items chances of appearing.
+        That is NOT the random number generators fault if you stuff a dozen items inside multiple layers of random checks.
+      ]]
+        local typeSelect = math.random(); -- 50/50 chance: weapon or cape
+        local bonusDrop = math.random(); -- Give player a  2ndshot at a drop
+        local weaponTable =
+        {
+            -- 5 different 252 skill weapons
+            [1] = 20616, -- Ipetam
+            [2] = 20762, -- Ukudyoni  
+            [3] = 20997, -- Raimitsukane
+            [4] = 21052, -- Tsurumaru
+            [5] = 21176  -- Ngqoqwanb
+        }
+        local capeTable =
+        {
+            -- 6 different JSE capes
+            [1] = 28610, -- Ik Cape
+            [2] = 28611, -- Tuilha Cape
+            [3] = 28612, -- Buquwik Cape
+            [4] = 28613, -- Kayapa Cape
+            [5] = 28614, -- Iximulew Cape
+            [6] = 28615  -- Toro Cape
+        }
+        -- If main RNG value is low, it's a weapon, else a JSE cape. Since there is always 1 of the two, the bonus will offer the opposite item.
+        if (typeSelect <= 0.50 or bonusDrop > 0.66) then
+            player:addTreasure(weaponTable[math.random(1,5)], mob);
         end
 
+        if (typeSelect > 0.50 or bonusDrop <= 0.33) then
+            player:addTreasure(capeTable[math.random(1,6)], mob);
+        end
     end
-
 end
 
 -----------------------------------
