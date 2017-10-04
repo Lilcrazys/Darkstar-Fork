@@ -151,4 +151,55 @@ function onMobDeath(mob, player, isKiller)
         player:addKeyItem(LUNAR_ABYSSITE3);
         player:messageSpecial(KEYITEM_OBTAINED, LUNAR_ABYSSITE3);
     end
+
+    if (isKiller == true) then
+        local TH_BONUS = 0;
+        -- TH1 is re-rolls in core (unused in script).
+        -- TH2 and beyond are direct+ chance of a drop but do not effect quality of drop.
+        if (mob:getTHlevel() > 2) then
+            TH_BONUS = mob:getTHlevel() -2;
+        end
+
+        -- Item 1 of 4: Always (100% so no TH) drops Elders Grip +1 or Tanzenite
+        if (math.random() > 0.50) then
+            player:addTreasure(21364, mob); -- Elders Grip
+        else
+            player:addTreasure(3925, mob); -- Tanzenite Jewel
+        end
+
+        local lootTable = nil;
+        lootTable =
+        {
+            [1] = 4692,  -- Haste II
+            [2] = 20858, -- Lightreaver
+            [3] = 20991, -- Chidori
+            [4] = 21227, -- Hangaku-no-Yumi
+            [5] = 21284, -- Vanir_Gun
+            [6] = 28155, -- Scuff._Cosciales
+            [7] = 28287  -- Durgai_Leggings
+        }
+
+        -- Random for item 2 of 4.
+        local lootDrop = math.random(1, #lootTable); -- Select one
+        if (TH_BONUS + math.random(1,100) > 92) then -- 8 in 100
+            player:addTreasure(lootTable[lootDrop], mob);
+            table.remove(lootTable, lootDrop); -- Remove this item from result list before next roll.
+        end
+
+        if (lootIt == true) then
+        end
+
+        -- Random for item 3 of 4
+        lootDrop = math.random(1, #lootTable); -- Select one
+        if (TH_BONUS + math.random(1,100) > 95) then -- 5 in 100
+            player:addTreasure(lootTable[lootDrop], mob);
+            table.remove(lootTable, lootDrop); -- Remove this item from result list before next roll.
+        end
+
+        -- Random for item 4 of 4
+        lootDrop = math.random(1, #lootTable); -- Select one
+        if (TH_BONUS + math.random(1,100) > 98) then -- 2 in 100
+            player:addTreasure(lootTable[lootDrop], mob);
+        end
+    end
 end;
