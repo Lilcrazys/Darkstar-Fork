@@ -3359,18 +3359,10 @@ INSERT INTO `mob_droplist` VALUES (9729,0,0,1000,9063,172);
 INSERT INTO `mob_droplist` VALUES (9729,0,0,1000,657,252);
 
 -- Shinryu
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,21227,110); -- Hanqaku-no-yumi
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,20858,120); -- Lightreaver
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,21364,380); -- Elders Grip
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,20991,140); -- Chidori
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,21284,120); -- Vanir_Gun
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,28155,50); -- Scuff._Cosciales
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,28287,50); -- Durgai_Leggings
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,3925,300); -- Tanz
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,3925,300); -- Tanz
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,3925,300); -- Tanz
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,4692,30); -- Haste II
-INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,9062,50); -- Dark Matter
+INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,3925,397); -- Tanz
+INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,3925,156); -- Tanz
+INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,9062,192); -- Dark Matter
+INSERT INTO `mob_droplist` VALUES (9730,0,0,1000,28514,24); -- Friomisi Earring
 
 -- Hydra
 INSERT INTO `mob_droplist` VALUES (9731,0,0,1000,28663,115); -- Steadfast shield
