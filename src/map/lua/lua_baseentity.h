@@ -625,6 +625,7 @@ public:
     int32 disengage(lua_State* L);
 
     // Custom
+    int32 getTHlevel(lua_State* L);     // Returns mobs current TH tier
     int32 SpoofMsg(lua_State* L);       // Sends a faked chat packet
     int32 offlineJail(lua_State* L);    // Send offline player to jail
     int32 sjBoost(lua_State*);          // Enhances a player's max subjob level temporarily

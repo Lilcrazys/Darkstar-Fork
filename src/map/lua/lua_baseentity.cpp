@@ -11120,12 +11120,18 @@ int32 CLuaBaseEntity::disengage(lua_State* L)
 
 //==========================================================//
 
-/************************************************************************
-*                                                                       *
-*  Spoofs a chat message to the target player                           *
-*                                                                       *
-************************************************************************/
+// Checks Monster's current Treasure Hunter Tier
+inline int32 CLuaBaseEntity::getTHlevel(lua_State* L)
+{
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
+    DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_MOB);
 
+    CMobEntity* PMob = (CMobEntity*)m_PBaseEntity;
+    lua_pushinteger(L, PMob->m_THLvl);
+    return 1;
+}
+
+// Spoofs a chat message to the target player
 inline int32 CLuaBaseEntity::SpoofMsg(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
@@ -11252,12 +11258,7 @@ inline int32 CLuaBaseEntity::SpoofMsg(lua_State* L)
     return 0;
 }
 
-/************************************************************************
-*                                                                       *
-*  Jail an offline character                                            *
-*                                                                       *
-************************************************************************/
-
+// Jail an offline character
 inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
@@ -11327,12 +11328,7 @@ inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
     return 1;
 }
 
-/************************************************************************
-*                                                                       *
-*  Enhances a player's max subjob level temporarily                     *
-*                                                                       *
-************************************************************************/
-
+// Enhances a player's max subjob level temporarily
 inline int32 CLuaBaseEntity::sjBoost(lua_State *L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
@@ -11371,12 +11367,7 @@ inline int32 CLuaBaseEntity::sjBoost(lua_State *L)
 }
 
 
-/************************************************************************
-*                                                                       *
-*  Used with GM command to add LS to player inventory                   *
-*                                                                       *
-************************************************************************/
-
+// Used with GM command to add LS to player inventory
 inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype == TYPE_NPC);
@@ -11946,8 +11937,8 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,engage),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,disengage),
 
-
     // Custom
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,getTHlevel),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofMsg),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,offlineJail), // Temp till DSP gets its shit together
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
