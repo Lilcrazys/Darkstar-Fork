@@ -49,21 +49,20 @@ end;
 function onMobDeath(mob, player, isKiller)
 
     if (isKiller == true) then
-        local itemRate = math.random(1,100); -- Weapon should be 50% chance
-        local selectWeapon = math.random(1,5);
-
-        if (itemRate <= 50) then
-            if (selectWeapon == 1) then
-                player:addTreasure(21195, mob); -- Uffrat +1
-            elseif (selectWeapon == 2) then
-                player:addTreasure(20870, mob); -- Iclamar +1
-            elseif (selectWeapon == 3) then
-                player:addTreasure(21194, mob); -- Lehbrailg +1
-            elseif (selectWeapon == 4) then
-                player:addTreasure(21004, mob); -- Kannakiri +1
-            elseif (selectWeapon == 5) then
-                player:addTreasure(20824, mob); -- Faizzeer +1
-            end
+        local itemRate = math.random(1,100);
+        local lootTable =
+        {
+            [1] = 20824, -- Faizzeer +1
+            [2] = 20870, -- Iclamar +1
+            [3] = 21004, -- Kannakiri +1
+            [4] = 21194, -- Lehbrailg +1
+            [5] = 21195  -- Uffrat +1
+        }
+        if (itemRate >= 50) then -- First drop is 50 in 100.
+            player:addTreasure(lootTable[math.random(1,5)], mob);
+        end
+        if (itemRate >= 90) then -- You lucky high roller, 2nd drop is only 10 in 100
+            player:addTreasure(lootTable[math.random(1,5)], mob);
         end
     end
 

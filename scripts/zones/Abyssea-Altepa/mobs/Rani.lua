@@ -67,21 +67,20 @@ function onMobDeath(mob, player, isKiller)
     player:addTitle(RANI_DECROWNER);
 
     if (isKiller == true) then
-        local itemRate = math.random(1,100); -- Weapon should be 50% chance
-        local selectWeapon = math.random(1,5);
-
-        if (itemRate <= 50) then
-            if (selectWeapon == 1) then
-                player:addTreasure(20736, mob); -- Iztaasu +1
-            elseif (selectWeapon == 2) then
-                player:addTreasure(21126, mob); -- Aedold +1
-            elseif (selectWeapon == 3) then
-                player:addTreasure(20546, mob); -- Ninzas +1
-            elseif (selectWeapon == 4) then
-                player:addTreasure(21286, mob); -- Hgafircian +1
-            elseif (selectWeapon == 5) then
-                player:addTreasure(21051, mob); -- Shichishito +1
-            end
+        local itemRate = math.random(1,100);
+        local lootTable =
+        {
+            [1] = 20546, -- Ninzas +1
+            [2] = 20736, -- Iztaasu +1
+            [3] = 21051, -- Shichishito +1
+            [4] = 21126, -- Aedold +1
+            [5] = 21286  -- Hgafircian +1
+        }
+        if (itemRate >= 50) then -- First drop is 50 in 100.
+            player:addTreasure(lootTable[math.random(1,5)], mob);
+        end
+        if (itemRate >= 90) then -- You lucky high roller, 2nd drop is only 10 in 100
+            player:addTreasure(lootTable[math.random(1,5)], mob);
         end
     end
 
