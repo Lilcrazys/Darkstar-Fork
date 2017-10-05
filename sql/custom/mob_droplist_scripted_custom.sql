@@ -115,8 +115,8 @@ INSERT INTO `mob_droplist_scripted` VALUES (3210,0,0,1000,20775,100); -- Crobaci
 INSERT INTO `mob_droplist_scripted` VALUES (3210,0,0,1000,21195,100); -- Uffrat +1
 
 -- Taisaijin
--- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,0,1000,4717,500); -- Refresh
--- INSERT INTO `mob_droplist_scripted` VALUES (3430,0,0,1000,4850,500); -- Refresh II
+INSERT INTO `mob_droplist_scripted` VALUES (3430,0,0,1000,4717,850); -- Refresh
+INSERT INTO `mob_droplist_scripted` VALUES (3430,0,0,1000,4850,150); -- Refresh II
 
 -- Yaanei
 INSERT INTO `mob_droplist_scripted` VALUES (4207,0,0,1000,21236,76); -- Bocluamni +1
