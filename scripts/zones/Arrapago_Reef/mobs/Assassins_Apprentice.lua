@@ -3,6 +3,7 @@
 -- VWNM:
 -----------------------------------
 require("scripts/globals/status");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -67,7 +68,7 @@ function onAdditionalEffect(mob,target,damage)
         target:addStatusEffect(EFFECT_STUN,1,0,2);
     end
 
-    return SUBEFFECT_STUN,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_STUN;
+    return SUBEFFECT_STUN,chatType.ADD_EFFECT_STATUS,EFFECT_STUN;
 end;
 -----------------------------------
 -- onMobDeath

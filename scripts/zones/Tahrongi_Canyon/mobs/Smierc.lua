@@ -5,9 +5,10 @@
 package.loaded["scripts/zones/Tahrongi_Canyon/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Tahrongi_Canyon/TextIDs");
+require("scripts/globals/keyitems");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/keyitems");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -83,7 +84,7 @@ function onAdditionalEffect(mob,target,damage)
         return 0,0,0;
     else
         target:addStatusEffect(EFFECT_CURSE_I,40,0,10);
-        return SUBEFFECT_CURSE, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_CURSE_I;
+        return SUBEFFECT_CURSE, chatType.ADD_EFFECT_STATUS, EFFECT_CURSE_I;
     end
 end;
 

@@ -2,14 +2,15 @@
 -- Area: Abyssea - Altepa (218)
 --  NM:  Amarok
 -----------------------------------
-
 package.loaded["scripts/zones/Abyssea-Altepa/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Altepa/TextIDs");
 require("scripts/globals/abyssea");
 require("scripts/globals/status");
 require("scripts/globals/keyitems");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize
@@ -67,7 +68,7 @@ function onAdditionalEffect(mob,target,damage)
     target:addStatusEffect(EFFECT_POISON, 50, 3, duration);
     -- mob:resetEnmity(target);
 
-    return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
+    return SUBEFFECT_POISON, chatType.ADD_EFFECT_STATUS, EFFECT_POISON;
 end;
 
 -----------------------------------

@@ -361,7 +361,7 @@ function onAdditionalEffect(mob, target, damage)
         dmg = finalMagicNonSpellAdjustments(mob, target, ELE_WATER, dmg);
         dmg = utils.clamp(dmg, 0, 250);
         mob:setLocalVar("Enwater", 0);
-        return SUBEFFECT_WATER_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+        return SUBEFFECT_WATER_DAMAGE, chatType.ADD_EFFECT_DMG, dmg;
     else -- No additional effect.
         return 0, 0, 0;
     end
@@ -384,7 +384,7 @@ function onSpikesDamage(mob, target, damage)
         mob:setLocalVar("DelugeSpikes", 0);
         return SUBEFFECT_DELUGE_SPIKES, message, dmg;
     else -- Use normal spike dmg/effect from status
-        return SUBEFFECT_DELUGE_SPIKES, MSGBASIC_SPIKES_EFFECT_DMG, damage;
+        return SUBEFFECT_DELUGE_SPIKES, chatType.SPIKES_EFFECT_DMG, damage;
     end
 end;
 

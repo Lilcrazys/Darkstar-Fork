@@ -2,9 +2,9 @@
 -- Area: South Gustaberg
 -- VWNM: Bhishani
 -----------------------------------
-
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -141,7 +141,7 @@ function onAdditionalEffect(mob,target,damage)
             target:PrintToPlayer(string.format("Effect ID: %i", EFFECT));
         end
         ]]
-        return SUBEFFECT_DARKNESS_DAMAGE, MSGBASIC_ADD_EFFECT_DISPEL, EFFECT;
+        return SUBEFFECT_DARKNESS_DAMAGE, chatType.ADD_EFFECT_DISPEL, EFFECT;
     else
         return 0, 0, 0;
     end

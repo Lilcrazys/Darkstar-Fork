@@ -5,6 +5,7 @@
 -----------------------------------
 
 require("scripts/globals/status");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- OnUseAbility
@@ -14,7 +15,7 @@ function onAbilityCheck(player,target,ability)
 	if (target:getSystem() == 9) then
 		return 0,0;
 	else
-		return MSGBASIC_UNABLE_TO_USE_JA2,0;
+		return chatType.UNABLE_TO_USE_JA2,0;
 	end
 end;
 

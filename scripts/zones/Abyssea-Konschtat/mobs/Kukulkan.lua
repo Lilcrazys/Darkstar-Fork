@@ -5,10 +5,11 @@
 package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Abyssea-Konschtat/TextIDs");
-require("scripts/globals/status");
-require("scripts/globals/titles");
 require("scripts/globals/keyitems");
 require("scripts/globals/abyssea");
+require("scripts/globals/status");
+require("scripts/globals/titles");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize
@@ -60,7 +61,7 @@ function onAdditionalEffect(mob,target,damage)
         local duration = 30 * applyResistanceAddEffect(mob, target, ELE_WATER, EFFECT_POISON)
         duartion = utils.clamp(duration,1,30);
         target:addStatusEffect(EFFECT_POISON, 100, 3, duration);
-        return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
+        return SUBEFFECT_POISON, chatType.ADD_EFFECT_STATUS, EFFECT_POISON;
     end
 end;
 

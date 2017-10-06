@@ -7,7 +7,6 @@
 -- Jugner Forest, Jugner Forest [S],
 -- Wajaom Woodlands, Bhaflau Thickets
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
@@ -131,7 +130,7 @@ function onAdditionalEffect(mob,target,damage)
         dmg = adjustForTarget(target, damage, ele);
         dmg = finalMagicNonSpellAdjustments(mob, target, ELE_FIRE, damage);
 
-        return SUBEFFECT_FIRE_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+        return SUBEFFECT_FIRE_DAMAGE, chatType.ADD_EFFECT_DMG, dmg;
     else
         return 0,0,0;
     end

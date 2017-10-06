@@ -8,6 +8,7 @@ require("scripts/zones/Crawlers_Nest_[S]/TextIDs");
 require("scripts/globals/keyitems");
 require("scripts/globals/quests");
 require("scripts/globals/status");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -66,7 +67,7 @@ function onAdditionalEffect(mob,target,damage)
         target:addStatusEffect(EFFECT_ADDLE,10,0,10);
     end
 
-    return SUBEFFECT_PARALYSIS,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_ADDLE;
+    return SUBEFFECT_PARALYSIS,chatType.ADD_EFFECT_STATUS,EFFECT_ADDLE;
 end;
 
 -----------------------------------

@@ -9,6 +9,7 @@ require("scripts/globals/keyitems");
 require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -74,7 +75,7 @@ function onAdditionalEffect(mob,target,damage)
         target:addStatusEffect(EFFECT_PARALYSIS,1,0,10);
     end
 
-    return SUBEFFECT_PARALYSIS,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_PARALYSIS;
+    return SUBEFFECT_PARALYSIS,chatType.ADD_EFFECT_STATUS,EFFECT_PARALYSIS;
 end;
 
 -----------------------------------

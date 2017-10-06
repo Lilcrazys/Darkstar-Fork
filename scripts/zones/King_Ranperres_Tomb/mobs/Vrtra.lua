@@ -7,6 +7,7 @@ require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/msg");
 
 local offsets = {1, 3, 5, 2, 4, 6};
 -- Don't remove the offsets variable.
@@ -143,7 +144,7 @@ function onAdditionalEffect(mob,target,damage)
         return 0,0,0;
     else
         target:addStatusEffect(EFFECT_CURSE_I,40,0,10);
-        return SUBEFFECT_CURSE,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_CURSE_I;
+        return SUBEFFECT_CURSE,chatType.ADD_EFFECT_STATUS,EFFECT_CURSE_I;
     end
 end;
 

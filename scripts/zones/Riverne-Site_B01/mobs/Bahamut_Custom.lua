@@ -6,6 +6,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInibahamutlize Action
@@ -138,7 +139,7 @@ function onAdditionalEffect(mob,target,damage)
         target:addStatusEffect(EFFECT_CURSE_I,40,0,10);
         mob:resetEnmity(target);
 
-        return SUBEFFECT_CURSE,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_CURSE_I;
+        return SUBEFFECT_CURSE,chatType.ADD_EFFECT_STATUS,EFFECT_CURSE_I;
     end
 end;
 

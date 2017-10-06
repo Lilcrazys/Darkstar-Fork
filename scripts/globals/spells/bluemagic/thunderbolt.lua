@@ -10,6 +10,8 @@
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+require("scripts/globals/msg");
+
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
@@ -18,7 +20,7 @@ function onMagicCastingCheck(caster,target,spell)
 	if caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) then
         return 0;
     else
-        return MSGBASIC_STATUS_PREVENTS;
+        return chatType.STATUS_PREVENTS;
     end
 end;
 
@@ -39,7 +41,7 @@ function onSpellCast(caster,target,spell)
 
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-	
+
 	-- local resist = applyResistance(caster,spell,target,caster:getStat(MOD_DEX) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
 
 	if (damage > 0 and resist < 0.125) then
@@ -47,6 +49,6 @@ function onSpellCast(caster,target,spell)
 		target:delStatusEffect(typeEffect);
 		target:addStatusEffect(typeEffect,5,0,getBlueEffectDuration(caster,resist,typeEffect));
 	end
-	
+
     return damage;
 end;

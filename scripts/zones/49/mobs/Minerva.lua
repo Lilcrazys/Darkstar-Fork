@@ -3,7 +3,6 @@
 --  HNM: Minerva
 -- Provenance Secret Bonus Boss
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
@@ -193,12 +192,12 @@ function onAdditionalEffect(mob,target,damage)
                 target:delStatusEffectSilent(EFFECT_MAGIC_DEF_DOWN);
                 target:addStatusEffect(EFFECT_MAGIC_DEF_DOWN, Enspell_Enfeeb * 5, 0, 150);
                 -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-                return SUBEFFECT_LIGHT_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+                return SUBEFFECT_LIGHT_DAMAGE, chatType.ADD_EFFECT_DMG, dmg;
             else
                 target:delMP(dmg * 0.5);
                 target:delTP(dmg * 0.25)
                 -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-                return SUBEFFECT_LIGHT_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+                return SUBEFFECT_LIGHT_DAMAGE, chatType.ADD_EFFECT_DMG, dmg;
             end
         elseif (mob:getStatusEffect(EFFECT_CUSTOM_ENSPELL):getPower() == 5) then -- Enthunder
             IntMndBonus = (INT_diff * 0.5) + (MND_diff * 0.25);
@@ -221,10 +220,10 @@ function onAdditionalEffect(mob,target,damage)
                 target:delStatusEffectSilent(EFFECT_MAGIC_EVASION_DOWN);
                 target:addStatusEffect(EFFECT_MAGIC_EVASION_DOWN, Enspell_Enfeeb * 10, 0, 150);
                 -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-                return SUBEFFECT_LIGHTNING_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+                return SUBEFFECT_LIGHTNING_DAMAGE, chatType.ADD_EFFECT_DMG, dmg;
             else
                 -- target:PrintToPlayer( string.format( "Enspell Dmg after clamp: '%u' ", dmg ) );
-                return SUBEFFECT_LIGHTNING_DAMAGE, MSGBASIC_ADD_EFFECT_DMG, dmg;
+                return SUBEFFECT_LIGHTNING_DAMAGE, chatType.ADD_EFFECT_DMG, dmg;
             end
         else
             target:PrintToPlayer("Unknown error with custom enspell. Bug report immediately.");

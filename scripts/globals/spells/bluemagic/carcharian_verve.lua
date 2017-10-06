@@ -4,6 +4,7 @@
 require("scripts/globals/bluemagic");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
 
 -----------------------------------------
 -- onMagicCastingCheck
@@ -13,7 +14,7 @@ function onMagicCastingCheck(caster,target,spell)
     if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
         return 0;
     else
-        return MSGBASIC_STATUS_PREVENTS;
+        return chatType.STATUS_PREVENTS;
     end
 end;
 

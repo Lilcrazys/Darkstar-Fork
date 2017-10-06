@@ -5,16 +5,17 @@
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
+require("scripts/globals/msg");
 
 -----------------------------------------
 -- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	 if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
+     if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
       return 0;
    else
-      return MSGBASIC_STATUS_PREVENTS;
+      return chatType.STATUS_PREVENTS;
    end
 end;
 
@@ -41,22 +42,22 @@ function onSpellCast(caster, target, spell)
 
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-	
-	if (target:getHP() > dmg) then
-		caster:addHP(dmg);
-		target:delHP(dmg);
-	else
-	
-	dmg = target:getHP();
-		caster:addHP(dmg);
-		target:delHP(dmg);
-	end
-	
-	if (target:isUndead()) then
-		spell:setMsg(75); -- No effect
-		return dmg;
-	end
 
-	spell:setMsg(227); 
-	return dmg;
+    if (target:getHP() > dmg) then
+        caster:addHP(dmg);
+        target:delHP(dmg);
+    else
+
+    dmg = target:getHP();
+        caster:addHP(dmg);
+        target:delHP(dmg);
+    end
+
+    if (target:isUndead()) then
+        spell:setMsg(75); -- No effect
+        return dmg;
+    end
+
+    spell:setMsg(227);
+    return dmg;
 end;

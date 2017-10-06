@@ -7,6 +7,7 @@ require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -181,7 +182,7 @@ function onAdditionalEffect(mob,target,damage)
 
         dmg = finalMagicNonSpellAdjustments(mob,target,ELE_FIRE,dmg);
 
-        return SUBEFFECT_FIRE_DAMAGE,MSGBASIC_ADD_EFFECT_DMG,dmg;
+        return SUBEFFECT_FIRE_DAMAGE,chatType.ADD_EFFECT_DMG,dmg;
     end
 end;
 
