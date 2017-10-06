@@ -159,10 +159,10 @@ INSERT INTO `item_mods` VALUES (20512,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20512,8,50); -- STR
 
 -- Godhands
-INSERT INTO `item_mods` VALUES (20515,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20515,507,250); -- Extra DMG X2.5
--- STP is in DSP
--- TP Bonus is in DSP
+-- Extra DMG Chance 10% is in DSP already
+-- Extra DMG X2.5 is in DSP already
+-- STP is in DSP already
+-- TP Bonus is in DSP already
 INSERT INTO `item_mods` VALUES (20515,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20515,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20515,165,5); -- Crit Rate
@@ -194,19 +194,6 @@ INSERT INTO `item_mods` VALUES (20589,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (20589,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20589,9,50); -- DEX
 
--- Aeneas
-INSERT INTO `item_mods` VALUES (20594,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20594,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20594,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20594,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20594,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20594,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20594,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20594,175,100); -- Skill Chain DMG
-
--- Jugo Kukri +1
-INSERT INTO `item_mods` VALUES (20609,11,15); -- LEGION CUSTOM AGI...WHY?
-
 INSERT INTO `item_mods` VALUES (20616,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20616,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20616,507,200); -- occ
@@ -226,18 +213,6 @@ INSERT INTO `item_mods` VALUES (20686,288,15); -- DBL ATK
 
 INSERT INTO `item_mods` VALUES (20687,302,10); -- TRP ATK
 INSERT INTO `item_mods` VALUES (20687,288,15); -- DBL ATK
-
--- Sequence 
-INSERT INTO `item_mods` VALUES (20695,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20695,507,250); -- Extra DMG X2.5
--- STP in DSP already
--- TP Bonus in DSP already
-INSERT INTO `item_mods` VALUES (20695,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20695,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20695,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20695,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20695,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20695,175,100); -- Skill Chain DMG
 
 -- Excalipoor II (DO NOT REMOVE UNTIL THE WS EXISTS IN DSP)
 INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
@@ -291,30 +266,6 @@ INSERT INTO `item_mods` VALUES (20884,421,50); --
 INSERT INTO `item_mods` VALUES (20885,165,25); --
 INSERT INTO `item_mods` VALUES (20885,421,50); --
 
--- Chango
-INSERT INTO `item_mods` VALUES (20843,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20843,507,250); -- Extra DMG X2.5
--- STP in DSP already
--- TP Bonus  in DSP already
-INSERT INTO `item_mods` VALUES (20843,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20843,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20843,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20843,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20843,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20843,175,100); -- Skill Chain DMG
-
--- Anguta
-INSERT INTO `item_mods` VALUES (20890,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20890,507,250); -- Extra DMG X2.5
--- STP in DSP already
--- TP Bonus  in DSP already
-INSERT INTO `item_mods` VALUES (20890,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20890,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20890,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20890,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20890,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20890,175,100); -- Skill Chain DMG
-
 INSERT INTO `item_mods` VALUES (20901,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20901,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20901,507,200); -- occ
@@ -329,18 +280,6 @@ INSERT INTO `item_mods` VALUES (20929,421,50); --
 INSERT INTO `item_mods` VALUES (20930,165,25); --
 INSERT INTO `item_mods` VALUES (20930,421,50); --
 
--- Trishula
-INSERT INTO `item_mods` VALUES (20935,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20935,507,250); -- Extra DMG X2.5
--- STP in DSP already
--- TP Bonus  in DSP already
-INSERT INTO `item_mods` VALUES (20935,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20935,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20935,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20935,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20935,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20935,175,100); -- Skill Chain DMG
-
 INSERT INTO `item_mods` VALUES (20946,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20946,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20946,507,200); -- occ
@@ -351,16 +290,6 @@ INSERT INTO `item_mods` VALUES (20974,421,50); --
 INSERT INTO `item_mods` VALUES (20975,165,25); --
 INSERT INTO `item_mods` VALUES (20975,421,50); --
 
--- Heishi Shorinken 
-INSERT INTO `item_mods` VALUES (20977,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (20977,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20977,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (20977,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (20977,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (20977,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (20977,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (20977,175,100); -- Skill Chain DMG
-
 INSERT INTO `item_mods` VALUES (20989,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20989,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20989,507,200); -- occ
@@ -369,33 +298,8 @@ INSERT INTO `item_mods` VALUES (20995,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20995,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20995,507,200); -- occ
 
-INSERT INTO `item_mods` VALUES (21006,23,23);
-INSERT INTO `item_mods` VALUES (21006,68,12);
-INSERT INTO `item_mods` VALUES (21006,9,7);
-
-INSERT INTO `item_mods` VALUES (21007,23,25);
-INSERT INTO `item_mods` VALUES (21007,68,13);
-INSERT INTO `item_mods` VALUES (21007,9,8);
-
 INSERT INTO `item_mods` VALUES (21019,165,25); --
 INSERT INTO `item_mods` VALUES (21019,421,50); --
-
--- Dojikiri Yasutsuna 
-INSERT INTO `item_mods` VALUES (21025,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21025,507,250); -- Extra DMG X2.5
--- STP already in DSP
--- TP Bonus already in DSP
-INSERT INTO `item_mods` VALUES (21025,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21025,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21025,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21025,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21025,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21025,175,100); -- Skill Chain DMG
-
-INSERT INTO `item_mods` VALUES (21032,25,20); -- Kunitsuna - 20 Acc
-INSERT INTO `item_mods` VALUES (21033,25,25); -- Kunitsuna +1 - 25 Acc
-
-INSERT INTO `item_mods` VALUES (21041,73,5);
 
 INSERT INTO `item_mods` VALUES (21042,73,6);
 
@@ -417,18 +321,6 @@ INSERT INTO `item_mods` VALUES (21078,30,40); -- MACC
 INSERT INTO `item_mods` VALUES (21079,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21079,421,65); -- Crit DMG
 
--- Tishtrya
-INSERT INTO `item_mods` VALUES (21082,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21082,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21082,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21082,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21082,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21082,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21082,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21082,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21082,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21082,175,100); -- Skill Chain DMG
-
 REPLACE INTO `item_mods` VALUES (21111,28,60); -- Matt
 
 REPLACE INTO `item_mods` VALUES (21139,28,165); -- Should be 60   magic dmg +  unknown
@@ -436,18 +328,6 @@ REPLACE INTO `item_mods` VALUES (21139,28,165); -- Should be 60   magic dmg +  u
 REPLACE INTO `item_mods` VALUES (21140,28,185); -- Should be 60   magic dmg +  unknown
 
 INSERT INTO `item_mods` VALUES (21144,28,100); --
-
--- Khatvanga
-INSERT INTO `item_mods` VALUES (21147,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21147,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21147,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21147,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21147,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21147,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21147,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21147,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21147,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21147,175,100); -- Skill Chain DMG
 
 REPLACE INTO `item_mods` VALUES (21161,28,135); -- Matt
 
@@ -467,20 +347,6 @@ REPLACE INTO `item_mods` VALUES (21182,28,130); --  Magic Attack Bonus +25
 
 REPLACE INTO `item_mods` VALUES (21194,28,95); -- Should be 19 see below
 
-INSERT INTO `item_mods` VALUES (21200,12,12);
-INSERT INTO `item_mods` VALUES (21200,13,12);
-INSERT INTO `item_mods` VALUES (21200,28,25);
-INSERT INTO `item_mods` VALUES (21200,311,195);
-
-INSERT INTO `item_mods` VALUES (21201,12,13);
-INSERT INTO `item_mods` VALUES (21201,13,13);
-INSERT INTO `item_mods` VALUES (21201,28,26);
-INSERT INTO `item_mods` VALUES (21201,311,205);
-
-INSERT INTO `item_mods` VALUES (21202,5,85);
-
-INSERT INTO `item_mods` VALUES (21203,5,87);
-
 REPLACE INTO `item_mods` VALUES (21208,28,73); -- Should be 40   see below
 
 INSERT INTO `item_mods` VALUES (21212,165,25); --
@@ -488,14 +354,6 @@ INSERT INTO `item_mods` VALUES (21212,421,50); --
 
 INSERT INTO `item_mods` VALUES (21213,165,25); --
 INSERT INTO `item_mods` VALUES (21213,421,50); --
-
-INSERT INTO `item_mods` VALUES (21239,73,4);
-
-INSERT INTO `item_mods` VALUES (21240,73,5);
-
-INSERT INTO `item_mods` VALUES (21249,26,12);
-
-INSERT INTO `item_mods` VALUES (21250,26,13);
 
 INSERT INTO `item_mods` VALUES (21265,165,25); --
 INSERT INTO `item_mods` VALUES (21265,421,50); --
@@ -515,36 +373,8 @@ INSERT INTO `item_mods` VALUES (21269,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21269,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21269,11,50); -- AGI
 
-INSERT INTO `item_mods` VALUES (21353,165,1);
-INSERT INTO `item_mods` VALUES (21353,23,5);
-INSERT INTO `item_mods` VALUES (21353,25,5);
-INSERT INTO `item_mods` VALUES (21353,26,10);
-
-INSERT INTO `item_mods` VALUES (21354,165,2);
-INSERT INTO `item_mods` VALUES (21354,23,6);
-INSERT INTO `item_mods` VALUES (21354,25,6);
-INSERT INTO `item_mods` VALUES (21354,26,11);
-
-INSERT INTO `item_mods` VALUES (21378,165,1);
-INSERT INTO `item_mods` VALUES (21378,421,5);
-
 INSERT INTO `item_mods` VALUES (21379,165,2);
 INSERT INTO `item_mods` VALUES (21379,421,6);
-
--- Marsyas
-INSERT INTO `item_mods` VALUES (21398,454,50); -- Song Duration
-
--- Fomalhaut
-INSERT INTO `item_mods` VALUES (21485,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21485,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21485,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21485,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21485,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21485,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21485,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21485,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21485,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21485,175,100); -- Skill Chain DMG
 
 INSERT INTO `item_mods` VALUES (21683,25,60); -- Ragnarok iLvL 119 AG - ACC +60
 INSERT INTO `item_mods` VALUES (21683,165,14); -- Crit Rate +14%
@@ -569,18 +399,6 @@ INSERT INTO `item_mods` VALUES (21751,288,15); -- DBL ATK
 INSERT INTO `item_mods` VALUES (21752,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21752,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21752,8,35); -- STR
-
--- Tri edge
-INSERT INTO `item_mods` VALUES (21753,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (21753,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21753,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21753,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (21753,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (21753,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (21753,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (21753,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21753,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (21753,175,100); -- Skill Chain DMG
 
 INSERT INTO `item_mods` VALUES (21756,25,60); -- Bravura iLvL 119 AG - ACC +60
 INSERT INTO `item_mods` VALUES (21756,431,1); -- Additional Effect - scripts\globals\items\bravura.lua
@@ -696,30 +514,7 @@ INSERT INTO `item_mods` VALUES (22064,12,50); -- INT
 INSERT INTO `item_mods` VALUES (22064,28,165); -- MAB
 INSERT INTO `item_mods` VALUES (22064,30,40); -- MACC
 
--- Fail-NOT
-INSERT INTO `item_mods` VALUES (22117,506,100); -- Extra DMG Chance 10%
-INSERT INTO `item_mods` VALUES (22117,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (22117,73,10); -- STP
-INSERT INTO `item_mods` VALUES (22117,345,500); -- TP Bonus
-INSERT INTO `item_mods` VALUES (22117,302,5); -- TRIP ATK
-INSERT INTO `item_mods` VALUES (22117,288,10); -- DBL ATK
-INSERT INTO `item_mods` VALUES (22117,165,5); -- Crit Rate
-INSERT INTO `item_mods` VALUES (22117,421,25); -- Crit DMG
-INSERT INTO `item_mods` VALUES (22117,174,100); -- Skill Chain Bonus
-INSERT INTO `item_mods` VALUES (22117,175,100); -- Skill Chain DMG
-
--- Srivatsa
-INSERT INTO `item_mods` VALUES (26403,2,150); -- HP
-INSERT INTO `item_mods` VALUES (26403,5,150); -- MP
-INSERT INTO `item_mods` VALUES (26403,23,35); -- ATK
-INSERT INTO `item_mods` VALUES (26403,25,35); -- ACC
-INSERT INTO `item_mods` VALUES (26403,27,15); -- Enmity
-INSERT INTO `item_mods` VALUES (26403,109,129); -- Shield skill (Custom)
-INSERT INTO `item_mods` VALUES (26403,161,-8); -- DMG TKN
-INSERT INTO `item_mods` VALUES (26403,163,-25); -- MAGIC DMG TKN
-INSERT INTO `item_mods` VALUES (26403,416,10); -- Annuls DMG 
-
-INSERT INTO `item_mods` VALUES (26406,127,3);
+INSERT INTO `item_mods` VALUES (26406,127,3); -- Kupo Shield
 INSERT INTO `item_mods` VALUES (26406,128,3);
 INSERT INTO `item_mods` VALUES (26406,129,3);
 INSERT INTO `item_mods` VALUES (26406,130,3);
@@ -731,192 +526,6 @@ INSERT INTO `item_mods` VALUES (26406,135,3);
 
 REPLACE INTO `item_mods` VALUES (26710,11,34);
 REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
-
-INSERT INTO `item_mods` VALUES (26874,311,20); -- Supay Weskit magic damage added,already pushed to DSP
-
-INSERT INTO `item_mods` VALUES (26877,1,133);
-INSERT INTO `item_mods` VALUES (26877,10,29);
-INSERT INTO `item_mods` VALUES (26877,11,36);
-INSERT INTO `item_mods` VALUES (26877,12,28);
-INSERT INTO `item_mods` VALUES (26877,13,28);
-INSERT INTO `item_mods` VALUES (26877,14,28);
-INSERT INTO `item_mods` VALUES (26877,165,3);
-INSERT INTO `item_mods` VALUES (26877,170,5);
-INSERT INTO `item_mods` VALUES (26877,2,59);
-INSERT INTO `item_mods` VALUES (26877,25,25);
-INSERT INTO `item_mods` VALUES (26877,26,25);
-INSERT INTO `item_mods` VALUES (26877,29,6);
-INSERT INTO `item_mods` VALUES (26877,30,25);
-INSERT INTO `item_mods` VALUES (26877,31,64);
-INSERT INTO `item_mods` VALUES (26877,384,40);
-INSERT INTO `item_mods` VALUES (26877,5,44);
-INSERT INTO `item_mods` VALUES (26877,68,49);
-INSERT INTO `item_mods` VALUES (26877,8,29);
-INSERT INTO `item_mods` VALUES (26877,9,37);
-
-INSERT INTO `item_mods` VALUES (26878,1,134);
-INSERT INTO `item_mods` VALUES (26878,10,30);
-INSERT INTO `item_mods` VALUES (26878,11,37);
-INSERT INTO `item_mods` VALUES (26878,12,29);
-INSERT INTO `item_mods` VALUES (26878,13,29);
-INSERT INTO `item_mods` VALUES (26878,14,29);
-INSERT INTO `item_mods` VALUES (26878,165,4);
-INSERT INTO `item_mods` VALUES (26878,170,6);
-INSERT INTO `item_mods` VALUES (26878,2,59);
-INSERT INTO `item_mods` VALUES (26878,25,26);
-INSERT INTO `item_mods` VALUES (26878,26,26);
-INSERT INTO `item_mods` VALUES (26878,29,6);
-INSERT INTO `item_mods` VALUES (26878,30,26);
-INSERT INTO `item_mods` VALUES (26878,31,64);
-INSERT INTO `item_mods` VALUES (26878,384,40);
-INSERT INTO `item_mods` VALUES (26878,5,44);
-INSERT INTO `item_mods` VALUES (26878,68,49);
-INSERT INTO `item_mods` VALUES (26878,8,30);
-INSERT INTO `item_mods` VALUES (26878,9,38);
-
-INSERT INTO `item_mods` VALUES (26879,1,127);
-INSERT INTO `item_mods` VALUES (26879,10,25);
-INSERT INTO `item_mods` VALUES (26879,11,25);
-INSERT INTO `item_mods` VALUES (26879,12,34);
-INSERT INTO `item_mods` VALUES (26879,13,34);
-INSERT INTO `item_mods` VALUES (26879,14,34);
-INSERT INTO `item_mods` VALUES (26879,2,54);
-INSERT INTO `item_mods` VALUES (26879,28,25);
-INSERT INTO `item_mods` VALUES (26879,29,6);
-INSERT INTO `item_mods` VALUES (26879,30,28);
-INSERT INTO `item_mods` VALUES (26879,31,80);
-INSERT INTO `item_mods` VALUES (26879,384,30);
-INSERT INTO `item_mods` VALUES (26879,5,59);
-INSERT INTO `item_mods` VALUES (26879,68,41);
-INSERT INTO `item_mods` VALUES (26879,8,25);
-INSERT INTO `item_mods` VALUES (26879,9,25);
-
-INSERT INTO `item_mods` VALUES (26880,1,128);
-INSERT INTO `item_mods` VALUES (26880,10,26);
-INSERT INTO `item_mods` VALUES (26880,11,26);
-INSERT INTO `item_mods` VALUES (26880,12,35);
-INSERT INTO `item_mods` VALUES (26880,13,35);
-INSERT INTO `item_mods` VALUES (26880,14,35);
-INSERT INTO `item_mods` VALUES (26880,2,54);
-INSERT INTO `item_mods` VALUES (26880,28,26);
-INSERT INTO `item_mods` VALUES (26880,29,6);
-INSERT INTO `item_mods` VALUES (26880,30,29);
-INSERT INTO `item_mods` VALUES (26880,31,80);
-INSERT INTO `item_mods` VALUES (26880,384,30);
-INSERT INTO `item_mods` VALUES (26880,5,59);
-INSERT INTO `item_mods` VALUES (26880,68,41);
-INSERT INTO `item_mods` VALUES (26880,8,26);
-INSERT INTO `item_mods` VALUES (26880,9,26);
-
-INSERT INTO `item_mods` VALUES (26881,1,143);
-INSERT INTO `item_mods` VALUES (26881,10,33);
-INSERT INTO `item_mods` VALUES (26881,11,21);
-INSERT INTO `item_mods` VALUES (26881,12,21);
-INSERT INTO `item_mods` VALUES (26881,13,21);
-INSERT INTO `item_mods` VALUES (26881,14,21);
-INSERT INTO `item_mods` VALUES (26881,161,-2);
-INSERT INTO `item_mods` VALUES (26881,2,111);
-INSERT INTO `item_mods` VALUES (26881,23,15);
-INSERT INTO `item_mods` VALUES (26881,25,15);
-INSERT INTO `item_mods` VALUES (26881,29,4);
-INSERT INTO `item_mods` VALUES (26881,31,53);
-INSERT INTO `item_mods` VALUES (26881,384,4);
-INSERT INTO `item_mods` VALUES (26881,5,44);
-INSERT INTO `item_mods` VALUES (26881,68,41);
-INSERT INTO `item_mods` VALUES (26881,8,33);
-INSERT INTO `item_mods` VALUES (26881,9,21);
-
-INSERT INTO `item_mods` VALUES (26882,1,144);
-INSERT INTO `item_mods` VALUES (26882,10,34);
-INSERT INTO `item_mods` VALUES (26882,11,21);
-INSERT INTO `item_mods` VALUES (26882,12,21);
-INSERT INTO `item_mods` VALUES (26882,13,21);
-INSERT INTO `item_mods` VALUES (26882,14,21);
-INSERT INTO `item_mods` VALUES (26882,161,-3);
-INSERT INTO `item_mods` VALUES (26882,2,121);
-INSERT INTO `item_mods` VALUES (26882,23,16);
-INSERT INTO `item_mods` VALUES (26882,25,16);
-INSERT INTO `item_mods` VALUES (26882,29,4);
-INSERT INTO `item_mods` VALUES (26882,31,53);
-INSERT INTO `item_mods` VALUES (26882,384,30);
-INSERT INTO `item_mods` VALUES (26882,5,44);
-INSERT INTO `item_mods` VALUES (26882,68,41);
-INSERT INTO `item_mods` VALUES (26882,8,34);
-INSERT INTO `item_mods` VALUES (26882,9,21);
-
-INSERT INTO `item_mods` VALUES (26883,1,131);
-INSERT INTO `item_mods` VALUES (26883,10,23);
-INSERT INTO `item_mods` VALUES (26883,11,29);
-INSERT INTO `item_mods` VALUES (26883,12,29);
-INSERT INTO `item_mods` VALUES (26883,13,24);
-INSERT INTO `item_mods` VALUES (26883,14,24);
-INSERT INTO `item_mods` VALUES (26883,2,59);
-INSERT INTO `item_mods` VALUES (26883,23,15);
-INSERT INTO `item_mods` VALUES (26883,24,15);
-INSERT INTO `item_mods` VALUES (26883,28,10);
-INSERT INTO `item_mods` VALUES (26883,29,5);
-INSERT INTO `item_mods` VALUES (26883,302,1);
-INSERT INTO `item_mods` VALUES (26883,31,64);
-INSERT INTO `item_mods` VALUES (26883,384,30);
-INSERT INTO `item_mods` VALUES (26883,5,29);
-INSERT INTO `item_mods` VALUES (26883,68,55);
-INSERT INTO `item_mods` VALUES (26883,8,29);
-INSERT INTO `item_mods` VALUES (26883,9,28);
-
-INSERT INTO `item_mods` VALUES (26884,1,132);
-INSERT INTO `item_mods` VALUES (26884,10,23);
-INSERT INTO `item_mods` VALUES (26884,11,29);
-INSERT INTO `item_mods` VALUES (26884,12,30);
-INSERT INTO `item_mods` VALUES (26884,13,24);
-INSERT INTO `item_mods` VALUES (26884,14,24);	
-INSERT INTO `item_mods` VALUES (26884,2,59);
-INSERT INTO `item_mods` VALUES (26884,23,16);
-INSERT INTO `item_mods` VALUES (26884,24,16);
-INSERT INTO `item_mods` VALUES (26884,28,11);
-INSERT INTO `item_mods` VALUES (26884,29,5);
-INSERT INTO `item_mods` VALUES (26884,302,2);
-INSERT INTO `item_mods` VALUES (26884,31,64);
-INSERT INTO `item_mods` VALUES (26884,384,30);
-INSERT INTO `item_mods` VALUES (26884,5,29);
-INSERT INTO `item_mods` VALUES (26884,68,55);
-INSERT INTO `item_mods` VALUES (26884,8,30);
-INSERT INTO `item_mods` VALUES (26884,9,28);
-
-INSERT INTO `item_mods` VALUES (26885,1,125);
-INSERT INTO `item_mods` VALUES (26885,10,21);
-INSERT INTO `item_mods` VALUES (26885,11,21);
-INSERT INTO `item_mods` VALUES (26885,12,34);
-INSERT INTO `item_mods` VALUES (26885,13,34);
-INSERT INTO `item_mods` VALUES (26885,14,34);
-INSERT INTO `item_mods` VALUES (26885,2,84);
-INSERT INTO `item_mods` VALUES (26885,28,12);
-INSERT INTO `item_mods` VALUES (26885,29,6);
-INSERT INTO `item_mods` VALUES (26885,30,12);
-INSERT INTO `item_mods` VALUES (26885,31,80);
-INSERT INTO `item_mods` VALUES (26885,369,2);
-INSERT INTO `item_mods` VALUES (26885,384,30);
-INSERT INTO `item_mods` VALUES (26885,5,89);
-INSERT INTO `item_mods` VALUES (26885,65,41);
-INSERT INTO `item_mods` VALUES (26885,8,21);
-INSERT INTO `item_mods` VALUES (26885,9,21);
-
-INSERT INTO `item_mods` VALUES (26886,1,126);
-INSERT INTO `item_mods` VALUES (26886,10,21);
-INSERT INTO `item_mods` VALUES (26886,11,21);
-INSERT INTO `item_mods` VALUES (26886,12,35);
-INSERT INTO `item_mods` VALUES (26886,13,35);
-INSERT INTO `item_mods` VALUES (26886,14,35);
-INSERT INTO `item_mods` VALUES (26886,2,94);
-INSERT INTO `item_mods` VALUES (26886,28,13);
-INSERT INTO `item_mods` VALUES (26886,29,6);
-INSERT INTO `item_mods` VALUES (26886,30,13);
-INSERT INTO `item_mods` VALUES (26886,31,80);
-INSERT INTO `item_mods` VALUES (26886,369,2);
-INSERT INTO `item_mods` VALUES (26886,384,30);
-INSERT INTO `item_mods` VALUES (26886,5,99);
-INSERT INTO `item_mods` VALUES (26886,65,41);
-INSERT INTO `item_mods` VALUES (26886,8,21);
-INSERT INTO `item_mods` VALUES (26886,9,21);
 
 INSERT INTO `item_mods` VALUES (26910,480,10); -- null dmg
 
@@ -947,122 +556,6 @@ REPLACE INTO `item_mods` VALUES (27175,384,51); --  Haste +5%
 REPLACE INTO `item_mods` VALUES (27175,508,35); -- Third Eye": "Counter" rate +35
 REPLACE INTO `item_mods` VALUES (27175,65,40); --  Evasion+25
 REPLACE INTO `item_mods` VALUES (27175,8,33); --  STR+21
-
-INSERT INTO `item_mods` VALUES (27230,10,16);
-INSERT INTO `item_mods` VALUES (27230,108,38);
-INSERT INTO `item_mods` VALUES (27230,11,20);
-INSERT INTO `item_mods` VALUES (27230,12,30);
-INSERT INTO `item_mods` VALUES (27230,13,17);
-INSERT INTO `item_mods` VALUES (27230,14,11);
-INSERT INTO `item_mods` VALUES (27230,2,47);
-INSERT INTO `item_mods` VALUES (27230,27,5);
-INSERT INTO `item_mods` VALUES (27230,288,5);
-INSERT INTO `item_mods` VALUES (27230,29,5);
-INSERT INTO `item_mods` VALUES (27230,302,2);
-INSERT INTO `item_mods` VALUES (27230,31,69);
-INSERT INTO `item_mods` VALUES (27230,384,60);
-INSERT INTO `item_mods` VALUES (27230,73,-4);
-INSERT INTO `item_mods` VALUES (27230,8,29);
-
-INSERT INTO `item_mods` VALUES (27262,1,113);
-INSERT INTO `item_mods` VALUES (27262,2,50);
-INSERT INTO `item_mods` VALUES (27262,8,29);
-INSERT INTO `item_mods` VALUES (27262,10,16);
-INSERT INTO `item_mods` VALUES (27262,11,20);
-INSERT INTO `item_mods` VALUES (27262,12,30);
-INSERT INTO `item_mods` VALUES (27262,13,30);
-INSERT INTO `item_mods` VALUES (27262,14,30);
-INSERT INTO `item_mods` VALUES (27262,25,20);
-INSERT INTO `item_mods` VALUES (27262,29,2);
-INSERT INTO `item_mods` VALUES (27262,31,51);
-INSERT INTO `item_mods` VALUES (27262,68,47);
-INSERT INTO `item_mods` VALUES (27262,88,23);
-INSERT INTO `item_mods` VALUES (27262,291,14);
-INSERT INTO `item_mods` VALUES (27262,384,81);
-
-INSERT INTO `item_mods` VALUES (27396,1,83);
-INSERT INTO `item_mods` VALUES (27396,10,15);
-INSERT INTO `item_mods` VALUES (27396,11,32);
-INSERT INTO `item_mods` VALUES (27396,13,10);
-INSERT INTO `item_mods` VALUES (27396,14,26);
-INSERT INTO `item_mods` VALUES (27396,2,45);
-INSERT INTO `item_mods` VALUES (27396,23,7);
-INSERT INTO `item_mods` VALUES (27396,27,4);
-INSERT INTO `item_mods` VALUES (27396,29,2);
-INSERT INTO `item_mods` VALUES (27396,31,75);
-INSERT INTO `item_mods` VALUES (27396,384,30);
-INSERT INTO `item_mods` VALUES (27396,68,52);
-INSERT INTO `item_mods` VALUES (27396,8,17);
-INSERT INTO `item_mods` VALUES (27396,9,19);
-
-INSERT INTO `item_mods` VALUES (27397,1,84);
-INSERT INTO `item_mods` VALUES (27397,10,15);
-INSERT INTO `item_mods` VALUES (27397,11,32);
-INSERT INTO `item_mods` VALUES (27397,13,10);
-INSERT INTO `item_mods` VALUES (27397,14,26);
-INSERT INTO `item_mods` VALUES (27397,2,55);
-INSERT INTO `item_mods` VALUES (27397,23,8);
-INSERT INTO `item_mods` VALUES (27397,27,5);
-INSERT INTO `item_mods` VALUES (27397,29,2);
-INSERT INTO `item_mods` VALUES (27397,31,75);
-INSERT INTO `item_mods` VALUES (27397,384,30);
-INSERT INTO `item_mods` VALUES (27397,68,52);
-INSERT INTO `item_mods` VALUES (27397,8,18);
-INSERT INTO `item_mods` VALUES (27397,9,20);
-
-INSERT INTO `item_mods` VALUES (27398,1,71);
-INSERT INTO `item_mods` VALUES (27398,10,11);
-INSERT INTO `item_mods` VALUES (27398,11,35);
-INSERT INTO `item_mods` VALUES (27398,12,2);
-INSERT INTO `item_mods` VALUES (27398,13,11);
-INSERT INTO `item_mods` VALUES (27398,14,28);
-INSERT INTO `item_mods` VALUES (27398,2,43);
-INSERT INTO `item_mods` VALUES (27398,23,7);
-INSERT INTO `item_mods` VALUES (27398,28,7);
-INSERT INTO `item_mods` VALUES (27398,29,3);
-INSERT INTO `item_mods` VALUES (27398,31,96);
-INSERT INTO `item_mods` VALUES (27398,359,4);
-INSERT INTO `item_mods` VALUES (27398,384,30);
-INSERT INTO `item_mods` VALUES (27398,5,8);
-INSERT INTO `item_mods` VALUES (27398,68,77);
-INSERT INTO `item_mods` VALUES (27398,8,13);
-INSERT INTO `item_mods` VALUES (27398,9,20);
-
-INSERT INTO `item_mods` VALUES (27399,1,72);
-INSERT INTO `item_mods` VALUES (27399,10,11);
-INSERT INTO `item_mods` VALUES (27399,11,35);
-INSERT INTO `item_mods` VALUES (27399,12,3);
-INSERT INTO `item_mods` VALUES (27399,13,11);
-INSERT INTO `item_mods` VALUES (27399,14,28);
-INSERT INTO `item_mods` VALUES (27399,2,53);
-INSERT INTO `item_mods` VALUES (27399,23,8);
-INSERT INTO `item_mods` VALUES (27399,259,5);
-INSERT INTO `item_mods` VALUES (27399,28,8);
-INSERT INTO `item_mods` VALUES (27399,29,3);
-INSERT INTO `item_mods` VALUES (27399,31,96);
-INSERT INTO `item_mods` VALUES (27399,384,30);
-INSERT INTO `item_mods` VALUES (27399,5,8);
-INSERT INTO `item_mods` VALUES (27399,68,77);
-INSERT INTO `item_mods` VALUES (27399,8,14);
-INSERT INTO `item_mods` VALUES (27399,9,20);
-
-INSERT INTO `item_mods` VALUES (27407,1,65);
-INSERT INTO `item_mods` VALUES (27407,2,13);
-INSERT INTO `item_mods` VALUES (27407,5,54);
-INSERT INTO `item_mods` VALUES (27407,8,10);
-INSERT INTO `item_mods` VALUES (27407,9,11);
-INSERT INTO `item_mods` VALUES (27407,10,10);
-INSERT INTO `item_mods` VALUES (27407,11,33);
-INSERT INTO `item_mods` VALUES (27407,12,17);
-INSERT INTO `item_mods` VALUES (27407,13,19);
-INSERT INTO `item_mods` VALUES (27407,14,34);
-INSERT INTO `item_mods` VALUES (27407,27,-7);
-INSERT INTO `item_mods` VALUES (27407,29,5);
-INSERT INTO `item_mods` VALUES (27407,31,107);
-INSERT INTO `item_mods` VALUES (27407,68,55);
-INSERT INTO `item_mods` VALUES (27407,296,4);
-INSERT INTO `item_mods` VALUES (27407,384,30);
-INSERT INTO `item_mods` VALUES (27407,396,-17);
 
 INSERT INTO `item_mods` VALUES (27564,15,15);
 INSERT INTO `item_mods` VALUES (27564,8,8);
@@ -1118,104 +611,5 @@ INSERT INTO `item_mods` VALUES (27579,30,3);
 INSERT INTO `item_mods` VALUES (27579,311,5);
 INSERT INTO `item_mods` VALUES (27579,5,55);
 
-INSERT INTO `item_mods` VALUES (27594,1,13);
-
-INSERT INTO `item_mods` VALUES (27676,1,82); -- DEF:82
-INSERT INTO `item_mods` VALUES (27676,10,19); -- VIT+19
-INSERT INTO `item_mods` VALUES (27676,11,14); -- AGI+14
-INSERT INTO `item_mods` VALUES (27676,13,16); -- MND+16
-INSERT INTO `item_mods` VALUES (27676,14,13); -- CHR+13
-INSERT INTO `item_mods` VALUES (27676,2,18); -- HP+18
-INSERT INTO `item_mods` VALUES (27676,23,17); -- Attack+17
-INSERT INTO `item_mods` VALUES (27676,31,29); -- Magic Evasion+29
-INSERT INTO `item_mods` VALUES (27676,384,61); -- Haste+6%
-INSERT INTO `item_mods` VALUES (27676,5,19); -- MP+19
-INSERT INTO `item_mods` VALUES (27676,65,15); -- Evasion+15
-INSERT INTO `item_mods` VALUES (27676,8,20); -- STR+20
-INSERT INTO `item_mods` VALUES (27676,9,14); -- DEX+14
-
-INSERT INTO `item_mods` VALUES (27697,1,109); -- DEF:82
-INSERT INTO `item_mods` VALUES (27697,10,25); -- VIT+19
-INSERT INTO `item_mods` VALUES (27697,11,20); -- AGI+14
-INSERT INTO `item_mods` VALUES (27697,13,22); -- MND+16
-INSERT INTO `item_mods` VALUES (27697,14,19); -- CHR+13
-INSERT INTO `item_mods` VALUES (27697,2,38); -- HP+18
-INSERT INTO `item_mods` VALUES (27697,23,22); -- Attack+17
-INSERT INTO `item_mods` VALUES (27697,31,43); -- Magic Evasion+29
-INSERT INTO `item_mods` VALUES (27697,384,61); -- Haste+6%
-INSERT INTO `item_mods` VALUES (27697,5,23); -- MP+19
-INSERT INTO `item_mods` VALUES (27697,65,33); -- Evasion+15
-INSERT INTO `item_mods` VALUES (27697,8,27); -- STR+20
-INSERT INTO `item_mods` VALUES (27697,9,20); -- DEX+14
-
-INSERT INTO `item_mods` VALUES (27746,1,87);
-INSERT INTO `item_mods` VALUES (27746,2,26);
-INSERT INTO `item_mods` VALUES (27746,5,21);
-INSERT INTO `item_mods` VALUES (27746,8,16);
-INSERT INTO `item_mods` VALUES (27746,9,23);
-INSERT INTO `item_mods` VALUES (27746,10,16);
-INSERT INTO `item_mods` VALUES (27746,11,17);
-INSERT INTO `item_mods` VALUES (27746,12,16);
-INSERT INTO `item_mods` VALUES (27746,13,16);
-INSERT INTO `item_mods` VALUES (27746,14,17);
-INSERT INTO `item_mods` VALUES (27746,25,12);
-INSERT INTO `item_mods` VALUES (27746,108,32);
-INSERT INTO `item_mods` VALUES (27746,31,45);
-INSERT INTO `item_mods` VALUES (27746,29,2);
-INSERT INTO `item_mods` VALUES (27746,384,70);
-INSERT INTO `item_mods` VALUES (27746,289,3);
-
-INSERT INTO `item_mods` VALUES (27747,1,90);
-INSERT INTO `item_mods` VALUES (27747,2,28);
-INSERT INTO `item_mods` VALUES (27747,5,22);
-INSERT INTO `item_mods` VALUES (27747,8,18);
-INSERT INTO `item_mods` VALUES (27747,9,26);
-INSERT INTO `item_mods` VALUES (27747,10,18);
-INSERT INTO `item_mods` VALUES (27747,11,19);
-INSERT INTO `item_mods` VALUES (27747,12,18);
-INSERT INTO `item_mods` VALUES (27747,13,18);
-INSERT INTO `item_mods` VALUES (27747,14,19);
-INSERT INTO `item_mods` VALUES (27747,25,13);
-INSERT INTO `item_mods` VALUES (27747,108,34);
-INSERT INTO `item_mods` VALUES (27747,31,46);
-INSERT INTO `item_mods` VALUES (27747,29,2);
-INSERT INTO `item_mods` VALUES (27747,384,70);
-INSERT INTO `item_mods` VALUES (27747,289,4);
-
-INSERT INTO `item_mods` VALUES (27748,1,97);
-INSERT INTO `item_mods` VALUES (27748,10,26);
-INSERT INTO `item_mods` VALUES (27748,11,15);
-INSERT INTO `item_mods` VALUES (27748,12,14);
-INSERT INTO `item_mods` VALUES (27748,13,14);
-INSERT INTO `item_mods` VALUES (27748,14,14);
-INSERT INTO `item_mods` VALUES (27748,2,30);
-INSERT INTO `item_mods` VALUES (27748,27,4);
-INSERT INTO `item_mods` VALUES (27748,29,1);
-INSERT INTO `item_mods` VALUES (27748,31,27);
-INSERT INTO `item_mods` VALUES (27748,375,7);
-INSERT INTO `item_mods` VALUES (27748,384,60);
-INSERT INTO `item_mods` VALUES (27748,5,21);
-INSERT INTO `item_mods` VALUES (27748,68,24);
-INSERT INTO `item_mods` VALUES (27748,8,20);
-INSERT INTO `item_mods` VALUES (27748,9,15);
-
-INSERT INTO `item_mods` VALUES (27749,1,100);
-INSERT INTO `item_mods` VALUES (27749,10,29);
-INSERT INTO `item_mods` VALUES (27749,11,17);
-INSERT INTO `item_mods` VALUES (27749,12,16);
-INSERT INTO `item_mods` VALUES (27749,13,16);
-INSERT INTO `item_mods` VALUES (27749,14,16);
-INSERT INTO `item_mods` VALUES (27749,2,32);
-INSERT INTO `item_mods` VALUES (27749,27,5);
-INSERT INTO `item_mods` VALUES (27749,29,1);
-INSERT INTO `item_mods` VALUES (27749,31,28);
-INSERT INTO `item_mods` VALUES (27749,375,8);
-INSERT INTO `item_mods` VALUES (27749,384,60);
-INSERT INTO `item_mods` VALUES (27749,5,22);
-INSERT INTO `item_mods` VALUES (27749,68,26);
-INSERT INTO `item_mods` VALUES (27749,8,22);
-INSERT INTO `item_mods` VALUES (27749,9,17);
-
-INSERT INTO `item_mods` VALUES (28135,369,2); -- Didn't include Unity refresh
-
-INSERT INTO `item_mods` VALUES (28235,169,25); -- Dusk to dawn: Movement speed +25% (Just added movement speed 24/7)
+-- Assid. Pants +1
+INSERT INTO `item_mods` VALUES (28135,369,2); -- Substitute for Unity refresh (this shouldn't be here)
