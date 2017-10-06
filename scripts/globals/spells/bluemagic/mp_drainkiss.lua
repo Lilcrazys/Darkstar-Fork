@@ -38,7 +38,6 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
-
     -- also have small constant to account for 0 dark skill
     local dmg = utils.clamp(5 + 0.375 * caster:getSkillLevel(BLUE_SKILL),0,165);
     --get resist multiplier (1x if no resist)

@@ -43,12 +43,10 @@ CWideScanPacket::CWideScanPacket(CCharEntity * PChar, CBaseEntity * PEntity)
 	this->size = 0x0E;
 
 	WBUFW(data,(0x04)) = PEntity->targid;
-    // Is it a MOB?
     if (PEntity->objtype == TYPE_MOB)
     {
-        WBUFB(data,(0x06)) = ((CBattleEntity*)PEntity)->GetMLevel();
+        WBUFB(data, (0x06)) = ((CBattleEntity*)PEntity)->GetMLevel();
     }
-  //WBUFB(data,(0x06)) = PEntity->GetMLevel();
 
 	// 0 - черная точка (? Char ?) 
 	// 1 - зеленая точка (NPC)

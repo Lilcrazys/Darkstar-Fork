@@ -208,6 +208,8 @@ public:
     int32 startEvent(lua_State*);           // Begins Event
     int32 startEventString(lua_State*);     // Begins Event with string param (0x33 packet)
     int32 updateEvent(lua_State*);          // Updates event
+    int32 updateEventString(lua_State*);    // (string, string, string, string, uint32, ...)
+
     int32 getEventTarget(lua_State*);       //
     int32 openSendBox(lua_State*);          // Opens send box (to deliver items)
 
@@ -233,6 +235,7 @@ public:
     int32 isSpawned(lua_State*);
     int32 setSpawn(lua_State*);                // Sets spawn point
     int32 setRespawnTime(lua_State*);          // set respawn time
+    int32 getRespawnTime(lua_State*);
     int32 getDynamisUniqueID(lua_State*);      //Get unique Dynamis ID
     int32 addPlayerToDynamis(lua_State*);      //Add player to the Dynamis
     int32 addTimeToDynamis(lua_State*);        //Add time to the Dynamis
