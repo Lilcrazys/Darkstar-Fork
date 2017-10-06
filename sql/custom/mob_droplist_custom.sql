@@ -83,7 +83,7 @@ INSERT INTO `mob_droplist` VALUES (52,0,0,1000,3291,1000); -- Alfard's Fang
 INSERT INTO `mob_droplist` VALUES (52,0,0,1000,3291,82); -- Alfard's Fang
 
 -- Alkyoneus
-DELETE FROM `mob_droplist` WHERE dropId=55
+DELETE FROM `mob_droplist` WHERE dropId=55;
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,10512,273); -- Calma Gauntlets
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,10611,438); -- Mustela Boots
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,11975,322); -- Avant Cuisses +1
@@ -268,7 +268,7 @@ INSERT INTO `mob_droplist` VALUES (231,0,0,1000,20772,182);
 INSERT INTO `mob_droplist` VALUES (231,0,0,1000,8751,186);
 
 -- Baobhan Sith
-DELETE FROM `mob_droplist` WHERE dropId=241
+DELETE FROM `mob_droplist` WHERE dropId=241;
 INSERT INTO `mob_droplist` VALUES (241,0,0,1000,10442,248); -- Laeradr Helm
 INSERT INTO `mob_droplist` VALUES (241,0,0,1000,19145,367); -- Asteria
 INSERT INTO `mob_droplist` VALUES (241,0,0,1000,20833,176); -- Faizzeer
@@ -296,7 +296,7 @@ DELETE FROM `mob_droplist` WHERE dropId=273 and dropType=0 and itemId=4892 and i
 DELETE FROM `mob_droplist` WHERE dropId=273 and dropType=0 and itemId=4890 and itemRate=100; -- comment me
 
 -- Biast
-DELETE FROM `mob_droplist` WHERE dropId=285
+DELETE FROM `mob_droplist` WHERE dropId=285;
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,15221,437); -- Patroclus's Helm
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,10462,331); -- Calma-breastplate
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,10507,328); -- Avant Gauntlets +1
@@ -323,7 +323,7 @@ INSERT INTO `mob_droplist` VALUES (346,0,0,1000,5078,100);
 INSERT INTO `mob_droplist` VALUES (369,0,0,1000,2408,28);
 
 -- Bonnacon
-DELETE FROM `mob_droplist` WHERE dropId=370
+DELETE FROM `mob_droplist` WHERE dropId=370;
 INSERT INTO `mob_droplist` VALUES (370,0,0,1000,11867,221); -- Heka's Kalasiris
 INSERT INTO `mob_droplist` VALUES (370,0,0,1000,19794,303); -- Delphinius
 INSERT INTO `mob_droplist` VALUES (370,0,0,1000,21208,178); -- Lehbrailg
@@ -460,7 +460,7 @@ INSERT INTO `mob_droplist` VALUES (788,0,0,1000,3288,1000); -- comment me
 INSERT INTO `mob_droplist` VALUES (788,0,0,1000,10255,82); --  Matanca Harness
 
 -- Duke Haborym
-DELETE FROM `mob_droplist` WHERE dropId=808
+DELETE FROM `mob_droplist` WHERE dropId=808;
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,11890,411); -- Skopos Bracers
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,11975,302); -- Avant Cuisses +1
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,10891,326); -- Mustela Mask
@@ -599,7 +599,7 @@ INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,14554,154); -- Usukane Haramaki
 INSERT INTO `mob_droplist` VALUES (1536,0,0,1000,10276,73); -- Enif Corazza
 
 -- Guivre
-DELETE FROM `mob_droplist` WHERE dropId=1602
+DELETE FROM `mob_droplist` WHERE dropId=1602;
 INSERT INTO `mob_droplist` VALUES (1602,0,0,1000,19174,380); -- Borealis
 INSERT INTO `mob_droplist` VALUES (1602,0,0,1000,10539,213); -- Huginn Gauntlets
 INSERT INTO `mob_droplist` VALUES (1602,0,0,1000,10572,263); -- Khepri Kecks
@@ -986,7 +986,7 @@ INSERT INTO `mob_droplist` VALUES (2241,0,0,1000,27922,143); -- Orvail Robe
 INSERT INTO `mob_droplist` VALUES (2351,0,0,1000,2361,29);
 
 -- Namtar
-DELETE FROM `mob_droplist` WHERE dropId=2414
+DELETE FROM `mob_droplist` WHERE dropId=2414;
 INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,11866,86); -- Toci's Harness
 INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,19175,128); -- Hoarfrost Blade
 INSERT INTO `mob_droplist` VALUES (2414,0,0,1000,20877,154); -- Iclamar
@@ -1066,7 +1066,7 @@ INSERT INTO `mob_droplist` VALUES (2491,0,0,1000,18999,153); -- Aymur
 INSERT INTO `mob_droplist` VALUES (2491,0,0,1000,19002,211); --  Kogarasumaru
 
 -- Ob
-DELETE FROM `mob_droplist` WHERE dropId=2496 
+DELETE FROM `mob_droplist` WHERE dropId=2496;
 INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,15711,250); -- Ares' Sollerets
 INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,10600,371); -- Ogier's Leggings
 INSERT INTO `mob_droplist` VALUES (2496,0,0,1000,28047,145); -- Shneddick Gloves
@@ -1085,7 +1085,7 @@ INSERT INTO `mob_droplist` VALUES (2721,0,0,1000,3287,158); -- orthruss claw
 INSERT INTO `mob_droplist` VALUES (2721,0,0,1000,3287,1000); -- orthruss claw
 
 -- Overlord Bakgodek
-DELETE FROM `mob_droplist` WHERE dropId=2728
+DELETE FROM `mob_droplist` WHERE dropId=2728;
 INSERT INTO `mob_droplist` VALUES (2728,0,0,1000,16106,277); -- Askar Zucchetto
 INSERT INTO `mob_droplist` VALUES (2728,0,0,1000,14568,307); -- Askar Korazin
 INSERT INTO `mob_droplist` VALUES (2728,0,0,1000,15648,420); -- Denali Kecks
@@ -1225,7 +1225,7 @@ INSERT INTO `mob_droplist` VALUES (3241,0,0,1000,19410,105); --  Armageddon
 DELETE FROM `mob_droplist` WHERE dropId=3430 and dropType=0 and itemId=4717 and itemRate=1000; -- Refresh
 
 -- Taxim
-DELETE FROM `mob_droplist` WHERE dropId=3441
+DELETE FROM `mob_droplist` WHERE dropId=3441;
 INSERT INTO `mob_droplist` VALUES (3441,0,0,1000,10280,323); --  Laeradr Breastplate
 INSERT INTO `mob_droplist` VALUES (3441,0,0,1000,18524,349); -- Huskarl Axe
 INSERT INTO `mob_droplist` VALUES (3441,0,0,1000,20787,110); -- Crobaci
@@ -1322,14 +1322,14 @@ INSERT INTO `mob_droplist` VALUES (3638,0,0,1000,28222,102); -- Neit's Pigaches
 INSERT INTO `mob_droplist` VALUES (3638,0,0,1000,28084,104); -- Namru's Shalwar
 
 -- Tyrannic Tunnok
-DELETE FROM `mob_droplist` WHERE dropId=3642
+DELETE FROM `mob_droplist` WHERE dropId=3642;
 INSERT INTO `mob_droplist` VALUES (3642,0,0,1000,10466,269); -- Gunman Gambison
 INSERT INTO `mob_droplist` VALUES (3642,0,0,1000,18457,333); -- Murasamemaru
 INSERT INTO `mob_droplist` VALUES (3642,0,0,1000,21058,160); -- Shichishito
 INSERT INTO `mob_droplist` VALUES (3642,0,0,1000,28205,119); -- Karieyh Brayettes
 
 -- Tzee Xicu the Manifest
-DELETE FROM `mob_droplist` WHERE dropId=3645
+DELETE FROM `mob_droplist` WHERE dropId=3645;
 INSERT INTO `mob_droplist` VALUES (3645,0,0,1000,14983,258); -- Askar Manopolas
 INSERT INTO `mob_droplist` VALUES (3645,0,0,1000,15647,324); -- Askar Dirs
 INSERT INTO `mob_droplist` VALUES (3645,0,0,1000,14984,312); -- Denali Wristbands
@@ -1497,7 +1497,7 @@ INSERT INTO `mob_droplist` VALUES (4381,0,0,1000,10439,85); -- Adhara Turban
 INSERT INTO `mob_droplist` VALUES (4381,0,0,1000,10329,103); -- Shedir Seraweels
 
 -- Za'Dha Adamantking
-DELETE FROM `mob_droplist` WHERE dropId=4383
+DELETE FROM `mob_droplist` WHERE dropId=4383;
 INSERT INTO `mob_droplist` VALUES (4383,0,0,1000,15733,264); -- Askar Gambieras
 INSERT INTO `mob_droplist` VALUES (4383,0,0,1000,16107,342); -- Denali Bonnet
 INSERT INTO `mob_droplist` VALUES (4383,0,0,1000,14569,335); -- Denali Jacket
