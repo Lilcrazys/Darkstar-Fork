@@ -30,7 +30,7 @@ function onTrigger(player)
     player:SpoofMsg(string.format("MainJob(jID: %s) LV: %i / SubJob(jID: %s) LV: %i ",
     target:getMainJob(), target:getMainLvl(), target:getSubJob(), target:getSubLvl()), nil, MESSAGE_ECHO, nil);
 
-    player:SpoofMsg(string.format("CurrentHP: %i / MaxHP: %i | CurrentHP: %d / Max MP: %i ",
+    player:SpoofMsg(string.format("HP: %i/%i  MP: %i/%i (current/max) ",
     target:getHP(), target:getMaxHP(), target:getMP(), target:getMaxMP()), nil, MESSAGE_ECHO, nil);
 
     player:SpoofMsg(string.format("Food Accuracy%% bonus: %i ", target:getMod(MOD_FOOD_ACCP)), nil, MESSAGE_ECHO, nil);
