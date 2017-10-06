@@ -2,7 +2,6 @@
 -- Spell: Dia II
 -- Lowers an enemy's defense and gradually deals light elemental damage.
 -----------------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/magic");
