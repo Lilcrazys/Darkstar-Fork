@@ -161,8 +161,8 @@ INSERT INTO `item_mods` VALUES (20512,8,50); -- STR
 -- Godhands
 INSERT INTO `item_mods` VALUES (20515,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (20515,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20515,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20515,345,500); -- TP Bonus
+-- STP is in DSP
+-- TP Bonus is in DSP
 INSERT INTO `item_mods` VALUES (20515,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20515,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20515,165,5); -- Crit Rate
@@ -170,17 +170,9 @@ INSERT INTO `item_mods` VALUES (20515,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20515,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20515,175,100); -- Skill Chain DMG
 
-INSERT INTO `item_mods` VALUES (20525,25,20); -- Blurred Claws - 20 Acc
-INSERT INTO `item_mods` VALUES (20526,25,25); -- Blurred Claws +1 - 25 Acc
-INSERT INTO `item_mods` VALUES (20526,173,20); -- Martial Arts +20
-
 INSERT INTO `item_mods` VALUES (20530,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20530,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20530,507,200); -- occ
-
-INSERT INTO `item_mods` VALUES (20537,10,7);
-
-INSERT INTO `item_mods` VALUES (20538,10,8);
 
 INSERT INTO `item_mods` VALUES (20563,165,25); --
 INSERT INTO `item_mods` VALUES (20563,421,50); --
@@ -212,17 +204,8 @@ INSERT INTO `item_mods` VALUES (20594,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20594,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20594,175,100); -- Skill Chain DMG
 
-INSERT INTO `item_mods` VALUES (20601,25,15); -- Blurred Knife - 15 Acc
-INSERT INTO `item_mods` VALUES (20601,68,22); -- 22 Eva
-INSERT INTO `item_mods` VALUES (20602,25,20); -- Blurred Knife +1 - 20 Acc
-INSERT INTO `item_mods` VALUES (20602,68,22); -- 22 Eva
-
 -- Jugo Kukri +1
-INSERT INTO `item_mods` VALUES (20609,11,15); -- LEGION CUSTOM AGI
-INSERT INTO `item_mods` VALUES (20609,30,15); -- 21 Macc
-INSERT INTO `item_mods` VALUES (20609,68,22); -- 22 Evasion
-INSERT INTO `item_mods` VALUES (20609,302,3); -- Triple Atk 3%
-INSERT INTO `item_mods` VALUES (20609,431,1); -- Additional Effect: Wind
+INSERT INTO `item_mods` VALUES (20609,11,15); -- LEGION CUSTOM AGI...WHY?
 
 INSERT INTO `item_mods` VALUES (20616,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20616,506,200); -- occ
@@ -247,17 +230,14 @@ INSERT INTO `item_mods` VALUES (20687,288,15); -- DBL ATK
 -- Sequence 
 INSERT INTO `item_mods` VALUES (20695,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (20695,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20695,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20695,345,500); -- TP Bonus
+-- STP in DSP already
+-- TP Bonus in DSP already
 INSERT INTO `item_mods` VALUES (20695,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20695,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20695,165,5); -- Crit Rate
 INSERT INTO `item_mods` VALUES (20695,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20695,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20695,175,100); -- Skill Chain DMG
-
-INSERT INTO `item_mods` VALUES (20711,25,15); -- Blurred Sword - 15 Acc
-INSERT INTO `item_mods` VALUES (20712,25,20); -- Blurred Sword +1 - 20 Acc
 
 -- Excalipoor II (DO NOT REMOVE UNTIL THE WS EXISTS IN DSP)
 INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
@@ -292,12 +272,6 @@ INSERT INTO `item_mods` VALUES (20794,421,50); --
 INSERT INTO `item_mods` VALUES (20795,165,25); --
 INSERT INTO `item_mods` VALUES (20795,421,50); --
 
--- Blurred Axe
-INSERT INTO `item_mods` VALUES (20802,25,15); -- 15 Acc
-
--- Blurred Axe +1
-INSERT INTO `item_mods` VALUES (20803,25,20); -- 20 Acc
-
 INSERT INTO `item_mods` VALUES (20809,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20809,506,200); -- occ
 
@@ -320,8 +294,8 @@ INSERT INTO `item_mods` VALUES (20885,421,50); --
 -- Chango
 INSERT INTO `item_mods` VALUES (20843,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (20843,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20843,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20843,345,500); -- TP Bonus
+-- STP in DSP already
+-- TP Bonus  in DSP already
 INSERT INTO `item_mods` VALUES (20843,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20843,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20843,165,5); -- Crit Rate
@@ -329,23 +303,17 @@ INSERT INTO `item_mods` VALUES (20843,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20843,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20843,175,100); -- Skill Chain DMG
 
-INSERT INTO `item_mods` VALUES (20849,25,20); -- Blurred Cleaver - 20 Acc
-INSERT INTO `item_mods` VALUES (20850,25,25); -- Blurred Cleaver +1 - 25 Acc
-
 -- Anguta
 INSERT INTO `item_mods` VALUES (20890,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (20890,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20890,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20890,345,500); -- TP Bonus
+-- STP in DSP already
+-- TP Bonus  in DSP already
 INSERT INTO `item_mods` VALUES (20890,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20890,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20890,165,5); -- Crit Rate
 INSERT INTO `item_mods` VALUES (20890,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20890,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20890,175,100); -- Skill Chain DMG
-
-INSERT INTO `item_mods` VALUES (20896,25,20); -- Blurred Scythe - 20 Acc
-INSERT INTO `item_mods` VALUES (20897,25,25); -- Blurred Scythe +1 - 25 Acc
 
 INSERT INTO `item_mods` VALUES (20901,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20901,506,200); -- occ
@@ -364,17 +332,14 @@ INSERT INTO `item_mods` VALUES (20930,421,50); --
 -- Trishula
 INSERT INTO `item_mods` VALUES (20935,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (20935,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (20935,73,10); -- STP
-INSERT INTO `item_mods` VALUES (20935,345,500); -- TP Bonus
+-- STP in DSP already
+-- TP Bonus  in DSP already
 INSERT INTO `item_mods` VALUES (20935,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (20935,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (20935,165,5); -- Crit Rate
 INSERT INTO `item_mods` VALUES (20935,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20935,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20935,175,100); -- Skill Chain DMG
-
-INSERT INTO `item_mods` VALUES (20940,25,20); -- Blurred Lance - 20 Acc
-INSERT INTO `item_mods` VALUES (20941,25,25); -- Blurred Lance +1 - 25 Acc
 
 INSERT INTO `item_mods` VALUES (20946,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20946,506,200); -- occ
@@ -395,11 +360,6 @@ INSERT INTO `item_mods` VALUES (20977,165,5); -- Crit Rate
 INSERT INTO `item_mods` VALUES (20977,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (20977,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (20977,175,100); -- Skill Chain DMG
-
-INSERT INTO `item_mods` VALUES (20984,25,15); -- Kujaku - 15 Acc
-INSERT INTO `item_mods` VALUES (20984,68,22); -- 22 Eva
-INSERT INTO `item_mods` VALUES (20985,25,20); -- Kujaku +1 - 20 Acc
-INSERT INTO `item_mods` VALUES (20985,68,22); -- 22 Eva
 
 INSERT INTO `item_mods` VALUES (20989,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20989,506,200); -- occ
@@ -423,8 +383,8 @@ INSERT INTO `item_mods` VALUES (21019,421,50); --
 -- Dojikiri Yasutsuna 
 INSERT INTO `item_mods` VALUES (21025,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (21025,507,250); -- Extra DMG X2.5
-INSERT INTO `item_mods` VALUES (21025,73,10); -- STP
-INSERT INTO `item_mods` VALUES (21025,345,500); -- TP Bonus
+-- STP already in DSP
+-- TP Bonus already in DSP
 INSERT INTO `item_mods` VALUES (21025,302,5); -- TRIP ATK
 INSERT INTO `item_mods` VALUES (21025,288,10); -- DBL ATK
 INSERT INTO `item_mods` VALUES (21025,165,5); -- Crit Rate
@@ -469,20 +429,6 @@ INSERT INTO `item_mods` VALUES (21082,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21082,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (21082,175,100); -- Skill Chain DMG
 
--- Blurred Rod
-INSERT INTO `item_mods` VALUES (21093,12,6); -- 6 Int
-INSERT INTO `item_mods` VALUES (21093,13,6); -- 6 Mnd
-INSERT INTO `item_mods` VALUES (21093,30,15); -- 15 Macc
-INSERT INTO `item_mods` VALUES (21093,28,16); -- 16 Mab
-INSERT INTO `item_mods` VALUES (21093,311,124); -- 124 M.Dmg
-
--- Nlurred Rod +1
-INSERT INTO `item_mods` VALUES (21094,12,6); -- 6 Int
-INSERT INTO `item_mods` VALUES (21094,13,6); -- 6 Mnd
-INSERT INTO `item_mods` VALUES (21094,30,20); -- 20 Macc
-INSERT INTO `item_mods` VALUES (21094,28,16); -- 16 Mab
-INSERT INTO `item_mods` VALUES (21094,311,124); -- 124 M.Dmg
-
 REPLACE INTO `item_mods` VALUES (21111,28,60); -- Matt
 
 REPLACE INTO `item_mods` VALUES (21139,28,165); -- Should be 60   magic dmg +  unknown
@@ -502,15 +448,6 @@ INSERT INTO `item_mods` VALUES (21147,165,5); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21147,421,25); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21147,174,100); -- Skill Chain Bonus
 INSERT INTO `item_mods` VALUES (21147,175,100); -- Skill Chain DMG
-
-INSERT INTO `item_mods` VALUES (21157,12,12); -- Blurred Staff - 12 Int
-INSERT INTO `item_mods` VALUES (21157,13,12); -- 12 Mnd
-INSERT INTO `item_mods` VALUES (21157,30,20); -- 20 Macc
-INSERT INTO `item_mods` VALUES (21157,28,28); -- 28 Mab
-INSERT INTO `item_mods` VALUES (21158,12,12); -- Blurred Staff +1 - 12 Int
-INSERT INTO `item_mods` VALUES (21158,13,13); -- 12 Mnd
-INSERT INTO `item_mods` VALUES (21158,30,25); -- 25 Macc
-INSERT INTO `item_mods` VALUES (21158,28,28); -- 28 Mab
 
 REPLACE INTO `item_mods` VALUES (21161,28,135); -- Matt
 
@@ -551,9 +488,6 @@ INSERT INTO `item_mods` VALUES (21212,421,50); --
 
 INSERT INTO `item_mods` VALUES (21213,165,25); --
 INSERT INTO `item_mods` VALUES (21213,421,50); --
-
-INSERT INTO `item_mods` VALUES (21217,26,20); -- Blurred Bow - 20 Racc
-INSERT INTO `item_mods` VALUES (21218,26,25); -- Blurred Bow +1 - 25 Racc
 
 INSERT INTO `item_mods` VALUES (21239,73,4);
 
@@ -600,18 +534,6 @@ INSERT INTO `item_mods` VALUES (21379,421,6);
 -- Marsyas
 INSERT INTO `item_mods` VALUES (21398,454,50); -- Song Duration
 
-INSERT INTO `item_mods` VALUES (21400,452,1); -- Blurred Harp - All Songs +1
-INSERT INTO `item_mods` VALUES (21400,453,1); -- One Additional Song
-INSERT INTO `item_mods` VALUES (21400,440,2); -- Lullaby +2
-INSERT INTO `item_mods` VALUES (21401,452,2); -- Blurred Harp +1 - All Songs +2
-INSERT INTO `item_mods` VALUES (21401,453,1); -- One Additional Song
-INSERT INTO `item_mods` VALUES (21401,440,2); -- Lullaby +2
-INSERT INTO `item_mods` VALUES (21401,442,2); -- Ballad +2
-
-INSERT INTO `item_mods` VALUES (21480,26,20); -- Blurred Crossbow - 20 Racc
-INSERT INTO `item_mods` VALUES (21481,26,25); -- Blurred Crossbow +1 - 25 Racc
-INSERT INTO `item_mods` VALUES (21481,365,15); -- Snapshot +15
-
 -- Fomalhaut
 INSERT INTO `item_mods` VALUES (21485,506,100); -- Extra DMG Chance 10%
 INSERT INTO `item_mods` VALUES (21485,507,250); -- Extra DMG X2.5
@@ -633,9 +555,6 @@ INSERT INTO `item_mods` VALUES (21683,627,40); -- Scourge DMG +40%
 INSERT INTO `item_mods` VALUES (21684,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21684,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21684,10,50); -- VIT
-
-INSERT INTO `item_mods` VALUES (21700,25,20); -- Blurred Claymore - 20 Acc
-INSERT INTO `item_mods` VALUES (21701,25,25); -- Blurred Claymore +1 - 25 Acc
 
 INSERT INTO `item_mods` VALUES (21750,23,60); -- Guttler iLvL 119 AG - ATT +60
 INSERT INTO `item_mods` VALUES (21750,431,1); -- Additional Effect - scripts\globals\items\guttler.lua
@@ -1200,13 +1119,6 @@ INSERT INTO `item_mods` VALUES (27579,311,5);
 INSERT INTO `item_mods` VALUES (27579,5,55);
 
 INSERT INTO `item_mods` VALUES (27594,1,13);
-
-INSERT INTO `item_mods` VALUES (27643,25,15); -- Blurred Shield - 15 Acc
-INSERT INTO `item_mods` VALUES (27643,23,15); -- 15 Att
-INSERT INTO `item_mods` VALUES (27643,518,5); -- Chance of Successful Block +5
-INSERT INTO `item_mods` VALUES (27644,25,20); -- Blurred Shield +1 - 20 Acc
-INSERT INTO `item_mods` VALUES (27644,23,20); -- 20 Att
-INSERT INTO `item_mods` VALUES (27644,518,10); -- Chance of Successful Block +10
 
 INSERT INTO `item_mods` VALUES (27676,1,82); -- DEF:82
 INSERT INTO `item_mods` VALUES (27676,10,19); -- VIT+19
