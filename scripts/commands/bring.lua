@@ -22,7 +22,9 @@ function onTrigger(player, target, forceZone)
     end
     local targ = GetPlayerByName( target );
     if (targ == nil) then
-        error(player, string.format( "Player named '%s' not found!", target ) );
+        if not player:bringPlayer( target ) then
+            error(player, string.format( "Player named '%s' not found!", target ) );
+        end;
         return;
     end
 

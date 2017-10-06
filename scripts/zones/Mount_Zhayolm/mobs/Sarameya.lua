@@ -7,9 +7,9 @@
 -- Wiki: http://ffxiclopedia.wikia.com/wiki/Sarameya
 -- TODO: PostAIRewrite: Code the Howl effect and gradual resists.
 -----------------------------------
-
 require("scripts/globals/magic");
 require("scripts/globals/status");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -145,7 +145,7 @@ function onAdditionalEffect(mob, player)
         if (player:hasStatusEffect(EFFECT_POISON) == false) then
             player:addStatusEffect(EFFECT_POISON, 50, 3, duration); -- Don't know potency on the poison.
         end
-        return SUBEFFECT_POISON, MSGBASIC_ADD_EFFECT_STATUS, EFFECT_POISON;
+        return SUBEFFECT_POISON, msgBasic.ADD_EFFECT_STATUS, EFFECT_POISON;
     end
 end;
 

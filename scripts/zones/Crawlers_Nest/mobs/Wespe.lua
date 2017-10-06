@@ -31,7 +31,7 @@ function onMobDespawn(mob)
                 UpdateNMSpawnPoint(Demonic_Tiphia);
                 GetMobByID(Demonic_Tiphia):setRespawnTime(GetMobRespawnTime(mobID));
                 SetServerVariable("[PH]Demonic_Tiphia", mobID);
-                DeterMob(mobID, true);
+                DisallowRespawn(mobID, true);
             end
         end
     end

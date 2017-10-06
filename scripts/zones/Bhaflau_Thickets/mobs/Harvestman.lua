@@ -5,6 +5,7 @@
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize
@@ -43,7 +44,7 @@ function onAdditionalEffect(mob,target,damage)
     else
         local duration = math.random(6,9); -- 2-3 Tick's
         target:addStatusEffect(EFFECT_POISON,100,3,duration);
-        return SUBEFFECT_POISON,MSGBASIC_ADD_EFFECT_STATUS,EFFECT_POISON;
+        return SUBEFFECT_POISON,msgBasic.ADD_EFFECT_STATUS,EFFECT_POISON;
     end
 end;
 

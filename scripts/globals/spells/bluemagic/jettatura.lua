@@ -31,17 +31,16 @@ end;
 
 function onSpellCast(caster,target,spell)
 
-    local typeEffect = EFFECT_TERROR;
-    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
-    --[[ replacing DSP's resist check
-    local resist = applyResistance(caster,spell,target,dINT,BLUE_SKILL);
-    ]]
-    local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,0,EFFECT_TERROR)
+    local params = {};
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_TERROR;
+    local resist = applyResistance(caster, target, spell, params);
     local duration = 5 * resist;
 
     if (resist > 0.5) then -- Do it!
         if (target:isFacing(caster)) then
-            if (target:addStatusEffect(typeEffect,1,0,duration)) then
+            if (target:addStatusEffect(params.effect,1,0,duration)) then
                 spell:setMsg(236);
             else
                 spell:setMsg(75);
@@ -53,5 +52,5 @@ function onSpellCast(caster,target,spell)
         spell:setMsg(85);
     end;
 
-    return typeEffect;
+    return params.effect;
 end;

@@ -30,39 +30,38 @@
 
 enum CHAT_MESSAGE_TYPE
 {
-    MESSAGE_SAY         = 0x00,
-    MESSAGE_SHOUT       = 0x01,
-    MESSAGE_UNKNOWN     = 0x02, // Does not work?
-    MESSAGE_TELL        = 0x03,
-    MESSAGE_PARTY       = 0x04,
-    MESSAGE_LINKSHELL   = 0x05,
-    MESSAGE_SYSTEM_1    = 0x06,
-    MESSAGE_SYSTEM_2    = 0x07,
-    MESSAGE_EMOTION     = 0x08,
-    // MESSAGE_NONE        = 0x09, // Does not work?
-    // MESSAGE_NONE        = 0x0A, // Does not work?
-    // MESSAGE_NONE        = 0x0B, // Does not work?
-    MESSAGE_GM_PROMPT   = 0x0C, // Menu prompt from GM
-    MESSAGE_SYS_SAY     = 0x0D, // Same as MESSAGE_SAY but has no speaker object displayed
-    MESSAGE_SYS_SHOUT   = 0x0E, // Same as MESSAGE_SHOUT but has no speaker object displayed
-    MESSAGE_SYS_PARTY   = 0x0F, // Same as MESSAGE_PARTY but has no speaker object displayed
-    MESSAGE_SYS_LS      = 0x10, // Same as MESSAGE_LINKSHELL but has no speaker object displayed
-    // MESSAGE_UNKNOWN     = 0x11, // Echo
-    // MESSAGE_UNKNOWN     = 0x12, // Echo
-    // MESSAGE_UNKNOWN     = 0x13, // Echo
-    MESSAGE_ECHO        = 0x14, // Echo
-    // MESSAGE_UNKNOWN     = 0x15, // Echo
-    // MESSAGE_UNKNOWN     = 0x16, // Echo
-    // MESSAGE_UNKNOWN     = 0x17, // Echo
-    // MESSAGE_UNKNOWN     = 0x18, // Say
-    // MESSAGE_UNKNOWN     = 0x19, // Say
-    MESSAGE_YELL        = 0x1A,
-    MESSAGE_LINKSHELL2  = 0x1B, // Second LS color...Default is Green
-    MESSAGE_SYS_LS2     = 0x1C, // Same as MESSAGE_LINKSHELL2 but has but has no speaker object displayed
-    // MESSAGE_LINKSHELL3  = 0x1E, // Third LS color...Default is same shade of yellow as the echo text default.
-    // MESSAGE_SYS_LS3     = 0x1F, // Same as MESSAGE_LINKSHELL_3 but has but has no speaker object displayed?
-    // MESSAGE_UNKNOWN     = 0x20, // Echo
-    MESSAGE_UNITY       = 0x21,
+    MESSAGE_SAY           = 0,
+    MESSAGE_SHOUT         = 1,
+    MESSAGE_UNKNOWN       = 2,
+    MESSAGE_TELL          = 3,
+    MESSAGE_PARTY         = 4,
+    MESSAGE_LINKSHELL     = 5,
+    MESSAGE_SYSTEM_1      = 6, // Standard "PrintToPlayer" default if no type specified
+    MESSAGE_SYSTEM_2      = 7, // Login / world announcement messages
+    MESSAGE_EMOTION       = 8,
+    // 9 / 10 / 11 = Does not work / nothing
+    MESSAGE_GMPROMPT      = 12, // Menu prompt from GM
+    MESSAGE_NS_SAY        = 13, // Same as MESSAGESAY but has no speaker object displayed
+    MESSAGE_NS_SHOUT      = 14, // Same as MESSAGESHOUT but has no speaker object displayed
+    MESSAGE_NS_PARTY      = 15, // Same as MESSAGEPARTY but has no speaker object displayed
+    MESSAGE_NS_LINKSHELL  = 16, // Same as MESSAGELINKSHELL but has no speaker object displayed
+    MESSAGE_UNKNOWN_17    = 17, // 17 through 25 appear to repeat the effects of other values
+    MESSAGE_UNKNOWN_18    = 18,
+    MESSAGE_UNKNOWN_19    = 19,
+    MESSAGE_UNKNOWN_20    = 20,
+    MESSAGE_UNKNOWN_21    = 21,
+    MESSAGE_UNKNOWN_22    = 22,
+    MESSAGE_UNKNOWN_23    = 23,
+    MESSAGE_UNKNOWN_24    = 24,
+    MESSAGE_UNKNOWN_25    = 25,
+    MESSAGE_YELL          = 26,
+    MESSAGE_LINKSHELL2    = 27, // Second LS color...Default is Green
+    MESSAGE_NS_LINKSHELL2 = 28, // Same as LINKSHELL2 but has but has no speaker object displayed
+    MESSAGE_SYSTEM_3      = 29, // "Basic system messages" in config menu. Yellow by default.
+    MESSAGE_LINKSHELL3    = 30, // Yes really, it looks like a 3rd LS may have been planned at some point.
+    MESSAGE_NS_LINKSHELL3 = 31, // (assumed, as it follows pattern and color)
+    MESSAGE_UNKNOWN_32    = 32, // Looks the same as 31
+    MESSAGE_UNITY         = 33
 };
 
 /************************************************************************
@@ -77,7 +76,7 @@ class CChatMessagePacket : public CBasicPacket
 {
 public:
     static const uint16 id {0x17};
-	CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE MessageType, int8* buff);
+	CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE MessageType, const std::string& message, const std::string& sender = std::string());
 };
 
 class CSpoofMessagePacket : public CBasicPacket

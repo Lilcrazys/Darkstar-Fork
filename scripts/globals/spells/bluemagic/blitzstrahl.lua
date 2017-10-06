@@ -30,8 +30,7 @@ end;
 -----------------------------------------
 
 function onSpellCast(caster,target,spell)
-    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
-    local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,1.0,EFFECT_STUN)
+
     local params = {};
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
         params.multiplier = 1.5625;
@@ -47,7 +46,17 @@ function onSpellCast(caster,target,spell)
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
     
-    -- local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    local params = {};
+    
+    params.diff = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
+    
+    params.attribute = MOD_INT;
+    
+    params.skillType = BLUE_SKILL;
+    
+    params.bonus = 1.0;
+    
+    resist = applyResistance(caster, target, spell, params);
 
     if (damage > 0 and resist > 0.0625) then
         local typeEffect = EFFECT_STUN;

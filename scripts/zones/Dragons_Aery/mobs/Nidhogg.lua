@@ -109,7 +109,7 @@ function onMobDespawn(mob)
         local wait = 72 * 360;
         SetServerVariable("[POP]Nidhogg", os.time() + wait); -- 3 days
         if (LandKingSystem_HQ == 0) then -- Is time spawn only
-            DeterMob(mob:getID(), true);
+            DisallowRespawn(mob:getID(), true);
         end
     end
 
@@ -117,7 +117,7 @@ function onMobDespawn(mob)
     if (LandKingSystem_NQ ~= 1) then
         local Fafnir = mob:getID()-1;
         SetServerVariable("[PH]Nidhogg", 0);
-        DeterMob(Fafnir, false);
+        DisallowRespawn(Fafnir, false);
         UpdateNMSpawnPoint(Fafnir);
         GetMobByID(Fafnir):setRespawnTime(math.random(21600,32400));
     end

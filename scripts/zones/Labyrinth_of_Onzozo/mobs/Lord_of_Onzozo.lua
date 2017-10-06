@@ -62,7 +62,7 @@ function onMobDespawn(mob)
     -- Set LoO's Window Open Time
     local wait = math.random(18000,28800);
     SetServerVariable("[POP]Lord_of_Onzozo", os.time() + wait); -- 5-8 Hours
-    DeterMob(mob:getID(), true);
+    DisallowRespawn(mob:getID(), true);
 
     ------------------------------------
     -- End Custom Legion Code
@@ -71,7 +71,7 @@ function onMobDespawn(mob)
     -- Set PH back to normal, then set to respawn spawn
     local PH = GetServerVariable("[PH]Lord_of_Onzozo");
     SetServerVariable("[PH]Lord_of_Onzozo", 0);
-    DeterMob(PH, false);
+    DisallowRespawn(PH, false);
     GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
 
 end;

@@ -16,12 +16,27 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
+
     -- calculate raw damage
     local basedmg = caster:getSkillLevel(ENFEEBLING_MAGIC_SKILL) / 4;
-    local dmg = calculateMagicDamage(basedmg,3,caster,spell,target,ENFEEBLING_MAGIC_SKILL,MOD_INT,false);
+    local params = {};
+    params.dmg = basedmg;
+    params.multiplier = 3;
+    params.skillType = ENFEEBLING_MAGIC_SKILL;
+    params.attribute = MOD_INT;
+    params.hasMultipleTargetReduction = false;
+
+    local dmg = calculateMagicDamage(caster, target, spell, params);
+
     dmg = utils.clamp(dmg, 1, 40);
+
     -- get resist multiplier (1x if no resist)
-    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT)-target:getStat(MOD_INT),ENFEEBLING_MAGIC_SKILL,1.0);
+    local params = {};
+    params.diff = caster:getStat(MOD_INT)-target:getStat(MOD_INT);
+    params.attribute = MOD_INT;
+    params.skillType = ENFEEBLING_MAGIC_SKILL;
+    params.bonus = 1.0;
+    resist = applyResistance(caster, target, spell, params);
     -- get the resisted damage
     dmg = dmg*resist;
     -- add on bonuses (staff/day/weather/jas/mab/etc all go in this function)
@@ -44,7 +59,7 @@ function onSpellCast(caster,target,spell)
     local bio = target:getStatusEffect(EFFECT_BIO);
 
     -- Do it!
-	if (bio == nil or (DIA_OVERWRITE == 0 and bio:getPower() <= 2) or (DIA_OVERWRITE == 1 and bio:getPower() < 2)) then
+    if (bio == nil or (DIA_OVERWRITE == 0 and bio:getPower() <= 2) or (DIA_OVERWRITE == 1 and bio:getPower() < 2)) then
         target:addStatusEffect(EFFECT_DIA,2+dotBonus,3,duration,FLAG_ERASABLE,10);
         spell:setMsg(2);
     else
@@ -52,11 +67,12 @@ function onSpellCast(caster,target,spell)
     end
 
     -- Try to kill same tier Bio
-	if (BIO_OVERWRITE == 1 and bio ~= nil) then
-		if (bio:getPower() <= 2) then
+    if (BIO_OVERWRITE == 1 and bio ~= nil) then
+        if (bio:getPower() <= 2) then
             target:delStatusEffect(EFFECT_BIO);
         end
     end
 
     return final;
+
 end;
