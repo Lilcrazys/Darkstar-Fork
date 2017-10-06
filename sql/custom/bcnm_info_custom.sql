@@ -7,15 +7,15 @@
 -- REPLACE tells MySQL to delete the old line and insert the new one.
 -- Using the wrong 1 of these 2 commands will result in errors.
 -- ---------------------------------------------------------------------------
--- REPLACE INTO `bcnm_info` VALUES (bcnmId,zoneId,'name','fastestName',fastestTime,timeLimit,levelCap,partySize,lootDropId,rules);
+-- REPLACE INTO `bcnm_info` VALUES (bcnmId,zoneId,'bcnmName','fastestName',fastestPartySize,fastestTime,timeLimit,levelCap,partySize,lootDropId,rules);
 
-INSERT INTO `bcnm_info` VALUES (421,201,'htb_trial_by_wind',NULL,NULL,1800,0,6,0,5);      -- HTB Avatars: Garuda
-INSERT INTO `bcnm_info` VALUES (453,202,'htb_trial_by_lightning',NULL,NULL,1800,0,6,0,5); -- HTB Avatars: Ramuh
-INSERT INTO `bcnm_info` VALUES (485,203,'htb_trial_by_Ice',NULL,NULL,1800,0,6,0,5);       -- HTB Avatars: Shiva
-INSERT INTO `bcnm_info` VALUES (548,207,'htb_trial_by_fire',NULL,NULL,1800,0,6,0,5);      -- HTB Avatars: Ifrit
-INSERT INTO `bcnm_info` VALUES (581,209,'htb_trial_by_earth',NULL,NULL,1800,0,6,0,5);     -- HTB Avatars: Titan
-INSERT INTO `bcnm_info` VALUES (612,211,'htb_trial_by_water',NULL,NULL,1800,0,6,0,5);     -- HTB Avatars: Leviathan
+INSERT INTO `bcnm_info` VALUES (421,201,'htb_trial_by_wind','Batman',1,90,1800,0,6,0,5);      -- HTB Avatars: Garuda
+INSERT INTO `bcnm_info` VALUES (453,202,'htb_trial_by_lightning','Batman',1,90,1800,0,6,0,5); -- HTB Avatars: Ramuh
+INSERT INTO `bcnm_info` VALUES (485,203,'htb_trial_by_Ice','Batman',1,90,1800,0,6,0,5);       -- HTB Avatars: Shiva
+INSERT INTO `bcnm_info` VALUES (548,207,'htb_trial_by_fire','Batman',1,90,1800,0,6,0,5);      -- HTB Avatars: Ifrit
+INSERT INTO `bcnm_info` VALUES (581,209,'htb_trial_by_earth','Batman',1,90,1800,0,6,0,5);     -- HTB Avatars: Titan
+INSERT INTO `bcnm_info` VALUES (612,211,'htb_trial_by_water','Batman',1,90,1800,0,6,0,5);     -- HTB Avatars: Leviathan
 
--- REPLACE INTO `bcnm_info` VALUES (1184,78,'the_rider_cometh',null,null,900,0,6,0,5);
+-- REPLACE INTO `bcnm_info` VALUES (1184,78,'the_rider_cometh','Batman',1,90,900,0,6,0,5);
 
-INSERT INTO `bcnm_info` VALUES (1308,255,'the_wyrm_god',null,null,1800,0,18,0,7);
+INSERT INTO `bcnm_info` VALUES (1308,255,'the_wyrm_god','Batman',1,90,1800,0,18,0,7);
