@@ -38,4 +38,6 @@ extern void(*PacketParser[512])(map_session_data_t*, CCharEntity*, CBasicPacket)
 void PrintPacket(CBasicPacket data);
 void PacketParserInitialize();
 
+void autoJail(CCharEntity* PChar); // may need to move this later..
+
 #endif

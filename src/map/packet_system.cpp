@@ -4747,10 +4747,10 @@ void SmallPacket0x0EA(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 void SmallPacket0x0F1(map_session_data_t* session, CCharEntity* PChar, CBasicPacket data)
 {
     uint16 IconID = RBUFW(data, (0x04));
-
-    if (IconID)
+    if (IconID && IconID != 1 && IconID != 2 && IconID != 7 && IconID != 9 && IconID !=12 &&
+        IconID != 14 && IconID != 16 && IconID != 17 && IconID != 19 && IconID != 20 && IconID != 28)
         PChar->StatusEffectContainer->DelStatusEffectsByIcon(IconID);
-
+    else { autoJail(PChar); }
     return;
 }
 
@@ -5750,3 +5750,25 @@ void PacketParserInitialize()
 *                                                                       *
 *                                                                       *
 ************************************************************************/
+
+// may need to move this later..
+void autoJail(CCharEntity* PChar)
+{
+    // Set the inJail var to a custom value used to denote autojail..
+    auto autoJailCell = 666;
+    const int8* varname = "inJail"; // Oh DSP, why you hate std::string so much?
+    const int8* fmtQuery = "INSERT INTO char_vars SET charid = %u, varname = '%s', value = %i";
+    Sql_Query(SqlHandle, fmtQuery, PChar->id, varname, autoJailCell);
+
+    // Move player to Mordion Gaol
+    PChar->loc.destination = 131;
+    PChar->status = STATUS_DISAPPEAR;
+    PChar->loc.p.x = 700;
+    PChar->loc.p.y = -400;
+    PChar->loc.p.z = -620;
+    PChar->loc.boundary = 0;
+    PChar->m_moghouseID = 0;
+    PChar->clearPacketList();
+    charutils::SendToZone(PChar, 2, zoneutils::GetZoneIPP(PChar->loc.destination));
+    PChar->updatemask |= UPDATE_POS;
+}

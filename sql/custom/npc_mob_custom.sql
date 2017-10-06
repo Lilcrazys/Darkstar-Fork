@@ -1961,6 +1961,8 @@ INSERT INTO `npc_list` VALUES (17310718,'Augment_Box','Loot Box',192,0.000,0.001
 -- 17314815
 -- ------------------------------------------------------------
 
+INSERT INTO `npc_list` VALUES (17314814,'AutoJailor','AutoJailor',64,699.975,-400.051,-604.394,0,50,50,0,0,0,0,3,0x010001001E001E001E001E001E00000000000000,0,NULL,0);
+
 
 -- ------------------------------------------------------------
 -- Abyssea - La Theine (Zone 132)
@@ -3744,7 +3746,7 @@ INSERT INTO `npc_list` VALUES (17818622,'Augment_Box','Loot Box',192,0.000,0.001
 -- INSERT INTO `npc_list` VALUES (17822711,'Shinryu_Treasure','Shinryu Treasure',0,519,-500,519,6,50,50,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17822712,'Shinryu_Treasure','Shinryu Treasure',0,-479,-1000,-471,6,50,50,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `mob_spawn_points` VALUES (17822713,'Benkei','Benkei',GROUPID,X,Y,Z,ROT);
--- INSERT INTO `mob_spawn_points` VALUES (17822714,'Benkei','Benkei',GROUPID,X,Y,Z,ROT);
+-- INSERT INTO `mob_spawn_points` VALUES (17822714,'Benkei','Benkei',GROUPID,X,Y,Z,ROT); -- Model: 0x01000100??00??00??00??00??00000000000000
 -- INSERT INTO `mob_spawn_points` VALUES (17822715,'Benkei','Benkei',GROUPID,X,Y,Z,ROT);
 -- INSERT INTO `npc_list` VALUES (17822716,'Epic_Treasure','Epic Treasure',0,-477.491,-0.5,515.33,6,50,50,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 -- INSERT INTO `npc_list` VALUES (17822717,'Epic_Treasure','Epic Treasure',0,519,-500,519,6,50,50,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);

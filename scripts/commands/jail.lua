@@ -45,7 +45,7 @@ function onTrigger(player, target, cellId, reason)
         {-620, -400,  660, 0},  {-180, -400,  660, 0}, {260, -400,  660, 0}, {700, -400,  660, 0},
         {-620, -400,  220, 0},  {-180, -400,  220, 0}, {260, -400,  220, 0}, {700, -400,  220, 0},
         {-620, -400, -220, 0},  {-180, -400, -220, 0}, {260, -400, -220, 0}, {700, -400, -220, 0},
-        {-620, -400, -620, 0},  {-180, -400, -620, 0}, {260, -400, -620, 0}, {700, -400, -620, 0},
+        {-620, -400, -620, 0},  {-180, -400, -620, 0}, {260, -400, -620, 0}, --{700, -400, -620, 0}, cell32 reserved for auto jail
     };
 
     -- Validate the target..
@@ -58,7 +58,7 @@ function onTrigger(player, target, cellId, reason)
     ]]
 
     -- Validate the cell id..
-    if (cellId == nil or cellId == 0 or cellId > 32) then
+    if (cellId == nil or cellId == 0 or cellId > 31) then
         cellId = 1;
     end
 
