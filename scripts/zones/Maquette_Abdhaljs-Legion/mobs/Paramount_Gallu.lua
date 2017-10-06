@@ -2,12 +2,10 @@
 -- Area: Legion
 --  MOB: Paramount_Gallu
 -----------------------------------
-
 require("scripts/globals/status");
+require("scripts/globals/titles");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
-require("scripts/globals/titles");
 
 -----------------------------------
 -- onMobInitialize Action

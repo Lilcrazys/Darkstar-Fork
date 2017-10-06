@@ -6,7 +6,7 @@ package.loaded["scripts/zones/Bastok_Markets/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Bastok_Markets/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrigger Action

@@ -29,7 +29,7 @@ function onMobWeaponSkill(target, mob, skill)
     SpawnMob(mob:getID()+3, 300):updateEnmity(target);
 
 
-    skill:setMsg(MSG_NONE);
+    skill:setMsg(msgBasic.NONE);
 
     return 0;
 end;

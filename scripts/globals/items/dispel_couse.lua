@@ -12,10 +12,10 @@ require("scripts/globals/status");
 -----------------------------------------
 
 function onItemUse(target)
-	local dispel = target:dispelStatusEffect();
-	if (dispel == EFFECT_NONE) then
-		skill:setMsg(MSG_NO_EFFECT);
-	else
-		skill:setMsg(MSG_DISPEL);
-	end
+    local dispel = target:dispelStatusEffect();
+    if (dispel == EFFECT_NONE) then
+        skill:setMsg(msgBasic.NO_EFFECT);
+    else
+        skill:setMsg(msgBasic.DISPEL);
+    end
 end;

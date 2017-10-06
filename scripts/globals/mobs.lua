@@ -7,8 +7,8 @@ require("scripts/globals/conquest");
 require("scripts/globals/missions");
 require("scripts/globals/quests");
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
-require("scripts/globals/custom_trials");
+require("scripts/globals/msg");
+-- require("scripts/globals/custom_trials");
 
 -----------------------------------
 -- onMobDeathEx
@@ -27,9 +27,9 @@ function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
                 if (ChaosbringerKills < 200) then
                     player:setVar("ChaosbringerKills", ChaosbringerKills + 1);
                     if (ChaosbringerKills == 1) then
-                        player:SpoofMsg(string.format("has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), nil, MESSAGE_EMOTION, nil);
+                        player:SpoofMsg(string.format("has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), nil, chatType.EMOTION, nil);
                     else
-                        player:SpoofMsg(string.format("has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), nil, MESSAGE_EMOTION, nil);
+                        player:SpoofMsg(string.format("has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), nil, chatType.EMOTION, nil);
                     end
                 end
             end

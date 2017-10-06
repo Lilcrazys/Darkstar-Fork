@@ -23,8 +23,8 @@ function onMobWeaponSkill(target, mob, skill)
         target:addStatusEffect(EFFECT_BIND, 10, 0, 5);
     end
 
-    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    -- skill:setMsg(msgBasic.MELEE); -- Single Target MSG
+    skill:setMsg(msgBasic.MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
     target:addTP(1);

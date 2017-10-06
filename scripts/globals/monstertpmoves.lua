@@ -65,8 +65,6 @@ TP_MACC_BONUS = 1;
 TP_MAB_BONUS = 2;
 TP_DMG_BONUS = 3;
 TP_RANGED = 4;
-MSG_MELEE     = 1;   -- Melee substitute skill (Single Target)
-MSG_MELEE_AOE = 264; -- Melee substitute skill (Area of Effect)
 BOMB_TOSS_HPP = 1;
 
 function MobRangedMove(mob,target,skill,numberofhits,accmod,dmgmod, tpeffect)

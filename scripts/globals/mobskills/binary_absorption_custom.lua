@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
 	local power = math.random(0, 101) + 100;
 	local dmg = MobFinalAdjustments(power,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_1_SHADOW);
 
-	skill:setMsg(MSG_DRAIN_HP);
+	skill:setMsg(msgBasic.DRAIN_HP);
 
 	if (MobPhysicalHit(skill, 0, 0, 0)) then
 		target:delHP(dmg);

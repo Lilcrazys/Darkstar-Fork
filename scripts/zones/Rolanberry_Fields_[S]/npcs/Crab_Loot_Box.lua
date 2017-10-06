@@ -5,7 +5,7 @@
 package.loaded["scripts/zones/Rolanberry_Fields_[S]/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Rolanberry_Fields_[S]/TextIDs");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 local CrabLoot;
 
@@ -64,7 +64,7 @@ function onEventFinish(player,csid,option)
             -- One goody per Box Per Person!
             player:setLocalVar("alreadyGotLoot", 1);
             --  Technically they can zone this var off, but box isn't up that long.
-            player:SpoofMsg("Found a legendary sword!..Or so you thought.. ", nil, MESSAGE_EMOTION, nil)
+            player:SpoofMsg("Found a legendary sword!..Or so you thought.. ", nil, chatType.EMOTION, nil)
             player:messageSpecial(ITEM_OBTAINED, CrabLoot);
         end
     end

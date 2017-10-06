@@ -6,7 +6,7 @@ package.loaded["scripts/zones/Windurst_Waters/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Windurst_Waters/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrigger Action

@@ -10,7 +10,7 @@ require("scripts/zones/Maquette_Abdhaljs-Legion/TextIDs");
 -- require("scripts/globals/keyitems");
 -- require("scripts/globals/status");
 -- require("scripts/globals/bcnm");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 local price = 60000; -- It's up here so it can be seen by both functions
 
@@ -62,9 +62,9 @@ function onTrigger(player,npc)
     local MURU = "\n Hall of Muru : Soaring Trophy ";
     local MULL = "\n Hall of Mull : Veiled Trophy ";
     local msgText = AN..IM..KI..MURU..MULL;
-    player:SpoofMsg("Entry requires "..price.." gil and an item. ", npc, MESSAGE_ECHO, nil);
-    player:SpoofMsg(msgText, npc, MESSAGE_ECHO, nil);
-    -- player:SpoofMsg("\n Hall(s) of SECRETS : Can you discover it? ", npc, MESSAGE_ECHO, nil);
+    player:SpoofMsg("Entry requires "..price.." gil and an item. ", npc, chatType.ECHO, nil);
+    player:SpoofMsg(msgText, npc, chatType.ECHO, nil);
+    -- player:SpoofMsg("\n Hall(s) of SECRETS : Can you discover it? ", npc, chatType.ECHO, nil);
 end;
 
 -----------------------------------

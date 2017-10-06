@@ -7,7 +7,7 @@ package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/zones/Port_Jeuno/TextIDs");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -48,7 +48,7 @@ function onTrigger(player,npc)
     local dnc = {12026,1000000,12046,1000000,12066,1000000,12086,1000000,12106,1000000};
     local sch = {12027,1000000,12047,1000000,12067,1000000,12087,1000000,12107,1000000};
     -------------------------------
-    player:SpoofMsg((string.format("Well if it's not %s.", player:getName())), npc, MESSAGE_SAY, nil);
+    player:SpoofMsg((string.format("Well if it's not %s.", player:getName())), npc, chatType.SAY, nil);
     if (lvl >= 80) then
         if (mJob == 1) then
             showShop(player, STATIC, war);
@@ -79,40 +79,40 @@ function onTrigger(player,npc)
             player:SpoofMsg("Time to get back to the wild with Beastmaster I see, i should have some animal skins here somewhere."); -- Shop for BST --
         elseif (mJob == 10) then
             showShop(player, STATIC, brd);
-            player:SpoofMsg("Time to sing like you have never sung before with Bard I see, lets get musical with these new threads. ", npc, MESSAGE_SAY, nil); -- Shop for BRD --
+            player:SpoofMsg("Time to sing like you have never sung before with Bard I see, lets get musical with these new threads. ", npc, chatType.SAY, nil); -- Shop for BRD --
         elseif (mJob == 11) then
             showShop(player, STATIC, rng);
-            player:SpoofMsg("Time to get your accuracy in order with your Ranger I see, I have some sharp items for you. ", npc, MESSAGE_SAY, nil); -- Shop for RNG --
+            player:SpoofMsg("Time to get your accuracy in order with your Ranger I see, I have some sharp items for you. ", npc, chatType.SAY, nil); -- Shop for RNG --
         elseif (mJob == 12) then
             showShop(player, STATIC, sam);
-            player:SpoofMsg("Time to honor the way of the Samurai I see, I have some special armour for you. ", npc, MESSAGE_SAY, nil); -- Shop for SAM --
+            player:SpoofMsg("Time to honor the way of the Samurai I see, I have some special armour for you. ", npc, chatType.SAY, nil); -- Shop for SAM --
         elseif (mJob == 13) then
             showShop(player, STATIC, nin);
-            player:SpoofMsg("Time to stalk the night by the Ninja code I see, you will need these then. ", npc, MESSAGE_SAY, nil); -- Shop for NIN --
+            player:SpoofMsg("Time to stalk the night by the Ninja code I see, you will need these then. ", npc, chatType.SAY, nil); -- Shop for NIN --
         elseif (mJob == 14) then
             showShop(player, STATIC, drg);
-            player:SpoofMsg("Time to show what a real Dragoon is made of I see, have I got something for you!. ", npc, MESSAGE_SAY, nil); -- Shop for DRG --
+            player:SpoofMsg("Time to show what a real Dragoon is made of I see, have I got something for you!. ", npc, chatType.SAY, nil); -- Shop for DRG --
         elseif (mJob == 15) then
             showShop(player, STATIC, smn);
-            player:SpoofMsg("Time to call forth hell with Summoner I see, well you are going to need these then. ", npc, MESSAGE_SAY, nil); -- Shop for SMN --
+            player:SpoofMsg("Time to call forth hell with Summoner I see, well you are going to need these then. ", npc, chatType.SAY, nil); -- Shop for SMN --
         elseif (mJob == 16) then
             showShop(player, STATIC, blu);
-            player:SpoofMsg("Time to release the beast within Blue Mage I see, OK lets see if we can find something for you. ", npc, MESSAGE_SAY, nil); -- Shop for BLU --
+            player:SpoofMsg("Time to release the beast within Blue Mage I see, OK lets see if we can find something for you. ", npc, chatType.SAY, nil); -- Shop for BLU --
         elseif (mJob == 17) then
             showShop(player, STATIC, cor);
-            player:SpoofMsg("Time to set sail with Corsair I see, I might have an eye patch or something, hmm lets see. ", npc, MESSAGE_SAY, nil); -- Shop for COR --
+            player:SpoofMsg("Time to set sail with Corsair I see, I might have an eye patch or something, hmm lets see. ", npc, chatType.SAY, nil); -- Shop for COR --
         elseif (mJob == 18) then
             showShop(player, STATIC, pup);
-            player:SpoofMsg("Time to stop being strung along with Puppet Master I see, I may have something bright and colourful for you. ", npc, MESSAGE_SAY, nil); -- Shop for PUP --
+            player:SpoofMsg("Time to stop being strung along with Puppet Master I see, I may have something bright and colourful for you. ", npc, chatType.SAY, nil); -- Shop for PUP --
         elseif (mJob == 19) then
             showShop(player, STATIC, dnc);
-            player:SpoofMsg("Time to get jiggy with dancer I see, well, only the best attire will do for you. ", npc, MESSAGE_SAY, nil); -- Shop for DNC --
+            player:SpoofMsg("Time to get jiggy with dancer I see, well, only the best attire will do for you. ", npc, chatType.SAY, nil); -- Shop for DNC --
         elseif (mJob == 20) then
             showShop(player, STATIC, sch);
-            player:SpoofMsg("Time to make a winning strategy with Scholar I see, I should have something good for you. ", npc, MESSAGE_SAY, nil); -- Shop for SCH --
+            player:SpoofMsg("Time to make a winning strategy with Scholar I see, I should have something good for you. ", npc, chatType.SAY, nil); -- Shop for SCH --
         end
     else
-        player:SpoofMsg("I'm sorry but your level is too low for my help! ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("I'm sorry but your level is too low for my help! ", npc, chatType.SAY, nil);
     end
 end;
 

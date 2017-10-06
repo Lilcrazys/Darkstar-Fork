@@ -3,7 +3,7 @@
 --  MOB: Holiday Gift Box
 -----------------------------------
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize
@@ -94,7 +94,7 @@ function onMobDeath(mob, player, isKiller)
                     sponges:addMP(sponges:getMaxMP() * 0.11);
                     sponges:addTP(525);
                     sponges:injectActionPacket(6, 599, 0, 0, 0);
-                    sponges:SpoofMsg("Twinkling starlights are released from the box. ", npc, MESSAGE_ECHO, nil);
+                    sponges:SpoofMsg("Twinkling starlights are released from the box. ", npc, chatType.ECHO, nil);
                 end
             end
         end

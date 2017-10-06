@@ -2,12 +2,10 @@
 -- Area: Legion
 -- Lofty_Harpeia
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
 require("scripts/globals/titles");
+require("scripts/globals/utils");
 
 -----------------------------------
 -- onMobInitialize Action

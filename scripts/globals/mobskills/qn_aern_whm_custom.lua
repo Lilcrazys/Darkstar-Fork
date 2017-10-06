@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
     target:addHP(maxHeal);
     target:wakeUp();
 
-    skill:setMsg(MSG_SELF_HEAL);
+    skill:setMsg(msgBasic.SELF_HEAL);
 
     return maxHeal;
 end;

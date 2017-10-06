@@ -7,9 +7,9 @@
 --  Range: 20' radial
 --  Notes:
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -22,9 +22,9 @@ function onMobWeaponSkill(target, mob, skill)
 
     if (dispel == 0) then
         -- no effect
-        skill:setMsg(MSG_NO_EFFECT); -- no effect
+        skill:setMsg(msgBasic.NO_EFFECT); -- no effect
     else
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
     end
 
     mob:lowerEnmity(target, 70);

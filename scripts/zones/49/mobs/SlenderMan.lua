@@ -11,7 +11,7 @@
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -50,7 +50,7 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-    target:SpoofMsg("I'll swallow your soul! ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+    target:SpoofMsg("I'll swallow your soul! ", mob, chatType.SAY, chatType.SHOUT);
 end;
 
 -----------------------------------
@@ -66,7 +66,7 @@ function onMobFight(mob, target)
         mob:setLocalVar("Slendy_2hr", 0);
         mob:setHP(0); -- Auto Die
     elseif (mob:getHPP() < 9 and Slendy_2hr_Used == 2) then
-        target:SpoofMsg("You can't kill me! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
+        target:SpoofMsg("You can't kill me! ", mob, chatType.SHOUT, chatType.SHOUT);
         mob:useMobAbility(731); -- Do Mijin Gakure!
         mob:setLocalVar("Slendy_2hr", 3);
     elseif (mob:getHPP() <= 25 and Slendy_2hr_Used == 1) then
@@ -111,7 +111,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    -- player:SpoofMsg("victory message here ", mob, MESSAGE_SAY, MESSAGE_SHOUT);
+    -- player:SpoofMsg("victory message here ", mob, chatType.SAY, chatType.SHOUT);
 end;
 
 -----------------------------------

@@ -7,7 +7,7 @@ package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
 -----------------------------------
 
 require("scripts/zones/Port_Jeuno/TextIDs");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -1904,7 +1904,7 @@ end;
 
 function onTrigger(player,npc)
     local msgText = string.format("Hello %s!, I'm here to help you upgrade a selection of Artifact, Relic, Salvage, and Empyrean armor", player:getName());
-    player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
+    player:SpoofMsg(msgText, npc, chatType.SAY, nil);
 end;
 
 -----------------------------------

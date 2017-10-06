@@ -19,7 +19,7 @@ require("scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
 	if (mob:AnimationSub() == 1) then
 		return 1;
-	else	
+	else
 	return 0;
 	end
 end;
@@ -78,7 +78,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 	skill:setMsg(MobBuffMove(mob, EFFECT_ATTACK_BOOST, AB, 0, 60));
 	skill:setMsg(MobBuffMove(mob, EFFECT_MAGIC_ATK_BOOST, MB, 0, 60));
-	skill:setMsg(MSG_SELF_HEAL);
+	skill:setMsg(msgBasic.SELF_HEAL);
 
 	return MobHealMove(mob, mob:getMaxHP() * potency / 100);
 end;

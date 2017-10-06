@@ -6,9 +6,9 @@
 --
 -- Range: Self
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -24,7 +24,7 @@ end;
 function onMobWeaponSkill(target, mob, skill)
     -- addEx to pervent dispel
     mob:addStatusEffectEx(EFFECT_MAGIC_SHIELD,0,1,0,45)
-    skill:setMsg(MSG_BUFF)
+    skill:setMsg(msgBasic.BUFF)
 
     return EFFECT_MAGIC_SHIELD;
 end;

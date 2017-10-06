@@ -19,7 +19,7 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     if (target:eraseStatusEffect()) then
-        skill:setMsg(MSG_DISAPPEAR);
+        skill:setMsg(msgBasic.DISAPPEAR);
     end
     skill:setMsg(MobBuffMove(mob, EFFECT_REGEN, 25, 0, 120));
     return EFFECT_REGEN;

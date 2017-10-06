@@ -1,10 +1,10 @@
 ---------------------------------------------------
 -- Elemental_Sforzo
--- Grants immunity to all magic attacks. 
+-- Grants immunity to all magic attacks.
 ---------------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -20,6 +20,6 @@ function onMobWeaponSkill(target, mob, skill)
     local typeEffect = EFFECT_ELEMENTAL_SFORZO
     MobBuffMove(mob, typeEffect, 1, 0, 30);
 
-    skill:setMsg(MSG_USES);
+    skill:setMsg(msgBasic.USES);
     return typeEffect;
 end;

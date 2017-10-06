@@ -20,7 +20,7 @@ function onMobWeaponSkill(target, mob, skill)
     local effect = target:dispelStatusEffect();
 
     if (effect ~= EFFECT_NONE) then
-        skill:setMsg(MSG_DISAPPEAR);
+        skill:setMsg(msgBasic.DISAPPEAR);
     end
 
     local dmgmod = 2.1;

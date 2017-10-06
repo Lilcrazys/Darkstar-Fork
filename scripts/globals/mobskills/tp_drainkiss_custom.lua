@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
 
-    skill:setMsg(MSG_DRAIN_TP);
+    skill:setMsg(msgBasic.DRAIN_TP);
 
     if (target:isUndead() == false) then
         -- can't go over limited mp
@@ -37,7 +37,7 @@ function onMobWeaponSkill(target, mob, skill)
         target:delTP(dmg);
         mob:addTP(dmg);
     else
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     end
 
 

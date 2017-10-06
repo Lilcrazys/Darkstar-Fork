@@ -35,9 +35,9 @@ function onMobWeaponSkill(target, mob, skill)
     end
 
     if (totalDispelled == 0) then
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     else
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
     end
 
     return totalDispelled;

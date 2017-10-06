@@ -22,14 +22,14 @@ function onMobWeaponSkill(target, mob, skill)
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 30);
 
     if (dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
         return 2;
     elseif (dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
         -- dispeled only one
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
         return 1;
     else
-        skill:setMsg(MSG_NO_EFFECT); -- no effect
+        skill:setMsg(msgBasic.NO_EFFECT); -- no effect
     end
 
     target:delHP(dmg);

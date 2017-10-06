@@ -19,8 +19,8 @@ function onMobWeaponSkill(target, mob, skill)
     local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT,1,2,3);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW,info.hitslanded);
 
-    skill:setMsg(MSG_MELEE); -- Single Target MSG
-    -- skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    skill:setMsg(msgBasic.MELEE); -- Single Target MSG
+    -- skill:setMsg(msgBasic.MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
     target:addTP(1);

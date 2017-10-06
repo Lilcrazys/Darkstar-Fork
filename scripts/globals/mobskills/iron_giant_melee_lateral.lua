@@ -26,8 +26,8 @@ function onMobWeaponSkill(target, mob, skill)
 
         -- The Knockback is set in SQL
 
-        -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-        skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+        -- skill:setMsg(msgBasic.MELEE); -- Single Target MSG
+        skill:setMsg(msgBasic.MELEE_AOE); -- AoE MSG
 
         target:delHP(dmg);
         target:addTP(1);
@@ -44,8 +44,8 @@ function onMobWeaponSkill(target, mob, skill)
 
         -- The Knockback is set in SQL
 
-        skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
-        -- skill:setMsg(MSG_MELEE); -- Single Target MSG
+        skill:setMsg(msgBasic.MELEE_AOE); -- AoE MSG
+        -- skill:setMsg(msgBasic.MELEE); -- Single Target MSG
 
         target:delHP(dmg);
         target:addTP(1);
@@ -62,8 +62,8 @@ function onMobWeaponSkill(target, mob, skill)
 
         -- The Knockback is set in SQL
 
-        skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
-        -- skill:setMsg(MSG_MELEE); -- Single Target MSG
+        skill:setMsg(msgBasic.MELEE_AOE); -- AoE MSG
+        -- skill:setMsg(msgBasic.MELEE); -- Single Target MSG
 
         target:delHP(dmg);
         target:addTP(1);

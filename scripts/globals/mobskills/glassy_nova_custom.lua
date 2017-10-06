@@ -16,9 +16,9 @@ require("scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
     if (mob:getHPP() <= 50) then
         return 0;
-    else 
+    else
         return 1;
-    end    
+    end
 end;
 
 function onMobWeaponSkill(target, mob, skill)
@@ -28,14 +28,14 @@ function onMobWeaponSkill(target, mob, skill)
 
 
     if (dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
         return 2;
     elseif (dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
         -- dispeled only one
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
         return 1;
     else
-        skill:setMsg(MSG_NO_EFFECT); -- no effect
+        skill:setMsg(msgBasic.NO_EFFECT); -- no effect
     end
 
     MobStatusEffectMove(mob, target, EFFECT_STR_DOWN, 78, 0, 60);

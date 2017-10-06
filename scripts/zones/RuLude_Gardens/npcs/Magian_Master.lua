@@ -6,7 +6,7 @@ package.loaded["scripts/zones/Rulude_Gardens/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/RuLude_Gardens/TextIDs");
 require("scripts/globals/custom_trials");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -14,7 +14,7 @@ require("scripts/globals/spoofchat");
 
 function onTrade(player,npc,trade)
     local msgText = string.format("Are you trying to give me gifts %s? I WILL NOT SUCCUMB TO BRIBERY! ", player:getName());
-    player:SpoofMsg(msgText, npc, MESSAGE_SAY, MESSAGE_SAY);
+    player:SpoofMsg(msgText, npc, chatType.SAY, chatType.SAY);
     if (player:getLocalVar("magianMasterBribery") >= 3) then
         player:setLocalVar("magianMasterBribery", 0);
         player:costume(2239);
@@ -29,7 +29,7 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofMsg("I have to keep an eye on these 3, especially CJ! He's always slacking off! ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("I have to keep an eye on these 3, especially CJ! He's always slacking off! ", npc, chatType.SAY, nil);
 end;
 
 -----------------------------------

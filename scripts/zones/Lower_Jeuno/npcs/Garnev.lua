@@ -15,7 +15,7 @@ require("scripts/globals/keyitems");
 require("scripts/globals/shop");
 require("scripts/globals/quests");
 require("scripts/zones/Lower_Jeuno/TextIDs");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -28,9 +28,9 @@ function onTrade(player,npc,trade)
     -- Begin Custom
     elseif (TRAVEL_SKIP >= 1 and player:getLocalVar("BRIBED_GARVEV") == 0) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, MESSAGE_EMOTION, nil);
-            player:SpoofMsg("Alright, I'll pretend I don't see you boarding the secret express freight to Norg.. ", npc, MESSAGE_SAY, nil);
-            player:SpoofMsg("Hurry up and go before someone notices. ", npc, MESSAGE_SAY, nil);
+            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
+            player:SpoofMsg("Alright, I'll pretend I don't see you boarding the secret express freight to Norg.. ", npc, chatType.SAY, nil);
+            player:SpoofMsg("Hurry up and go before someone notices. ", npc, chatType.SAY, nil);
             player:delGil(TRAVEL_SKIP);
             player:setLocalVar("BRIBED_GARVEV");
         end

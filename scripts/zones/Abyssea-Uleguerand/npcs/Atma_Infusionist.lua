@@ -10,7 +10,7 @@ require("scripts/globals/settings");
 require("scripts/globals/abyssea");
 require("scripts/zones/Abyssea-Uleguerand/TextIDs");
 require("scripts/globals/atma");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -38,8 +38,8 @@ function onTrigger(player,npc)
         player:startEvent(2003);
     elseif ((player:getVar("ACTIVE_ATMA_COUNT") >= countLunars(player))) then
         local msgText = string.format("You have the maximum ATMA effects your %i Lunar Abyssite will allow.", countLunars(player));
-        player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
-        player:SpoofMsg("To have all ATMA effects removed, trade me 1 gil. ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg(msgText, npc, chatType.SAY, nil);
+        player:SpoofMsg("To have all ATMA effects removed, trade me 1 gil. ", npc, chatType.SAY, nil);
     else
         player:PrintToPlayer("Parts of this menu are not yet functional!")
         player:PrintToPlayer("ATMA will be shown even if you do not have it yet!")

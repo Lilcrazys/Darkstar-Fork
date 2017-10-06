@@ -10,7 +10,7 @@ package.loaded["scripts/zones/Bibiki_Bay/TextIDs"] = nil;
 require("scripts/zones/Bibiki_Bay/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/settings");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -19,8 +19,8 @@ require("scripts/globals/spoofchat");
 function onTrade(player,npc,trade)
     if (TRAVEL_SKIP >= 1) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("smiles and takes the %d gil.. ", TRAVEL_SKIP), npc, MESSAGE_EMOTION, nil);
-            player:SpoofMsg("Ha! Somebody told you about the 'special ticket'! Alright, get on board. ", npc, MESSAGE_SAY, nil);
+            player:SpoofMsg(string.format("smiles and takes the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
+            player:SpoofMsg("Ha! Somebody told you about the 'special ticket'! Alright, get on board. ", npc, chatType.SAY, nil);
             player:delGil(TRAVEL_SKIP);
             -- player:setPos(489.5,-3,712,192,4);
             player:addStatusEffectEx(EFFECT_COMMUTE,0,COMMUTE.FERRY_BIBIKIBAY,0,2);

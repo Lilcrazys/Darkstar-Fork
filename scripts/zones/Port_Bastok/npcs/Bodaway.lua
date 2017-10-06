@@ -9,7 +9,7 @@ package.loaded["scripts/zones/Port_Bastok/TextIDs"] = nil;
 require("scripts/zones/Port_Bastok/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/settings");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -18,8 +18,8 @@ require("scripts/globals/spoofchat");
 function onTrade(player,npc,trade)
     if (TRAVEL_SKIP >= 1) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, MESSAGE_EMOTION, nil);
-            player:SpoofMsg("Well..I guess I can let you aboard the express freight Vessel.. ", npc, MESSAGE_SAY, nil);
+            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
+            player:SpoofMsg("Well..I guess I can let you aboard the express freight Vessel.. ", npc, chatType.SAY, nil);
             if (player:hasKeyItem(AIRSHIP_PASS)) then
                 player:delGil(TRAVEL_SKIP);
                 -- player:setPos(-48,12,-120,192,246);
@@ -27,7 +27,7 @@ function onTrade(player,npc,trade)
             else
                 player:setVar("HasDoorHacked", player:getVar("HasDoorHacked") +1);
                 print(player:getName() .. " tried to TRAVEL_SKIP an airship but didn't have a Airship Pass..");
-                player:SpoofMsg("Wait a minute, You don't have a AIRSHIP PASS, how'd you even get through the door?.. ", npc, MESSAGE_SAY, nil);
+                player:SpoofMsg("Wait a minute, You don't have a AIRSHIP PASS, how'd you even get through the door?.. ", npc, chatType.SAY, nil);
             end
         end
     end

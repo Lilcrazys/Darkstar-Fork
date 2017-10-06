@@ -26,7 +26,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     if (MobPhysicalHit(skill)) then
         target:addStatusEffect(typeEffect,40,0,60);
-        skill:setMsg(MSG_ENFEEB_IS);
+        skill:setMsg(msgBasic.ENFEEB_IS);
 		return typeEffect;
     end
 

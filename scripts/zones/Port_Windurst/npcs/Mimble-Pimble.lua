@@ -9,7 +9,7 @@ package.loaded["scripts/zones/Port_Windurst/TextIDs"] = nil;
 require("scripts/zones/Port_Windurst/TextIDs");
 require("scripts/globals/keyitems")
 require("scripts/globals/settings");
-require("scripts/globals/spoofchat")
+require("scripts/globals/msg");
 --[[
     bit1  = 1      -- Shadowlord
     bit2  = 2      -- Stellar Fulcrum
@@ -45,9 +45,9 @@ end;
 -----------------------------------
 function onTrigger(player,npc)
     if (player:getMainLvl() < 75) then
-        player:SpoofMsg("This is no place for the weak. Leave at once. ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("This is no place for the weak. Leave at once. ", npc, chatType.SAY, nil);
     elseif (player:getMainLvl() < 90) then
-        player:SpoofMsg("Strength is not everything. I find your lack of experience disturbing. ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("Strength is not everything. I find your lack of experience disturbing. ", npc, chatType.SAY, nil);
     else
         local MERITS = player:getMeritCount();
         local unknown1 = 0; -- Dummied until understood
@@ -168,7 +168,7 @@ function onEventFinish(player,csid,option)
 
         if (keyItem ~= nil and cost ~= nil) then
             if (player:hasKeyItem(keyItem)) then
-                player:SpoofMsg("Mimble-Pimble : You already posses that Phantom Gem. ", nil, MESSAGE_SYS_SAY, nil);
+                player:SpoofMsg("Mimble-Pimble : You already posses that Phantom Gem. ", nil, chatType.SYS_SAY, nil);
             else
                 local meritCount = player:getMeritCount();
                 if (meritCount >= cost) then
@@ -176,7 +176,7 @@ function onEventFinish(player,csid,option)
                     player:addKeyItem(keyItem);
                     player:messageSpecial(KEYITEM_OBTAINED, keyItem);
                 else
-                    player:SpoofMsg("Mimble-Pimble : You haven't enough. I can do nothing with that amount. ", nil, MESSAGE_SYS_SAY, nil);
+                    player:SpoofMsg("Mimble-Pimble : You haven't enough. I can do nothing with that amount. ", nil, chatType.SYS_SAY, nil);
                 end
             end
         end

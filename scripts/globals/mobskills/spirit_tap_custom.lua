@@ -30,7 +30,7 @@ function onMobWeaponSkill(target, mob, skill)
             -- add to myself
             mob:addStatusEffect(effect:getType(), effect:getPower(), effect:getTickCount(), effect:getDuration());
         -- add buff to myself
-        skill:setMsg(MSG_EFFECT_DRAINED);
+        skill:setMsg(msgBasic.EFFECT_DRAINED);
 
         return 1;
     else
@@ -41,7 +41,7 @@ function onMobWeaponSkill(target, mob, skill)
         target:delHP(dmg);
         mob:addHP(dmg);
 
-        skill:setMsg(MSG_DRAIN_HP);
+        skill:setMsg(msgBasic.DRAIN_HP);
     end
 
     return dmg;

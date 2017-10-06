@@ -6,7 +6,7 @@ package.loaded["scripts/zones/Southern_San_dOria/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Southern_San_dOria/TextIDs");
 require("scripts/globals/status");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrigger Action

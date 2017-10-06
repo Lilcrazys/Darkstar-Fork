@@ -3,7 +3,7 @@
 --  Mob: Dummy
 -- never dies, never fights back, just takes dmg.
 -----------------------------------
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 require("scripts/globals/status");
 
 -----------------------------------
@@ -27,9 +27,9 @@ end;
 
 function onMobFight(mob, target)
     if (mob:getHP() < mob:getMaxHP()/2) then
-        target:SpoofMsg("is crying..", mob, MESSAGE_EMOTION, MESSAGE_PARTY);
+        target:SpoofMsg("is crying..", mob, chatType.EMOTION, chatType.PARTY);
         mob:setHP(mob:getMaxHP());
-        target:SpoofMsg("Why you hitting me? What I ever do to you? ", mob, MESSAGE_SAY, MESSAGE_PARTY);
+        target:SpoofMsg("Why you hitting me? What I ever do to you? ", mob, chatType.SAY, chatType.PARTY);
     end
 end;
 
@@ -38,7 +38,7 @@ end;
 -----------------------------------
 
 function onMagicHit(caster, target, spell)
-    -- player:SpoofMsg("[Magic DMG Debug] placeholder", mob, MESSAGE_ECHO, MESSAGE_PARTY);
+    -- player:SpoofMsg("[Magic DMG Debug] placeholder", mob, chatType.ECHO, chatType.PARTY);
 
     return 1;
 end;
@@ -48,7 +48,7 @@ end;
 -----------------------------------
 
 function onWeaponskillHit(mob, attacker, weaponskill)
-    attacker:SpoofMsg("[WS DMG Debug] placeholder", mob, MESSAGE_ECHO, MESSAGE_PARTY);
+    attacker:SpoofMsg("[WS DMG Debug] placeholder", mob, chatType.ECHO, chatType.PARTY);
 
     return 1;
 end;
@@ -58,5 +58,5 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:SpoofMsg("YOU CHEATING BASTID! ", mob, MESSAGE_SHOUT, MESSAGE_SHOUT);
+    player:SpoofMsg("YOU CHEATING BASTID! ", mob, chatType.SHOUT, chatType.SHOUT);
 end;

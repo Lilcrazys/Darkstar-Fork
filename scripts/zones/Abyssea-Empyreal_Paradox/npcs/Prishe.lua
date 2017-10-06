@@ -9,7 +9,7 @@ require("scripts/zones/Abyssea-Empyreal_Paradox/TextIDs");
 require("scripts/globals/missions");
 require("scripts/globals/titles");
 require("scripts/globals/atma");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -301,5 +301,5 @@ end;
 
 function onTrigger(player,npc)
     local msgText = string.format("Hello %s!, I'm here to help you reforge your Empyrean Armor", player:getName());
-    player:SpoofMsg(msgText, npc, MESSAGE_SAY, nil);
+    player:SpoofMsg(msgText, npc, chatType.SAY, nil);
 end;

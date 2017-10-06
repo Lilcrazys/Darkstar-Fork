@@ -27,7 +27,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
 
-    skill:setMsg(MSG_DRAIN_MP);
+    skill:setMsg(msgBasic.DRAIN_MP);
 
     if (target:isUndead() == false) then
 
@@ -39,7 +39,7 @@ function onMobWeaponSkill(target, mob, skill)
         target:delMP(dmg);
         mob:addMP(dmg);
     else
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     end
 
     return dmg;

@@ -12,7 +12,7 @@ require("scripts/globals/keyitems");
 require("scripts/globals/titles");
 require("scripts/zones/Rolanberry_Fields/TextIDs");
 -- require("scripts/globals/custom_legion");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -40,7 +40,7 @@ function onTrigger(player,npc)
     end
 
     -- player:startEvent(8008, 0, LEGENDARY, CAPACITY);
-    player:SpoofMsg("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees! ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees! ", npc, chatType.SAY, nil);
 end;
 
 -----------------------------------

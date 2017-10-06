@@ -26,8 +26,8 @@ function onMobWeaponSkill(target, mob, skill)
     local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*POW,ELE_THUNDER,dmgmod,TP_NO_EFFECT);
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_NONE,MOBPARAM_2_SHADOW);
 
-    -- skill:setMsg(MSG_MELEE); -- Single Target MSG
-    skill:setMsg(MSG_MELEE_AOE); -- AoE MSG
+    -- skill:setMsg(msgBasic.MELEE); -- Single Target MSG
+    skill:setMsg(msgBasic.MELEE_AOE); -- AoE MSG
 
     target:delHP(dmg);
     target:addTP(1);

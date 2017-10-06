@@ -25,9 +25,9 @@ function onMobWeaponSkill(target, mob, skill)
     if (target:isUndead() == false) then
         target:delMP(dmg);
         mob:addMP(dmg);
-        skill:setMsg(MSG_DRAIN_MP);
+        skill:setMsg(msgBasic.DRAIN_MP);
     else
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     end
 
     return dmg;

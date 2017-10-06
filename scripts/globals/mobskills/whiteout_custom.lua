@@ -1,5 +1,5 @@
 ---------------------------------------------
---  Whiteout
+-- Whiteout
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
@@ -18,14 +18,14 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
     local effect = nil;
 
-    if (MobStatusEffectMove(mob, target, EFFECT_SLEEP_II, 10, 0, 60) == MSG_ENFEEB_IS) then
+    if (MobStatusEffectMove(mob, target, EFFECT_SLEEP_II, 10, 0, 60) == msgBasic.ENFEEB_IS) then
         effect = EFFECT_SLEEP_II;
-        skill:setMsg(MSG_ENFEEB_IS);
+        skill:setMsg(msgBasic.ENFEEB_IS);
     end
 
-    if (MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 50, 0, 60) == MSG_ENFEEB_IS) then
+    if (MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 50, 0, 60) == msgBasic.ENFEEB_IS) then
         effect = EFFECT_CURSE_I;
-        skill:setMsg(MSG_ENFEEB_IS);
+        skill:setMsg(msgBasic.ENFEEB_IS);
     end
 
     target:delHP(dmg);

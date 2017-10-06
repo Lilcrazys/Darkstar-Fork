@@ -20,7 +20,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     mob:spawnPet();
 
-    skill:setMsg(MSG_NONE);
+    skill:setMsg(msgBasic.NONE);
 
     return 0;
 end;

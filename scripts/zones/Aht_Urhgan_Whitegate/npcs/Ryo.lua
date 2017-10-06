@@ -8,7 +8,7 @@ package.loaded["scripts/zones/Aht_Urhgan_Whitegate/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 require("scripts/globals/besieged");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onTrade Action
@@ -20,12 +20,12 @@ function onTrade(player,npc,trade)
             local msgText = string.format("exchanges your %i gil for %i zeni. ", trade:getGil(), trade:getGil() *0.1);
             player:addCurrency("zeni_point", trade:getGil() *0.1);
             player:delGil(trade:getGil()); -- we don't use tradeComplete() for this.
-            player:SpoofMsg(msgText, npc, MESSAGE_EMOTION, nil);
+            player:SpoofMsg(msgText, npc, chatType.EMOTION, nil);
         else
-            player:SpoofMsg("Please trade me amounts that are multiples of 10. ", npc, MESSAGE_SAY, nil);
+            player:SpoofMsg("Please trade me amounts that are multiples of 10. ", npc, chatType.SAY, nil);
         end
     else
-        player:SpoofMsg("I am sorry but at the current exchange rate 1 zeni is worth 10 gil. ", npc, MESSAGE_SAY, nil);
+        player:SpoofMsg("I am sorry but at the current exchange rate 1 zeni is worth 10 gil. ", npc, chatType.SAY, nil);
     end
 end;
 
@@ -37,8 +37,8 @@ function onTrigger(player,npc)
     --[[
     player:startEvent(0x0391);
     ]]
-    player:SpoofMsg("Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", npc, MESSAGE_SAY, nil);
-    player:SpoofMsg("Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", npc, chatType.SAY, nil);
+    player:SpoofMsg("Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", npc, chatType.SAY, nil);
 end;
 
 -----------------------------------

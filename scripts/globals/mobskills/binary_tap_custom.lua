@@ -40,7 +40,7 @@ function onMobWeaponSkill(target, mob, skill)
 
 
         -- add buff to myself
-        skill:setMsg(MSG_EFFECT_DRAINED);
+        skill:setMsg(msgBasic.EFFECT_DRAINED);
 
         return count;
     else
@@ -51,7 +51,7 @@ function onMobWeaponSkill(target, mob, skill)
         target:delHP(dmg);
         mob:addHP(dmg);
 
-        skill:setMsg(MSG_DRAIN_HP);
+        skill:setMsg(msgBasic.DRAIN_HP);
         return dmg;
     end
 

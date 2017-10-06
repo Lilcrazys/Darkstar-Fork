@@ -9,7 +9,7 @@ require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/titles");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
@@ -102,10 +102,10 @@ function onMobFight(mob, target)
     -- Fight timer and claim tracking...
     if (target:getHPP() <= 5 and mob:getLocalVar("LaughingCrab") == 0) then
         mob:setLocalVar("LaughingCrab", 1);
-        target:SpoofMsg("seems to be laughing..You didn't even know giant crabs could laugh.. ", mob, MESSAGE_ECHO, MESSAGE_SAY);
+        target:SpoofMsg("seems to be laughing..You didn't even know giant crabs could laugh.. ", mob, chatType.ECHO, chatType.SAY);
     -- elseif (mob:getLocalVar("SuperDuperJump") == 1) then
         -- mob:setLocalVar("SuperDuperJump", 2);
-        -- target:SpoofMsg("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky. ", mob, MESSAGE_ECHO, MESSAGE_SAY);
+        -- target:SpoofMsg("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky. ", mob, chatType.ECHO, chatType.SAY);
         -- DespawnMob(mob:getID());
     elseif (BattleTime > 7200 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
@@ -118,7 +118,7 @@ function onMobFight(mob, target)
             mob:setLocalVar("SuperDuperJump", 1);
             mob:useMobAbility(1024); -- SuperDuperJump
         else
-            target:SpoofMsg("Is beginning to look disinterested in the battle. ", mob, MESSAGE_ECHO, MESSAGE_SAY);
+            target:SpoofMsg("Is beginning to look disinterested in the battle. ", mob, chatType.ECHO, chatType.SAY);
             mob:setLocalVar("isBoard", 1);
             mob:castSpell(260);
         end

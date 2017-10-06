@@ -11,7 +11,7 @@ require("scripts/globals/monstertpmoves");
 function onMobSkillCheck(target,mob,skill)
 	local NM = mob:getID();
 	local HP = mob:getHPP();
-	
+
 	if (NM == 17662476 or NM == 17662481 or NM == 17662486) and (HP < 50) then
 		return 0;
 	end
@@ -26,9 +26,9 @@ function onMobWeaponSkill(target, mob, skill)
     if (target:isUndead() == false) then
         target:delHP(dmg);
         mob:addHP(dmg);
-        skill:setMsg(MSG_DRAIN_HP);
+        skill:setMsg(msgBasic.DRAIN_HP);
     else
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     end
 	return dmg;
 end;

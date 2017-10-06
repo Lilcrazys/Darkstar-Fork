@@ -44,11 +44,10 @@ function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o
         player:SpoofMsg("Shout with no name = 14", nil, 14, nil, nil);
         player:SpoofMsg("Party with no name = 15", nil, 15, nil, nil);
         player:SpoofMsg("1st LS with no name = 16", nil, 16, nil, nil);
-        player:SpoofMsg("Echo = 17", nil, 17, nil, nil);
-        player:SpoofMsg("Echo = 20", nil, 20, nil, nil);
         player:SpoofMsg("Yell = 26", nil, 26, nil, nil);
         player:SpoofMsg("2nd LS = 27", nil, 27, nil, nil);
         player:SpoofMsg("2nd LS with no name = 28", nil, 28, nil, nil);
+        player:SpoofMsg("Echo/system3", nil, 29, nil, nil);
         player:SpoofMsg("Unity = 33", nil, 33, nil, nil);
     else
         player:SpoofMsg(MSG_TEXT, player, MSG_TYPE, nil);

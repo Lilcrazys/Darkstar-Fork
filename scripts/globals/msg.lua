@@ -19,10 +19,10 @@ chatType =
     EMOTION        = 8,
     -- 9 / 10 / 11 = Does not work / nothing
     GM_PROMPT      = 12, -- Menu prompt from GM
-    NS_SAY         = 13, -- Same as MESSAGE_SAY but has no speaker object displayed
-    NS_SHOUT       = 14, -- Same as MESSAGE_SHOUT but has no speaker object displayed
-    NS_PARTY       = 15, -- Same as MESSAGE_PARTY but has no speaker object displayed
-    NS_LINKSHELL   = 16, -- Same as MESSAGE_LINKSHELL but has no speaker object displayed
+    NS_SAY         = 13, -- Same as chatType.SAY but has no speaker object displayed
+    NS_SHOUT       = 14, -- Same as chatType.SHOUT but has no speaker object displayed
+    NS_PARTY       = 15, -- Same as chatType.PARTY but has no speaker object displayed
+    NS_LINKSHELL   = 16, -- Same as chatType.LINKSHELL but has no speaker object displayed
     UNKNOWN_17     = 17, -- 17 through 25 appear to repeat the effects of other values
     UNKNOWN_18     = 18,
     UNKNOWN_19     = 19,
@@ -35,6 +35,7 @@ chatType =
     YELL           = 26,
     LINKSHELL2     = 27, -- Second LS color...Default is Green
     NS_LINKSHELL2  = 28, -- Same as LINKSHELL_2 but has but has no speaker object displayed
+    ECHO           = 29, -- Temp solution
     SYSTEM_3       = 29, -- "Basic system messages" in config menu. Yellow by default.
     LINKSHELL3     = 30, -- Yes really it looks like a 3rd LS may have been planned at some point.
     NS_LINKSHELL3  = 31, -- (assumed as it follows pattern and color)
@@ -49,6 +50,10 @@ chatType =
 msgBasic =
 {
     NONE = 0, -- Display nothing
+
+    -- Custom added
+    MELEE                  = 1,   -- Melee substitute skill (Single Target)
+    MELEE_AOE              = 264, -- Melee substitute skill (Area of Effect)
 
     -- Unsorted messages used by ability.lua, monstertpmoves.lua, and automatonweaponskills.lua
     BUFF_FAIL              = 75;

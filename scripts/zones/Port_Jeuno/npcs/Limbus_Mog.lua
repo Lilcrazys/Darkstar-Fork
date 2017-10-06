@@ -5,7 +5,7 @@
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Port_Jeuno/TextIDs");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 
 -----------------------------------
@@ -20,8 +20,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofMsg("The dev team forgot me kupo.. ", npc, MESSAGE_SAY, nil);
-    player:SpoofMsg("Whats a Mog to do now? <Sigh> ", npc, MESSAGE_SAY, nil);
+    player:SpoofMsg("The dev team forgot me kupo.. ", npc, chatType.SAY, nil);
+    player:SpoofMsg("Whats a Mog to do now? <Sigh> ", npc, chatType.SAY, nil);
 end;
 
 -----------------------------------

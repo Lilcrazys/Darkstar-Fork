@@ -23,10 +23,10 @@ function onMobWeaponSkill(target, mob, skill)
     mob:addStatusEffect(EFFECT_REPRISAL, 10, 0, 600);
 
     if (mob:eraseStatusEffect() == EFFECT_NONE) then
-        skill:setMsg(MSG_SELF_HEAL);
+        skill:setMsg(msgBasic.SELF_HEAL);
         return MobHealMove(mob, 9999);
     else
-        skill:setMsg(MSG_DISAPPEAR);
+        skill:setMsg(msgBasic.DISAPPEAR);
         return erase
     end
 end;

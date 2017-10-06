@@ -15,7 +15,7 @@ function onMobSkillCheck(target,mob,skill)
    if (mobID == 16928966) then
       if (mobhp > 40) then
 	     return 0;
-	  end  
+	  end
    end
    return 1;
 end;
@@ -23,13 +23,13 @@ end;
 function onMobWeaponSkill(target, mob, skill)
 	local typeEffect = EFFECT_TERROR;
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 10);
-	
+
     local count = target:dispelAllStatusEffect();
 
     if (count == 0) then
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     else
-        skill:setMsg(MSG_DISAPPEAR_NUM);
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
     end
 
     return count;

@@ -31,7 +31,7 @@ function onMobWeaponSkill(target, mob, skill)
     if target:isPC() and ((target:getRace() == 3 or target:getRace() == 4) and not target:hasKeyItem(LIGHT_OF_MEA)) then
         skill:setMsg(MobStatusEffectMove(mob, target, typeEffect, power, 0, duration));
     else
-        skill:setMsg(MSG_NO_EFFECT);
+        skill:setMsg(msgBasic.NO_EFFECT);
     end
 	return typeEffect;
 end;

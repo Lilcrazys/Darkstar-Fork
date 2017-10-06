@@ -2,11 +2,9 @@
 -- Area: Legion
 -- Lofty_Elasmoth
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-require("scripts/globals/spoofchat");
 
 -----------------------------------
 -- onMobInitialize Action
