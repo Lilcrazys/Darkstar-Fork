@@ -301,8 +301,6 @@ INSERT INTO `item_mods` VALUES (20995,507,200); -- occ
 INSERT INTO `item_mods` VALUES (21019,165,25); --
 INSERT INTO `item_mods` VALUES (21019,421,50); --
 
-INSERT INTO `item_mods` VALUES (21042,73,6);
-
 INSERT INTO `item_mods` VALUES (21052,73,25); -- Should be Save TP +250   added Store TP +25
 
 REPLACE INTO `item_mods` VALUES (21062,28,65); --
@@ -372,9 +370,6 @@ INSERT INTO `item_mods` VALUES (21268,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21269,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21269,421,65); -- Crit DMG
 INSERT INTO `item_mods` VALUES (21269,11,50); -- AGI
-
-INSERT INTO `item_mods` VALUES (21379,165,2);
-INSERT INTO `item_mods` VALUES (21379,421,6);
 
 INSERT INTO `item_mods` VALUES (21683,25,60); -- Ragnarok iLvL 119 AG - ACC +60
 INSERT INTO `item_mods` VALUES (21683,165,14); -- Crit Rate +14%
