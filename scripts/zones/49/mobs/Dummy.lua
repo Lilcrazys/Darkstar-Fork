@@ -5,6 +5,7 @@
 -----------------------------------
 require("scripts/globals/msg");
 require("scripts/globals/status");
+require("scripts/globals/msg");
 
 -----------------------------------
 -- onMobInitialize Action
