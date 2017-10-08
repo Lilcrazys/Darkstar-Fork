@@ -3,9 +3,9 @@
 -- Rockfin Special Melee
 -- AoE Water damage and silence
 ---------------------------------------------
-require("scripts/globals/settings");
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)

@@ -5,9 +5,9 @@
 -- While damage is magic, power is calculated by physical attack vs physical defense.
 ---Steals 1 TP and has 1 in 10 chance to stun for 1 second.
 ---------------------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
+require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)

@@ -4,8 +4,8 @@
 -- Physical Damage with Knockback
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
-require("scripts/globals/settings");
 require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
