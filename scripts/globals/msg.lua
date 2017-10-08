@@ -2,7 +2,6 @@
 -- This file holds all global (not zone specific) text references
 ------------------------------------------------------------------------
 
-require("scripts/globals/msg");
 
 ------------------------------------
 -- Chat types
