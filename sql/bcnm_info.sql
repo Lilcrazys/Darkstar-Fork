@@ -42,6 +42,9 @@ CREATE TABLE `bcnm_info` (
 -- Dumping data for table `bcnm_info`
 -- ORDER BY:  `bcnmId`
 
+LOCK TABLES `bcnm_info` WRITE;
+/*!40000 ALTER TABLE `bcnm_info` DISABLE KEYS */;
+set autocommit=0;
 INSERT INTO `bcnm_info` VALUES (0,139,'rank_2_mission','Shitstain',1,18,1800,25,6,0,5);
 INSERT INTO `bcnm_info` VALUES (1,139,'tails_of_woe','Shitstain',1,18,1800,40,6,0,15);
 INSERT INTO `bcnm_info` VALUES (2,139,'dismemberment_brigade','Shitstain',1,18,1800,60,6,0,15);
@@ -304,7 +307,7 @@ INSERT INTO `bcnm_info` VALUES (1304,37,'central_temenos_2nd_floor','Shitstain',
 INSERT INTO `bcnm_info` VALUES (1305,37,'central_temenos_3rd_floor','Shitstain',1,18,2700,0,18,0,7);
 INSERT INTO `bcnm_info` VALUES (1306,37,'central_temenos_4th_floor','Shitstain',1,18,3600,0,18,0,7);
 INSERT INTO `bcnm_info` VALUES (1307,37,'central_temenos_4th_floor_ii','Shitstain',1,18,3600,0,18,0,7);
--- INSERT INTO `bcnm_info` VALUES (1308,255,'the_wyrm_god',NULL,NULL,1800,0,18,0,7);
+-- INSERT INTO `bcnm_info` VALUES (1308,255,'the_wyrm_god','Shitstain',1,18,1800,0,18,0,7);
 /*!40000 ALTER TABLE `bcnm_info` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
