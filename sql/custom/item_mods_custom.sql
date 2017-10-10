@@ -522,10 +522,6 @@ INSERT INTO `item_mods` VALUES (26406,135,3);
 REPLACE INTO `item_mods` VALUES (26710,11,34);
 REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
 
-INSERT INTO `item_mods` VALUES (26910,480,10); -- null dmg
-
-INSERT INTO `item_mods` VALUES (26911,480,12); -- null dmg
-
 REPLACE INTO `item_mods` VALUES (27174,10,12); --  VIT+12
 REPLACE INTO `item_mods` VALUES (27174,11,9); -- AGI+9
 REPLACE INTO `item_mods` VALUES (27174,12,17); --  INT+17
