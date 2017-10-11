@@ -13,7 +13,7 @@
 
 -- No "Enhances Holy Water Effect" MOD for Blenmot's ring or HQ (10794/10795)
 
-INSERT INTO `item_mods` VALUES (11926,416,15); --  Legion Custom MOD_NULL_PHYSICAL_DAMAGE
+INSERT INTO `item_mods` VALUES (11926,416,15); --  Ochain Legion Custom MOD_NULL_PHYSICAL_DAMAGE
 
 INSERT INTO `item_mods` VALUES (11927,163,-128); -- Aegis (lv99 no afterglow) -50% Magic Damage Taken
 
@@ -217,8 +217,6 @@ INSERT INTO `item_mods` VALUES (20687,288,15); -- DBL ATK
 -- Excalipoor II (DO NOT REMOVE UNTIL THE WS EXISTS IN DSP)
 INSERT INTO `item_mods` VALUES (20714, 355, 227); -- Add "Knights of the Rotund" (not "round", ROTUND!)
 
-REPLACE INTO `item_mods` VALUES (20715,311,96); -- Acclimator +96 M.Dmg
-
 INSERT INTO `item_mods` VALUES (20718,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (20718,506,200); -- occ
 INSERT INTO `item_mods` VALUES (20718,507,200); -- occ
@@ -303,8 +301,6 @@ INSERT INTO `item_mods` VALUES (21019,421,50); --
 
 INSERT INTO `item_mods` VALUES (21052,73,25); -- Should be Save TP +250   added Store TP +25
 
-REPLACE INTO `item_mods` VALUES (21062,28,65); --
-
 INSERT INTO `item_mods` VALUES (21077,23,60); -- Mjollnir iLvL 119 AG - ATT +60
 INSERT INTO `item_mods` VALUES (21077,431,1); -- Additional Effect - scripts\globals\items\mjollnir.lua
 INSERT INTO `item_mods` VALUES (21077,506,130); -- Extra DMG Chance 13%
@@ -319,33 +315,11 @@ INSERT INTO `item_mods` VALUES (21078,30,40); -- MACC
 INSERT INTO `item_mods` VALUES (21079,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21079,421,65); -- Crit DMG
 
-REPLACE INTO `item_mods` VALUES (21111,28,60); -- Matt
-
-REPLACE INTO `item_mods` VALUES (21139,28,165); -- Should be 60   magic dmg +  unknown
-
-REPLACE INTO `item_mods` VALUES (21140,28,185); -- Should be 60   magic dmg +  unknown
-
 INSERT INTO `item_mods` VALUES (21144,28,100); --
-
-REPLACE INTO `item_mods` VALUES (21161,28,135); -- Matt
-
-REPLACE INTO `item_mods` VALUES (21173,28,120); -- Matt
 
 INSERT INTO `item_mods` VALUES (21173,345,1000); -- tp bonus
 INSERT INTO `item_mods` VALUES (21173,506,200); -- occ
 INSERT INTO `item_mods` VALUES (21173,507,200); -- occ
-
-REPLACE INTO `item_mods` VALUES (21176,28,120); -- Should be 18 see below
-
-REPLACE INTO `item_mods` VALUES (21177,28,125); -- Matt
-
-REPLACE INTO `item_mods` VALUES (21181,28,168); -- MATT
-
-REPLACE INTO `item_mods` VALUES (21182,28,130); --  Magic Attack Bonus +25
-
-REPLACE INTO `item_mods` VALUES (21194,28,95); -- Should be 19 see below
-
-REPLACE INTO `item_mods` VALUES (21208,28,73); -- Should be 40   see below
 
 INSERT INTO `item_mods` VALUES (21212,165,25); --
 INSERT INTO `item_mods` VALUES (21212,421,50); --
@@ -519,35 +493,6 @@ INSERT INTO `item_mods` VALUES (26406,133,3);
 INSERT INTO `item_mods` VALUES (26406,134,3);
 INSERT INTO `item_mods` VALUES (26406,135,3);
 
-REPLACE INTO `item_mods` VALUES (26710,11,34);
-REPLACE INTO `item_mods` VALUES (26710,9,34); -- didnt add extra unity DEX and AGI
-
-REPLACE INTO `item_mods` VALUES (27174,10,12); --  VIT+12
-REPLACE INTO `item_mods` VALUES (27174,11,9); -- AGI+9
-REPLACE INTO `item_mods` VALUES (27174,12,17); --  INT+17
-REPLACE INTO `item_mods` VALUES (27174,13,10); -- MND+10
-REPLACE INTO `item_mods` VALUES (27174,14,8); --  CHR+8
-REPLACE INTO `item_mods` VALUES (27174,2,23); -- HP+23
-REPLACE INTO `item_mods` VALUES (27174,23,15); --  Attack+15
-REPLACE INTO `item_mods` VALUES (27174,29,1); --  Magic Def. Bonus+1 (used magic defence ?)
-REPLACE INTO `item_mods` VALUES (27174,31,51); -- Magic Evasion+51
-REPLACE INTO `item_mods` VALUES (27174,8,21); --  STR+21
-
-REPLACE INTO `item_mods` VALUES (27175,1,125); --  DEF:89
-REPLACE INTO `item_mods` VALUES (27175,10,19); --  VIT+12
-REPLACE INTO `item_mods` VALUES (27175,11,15); -- AGI+9
-REPLACE INTO `item_mods` VALUES (27175,12,26); --  INT+17
-REPLACE INTO `item_mods` VALUES (27175,13,16); -- MND+10
-REPLACE INTO `item_mods` VALUES (27175,14,12); --  CHR+8
-REPLACE INTO `item_mods` VALUES (27175,2,50); -- HP+23
-REPLACE INTO `item_mods` VALUES (27175,23,18); --  Attack+15
-REPLACE INTO `item_mods` VALUES (27175,29,3); --  Magic Def. Bonus+1 (used magic defence ?)
-REPLACE INTO `item_mods` VALUES (27175,31,75); -- Magic Evasion+51
-REPLACE INTO `item_mods` VALUES (27175,384,51); --  Haste +5%
-REPLACE INTO `item_mods` VALUES (27175,508,35); -- Third Eye": "Counter" rate +35
-REPLACE INTO `item_mods` VALUES (27175,65,40); --  Evasion+25
-REPLACE INTO `item_mods` VALUES (27175,8,33); --  STR+21
-
 INSERT INTO `item_mods` VALUES (27564,15,15);
 INSERT INTO `item_mods` VALUES (27564,8,8);
 
@@ -602,5 +547,3 @@ INSERT INTO `item_mods` VALUES (27579,30,3);
 INSERT INTO `item_mods` VALUES (27579,311,5);
 INSERT INTO `item_mods` VALUES (27579,5,55);
 
--- Assid. Pants +1
-INSERT INTO `item_mods` VALUES (28135,369,2); -- Substitute for Unity refresh (this shouldn't be here)
