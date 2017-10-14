@@ -1,12 +1,11 @@
 ---------------------------------------------------
 -- Drain Whip
 -- Steals an enemy's HP. Ineffective against undead.
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     return 0;

@@ -2,9 +2,9 @@
 -- Raksha Stance
 -- Naraka
 ---------------------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
+require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -21,7 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
     local totalDispelled = 0;
 
     mob:setMod(MOD_DMGPHYS,0);
-    mob:setMod(MOD_DMGMAGIC,-128);
+    mob:setMod(MOD_DMGMAGIC,-50);
     mob:addMod(MOD_MATT,30);
     mob:addMod(MOD_ATT,-150);
     mob:setLocalVar("stance", 1);

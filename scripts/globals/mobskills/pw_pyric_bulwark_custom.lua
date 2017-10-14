@@ -7,8 +7,8 @@
 -- Range: Self
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
-require("scripts/globals/settings");
 require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -22,9 +22,9 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-   -- addEx to pervent dispel
-   mob:addStatusEffectEx(EFFECT_PHYSICAL_SHIELD,0,1,0,45)
-   skill:setMsg(msgBasic.BUFF)
+    -- addEx to prevent dispel
+    mob:addStatusEffectEx(EFFECT_PHYSICAL_SHIELD,0,1,0,45)
+    skill:setMsg(msgBasic.BUFF)
 
-   return EFFECT_PHYSICAL_SHIELD;
+    return EFFECT_PHYSICAL_SHIELD;
 end;

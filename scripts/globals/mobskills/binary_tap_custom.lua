@@ -5,13 +5,11 @@
 -- Utsusemi/Blink absorb: Ignores Shadows
 -- Range: Melee
 -- Notes: Can be any (positive) buff, including food. Will drain about 100HP if it can't take any buffs
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     return 0;
@@ -25,9 +23,7 @@ function onMobWeaponSkill(target, mob, skill)
     local dmg = 0;
 
     if (effectFirst ~= nil) then
-
         local count = 1;
-
             -- add to myself
         mob:addStatusEffect(effectFirst:getType(), effectFirst:getPower(), effectFirst:getTickCount(), effectFirst:getDuration());
 
@@ -38,8 +34,7 @@ function onMobWeaponSkill(target, mob, skill)
 
         end
 
-
-        -- add buff to myself
+        -- msg
         skill:setMsg(msgBasic.EFFECT_DRAINED);
 
         return count;
@@ -54,5 +49,4 @@ function onMobWeaponSkill(target, mob, skill)
         skill:setMsg(msgBasic.DRAIN_HP);
         return dmg;
     end
-
 end;

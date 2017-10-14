@@ -1,11 +1,11 @@
 ---------------------------------------------------
 -- Elemental_Sforzo
 -- Grants immunity to all magic attacks.
----------------------------------------------------
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-require("scripts/globals/settings");
 require("scripts/globals/status");
----------------------------------------------------
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     if (skill:getParam() ~= 0) then

@@ -1,17 +1,15 @@
 ---------------------------------------------
---  Belly Dance
+-- Belly Dance
 --
---  Description: Charms all targets in an area of effect, that are facing the Lamia.
---  Type: Enfeebling
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: 15' radial
---  Notes: Used only by Lamia NM's, particularly in Besieged.
+-- Description: Charms all targets in an area of effect, that are facing the Lamia.
+-- Type: Enfeebling
+-- Utsusemi/Blink absorb: Ignores shadows
+-- Range: 15' radial
+-- Notes: Used only by Lamia NM's, particularly in Besieged.
 ---------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
+require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -19,8 +17,8 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_CHARM_I;
-	local power = 0;
+    local typeEffect = EFFECT_CHARM_I;
+    local power = 0;
 
     if (not target:isPC()) then
         skill:setMsg(msgBasic.MISS);

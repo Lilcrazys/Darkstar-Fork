@@ -1,13 +1,12 @@
 ---------------------------------------------------
 -- AV_Call_Wyvern
 -- Spawn Ix Wynav's
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+-- FIX ME: all sortsa wrong
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     local WYNAV_1 = GetMobAction(mob:getID()+1);
@@ -27,7 +26,6 @@ function onMobWeaponSkill(target, mob, skill)
     SpawnMob(mob:getID()+1, 300):updateEnmity(target);
     SpawnMob(mob:getID()+2, 300):updateEnmity(target);
     SpawnMob(mob:getID()+3, 300):updateEnmity(target);
-
 
     skill:setMsg(msgBasic.NONE);
 

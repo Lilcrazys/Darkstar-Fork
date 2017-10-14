@@ -1,11 +1,11 @@
 ---------------------------------------------------
 -- Ravenous_Cracklaw_Rending_Deluge
 -- Deals water elemental damage to enemies within area of effect.
----------------------------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     return 0;
@@ -21,6 +21,7 @@ function onMobWeaponSkill(target, mob, skill)
 
     MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, 1, 0, 30);
 
+    --[[ Fix me: msg conflict
     if (dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
         skill:setMsg(msgBasic.DISAPPEAR_NUM);
         return 2;
@@ -30,7 +31,7 @@ function onMobWeaponSkill(target, mob, skill)
         return 1;
     else
         skill:setMsg(msgBasic.NO_EFFECT); -- no effect
-    end
+    end]]
 
     target:delHP(dmg);
 

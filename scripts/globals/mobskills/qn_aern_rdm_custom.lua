@@ -1,13 +1,11 @@
 ---------------------------------------------------
 -- Chainspell
 -- Meant for Qn'aern (RDM) with Ix'Aern encounter
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     if (mob:getID() == 16916816) then

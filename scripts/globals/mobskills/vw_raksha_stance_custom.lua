@@ -1,12 +1,11 @@
----------------------------------------------
---  Raksha Stance
---  Naraka
----------------------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------------
+-- Raksha Stance
+-- Naraka
+---------------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     if (mob:getLocalVar("stance") == 1) then
@@ -17,24 +16,29 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-
     local dis1 = target:dispelStatusEffect();
     local dis2 = target:dispelStatusEffect();
+    local totalDispelled = 0;
 
-    if (dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
-        skill:setMsg(msgBasic.DISAPPEAR_NUM);
-        return 2;
-    elseif (dis1 ~= EFFECT_NONE or dis2 ~= EFFECT_NONE) then
-        -- dispeled only one
-        skill:setMsg(msgBasic.DISAPPEAR_NUM);
-        return 1;
-    else
-        skill:setMsg(msgBasic.NO_EFFECT); -- no effect
-    end
     mob:setMod(MOD_DMGPHYS,0);
-    mob:setMod(MOD_DMGMAGIC,-128);
+    mob:setMod(MOD_DMGMAGIC,-50);
     mob:addMod(MOD_MATT,30);
     mob:addMod(MOD_ATT,-150);
     mob:setLocalVar("stance", 1);
-    return 0;
+
+    if (dis1 ~= EFFECT_NONE) then
+        totalDispelled = totalDispelled + 1;
+    end
+
+    if (dis2 ~= EFFECT_NONE) then
+        totalDispelled = totalDispelled + 1;
+    end
+
+    if (totalDispelled == 0) then
+        skill:setMsg(msgBasic.NO_EFFECT);
+    else
+        skill:setMsg(msgBasic.DISAPPEAR_NUM);
+    end
+
+    return totalDispelled;
 end;

@@ -1,21 +1,19 @@
 ---------------------------------------------
---  Shrieking Gale
---  Harpia
+-- Shrieking Gale
+-- Harpia
 ---------------------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
+require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
+
 function onMobSkillCheck(target,mob,skill)
     return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-
     local dis1 = target:dispelStatusEffect();
     local dis2 = target:dispelStatusEffect();
-
 
     if (dis1 ~= EFFECT_NONE and dis2 ~= EFFECT_NONE) then
         skill:setMsg(msgBasic.DISAPPEAR_NUM);

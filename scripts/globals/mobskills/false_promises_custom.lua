@@ -1,11 +1,11 @@
 ---------------------------------------------
--- False_Promises
+-- False Promises
 --
 -- Description: Inflicts charm on all targets in an area of effect.
 ---------------------------------------------
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
+require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -13,14 +13,13 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_CHARM_I;
-	local power = 0;
+    local typeEffect = EFFECT_CHARM_I;
+    local power = 0;
 
     if (not target:isPC()) then
         skill:setMsg(msgBasic.MISS);
         return typeEffect;
     end
-
 
     local msg = MobStatusEffectMove(mob, target, typeEffect, power, 3, 75)
     if (msg == msgBasic.ENFEEB_IS) then

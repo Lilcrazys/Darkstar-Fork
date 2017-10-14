@@ -5,13 +5,11 @@
 -- Utsusemi/Blink absorb: Ignores Shadows
 -- Range: Melee
 -- Notes: Can be any (positive) buff, including food. Will drain about 100HP if it can't take any buffs
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     if (mob:isMobType(MOBTYPE_NOTORIOUS)) then
@@ -30,22 +28,20 @@ function onMobWeaponSkill(target, mob, skill)
 
     if (effect1 ~= nil) then
         local count = 1;
-
             -- add to myself
             mob:addStatusEffect(effect1:getType(), effect1:getPower(), effect1:getTickCount(), effect1:getDuration());
-
         if (effect2 ~= nil) then
             count = count + 1;
-                -- add to myself
-                mob:addStatusEffect(effect2:getType(), effect2:getPower(), effect2:getTickCount(), effect2:getDuration());
+            -- add to myself
+            mob:addStatusEffect(effect2:getType(), effect2:getPower(), effect2:getTickCount(), effect2:getDuration());
         end
 
         if (effect3 ~= nil) then
             count = count + 1;
-                -- add to myself
-                mob:addStatusEffect(effect3:getType(), effect3:getPower(), effect3:getTickCount(), effect3:getDuration());
+            -- add to myself
+            mob:addStatusEffect(effect3:getType(), effect3:getPower(), effect3:getTickCount(), effect3:getDuration());
         end
-        -- add buff to myself
+        -- msg
         skill:setMsg(msgBasic.EFFECT_DRAINED);
 
         return count;
@@ -54,11 +50,10 @@ function onMobWeaponSkill(target, mob, skill)
         local power = math.random(0, 151) + 150;
         dmg = MobFinalAdjustments(power,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_DARK,MOBPARAM_IGNORE_SHADOWS);
 
+        skill:setMsg(msgBasic.DRAIN_HP);
         target:delHP(dmg);
         mob:addHP(dmg);
 
-        skill:setMsg(msgBasic.DRAIN_HP);
         return dmg;
     end
-
 end;

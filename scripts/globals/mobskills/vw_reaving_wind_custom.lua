@@ -1,15 +1,15 @@
----------------------------------------------
---  Reaving Wind
+---------------------------------------------------
+-- Reaving Wind
 --
---  Description: Resets TP of all targets in an area of effect.
---  Type: Enfeebling
---  Ignores Shadows
---  Range: Unknown radial
----------------------------------------------
+-- Description: Resets TP of all targets in an area of effect.
+-- Type: Enfeebling
+-- Ignores Shadows
+-- Range: Unknown radial
+---------------------------------------------------
 require("scripts/globals/monstertpmoves");
-require("scripts/globals/settings");
 require("scripts/globals/status");
----------------------------------------------
+require("scripts/globals/msg");
+---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     return 0;

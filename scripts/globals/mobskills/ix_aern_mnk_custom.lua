@@ -1,13 +1,11 @@
 ---------------------------------------------------
 -- Hundred Fists
 -- Meant for Ix'Aern (MNK)
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     if (mob:getID() == 16916815 and mob:getLocalVar("BracerMode") == 1) then

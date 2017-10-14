@@ -1,13 +1,11 @@
 ---------------------------------------------------
 -- Activate
 -- Call automaton.
----------------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
+---------------------------------------------
 require("scripts/globals/monstertpmoves");
-
----------------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
     if (mob:hasPet() or mob:getPet() == nil) then
@@ -17,7 +15,6 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-
     mob:spawnPet();
 
     skill:setMsg(msgBasic.NONE);

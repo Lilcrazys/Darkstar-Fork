@@ -1,17 +1,13 @@
 ---------------------------------------------
---
 -- Grace of Hera (Minerva's custom version)
 --
 -- Grants custom Light Spikes effect,
 -- removes a harmful status effect
 -- or Minerva heals for 9999 HP
---
 ---------------------------------------------
-
-require("scripts/globals/settings");
-require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
-
+require("scripts/globals/status");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
