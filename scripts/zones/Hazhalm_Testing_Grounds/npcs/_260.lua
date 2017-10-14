@@ -20,6 +20,9 @@ require("scripts/globals/bcnm");
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    if (TradeBCNM(player,player:getZoneID(),trade,npc)) then
+        return;
+    end
 end;
 
 -----------------------------------
@@ -29,8 +32,10 @@ end;
 function onTrigger(player,npc)
     if (player:getCurrentMission(TOAU) == GAZE_OF_THE_SABOTEUR and player:getVar("AhtUrganStatus") == 1) then
         player:startEvent(7);
-    elseif (TradeBCNM(player,player:getZoneID(),trade,npc)) then
+    --[[
+    elseif (EventTriggerBCNM(player,npc)) then
         return;
+    ]]
     else
         npc:openDoor(10); -- Temp
     end
