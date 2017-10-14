@@ -2,16 +2,25 @@
 --  Area: Abyssea - Vunkerl (217)
 --   Mob: Bukhis
 -----------------------------------
+package.loaded["scripts/zones/Abyssea-Vunkerl/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Vunkerl/textIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 require("scripts/globals/magic");
+
 -----------------------------------
 -- OnMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
+    mob:setMobMod(MOBMOD_HP_STANDBACK,-1); -- No standing back, you get in there and melee mage it up!
+
+    -- addMod
+    mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_MACC, 100);
 end;
 
 -----------------------------------
@@ -20,14 +29,10 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGAIN,10);
+    mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_REGEN, 100);
     mob:setMod(MOD_HASTE_ABILITY, 20);
-    mob:setMod(MOD_MATT,100);
-    mob:setMod(MOD_MACC,1800);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_MDEF,50);
 end;
 
 -----------------------------------
