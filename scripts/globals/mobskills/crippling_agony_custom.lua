@@ -1,29 +1,21 @@
 ---------------------------------------------
---  Gregale Wing
 --
---  Description: An icy wind deals Ice damage to enemies within a very wide area of effect. Additional effect: Paralyze
---  Type: Magical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: 30' radial.
---  Notes: Used only by Jormungand and Isgebind
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local typeEffect = EFFECT_WEAKNESS;
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_ICE,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_WIPE_SHADOWS);
 
-	MobStatusEffectMove(mob, target, typeEffect, 40, 0, 60);
-
-	local dmgmod = 1;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*5,ELE_ICE,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_ICE,MOBPARAM_WIPE_SHADOWS);
-	target:delHP(dmg);
-	return dmg;
+    target:delHP(dmg); -- Effect AFTER dmg to avoid instant KO
+    MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 40, 0, 60);
+    return dmg;
 end;

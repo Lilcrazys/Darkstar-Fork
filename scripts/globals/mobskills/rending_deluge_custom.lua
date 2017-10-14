@@ -30,8 +30,7 @@ function onMobWeaponSkill(target, mob, skill)
         skill:setMsg(msgBasic.NO_EFFECT); -- no effect
     end]]
 
+    target:delHP(dmg); -- Effect AFTER dmg to avoid instant KO
     MobPhysicalStatusEffectMove(mob, target, skill, EFFECT_WEAKNESS, 1, 0, 90);
-
-    target:delHP(dmg);
     return dmg;
 end

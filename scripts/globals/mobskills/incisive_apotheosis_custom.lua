@@ -2,11 +2,9 @@
 -- Incisive Apotheosis
 -- Colkhab
 ---------------------------------------------------
-
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
-
 ---------------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -14,20 +12,16 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-
     local targetcurrentHP = target:getHP();
-    local targetmaxHP = target:getMaxHP();
-    local hpset=targetmaxHP*0.5;
-    local typeEffect = EFFECT_WEAKNESS;
-
-    MobStatusEffectMove(mob, target, typeEffect, 1, 0, 30);
+    local hpset = target:getMaxHP()*0.5;
 
     if (targetcurrentHP > hpset)then
-        dmg= targetcurrentHP - hpset;
+        dmg = targetcurrentHP -hpset;
     else
-        dmg=0;
+        dmg = 0;
     end
 
-        target:delHP(dmg);
+    target:delHP(dmg); -- Effect AFTER dmg to avoid instant KO
+    MobStatusEffectMove(mob, target, EFFECT_WEAKNESS, 1, 0, 30);
     return dmg;
 end;
