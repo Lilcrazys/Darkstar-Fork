@@ -1,15 +1,13 @@
 -----------------------------------
 -- Orcish Counterstance
 -----------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -17,5 +15,5 @@ function onSpellCast(caster,target,spell)
     if (target:addStatusEffect(EFFECT_COUNTERSTANCE,power,0,300) == false) then
        spell:setMsg(75);
     end
-	return EFFECT_COUNTERSTANCE;
+    return EFFECT_COUNTERSTANCE;
 end;
