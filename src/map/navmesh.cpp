@@ -213,10 +213,10 @@ std::vector<position_t> CNavMesh::findPath(const position_t& start, const positi
     filter.setIncludeFlags(0xffff);
     filter.setExcludeFlags(0);
 
-    float polyPickExt[3];
-    polyPickExt[0] = 10;
-    polyPickExt[1] = 20;
-    polyPickExt[2] = 10;
+    float polyPickExt[3]; // float polyPickExt[3];
+    polyPickExt[0] = 5;   // polyPickExt[0] = 10;
+    polyPickExt[1] = 5;   // polyPickExt[1] = 20;
+    polyPickExt[2] = 5;   // polyPickExt[2] = 10;
 
     dtPolyRef startRef;
     dtPolyRef endRef;
