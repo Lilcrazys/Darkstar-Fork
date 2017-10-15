@@ -3,17 +3,13 @@
 -- Item: Dispel Couse
 -- Enchantment: Sames as Dispel
 -----------------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
-
------------------------------------------
--- OnItemUse
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onItemUse(target)
-    local dispel = target:dispelStatusEffect();
-    if (dispel == EFFECT_NONE) then
+    if (target:dispelStatusEffect() == EFFECT_NONE) then
         skill:setMsg(msgBasic.NO_EFFECT);
     else
         skill:setMsg(msgBasic.DISPEL);
