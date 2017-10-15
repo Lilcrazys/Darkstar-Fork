@@ -3,15 +3,13 @@
 -- Item: Plaga Scythe
 -- Additional Effect: Dark Damage
 -----------------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
+-----------------------------------
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 function onAdditionalEffect(player,target,damage)
-
+    local MESSAGE = msgBasic.ADD_EFFECT_DMG;
     local dmg = math.random(3,10);
     local params = {};
     params.bonusmab = 0;
@@ -21,10 +19,5 @@ function onAdditionalEffect(player,target,damage)
     dmg = adjustForTarget(target,dmg,ELE_DARK);
     dmg = finalMagicNonSpellAdjustments(player,target,ELE_DARK,dmg);
 
-    local message = 163;
-    if (dmg < 0) then
-        message = 167;
-    end
-
-    return SUBEFFECT_DARK_DAMAGE,message,dmg;
+    return SUBEFFECT_DARK_DAMAGE,MESSAGE,dmg;
 end;
