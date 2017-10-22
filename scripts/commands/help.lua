@@ -42,7 +42,7 @@ function onTrigger(player)
         player:PrintToPlayer("!addquest  !delquest  !completequest ");
         player:PrintToPlayer("!addkeyitem  !delkeyitem  !addcurrency  !delcurrency ");
         player:PrintToPlayer("!additem  !delitem  !giveitem  !givexp  !addtreasure ");
-        player:PrintToPlayer("!addspell  !addallspells  !delspell  !setgil  !givegil ");
+        player:PrintToPlayer("!addspell  !addallspells  !delspell  !setgil ");
         player:PrintToPlayer("!setskill  !capskill  !capallskills  !title ");
         player:PrintToPlayer("!spawnmob  !despawnmob  !mobhere  !npchere  !despawnnpc ");
         player:PrintToPlayer("!raise  !dynareset  !checkrepop ");
@@ -61,6 +61,7 @@ function onTrigger(player)
     end
 
     if (gmlvl >= 4) then -- Senior GM
+        player:PrintToPlayer("!givegil  !takegil");
         player:PrintToPlayer("!timeoffset  !updateconquest ");
     end
 
@@ -74,9 +75,9 @@ function onTrigger(player)
         player:PrintToPlayer("!addallkeyitems (don't..its problematic) ");
         player:PrintToPlayer("!shoptest  !heroshop  !adddynatime (crashy) ");
         player:PrintToPlayer("!slap  !inject  !animation  !entityvisual ");
-        player:PrintToPlayer("!promote  !setflag  !setminion  !givels ");
-        player:PrintToPlayer("!takexp  !takegil  !setplayernation ");
+        player:PrintToPlayer("!givels  !setplayernation  !takexp ");
         player:PrintToPlayer("!hp  !mp  !tp  !pettp  !addeffect  !deleffect ");
+        player:PrintToPlayer("!promote  !setflag  !setminion ");
         player:PrintToPlayer("!softban ");
     end
     -- Although it IS technically possibly to create tiers as high as 255...
