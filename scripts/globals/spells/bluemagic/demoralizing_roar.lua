@@ -1,36 +1,34 @@
 -----------------------------------------
 -- Spell: Demoralizing Roar
 -----------------------------------------
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	local duration = 60;
+    local params = {};
+    params.attribute = MOD_MND;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_ATTACK_DOWN;
+    local resist = applyResistance(caster, target, spell, params);
 
-	local dINT = caster:getStat(MOD_MND) - target:getStat(MOD_MND);
-	local resist = applyResistance(caster,spell,target,dINT,37);
-	if (resist > (0.0652)) then
-		-- resisted!
-		spell:setMsg(85);
-		return 0;
-	end
+    if (resist > (0.0652)) then
+        spell:setMsg(msgBasic.MAGIC_RESIST);
+        return 0;
+    end
 
-	if (target:hasStatusEffect(EFFECT_ATTACK_DOWN) == true) then
-			spell:setMsg(75);
-	else
-		target:addStatusEffect(EFFECT_ATTACK_DOWN,20,0,duration);
-		spell:setMsg(236);
-	end
+    if (target:hasStatusEffect(params.effect)) then
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
+    else
+        target:addStatusEffect(params.effect,20,0,60);
+        spell:setMsg(msgBasic.MAGIC_ENFEEB_IS);
+    end
 
-	return EFFECT_ATTACK_DOWN;
+    return params.effect;
 end;
