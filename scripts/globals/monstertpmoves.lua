@@ -233,7 +233,7 @@ function MobPhysicalMove(mob,target,skill,numberofhits,accmod,dmgmod,tpeffect,mt
     if (hitslanded == 0 or finaldmg == 0) then
         finaldmg = 0;
         hitslanded = 0;
-        skill:setMsg(msgBasic.MISS);
+        skill:setMsg(msgBasic.SKILL_MISS);
     end
 
     returninfo.dmg = finaldmg;
@@ -312,10 +312,10 @@ function MobMagicalMove(mob,target,skill,damage,element,dmgmod,tpeffect,tpvalue)
 
 end
 
---mob version
---effect = EFFECT_WHATEVER if enfeeble
---statmod = the stat to account for resist (INT,MND,etc) e.g. MOD_INT
---This determines how much the monsters ability resists on the player.
+-- mob version
+-- effect = EFFECT_WHATEVER if enfeeble
+-- statmod = the stat to account for resist (INT,MND,etc) e.g. MOD_INT
+-- This determines how much the monsters ability resists on the player.
 function applyPlayerResistance(mob,effect,target,diff,bonus,element)
     local percentBonus = 0;
     local magicaccbonus = 0;
@@ -330,7 +330,7 @@ function applyPlayerResistance(mob,effect,target,diff,bonus,element)
         magicaccbonus = magicaccbonus + bonus;
     end
 
-    if(effect ~= nil) then
+    if (effect ~= nil) then
         percentBonus = percentBonus - getEffectResistance(target, effect);
     end
 
@@ -481,7 +481,7 @@ function MobFinalAdjustments(dmg,mob,skill,target,skilltype,skillparam,shadowbeh
     --handle pd
     if ((target:hasStatusEffect(EFFECT_PERFECT_DODGE) or target:hasStatusEffect(EFFECT_ALL_MISS) )
             and skilltype==MOBSKILL_PHYSICAL) then
-        skill:setMsg(msgBasic.MISS);
+        skill:setMsg(msgBasic.SKILL_MISS);
         return 0;
     end
 
@@ -622,7 +622,7 @@ function MobDrainMove(mob, target, drainType, drain)
         return msgBasic.DAMAGE;
     end
 
-    return msgBasic.NO_EFFECT;
+    return msgBasic.SKILL_NO_EFFECT;
 end;
 
 function MobPhysicalDrainMove(mob, target, skill, drainType, drain)
@@ -630,7 +630,7 @@ function MobPhysicalDrainMove(mob, target, skill, drainType, drain)
         return MobDrainMove(mob, target, drainType, drain);
     end
 
-    return msgBasic.MISS;
+    return msgBasic.SKILL_MISS;
 end;
 
 function MobDrainAttribute(mob, target, typeEffect, power, tick, duration)
@@ -654,16 +654,16 @@ function MobDrainAttribute(mob, target, typeEffect, power, tick, duration)
     if (positive ~= nil) then
         local results = MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
 
-        if (results == msgBasic.ENFEEB_IS) then
+        if (results == msgBasic.SKILL_ENFEEB_IS) then
             mob:addStatusEffect(positive, power, tick, duration);
 
             return msgBasic.ATTR_DRAINED;
         end
 
-        return msgBasic.MISS;
+        return msgBasic.SKILL_MISS;
     end
 
-    return msgBasic.NO_EFFECT;
+    return msgBasic.SKILL_NO_EFFECT;
 end;
 
 function MobDrainStatusEffectMove(mob, target)
@@ -680,7 +680,7 @@ function MobDrainStatusEffectMove(mob, target)
         return msgBasic.EFFECT_DRAINED;
     end
 
-    return msgBasic.NO_EFFECT;
+    return msgBasic.SKILL_NO_EFFECT;
 end;
 
 -- Adds a status effect to a target
@@ -707,12 +707,12 @@ function MobStatusEffectMove(mob, target, typeEffect, power, tick, duration)
             if (typeEffect == EFFECT_DOOM) then totalDuration = duration; end
             target:addStatusEffect(typeEffect, power, tick, totalDuration);
 
-            return msgBasic.ENFEEB_IS;
+            return msgBasic.SKILL_ENFEEB_IS;
         end
 
-        return msgBasic.MISS; -- resist !
+        return msgBasic.SKILL_MISS; -- resist !
     end
-    return msgBasic.NO_EFFECT; -- no effect
+    return msgBasic.SKILL_NO_EFFECT; -- no effect
 end;
 
 -- similar to status effect move except, this will not land if the attack missed
@@ -722,7 +722,7 @@ function MobPhysicalStatusEffectMove(mob, target, skill, typeEffect, power, tick
         return MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
     end
 
-    return msgBasic.MISS;
+    return msgBasic.SKILL_MISS;
 end;
 
 -- similar to statuseffect move except it will only take effect if facing
@@ -730,7 +730,7 @@ function MobGazeMove(mob, target, typeEffect, power, tick, duration)
     if (target:isFacing(mob)) then
         return MobStatusEffectMove(mob, target, typeEffect, power, tick, duration);
     end
-    return msgBasic.NO_EFFECT;
+    return msgBasic.SKILL_NO_EFFECT;
 end;
 
 function MobBuffMove(mob, typeEffect, power, tick, duration)
@@ -738,7 +738,7 @@ function MobBuffMove(mob, typeEffect, power, tick, duration)
     if (mob:addStatusEffect(typeEffect,power,tick,duration)) then
         return msgBasic.BUFF;
     end
-    return msgBasic.NO_EFFECT;
+    return msgBasic.SKILL_NO_EFFECT;
 end;
 
 function MobHealMove(target, heal)

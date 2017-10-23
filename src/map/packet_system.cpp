@@ -304,8 +304,7 @@ void SmallPacket0x00A(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     if (!PChar->loc.zoning)
         PChar->StatusEffectContainer->DelStatusEffectsByFlag(EFFECTFLAG_ON_ZONE, true);
 
-    CTaskMgr::getInstance()->AddTask(new CTaskMgr::CTask("afterZoneIn", server_clock::now() + 500ms, (void*)PChar->id, CTaskMgr::TASK_ONCE, luautils::AfterZoneIn));
-    return;
+    PChar->PAI->QueueAction(queueAction_t(400ms, false, luautils::AfterZoneIn));
 }
 
 /************************************************************************
@@ -1533,9 +1532,7 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     {
     case 0x01:
     {
-        int8* fmtQuery;
-
-        fmtQuery = "SELECT itemid, itemsubid, slot, quantity, sent, extra, sender, charname FROM delivery_box WHERE charid = %u AND box = %d AND slot < 8 ORDER BY slot;";
+        const char* fmtQuery = "SELECT itemid, itemsubid, slot, quantity, sent, extra, sender, charname FROM delivery_box WHERE charid = %u AND box = %d AND slot < 8 ORDER BY slot;";
 
         int32 ret = Sql_Query(SqlHandle, fmtQuery, PChar->id, boxtype);
 

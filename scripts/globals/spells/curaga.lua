@@ -2,13 +2,10 @@
 -- Spell: Curaga
 -- Restores HP of all party members within area of effect.
 -----------------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -32,10 +29,10 @@ function onSpellCast(caster,target,spell)
     local final = getCureFinal(caster,spell,getBaseCureOld(power,divisor,constant),minCure,false);
 
     final = final + (final * (target:getMod(MOD_CURE_POTENCY_RCVD)/100));
-    
+
     --Applying server mods....
     final = final * CURE_POWER;
-    
+
     local diff = (target:getMaxHP() - target:getHP());
     if (final > diff) then
         final = diff;
@@ -44,17 +41,8 @@ function onSpellCast(caster,target,spell)
 
     target:wakeUp();
     caster:updateEnmityFromCure(target,final);
-    
-    spell:setMsg(367);
-    
-    if (caster:getObjType() == TYPE_PC) then
-        if (caster:getEquipID(SLOT_FEET) == 28151
-        or caster:getEquipID(SLOT_FEET) == 27241
-        or caster:getEquipID(SLOT_FEET) == 27242
-        or caster:getEquipID(SLOT_FEET) == 11126) then
-            caster:addMp(final*0.05);
-        end
-    end
+
+    spell:setMsg(msgBasic.AOE_HP_RECOVERY);
 
     return final;
 end;

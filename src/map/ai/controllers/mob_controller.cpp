@@ -921,6 +921,7 @@ bool CMobController::Disengage()
     m_NeutralTime = m_Tick;
 
     PMob->PAI->PathFind->Clear();
+    PMob->PEnmityContainer->Clear();
 
     if (PMob->getMobMod(MOBMOD_IDLE_DESPAWN))
     {
