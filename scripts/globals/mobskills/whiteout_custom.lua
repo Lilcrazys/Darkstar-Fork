@@ -11,28 +11,57 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 10;
-    local dmgmod = 3;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_SLASH,MOBPARAM_3_SHADOW);
-    local effect = nil;
+    local message = msgBasic.SKILL_MISS;
+    local effect = EFFECT_SLEEP_II;
 
     if (MobStatusEffectMove(mob, target, EFFECT_SLEEP_II, 10, 0, 60) == msgBasic.ENFEEB_IS) then
-        effect = EFFECT_SLEEP_II;
-        skill:setMsg(msgBasic.ENFEEB_IS);
+        message = msgBasic.ENFEEB_IS;
     end
 
+     -- Retail prolly keeps the sleep message, but we're switching to curse IF it lands.
+     -- This is the only reason we don't just pass the sleep one into skill:setMsg()
+     -- Since MobStatusEffectMove() returns the message already.
     if (MobStatusEffectMove(mob, target, EFFECT_CURSE_I, 50, 0, 60) == msgBasic.ENFEEB_IS) then
         effect = EFFECT_CURSE_I;
-        skill:setMsg(msgBasic.ENFEEB_IS);
+        message = msgBasic.ENFEEB_IS;
     end
 
-    target:delHP(dmg);
+    skill:setMsg(message);
 
-    if (effect ~= nil) then
-        return effect;
+    -- When used by Isarukitsck, all "Little Wingman" switch to his target
+    if (mob:getPool() == 9888) then
+        for wingman = mob:getID()+1, mob:getID()+3 do
+            if (GetMobByID(wingman:isAlive())) then
+                local enmityList = wingman:getEnmityList();
+                for _, players in pairs(enmityList) do
+                    wingman:resetEnmity(players);
+                end
+
+                wingman:updateEnmity(target);
+            end
+        end
     end
 
-    return dmg;
+    return effect;
+  --[[
+    -- Hypothetical DSP ver, which does not exist yet..
+    skill:setMsg(MobStatusEffectMove(mob, target, EFFECT_SLEEP_II, 10, 0, 60));
+    -- MobStatusEffectMove(mob, target, ZOMBIE EFFECT HERE, 50, 0, 60); -- Prevents healing, can only be removed by whm "sacrifice" spell.
+
+    -- When used by Isarukitsck, all "Little Wingman" switch to his target
+    if (mob:getPool() == POOL ID HERE) then
+        for wingman = mob:getID()+1, mob:getID()+3 do
+            if (GetMobByID(wingman:isAlive())) then
+                local enmityList = wingman:getEnmityList();
+                for _, players in pairs(enmityList) do
+                    wingman:resetEnmity(players);
+                end
+
+                wingman:updateEnmity(target);
+            end
+        end
+    end
+
+    return effect;
+  ]]
 end;

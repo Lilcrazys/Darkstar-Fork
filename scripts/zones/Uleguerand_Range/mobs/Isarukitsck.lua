@@ -1,25 +1,30 @@
 -----------------------------------
--- Area: ?
--- VWNM:
+-- Area: Uleguerand Range
+-- VWNM: Isarukitsck
+-- Notes:
+-- Isarukitsck gains damage reduction for each Little Wingman killed.
+-- When Isarukitsck uses Whiteout, all Little Wingman will switch to Isarukitsck's target
 -----------------------------------
-
+require("scripts/globals/keyitems");
+require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-require("scripts/globals/keyitems");
-require("scripts/globals/quests");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
+    -- setMobMod
     mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
 
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_ATT,150);
     mob:addMod(MOD_DEF,50);
+    mob:addMod(MOD_MACC,100);
+    mob:addMod(MOD_MATT,80);
 end;
 
 -----------------------------------
@@ -28,14 +33,21 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_REFRESH, 250);
-    mob:setMod(MOD_UFASTCAST, 55);
-    mob:setMod(MOD_MACC,1950);
-    mob:setMod(MOD_MATT,80);
     mob:setMod(MOD_DOUBLE_ATTACK,25);
+    mob:setMod(MOD_UFASTCAST, 55);
+    mob:setMod(MOD_REFRESH, 25);
+    mob:setMod(MOD_REGAIN, 10);
+    mob:setMod(MOD_REGEN, 50);
 
+    -- Spawn Isarukitsck's Wingemen so he can impress them penguin ladies
+    local rndXPos = math.random(0,2); -- So they aren't all stacked..
+    local rndYPos = math.random(0,2); -- So they aren't all stacked..
+    for wingman = mob:getID()+1, mob:getID()+3 do
+        if (GetMobByID(wingman):isSpawned() == false) then
+            SpawnMob(wingman):updateEnmity(target);
+            GetMobByID(wingman):setPos(mob:getXPos()+rndXPos, mob:getYPos(), mob:getYPos()+rndYPos);
+        end
+    end
 end;
 
 -----------------------------------
@@ -43,13 +55,15 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-end;
-
------------------------------------
--- onMobWeaponSkill Action
------------------------------------
-
-function onMobWeaponSkill(target, mob, skill)
+    local enmity = 0;
+    for wingman = mob:getID()+1, mob:getID()+3 do
+        if (GetMobByID(wingman:isAlive())) then
+            enmity = GetMobByID(wingman):GetCE() + GetMobByID(wingman):GetVE();
+            if (enmity == 0) then
+                wingman:updateEnmity(target);
+            end
+        end
+    end
 end;
 
 -----------------------------------
@@ -57,27 +71,23 @@ end;
 -----------------------------------
 
 function onMobFight(mob, target)
-    local popTimerDelay = 120; -- For easy adjustment.
-    local popTime = mob:getLocalVar("nextPetPop");
-    local rndPos = math.random(0,2); -- So they aren't all unforgettably stacked..
-    if (rndPos == 2) then
-        rdnPos = -1;
+    local Wingman1 = mob:getID()+1;
+    local Wingman2 = mob:getID()+2;
+    local Wingman3 = mob:getID()+3;
+
+    if (GetMobByID(Wingman1):isDead() and mob:getLocalVar("DT1") == 0) then
+        mob:setLocalVar("DT1", 1);
+        mob:addMod(MOD_DMG, -30);
     end
 
-    if (os.time(t) > popTime) then
-        if (GetMobAction(mob:getID()+1) == ACTION_NONE) then
-            SpawnMob(mob:getID()+1):updateEnmity(target);
-            GetMobByID(mob:getID()+1):setPos(mob:getXPos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
-        elseif (GetMobAction(mob:getID()+2) == ACTION_NONE) then
-            SpawnMob(mob:getID()+2):updateEnmity(target);
-            GetMobByID(mob:getID()+2):setPos(mob:getXPos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
-        elseif (GetMobAction(mob:getID()+3) == ACTION_NONE) then
-            SpawnMob(mob:getID()+3):updateEnmity(target);
-            GetMobByID(mob:getID()+3):setPos(mob:getXPos()+rndPos, mob:getYPos(), mob:getYPos()+rndPos);
-            mob:setLocalVar("nextPetPop", os.time(t)+popTimerDelay);
-        end
+    if (GetMobByID(Wingman2):isDead() and mob:getLocalVar("DT2") == 0) then
+        mob:setLocalVar("DT2", 1);
+        mob:addMod(MOD_DMG, -30);
+    end
+
+    if (GetMobByID(Wingman3):isDead() and mob:getLocalVar("DT3") == 0) then
+        mob:setLocalVar("DT3", 1);
+        mob:addMod(MOD_DMG, -30);
     end
 end;
 
@@ -86,8 +96,16 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-
+    -- Check killer so that we only do this part once.
     if (isKiller == true) then
+        -- Kill the wingmen..
+        for wingman = mob:getID()+1, mob:getID()+3 do
+            if (GetMobByID(wingman):isAlive()) then
+                GetMobByID(wingman):setHP(0);
+            end
+        end
+
+        -- Loot time! Adds one of these to the pool of this person's party/alliance.
         local RND1 = math.random(1,8);
         if (RND1 == 1) then
             player:addTreasure(8919, mob); -- Ifritear
@@ -108,6 +126,7 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 
+    -- This part runs once on each party/alliance member.
     if (player:getQuestStatus(OTHER_AREAS, VW_OP_026_TAVNAZIAN_TERRORS) == QUEST_ACCEPTED) then
         if (player:getMaskBit(player:getVar("HYACINTH_STRATUM"), 3) == false) then
             player:setMaskBit(player:getVar("HYACINTH_STRATUM"),"HYACINTH_STRATUM",3,true);

@@ -2848,7 +2848,7 @@ INSERT INTO `mob_skills` VALUES (2813,2557,'dunur_strike_custom',0,7.0,2000,1500
 -- INSERT INTO `mob_skills` VALUES (2816,2560,'beak_lunge',0,7.0,2000,1500,4,0,0,0,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2817,2561,'frigid_shuffle',0,7.0,2000,1500,4,0,0,0,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2818,2562,'wing_whirl',0,7.0,2000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (2819,2563,'whiteout_custom',1,20.0,2000,1500,4,0,0,0,0,0,0); -- fix me
+INSERT INTO `mob_skills` VALUES (2819,1159,'whiteout_custom',1,20.0,2000,1500,4,0,0,0,0,0,0);
 -- INSERT INTO `mob_skills` VALUES (2820,2564,'keratinous_crush',0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (2821,2565,'accurst_spear_custom',0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (2822,2566,'eldritch_wind_custom',1,30.0,2000,1500,4,0,0,3,0,0,0);

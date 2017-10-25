@@ -1,20 +1,17 @@
------------------------------------
--- Area: ?
--- VWNM:
------------------------------------
-
+--------------------------------------------
+-- Area: Uleguerand Range
+--  Mob: Little Wingman
+-- Notes:
+-- Assists Isarukitsck, who gains damage reduction for each Little Wingman killed.
+-- When Isarukitsck uses Whiteout, all Little Wingman will switch to Isarukitsck's target
+--------------------------------------------
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-require("scripts/globals/keyitems");
 
 -----------------------------------
 -- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_MAGIC_COOL, 45);
-
     -- addMod
     mob:addMod(MOD_ATT,150);
 end;
@@ -25,13 +22,8 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGEN, 50);
+    mob:setMod(MOD_REGEN, 25);
     mob:setMod(MOD_REGAIN, 10);
-    mob:setMod(MOD_MACC,2400);
-    mob:setMod(MOD_MATT,90);
-    mob:setMod(MOD_DOUBLE_ATTACK,25);
-    mob:setMod(MOD_COUNTER,30);
-
 end;
 
 -----------------------------------
@@ -39,13 +31,6 @@ end;
 -----------------------------------
 
 function onMobEngaged(mob, target)
-end;
-
------------------------------------
--- onMobWeaponSkill Action
------------------------------------
-
-function onMobWeaponSkill(target, mob, skill)
 end;
 
 -----------------------------------
