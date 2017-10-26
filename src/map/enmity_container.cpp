@@ -156,8 +156,8 @@ void CEnmityContainer::UpdateEnmity(CBattleEntity* PEntity, int32 CE, int32 VE, 
         if (initial) CE += 200;
         float bonus = CalculateEnmityBonus(PEntity);
 
-        CE = dsp_cap((int16)(CE * bonus), 0, 30000);
-        VE = dsp_cap((int16)(VE * bonus), 0, 30000);
+        CE = dsp_cap((int32)(CE * bonus), 0, 30000);
+        VE = dsp_cap((int32)(VE * bonus), 0, 30000);
         auto maxTH = 0;
         if (CE + VE > 0)
             maxTH = (uint8)(PEntity->getMod(Mod::TREASURE_HUNTER));
@@ -211,8 +211,8 @@ void CEnmityContainer::UpdateEnmityFromCure(CBattleEntity* PEntity, uint8 level,
 
         auto mod = battleutils::GetEnmityModCure(level);
 
-        CE = (int16)(40. / mod * CureAmount * bonus * tranquilHeartReduction);
-        VE = (int16)(240. / mod * CureAmount * bonus * tranquilHeartReduction);
+        CE = (int32)(40. / mod * CureAmount * bonus * tranquilHeartReduction);
+        VE = (int32)(240. / mod * CureAmount * bonus * tranquilHeartReduction);
     }
 
     auto enmity_obj = m_EnmityList.find(PEntity->id);
@@ -224,7 +224,7 @@ void CEnmityContainer::UpdateEnmityFromCure(CBattleEntity* PEntity, uint8 level,
         enmity_obj->second.active = true;
     }
     else
-        m_EnmityList.emplace(PEntity->id, EnmityObject_t{ PEntity, (int16)dsp_cap(CE, 0, 30000), (int16)dsp_cap(VE, 0, 30000), true, 0 });
+        m_EnmityList.emplace(PEntity->id, EnmityObject_t{ PEntity, (int32)dsp_cap(CE, 0, 30000), (int32)dsp_cap(VE, 0, 30000), true, 0 });
 }
 
 /************************************************************************
@@ -242,10 +242,10 @@ void CEnmityContainer::LowerEnmityByPercent(CBattleEntity* PEntity, uint8 percen
     {
         float mod = ((float)(percent) / 100.0f);
 
-        auto CEValue = (int16)(enmity_obj->second.CE * mod);
+        auto CEValue = (int32)(enmity_obj->second.CE * mod);
         enmity_obj->second.CE -= (CEValue < 0 ? 0 : CEValue);
 
-        auto VEValue = (int16)(enmity_obj->second.VE * mod);
+        auto VEValue = (int32)(enmity_obj->second.VE * mod);
         enmity_obj->second.VE -= (VEValue < 0 ? 0 : VEValue);
 
 
