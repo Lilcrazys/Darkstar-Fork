@@ -6,8 +6,8 @@
 -- (it is a single effect in the client).
 -- Todo: table this BS / ditch these functions
 -----------------------------------
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 -----------------------------------
 
 function atmaEffectGain(target, effect)
@@ -51,7 +51,7 @@ function atmaEffectGain(target, effect)
     elseif (pwr == 11) then -- ATMA_OF_THE_VORACIOUS_VIOLET
         target:addMod(MOD_STR, 50);
         target:addMod(MOD_DOUBLE_ATTACK, 10);
-        target:addMod(MOD_REGAIN, 20);
+        target:addMod(MOD_REGAIN, 200);
     elseif (pwr == 12) then -- ATMA_OF_CLOAK_AND_DAGGER
         target:addMod(MOD_ACC, 40);
         target:addMod(MOD_EVA, 40);
@@ -174,7 +174,7 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_CRITHITRATE, 30);
         target:addMod(MOD_CRIT_DMG_INCREASE, 10);
     elseif (pwr == 46) then -- ATMA_OF_THE_BLUDGEONING_BRUTE
-        target:addMod(MOD_REGAIN, 1);
+        target:addMod(MOD_REGAIN, 10);
         target:addMod(MOD_THUNDERRES, 50);
         target:addMod(MOD_WATERRES, 50);
     elseif (pwr == 47) then -- ATMA_OF_THE_RAPID_REPTILIAN
@@ -201,7 +201,7 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_INT, 50);
         target:addMod(MOD_ENMITY, -20);
     elseif (pwr == 54) then -- ATMA_OF_THE_WOULD_BE_KING
-        target:addMod(MOD_REGAIN, 10);
+        target:addMod(MOD_REGAIN, 100);
         target:addMod(MOD_STORETP, 20);
         target:addMod(MOD_TP_BONUS, 20);
     elseif (pwr == 55) then -- ATMA_OF_THE_BLINDING_HORN
@@ -328,7 +328,7 @@ function atmaEffectGain(target, effect)
         target:addMod(MOD_DMG, -25);
         target:addMod(MOD_REGEN, 2);
     elseif (pwr == 90) then -- ATMA_OF_THE_SEA_DAUGHTER
-        target:addMod(MOD_REGAIN, 5);
+        target:addMod(MOD_REGAIN, 50);
         target:addMod(MOD_HASTE_GEAR, -12);
         target:addMod(MOD_REGEN, 30);
     elseif (pwr == 91) then -- ATMA_OF_THE_HATEFUL_STREAM
@@ -457,7 +457,7 @@ function atmaEffectLose(target, effect)
     elseif (pwr == 11) then -- ATMA_OF_THE_VORACIOUS_VIOLET
         target:delMod(MOD_STR, 50);
         target:delMod(MOD_DOUBLE_ATTACK, 10);
-        target:delMod(MOD_REGAIN, 20);
+        target:delMod(MOD_REGAIN, 200);
     elseif (pwr == 12) then -- ATMA_OF_CLOAK_AND_DAGGER
         target:delMod(MOD_ACC, 40);
         target:delMod(MOD_EVA, 40);
@@ -580,7 +580,7 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_CRITHITRATE, 30);
         target:delMod(MOD_CRIT_DMG_INCREASE, 10);
     elseif (pwr == 46) then -- ATMA_OF_THE_BLUDGEONING_BRUTE
-        target:delMod(MOD_REGAIN, 1);
+        target:delMod(MOD_REGAIN, 10);
         target:delMod(MOD_THUNDERRES, 50);
         target:delMod(MOD_WATERRES, 50);
     elseif (pwr == 47) then -- ATMA_OF_THE_RAPID_REPTILIAN
@@ -607,7 +607,7 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_INT, 50);
         target:delMod(MOD_ENMITY, -20);
     elseif (pwr == 54) then -- ATMA_OF_THE_WOULD_BE_KING
-        target:delMod(MOD_REGAIN, 10);
+        target:delMod(MOD_REGAIN, 100);
         target:delMod(MOD_STORETP, 20);
         target:delMod(MOD_TP_BONUS, 20);
     elseif (pwr == 55) then -- ATMA_OF_THE_BLINDING_HORN
@@ -734,7 +734,7 @@ function atmaEffectLose(target, effect)
         target:delMod(MOD_DMG, -25);
         target:delMod(MOD_REGEN, 2);
     elseif (pwr == 90) then -- ATMA_OF_THE_SEA_DAUGHTER
-        target:delMod(MOD_REGAIN, 5);
+        target:delMod(MOD_REGAIN, 50);
         target:delMod(MOD_HASTE_GEAR, -12);
         target:delMod(MOD_REGEN, 30);
     elseif (pwr == 91) then -- ATMA_OF_THE_HATEFUL_STREAM

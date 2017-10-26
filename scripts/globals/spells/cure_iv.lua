@@ -129,13 +129,9 @@ function onSpellCast(caster,target,spell)
         end
     end
 
-    if (caster:getObjType() == TYPE_PC) then
-        if (caster:getEquipID(SLOT_FEET) == 28151
-        or caster:getEquipID(SLOT_FEET) == 27241
-        or caster:getEquipID(SLOT_FEET) == 27242
-        or caster:getEquipID(SLOT_FEET) == 11126) then
-            caster:addMp(final*0.05);
-        end
+    local mpBonusPercent = (final*caster:getMod(MOD_CURE2MP_PERCENT))/100;
+    if (mpBonusPercent > 0) then
+        caster:addMp(mpBonusPercent);
     end
 
     return final;
