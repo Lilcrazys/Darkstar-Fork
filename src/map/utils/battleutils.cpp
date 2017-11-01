@@ -667,7 +667,7 @@ namespace battleutils
             case SPIKE_REPRISAL:
                 if (PDefender->objtype == TYPE_MOB)
                 {
-                    damage += (float)damageTaken*0.3;
+                    damage += (uint16)(damageTaken*0.3f);
                 }
                 break;
             default:

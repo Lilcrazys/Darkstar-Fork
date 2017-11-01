@@ -3612,7 +3612,7 @@ namespace charutils
             if (PChar->StatusEffectContainer->HasStatusEffect(EFFECT_SIGIL) &&
                 (region >= 33 && region <= 40))
             {
-                charutils::AddPoints(PChar, "allied_notes", (exp * 0.1f));
+                charutils::AddPoints(PChar, "allied_notes", (int32)(exp * 0.1f));
                 PChar->pushPacket(new CConquestPacket(PChar));
             }
 
@@ -3622,7 +3622,7 @@ namespace charutils
             {
                 uint16 TextID = luautils::GetTextIDVariable(Pzone, "CRUOR_OBTAINED");
                 uint32 Total = charutils::GetPoints(PChar, "cruor");
-                uint32 Cruor = exp * 0.2f; // Need to work out how to do cruor chains, until then no cruor will drop unless this line is customized for non retail play.
+                uint32 Cruor = (int32)(exp * 0.2f); // Need to work out how to do cruor chains, until then no cruor will drop unless this line is customized for non retail play.
 
                 if (TextID == 0)
                 {

@@ -1,6 +1,6 @@
 -----------------------------------
---  Area: Abyssea - Vunkerl (217)
---   Mob: Bukhis
+-- Area: Abyssea - Vunkerl (217)
+--  Mob: Bukhis
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Vunkerl/TextIDs"] = nil;
 -----------------------------------

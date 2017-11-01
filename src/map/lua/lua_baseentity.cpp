@@ -83,7 +83,7 @@
 #include "../packets/change_music.h"
 #include "../packets/conquest_map.h"
 #include "../packets/weather.h"
-#include"../message.h"
+
 #include "../ability.h"
 #include "../utils/battleutils.h"
 #include "../utils/blueutils.h"
@@ -11590,7 +11590,7 @@ int32 CLuaBaseEntity::knockback(lua_State* L)
     auto PChar = (CCharEntity*)m_PBaseEntity;
     auto id = (uint32)lua_tointeger(L, 1);
     auto animation = (uint16)lua_tointeger(L, 2);
-    auto knockback = (uint16)lua_tointeger(L, 3);
+    auto knockback = (uint8)lua_tointeger(L, 3);
     auto messageID = (uint16)lua_tointeger(L, 4);
     auto paramID = (uint16)lua_tointeger(L, 5);
 
