@@ -13,7 +13,7 @@ function disturbMob(mob)
 end
 
 function onMobSpawn(mob)
--    -[[
+    --[[
     disturbMob(mob);
     ]
 end;
@@ -25,7 +25,7 @@ function onMobEngaged(mob, target)
 end;
 
 function onMobFight(mob, target)
--    -[[
+    --[[
     disturbMob(mob);
     ]]
 end;
@@ -62,8 +62,8 @@ function onMobDespawn(mob)
         local Taisaijin_ToD = GetServerVariable("Taisaijin[POP]");
         if (Taisaijin_ToD <= os.time(t) and GetMobAction(Taisaijin) == 0) then
             if (math.random(1,15) == 5) then
-                DeterMob(Taisai, true);
-                DeterMob(Taisaijin, false);
+                DisallowRespawn(Taisai, true);
+                DisallowRespawn(Taisaijin, false);
                 UpdateNMSpawnPoint(Taisaijin);
                 GetMobByID(Taisaijin):setRespawnTime(300);
                 SetServerVariable("Taisaijin[PH]", Taisai);

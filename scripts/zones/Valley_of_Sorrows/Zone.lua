@@ -24,17 +24,17 @@ function onInitialize(zone)
     if (LandKingSystem_HQ ~= 1
     and GetServerVariable("[POP]Aspidochelone") <= os.time(t)
     and GetServerVariable("[PH]Aspidochelone") > 6) then
-        DeterMob(17301538, false);
+        DisallowRespawn(17301538, false);
         SetRespawnTime(17301538, 900, 10800); -- Aspidochelone
         if (LandKingSystem_NQ == 0) then
-            DeterMob(17301537, true);
+            DisallowRespawn(17301537, true);
         end
     else
         if (LandKingSystem_NQ ~= 1) then
-            DeterMob(17301537, false);
+            DisallowRespawn(17301537, false);
             SetRespawnTime(17301537, 900, 10800); -- Adamantoise
             if (LandKingSystem_HQ == 0) then
-                DeterMob(17301538, true);
+                DisallowRespawn(17301538, true);
             end
         end
     end

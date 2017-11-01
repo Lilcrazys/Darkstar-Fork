@@ -72,9 +72,9 @@ function onGameHour()
     local day = tonumber(os.date("%d"));
     -- Dec 5th through Jan 5th.
     if ((month == 12 and day >= 5) or (month == 1 and day <= 5)) then
-        DeterMob(TwinkleTreantID, false);
+        DisallowRespawn(TwinkleTreantID, false);
     else
-        DeterMob(TwinkleTreantID, true);
+        DisallowRespawn(TwinkleTreantID, true);
         if (GetMobAction(TwinkleTreantID) == ACTION_ROAMING) then
             DespawnMob(TwinkleTreantID);
         end

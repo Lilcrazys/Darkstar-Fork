@@ -74,7 +74,7 @@ end;
 -- onMobFight Action
 -----------------------------------
 
-function onMobFight(mob, target).
+function onMobFight(mob, target)
     -- 45 min passed and its not already raged
     if (BattleTime - os.time() > 2700 and mob:getLocalVar("RAGED") == 0) then
         mob:setLocalVar("RAGED", 1);
@@ -118,11 +118,11 @@ function onSpellPrecast(mob, spell)
         [207] = 823, -- Freeze2
         [205] = 821  -- Flare2
     }
-    if (spellTable[spell:getID] ~= nil) then
+    if (spellTable[spell:getID()] ~= nil) then
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
         spell:setRadius(30);
-        spell:setAnimation(spellTable[spell:getID]);
+        spell:setAnimation(spellTable[spell:getID()]);
     end
 end;
 

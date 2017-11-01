@@ -34,7 +34,7 @@ function onMobDespawn(mob)
     DisallowRespawn(mob:getID(), true);
     DisallowRespawn(ph:getID(), false);
     ph:setRespawnTime(GetMobRespawnTime(ph:getID()));
-    
+
     -- pick next placeholder
     phIndex = (phIndex % 3) + 1;
     ph = GetMobByID(TAISAIJIN_PH[phIndex]);
@@ -45,6 +45,6 @@ function onMobDespawn(mob)
     local Taisaijin_PH = GetServerVariable("Taisaijin[PH]");
     SetServerVariable("Taisaijin[POP]", os.time() + math.random(900, 2700));
     SetServerVariable("Taisaijin[PH]", 0);
-    DeterMob(mob:getID(), true);
-    DeterMob(Taisaijin_PH, false);
+    DisallowRespawn(mob:getID(), true);
+    DisallowRespawn(Taisaijin_PH, false);
 end;
