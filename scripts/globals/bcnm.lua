@@ -45,7 +45,6 @@ itemid_bcnmid_map =
     206, {0, 0}, -- Qu'Bia Arena
     207, {1544, 545}, -- Cloister of Flames
     209, {1547, 578, 1169, 577}, -- Cloister of Tremors
-    211, {1549, 609} -- Cloister of Tides
     211, {1549, 609}, -- Cloister of Tides
     255, {3924,1308} -- Abyssea Empyreal Paradox (Custom Shinryu)
 }
@@ -237,7 +236,7 @@ function EventUpdateBCNM(player, csid, option, entrance)
             local name = 'Meme';
             local partySize = 5;
             local clearTime = 260;
-            
+
             if battlefield then
                 local record = battlefield:getRecord()
                 name = record.name
