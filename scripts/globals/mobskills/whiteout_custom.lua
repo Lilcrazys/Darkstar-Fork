@@ -34,7 +34,7 @@ function onMobWeaponSkill(target, mob, skill)
             if (GetMobByID(wingman:isAlive())) then
                 local enmityList = wingman:getEnmityList();
                 for _, players in pairs(enmityList) do
-                    wingman:resetEnmity(players);
+                    wingman:resetEnmity(players.entity);
                 end
 
                 wingman:updateEnmity(target);

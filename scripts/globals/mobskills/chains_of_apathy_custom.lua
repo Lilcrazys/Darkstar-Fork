@@ -12,9 +12,9 @@ require("scripts/globals/msg");
 function onMobSkillCheck(target,mob,skill)
     local targets = mob:getEnmityList();
     for i,v in pairs(targets) do
-        if (v:isPC()) then
+        if (v.entity:isPC()) then
             local race = v:getRace()
-            if (race == 1 or race == 2) and not v:hasKeyItem(LIGHT_OF_VAHZL) then
+            if (race == 1 or race == 2) and not v.entity:hasKeyItem(LIGHT_OF_VAHZL) then
                 mob:showText(mob, PROMATHIA_TEXT);
                 return 0;
             end
