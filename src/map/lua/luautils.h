@@ -276,6 +276,7 @@ namespace luautils
 
     // Custom
     int32 isValidLS(lua_State*); // Checks if LS exists
+    int32 underscore2space(lua_State* L); // Replaces underscores in given string with spaces
 
 };
 

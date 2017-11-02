@@ -63,7 +63,21 @@ CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE
     ref<uint8>(0x04) = MessageType;
     ref<uint16>(0x06) = PEntity->getZone();
 
-    auto speakerName = (PEntity->objtype != TYPE_PC ? PEntity->GetCleanedName() : PEntity->GetName());
+    auto speakerName = PEntity->GetName();
+    if (PEntity->objtype != TYPE_PC)
+    {
+        string_t fixedName = PEntity->GetName();
+
+        // Strip out the _ in strings, replace with spaces
+        size_t string_pos = fixedName.find("_");
+        while (string_pos < fixedName.size())
+        {
+            fixedName.replace(string_pos, 1, " ");
+            string_pos = fixedName.find("_");
+        }
+
+        speakerName = fixedName.c_str();
+    }
 
     memcpy(data + (0x08), speakerName, PEntity->name.size());
     memcpy(data + (0x18), buff, buffSize);

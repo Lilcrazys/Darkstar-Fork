@@ -38,7 +38,7 @@
 #include "lua_trade_container.h"
 #include "lua_zone.h"
 #include "lua_item.h"
-#include "../packets/chat_message.h"
+
 #include "../ability.h"
 #include "../entities/baseentity.h"
 #include "../utils/battleutils.h"
@@ -150,7 +150,8 @@ namespace luautils
 
         lua_register(LuaHandle, "getAbility", luautils::getAbility);
         lua_register(LuaHandle, "getSpell", luautils::getSpell);
-        lua_register(LuaHandle,"isValidLS",luautils::isValidLS);
+        lua_register(LuaHandle, "isValidLS", luautils::isValidLS);
+        lua_register(LuaHandle, "underscore2space", luautils::underscore2space);
         Lunar<CLuaAbility>::Register(LuaHandle);
         Lunar<CLuaAction>::Register(LuaHandle);
         Lunar<CLuaBaseEntity>::Register(LuaHandle);
@@ -4572,8 +4573,14 @@ namespace luautils
 
     int32 isValidLS(lua_State* L)
     {
-        const int8* linkshellName = lua_tostring(L, 1);
-        const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
+        if (lua_isnil(L, 1))
+        {
+            lua_pushboolean(L, false);
+            return 1;
+        }
+
+        const char* linkshellName = lua_tostring(L, 1);
+        const char* Query = "SELECT name FROM linkshells WHERE name='%s'";
         int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
 
         if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
@@ -4585,6 +4592,27 @@ namespace luautils
             lua_pushboolean(L, false);
         }
 
+        return 1;
+    }
+
+    inline int32 underscore2space(lua_State* L)
+    {
+        if (lua_isnil(L, 1) || !lua_isstring(L, 1))
+        {
+            return 0;
+        }
+
+        string_t thisString = lua_tostring(L, 1);
+
+        // Strip out the _ in strings, replace with spaces
+        size_t string_pos = thisString.find("_");
+        while (string_pos < thisString.size())
+        {
+            thisString.replace(string_pos, 1, " ");
+            string_pos = thisString.find("_");
+        }
+
+        lua_pushstring(L, thisString.c_str());
         return 1;
     }
 

@@ -28,8 +28,6 @@
 #include "../ai/ai_container.h"
 #include "../instance.h"
 
-#include "../packets/chat_message.h"
-
 CBaseEntity::CBaseEntity()
 {
 	m_TargID = 0;
@@ -158,19 +156,4 @@ void CBaseEntity::SetModelId(uint16 modelid)
 uint16 CBaseEntity::GetModelId()
 {
     return look.modelid;
-}
-
-const int8* CBaseEntity::GetCleanedName()
-{
-    // Strip out the _ in names
-    CleanName = name;
-
-    size_t string_pos = CleanName.find("_");
-    while (string_pos < name.size())
-    {
-        CleanName.replace(string_pos, 1, " ");
-        string_pos = CleanName.find("_");
-    }
-
-    return CleanName.c_str();
 }

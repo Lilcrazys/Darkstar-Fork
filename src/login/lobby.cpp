@@ -499,11 +499,11 @@ int32 lobbyview_parse(int32 fd)
                 int32 ret = Sql_Query(SqlHandle, pfmtQuery, sd->accid);
                 if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
                 {
-                LOBBY_026_RESERVEPACKET(ReservePacket);
+                    LOBBY_026_RESERVEPACKET(ReservePacket);
                     WBUFW(ReservePacket, 32) = Sql_GetUIntData(SqlHandle, 0); // Expansion Bitmask
                     WBUFW(ReservePacket, 36) = Sql_GetUIntData(SqlHandle, 1); // Feature Bitmask
-                memcpy(MainReservePacket, ReservePacket, sendsize);
-            }
+                    memcpy(MainReservePacket, ReservePacket, sendsize);
+                }
                 else
                 {
                     do_close_lobbydata(sd, fd);

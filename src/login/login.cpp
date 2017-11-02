@@ -344,7 +344,7 @@ int32 login_config_read(const char *cfgName)
             login_config.login_data_port = atoi(w2);
         }
         else if (strcmp(w1, "login_view_ip") == 0)
-        {
+        {   
             login_config.login_view_ip = std::string(w2);
         }
         else if (strcmp(w1, "login_view_port") == 0)
@@ -352,7 +352,7 @@ int32 login_config_read(const char *cfgName)
             login_config.login_view_port = atoi(w2);
         }
         else if (strcmp(w1, "login_auth_ip") == 0)
-        {
+        {   
             login_config.login_auth_ip = std::string(w2);
         }
         else if (strcmp(w1, "login_auth_port") == 0)
@@ -482,7 +482,6 @@ int32 version_info_default()
 {
     version_info.client_ver = "99999999_9"; // xxYYMMDD_m = xx:MajorRelease YY:year MM:month DD:day _m:MinorRelease
     version_info.enable_ver_lock = true;
-    version_info.ALT_VER = "99999999_9"; // xxYYMMDD_m = xx:MajorRelease YY:year MM:month DD:day _m:MinorRelease
     // version_info.DSP_VER = 0;
     return 0;
 }
