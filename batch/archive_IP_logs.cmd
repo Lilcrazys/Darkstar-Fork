@@ -15,15 +15,15 @@ for /f %%i in ('time /t') do set START_TIME=%%i
 for /f %%i in ('echo %start_time::=:%') do set START_TIME=%%i
 CLS
 ECHO Chat Audit Started Date: %DATE_DAY% Time: %START_TIME%
-%dumpExe% --lock-tables=false --skip-triggers --skip-extended-insert --order-by-primary --no-create-info --skip-comments -h %mysqlhost% -u %mysqluser% -p%mysqlpass% legiondb audit_chat > "E:\database-backup\legiondb\audit_chat_%DATE_DAY%_%DATE_TIME%.sql"
+%dumpExe% --lock-tables=false --skip-triggers --skip-extended-insert --order-by-primary --no-create-info --skip-comments -h %mysqlhost% -u %mysqluser% -p%mysqlpass% legiondb account_ip_record > "E:\database-backup\legiondb\account_ip_record_%DATE_DAY%_%DATE_TIME%.sql"
 ECHO ..Done dumping table. Now Clearing it out..
-%mysqlExe% -u %mysqluser% -p%mysqlpass% -e "TRUNCATE TABLE audit_chat" legiondb
+%mysqlExe% -u %mysqluser% -p%mysqlpass% -e "TRUNCATE TABLE account_ip_record" legiondb
 ECHO ..DONE
 for /f %%i in ('time /t') do set END_TIME=%%i
 for /f %%i in ('echo %end_time::=:%') do set END_TIME=%%i
 REM ------------------------------------------------------
-echo Last Backup Run on %date% >> %LogPath%\Chat_Audit.txt
-echo StartTime: %START_TIME% - EndTime: %END_TIME% >> %LogPath%\Chat_Audit.txt
+echo Last Backup Run on %date% >> %LogPath%\archive_ip_records.txt
+echo StartTime: %START_TIME% - EndTime: %END_TIME% >> %LogPath%\archive_ip_records.txt
 ECHO Nuking vars
 set dumpExe=
 set mysqlhost=
