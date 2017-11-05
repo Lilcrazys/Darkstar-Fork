@@ -3,14 +3,8 @@
 -- DO NOT mess with the order
 -- or change things to "elseif"!
 -----------------------------------
-require("scripts/globals/common");
-require("scripts/globals/settings");
+
 require("scripts/globals/keyitems");
-require("scripts/globals/status");
-require("scripts/globals/weaponskills");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
------------------------------------
 
 -- weaponskills for red weakness
 local red_weakness = {
