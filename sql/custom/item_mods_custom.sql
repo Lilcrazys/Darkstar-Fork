@@ -15,8 +15,6 @@
 
 INSERT INTO `item_mods` VALUES (11926,416,15); -- Lvl 99 Ochain - 15% Chance to Null Physical DMG
 
-INSERT INTO `item_mods` VALUES (11927,163,-128); -- Lvl 99 (No Afterglow) Aegis - -50% Magic Damage Taken (WHY IS THIS -128%!?)
-
 INSERT INTO `item_mods` VALUES (13215,2,9999); -- Judges Belt - +9999 HP
 
 INSERT INTO `item_mods` VALUES (16193,416,10); -- Lvl 90 Ochain - 10% Chance to Null Physical DMG
