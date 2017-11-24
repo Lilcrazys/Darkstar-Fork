@@ -56,7 +56,7 @@ function onTrigger(player,npc)
         };
         showShop(player, STATIC, stock);
     else
-        -- player:startEvent(0x0096);
+        -- player:startEvent(150);
     end
 end;
 

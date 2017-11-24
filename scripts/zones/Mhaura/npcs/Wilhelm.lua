@@ -29,9 +29,9 @@ function onTrade(player,npc,trade)
         else
             player:setLocalVar("Wilhelm_Item",armor);
             if (armor == 15241 or armor == 14489 or armor == 14906 or armor == 15577 or armor == 15662) then  -- utlima
-                player:startEvent(0x0148,armor);
+                player:startEvent(328,armor);
             elseif (armor == 15576 or armor == 15661 or armor == 15240 or armor == 14905 or armor == 14488) then -- omega
-                player:startEvent(0x014A,armor);
+                player:startEvent(330,armor);
             end
         end
     end
@@ -43,9 +43,9 @@ end;
 
 function onTrigger(player,npc)
     if (player:getCurrentMission(COP) > THE_WARRIOR_S_PATH) then
-        player:startEvent(0x0146);
+        player:startEvent(326);
     else
-       player:startEvent(0x0145);
+       player:startEvent(325);
     end
 
 --Wilhelm     325 default
@@ -75,7 +75,7 @@ function onEventFinish(player,csid,option)
     -- printf("RESULT: %u",option);
 
     --[[
-    if (csid== 0x0148 or csid == 0x014A) then
+    if (csid== 328 or csid == 330) then
     ]]
     local item = player:getLocalVar("Wilhelm_Item");
     if ((csid== 0x0148 or csid == 0x014A) and item == option) then

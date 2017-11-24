@@ -22,10 +22,10 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
-    homepointMenu( player, 0x21fc, 49);
     player:PrintToPlayer("SoA is closed - you should not be here.");
-    --homepointMenu( player, 0x21fc, 49);
+    --[[
+    homepointMenu( player, 8700, 49);
+    ]]
     player:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
 end;
 
@@ -46,7 +46,7 @@ function onEventFinish(player,csid,option)
     --printf("CSID: %u",csid);
     --printf("RESULT: %u",option);
 
-    if (csid == 0x21fc) then
+    if (csid == 8700) then
 
         if (option == 1) then
             player:setHomePoint();

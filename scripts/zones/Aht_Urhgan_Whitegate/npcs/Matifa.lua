@@ -28,7 +28,7 @@ function onTrigger(player,npc)
 	if (artsAndCrafts == 1 and artsAndCrafts_Matifa ~= 1) then
 		player:startEvent(0x0204);
 	else
-		player:startEvent(0x021D);
+		player:startEvent(541);
 	end
 end;
 

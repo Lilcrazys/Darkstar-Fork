@@ -47,7 +47,7 @@ function onTrade(player,npc,trade)
             zeni = math.random(1,200); -- random value since soul plates aren't implemented yet.
             player:tradeComplete();
             player:addCurrency("zeni_point", zeni);
-            player:startEvent(0x038E,zeni);
+            player:startEvent(910,zeni);
         else
     ]]
             local znm = -1;
@@ -64,7 +64,7 @@ function onTrade(player,npc,trade)
                 if (player:hasKeyItem(seals[znm]) == false) then
                     player:tradeComplete();
                     player:addKeyItem(seals[znm]);
-                    player:startEvent(0x0390,0,0,0,seals[znm]);
+                    player:startEvent(912,0,0,0,seals[znm]);
                 else
                     player:messageSpecial(SANCTION + 8,seals[znm]); -- You already possess .. (not sure this is authentic)
                 end
@@ -82,7 +82,7 @@ end;
 function onTrigger(player,npc)
     --[[
     if (player:getVar("ZeniStatus") == 0) then
-        player:startEvent(0x038c);
+        player:startEvent(908);
     else
     ]]
         local param = 2140136440; -- Defaut bitmask, Tier 1 ZNM Menu + don't ask option
@@ -124,7 +124,7 @@ function onTrigger(player,npc)
             param = param - 0x40000000; -- unlocks Pandemonium Warden.
         end;
 
-        player:startEvent(0x038D,param);
+        player:startEvent(909,param);
     --[[
     end
     ]]
@@ -161,7 +161,7 @@ function onEventUpdate(player,csid,option)
         LAVENDER_COLORED_SEAL
     }
 
-    if (csid == 0x038D) then
+    if (csid == 909) then
         local zeni = player:getCurrency("zeni_point");
         local salt = nil;
 
@@ -256,7 +256,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("finishRESULT: %u",option);
-    if (csid == 0x038c) then
+    if (csid == 908) then
         player:setVar("ZeniStatus",1);
         player:addCurrency("zeni_point", 2000);
     end

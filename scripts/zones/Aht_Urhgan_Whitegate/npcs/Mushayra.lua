@@ -22,13 +22,13 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	local artsAndCrafts = player:getQuestStatus(AHT_URHGAN,ARTS_AND_CRAFTS);
+    local artsAndCrafts = player:getQuestStatus(AHT_URHGAN,ARTS_AND_CRAFTS);
 
-	if (artsAndCrafts == QUEST_ACCEPTED) then
-		player:showText(npc,HADAHDA_DIALOG + 16);
-	else
-		player:startEvent(0x0207);
-	end
+    if (artsAndCrafts == QUEST_ACCEPTED) then
+        player:showText(npc,HADAHDA_DIALOG + 16);
+    else
+        player:startEvent(519);
+    end
 end;
 
 -----------------------------------
@@ -36,8 +36,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-	-- printf("CSID: %u",csid);
-	-- printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -45,7 +45,7 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-	-- printf("CSID: %u",csid);
-	-- printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 

@@ -43,6 +43,7 @@ This file is part of DarkStar-server source code.
 #include "../mob_spell_list.h"
 #include "../enmity_container.h"
 #include "../items/item_weapon.h"
+#include "../zone_instance.h"
 
 #include "../ai/ai_container.h"
 #include "../ai/controllers/mob_controller.h"
@@ -382,6 +383,8 @@ namespace petutils
         case JOB_SCH:
             PMob->health.maxmp = (int16)(15.2 * pow(lvl, 1.1075) * petStats->MPscale);
             break;
+        default:
+            break;
         }
 
         PMob->speed = petStats->speed;
@@ -432,9 +435,9 @@ namespace petutils
 
     void LoadAutomatonStats(CCharEntity* PMaster, CPetEntity* PPet, Pet_t* petStats)
     {
-        PPet->WorkingSkills.automaton_melee = dsp_min(puppetutils::getSkillCap(PMaster, SKILL_AME), PMaster->GetSkill(SKILL_AME));
-        PPet->WorkingSkills.automaton_ranged = dsp_min(puppetutils::getSkillCap(PMaster, SKILL_ARA), PMaster->GetSkill(SKILL_ARA));
-        PPet->WorkingSkills.automaton_magic = dsp_min(puppetutils::getSkillCap(PMaster, SKILL_AMA), PMaster->GetSkill(SKILL_AMA));
+        PPet->WorkingSkills.automaton_melee = std::min(puppetutils::getSkillCap(PMaster, SKILL_AME), PMaster->GetSkill(SKILL_AME));
+        PPet->WorkingSkills.automaton_ranged = std::min(puppetutils::getSkillCap(PMaster, SKILL_ARA), PMaster->GetSkill(SKILL_ARA));
+        PPet->WorkingSkills.automaton_magic = std::min(puppetutils::getSkillCap(PMaster, SKILL_AMA), PMaster->GetSkill(SKILL_AMA));
 
         // Set capped flags
         for (int i = 22; i <= 24; ++i)
@@ -465,23 +468,22 @@ namespace petutils
         int32 scaleOver60Column = 3;	// номер колонки с модификатором после 60 уровня
         int32 scaleOver75Column = 4;	// номер колонки с модификатором после 75 уровня
         int32 scaleOver60 = 2;			// номер колонки с модификатором для расчета MP после 60 уровня
-        int32 scaleOver75 = 3;			// номер колонки с модификатором для расчета Статов после 75-го уровня
+        // int32 scaleOver75 = 3;			// номер колонки с модификатором для расчета Статов после 75-го уровня
 
         uint8 grade;
 
         uint8 mlvl = PPet->GetMLevel();
-        uint8 slvl = PPet->GetSLevel();
         JOBTYPE mjob = PPet->GetMJob();
         JOBTYPE sjob = PPet->GetSJob();
         // Расчет прироста HP от main job
-        int32 mainLevelOver30 = dsp_cap(mlvl - 30, 0, 30);			// Расчет условия +1HP каждый лвл после 30 уровня
+        int32 mainLevelOver30 = std::clamp(mlvl - 30, 0, 30);			// Расчет условия +1HP каждый лвл после 30 уровня
         int32 mainLevelUpTo60 = (mlvl < 60 ? mlvl - 1 : 59);			// Первый режим рассчета до 60 уровня (Используется так же и для MP)
-        int32 mainLevelOver60To75 = dsp_cap(mlvl - 60, 0, 15);		// Второй режим расчета после 60 уровня
+        int32 mainLevelOver60To75 = std::clamp(mlvl - 60, 0, 15);		// Второй режим расчета после 60 уровня
         int32 mainLevelOver75 = (mlvl < 75 ? 0 : mlvl - 75);			// Третий режим расчета после 75 уровня
 
         //Расчет бонусного количества HP
         int32 mainLevelOver10 = (mlvl < 10 ? 0 : mlvl - 10);			// +2HP на каждом уровне после 10
-        int32 mainLevelOver50andUnder60 = dsp_cap(mlvl - 50, 0, 10);	// +2HP на каждом уровне в промежутке от 50 до 60 уровня
+        int32 mainLevelOver50andUnder60 = std::clamp(mlvl - 50, 0, 10);	// +2HP на каждом уровне в промежутке от 50 до 60 уровня
         int32 mainLevelOver60 = (mlvl < 60 ? 0 : mlvl - 60);
 
         // Расчет raceStat jobStat bonusStat sJobStat
@@ -636,14 +638,14 @@ namespace petutils
         uint8 race = 3;					//Tarutaru
 
         // Расчет прироста HP от main job
-        int32 mainLevelOver30 = dsp_cap(mlvl - 30, 0, 30);			// Расчет условия +1HP каждый лвл после 30 уровня
+        int32 mainLevelOver30 = std::clamp(mlvl - 30, 0, 30);			// Расчет условия +1HP каждый лвл после 30 уровня
         int32 mainLevelUpTo60 = (mlvl < 60 ? mlvl - 1 : 59);			// Первый режим рассчета до 60 уровня (Используется так же и для MP)
-        int32 mainLevelOver60To75 = dsp_cap(mlvl - 60, 0, 15);		// Второй режим расчета после 60 уровня
+        int32 mainLevelOver60To75 = std::clamp(mlvl - 60, 0, 15);		// Второй режим расчета после 60 уровня
         int32 mainLevelOver75 = (mlvl < 75 ? 0 : mlvl - 75);			// Третий режим расчета после 75 уровня
 
         //Расчет бонусного количества HP
         int32 mainLevelOver10 = (mlvl < 10 ? 0 : mlvl - 10);			// +2HP на каждом уровне после 10
-        int32 mainLevelOver50andUnder60 = dsp_cap(mlvl - 50, 0, 10);	// +2HP на каждом уровне в промежутке от 50 до 60 уровня
+        int32 mainLevelOver50andUnder60 = std::clamp(mlvl - 50, 0, 10);	// +2HP на каждом уровне в промежутке от 50 до 60 уровня
         int32 mainLevelOver60 = (mlvl < 60 ? 0 : mlvl - 60);
 
         // Расчет raceStat jobStat bonusStat sJobStat
@@ -778,10 +780,15 @@ namespace petutils
             PPet->allegiance = PMaster->allegiance;
             PMaster->StatusEffectContainer->CopyConfrontationEffect(PPet);
 
-            PMaster->PPet = PPet;
             PPet->PMaster = PMaster;
 
+            if (PMaster->PInstance)
+            {
+                PPet->PInstance = PMaster->PInstance;
+            }
+
             PMaster->loc.zone->InsertPET(PPet);
+
             PPet->Spawn();
             if (PMaster->objtype == TYPE_PC)
             {
@@ -881,9 +888,7 @@ namespace petutils
             CMobEntity* PMob = (CMobEntity*)PPet;
 
             if (!PMob->isDead()){
-
-                //clear the ex-charmed mobs enmity
-                PMob->PEnmityContainer->Clear();
+                PMob->PAI->Disengage();
 
                 // charm time is up, mob attacks player now
                 if (PMob->PEnmityContainer->IsWithinEnmityRange(PMob->PMaster))
@@ -901,7 +906,7 @@ namespace petutils
 
                 //master using leave command
                 auto state = dynamic_cast<CAbilityState*>(PMaster->PAI->GetCurrentState());
-                if (state && state->GetAbility()->getID() == ABILITY_LEAVE || PChar->loc.zoning || PChar->isDead()){
+                if ((state && state->GetAbility()->getID() == ABILITY_LEAVE) || PChar->loc.zoning || PChar->isDead()){
                     PMob->PEnmityContainer->Clear();
                     PMob->m_OwnerID.clean();
                     PMob->updatemask |= UPDATE_STATUS;
@@ -919,10 +924,6 @@ namespace petutils
             PMob->PMaster = nullptr;
 
             PMob->PAI->SetController(std::make_unique<CMobController>(PMob));
-
-            if (!PMob->isDead())
-                PMob->PAI->Disengage();
-
         }
         else if (PPet->objtype == TYPE_PET){
             if (!PPet->isDead())
@@ -961,8 +962,6 @@ namespace petutils
     void DespawnPet(CBattleEntity* PMaster)
     {
         DSP_DEBUG_BREAK_IF(PMaster->PPet == nullptr);
-
-        CBattleEntity* PPet = PMaster->PPet;
 
         petutils::DetachPet(PMaster);
     }
@@ -1232,6 +1231,7 @@ namespace petutils
         {
             petType = PETTYPE_AUTOMATON;
         }
+
         CPetEntity* PPet = nullptr;
         if (petType == PETTYPE_AUTOMATON && PMaster->objtype == TYPE_PC)
         {
@@ -1239,7 +1239,9 @@ namespace petutils
             PPet->PAI->SetController(std::make_unique<CAutomatonController>(static_cast<CAutomatonEntity*>(PPet)));
         }
         else
+        {
             PPet = new CPetEntity(petType);
+        }
 
         PPet->loc = PMaster->loc;
 
@@ -1353,7 +1355,7 @@ namespace petutils
             }
 
             // Randomize: 0-2 lvls lower, less Monster Gloves(+1/+2) bonus
-            highestLvl -= dsprand::GetRandomNumber(3 - dsp_cap(PChar->getMod(Mod::JUG_LEVEL_RANGE), 0, 2));
+            highestLvl -= dsprand::GetRandomNumber(3 - std::clamp<int16>(PChar->getMod(Mod::JUG_LEVEL_RANGE), 0, 2));
 
             PPet->SetMLevel(highestLvl);
             LoadJugStats(PPet, PPetData); //follow monster calcs (w/o SJ)

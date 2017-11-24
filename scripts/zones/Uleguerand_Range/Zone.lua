@@ -5,22 +5,28 @@
 -----------------------------------
 package.loaded["scripts/zones/Uleguerand_Range/TextIDs"] = nil;
 -----------------------------------
-
-require("scripts/globals/settings");
+require("scripts/zones/Uleguerand_Range/TextIDs");
+require("scripts/zones/Uleguerand_Range/MobIDs");
+require("scripts/globals/conquest");
+require("scripts/globals/missions");
 require("scripts/globals/weather");
 require("scripts/globals/zone");
-require("scripts/zones/Uleguerand_Range/TextIDs");
-require("scripts/globals/missions");
+
 -----------------------------------
 -- onInitialize
 -----------------------------------
 
 function onInitialize(zone)
+    SetRespawnTime(16797969, 86400, 259200);
     -- Jormungand
-    SetRespawnTime(16797969, 900, 10800);
+    UpdateNMSpawnPoint(JORMUNGAND);
+    --[[
+    GetMobByID(JORMUNGAND):setRespawnTime(math.random(86400, 259200));
+    ]]
+    GetMobByID(JORMUNGAND):setRespawnTime(math.random(900, 10800));
 
     -- Kumhau
-    GetMobByID(16798718):setRespawnTime(math.random((900),(10800)));
+    GetMobByID(16798718):setRespawnTime(math.random(900,10800));
 end;
 
 -----------------------------------
@@ -45,7 +51,7 @@ function onZoneIn(player,prevZone)
         player:setPos(363.025,16,-60,12);
     end
     if (player:getCurrentMission(COP) == DAWN and player:getVar("COP_louverance_story")== 1 ) then
-      cs=0x0011;
+      cs=17;
     end
     return cs;
 end;
@@ -73,7 +79,7 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    if (csid == 0x0011) then
+    if (csid == 17) then
         player:setVar("COP_louverance_story",2);
     end
 end;
@@ -83,9 +89,7 @@ end;
 -----------------------------------
 
 function onZoneWeatherChange(weather)
-
-    local waterfall = GetNPCByID(16798112);
-
+    local waterfall = GetNPCByID(WATERFALL);
     if (weather == WEATHER_SNOW or weather == WEATHER_BLIZZARDS) then
         if (waterfall:getAnimation() ~= 9) then
             waterfall:setAnimation(9);

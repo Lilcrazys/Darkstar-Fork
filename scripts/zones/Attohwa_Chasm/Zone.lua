@@ -5,10 +5,10 @@
 -----------------------------------
 package.loaded["scripts/zones/Attohwa_Chasm/TextIDs"] = nil;
 -----------------------------------
-
+require("scripts/zones/Attohwa_Chasm/TextIDs");
+require("scripts/zones/Attohwa_Chasm/MobIDs");
 require("scripts/globals/settings");
 require("scripts/globals/zone");
-require("scripts/zones/Attohwa_Chasm/TextIDs");
 
 -----------------------------------
 -- onInitialize
@@ -48,7 +48,11 @@ function onInitialize(zone)
     zone:registerRegion(30, -385.349, 5, -173.973, 0,0,0);
 
     -- Tiamat
-    SetRespawnTime(16806227, 900, 10800);
+    UpdateNMSpawnPoint(TIAMAT);
+    GetMobByID(TIAMAT):setRespawnTime(math.random(900, 10800));
+    --[[ block comment out DSP stock repop
+    GetMobByID(TIAMAT):setRespawnTime(math.random(86400, 259200));
+    ]]
 
     -- Achuka
     GetMobByID(16806910):setRespawnTime(math.random(900,10800));
@@ -83,7 +87,7 @@ end;
 -----------------------------------
 
 function onRegionEnter(player,region)
-    local Gasponia_Offset = 16806327;
+    local Gasponia_Offset = GASPONIA_OFFSET;
 
     if (region:GetRegionID() <= 30) then
     -- TODO: Gasponia's shouldn't "always" poison you. However, in retail regions constantly reapply themselves without having to re-enter the region. In DSP that doesn't happen so I'm leaving it as-is for now.

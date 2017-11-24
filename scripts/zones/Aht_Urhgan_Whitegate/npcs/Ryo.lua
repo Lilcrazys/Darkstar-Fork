@@ -35,7 +35,7 @@ end;
 
 function onTrigger(player,npc)
     --[[
-    player:startEvent(0x0391);
+    player:startEvent(913);
     ]]
     player:SpoofMsg("Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", npc, chatType.SAY, nil);
     player:SpoofMsg("Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", npc, chatType.SAY, nil);

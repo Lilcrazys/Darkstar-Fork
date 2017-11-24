@@ -22,14 +22,14 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-	local artsAndCrafts = player:getQuestStatus(AHT_URHGAN,ARTS_AND_CRAFTS);
-	local artsAndCrafts_Balakaf = player:getVar("QUEST_ARTSANDCRAFTS_BALAKAF");
+    local artsAndCrafts = player:getQuestStatus(AHT_URHGAN,ARTS_AND_CRAFTS);
+    local artsAndCrafts_Balakaf = player:getVar("QUEST_ARTSANDCRAFTS_BALAKAF");
 
-	if (artsAndCrafts == QUEST_ACCEPTED and artsAndCrafts_Balakaf ~= 1) then
-		player:startEvent(0x0203);
-	else
-		player:startEvent(0x0221);
-	end
+    if (artsAndCrafts == QUEST_ACCEPTED and artsAndCrafts_Balakaf ~= 1) then
+        player:startEvent(515);
+    else
+        player:startEvent(0x0221);
+    end
 end;
 
 -----------------------------------
@@ -37,8 +37,8 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
-	-- printf("CSID: %u",csid);
-	-- printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
 -----------------------------------
@@ -46,10 +46,10 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
-	-- printf("CSID: %u",csid);
-	-- printf("RESULT: %u",option);
-	if (csid == 0x0203) then
-		player:setVar("QUEST_ARTSANDCRAFTS_BALAKAF",1);
-	end
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
+    if (csid == 0x0203) then
+        player:setVar("QUEST_ARTSANDCRAFTS_BALAKAF",1);
+    end
 end;
 

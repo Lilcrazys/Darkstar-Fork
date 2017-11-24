@@ -23,7 +23,7 @@ require("scripts/globals/msg");
 
 function onTrade(player,npc,trade)
     if (player:getQuestStatus(JEUNO,DEAL_WITH_TENSHODO) == QUEST_ACCEPTED and trade:hasItemQty(554,1) == true and trade:getItemCount() == 1) then
-        player:startEvent(0x00a6); -- Ending quest
+        player:startEvent(166); -- Ending quest
     ------------------------
     -- Begin Custom
     elseif (TRAVEL_SKIP >= 1 and player:getLocalVar("BRIBED_GARVEV") == 0) then
@@ -46,12 +46,12 @@ end;
 function onTrigger(player,npc)
     if (player:getQuestStatus(JEUNO,A_CLOCK_MOST_DELICATE) == QUEST_ACCEPTED and player:getQuestStatus(JEUNO,DEAL_WITH_TENSHODO) == QUEST_AVAILABLE) then
         if (player:getFameLevel(NORG) >= 2) then
-            player:startEvent(0x00a7); -- Start quest
+            player:startEvent(167); -- Start quest
         else
-            player:startEvent(0x00a8); -- dialog without correct tenshodo/norg fame
+            player:startEvent(168); -- dialog without correct tenshodo/norg fame
         end
     else
-        player:startEvent(0x00CF); -- Standard dialog
+        player:startEvent(207); -- Standard dialog
     end
 end;
 
@@ -71,9 +71,9 @@ end;
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
-    if (csid == 0x00a7) then
+    if (csid == 167) then
         player:addQuest(JEUNO,DEAL_WITH_TENSHODO);
-    elseif (csid == 0x00a6) then
+    elseif (csid == 166) then
         player:addTitle(TRADER_OF_RENOWN);
         player:addKeyItem(CLOCK_TOWER_OIL);
         player:messageSpecial(KEYITEM_OBTAINED,CLOCK_TOWER_OIL);

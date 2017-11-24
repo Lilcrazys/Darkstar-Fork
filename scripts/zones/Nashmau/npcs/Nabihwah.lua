@@ -21,7 +21,9 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:startEvent(0x00fd, npc);
+    --[[
+    player:startEvent(253, npc);
+    ]]
     local merc_rank = getMercenaryRank(player)
 
     if (merc_rank == 0) then

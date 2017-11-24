@@ -2,9 +2,9 @@
 -- Area: Al'Taieu
 --  HNM: Absolute Virtue
 -----------------------------------
-
-require("scripts/globals/titles");
+require("scripts/zones/AlTaieu/MobIDs");
 require("scripts/globals/status");
+require("scripts/globals/titles");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/spoofchat");
@@ -45,7 +45,7 @@ function onMobSpawn(mob)
     mob:setMod(MOD_STUNRES, 75);
     mob:setMod(MOD_PARALYZERES, 100);
 
-    local JoL = GetMobByID(16912848);
+    local JoL = GetMobByID(JAILER_OF_LOVE);
     -- Special check for regen modification by JoL pets killed
     if (JoL:getLocalVar("JoL_Qn_xzomit_Killed") == 9) then
         mob:addMod(MOD_REGEN, -130)

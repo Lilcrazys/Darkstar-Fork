@@ -5,9 +5,6 @@
 -----------------------------------------
 require("scripts/globals/teleports");
 require("scripts/globals/status");
-
------------------------------------------
--- OnItemCheck
 -----------------------------------------
 
 function onItemCheck(target)
@@ -45,10 +42,6 @@ function onItemCheck(target)
 
     return result;
 end;
-
------------------------------------------
--- OnItemUse
------------------------------------------
 
 function onItemUse(target)
     -- Begin custom time recording

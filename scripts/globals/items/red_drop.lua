@@ -1,32 +1,22 @@
 -----------------------------------------
 --  ID: 4258
 --  Item: Red Drop
------------------------------------------
 --  Strength 5
 -----------------------------------------
-
 require("scripts/globals/status");
-
------------------------------------------
--- OnItemCheck
------------------------------------------
+require("scripts/globals/msg");
 
 function onItemCheck(target)
-    local result = 0;
     --[[
     if (target:hasStatusEffect(EFFECT_MEDICINE)) then
-        result = 111;
+        return msgBasic.ITEM_NO_USE_MEDICATED;
     end
     ]]
     if (target:hasStatusEffect(EFFECT_FOOD) == true or target:hasStatusEffect(EFFECT_FIELD_SUPPORT_FOOD) == true) then
-        result = 246;
+        return 246;
     end
-    return result;
+    return 0;
 end;
-
------------------------------------------
--- OnItemUse
------------------------------------------
 
 function onItemUse(target)
     --[[

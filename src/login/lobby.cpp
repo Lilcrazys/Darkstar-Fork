@@ -75,7 +75,7 @@ int32 lobbydata_parse(int32 fd)
         {
             char* buff = &session[fd]->rdata[0];
 
-            int32 accid = RBUFL(buff, 1);
+            uint32 accid = RBUFL(buff, 1);
 
             sd = find_loginsd_byaccid(accid);
             if (sd == nullptr)
@@ -164,7 +164,7 @@ int32 lobbydata_parse(int32 fd)
             LOBBY_A1_RESERVEPACKET(ReservePacket);
 
             //server's name that shows in lobby menu
-            memcpy(ReservePacket + 60, login_config.servername.c_str(), dsp_cap(login_config.servername.length(), 0, 15));
+            memcpy(ReservePacket + 60, login_config.servername.c_str(), std::clamp<size_t>(login_config.servername.length(), 0, 15));
 
             // Prepare the character list data..
             for (int j = 0; j < 16; ++j)
@@ -525,7 +525,6 @@ int32 lobbyview_parse(int32 fd)
         case 0x14:
         {
             //delete char
-            uint32 ContentID = RBUFL(session[fd]->rdata.data(), 0x1C);
             uint32 CharID = RBUFL(session[fd]->rdata.data(), 0x20);
 
             ShowInfo(CL_WHITE"lobbyview_parse" CL_RESET":attempt to delete char:<" CL_WHITE"%d" CL_RESET"> from ip:<%s>\n", CharID, ip2str(sd->client_addr, nullptr));
@@ -570,7 +569,7 @@ int32 lobbyview_parse(int32 fd)
         case 0x24:
         {
             LOBBY_024_RESERVEPACKET(ReservePacket);
-            memcpy(ReservePacket + 36, login_config.servername.c_str(), dsp_cap(login_config.servername.length(), 0, 15));
+            memcpy(ReservePacket + 36, login_config.servername.c_str(), std::clamp<size_t>(login_config.servername.length(), 0, 15));
 
             unsigned char Hash[16];
 
@@ -611,7 +610,7 @@ int32 lobbyview_parse(int32 fd)
                 do_close_lobbyview(sd, fd);
                 return -1;
             }
-            char lobbydata_code[] = { 0x15, 0x07 };
+            // char lobbydata_code[] = { 0x15, 0x07 };
             //				session[sd->login_lobbydata_fd]->wdata[0]  = 0x15;
             //				session[sd->login_lobbydata_fd]->wdata[1]  = 0x07;
             //				WFIFOSET(sd->login_lobbydata_fd,2);
@@ -721,7 +720,7 @@ int32 lobby_createchar(login_session_data_t *loginsd, char *buf)
 
     // Validate that the job is a starting job.
     uint8 mjob = RBUFB(buf, 50);
-    createchar.m_mjob = dsp_cap(mjob, 1, 6);
+    createchar.m_mjob = std::clamp<uint8>(mjob, 1, 6);
 
     // Log that the character attempting to create a non-starting job.
     if (mjob != createchar.m_mjob) {
