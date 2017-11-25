@@ -20,7 +20,6 @@ function onItemUse(target)
     --[[
     target:addStatusEffect(EFFECT_MEDICINE,0,0,3600);
     target:warp();
-end;
     ]]
     toHomeNation(target);
 end;

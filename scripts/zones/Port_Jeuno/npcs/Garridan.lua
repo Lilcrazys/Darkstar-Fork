@@ -94,7 +94,6 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-
     -- Normal event missing
     local month = tonumber(os.date("%m"));
     local day = tonumber(os.date("%d"));

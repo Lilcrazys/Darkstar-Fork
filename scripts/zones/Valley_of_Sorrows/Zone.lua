@@ -27,14 +27,16 @@ function onInitialize(zone)
     and GetServerVariable("[POP]Aspidochelone") <= os.time(t)
     and GetServerVariable("[PH]Aspidochelone") > 6) then
         DisallowRespawn(17301538, false);
-        SetRespawnTime(17301538, 900, 10800); -- Aspidochelone
+        UpdateNMSpawnPoint(17301538);
+        GetMobByID(17301538):setRespawnTime(900, 10800); -- Aspidochelone
         if (LandKingSystem_NQ == 0) then
             DisallowRespawn(17301537, true);
         end
     else
         if (LandKingSystem_NQ ~= 1) then
             DisallowRespawn(17301537, false);
-            SetRespawnTime(17301537, 900, 10800); -- Adamantoise
+            UpdateNMSpawnPoint(17301537);
+            GetMobByID(17301537):setRespawnTime(900, 10800); -- Adamantoise
             if (LandKingSystem_HQ == 0) then
                 DisallowRespawn(17301538, true);
             end

@@ -26,14 +26,16 @@ function onInitialize(zone)
     and GetServerVariable("[POP]King_Behemoth") <= os.time(t)
     and GetServerVariable("[PH]King_Behemoth") > 6) then
         DisallowRespawn(17297441, false);
-        SetRespawnTime(17297441, 900, 10800); -- King Behemoth
+        UpdateNMSpawnPoint(17297441);
+        GetMobByID(17297441):setRespawnTime(900, 10800); -- King Behemoth
         if (LandKingSystem_NQ == 0) then
             DisallowRespawn(17297440, true);
         end
     else
         if (LandKingSystem_NQ ~= 1) then
             DisallowRespawn(17297440, false);
-            SetRespawnTime(17297440, 900, 10800); -- Behemoth
+            UpdateNMSpawnPoint(17297440);
+            GetMobByID(17297440):setRespawnTime(900, 10800); -- Behemoth
             if (LandKingSystem_HQ == 0) then
                 DisallowRespawn(17297441, true);
             end

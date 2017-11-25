@@ -27,14 +27,16 @@ function onInitialize(zone)
     and GetServerVariable("[POP]Nidhogg") <= os.time(t)
     and GetServerVariable("[PH]Nidhogg") > 6) then
         DisallowRespawn(17408019, false);
-        SetRespawnTime(17408019, 900, 10800); -- Nidhogg
+        UpdateNMSpawnPoint(17408019);
+        GetMobByID(17408019):setRespawnTime(900, 10800); -- Nidhogg
         if (LandKingSystem_NQ == 0) then
             DisallowRespawn(17408018, true);
         end
     else
         if (LandKingSystem_NQ ~= 1) then
             DisallowRespawn(17408018, false);
-            SetRespawnTime(17408018, 900, 10800); -- Fafnir
+            UpdateNMSpawnPoint(17408018);
+            GetMobByID(17408018):setRespawnTime(900, 10800); -- Fafnir
             if (LandKingSystem_HQ == 0) then
                 DisallowRespawn(17408019, true);
             end

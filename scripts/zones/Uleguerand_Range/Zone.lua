@@ -17,7 +17,6 @@ require("scripts/globals/zone");
 -----------------------------------
 
 function onInitialize(zone)
-    SetRespawnTime(16797969, 86400, 259200);
     -- Jormungand
     UpdateNMSpawnPoint(JORMUNGAND);
     --[[
