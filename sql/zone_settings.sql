@@ -88,8 +88,8 @@ INSERT INTO `zone_settings` VALUES (39,5,'127.0.0.1',54430,'Dynamis-Valkurm',121
 INSERT INTO `zone_settings` VALUES (40,5,'127.0.0.1',54430,'Dynamis-Buburimu',121,121,121,121,0,0.00,400);
 INSERT INTO `zone_settings` VALUES (41,5,'127.0.0.1',54430,'Dynamis-Qufim',121,121,121,121,0,0.00,400);
 INSERT INTO `zone_settings` VALUES (42,5,'127.0.0.1',54430,'Dynamis-Tavnazia',121,121,121,121,0,0.00,400);
-INSERT INTO `zone_settings` VALUES (43,2,'127.0.0.1',54230,'Diorama_Abdhaljs-Ghelsba',0,0,218,219,0,0.00,??);
-INSERT INTO `zone_settings` VALUES (44,2,'127.0.0.1',54230,'Abdhaljs_Isle-Purgonorgo',0,0,226,226,0,0.00,??);
+INSERT INTO `zone_settings` VALUES (43,2,'127.0.0.1',54230,'Diorama_Abdhaljs-Ghelsba',0,0,218,219,0,0.00,136);
+INSERT INTO `zone_settings` VALUES (44,2,'127.0.0.1',54230,'Abdhaljs_Isle-Purgonorgo',0,0,226,226,0,0.00,136);
 INSERT INTO `zone_settings` VALUES (45,2,'127.0.0.1',54230,'Abyssea-Tahrongi',51,51,52,52,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (46,2,'127.0.0.1',54230,'Open_sea_route_to_Al_Zahbi',147,147,101,138,0,0.00,1178);
 INSERT INTO `zone_settings` VALUES (47,2,'127.0.0.1',54230,'Open_sea_route_to_Mhaura',147,147,101,138,0,0.00,1178);
@@ -116,7 +116,7 @@ INSERT INTO `zone_settings` VALUES (67,4,'127.0.0.1',54230,'Jade_Sepulcher',0,0,
 INSERT INTO `zone_settings` VALUES (68,3,'127.0.0.1',54230,'Aydeewa_Subterrane',174,174,115,139,0,0.00,1171);
 INSERT INTO `zone_settings` VALUES (69,6,'127.0.0.1',54530,'Leujaoam_Sanctum',0,0,144,144,0,0.00,1171);
 INSERT INTO `zone_settings` VALUES (70,1,'127.0.0.1',54230,'Chocobo_Circuit',176,176,176,176,0,0.00,1028);
-INSERT INTO `zone_settings` VALUES (71,1,'127.0.0.1',54230,'The_Colosseum',0,0,139,139,0,0.00,??);
+INSERT INTO `zone_settings` VALUES (71,1,'127.0.0.1',54230,'The_Colosseum',0,0,139,139,0,0.00,0);
 INSERT INTO `zone_settings` VALUES (72,3,'127.0.0.1',54230,'Alzadaal_Undersea_Ruins',0,0,115,139,0,0.00,1171);
 INSERT INTO `zone_settings` VALUES (73,6,'127.0.0.1',54530,'Zhayolm_Remnants',148,148,115,139,0,0.00,1171);
 INSERT INTO `zone_settings` VALUES (74,6,'127.0.0.1',54530,'Arrapago_Remnants',148,148,115,139,0,0.00,1171);
