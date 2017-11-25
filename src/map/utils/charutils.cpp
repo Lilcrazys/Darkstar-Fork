@@ -4922,11 +4922,11 @@ namespace charutils
             {
                 if (PMob->GetMLevel() < 70)
                 {
-                    gilTotal += dsp_cap(gilBonus, 1, map_config.max_gil_bonus);
+                    gilTotal += std::clamp<uint32>(gilBonus, 1, map_config.max_gil_bonus);
                 }
                 else
                 {
-                    gilTotal += dsp_cap(gilBonus, 1, map_config.max_gil_bonus*2); // LV 70+  and gave XP so double the cap.
+                    gilTotal += std::clamp<uint32>(gilBonus, 1, map_config.max_gil_bonus*2); // LV 70+  and gave XP so double the cap.
                 }
             }
             else
