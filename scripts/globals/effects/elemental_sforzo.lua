@@ -6,7 +6,7 @@
 require("scripts/globals/status");
 
 function onEffectGain(target,effect)
-    target:addMod(MOD_UDMGMAGIC, -256);
+    target:addMod(MOD_UDMGMAGIC, -100);
     -- No way to tell if effect source was a spell or other yet.
     -- Don't even know if this grants immunity to enfeebling magics on retail actually..
     target:addMod(MOD_SLEEPRES, 100);
@@ -31,7 +31,7 @@ function onEffectTick(target,effect)
 end;
 
 function onEffectLose(target,effect)
-    target:delMod(MOD_UDMGMAGIC, -256);
+    target:delMod(MOD_UDMGMAGIC, -100);
     target:delMod(MOD_SLEEPRES, 100);
     target:delMod(MOD_POISONRES, 100);
     target:delMod(MOD_PARALYZERES, 100);
