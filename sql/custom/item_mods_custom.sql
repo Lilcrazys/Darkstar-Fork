@@ -172,7 +172,6 @@ INSERT INTO `item_mods` VALUES (20510,288,15); -- +15% Double Atk
 
 INSERT INTO `item_mods` VALUES (20512,165,15); -- iLvl 119 (+269 Skill Afterglow) Verethragna - +15% Crit Rate
 INSERT INTO `item_mods` VALUES (20512,421,65); -- +65% Crit DMG
-INSERT INTO `item_mods` VALUES (20512,8,50); -- +50 STR
 
 INSERT INTO `item_mods` VALUES (20530,345,1000); -- Ohrmazd - TP Bonus +1000
 INSERT INTO `item_mods` VALUES (20530,506,200); -- +20% chance for Extra DMG
@@ -204,7 +203,6 @@ INSERT INTO `item_mods` VALUES (20586,288,15); -- +15% Double Atk
 
 INSERT INTO `item_mods` VALUES (20587,165,15); -- iLvl 119 (+269 Skill Afterglow) Twashtar - +15% Crit Rate
 INSERT INTO `item_mods` VALUES (20587,421,65); -- +65% Crit Rate
-INSERT INTO `item_mods` VALUES (20587,9,50); -- +50 DEX
 
 -- INSERT INTO `item_mods` VALUES (20589,165,15); -- (CANT FIND ITEM ID ON FFXIAH) - +15% Crit Rate
 -- INSERT INTO `item_mods` VALUES (20589,421,65); -- (CANT FIND ITEM ID ON FFXIAH) - +65% Crit DMG
@@ -432,7 +430,6 @@ INSERT INTO `item_mods` VALUES (21757,288,15); -- DBL ATK
 
 INSERT INTO `item_mods` VALUES (21758,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21758,421,65); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21758,8,50); -- STR
 
 INSERT INTO `item_mods` VALUES (21808,25,60); -- Apocalypse iLvL 119 AG - ACC +60
 INSERT INTO `item_mods` VALUES (21808,431,1); -- Additional Effect - scripts\gobals\items\apocalypse.lua
@@ -477,7 +474,6 @@ INSERT INTO `item_mods` VALUES (21907,288,15); -- DBL ATK
 
 INSERT INTO `item_mods` VALUES (21908,165,15); -- Crit Rate
 INSERT INTO `item_mods` VALUES (21908,421,65); -- Crit DMG
-INSERT INTO `item_mods` VALUES (21908,11,50); -- AGI
 
 INSERT INTO `item_mods` VALUES (21954,25,60); -- Amanomurakumo ILvL 119 AG - ACC +60
 INSERT INTO `item_mods` VALUES (21954,431,1); -- Additional Effect - scripts\globals\items\amanomurakumo.lua
