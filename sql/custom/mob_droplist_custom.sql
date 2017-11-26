@@ -84,10 +84,7 @@ INSERT INTO `mob_droplist` VALUES (52,0,0,1000,3291,82); -- Alfard's Fang
 
 -- Alkyoneus
 DELETE FROM `mob_droplist` WHERE dropId=55;
-INSERT INTO `mob_droplist` VALUES (55,0,0,1000,10512,273); -- Calma Gauntlets
-INSERT INTO `mob_droplist` VALUES (55,0,0,1000,10611,438); -- Mustela Boots
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,11975,322); -- Avant Cuisses +1
-INSERT INTO `mob_droplist` VALUES (55,0,0,1000,10892,408); -- Magavan Beret
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,10452,362); -- Rubeus Jacket
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,20967,140); -- Qatsunoci
 INSERT INTO `mob_droplist` VALUES (55,0,0,1000,28061,132); -- Orvail Cuffs
@@ -168,10 +165,7 @@ DELETE FROM `mob_droplist` WHERE dropId=191 and dropType=0 and itemId=903 and it
 DELETE FROM `mob_droplist` WHERE dropId=191 and dropType=0 and itemId=1133 and itemRate=40; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=191 and dropType=0 and itemId=4486 and itemRate=30; -- comment me
 DELETE FROM `mob_droplist` WHERE dropId=191 and dropType=0 and itemId=16961 and itemRate=20; -- comment me
-INSERT INTO `mob_droplist` VALUES (191,0,0,1000,10890,183); -- Calma Armet
 INSERT INTO `mob_droplist` VALUES (191,0,0,1000,10457,63); -- Avant Mail +1
-INSERT INTO `mob_droplist` VALUES (191,0,0,1000,10513,128); -- Mustela Gloves
-INSERT INTO `mob_droplist` VALUES (191,0,0,1000,11982,67); -- Magavan Slops
 INSERT INTO `mob_droplist` VALUES (191,0,0,1000,10602,50); -- Rubeus Boots
 INSERT INTO `mob_droplist` VALUES (191,0,0,1000,21052,66); -- Tsurumaru
 
@@ -298,10 +292,7 @@ DELETE FROM `mob_droplist` WHERE dropId=273 and dropType=0 and itemId=4890 and i
 -- Biast
 DELETE FROM `mob_droplist` WHERE dropId=285;
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,15221,437); -- Patroclus's Helm
-INSERT INTO `mob_droplist` VALUES (285,0,0,1000,10462,331); -- Calma-breastplate
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,10507,328); -- Avant Gauntlets +1
-INSERT INTO `mob_droplist` VALUES (285,0,0,1000,11981,358); -- Mustela Brais
-INSERT INTO `mob_droplist` VALUES (285,0,0,1000,10612,392); -- Magavan Clogs
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,10878,257); -- Rubeus Bandeau
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,20742,176); -- Iztaasu
 INSERT INTO `mob_droplist` VALUES (285,0,0,1000,28328,96); -- Shneddick Boots
@@ -463,8 +454,6 @@ INSERT INTO `mob_droplist` VALUES (788,0,0,1000,10255,82); --  Matanca Harness
 DELETE FROM `mob_droplist` WHERE dropId=808;
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,11890,411); -- Skopos Bracers
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,11975,302); -- Avant Cuisses +1
-INSERT INTO `mob_droplist` VALUES (808,0,0,1000,10891,326); -- Mustela Mask
-INSERT INTO `mob_droplist` VALUES (808,0,0,1000,10464,282); -- Magavan Frock
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,10502,408); -- Rubeus Gloves
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,21209,199); -- Uffrat
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,28205,131); -- Weather. Souliers
@@ -802,10 +791,7 @@ INSERT INTO `mob_droplist` VALUES (1852,0,0,1000,279,1000);
 
 -- Juggler Hecatomb
 DELETE FROM `mob_droplist` WHERE dropId=1861 and dropType=0 and itemId=16868 and itemRate=100; -- comment me
-INSERT INTO `mob_droplist` VALUES (1861,0,0,1000,10610,192); --  Calma Leggings
 INSERT INTO `mob_droplist` VALUES (1861,0,0,1000,10885,161); -- Avant Helm +1
-INSERT INTO `mob_droplist` VALUES (1861,0,0,1000,10463,190); -- Mustela Harness
-INSERT INTO `mob_droplist` VALUES (1861,0,0,1000,10514,127); --  Magavan Mitts
 INSERT INTO `mob_droplist` VALUES (1861,0,0,1000,11971,174); --  Rubeus Spats
 INSERT INTO `mob_droplist` VALUES (1861,0,0,1000,27781,66); --  Xux hat
 
