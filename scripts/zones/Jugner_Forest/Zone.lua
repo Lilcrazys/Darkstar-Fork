@@ -60,6 +60,9 @@ function onInitialize(zone)
     UpdateNMSpawnPoint(FRAELISSA);
     GetMobByID(FRAELISSA):setRespawnTime(math.random(900, 10800));
 
+    -- server restarts and crashes cause the king arthro knight crabs to reset, so we need to reset this var
+    SetServerVariable("[POP]King_Arthro",0);
+
     SetRegionalConquestOverseers(zone:getRegionID());
 end;
 
