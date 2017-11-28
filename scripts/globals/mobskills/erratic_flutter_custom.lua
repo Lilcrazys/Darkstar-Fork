@@ -1,16 +1,24 @@
 ---------------------------------------------
---  Groundburst
+-- Erratic Flutter
 --
---  Description: Expels a fireball on targets in an area of effect.
---  Type: Physical
---  Utsusemi/Blink absorb: Wipes shadows
---  Range: Unknown radial
---  Notes: Only used by notorious monsters, and from any Mamool Ja in besieged.
+-- Description: Deals Fire damage around the caster. Grants the effect of Haste.
+-- Family: Wamoura
+-- Monipulators: Wamoura (MON), Coral Wamoura (MON)
+-- Level (Monstrosity): 60
+-- TP Cost (Monstrosity): 1500 TP
+-- Type: Enhancing
+-- Element: Fire
+-- Can be dispelled: Yes
+-- Notes:
+-- Blue magic version is 307/1024 haste for 5 minutes. Wamaora haste is presumed identical.
+-- Wamoura version also deals Fire damage to targets around the wamoura.
+-- While it does not overwrite most forms of Slowga, Slow II, Slow II TP moves,
+-- Erratic Flutter does overwrite Hojo: Ni, Hojo: Ichi, and Slow.
+-- Player Blue magic version is wind element instead of fire.
 ---------------------------------------------
-
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
@@ -18,12 +26,12 @@ function onMobSkillCheck(target,mob,skill)
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-    local numhits = 1;
-    local accmod = 1;
-    local dmgmod = 3;
-    local info = MobPhysicalMove(mob,target,skill,numhits,accmod,dmgmod,TP_NO_EFFECT);
-    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_PHYSICAL,MOBPARAM_BLUNT,MOBPARAM_WIPE_SHADOWS);
+    local dmgmod = 1;
+    local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*1.5,ELE_FIRE,dmgmod,TP_NO_EFFECT);
+    local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_FIRE,MOBPARAM_IGNORE_SHADOWS);
+
+    mob:addStatusEffect(EFFECT_HASTE,307,0,300); -- Checked in retail there is no message for the self buff aspect
+
     target:delHP(dmg);
-    mob:addStatusEffect(EFFECT_HASTE,75,0,30);
     return dmg;
 end;
