@@ -1,25 +1,22 @@
 ---------------------------------------------
---  Crosswind
+-- White Wind
 --
---  Description: Deals Wind damage to enemies within a fan-shaped area. Additional effect: Knockback
---  Type: Breath
---  Utsusemi/Blink absorb: Ignores shadows
---  Range: Unknown cone
---  Notes:
+-- Description:
+-- HP recovery on all nearby mobs centered on the user.
+-- The higher the user's HP, the higher the HP recovery.
+-- Only used by certain puks.
 ---------------------------------------------
+require("scripts/globals/monstertpmoves");
 require("scripts/globals/settings");
 require("scripts/globals/status");
-require("scripts/globals/monstertpmoves");
+require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-	return 0;
+    return 0;
 end;
 
 function onMobWeaponSkill(target, mob, skill)
-	local dmgmod = 2.5;
-	local info = MobMagicalMove(mob,target,skill,mob:getWeaponDmg()*3,ELE_WIND,dmgmod,TP_NO_EFFECT);
-	local dmg = MobFinalAdjustments(info.dmg,mob,skill,target,MOBSKILL_MAGICAL,MOBPARAM_WIND,MOBPARAM_IGNORE_SHADOWS);
-	target:delHP(dmg);
-	return dmg;
+    skill:setMsg(msgBasic.SKILL_RECOVERS_HP);
+    return MobHealMove(mob, (math.floor(mob:getHP()/7)) + (math.floor(mob:getMaxHP()/7));
 end;
