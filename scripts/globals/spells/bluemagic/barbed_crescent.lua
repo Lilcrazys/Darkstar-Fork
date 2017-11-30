@@ -1,21 +1,19 @@
 -----------------------------------------
--- Barbed Crescent
+-- Spell: Barbed Crescent
 -----------------------------------------
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
+    params.effect = EFFECT_ACCURACY_DOWN;
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
     params.tpmod = TPMOD_CRITICAL; params.dmgtype = DMGTYPE_SLASH; params.scattr = SC_DISTORTION;
 	params.numhits = 1;
@@ -27,9 +25,8 @@ function onSpellCast(caster,target,spell)
    local chance = math.random();
 
 	if (damage > 0 and chance > 4) then
-		local typeEffect = EFFECT_ACCURACY_DOWN;
-		target:delStatusEffect(typeEffect);
-		target:addStatusEffect(typeEffect,4,0,getBlueEffectDuration(caster,resist,typeEffect));
+		target:delStatusEffect(params.effect);
+		target:addStatusEffect(params.effect,4,0,getBlueEffectDuration(caster,resist,params.effect));
 	end
     return damage;
 end;

@@ -1,15 +1,10 @@
 -----------------------------------------
 -- Spell: Erratic Flutter
--- Overwrites Intimidate (Pugil), Sticky Thread (Crawler), and Horror Cloud (Skeleton)
--- Cannot be overwriten by Intimidate or Horror Cloud
--- Overwriten by, and cannot overwrite, Slow, Slowga, Haste, Hastega, and Spider Web
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)

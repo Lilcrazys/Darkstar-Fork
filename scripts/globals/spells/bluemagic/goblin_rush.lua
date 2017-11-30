@@ -1,17 +1,18 @@
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
 -----------------------------------------
--- OnSpellCast
+-- Spell: Goblin Rush
+-----------------------------------------
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-   
     params.tpmod = TPMOD_ACC; params.dmgtype = DMGTYPE_H2H; params.scattr = SC_IMPACTION;
 	params.numhits = 3;
 	params.multiplier = 4.0; params.tp150 = 2.05; params.tp300 = 2.1; params.azuretp = 2.2; params.duppercap = 100; 

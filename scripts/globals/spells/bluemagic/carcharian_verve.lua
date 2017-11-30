@@ -5,9 +5,6 @@ require("scripts/globals/bluemagic");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/msg");
-
------------------------------------------
--- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -17,10 +14,6 @@ function onMagicCastingCheck(caster,target,spell)
         return chatType.STATUS_PREVENTS;
     end
 end;
-
------------------------------------------
--- OnSpellCast
------------------------------------------
 
 function onSpellCast(caster,target,spell)
     if (caster:hasStatusEffect(EFFECT_DIFFUSION)) then

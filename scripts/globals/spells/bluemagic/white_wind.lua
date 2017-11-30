@@ -1,13 +1,10 @@
 -----------------------------------------
--- Spell: Healing Breeze
--- Restores target's HP.
--- Shamelessly stolen from http://members.shaw.ca/pizza_steve/cure/Cure_Calculator.html
+-- Spell: White Wind
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)

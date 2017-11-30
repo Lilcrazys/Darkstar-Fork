@@ -1,23 +1,21 @@
 ---------------------------------------------
---  Delta Thrust
----------------------------------------------
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
-
+-- Spell: Delta Thrust
 -----------------------------------------
--- OnSpellCast
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-
     local params = {};
-
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_PLAGUE;
     params.tpmod = TPMOD_ATTACK;
     params.dmgtype = DMGTYPE_SLASH;
     params.scattr = SC_LIQUEFACTION;
@@ -39,13 +37,11 @@ function onSpellCast(caster,target,spell)
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-   
-    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    local resist = applyResistance(caster, target, spell, params);
 
     if (damage > 0 and resist < 0.5) then
-        local typeEffect = EFFECT_PLAGUE;
-        target:delStatusEffect(typeEffect);
-        target:addStatusEffect(typeEffect,4,0,getBlueEffectDuration(caster,resist,typeEffect));
+        target:delStatusEffect(params.effect);
+        target:addStatusEffect(params.effect,4,0,getBlueEffectDuration(caster,resist,params.effect));
     end
     return damage;
 

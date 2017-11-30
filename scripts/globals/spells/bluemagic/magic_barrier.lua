@@ -1,23 +1,17 @@
 -----------------------------------
 -- Spell: Magic Barrier
------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
-
 -----------------------------------------
--- onMagicCastingCheck
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
     return 0;
 end;
 
------------------------------------------
--- OnSpellCast
------------------------------------------
-
-function onSpellCast(caster, target, spell)
+function onSpellCast(caster,target,spell)
     local duration = 120;
 
     if (caster:hasStatusEffect(EFFECT_DIFFUSION)) then

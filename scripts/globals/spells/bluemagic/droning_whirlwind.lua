@@ -1,13 +1,10 @@
 -----------------------------------------
---  Droning Whirlwind
+-- Spell: Droning Whirlwind
 -----------------------------------------
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/bluemagic");
 require("scripts/globals/msg");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -20,7 +17,8 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
     params.multiplier = 4.0;
     params.tMultiplier = 2.0;
     params.duppercap = 100;
@@ -35,7 +33,7 @@ function onSpellCast(caster,target,spell)
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    local resist = applyResistance(caster, target, spell, params);
 
     if (damage > 0 and resist < 0.125) then
        target:dispelStatusEffect();

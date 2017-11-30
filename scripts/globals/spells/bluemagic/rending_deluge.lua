@@ -1,18 +1,21 @@
 ---------------------------------------------
---  Rending Deluge
---------------------------------------------- 
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
+-- Spell: Rending Deluge
 -----------------------------------------
--- OnSpellCast
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
-function onMagicCastingCheck(caster,target,spell)	return 0;
+function onMagicCastingCheck(caster,target,spell)
+	return 0;
 end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_NONE;
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
 	local multi = 1.0;
 	if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
@@ -23,10 +26,7 @@ function onSpellCast(caster,target,spell)
     damage = BlueMagicalSpell(caster, target, spell, params, MND_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    local dINT = (caster:getStat(MOD_INT) - target:getStat(MOD_INT));
-
-    local resist = applyResistance(caster,spell,target,dINT,BLUE_SKILL);
-    local effect = EFFECT_NONE;
+    local resist = applyResistance(caster, target, spell, params);
 
     if (resist > 0.655) then
 		effect = target:dispelStatusEffect();

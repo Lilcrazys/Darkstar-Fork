@@ -1,15 +1,14 @@
 ---------------------------------------------------
--- Final Sting
----------------------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
+-- Spell: Final Sting
 -----------------------------------------
--- OnSpellCast
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -23,8 +22,8 @@ function onSpellCast(caster,target,spell)
 		target:delHP(playerHP);
 		caster:setHP(1);
 		caster:delStatusEffect(EFFECT_WEAKNESS);
-		caster:addStatusEffect(EFFECT_WEAKNESS,1,0,duration);
-		
+		caster:addStatusEffect(EFFECT_WEAKNESS,1,0,duration);	
 	end
+	
 	return damage;
 end;

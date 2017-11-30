@@ -1,13 +1,10 @@
 ---------------------------------------------
---  Bilgestorm
----------------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
-require("scripts/globals/msg");
-
+-- Spell: Bilgestorm
 -----------------------------------------
--- OnSpellCast
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -20,7 +17,8 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
     params.tpmod = TPMOD_ATTACK;
     params.dmgtype = DMGTYPE_SLASH;
     params.scattr = SC_SCISSION;
@@ -43,7 +41,7 @@ function onSpellCast(caster,target,spell)
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    local resist = applyResistance(caster, target, spell, params);
 
     if (damage > 0 and resist < 0.3) then
     local typeEffect = EFFECT_ACCURACY_DOWN;

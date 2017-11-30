@@ -1,13 +1,10 @@
 -----------------------------------------
---  Subduction
--- http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
---
+-- Spell: Subduction
 -----------------------------------------
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -16,7 +13,9 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-
+	params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_WEIGHT;
     params.multiplier = 2.0;
     params.tMultiplier = 2.0;
     params.duppercap = 96;
@@ -35,12 +34,11 @@ function onSpellCast(caster,target,spell)
 		multi = multi + 0.50;
 	end
 
-	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,3.0);
+    local resist = applyResistance(caster, target, spell, params);
 
 	if (damage > 0 and resist < 0.3) then
-		local typeEffect = EFFECT_WEIGHT;
-		target:delStatusEffect(typeEffect);
-		target:addStatusEffect(typeEffect,60,0,getBlueEffectDuration(caster,resist,typeEffect));
+		target:delStatusEffect(params.effect);
+		target:addStatusEffect(params.effect,60,0,getBlueEffectDuration(caster,resist,params.effect));
 	end
 	
     return damage;

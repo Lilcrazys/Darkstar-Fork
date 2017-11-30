@@ -1,23 +1,15 @@
 -----------------------------------------
 -- Spell: Reaving Wind
---
 -----------------------------------------
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-
------------------------------------------
--- onMagicCastingCheck
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
 	return 0;
 end;
-
------------------------------------------
--- OnSpellCast
------------------------------------------
 
 function onSpellCast(caster,target,spell)
     -- Todo: monster affinity should modify the amount by 25%

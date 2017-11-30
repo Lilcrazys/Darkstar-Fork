@@ -1,20 +1,21 @@
 ---------------------------------------------
---  Acrid Stream
---------------------------------------------- 
-require("scripts/globals/magic");
-require("scripts/globals/status");
+-- Spell: Acrid Stream
+---------------------------------------------
 require("scripts/globals/bluemagic");
-
------------------------------------------
--- OnSpellCast
------------------------------------------
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
+---------------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_MAGIC_DEF_DOWN;
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
 	local multi = 3.08;
 	if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
@@ -25,12 +26,11 @@ function onSpellCast(caster,target,spell)
     damage = BlueMagicalSpell(caster, target, spell, params, MND_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-	local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
+    local resist = applyResistance(caster, target, spell, params);
 
 	if (damage > 0 and resist > 0.3) then
-		local typeEffect = EFFECT_MAGIC_DEF_DOWN;
-		target:delStatusEffect(typeEffect);
-		target:addStatusEffect(typeEffect,25,0,getBlueEffectDuration(caster,resist,typeEffect));
+		target:delStatusEffect(params.effect);
+		target:addStatusEffect(params.effect,25,0,getBlueEffectDuration(caster,resist,params.effect));
 	end
 	return damage;
 end;

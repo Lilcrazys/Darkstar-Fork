@@ -1,15 +1,10 @@
 -----------------------------------------
---
---  diffusion ray
---
+-- Spell: Diffusion Ray
 -----------------------------------------
-
-require("scripts/globals/magic");
-require("scripts/globals/status");
 require("scripts/globals/bluemagic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -17,7 +12,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-     local params = {};
+    local params = {};
 
     params.multiplier = 5.0;
     params.tMultiplier = 2.0;

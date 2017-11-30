@@ -1,12 +1,10 @@
 ---------------------------------------------
---  Benthic Typhoon
----------------------------------------------
+-- Spell: Benthic Typhoon
+-----------------------------------------
 require("scripts/globals/bluemagic");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -15,7 +13,7 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-
+    params.skillType = BLUE_SKILL;
     params.tpmod = TPMOD_ATTACK;
     params.dmgtype = DMGTYPE_SLASH;
     params.scattr = SC_GRAVITATION;
@@ -38,7 +36,7 @@ function onSpellCast(caster,target,spell)
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
     local macc = (caster:getMod(MOD_MACC) - target:getMod(MOD_MEVA));
-    local resist = applyResistance(caster,spell,target,macc,BLUE_SKILL);
+    local resist = applyResistance(caster,spell,target,macc,params.skillType);
 
     if (damage > 0 and resist > 0.125) then
         target:addStatusEffect(EFFECT_DEFENSE_DOWN,10,0,60*resist);

@@ -5,9 +5,6 @@ require("scripts/globals/bluemagic");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/msg");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -19,13 +16,15 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    -- local resist = applyResistance(caster,spell,target,caster:getStat(MOD_INT) - target:getStat(MOD_INT),BLUE_SKILL,1.0);
-    local dINT = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
-    local resist = applyResistanceEffect(caster,spell,target,dINT,SKILL_BLU,1.0,EFFECT_TERROR)
+    local params = {};
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_TERROR;
+    local resist = applyResistance(caster, target, spell, params);
 
     if (resist > 0.25) then
-        target:addStatusEffect(EFFECT_TERROR,1,0,10);
+        target:addStatusEffect(params.effect,1,0,10);
     end
 
-    return EFFECT_TERROR;
+    return params.effect;
 end;

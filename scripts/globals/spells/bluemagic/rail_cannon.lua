@@ -1,8 +1,10 @@
-require("scripts/globals/magic");
-require("scripts/globals/status");
-require("scripts/globals/bluemagic");
 -----------------------------------------
--- OnSpellCast
+-- Spell: Rail Cannon
+-----------------------------------------
+require("scripts/globals/bluemagic");
+require("scripts/globals/status");
+require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
