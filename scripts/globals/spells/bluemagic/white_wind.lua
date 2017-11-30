@@ -1,5 +1,10 @@
 -----------------------------------------
 -- Spell: White Wind
+-- HP healed is equal to floor(MaxHP/7)*2 and is affected by cure potency.
+-- Potency is determined via maximum HP and not the caster's current HP.
+-- This spell can be used with Divine Seal to increase the amount of HP restored.
+-- This spell is also affected by Cure Potency equipment (eg: Light Staff, etc.) as well as Obis and weather.
+-- However, this spell is not affect by Healing Magic Skill.
 -----------------------------------------
 require("scripts/globals/bluemagic");
 require("scripts/globals/status");
@@ -8,40 +13,16 @@ require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
-	local minCure = 352;
+    local cure = math.floor(mob:getHP()/7)*2;
+    cure = getCureFinal(caster,spell,cure,1,true);
 
-	local divisor = 0.6666;
-	local constant = -45;
-	local power = getCurePowerOld(caster);
-	if (power > 459) then
-		divisor = 7;
-		constant = 144.6666;
-	elseif (power > 219) then
-		divisor =  2;
-		constant = 65;
-	end
-
-	local final = getCureFinal(caster,spell,getBaseCureOld(power,divisor,constant),minCure,true);
-
-	final = final + (final * (target:getMod(MOD_CURE_POTENCY_RCVD)/100));
-	
-	if (target:getAllegiance() == caster:getAllegiance() and (target:getObjType() == TYPE_PC or target:getObjType() == TYPE_MOB)) then
-		--Applying server mods....
-		final = final * CURE_POWER;
-	end
-	
-	local diff = (target:getMaxHP() - target:getHP());
-	if (final > diff) then
-		final = diff;
-	end
-	target:addHP(final);
-
-	target:wakeUp();
-	caster:updateEnmityFromCure(target,final);
-	spell:setMsg(7);
-	return final;
+    spell:setMsg(msgBasic.MAGIC_RECOVERS_HP);
+    target:addHP(cure);
+    target:wakeUp();
+    caster:updateEnmityFromCure(target,cure);
+    return cure;
 end;
