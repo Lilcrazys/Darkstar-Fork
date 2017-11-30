@@ -8,7 +8,7 @@ require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -28,9 +28,9 @@ function onSpellCast(caster,target,spell)
     -- This data should match information on http://wiki.ffxiclopedia.org/wiki/Calculating_Blue_Magic_Damage
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-	
+
     local resist = applyResistance(caster, target, spell, params);
-    
+
     if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
         multi = multi + 0.50;
     end
