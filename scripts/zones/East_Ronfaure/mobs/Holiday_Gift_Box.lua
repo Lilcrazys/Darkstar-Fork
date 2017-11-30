@@ -36,28 +36,33 @@ function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         local lootPool =
         {
-            [1]  = {ID = nil, multi = false}, -- Buff
-            [2]  = {ID = 28540, multi = false}, -- Warp Ring
-            [3]  = {ID = nil, multi = false}, -- Buff
-            [4]  = {ID = 4168, multi = true}, -- Twinkle Shower
-            [5]  = {ID = 4169, multi = true}, -- Little Comet
-            [6]  = {ID = 4186, multi = true}, -- Airborn
-            [7]  = {ID = 4216, multi = true}, -- Brilliant Snow
-            [8]  = {ID = 4218, multi = true}, -- Air Rider
-            [9]  = {ID = 4218, multi = true}, -- Air Rider
-            [10] = {ID = 4257, multi = true}, -- Papillion
-            [11] = {ID = 5441, multi = true}, -- Angelwing
-            [12] = {ID = 5620, multi = false}, -- Roast Turkey
-            [13] = {ID = 5621, multi = false}, -- Candy Ring
-            [14] = {ID = 5622, multi = false}, -- Candy Cane
-            [15] = {ID = 5883, multi = true}, -- Falling Star
-            [16] = {ID = 13179, multi = false}, -- Kingdom Stables Collar
-            [17] = {ID = 13180, multi = false}, -- Republic Stables Medal
-            [18] = {ID = 13181, multi = false}, -- Federation Stables Scarf
-            [19] = {ID = nil, multi = false}, -- Buff
-            [20] = {ID = 28540, multi = false} -- Warp Ring
+            [1]  = {ID = nil,   multi = false}, -- Buff
+            [2]  = {ID = 5542,  multi = false}, -- Gateau aux Fraises
+            [3]  = {ID = 5620,  multi = false}, -- Roast Turkey
+            [4]  = {ID = 5621,  multi = false}, -- Candy Ring
+            [5]  = {ID = 5622,  multi = false}, -- Candy Cane
+            [6]  = {ID = 4168,  multi = true},  -- Twinkle Shower
+            [7]  = {ID = 4169,  multi = true},  -- Little Comet
+            [8]  = {ID = 4216,  multi = true},  -- Brilliant Snow
+            [9]  = {ID = 4218,  multi = true},  -- Air Rider
+            [10] = {ID = 4257,  multi = true},  -- Papillion
+            [11] = {ID = 5441,  multi = true},  -- Angelwing
+            [12] = {ID = 5883,  multi = true},  -- Falling Star
+            [13] = {ID = 88,    multi = false}, -- Timepiece
+            [14] = {ID = 154,   multi = false}, -- Miniature-Airship
+            [15] = {ID = 264,   multi = false}, -- Stuffed-Chocobo
+            [16] = {ID = 320,   multi = false}, -- Harpsichord
+            -- (disabled, nobody wants these while homepoint warps are a thing)
+            -- [17] = {ID = 13179, multi = false}, -- Kingdom Stables Collar
+            -- [18] = {ID = 13180, multi = false}, -- Republic Stables Medal
+            -- [19] = {ID = 13181, multi = false}, -- Federation Stables Scarf
+            [17] = {ID = 13216, multi = false}, -- Gold Moogle Belt
+            [18] = {ID = 13217, multi = false}, -- Silver Moogle Belt
+            [19] = {ID = 13218, multi = false}, -- Bronze Moogle Belt
+            [20] = {ID = 5543,  multi = false}, -- Midwinter Dream
+            [21] = {ID = nil,   multi = false}  -- Buff
         }
-        local randomItem = lootPool[math.random(1,20)];
+        local randomItem = lootPool[math.random(1,21)];
         if (randomItem.ID ~= nil) then -- Item!
             -- Direct drop to killing party/alliance/person
             if (randomItem.multi == true) then

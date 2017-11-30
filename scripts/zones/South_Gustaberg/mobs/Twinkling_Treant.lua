@@ -132,15 +132,25 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
-        if (math.random(1,100) > 50) then
-            player:addTreasure(28540, mob); -- Warp Ring
+        local = rndNumber = math.random(1,100);
+        if (rndNumber > 90) then
+            player:addTreasure(3596, mob); -- Ornament Case
+        -- Region rockin choco, or common random rockin choco
+        if (rndNumber > 50) then
+            -- This random only works because these items have sequential IDs - don't try to copy it.
+            -- 1 of 5 Hobby-Bo furnishing at random.
+            player:addTreasure(math.random(326,330));
         else
-            player:addTreasure(3596, mob);  -- Ornament Case
+            player:addTreasure(329, mob); -- Blue-hobby-bo
         end
-        -- 2 of Kingdom Stables Collar/Republic Stables Medal/Federation Stables Scarf
-        -- This random only works because these 3 items have sequential IDs - don't try to copy it.
-        player:addTreasure(math.random(13179,13181));
-        player:addTreasure(math.random(13179,13181));
+
+        -- (disabled, nobody wants these while homepoint warps are a thing)
+        -- This random only works because these items have sequential IDs - don't try to copy it.
+        -- Kingdom Stables Collar/Republic Stables Medal/Federation Stables Scarf
+        -- player:addTreasure(math.random(13179,13181));
+
+        -- Always drop region specific wreath
+        player:addTreasure(3620, mob); -- Silberkranz
     end
 
     if (player == nil or isKiller == true) then

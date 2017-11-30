@@ -104,11 +104,14 @@ function onTrigger(player,npc)
     if ((month == 12 and day >= 5 and day <= 27)) then -- Starlight Celebration ~ Dec 5 - Dec 27
         local stock_1 =
         {
+            5622,    5000,    -- Candy Cane
+            5621,    5000,    -- Candy Ring
+            5620,    5000,    -- Roast Turkey
             15179,   7500,    -- Dream Hat +1
             18864,   7500,    -- Dream Bell +1
             14520,   7500,    -- Dream Robe +1
             10383,   7500,    -- Dream Mittens +1
-            11966,   7500,    -- Dream Trousers
+            11966,   7500,    -- Dream Trousers +1
             11968,   7500,    -- Dream Pants +1
             15753,   7500,    -- Dream Boots +1
             155,     5000,    -- Dream Sock
@@ -118,14 +121,17 @@ function onTrigger(player,npc)
             115,     6000,    -- Bastokan Tree
             116,     6000,    -- Windurstian Tree
             138,     8000,    -- Jeunoan Tree
-            5622,    5000,    -- Candy Cane
-            5621,    5000,    -- Candy Ring
-            5620,    5000,    -- Roast Turkey
+            366,     5000,    -- kanonenofen
+            365,     5000,    -- poele-classique
+            367,     5000,    -- pot-topper
         };
         showShop(player, STATIC, stock_1);
     elseif ((month == 12 and day >= 28) or (month == 1 and day <= 15)) then -- Happy New Year ~ Dec 28 - Jan 15
         local stock_2 =
         {
+            5622,    5000,    -- Candy Cane
+            5621,    5000,    -- Candy Ring
+            5620,    5000,    -- Roast Turkey
             11491,   8000,    -- Snow Bunny Hat +1
             18846,   7500,    -- Battledore
             10875,   7500,    -- Snowman Cap
@@ -133,9 +139,9 @@ function onTrigger(player,npc)
             177,     6000,    -- Snowman Miner
             178,     6000,    -- Snowman Mage
             192,     6000,    -- Hoary Spire
-            5622,    5000,    -- Candy Cane
-            5621,    5000,    -- Candy Ring
-            5620,    5000,    -- Roast Turkey
+            366,     5000,    -- kanonenofen
+            365,     5000,    -- poele-classique
+            367,     5000,    -- pot-topper
         };
         showShop(player, STATIC, stock_2);
     elseif (month == 2 and day <= 15) then -- Valentione's Day ~ Feb 1 - Feb 15
