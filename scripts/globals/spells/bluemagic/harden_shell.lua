@@ -16,9 +16,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster, target, spell)
-
-	local power = 200; -- Percentage, not amount.
-
+    local power = 200; -- Percentage, not amount.
     local duration = 60;
 
     if (caster:hasStatusEffect(EFFECT_DIFFUSION)) then
@@ -31,11 +29,11 @@ function onSpellCast(caster, target, spell)
         caster:delStatusEffect(EFFECT_DIFFUSION);
     end
 
-	if (target:addStatusEffect(EFFECT_DEFENSE_BOOST,power,0,duration)) then
-		spell:setMsg(230);
-	else
-		spell:setMsg(75);
-	end
+    if (target:addStatusEffect(EFFECT_DEFENSE_BOOST,power,0,duration)) then
+        spell:setMsg(msgBasic.MAGIC_GAIN_EFFECT);
+    else
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
+    end
 
     return EFFECT_DEFENSE_BOOST;
 end;

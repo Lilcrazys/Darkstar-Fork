@@ -37,28 +37,14 @@ function onSpellCast(caster,target,spell)
     params.mnd_wsc = 0.0;
     params.chr_wsc = 0.0;
 
-
+    local resist = applyResistance(caster, target, spell, params);
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    local resist = applyResistance(caster, target, spell, params);
-
-    if (damage > 0 and resist < 0.3) then
-    local typeEffect = EFFECT_ACCURACY_DOWN;
-        target:delStatusEffect(typeEffect);
-        target:addStatusEffect(typeEffect,35,0,getBlueEffectDuration(caster,resist,typeEffect));
-    end
-
-    if (damage > 0 and resist < 0.3) then
-    local typeEffect = EFFECT_ATTACK_DOWN;
-        target:delStatusEffect(typeEffect);
-        target:addStatusEffect(typeEffect,25,0,getBlueEffectDuration(caster,resist,typeEffect));
-    end
-
-    if (damage > 0 and resist < 0.3) then
-    local typeEffect = EFFECT_DEFENSE_DOWN;
-        target:delStatusEffect(typeEffect);
-        target:addStatusEffect(typeEffect,25,0,getBlueEffectDuration(caster,resist,typeEffect));
+    if (resist > 0.0625) then
+        target:addStatusEffect(EFFECT_ACCURACY_DOWN, 35, 0, math.random(30,60));
+        target:addStatusEffect(EFFECT_ATTACK_DOWN,   25, 0, math.random(30,60));
+        target:addStatusEffect(EFFECT_DEFENSE_DOWN,  25, 0, math.random(30,60));
     end
 
     return damage;

@@ -13,7 +13,6 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-
     params.multiplier = 5.0;
     params.tMultiplier = 2.0;
     params.duppercap = 69;

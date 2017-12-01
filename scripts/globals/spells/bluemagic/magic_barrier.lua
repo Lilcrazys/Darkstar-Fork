@@ -24,11 +24,11 @@ function onSpellCast(caster,target,spell)
         caster:delStatusEffect(EFFECT_DIFFUSION);
     end
 
-    if (caster:hasStatusEffect(EFFECT_MAGIC_SHIELD) and caster:hasStatusEffect(EFFECT_MAGIC_SHIELD) == true) then
-        spell:setMsg(75);
+    if (caster:hasStatusEffect(EFFECT_MAGIC_SHIELD)) then
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
     else
         caster:addStatusEffect(EFFECT_MAGIC_SHIELD,100,0,duration);
-        spell:setMsg(230);
+        spell:setMsg(msgBasic.MAGIC_GAIN_EFFECT);
     end
 
     return EFFECT_MAGIC_SHIELD;

@@ -4,6 +4,7 @@
 require("scripts/globals/bluemagic");
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/utils");
 require("scripts/globals/msg");
 -----------------------------------------
 
@@ -16,7 +17,8 @@ function onSpellCast(caster,target,spell)
     if (target:isUndead()) then
         return 0;
     end
-	local params = {};
+
+    local params = {};
     params.attribute = MOD_INT;
     params.skillType = BLUE_SKILL;
     params.effect = EFFECT_NONE;
@@ -32,7 +34,11 @@ function onSpellCast(caster,target,spell)
 
     if (resist > 0.0625) then
         params.effect = target:dispelStatusEffect();
-        -- caster:addStatusEffect(effect,getPower,getTick,GetDuration,GetSubPower,getTier)
+        --[[
+        if (params.effect ~= EFFECT_NONE) then
+            caster:addStatusEffect(params.effect,getPower,getTick,GetDuration,GetSubPower,getTier)
+        end
+        ]]
     end
 
     caster:addHP(dmg);

@@ -19,14 +19,14 @@ function onSpellCast(caster,target,spell)
     local resist = applyResistance(caster, target, spell, params);
 
     if (target:isNM()) then -- Immune, cannot Doom NMs
-        spell:setMsg(75);
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
     elseif (resist < 1) then -- Resisted
-        spell:setMsg(85);
+        spell:setMsg(msgBasic.MAGIC_RESIST);
     else
         if (target:addStatusEffect(params.effect,10, 3, 30)) then
-            spell:setMsg(237);
+            spell:setMsg(msgBasic.MAGIC_ENFEEB);
         else
-            spell:setMsg(75); -- Already inflicted
+            spell:setMsg(msgBasic.MAGIC_NO_EFFECT); -- Already inflicted
         end
     end
 

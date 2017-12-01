@@ -13,7 +13,6 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
-
     params.tpmod = TPMOD_ATTACK;
     params.dmgtype = DMGTYPE_PIERCE;
     params.scattr = SC_IMPACTION;
@@ -34,6 +33,6 @@ function onSpellCast(caster,target,spell)
 
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-   
+
     return damage;
 end;

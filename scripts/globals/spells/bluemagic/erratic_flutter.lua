@@ -12,7 +12,6 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-
     local duration = 300;
 
     if (caster:hasStatusEffect(EFFECT_DIFFUSION)) then
@@ -22,8 +21,10 @@ function onSpellCast(caster,target,spell)
         end
         caster:delStatusEffect(EFFECT_DIFFUSION);
     end
+
     if (target:addStatusEffect(EFFECT_HASTE,300,0,duration) == false) then
-        spell:setMsg(75);
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
     end
+
     return EFFECT_HASTE;
 end;

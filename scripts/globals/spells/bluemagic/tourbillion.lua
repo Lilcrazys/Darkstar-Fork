@@ -8,7 +8,7 @@ require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
+    if (caster:hasStatusEffect(EFFECT_UNBRIDLED_LEARNING) == true) then
       return 0;
     else
       return chatType.STATUS_PREVENTS;
@@ -16,10 +16,9 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-
-	local params = {};
-	params.effect = EFFECT_DEFENSE_DOWN;
-	params.tpmod = TPMOD_ATTACK;
+    local params = {};
+    params.effect = EFFECT_DEFENSE_DOWN;
+    params.tpmod = TPMOD_ATTACK;
     params.dmgtype = DMGTYPE_BLUNT;
     params.scattr = SC_SCISSION;
     params.numhits = 1;
@@ -37,18 +36,16 @@ function onSpellCast(caster,target,spell)
     params.mnd_wsc = 0.25;
     params.chr_wsc = 0.0;
 
+    local resist = applyResistance(caster, target, spell, params);
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    local resist = applyResistance(caster, target, spell, params);
 
-	if (damage > 0 and resist < 0.3) then
-	local typeEffect = EFFECT_DEFENSE_DOWN;
-		target:delStatusEffect(params.effect);
-		target:addStatusEffect(params.effect,250,0,getBlueEffectDuration(caster,resist,params.effect));
-	end
+    if (damage > 0 and resist < 0.3) then
+    local typeEffect = EFFECT_DEFENSE_DOWN;
+        target:delStatusEffect(params.effect);
+        target:addStatusEffect(params.effect,250,0,getBlueEffectDuration(caster,resist,params.effect));
+    end
 
     return damage;
 end;
-
-

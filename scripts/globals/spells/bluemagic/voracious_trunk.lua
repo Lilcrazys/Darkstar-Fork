@@ -1,4 +1,3 @@
-
 -----------------------------------------
 -- Spell: Voracious Trunk
 -----------------------------------------
@@ -9,7 +8,7 @@ require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -20,13 +19,13 @@ function onSpellCast(caster,target,spell)
     local resist = applyResistance(caster, target, spell, params);
 
     if (resist > 0.0625) then
-		spell:setMsg(341);
-		effect = target:dispelStatusEffect();
-		if (effect == EFFECT_NONE) then
-			spell:setMsg(75);
-		end
-	else
-        spell:setMsg(85);
+        spell:setMsg(msgBasic.MAGIC_ERASE);
+        effect = target:dispelStatusEffect();
+        if (effect == EFFECT_NONE) then
+            spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
+        end
+    else
+        spell:setMsg(msgBasic.MAGIC_RESIST);
     end
 
     return effect;

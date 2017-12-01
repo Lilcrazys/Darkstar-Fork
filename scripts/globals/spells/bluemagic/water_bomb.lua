@@ -4,11 +4,10 @@
 require("scripts/globals/bluemagic");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -30,17 +29,16 @@ function onSpellCast(caster,target,spell)
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-	if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
-		multi = multi + 1.50;
-	end
+    if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
+        multi = multi + 1.50;
+    end
 
     local resist = applyResistance(caster, target, spell, params);
 
-	if (damage > 0 and resist < 0.4) then
-		target:delStatusEffect(params.effect);
-		target:addStatusEffect(params.effect,25,0,getBlueEffectDuration(caster,resist,params.effect));
-	end
+    if (damage > 0 and resist < 0.4) then
+        target:delStatusEffect(params.effect);
+        target:addStatusEffect(params.effect,25,0,getBlueEffectDuration(caster,resist,params.effect));
+    end
 
     return damage;
-
 end;

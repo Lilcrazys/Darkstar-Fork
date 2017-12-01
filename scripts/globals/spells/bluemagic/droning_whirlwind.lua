@@ -30,10 +30,9 @@ function onSpellCast(caster,target,spell)
     params.mnd_wsc = 0.2;
     params.chr_wsc = 0.0;
 
+    local resist = applyResistance(caster, target, spell, params);
     local damage = BlueMagicalSpell(caster, target, spell, params, INT_BASED);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
-
-    local resist = applyResistance(caster, target, spell, params);
 
     if (damage > 0 and resist < 0.125) then
        target:dispelStatusEffect();

@@ -12,16 +12,32 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-	--doElementalNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus)
-	local dmg = doElementalNuke(719,2.8,caster,spell,target,false,1.0);
-	
-	if (target:hasStatusEffect(EFFECT_SLOW)) then
-	spell:setMsg(75); -- no effect
-	    else	
-		target:addStatusEffect(EFFECT_SLOW,15,0,20);
-		   end
+    local params = {};
+    params.diff = caster:getStat(MOD_INT) - target:getStat(MOD_INT);
+    params.attribute = MOD_INT;
+    params.skillType = BLUE_SKILL;
+    params.effect = EFFECT_SLOW;
+    params.multiplier = 3.0;
+    if (caster:hasStatusEffect(EFFECT_AZURE_LORE)) then
+        params.multiplier = params.multiplier + 0.50;
+    end
+    params.tMultiplier = 2.0;
+    params.duppercap = 69;
+    params.str_wsc = 0.0;
+    params.dex_wsc = 0.0;
+    params.vit_wsc = 0.3;
+    params.agi_wsc = 0.0;
+    params.int_wsc = 0.0;
+    params.mnd_wsc = 0.0;
+    params.chr_wsc = 0.0;
 
+    local resist = applyResistance(caster, target, spell, params);
+    local damage = BlueMagicalSpell(caster, target, spell, params, MND_BASED);
+    damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-	return dmg;
+    if (resist > 0.25) then
+        target:addStatusEffect(EFFECT_SLOW,25,0,getBlueEffectDuration(caster,resist,params.effect));
+    end
+
+    return damage;
 end;
-
