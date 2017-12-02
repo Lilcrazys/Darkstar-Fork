@@ -27,7 +27,7 @@ function onSpellCast(caster,target,spell)
     end
 
     if (caster:hasStatusEffect(EFFECT_MAGIC_ATK_BOOST) and caster:hasStatusEffect(EFFECT_MAGIC_DEF_BOOST) == true) then
-        spell:setMsg(75);
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
     else
         caster:addStatusEffect(EFFECT_MAGIC_ATK_BOOST,25,0,90);
         caster:addStatusEffect(EFFECT_ATTACK_BOOST,50,0,90);
