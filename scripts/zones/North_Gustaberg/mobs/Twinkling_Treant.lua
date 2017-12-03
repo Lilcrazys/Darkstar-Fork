@@ -4,17 +4,10 @@
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
 end;
-
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     mob:setMod(MOD_UDMGPHYS, 0);
@@ -24,10 +17,6 @@ function onMobSpawn(mob)
 
     mob:setLocalVar("Trigger", 100);
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob, target)
     local trigger = mob:getLocalVar("Trigger");
@@ -63,10 +52,6 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onCriticalHit
------------------------------------
-
 function onCriticalHit(mob)
     if (mob:getMod(MOD_UDMGMAGIC) < 1000) then
         mob:addMod(MOD_UDMGMAGIC, 3);
@@ -94,10 +79,6 @@ function onCriticalHit(mob)
     end
 end;
 
------------------------------------
--- onWeaponskillHit
------------------------------------
-
 function onWeaponskillHit(mob, attacker, weaponskill)
     if (mob:getMod(MOD_UDMGMAGIC) < 1000) then
         mob:addMod(MOD_UDMGMAGIC, 1);
@@ -109,10 +90,6 @@ function onWeaponskillHit(mob, attacker, weaponskill)
 
     return 1;
 end;
-
------------------------------------
--- onMagicHit
------------------------------------
 
 function onMagicHit(caster, target, spell)
     if (target:getMod(MOD_UDMGPHYS) < 1000) then
@@ -126,17 +103,13 @@ function onMagicHit(caster, target, spell)
     return 1;
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
-        local = rndNumber = math.random(1,100);
+        local rndNumber = math.random(1,100);
         if (rndNumber > 90) then
             player:addTreasure(3596, mob); -- Ornament Case
         -- Region rockin choco, or common random rockin choco
-        if (rndNumber > 50) then
+        elseif (rndNumber > 50) then
             -- This random only works because these items have sequential IDs - don't try to copy it.
             -- 1 of 5 Hobby-Bo furnishing at random.
             player:addTreasure(math.random(326,330));
