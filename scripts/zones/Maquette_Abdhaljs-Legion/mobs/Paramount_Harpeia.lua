@@ -57,7 +57,7 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("legion_point", 75);
+    player:addCurrency("legion_point", 200);
 end;
 
 -----------------------------------
