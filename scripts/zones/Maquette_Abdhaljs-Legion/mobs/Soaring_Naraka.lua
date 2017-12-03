@@ -63,9 +63,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("legion_point", 250);
     if (mob:getID() == 17526825) then
+        player:addCurrency("legion_point", 240);
         player:addTitle(SUBJUGATOR_OF_THE_SOARING);
+    else
+        player:addCurrency("legion_point", 100);
     end
 end;
 
