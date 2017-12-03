@@ -3801,7 +3801,7 @@ void SmallPacket0x0AD(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
 void SmallPacket0x0B5(map_session_data_t* session, CCharEntity* PChar, CBasicPacket data)
 {
-    if ((RBUFB(data, (0x06)) == '!' || RBUFB(data, (0x06)) == '$' || (RBUFB(data, (0x06)) == '@' && PChar->m_GMlevel > 0)) && CmdHandler.call(PChar, (const int8*)data[7]) == 0)
+    if ((RBUFB(data, (0x06)) == '!' || (RBUFB(data, (0x06)) == '@' && PChar->m_GMlevel > 0)) && CmdHandler.call(PChar, (const int8*)data[7]) == 0)
     {
         //this makes sure a command isn't sent to chat
     }
@@ -5786,8 +5786,8 @@ void autoJail(CCharEntity* PChar)
 {
     // Set the inJail var to a custom value used to denote autojail..
     auto autoJailCell = 666;
-    const int8* varname = "inJail"; // Oh DSP, why you hate std::string so much?
-    const int8* fmtQuery = "INSERT INTO char_vars SET charid = %u, varname = '%s', value = %i";
+    const char* varname = "inJail"; // Oh DSP, why you hate std::string so much?
+    const char* fmtQuery = "INSERT INTO char_vars SET charid = %u, varname = '%s', value = %i";
     Sql_Query(SqlHandle, fmtQuery, PChar->id, varname, autoJailCell);
 
     // Move player to Mordion Gaol
