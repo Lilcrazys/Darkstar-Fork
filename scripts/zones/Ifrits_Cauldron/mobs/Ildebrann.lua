@@ -40,9 +40,9 @@ function onMobSpawn(mob)
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_HUMANOID_KILLER, 5);
-    mob:setMod(MOD_FIRE_ABSORB, 100);
     mob:setMod(MOD_TERRORRES, 100);
+    -- mob:setMod(MOD_FIRE_ABSORB, 100);
+    mob:setMod(MOD_HUMANOID_KILLER, 5);
 
     -- Temp
     mob:AnimationSub(0); -- reset
