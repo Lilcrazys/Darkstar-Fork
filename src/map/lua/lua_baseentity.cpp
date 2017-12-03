@@ -13701,7 +13701,7 @@ inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
         return 1;
     }
 
-    const int8* charName = lua_tostring(L, 1);
+    const char* charName = lua_tostring(L, 1);
     auto jailCell = (!lua_isnil(L, 3) ? (int32)lua_tointeger(L, 2) : 1);
     auto xPos = (!lua_isnil(L, 3) ? (float)lua_tointeger(L, 3) : 0);
     auto yPos = (!lua_isnil(L, 3) ? (float)lua_tointeger(L, 4) : 0);
@@ -13709,7 +13709,7 @@ inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
     uint32 charId = 0;
 
     // char will not be logged in so get the id manually
-    const int8* Query = "SELECT charid FROM chars WHERE charname = '%s';";
+    const char* Query = "SELECT charid FROM chars WHERE charname = '%s';";
     int32 ret = Sql_Query(SqlHandle, Query, charName);
 
     if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
@@ -13726,7 +13726,7 @@ inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
     }
 
     // Set the var to match holding cell..
-    const int8* varname = "inJail";
+    const char* varname = "inJail";
     Query = "INSERT INTO char_vars SET charid = %u, varname = '%s', value = %i ON DUPLICATE KEY UPDATE value = %i;";
     Sql_Query(SqlHandle, Query, charId, varname, jailCell, jailCell);
 
@@ -13882,9 +13882,9 @@ int32 CLuaBaseEntity::knockback(lua_State* L)
 
 //= end custom =//
 
-//==========================================================//
+//=======================================================//
 
-const int8 CLuaBaseEntity::className[] = "CBaseEntity";
+const char CLuaBaseEntity::className[] = "CBaseEntity";
 
 Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
 {
