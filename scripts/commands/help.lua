@@ -61,7 +61,7 @@ function onTrigger(player)
     end
 
     if (gmlvl >= 4) then -- Senior GM
-        player:PrintToPlayer("!givegil  !takegil");
+        player:PrintToPlayer("!givegil  !takegil ");
         player:PrintToPlayer("!timeoffset  !updateconquest ");
     end
 
