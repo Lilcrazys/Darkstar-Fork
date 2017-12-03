@@ -23,8 +23,6 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:PrintToPlayer("PUP unlock quest is temp disabled. -The Staff");
---[[
     local NoStringsAttached = player:getQuestStatus(AHT_URHGAN,NO_STRINGS_ATTACHED);
     local NoStringsAttachedProgress = player:getVar("NoStringsAttachedProgress");
 
@@ -35,7 +33,6 @@ function onTrigger(player,npc)
     else
         player:startEvent(433);
     end;
-]]--
 end;
 
 -----------------------------------
