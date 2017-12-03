@@ -13797,14 +13797,13 @@ inline int32 CLuaBaseEntity::sjBoost(lua_State *L)
     return 0;
 }
 
-
 // Used with GM command to add LS to player inventory
 inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype == TYPE_NPC);
 
-    const int8* linkshellName = lua_tostring(L, 1);
-    const int8* Query = "SELECT name FROM linkshells WHERE name='%s'";
+    const char* linkshellName = lua_tostring(L, 1);
+    const char* Query = "SELECT name FROM linkshells WHERE name='%s'";
     int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
 
     if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
@@ -13830,9 +13829,12 @@ inline int32 CLuaBaseEntity::addLSpearl(lua_State* L)
             ((CItemLinkshell*)PItem)->SetLSID(Sql_GetUIntData(SqlHandle, 0));
             ((CItemLinkshell*)PItem)->SetLSColor(Sql_GetIntData(SqlHandle, 1));
             uint8 invSlotID = charutils::AddItem(PChar, LOC_INVENTORY, PItem, 1);
+
+            lua_pushboolean(L, true);
+            return 1;
         }
     }
-
+    lua_pushboolean(L, false);
     return 1;
 }
 

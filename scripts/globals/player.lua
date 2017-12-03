@@ -29,7 +29,7 @@ function onGameIn(player, firstlogin, zoning)
         -- Check if import char
         if (player:getVar("FreshlyImported") == 1) then
             -- Make sure LS exists and player has at least 1 free space
-            if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() > 0) then
+            if (player:getFreeSlotsCount() > 0) then
                 player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
                 player:setVar("FreshlyImported", 0);
             end
@@ -396,7 +396,7 @@ function CharCreate(player)
     player:setVar("MoghouseExplication",1);
 
     -- Start of custom stuffs for new players
-    if (isValidLS("LegionDS") == true and player:getFreeSlotsCount() >=1) then -- Make sure LS exists and player has at least 1 free space
+    if (player:getFreeSlotsCount() > 0) then -- Make sure LS exists and player has at least 1 free space
         player:addLSpearl("LegionDS"); -- Give an LS pearl to all new players
     end
     -- End of custom stuffs for new players

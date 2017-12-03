@@ -150,7 +150,6 @@ namespace luautils
 
         lua_register(LuaHandle, "getAbility", luautils::getAbility);
         lua_register(LuaHandle, "getSpell", luautils::getSpell);
-        lua_register(LuaHandle, "isValidLS", luautils::isValidLS);
         lua_register(LuaHandle, "underscore2space", luautils::underscore2space);
         Lunar<CLuaAbility>::Register(LuaHandle);
         Lunar<CLuaAction>::Register(LuaHandle);
@@ -4154,36 +4153,6 @@ namespace luautils
         return searchLuaFileForFunction(PChar->m_event.Script) ||
             (PChar->PInstance && searchLuaFileForFunction(std::string("scripts/zones/") + PChar->loc.zone->GetName() + "/instances/" + PChar->PInstance->GetName())) ||
             (searchLuaFileForFunction(std::string("scripts/zones/") + PChar->loc.zone->GetName() + "/Zone.lua"));
-    }
-
-    /************************************************************************
-    *                                                                       *
-    * Check if a given linkshell exists by checking the name in database    *
-    *                                                                       *
-    ************************************************************************/
-
-    int32 isValidLS(lua_State* L)
-    {
-        if (lua_isnil(L, 1))
-        {
-            lua_pushboolean(L, false);
-            return 1;
-        }
-
-        const char* linkshellName = lua_tostring(L, 1);
-        const char* Query = "SELECT name FROM linkshells WHERE name='%s'";
-        int32 ret = Sql_Query(SqlHandle, Query, linkshellName);
-
-        if (ret != SQL_ERROR && Sql_NumRows(SqlHandle) != 0 && Sql_NextRow(SqlHandle) == SQL_SUCCESS)
-        {
-            lua_pushboolean(L, true);
-        }
-        else
-        {
-            lua_pushboolean(L, false);
-        }
-
-        return 1;
     }
 
     inline int32 underscore2space(lua_State* L)
