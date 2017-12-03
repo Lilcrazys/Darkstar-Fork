@@ -170,7 +170,7 @@ end;
 
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then -- This check is to force this to only run once.
-        SpawnMob(16912876):updateClaim(player); -- Claim AV, begin death fest
+        --SpawnMob(16912876):updateClaim(player); -- Claim AV, begin death fest
 
         -- Get rid of JoL's adds.
         for helperId = mob:getID()+1, mob:getID()+27, 1 do
