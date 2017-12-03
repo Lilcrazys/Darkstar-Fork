@@ -82,7 +82,7 @@ public:
 class CSpoofMessagePacket : public CBasicPacket
 {
 public:
-    CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE MessageType, int8* buff);
+    CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE MessageType, const std::string& message);
 };
 
 #endif

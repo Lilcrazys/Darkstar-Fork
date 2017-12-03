@@ -12,33 +12,33 @@ require("scripts/globals/msg");
 function onTrade(player,npc,trade)
     if (trade:getItemCount() == 1) then
         if (player:getFreeSlotsCount() == 0) then
-            player:SpoofMsg("Hey, you don't have inventory space, kupo! ", npc, chatType.SAY, nil);
+            player:PrintToPlayer("Hey, you don't have inventory space, kupo! ", chatType.SAY, underscore2space(npc:getName()));
         else
             -- Note: most complete trade first because item is rare flagged!
             if (trade:hasItemQty(13216, 1)) then -- Gold Mog Belt
                 player:tradeComplete(trade);
                 player:addItem(13216, 1, 551, 2, 37, 1); -- STR+3, VIT+3, Mag.Evasion+2
-                player:SpoofMsg("A Gold Mog belt!!! Here, let me unlock its latent powers.. ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("A Gold Mog belt!!! Here, let me unlock its latent powers.. ", chatType.SAY, underscore2space(npc:getName()));
                 player:injectActionPacket(6, 207, 0, 0, 0);
                 player:messageSpecial(ITEM_OBTAINED, 13216);
             elseif (trade:hasItemQty(13217, 1)) then -- Silver Mog Belt
                 player:tradeComplete(trade);
                 player:addItem(13217, 1, 554, 2, 1806, 1); -- INT+3, MND+3, Pet: STR+2 DEX+2 VIT+2
-                player:SpoofMsg("A Silver Mog belt!!! Here, let me unlock its latent powers.. ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("A Silver Mog belt!!! Here, let me unlock its latent powers.. ", chatType.SAY, underscore2space(npc:getName()));
                 player:injectActionPacket(6, 207, 0, 0, 0);
                 player:messageSpecial(ITEM_OBTAINED, 13217);
             elseif (trade:hasItemQty(13218, 1)) then -- Bronze Mog Belt
                 player:tradeComplete(trade);
                 player:addItem(13218, 1, 553, 2, 332, 1); -- DEX+3, AGI+3, Sklchn.dmg.+2%
-                player:SpoofMsg("A Bronze Mog belt!!! Here, let me unlock its latent powers.. ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("A Bronze Mog belt!!! Here, let me unlock its latent powers.. ", chatType.SAY, underscore2space(npc:getName()));
                 player:injectActionPacket(6, 207, 0, 0, 0);
                 player:messageSpecial(ITEM_OBTAINED, 13218);
             else
-                player:SpoofMsg("Have you ever heard of the legendary mog belts? In ages past we moogles had amazing girdled of magnificent kupower! ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("Have you ever heard of the legendary mog belts? In ages past we moogles had amazing girdled of magnificent kupower! ", chatType.SAY, underscore2space(npc:getName()));
             end
         end
     else
-        player:SpoofMsg("Hey, one item at a time, don't kupo'ing confuse me. ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("Hey, one item at a time, don't kupo'ing confuse me. ", chatType.SAY, underscore2space(npc:getName()));
     end
 end;
 
@@ -167,27 +167,30 @@ function onTrigger(player,npc)
                 player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, prizeID);
             end
         else
-            player:SpoofMsg("Check back later. Anniversary event prizes are awarded once per earth day. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer("Anniversary event prizes are awarded once per earth day. ", chatType.SAY, underscore2space(npc:getName()));
         end
 
         local AnniversaryBuff = math.random(1,10);
         if (player:getVar("AnniversaryBuffGet") < os.time()) then
             if (AnniversaryBuff == 1) then
                 player:addStatusEffect(EFFECT_FLEE,50,0,1800);
-                player:addStatusEffect(EFFECT_COSTUME,2744,0,1800);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
-                -- add costume of something....??
+                player:injectActionPacket(6, 207, 0, 0, 0);
+                player:addStatusEffect(EFFECT_COSTUME,2744,0,1800);
             elseif (AnniversaryBuff == 2) then
                 player:addStatusEffect(EFFECT_REGEN, 10,1,1800);
                 player:addStatusEffect(EFFECT_REFRESH, 10,1,1800);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             elseif (AnniversaryBuff == 3) then
                 player:addStatusEffect(EFFECT_REGAIN, 10,1,1800);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             elseif (AnniversaryBuff == 4) then
                 player:addStatusEffect(EFFECT_MAX_HP_BOOST,40,0,1800);
                 player:addStatusEffect(EFFECT_MAX_MP_BOOST,40,0,1800);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             elseif (AnniversaryBuff == 5) then
                 player:addStatusEffect(EFFECT_STR_BOOST,50,0,1800);
                 player:addStatusEffect(EFFECT_DEX_BOOST,50,0,1800);
@@ -197,18 +200,21 @@ function onTrigger(player,npc)
                 player:addStatusEffect(EFFECT_MND_BOOST,50,0,1800);
                 player:addStatusEffect(EFFECT_CHR_BOOST,50,0,1800);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             elseif (AnniversaryBuff == 6) then
                 player:addStatusEffect(EFFECT_CHAINSPELL, 1,0,900);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
             elseif (AnniversaryBuff == 7) then
                 player:addStatusEffect(EFFECT_HUNDRED_FISTS,1,0,900);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             elseif (AnniversaryBuff == 8) then
                 player:addStatusEffect(EFFECT_MIGHTY_STRIKES,1,0,900);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
             elseif (AnniversaryBuff == 9) then
                 player:addStatusEffect(EFFECT_MANAFONT,1,0,900);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             elseif (AnniversaryBuff == 10) then
                 player:addStatusEffect(EFFECT_MAX_HP_BOOST,1000,0,900);
                 player:addStatusEffect(EFFECT_MAX_MP_BOOST,1000,0,900);
@@ -223,14 +229,15 @@ function onTrigger(player,npc)
                 player:addStatusEffect(EFFECT_REFRESH,99,0,900);
                 player:addStatusEffect(EFFECT_REGEN,99,0,900);
                 player:setVar("AnniversaryBuffGet", os.time()+3600);
+                player:injectActionPacket(6, 207, 0, 0, 0);
             end
         else
-            player:PrintToPlayer("Check back later. Anniversary power-up buffs are issued once an hour. ");
-            player:SpoofMsg("Have you ever heard of the legendary mog belts? In ages past we moogles had amazing girdled of magnificent kupower! ", npc, chatType.SAY, nil);
+            player:PrintToPlayer("Anniversary power-up buffs are issued once an hour. ", chatType.SAY, underscore2space(npc:getName()));
         end
+        player:PrintToPlayer("Have you ever heard of the legendary mog belts? In ages past we moogles had amazing girdled of magnificent kupower! ", chatType.SAY, underscore2space(npc:getName()));
     else
-        player:SpoofMsg("The Anniversary Event begins December 1st and lasts to December 10th.");
-        player:SpoofMsg("Have you ever heard of the legendary mog belts? In ages past we moogles had amazing girdled of magnificent kupower! ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("The Anniversary Event begins December 1st and lasts to December 10th. ", chatType.SAY, underscore2space(npc:getName()));
+        player:PrintToPlayer("Have you ever heard of the legendary mog belts? In ages past we moogles had amazing girdled of magnificent kupower! ", chatType.SAY, underscore2space(npc:getName()));
     end
 end;
 

@@ -53,9 +53,9 @@ CChatMessagePacket::CChatMessagePacket(CCharEntity* PChar, CHAT_MESSAGE_TYPE Mes
     memcpy(data + (0x18), &message[0], buffSize);
 }
 
-CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE MessageType, int8* buff)
+CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE MessageType, const std::string& message)
 {
-    int32 buffSize = (strlen(buff) > 236) ? 236 : strlen(buff);
+    auto buffSize = std::min<size_t>(message.size(), 236);
     this->type = 0x17;
     this->size = 0x82;
     //this->size = dsp_min((32 + (buffSize + 1) + ((4 - ((buffSize + 1) % 4)) % 4)) / 2, 128);
@@ -80,5 +80,5 @@ CSpoofMessagePacket::CSpoofMessagePacket(CCharEntity* PEntity, CHAT_MESSAGE_TYPE
     }
 
     memcpy(data + (0x08), speakerName, PEntity->name.size());
-    memcpy(data + (0x18), buff, buffSize);
+    memcpy(data + (0x18), &message[0], buffSize);
 }
