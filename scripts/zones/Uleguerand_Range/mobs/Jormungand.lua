@@ -33,15 +33,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,2500);
     mob:setMod(MOD_MATT,120);
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
-    mob:setMod(MOD_ICE_AFFINITY_DMG, 3);
-    mob:setMod(MOD_ICE_AFFINITY_ACC, 3);
     mob:setMod(MOD_SLEEPRES,100);
     mob:setMod(MOD_SILENCERES,100);
     mob:setMod(MOD_STUNRES,25);
     mob:setMod(MOD_PARALYZERES,30);
-    mob:setMod(MOD_HUMANOID_KILLER, 5);
     mob:setMod(MOD_TERRORRES, 100);
-    mob:setMod(MOD_ICE_ABSORB, 100);
+    -- mob:setMod(MOD_ICE_ABSORB, 100);
+    mob:setMod(MOD_ICE_AFFINITY_DMG, 3);
+    mob:setMod(MOD_ICE_AFFINITY_ACC, 3);
+    mob:setMod(MOD_HUMANOID_KILLER, 5);
 
     -- Other
     mob:SetMobSkillAttack(0); -- resetting so it doesn't respawn in flight mode.
