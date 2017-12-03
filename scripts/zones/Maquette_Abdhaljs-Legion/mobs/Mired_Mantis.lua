@@ -59,9 +59,11 @@ end;
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
-    player:addCurrency("legion_point", 150);
     if (mob:getID() == 17526811) then
+        player:addCurrency("legion_point", 220);
         player:addTitle(SUBJUGATOR_OF_THE_MIRED);
+    else
+        player:addCurrency("legion_point", 100);
     end
 end;
 
