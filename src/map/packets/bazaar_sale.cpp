@@ -31,9 +31,9 @@ CBazaarSalePacket::CBazaarSalePacket(CCharEntity* PChar, CCharEntity* PBuyer, ui
     this->id(0x10A);
     this->length(0x20);
 
-    WBUFL(data, (0x04)) = Quantity;
-    WBUFW(data, (0x08)) = ItemID;
+    ref<uint32>(0x04) = Quantity;
+    ref<uint16>(0x08) = ItemID;
     memcpy(data + (0x0A), PBuyer->GetName(), PBuyer->name.size());
-    WBUFL(data, (0x1A)) = 0;
-    WBUFW(data, (0x1C)) = 0;
+    ref<uint8>(0x1A) = 0;
+    ref<uint8>(0x1C) = 0;
 }
