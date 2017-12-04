@@ -3,13 +3,10 @@
 -- Lowers an enemy's defense and
 -- gradually deals light elemental damage.
 -----------------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -48,9 +45,9 @@ function onSpellCast(caster,target,spell)
     -- Do it!
     if (bio == nil or (DIA_OVERWRITE == 0 and bio:getPower() <= 4) or (DIA_OVERWRITE == 1 and bio:getPower() < 4)) then
         target:addStatusEffect(EFFECT_DIA,4+dotBonus,3,duration,FLAG_ERASABLE,20);
-        spell:setMsg(2);
+        spell:setMsg(msgBasic.MAGIC_DMG);
     else
-        spell:setMsg(75);
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT);
     end
 
     -- Try to kill same tier Bio

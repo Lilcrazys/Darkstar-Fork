@@ -3,6 +3,7 @@
 -- Gradually restores target's HP.
 -----------------------------------------
 require("scripts/globals/status");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -25,9 +26,9 @@ function onSpellCast(caster,target,spell)
     end
 
     if (target:addStatusEffect(EFFECT_REGEN,hp,3,duration,0,0,0)) then
-        spell:setMsg(230);
+        spell:setMsg(msgBasic.MAGIC_GAIN_EFFECT);
     else
-        spell:setMsg(75); -- no effect
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT); -- no effect
     end
 
     return EFFECT_REGEN;

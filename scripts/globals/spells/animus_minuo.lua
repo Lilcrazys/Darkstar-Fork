@@ -3,11 +3,7 @@
 -- Suppresses enmity gain for target
 -- party member.
 -----------------------------------------
-
 require("scripts/globals/status");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)

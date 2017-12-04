@@ -2,12 +2,8 @@
 -- Spell: Banish V
 -- Deals light damage to an enemy.
 -----------------------------------------
-
-require("scripts/globals/magic");
 require("scripts/globals/status");
-
------------------------------------------
--- OnSpellCast
+require("scripts/globals/magic");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -15,7 +11,11 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    --doDivineBanishNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus)
-    local dmg = doDivineBanishNuke(594,1.5,caster,spell,target,false,1.0);
-    return dmg;
+    local params = {};
+    params.dmg = 594;
+    params.multiplier = 1.5;
+    params.hasMultipleTargetReduction = false;
+    params.resistBonus = 1.0;
+
+    return doDivineBanishNuke(caster, target, spell, params);
 end;
