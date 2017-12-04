@@ -34,6 +34,6 @@ CBazaarSalePacket::CBazaarSalePacket(CCharEntity* PChar, CCharEntity* PBuyer, ui
     ref<uint32>(0x04) = Quantity;
     ref<uint16>(0x08) = ItemID;
     memcpy(data + (0x0A), PBuyer->GetName(), PBuyer->name.size());
-    ref<uint8>(0x1A) = 0;
-    ref<uint8>(0x1C) = 0;
+    ref<uint32>(0x1A) = 0;
+    ref<uint16>(0x1C) = 0;
 }
