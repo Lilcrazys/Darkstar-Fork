@@ -1,16 +1,12 @@
 -----------------------------------------
 -- Spell: Foe Requiem VIII
 -----------------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    return 0;
 end;
 
 function onSpellCast(caster,target,spell)
@@ -27,11 +23,11 @@ function onSpellCast(caster,target,spell)
         spell:setMsg(85);--resist message
         return 1;
     end
-	duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
- 	duration = duration + (duration * ((caster:getMod(MOD_ALL_SONGS) * 10)/100));
-	duration = duration + (duration * ((caster:getMod(MOD_REQUIEM) * 10)/100));
-	
-	power = power + caster:getMod(MOD_REQUIEM) + caster:getMod(MOD_ALL_SONGS);
+    duration = duration + (duration * (caster:getMod(MOD_SONG_DURATION)/100));
+    duration = duration + (duration * ((caster:getMod(MOD_ALL_SONGS) * 10)/100));
+    duration = duration + (duration * ((caster:getMod(MOD_REQUIEM) * 10)/100));
+
+    power = power + caster:getMod(MOD_REQUIEM) + caster:getMod(MOD_ALL_SONGS);
 
     -- Try to overwrite weaker slow / haste
     if (canOverwrite(target, effect, power)) then

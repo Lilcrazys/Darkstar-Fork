@@ -2,14 +2,9 @@
 -- Spell: Pining Nocturne
 -- Decreases enemy's MACC and increases
 -- spellcasting time.
--- Substituted with Addle
 -----------------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)

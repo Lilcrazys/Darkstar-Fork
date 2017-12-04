@@ -2,20 +2,12 @@
 -- Spell: Regen V
 -- Gradually restores target's HP.
 -----------------------------------------
-
 require("scripts/globals/status");
-
------------------------------------------
--- onMagicCastingCheck
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
     return 0;
 end;
-
------------------------------------------
--- OnSpellCast
------------------------------------------
 
 function onSpellCast(caster,target,spell)
     local hp = math.ceil(40 * (1 + 0.01 * caster:getMod(MOD_REGEN_MULTIPLIER))); -- spell base times gear multipliers

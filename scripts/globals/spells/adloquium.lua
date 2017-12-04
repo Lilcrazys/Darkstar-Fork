@@ -1,13 +1,9 @@
 -----------------------------------------
 -- Spell: Adloquium
 -- Gradually restores target party member's
--- TP. 1 TP per tic for 60 TP total.
+-- TP. 10 TP per tic for 600 TP total.
 -----------------------------------------
-
 require("scripts/globals/status");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -15,10 +11,10 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local tp = 1;
+    local tp = 10;
     local duration = 180;
 
-    target:addStatusEffect(EFFECT_REGAIN,tp,3,duration);
+    target:addStatusEffect(EFFECT_REGAIN, tp, 0, duration);
 
     return EFFECT_REGAIN;
 end;

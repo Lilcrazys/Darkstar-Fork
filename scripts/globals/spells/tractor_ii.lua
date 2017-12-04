@@ -1,16 +1,15 @@
 -----------------------------------------
 -- Spell: Tractor II
 -----------------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    if (caster:isPC()) then
+        caster:PrintToPlayer("Spell non working, staff is aware.");
+    end
+    return 1;
 end;
 
 function onSpellCast(caster,target,spell)

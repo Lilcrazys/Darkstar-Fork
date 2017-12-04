@@ -1,18 +1,18 @@
 -----------------------------------------
 -- Spell: Puppet's Opperetta
--- Increases Silence Resistance to 
+-- Increases Silence Resistance to
 -- Party Members within target AoE
 -----------------------------------------
 
--- NOTE: THIS SCRIPT IS CURRENTLY IGNORED.  See battleutils:SingSong()
-
------------------------------------------
--- OnSpellCast
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
-	return 0;
+    if (caster:isPC()) then
+        caster:PrintToPlayer("Spell non working, staff is aware.");
+    end
+    return 1;
 end;
 
 function onSpellCast(caster,target,spell)
+    return 0;
 end;
