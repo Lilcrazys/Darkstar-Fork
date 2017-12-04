@@ -5,6 +5,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -27,7 +28,7 @@ function onSpellCast(caster,target,spell)
     -- Since all the tiers use the same effect buff it is hard to delete a specific one.
     target:delStatusEffect(EFFECT_FUGUE);
     target:addStatusEffect(EFFECT_FUGUE,power,0,duration);
-    spell:setMsg(230);
+    spell:setMsg(msgBasic.MAGIC_GAIN_EFFECT);
     return EFFECT_FUGUE;
     ]]
     return 0;

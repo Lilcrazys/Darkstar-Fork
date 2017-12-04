@@ -3,6 +3,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -34,9 +35,9 @@ function onSpellCast(caster,target,spell)
         -- overwrite them
         target:delStatusEffect(effect);
         target:addStatusEffect(effect,power,3,duration);
-        spell:setMsg(237);
+        spell:setMsg(msgBasic.MAGIC_ENFEEB);
     else
-        spell:setMsg(75); -- no effect
+        spell:setMsg(msgBasic.MAGIC_NO_EFFECT); -- no effect
     end
 
     return effect;

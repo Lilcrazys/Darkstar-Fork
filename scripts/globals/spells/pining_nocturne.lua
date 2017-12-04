@@ -5,6 +5,7 @@
 -----------------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
+require("scripts/globals/msg");
 -----------------------------------------
 
 function onMagicCastingCheck(caster,target,spell)
@@ -19,7 +20,7 @@ function onSpellCast(caster,target,spell)
     power = power + (caster:getMod(MOD_ALL_SONGS_EFFECT) * 4);
 
     target:addStatusEffect(EFFECT_NOCTURNE,power,0,duration);
-    spell:setMsg(230);
+    spell:setMsg(msgBasic.MAGIC_GAIN_EFFECT);
 
     return EFFECT_NOCTURNE;
 end;

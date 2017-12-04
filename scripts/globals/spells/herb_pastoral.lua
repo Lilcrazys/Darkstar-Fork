@@ -16,8 +16,8 @@ function onSpellCast(caster,target,spell)
     local power = 20;
 
     duration = duration * (caster:getMod(MOD_SONG_DURATION_BONUS)/100)
-
     target:addBardSong(caster,EFFECT_PASTORAL,power,0,duration,caster:getID(), 0, 1);
+    spell:setMsg(msgBasic.MAGIC_GAIN_EFFECT);
 
     return EFFECT_PASTORAL;
 end;
