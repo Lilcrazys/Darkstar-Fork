@@ -41,13 +41,13 @@ REPLACE INTO `item_basic` VALUES (8719,0,'maliyakaleya_coral','maliya._coral',12
 REPLACE INTO `item_basic` VALUES (8724,0,'beryllium_ingot','beryllium_ingot',12,0,38,0,1);
 REPLACE INTO `item_basic` VALUES (8725,0,'exalted_log','exalted_log',12,0,43,0,1);
 REPLACE INTO `item_basic` VALUES (8726,0,'exalted_lumber','exalted_lumber',1,0,43,0,1);
-REPLACE INTO `item_basic` VALUES (8727,0,'sifs_lock','sifs_lock',1,0,40,0,1);
+REPLACE INTO `item_basic` VALUES (8727,0,'sifs_lock','sifs_lock',12,0,40,0,1);
 REPLACE INTO `item_basic` VALUES (8728,0,'spool_of_sifs_macrame','sifs_macrame',1,0,40,0,49096);
 REPLACE INTO `item_basic` VALUES (8747,0,'rakaznar_ore','rakaznar_ore',12,0,38,0,1);
 REPLACE INTO `item_basic` VALUES (8748,0,'rakaznar_ingot','rakaznar_ingot',12,0,38,0,1);
 REPLACE INTO `item_basic` VALUES (8749,0,'rakaznar_bolt_heads','ra._bolt_heads',99,0,15,0,1);
 REPLACE INTO `item_basic` VALUES (8751,0,'square_of_ancestral_cloth','ancestral_cloth',12,0,40,0,1);
-REPLACE INTO `item_basic` VALUES (8752,0,'cehuetzi_claw','cehuetzi_claw',1,0,42,0,1);
+REPLACE INTO `item_basic` VALUES (8752,0,'cehuetzi_claw','cehuetzi_claw',12,0,42,0,1);
 REPLACE INTO `item_basic` VALUES (8754,0,'cehuetzi_pelt','cehuetzi_pelt',12,0,41,0,1);
 REPLACE INTO `item_basic` VALUES (8919,0,'ifritear','ifritear',12,0,39,0,3800);
 REPLACE INTO `item_basic` VALUES (8920,0,'leviatear','leviatear',12,0,39,0,3800);
