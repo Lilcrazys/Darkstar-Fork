@@ -57,6 +57,6 @@ function onEventFinish(player,csid,option)
         player:addKeyItem(SHADOW_FRAGMENT);
         player:messageSpecial(KEYITEM_OBTAINED,SHADOW_FRAGMENT);
         player:setVar("MissionStatus",4);
-        player:setPos(378, -12, -20, 125, 0xA1);
+        player:setPos(378, -12, -20, 125, 161);
     end
 end;
