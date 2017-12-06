@@ -521,7 +521,7 @@ INSERT INTO `mob_skills` VALUES (490,234,'undead_mold',4,10.0,2000,1500,4,0,0,0,
 INSERT INTO `mob_skills` VALUES (491,235,'call_of_the_grave',1,15.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (492,236,'abyss_blast',0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (493,846,'rampant_gnaw',0,7.0,2000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (494,847,'big_horn_custom',0,7.0,2000,1500,4,0,0,1,0,0,0);
+INSERT INTO `mob_skills` VALUES (494,847,'big_horn',0,7.0,2000,1500,4,0,0,1,0,0,0);
 INSERT INTO `mob_skills` VALUES (495,848,'snort_custom',4,12.5,2000,1500,4,0,0,3,0,0,0);
 INSERT INTO `mob_skills` VALUES (496,849,'rabid_dance_custom',0,7.0,2000,1500,1,0,0,0,0,0,0); -- dsp has listed as rapid_dance this is incorrect
 INSERT INTO `mob_skills` VALUES (497,850,'lowing',1,15.0,2000,2500,4,0,0,0,0,0,0);
