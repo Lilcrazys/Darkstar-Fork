@@ -3,14 +3,10 @@
 --  NM:  Blubbery Bulge
 -- Involved in Quest: The Miraculous Dale
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/quests");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -21,17 +17,9 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MATT,20);
     mob:addMod(MOD_MACC,400); 
 end;
-     
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
 end;
-
------------------------------------
--- onSpikesDamage
------------------------------------
 
 function onSpikesDamage(mob,target,damage)
     local RAND = math.random(0,99);
@@ -51,22 +39,8 @@ function onSpikesDamage(mob,target,damage)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
-    -- Set PH back to normal
-    local PH = GetServerVariable("[PH]Blubbery_Bulge");
-    SetServerVariable("[PH]Blubbery_Bulge", 0);
-    DisallowRespawn(PH, false);
-    GetMobByID(PH):setRespawnTime(GetMobRespawnTime(PH));
-    DisallowRespawn(mob:getID(), true);
 end;
