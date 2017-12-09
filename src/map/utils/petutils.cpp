@@ -1451,7 +1451,8 @@ namespace petutils
         if (PMaster->objtype == TYPE_PC)
         {
             // Check for Jug pet we should buff
-            if (PPet->getPetType() == PETTYPE_JUG_PET && PMaster->m_Weapons[SLOT_MAIN]->getILvl() > 0)
+            if (PPet->getPetType() == PETTYPE_JUG_PET &&
+            PMaster->m_Weapons[SLOT_MAIN] && PMaster->m_Weapons[SLOT_MAIN]->getILvl() > 0)
             {
                 PPet->addModifier(Mod::ATT, (int16)(floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75f)));
                 PPet->addModifier(Mod::ACC, (int16)(floor(PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill()*0.75f)));
@@ -1467,7 +1468,8 @@ namespace petutils
                 // ShowDebug("Jug pet MaxMP: %d \n", PPet->health.maxmp);
             }
             // Check for Avatar or Wyvern we should buff
-            else if (PPet->getPetType() != PETTYPE_AUTOMATON && PMaster->m_Weapons[SLOT_MAIN]->getILvl() > 0)
+            else if (PPet->getPetType() != PETTYPE_AUTOMATON &&
+            PMaster->m_Weapons[SLOT_MAIN] && PMaster->m_Weapons[SLOT_MAIN]->getILvl() > 0)
             {
                 PPet->addModifier(Mod::ATT, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
                 PPet->addModifier(Mod::ACC, PMaster->m_Weapons[SLOT_MAIN]->getILvlSkill());
@@ -1483,7 +1485,8 @@ namespace petutils
                 // ShowDebug("Avatar / Wyvern MaxMP: %d \n", PPet->health.maxmp);
             }
             // Check for Automaton we should buff
-            else if (PPet->getPetType() == PETTYPE_AUTOMATON && PMaster->GetMJob() == JOB_PUP && PMaster->m_Weapons[SLOT_RANGED]->getILvl() > 0)
+            else if (PPet->getPetType() == PETTYPE_AUTOMATON && PMaster->GetMJob() == JOB_PUP &&
+            PMaster->m_Weapons[SLOT_RANGED] && PMaster->m_Weapons[SLOT_RANGED]->getILvl() > 0)
             {
                 if (PMaster->m_Weapons[SLOT_RANGED]->getILvl() > 115) // ilevel 116+
                 {
