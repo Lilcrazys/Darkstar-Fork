@@ -68,12 +68,12 @@ uint16 CItemArmor::getRemoveSlotId()
 
 uint8 CItemArmor::getReqLvl()
 {
-	return std::clamp(m_reqLvl+getModifier(Mod::REQUIRED_LV), 0, 255);
+	return m_reqLvl; // std::clamp(m_reqLvl+getModifier(Mod::REQUIRED_LV), 0, 255);
 }
 
 uint8 CItemArmor::getILvl()
 {   //printf("(m_equipSlotID %u) getILvl: %u \n", m_equipSlotID, (getModifier(Mod::ITEM_LEVEL) > 0 ? std::clamp(getModifier(Mod::EFFECTIVE_ILV)+99, 0, 255) : m_iLvl));
-    return (getModifier(Mod::ITEM_LEVEL) > 0 ? std::clamp(getModifier(Mod::ITEM_LEVEL)+99, 0, 255) : m_iLvl);
+    return m_iLvl; // (getModifier(Mod::ITEM_LEVEL) > 0 ? std::clamp(getModifier(Mod::ITEM_LEVEL)+99, 0, 255) : m_iLvl);
 }
 
 uint32 CItemArmor::getJobs()
