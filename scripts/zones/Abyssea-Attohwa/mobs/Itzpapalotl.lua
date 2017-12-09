@@ -3,10 +3,10 @@
 --  NM:  Itzpapalotl
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Attohwa/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Abyssea-Attohwa/TextIDs");
-require("scripts/globals/abyssea");
-require("scripts/globals/status");
 require("scripts/globals/keyitems");
+require("scripts/globals/status");
 require("scripts/globals/magic");
 
 -----------------------------------
@@ -15,8 +15,13 @@ require("scripts/globals/magic");
 
 function onMobInitialize(mob)
     -- addMod
-    mob:addMod(MOD_DEF,100);
-    mob:addMod(MOD_MDEF,50);
+    mob:addMod(MOD_REGAIN, 10);
+    mob:addMod(MOD_REGEN, 100);
+    mob:addMod(MOD_REFRESH, 25);
+    mob:addMod(MOD_DEF, 100);
+    mob:addMod(MOD_MDEF, 50);
+    mob:addMod(MOD_MATT, 40);
+    mob:addMod(MOD_MACC, 100);
 end;
 
 -----------------------------------
@@ -25,12 +30,7 @@ end;
 
 function onMobSpawn(mob)
     -- setMod
-    mob:setMod(MOD_REGAIN,10);
-    mob:setMod(MOD_REGEN, 100);
-    mob:setMod(MOD_UFASTCAST, 45);
-    mob:setMod(MOD_REFRESH, 100);
-    mob:setMod(MOD_MATT,90);
-    mob:setMod(MOD_MACC,1800);
+    mob:setMod(MOD_FASTCAST, 45);
 
 end;
 
