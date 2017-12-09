@@ -1,8 +1,8 @@
 -----------------------------------
 -- Zone: Abyssea-Uleguerand
---  NPC: qm3 (???)
--- Spawns Blanga
--- !pos -615.221 -39.768 -16.079 253
+--  NPC: qm19 (???)
+-- Spawns Pantokrator
+-- !pos -199 -175 170 253
 -----------------------------------
 require("scripts/globals/abyssea");
 
@@ -27,6 +27,7 @@ end;
 -----------------------------------
 
 function onEventUpdate(player,csid,option)
+    abysseaOnEventUpdate(player,csid,option);
 end;
 
 -----------------------------------
@@ -34,4 +35,5 @@ end;
 -----------------------------------
 
 function onEventFinish(player,csid,option)
+    abysseaOnEventFinish(player,csid,option);
 end;
