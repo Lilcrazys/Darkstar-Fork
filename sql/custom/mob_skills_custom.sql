@@ -1144,8 +1144,8 @@ INSERT INTO `mob_skills` VALUES (1113,764,'tormentful_glare',4,15.0,2000,1500,4,
 INSERT INTO `mob_skills` VALUES (1114,765,'seismostomp',1,15.0,3000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (1115,766,'torpid_glare',4,15.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (1116,767,'seismostomp',1,15.0,3000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (1117,768,'lead_breath_custom',4,15.0,2000,1500,4,0,0,0,0,0,0);
-INSERT INTO `mob_skills` VALUES (1118,769,'lead_breath_custom',4,15.0,2000,1500,4,0,0,0,0,0,0);
+INSERT INTO `mob_skills` VALUES (1117,768,'lead_breath',4,15.0,2000,1500,4,0,0,0,0,0,0);
+INSERT INTO `mob_skills` VALUES (1118,769,'lead_breath',4,15.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (1119,863,'frag_bomb_custom',0,7.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (1120,69,'10000_needles_custom',1,10.0,2000,1500,4,0,0,0,0,0,0);
 INSERT INTO `mob_skills` VALUES (1121,770,'eagle_eye_shot',0,25.0,2000,0,4,2,0,0,0,0,0); -- yagudo move
