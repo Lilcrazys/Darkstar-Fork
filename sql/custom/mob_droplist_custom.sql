@@ -456,7 +456,7 @@ INSERT INTO `mob_droplist` VALUES (808,0,0,1000,11890,411); -- Skopos Bracers
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,11975,302); -- Avant Cuisses +1
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,10502,408); -- Rubeus Gloves
 INSERT INTO `mob_droplist` VALUES (808,0,0,1000,21209,199); -- Uffrat
-INSERT INTO `mob_droplist` VALUES (808,0,0,1000,28205,131); -- Weather. Souliers
+INSERT INTO `mob_droplist` VALUES (808,0,0,1000,28329,131); -- Weather. Souliers
 
 -- Dune Manticore
 INSERT INTO `mob_droplist` VALUES (811,0,0,1000,2878,28);
