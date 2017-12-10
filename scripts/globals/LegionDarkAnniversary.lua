@@ -68,7 +68,7 @@ function getAnniversaryEventItem(player)
         -- [index] = itemID,
     }
     local prizeID = nil;
-    local random = math.random(1,127);
+    local random = math.random(1,128);
     if (random < 16) then
         prizeID = getAnniversaryEventItemRSE(player, AnniversaryDayLoot[random]);
     else
