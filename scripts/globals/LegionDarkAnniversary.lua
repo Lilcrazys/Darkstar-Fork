@@ -7,8 +7,9 @@ function getAnniversaryEventItem(player)
     {
         -- [index] = itemID,
         -- 1 through 15 pass string to RSE which function returns item ID
-        [1]   = "RSE_TOP_A",     [2]  = "RSE_TOP_B",        [3]  = "RSE_TOP_C",
-        [4]   = "RSE_BOTTOM_A",  [5]  = "RSE_BOTTOM_B",     [6]  = "RSE_BOTTOM_C",
+        [1]   = "RSE_TOP_A",     [2]  = "RSE_BOTTOM_A",  -- Swimwear
+        [3]   = "RSE_TOP_B",     [4]  = "RSE_BOTTOM_B",  -- Swimwear
+        [5]   = "GSE_TOP"        [6]  = "GSE_BOTTOM",    -- Swimwear
         [7]   = "NOVENNIAL_TOP", [8]  = "NOVENNIAL_BOTTOM", [9]  = "YUKAYA_A",
         [10]  = "YUKATA_B",      [11] = "YUKATA_C",         [12] = "YUKATA_D",
         [13]  = "YUKAYA_E",      [14] = "YUKATA_F",         [15] = "YUKATA_G",
@@ -79,6 +80,12 @@ function getAnniversaryEventItem(player)
 end;
 
 function getAnniversaryEventItemRSE(player, setName)
+    -- HM=1, HF=2, EM=3, EF=4, TM=5, TF=6, MI=7, GA=8
+    local race = player:getRace();
+
+    -- female = 0, male = 1
+    local gender = player:getGender();
+
     -- This is ugly but I don't got time to redo this anytime soon..
     local rseTable = {};
     if (setName == "RSE_TOP_A") then
@@ -88,26 +95,19 @@ function getAnniversaryEventItemRSE(player, setName)
             [5]=14461, --[[ Tarutaru Maillot +1 ]] [6]=14472, -- [[ Tarutaru Top +1 ]]
             [7]=14462, --[[ Mithra Top +1       ]] [8]=14463, -- [[ Galka Gilet +1  ]]
         }
-    elseif (setName == "RSE_TOP_B") then
-        rseTable = {
-            [1]=11273, --[[ Custom Gilet +1   ]] [2]=11274, -- [[ Custom Top +1  ]]
-            [3]=11275, --[[ Magna Gilet +1    ]] [4]=11276, -- [[ Magna Top +1   ]]
-            [5]=11277, --[[ Wonder Maillot +1 ]] [6]=11278, -- [[ Wonder Top +1  ]]
-            [7]=11279, --[[ Savage Top +1     ]] [8]=11280, -- [[ Elder Gilet +1 ]]
-        }
-    elseif (setName == "RSE_TOP_C") then
-        rseTable = {
-            [1]=27805, --[[ Rustic Maillot +1 ]] [2]=27806, -- [[ Shoal Maillot +1  ]]
-            [3]=27805, --[[ Rustic Maillot +1 ]] [4]=27806, -- [[ Shoal Maillot +1  ]]
-            [5]=27805, --[[ Rustic Maillot +1 ]] [6]=27806, -- [[ Shoal Maillot +1  ]]
-            [7]=27806, --[[ Shoal Maillot +1  ]] [8]=27805, -- [[ Rustic Maillot +1 ]]
-        }
     elseif (setName == "RSE_BOTTOM_A") then
         rseTable = {
             [1]=15415, --[[ Hume Trunks +1     ]] [2]=15416, -- [[ Hume Shorts +1     ]]
             [3]=15417, --[[ Elvaan Trunks +1   ]] [4]=15418, -- [[ Elvaan Shorts +1   ]]
             [5]=15419, --[[ Tarutaru Trunks +1 ]] [6]=15424, -- [[ Tarutaru Shorts +1 ]]
             [7]=15420, --[[ Mithra Shorts +1   ]] [8]=15421, -- [[ Galka Trunks +1    ]]
+        }
+    elseif (setName == "RSE_TOP_B") then
+        rseTable = {
+            [1]=11273, --[[ Custom Gilet +1   ]] [2]=11274, -- [[ Custom Top +1  ]]
+            [3]=11275, --[[ Magna Gilet +1    ]] [4]=11276, -- [[ Magna Top +1   ]]
+            [5]=11277, --[[ Wonder Maillot +1 ]] [6]=11278, -- [[ Wonder Top +1  ]]
+            [7]=11279, --[[ Savage Top +1     ]] [8]=11280, -- [[ Elder Gilet +1 ]]
         }
     elseif (setName == "RSE_BOTTOM_B") then
         rseTable = {
@@ -116,81 +116,77 @@ function getAnniversaryEventItemRSE(player, setName)
             [5]=16333, --[[ Wonder Trunks +1 ]] [6]=16334, -- [[ Wonder Shorts +1 ]]
             [7]=16335, --[[ Savage Shorts +1 ]] [8]=16336, -- [[ Elder Trunks +1  ]]
         }
-    elseif (setName == "RSE_BOTTOM_C") then
-        rseTable = {
-            [1]=28088, --[[ Rustic Trunks +1 ]] [2]=28089, -- [[ Shoal Trunks +1  ]]
-            [3]=28088, --[[ Rustic Trunks +1 ]] [4]=28089, -- [[ Shoal Trunks +1  ]]
-            [5]=28088, --[[ Rustic Trunks +1 ]] [6]=28089, -- [[ Shoal Trunks +1  ]]
-            [7]=28089, --[[ Shoal Trunks +1  ]] [8]=28088, -- [[ Rustic Trunks +1 ]]
-        }
-    -- Below here are just gender specific and later I'll move those to not check 8 values for 2 things..But again, in a hurry..
+    -- Below here are just gender specific..Again ugly, but in a hurry..
+    elseif (setName == "GSE_TOP") then
+        if (gender == 1) then
+            return 27805; -- Rustic Maillot +1
+        else
+            return 27806; -- Shoal Maillot +1
+        end
+    elseif (setName == "GSE_BOTTOM") then
+        if (gender == 1) then
+            return 28088; -- Rustic Trunks +1
+        else
+            return 28089; -- Shoal Trunks +1
+        end
     elseif (setName == "NOVENNIAL_TOP") then
-        rseTable = {
-            [1]=11853, --[[ Novennial Coat  ]] [2]=11854, -- [[ Novennial Dress ]]
-            [3]=11853, --[[ Novennial Coat  ]] [4]=11854, -- [[ Novennial Dress ]]
-            [5]=11853, --[[ Novennial Coat  ]] [6]=11854, -- [[ Novennial Dress ]]
-            [7]=11854, --[[ Novennial Dress ]] [8]=11853, -- [[ Novennial Coat  ]]
-        }
+        if (gender == 1) then
+            return 11853; -- Novennial Coat
+        else
+            return 11854; -- Novennial Dress
+        end
     elseif (setName == "NOVENNIAL_BOTTOM") then
-        rseTable = {
-            [1]=11956, --[[ Novennial Hose  ]] [2]=11957, -- [[ Novennial Boots ]]
-            [3]=11956, --[[ Novennial Hose  ]] [4]=11957, -- [[ Novennial Boots ]]
-            [5]=11956, --[[ Novennial Hose  ]] [6]=11957, -- [[ Novennial Boots ]]
-            [7]=11957, --[[ Novennial Boots ]] [8]=11956, -- [[ Novennial Hose  ]]
-        }
+        if (gender == 1) then
+            return 11956; -- Novennial Hose
+        else
+            return 11957; -- Novennial Boots
+        end
     elseif (setName == "YUKAYA_A") then
-        rseTable = {
-            [1]=13821, --[[ Hikogami Yukata ]] [2]=11862, -- [[ Himegami Yukata ]]
-            [3]=13821, --[[ Hikogami Yukata ]] [4]=11862, -- [[ Himegami Yukata ]]
-            [5]=13821, --[[ Hikogami Yukata ]] [6]=11862, -- [[ Himegami Yukata ]]
-            [7]=13822, --[[ Himegami Yukata ]] [8]=13822, -- [[ Hikogami Yukata ]]
-        }
+        if (gender == 1) then
+            return 13821; -- Lord's Yukata
+        else
+            return 13822; -- Lady's Yukata
+        end
     elseif (setName == "YUKATA_B") then
-        rseTable = {
-            [1]=14532, --[[ Hikogami Yukata ]] [2]=14533, -- [[ Himegami Yukata ]]
-            [3]=14532, --[[ Hikogami Yukata ]] [4]=14533, -- [[ Himegami Yukata ]]
-            [5]=14532, --[[ Hikogami Yukata ]] [6]=14533, -- [[ Himegami Yukata ]]
-            [7]=14533, --[[ Himegami Yukata ]] [8]=14532, -- [[ Hikogami Yukata ]]
-        }
+        if (gender == 1) then
+            return 14532; -- Otoko Yukata
+        else
+            return 14533; -- Onago Yukata
+        end
     elseif (setName == "YUKATA_C") then
-        rseTable = {
-            [1]=14534, --[[ Hikogami Yukata ]] [2]=14535, -- [[ Himegami Yukata ]]
-            [3]=14534, --[[ Hikogami Yukata ]] [4]=14535, -- [[ Himegami Yukata ]]
-            [5]=14534, --[[ Hikogami Yukata ]] [6]=14535, -- [[ Himegami Yukata ]]
-            [7]=14535, --[[ Himegami Yukata ]] [8]=14534, -- [[ Hikogami Yukata ]]
-        }
+        if (gender == 1) then
+            return 14534; -- Otokogimi Yukata
+        else
+            return 14535; -- Onnagimi Yukata
+        end
     elseif (setName == "YUKATA_D") then
-        rseTable = {
-            [1]=11316, --[[ Hikogami Yukata ]] [2]=11319, -- [[ Himegami Yukata ]]
-            [3]=11316, --[[ Hikogami Yukata ]] [4]=11319, -- [[ Himegami Yukata ]]
-            [5]=11316, --[[ Hikogami Yukata ]] [6]=11319, -- [[ Himegami Yukata ]]
-            [7]=11319, --[[ Himegami Yukata ]] [8]=11316, -- [[ Hikogami Yukata ]]
-        }
+        if (gender == 1) then
+            return 11316; -- Otokoeshi Yukata
+        else
+            return 11319; -- Ominaeshi Yukata
+        end
     elseif (setName == "YUKATA_E") then
-        rseTable = {
-            [1]=11861, --[[ Hikogami Yukata ]] [2]=11862, -- [[ Himegami Yukata ]]
-            [3]=11861, --[[ Hikogami Yukata ]] [4]=11862, -- [[ Himegami Yukata ]]
-            [5]=11861, --[[ Hikogami Yukata ]] [6]=11862, -- [[ Himegami Yukata ]]
-            [7]=11862, --[[ Himegami Yukata ]] [8]=11861, -- [[ Hikogami Yukata ]]
-        }
+        if (gender == 1) then
+            return 11861; -- Hikogami Yukata
+        else
+            return 11862; -- Himegami Yukata
+        end
     elseif (setName == "YUKATA_F") then
-        rseTable = {
-            [1]=14532, --[[ Otoko Yukata ]] [2]=14533, -- [[ Onago Yukata ]]
-            [3]=14532, --[[ Otoko Yukata ]] [4]=14533, -- [[ Onago Yukata ]]
-            [5]=14532, --[[ Otoko Yukata ]] [6]=14533, -- [[ Onago Yukata ]]
-            [7]=14533, --[[ Onago Yukata ]] [8]=14532, -- [[ Otoko Yukata ]]
-        }
+        if (gender == 1) then
+            return 14532; -- Otoko Yukata
+        else
+            return 14533; -- Onago Yukata
+        end
     elseif (setName == "YUKATA_G") then
-        rseTable = {
-            [1]=14534, --[[ Otokogimi Yukata ]] [2]=14535, -- [[ Onnagimi Yukata  ]]
-            [3]=14534, --[[ Otokogimi Yukata ]] [4]=14535, -- [[ Onnagimi Yukata  ]]
-            [5]=14534, --[[ Otokogimi Yukata ]] [6]=14535, -- [[ Onnagimi Yukata  ]]
-            [7]=14535, --[[ Onnagimi Yukata  ]] [8]=14534, -- [[ Otokogimi Yukata ]]
-        }
+        if (gender == 1) then
+            return 14534; -- Otokogimi Yukata
+        else
+            return 14535; -- Onnagimi Yukata
+        end
+    else
+        player:PrintToPlayer("Error occurred: invalid RSE check.");
+        return nil;
     end
-
-    local race = player:getRace();
-    -- HM=1, HF=2, EM=3, EF=4, TM=5, TF=6, MI=7, GA=8
 
     return rseTable[race];
 end;
