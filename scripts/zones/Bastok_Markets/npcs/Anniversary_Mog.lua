@@ -6,7 +6,7 @@
 package.loaded["scripts/zones/Bastok_Markets/TextIDs"] = nil;
 -----------------------------------
 require("scripts/zones/Bastok_Markets/TextIDs");
-require("scripts/globals/LegionDarkAnniversary");
+require("scripts/globals/events/LegionDarkAnniversary");
 require("scripts/globals/status");
 require("scripts/globals/msg");
 -----------------------------------
