@@ -19,6 +19,7 @@ local price = 60000; -- It's up here so it can be seen by both functions
 -----------------------------------
 
 function onTrade(player,npc,trade)
+    --[[
     print('[DEBUG] Player trading to enter Legion : '..player:getName());
     print('[DEBUG] Gil total        : '..trade:getGil()..' ('..tostring(trade:getGil() == price)..')');
     print('[DEBUG] Fire Cluster     : '..tostring(trade:hasItemQty(4104,1)));
@@ -27,7 +28,7 @@ function onTrade(player,npc,trade)
     print('[DEBUG] Soaring Trophy   : '..tostring(trade:hasItemQty(3531,1)));
     print('[DEBUG] Veiled Trophy    : '..tostring(trade:hasItemQty(3532,1)));
     print('[DEBUG] Total item count : '..trade:getItemCount());
-
+    ]]
     local gil = trade:getGil();
     local itemCount = trade:getItemCount();
 
