@@ -9,10 +9,10 @@ function getAnniversaryEventItem(player)
         -- 1 through 15 pass string to RSE which function returns item ID
         [1]   = "RSE_TOP_A",     [2]  = "RSE_BOTTOM_A",  -- Swimwear
         [3]   = "RSE_TOP_B",     [4]  = "RSE_BOTTOM_B",  -- Swimwear
-        [5]   = "GSE_TOP"        [6]  = "GSE_BOTTOM",    -- Swimwear
+        [5]   = "GSE_TOP",       [6]  = "GSE_BOTTOM",    -- Swimwear
         [7]   = "NOVENNIAL_TOP", [8]  = "NOVENNIAL_BOTTOM", [9]  = "YUKAYA_A",
         [10]  = "YUKATA_B",      [11] = "YUKATA_C",         [12] = "YUKATA_D",
-        [13]  = "YUKAYA_E",      [14] = "YUKATA_F",         [15] = "YUKATA_G",
+        [13]  = "YUKATA_E",      [14] = "YUKATA_F",         [15] = "YUKATA_G",
         -- 16 through 127 direct item ID
         [16]  = 265,     --[[ Adamantoise Statue       ]]   [17]  = 266,     --[[ Behemoth Statue           ]]
         [18]  = 267,     --[[ Fafnir Statue            ]]   [19]  = 268,     --[[ Nomad Moogle Statue       ]]
@@ -74,6 +74,9 @@ function getAnniversaryEventItem(player)
         prizeID = getAnniversaryEventItemRSE(player, AnniversaryDayLoot[random]);
     else
         prizeID = AnniversaryDayLoot[random];
+        if (prizeID == nil) then
+            player:PrintToPlayer(string.format("item data set: '%d'.", random));
+        end
     end
 
     return prizeID;
@@ -184,7 +187,7 @@ function getAnniversaryEventItemRSE(player, setName)
             return 14535; -- Onnagimi Yukata
         end
     else
-        player:PrintToPlayer("Error occurred: invalid RSE check.");
+        player:PrintToPlayer(string.format("Error occurred: invalid RSE check '%s'.", setName));
         return nil;
     end
 
