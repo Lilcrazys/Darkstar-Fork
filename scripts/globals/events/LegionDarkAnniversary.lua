@@ -62,14 +62,14 @@ function getAnniversaryEventItem(player)
         [105] = 15177,   --[[ Horror Head II           ]]   [106] = 10447,   --[[ Pyracmon Cap              ]]
         [107] = 26708,   --[[ Flan Mask +1             ]]   [108] = 458,     --[[ Calabazilla Lantern       ]]
         [109] = 203,     --[[ Bomb Lantern             ]]   [110] = 204,     --[[ Pumpkin Lantern           ]]
-        [121] = 205,     --[[ Mandragora Lantern       ]]   [122] = 3649,    --[[ Harvest Horror            ]]
-        [123] = 3623,    --[[ Djinn Pricket            ]]   [124] = 3624,    --[[ Korrigan Pricket          ]]
-        [125] = 3646,    --[[ Mandragora Pricket       ]]   [126] = 3647,    --[[ Spook-a-Swirl             ]]
-        [127] = 3648,    --[[ Chocolate Grumpkin       ]]   [128] = 4488,    --[[ Jack-o'-Lantern           ]]
+        [111] = 205,     --[[ Mandragora Lantern       ]]   [112] = 3649,    --[[ Harvest Horror            ]]
+        [113] = 3623,    --[[ Djinn Pricket            ]]   [114] = 3624,    --[[ Korrigan Pricket          ]]
+        [115] = 3646,    --[[ Mandragora Pricket       ]]   [116] = 3647,    --[[ Spook-a-Swirl             ]]
+        [117] = 3648,    --[[ Chocolate Grumpkin       ]]   [118] = 4488,    --[[ Jack-o'-Lantern           ]]
         -- [index] = itemID,
     }
     local prizeID = nil;
-    local random = math.random(1,128);
+    local random = math.random(1,118);
     if (random < 16) then
         prizeID = getAnniversaryEventItemRSE(player, AnniversaryDayLoot[random]);
     else
