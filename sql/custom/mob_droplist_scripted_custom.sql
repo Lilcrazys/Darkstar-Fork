@@ -798,6 +798,17 @@ INSERT INTO `mob_droplist_scripted` VALUES (9706,0,0,1000,20546,100); -- Ninzas 
 INSERT INTO `mob_droplist_scripted` VALUES (9706,0,0,1000,21286,100); -- Hgafircian +1
 INSERT INTO `mob_droplist_scripted` VALUES (9706,0,0,1000,21051,100); -- Shichishito +1
 
+-- Shinryu
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,21364, 500); -- Elders Grip    (slot 1 @ 100%)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,3925, 500); -- Tanzenite Jewel (slot 1 @ 100%)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,20858, 50); -- Lightreaver      (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,20991, 50); -- Chidori          (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,21227, 50); -- Hangaku-no-Yumi  (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,21284, 50); -- Vanir_Gun        (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,28155, 50); -- Scuff._Cosciales (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,28287, 50); -- Durgai_Leggings  (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+INSERT INTO `mob_droplist_scripted` VALUES (9730,0,0,1000,4692, 50); -- Haste II          (slot 2/3/4 @ 8%/5%/2% + TH modifier)
+
 -- Hydra
 INSERT INTO `mob_droplist_scripted` VALUES (9731,0,0,1000,10952,33); -- Tanner's Torque
 INSERT INTO `mob_droplist_scripted` VALUES (9731,0,0,1000,20548,66); -- Oatixur
