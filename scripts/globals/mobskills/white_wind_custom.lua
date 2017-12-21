@@ -18,5 +18,5 @@ end;
 
 function onMobWeaponSkill(target, mob, skill)
     skill:setMsg(msgBasic.SKILL_RECOVERS_HP);
-    return MobHealMove(mob, (math.floor(mob:getHP()/7)) + (math.floor(mob:getMaxHP()/7));
+    return MobHealMove(mob, (math.floor(mob:getHP()/7)) + (math.floor(mob:getMaxHP()/7)));
 end;
