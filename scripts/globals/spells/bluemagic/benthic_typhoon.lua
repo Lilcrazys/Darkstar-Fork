@@ -13,7 +13,10 @@ end;
 
 function onSpellCast(caster,target,spell)
     local params = {};
+    params.diff = caster:getMod(MOD_MACC) - target:getMod(MOD_MEVA);
+    params.attribute = MOD_INT;
     params.skillType = BLUE_SKILL;
+    params.bonus = 1.0;
     params.tpmod = TPMOD_ATTACK;
     params.dmgtype = DMGTYPE_SLASH;
     params.scattr = SC_GRAVITATION;
@@ -32,15 +35,13 @@ function onSpellCast(caster,target,spell)
     params.mnd_wsc = 0.0;
     params.chr_wsc = 0.0;
 
+    local resist = applyResistance(caster, target, spell, params);
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
-    local macc = (caster:getMod(MOD_MACC) - target:getMod(MOD_MEVA));
-    local resist = applyResistance(caster,spell,target,macc,params.skillType);
-
     if (damage > 0 and resist > 0.125) then
-        target:addStatusEffect(EFFECT_DEFENSE_DOWN,10,0,60*resist);
-        target:addStatusEffect(EFFECT_MAGIC_DEF_DOWN,10,0,60*resist);
+        target:addStatusEffect(EFFECT_DEFENSE_DOWN, 10, 0, 60 * resist);
+        target:addStatusEffect(EFFECT_MAGIC_DEF_DOWN, 10, 0, 60 * resist);
     end
 
     return damage;
