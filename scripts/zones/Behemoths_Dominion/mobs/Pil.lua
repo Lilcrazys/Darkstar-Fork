@@ -76,7 +76,7 @@ end;
 
 function onMobFight(mob, target)
     -- 45 min passed and its not already raged
-    if (BattleTime - os.time() > 2700 and mob:getLocalVar("RAGED") == 0) then
+    if (mob:getBattleTime() - os.time() > 2700 and mob:getLocalVar("RAGED") == 0) then
         mob:setLocalVar("RAGED", 1);
         -- Now lets make claim holder's eat SH and die.
         mob:addMod(MOD_ATTP, 999);
