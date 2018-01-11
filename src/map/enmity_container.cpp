@@ -322,7 +322,7 @@ void CEnmityContainer::SetVE(CBattleEntity* PEntity, uint16 amount)
 *                                                                       *
 ************************************************************************/
 
-void CEnmityContainer::UpdateEnmityFromDamage(CBattleEntity* PEntity, uint16 Damage)
+void CEnmityContainer::UpdateEnmityFromDamage(CBattleEntity* PEntity, int32 Damage)
 {
     Damage = (Damage < 1 ? 1 : Damage);
 
@@ -332,8 +332,8 @@ void CEnmityContainer::UpdateEnmityFromDamage(CBattleEntity* PEntity, uint16 Dam
         mod = battleutils::GetEnmityModDamage(m_EnmityHolder->GetMLevel());
     }
 
-    auto CE = (int16)((80.0f / mod) * Damage);
-    auto VE = (int16)((240.0f / mod) * Damage);
+    auto CE = std::clamp<int16>((int16)((80.0f / mod) * Damage), 0, 30000);
+    auto VE = std::clamp<int16>((int16)((240.0f / mod) * Damage), 0, 30000);
 
     UpdateEnmity(PEntity, CE, VE);
 
