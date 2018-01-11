@@ -1020,15 +1020,23 @@ function takeWeaponskillDamage(defender, attacker, params, primary, finaldmg, sl
         defender:addEnmity(enmityEntity, params.overrideCE, params.overrideVE)
     else
         local enmityMult = params.enmityMult or 1
-        if (enmityMult > 1) then
-            enmityMult = enmityMult*1.2;
-        else
+
+        -- Custom enmity modification, PLD ws more hate, everyone else (except NIN) slightly less.
+        if (enmityMult > 1 or enmityEntity:getMainJob() == JOBS.PLD) then
+            enmityMult = enmityMult*1.25;
+        elseif (enmityEntity:getMainJob() ~= JOBS.NIN) then -- TODO: exempt trick attack as well?
             enmityMult = enmityMult*0.8;
         end
-        if (enmityEntity:getMainJob() == JOBS.PLD) then
-            enmityMult = enmityMult*1.8;
+
+        -- Temp debug block
+        if ((finaldmg * enmityMult) > 65535 or (finaldmg * enmityMult) < 1) then
+            print("ws enmityMult overflow/underflow! Tell Teo!");
+        end
+        if (enmityMult == 0) then
+            print("ws enmityMult zero! Tell Teo!");
         end
         -- debugWeaponskillDamageEnmity(enmityEntity,defender,finaldmg,enmityMult)
+
         defender:updateEnmityFromDamage(enmityEntity, finaldmg * enmityMult)
     end
 

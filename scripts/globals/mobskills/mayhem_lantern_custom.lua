@@ -1,5 +1,8 @@
 ---------------------------------------------
 -- Mayhem_Lantern
+-- Attempts to charm targets in an area of effect.
+-- Additional effect: Shock + Attack Boost
+-- Shock effect prevents sleeping charmed players.
 ---------------------------------------------
 require("scripts/globals/monstertpmoves");
 require("scripts/globals/status");
@@ -7,7 +10,7 @@ require("scripts/globals/msg");
 ---------------------------------------------
 
 function onMobSkillCheck(target,mob,skill)
-    return 0;
+    return 1;
 end;
 
 function onMobWeaponSkill(target, mob, skill)

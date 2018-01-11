@@ -23,13 +23,13 @@ function onMobDeathEx(mob, player, isKiller, isWeaponSkillKill)
         local BladeofDeath = player:getQuestStatus(BASTOK, BLADE_OF_DEATH);
         local ChaosbringerKills = player:getVar("ChaosbringerKills");
         if (BladeofDarkness == QUEST_ACCEPTED or BladeofDeath == QUEST_ACCEPTED) then
-            if (player:getEquipID(SLOT_MAIN) == 16607 and isWeaponSkillKill == false) then
+            if (player:getEquipID(SLOT_MAIN) == 16607) then -- and isWeaponSkillKill == false) then
                 if (ChaosbringerKills < 200) then
                     player:setVar("ChaosbringerKills", ChaosbringerKills + 1);
                     if (ChaosbringerKills == 1) then
-                        player:SpoofMsg(string.format("has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), nil, chatType.EMOTION, nil);
+                        player:PrintToPlayer(string.format("has felled %u foe using the Chaosbringer...", ChaosbringerKills + 1), chatType.EMOTION);
                     else
-                        player:SpoofMsg(string.format("has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), nil, chatType.EMOTION, nil);
+                        player:PrintToPlayer(string.format("has felled %u foes using the Chaosbringer...", ChaosbringerKills + 1), chatType.EMOTION);
                     end
                 end
             end
