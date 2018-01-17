@@ -17,7 +17,7 @@ function onMagicCastingCheck(caster,target,spell)
 end;
 
 function onSpellCast(caster,target,spell)
-    local cure = math.floor(mob:getHP()/7)*2;
+    local cure = math.floor(caster:getHP()/7)*2;
     cure = getCureFinal(caster,spell,cure,1,true);
 
     spell:setMsg(msgBasic.MAGIC_RECOVERS_HP);
