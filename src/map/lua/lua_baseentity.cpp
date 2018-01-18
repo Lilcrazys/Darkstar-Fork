@@ -2544,15 +2544,7 @@ inline int32 CLuaBaseEntity::setPos(lua_State *L)
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
 
     if (m_PBaseEntity->objtype == TYPE_PC)
-    {
-        if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 &&
-            charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail"))) // jailutils::InPrison((CCharEntity*)m_PBaseEntity)
-        {
-            uint16 messageID = luautils::GetTextIDVariable(131, "NO_ESCAPE");
-            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CMessageSpecialPacket(m_PBaseEntity,messageID,0,0,0,0,0));
-            return 0;
-        }
-
+    {   if (m_PBaseEntity->getZone() == 131 && ((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 && charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail")) { return 0; }
         if (!lua_isnil(L, 5) && lua_isnumber(L, 5) && ((CCharEntity*)m_PBaseEntity)->status == STATUS_DISAPPEAR)
         {
             // do not modify zone/position if the character is already zoning
@@ -2628,15 +2620,7 @@ inline int32 CLuaBaseEntity::warp(lua_State *L)
 {
     DSP_DEBUG_BREAK_IF(m_PBaseEntity == nullptr);
     DSP_DEBUG_BREAK_IF(m_PBaseEntity->objtype != TYPE_PC);
-
-    if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 &&
-        charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail"))) // jailutils::InPrison((CCharEntity*)m_PBaseEntity)
-    {
-        uint16 messageID = luautils::GetTextIDVariable(131, "NO_ESCAPE");
-        ((CCharEntity*)m_PBaseEntity)->pushPacket(new CMessageSpecialPacket(m_PBaseEntity,messageID,0,0,0,0,0));
-        return 0;
-    }
-
+    if (m_PBaseEntity->getZone() == 131 && ((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 && charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail")) { return 0; }
     ((CCharEntity*)m_PBaseEntity)->loc.boundary = 0;
     ((CCharEntity*)m_PBaseEntity)->m_moghouseID = 0;
     ((CCharEntity*)m_PBaseEntity)->loc.p = ((CCharEntity*)m_PBaseEntity)->profile.home_point.p;
