@@ -246,6 +246,9 @@ REPLACE INTO `mob_pools` VALUES (595,'Cactrot_Rapido','Cactrot_Rapido',212,0x000
 -- REPLACE INTO `mob_pools` VALUES (3268,'Qiqirn_Volcanist','Qiqirn_Volcanist',199,0x0000C70600000000000000000000000000000000,11,11,5,200,100,0,1,0,1,0,0,0,258,131,0,0,0,1,0,199);
 -- REPLACE INTO `mob_pools` VALUES (3269,'Qn_aern_rdm','Qn_aern_rdm',3,0x00005E0500000000000000000000000000000000,5,5,4,240,100,0,0,0,1,0,0,0,0,0,0,0,624,1,0,441);
 
+-- DSP has this as nin/nin, because ffxiclopedia lists it as ninja because it uses Mijin Gakure. This however, causes it to spam ranged attack which Xzomits have no animation for..
+REPLACE INTO `mob_pools` VALUES (3271,'Qn_xzomit','Qn_xzomit',269,0x0000100200000000000000000000000000000000,1,13,7,200,100,0,0,0,1,0,0,0,0,0,0,0,7,1,0,269);
+
 REPLACE INTO `mob_pools` VALUES (3294,'Qutrub','Qutrub',203,0x0600C60600000000000000000000000000000000,8,8,5,240,100,0,1,0,0,0,0,0,296,129,0,0,5,1,0,203);
 -- INSERT INTO `mob_pools` VALUES (3294,'Qutrub','Qutrub',203,0x0000EE0600000000000000000000000000000000,8,8,5,240,100,0,7,0,0,0,0,296,129,0,0,5,1,0,203);
 -- Animation probs with the above model. Temp borrowing another mobs till resolved.
