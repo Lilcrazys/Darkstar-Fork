@@ -2115,7 +2115,7 @@ inline int32 CLuaBaseEntity::sendMenu(lua_State *L)
     CCharEntity* PChar = (CCharEntity*)m_PBaseEntity;
 
     uint32 menu = (uint32)lua_tointeger(L, 1);
-
+    if (m_PBaseEntity->getZone() == 131 && (((CCharEntity*)m_PBaseEntity)->m_GMlevel == 0 && charutils::GetVar((CCharEntity*)m_PBaseEntity, "inJail"))) { return 0; } // Jailed chars can't use menu.
     switch (menu)
     {
         case 1:
