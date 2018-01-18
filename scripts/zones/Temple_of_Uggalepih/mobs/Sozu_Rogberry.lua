@@ -2,11 +2,10 @@
 -- Area: Temple of Uggalepih
 --  NM:  Sozu Rogberry
 -----------------------------------
-require("scripts/globals/status");
+mixins = {require("scripts/mixins/families/tonberry")}
+require("scripts/zones/Temple_of_Uggalepih/MobIDs");
+require("scripts/globals/settings");
 
------------------------------------
--- onMobInitialize
------------------------------------
 
 function onMobInitialize(mob)
     -- addMod
@@ -15,10 +14,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_EVA,-150);
     mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -59,13 +54,9 @@ function onMobSpawn(mob)
 
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
-    local kills = player:getVar("EVERYONES_GRUDGE_KILLS");
-    if (kills < 480) then
-        player:setVar("EVERYONES_GRUDGE_KILLS",kills + 1);
-    end
+end;
+
+function onMobDespawn(mob)
+    GetNPCByID(SOZU_ROGBERRY_QM):updateNPCHideTime(FORCE_SPAWN_QM_RESET_TIME);
 end;

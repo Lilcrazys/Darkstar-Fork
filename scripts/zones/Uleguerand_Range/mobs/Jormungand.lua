@@ -9,19 +9,11 @@ require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/msg");
 
------------------------------------
--- onMobInitialize Action
------------------------------------
-
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -49,17 +41,10 @@ function onMobSpawn(mob)
     mob:delStatusEffect(EFFECT_ALL_MISS);
 end;
 
------------------------------------
--- onMobEngage Action
------------------------------------
 
 function onMobEngaged(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob,target)
     if (mob:hasStatusEffect(EFFECT_BLOOD_WEAPON) == false and mob:actionQueueEmpty() == true) then
@@ -110,9 +95,19 @@ function onMobFight(mob,target)
     end
 end;
 
------------------------------------
--- onSpellPrecast
------------------------------------
+function onMobWeaponSkill(target, mob, skill)
+    if (skill:getID() == 1296 and mob:getHPP() <= 30) then
+        local roarCounter = mob:getLocalVar("roarCounter");
+        roarCounter = roarCounter +1;
+        mob:setLocalVar("roarCounter", roarCounter);
+
+        if (roarCounter > 2) then
+            mob:setLocalVar("roarCounter", 0);
+        else
+            mob:useMobAbility(1296);
+        end
+    end
+end;
 
 function onSpellPrecast(mob, spell)
     if (spell:getID() == 207) then
@@ -122,10 +117,6 @@ function onSpellPrecast(mob, spell)
         -- spell:setAnimation(2266);
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 
 function onAdditionalEffect(mob,target,damage)
     local chance = 40;
@@ -163,27 +154,16 @@ function onAdditionalEffect(mob,target,damage)
     end
 end;
 
------------------------------------
--- onMobDrawIn
------------------------------------
-
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
     mob:useMobAbility(1290);
     mob:addTP(1000);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(WORLD_SERPENT_SLAYER);
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     mob:setRespawnTime(math.random(75600,86400)); -- 21 to 24 hours, originally 3 to 5 days
