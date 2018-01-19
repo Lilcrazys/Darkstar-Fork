@@ -168,7 +168,7 @@ INSERT INTO `zone_settings` VALUES (119,2,'127.0.0.1',54230,'Meriphataud_Mountai
 INSERT INTO `zone_settings` VALUES (120,2,'127.0.0.1',54230,'Sauromugue_Champaign',158,158,101,103,0,0.00,1182);
 INSERT INTO `zone_settings` VALUES (121,2,'127.0.0.1',54230,'The_Sanctuary_of_ZiTah',190,190,101,191,0,0.00,1182);
 INSERT INTO `zone_settings` VALUES (122,2,'127.0.0.1',54230,'RoMaeve',211,211,101,191,0,0.00,1178);
-INSERT INTO `zone_settings` VALUES (123,2,'127.0.0.1',54230,'Yuhtunga_Jungle',134,134,101,191,0,0.00,11826);
+INSERT INTO `zone_settings` VALUES (123,2,'127.0.0.1',54230,'Yuhtunga_Jungle',134,134,101,191,0,0.00,1182);
 INSERT INTO `zone_settings` VALUES (124,2,'127.0.0.1',54230,'Yhoator_Jungle',134,134,101,191,0,0.00,1182);
 INSERT INTO `zone_settings` VALUES (125,2,'127.0.0.1',54230,'Western_Altepa_Desert',171,171,101,191,0,0.00,1182);
 INSERT INTO `zone_settings` VALUES (126,2,'127.0.0.1',54230,'Qufim_Island',0,0,101,103,0,0.00,1178);
