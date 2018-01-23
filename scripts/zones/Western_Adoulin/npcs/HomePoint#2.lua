@@ -1,50 +1,34 @@
 -----------------------------------
 -- Area: Western_Adoulin
--- NPC:  HomePoint#2
+--  NPC: HomePoint#2
 -- !pos
 -----------------------------------
-
 package.loaded["scripts/zones/Western_Adoulin/TextIDs"] = nil;
-
+-----------------------------------
 require("scripts/globals/settings");
 require("scripts/zones/Western_Adoulin/TextIDs");
 require("scripts/globals/homepoint");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
 end; 
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
     player:PrintToPlayer("SoA is closed - you should not be here.");
     --[[
-    homepointMenu( player, 8701, 49);
+    homepointMenu(player, 8701, 109);
     ]]
     player:addStatusEffectEx(EFFECT_TELEPORT,0,TELEPORT_WARP,0,4);
 end; 
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
-    --printf("CSID: %u",csid);
-    --printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
------------------------------------
--- onEventFinish
------------------------------------
-
 function onEventFinish(player,csid,option)
-    --printf("CSID: %u",csid);
-    --printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 
     if (csid == 8701) then
 
@@ -52,7 +36,7 @@ function onEventFinish(player,csid,option)
             player:setHomePoint();
             player:messageSpecial(HOMEPOINT_SET);
         else
-            hpTeleport( player, option);
+            hpTeleport(player, option);
         end
     end
 end;

@@ -5,19 +5,11 @@
 -----------------------------------
 package.loaded["scripts/zones/Horlais_Peak/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Horlais_Peak/TextIDs");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     if (target:hasStatusEffect(EFFECT_FOOD) == true and mob:hasStatusEffect(EFFECT_FOOD) == false) then
@@ -34,10 +26,6 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onMobEngaged Action
------------------------------------
-
 function onMobEngaged(mob,target)
     target:showText(mob,YOU_DECIDED_TO_SHOW_UP);
     -- printf("Maat Horlais Peak works");
@@ -47,10 +35,6 @@ function onMobEngaged(mob,target)
     -- If you dying: target:showText(mob,LOOKS_LIKE_YOU_WERENT_READY);
 end;
 
------------------------------------
--- onMobFight Action
------------------------------------
-
 function onMobFight(mob, target)
     local bf = mob:getBattlefield();
 
@@ -59,10 +43,6 @@ function onMobFight(mob, target)
         return;
     end
 end;
-
------------------------------------
--- onMobDeath Action
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:showText(mob,YOUVE_COME_A_LONG_WAY);

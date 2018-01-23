@@ -11,8 +11,6 @@ require("scripts/globals/besieged");
 require("scripts/globals/msg");
 
 -----------------------------------
--- onTrade Action
------------------------------------
 
 function onTrade(player,npc,trade)
     if (trade:getGil() >= 10) then
@@ -29,10 +27,6 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
     --[[
     player:startEvent(913);
@@ -40,10 +34,6 @@ function onTrigger(player,npc)
     player:SpoofMsg("Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", npc, chatType.SAY, nil);
     player:SpoofMsg("Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", npc, chatType.SAY, nil);
 end;
-
------------------------------------
--- onEventUpdate
------------------------------------
 
 function onEventUpdate(player,csid,option)
     -- printf("updateCSID: %u",csid);
@@ -54,10 +44,6 @@ function onEventUpdate(player,csid,option)
         player:updateEvent(0,0);
     end
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("finishCSID: %u",csid);

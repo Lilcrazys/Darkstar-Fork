@@ -10,9 +10,6 @@
 require("scripts/globals/magic");
 require("scripts/globals/status");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -36,10 +33,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ATT, 50);
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     mob:addMod(MOD_MEVA, 95);
     mob:addMod(MOD_MDEF, 30);
@@ -51,25 +44,13 @@ function onMobSpawn(mob)
     ]]
 end;
 
------------------------------------
--- onMobRoam Action
------------------------------------
-
 function onMobRoam(mob)
 end;
-
------------------------------------
--- onMobDisEngage Action
------------------------------------
 
 function onMobDisEngage(mob, target)
     mob:setLocalVar("RAGED", 0);
     mob:delStatusEffect(EFFECT_RAGE);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
 
@@ -126,10 +107,6 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onAdditionalEffect
------------------------------------
-
 function onAdditionalEffect(mob, player)
     local chance = 40;
     local resist = applyResistanceAddEffect(mob,player,ELE_WATER,EFFECT_POISON);
@@ -148,10 +125,6 @@ function onAdditionalEffect(mob, player)
         return SUBEFFECT_POISON, msgBasic.ADD_EFFECT_STATUS, EFFECT_POISON;
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     mob:setLocalVar("RAGED", 0);

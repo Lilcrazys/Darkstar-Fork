@@ -1,16 +1,12 @@
 -----------------------------------
 -- Area: Upper Jeuno
--- NPC: Renik
+--  NPC: Renik
 -- Standard Info NPC
 -----------------------------------
 package.loaded["scripts/zones/Upper_Jeuno/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Upper_Jeuno/TextIDs");
 require("scripts/globals/quests");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
     -------------------------------Empy 119 Trials----------------------------------------------------
@@ -735,18 +731,10 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

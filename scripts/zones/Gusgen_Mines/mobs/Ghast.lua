@@ -2,20 +2,13 @@
 -- Area: Gusgen Mines
 --  MOB: Ghast
 -----------------------------------
-
 require("scripts/globals/groundsofvalor");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
     mob:addMod(MOD_CURE_POTENCY_RCVD,-15);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     checkGoVregime(player,mob,679,1);

@@ -5,10 +5,6 @@
 
 require("scripts/globals/status");
 
------------------------------------
--- onMobInitialize
------------------------------------
-
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_SIGHT_RANGE,30);
@@ -23,25 +19,13 @@ function onMobInitialize(mob)
     mob:addMod(MOD_TRIPLE_ATTACK,15);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
 

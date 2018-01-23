@@ -2,13 +2,9 @@
 -- Area: Mamook
 --  NM:  Gulool Ja Ja
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -29,10 +25,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,33);
 end;
 
------------------------------------
--- onMobEngaged Action
------------------------------------
-
 function onMobEngaged(mob,target)
 
     SpawnMob(17043876):updateEnmity(target);
@@ -41,10 +33,6 @@ function onMobEngaged(mob,target)
     SpawnMob(17043879):updateEnmity(target);
 
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(SHINING_SCALE_RIFLER);

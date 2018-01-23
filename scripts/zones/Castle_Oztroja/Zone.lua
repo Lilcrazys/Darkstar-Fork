@@ -12,9 +12,6 @@ require("scripts/globals/quests");
 require("scripts/globals/zone");
 require("scripts/zones/Castle_Oztroja/TextIDs");
 require("scripts/globals/msg");
-
------------------------------------
--- onInitialize
 -----------------------------------
 
 function onInitialize(zone)
@@ -28,10 +25,6 @@ function onInitialize(zone)
     UpdateTreasureSpawnPoint(17396211);
 end;
 
------------------------------------
--- onZoneIn
------------------------------------
-
 function onZoneIn(player,prevZone)
     local cs = -1;
     if (player:getXPos() == 0 and player:getYPos() == 0 and player:getZPos() == 0) then
@@ -40,10 +33,6 @@ function onZoneIn(player,prevZone)
     return cs;
 end;
 
------------------------------------
--- onConquestUpdate
------------------------------------
-
 function onConquestUpdate(zone, updatetype)
     local players = zone:getPlayers();
 
@@ -51,10 +40,6 @@ function onConquestUpdate(zone, updatetype)
         conquestUpdate(zone, player, updatetype, CONQUEST_BASE);
     end
 end;
-
------------------------------------
--- onRegionEnter
------------------------------------
 
 function onRegionEnter(player,region)
     switch (region:GetRegionID()): caseof
@@ -70,18 +55,33 @@ function onRegionEnter(player,region)
     }
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
+Oz_Handle_Table =
+{
+    [0] = {[17396196] = 8, [17396197] = 8, [17396198] = 8, [17396199] = 8},
+    [1] = {[17396196] = 8, [17396197] = 9, [17396198] = 9, [17396199] = 9},
+    [2] = {[17396196] = 9, [17396197] = 8, [17396198] = 9, [17396199] = 9},
+    [3] = {[17396196] = 9, [17396197] = 8, [17396198] = 8, [17396199] = 9},
+    [4] = {[17396196] = 9, [17396197] = 8, [17396198] = 9, [17396199] = 8},
+    [5] = {[17396196] = 8, [17396197] = 8, [17396198] = 9, [17396199] = 8},
+    [6] = {[17396196] = 9, [17396197] = 9, [17396198] = 8, [17396199] = 9},
+    [7] = {[17396196] = 9, [17396197] = 9, [17396198] = 9, [17396199] = 8},
+    [8] = {[17396196] = 8, [17396197] = 8, [17396198] = 9, [17396199] = 9},
+};
+
+function onGameHour(zone)
+    local VanadielHour = VanadielHour();
+    if (VanadielHour % 24 == 0) then -- Change handles every game day
+        Oz_handleSet = math.random(0,8);
+        for i,v in pairs(Oz_Handle_Table[Oz_handleSet]) do
+            GetNPCByID(i):setAnimation(v);
+        end
+    end
+end;
 
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

@@ -5,19 +5,11 @@
 -----------------------------------
 package.loaded["scripts/zones/QuBia_Arena/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/QuBia_Arena/TextIDs");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     if (target:hasStatusEffect(EFFECT_FOOD) == true and mob:hasStatusEffect(EFFECT_FOOD) == false) then
@@ -47,10 +39,6 @@ function onMobEngaged(mob,target)
     -- If you dying: target:showText(mob,LOOKS_LIKE_YOU_WERENT_READY);
 end;
 
------------------------------------
--- onMobFight Action
------------------------------------
-
 function onMobFight(mob, target)
     local bf = mob:getBattlefield();
 
@@ -59,11 +47,6 @@ function onMobFight(mob, target)
         return;
     end
 end;
-
-
------------------------------------
--- onMobDeath Action
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:showText(mob,YOUVE_COME_A_LONG_WAY);

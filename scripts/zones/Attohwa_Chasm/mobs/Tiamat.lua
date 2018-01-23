@@ -2,26 +2,18 @@
 -- Area: Attohwa Chasm
 --  MOB: Tiamat
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 1);
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -49,17 +41,9 @@ function onMobSpawn(mob)
     mob:delStatusEffect(EFFECT_ALL_MISS);
 end;
 
------------------------------------
--- onMobEngage Action
------------------------------------
-
 function onMobEngaged(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob,target)
 
@@ -132,10 +116,6 @@ function onMobFight(mob,target)
 
 end;
 
------------------------------------
--- onSpellPrecast
------------------------------------
-
 function onSpellPrecast(mob, spell)
     if (spell:getID() == 218) then
         spell:setAoE(SPELLAOE_RADIAL);
@@ -145,10 +125,6 @@ function onSpellPrecast(mob, spell)
         spell:setMPCost(1);
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 
 function onAdditionalEffect(mob,target,damage)
     local chance = 45;
@@ -186,27 +162,15 @@ function onAdditionalEffect(mob,target,damage)
     end
 end;
 
------------------------------------
--- onMobDrawIn
------------------------------------
-
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
     mob:useMobAbility(1279);
     mob:addTP(100);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
     player:addTitle(TIAMAT_TROUNCER);
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     mob:setRespawnTime(math.random(75600,86400)); -- 21 to 24 hours, originally 3 to 5 days

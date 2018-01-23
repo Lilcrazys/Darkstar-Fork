@@ -10,36 +10,21 @@ require("scripts/zones/Rolanberry_Fields/TextIDs");
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
 require("scripts/globals/titles");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
-    player:PrintToPlayer( "Entry system has changed, just click it! :-) " );
+    player:PrintToPlayer("Entry system has changed, just click it! :-) ");
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
-    player:PrintToPlayer( "You will now be transfered to the lobby area. " );
+    player:PrintToPlayer("You will now be transfered to the lobby area. ");
     player:startEvent(8009);
 end;
-
------------------------------------
--- onEventUpdate
------------------------------------
 
 function onEventUpdate(player,csid,option,target)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option,target)
     -- print("CSID:",csid);

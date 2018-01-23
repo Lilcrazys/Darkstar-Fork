@@ -2,20 +2,12 @@
 -- Area: Arrapago Reef
 --  ZNM: Zareehkl the Jubilant
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -24,10 +16,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UDMGMAGIC,100);
     mob:setMod(MOD_UDMGRANGE,50);
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob, target)
     local swapTimer = mob:getLocalVar("swapTime");
@@ -43,10 +31,6 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onCriticalHit
------------------------------------
-
 function onCriticalHit(mob)
 
     if (math.random(100) < 5) then  -- Wiki seems to imply that this thing's weapon is harder to break...
@@ -58,10 +42,6 @@ function onCriticalHit(mob)
         end
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 

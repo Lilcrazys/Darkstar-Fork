@@ -6,13 +6,8 @@
 require("scripts/globals/status");
 -----------------------------------
 
-
------------------------------------
--- onMobInitialize
------------------------------------
-
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 
     -- addMod
     mob:addMod(MOD_STR,27);
@@ -21,25 +16,14 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MACC,400);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
 
@@ -50,9 +34,6 @@ function onMobDespawn(mob)
 
 end;
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 function onAdditionalEffect(mob,target,damage)
 
     if ((math.random(1,15) ~= 5) or (target:hasStatusEffect(EFFECT_TERROR) == true)) then

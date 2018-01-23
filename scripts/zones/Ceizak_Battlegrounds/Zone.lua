@@ -1,65 +1,46 @@
 -----------------------------------
--- 
+--
 -- Zone: Ceizak Battlegrounds
--- 
+--
 -----------------------------------
-
 require("scripts/globals/settings");
 package.loaded["scripts/zones/Ceizak_Battlegrounds/TextIDs"] = nil;
-require("scripts/zones/Ceizak_Battlegrounds/TextIDs");
-
 -----------------------------------
---  onInitialize
+require("scripts/zones/Ceizak_Battlegrounds/TextIDs");
 -----------------------------------
 
 function onInitialize(zone)
 end;
 
------------------------------------
--- onZoneIn
------------------------------------
-
 function onZoneIn(player,prevZone)
     local cs = -1;
 
-	player:setVar("HpTeleportMask1a", 0);
-	player:setVar("HpTeleportMask1b", 0);
-	player:setVar("HpTeleportMask2a", 0);
-	player:setVar("HpTeleportMask2b", 0);
-	player:setVar("HpTeleportMask3a", 0);
-	player:setVar("HpTeleportMask3b", 0);
-	player:setVar("HpTeleportMask4a", 0);
-	player:setVar("HpTeleportMask4b", 0);
+    player:setVar("HpTeleportMask1a", 0);
+    player:setVar("HpTeleportMask1b", 0);
+    player:setVar("HpTeleportMask2a", 0);
+    player:setVar("HpTeleportMask2b", 0);
+    player:setVar("HpTeleportMask3a", 0);
+    player:setVar("HpTeleportMask3b", 0);
+    player:setVar("HpTeleportMask4a", 0);
+    player:setVar("HpTeleportMask4b", 0);
 
-	if ((player:getXPos() == 0) and (player:getYPos() == 0) and (player:getZPos() == 0)) then
-		player:setPos(431,0,178,110);
-	end
+    if ((player:getXPos() == 0) and (player:getYPos() == 0) and (player:getZPos() == 0)) then
+        player:setPos(431,0,178,110);
+    end
 
     return cs;
 end;
 
------------------------------------
--- onRegionEnter          
------------------------------------
-
 function onRegionEnter(player,region)
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 
------------------------------------
--- onEventFinish
------------------------------------
-
 function onEventFinish(player,csid,option)
---printf("CSID: %u",csid);
---printf("RESULT: %u",option);
+    -- printf("CSID: %u",csid);
+    -- printf("RESULT: %u",option);
 end;
 

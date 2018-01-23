@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: The_Garden_of_RuHmet
--- NPC:  ??? (Jailer of Fortitude Spawn)
+--  NPC: ??? (Jailer of Fortitude Spawn)
 -- Allows players to spawn the Jailer of Fortitude by trading 12 Ghrah M Chips to a ???.
 -- Random positions:
 -- !pos -420 0 755
@@ -11,13 +11,10 @@
 -----------------------------------
 package.loaded["scripts/zones/The_Garden_of_RuHmet/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/The_Garden_of_RuHmet/TextIDs");
 require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
 require("scripts/globals/status");
 
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -52,27 +49,16 @@ function onTrade(player,npc,trade)
         end
     end
 end;
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
 
     player:PrintToPlayer("Debug: Jailer of Fortitude (qm1.lua)");
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("onUpdate CSID: %u",csid);
     -- printf("onUpdate RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish Action
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("onFinish CSID: %u",csid);

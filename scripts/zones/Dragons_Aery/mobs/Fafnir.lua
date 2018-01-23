@@ -2,14 +2,10 @@
 -- Area: Dragons Aery
 --  HNM: Fafnir
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -17,10 +13,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MACC,400);
     mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
-
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -38,10 +30,6 @@ function onMobSpawn(mob)
         GetNPCByID(17408033):setStatus(STATUS_DISAPPEAR);
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(FAFNIR_SLAYER);
@@ -67,10 +55,6 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
 
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     local Fafnir = mob:getID();

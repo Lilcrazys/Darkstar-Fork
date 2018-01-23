@@ -5,24 +5,16 @@
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/msg");
-
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- setMobMod
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 30)
     mob:addMod(MOD_ATT, 100);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -34,10 +26,6 @@ function onMobSpawn(mob)
     -- Adjust MOD_MATT as needed, Tegmine's nin nuke should not land zero but not land over 50 dmg on an average lv99 either.
 end;
 
------------------------------------
--- onMobFight
------------------------------------
-
 function onMobFight(mob)
     if (mob:getLocalVar("GO_BOOM") == 0 and mob:getHPP() <= 20) then
         mob:setLocalVar("MagicAttackBonus", mob:getMod(MOD_MATT)); -- Store original amount of Magic Attack in a localVar
@@ -48,9 +36,6 @@ function onMobFight(mob)
     end
 end;
 
------------------------------------
--- onMonsterMagicPrepare
------------------------------------
 function onMonsterMagicPrepare(mob,target)
     local sumDumVar = math.random(1,100);
 
@@ -64,10 +49,6 @@ function onMonsterMagicPrepare(mob,target)
         return 325; -- Hyoton: San, make target weak vs fire.
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 
 function onAdditionalEffect(mob,target,damage)
     -- Wiki says nothing about proc rate, going with 80% for now.
@@ -103,18 +84,12 @@ function onAdditionalEffect(mob,target,damage)
 
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
     -- UpdateNMSpawnPoint(mob:getID());
-    -- mob:setRespawnTime(math.random((7200),(7800))); -- 120 to 130 min
+    --[[
+    mob:setRespawnTime(math.random((7200),(7800))); -- 120 to 130 min
+    ]]
 end;

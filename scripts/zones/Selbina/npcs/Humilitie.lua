@@ -1,19 +1,15 @@
 -----------------------------------
 -- Area: Selbina
--- NPC:  Humilitie
+--  NPC: Humilitie
 -- Reports the time remaining before boat arrival.
 -- !pos 17.979 -2.39 -58.800 248
 -----------------------------------
 package.loaded["scripts/zones/Selbina/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Selbina/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/settings");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -28,10 +24,6 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
 
    -- Based on scripts/zones/Mhaura/Dieh_Yamilsiah.lua
@@ -39,27 +31,19 @@ function onTrigger(player,npc)
    local direction = 0; -- Arrive, 1 for depart
    local waiting = 216; -- Offset for Mhaura
 
-   if (timer <= waiting) then
+    if (timer <= waiting) then
       direction = 1; -- Ship arrived, switch dialog from "arrive" to "depart"
    else
       timer = timer - waiting; -- Ship hasn't arrived, subtract waiting time to get time to arrival
-   end
+    end
 
    player:startEvent(231,timer,direction);
 end;
-
------------------------------------
--- onEventUpdate
------------------------------------
 
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

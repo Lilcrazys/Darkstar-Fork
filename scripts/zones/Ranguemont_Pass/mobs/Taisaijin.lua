@@ -2,12 +2,8 @@
 -- Area: Ranguemont Pass
 --  NM:  Taisaijin
 -----------------------------------
-
 require("scripts/zones/Ranguemont_Pass/MobIDs");
 require("scripts/globals/titles");
-
------------------------------------
--- onMobDeath
 -----------------------------------
 
 function onMobDeath(mob, player, isKiller)
@@ -20,10 +16,6 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     --[[

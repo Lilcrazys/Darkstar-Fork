@@ -4,9 +4,6 @@
 -- Jailor of Love Pet version
 -----------------------------------
 require("scripts/zones/AlTaieu/MobIDs");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
@@ -24,16 +21,8 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK, 10);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     local JoL = GetMobByID(JAILER_OF_LOVE);

@@ -2,13 +2,8 @@
 -- Area: Al'Taieu
 --  NM:  Jailer of Love
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
--- require("scripts/globals/utils");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -17,10 +12,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ATT,100);
     mob:addMod(MOD_ACC,100);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 250);
@@ -37,10 +28,6 @@ function onMobSpawn(mob)
     mob:wait(2000);
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob, target)
     mob:hideName(false);
     mob:untargetable(false);
@@ -48,19 +35,11 @@ function onMobEngaged(mob, target)
     mob:wait(2000);
 end;
 
------------------------------------
--- onMobDisengage
------------------------------------
-
 function onMobDisengage(mob)
     -- mob:hideName(true);
     -- mob:untargetable(true);
     mob:AnimationSub(5);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     -- Only 9 Qn'xzomit and 9 Qn'hpemde can be summoned. Ru'phuabo (Sharks) are unlimited.
@@ -151,10 +130,6 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
     --[[
     local AV_CHANCE = 25;
@@ -163,10 +138,6 @@ function onMobDespawn(mob)
     end
     ]]
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then -- This check is to force this to only run once.

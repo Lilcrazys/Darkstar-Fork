@@ -1,9 +1,10 @@
 -----------------------------------
 -- Area: Tavnazian Safehold
--- NPC: Meret
+--  NPC: Meret
 -- Standard Info NPC
 -----------------------------------
 package.loaded["scripts/zones/Tavnazian_Safehold/TextIDs"] = nil;
+-----------------------------------
 require("scripts/globals/keyitems");
 require("scripts/globals/quests");
 require("scripts/zones/Tavnazian_Safehold/TextIDs");
@@ -44,10 +45,6 @@ local YOVRA_ORGAN=1788;
 local LUMINON_Chip=1819;
 local LUMINIAN_Tissue=1783;
 local VIRTUE_STONE_POUCH=5410;
------------------------------------
--- onTrade Action
------------------------------------
-
 function onTrade(player,npc,trade)
     local reward = 0;
     local item = 0;
@@ -105,10 +102,6 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
     local NameOfScience = player:getQuestStatus(OTHER_AREAS,IN_THE_NAME_OF_SCIENCE);
     local rnd= math.random();
@@ -127,25 +120,17 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
     local reward = player:getLocalVar("Meret_Item");
     if (csid == 586) then
-        if (player:getFreeSlotsCount()==0 or (option ~= VIRTUE_STONE_POUCH and player:hasItem(option)==true)) then
+        if (player:getFreeSlotsCount() == 0 or (option ~= VIRTUE_STONE_POUCH and player:hasItem(option) == true)) then
             player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,option);
         elseif (option ~= reward) then
             -- Cs hack detection

@@ -2,26 +2,15 @@
 -- Area: Grand Palace of HuXzoi
 --  NM:  Ix_aern_mnk
 -----------------------------------
-
 require("scripts/globals/status");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- setMobMod
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
-
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,150);
     mob:addMod(MOD_ATT,75);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -48,18 +37,11 @@ function onMobSpawn(mob)
     mob:AnimationSub(1); -- Reset the subanim - otherwise it will respawn with bracers on. Note that Aerns are never actually supposed to be in subanim 0.
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob, target)
     SpawnMob(mob:getID()+1, 300):updateEnmity(target);
     SpawnMob(mob:getID()+2, 300):updateEnmity(target);
 end;
 
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     --[[
@@ -106,19 +88,11 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
     -- Despawn his minions if they are alive (Qn'aern)
     DespawnMob(mob:getID()+1);
     DespawnMob(mob:getID()+2);
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     -- Despawn his minions if they are alive (Qn'aern)

@@ -4,11 +4,6 @@
 -- Jailor of Love Pet version
 -----------------------------------
 
-
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 10);
     mob:setMod(MOD_HASTE_ABILITY, 20);
@@ -20,10 +15,6 @@ function onMobSpawn(mob)
     mob:addMod(MOD_ATT,100);
     mob:addMod(MOD_ACC,100);
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 end;

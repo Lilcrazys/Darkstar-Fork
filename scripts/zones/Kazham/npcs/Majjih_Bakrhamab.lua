@@ -1,17 +1,14 @@
 -----------------------------------
 -- Area: Kazham
--- NPC: Majjih Bakrhamab
+--  NPC: Majjih Bakrhamab
 -- Standard Info NPC
 -----------------------------------
-
 package.loaded["scripts/zones/Kazham/TextIDs"] = nil;
+-----------------------------------
 require("scripts/zones/Kazham/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/settings");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -25,10 +22,6 @@ function onTrade(player,npc,trade)
         end
     end
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
 
@@ -51,18 +44,10 @@ function onTrigger(player,npc)
     player:startEvent( 261, seconds, 0, 0, 0, 0, 0, 0, 0);
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

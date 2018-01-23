@@ -1,18 +1,14 @@
 -----------------------------------
 -- Area: Port Jeuno
--- NPC: Avijit
+--  NPC: Avijit
 -- Standard Info NPC
 -----------------------------------
-
 package.loaded["scripts/zones/Port_Jeuno/TextIDs"] = nil;
-
+-----------------------------------
 require("scripts/zones/Port_Jeuno/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/settings");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -34,10 +30,6 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
 
     local vHour = VanadielHour();
@@ -52,18 +44,10 @@ function onTrigger(player,npc)
     player:startEvent( 10024, seconds, 0, 0, 0, 0, 0, 0, 0);
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

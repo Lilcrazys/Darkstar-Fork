@@ -1,7 +1,7 @@
 -----------------------------------
---  Area: Mhaura
---  NPC:  Wilhelm
---  Type: Standard NPC
+-- Area: Mhaura
+--  NPC: Wilhelm
+-- Type: Standard NPC
 -- !pos -22.746 -5 17.157 249
 -----------------------------------
 package.loaded["scripts/zones/Mhaura/TextIDs"] = nil;
@@ -9,8 +9,6 @@ package.loaded["scripts/zones/Mhaura/TextIDs"] = nil;
 require("scripts/globals/armor_upgrade");
 require("scripts/zones/Mhaura/TextIDs");
 
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -24,7 +22,7 @@ function onTrade(player,npc,trade)
     end
   --print("armor"..armor);
     if (armor > 0) then
-        if (player:getFreeSlotsCount()==0 or player:hasItem(armor) ) then
+        if (player:getFreeSlotsCount() == 0 or player:hasItem(armor) ) then
             player:messageSpecial(ITEM_CANNOT_BE_OBTAINED,armor);
         else
             player:setLocalVar("Wilhelm_Item",armor);
@@ -36,10 +34,6 @@ function onTrade(player,npc,trade)
         end
     end
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
     if (player:getCurrentMission(COP) > THE_WARRIOR_S_PATH) then
@@ -57,18 +51,10 @@ function onTrigger(player,npc)
 --Wilhelm     331
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

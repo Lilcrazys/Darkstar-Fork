@@ -6,9 +6,6 @@ require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -21,10 +18,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DEF,130);
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 100);
@@ -33,10 +26,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MACC,925);
     mob:setMod(MOD_DOUBLE_ATTACK, 20);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     local popTime = mob:getLocalVar("lastPetPop");
@@ -58,10 +47,6 @@ function onMobFight(mob, target)
     end
 end
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
 function onAdditionalEffect(mob,target,damage)
     if (target:hasStatusEffect(EFFECT_POISON)) then
         target:delStatusEffect(EFFECT_POISON);
@@ -75,10 +60,6 @@ function onAdditionalEffect(mob,target,damage)
 
     return SUBEFFECT_POISON, chatType.ADD_EFFECT_STATUS, EFFECT_POISON;
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 end;

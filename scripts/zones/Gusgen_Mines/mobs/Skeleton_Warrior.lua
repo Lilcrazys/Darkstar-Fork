@@ -2,20 +2,12 @@
 -- Area: Gusgen Mines
 --  MOB: Skeleton Warrior
 -----------------------------------
-
 require("scripts/globals/groundsofvalor");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
     mob:addMod(MOD_CURE_POTENCY_RCVD,-25);
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     checkGoVregime(player,mob,679,1);

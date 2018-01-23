@@ -7,9 +7,6 @@
 -----------------------------------
 require("scripts/zones/AlTaieu/MobIDs");
 require("scripts/globals/status");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -33,10 +30,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ACC,150);
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     mob:AnimationSub(0); -- Mouth closed
     mob:addStatusEffectEx(EFFECT_FLEE,0,100,0,60);
@@ -54,18 +47,10 @@ function onMobSpawn(mob)
     mob:addMod(MOD_LULLABYRES, 30);
 end;
 
------------------------------------
--- onMobDisEngage Action
------------------------------------
-
 function onMobDisEngage(mob, target)
     mob:setLocalVar("RAGED", 0);
     mob:delStatusEffect(EFFECT_RAGE);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     local BattleTime = mob:getBattleTime();
@@ -99,12 +84,8 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
 -- onMobskill -- When this functionlity is added, this should work.
------------------------------------
-
 -- function onUseAbility(mob,target,ability)
-
     -- if (ability:getID() == 437) then -- Perfect Dodge
         -- mob:addStatusEffectEx(EFFECT_FLEE,0,100,0,30);
     -- else
@@ -119,10 +100,6 @@ end;
         -- end
     -- end
 -- end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
@@ -141,10 +118,6 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     --[[

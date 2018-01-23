@@ -324,8 +324,6 @@ local path =
 ]]
 
 -----------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
 --[[
@@ -333,19 +331,11 @@ function onMobSpawn(mob)
 ]]
 end;
 
------------------------------------
--- onPath Action
------------------------------------
-
 function onPath(mob)
 --[[
     pathfind.patrol(mob, path, PATHFLAG_RUN);
 ]]
 end;
-
------------------------------------
--- onMobRoam Action
------------------------------------
 
 function onMobRoam(mob)
 --[[
@@ -356,17 +346,9 @@ function onMobRoam(mob)
 ]]
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
     player:addTitle(CACTROT_DESACELERADOR);
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     -- Set Cactrot Rapido's spawnpoint and respawn time (24-72 hours)

@@ -2,14 +2,10 @@
 -- Area: Behemoth's Dominion
 --  HNM: King Behemoth
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -27,10 +23,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
     mob:setMobMod(MOBMOD_MAGIC_COOL, 60);
 end;
-
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- Todo: move this to SQL after drop slots are a thing
@@ -61,10 +53,6 @@ function onSpellPrecast(mob, spell)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
     player:addTitle(BEHEMOTH_DETHRONER);
 
@@ -92,10 +80,6 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
 
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     -- Set King_Behemoth's Window Open Time

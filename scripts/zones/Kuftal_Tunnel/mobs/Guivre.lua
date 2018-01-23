@@ -2,7 +2,6 @@
 -- Area: Gustav Tunnel
 --   NM: Guivre
 -----------------------------------
-
 require("scripts/globals/status");
 
 local path =
@@ -374,10 +373,6 @@ local path =
     107.542999, 0.261044, 3.065771
 };
 
------------------------------------
--- onMobInitialize
------------------------------------
-
 function onMobInitialize(mob)
     -- addMod
     mob:addMod(MOD_STR,7);
@@ -388,28 +383,16 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
 function onMobSpawn(mob)
     onMobRoam(mob);
 
     -- setMod
-	mob:setMod(MOD_REGAIN,33);
+    mob:setMod(MOD_REGAIN,33);
 end;
-
------------------------------------
--- onPath
------------------------------------
 
 function onPath(mob)
     pathfind.patrol(mob, path);
 end;
-
------------------------------------
--- onMobRoam
------------------------------------
 
 function onMobRoam(mob)
     -- move to start position if not moving
@@ -418,21 +401,11 @@ function onMobRoam(mob)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
-
     -- Set Guivre's spawnpoint and respawn time (18-24 hours)
     UpdateNMSpawnPoint(mob:getID());
     mob:setRespawnTime(math.random(64800,86400));
-
 end;

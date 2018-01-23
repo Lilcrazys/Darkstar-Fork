@@ -2,12 +2,8 @@
 -- Area: Qulun Dome
 --  NM:  Za Dha Adamantking
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/zones/Qulun_Dome/TextIDs");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -28,27 +24,15 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN,33);
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob,target)
     -- TODO: Addtionaleffect:Slow on melee attacks
     mob:showText(mob,QUADAV_KING_ENGAGE);
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 
     player:addTitle(ADAMANTKING_USURPER);
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     mob:showText(mob,QUADAV_KING_DEATH);

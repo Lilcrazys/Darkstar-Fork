@@ -5,18 +5,13 @@
 -- Also involved in Einherjar
 -----------------------------------
 package.loaded["scripts/zones/Hazhalm_Testing_Grounds/TextIDs"] = nil;
-
 -----------------------------------
-
 require("scripts/zones/Hazhalm_Testing_Grounds/TextIDs");
 require("scripts/globals/keyitems");
 require("scripts/globals/missions");
 require("scripts/globals/titles");
 require("scripts/globals/quests");
 require("scripts/globals/bcnm");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -24,10 +19,6 @@ function onTrade(player,npc,trade)
         return;
     end
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
     if (player:getCurrentMission(TOAU) == GAZE_OF_THE_SABOTEUR and player:getVar("AhtUrganStatus") == 1) then
@@ -41,10 +32,6 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
@@ -52,10 +39,6 @@ function onEventUpdate(player,csid,option)
         return;
     end
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

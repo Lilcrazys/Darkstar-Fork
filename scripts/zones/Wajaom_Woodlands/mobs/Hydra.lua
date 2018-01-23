@@ -3,12 +3,9 @@
 --  MOB: Hydra
 -- !pos -282 -24 -1 51
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/custom_trials");
 
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -57,10 +54,6 @@ function onCriticalHit(mob)
     end
 
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 

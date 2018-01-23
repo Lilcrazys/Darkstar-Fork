@@ -6,14 +6,10 @@
 -- !pos -560 5.00 239 35
 -- !pos -600 5.00 440 35
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/status");
 require("scripts/globals/monstertpmoves");
 require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -61,10 +57,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_ATT,75);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
 function onMobSpawn(mob)
     mob:AnimationSub(1);
     --[[
@@ -91,18 +83,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_DOUBLE_ATTACK, 15);
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob)
     mob:setLocalVar("bloodMode", 0);
     mob:setLocalVar("bloodTime", os.time() + 120);
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob, target)
 
@@ -122,10 +106,6 @@ function onMobFight(mob, target)
 
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
     if (isKiller == true) then
         if (math.random(1,100) <= 80) then
@@ -135,10 +115,6 @@ function onMobDeath(mob, player, isKiller)
         end
     end
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     mob:setLocalVar("AERN_RERAISES",0);

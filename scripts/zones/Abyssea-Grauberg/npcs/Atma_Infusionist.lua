@@ -5,7 +5,6 @@
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Grauberg/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/abyssea");
 require("scripts/zones/Abyssea-Grauberg/TextIDs");
@@ -13,16 +12,10 @@ require("scripts/globals/atma");
 require("scripts/globals/msg");
 
 -----------------------------------
--- onTrade Action
------------------------------------
 
 function onTrade(player,npc,trade)
     removeATMA(player);
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
     local param1 = player:getCurrency("Cruor"); -- This param seems to contain both the players current cruor total and the reinfuse option.
@@ -47,19 +40,11 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
     -- player:PrintToPlayer(string.format("Update: %u", option));
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

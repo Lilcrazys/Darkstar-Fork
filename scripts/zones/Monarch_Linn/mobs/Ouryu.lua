@@ -2,11 +2,7 @@
 -- Area:
 --  MOB: Ouryu
 -----------------------------------
-
 require("scripts/globals/titles");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
@@ -14,10 +10,6 @@ function onMobSpawn(mob)
     mob:AnimationSub(0); -- subanim 0 is only used when it spawns until first flight.
     mob:delStatusEffect(EFFECT_ALL_MISS);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob,target)
 
@@ -60,10 +52,6 @@ function onMobFight(mob,target)
         end
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 

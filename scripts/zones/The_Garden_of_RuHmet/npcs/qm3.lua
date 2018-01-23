@@ -1,18 +1,15 @@
 -----------------------------------
 -- Area: The_Garden_of_RuHmet
--- NPC:  ??? (Jailer of Faith Spawn)
+--  NPC: ??? (Jailer of Faith Spawn)
 -- Allows players to spawn the Jailer of Faith by trading 1 High-Quality Euvhi Organ to a ???.
 -- !pos -260 0 -645
 -----------------------------------
 package.loaded["scripts/zones/The_Garden_of_RuHmet/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/The_Garden_of_RuHmet/TextIDs");
 require("scripts/zones/The_Garden_of_RuHmet/MobIDs");
 require("scripts/globals/status");
 
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -38,27 +35,15 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
 
     player:PrintToPlayer("Debug: Jailer of Faith (qm3.lua)");
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("onUpdate CSID: %u",csid);
     -- printf("onUpdate RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish Action
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("onFinish CSID: %u",csid);

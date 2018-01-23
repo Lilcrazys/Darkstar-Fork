@@ -4,9 +4,6 @@
 -- Jailor of Love Pet version
 -----------------------------------
 require("scripts/zones/AlTaieu/MobIDs");
-
------------------------------------
--- onMobSpawn Action
 -----------------------------------
 
 function onMobSpawn(mob)
@@ -24,10 +21,6 @@ function onMobSpawn(mob)
     -- Other
     mob:AnimationSub(6); -- Mouth Closed
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob, target)
     local changeTime = mob:getLocalVar("changeTime");
@@ -48,16 +41,8 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     local JoL = GetMobByID(JAILER_OF_LOVE);

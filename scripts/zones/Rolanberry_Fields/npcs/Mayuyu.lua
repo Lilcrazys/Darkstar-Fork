@@ -6,24 +6,17 @@
 -----------------------------------
 package.loaded["scripts/zones/Rolanberry_Fields/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/keyitems");
 require("scripts/globals/titles");
 require("scripts/zones/Rolanberry_Fields/TextIDs");
 -- require("scripts/globals/custom_legion");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
 function onTrigger(player,npc)
     local LEGENDARY = 0;
     local CAPACITY = 0;
@@ -43,18 +36,10 @@ function onTrigger(player,npc)
     player:SpoofMsg("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees! ", npc, chatType.SAY, nil);
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- print("CSID:", csid);
     -- print("RESULT:", option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- print("CSID:", csid);

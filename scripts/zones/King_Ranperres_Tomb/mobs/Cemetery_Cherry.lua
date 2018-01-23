@@ -3,13 +3,8 @@
 --  NM:  Cemetery Cherry
 -- !pos 33.000 0.500 -287.000 190
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/status");
-
-
------------------------------------
--- onMobSpawn
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -32,31 +27,16 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DOUBLE_ATTACK,35);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGAIN,33);
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob,target)
 end;
 
------------------------------------
--- onMobFight
------------------------------------
 function onMobFight(mob,target)
 end
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(MON_CHERRY);

@@ -2,7 +2,6 @@
 -- Area: King Ranperre's Tomb
 --  MOB: Vrtra
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/magic");
@@ -13,10 +12,6 @@ local offsets = {1, 3, 5, 2, 4, 6};
 -- Don't remove the offsets variable.
 -- That is the ONLY reason the DSP code wasn't working for you.
 
------------------------------------
--- OnMobInitialize Action
------------------------------------
-
 function onMobInitialize(mob)
     -- setMobMod
     mob:setMobMod(MOBMOD_DRAW_IN, 2);
@@ -24,9 +19,6 @@ function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -49,18 +41,10 @@ function onMobSpawn(mob)
     mob:setMod(MOD_TERRORRES, 100);
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
     mob:resetLocalVars();
-end
-
------------------------------------
--- onMobFight Action
------------------------------------
+end;
 
 function onMobFight(mob, target)
 
@@ -123,10 +107,6 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onSpellPrecast
------------------------------------
-
 function onSpellPrecast(mob, spell)
     if (spell:getID() == 246)  then -- set drain 2 to AoE
         spell:setAoE(SPELLAOE_RADIAL);
@@ -134,10 +114,6 @@ function onSpellPrecast(mob, spell)
         spell:setRadius(29);
     end
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 
 function onAdditionalEffect(mob,target,damage)
     if (math.random(1,10) > 4 or target:hasStatusEffect(EFFECT_CURSE_I)) then
@@ -148,29 +124,17 @@ function onAdditionalEffect(mob,target,damage)
     end
 end;
 
------------------------------------
--- onMobDrawIn
------------------------------------
-
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
     mob:useMobAbility(1053);
     mob:addTP(100);
 end;
 
------------------------------------
--- onMobDisengage
------------------------------------
-
 function onMobDisengage(mob)
     for i, offset in ipairs(offsets) do
         DespawnMob(mob:getID()+offset);
     end
-end
-
------------------------------------
--- onMobDeath
------------------------------------
+end;
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(VRTRA_VANQUISHER);
@@ -179,10 +143,6 @@ function onMobDeath(mob, player, isKiller)
         DespawnMob(mob:getID()+offset);
     end
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
 

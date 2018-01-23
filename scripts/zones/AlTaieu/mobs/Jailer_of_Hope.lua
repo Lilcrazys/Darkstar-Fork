@@ -2,27 +2,18 @@
 -- Area: Al'Taieu
 --  NM:  Jailer of Hope
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- setMobMod
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 
     -- addMod
     mob:addMod(MOD_MDEF,100);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,120);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -41,18 +32,10 @@ function onMobSpawn(mob)
     mob:setMobMod(MOBMOD_MAGIC_COOL, 20); -- This gives around 6 - 15 seconds between casts. Doesn't seem to work anywhere except in this function.
 end;
 
------------------------------------
--- onMobDisEngage Action
------------------------------------
-
 function onMobDisEngage(mob, target)
     mob:setLocalVar("RAGED", 0);
     mob:delStatusEffect(EFFECT_RAGE);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     local BattleTime = mob:getBattleTime();
@@ -91,10 +74,6 @@ function onMobFight(mob, target)
     end;
 end;
 
------------------------------------
--- onMobWeaponSkill Action
------------------------------------
-
 function onMobWeaponSkill(target, mob, skill)
     if (skill:getID() == 1102) then -- Set spell list for Burst2/Thundaga3 upon using Plasma Charge. Allow for 60 seconds.
         mob:setSpellList(140);
@@ -102,9 +81,6 @@ function onMobWeaponSkill(target, mob, skill)
     end;
 end;
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 function onAdditionalEffect(mob,target,damage)
     -- Guestimating 2 in 3 chance to stun on melee.
     if ((math.random(1,100) >= 66) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
@@ -115,10 +91,6 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_STUN,0,EFFECT_STUN;
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 end;

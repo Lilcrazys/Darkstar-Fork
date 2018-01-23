@@ -4,9 +4,6 @@
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -32,10 +29,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGAIN, 20);
 end;
 
------------------------------------
--- onSpikesDamage
------------------------------------
-
 function onSpikesDamage(mob,target,damage)
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
 
@@ -60,16 +53,8 @@ function onSpikesDamage(mob,target,damage)
 
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     UpdateNMSpawnPoint(mob:getID());

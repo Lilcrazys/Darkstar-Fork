@@ -5,14 +5,10 @@
 -----------------------------------
 package.loaded["scripts/zones/Port_Bastok/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/globals/zone");
 require("scripts/globals/settings");
 require("scripts/globals/missions");
 require("scripts/zones/Port_Bastok/TextIDs");
-
------------------------------------
--- onInitialize
 -----------------------------------
 
 function onInitialize(zone)
@@ -21,10 +17,6 @@ function onInitialize(zone)
     zone:registerRegion(3, 60, 5, -70, 0,0,0); -- bridge workaround, North Side
 end;
 
------------------------------------
--- onConquestUpdate
------------------------------------
-
 function onConquestUpdate(zone, updatetype)
     local players = zone:getPlayers();
 
@@ -32,10 +24,6 @@ function onConquestUpdate(zone, updatetype)
         conquestUpdate(zone, player, updatetype, CONQUEST_BASE);
     end
 end;
-
------------------------------------
--- onZoneIn
------------------------------------
 
 function onZoneIn(player,prevZone)
     local cs = -1;
@@ -69,10 +57,6 @@ function onZoneIn(player,prevZone)
     return cs;
 end;
 
------------------------------------
--- onRegionEnter
------------------------------------
-
 function onRegionEnter(player,region)
     local regionID =region:GetRegionID();
     -- printf("regionID: %u",regionID);
@@ -85,33 +69,17 @@ function onRegionEnter(player,region)
     end
 end;
 
------------------------------------
--- onRegionLeave
------------------------------------
-
 function onRegionLeave(player,region)
 end;
-
------------------------------------
--- onTransportEvent
------------------------------------
 
 function onTransportEvent(player,transport)
     player:startEvent(71);
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

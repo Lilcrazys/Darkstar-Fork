@@ -1,19 +1,15 @@
 -----------------------------------
---  Area: Bibiki Bay
---  NPC:  Fheli Lapatzuo
---  Type: Manaclipper
+-- Area: Bibiki Bay
+--  NPC: Fheli Lapatzuo
+-- Type: Manaclipper
 -- !pos 488.793 -4.003 709.473 4
 -----------------------------------
-
 package.loaded["scripts/zones/Bibiki_Bay/TextIDs"] = nil;
-
+-----------------------------------
 require("scripts/zones/Bibiki_Bay/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/settings");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -27,10 +23,6 @@ function onTrade(player,npc,trade)
         end
     end
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
 
@@ -170,18 +162,10 @@ function onTrigger(player,npc)
     player:startEvent( 18, seconds, depart, arrive, description, 0, 0, 0, 0);
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

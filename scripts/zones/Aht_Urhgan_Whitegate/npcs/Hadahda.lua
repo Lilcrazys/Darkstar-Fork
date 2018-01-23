@@ -1,17 +1,14 @@
 -----------------------------------
---  Area: Aht Urhgan Whitegate
---  NPC:  Hadahda
---  Type: Standard NPC
+-- Area: Aht Urhgan Whitegate
+--  NPC: Hadahda
+-- Type: Standard NPC
 -- !pos -112.029 -6.999 -66.114 50
 -----------------------------------
 package.loaded["scripts/zones/Aht_Urhgan_Whitegate/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Aht_Urhgan_Whitegate/TextIDs");
 require("scripts/globals/quests");
 
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -31,10 +28,6 @@ function onTrade(player,npc,trade)
         player:messageSpecial(ITEM_OBTAINED,imperialBronzePiece);
     end
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
 
@@ -64,18 +57,10 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

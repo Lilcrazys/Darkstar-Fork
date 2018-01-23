@@ -6,21 +6,13 @@
 -----------------------------------
 package.loaded["scripts/zones/Southern_San_dOria_[S]/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/campaign");
 require("scripts/zones/Southern_San_dOria_[S]/TextIDs");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
     local notes = player:getCurrency("allied_notes");
@@ -44,10 +36,6 @@ function onTrigger(player,npc)
 
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
@@ -59,10 +47,6 @@ function onEventUpdate(player,csid,option)
         player:updateEvent(0, 0, 0, 0, 0, 0, 0, canEquip); -- canEquip(player,itemid));  <- works for sanction NPC, wtf?
     end
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

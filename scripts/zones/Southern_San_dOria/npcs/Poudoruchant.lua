@@ -1,6 +1,6 @@
 -----------------------------------
 -- Area: Southern San d'Oria
--- NPC: Poudoruchant
+--  NPC: Poudoruchant
 --  General Info NPC
 -------------------------------------
 package.loaded["scripts/zones/Southern_San_dOria/TextIDs"] = nil;
@@ -9,10 +9,6 @@ require("scripts/zones/Southern_San_dOria/TextIDs");
 require("scripts/globals/settings");
 require("scripts/globals/quests");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
------------------------------------
 
 function onTrade(player,npc,trade)
     -- This being commented out will not prevent quest completion.
@@ -100,8 +96,7 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
-
+function onTrigger(player,npc)
 function onTrigger(player,npc)
     --[[
     player:startEvent(779);
@@ -317,18 +312,10 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

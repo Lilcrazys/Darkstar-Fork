@@ -3,23 +3,15 @@
 --  MOB: Qn'aern (RDM)
 -- ID: 16916816
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_MAIN_2HOUR,1);
     mob:setMobMod(MOBMOD_2HOUR_MULTI,1);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
@@ -32,23 +24,11 @@ function onMobSpawn(mob)
     mob:addMod(MOD_ATT,75);
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob,target)
 end;
 
------------------------------------
--- onMobFight Action
------------------------------------
-
 function onMobFight(mob,target)
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 end;

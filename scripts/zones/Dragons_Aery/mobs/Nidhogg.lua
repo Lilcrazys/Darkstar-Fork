@@ -2,14 +2,11 @@
 -- Area: Dragons Aery
 --  HNM: Nidhogg
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
 
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -20,10 +17,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MACC,400);
     mob:addMod(MOD_DOUBLE_ATTACK,15);
 end;
-
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -37,10 +30,6 @@ function onMobSpawn(mob)
     end
     ]]
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     local battletime = mob:getBattleTime();
@@ -57,10 +46,6 @@ function onMobFight(mob, target)
         mob:setLocalVar("twohourTime",battletime + math.random(60,120));
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(NIDHOGG_SLAYER);
@@ -99,10 +84,6 @@ function onMobDeath(mob, player, isKiller)
 
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
     -- Set Nidhogg's Window Open Time
     if (LandKingSystem_HQ ~= 1) then
@@ -121,7 +102,6 @@ function onMobDespawn(mob)
         UpdateNMSpawnPoint(Fafnir);
         GetMobByID(Fafnir):setRespawnTime(math.random(21600,32400));
     end
-
 
     --[[
     if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then

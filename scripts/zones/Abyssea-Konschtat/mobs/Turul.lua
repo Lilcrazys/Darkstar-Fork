@@ -1,5 +1,5 @@
 -----------------------------------
---  Area: Abyssea - Konschtat (15)
+-- Area: Abyssea - Konschtat (15)
 --   Mob: Turul
 -----------------------------------
 package.loaded["scripts/zones/Abyssea-Konschtat/TextIDs"] = nil;
@@ -37,10 +37,6 @@ local path =
 function onMobInitialize(mob)
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
 function onMobSpawn(mob)
     -- addMod
     mob:addMod(MOD_MATT,80);
@@ -52,9 +48,6 @@ function onMobSpawn(mob)
     onPath(mob);
 end;
 
------------------------------------
--- onPath
------------------------------------
 
 function onPath(mob)
     local FT = mob:getLocalVar("flyingTime");
@@ -79,10 +72,6 @@ function onPath(mob)
         mob:untargetable(false);
     end
 end;
-
------------------------------------
--- OnMobRoam
------------------------------------
 
 function onMobRoam(mob)
     local FT = mob:getLocalVar("flyingTime");
@@ -111,26 +100,14 @@ function onMobRoam(mob)
     end
 end;
 
------------------------------------
--- onMobEngaged
------------------------------------
-
 function onMobEngaged(mob, target)
     mob:AnimationSub(0);
     mob:hideName(false);
     mob:untargetable(false);
 end;
 
------------------------------------
--- onMobDisengage
------------------------------------
-
 function onMobDisengage(mob)
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob,target)
     -- Uncertain of threshold. Going with 50% for now.
@@ -144,10 +121,6 @@ function onMobFight(mob,target)
     end
 end;
 
-------------------------------------
--- onSpellPrecast
-------------------------------------
-
 function onSpellPrecast(mob, spell)
     --[[
     Todo:
@@ -157,10 +130,6 @@ function onSpellPrecast(mob, spell)
     https://github.com/DarkstarProject/darkstar/blob/638b9018e563f98ceddf05d642b6e3db055ccc36/src/map/mob_spell_container.cpp#L124
     ]]
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     local KI_CHANCE = 20;
@@ -176,10 +145,6 @@ function onMobDeath(mob, player, isKiller)
         player:messageSpecial(KEYITEM_OBTAINED, ATMA_OF_THE_STORMBIRD);
     end
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
 end;

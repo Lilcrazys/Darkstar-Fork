@@ -4,22 +4,15 @@
 -----------------------------------
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
     mob:setMobMod(MOBMOD_AUTO_SPIKES,mob:getShortID());
     mob:addStatusEffect(EFFECT_SHOCK_SPIKES,50,0,0);
     mob:getStatusEffect(EFFECT_SHOCK_SPIKES):setFlag(32);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 end;
-
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -31,10 +24,6 @@ function onMobSpawn(mob)
 
 end;
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
 function onAdditionalEffect(mob,target,damage)
     -- Guestimating 2 in 3 chance to stun on melee.
     if ((math.random(1,100) >= 66) or (target:hasStatusEffect(EFFECT_STUN) == true)) then
@@ -45,10 +34,6 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_STUN,0,EFFECT_STUN;
     end
 end;
-
------------------------------------
--- onSpikesDamage
------------------------------------
 
 function onSpikesDamage(mob,target,damage)
     local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
@@ -73,18 +58,12 @@ function onSpikesDamage(mob,target,damage)
     return SUBEFFECT_SHOCK_SPIKES,44,dmg;
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
     -- UpdateNMSpawnPoint(mob:getID());
-    -- mob:setRespawnTime(math.random((7200),(10800))); -- 2 to 3 hrs
+    --[[
+    mob:setRespawnTime(math.random((7200),(10800))); -- 2 to 3 hrs
+    ]]
 end;

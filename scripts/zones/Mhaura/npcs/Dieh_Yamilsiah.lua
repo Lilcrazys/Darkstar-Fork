@@ -1,20 +1,16 @@
 -----------------------------------
 -- Area: Mhaura
--- NPC:  Dieh Yamilsiah
+--  NPC: Dieh Yamilsiah
 -- Reports the time remaining before boat arrival.
 -- !pos 7.057 -2.364 2.489 249
 -----------------------------------
 package.loaded["scripts/zones/Mhaura/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Mhaura/TextIDs");
 require("scripts/globals/teleports");
 require("scripts/globals/keyitems");
 require("scripts/globals/settings");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -35,10 +31,6 @@ function onTrade(player,npc,trade)
     end
 end;
 
------------------------------------
--- onTrigger Action
------------------------------------
-
 function onTrigger(player,npc)
 
     -- Each boat comes every 1152 seconds/8 game hours, 4 hour offset between Selbina and Aht Urghan
@@ -49,18 +41,18 @@ function onTrigger(player,npc)
    local waiting = 216; -- Offset for Selbina
 
    -- Next ferry is Al Zhabi for higher values.
-   if (timer >= 576) then
+    if (timer >= 576) then
       destination = 1;
       timer = timer - 576;
       waiting = 193;
-   end
+    end
 
    -- Logic to manipulate cutscene results.
-   if (timer <= waiting) then
+    if (timer <= waiting) then
       direction = 1; -- Ship arrived, switch dialog from "arrive" to "depart"
    else
       timer = timer - waiting; -- Ship hasn't arrived, subtract waiting time to get time to arrival
-   end
+    end
 
    player:startEvent(231,timer,direction,0,destination); -- timer arriving/departing ??? destination
 
@@ -73,18 +65,10 @@ function onTrigger(player,npc)
 
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

@@ -9,9 +9,6 @@ require("scripts/zones/PsoXja/TextIDs");
 require("scripts/globals/settings");
 require("scripts/globals/missions");
 require("scripts/globals/status");
-
------------------------------------
--- onInitialize
 -----------------------------------
 
 function onInitialize(zone)
@@ -35,10 +32,6 @@ function onInitialize(zone)
     UpdateTreasureSpawnPoint(16814557);
 end;
 
------------------------------------
--- onConquestUpdate
------------------------------------
-
 function onConquestUpdate(zone, updatetype)
     local players = zone:getPlayers();
 
@@ -46,10 +39,6 @@ function onConquestUpdate(zone, updatetype)
         conquestUpdate(zone, player, updatetype, CONQUEST_BASE);
     end
 end;
-
------------------------------------
--- onZoneIn
------------------------------------
 
 function onZoneIn(player,prevZone)
     local cs = -1;
@@ -66,10 +55,6 @@ function onZoneIn(player,prevZone)
 
     return cs;
 end;
-
------------------------------------
--- afterZoneIn
------------------------------------
 
 function afterZoneIn(player)
     player:entityVisualPacket("brmp");
@@ -98,10 +83,6 @@ function afterZoneIn(player)
         end
     end
 end;
-
------------------------------------
--- onRegionEnter
------------------------------------
 
 function onRegionEnter(player,region)
 
@@ -193,25 +174,13 @@ function onRegionEnter(player,region)
     end
 end;
 
------------------------------------
--- onRegionLeave
------------------------------------
-
 function onRegionLeave(player,region)
 end;
-
------------------------------------
--- onEventUpdate
------------------------------------
 
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

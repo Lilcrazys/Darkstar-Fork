@@ -2,12 +2,8 @@
 -- Area: Mount Zhayolm
 --  NM:  Cerberus
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/custom_trials");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -19,16 +15,8 @@ function onMobInitialize(mob)
     mob:addMod(MOD_DEF,50);
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob, target)
     if (mob:getHPP() > 25) then
@@ -37,10 +25,6 @@ function onMobFight(mob, target)
         mob:setMod(MOD_REGAIN, 70)
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(CERBERUS_MUZZLER);
@@ -69,10 +53,6 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
 
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     --[[

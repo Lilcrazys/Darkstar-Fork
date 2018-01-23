@@ -6,11 +6,8 @@ require("scripts/zones/AlTaieu/MobIDs");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/magic");
-require("scripts/globals/utils");
 require("scripts/globals/spoofchat");
-
------------------------------------
--- onMobInitialize Action
+require("scripts/globals/utils");
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -55,24 +52,9 @@ function onMobSpawn(mob)
     end
 end;
 
------------------------------------
--- onMobEngage Action
------------------------------------
-
-function onMobEngaged(mob, target)
-end;
-
------------------------------------
--- onMobDisEngage Action
------------------------------------
-
 function onMobDisEngage(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     local DID2HR = mob:getLocalVar("DID2HR");
@@ -155,10 +137,6 @@ function onMobFight(mob, target)
     end
 end;
 
-------------------------------------
--- onSpellPrecast
-------------------------------------
-
 function onSpellPrecast(mob, spell)
     if (spell:getID() == 218) then -- Meteor
         spell:setAoE(SPELLAOE_RADIAL);
@@ -168,10 +146,6 @@ function onSpellPrecast(mob, spell)
         spell:setMPCost(1);
     end
 end;
-
-------------------------------------
--- onMonsterMagicPrepare
-------------------------------------
 
 function onMonsterMagicPrepare(caster, target)
     local spellList =
@@ -200,10 +174,6 @@ function onMonsterMagicPrepare(caster, target)
     end
 end;
 
------------------------------------
--- onMagicHit
------------------------------------
-
 function onMagicHit(caster, target, spell)
     local REGEN = target:getMod(MOD_REGEN);
     local DAY = VanadielDayElement();
@@ -218,10 +188,6 @@ function onMagicHit(caster, target, spell)
     return 1;
 end;
 
------------------------------------
--- onAdditionalEffect Action
------------------------------------
-
 function onAdditionalEffect(mob,target,damage)
     if (math.random(1,15) ~= 5 or target:hasStatusEffect(EFFECT_TERROR) == true) then
         return 0,0,0;
@@ -231,16 +197,8 @@ function onAdditionalEffect(mob,target,damage)
     end
 end;
 
------------------------------------
--- onMobDespawn
------------------------------------
-
 function onMobDespawn(mob)
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(VIRTUOUS_SAINT);

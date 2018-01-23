@@ -3,22 +3,13 @@
 --  MOB: Ix'aern (drg)
 -----------------------------------
 require("scripts/globals/status");
-require("scripts/globals/magic");
-require("scripts/globals/utils");
-
 -----------------------------------
--- onMobInitialize
-----------------------------------
 function onMobInitialize(mob)
     -- addMod
     mob:addMod(MOD_MDEF,50);
     mob:addMod(MOD_DEF,100);
     mob:addMod(MOD_ATT,75);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     --[[
@@ -39,10 +30,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_MATT,100);
 end;
 
------------------------------------
--- onMobFight Action
------------------------------------
-
 function onMobFight(mob,target)
     -- Spawn the pets if they are despawned
     -- TODO: summon animations?
@@ -59,11 +46,7 @@ function onMobFight(mob,target)
             end
         end
     end
-end
-
------------------------------------
--- onMobDeath
------------------------------------
+end;
 
 function onMobDeath(mob, player, isKiller)
     -- Despawn pets..
@@ -72,9 +55,6 @@ function onMobDeath(mob, player, isKiller)
     DespawnMob(mob:getID()+3);
 end;
 
------------------------------------
--- OnMobDespawn
------------------------------------
 function onMobDespawn( mob )
     -- Despawn pets.
     DespawnMob(mob:getID()+1);

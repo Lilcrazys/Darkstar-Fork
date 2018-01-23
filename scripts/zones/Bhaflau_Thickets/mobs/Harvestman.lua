@@ -6,24 +6,16 @@
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-    -- setMobMod
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
     mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
 
     -- addMod
     mob:addMod(MOD_DOUBLE_ATTACK, 15)
     mob:addMod(MOD_MATT, 100);
 end;
-
------------------------------------
--- onMobSpawn
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -32,10 +24,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 55);
     mob:setMod(MOD_MACC, 950);
 end;
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 
 function onAdditionalEffect(mob,target,damage)
     -- Guesstimating 1 in 4 chance to poison on melee.
@@ -48,16 +36,8 @@ function onAdditionalEffect(mob,target,damage)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     --[[

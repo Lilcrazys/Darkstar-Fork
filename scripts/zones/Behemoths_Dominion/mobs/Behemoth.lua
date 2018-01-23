@@ -2,14 +2,11 @@
 -- Area: Behemoth's Dominion
 --  HNM: Behemoth
 -----------------------------------
-
 require("scripts/globals/settings");
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/custom_trials");
 
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -18,19 +15,11 @@ function onMobInitialize(mob)
     mob:addMod(MOD_TERRORRES, 80);
 end;
 
------------------------------------
--- onMobSpawn
------------------------------------
-
 function onMobSpawn(mob)
     if (LandKingSystem_NQ > 0 or LandKingSystem_HQ > 0) then
         GetNPCByID(17297459):setStatus(STATUS_DISAPPEAR);
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     player:addTitle(BEHEMOTHS_BANE);
@@ -51,10 +40,6 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
 
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     local Behemoth = mob:getID();

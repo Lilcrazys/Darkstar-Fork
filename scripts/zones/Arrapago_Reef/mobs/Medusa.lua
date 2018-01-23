@@ -10,9 +10,6 @@ require("scripts/zones/Arrapago_Reef/TextIDs");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/custom_trials");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -23,17 +20,9 @@ function onMobInitialize(mob)
     mob:addMod(MOD_REGAIN,1);
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     mob:setLocalVar("eeshpp", math.random(5,99)); -- Uses EES randomly during the fight
 end;
-
------------------------------------
--- onMobEngaged Action
------------------------------------
 
 function onMobEngaged(mob, target)
     local mobID = mob:getID();
@@ -43,10 +32,6 @@ function onMobEngaged(mob, target)
     SpawnMob(mobID+3):updateEnmity(target);
     SpawnMob(mobID+4):updateEnmity(target);
 end;
-
------------------------------------
--- onMobFight Action
------------------------------------
 
 function onMobFight(mob, target)
     local HPP = mob:getHPP();
@@ -58,11 +43,10 @@ function onMobFight(mob, target)
     end
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
+    --[[
+    player:showText(mob, MEDUSA_DEATH);
+    ]]
     mob:showText(mob, MEDUSA_DEATH);
     player:addTitle(GORGONSTONE_SUNDERER);
 

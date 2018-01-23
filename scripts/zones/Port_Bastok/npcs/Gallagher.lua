@@ -1,16 +1,12 @@
 -----------------------------------
 -- Area: Port Bastok
--- NPC: Gallagher
+--  NPC: Gallagher
 -- Standard Info NPC
 -----------------------------------
 package.loaded["scripts/zones/Port_Bastok/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Port_Bastok/TextIDs");
 require("scripts/globals/msg");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
@@ -87,10 +83,6 @@ function onTrade(player,npc,trade)
         player:SpoofMsg("I don't have special deals to show you right now. ", npc, chatType.SAY, nil);
     end
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
     --[[
@@ -307,18 +299,10 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

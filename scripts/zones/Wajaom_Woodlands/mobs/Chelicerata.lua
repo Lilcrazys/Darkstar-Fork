@@ -2,18 +2,17 @@
 -- Zone: Wajaom Woodlands
 -- Mob: Chelicerata
 -----------------------------------
-
+--[[
+--require("scripts/globals/titles");
+mixins = { require("scripts/mixins/families/chigoe") }
+]]
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-
------------------------------------
--- onMobInitialize
 -----------------------------------
 
 function onMobInitialize(mob)
-    mob:setMobMod(MOBMOD_ADD_EFFECT,mob:getShortID());
-    mob:setMobMod(MOBMOD_MAIN_2HOUR, 1);
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1);
 
     -- addMod
     mob:addMod(MOD_TRIPLE_ATTACK, 30)
@@ -28,10 +27,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_REGEN, 40);
     mob:setMod(MOD_REGAIN, 20);
 end;
-
------------------------------------
--- onMobEngaged
------------------------------------
 
 function onMobEngaged(mob,target)
 end;
@@ -49,10 +44,6 @@ function onAdditionalEffect(mob,target,damage)
         return SUBEFFECT_NONE,0,EFFECT_SLOW;
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
 end;

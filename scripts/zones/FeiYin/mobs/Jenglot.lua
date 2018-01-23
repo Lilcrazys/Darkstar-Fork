@@ -2,13 +2,9 @@
 -- Area: Fei'Yin
 --  NM:  Jenglot
 -----------------------------------
-
 require("scripts/globals/titles");
 require("scripts/globals/status");
 require("scripts/globals/magic");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -20,10 +16,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_MATT, 100);
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     -- setMod
     mob:setMod(MOD_REGEN, 40);
@@ -32,10 +24,6 @@ function onMobSpawn(mob)
     mob:setMod(MOD_UFASTCAST, 65);
     mob:setMod(MOD_MACC, 950);
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     -- Curses, Foiled A-Golem!?

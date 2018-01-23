@@ -1,24 +1,16 @@
 -----------------------------------
---  Area: Nashmau
---  NPC:  Nabihwah
---  Type: Standard NPC
+-- Area: Nashmau
+--  NPC: Nabihwah
+-- Type: Standard NPC
 -- !pos 9.988 -7 68.585 53
 -----------------------------------
 package.loaded["scripts/zones/Nashmau/TextIDs"] = nil;
 -----------------------------------
-
 require("scripts/zones/Nashmau/TextIDs");
-
------------------------------------
--- onTrade Action
 -----------------------------------
 
 function onTrade(player,npc,trade)
 end;
-
------------------------------------
--- onTrigger Action
------------------------------------
 
 function onTrigger(player,npc)
     --[[
@@ -39,10 +31,6 @@ function onTrigger(player,npc)
     end
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
@@ -51,10 +39,6 @@ function onEventUpdate(player,csid,option)
         player:updateEvent(0,0,0,canEquip(player,itemid))
     end
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);

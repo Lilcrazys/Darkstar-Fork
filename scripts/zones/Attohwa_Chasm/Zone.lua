@@ -9,9 +9,6 @@ require("scripts/zones/Attohwa_Chasm/TextIDs");
 require("scripts/zones/Attohwa_Chasm/MobIDs");
 require("scripts/globals/settings");
 require("scripts/globals/zone");
-
------------------------------------
--- onInitialize
 -----------------------------------
 
 function onInitialize(zone)
@@ -58,10 +55,6 @@ function onInitialize(zone)
     GetMobByID(16806910):setRespawnTime(math.random(900,10800));
 end;
 
------------------------------------
--- onZoneIn
------------------------------------
-
 function onZoneIn(player,prevZone)
     local cs = -1;
     if (player:getXPos() == 0 and player:getYPos() == 0 and player:getZPos() == 0) then
@@ -70,10 +63,6 @@ function onZoneIn(player,prevZone)
     return cs;
 end;
 
------------------------------------
--- onConquestUpdate
------------------------------------
-
 function onConquestUpdate(zone, updatetype)
     local players = zone:getPlayers();
 
@@ -81,10 +70,6 @@ function onConquestUpdate(zone, updatetype)
         conquestUpdate(zone, player, updatetype, CONQUEST_BASE);
     end
 end;
-
------------------------------------
--- onRegionEnter
------------------------------------
 
 function onRegionEnter(player,region)
     -- TODO: Gasponia's shouldn't "always" poison you. However, in retail regions constantly reapply themselves without having to re-enter the region. In DSP that doesn't happen so I'm leaving it as-is for now.
@@ -101,16 +86,8 @@ function onRegionEnter(player,region)
     end
 end;
 
------------------------------------
--- onRegionLeave
------------------------------------
-
 function onRegionLeave(player,region)
 end;
-
------------------------------------
--- onGameHour
------------------------------------
 
 function onGameHour(zone)
     --[[
@@ -120,18 +97,10 @@ function onGameHour(zone)
     --]]
 end;
 
------------------------------------
--- onEventUpdate
------------------------------------
-
 function onEventUpdate(player,csid,option)
     -- printf("CSID: %u",csid);
     -- printf("RESULT: %u",option);
 end;
-
------------------------------------
--- onEventFinish
------------------------------------
 
 function onEventFinish(player,csid,option)
     -- printf("CSID: %u",csid);
