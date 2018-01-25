@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
--- func: @setskill <skill name or ID> <skill level> <target>
+-- func: !setskill <skill name or ID> <skill level> <target>
 -- desc: set specified skill
 ---------------------------------------------------------------------------------------------------
 
@@ -11,7 +11,7 @@ cmdprops =
 
 function onTrigger(player, skill, skillLV, target)
     if (skill == nill) then
-        player:PrintToPlayer("@setskill <skill name or ID> <skill level> <target>")
+        player:PrintToPlayer("!setskill <skill name or ID> <skill level> <target>")
         return;
     end
 
@@ -37,9 +37,9 @@ function onTrigger(player, skill, skillLV, target)
         ["club"]         = 11,
         ["staff"]        = 12,
         -- 13 to 21 do not exist.
-        -- automaton melee     = 22,
-        -- automaton archery   = 23,
-        -- automaton magic     = 24,
+        -- ["automelee"]    = 22, -- automaton melee
+        -- ["autoarchery"]  = 23, -- automaton archery
+        -- ["automagic"]    = 24, -- automaton magic
         ["archery"]      = 25,
         ["marksmanship"] = 26,
         ["throwing"]     = 27,
@@ -111,6 +111,7 @@ function onTrigger(player, skill, skillLV, target)
             player:PrintToPlayer(string.format("%s's %s Rank: %u", targ:getName(), skill, targ:getSkillRank(skillID)))
         end
     else
+        -- TODO: table this
         if (skillID > 47) then
             if (skillLV >= 0 and skillLV < 8) then
                 targ:setSkillRank(skillID,0);   -- Amateur 0-8
@@ -150,13 +151,13 @@ function onTrigger(player, skill, skillLV, target)
                 -- 15 = Legend
                 -- 16+ invalid.
             end
+
+            player:PrintToPlayer(string.format("%s's new %s Rank: %u", targ:getName(), skill, targ:getSkillRank(skillID)));
         end
-        targ:setSkillLevel(skillID, skillLV);
+
+        targ:setSkillLevel(skillID, skillLV*10);
         targ:messageBasic(53, skillID, skillLV);
-        player:PrintToPlayer(string.format("%s's new %s Skill: %u", targ:getName(), skill, targ:getSkillLevel(skillID)))
-        if (skillID > 47) then
-            player:PrintToPlayer(string.format("%s's new %s Rank: %u", targ:getName(), skill, targ:getSkillRank(skillID)))
-        end
+        player:PrintToPlayer(string.format("%s's new %s Skill: %u", targ:getName(), skill, targ:getSkillLevel(skillID)));
     end
 
     local dateStamp = os.date("%d/%m/%Y");
