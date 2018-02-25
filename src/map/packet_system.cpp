@@ -1512,6 +1512,11 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
     ShowDebug(CL_CYAN"DeliveryBox Action (%02hx)\n" CL_RESET, data.ref<uint8>(0x04));
     PrintPacket(data);
+    if (jailutils::InPrison(PChar)) // If jailed, no mailbox menu for you.
+    {
+        return;
+    }
+
     // 0x01 - Send old items..
     // 0x02 - Add items to be sent..
     // 0x03 - Send confirmation..
@@ -2146,6 +2151,11 @@ void SmallPacket0x04E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     uint8  quantity = data.ref<uint8>(0x10);
 
     ShowDebug(CL_CYAN"AH Action (%02hx)\n" CL_RESET, data.ref<uint8>(0x04));
+    if (jailutils::InPrison(PChar)) // If jailed, no AH menu for you.
+    {
+        return;
+    }
+
     // 0x04 - Selling Items
     // 0x05 - Open List Of Sales / Wait
     // 0x0A - Retrieve List of Items Sold By Player
@@ -3802,7 +3812,7 @@ void SmallPacket0x0AD(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
 void SmallPacket0x0B5(map_session_data_t* session, CCharEntity* PChar, CBasicPacket data)
 {
-    if ((data.ref<uint8>(0x06) == '!' || (data.ref<uint8>(0x06) == '@' && PChar->m_GMlevel > 0)) && CmdHandler.call(PChar, (const int8*)data[7]) == 0)
+    if (data.ref<uint8>(0x06) == '!' && !jailutils::InPrison(PChar) && CmdHandler.call(PChar, (const int8*)data[7]) == 0)
     {
         //this makes sure a command isn't sent to chat
     }

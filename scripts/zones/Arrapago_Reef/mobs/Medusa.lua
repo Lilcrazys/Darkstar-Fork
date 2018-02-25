@@ -1,46 +1,30 @@
 -----------------------------------
 -- Area: Arrapago Reef
---  NM:  Medusa
+--  MOB: Medusa
 -- !pos -458 -20 458
 -- TODO: resists, attack/def boosts
 -----------------------------------
 package.loaded["scripts/zones/Arrapago_Reef/TextIDs"] = nil;
 -----------------------------------
+mixins = {require("scripts/mixins/job_special")};
 require("scripts/zones/Arrapago_Reef/TextIDs");
-require("scripts/globals/status");
 require("scripts/globals/titles");
-require("scripts/globals/custom_trials");
 -----------------------------------
 
-function onMobInitialize(mob)
-    -- setMobMod
-    mob:setMobMod(MOBMOD_SUPERLINK, mob:getShortID());
-
-    -- addMod
-    mob:addMod(MOD_REGAIN,1);
-end;
-
 function onMobSpawn(mob)
-    mob:setLocalVar("eeshpp", math.random(5,99)); -- Uses EES randomly during the fight
+    mob:setLocalVar("mainSpec", jobSpec.EES_LAMIA);
+    mob:setLocalVar("useSpecAtHpMin", 5);
+    mob:setLocalVar("useSpecAtHpMax", 99);
+    mob:setLocalVar("useMainSpecAtHPP", math.random(5,99));
 end;
 
 function onMobEngaged(mob, target)
     local mobID = mob:getID();
-    mob:showText(mob, MEDUSA_ENGAGE);
-    SpawnMob(mobID+1):updateEnmity(target);
-    SpawnMob(mobID+2):updateEnmity(target);
-    SpawnMob(mobID+3):updateEnmity(target);
-    SpawnMob(mobID+4):updateEnmity(target);
-end;
-
-function onMobFight(mob, target)
-    local HPP = mob:getHPP();
-    if (mob:getLocalVar("usedees") == 0) then
-        if (HPP <= mob:getLocalVar("eeshpp")) then
-            mob:useMobAbility(1931); -- Eagle Eye Shot
-            mob:setLocalVar("usedees", 1);
-        end
-    end
+    target:showText(mob, MEDUSA_ENGAGE);
+    SpawnMob(mobID+1, 180):updateEnmity(target);
+    SpawnMob(mobID+2, 180):updateEnmity(target);
+    SpawnMob(mobID+3, 180):updateEnmity(target);
+    SpawnMob(mobID+4, 180):updateEnmity(target);
 end;
 
 function onMobDeath(mob, player, isKiller)
@@ -74,10 +58,6 @@ function onMobDeath(mob, player, isKiller)
     ------------------------------------
 
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     mob:setRespawnTime(math.random(75600,86400));   -- 21 to 24 hours

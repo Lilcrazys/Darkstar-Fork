@@ -1,20 +1,13 @@
 -----------------------------------
--- Area: Alzadaal Undersea Ruins
---  ZNM: Armed Gears
+-- Area: Alzadaal Undersea Ruins (72)
+--  MOB: Armed Gears (Tier-III ZNM)
 -----------------------------------
+mixins = {require("scripts/mixins/job_special")};
 require("scripts/globals/custom_trials");
 require("scripts/globals/status");
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     local CHANCE = 25;
