@@ -1512,6 +1512,7 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
     ShowDebug(CL_CYAN"DeliveryBox Action (%02hx)\n" CL_RESET, data.ref<uint8>(0x04));
     PrintPacket(data);
+
     if (jailutils::InPrison(PChar)) // If jailed, no mailbox menu for you.
     {
         return;
@@ -1532,8 +1533,7 @@ void SmallPacket0x04D(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     // 0x0d - Opening to send mail..
     // 0x0e - Opening to receive mail..
     // 0x0f - Closing mail window..
-    if (PChar->m_GMlevel == 0 && PChar->getZone() == 131 && charutils::GetVar(PChar, "inJail"))
-    { return; } // Jailed chars can't use.
+
     switch (action)
     {
     case 0x01:
@@ -2151,6 +2151,7 @@ void SmallPacket0x04E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     uint8  quantity = data.ref<uint8>(0x10);
 
     ShowDebug(CL_CYAN"AH Action (%02hx)\n" CL_RESET, data.ref<uint8>(0x04));
+
     if (jailutils::InPrison(PChar)) // If jailed, no AH menu for you.
     {
         return;
@@ -2163,8 +2164,7 @@ void SmallPacket0x04E(map_session_data_t* session, CCharEntity* PChar, CBasicPac
     // 0x0E - Purchasing Items
     // 0x0С - Cancel Sale
     // 0x0D - Update Sale List By Player
-    if (PChar->m_GMlevel == 0 && PChar->getZone() == 131 && charutils::GetVar(PChar, "inJail"))
-    { return; } // Jailed chars can't use.
+
     switch (action)
     {
     case 0x04:
@@ -3549,11 +3549,10 @@ void SmallPacket0x083(map_session_data_t* session, CCharEntity* PChar, CBasicPac
         if (gil->getQuantity() > (price * quantity))
         {
             uint8 SlotID = charutils::AddItem(PChar, LOC_INVENTORY, itemID, quantity);
-
             if (SlotID != ERROR_SLOTID)
             {
                 charutils::UpdateItem(PChar, LOC_INVENTORY, 0, -(int32)(price * quantity));
-                // ShowNotice(CL_YELLOW"User '%s' purchased %d of item of ID %d \n" CL_RESET, PChar->GetName(), quantity, itemID);
+                ShowNotice(CL_YELLOW"User '%s' purchased %d of item of ID %d \n" CL_RESET, PChar->GetName(), quantity, itemID);
                 PChar->pushPacket(new CShopBuyPacket(shopSlotID, quantity));
                 PChar->pushPacket(new CInventoryFinishPacket());
             }
@@ -3604,12 +3603,11 @@ void SmallPacket0x085(map_session_data_t* session, CCharEntity* PChar, CBasicPac
 
     CItem* gil = PChar->getStorage(LOC_INVENTORY)->GetItem(0);
     CItem* PItem = PChar->getStorage(LOC_INVENTORY)->GetItem(slotID);
-
     if ((PItem != nullptr) && ((gil != nullptr) && gil->isType(ITEM_CURRENCY)))
     {
         charutils::UpdateItem(PChar, LOC_INVENTORY, 0, quantity * PItem->getBasePrice());
         charutils::UpdateItem(PChar, LOC_INVENTORY, slotID, -(int32)quantity);
-        // ShowNotice(CL_YELLOW"User '%s' sold %d of item of ID %d \n" CL_RESET, PChar->GetName(), quantity, itemID);
+        ShowNotice(CL_YELLOW"User '%s' sold %d of item of ID %d \n" CL_RESET, PChar->GetName(), quantity, itemID);
         PChar->pushPacket(new CMessageStandardPacket(0, itemID, quantity, 232));
         PChar->pushPacket(new CInventoryFinishPacket());
     }
