@@ -47,6 +47,49 @@ function onMobDeath(mob, player, isKiller)
     -- Set server var for custom @command to check ToD
     SetServerVariable("Our_Fafnir_ToD", os.time());
 
+    -- Customized lootdrop scripting
+    if (isKiller == true) then
+        local group_1 = math.random(1,4); -- Guaranteed drop: 25% of any one item
+        if (group2 == 1) then
+            player:addTreasure(1133, mob); -- Dragon Blood
+        elseif (group_1 == 2) then
+            player:addTreasure(4272, mob); -- Dragon Meat
+        elseif (group_1 == 3) then
+            player:addTreasure(867, mob); -- Dragon Scales
+        elseif (group_1 == 4) then
+            player:addTreasure(903, mob); -- Dragon Talon
+        end
+
+        local group_2 = math.random(1,9); -- Guaranteed drop: 3/3/2/1 of 9 chance
+        if (group_2 > 6) then -- Rolled 7, 8, or 9
+            player:addTreasure(13914, mob); -- Aegishjalmr
+        elseif (group_2 > 3) then -- Rolled 4, 5, or 6
+            player:addTreasure(14075, mob); -- Andvaranauts
+        elseif (group_2 > 1) then -- Rolled 2 or 3
+            player:addTreasure(16942, mob); -- Balmung
+        else -- Rolled a 1
+            player:addTreasure(4486, mob); -- Dragon Heart
+        end
+
+        local group_3 = math.random(1,4); -- Guaranteed drop: 25% of any one abjur
+        if (group_3 == 1) then
+            player:addTreasure(1321, mob); -- Earthen Abjuration: Hands
+        elseif (group_3 == 2) then
+            player:addTreasure(1326, mob); -- Aquarian Abjuration: Hands
+        elseif (group_3 == 3) then
+            player:addTreasure(1328, mob); -- Aquarian Abjuration: Feet
+        elseif (group_3 == 4) then
+            player:addTreasure(1339, mob); -- Neptunal Abjuration: Head
+        end
+
+        local group_4 = math.random(1,100); -- 64% chance of no drop
+        if (group_4 >= 94) then -- 6%
+            player:addTreasure(16555, mob); -- Ridill
+        elseif (group_4 >= 70) then -- 30%
+            player:addTreasure(17653, mob); -- Hrotti
+        end
+    end
+
     -- Custom Trial Check
     cTrialProgress(player, 2, "relic");
 

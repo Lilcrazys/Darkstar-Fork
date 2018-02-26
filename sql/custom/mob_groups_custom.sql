@@ -1279,7 +1279,21 @@ INSERT INTO `mob_groups` VALUES (96599,16600,116,15,128,0,800000,8000,2,2,0); --
 -- INSERT INTO `mob_groups` VALUES (96642,16643,zoneid,0,128,0,HP,MP,104,104,0); -- Australis Shadow
 -- INSERT INTO `mob_groups` VALUES (96643,16644,zoneid,0,128,0,HP,MP,104,104,0); -- Occidentalis Shadow
 -- INSERT INTO `mob_groups` VALUES (96644,16645,zoneid,0,128,16637,HP,MP,128,128,0); -- Camahueto
--- INSERT INTO `mob_groups` VALUES (96645,16646,zoneid,0,128,16638,HP,MP,128,128,0); -- Vedrfolnir
+-- INSERT INTO `mob_groups` VALUES (96645,16646,zoneid,0,128,16638,HP,MP,128,128,0); -- Carousing Celine
+-- INSERT INTO `mob_groups` VALUES (96646,16647,zoneid,0,128,16639,HP,MP,128,128,0); -- Grand Grenade
+-- INSERT INTO `mob_groups` VALUES (96647,16648,zoneid,0,128,16640,HP,MP,128,128,0); -- Vedrfolnir
+-- INSERT INTO `mob_groups` VALUES (96648,16649,zoneid,0,128,16641,HP,MP,128,128,0); -- Vidmapire
+-- INSERT INTO `mob_groups` VALUES (96649,16650,zoneid,0,128,16642,HP,MP,128,128,0); -- Volatile Cluster
+-- INSERT INTO `mob_groups` VALUES (96650,16651,zoneid,0,128,16643,HP,MP,128,128,0); -- Glazemane
+-- INSERT INTO `mob_groups` VALUES (96651,16652,zoneid,0,128,16644,HP,MP,128,128,0); -- Wyvernhunter Bambrox
+-- Mobs above level 130 are unsafe to enable until DSP post 99 level scaling is handled..
+-- INSERT INTO `mob_groups` VALUES (96652,16653,zoneid,0,128,16645,HP,MP,135,135,0); -- Hidhaegg
+-- INSERT INTO `mob_groups` VALUES (96653,16654,zoneid,0,128,16646,HP,MP,135,135,0); -- Sovereign Behemoth
+-- INSERT INTO `mob_groups` VALUES (96654,16655,zoneid,0,128,16647,HP,MP,135,135,0); -- Tolba
+-- INSERT INTO `mob_groups` VALUES (96655,16656,zoneid,0,128,16648,HP,MP,135,135,0); -- Thu'ban
+-- INSERT INTO `mob_groups` VALUES (96656,16657,zoneid,0,128,16649,HP,MP,135,135,0); -- Sarama
+-- INSERT INTO `mob_groups` VALUES (96657,16658,zoneid,0,128,16650,HP,MP,135,135,0); -- Shedu
+-- INSERT INTO `mob_groups` VALUES (96658,16659,zoneid,0,128,16651,HP,MP,145,145,0); -- Tumult Curator
 -- Unity NMs End
 
 INSERT INTO `mob_groups` VALUES (96665,16665,91,3600,0,16665,154000,75000,131,131,0); -- The Jumping Crab

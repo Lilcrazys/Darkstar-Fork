@@ -4,11 +4,15 @@
 --
 -- For new entries DarkStar does not have, use "INSERT INTO".
 --
--- To REMOVE a drop that DarkStar has we don't want in Legion, use:
--- DELETE FROM `mob_droplist` WHERE dropId=0 and dropType=0 and itemId=0 `itemRate`=0;
--- Where the zero is replaced by whatever values DarkStar was using.
+-- To REMOVE drops that DarkStar has but we don't want in Legion, use:
+-- DELETE FROM `mob_droplist` WHERE dropId=1; -- ALL drops in dropId one are nuked!
+-- OR:
+-- DELETE FROM `mob_droplist` WHERE dropId=1 and dropType=2 and itemId=3 and itemRate=4; -- Only this one item is nuked.
 --
--- Please comment what is dropping from what mob on each line:
+-- The drop ID should contain at least one drop after this file finishes..
+-- ..If it doesn't then you should be replacing the drop ID or setting MOBMOD_NO_DROPS instead.
+--
+-- Please remember to comment what is item is on each line:
 -- Insert INTO `mob_droplist` VALUES (dropId,dropType,groupId,groupRate,itemId,itemRate); -- Item name from NM name
 -- ---------------------------------------------------------------------------
 
@@ -3634,12 +3638,18 @@ INSERT INTO `mob_droplist` VALUES (9732,0,0,1000,1767,118);
 -- INSERT INTO `mob_droplist` VALUES (16635,0,0,1000,6365,1000); -- Azrael's Coffer
 -- INSERT INTO `mob_droplist` VALUES (16636,0,0,1000,6366,1000); -- Borealis Shadow's Coffer
 -- INSERT INTO `mob_droplist` VALUES (16637,0,0,1000,6359,1000); -- Camahueto's Coffer
--- INSERT INTO `mob_droplist` VALUES (16638,0,0,1000,6354,1000); -- Vedrfolnir's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16638,0,0,1000,?,1000); -- Carousing Celine's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16639,0,0,1000,?,1000); -- Grand Grenade's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16640,0,0,1000,6354,1000); -- Vedrfolnir's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16641,0,0,1000,?,1000); -- Vidmapire's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16642,0,0,1000,?,1000); -- Volatile Cluster's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16643,0,0,1000,?,1000); -- Glazemane's Coffer
+-- INSERT INTO `mob_droplist` VALUES (16644,0,0,1000,?,1000); -- Wyvernhunter Bambrox's Coffer
 -- End Unity NM drops
 
 -- Drop IDs 16639 to 16664 reserved
 
--- The Jumping Crab (please do not add anything to this crab without consulting Teo)
+-- The Jumping Crab
 INSERT INTO `mob_droplist` VALUES (16665,0,0,1000,3925,1000); -- Single Tanzenite Jewel 100%
 INSERT INTO `mob_droplist` VALUES (16665,0,0,1000,3925,333); -- Second Tanzenite Jewel 33.3%
 INSERT INTO `mob_droplist` VALUES (16665,2,0,1000,3925,33); -- Stealable Tanzenite Jewel 3.3% (good luck with that).
@@ -3648,6 +3658,3 @@ INSERT INTO `mob_droplist` VALUES (16665,2,0,1000,3925,33); -- Stealable Tanzeni
 -- INSERT INTO `mob_droplist` VALUES (16665,0,0,1000,?,?); -- future mystery item
 -- End of Jumping Crabs Droplist. Other items may be / may become available via script.
 
--- 16666 Slendy
--- 16760 Mars
--- 16777 Minerva

@@ -60,6 +60,7 @@ function onMobDeath(mob, player, isKiller)
         player:addSpell(SPELL_ID);
     end
 
+    -- Customized lootdrop scripting
     if (isKiller == true) then
         local RND = math.random(1,1000);
         if (RND <= 100) then -- 10%

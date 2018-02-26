@@ -721,9 +721,21 @@ INSERT INTO `mob_pools` VALUES (16600,'Twinkling_Treant','Twinkling_Treant',245,
 -- INSERT INTO `mob_pools` VALUES (16643,'Australis_Shadow
 -- INSERT INTO `mob_pools` VALUES (16644,'Occidentalis_Shadow
 -- INSERT INTO `mob_pools` VALUES (16645,'Camahueto
--- INSERT INTO `mob_pools` VALUES (16646,'Vedrfolnir
+-- INSERT INTO `mob_pools` VALUES (16646,'Carousing Celine
+-- INSERT INTO `mob_pools` VALUES (16647,'Grand Grenade
+-- INSERT INTO `mob_pools` VALUES (16648,'Vedrfolnir
+-- INSERT INTO `mob_pools` VALUES (16649,'Vidmapire
+-- INSERT INTO `mob_pools` VALUES (16650,'Volatile Cluster
+-- INSERT INTO `mob_pools` VALUES (16651,'Glazemane
+-- INSERT INTO `mob_pools` VALUES (16652,'Wyvernhunter Bambrox
+-- INSERT INTO `mob_pools` VALUES (16653 Hidhaegg
+-- INSERT INTO `mob_pools` VALUES (16654 Sovereign Behemoth
+-- INSERT INTO `mob_pools` VALUES (16655 Tolba
+-- INSERT INTO `mob_pools` VALUES (16656 Thu'ban
+-- INSERT INTO `mob_pools` VALUES (16657 Sarama
+-- INSERT INTO `mob_pools` VALUES (16658 Shedu
+-- INSERT INTO `mob_pools` VALUES (16659 Tumult Curator
 -- Unity NMs End
--- Pool IDs 16647 to 16660 reserved
 
 INSERT INTO `mob_pools` VALUES (16665,'The_Jumping_Crab','The_Jumping_Crab',76,0x0000650100000000000000000000000000000000,5,14,4,240,100,0,1,0,0,2,23,32,304,15,0,0,665,1,0,9665);
 

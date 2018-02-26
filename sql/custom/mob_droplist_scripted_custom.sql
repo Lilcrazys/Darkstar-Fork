@@ -44,6 +44,22 @@ INSERT INTO `mob_droplist_scripted` VALUES (502,0,0,1000,21228,66); -- Falubeza
 INSERT INTO `mob_droplist_scripted` VALUES (502,0,0,1000,4023,901); -- Snowsteel Ore
 INSERT INTO `mob_droplist_scripted` VALUES (502,0,0,1000,4023,901); -- Snowsteel Ore
 
+-- Fafnir
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,867,250); -- Dragon Scales
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,903,250); -- Dragon Talon
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,1133,250); -- Dragon Blood
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,1321,250); -- Earthen Abjuration Hands
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,1326,250); -- Aquarian Abjuration Hands
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,1328,250); -- Aquarian Abjuration Feet
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,1339,250); -- Neptunal Abjuration Head
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,4272,250); -- Dragon Meat
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,4486,125); -- Dragon Heart
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,13914,375); -- Aegishjalmr
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,14075,375); -- Andvaranauts
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,16555,60); -- Ridill
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,16942,250); -- Balmung
+INSERT INTO `mob_droplist_scripted` VALUES (918,0,0,1000,17653,300); -- Hrotti
+
 -- Gulool Ja Ja
 INSERT INTO `mob_droplist_scripted` VALUES (1607,0,0,1000,10955,33); -- Culinarian's Torque
 INSERT INTO `mob_droplist_scripted` VALUES (1607,0,0,1000,20861,66); -- Qalgwer
