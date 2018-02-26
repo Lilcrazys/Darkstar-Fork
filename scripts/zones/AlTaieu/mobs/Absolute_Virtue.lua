@@ -6,8 +6,63 @@ require("scripts/zones/AlTaieu/MobIDs");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/magic");
-require("scripts/globals/msg");
 require("scripts/globals/utils");
+require("scripts/globals/spoofchat");
+
+-- Ability ID definitions.
+local abilityList =
+{
+    [1]  = {MightyStrikes = 688},
+    [2]  = {Benediction   = 689},
+    [3]  = {HundredFists  = 690},
+    [4]  = {Manafont      = 691},
+    [5]  = {Chainspell    = 692},
+    [6]  = {PerfectDodge  = 693},
+    [7]  = {Invincible    = 694},
+    [8]  = {BloodWeapon   = 695},
+    [9]  = {SoulVoice     = 696},
+    [10] = {Familiar      = 740},
+    [11] = {MeikyoShisui  = 730},
+    [12] = {MijinGakure   = 731},
+    [13] = {EagleEyeShot  = 1019},
+    [14] = {CallWyvern    = 1022},
+    [15] = {AstralFlow    = 1023}
+}
+local MightyStrikes = 688;
+local Benediction   = 689;
+local HundredFists  = 690;
+local Manafont      = 691;
+local Chainspell    = 692;
+local PerfectDodge  = 693;
+local Invincible    = 694;
+local BloodWeapon   = 695;
+local SoulVoice     = 696;
+local Familiar      = 740;
+local MeikyoShisui  = 730;
+local MijinGakure   = 731;
+-- local CallBeast     = 1017;
+local EagleEyeShot  = 1019;
+local CallWyvern    = 1022;
+local AstralFlow    = 1023;
+--[[ ..DSP prolly has wrong anim IDsfor the copies AV should use so I use diff ones above instead..And have to use that table. UGH.
+local MightyStrikes = 1008;
+local HundredFists  = 1009;
+local Benediction   = 1010;
+local Manafont      = 1011;
+local Chainspell    = 1012;
+local PerfectDodge  = 1013;
+local Invincible    = 1014;
+local BloodWeapon   = 1015;
+local Familiar      = 1016;
+local CallBeast     = 1017;
+local SoulVoice     = 1018;
+local EagleEyeShot  = 1019;
+local MeikyoShisui  = 1020;
+local MijinGakure   = 1021;
+local CallWyvern    = 1022;
+local AstralFlow    = 1023;
+]]
+
 -----------------------------------
 
 function onMobInitialize(mob)
@@ -20,10 +75,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_TRIPLE_ATTACK, 3);
     mob:addMod(MOD_MDEF,80);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- Set localVars for 2hr triggers
@@ -52,86 +103,184 @@ function onMobSpawn(mob)
     end
 end;
 
+function onMobEngaged(mob, target)
+end;
+
 function onMobDisEngage(mob, target)
     mob:delStatusEffect(EFFECT_RAGE);
 end;
 
 function onMobFight(mob, target)
-    local DID2HR = mob:getLocalVar("DID2HR");
-    local RND = math.random(1,12);
-    local AV2HR = nil;
-    local popTime = mob:getLocalVar("lastPetPop");
+    mob:setMod(MOD_REFRESH, 0);
+    mob:setMod(MOD_MEVA, 0);
+    mob:setMod(MOD_MDEF, 0);
+    local combo1 = mob:getLocalVar("combo1");
+    local combo2 = mob:getLocalVar("combo2");
+    local combo3 = mob:getLocalVar("combo3");
+    local combo4 = mob:getLocalVar("combo4");
+    local comboCount = mob:getLocalVar("comboCount");
+    local abilityCount = mob:getLocalVar("abilityCount");
+    local braceletMode = mob:AnimationSub();
+    local HPP = mob:getHPP();
+    local lastCallBeast = mob:getLocalVar("lastCallBeast");
 
-    if (mob:getBattleTime() > 3600 and mob:getLocalVar("RAGED") == 0) then
-        -- In retail, this is where it'd just depop instead..Except we'd be tracking it from JoL's pop time instead of BattleTime.
-        mob:addStatusEffectEx(EFFECT_RAGE,0,1,0,0);
-        mob:setLocalVar("RAGED", 1);
-    end
-
-    if (os.time() - popTime > 120) then
-        for Helper = mob:getID()+1, mob:getID()+4 do
-            if (GetMobAction(Helper) == ACTION_NONE or GetMobAction(Helper) == ACTION_SPAWN) then
-                SpawnMob(Helper):updateEnmity(target);
-                mob:setLocalVar("lastPetPop", os.time());
+    if (braceletMode ~= 2 and HPP <= 75) then
+        mob:AnimationSub(2);
+    elseif (braceletMode ~= 2 and abilityCount == 2 and HPP < 80) then
+        print("Ability!")
+        doAbility(mob, target);
+    elseif (braceletMode ~= 2 and abilityCount == 1 and HPP < 85) then
+        print("Ability!")
+        doAbility(mob, target);
+    elseif (braceletMode ~= 2 and abilityCount == 0 and HPP < 90) then
+        print("Ability!")
+        doAbility(mob, target);
+    elseif (braceletMode == 2 and comboCount == 3 and HPP < combo4) then
+        print("Combo!")
+        doCombo(mob, target, mob:getLocalVar("selectCombo"));
+    elseif (braceletMode == 2 and comboCount == 2 and HPP < combo3) then
+        print("Combo!")
+        doCombo(mob, target, mob:getLocalVar("selectCombo"));
+    elseif (braceletMode == 2 and comboCount == 1 and HPP < combo2) then
+        print("Combo!")
+        doCombo(mob, target, mob:getLocalVar("selectCombo"));
+    elseif (braceletMode == 2 and comboCount == 0 and HPP < combo1) then
+        print("Combo!")
+        doCombo(mob, target, mob:getLocalVar("selectCombo"));
+    elseif (os.time() - lastCallBeast > 120) then
+        for WynavID = mob:getID()+1, mob:getID()+4 do
+            if (GetMobByID(WynavID):isDead()) then
+                SpawnMob(WynavID):updateEnmity(target);
+                mob:setLocalVar("lastCallBeast", os.time());
+                break;
             end
         end
+    end
+end;
 
-
-    else
-        if (RND == 1) then
-            AV2HR = 688;
-        elseif (RND == 2) then
-            AV2HR = 689;
-        elseif (RND == 3) then
-            AV2HR = 690;
-        elseif (RND == 4) then
-            AV2HR = 691;
-        elseif (RND == 5) then
-            AV2HR = 692;
-        elseif (RND == 6) then
-            AV2HR = 693;
-        elseif (RND == 7) then
-            AV2HR = 694;
-        elseif (RND == 8) then
-            AV2HR = 695;
-        elseif (RND == 9) then
-            AV2HR = 696;
-        elseif (RND == 10) then
-            AV2HR = 697;
-        elseif (RND == 11) then
-            AV2HR = 698;
-        elseif (RND == 12) then
-            AV2HR = 699;
+-- custom function for one off abilities 16912876
+function doAbility(mob, target)
+    print("Ability count: " .. mob:getLocalVar("abilityCount"))
+    local abilityID = abilityList[math.random(1,15)];
+    print("Ability ID: " .. abilityID)
+    if (abilityID == CallWyvern) then
+        -- mob:useMobAbility(CallWyvern);
+        for WynavID = mob:getID()+1, mob:getID()+4 do
+            if (GetMobByID(WynavID):isSpawned() == false) then
+                SpawnMob(WynavID):updateEnmity(target);
+            end
         end
+    elseif (abilityID == AstralFlow) then
+        -- If AV has no WynavIDs out, players just lucked out and AV wasted a 2hr
+        if (mob:hasPet()) then
+            mob:useMobAbility(abilityID);
+        end
+    elseif (abilityID == Familiar) then
+        -- If AV has no WynavIDs out, players just lucked out and AV wasted a 2hr
+        if (mob:hasPet()) then
+            for WynavID = mob:getID()+1, mob:getID()+4 do
+                if (GetMobByID(WynavID):isAlive()) then
+                    WynavID:addStatusEffect(EFFECT_MAX_HP_BOOST,10,0,0);
+                    WynavID:addStatusEffect(EFFECT_ACCURACY_BOOST,10,0,0);
+                    WynavID:addStatusEffect(EFFECT_ATTACK_BOOST,10,0,0);
+                    WynavID:addStatusEffect(EFFECT_EVASION_BOOST,10,0,0);
+                    WynavID:addStatusEffect(EFFECT_DEFENSE_BOOST,10,0,0);
+                end
+            end
+            mob:useMobAbility(abilityID);
+        end
+    else
+        mob:useMobAbility(abilityID);
+    end
+    mob:setLocalVar("abilityCount", mob:getLocalVar("abilityCount")+1);
+end;
 
-        if (AV2HR ~= nil) then
-            if (mob:getHPP() <= 10 and DID2HR == 8) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 9);
-            elseif (mob:getHPP() <= 20 and DID2HR == 7) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 8);
-            elseif (mob:getHPP() <= 30 and DID2HR == 6) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 7);
-            elseif (mob:getHPP() <= 40 and DID2HR == 5) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 6);
-            elseif (mob:getHPP() <= 50 and DID2HR == 4) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 5);
-            elseif (mob:getHPP() <= 60 and DID2HR == 3) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 4);
-            elseif (mob:getHPP() <= 70 and DID2HR == 2) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 3);
-            elseif (mob:getHPP() <= 80 and DID2HR == 1) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 2);
-            elseif (mob:getHPP() <= 90 and DID2HR == 0) then
-                mob:useMobAbility(AV2HR);
-                mob:setLocalVar("DID2HR", 1);
+-- Custom function for ability Combinations
+function doCombo(mob, target, selectCombo)
+    print("Combo count: " .. mob:getLocalVar("comboCount"))
+    local abilityUsed = mob:getLocalVar("abilityUsed");
+
+    if (selectCombo == 0 or selectCombo == nil) then
+        selectCombo = math.random(1,5);
+        mob:setLocalVar("selectCombo", selectCombo);
+    end
+    print(selectCombo);
+
+    if (selectCombo == 1) then
+        if (abilityUsed == Chainspell) then
+            if (math.random(1,3) ~= 2) then
+                mob:setLocalVar("abilityUsed", Manafont);
+                mob:setLocalVar("comboCount", mob:getLocalVar("comboCount")+1);
+                mob:useMobAbility(Manafont);
+            else
+                mob:setLocalVar("abilityUsed", SoulVoice);
+                mob:setLocalVar("comboCount", mob:getLocalVar("comboCount")+1);
+                mob:useMobAbility(SoulVoice);
+            end
+        else
+            mob:setLocalVar("abilityUsed", Chainspell);
+            mob:useMobAbility(Chainspell);
+        end
+    elseif (selectCombo == 2) then
+        if (abilityUsed == MightyStrikes) then
+            mob:setLocalVar("abilityUsed", HundredFists);
+            mob:useMobAbility(HundredFists);
+            mob:setLocalVar("comboCount", mob:getLocalVar("comboCount")+1);
+        else
+            mob:setLocalVar("abilityUsed", MightyStrikes);
+            mob:useMobAbility(MightyStrikes);
+        end
+    elseif (selectCombo == 3) then
+        if (abilityUsed == MeikyoShisui) then
+            if (mob:getLocalVar("EagleEyeShotCount") < 3) then
+                mob:setLocalVar("EagleEyeShotCount", mob:getLocalVar("EagleEyeShotCount")+1);
+                mob:useMobAbility(EagleEyeShot);
+            else
+                mob:setLocalVar("comboCount", mob:getLocalVar("comboCount")+1);
+                mob:setLocalVar("EagleEyeShotCount", 0);
+            end
+        else
+            mob:setLocalVar("abilityUsed", MeikyoShisui);
+            mob:useMobAbility(MeikyoShisui);
+        end
+    elseif (selectCombo == 4) then
+        -- Benediction unused here because players do not yet have the ability to lock AV form using it, AND because custom max HP value..
+        if (abilityUsed == Invincible) then
+            mob:setLocalVar("abilityUsed", MijinGakure);
+            mob:setLocalVar("comboCount", mob:getLocalVar("comboCount")+1);
+            mob:useMobAbility(MijinGakure);
+        else
+            mob:setLocalVar("abilityUsed", Invincible);
+            mob:useMobAbility(Invincible);
+        end
+    elseif (selectCombo == 5) then
+        if (abilityUsed == CallWyvern) then
+            mob:setLocalVar("abilityUsed", Familiar);
+            if (mob:hasPet()) then
+                for WynavID = mob:getID()+1, mob:getID()+4 do
+                    if (GetMobByID(WynavID):isAlive()) then
+                        GetMobByID(WynavID):addStatusEffect(EFFECT_MAX_HP_BOOST,10,0,0);
+                        GetMobByID(WynavID):addStatusEffect(EFFECT_ACCURACY_BOOST,10,0,0);
+                        GetMobByID(WynavID):addStatusEffect(EFFECT_ATTACK_BOOST,10,0,0);
+                        GetMobByID(WynavID):addStatusEffect(EFFECT_EVASION_BOOST,10,0,0);
+                        GetMobByID(WynavID):addStatusEffect(EFFECT_DEFENSE_BOOST,10,0,0);
+                    end
+                end
+                mob:useMobAbility(Familiar);
+            end
+        elseif (abilityUsed == Familiar) then
+            mob:setLocalVar("abilityUsed", AstralFlow);
+            mob:setLocalVar("comboCount", mob:getLocalVar("comboCount")+1);
+            if (mob:hasPet()) then
+                mob:useMobAbility(AstralFlow);
+            end
+        else
+            mob:setLocalVar("abilityUsed", CallWyvern);
+            -- mob:useMobAbility(CallWyvern);
+            for WynavID = mob:getID()+1, mob:getID()+4 do
+                if (GetMobByID(WynavID):isDead()) then
+                    SpawnMob(WynavID):updateEnmity(target);
+                end
             end
         end
     end
