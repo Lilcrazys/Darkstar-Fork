@@ -2741,14 +2741,14 @@ int32 CLuaBaseEntity::goToEntity(lua_State* L)
         memset(&buf[0], 0, sizeof(buf));
 
         ref<bool>  (&buf,  0) = true; // Toggle for message routing; goes to entity server first
-        ref<bool>  (&buf,  1) = spawnedOnly; // Specification for Spawned Only or Any 
+        ref<bool>  (&buf,  1) = spawnedOnly; // Specification for Spawned Only or Any
         ref<uint16>(&buf,  2) = targetZone;
         ref<uint16>(&buf,  4) = playerZone;
         ref<uint32>(&buf,  6) = targetID;
         ref<uint16>(&buf, 10) = playerID;
 
         message::send(MSG_SEND_TO_ENTITY, &buf[0], sizeof(buf), nullptr);
-	}	
+	}
     return 0;
 }
 
@@ -13579,133 +13579,6 @@ inline int32 CLuaBaseEntity::getTHlevel(lua_State* L)
     return 1;
 }
 
-// Spoofs a chat message to the target player
-inline int32 CLuaBaseEntity::SpoofMsg(lua_State* L)
-{
-    DSP_DEBUG_BREAK_IF(m_PBaseEntity == NULL);
-    DSP_DEBUG_BREAK_IF(lua_isnil(L, 1) || !lua_isstring(L, 1));
-
-    char* messageText = (char*)lua_tostring(L, 1);
-
-    if (m_PBaseEntity->objtype == TYPE_PC)
-    {
-        CHAT_MESSAGE_TYPE messageType = (!lua_isnil(L, 3) && lua_isnumber(L, 3) ? (CHAT_MESSAGE_TYPE)lua_tointeger(L, 3) : MESSAGE_SAY);
-        // ShowDebug(CL_CYAN"Lua::SpoofMsg: L3 = %u \n" CL_RESET, messageType);
-
-        if (!lua_isnil(L, 2) && lua_isuserdata(L, 2)) // Script specified a speaker..
-        {
-            CLuaBaseEntity* PLuaBaseEntity = Lunar<CLuaBaseEntity>::check(L, 2);
-            // Note: later we'll still send this as a CharEntity, even when it isn't.
-            // It's harmless, and DSP doesn't play nice with other entity types there.
-            CBaseEntity* SpeakerEntity = PLuaBaseEntity->GetBaseEntity();
-
-            if (SpeakerEntity == nullptr) // Houston we have a problem!
-            {
-                ShowError(CL_RED"Lua::SpoofMsg: Couldn't find entity to send message from! (Bad L2 value?)\n" CL_RESET);
-            }
-            else
-            {
-                // Make NPC's turn to face the player they are talking to.
-                if (SpeakerEntity->objtype == TYPE_NPC)
-                {
-                    SpeakerEntity->m_TargID = m_PBaseEntity->targid;
-                    SpeakerEntity->loc.p.rotation = getangle(SpeakerEntity->loc.p, m_PBaseEntity->loc.p);
-
-                    SpeakerEntity->loc.zone->PushPacket(
-                        SpeakerEntity, CHAR_INRANGE, new CEntityUpdatePacket(
-                            SpeakerEntity, ENTITY_UPDATE, UPDATE_POS
-                        )
-                    );
-                }
-
-                if (!lua_isnil(L, 4) && lua_isnumber(L, 4))
-                {
-                    uint8 messageRange = (uint8)lua_tointeger(L, 4);
-                    // ShowDebug(CL_CYAN"Lua::SpoofMsg: L4 = %u \n" CL_RESET, messageRange);
-
-                    if (messageRange == 0x01 || messageRange == 0x0E) // "/shout" range
-                    {
-                        SpeakerEntity->loc.zone->PushPacket(SpeakerEntity, CHAR_INSHOUT, new CSpoofMessagePacket(
-                            (CCharEntity*)SpeakerEntity,
-                            messageType,
-                            messageText
-                        ));
-                    }
-                    else if (messageRange == 0x1A) // Display msg in any place "/yell" would be displayed
-                    {
-                        message::send(MSG_CHAT_YELL, 0, 0, new CSpoofMessagePacket(
-                            (CCharEntity*)SpeakerEntity,
-                            messageType,
-                            messageText
-                        ));
-                    }
-                    else if (messageRange == 0x06 || messageRange == 0x07) // Display msg server wide
-                    {
-                        message::send(MSG_CHAT_SERVMES, 0, 0, new CSpoofMessagePacket(
-                            (CCharEntity*)SpeakerEntity,
-                            messageType,
-                            messageText
-                        ));
-                    }
-                    else if (messageRange == 0x21) // Display msg in unity chat, server wide
-                    {
-                        // Not properly implemented yet
-                        message::send(MSG_CHAT_SERVMES, 0, 0, new CSpoofMessagePacket(
-                            (CCharEntity*)SpeakerEntity,
-                            messageType,
-                            messageText
-                        ));
-                    }
-                    else if (messageRange == 0x04 || messageRange == 0x0F) // Display message to Party/Alliance
-                    {
-                        ((CCharEntity*)m_PBaseEntity)->ForAlliance([SpeakerEntity, messageType, messageText](CBattleEntity* PPartyMember)
-                        {
-                            CCharEntity* PMember = (CCharEntity*)PPartyMember;
-                            if (PMember->objtype == TYPE_PC)
-                            {
-                                PMember->pushPacket(new CSpoofMessagePacket(
-                                    (CCharEntity*)SpeakerEntity,
-                                    messageType,
-                                    messageText
-                                ));
-                            }
-                        } );
-                    }
-                    else // "/say" range (default used for unrecognized values)
-                    {
-                        SpeakerEntity->loc.zone->PushPacket(SpeakerEntity, CHAR_INRANGE, new CSpoofMessagePacket(
-                            (CCharEntity*)SpeakerEntity,
-                            messageType,
-                            messageText
-                        ));
-                    }
-                }
-                else // No range specified so just send to one player (default)
-                {
-                    ((CCharEntity*)m_PBaseEntity)->pushPacket(new CSpoofMessagePacket(
-                        (CCharEntity*)SpeakerEntity,
-                        messageType,
-                        messageText
-                    ));
-                }
-            }
-        }
-        else // No speaker object included in script, use normal packet with player as the speaker..
-        {
-            ((CCharEntity*)m_PBaseEntity)->pushPacket(new CChatMessagePacket(
-                (CCharEntity*)m_PBaseEntity,
-                messageType,
-                messageText
-            ));
-        }
-    }
-    else // Somebody dun derped that script!
-    {
-        ShowError(CL_RED"Lua::SpoofMsg: Base entity wasn't a player!\n" CL_RESET);
-    }
-    return 0;
-}
-
 // Jail an offline character
 inline int32 CLuaBaseEntity::offlineJail(lua_State *L)
 {
@@ -14022,7 +13895,7 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,resetPlayer),
 
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,goToEntity),
-    LUNAR_DECLARE_METHOD(CLuaBaseEntity,gotoPlayer),	
+    LUNAR_DECLARE_METHOD(CLuaBaseEntity,gotoPlayer),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,bringPlayer),
 
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getNationTeleport),
@@ -14548,7 +14421,6 @@ Lunar<CLuaBaseEntity>::Register_t CLuaBaseEntity::methods[] =
 
     // Custom
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,getTHlevel),
-    LUNAR_DECLARE_METHOD(CLuaBaseEntity,SpoofMsg),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,offlineJail), // Temp till DSP gets its shit together
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,sjBoost),
     LUNAR_DECLARE_METHOD(CLuaBaseEntity,addLSpearl),

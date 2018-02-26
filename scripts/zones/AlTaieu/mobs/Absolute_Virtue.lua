@@ -6,7 +6,7 @@ require("scripts/zones/AlTaieu/MobIDs");
 require("scripts/globals/status");
 require("scripts/globals/titles");
 require("scripts/globals/magic");
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 require("scripts/globals/utils");
 -----------------------------------
 

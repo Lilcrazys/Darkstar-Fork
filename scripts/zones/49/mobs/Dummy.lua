@@ -6,58 +6,42 @@
 require("scripts/globals/msg");
 require("scripts/globals/status");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
 end;
 
------------------------------------
--- onMobSpawn Action
------------------------------------
-
 function onMobSpawn(mob)
     mob:SetMobSkillAttack(9999); -- Disables melee
 end;
 
------------------------------------
--- onMobFight Action
------------------------------------
-
 function onMobFight(mob, target)
     if (mob:getHP() < mob:getMaxHP()/2) then
-        target:SpoofMsg("is crying..", mob, chatType.EMOTION, chatType.PARTY);
+        local party = player:getParty();
+        if (party ~= nil) then
+            for i,v in ipairs(party) do
+                if v:isPC() and mob:checkDistance(v) < 30 then
+                    v:PrintToPlayer("is crying..", chatType.EMOTION, mob:getName());
+                    v:PrintToPlayer("Why you hitting me? What I ever do to you? ", chatType.SAY, mob:getName());
+                end
+            end
+        end
         mob:setHP(mob:getMaxHP());
-        target:SpoofMsg("Why you hitting me? What I ever do to you? ", mob, chatType.SAY, chatType.PARTY);
     end
 end;
 
------------------------------------
--- onMagicHit
------------------------------------
-
 function onMagicHit(caster, target, spell)
-    -- player:SpoofMsg("[Magic DMG Debug] placeholder", mob, chatType.ECHO, chatType.PARTY);
+    -- player:PrintToPlayer("[Magic DMG Debug] placeholder", chatType.SYSTEM_3);
 
     return 1;
 end;
-
------------------------------------
--- onWeaponskillHit
------------------------------------
 
 function onWeaponskillHit(mob, attacker, weaponskill)
-    attacker:SpoofMsg("[WS DMG Debug] placeholder", mob, chatType.ECHO, chatType.PARTY);
+    -- attacker:PrintToPlayer("[WS DMG Debug] placeholder", chatType.SYSTEM_3);
 
     return 1;
 end;
 
------------------------------------
--- onMobDeath
------------------------------------
-
 function onMobDeath(mob, player, isKiller)
-    player:SpoofMsg("YOU CHEATING BASTID! ", mob, chatType.SHOUT, chatType.SHOUT);
+    player:PrintToPlayer("YOU CHEATING BASTID! ", chatType.SHOUT);
 end;

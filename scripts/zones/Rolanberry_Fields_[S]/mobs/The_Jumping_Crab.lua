@@ -4,21 +4,16 @@
 -- @pos -724 -32 -362 91
 -- @pos 275 -32 -270 91
 -----------------------------------
-
 require("scripts/globals/status");
 require("scripts/globals/magic");
 require("scripts/globals/utils");
-require("scripts/globals/titles");
 require("scripts/globals/msg");
-
------------------------------------
--- onMobInitialize Action
 -----------------------------------
 
 function onMobInitialize(mob)
     mob:setMobMod(MOBMOD_DRAW_IN, 1); -- 1=Single target Draw In, 2=Alliance Draw in
-    mob:setMobMod(MOBMOD_ADD_EFFECT, mob:getShortID()); -- Give additional effect on melee
-    mob:setMobMod(MOBMOD_AUTO_SPIKES, mob:getShortID()); -- Give Auto spikes
+    mob:setMobMod(MOBMOD_ADD_EFFECT, 1); -- Give additional effect on melee
+    mob:setMobMod(MOBMOD_AUTO_SPIKES, 1); -- Give Auto spikes
     mob:addStatusEffect(EFFECT_DELUGE_SPIKES, 20, 0, 0); -- Needed for auto spikes to fire off
     mob:getStatusEffect(EFFECT_DELUGE_SPIKES):setFlag(32); -- Can't dispel spikes
 
@@ -39,10 +34,6 @@ function onMobInitialize(mob)
     mob:addMod(MOD_RDEF, 25);
     mob:addMod(MOD_REVA, 25);
 end;
-
------------------------------------
--- onMobSpawn Action
------------------------------------
 
 function onMobSpawn(mob)
     -- setMod
@@ -67,11 +58,8 @@ function onMobSpawn(mob)
         mob:setSpawn(120, -15, -698); -- South side of Zone
         mob:setPos(120, -15, -698); -- South side of Zone
     end
+    -- Todo: add aditional locaions in other zones, must ensure 2 crab can't be up at once!
 end;
-
------------------------------------
--- onMobEngaged
------------------------------------
 
 function onMobEngaged(mob, target)
     local claims = GetServerVariable("JumpingCrabClaim");
@@ -79,18 +67,10 @@ function onMobEngaged(mob, target)
     mob:useMobAbility(718);
 end;
 
------------------------------------
--- onMobDisengage
------------------------------------
-
 function onMobDisengage(mob, target)
-    mob:setLocalVar("isBoard", 0)
+    mob:setLocalVar("isBored", 0)
     mob:setLocalVar("LaughingCrab", 0)
 end;
-
------------------------------------
--- onMobFight
------------------------------------
 
 function onMobFight(mob, target)
     local pos = GetServerVariable("JumpingCrabPos");
@@ -102,24 +82,24 @@ function onMobFight(mob, target)
     -- Fight timer and claim tracking...
     if (target:getHPP() <= 5 and mob:getLocalVar("LaughingCrab") == 0) then
         mob:setLocalVar("LaughingCrab", 1);
-        target:SpoofMsg("seems to be laughing..You didn't even know giant crabs could laugh.. ", mob, chatType.ECHO, chatType.SAY);
+        target:PrintToPlayer("seems to be laughing..You didn't even know giant crabs could laugh.. ", chatType.SYSTEM_3, mob:getName());
     -- elseif (mob:getLocalVar("SuperDuperJump") == 1) then
         -- mob:setLocalVar("SuperDuperJump", 2);
-        -- target:SpoofMsg("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky. ", mob, chatType.ECHO, chatType.SAY);
+        -- target:PrintToPlayer("The Incredible Jumping Crab uses SuperDuperJump, disappearing into the sky. ", chatType.SYSTEM_3, mob:getName());
         -- DespawnMob(mob:getID());
     elseif (BattleTime > 7200 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
         mob:setLocalVar("SuperDuperJump", 1);
         mob:useMobAbility(1024); -- SuperDuperJump
-    elseif (BattleTime > 3600 and mob:getLocalVar("isBoard") == 0 and mob:getLocalVar("SuperDuperJump") == 0) then
+    elseif (BattleTime > 3600 and mob:getLocalVar("isBored") == 0 and mob:getLocalVar("SuperDuperJump") == 0) then
         -- target:PrintToPlayer(string.format("Timer: %u ", BattleTime))
         -- target:PrintToPlayer(string.format("Claim count: %u ", GetServerVariable("JumpingCrabClaim")))
         if (GetServerVariable("JumpingCrabClaim") == 3) then -- Strike 3, yer out (Lost claim too many times and fought past 1hr mark)!
             mob:setLocalVar("SuperDuperJump", 1);
             mob:useMobAbility(1024); -- SuperDuperJump
         else
-            target:SpoofMsg("Is beginning to look disinterested in the battle. ", mob, chatType.ECHO, chatType.SAY);
-            mob:setLocalVar("isBoard", 1);
+            target:PrintToPlayer("Is beginning to look disinterested in the battle. ", chatType.SYSTEM_3, mob:getName());
+            mob:setLocalVar("isBored", 1);
             mob:castSpell(260);
         end
 
@@ -179,30 +159,26 @@ function onMobFight(mob, target)
         mob:useMobAbility(513); -- Crab_Flying_Punch (sucks to be you!)
         mob:setLocalVar("wasTerror", 0);
         mob:setLocalVar("wasStun", 0); -- Also clear stun var, if both were set.
-        mob:addTP(144); -- You really do not want to terror this crab, lulz.
+        mob:addTP(1440); -- You really do not want to terror this crab, lulz.
     elseif (mob:hasStatusEffect(EFFECT_TERROR)) then
         mob:setLocalVar("wasTerror", 1);
         mob:delStatusEffect(EFFECT_TERROR);
     elseif (mob:getLocalVar("wasStun") == 1) then
         mob:useMobAbility(44); -- Crab_Head_butt (stun you right back!)
         mob:setLocalVar("wasStun", 0);
-        mob:addTP(88); -- Angry crab smash puny players who try and stunlock.
+        mob:addTP(880); -- Angry crab smash puny players who try and stunlock.
     elseif (mob:hasStatusEffect(EFFECT_STUN)) then
         mob:setLocalVar("wasStun", 1);
         mob:delStatusEffect(EFFECT_STUN);
     end
 end;
 
------------------------------------
--- onSpellPrecast
------------------------------------
-
 function onSpellPrecast(mob, spell)
     local RND = math.random(0,99);
 
     -- These players are too slow, so Floodga2 their asses.
-    if (spell:getID() == 215 and mob:getLocalVar("isBoard") == 1) then
-        mob:setLocalVar("isBoard", 2);
+    if (spell:getID() == 215 and mob:getLocalVar("isBored") == 1) then
+        mob:setLocalVar("isBored", 2);
         spell:setAoE(SPELLAOE_RADIAL);
         spell:setFlag(SPELLFLAG_HIT_ALL);
         spell:setRadius(25);
@@ -240,10 +216,6 @@ function onSpellPrecast(mob, spell)
     end
 end
 
------------------------------------
--- onMagicHit
------------------------------------
-
 function onMagicHit(caster, target, spell)
     local mob = nil;
     if (caster:getID() == target:getID()) then
@@ -272,10 +244,6 @@ function onMagicHit(caster, target, spell)
 
     return 1;
 end;
-
------------------------------------
--- onWeaponskillHit
------------------------------------
 
 function onWeaponskillHit(mob, attacker, weaponskill)
     local QUEST_WS_TABLE = {9, 25, 42, 56, 72, 88, 104, 120, 136, 152, 169, 184, 199, 215}
@@ -336,19 +304,11 @@ function isInTable(table, element)
     return false
 end;
 
------------------------------------
--- onCriticalHit
------------------------------------
-
 function onCriticalHit(mob)
-    -- Get 50 extra TP and 1 hit duration Enwater every time a critical lands
-    mob:addTP(50); -- Bonus TP
+    -- Get 500 extra TP and 1 hit duration Enwater every time a critical lands
+    mob:addTP(500); -- Bonus TP
     mob:setLocalVar("Enwater", 1);
 end
-
------------------------------------
--- onAdditionalEffect Action
------------------------------------
 
 function onAdditionalEffect(mob, target, damage)
     if (mob:getLocalVar("Enwater") == 1) then -- Do additional effect water damage.
@@ -367,10 +327,6 @@ function onAdditionalEffect(mob, target, damage)
     end
 end;
 
------------------------------------
--- onSpikesDamage
------------------------------------
-
 function onSpikesDamage(mob, target, damage)
     if (mob:getLocalVar("DelugeSpikes") == 1) then -- use custom dmg
         local INT_diff = mob:getStat(MOD_INT) - target:getStat(MOD_INT);
@@ -388,19 +344,11 @@ function onSpikesDamage(mob, target, damage)
     end
 end;
 
------------------------------------
--- onMobDrawIn
------------------------------------
-
 function onMobDrawIn(mob, target)
     target:addStatusEffect(EFFECT_BIND, 1, 0, 3);
     mob:useMobAbility(1181); -- Crab_Jump_4
     mob:addTP(100);
 end;
-
------------------------------------
--- onMobDespawn
------------------------------------
 
 function onMobDespawn(mob)
     local repop = math.random(3600, 57600) -- 1 to 16 hours by default.
@@ -428,10 +376,6 @@ function onMobDespawn(mob)
         mob:setPos(120, -15, -698); -- South side of Zone
     end
 end;
-
------------------------------------
--- onMobDeath
------------------------------------
 
 function onMobDeath(mob, player, isKiller)
     if (player:getLocalVar("gotCrabLoot") > 0) then

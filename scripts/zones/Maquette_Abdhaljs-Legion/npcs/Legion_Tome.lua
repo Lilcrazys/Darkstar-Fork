@@ -63,9 +63,9 @@ function onTrigger(player,npc)
     local MURU = "\n Hall of Muru : Soaring Trophy ";
     local MULL = "\n Hall of Mull : Veiled Trophy ";
     local msgText = AN..IM..KI..MURU..MULL;
-    player:SpoofMsg("Entry requires "..price.." gil and an item. ", npc, chatType.ECHO, nil);
-    player:SpoofMsg(msgText, npc, chatType.ECHO, nil);
-    -- player:SpoofMsg("\n Hall(s) of SECRETS : Can you discover it? ", npc, chatType.ECHO, nil);
+    player:PrintToPlayer("Entry requires "..price.." gil and an item. ", chatType.SYSTEM_3, npc:getName());
+    player:PrintToPlayer(msgText, chatType.SYSTEM_3, npc:getName());
+    -- player:PrintToPlayer("\n Hall(s) of SECRETS : Can you discover it? ", chatType.SYSTEM_3, npc:getName());
 end;
 
 -----------------------------------

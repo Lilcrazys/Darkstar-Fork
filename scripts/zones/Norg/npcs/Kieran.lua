@@ -105,7 +105,7 @@ function onEventFinish(player,csid,option)
             -- so that player can do VW once a day at aprox same time of day.
             player:messageSpecial(KEYITEM_OBTAINED, VOIDSTONE1);
         else
-            player:SpoofMsg("Voidstones are issued once per Earth day.");
+            player:PrintToPlayer("Voidstones are issued once per Earth day.");
         end
     elseif (csid == 260) then
         player:addKeyItem(ASHEN_STRATUM_ABYSSITE_III);

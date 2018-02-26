@@ -33,7 +33,7 @@ function onTrigger(player,npc)
     end
 
     -- player:startEvent(8008, 0, LEGENDARY, CAPACITY);
-    player:SpoofMsg("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees! ", npc, chatType.SAY, nil);
+    player:PrintToPlayer("I'm disabled because Teo punted me for not doing my job!\nThe landing broke my non existent knees! ", chatType.SAY, npc:getName());
 end;
 
 function onEventUpdate(player,csid,option)

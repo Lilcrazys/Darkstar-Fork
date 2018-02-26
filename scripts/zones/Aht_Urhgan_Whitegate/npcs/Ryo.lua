@@ -18,12 +18,12 @@ function onTrade(player,npc,trade)
             local msgText = string.format("exchanges your %i gil for %i zeni. ", trade:getGil(), trade:getGil() *0.1);
             player:addCurrency("zeni_point", trade:getGil() *0.1);
             player:delGil(trade:getGil()); -- we don't use tradeComplete() for this.
-            player:SpoofMsg(msgText, npc, chatType.EMOTION, nil);
+            player:PrintToPlayer(msgText, chatType.EMOTION, npc:getName());
         else
-            player:SpoofMsg("Please trade me amounts that are multiples of 10. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer("Please trade me amounts that are multiples of 10. ", chatType.SAY, npc:getName());
         end
     else
-        player:SpoofMsg("I am sorry but at the current exchange rate 1 zeni is worth 10 gil. ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("I am sorry but at the current exchange rate 1 zeni is worth 10 gil. ", chatType.SAY, npc:getName());
     end
 end;
 
@@ -31,8 +31,8 @@ function onTrigger(player,npc)
     --[[
     player:startEvent(913);
     ]]
-    player:SpoofMsg("Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", npc, chatType.SAY, nil);
-    player:SpoofMsg("Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", npc, chatType.SAY, nil);
+    player:PrintToPlayer("Master Sanraku will only trade in the Far Eastern currency of our homeland, called zeni. ", chatType.SAY, npc:getName());
+    player:PrintToPlayer("Worry not, I will covert your gil to zeni at the current exchange rate of 10 gil to 1 zeni. ", chatType.SAY, npc:getName());
 end;
 
 function onEventUpdate(player,csid,option)

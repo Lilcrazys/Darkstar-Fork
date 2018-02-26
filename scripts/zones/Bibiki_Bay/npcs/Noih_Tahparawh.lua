@@ -15,8 +15,8 @@ require("scripts/globals/msg");
 function onTrade(player,npc,trade)
     if (TRAVEL_SKIP >= 1) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("smiles and takes the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
-            player:SpoofMsg("Ha! Somebody told you about the 'special ticket'! Alright, get on board. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer(string.format("smiles and takes the %d gil.. ", TRAVEL_SKIP), chatType.EMOTION, npc:getName());
+            player:PrintToPlayer("Ha! Somebody told you about the 'special ticket'! Alright, get on board. ", chatType.SAY, npc:getName());
             player:delGil(TRAVEL_SKIP);
             -- player:setPos(489.5,-3,712,192,4);
             player:addStatusEffectEx(EFFECT_COMMUTE,0,COMMUTE.FERRY_BIBIKIBAY,0,2);

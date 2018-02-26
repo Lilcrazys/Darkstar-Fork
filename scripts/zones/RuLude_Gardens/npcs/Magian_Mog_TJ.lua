@@ -24,10 +24,10 @@ function onTrade(player,npc,trade)
     -- Begin a new trial
     if (cTrial == 0 and cStatus == 0) then
         if (custom_trials[itemID] == nil) then -- Invalid
-            player:SpoofMsg("I don't have a trial to give you for that item, kupo.. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer("I don't have a trial to give you for that item, kupo.. ", chatType.SAY, npc:getName());
         else
             if (itemInfo.t ~= "relic") then
-                player:SpoofMsg("I only handle Relic Weapons, kupo.. ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("I only handle Relic Weapons, kupo.. ", chatType.SAY, npc:getName());
             elseif (itemInfo.s > 0) then
                 if (itemInfo.s == 1) then
                     player:PrintToPlayer("Defeat any of these foes 9 times total..");
@@ -43,7 +43,7 @@ function onTrade(player,npc,trade)
                 end
                 player:setVar("cTrialItem[relic]", itemID); -- Sets new trial.
                 player:injectActionPacket(6, 203, 0, 0, 0);
-                player:SpoofMsg("Use '$trial' to review your progress! ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("Use '$trial' to review your progress! ", chatType.SAY, npc:getName());
 
                 -- Log it..
                 local logNfo = custom_trials[itemID];
@@ -74,13 +74,13 @@ function onTrade(player,npc,trade)
         -- player:setVar("cTrialCount[relic]", player:getVar("cTrialCount[mythic]")+1);
         player:tradeComplete(trade);
         player:setVar("cTrialComplete[relic]", 1);
-        player:SpoofMsg("C.J. thinks he's so cool.. ", npc, chatType.SAY, nil);
-        player:SpoofMsg("Oh, you finished your trial? Show me the weapon, kupo. ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("C.J. thinks he's so cool.. ", chatType.SAY, npc:getName());
+        player:PrintToPlayer("Oh, you finished your trial? Show me the weapon, kupo. ", chatType.SAY, npc:getName());
 
     -- Completed trial, trade for upgrade
     elseif (trade:hasItemQty(cTrial, 1) and cStatus == 1 and itemCount == 1) then
         player:injectActionPacket(6, 206, 0, 0, 0);
-        player:SpoofMsg("This ought to put some spark into it..KUPOW! ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("This ought to put some spark into it..KUPOW! ", chatType.SAY, npc:getName());
         player:injectActionPacket(6, 205, 0, 0, 0);
         cTrialEnd(player, "relic");
 
@@ -109,15 +109,15 @@ function onTrade(player,npc,trade)
         player:setVar("cTrialItem[relic]", 0);
         player:setVar("cTrialCount[relic]", 0);
         player:tradeComplete();
-        player:SpoofMsg("Thats a shame..Well, your Relic trial has been canceled. ", npc, chatType.SAY, nil);
-        player:SpoofMsg("You can now begin a new trial, if you so choose. ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("Thats a shame..Well, your Relic trial has been canceled. ", chatType.SAY, npc:getName());
+        player:PrintToPlayer("You can now begin a new trial, if you so choose. ", chatType.SAY, npc:getName());
 
     -- Other
     else -- Trading anything other than expected during an active trial triggers this.
         if (cTrial > 0) then
-            player:SpoofMsg("If you wish to cancel your Relic trial.. ", npc, chatType.SAY, nil);
-            player:SpoofMsg("The fee for wasting our time is: ", npc, chatType.SAY, nil);
-            player:SpoofMsg("1 Imperial Bronze Piece. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer("If you wish to cancel your Relic trial.. ", chatType.SAY, npc:getName());
+            player:PrintToPlayer("The fee for wasting our time is: ", chatType.SAY, npc:getName());
+            player:PrintToPlayer("1 Imperial Bronze Piece. ", chatType.SAY, npc:getName());
         end
     end
 end;
@@ -130,14 +130,14 @@ function onTrigger(player,npc)
     local cTrial = player:getVar("cTrialItem[relic]");
     local cStatus = player:getVar("cTrialComplete[relic]");
     if (cTrial == 0) then
-        player:SpoofMsg("Hand me a RELIC weapon to begin a trial, Kupo! ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("Hand me a RELIC weapon to begin a trial, Kupo! ", chatType.SAY, npc:getName());
     elseif (cStatus > 0 and cTrial > 0) then
-        player:SpoofMsg("C.J. thinks he's so cool.. ", npc, chatType.SAY, nil);
-        player:SpoofMsg("Oh, you finished your trial? Show me the weapon, kupo. ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("C.J. thinks he's so cool.. ", chatType.SAY, npc:getName());
+        player:PrintToPlayer("Oh, you finished your trial? Show me the weapon, kupo. ", chatType.SAY, npc:getName());
     elseif (cStatus == 0 and cTrial > 0) then
-        player:SpoofMsg("If you wish to cancel your current trial.. ", npc, chatType.SAY, nil);
-        player:SpoofMsg("The fee for wasting my time is: ", npc, chatType.SAY, nil);
-        player:SpoofMsg("1 Imperial Bronze Piece. ", npc, chatType.SAY, nil);
+        player:PrintToPlayer("If you wish to cancel your current trial.. ", chatType.SAY, npc:getName());
+        player:PrintToPlayer("The fee for wasting my time is: ", chatType.SAY, npc:getName());
+        player:PrintToPlayer("1 Imperial Bronze Piece. ", chatType.SAY, npc:getName());
     end
 end;
 

@@ -269,5 +269,5 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofMsg((string.format( "Hello %s!, I'm here to help you reforge your Relic Armor", player:getName() )), npc, MESSAGE_SAY, nil);
+    player:PrintToPlayer((string.format( "Hello %s!, I'm here to help you reforge your Relic Armor", player:getName() )), chatType.SAY, npc:getName());
 end;

@@ -64,7 +64,7 @@ function onEventFinish(player,csid,option)
             -- One goody per Box Per Person!
             player:setLocalVar("alreadyGotLoot", 1);
             --  Technically they can zone this var off, but box isn't up that long.
-            player:SpoofMsg("Found a legendary sword!..Or so you thought.. ", nil, chatType.EMOTION, nil)
+            player:PrintToPlayer("Found a legendary sword!..Or so you thought.. ", chatType.EMOTION)
             player:messageSpecial(ITEM_OBTAINED, CrabLoot);
         end
     end

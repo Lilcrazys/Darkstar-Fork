@@ -104,7 +104,7 @@ function onTrade(player,npc,trade)
             end
         end
     else
-        player:SpoofMsg("You do not have enough Legion points for the upgrade!", npc, MESSAGE_SAY, nil);
+        player:PrintToPlayer("You do not have enough Legion points for the upgrade!", chatType.SAY, npc:getName());
     end
 end;
 
@@ -115,8 +115,8 @@ end;
 function onTrigger(player,npc)
     local MSG1 = string.format("Hello %s! I'm here to help you upgrade your Legion Armor. ", player:getName());
     local MSG2 = string.format("This service will cost %s Legion points and some Tanzanite Jewels, Kupo! ", LegionPointPrice);
-    player:SpoofMsg(MSG1, npc, MESSAGE_SAY, nil);
-    player:SpoofMsg(MSG2, npc, MESSAGE_SAY, nil);
+    player:PrintToPlayer(MSG1, chatType.SAY, npc:getName());
+    player:PrintToPlayer(MSG2, chatType.SAY, npc:getName());
 end;
 
 -----------------------------------

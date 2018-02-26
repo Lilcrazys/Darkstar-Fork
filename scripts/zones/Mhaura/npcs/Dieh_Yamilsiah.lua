@@ -16,8 +16,8 @@ require("scripts/globals/msg");
 function onTrade(player,npc,trade)
     if (TRAVEL_SKIP >= 1) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
-            player:SpoofMsg("Well..I guess I can let you aboard the express freight Vessel.. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer(string.format("eye's the %d gil.. ", TRAVEL_SKIP), chatType.EMOTION, npc:getName());
+            player:PrintToPlayer("Well..I guess I can let you aboard the express freight Vessel.. ", chatType.SAY, npc:getName());
             if (player:hasKeyItem(BOARDING_PERMIT) and (1152 - ((os.time() - 1009810802)%1152) >= 576)) then
                 player:delGil(TRAVEL_SKIP);
                 -- player:setPos(-11,2,-142,192,50);

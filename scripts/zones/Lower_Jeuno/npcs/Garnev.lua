@@ -24,9 +24,9 @@ function onTrade(player,npc,trade)
     -- Begin Custom
     elseif (TRAVEL_SKIP >= 1 and player:getLocalVar("BRIBED_GARVEV") == 0) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
-            player:SpoofMsg("Alright, I'll pretend I don't see you boarding the secret express freight to Norg.. ", npc, chatType.SAY, nil);
-            player:SpoofMsg("Hurry up and go before someone notices. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer(string.format("eye's the %d gil.. ", TRAVEL_SKIP), chatType.EMOTION, npc:getName());
+            player:PrintToPlayer("Alright, I'll pretend I don't see you boarding the secret express freight to Norg.. ", chatType.SAY, npc:getName());
+            player:PrintToPlayer("Hurry up and go before someone notices. ", chatType.SAY, npc:getName());
             player:delGil(TRAVEL_SKIP);
             player:setLocalVar("BRIBED_GARVEV");
         end

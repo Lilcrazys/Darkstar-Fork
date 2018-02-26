@@ -20,8 +20,8 @@ end;
 -----------------------------------
 
 function onTrigger(player,npc)
-    player:SpoofMsg("The dev team forgot me kupo.. ", npc, chatType.SAY, nil);
-    player:SpoofMsg("Whats a Mog to do now? <Sigh> ", npc, chatType.SAY, nil);
+    player:PrintToPlayer("The dev team forgot me kupo.. ", chatType.SAY, npc:getName());
+    player:PrintToPlayer("Whats a Mog to do now? <Sigh> ", chatType.SAY, npc:getName());
 end;
 
 -----------------------------------

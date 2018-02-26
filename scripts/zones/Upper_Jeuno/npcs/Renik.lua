@@ -15,7 +15,7 @@ function onTrade(player,npc,trade)
         player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, PRIZE);
     else
         if (player:getCurrency("bayld") < 5000) then
-            player:SpoofMsg("Not enough Bayld. 5000 is required. ", npc, MESSAGE_ECHO, nil);
+            player:PrintToPlayer("Not enough Bayld. 5000 is required. ", npc, chatType.SYSTEM_3, nil);
         else
             local PRIZE = 0;
     ---------------------------------------Empy 119----------------------------------------------------------
@@ -727,7 +727,7 @@ function onTrigger(player,npc)
         --[[
         player:startEvent(168);
         ]]
-        player:SpoofMsg((string.format( "Hello %s!, I'm here to help you reforge your Empyrian Armor", player:getName() )), npc, MESSAGE_SAY, nil);
+        player:PrintToPlayer((string.format( "Hello %s!, I'm here to help you reforge your Empyrian Armor", player:getName() )), chatType.SAY, npc:getName());
     end
 end;
 

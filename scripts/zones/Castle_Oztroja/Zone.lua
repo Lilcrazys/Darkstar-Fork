@@ -50,7 +50,7 @@ function onRegionEnter(player,region)
         [1] = function (x)  -- PLD AF2 "A boy's dream".
         if (player:getQuestStatus(SANDORIA, A_BOY_S_DREAM) == QUEST_ACCEPTED) then
             if (player:hasItem(17001) == true and player:hasItem(4562) == false) then
-                player:SpoofMsg("The Giant Shell Bug you posses brings a fiend out of the water!. ", nil, chatType.ECHO, nil);
+                player:PrintToPlayer("The Giant Shell Bug you posses brings a fiend out of the water!. ", chatType.SYSTEM_3);
                 SpawnMob(17396141):updateEnmity(player);
             end
         end

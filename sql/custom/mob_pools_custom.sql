@@ -725,24 +725,9 @@ INSERT INTO `mob_pools` VALUES (16600,'Twinkling_Treant','Twinkling_Treant',245,
 -- Unity NMs End
 -- Pool IDs 16647 to 16660 reserved
 
--- INSERT INTO `mob_pools` VALUES (16661,'Benkei','Benkei',150,0x0100110311100920093009400950006000700000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,665,1,0,4060);
--- INSERT INTO `mob_pools` VALUES (16662,'Druk','Druk',TEO_FIX,0x0000620200000000000000000000000000000000                       4061);
--- INSERT INTO `mob_pools` VALUES (16663,'Zomok','Zomok',TEO_FIX,0x00000F0300000000000000000000000000000000                      4062);
--- INSERT INTO `mob_pools` VALUES (16664,'Abzu','Abzu',TEO_FIX,0x0000610200000000000000000000000000000000                       4063);
 INSERT INTO `mob_pools` VALUES (16665,'The_Jumping_Crab','The_Jumping_Crab',76,0x0000650100000000000000000000000000000000,5,14,4,240,100,0,1,0,0,2,23,32,304,15,0,0,665,1,0,9665);
 
--- ---------------------------------------------------------------------------
--- Super experimental z49 mobs, will not spawn without script or GM command.
--- ---------------------------------------------------------------------------
-
-INSERT INTO `mob_pools` VALUES (16666,'SlenderMan','SlenderMan',223,0x0000270200000000000000000000000000000000,2,5,3,320,110,0,0,0,0,2,71,0,245,8388748,0,0,666,1,0,9666);
--- INSERT INTO `mob_pools` VALUES (9667,'Zombaru','Zombaru',153,0x0000xxxx00000000000000000000000000000000,5,14,4,240,100,0,2,0,2,23,32,304,15,0,0,667,1,0,9667);
-INSERT INTO `mob_pools` VALUES (16760,'Mars','Mars',351,0x00001D0500000000000000000000000000000000,1,8,3,160,100,0,1,0,1,2,17,32,0,196620,0,0,760,1,0,9760); -- Testing
--- INSERT INTO `mob_pools` VALUES (16760,'Mars','Mars',351,0x00001D0500000000000000000000000000000000,1,8,3,160,100,0,1,1,18,17,32,0,196620,0,0,760,1,0,9760); -- Legion Custom Instance Event.
-INSERT INTO `mob_pools` VALUES (16777,'Minerva','Minerva',474,0x00008E0800000000000000000000000000000000,5,3,12,280,75,0,0,0,0,2,117,32,1,543,0,0,777,1,0,9777); -- Testing
--- INSERT INTO `mob_pools` VALUES (16777,'Minerva','Minerva',474,0x00008E0800000000000000000000000000000000,5,3,12,280,75,0,0,0,18,117,32,1,537,0,0,777,1,0,9777); -- Provenance Custom Battlefield Event.
-
--- Temp to be re-ID'd by Teo later
+-- Temp to be re-ID'd
 INSERT INTO `mob_pools` VALUES (25000,'Konjac','Konjac',230,0x0000240100000000000000000000000000000000,1,1,7,240,100,0,1,0,0,2,23,0,0,3,0,0,0,1,0,230);
 INSERT INTO `mob_pools` VALUES (24999,'Chelicerata','Chelicerata',64,0x0000D40600000000000000000000000000000000,6,6,2,240,100,0,1,0,0,2,23,32,6634,645,0,0,0,1,0,64);
 INSERT INTO `mob_pools` VALUES (24997,'Canal_Moocher','Canal_Moocher',172,0x0000140100000000000000000000000000000000,1,1,7,240,100,0,1,0,0,2,23,0,0,3,0,0,0,1,0,172);
@@ -753,7 +738,7 @@ INSERT INTO `mob_pools` VALUES (99999,'Dummy','Dummy',133,0x00006705000000000000
 -- Thinking of placing a new entry right here (or below)? DO NOT.
 -- Below this line are bug workarounds that MUST be at the very end of the file!
 -- DO NOT PUT ANYTHING BELOW THEM!
-UPDATE mob_pools SET cmbSkill = 3 WHERE cmbSkill = 1 and mJob = 1; -- Fix non monk mobs mistakenly set to H2H in DSP..
+UPDATE mob_pools SET cmbSkill = 3 WHERE cmbSkill = 1 and mJob = 1; -- Fix non monk mobs mistakenly set to H2H in DSP.. Note that this breaks a few that SHOULD use H2H
 UPDATE mob_pools SET cmbSkill = 11 WHERE cmbSkill = 1 and mJob = 3;
 UPDATE mob_pools SET cmbSkill = 12 WHERE cmbSkill = 1 and mJob = 4;
 UPDATE mob_pools SET cmbSkill = 2 WHERE cmbSkill = 1 and mJob = 5;

@@ -1282,16 +1282,7 @@ INSERT INTO `mob_groups` VALUES (96599,16600,116,15,128,0,800000,8000,2,2,0); --
 -- INSERT INTO `mob_groups` VALUES (96645,16646,zoneid,0,128,16638,HP,MP,128,128,0); -- Vedrfolnir
 -- Unity NMs End
 
--- Super experimental z49 mobs, will not spawn without script or GM command.
--- INSERT INTO `mob_groups` VALUES (96661,16661,49,0,128,dropid,HP,MP,lv,lv,0); -- Benkei
--- INSERT INTO `mob_groups` VALUES (96662,16662,49,0,128,dropid,HP,MP,lv,lv,0); -- Druk
--- INSERT INTO `mob_groups` VALUES (96663,16663,49,0,128,dropid,HP,MP,lv,lv,0); -- Zomok
--- INSERT INTO `mob_groups` VALUES (96664,16664,49,0,128,dropid,HP,MP,lv,lv,0); -- Abzu
 INSERT INTO `mob_groups` VALUES (96665,16665,91,3600,0,16665,154000,75000,131,131,0); -- The Jumping Crab
--- INSERT INTO `mob_groups` VALUES (96666,16666,49,0,128,16666,136666,6666,106,106,0); -- SlenderMan
--- INSERT INTO `mob_groups` VALUES (96667,16667,49,0,128,0,6666,3333,90,90,0); -- Zombaru
--- INSERT INTO `mob_groups` VALUES (97600,16760,49,0,128,16760,185000,7600,128,128,0); -- Mars
--- INSERT INTO `mob_groups` VALUES (97777,16777,49,0,128,16777,444000,7777,140,140,0); -- Minerva
 
 -- Dummy, never dies and never fights back.
 INSERT INTO `mob_groups` VALUES (99999,99999,49,0,0,0,1000000,2500,120,120,0);

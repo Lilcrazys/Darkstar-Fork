@@ -15,8 +15,8 @@ require("scripts/globals/msg");
 function onTrade(player,npc,trade)
     if (TRAVEL_SKIP >= 1) then
         if (trade:getGil() >= TRAVEL_SKIP and trade:getItemCount() == 1) then
-            player:SpoofMsg(string.format("eye's the %d gil.. ", TRAVEL_SKIP), npc, chatType.EMOTION, nil);
-            player:SpoofMsg("Well..I guess I can let you aboard the express freight Vessel.. ", npc, chatType.SAY, nil);
+            player:PrintToPlayer(string.format("eye's the %d gil.. ", TRAVEL_SKIP), chatType.EMOTION, npc:getName());
+            player:PrintToPlayer("Well..I guess I can let you aboard the express freight Vessel.. ", chatType.SAY, npc:getName());
             if (player:hasKeyItem(AIRSHIP_PASS_FOR_KAZHAM)) then
                 player:delGil(TRAVEL_SKIP);
                 -- player:setPos(-9,-4,-1,65,250);
@@ -24,7 +24,7 @@ function onTrade(player,npc,trade)
             else
                 player:setVar("HasDoorHacked", player:getVar("HasDoorHacked") +1);
                 print(player:getName() .. " tried to TRAVEL_SKIP to Kazham but didn't have a Kazham Pass..");
-                player:SpoofMsg("Wait a minute, You don't have a KAZHAM PASS, how'd you even get through the door?.. ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("Wait a minute, You don't have a KAZHAM PASS, how'd you even get through the door?.. ", chatType.SAY, npc:getName());
             end
         end
     end

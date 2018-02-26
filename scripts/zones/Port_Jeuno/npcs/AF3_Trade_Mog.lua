@@ -1904,7 +1904,7 @@ end;
 
 function onTrigger(player,npc)
     local msgText = string.format("Hello %s!, I'm here to help you upgrade a selection of Artifact, Relic, Salvage, and Empyrean armor", player:getName());
-    player:SpoofMsg(msgText, npc, chatType.SAY, nil);
+    player:PrintToPlayer(msgText, chatType.SAY, npc:getName());
 end;
 
 -----------------------------------

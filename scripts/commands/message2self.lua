@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
--- func: @message2self <MSG_TEXT> <optional MSG_TYPE>
+-- func: message2self <optional MSG_TYPE> <MSG_TEXT>
 -- desc: Spoofs a chat message to self for testing
 ---------------------------------------------------------------------------------------------------
 
@@ -9,7 +9,7 @@ cmdprops =
     parameters = "issssssssssssssssssss"
 };
 
-require("scripts/globals/spoofchat");
+require("scripts/globals/msg");
 
 function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t)
     -- Todo: replace this crap using 1 string parameter and doing a split at the 1st space.
@@ -23,6 +23,7 @@ function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o
     if (f == nil) then f = ""; end      if (e == nil) then e = ""; end
     if (d == nil) then d = ""; end      if (c == nil) then c = ""; end
     if (b == nil) then b = ""; end      if (a == nil) then a = ""; end
+    -- Seriously, the above was a crappy hacky way to get it done in a hurry.
     local MSG_TEXT = table.concat(
     {
         a, " ", b, " ", c, " ", d, " ", e, " ", f, " ", g, " ",
@@ -31,25 +32,25 @@ function onTrigger(player, MSG_TYPE, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o
     });
 
     if ((MSG_TYPE == nil or tonumber(MSG_TYPE) == nil) or MSG_TEXT == nil) then
-        -- player:PrintToPlayer("@message2self <MSG_TYPE> <message text spaces are allowed>");
+        -- player:PrintToPlayer("message2self <MSG_TYPE> <message text spaces are allowed>");
         player:PrintToPlayer("Didn't see a valid MSG_TYPE, so printing available types at you!");
-        player:SpoofMsg("Say = 0", nil, 0, nil, nil);
-        player:SpoofMsg("Shout = 1", nil, 1, nil, nil);
-        player:SpoofMsg("Tell = 2", nil, 2, nil, nil);
-        player:SpoofMsg("Party = 4", nil, 4, nil, nil);
-        player:SpoofMsg("1st LS = 5", nil, 5, nil, nil);
-        player:SpoofMsg("System message = 6 or 7", nil, 6, nil, nil);
-        player:SpoofMsg("Emote = 8", nil, 8, nil, nil);
-        player:SpoofMsg("Say with no name = 13", nil, 13, nil, nil);
-        player:SpoofMsg("Shout with no name = 14", nil, 14, nil, nil);
-        player:SpoofMsg("Party with no name = 15", nil, 15, nil, nil);
-        player:SpoofMsg("1st LS with no name = 16", nil, 16, nil, nil);
-        player:SpoofMsg("Yell = 26", nil, 26, nil, nil);
-        player:SpoofMsg("2nd LS = 27", nil, 27, nil, nil);
-        player:SpoofMsg("2nd LS with no name = 28", nil, 28, nil, nil);
-        player:SpoofMsg("Echo/system3", nil, 29, nil, nil);
-        player:SpoofMsg("Unity = 33", nil, 33, nil, nil);
+        player:PrintToPlayer("Say = 0", 0);
+        player:PrintToPlayer("Shout = 1", 1);
+        player:PrintToPlayer("Tell = 2", 2);
+        player:PrintToPlayer("Party = 4", 4);
+        player:PrintToPlayer("1st LS = 5", 5);
+        player:PrintToPlayer("System message = 6 or 7", 6);
+        player:PrintToPlayer("Emote = 8", 8);
+        player:PrintToPlayer("Say with no name = 13", 13);
+        player:PrintToPlayer("Shout with no name = 14", 14);
+        player:PrintToPlayer("Party with no name = 15", 15);
+        player:PrintToPlayer("1st LS with no name = 16", 16);
+        player:PrintToPlayer("Yell = 26", 26);
+        player:PrintToPlayer("2nd LS = 27", 27);
+        player:PrintToPlayer("2nd LS with no name = 28", 28);
+        player:PrintToPlayer("Echo/system3", 29);
+        player:PrintToPlayer("Unity = 33", 33);
     else
-        player:SpoofMsg(MSG_TEXT, player, MSG_TYPE, nil);
+        player:PrintToPlayer(MSG_TEXT, MSG_TYPE, player:getName());
     end
 end;

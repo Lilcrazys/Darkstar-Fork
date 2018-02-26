@@ -24,8 +24,8 @@ function onTrigger(player,npc)
         ]]
         if (math.random(1,50) == 5) then
             require("scripts/globals/msg");
-            player:SpoofMsg("SUE! SUE! RUIN! ", npc, chatType.SAY, chatType.SAY);
-            player:SpoofMsg("Tsutsuroon sorry, Tsutsuroon sometimes has nervous tick.. ", npc, chatType.SAY, chatType.SAY);
+            player:PrintToPlayer("SUE! SUE! RUIN! ", chatType.SAY, npc:getname());
+            player:PrintToPlayer("Tsutsuroon sorry, Tsutsuroon sometimes has nervous tick.. ", chatType.SAY, npc:getname());
         else
             player:showText(npc,TSUTSUROON_SHOP_DIALOG);
         end

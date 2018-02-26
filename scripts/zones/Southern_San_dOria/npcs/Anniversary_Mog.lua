@@ -57,7 +57,7 @@ function onTrigger(player,npc)
                 player:addItem(15793, 1);
                 player:setVar("AnniversaryLootGet", os.time()+86400);
             else
-                player:SpoofMsg("Check back later. Rings are issued once a day. ", npc, chatType.SAY, nil);
+                player:PrintToPlayer("Check back later. Rings are issued once a day. ", chatType.SAY, npc:getName());
             end
         else
             player:messageSpecial(ITEM_CANNOT_BE_OBTAINED, 15793);

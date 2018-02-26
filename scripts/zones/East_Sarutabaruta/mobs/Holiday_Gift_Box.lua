@@ -99,7 +99,7 @@ function onMobDeath(mob, player, isKiller)
                     sponges:addMP(sponges:getMaxMP() * 0.11);
                     sponges:addTP(525);
                     sponges:injectActionPacket(6, 599, 0, 0, 0);
-                    sponges:SpoofMsg("Twinkling starlights are released from the box. ", npc, chatType.ECHO, nil);
+                    sponges:PrintToPlayer("Twinkling starlights are released from the box. ", chatType.SYSTEM_3, npc:getName());
                 end
             end
         end

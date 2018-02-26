@@ -783,29 +783,7 @@ REPLACE INTO `mob_spawn_points` VALUES (16974126,'Acrolith','Acrolith',1486,-67,
 -- ------------------------------------------------------------
 
 INSERT INTO `mob_spawn_points` VALUES (16977921,'Dummy','Dummy',99999,0.001,0.000,0.001,0); -- Never dies, never fights back.
--- INSERT INTO `mob_spawn_points` VALUES (16977922,'Pil-Provenance','Pil-Provenance',90507,0,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977923,'Rukh','Rukh',90508,5,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977924,'Asb','Asb',90509,10,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977925,'Sarbaz','Sarbaz',90510,15,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977926,'Wazir','Wazir',90511,20,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977927,'Shah','Shah',90512,25,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977928,'Provenance_Watcher','Provenance_Watcher',90513,30,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977929,'Crystal_Fetter','Crystal_Fetter',90514,31,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977930,'Crystal_Fetter','Crystal_Fetter',90514,30,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977931,'Crystal_Fetter','Crystal_Fetter',90514,29,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977932,'Crystal_Fetter','Crystal_Fetter',90514,28,0,1,0);
--- INSERT INTO `mob_spawn_points` VALUES (16977933,'Umagrhk','Umagrhk',90515,40,0,1,0);
 
--- Super experimental, will not spawn without script or GM command.
--- INSERT INTO `mob_spawn_points` VALUES (16978934,'Benkei','Benkei',96661,-12,0,-8,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978935,'Druk','Druk',96662,0,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978936,'Zomok','Zomok',96663,0,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978937,'Abzu','Abzu',96664,0,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978938,'SlenderMan','SlenderMan',96666,-24,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978939,'Zombaru','Zombaru',96667,-24,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978940,'Zombaru','Zombaru',96667,-24,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978941,'Mars','Mars',97600,-5,0,0,0);
--- INSERT INTO `mob_spawn_points` VALUES (16978942,'Minerva','Minerva',97777,-12,0,0,0);
 -- INSERT INTO `npc_list` VALUES (16978943,'Test_Box','Test Loot Box',192,0.000,0.000,0.000,6,50,50,0,12,100,0,4227,0x0000020100000000000000000000000000000000,0,NULL,0);
 
 
