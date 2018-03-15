@@ -59,7 +59,7 @@ function onSpellCast(caster,target,spell)
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
     if (resist > 0.25) then -- This line may need adjusting for retail accuracy.
-        target:addStatusEffect(EFFECT_STUN, 1, 0, 5 * resist);
+        target:addStatusEffect(EFFECT_STUN, 1, 0, math.random(2,5) * resist);
     end
 
     return damage;

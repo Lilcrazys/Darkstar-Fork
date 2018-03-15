@@ -58,8 +58,15 @@ function onSpellCast(caster,target,spell)
     local damage = BluePhysicalSpell(caster, target, spell, params);
     damage = BlueFinalAdjustments(caster, target, spell, damage, params);
 
+    --[[ DSP code
     if (resist > 0.25) then -- This line may need adjusting for retail accuracy.
         target:addStatusEffect(EFFECT_STUN, 1, 0, 20 * resist); -- Wiki says duration of "up to" 20 second..
+    end
+    ]]
+
+    -- Custom nerfage.
+    if (resist > 0.25) then
+        target:addStatusEffect(EFFECT_STUN, 1, 0, math.random(5,15) * resist);
     end
 
     return damage;

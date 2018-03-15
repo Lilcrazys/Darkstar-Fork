@@ -17,8 +17,8 @@ end;
 function onSpellCast(caster,target,spell)
     --doNinjutsuNuke(V,M,caster,spell,target,hasMultipleTargetReduction,resistBonus)
     local duration = 15 + caster:getMerit(MERIT_HUTON_EFFECT) -- T1 bonus debuff duration
-    local bonusAcc = 0;
-    local bonusMab = caster:getMerit(MERIT_HUTON_EFFECT); -- T1 mag atk
+    local bonusAcc = 10;
+    local bonusMab = 5+caster:getMerit(MERIT_HUTON_EFFECT); -- T1 mag atk
 
     local params = {};
 

@@ -23,7 +23,10 @@ end;
 function onSpellCast(caster,target,spell)
     local typeEffect = EFFECT_BLINK;
     local skill = caster:getSkillLevel(BLUE_SKILL);
+    --[[
     local power = (skill / 50);
+    ]]
+    local power = (skill / 100); -- Temp set fewer shadows because proc rate is wrong.
     local duration = 300;
 
     -- 400 skill = 8 shadows, 450 = 9 shadows, so I am assuming every 50 skill is a shadow.
